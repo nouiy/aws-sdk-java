@@ -33,6 +33,12 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String filterByName;
     /**
      * <p>
+     * Filters the channel list to match the specified policy.
+     * </p>
+     */
+    private String filterByPlaybackRestrictionPolicyArn;
+    /**
+     * <p>
      * Filters the channel list to match the specified recording-configuration ARN.
      * </p>
      */
@@ -87,6 +93,46 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     public ListChannelsRequest withFilterByName(String filterByName) {
         setFilterByName(filterByName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Filters the channel list to match the specified policy.
+     * </p>
+     * 
+     * @param filterByPlaybackRestrictionPolicyArn
+     *        Filters the channel list to match the specified policy.
+     */
+
+    public void setFilterByPlaybackRestrictionPolicyArn(String filterByPlaybackRestrictionPolicyArn) {
+        this.filterByPlaybackRestrictionPolicyArn = filterByPlaybackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Filters the channel list to match the specified policy.
+     * </p>
+     * 
+     * @return Filters the channel list to match the specified policy.
+     */
+
+    public String getFilterByPlaybackRestrictionPolicyArn() {
+        return this.filterByPlaybackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Filters the channel list to match the specified policy.
+     * </p>
+     * 
+     * @param filterByPlaybackRestrictionPolicyArn
+     *        Filters the channel list to match the specified policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListChannelsRequest withFilterByPlaybackRestrictionPolicyArn(String filterByPlaybackRestrictionPolicyArn) {
+        setFilterByPlaybackRestrictionPolicyArn(filterByPlaybackRestrictionPolicyArn);
         return this;
     }
 
@@ -225,6 +271,8 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
         sb.append("{");
         if (getFilterByName() != null)
             sb.append("FilterByName: ").append(getFilterByName()).append(",");
+        if (getFilterByPlaybackRestrictionPolicyArn() != null)
+            sb.append("FilterByPlaybackRestrictionPolicyArn: ").append(getFilterByPlaybackRestrictionPolicyArn()).append(",");
         if (getFilterByRecordingConfigurationArn() != null)
             sb.append("FilterByRecordingConfigurationArn: ").append(getFilterByRecordingConfigurationArn()).append(",");
         if (getMaxResults() != null)
@@ -249,6 +297,11 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getFilterByName() != null && other.getFilterByName().equals(this.getFilterByName()) == false)
             return false;
+        if (other.getFilterByPlaybackRestrictionPolicyArn() == null ^ this.getFilterByPlaybackRestrictionPolicyArn() == null)
+            return false;
+        if (other.getFilterByPlaybackRestrictionPolicyArn() != null
+                && other.getFilterByPlaybackRestrictionPolicyArn().equals(this.getFilterByPlaybackRestrictionPolicyArn()) == false)
+            return false;
         if (other.getFilterByRecordingConfigurationArn() == null ^ this.getFilterByRecordingConfigurationArn() == null)
             return false;
         if (other.getFilterByRecordingConfigurationArn() != null
@@ -271,6 +324,7 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFilterByName() == null) ? 0 : getFilterByName().hashCode());
+        hashCode = prime * hashCode + ((getFilterByPlaybackRestrictionPolicyArn() == null) ? 0 : getFilterByPlaybackRestrictionPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getFilterByRecordingConfigurationArn() == null) ? 0 : getFilterByRecordingConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());

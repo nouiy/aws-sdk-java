@@ -99,6 +99,12 @@ import com.amazonaws.services.ivs.model.*;
  * endpoints for more information.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * <b>Playback restriction policy</b> — Restricts playback by countries and/or origin sites. See the Playback
+ * Restriction Policy endpoints for more information.
+ * </p>
+ * </li>
  * </ul>
  * <p>
  * <b>Tagging</b>
@@ -225,72 +231,33 @@ import com.amazonaws.services.ivs.model.*;
  * </li>
  * </ul>
  * <p>
- * <b>StreamKey Endpoints</b>
+ * <b>Playback Restriction Policy Endpoints</b>
  * </p>
  * <ul>
  * <li>
  * <p>
- * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * <a>CreatePlaybackRestrictionPolicy</a> — Creates a new playback restriction policy, for constraining playback by
+ * countries and/or origins.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * <a>DeletePlaybackRestrictionPolicy</a> — Deletes the specified playback restriction policy
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * <a>GetPlaybackRestrictionPolicy</a> — Gets the specified playback restriction policy.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * <a>ListPlaybackRestrictionPolicies</a> — Gets summary information about playback restriction policies.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Stream Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStreamSession</a> — Gets metadata on a specified stream.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
- * where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
- * in the AWS region where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
- * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
- * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
- * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * <a>UpdatePlaybackRestrictionPolicy</a> — Updates a specified playback restriction policy.
  * </p>
  * </li>
  * </ul>
@@ -364,6 +331,76 @@ import com.amazonaws.services.ivs.model.*;
  * <li>
  * <p>
  * <a>DeleteRecordingConfiguration</a> — Deletes the recording configuration for the specified ARN.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Stream Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamSession</a> — Gets metadata on a specified stream.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
+ * where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
+ * in the AWS region where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
+ * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
+ * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
+ * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>StreamKey Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
  * </p>
  * </li>
  * </ul>
@@ -518,6 +555,41 @@ public interface AmazonIVSAsync extends AmazonIVS {
      */
     java.util.concurrent.Future<CreateChannelResult> createChannelAsync(CreateChannelRequest createChannelRequest,
             com.amazonaws.handlers.AsyncHandler<CreateChannelRequest, CreateChannelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new playback restriction policy, for constraining playback by countries and/or origins.
+     * </p>
+     * 
+     * @param createPlaybackRestrictionPolicyRequest
+     * @return A Java Future containing the result of the CreatePlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsync.CreatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/CreatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePlaybackRestrictionPolicyResult> createPlaybackRestrictionPolicyAsync(
+            CreatePlaybackRestrictionPolicyRequest createPlaybackRestrictionPolicyRequest);
+
+    /**
+     * <p>
+     * Creates a new playback restriction policy, for constraining playback by countries and/or origins.
+     * </p>
+     * 
+     * @param createPlaybackRestrictionPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsyncHandler.CreatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/CreatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePlaybackRestrictionPolicyResult> createPlaybackRestrictionPolicyAsync(
+            CreatePlaybackRestrictionPolicyRequest createPlaybackRestrictionPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePlaybackRestrictionPolicyRequest, CreatePlaybackRestrictionPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -699,6 +771,41 @@ public interface AmazonIVSAsync extends AmazonIVS {
 
     /**
      * <p>
+     * Deletes the specified playback restriction policy.
+     * </p>
+     * 
+     * @param deletePlaybackRestrictionPolicyRequest
+     * @return A Java Future containing the result of the DeletePlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsync.DeletePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeletePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePlaybackRestrictionPolicyResult> deletePlaybackRestrictionPolicyAsync(
+            DeletePlaybackRestrictionPolicyRequest deletePlaybackRestrictionPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes the specified playback restriction policy.
+     * </p>
+     * 
+     * @param deletePlaybackRestrictionPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsyncHandler.DeletePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeletePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePlaybackRestrictionPolicyResult> deletePlaybackRestrictionPolicyAsync(
+            DeletePlaybackRestrictionPolicyRequest deletePlaybackRestrictionPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePlaybackRestrictionPolicyRequest, DeletePlaybackRestrictionPolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the recording configuration for the specified ARN.
      * </p>
      * <p>
@@ -844,6 +951,41 @@ public interface AmazonIVSAsync extends AmazonIVS {
      */
     java.util.concurrent.Future<GetPlaybackKeyPairResult> getPlaybackKeyPairAsync(GetPlaybackKeyPairRequest getPlaybackKeyPairRequest,
             com.amazonaws.handlers.AsyncHandler<GetPlaybackKeyPairRequest, GetPlaybackKeyPairResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the specified playback restriction policy.
+     * </p>
+     * 
+     * @param getPlaybackRestrictionPolicyRequest
+     * @return A Java Future containing the result of the GetPlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsync.GetPlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetPlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPlaybackRestrictionPolicyResult> getPlaybackRestrictionPolicyAsync(
+            GetPlaybackRestrictionPolicyRequest getPlaybackRestrictionPolicyRequest);
+
+    /**
+     * <p>
+     * Gets the specified playback restriction policy.
+     * </p>
+     * 
+     * @param getPlaybackRestrictionPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsyncHandler.GetPlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetPlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPlaybackRestrictionPolicyResult> getPlaybackRestrictionPolicyAsync(
+            GetPlaybackRestrictionPolicyRequest getPlaybackRestrictionPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPlaybackRestrictionPolicyRequest, GetPlaybackRestrictionPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -1081,6 +1223,41 @@ public interface AmazonIVSAsync extends AmazonIVS {
      */
     java.util.concurrent.Future<ListPlaybackKeyPairsResult> listPlaybackKeyPairsAsync(ListPlaybackKeyPairsRequest listPlaybackKeyPairsRequest,
             com.amazonaws.handlers.AsyncHandler<ListPlaybackKeyPairsRequest, ListPlaybackKeyPairsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets summary information about playback restriction policies.
+     * </p>
+     * 
+     * @param listPlaybackRestrictionPoliciesRequest
+     * @return A Java Future containing the result of the ListPlaybackRestrictionPolicies operation returned by the
+     *         service.
+     * @sample AmazonIVSAsync.ListPlaybackRestrictionPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListPlaybackRestrictionPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPlaybackRestrictionPoliciesResult> listPlaybackRestrictionPoliciesAsync(
+            ListPlaybackRestrictionPoliciesRequest listPlaybackRestrictionPoliciesRequest);
+
+    /**
+     * <p>
+     * Gets summary information about playback restriction policies.
+     * </p>
+     * 
+     * @param listPlaybackRestrictionPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPlaybackRestrictionPolicies operation returned by the
+     *         service.
+     * @sample AmazonIVSAsyncHandler.ListPlaybackRestrictionPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListPlaybackRestrictionPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPlaybackRestrictionPoliciesResult> listPlaybackRestrictionPoliciesAsync(
+            ListPlaybackRestrictionPoliciesRequest listPlaybackRestrictionPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPlaybackRestrictionPoliciesRequest, ListPlaybackRestrictionPoliciesResult> asyncHandler);
 
     /**
      * <p>
@@ -1464,5 +1641,40 @@ public interface AmazonIVSAsync extends AmazonIVS {
      */
     java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest updateChannelRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateChannelRequest, UpdateChannelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a specified playback restriction policy.
+     * </p>
+     * 
+     * @param updatePlaybackRestrictionPolicyRequest
+     * @return A Java Future containing the result of the UpdatePlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsync.UpdatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/UpdatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePlaybackRestrictionPolicyResult> updatePlaybackRestrictionPolicyAsync(
+            UpdatePlaybackRestrictionPolicyRequest updatePlaybackRestrictionPolicyRequest);
+
+    /**
+     * <p>
+     * Updates a specified playback restriction policy.
+     * </p>
+     * 
+     * @param updatePlaybackRestrictionPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePlaybackRestrictionPolicy operation returned by the
+     *         service.
+     * @sample AmazonIVSAsyncHandler.UpdatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/UpdatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePlaybackRestrictionPolicyResult> updatePlaybackRestrictionPolicyAsync(
+            UpdatePlaybackRestrictionPolicyRequest updatePlaybackRestrictionPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePlaybackRestrictionPolicyRequest, UpdatePlaybackRestrictionPolicyResult> asyncHandler);
 
 }

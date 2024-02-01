@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
+ * Only the native tokens BTC and ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
  * </p>
  * </note>
  * 
@@ -51,8 +51,8 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
-     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for Bitcoin,
+     * eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the 64 character
      * hexadecimal <code>tokenid</code> format.
      * </p>
      * </note>
@@ -164,8 +164,8 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
-     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for Bitcoin,
+     * eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the 64 character
      * hexadecimal <code>tokenid</code> format.
      * </p>
      * </note>
@@ -173,8 +173,8 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * @param tokenId
      *        The unique identifier of the token.</p> <note>
      *        <p>
-     *        You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for
-     *        the native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64
+     *        For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for
+     *        Bitcoin, eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the 64
      *        character hexadecimal <code>tokenid</code> format.
      *        </p>
      */
@@ -189,17 +189,17 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
-     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for Bitcoin,
+     * eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the 64 character
      * hexadecimal <code>tokenid</code> format.
      * </p>
      * </note>
      * 
      * @return The unique identifier of the token.</p> <note>
      *         <p>
-     *         You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for
-     *         the native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64
-     *         character hexadecimal <code>tokenid</code> format.
+     *         For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for
+     *         Bitcoin, eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the
+     *         64 character hexadecimal <code>tokenid</code> format.
      *         </p>
      */
 
@@ -213,8 +213,8 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
-     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for Bitcoin,
+     * eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the 64 character
      * hexadecimal <code>tokenid</code> format.
      * </p>
      * </note>
@@ -222,8 +222,8 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * @param tokenId
      *        The unique identifier of the token.</p> <note>
      *        <p>
-     *        You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for
-     *        the native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64
+     *        For native tokens, use the 3 character abbreviation that best matches your token. For example, btc for
+     *        Bitcoin, eth for Ether, etc. For all other token types you must specify the <code>tokenId</code> in the 64
      *        character hexadecimal <code>tokenid</code> format.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

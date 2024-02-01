@@ -99,6 +99,12 @@ import java.util.concurrent.ExecutorService;
  * endpoints for more information.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * <b>Playback restriction policy</b> — Restricts playback by countries and/or origin sites. See the Playback
+ * Restriction Policy endpoints for more information.
+ * </p>
+ * </li>
  * </ul>
  * <p>
  * <b>Tagging</b>
@@ -225,72 +231,33 @@ import java.util.concurrent.ExecutorService;
  * </li>
  * </ul>
  * <p>
- * <b>StreamKey Endpoints</b>
+ * <b>Playback Restriction Policy Endpoints</b>
  * </p>
  * <ul>
  * <li>
  * <p>
- * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * <a>CreatePlaybackRestrictionPolicy</a> — Creates a new playback restriction policy, for constraining playback by
+ * countries and/or origins.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * <a>DeletePlaybackRestrictionPolicy</a> — Deletes the specified playback restriction policy
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * <a>GetPlaybackRestrictionPolicy</a> — Gets the specified playback restriction policy.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * <a>ListPlaybackRestrictionPolicies</a> — Gets summary information about playback restriction policies.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Stream Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStreamSession</a> — Gets metadata on a specified stream.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
- * where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
- * in the AWS region where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
- * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
- * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
- * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * <a>UpdatePlaybackRestrictionPolicy</a> — Updates a specified playback restriction policy.
  * </p>
  * </li>
  * </ul>
@@ -364,6 +331,76 @@ import java.util.concurrent.ExecutorService;
  * <li>
  * <p>
  * <a>DeleteRecordingConfiguration</a> — Deletes the recording configuration for the specified ARN.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Stream Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamSession</a> — Gets metadata on a specified stream.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
+ * where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
+ * in the AWS region where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
+ * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
+ * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
+ * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>StreamKey Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
  * </p>
  * </li>
  * </ul>
@@ -567,6 +604,41 @@ public class AmazonIVSAsyncClient extends AmazonIVSClient implements AmazonIVSAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePlaybackRestrictionPolicyResult> createPlaybackRestrictionPolicyAsync(
+            CreatePlaybackRestrictionPolicyRequest request) {
+
+        return createPlaybackRestrictionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePlaybackRestrictionPolicyResult> createPlaybackRestrictionPolicyAsync(
+            final CreatePlaybackRestrictionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePlaybackRestrictionPolicyRequest, CreatePlaybackRestrictionPolicyResult> asyncHandler) {
+        final CreatePlaybackRestrictionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePlaybackRestrictionPolicyResult>() {
+            @Override
+            public CreatePlaybackRestrictionPolicyResult call() throws Exception {
+                CreatePlaybackRestrictionPolicyResult result = null;
+
+                try {
+                    result = executeCreatePlaybackRestrictionPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateRecordingConfigurationResult> createRecordingConfigurationAsync(CreateRecordingConfigurationRequest request) {
 
         return createRecordingConfigurationAsync(request, null);
@@ -699,6 +771,41 @@ public class AmazonIVSAsyncClient extends AmazonIVSClient implements AmazonIVSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DeletePlaybackRestrictionPolicyResult> deletePlaybackRestrictionPolicyAsync(
+            DeletePlaybackRestrictionPolicyRequest request) {
+
+        return deletePlaybackRestrictionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePlaybackRestrictionPolicyResult> deletePlaybackRestrictionPolicyAsync(
+            final DeletePlaybackRestrictionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePlaybackRestrictionPolicyRequest, DeletePlaybackRestrictionPolicyResult> asyncHandler) {
+        final DeletePlaybackRestrictionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePlaybackRestrictionPolicyResult>() {
+            @Override
+            public DeletePlaybackRestrictionPolicyResult call() throws Exception {
+                DeletePlaybackRestrictionPolicyResult result = null;
+
+                try {
+                    result = executeDeletePlaybackRestrictionPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteRecordingConfigurationResult> deleteRecordingConfigurationAsync(DeleteRecordingConfigurationRequest request) {
 
         return deleteRecordingConfigurationAsync(request, null);
@@ -815,6 +922,39 @@ public class AmazonIVSAsyncClient extends AmazonIVSClient implements AmazonIVSAs
 
                 try {
                     result = executeGetPlaybackKeyPair(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPlaybackRestrictionPolicyResult> getPlaybackRestrictionPolicyAsync(GetPlaybackRestrictionPolicyRequest request) {
+
+        return getPlaybackRestrictionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPlaybackRestrictionPolicyResult> getPlaybackRestrictionPolicyAsync(final GetPlaybackRestrictionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPlaybackRestrictionPolicyRequest, GetPlaybackRestrictionPolicyResult> asyncHandler) {
+        final GetPlaybackRestrictionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPlaybackRestrictionPolicyResult>() {
+            @Override
+            public GetPlaybackRestrictionPolicyResult call() throws Exception {
+                GetPlaybackRestrictionPolicyResult result = null;
+
+                try {
+                    result = executeGetPlaybackRestrictionPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1046,6 +1186,41 @@ public class AmazonIVSAsyncClient extends AmazonIVSClient implements AmazonIVSAs
 
                 try {
                     result = executeListPlaybackKeyPairs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPlaybackRestrictionPoliciesResult> listPlaybackRestrictionPoliciesAsync(
+            ListPlaybackRestrictionPoliciesRequest request) {
+
+        return listPlaybackRestrictionPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPlaybackRestrictionPoliciesResult> listPlaybackRestrictionPoliciesAsync(
+            final ListPlaybackRestrictionPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPlaybackRestrictionPoliciesRequest, ListPlaybackRestrictionPoliciesResult> asyncHandler) {
+        final ListPlaybackRestrictionPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPlaybackRestrictionPoliciesResult>() {
+            @Override
+            public ListPlaybackRestrictionPoliciesResult call() throws Exception {
+                ListPlaybackRestrictionPoliciesResult result = null;
+
+                try {
+                    result = executeListPlaybackRestrictionPolicies(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1409,6 +1584,41 @@ public class AmazonIVSAsyncClient extends AmazonIVSClient implements AmazonIVSAs
 
                 try {
                     result = executeUpdateChannel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePlaybackRestrictionPolicyResult> updatePlaybackRestrictionPolicyAsync(
+            UpdatePlaybackRestrictionPolicyRequest request) {
+
+        return updatePlaybackRestrictionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePlaybackRestrictionPolicyResult> updatePlaybackRestrictionPolicyAsync(
+            final UpdatePlaybackRestrictionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePlaybackRestrictionPolicyRequest, UpdatePlaybackRestrictionPolicyResult> asyncHandler) {
+        final UpdatePlaybackRestrictionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePlaybackRestrictionPolicyResult>() {
+            @Override
+            public UpdatePlaybackRestrictionPolicyResult call() throws Exception {
+                UpdatePlaybackRestrictionPolicyResult result = null;
+
+                try {
+                    result = executeUpdatePlaybackRestrictionPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

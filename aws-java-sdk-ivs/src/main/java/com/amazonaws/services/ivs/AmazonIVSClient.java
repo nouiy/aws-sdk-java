@@ -125,6 +125,12 @@ import com.amazonaws.services.ivs.model.transform.*;
  * endpoints for more information.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * <b>Playback restriction policy</b> — Restricts playback by countries and/or origin sites. See the Playback
+ * Restriction Policy endpoints for more information.
+ * </p>
+ * </li>
  * </ul>
  * <p>
  * <b>Tagging</b>
@@ -251,72 +257,33 @@ import com.amazonaws.services.ivs.model.transform.*;
  * </li>
  * </ul>
  * <p>
- * <b>StreamKey Endpoints</b>
+ * <b>Playback Restriction Policy Endpoints</b>
  * </p>
  * <ul>
  * <li>
  * <p>
- * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * <a>CreatePlaybackRestrictionPolicy</a> — Creates a new playback restriction policy, for constraining playback by
+ * countries and/or origins.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * <a>DeletePlaybackRestrictionPolicy</a> — Deletes the specified playback restriction policy
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * <a>GetPlaybackRestrictionPolicy</a> — Gets the specified playback restriction policy.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * <a>ListPlaybackRestrictionPolicies</a> — Gets summary information about playback restriction policies.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Stream Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStreamSession</a> — Gets metadata on a specified stream.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
- * where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
- * in the AWS region where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
- * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
- * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
- * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * <a>UpdatePlaybackRestrictionPolicy</a> — Updates a specified playback restriction policy.
  * </p>
  * </li>
  * </ul>
@@ -390,6 +357,76 @@ import com.amazonaws.services.ivs.model.transform.*;
  * <li>
  * <p>
  * <a>DeleteRecordingConfiguration</a> — Deletes the recording configuration for the specified ARN.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Stream Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamSession</a> — Gets metadata on a specified stream.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
+ * where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
+ * in the AWS region where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
+ * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
+ * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
+ * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>StreamKey Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
  * </p>
  * </li>
  * </ul>
@@ -749,6 +786,69 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
 
     /**
      * <p>
+     * Creates a new playback restriction policy, for constraining playback by countries and/or origins.
+     * </p>
+     * 
+     * @param createPlaybackRestrictionPolicyRequest
+     * @return Result of the CreatePlaybackRestrictionPolicy operation returned by the service.
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ThrottlingException
+     * @throws ServiceQuotaExceededException
+     * @sample AmazonIVS.CreatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/CreatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreatePlaybackRestrictionPolicyResult createPlaybackRestrictionPolicy(CreatePlaybackRestrictionPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreatePlaybackRestrictionPolicy(request);
+    }
+
+    @SdkInternalApi
+    final CreatePlaybackRestrictionPolicyResult executeCreatePlaybackRestrictionPolicy(
+            CreatePlaybackRestrictionPolicyRequest createPlaybackRestrictionPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createPlaybackRestrictionPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreatePlaybackRestrictionPolicyRequest> request = null;
+        Response<CreatePlaybackRestrictionPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreatePlaybackRestrictionPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createPlaybackRestrictionPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ivs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreatePlaybackRestrictionPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreatePlaybackRestrictionPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreatePlaybackRestrictionPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new recording configuration, used to enable recording to Amazon S3.
      * </p>
      * <p>
@@ -1017,6 +1117,69 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
 
     /**
      * <p>
+     * Deletes the specified playback restriction policy.
+     * </p>
+     * 
+     * @param deletePlaybackRestrictionPolicyRequest
+     * @return Result of the DeletePlaybackRestrictionPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ConflictException
+     * @sample AmazonIVS.DeletePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeletePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeletePlaybackRestrictionPolicyResult deletePlaybackRestrictionPolicy(DeletePlaybackRestrictionPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePlaybackRestrictionPolicy(request);
+    }
+
+    @SdkInternalApi
+    final DeletePlaybackRestrictionPolicyResult executeDeletePlaybackRestrictionPolicy(
+            DeletePlaybackRestrictionPolicyRequest deletePlaybackRestrictionPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePlaybackRestrictionPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePlaybackRestrictionPolicyRequest> request = null;
+        Response<DeletePlaybackRestrictionPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePlaybackRestrictionPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deletePlaybackRestrictionPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ivs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePlaybackRestrictionPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePlaybackRestrictionPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeletePlaybackRestrictionPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the recording configuration for the specified ARN.
      * </p>
      * <p>
@@ -1252,6 +1415,67 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
 
             HttpResponseHandler<AmazonWebServiceResponse<GetPlaybackKeyPairResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetPlaybackKeyPairResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the specified playback restriction policy.
+     * </p>
+     * 
+     * @param getPlaybackRestrictionPolicyRequest
+     * @return Result of the GetPlaybackRestrictionPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @sample AmazonIVS.GetPlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetPlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetPlaybackRestrictionPolicyResult getPlaybackRestrictionPolicy(GetPlaybackRestrictionPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPlaybackRestrictionPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetPlaybackRestrictionPolicyResult executeGetPlaybackRestrictionPolicy(GetPlaybackRestrictionPolicyRequest getPlaybackRestrictionPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPlaybackRestrictionPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPlaybackRestrictionPolicyRequest> request = null;
+        Response<GetPlaybackRestrictionPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPlaybackRestrictionPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getPlaybackRestrictionPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ivs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPlaybackRestrictionPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPlaybackRestrictionPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetPlaybackRestrictionPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1673,6 +1897,68 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListPlaybackKeyPairsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListPlaybackKeyPairsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets summary information about playback restriction policies.
+     * </p>
+     * 
+     * @param listPlaybackRestrictionPoliciesRequest
+     * @return Result of the ListPlaybackRestrictionPolicies operation returned by the service.
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ConflictException
+     * @sample AmazonIVS.ListPlaybackRestrictionPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListPlaybackRestrictionPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListPlaybackRestrictionPoliciesResult listPlaybackRestrictionPolicies(ListPlaybackRestrictionPoliciesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListPlaybackRestrictionPolicies(request);
+    }
+
+    @SdkInternalApi
+    final ListPlaybackRestrictionPoliciesResult executeListPlaybackRestrictionPolicies(
+            ListPlaybackRestrictionPoliciesRequest listPlaybackRestrictionPoliciesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listPlaybackRestrictionPoliciesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListPlaybackRestrictionPoliciesRequest> request = null;
+        Response<ListPlaybackRestrictionPoliciesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListPlaybackRestrictionPoliciesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listPlaybackRestrictionPoliciesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ivs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListPlaybackRestrictionPolicies");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListPlaybackRestrictionPoliciesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListPlaybackRestrictionPoliciesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2341,6 +2627,69 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateChannelResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateChannelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a specified playback restriction policy.
+     * </p>
+     * 
+     * @param updatePlaybackRestrictionPolicyRequest
+     * @return Result of the UpdatePlaybackRestrictionPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ConflictException
+     * @sample AmazonIVS.UpdatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/UpdatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdatePlaybackRestrictionPolicyResult updatePlaybackRestrictionPolicy(UpdatePlaybackRestrictionPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdatePlaybackRestrictionPolicy(request);
+    }
+
+    @SdkInternalApi
+    final UpdatePlaybackRestrictionPolicyResult executeUpdatePlaybackRestrictionPolicy(
+            UpdatePlaybackRestrictionPolicyRequest updatePlaybackRestrictionPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updatePlaybackRestrictionPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdatePlaybackRestrictionPolicyRequest> request = null;
+        Response<UpdatePlaybackRestrictionPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdatePlaybackRestrictionPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updatePlaybackRestrictionPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ivs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdatePlaybackRestrictionPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdatePlaybackRestrictionPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdatePlaybackRestrictionPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

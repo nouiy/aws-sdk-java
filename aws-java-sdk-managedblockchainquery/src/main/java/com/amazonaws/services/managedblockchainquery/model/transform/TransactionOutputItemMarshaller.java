@@ -33,6 +33,8 @@ public class TransactionOutputItemMarshaller {
             .marshallLocationName("network").build();
     private static final MarshallingInfo<java.util.Date> TRANSACTIONTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionTimestamp").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> CONFIRMATIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("confirmationStatus").build();
 
     private static final TransactionOutputItemMarshaller instance = new TransactionOutputItemMarshaller();
 
@@ -53,6 +55,7 @@ public class TransactionOutputItemMarshaller {
             protocolMarshaller.marshall(transactionOutputItem.getTransactionHash(), TRANSACTIONHASH_BINDING);
             protocolMarshaller.marshall(transactionOutputItem.getNetwork(), NETWORK_BINDING);
             protocolMarshaller.marshall(transactionOutputItem.getTransactionTimestamp(), TRANSACTIONTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(transactionOutputItem.getConfirmationStatus(), CONFIRMATIONSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

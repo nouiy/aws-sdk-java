@@ -19,6 +19,7 @@ import javax.annotation.Generated;
  * create an endpoint for you and return it if one doesn't already exist. Specify GET_ONLY to return your endpoints if
  * any exist, or an empty list if none exist.
  */
+@Deprecated
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DescribeEndpointsMode {
 

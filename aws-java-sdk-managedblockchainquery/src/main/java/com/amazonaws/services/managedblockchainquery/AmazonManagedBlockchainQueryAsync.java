@@ -44,7 +44,7 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      * </p>
      * <note>
      * <p>
-     * Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
+     * Only the native tokens BTC and ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
      * </p>
      * </note>
      * 
@@ -63,7 +63,7 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      * </p>
      * <note>
      * <p>
-     * Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
+     * Only the native tokens BTC and ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
      * </p>
      * </note>
      * 
@@ -148,7 +148,7 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      * </p>
      * <note>
      * <p>
-     * Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
+     * Only the native tokens BTC and ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
      * </p>
      * </note>
      * 
@@ -167,7 +167,7 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      * </p>
      * <note>
      * <p>
-     * Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
+     * Only the native tokens BTC and ETH, and the ERC-20, ERC-721, and ERC 1155 token standards are supported.
      * </p>
      * </note>
      * 
@@ -186,8 +186,15 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
 
     /**
      * <p>
-     * Get the details of a transaction.
+     * Gets the details of a transaction.
      * </p>
+     * <note>
+     * <p>
+     * This action will return transaction details for all transactions that are <i>confirmed</i> on the blockchain,
+     * even if they have not reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">finality</a>.
+     * </p>
+     * </note>
      * 
      * @param getTransactionRequest
      * @return A Java Future containing the result of the GetTransaction operation returned by the service.
@@ -199,8 +206,15 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
 
     /**
      * <p>
-     * Get the details of a transaction.
+     * Gets the details of a transaction.
      * </p>
+     * <note>
+     * <p>
+     * This action will return transaction details for all transactions that are <i>confirmed</i> on the blockchain,
+     * even if they have not reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">finality</a>.
+     * </p>
+     * </note>
      * 
      * @param getTransactionRequest
      * @param asyncHandler
@@ -333,6 +347,13 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      * <p>
      * An array of <code>TransactionEvent</code> objects. Each object contains details about the transaction event.
      * </p>
+     * <note>
+     * <p>
+     * This action will return transaction details for all transactions that are <i>confirmed</i> on the blockchain,
+     * even if they have not reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">finality</a>.
+     * </p>
+     * </note>
      * 
      * @param listTransactionEventsRequest
      * @return A Java Future containing the result of the ListTransactionEvents operation returned by the service.
@@ -346,6 +367,13 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      * <p>
      * An array of <code>TransactionEvent</code> objects. Each object contains details about the transaction event.
      * </p>
+     * <note>
+     * <p>
+     * This action will return transaction details for all transactions that are <i>confirmed</i> on the blockchain,
+     * even if they have not reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">finality</a>.
+     * </p>
+     * </note>
      * 
      * @param listTransactionEventsRequest
      * @param asyncHandler

@@ -72,6 +72,10 @@ public class ChannelJsonUnmarshaller implements Unmarshaller<Channel, JsonUnmars
                     context.nextToken();
                     channel.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("playbackRestrictionPolicyArn", targetDepth)) {
+                    context.nextToken();
+                    channel.setPlaybackRestrictionPolicyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("playbackUrl", targetDepth)) {
                     context.nextToken();
                     channel.setPlaybackUrl(context.getUnmarshaller(String.class).unmarshall(context));

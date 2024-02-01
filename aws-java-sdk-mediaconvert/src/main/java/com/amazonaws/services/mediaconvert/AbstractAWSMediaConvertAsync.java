@@ -158,12 +158,14 @@ public class AbstractAWSMediaConvertAsync extends AbstractAWSMediaConvert implem
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest request) {
 
         return describeEndpointsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeEndpointsRequest, DescribeEndpointsResult> asyncHandler) {
 

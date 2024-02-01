@@ -82,7 +82,7 @@ public class DescribeEndpointsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        return your endpoints if any exist, or an empty list if none exist.
      * @see DescribeEndpointsMode
      */
-
+    @Deprecated
     public void setMode(String mode) {
         this.mode = mode;
     }
@@ -97,7 +97,7 @@ public class DescribeEndpointsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         return your endpoints if any exist, or an empty list if none exist.
      * @see DescribeEndpointsMode
      */
-
+    @Deprecated
     public String getMode() {
         return this.mode;
     }
@@ -114,7 +114,7 @@ public class DescribeEndpointsRequest extends com.amazonaws.AmazonWebServiceRequ
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeEndpointsMode
      */
-
+    @Deprecated
     public DescribeEndpointsRequest withMode(String mode) {
         setMode(mode);
         return this;
@@ -132,7 +132,7 @@ public class DescribeEndpointsRequest extends com.amazonaws.AmazonWebServiceRequ
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeEndpointsMode
      */
-
+    @Deprecated
     public DescribeEndpointsRequest withMode(DescribeEndpointsMode mode) {
         this.mode = mode.toString();
         return this;

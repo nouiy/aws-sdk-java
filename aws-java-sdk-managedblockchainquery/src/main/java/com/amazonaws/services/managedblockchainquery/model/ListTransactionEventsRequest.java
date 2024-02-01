@@ -47,6 +47,9 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The maximum number of transaction events to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -206,6 +209,9 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The maximum number of transaction events to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -218,7 +224,11 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * </note>
      * 
      * @param maxResults
-     *        The maximum number of transaction events to list.</p> <note>
+     *        The maximum number of transaction events to list.</p>
+     *        <p>
+     *        Default:<code>100</code>
+     *        </p>
+     *        <note>
      *        <p>
      *        Even if additional results can be retrieved, the request can return less results than
      *        <code>maxResults</code> or an empty array of results.
@@ -237,6 +247,9 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The maximum number of transaction events to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -248,7 +261,11 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </note>
      * 
-     * @return The maximum number of transaction events to list.</p> <note>
+     * @return The maximum number of transaction events to list.</p>
+     *         <p>
+     *         Default:<code>100</code>
+     *         </p>
+     *         <note>
      *         <p>
      *         Even if additional results can be retrieved, the request can return less results than
      *         <code>maxResults</code> or an empty array of results.
@@ -267,6 +284,9 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The maximum number of transaction events to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -279,7 +299,11 @@ public class ListTransactionEventsRequest extends com.amazonaws.AmazonWebService
      * </note>
      * 
      * @param maxResults
-     *        The maximum number of transaction events to list.</p> <note>
+     *        The maximum number of transaction events to list.</p>
+     *        <p>
+     *        Default:<code>100</code>
+     *        </p>
+     *        <note>
      *        <p>
      *        Even if additional results can be retrieved, the request can return less results than
      *        <code>maxResults</code> or an empty array of results.

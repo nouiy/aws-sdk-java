@@ -402,12 +402,14 @@ public class AWSMediaConvertAsyncClient extends AWSMediaConvertClient implements
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest request) {
 
         return describeEndpointsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(final DescribeEndpointsRequest request,
             final com.amazonaws.handlers.AsyncHandler<DescribeEndpointsRequest, DescribeEndpointsResult> asyncHandler) {
         final DescribeEndpointsRequest finalRequest = beforeClientExecution(request);

@@ -33,7 +33,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String resourceArn;
     /**
      * <p>
-     * Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See <a
+     * Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
      * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
      * IVS has no service-specific constraints beyond what is documented there.
@@ -83,13 +83,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See <a
+     * Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
      * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
      * IVS has no service-specific constraints beyond what is documented there.
      * </p>
      * 
-     * @return Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See
+     * @return Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See
      *         <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *         Resources</a> for more information, including restrictions that apply to tags and
      *         "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is
@@ -102,14 +102,14 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See <a
+     * Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
      * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
      * IVS has no service-specific constraints beyond what is documented there.
      * </p>
      * 
      * @param tagKeys
-     *        Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See
+     *        Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See
      *        <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *        Resources</a> for more information, including restrictions that apply to tags and
      *        "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is
@@ -127,7 +127,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See <a
+     * Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
      * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
      * IVS has no service-specific constraints beyond what is documented there.
@@ -139,7 +139,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See
+     *        Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See
      *        <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *        Resources</a> for more information, including restrictions that apply to tags and
      *        "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is
@@ -159,14 +159,14 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See <a
+     * Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
      * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
      * IVS has no service-specific constraints beyond what is documented there.
      * </p>
      * 
      * @param tagKeys
-     *        Array of tags to be removed. Array of maps, each of the form s<code>tring:string (key:value)</code>. See
+     *        Array of tags to be removed. Array of maps, each of the form <code>string:string (key:value)</code>. See
      *        <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *        Resources</a> for more information, including restrictions that apply to tags and
      *        "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is

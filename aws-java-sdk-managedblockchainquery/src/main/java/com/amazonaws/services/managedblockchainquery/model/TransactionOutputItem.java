@@ -46,6 +46,12 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.Date transactionTimestamp;
+    /**
+     * <p>
+     * Specifies whether to list transactions that have not reached Finality.
+     * </p>
+     */
+    private String confirmationStatus;
 
     /**
      * <p>
@@ -190,6 +196,65 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Specifies whether to list transactions that have not reached Finality.
+     * </p>
+     * 
+     * @param confirmationStatus
+     *        Specifies whether to list transactions that have not reached Finality.
+     * @see ConfirmationStatus
+     */
+
+    public void setConfirmationStatus(String confirmationStatus) {
+        this.confirmationStatus = confirmationStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to list transactions that have not reached Finality.
+     * </p>
+     * 
+     * @return Specifies whether to list transactions that have not reached Finality.
+     * @see ConfirmationStatus
+     */
+
+    public String getConfirmationStatus() {
+        return this.confirmationStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to list transactions that have not reached Finality.
+     * </p>
+     * 
+     * @param confirmationStatus
+     *        Specifies whether to list transactions that have not reached Finality.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfirmationStatus
+     */
+
+    public TransactionOutputItem withConfirmationStatus(String confirmationStatus) {
+        setConfirmationStatus(confirmationStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to list transactions that have not reached Finality.
+     * </p>
+     * 
+     * @param confirmationStatus
+     *        Specifies whether to list transactions that have not reached Finality.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfirmationStatus
+     */
+
+    public TransactionOutputItem withConfirmationStatus(ConfirmationStatus confirmationStatus) {
+        this.confirmationStatus = confirmationStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -206,7 +271,9 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
         if (getNetwork() != null)
             sb.append("Network: ").append(getNetwork()).append(",");
         if (getTransactionTimestamp() != null)
-            sb.append("TransactionTimestamp: ").append(getTransactionTimestamp());
+            sb.append("TransactionTimestamp: ").append(getTransactionTimestamp()).append(",");
+        if (getConfirmationStatus() != null)
+            sb.append("ConfirmationStatus: ").append(getConfirmationStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -233,6 +300,10 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
             return false;
         if (other.getTransactionTimestamp() != null && other.getTransactionTimestamp().equals(this.getTransactionTimestamp()) == false)
             return false;
+        if (other.getConfirmationStatus() == null ^ this.getConfirmationStatus() == null)
+            return false;
+        if (other.getConfirmationStatus() != null && other.getConfirmationStatus().equals(this.getConfirmationStatus()) == false)
+            return false;
         return true;
     }
 
@@ -244,6 +315,7 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getTransactionHash() == null) ? 0 : getTransactionHash().hashCode());
         hashCode = prime * hashCode + ((getNetwork() == null) ? 0 : getNetwork().hashCode());
         hashCode = prime * hashCode + ((getTransactionTimestamp() == null) ? 0 : getTransactionTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getConfirmationStatus() == null) ? 0 : getConfirmationStatus().hashCode());
         return hashCode;
     }
 

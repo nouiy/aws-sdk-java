@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ConfirmationStatus {
 
-    FINAL("FINAL");
+    FINAL("FINAL"),
+    NONFINAL("NONFINAL");
 
     private String value;
 

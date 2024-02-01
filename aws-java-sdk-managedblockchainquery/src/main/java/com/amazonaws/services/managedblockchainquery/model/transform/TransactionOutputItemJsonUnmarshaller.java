@@ -60,6 +60,10 @@ public class TransactionOutputItemJsonUnmarshaller implements Unmarshaller<Trans
                     context.nextToken();
                     transactionOutputItem.setTransactionTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("confirmationStatus", targetDepth)) {
+                    context.nextToken();
+                    transactionOutputItem.setConfirmationStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

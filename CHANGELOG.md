@@ -1,3 +1,24 @@
+# __1.12.650__ __2024-02-01__
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - This release includes support for broadcast-mixed audio description tracks.
+
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - Added CreateIdentityProvider and UpdateIdentityProvider details for new SAML IdP features
+
+## __Amazon Interactive Video Service__
+  - ### Features
+    - This release introduces a new resource Playback Restriction Policy which can be used to geo-restrict or domain-restrict channel stream playback when associated with a channel.  New APIs to support this resource were introduced in the form of Create/Delete/Get/Update/List.
+
+## __Amazon Managed Blockchain Query__
+  - ### Features
+    - This release adds support for transactions that have not reached finality. It also removes support for the status property from the response of the GetTransaction operation. You can use the confirmationStatus and executionStatus properties to determine the status of the transaction.
+
+## __Amazon Neptune Graph__
+  - ### Features
+    - Adding new APIs in SDK for Amazon Neptune Analytics. These APIs include operations to execute, cancel, list queries and get the graph summary.
+
 # __1.12.649__ __2024-01-31__
 ## __AWS CloudFormation__
   - ### Features

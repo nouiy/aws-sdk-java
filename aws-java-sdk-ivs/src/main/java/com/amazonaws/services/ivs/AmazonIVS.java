@@ -100,6 +100,12 @@ import com.amazonaws.services.ivs.model.*;
  * endpoints for more information.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * <b>Playback restriction policy</b> — Restricts playback by countries and/or origin sites. See the Playback
+ * Restriction Policy endpoints for more information.
+ * </p>
+ * </li>
  * </ul>
  * <p>
  * <b>Tagging</b>
@@ -226,72 +232,33 @@ import com.amazonaws.services.ivs.model.*;
  * </li>
  * </ul>
  * <p>
- * <b>StreamKey Endpoints</b>
+ * <b>Playback Restriction Policy Endpoints</b>
  * </p>
  * <ul>
  * <li>
  * <p>
- * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * <a>CreatePlaybackRestrictionPolicy</a> — Creates a new playback restriction policy, for constraining playback by
+ * countries and/or origins.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * <a>DeletePlaybackRestrictionPolicy</a> — Deletes the specified playback restriction policy
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * <a>GetPlaybackRestrictionPolicy</a> — Gets the specified playback restriction policy.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * <a>ListPlaybackRestrictionPolicies</a> — Gets summary information about playback restriction policies.
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Stream Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStreamSession</a> — Gets metadata on a specified stream.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
- * where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
- * in the AWS region where the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
- * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
- * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
- * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * <a>UpdatePlaybackRestrictionPolicy</a> — Updates a specified playback restriction policy.
  * </p>
  * </li>
  * </ul>
@@ -365,6 +332,76 @@ import com.amazonaws.services.ivs.model.*;
  * <li>
  * <p>
  * <a>DeleteRecordingConfiguration</a> — Deletes the recording configuration for the specified ARN.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Stream Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>GetStream</a> — Gets information about the active (live) stream on a specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamSession</a> — Gets metadata on a specified stream.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
+ * where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account,
+ * in the AWS region where the API request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopStream</a> — Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with
+ * <a>DeleteStreamKey</a> to prevent further streaming to a channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second
+ * per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend
+ * batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>StreamKey Endpoints</b>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>CreateStreamKey</a> — Creates a stream key, used to initiate a stream, for the specified channel ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStreamKey</a> — Gets stream key information for the specified ARN.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>BatchGetStreamKey</a> — Performs <a>GetStreamKey</a> on multiple ARNs simultaneously.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStreamKeys</a> — Gets summary information about stream keys for the specified channel.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteStreamKey</a> — Deletes the stream key for the specified ARN, so it can no longer be used to stream.
  * </p>
  * </li>
  * </ul>
@@ -460,6 +497,24 @@ public interface AmazonIVS {
      *      Documentation</a>
      */
     CreateChannelResult createChannel(CreateChannelRequest createChannelRequest);
+
+    /**
+     * <p>
+     * Creates a new playback restriction policy, for constraining playback by countries and/or origins.
+     * </p>
+     * 
+     * @param createPlaybackRestrictionPolicyRequest
+     * @return Result of the CreatePlaybackRestrictionPolicy operation returned by the service.
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ThrottlingException
+     * @throws ServiceQuotaExceededException
+     * @sample AmazonIVS.CreatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/CreatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePlaybackRestrictionPolicyResult createPlaybackRestrictionPolicy(CreatePlaybackRestrictionPolicyRequest createPlaybackRestrictionPolicyRequest);
 
     /**
      * <p>
@@ -560,6 +615,24 @@ public interface AmazonIVS {
 
     /**
      * <p>
+     * Deletes the specified playback restriction policy.
+     * </p>
+     * 
+     * @param deletePlaybackRestrictionPolicyRequest
+     * @return Result of the DeletePlaybackRestrictionPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ConflictException
+     * @sample AmazonIVS.DeletePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/DeletePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeletePlaybackRestrictionPolicyResult deletePlaybackRestrictionPolicy(DeletePlaybackRestrictionPolicyRequest deletePlaybackRestrictionPolicyRequest);
+
+    /**
+     * <p>
      * Deletes the recording configuration for the specified ARN.
      * </p>
      * <p>
@@ -634,6 +707,23 @@ public interface AmazonIVS {
      *      Documentation</a>
      */
     GetPlaybackKeyPairResult getPlaybackKeyPair(GetPlaybackKeyPairRequest getPlaybackKeyPairRequest);
+
+    /**
+     * <p>
+     * Gets the specified playback restriction policy.
+     * </p>
+     * 
+     * @param getPlaybackRestrictionPolicyRequest
+     * @return Result of the GetPlaybackRestrictionPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @sample AmazonIVS.GetPlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/GetPlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetPlaybackRestrictionPolicyResult getPlaybackRestrictionPolicy(GetPlaybackRestrictionPolicyRequest getPlaybackRestrictionPolicyRequest);
 
     /**
      * <p>
@@ -758,6 +848,23 @@ public interface AmazonIVS {
      *      Documentation</a>
      */
     ListPlaybackKeyPairsResult listPlaybackKeyPairs(ListPlaybackKeyPairsRequest listPlaybackKeyPairsRequest);
+
+    /**
+     * <p>
+     * Gets summary information about playback restriction policies.
+     * </p>
+     * 
+     * @param listPlaybackRestrictionPoliciesRequest
+     * @return Result of the ListPlaybackRestrictionPolicies operation returned by the service.
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ConflictException
+     * @sample AmazonIVS.ListPlaybackRestrictionPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/ListPlaybackRestrictionPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListPlaybackRestrictionPoliciesResult listPlaybackRestrictionPolicies(ListPlaybackRestrictionPoliciesRequest listPlaybackRestrictionPoliciesRequest);
 
     /**
      * <p>
@@ -960,6 +1067,24 @@ public interface AmazonIVS {
      *      Documentation</a>
      */
     UpdateChannelResult updateChannel(UpdateChannelRequest updateChannelRequest);
+
+    /**
+     * <p>
+     * Updates a specified playback restriction policy.
+     * </p>
+     * 
+     * @param updatePlaybackRestrictionPolicyRequest
+     * @return Result of the UpdatePlaybackRestrictionPolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ConflictException
+     * @sample AmazonIVS.UpdatePlaybackRestrictionPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/UpdatePlaybackRestrictionPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdatePlaybackRestrictionPolicyResult updatePlaybackRestrictionPolicy(UpdatePlaybackRestrictionPolicyRequest updatePlaybackRestrictionPolicyRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

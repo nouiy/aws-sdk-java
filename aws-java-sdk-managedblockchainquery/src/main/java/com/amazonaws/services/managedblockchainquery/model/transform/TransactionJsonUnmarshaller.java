@@ -76,10 +76,6 @@ public class TransactionJsonUnmarshaller implements Unmarshaller<Transaction, Js
                     context.nextToken();
                     transaction.setNumberOfTransactions(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
-                if (context.testExpression("status", targetDepth)) {
-                    context.nextToken();
-                    transaction.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("to", targetDepth)) {
                     context.nextToken();
                     transaction.setTo(context.getUnmarshaller(String.class).unmarshall(context));

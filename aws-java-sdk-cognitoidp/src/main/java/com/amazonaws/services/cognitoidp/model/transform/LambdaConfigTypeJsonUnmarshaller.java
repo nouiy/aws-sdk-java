@@ -84,13 +84,13 @@ public class LambdaConfigTypeJsonUnmarshaller implements Unmarshaller<LambdaConf
                     context.nextToken();
                     lambdaConfigType.setPreTokenGeneration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("PreTokenGenerationConfig", targetDepth)) {
-                    context.nextToken();
-                    lambdaConfigType.setPreTokenGenerationConfig(PreTokenGenerationVersionConfigTypeJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("UserMigration", targetDepth)) {
                     context.nextToken();
                     lambdaConfigType.setUserMigration(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PreTokenGenerationConfig", targetDepth)) {
+                    context.nextToken();
+                    lambdaConfigType.setPreTokenGenerationConfig(PreTokenGenerationVersionConfigTypeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("CustomSMSSender", targetDepth)) {
                     context.nextToken();

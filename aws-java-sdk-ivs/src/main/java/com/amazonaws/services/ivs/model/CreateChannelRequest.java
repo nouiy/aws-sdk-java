@@ -53,6 +53,13 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String name;
     /**
      * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     */
+    private String playbackRestrictionPolicyArn;
+    /**
+     * <p>
      * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
      * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
      * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
@@ -62,7 +69,8 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String preset;
     /**
      * <p>
-     * Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
+     * (empty string, recording is disabled).
      * </p>
      */
     private String recordingConfigurationArn;
@@ -310,6 +318,52 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     * 
+     * @param playbackRestrictionPolicyArn
+     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *        restriction. Default: "" (empty string, no playback restriction policy is applied).
+     */
+
+    public void setPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
+        this.playbackRestrictionPolicyArn = playbackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     * 
+     * @return Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *         restriction. Default: "" (empty string, no playback restriction policy is applied).
+     */
+
+    public String getPlaybackRestrictionPolicyArn() {
+        return this.playbackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     * 
+     * @param playbackRestrictionPolicyArn
+     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *        restriction. Default: "" (empty string, no playback restriction policy is applied).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChannelRequest withPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
+        setPlaybackRestrictionPolicyArn(playbackRestrictionPolicyArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * Optional transcode preset for the channel. This is selectable only for <code>ADVANCED_HD</code> and
      * <code>ADVANCED_SD</code> channel types. For those channel types, the default <code>preset</code> is
      * <code>HIGHER_BANDWIDTH_DELIVERY</code>. For other channel types (<code>BASIC</code> and <code>STANDARD</code>),
@@ -393,11 +447,13 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
+     * (empty string, recording is disabled).
      * </p>
      * 
      * @param recordingConfigurationArn
-     *        Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default:
+     *        "" (empty string, recording is disabled).
      */
 
     public void setRecordingConfigurationArn(String recordingConfigurationArn) {
@@ -406,10 +462,12 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
+     * (empty string, recording is disabled).
      * </p>
      * 
-     * @return Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     * @return Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording.
+     *         Default: "" (empty string, recording is disabled).
      */
 
     public String getRecordingConfigurationArn() {
@@ -418,11 +476,13 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
+     * (empty string, recording is disabled).
      * </p>
      * 
      * @param recordingConfigurationArn
-     *        Recording-configuration ARN. Default: "" (empty string, recording is disabled).
+     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default:
+     *        "" (empty string, recording is disabled).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -624,6 +684,8 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getPlaybackRestrictionPolicyArn() != null)
+            sb.append("PlaybackRestrictionPolicyArn: ").append(getPlaybackRestrictionPolicyArn()).append(",");
         if (getPreset() != null)
             sb.append("Preset: ").append(getPreset()).append(",");
         if (getRecordingConfigurationArn() != null)
@@ -662,6 +724,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getPlaybackRestrictionPolicyArn() == null ^ this.getPlaybackRestrictionPolicyArn() == null)
+            return false;
+        if (other.getPlaybackRestrictionPolicyArn() != null && other.getPlaybackRestrictionPolicyArn().equals(this.getPlaybackRestrictionPolicyArn()) == false)
+            return false;
         if (other.getPreset() == null ^ this.getPreset() == null)
             return false;
         if (other.getPreset() != null && other.getPreset().equals(this.getPreset()) == false)
@@ -690,6 +756,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getInsecureIngest() == null) ? 0 : getInsecureIngest().hashCode());
         hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPlaybackRestrictionPolicyArn() == null) ? 0 : getPlaybackRestrictionPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getPreset() == null) ? 0 : getPreset().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

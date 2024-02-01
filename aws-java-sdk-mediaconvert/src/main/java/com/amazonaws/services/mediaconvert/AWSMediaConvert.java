@@ -325,6 +325,7 @@ public interface AWSMediaConvert {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DescribeEndpoints" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     DescribeEndpointsResult describeEndpoints(DescribeEndpointsRequest describeEndpointsRequest);
 
     /**

@@ -43,8 +43,8 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
     private BlockchainInstant toBlockchainInstant;
     /**
      * <p>
-     * Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a descending
-     * order if the first page starts at <code>toTime</code>.
+     * The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will be
+     * ordered by <code>fromTime</code>.
      * </p>
      */
     private ListTransactionsSort sort;
@@ -58,6 +58,9 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The maximum number of transactions to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -70,6 +73,14 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * </note>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * This filter is used to include transactions in the response that haven't reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality"> <i>finality</i>
+     * </a>. Transactions that have reached finiality are always part of the response.
+     * </p>
+     */
+    private ConfirmationStatusFilter confirmationStatusFilter;
 
     /**
      * <p>
@@ -224,13 +235,13 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a descending
-     * order if the first page starts at <code>toTime</code>.
+     * The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will be
+     * ordered by <code>fromTime</code>.
      * </p>
      * 
      * @param sort
-     *        Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a
-     *        descending order if the first page starts at <code>toTime</code>.
+     *        The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will be
+     *        ordered by <code>fromTime</code>.
      */
 
     public void setSort(ListTransactionsSort sort) {
@@ -239,12 +250,12 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a descending
-     * order if the first page starts at <code>toTime</code>.
+     * The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will be
+     * ordered by <code>fromTime</code>.
      * </p>
      * 
-     * @return Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a
-     *         descending order if the first page starts at <code>toTime</code>.
+     * @return The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will
+     *         be ordered by <code>fromTime</code>.
      */
 
     public ListTransactionsSort getSort() {
@@ -253,13 +264,13 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a descending
-     * order if the first page starts at <code>toTime</code>.
+     * The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will be
+     * ordered by <code>fromTime</code>.
      * </p>
      * 
      * @param sort
-     *        Sorts items in an ascending order if the first page starts at <code>fromTime</code>. Sorts items in a
-     *        descending order if the first page starts at <code>toTime</code>.
+     *        The order by which the results will be sorted. If <code>ASCENNDING</code> is selected, the results will be
+     *        ordered by <code>fromTime</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,6 +323,9 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The maximum number of transactions to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -324,7 +338,11 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * </note>
      * 
      * @param maxResults
-     *        The maximum number of transactions to list.</p> <note>
+     *        The maximum number of transactions to list.</p>
+     *        <p>
+     *        Default:<code>100</code>
+     *        </p>
+     *        <note>
      *        <p>
      *        Even if additional results can be retrieved, the request can return less results than
      *        <code>maxResults</code> or an empty array of results.
@@ -343,6 +361,9 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The maximum number of transactions to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -354,7 +375,11 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </note>
      * 
-     * @return The maximum number of transactions to list.</p> <note>
+     * @return The maximum number of transactions to list.</p>
+     *         <p>
+     *         Default:<code>100</code>
+     *         </p>
+     *         <note>
      *         <p>
      *         Even if additional results can be retrieved, the request can return less results than
      *         <code>maxResults</code> or an empty array of results.
@@ -373,6 +398,9 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The maximum number of transactions to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
      * <note>
      * <p>
      * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
@@ -385,7 +413,11 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
      * </note>
      * 
      * @param maxResults
-     *        The maximum number of transactions to list.</p> <note>
+     *        The maximum number of transactions to list.</p>
+     *        <p>
+     *        Default:<code>100</code>
+     *        </p>
+     *        <note>
      *        <p>
      *        Even if additional results can be retrieved, the request can return less results than
      *        <code>maxResults</code> or an empty array of results.
@@ -399,6 +431,58 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     public ListTransactionsRequest withMaxResults(Integer maxResults) {
         setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This filter is used to include transactions in the response that haven't reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality"> <i>finality</i>
+     * </a>. Transactions that have reached finiality are always part of the response.
+     * </p>
+     * 
+     * @param confirmationStatusFilter
+     *        This filter is used to include transactions in the response that haven't reached <a
+     *        href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">
+     *        <i>finality</i> </a>. Transactions that have reached finiality are always part of the response.
+     */
+
+    public void setConfirmationStatusFilter(ConfirmationStatusFilter confirmationStatusFilter) {
+        this.confirmationStatusFilter = confirmationStatusFilter;
+    }
+
+    /**
+     * <p>
+     * This filter is used to include transactions in the response that haven't reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality"> <i>finality</i>
+     * </a>. Transactions that have reached finiality are always part of the response.
+     * </p>
+     * 
+     * @return This filter is used to include transactions in the response that haven't reached <a
+     *         href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">
+     *         <i>finality</i> </a>. Transactions that have reached finiality are always part of the response.
+     */
+
+    public ConfirmationStatusFilter getConfirmationStatusFilter() {
+        return this.confirmationStatusFilter;
+    }
+
+    /**
+     * <p>
+     * This filter is used to include transactions in the response that haven't reached <a
+     * href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality"> <i>finality</i>
+     * </a>. Transactions that have reached finiality are always part of the response.
+     * </p>
+     * 
+     * @param confirmationStatusFilter
+     *        This filter is used to include transactions in the response that haven't reached <a
+     *        href="https://docs.aws.amazon.com/managed-blockchain/latest/ambq-dg/key-concepts.html#finality">
+     *        <i>finality</i> </a>. Transactions that have reached finiality are always part of the response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListTransactionsRequest withConfirmationStatusFilter(ConfirmationStatusFilter confirmationStatusFilter) {
+        setConfirmationStatusFilter(confirmationStatusFilter);
         return this;
     }
 
@@ -427,7 +511,9 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getConfirmationStatusFilter() != null)
+            sb.append("ConfirmationStatusFilter: ").append(getConfirmationStatusFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -470,6 +556,10 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getConfirmationStatusFilter() == null ^ this.getConfirmationStatusFilter() == null)
+            return false;
+        if (other.getConfirmationStatusFilter() != null && other.getConfirmationStatusFilter().equals(this.getConfirmationStatusFilter()) == false)
+            return false;
         return true;
     }
 
@@ -485,6 +575,7 @@ public class ListTransactionsRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getSort() == null) ? 0 : getSort().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getConfirmationStatusFilter() == null) ? 0 : getConfirmationStatusFilter().hashCode());
         return hashCode;
     }
 

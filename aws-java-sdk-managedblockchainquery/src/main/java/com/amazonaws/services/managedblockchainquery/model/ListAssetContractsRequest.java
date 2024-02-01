@@ -41,6 +41,19 @@ public class ListAssetContractsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The maximum number of contracts to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
+     * <note>
+     * <p>
+     * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
+     * an empty array of results.
+     * </p>
+     * <p>
+     * To retrieve the next set of results, make another request with the returned <code>nextToken</code> value. The
+     * value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     * </p>
+     * </note>
      */
     private Integer maxResults;
 
@@ -128,9 +141,34 @@ public class ListAssetContractsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The maximum number of contracts to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
+     * <note>
+     * <p>
+     * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
+     * an empty array of results.
+     * </p>
+     * <p>
+     * To retrieve the next set of results, make another request with the returned <code>nextToken</code> value. The
+     * value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     * </p>
+     * </note>
      * 
      * @param maxResults
-     *        The maximum number of contracts to list.
+     *        The maximum number of contracts to list.</p>
+     *        <p>
+     *        Default:<code>100</code>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Even if additional results can be retrieved, the request can return less results than
+     *        <code>maxResults</code> or an empty array of results.
+     *        </p>
+     *        <p>
+     *        To retrieve the next set of results, make another request with the returned <code>nextToken</code> value.
+     *        The value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     *        </p>
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -141,8 +179,33 @@ public class ListAssetContractsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The maximum number of contracts to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
+     * <note>
+     * <p>
+     * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
+     * an empty array of results.
+     * </p>
+     * <p>
+     * To retrieve the next set of results, make another request with the returned <code>nextToken</code> value. The
+     * value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     * </p>
+     * </note>
      * 
-     * @return The maximum number of contracts to list.
+     * @return The maximum number of contracts to list.</p>
+     *         <p>
+     *         Default:<code>100</code>
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Even if additional results can be retrieved, the request can return less results than
+     *         <code>maxResults</code> or an empty array of results.
+     *         </p>
+     *         <p>
+     *         To retrieve the next set of results, make another request with the returned <code>nextToken</code> value.
+     *         The value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     *         </p>
      */
 
     public Integer getMaxResults() {
@@ -153,9 +216,34 @@ public class ListAssetContractsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The maximum number of contracts to list.
      * </p>
+     * <p>
+     * Default:<code>100</code>
+     * </p>
+     * <note>
+     * <p>
+     * Even if additional results can be retrieved, the request can return less results than <code>maxResults</code> or
+     * an empty array of results.
+     * </p>
+     * <p>
+     * To retrieve the next set of results, make another request with the returned <code>nextToken</code> value. The
+     * value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     * </p>
+     * </note>
      * 
      * @param maxResults
-     *        The maximum number of contracts to list.
+     *        The maximum number of contracts to list.</p>
+     *        <p>
+     *        Default:<code>100</code>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Even if additional results can be retrieved, the request can return less results than
+     *        <code>maxResults</code> or an empty array of results.
+     *        </p>
+     *        <p>
+     *        To retrieve the next set of results, make another request with the returned <code>nextToken</code> value.
+     *        The value of <code>nextToken</code> is <code>null</code> when there are no more results to return
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

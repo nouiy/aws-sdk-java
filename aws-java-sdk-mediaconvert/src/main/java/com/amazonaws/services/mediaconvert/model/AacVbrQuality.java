@@ -15,8 +15,7 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
- * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+ * VBR Quality Level - Only used if rate_control_mode is VBR.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AacVbrQuality {

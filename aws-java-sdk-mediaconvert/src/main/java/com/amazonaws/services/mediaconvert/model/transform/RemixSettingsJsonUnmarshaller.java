@@ -48,6 +48,14 @@ public class RemixSettingsJsonUnmarshaller implements Unmarshaller<RemixSettings
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("audioDescriptionAudioChannel", targetDepth)) {
+                    context.nextToken();
+                    remixSettings.setAudioDescriptionAudioChannel(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("audioDescriptionDataChannel", targetDepth)) {
+                    context.nextToken();
+                    remixSettings.setAudioDescriptionDataChannel(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("channelMapping", targetDepth)) {
                     context.nextToken();
                     remixSettings.setChannelMapping(ChannelMappingJsonUnmarshaller.getInstance().unmarshall(context));

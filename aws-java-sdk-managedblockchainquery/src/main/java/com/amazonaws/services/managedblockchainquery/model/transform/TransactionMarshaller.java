@@ -41,8 +41,6 @@ public class TransactionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionIndex").build();
     private static final MarshallingInfo<Long> NUMBEROFTRANSACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfTransactions").build();
-    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("status").build();
     private static final MarshallingInfo<String> TO_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("to").build();
     private static final MarshallingInfo<String> FROM_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -93,7 +91,6 @@ public class TransactionMarshaller {
             protocolMarshaller.marshall(transaction.getTransactionTimestamp(), TRANSACTIONTIMESTAMP_BINDING);
             protocolMarshaller.marshall(transaction.getTransactionIndex(), TRANSACTIONINDEX_BINDING);
             protocolMarshaller.marshall(transaction.getNumberOfTransactions(), NUMBEROFTRANSACTIONS_BINDING);
-            protocolMarshaller.marshall(transaction.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(transaction.getTo(), TO_BINDING);
             protocolMarshaller.marshall(transaction.getFrom(), FROM_BINDING);
             protocolMarshaller.marshall(transaction.getContractAddress(), CONTRACTADDRESS_BINDING);

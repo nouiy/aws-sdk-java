@@ -318,6 +318,7 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DescribeEndpoints" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest describeEndpointsRequest);
 
     /**
@@ -334,6 +335,7 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DescribeEndpoints" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest describeEndpointsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeEndpointsRequest, DescribeEndpointsResult> asyncHandler);
 

@@ -68,6 +68,10 @@ public class ChannelSummaryJsonUnmarshaller implements Unmarshaller<ChannelSumma
                     context.nextToken();
                     channelSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("playbackRestrictionPolicyArn", targetDepth)) {
+                    context.nextToken();
+                    channelSummary.setPlaybackRestrictionPolicyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("preset", targetDepth)) {
                     context.nextToken();
                     channelSummary.setPreset(context.getUnmarshaller(String.class).unmarshall(context));

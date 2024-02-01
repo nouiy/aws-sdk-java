@@ -299,7 +299,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
     private String defaultRedirectURI;
     /**
      * <p>
-     * The allowed OAuth flows.
+     * The OAuth grant types that you want your app client to generate. To create an app client that generates client
+     * credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth flow.
      * </p>
      * <dl>
      * <dt>code</dt>
@@ -2653,7 +2654,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The allowed OAuth flows.
+     * The OAuth grant types that you want your app client to generate. To create an app client that generates client
+     * credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth flow.
      * </p>
      * <dl>
      * <dt>code</dt>
@@ -2678,7 +2680,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </dd>
      * </dl>
      * 
-     * @return The allowed OAuth flows.</p>
+     * @return The OAuth grant types that you want your app client to generate. To create an app client that generates
+     *         client credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth
+     *         flow.</p>
      *         <dl>
      *         <dt>code</dt>
      *         <dd>
@@ -2709,7 +2713,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The allowed OAuth flows.
+     * The OAuth grant types that you want your app client to generate. To create an app client that generates client
+     * credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth flow.
      * </p>
      * <dl>
      * <dt>code</dt>
@@ -2735,7 +2740,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </dl>
      * 
      * @param allowedOAuthFlows
-     *        The allowed OAuth flows.</p>
+     *        The OAuth grant types that you want your app client to generate. To create an app client that generates
+     *        client credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth
+     *        flow.</p>
      *        <dl>
      *        <dt>code</dt>
      *        <dd>
@@ -2771,7 +2778,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The allowed OAuth flows.
+     * The OAuth grant types that you want your app client to generate. To create an app client that generates client
+     * credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth flow.
      * </p>
      * <dl>
      * <dt>code</dt>
@@ -2802,7 +2810,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param allowedOAuthFlows
-     *        The allowed OAuth flows.</p>
+     *        The OAuth grant types that you want your app client to generate. To create an app client that generates
+     *        client credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth
+     *        flow.</p>
      *        <dl>
      *        <dt>code</dt>
      *        <dd>
@@ -2840,7 +2850,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The allowed OAuth flows.
+     * The OAuth grant types that you want your app client to generate. To create an app client that generates client
+     * credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth flow.
      * </p>
      * <dl>
      * <dt>code</dt>
@@ -2866,7 +2877,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </dl>
      * 
      * @param allowedOAuthFlows
-     *        The allowed OAuth flows.</p>
+     *        The OAuth grant types that you want your app client to generate. To create an app client that generates
+     *        client credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth
+     *        flow.</p>
      *        <dl>
      *        <dt>code</dt>
      *        <dd>
@@ -2899,7 +2912,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The allowed OAuth flows.
+     * The OAuth grant types that you want your app client to generate. To create an app client that generates client
+     * credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth flow.
      * </p>
      * <dl>
      * <dt>code</dt>
@@ -2925,7 +2939,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </dl>
      * 
      * @param allowedOAuthFlows
-     *        The allowed OAuth flows.</p>
+     *        The OAuth grant types that you want your app client to generate. To create an app client that generates
+     *        client credentials grants, you must add <code>client_credentials</code> as the only allowed OAuth
+     *        flow.</p>
      *        <dl>
      *        <dt>code</dt>
      *        <dd>

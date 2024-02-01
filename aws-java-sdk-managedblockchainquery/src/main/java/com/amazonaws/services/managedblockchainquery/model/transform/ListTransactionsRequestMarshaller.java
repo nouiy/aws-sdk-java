@@ -41,6 +41,8 @@ public class ListTransactionsRequestMarshaller {
             .marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<StructuredPojo> CONFIRMATIONSTATUSFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("confirmationStatusFilter").build();
 
     private static final ListTransactionsRequestMarshaller instance = new ListTransactionsRequestMarshaller();
 
@@ -65,6 +67,7 @@ public class ListTransactionsRequestMarshaller {
             protocolMarshaller.marshall(listTransactionsRequest.getSort(), SORT_BINDING);
             protocolMarshaller.marshall(listTransactionsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listTransactionsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listTransactionsRequest.getConfirmationStatusFilter(), CONFIRMATIONSTATUSFILTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

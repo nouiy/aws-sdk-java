@@ -78,6 +78,7 @@ public class AbstractAWSMediaConvert implements AWSMediaConvert {
     }
 
     @Override
+    @Deprecated
     public DescribeEndpointsResult describeEndpoints(DescribeEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

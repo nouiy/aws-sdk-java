@@ -48,6 +48,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
     }
 
     @Override
+    public CreatePlaybackRestrictionPolicyResult createPlaybackRestrictionPolicy(CreatePlaybackRestrictionPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateRecordingConfigurationResult createRecordingConfiguration(CreateRecordingConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -68,6 +73,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
     }
 
     @Override
+    public DeletePlaybackRestrictionPolicyResult deletePlaybackRestrictionPolicy(DeletePlaybackRestrictionPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteRecordingConfigurationResult deleteRecordingConfiguration(DeleteRecordingConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -84,6 +94,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
 
     @Override
     public GetPlaybackKeyPairResult getPlaybackKeyPair(GetPlaybackKeyPairRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetPlaybackRestrictionPolicyResult getPlaybackRestrictionPolicy(GetPlaybackRestrictionPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -119,6 +134,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
 
     @Override
     public ListPlaybackKeyPairsResult listPlaybackKeyPairs(ListPlaybackKeyPairsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListPlaybackRestrictionPoliciesResult listPlaybackRestrictionPolicies(ListPlaybackRestrictionPoliciesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -174,6 +194,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
 
     @Override
     public UpdateChannelResult updateChannel(UpdateChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePlaybackRestrictionPolicyResult updatePlaybackRestrictionPolicy(UpdatePlaybackRestrictionPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

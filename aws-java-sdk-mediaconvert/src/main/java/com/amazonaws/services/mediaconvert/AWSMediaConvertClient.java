@@ -849,6 +849,7 @@ public class AWSMediaConvertClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeEndpointsResult describeEndpoints(DescribeEndpointsRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeEndpoints(request);

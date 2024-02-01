@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateChannelResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Object specifying the updated channel.
+     * </p>
+     */
     private Channel channel;
 
     /**
+     * <p>
+     * Object specifying the updated channel.
+     * </p>
+     * 
      * @param channel
+     *        Object specifying the updated channel.
      */
 
     public void setChannel(Channel channel) {
@@ -34,7 +44,11 @@ public class UpdateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * @return
+     * <p>
+     * Object specifying the updated channel.
+     * </p>
+     * 
+     * @return Object specifying the updated channel.
      */
 
     public Channel getChannel() {
@@ -42,7 +56,12 @@ public class UpdateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * Object specifying the updated channel.
+     * </p>
+     * 
      * @param channel
+     *        Object specifying the updated channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -41,6 +41,8 @@ public class ChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMode").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> PLAYBACKRESTRICTIONPOLICYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("playbackRestrictionPolicyArn").build();
     private static final MarshallingInfo<String> PLAYBACKURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("playbackUrl").build();
     private static final MarshallingInfo<String> PRESET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -74,6 +76,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getInsecureIngest(), INSECUREINGEST_BINDING);
             protocolMarshaller.marshall(channel.getLatencyMode(), LATENCYMODE_BINDING);
             protocolMarshaller.marshall(channel.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(channel.getPlaybackRestrictionPolicyArn(), PLAYBACKRESTRICTIONPOLICYARN_BINDING);
             protocolMarshaller.marshall(channel.getPlaybackUrl(), PLAYBACKURL_BINDING);
             protocolMarshaller.marshall(channel.getPreset(), PRESET_BINDING);
             protocolMarshaller.marshall(channel.getRecordingConfigurationArn(), RECORDINGCONFIGURATIONARN_BINDING);

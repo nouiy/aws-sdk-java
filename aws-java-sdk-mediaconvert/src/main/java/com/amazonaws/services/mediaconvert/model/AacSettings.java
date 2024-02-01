@@ -47,12 +47,7 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
      * rate. Default values depend on Bitrate control mode and Profile.
      */
     private Integer bitrate;
-    /**
-     * Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable: Keep the
-     * default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or HEV2. HEV1 (AAC-HE
-     * v1) adds spectral band replication to improve speech audio at low bitrates. HEV2 (AAC-HE v2) adds parametric
-     * stereo, which optimizes for encoding stereo audio at very low bitrates.
-     */
+    /** AAC Profile. */
     private String codecProfile;
     /**
      * The Coding mode that you specify determines the number of audio channels and the audio channel layout metadata in
@@ -63,11 +58,7 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
      * Ls, Rs, LFE.
      */
     private String codingMode;
-    /**
-     * Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be equal to
-     * the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output bitrate will vary
-     * according to your audio content and the value that you choose for Bitrate quality.
-     */
+    /** Rate Control Mode. */
     private String rateControlMode;
     /**
      * Enables LATM/LOAS AAC output. Note that if you use LATM/LOAS AAC in an output, you must choose "No container" for
@@ -75,17 +66,17 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private String rawFormat;
     /**
-     * Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and Coding
-     * mode that you select. For a list of supported sample rates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     * Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select. The
+     * following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode 1.0, 2.0, and
+     * Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC Profile, Coding mode 5.1:
+     * 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix: 22050, 24000, 32000, 44100, 48000. *
+     * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. * HEV2 Profile, Coding mode 2.0: 22050, 24000,
+     * 32000, 44100, 48000.
      */
     private Integer sampleRate;
     /** Use MPEG-2 AAC instead of MPEG-4 AAC audio for raw or MPEG-2 Transport Stream containers. */
     private String specification;
-    /**
-     * Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
-     */
+    /** VBR Quality Level - Only used if rate_control_mode is VBR. */
     private String vbrQuality;
 
     /**
@@ -246,16 +237,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable: Keep the
-     * default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or HEV2. HEV1 (AAC-HE
-     * v1) adds spectral band replication to improve speech audio at low bitrates. HEV2 (AAC-HE v2) adds parametric
-     * stereo, which optimizes for encoding stereo audio at very low bitrates.
+     * AAC Profile.
      * 
      * @param codecProfile
-     *        Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable:
-     *        Keep the default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or
-     *        HEV2. HEV1 (AAC-HE v1) adds spectral band replication to improve speech audio at low bitrates. HEV2
-     *        (AAC-HE v2) adds parametric stereo, which optimizes for encoding stereo audio at very low bitrates.
+     *        AAC Profile.
      * @see AacCodecProfile
      */
 
@@ -264,15 +249,9 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable: Keep the
-     * default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or HEV2. HEV1 (AAC-HE
-     * v1) adds spectral band replication to improve speech audio at low bitrates. HEV2 (AAC-HE v2) adds parametric
-     * stereo, which optimizes for encoding stereo audio at very low bitrates.
+     * AAC Profile.
      * 
-     * @return Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable:
-     *         Keep the default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or
-     *         HEV2. HEV1 (AAC-HE v1) adds spectral band replication to improve speech audio at low bitrates. HEV2
-     *         (AAC-HE v2) adds parametric stereo, which optimizes for encoding stereo audio at very low bitrates.
+     * @return AAC Profile.
      * @see AacCodecProfile
      */
 
@@ -281,16 +260,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable: Keep the
-     * default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or HEV2. HEV1 (AAC-HE
-     * v1) adds spectral band replication to improve speech audio at low bitrates. HEV2 (AAC-HE v2) adds parametric
-     * stereo, which optimizes for encoding stereo audio at very low bitrates.
+     * AAC Profile.
      * 
      * @param codecProfile
-     *        Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable:
-     *        Keep the default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or
-     *        HEV2. HEV1 (AAC-HE v1) adds spectral band replication to improve speech audio at low bitrates. HEV2
-     *        (AAC-HE v2) adds parametric stereo, which optimizes for encoding stereo audio at very low bitrates.
+     *        AAC Profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AacCodecProfile
      */
@@ -301,16 +274,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable: Keep the
-     * default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or HEV2. HEV1 (AAC-HE
-     * v1) adds spectral band replication to improve speech audio at low bitrates. HEV2 (AAC-HE v2) adds parametric
-     * stereo, which optimizes for encoding stereo audio at very low bitrates.
+     * AAC Profile.
      * 
      * @param codecProfile
-     *        Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable:
-     *        Keep the default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or
-     *        HEV2. HEV1 (AAC-HE v1) adds spectral band replication to improve speech audio at low bitrates. HEV2
-     *        (AAC-HE v2) adds parametric stereo, which optimizes for encoding stereo audio at very low bitrates.
+     *        AAC Profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AacCodecProfile
      */
@@ -412,14 +379,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be equal to
-     * the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output bitrate will vary
-     * according to your audio content and the value that you choose for Bitrate quality.
+     * Rate Control Mode.
      * 
      * @param rateControlMode
-     *        Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be
-     *        equal to the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output
-     *        bitrate will vary according to your audio content and the value that you choose for Bitrate quality.
+     *        Rate Control Mode.
      * @see AacRateControlMode
      */
 
@@ -428,13 +391,9 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be equal to
-     * the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output bitrate will vary
-     * according to your audio content and the value that you choose for Bitrate quality.
+     * Rate Control Mode.
      * 
-     * @return Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be
-     *         equal to the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output
-     *         bitrate will vary according to your audio content and the value that you choose for Bitrate quality.
+     * @return Rate Control Mode.
      * @see AacRateControlMode
      */
 
@@ -443,14 +402,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be equal to
-     * the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output bitrate will vary
-     * according to your audio content and the value that you choose for Bitrate quality.
+     * Rate Control Mode.
      * 
      * @param rateControlMode
-     *        Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be
-     *        equal to the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output
-     *        bitrate will vary according to your audio content and the value that you choose for Bitrate quality.
+     *        Rate Control Mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AacRateControlMode
      */
@@ -461,14 +416,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be equal to
-     * the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output bitrate will vary
-     * according to your audio content and the value that you choose for Bitrate quality.
+     * Rate Control Mode.
      * 
      * @param rateControlMode
-     *        Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be
-     *        equal to the value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output
-     *        bitrate will vary according to your audio content and the value that you choose for Bitrate quality.
+     *        Rate Control Mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AacRateControlMode
      */
@@ -538,14 +489,20 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and Coding
-     * mode that you select. For a list of supported sample rates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     * Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select. The
+     * following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode 1.0, 2.0, and
+     * Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC Profile, Coding mode 5.1:
+     * 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix: 22050, 24000, 32000, 44100, 48000. *
+     * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. * HEV2 Profile, Coding mode 2.0: 22050, 24000,
+     * 32000, 44100, 48000.
      * 
      * @param sampleRate
-     *        Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and
-     *        Coding mode that you select. For a list of supported sample rates, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     *        Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select.
+     *        The following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode
+     *        1.0, 2.0, and Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC
+     *        Profile, Coding mode 5.1: 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix:
+     *        22050, 24000, 32000, 44100, 48000. * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. *
+     *        HEV2 Profile, Coding mode 2.0: 22050, 24000, 32000, 44100, 48000.
      */
 
     public void setSampleRate(Integer sampleRate) {
@@ -553,13 +510,19 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and Coding
-     * mode that you select. For a list of supported sample rates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     * Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select. The
+     * following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode 1.0, 2.0, and
+     * Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC Profile, Coding mode 5.1:
+     * 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix: 22050, 24000, 32000, 44100, 48000. *
+     * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. * HEV2 Profile, Coding mode 2.0: 22050, 24000,
+     * 32000, 44100, 48000.
      * 
-     * @return Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and
-     *         Coding mode that you select. For a list of supported sample rates, see:
-     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     * @return Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select.
+     *         The following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode
+     *         1.0, 2.0, and Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC
+     *         Profile, Coding mode 5.1: 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix:
+     *         22050, 24000, 32000, 44100, 48000. * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. *
+     *         HEV2 Profile, Coding mode 2.0: 22050, 24000, 32000, 44100, 48000.
      */
 
     public Integer getSampleRate() {
@@ -567,14 +530,20 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and Coding
-     * mode that you select. For a list of supported sample rates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     * Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select. The
+     * following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode 1.0, 2.0, and
+     * Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC Profile, Coding mode 5.1:
+     * 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix: 22050, 24000, 32000, 44100, 48000. *
+     * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. * HEV2 Profile, Coding mode 2.0: 22050, 24000,
+     * 32000, 44100, 48000.
      * 
      * @param sampleRate
-     *        Specify the AAC sample rate in samples per second (Hz). Valid sample rates depend on the AAC profile and
-     *        Coding mode that you select. For a list of supported sample rates, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html
+     *        Specify the Sample rate in Hz. Valid sample rates depend on the Profile and Coding mode that you select.
+     *        The following list shows valid sample rates for each Profile and Coding mode. * LC Profile, Coding mode
+     *        1.0, 2.0, and Receiver Mix: 8000, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 88200, 96000. * LC
+     *        Profile, Coding mode 5.1: 32000, 44100, 48000, 96000. * HEV1 Profile, Coding mode 1.0 and Receiver Mix:
+     *        22050, 24000, 32000, 44100, 48000. * HEV1 Profile, Coding mode 2.0 and 5.1: 32000, 44100, 48000, 96000. *
+     *        HEV2 Profile, Coding mode 2.0: 22050, 24000, 32000, 44100, 48000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -635,12 +604,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     * VBR Quality Level - Only used if rate_control_mode is VBR.
      * 
      * @param vbrQuality
-     *        Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     *        VBR Quality Level - Only used if rate_control_mode is VBR.
      * @see AacVbrQuality
      */
 
@@ -649,11 +616,9 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     * VBR Quality Level - Only used if rate_control_mode is VBR.
      * 
-     * @return Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates,
-     *         see: https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     * @return VBR Quality Level - Only used if rate_control_mode is VBR.
      * @see AacVbrQuality
      */
 
@@ -662,12 +627,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     * VBR Quality Level - Only used if rate_control_mode is VBR.
      * 
      * @param vbrQuality
-     *        Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     *        VBR Quality Level - Only used if rate_control_mode is VBR.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AacVbrQuality
      */
@@ -678,12 +641,10 @@ public class AacSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     * VBR Quality Level - Only used if rate_control_mode is VBR.
      * 
      * @param vbrQuality
-     *        Specify the quality of your variable bitrate (VBR) AAC audio. For a list of approximate VBR bitrates, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/aac-support.html#aac_vbr
+     *        VBR Quality Level - Only used if rate_control_mode is VBR.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AacVbrQuality
      */

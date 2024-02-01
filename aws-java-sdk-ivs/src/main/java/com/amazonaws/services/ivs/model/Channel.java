@@ -67,6 +67,13 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     */
+    private String playbackRestrictionPolicyArn;
+    /**
+     * <p>
      * Channel playback URL.
      * </p>
      */
@@ -82,7 +89,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String preset;
     /**
      * <p>
-     * Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: ""
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
      * (empty string, recording is disabled).
      * </p>
      */
@@ -415,6 +422,52 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     * 
+     * @param playbackRestrictionPolicyArn
+     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *        restriction. Default: "" (empty string, no playback restriction policy is applied).
+     */
+
+    public void setPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
+        this.playbackRestrictionPolicyArn = playbackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     * 
+     * @return Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *         restriction. Default: "" (empty string, no playback restriction policy is applied).
+     */
+
+    public String getPlaybackRestrictionPolicyArn() {
+        return this.playbackRestrictionPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback restriction.
+     * Default: "" (empty string, no playback restriction policy is applied).
+     * </p>
+     * 
+     * @param playbackRestrictionPolicyArn
+     *        Playback-restriction-policy ARN. A valid ARN value here both specifies the ARN and enables playback
+     *        restriction. Default: "" (empty string, no playback restriction policy is applied).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withPlaybackRestrictionPolicyArn(String playbackRestrictionPolicyArn) {
+        setPlaybackRestrictionPolicyArn(playbackRestrictionPolicyArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * Channel playback URL.
      * </p>
      * 
@@ -538,13 +591,13 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: ""
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
      * (empty string, recording is disabled).
      * </p>
      * 
      * @param recordingConfigurationArn
-     *        Recording-configuration ARN. A value other than an empty string indicates that recording is enabled.
-     *        Default: "" (empty string, recording is disabled).
+     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default:
+     *        "" (empty string, recording is disabled).
      */
 
     public void setRecordingConfigurationArn(String recordingConfigurationArn) {
@@ -553,11 +606,11 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: ""
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
      * (empty string, recording is disabled).
      * </p>
      * 
-     * @return Recording-configuration ARN. A value other than an empty string indicates that recording is enabled.
+     * @return Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording.
      *         Default: "" (empty string, recording is disabled).
      */
 
@@ -567,13 +620,13 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: ""
+     * Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default: ""
      * (empty string, recording is disabled).
      * </p>
      * 
      * @param recordingConfigurationArn
-     *        Recording-configuration ARN. A value other than an empty string indicates that recording is enabled.
-     *        Default: "" (empty string, recording is disabled).
+     *        Recording-configuration ARN. A valid ARN value here both specifies the ARN and enables recording. Default:
+     *        "" (empty string, recording is disabled).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -783,6 +836,8 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getPlaybackRestrictionPolicyArn() != null)
+            sb.append("PlaybackRestrictionPolicyArn: ").append(getPlaybackRestrictionPolicyArn()).append(",");
         if (getPlaybackUrl() != null)
             sb.append("PlaybackUrl: ").append(getPlaybackUrl()).append(",");
         if (getPreset() != null)
@@ -831,6 +886,10 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getPlaybackRestrictionPolicyArn() == null ^ this.getPlaybackRestrictionPolicyArn() == null)
+            return false;
+        if (other.getPlaybackRestrictionPolicyArn() != null && other.getPlaybackRestrictionPolicyArn().equals(this.getPlaybackRestrictionPolicyArn()) == false)
+            return false;
         if (other.getPlaybackUrl() == null ^ this.getPlaybackUrl() == null)
             return false;
         if (other.getPlaybackUrl() != null && other.getPlaybackUrl().equals(this.getPlaybackUrl()) == false)
@@ -865,6 +924,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getInsecureIngest() == null) ? 0 : getInsecureIngest().hashCode());
         hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPlaybackRestrictionPolicyArn() == null) ? 0 : getPlaybackRestrictionPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
         hashCode = prime * hashCode + ((getPreset() == null) ? 0 : getPreset().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());

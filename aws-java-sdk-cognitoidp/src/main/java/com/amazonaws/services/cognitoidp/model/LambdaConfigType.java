@@ -92,17 +92,17 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
     private String preTokenGeneration;
     /**
      * <p>
+     * The user migration Lambda config type.
+     * </p>
+     */
+    private String userMigration;
+    /**
+     * <p>
      * The detailed configuration of a pre token generation trigger. If you also set an ARN in
      * <code>PreTokenGeneration</code>, its value must be identical to <code>PreTokenGenerationConfig</code>.
      * </p>
      */
     private PreTokenGenerationVersionConfigType preTokenGenerationConfig;
-    /**
-     * <p>
-     * The user migration Lambda config type.
-     * </p>
-     */
-    private String userMigration;
     /**
      * <p>
      * A custom SMS sender Lambda trigger.
@@ -531,6 +531,46 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * The user migration Lambda config type.
+     * </p>
+     * 
+     * @param userMigration
+     *        The user migration Lambda config type.
+     */
+
+    public void setUserMigration(String userMigration) {
+        this.userMigration = userMigration;
+    }
+
+    /**
+     * <p>
+     * The user migration Lambda config type.
+     * </p>
+     * 
+     * @return The user migration Lambda config type.
+     */
+
+    public String getUserMigration() {
+        return this.userMigration;
+    }
+
+    /**
+     * <p>
+     * The user migration Lambda config type.
+     * </p>
+     * 
+     * @param userMigration
+     *        The user migration Lambda config type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LambdaConfigType withUserMigration(String userMigration) {
+        setUserMigration(userMigration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The detailed configuration of a pre token generation trigger. If you also set an ARN in
      * <code>PreTokenGeneration</code>, its value must be identical to <code>PreTokenGenerationConfig</code>.
      * </p>
@@ -572,46 +612,6 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     public LambdaConfigType withPreTokenGenerationConfig(PreTokenGenerationVersionConfigType preTokenGenerationConfig) {
         setPreTokenGenerationConfig(preTokenGenerationConfig);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The user migration Lambda config type.
-     * </p>
-     * 
-     * @param userMigration
-     *        The user migration Lambda config type.
-     */
-
-    public void setUserMigration(String userMigration) {
-        this.userMigration = userMigration;
-    }
-
-    /**
-     * <p>
-     * The user migration Lambda config type.
-     * </p>
-     * 
-     * @return The user migration Lambda config type.
-     */
-
-    public String getUserMigration() {
-        return this.userMigration;
-    }
-
-    /**
-     * <p>
-     * The user migration Lambda config type.
-     * </p>
-     * 
-     * @param userMigration
-     *        The user migration Lambda config type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public LambdaConfigType withUserMigration(String userMigration) {
-        setUserMigration(userMigration);
         return this;
     }
 
@@ -777,10 +777,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
             sb.append("VerifyAuthChallengeResponse: ").append(getVerifyAuthChallengeResponse()).append(",");
         if (getPreTokenGeneration() != null)
             sb.append("PreTokenGeneration: ").append(getPreTokenGeneration()).append(",");
-        if (getPreTokenGenerationConfig() != null)
-            sb.append("PreTokenGenerationConfig: ").append(getPreTokenGenerationConfig()).append(",");
         if (getUserMigration() != null)
             sb.append("UserMigration: ").append(getUserMigration()).append(",");
+        if (getPreTokenGenerationConfig() != null)
+            sb.append("PreTokenGenerationConfig: ").append(getPreTokenGenerationConfig()).append(",");
         if (getCustomSMSSender() != null)
             sb.append("CustomSMSSender: ").append(getCustomSMSSender()).append(",");
         if (getCustomEmailSender() != null)
@@ -837,13 +837,13 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getPreTokenGeneration() != null && other.getPreTokenGeneration().equals(this.getPreTokenGeneration()) == false)
             return false;
-        if (other.getPreTokenGenerationConfig() == null ^ this.getPreTokenGenerationConfig() == null)
-            return false;
-        if (other.getPreTokenGenerationConfig() != null && other.getPreTokenGenerationConfig().equals(this.getPreTokenGenerationConfig()) == false)
-            return false;
         if (other.getUserMigration() == null ^ this.getUserMigration() == null)
             return false;
         if (other.getUserMigration() != null && other.getUserMigration().equals(this.getUserMigration()) == false)
+            return false;
+        if (other.getPreTokenGenerationConfig() == null ^ this.getPreTokenGenerationConfig() == null)
+            return false;
+        if (other.getPreTokenGenerationConfig() != null && other.getPreTokenGenerationConfig().equals(this.getPreTokenGenerationConfig()) == false)
             return false;
         if (other.getCustomSMSSender() == null ^ this.getCustomSMSSender() == null)
             return false;
@@ -874,8 +874,8 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getCreateAuthChallenge() == null) ? 0 : getCreateAuthChallenge().hashCode());
         hashCode = prime * hashCode + ((getVerifyAuthChallengeResponse() == null) ? 0 : getVerifyAuthChallengeResponse().hashCode());
         hashCode = prime * hashCode + ((getPreTokenGeneration() == null) ? 0 : getPreTokenGeneration().hashCode());
-        hashCode = prime * hashCode + ((getPreTokenGenerationConfig() == null) ? 0 : getPreTokenGenerationConfig().hashCode());
         hashCode = prime * hashCode + ((getUserMigration() == null) ? 0 : getUserMigration().hashCode());
+        hashCode = prime * hashCode + ((getPreTokenGenerationConfig() == null) ? 0 : getPreTokenGenerationConfig().hashCode());
         hashCode = prime * hashCode + ((getCustomSMSSender() == null) ? 0 : getCustomSMSSender().hashCode());
         hashCode = prime * hashCode + ((getCustomEmailSender() == null) ? 0 : getCustomEmailSender().hashCode());
         hashCode = prime * hashCode + ((getKMSKeyID() == null) ? 0 : getKMSKeyID().hashCode());
