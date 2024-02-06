@@ -211,6 +211,33 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
 
     /**
      * <p>
+     * Cancels a pending configuration change on an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param cancelDomainConfigChangeRequest
+     * @return A Java Future containing the result of the CancelDomainConfigChange operation returned by the service.
+     * @sample AmazonOpenSearchAsync.CancelDomainConfigChange
+     */
+    java.util.concurrent.Future<CancelDomainConfigChangeResult> cancelDomainConfigChangeAsync(CancelDomainConfigChangeRequest cancelDomainConfigChangeRequest);
+
+    /**
+     * <p>
+     * Cancels a pending configuration change on an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param cancelDomainConfigChangeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelDomainConfigChange operation returned by the service.
+     * @sample AmazonOpenSearchAsyncHandler.CancelDomainConfigChange
+     */
+    java.util.concurrent.Future<CancelDomainConfigChangeResult> cancelDomainConfigChangeAsync(CancelDomainConfigChangeRequest cancelDomainConfigChangeRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelDomainConfigChangeRequest, CancelDomainConfigChangeResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels a scheduled service software update for an Amazon OpenSearch Service domain. You can only perform this
      * operation before the <code>AutomatedUpdateDate</code> and when the domain's <code>UpdateStatus</code> is
      * <code>PENDING_UPDATE</code>. For more information, see <a

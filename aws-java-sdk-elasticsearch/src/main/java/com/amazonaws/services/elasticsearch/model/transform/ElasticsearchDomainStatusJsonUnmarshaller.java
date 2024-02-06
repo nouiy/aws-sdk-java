@@ -151,6 +151,17 @@ public class ElasticsearchDomainStatusJsonUnmarshaller implements Unmarshaller<E
                     context.nextToken();
                     elasticsearchDomainStatus.setChangeProgressDetails(ChangeProgressDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DomainProcessingStatus", targetDepth)) {
+                    context.nextToken();
+                    elasticsearchDomainStatus.setDomainProcessingStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ModifyingProperties", targetDepth)) {
+                    context.nextToken();
+                    elasticsearchDomainStatus.setModifyingProperties(new ListUnmarshaller<ModifyingProperties>(ModifyingPropertiesJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

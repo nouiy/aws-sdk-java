@@ -56,6 +56,22 @@ public class ChangeProgressDetailsJsonUnmarshaller implements Unmarshaller<Chang
                     context.nextToken();
                     changeProgressDetails.setMessage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ConfigChangeStatus", targetDepth)) {
+                    context.nextToken();
+                    changeProgressDetails.setConfigChangeStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StartTime", targetDepth)) {
+                    context.nextToken();
+                    changeProgressDetails.setStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LastUpdatedTime", targetDepth)) {
+                    context.nextToken();
+                    changeProgressDetails.setLastUpdatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("InitiatedBy", targetDepth)) {
+                    context.nextToken();
+                    changeProgressDetails.setInitiatedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

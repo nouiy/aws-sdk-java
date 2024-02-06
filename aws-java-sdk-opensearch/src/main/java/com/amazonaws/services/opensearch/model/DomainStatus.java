@@ -212,6 +212,18 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SoftwareUpdateOptions softwareUpdateOptions;
+    /**
+     * <p>
+     * The status of any changes that are currently in progress for the domain.
+     * </p>
+     */
+    private String domainProcessingStatus;
+    /**
+     * <p>
+     * Information about the domain properties that are currently being modified.
+     * </p>
+     */
+    private java.util.List<ModifyingProperties> modifyingProperties;
 
     /**
      * <p>
@@ -1611,6 +1623,135 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of any changes that are currently in progress for the domain.
+     * </p>
+     * 
+     * @param domainProcessingStatus
+     *        The status of any changes that are currently in progress for the domain.
+     * @see DomainProcessingStatusType
+     */
+
+    public void setDomainProcessingStatus(String domainProcessingStatus) {
+        this.domainProcessingStatus = domainProcessingStatus;
+    }
+
+    /**
+     * <p>
+     * The status of any changes that are currently in progress for the domain.
+     * </p>
+     * 
+     * @return The status of any changes that are currently in progress for the domain.
+     * @see DomainProcessingStatusType
+     */
+
+    public String getDomainProcessingStatus() {
+        return this.domainProcessingStatus;
+    }
+
+    /**
+     * <p>
+     * The status of any changes that are currently in progress for the domain.
+     * </p>
+     * 
+     * @param domainProcessingStatus
+     *        The status of any changes that are currently in progress for the domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DomainProcessingStatusType
+     */
+
+    public DomainStatus withDomainProcessingStatus(String domainProcessingStatus) {
+        setDomainProcessingStatus(domainProcessingStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of any changes that are currently in progress for the domain.
+     * </p>
+     * 
+     * @param domainProcessingStatus
+     *        The status of any changes that are currently in progress for the domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DomainProcessingStatusType
+     */
+
+    public DomainStatus withDomainProcessingStatus(DomainProcessingStatusType domainProcessingStatus) {
+        this.domainProcessingStatus = domainProcessingStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the domain properties that are currently being modified.
+     * </p>
+     * 
+     * @return Information about the domain properties that are currently being modified.
+     */
+
+    public java.util.List<ModifyingProperties> getModifyingProperties() {
+        return modifyingProperties;
+    }
+
+    /**
+     * <p>
+     * Information about the domain properties that are currently being modified.
+     * </p>
+     * 
+     * @param modifyingProperties
+     *        Information about the domain properties that are currently being modified.
+     */
+
+    public void setModifyingProperties(java.util.Collection<ModifyingProperties> modifyingProperties) {
+        if (modifyingProperties == null) {
+            this.modifyingProperties = null;
+            return;
+        }
+
+        this.modifyingProperties = new java.util.ArrayList<ModifyingProperties>(modifyingProperties);
+    }
+
+    /**
+     * <p>
+     * Information about the domain properties that are currently being modified.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setModifyingProperties(java.util.Collection)} or {@link #withModifyingProperties(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param modifyingProperties
+     *        Information about the domain properties that are currently being modified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainStatus withModifyingProperties(ModifyingProperties... modifyingProperties) {
+        if (this.modifyingProperties == null) {
+            setModifyingProperties(new java.util.ArrayList<ModifyingProperties>(modifyingProperties.length));
+        }
+        for (ModifyingProperties ele : modifyingProperties) {
+            this.modifyingProperties.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the domain properties that are currently being modified.
+     * </p>
+     * 
+     * @param modifyingProperties
+     *        Information about the domain properties that are currently being modified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainStatus withModifyingProperties(java.util.Collection<ModifyingProperties> modifyingProperties) {
+        setModifyingProperties(modifyingProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1679,7 +1820,11 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
         if (getOffPeakWindowOptions() != null)
             sb.append("OffPeakWindowOptions: ").append(getOffPeakWindowOptions()).append(",");
         if (getSoftwareUpdateOptions() != null)
-            sb.append("SoftwareUpdateOptions: ").append(getSoftwareUpdateOptions());
+            sb.append("SoftwareUpdateOptions: ").append(getSoftwareUpdateOptions()).append(",");
+        if (getDomainProcessingStatus() != null)
+            sb.append("DomainProcessingStatus: ").append(getDomainProcessingStatus()).append(",");
+        if (getModifyingProperties() != null)
+            sb.append("ModifyingProperties: ").append(getModifyingProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -1810,6 +1955,14 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSoftwareUpdateOptions() != null && other.getSoftwareUpdateOptions().equals(this.getSoftwareUpdateOptions()) == false)
             return false;
+        if (other.getDomainProcessingStatus() == null ^ this.getDomainProcessingStatus() == null)
+            return false;
+        if (other.getDomainProcessingStatus() != null && other.getDomainProcessingStatus().equals(this.getDomainProcessingStatus()) == false)
+            return false;
+        if (other.getModifyingProperties() == null ^ this.getModifyingProperties() == null)
+            return false;
+        if (other.getModifyingProperties() != null && other.getModifyingProperties().equals(this.getModifyingProperties()) == false)
+            return false;
         return true;
     }
 
@@ -1847,6 +2000,8 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getChangeProgressDetails() == null) ? 0 : getChangeProgressDetails().hashCode());
         hashCode = prime * hashCode + ((getOffPeakWindowOptions() == null) ? 0 : getOffPeakWindowOptions().hashCode());
         hashCode = prime * hashCode + ((getSoftwareUpdateOptions() == null) ? 0 : getSoftwareUpdateOptions().hashCode());
+        hashCode = prime * hashCode + ((getDomainProcessingStatus() == null) ? 0 : getDomainProcessingStatus().hashCode());
+        hashCode = prime * hashCode + ((getModifyingProperties() == null) ? 0 : getModifyingProperties().hashCode());
         return hashCode;
     }
 

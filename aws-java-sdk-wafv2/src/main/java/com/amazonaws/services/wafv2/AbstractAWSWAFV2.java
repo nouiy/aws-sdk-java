@@ -63,6 +63,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public DeleteAPIKeyResult deleteAPIKey(DeleteAPIKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteFirewallManagerRuleGroupsResult deleteFirewallManagerRuleGroups(DeleteFirewallManagerRuleGroupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

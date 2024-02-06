@@ -444,6 +444,21 @@ public class AbstractAWSAppSyncAsync extends AbstractAWSAppSync implements AWSAp
     }
 
     @Override
+    public java.util.concurrent.Future<GetGraphqlApiEnvironmentVariablesResult> getGraphqlApiEnvironmentVariablesAsync(
+            GetGraphqlApiEnvironmentVariablesRequest request) {
+
+        return getGraphqlApiEnvironmentVariablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetGraphqlApiEnvironmentVariablesResult> getGraphqlApiEnvironmentVariablesAsync(
+            GetGraphqlApiEnvironmentVariablesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetGraphqlApiEnvironmentVariablesRequest, GetGraphqlApiEnvironmentVariablesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIntrospectionSchemaResult> getIntrospectionSchemaAsync(GetIntrospectionSchemaRequest request) {
 
         return getIntrospectionSchemaAsync(request, null);
@@ -647,6 +662,21 @@ public class AbstractAWSAppSyncAsync extends AbstractAWSAppSync implements AWSAp
     @Override
     public java.util.concurrent.Future<ListTypesByAssociationResult> listTypesByAssociationAsync(ListTypesByAssociationRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTypesByAssociationRequest, ListTypesByAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutGraphqlApiEnvironmentVariablesResult> putGraphqlApiEnvironmentVariablesAsync(
+            PutGraphqlApiEnvironmentVariablesRequest request) {
+
+        return putGraphqlApiEnvironmentVariablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutGraphqlApiEnvironmentVariablesResult> putGraphqlApiEnvironmentVariablesAsync(
+            PutGraphqlApiEnvironmentVariablesRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutGraphqlApiEnvironmentVariablesRequest, PutGraphqlApiEnvironmentVariablesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

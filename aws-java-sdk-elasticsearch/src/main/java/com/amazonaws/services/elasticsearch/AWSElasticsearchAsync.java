@@ -182,6 +182,35 @@ public interface AWSElasticsearchAsync extends AWSElasticsearch {
 
     /**
      * <p>
+     * Cancels a pending configuration change on an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param cancelDomainConfigChangeRequest
+     *        Container for parameters of the <code>CancelDomainConfigChange</code> operation.
+     * @return A Java Future containing the result of the CancelDomainConfigChange operation returned by the service.
+     * @sample AWSElasticsearchAsync.CancelDomainConfigChange
+     */
+    java.util.concurrent.Future<CancelDomainConfigChangeResult> cancelDomainConfigChangeAsync(CancelDomainConfigChangeRequest cancelDomainConfigChangeRequest);
+
+    /**
+     * <p>
+     * Cancels a pending configuration change on an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param cancelDomainConfigChangeRequest
+     *        Container for parameters of the <code>CancelDomainConfigChange</code> operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelDomainConfigChange operation returned by the service.
+     * @sample AWSElasticsearchAsyncHandler.CancelDomainConfigChange
+     */
+    java.util.concurrent.Future<CancelDomainConfigChangeResult> cancelDomainConfigChangeAsync(CancelDomainConfigChangeRequest cancelDomainConfigChangeRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelDomainConfigChangeRequest, CancelDomainConfigChangeResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels a scheduled service software update for an Amazon ES domain. You can only perform this operation before
      * the <code>AutomatedUpdateDate</code> and when the <code>UpdateStatus</code> is in the <code>PENDING_UPDATE</code>
      * state.

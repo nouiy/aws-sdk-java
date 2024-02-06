@@ -48,6 +48,8 @@ public class LogGroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inheritedProperties").build();
     private static final MarshallingInfo<String> LOGGROUPCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupClass").build();
+    private static final MarshallingInfo<String> LOGGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupArn").build();
 
     private static final LogGroupMarshaller instance = new LogGroupMarshaller();
 
@@ -75,6 +77,7 @@ public class LogGroupMarshaller {
             protocolMarshaller.marshall(logGroup.getDataProtectionStatus(), DATAPROTECTIONSTATUS_BINDING);
             protocolMarshaller.marshall(logGroup.getInheritedProperties(), INHERITEDPROPERTIES_BINDING);
             protocolMarshaller.marshall(logGroup.getLogGroupClass(), LOGGROUPCLASS_BINDING);
+            protocolMarshaller.marshall(logGroup.getLogGroupArn(), LOGGROUPARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

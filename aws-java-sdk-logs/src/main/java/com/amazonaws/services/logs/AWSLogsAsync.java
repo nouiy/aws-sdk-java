@@ -608,6 +608,11 @@ public interface AWSLogsAsync extends AWSLogs {
      * slash), '.' (period), and '#' (number sign)
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Log group names can't start with the string <code>aws/</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * When you create a log group, by default the log events in the log group do not expire. To set a retention policy
@@ -663,6 +668,11 @@ public interface AWSLogsAsync extends AWSLogs {
      * <p>
      * Log group names consist of the following characters: a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), '/' (forward
      * slash), '.' (period), and '#' (number sign)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Log group names can't start with the string <code>aws/</code>
      * </p>
      * </li>
      * </ul>
@@ -1404,6 +1414,20 @@ public interface AWSLogsAsync extends AWSLogs {
      * <p>
      * Retrieves a list of the deliveries that have been created in the account.
      * </p>
+     * <p>
+     * A <i>delivery</i> is a connection between a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html">
+     * <i>delivery source</i> </a> and a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html">
+     * <i>delivery destination</i> </a>.
+     * </p>
+     * <p>
+     * A delivery source represents an Amazon Web Services resource that sends logs to an logs delivery destination. The
+     * destination can be CloudWatch Logs, Amazon S3, or Kinesis Data Firehose. Only some Amazon Web Services services
+     * support being configured as a delivery source. These services are listed in <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enable logging
+     * from Amazon Web Services services.</a>
+     * </p>
      * 
      * @param describeDeliveriesRequest
      * @return A Java Future containing the result of the DescribeDeliveries operation returned by the service.
@@ -1416,6 +1440,20 @@ public interface AWSLogsAsync extends AWSLogs {
     /**
      * <p>
      * Retrieves a list of the deliveries that have been created in the account.
+     * </p>
+     * <p>
+     * A <i>delivery</i> is a connection between a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html">
+     * <i>delivery source</i> </a> and a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html">
+     * <i>delivery destination</i> </a>.
+     * </p>
+     * <p>
+     * A delivery source represents an Amazon Web Services resource that sends logs to an logs delivery destination. The
+     * destination can be CloudWatch Logs, Amazon S3, or Kinesis Data Firehose. Only some Amazon Web Services services
+     * support being configured as a delivery source. These services are listed in <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enable logging
+     * from Amazon Web Services services.</a>
      * </p>
      * 
      * @param describeDeliveriesRequest
@@ -2087,8 +2125,18 @@ public interface AWSLogsAsync extends AWSLogs {
 
     /**
      * <p>
-     * Returns complete information about one <i>delivery</i>. A delivery is a connection between a logical <i>delivery
-     * source</i> and a logical <i>delivery destination</i>
+     * Returns complete information about one logical <i>delivery</i>. A delivery is a connection between a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html">
+     * <i>delivery source</i> </a> and a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html">
+     * <i>delivery destination</i> </a>.
+     * </p>
+     * <p>
+     * A delivery source represents an Amazon Web Services resource that sends logs to an logs delivery destination. The
+     * destination can be CloudWatch Logs, Amazon S3, or Kinesis Data Firehose. Only some Amazon Web Services services
+     * support being configured as a delivery source. These services are listed in <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enable logging
+     * from Amazon Web Services services.</a>
      * </p>
      * <p>
      * You need to specify the delivery <code>id</code> in this operation. You can find the IDs of the deliveries in
@@ -2107,8 +2155,18 @@ public interface AWSLogsAsync extends AWSLogs {
 
     /**
      * <p>
-     * Returns complete information about one <i>delivery</i>. A delivery is a connection between a logical <i>delivery
-     * source</i> and a logical <i>delivery destination</i>
+     * Returns complete information about one logical <i>delivery</i>. A delivery is a connection between a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html">
+     * <i>delivery source</i> </a> and a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html">
+     * <i>delivery destination</i> </a>.
+     * </p>
+     * <p>
+     * A delivery source represents an Amazon Web Services resource that sends logs to an logs delivery destination. The
+     * destination can be CloudWatch Logs, Amazon S3, or Kinesis Data Firehose. Only some Amazon Web Services services
+     * support being configured as a delivery source. These services are listed in <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enable logging
+     * from Amazon Web Services services.</a>
      * </p>
      * <p>
      * You need to specify the delivery <code>id</code> in this operation. You can find the IDs of the deliveries in

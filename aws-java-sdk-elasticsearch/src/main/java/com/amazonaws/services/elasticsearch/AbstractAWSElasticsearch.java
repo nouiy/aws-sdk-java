@@ -58,6 +58,11 @@ public class AbstractAWSElasticsearch implements AWSElasticsearch {
     }
 
     @Override
+    public CancelDomainConfigChangeResult cancelDomainConfigChange(CancelDomainConfigChangeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelElasticsearchServiceSoftwareUpdateResult cancelElasticsearchServiceSoftwareUpdate(CancelElasticsearchServiceSoftwareUpdateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -188,6 +188,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
     }
 
     @Override
+    public GetGraphqlApiEnvironmentVariablesResult getGraphqlApiEnvironmentVariables(GetGraphqlApiEnvironmentVariablesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetIntrospectionSchemaResult getIntrospectionSchema(GetIntrospectionSchemaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -264,6 +269,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
 
     @Override
     public ListTypesByAssociationResult listTypesByAssociation(ListTypesByAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutGraphqlApiEnvironmentVariablesResult putGraphqlApiEnvironmentVariables(PutGraphqlApiEnvironmentVariablesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

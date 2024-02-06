@@ -120,6 +120,12 @@ public class DomainConfigJsonUnmarshaller implements Unmarshaller<DomainConfig, 
                     context.nextToken();
                     domainConfig.setSoftwareUpdateOptions(SoftwareUpdateOptionsStatusJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ModifyingProperties", targetDepth)) {
+                    context.nextToken();
+                    domainConfig.setModifyingProperties(new ListUnmarshaller<ModifyingProperties>(ModifyingPropertiesJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

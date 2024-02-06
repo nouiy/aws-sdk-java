@@ -1094,6 +1094,102 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
 
     /**
      * <p>
+     * Deletes the specified API key.
+     * </p>
+     * <p>
+     * After you delete a key, it can take up to 24 hours for WAF to disallow use of the key in all regions.
+     * </p>
+     * 
+     * @param deleteAPIKeyRequest
+     * @return Result of the DeleteAPIKey operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn't exist. If you've just created a resource
+     *         that you're using in this operation, you might just need to wait a few minutes. It can take from a few
+     *         seconds to a number of minutes for changes to propagate.
+     * @throws WAFOptimisticLockException
+     *         WAF couldn’t save your changes because you tried to update or delete a resource that has changed since
+     *         you last retrieved it. Get the resource again, make any changes you need to make to the new copy, and
+     *         retry your operation.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.DeleteAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteAPIKeyResult deleteAPIKey(DeleteAPIKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAPIKey(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAPIKeyResult executeDeleteAPIKey(DeleteAPIKeyRequest deleteAPIKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAPIKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAPIKeyRequest> request = null;
+        Response<DeleteAPIKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAPIKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAPIKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WAFV2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAPIKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAPIKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteAPIKeyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes all rule groups that are managed by Firewall Manager for the specified web ACL.
      * </p>
      * <p>

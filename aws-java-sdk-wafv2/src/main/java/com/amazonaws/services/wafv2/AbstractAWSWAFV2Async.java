@@ -118,6 +118,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAPIKeyResult> deleteAPIKeyAsync(DeleteAPIKeyRequest request) {
+
+        return deleteAPIKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAPIKeyResult> deleteAPIKeyAsync(DeleteAPIKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAPIKeyRequest, DeleteAPIKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteFirewallManagerRuleGroupsResult> deleteFirewallManagerRuleGroupsAsync(
             DeleteFirewallManagerRuleGroupsRequest request) {
 

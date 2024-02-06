@@ -85,6 +85,9 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the container (as it appears in a container definition) to associate with the load balancer.
      * </p>
+     * <p>
+     * You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
+     * </p>
      */
     private String containerName;
     /**
@@ -350,9 +353,15 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the container (as it appears in a container definition) to associate with the load balancer.
      * </p>
+     * <p>
+     * You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
+     * </p>
      * 
      * @param containerName
-     *        The name of the container (as it appears in a container definition) to associate with the load balancer.
+     *        The name of the container (as it appears in a container definition) to associate with the load
+     *        balancer.</p>
+     *        <p>
+     *        You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
      */
 
     public void setContainerName(String containerName) {
@@ -363,8 +372,14 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the container (as it appears in a container definition) to associate with the load balancer.
      * </p>
+     * <p>
+     * You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
+     * </p>
      * 
-     * @return The name of the container (as it appears in a container definition) to associate with the load balancer.
+     * @return The name of the container (as it appears in a container definition) to associate with the load
+     *         balancer.</p>
+     *         <p>
+     *         You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
      */
 
     public String getContainerName() {
@@ -375,9 +390,15 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the container (as it appears in a container definition) to associate with the load balancer.
      * </p>
+     * <p>
+     * You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
+     * </p>
      * 
      * @param containerName
-     *        The name of the container (as it appears in a container definition) to associate with the load balancer.
+     *        The name of the container (as it appears in a container definition) to associate with the load
+     *        balancer.</p>
+     *        <p>
+     *        You need to specify the container name when configuring the target group for an Amazon ECS load balancer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

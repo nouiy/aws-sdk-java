@@ -13,7 +13,7 @@
 package com.amazonaws.services.opensearch.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -87,6 +87,10 @@ public class DomainStatusMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OffPeakWindowOptions").build();
     private static final MarshallingInfo<StructuredPojo> SOFTWAREUPDATEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SoftwareUpdateOptions").build();
+    private static final MarshallingInfo<String> DOMAINPROCESSINGSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DomainProcessingStatus").build();
+    private static final MarshallingInfo<List> MODIFYINGPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModifyingProperties").build();
 
     private static final DomainStatusMarshaller instance = new DomainStatusMarshaller();
 
@@ -133,6 +137,8 @@ public class DomainStatusMarshaller {
             protocolMarshaller.marshall(domainStatus.getChangeProgressDetails(), CHANGEPROGRESSDETAILS_BINDING);
             protocolMarshaller.marshall(domainStatus.getOffPeakWindowOptions(), OFFPEAKWINDOWOPTIONS_BINDING);
             protocolMarshaller.marshall(domainStatus.getSoftwareUpdateOptions(), SOFTWAREUPDATEOPTIONS_BINDING);
+            protocolMarshaller.marshall(domainStatus.getDomainProcessingStatus(), DOMAINPROCESSINGSTATUS_BINDING);
+            protocolMarshaller.marshall(domainStatus.getModifyingProperties(), MODIFYINGPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

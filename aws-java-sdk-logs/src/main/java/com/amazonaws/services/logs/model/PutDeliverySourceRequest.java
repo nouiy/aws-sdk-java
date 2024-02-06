@@ -40,8 +40,8 @@ public class PutDeliverySourceRequest extends com.amazonaws.AmazonWebServiceRequ
     private String resourceArn;
     /**
      * <p>
-     * Defines the type of log that the source is sending. For valid values for this parameter, see the documentation
-     * for the source service.
+     * Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     * <code>EVENT_LOGS</code>.
      * </p>
      */
     private String logType;
@@ -144,13 +144,13 @@ public class PutDeliverySourceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Defines the type of log that the source is sending. For valid values for this parameter, see the documentation
-     * for the source service.
+     * Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     * <code>EVENT_LOGS</code>.
      * </p>
      * 
      * @param logType
-     *        Defines the type of log that the source is sending. For valid values for this parameter, see the
-     *        documentation for the source service.
+     *        Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     *        <code>EVENT_LOGS</code>.
      */
 
     public void setLogType(String logType) {
@@ -159,12 +159,12 @@ public class PutDeliverySourceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Defines the type of log that the source is sending. For valid values for this parameter, see the documentation
-     * for the source service.
+     * Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     * <code>EVENT_LOGS</code>.
      * </p>
      * 
-     * @return Defines the type of log that the source is sending. For valid values for this parameter, see the
-     *         documentation for the source service.
+     * @return Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     *         <code>EVENT_LOGS</code>.
      */
 
     public String getLogType() {
@@ -173,13 +173,13 @@ public class PutDeliverySourceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Defines the type of log that the source is sending. For valid values for this parameter, see the documentation
-     * for the source service.
+     * Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     * <code>EVENT_LOGS</code>.
      * </p>
      * 
      * @param logType
-     *        Defines the type of log that the source is sending. For valid values for this parameter, see the
-     *        documentation for the source service.
+     *        Defines the type of log that the source is sending. For Amazon CodeWhisperer, the valid value is
+     *        <code>EVENT_LOGS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

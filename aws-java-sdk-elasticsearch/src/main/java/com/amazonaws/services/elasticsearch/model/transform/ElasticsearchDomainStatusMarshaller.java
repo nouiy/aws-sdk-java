@@ -13,7 +13,7 @@
 package com.amazonaws.services.elasticsearch.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -79,6 +79,10 @@ public class ElasticsearchDomainStatusMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoTuneOptions").build();
     private static final MarshallingInfo<StructuredPojo> CHANGEPROGRESSDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChangeProgressDetails").build();
+    private static final MarshallingInfo<String> DOMAINPROCESSINGSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DomainProcessingStatus").build();
+    private static final MarshallingInfo<List> MODIFYINGPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModifyingProperties").build();
 
     private static final ElasticsearchDomainStatusMarshaller instance = new ElasticsearchDomainStatusMarshaller();
 
@@ -121,6 +125,8 @@ public class ElasticsearchDomainStatusMarshaller {
             protocolMarshaller.marshall(elasticsearchDomainStatus.getAdvancedSecurityOptions(), ADVANCEDSECURITYOPTIONS_BINDING);
             protocolMarshaller.marshall(elasticsearchDomainStatus.getAutoTuneOptions(), AUTOTUNEOPTIONS_BINDING);
             protocolMarshaller.marshall(elasticsearchDomainStatus.getChangeProgressDetails(), CHANGEPROGRESSDETAILS_BINDING);
+            protocolMarshaller.marshall(elasticsearchDomainStatus.getDomainProcessingStatus(), DOMAINPROCESSINGSTATUS_BINDING);
+            protocolMarshaller.marshall(elasticsearchDomainStatus.getModifyingProperties(), MODIFYINGPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

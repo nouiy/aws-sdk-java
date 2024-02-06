@@ -67,6 +67,24 @@ public class ChangeProgressStatusDetails implements Serializable, Cloneable, Str
      * </p>
      */
     private java.util.List<ChangeProgressStage> changeProgressStages;
+    /**
+     * <p>
+     * The last time that the status of the configuration change was updated.
+     * </p>
+     */
+    private java.util.Date lastUpdatedTime;
+    /**
+     * <p>
+     * The current status of the configuration change.
+     * </p>
+     */
+    private String configChangeStatus;
+    /**
+     * <p>
+     * The IAM principal who initiated the configuration change.
+     * </p>
+     */
+    private String initiatedBy;
 
     /**
      * <p>
@@ -458,6 +476,164 @@ public class ChangeProgressStatusDetails implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The last time that the status of the configuration change was updated.
+     * </p>
+     * 
+     * @param lastUpdatedTime
+     *        The last time that the status of the configuration change was updated.
+     */
+
+    public void setLastUpdatedTime(java.util.Date lastUpdatedTime) {
+        this.lastUpdatedTime = lastUpdatedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the status of the configuration change was updated.
+     * </p>
+     * 
+     * @return The last time that the status of the configuration change was updated.
+     */
+
+    public java.util.Date getLastUpdatedTime() {
+        return this.lastUpdatedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the status of the configuration change was updated.
+     * </p>
+     * 
+     * @param lastUpdatedTime
+     *        The last time that the status of the configuration change was updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChangeProgressStatusDetails withLastUpdatedTime(java.util.Date lastUpdatedTime) {
+        setLastUpdatedTime(lastUpdatedTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current status of the configuration change.
+     * </p>
+     * 
+     * @param configChangeStatus
+     *        The current status of the configuration change.
+     * @see ConfigChangeStatus
+     */
+
+    public void setConfigChangeStatus(String configChangeStatus) {
+        this.configChangeStatus = configChangeStatus;
+    }
+
+    /**
+     * <p>
+     * The current status of the configuration change.
+     * </p>
+     * 
+     * @return The current status of the configuration change.
+     * @see ConfigChangeStatus
+     */
+
+    public String getConfigChangeStatus() {
+        return this.configChangeStatus;
+    }
+
+    /**
+     * <p>
+     * The current status of the configuration change.
+     * </p>
+     * 
+     * @param configChangeStatus
+     *        The current status of the configuration change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfigChangeStatus
+     */
+
+    public ChangeProgressStatusDetails withConfigChangeStatus(String configChangeStatus) {
+        setConfigChangeStatus(configChangeStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current status of the configuration change.
+     * </p>
+     * 
+     * @param configChangeStatus
+     *        The current status of the configuration change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfigChangeStatus
+     */
+
+    public ChangeProgressStatusDetails withConfigChangeStatus(ConfigChangeStatus configChangeStatus) {
+        this.configChangeStatus = configChangeStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IAM principal who initiated the configuration change.
+     * </p>
+     * 
+     * @param initiatedBy
+     *        The IAM principal who initiated the configuration change.
+     * @see InitiatedBy
+     */
+
+    public void setInitiatedBy(String initiatedBy) {
+        this.initiatedBy = initiatedBy;
+    }
+
+    /**
+     * <p>
+     * The IAM principal who initiated the configuration change.
+     * </p>
+     * 
+     * @return The IAM principal who initiated the configuration change.
+     * @see InitiatedBy
+     */
+
+    public String getInitiatedBy() {
+        return this.initiatedBy;
+    }
+
+    /**
+     * <p>
+     * The IAM principal who initiated the configuration change.
+     * </p>
+     * 
+     * @param initiatedBy
+     *        The IAM principal who initiated the configuration change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InitiatedBy
+     */
+
+    public ChangeProgressStatusDetails withInitiatedBy(String initiatedBy) {
+        setInitiatedBy(initiatedBy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IAM principal who initiated the configuration change.
+     * </p>
+     * 
+     * @param initiatedBy
+     *        The IAM principal who initiated the configuration change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InitiatedBy
+     */
+
+    public ChangeProgressStatusDetails withInitiatedBy(InitiatedBy initiatedBy) {
+        this.initiatedBy = initiatedBy.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -482,7 +658,13 @@ public class ChangeProgressStatusDetails implements Serializable, Cloneable, Str
         if (getTotalNumberOfStages() != null)
             sb.append("TotalNumberOfStages: ").append(getTotalNumberOfStages()).append(",");
         if (getChangeProgressStages() != null)
-            sb.append("ChangeProgressStages: ").append(getChangeProgressStages());
+            sb.append("ChangeProgressStages: ").append(getChangeProgressStages()).append(",");
+        if (getLastUpdatedTime() != null)
+            sb.append("LastUpdatedTime: ").append(getLastUpdatedTime()).append(",");
+        if (getConfigChangeStatus() != null)
+            sb.append("ConfigChangeStatus: ").append(getConfigChangeStatus()).append(",");
+        if (getInitiatedBy() != null)
+            sb.append("InitiatedBy: ").append(getInitiatedBy());
         sb.append("}");
         return sb.toString();
     }
@@ -525,6 +707,18 @@ public class ChangeProgressStatusDetails implements Serializable, Cloneable, Str
             return false;
         if (other.getChangeProgressStages() != null && other.getChangeProgressStages().equals(this.getChangeProgressStages()) == false)
             return false;
+        if (other.getLastUpdatedTime() == null ^ this.getLastUpdatedTime() == null)
+            return false;
+        if (other.getLastUpdatedTime() != null && other.getLastUpdatedTime().equals(this.getLastUpdatedTime()) == false)
+            return false;
+        if (other.getConfigChangeStatus() == null ^ this.getConfigChangeStatus() == null)
+            return false;
+        if (other.getConfigChangeStatus() != null && other.getConfigChangeStatus().equals(this.getConfigChangeStatus()) == false)
+            return false;
+        if (other.getInitiatedBy() == null ^ this.getInitiatedBy() == null)
+            return false;
+        if (other.getInitiatedBy() != null && other.getInitiatedBy().equals(this.getInitiatedBy()) == false)
+            return false;
         return true;
     }
 
@@ -540,6 +734,9 @@ public class ChangeProgressStatusDetails implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getCompletedProperties() == null) ? 0 : getCompletedProperties().hashCode());
         hashCode = prime * hashCode + ((getTotalNumberOfStages() == null) ? 0 : getTotalNumberOfStages().hashCode());
         hashCode = prime * hashCode + ((getChangeProgressStages() == null) ? 0 : getChangeProgressStages().hashCode());
+        hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
+        hashCode = prime * hashCode + ((getConfigChangeStatus() == null) ? 0 : getConfigChangeStatus().hashCode());
+        hashCode = prime * hashCode + ((getInitiatedBy() == null) ? 0 : getInitiatedBy().hashCode());
         return hashCode;
     }
 

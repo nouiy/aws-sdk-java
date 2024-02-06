@@ -514,6 +514,71 @@ public class AmazonOpenSearchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Cancels a pending configuration change on an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param cancelDomainConfigChangeRequest
+     * @return Result of the CancelDomainConfigChange operation returned by the service.
+     * @throws BaseException
+     *         An error occurred while processing the request.
+     * @throws InternalException
+     *         Request processing failed because of an unknown error, exception, or internal failure.
+     * @throws ResourceNotFoundException
+     *         An exception for accessing or deleting a resource that doesn't exist.
+     * @throws ValidationException
+     *         An exception for accessing or deleting a resource that doesn't exist.
+     * @throws DisabledOperationException
+     *         An error occured because the client wanted to access an unsupported operation.
+     * @sample AmazonOpenSearch.CancelDomainConfigChange
+     */
+    @Override
+    public CancelDomainConfigChangeResult cancelDomainConfigChange(CancelDomainConfigChangeRequest request) {
+        request = beforeClientExecution(request);
+        return executeCancelDomainConfigChange(request);
+    }
+
+    @SdkInternalApi
+    final CancelDomainConfigChangeResult executeCancelDomainConfigChange(CancelDomainConfigChangeRequest cancelDomainConfigChangeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(cancelDomainConfigChangeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CancelDomainConfigChangeRequest> request = null;
+        Response<CancelDomainConfigChangeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CancelDomainConfigChangeRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(cancelDomainConfigChangeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "OpenSearch");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CancelDomainConfigChange");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CancelDomainConfigChangeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CancelDomainConfigChangeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Cancels a scheduled service software update for an Amazon OpenSearch Service domain. You can only perform this
      * operation before the <code>AutomatedUpdateDate</code> and when the domain's <code>UpdateStatus</code> is
      * <code>PENDING_UPDATE</code>. For more information, see <a

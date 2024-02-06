@@ -20,7 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Specifies whether the domain should encrypt data at rest, and if so, the Key Management Service (KMS) key to use. Can
- * be used only to create a new domain, not update an existing one.
+ * only be used when creating a new domain or enabling encryption at rest for the first time on an existing domain. You
+ * can't modify this parameter after it's already been specified.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -512,6 +512,43 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Deletes the specified API key.
+     * </p>
+     * <p>
+     * After you delete a key, it can take up to 24 hours for WAF to disallow use of the key in all regions.
+     * </p>
+     * 
+     * @param deleteAPIKeyRequest
+     * @return A Java Future containing the result of the DeleteAPIKey operation returned by the service.
+     * @sample AWSWAFV2Async.DeleteAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAPIKeyResult> deleteAPIKeyAsync(DeleteAPIKeyRequest deleteAPIKeyRequest);
+
+    /**
+     * <p>
+     * Deletes the specified API key.
+     * </p>
+     * <p>
+     * After you delete a key, it can take up to 24 hours for WAF to disallow use of the key in all regions.
+     * </p>
+     * 
+     * @param deleteAPIKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAPIKey operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.DeleteAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DeleteAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAPIKeyResult> deleteAPIKeyAsync(DeleteAPIKeyRequest deleteAPIKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAPIKeyRequest, DeleteAPIKeyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes all rule groups that are managed by Firewall Manager for the specified web ACL.
      * </p>
      * <p>

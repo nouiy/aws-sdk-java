@@ -337,8 +337,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about stop code, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
-     * codes</a> in the <i>Amazon ECS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped tasks
+     * error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      */
     private String stopCode;
@@ -2609,8 +2609,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about stop code, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
-     * codes</a> in the <i>Amazon ECS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped tasks
+     * error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * 
      * @param stopCode
@@ -2618,8 +2618,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        details. </p>
      *        <p>
      *        For more information about stop code, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
-     *        error codes</a> in the <i>Amazon ECS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped
+     *        tasks error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * @see TaskStopCode
      */
 
@@ -2633,16 +2633,16 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about stop code, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
-     * codes</a> in the <i>Amazon ECS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped tasks
+     * error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * 
      * @return The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
      *         details. </p>
      *         <p>
      *         For more information about stop code, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
-     *         error codes</a> in the <i>Amazon ECS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped
+     *         tasks error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * @see TaskStopCode
      */
 
@@ -2656,8 +2656,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about stop code, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
-     * codes</a> in the <i>Amazon ECS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped tasks
+     * error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * 
      * @param stopCode
@@ -2665,8 +2665,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        details. </p>
      *        <p>
      *        For more information about stop code, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
-     *        error codes</a> in the <i>Amazon ECS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped
+     *        tasks error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStopCode
      */
@@ -2682,8 +2682,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about stop code, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
-     * codes</a> in the <i>Amazon ECS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped tasks
+     * error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * 
      * @param stopCode
@@ -2691,8 +2691,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        details. </p>
      *        <p>
      *        For more information about stop code, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
-     *        error codes</a> in the <i>Amazon ECS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-error-codes.html">Stopped
+     *        tasks error codes</a> in the <i>Amazon ECS Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStopCode
      */

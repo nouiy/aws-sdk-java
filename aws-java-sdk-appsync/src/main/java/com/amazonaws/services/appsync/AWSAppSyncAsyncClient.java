@@ -1130,6 +1130,41 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
     }
 
     @Override
+    public java.util.concurrent.Future<GetGraphqlApiEnvironmentVariablesResult> getGraphqlApiEnvironmentVariablesAsync(
+            GetGraphqlApiEnvironmentVariablesRequest request) {
+
+        return getGraphqlApiEnvironmentVariablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetGraphqlApiEnvironmentVariablesResult> getGraphqlApiEnvironmentVariablesAsync(
+            final GetGraphqlApiEnvironmentVariablesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetGraphqlApiEnvironmentVariablesRequest, GetGraphqlApiEnvironmentVariablesResult> asyncHandler) {
+        final GetGraphqlApiEnvironmentVariablesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetGraphqlApiEnvironmentVariablesResult>() {
+            @Override
+            public GetGraphqlApiEnvironmentVariablesResult call() throws Exception {
+                GetGraphqlApiEnvironmentVariablesResult result = null;
+
+                try {
+                    result = executeGetGraphqlApiEnvironmentVariables(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIntrospectionSchemaResult> getIntrospectionSchemaAsync(GetIntrospectionSchemaRequest request) {
 
         return getIntrospectionSchemaAsync(request, null);
@@ -1642,6 +1677,41 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeListTypesByAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutGraphqlApiEnvironmentVariablesResult> putGraphqlApiEnvironmentVariablesAsync(
+            PutGraphqlApiEnvironmentVariablesRequest request) {
+
+        return putGraphqlApiEnvironmentVariablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutGraphqlApiEnvironmentVariablesResult> putGraphqlApiEnvironmentVariablesAsync(
+            final PutGraphqlApiEnvironmentVariablesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutGraphqlApiEnvironmentVariablesRequest, PutGraphqlApiEnvironmentVariablesResult> asyncHandler) {
+        final PutGraphqlApiEnvironmentVariablesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutGraphqlApiEnvironmentVariablesResult>() {
+            @Override
+            public PutGraphqlApiEnvironmentVariablesResult call() throws Exception {
+                PutGraphqlApiEnvironmentVariablesResult result = null;
+
+                try {
+                    result = executePutGraphqlApiEnvironmentVariables(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

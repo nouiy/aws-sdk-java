@@ -380,6 +380,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAPIKeyResult> deleteAPIKeyAsync(DeleteAPIKeyRequest request) {
+
+        return deleteAPIKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAPIKeyResult> deleteAPIKeyAsync(final DeleteAPIKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAPIKeyRequest, DeleteAPIKeyResult> asyncHandler) {
+        final DeleteAPIKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAPIKeyResult>() {
+            @Override
+            public DeleteAPIKeyResult call() throws Exception {
+                DeleteAPIKeyResult result = null;
+
+                try {
+                    result = executeDeleteAPIKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteFirewallManagerRuleGroupsResult> deleteFirewallManagerRuleGroupsAsync(
             DeleteFirewallManagerRuleGroupsRequest request) {
 

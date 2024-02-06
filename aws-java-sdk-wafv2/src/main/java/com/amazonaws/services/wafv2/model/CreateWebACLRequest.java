@@ -132,7 +132,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      */
@@ -922,7 +922,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * 
@@ -936,7 +936,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      *         </p>
      *         <p>
-     *         Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *         Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *         token domains.
      */
 
@@ -956,7 +956,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * 
@@ -970,7 +970,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      *        </p>
      *        <p>
-     *        Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *        Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *        token domains.
      */
 
@@ -995,7 +995,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * <p>
@@ -1014,7 +1014,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      *        </p>
      *        <p>
-     *        Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *        Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *        token domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1041,7 +1041,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * 
@@ -1055,7 +1055,7 @@ public class CreateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Example JSON: <code>"TokenDomains": { "mywebsite.com", "myotherwebsite.com" }</code>
      *        </p>
      *        <p>
-     *        Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *        Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *        token domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

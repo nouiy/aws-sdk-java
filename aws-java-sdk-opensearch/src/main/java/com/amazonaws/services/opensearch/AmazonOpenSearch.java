@@ -176,6 +176,27 @@ public interface AmazonOpenSearch {
 
     /**
      * <p>
+     * Cancels a pending configuration change on an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param cancelDomainConfigChangeRequest
+     * @return Result of the CancelDomainConfigChange operation returned by the service.
+     * @throws BaseException
+     *         An error occurred while processing the request.
+     * @throws InternalException
+     *         Request processing failed because of an unknown error, exception, or internal failure.
+     * @throws ResourceNotFoundException
+     *         An exception for accessing or deleting a resource that doesn't exist.
+     * @throws ValidationException
+     *         An exception for accessing or deleting a resource that doesn't exist.
+     * @throws DisabledOperationException
+     *         An error occured because the client wanted to access an unsupported operation.
+     * @sample AmazonOpenSearch.CancelDomainConfigChange
+     */
+    CancelDomainConfigChangeResult cancelDomainConfigChange(CancelDomainConfigChangeRequest cancelDomainConfigChangeRequest);
+
+    /**
+     * <p>
      * Cancels a scheduled service software update for an Amazon OpenSearch Service domain. You can only perform this
      * operation before the <code>AutomatedUpdateDate</code> and when the domain's <code>UpdateStatus</code> is
      * <code>PENDING_UPDATE</code>. For more information, see <a

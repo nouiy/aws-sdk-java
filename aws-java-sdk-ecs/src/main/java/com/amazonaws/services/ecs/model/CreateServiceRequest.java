@@ -148,8 +148,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
-     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
+     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1280,8 +1280,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
-     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
+     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1307,7 +1307,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
      *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
@@ -1341,8 +1341,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
-     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
+     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1367,8 +1367,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <p>
      *         Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
-     *         capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html"
+     *         >Fargate capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *         </p>
      *         </note>
      *         <p>
@@ -1401,8 +1401,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
-     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
+     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1428,7 +1428,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
      *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
@@ -1464,8 +1464,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
-     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
+     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1491,7 +1491,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
      *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>

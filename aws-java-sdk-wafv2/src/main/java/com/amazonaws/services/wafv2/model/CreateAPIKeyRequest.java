@@ -56,7 +56,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      */
@@ -269,7 +269,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * 
@@ -278,7 +278,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      *         </p>
      *         <p>
-     *         Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *         Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *         token domains.
      */
 
@@ -294,7 +294,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * 
@@ -304,7 +304,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      *        </p>
      *        <p>
-     *        Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *        Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *        token domains.
      */
 
@@ -325,7 +325,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * <p>
@@ -340,7 +340,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      *        </p>
      *        <p>
-     *        Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *        Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *        token domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -363,7 +363,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      * </p>
      * <p>
-     * Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as token
+     * Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as token
      * domains.
      * </p>
      * 
@@ -373,7 +373,7 @@ public class CreateAPIKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Example JSON: <code>"TokenDomains": ["abc.com", "store.abc.com"]</code>
      *        </p>
      *        <p>
-     *        Public suffixes aren't allowed. For example, you can't use <code>usa.gov</code> or <code>co.uk</code> as
+     *        Public suffixes aren't allowed. For example, you can't use <code>gov.au</code> or <code>co.uk</code> as
      *        token domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
