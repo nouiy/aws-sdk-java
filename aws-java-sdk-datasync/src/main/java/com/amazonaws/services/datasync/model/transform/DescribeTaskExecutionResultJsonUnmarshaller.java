@@ -72,6 +72,10 @@ public class DescribeTaskExecutionResultJsonUnmarshaller implements Unmarshaller
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ManifestConfig", targetDepth)) {
+                    context.nextToken();
+                    describeTaskExecutionResult.setManifestConfig(ManifestConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("StartTime", targetDepth)) {
                     context.nextToken();
                     describeTaskExecutionResult.setStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
@@ -96,13 +100,13 @@ public class DescribeTaskExecutionResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     describeTaskExecutionResult.setBytesTransferred(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
-                if (context.testExpression("Result", targetDepth)) {
-                    context.nextToken();
-                    describeTaskExecutionResult.setResult(TaskExecutionResultDetailJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("BytesCompressed", targetDepth)) {
                     context.nextToken();
                     describeTaskExecutionResult.setBytesCompressed(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("Result", targetDepth)) {
+                    context.nextToken();
+                    describeTaskExecutionResult.setResult(TaskExecutionResultDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("TaskReportConfig", targetDepth)) {
                     context.nextToken();

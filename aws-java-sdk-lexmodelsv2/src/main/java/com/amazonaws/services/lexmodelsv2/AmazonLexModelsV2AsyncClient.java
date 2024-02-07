@@ -309,6 +309,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateBotReplicaResult> createBotReplicaAsync(CreateBotReplicaRequest request) {
+
+        return createBotReplicaAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBotReplicaResult> createBotReplicaAsync(final CreateBotReplicaRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateBotReplicaRequest, CreateBotReplicaResult> asyncHandler) {
+        final CreateBotReplicaRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateBotReplicaResult>() {
+            @Override
+            public CreateBotReplicaResult call() throws Exception {
+                CreateBotReplicaResult result = null;
+
+                try {
+                    result = executeCreateBotReplica(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateBotVersionResult> createBotVersionAsync(CreateBotVersionRequest request) {
 
         return createBotVersionAsync(request, null);
@@ -691,6 +724,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeDeleteBotLocale(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBotReplicaResult> deleteBotReplicaAsync(DeleteBotReplicaRequest request) {
+
+        return deleteBotReplicaAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBotReplicaResult> deleteBotReplicaAsync(final DeleteBotReplicaRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteBotReplicaRequest, DeleteBotReplicaResult> asyncHandler) {
+        final DeleteBotReplicaRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteBotReplicaResult>() {
+            @Override
+            public DeleteBotReplicaResult call() throws Exception {
+                DeleteBotReplicaResult result = null;
+
+                try {
+                    result = executeDeleteBotReplica(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1187,6 +1253,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeDescribeBotRecommendation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBotReplicaResult> describeBotReplicaAsync(DescribeBotReplicaRequest request) {
+
+        return describeBotReplicaAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBotReplicaResult> describeBotReplicaAsync(final DescribeBotReplicaRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeBotReplicaRequest, DescribeBotReplicaResult> asyncHandler) {
+        final DescribeBotReplicaRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeBotReplicaResult>() {
+            @Override
+            public DescribeBotReplicaResult call() throws Exception {
+                DescribeBotReplicaResult result = null;
+
+                try {
+                    result = executeDescribeBotReplica(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1736,6 +1835,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListBotAliasReplicasResult> listBotAliasReplicasAsync(ListBotAliasReplicasRequest request) {
+
+        return listBotAliasReplicasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotAliasReplicasResult> listBotAliasReplicasAsync(final ListBotAliasReplicasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBotAliasReplicasRequest, ListBotAliasReplicasResult> asyncHandler) {
+        final ListBotAliasReplicasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBotAliasReplicasResult>() {
+            @Override
+            public ListBotAliasReplicasResult call() throws Exception {
+                ListBotAliasReplicasResult result = null;
+
+                try {
+                    result = executeListBotAliasReplicas(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBotAliasesResult> listBotAliasesAsync(ListBotAliasesRequest request) {
 
         return listBotAliasesAsync(request, null);
@@ -1835,6 +1967,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListBotReplicasResult> listBotReplicasAsync(ListBotReplicasRequest request) {
+
+        return listBotReplicasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotReplicasResult> listBotReplicasAsync(final ListBotReplicasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBotReplicasRequest, ListBotReplicasResult> asyncHandler) {
+        final ListBotReplicasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBotReplicasResult>() {
+            @Override
+            public ListBotReplicasResult call() throws Exception {
+                ListBotReplicasResult result = null;
+
+                try {
+                    result = executeListBotReplicas(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBotResourceGenerationsResult> listBotResourceGenerationsAsync(ListBotResourceGenerationsRequest request) {
 
         return listBotResourceGenerationsAsync(request, null);
@@ -1852,6 +2017,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeListBotResourceGenerations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotVersionReplicasResult> listBotVersionReplicasAsync(ListBotVersionReplicasRequest request) {
+
+        return listBotVersionReplicasAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotVersionReplicasResult> listBotVersionReplicasAsync(final ListBotVersionReplicasRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBotVersionReplicasRequest, ListBotVersionReplicasResult> asyncHandler) {
+        final ListBotVersionReplicasRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBotVersionReplicasResult>() {
+            @Override
+            public ListBotVersionReplicasResult call() throws Exception {
+                ListBotVersionReplicasResult result = null;
+
+                try {
+                    result = executeListBotVersionReplicas(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

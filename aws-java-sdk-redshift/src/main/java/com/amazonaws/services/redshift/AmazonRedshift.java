@@ -2724,6 +2724,24 @@ public interface AmazonRedshift {
 
     /**
      * <p>
+     * List the Amazon Redshift Advisor recommendations for one or multiple Amazon Redshift clusters in an Amazon Web
+     * Services account.
+     * </p>
+     * 
+     * @param listRecommendationsRequest
+     * @return Result of the ListRecommendations operation returned by the service.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @sample AmazonRedshift.ListRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ListRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListRecommendationsResult listRecommendations(ListRecommendationsRequest listRecommendationsRequest);
+
+    /**
+     * <p>
      * This operation is retired. Calling this operation does not change AQUA configuration. Amazon Redshift
      * automatically determines whether to use AQUA (Advanced Query Accelerator).
      * </p>

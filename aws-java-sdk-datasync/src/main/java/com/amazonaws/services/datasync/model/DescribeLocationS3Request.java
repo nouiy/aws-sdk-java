@@ -30,18 +30,18 @@ public class DescribeLocationS3Request extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      * </p>
      */
     private String locationArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     *        Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      */
 
     public void setLocationArn(String locationArn) {
@@ -50,10 +50,10 @@ public class DescribeLocationS3Request extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     * @return Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      */
 
     public String getLocationArn() {
@@ -62,11 +62,11 @@ public class DescribeLocationS3Request extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the Amazon S3 bucket location to describe.
+     *        Specifies the Amazon Resource Name (ARN) of the Amazon S3 location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

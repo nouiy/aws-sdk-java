@@ -1,3 +1,16 @@
+# __1.12.654__ __2024-02-07__
+## __AWS DataSync__
+  - ### Features
+    - AWS DataSync now supports manifests for specifying files or objects to transfer.
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - This release introduces a new bot replication feature as part of Lex Global Resiliency offering. This feature leverages a new set of APIs that allow customers to create bot replicas and replicate changes to bots across regions.
+
+## __Amazon Redshift__
+  - ### Features
+    - LisRecommendations API to fetch Amazon Redshift Advisor recommendations.
+
 # __1.12.653__ __2024-02-06__
 ## __AWS AppSync__
   - ### Features

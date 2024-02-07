@@ -640,6 +640,75 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Action to create a replication of the source bot in the secondary region.
+     * </p>
+     * 
+     * @param createBotReplicaRequest
+     * @return Result of the CreateBotReplica operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.CreateBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateBotReplicaResult createBotReplica(CreateBotReplicaRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateBotReplica(request);
+    }
+
+    @SdkInternalApi
+    final CreateBotReplicaResult executeCreateBotReplica(CreateBotReplicaRequest createBotReplicaRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createBotReplicaRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateBotReplicaRequest> request = null;
+        Response<CreateBotReplicaResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateBotReplicaRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createBotReplicaRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateBotReplica");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateBotReplicaResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateBotReplicaResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an immutable version of the bot. When you create the first version of a bot, Amazon Lex sets the version
      * number to 1. Subsequent bot versions increase in an increment of 1. The version number will always represent the
      * total number of versions created of the bot, not the current number of versions. If a bot version is deleted,
@@ -1540,6 +1609,75 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteBotLocaleResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteBotLocaleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * The action to delete the replicated bot in the secondary region.
+     * </p>
+     * 
+     * @param deleteBotReplicaRequest
+     * @return Result of the DeleteBotReplica operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DeleteBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteBotReplicaResult deleteBotReplica(DeleteBotReplicaRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteBotReplica(request);
+    }
+
+    @SdkInternalApi
+    final DeleteBotReplicaResult executeDeleteBotReplica(DeleteBotReplicaRequest deleteBotReplicaRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteBotReplicaRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteBotReplicaRequest> request = null;
+        Response<DeleteBotReplicaResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteBotReplicaRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteBotReplicaRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteBotReplica");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteBotReplicaResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteBotReplicaResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2569,6 +2707,72 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<DescribeBotRecommendationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeBotRecommendationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Monitors the bot replication status through the UI console.
+     * </p>
+     * 
+     * @param describeBotReplicaRequest
+     * @return Result of the DescribeBotReplica operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotReplica"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeBotReplicaResult describeBotReplica(DescribeBotReplicaRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeBotReplica(request);
+    }
+
+    @SdkInternalApi
+    final DescribeBotReplicaResult executeDescribeBotReplica(DescribeBotReplicaRequest describeBotReplicaRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeBotReplicaRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeBotReplicaRequest> request = null;
+        Response<DescribeBotReplicaResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeBotReplicaRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeBotReplicaRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeBotReplica");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeBotReplicaResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeBotReplicaResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3684,6 +3888,69 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * The action to list the replicated bots created from the source bot alias.
+     * </p>
+     * 
+     * @param listBotAliasReplicasRequest
+     * @return Result of the ListBotAliasReplicas operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListBotAliasReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotAliasReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListBotAliasReplicasResult listBotAliasReplicas(ListBotAliasReplicasRequest request) {
+        request = beforeClientExecution(request);
+        return executeListBotAliasReplicas(request);
+    }
+
+    @SdkInternalApi
+    final ListBotAliasReplicasResult executeListBotAliasReplicas(ListBotAliasReplicasRequest listBotAliasReplicasRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listBotAliasReplicasRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListBotAliasReplicasRequest> request = null;
+        Response<ListBotAliasReplicasResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListBotAliasReplicasRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listBotAliasReplicasRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBotAliasReplicas");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListBotAliasReplicasResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListBotAliasReplicasResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a list of aliases for the specified bot.
      * </p>
      * 
@@ -3875,6 +4142,69 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * The action to list the replicated bots.
+     * </p>
+     * 
+     * @param listBotReplicasRequest
+     * @return Result of the ListBotReplicas operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListBotReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotReplicas" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListBotReplicasResult listBotReplicas(ListBotReplicasRequest request) {
+        request = beforeClientExecution(request);
+        return executeListBotReplicas(request);
+    }
+
+    @SdkInternalApi
+    final ListBotReplicasResult executeListBotReplicas(ListBotReplicasRequest listBotReplicasRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listBotReplicasRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListBotReplicasRequest> request = null;
+        Response<ListBotReplicasResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListBotReplicasRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listBotReplicasRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBotReplicas");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListBotReplicasResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListBotReplicasResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the generation requests made for a bot locale.
      * </p>
      * 
@@ -3929,6 +4259,70 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<ListBotResourceGenerationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListBotResourceGenerationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Contains information about all the versions replication statuses applicable for Global Resiliency.
+     * </p>
+     * 
+     * @param listBotVersionReplicasRequest
+     * @return Result of the ListBotVersionReplicas operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListBotVersionReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotVersionReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListBotVersionReplicasResult listBotVersionReplicas(ListBotVersionReplicasRequest request) {
+        request = beforeClientExecution(request);
+        return executeListBotVersionReplicas(request);
+    }
+
+    @SdkInternalApi
+    final ListBotVersionReplicasResult executeListBotVersionReplicas(ListBotVersionReplicasRequest listBotVersionReplicasRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listBotVersionReplicasRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListBotVersionReplicasRequest> request = null;
+        Response<ListBotVersionReplicasResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListBotVersionReplicasRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listBotVersionReplicasRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBotVersionReplicas");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListBotVersionReplicasResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListBotVersionReplicasResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

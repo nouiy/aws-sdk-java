@@ -30,18 +30,18 @@ public class DescribeLocationObjectStorageRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     * Specifies the Amazon Resource Name (ARN) of the object storage system location.
      * </p>
      */
     private String locationArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     * Specifies the Amazon Resource Name (ARN) of the object storage system location.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     *        Specifies the Amazon Resource Name (ARN) of the object storage system location.
      */
 
     public void setLocationArn(String locationArn) {
@@ -50,10 +50,10 @@ public class DescribeLocationObjectStorageRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     * Specifies the Amazon Resource Name (ARN) of the object storage system location.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     * @return Specifies the Amazon Resource Name (ARN) of the object storage system location.
      */
 
     public String getLocationArn() {
@@ -62,11 +62,11 @@ public class DescribeLocationObjectStorageRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     * Specifies the Amazon Resource Name (ARN) of the object storage system location.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the object storage system location that you want information about.
+     *        Specifies the Amazon Resource Name (ARN) of the object storage system location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

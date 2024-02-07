@@ -275,6 +275,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Action to create a replication of the source bot in the secondary region.
+     * </p>
+     * 
+     * @param createBotReplicaRequest
+     * @return A Java Future containing the result of the CreateBotReplica operation returned by the service.
+     * @sample AmazonLexModelsV2Async.CreateBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBotReplicaResult> createBotReplicaAsync(CreateBotReplicaRequest createBotReplicaRequest);
+
+    /**
+     * <p>
+     * Action to create a replication of the source bot in the secondary region.
+     * </p>
+     * 
+     * @param createBotReplicaRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateBotReplica operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.CreateBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBotReplicaResult> createBotReplicaAsync(CreateBotReplicaRequest createBotReplicaRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateBotReplicaRequest, CreateBotReplicaResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an immutable version of the bot. When you create the first version of a bot, Amazon Lex sets the version
      * number to 1. Subsequent bot versions increase in an increment of 1. The version number will always represent the
      * total number of versions created of the bot, not the current number of versions. If a bot version is deleted,
@@ -813,6 +844,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to delete the replicated bot in the secondary region.
+     * </p>
+     * 
+     * @param deleteBotReplicaRequest
+     * @return A Java Future containing the result of the DeleteBotReplica operation returned by the service.
+     * @sample AmazonLexModelsV2Async.DeleteBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBotReplicaResult> deleteBotReplicaAsync(DeleteBotReplicaRequest deleteBotReplicaRequest);
+
+    /**
+     * <p>
+     * The action to delete the replicated bot in the secondary region.
+     * </p>
+     * 
+     * @param deleteBotReplicaRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteBotReplica operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.DeleteBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBotReplicaResult> deleteBotReplicaAsync(DeleteBotReplicaRequest deleteBotReplicaRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteBotReplicaRequest, DeleteBotReplicaResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a specific version of a bot. To delete all versions of a bot, use the <a
      * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DeleteBot.html">DeleteBot</a> operation.
      * </p>
@@ -1331,6 +1393,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
     java.util.concurrent.Future<DescribeBotRecommendationResult> describeBotRecommendationAsync(
             DescribeBotRecommendationRequest describeBotRecommendationRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeBotRecommendationRequest, DescribeBotRecommendationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Monitors the bot replication status through the UI console.
+     * </p>
+     * 
+     * @param describeBotReplicaRequest
+     * @return A Java Future containing the result of the DescribeBotReplica operation returned by the service.
+     * @sample AmazonLexModelsV2Async.DescribeBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotReplica"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBotReplicaResult> describeBotReplicaAsync(DescribeBotReplicaRequest describeBotReplicaRequest);
+
+    /**
+     * <p>
+     * Monitors the bot replication status through the UI console.
+     * </p>
+     * 
+     * @param describeBotReplicaRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeBotReplica operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.DescribeBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotReplica"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBotReplicaResult> describeBotReplicaAsync(DescribeBotReplicaRequest describeBotReplicaRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeBotReplicaRequest, DescribeBotReplicaResult> asyncHandler);
 
     /**
      * <p>
@@ -1916,6 +2009,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to list the replicated bots created from the source bot alias.
+     * </p>
+     * 
+     * @param listBotAliasReplicasRequest
+     * @return A Java Future containing the result of the ListBotAliasReplicas operation returned by the service.
+     * @sample AmazonLexModelsV2Async.ListBotAliasReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotAliasReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotAliasReplicasResult> listBotAliasReplicasAsync(ListBotAliasReplicasRequest listBotAliasReplicasRequest);
+
+    /**
+     * <p>
+     * The action to list the replicated bots created from the source bot alias.
+     * </p>
+     * 
+     * @param listBotAliasReplicasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBotAliasReplicas operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.ListBotAliasReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotAliasReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotAliasReplicasResult> listBotAliasReplicasAsync(ListBotAliasReplicasRequest listBotAliasReplicasRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBotAliasReplicasRequest, ListBotAliasReplicasResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of aliases for the specified bot.
      * </p>
      * 
@@ -2009,6 +2133,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to list the replicated bots.
+     * </p>
+     * 
+     * @param listBotReplicasRequest
+     * @return A Java Future containing the result of the ListBotReplicas operation returned by the service.
+     * @sample AmazonLexModelsV2Async.ListBotReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotReplicas" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotReplicasResult> listBotReplicasAsync(ListBotReplicasRequest listBotReplicasRequest);
+
+    /**
+     * <p>
+     * The action to list the replicated bots.
+     * </p>
+     * 
+     * @param listBotReplicasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBotReplicas operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.ListBotReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotReplicas" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotReplicasResult> listBotReplicasAsync(ListBotReplicasRequest listBotReplicasRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBotReplicasRequest, ListBotReplicasResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the generation requests made for a bot locale.
      * </p>
      * 
@@ -2039,6 +2194,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
     java.util.concurrent.Future<ListBotResourceGenerationsResult> listBotResourceGenerationsAsync(
             ListBotResourceGenerationsRequest listBotResourceGenerationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListBotResourceGenerationsRequest, ListBotResourceGenerationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Contains information about all the versions replication statuses applicable for Global Resiliency.
+     * </p>
+     * 
+     * @param listBotVersionReplicasRequest
+     * @return A Java Future containing the result of the ListBotVersionReplicas operation returned by the service.
+     * @sample AmazonLexModelsV2Async.ListBotVersionReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotVersionReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotVersionReplicasResult> listBotVersionReplicasAsync(ListBotVersionReplicasRequest listBotVersionReplicasRequest);
+
+    /**
+     * <p>
+     * Contains information about all the versions replication statuses applicable for Global Resiliency.
+     * </p>
+     * 
+     * @param listBotVersionReplicasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBotVersionReplicas operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.ListBotVersionReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotVersionReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotVersionReplicasResult> listBotVersionReplicasAsync(ListBotVersionReplicasRequest listBotVersionReplicasRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBotVersionReplicasRequest, ListBotVersionReplicasResult> asyncHandler);
 
     /**
      * <p>

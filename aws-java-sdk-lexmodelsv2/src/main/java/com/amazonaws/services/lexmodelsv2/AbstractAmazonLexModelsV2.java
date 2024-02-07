@@ -64,6 +64,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public CreateBotReplicaResult createBotReplica(CreateBotReplicaRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateBotVersionResult createBotVersion(CreateBotVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -120,6 +125,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public DeleteBotLocaleResult deleteBotLocale(DeleteBotLocaleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteBotReplicaResult deleteBotReplica(DeleteBotReplicaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -195,6 +205,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public DescribeBotRecommendationResult describeBotRecommendation(DescribeBotRecommendationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeBotReplicaResult describeBotReplica(DescribeBotReplicaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -279,6 +294,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public ListBotAliasReplicasResult listBotAliasReplicas(ListBotAliasReplicasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListBotAliasesResult listBotAliases(ListBotAliasesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -294,7 +314,17 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public ListBotReplicasResult listBotReplicas(ListBotReplicasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListBotResourceGenerationsResult listBotResourceGenerations(ListBotResourceGenerationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListBotVersionReplicasResult listBotVersionReplicas(ListBotVersionReplicasRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

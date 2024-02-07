@@ -35,7 +35,7 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
     private String locationArn;
     /**
      * <p>
-     * The URL of the object storage system location.
+     * The URI of the object storage system location.
      * </p>
      */
     private String locationUri;
@@ -59,7 +59,7 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
     private String serverProtocol;
     /**
      * <p>
-     * The ARNs of the DataSync agents that can securely connect with your location.
+     * The ARNs of the DataSync agents that can connect with your object storage system.
      * </p>
      */
     private java.util.List<String> agentArns;
@@ -118,11 +118,11 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The URL of the object storage system location.
+     * The URI of the object storage system location.
      * </p>
      * 
      * @param locationUri
-     *        The URL of the object storage system location.
+     *        The URI of the object storage system location.
      */
 
     public void setLocationUri(String locationUri) {
@@ -131,10 +131,10 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The URL of the object storage system location.
+     * The URI of the object storage system location.
      * </p>
      * 
-     * @return The URL of the object storage system location.
+     * @return The URI of the object storage system location.
      */
 
     public String getLocationUri() {
@@ -143,11 +143,11 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The URL of the object storage system location.
+     * The URI of the object storage system location.
      * </p>
      * 
      * @param locationUri
-     *        The URL of the object storage system location.
+     *        The URI of the object storage system location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -297,10 +297,10 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARNs of the DataSync agents that can securely connect with your location.
+     * The ARNs of the DataSync agents that can connect with your object storage system.
      * </p>
      * 
-     * @return The ARNs of the DataSync agents that can securely connect with your location.
+     * @return The ARNs of the DataSync agents that can connect with your object storage system.
      */
 
     public java.util.List<String> getAgentArns() {
@@ -309,11 +309,11 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARNs of the DataSync agents that can securely connect with your location.
+     * The ARNs of the DataSync agents that can connect with your object storage system.
      * </p>
      * 
      * @param agentArns
-     *        The ARNs of the DataSync agents that can securely connect with your location.
+     *        The ARNs of the DataSync agents that can connect with your object storage system.
      */
 
     public void setAgentArns(java.util.Collection<String> agentArns) {
@@ -327,7 +327,7 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARNs of the DataSync agents that can securely connect with your location.
+     * The ARNs of the DataSync agents that can connect with your object storage system.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -336,7 +336,7 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param agentArns
-     *        The ARNs of the DataSync agents that can securely connect with your location.
+     *        The ARNs of the DataSync agents that can connect with your object storage system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -352,11 +352,11 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARNs of the DataSync agents that can securely connect with your location.
+     * The ARNs of the DataSync agents that can connect with your object storage system.
      * </p>
      * 
      * @param agentArns
-     *        The ARNs of the DataSync agents that can securely connect with your location.
+     *        The ARNs of the DataSync agents that can connect with your object storage system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

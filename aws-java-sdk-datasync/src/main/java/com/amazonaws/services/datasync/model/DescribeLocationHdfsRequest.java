@@ -27,18 +27,18 @@ public class DescribeLocationHdfsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the HDFS location.
      * </p>
      */
     private String locationArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the HDFS location.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     *        Specifies the Amazon Resource Name (ARN) of the HDFS location.
      */
 
     public void setLocationArn(String locationArn) {
@@ -47,10 +47,10 @@ public class DescribeLocationHdfsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the HDFS location.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     * @return Specifies the Amazon Resource Name (ARN) of the HDFS location.
      */
 
     public String getLocationArn() {
@@ -59,11 +59,11 @@ public class DescribeLocationHdfsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     * Specifies the Amazon Resource Name (ARN) of the HDFS location.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the HDFS cluster location to describe.
+     *        Specifies the Amazon Resource Name (ARN) of the HDFS location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

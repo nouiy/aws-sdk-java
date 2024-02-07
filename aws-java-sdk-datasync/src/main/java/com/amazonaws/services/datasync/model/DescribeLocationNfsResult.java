@@ -34,7 +34,7 @@ public class DescribeLocationNfsResult extends com.amazonaws.AmazonWebServiceRes
     private String locationArn;
     /**
      * <p>
-     * The URL of the NFS location.
+     * The URI of the NFS location.
      * </p>
      */
     private String locationUri;
@@ -95,11 +95,11 @@ public class DescribeLocationNfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The URL of the NFS location.
+     * The URI of the NFS location.
      * </p>
      * 
      * @param locationUri
-     *        The URL of the NFS location.
+     *        The URI of the NFS location.
      */
 
     public void setLocationUri(String locationUri) {
@@ -108,10 +108,10 @@ public class DescribeLocationNfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The URL of the NFS location.
+     * The URI of the NFS location.
      * </p>
      * 
-     * @return The URL of the NFS location.
+     * @return The URI of the NFS location.
      */
 
     public String getLocationUri() {
@@ -120,11 +120,11 @@ public class DescribeLocationNfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The URL of the NFS location.
+     * The URI of the NFS location.
      * </p>
      * 
      * @param locationUri
-     *        The URL of the NFS location.
+     *        The URI of the NFS location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

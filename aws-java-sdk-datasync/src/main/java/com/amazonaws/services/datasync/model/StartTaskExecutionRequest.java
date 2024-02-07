@@ -54,6 +54,42 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<FilterRule> excludes;
     /**
      * <p>
+     * Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     * information and configuration examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a manifest configuration, specify this parameter with an empty value.
+     * </p>
+     */
+    private ManifestConfig manifestConfig;
+    /**
+     * <p>
+     * Specifies how you want to configure a task report, which provides detailed information about your DataSync
+     * transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync transfers
+     * with task reports</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a task report configuration, specify this parameter as empty.
+     * </p>
+     */
+    private TaskReportConfig taskReportConfig;
+    /**
+     * <p>
      * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the task execution.
      * </p>
      * <p>
@@ -61,13 +97,6 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private java.util.List<TagListEntry> tags;
-    /**
-     * <p>
-     * Specifies how you want to configure a task report, which provides detailed information about for your DataSync
-     * transfer.
-     * </p>
-     */
-    private TaskReportConfig taskReportConfig;
 
     /**
      * <p>
@@ -309,6 +338,224 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
+     * Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     * information and configuration examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a manifest configuration, specify this parameter with an empty value.
+     * </p>
+     * 
+     * @param manifestConfig
+     *        Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     *        information and configuration examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *        what DataSync transfers by using a manifest</a>.</p>
+     *        <p>
+     *        When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     *        <code>iam:PassRole</code> permission. The <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     *        >AWSDataSyncFullAccess</a> policy includes this permission.
+     *        </p>
+     *        <p>
+     *        To remove a manifest configuration, specify this parameter with an empty value.
+     */
+
+    public void setManifestConfig(ManifestConfig manifestConfig) {
+        this.manifestConfig = manifestConfig;
+    }
+
+    /**
+     * <p>
+     * Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     * information and configuration examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a manifest configuration, specify this parameter with an empty value.
+     * </p>
+     * 
+     * @return Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     *         information and configuration examples, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *         what DataSync transfers by using a manifest</a>.</p>
+     *         <p>
+     *         When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     *         <code>iam:PassRole</code> permission. The <a href=
+     *         "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     *         >AWSDataSyncFullAccess</a> policy includes this permission.
+     *         </p>
+     *         <p>
+     *         To remove a manifest configuration, specify this parameter with an empty value.
+     */
+
+    public ManifestConfig getManifestConfig() {
+        return this.manifestConfig;
+    }
+
+    /**
+     * <p>
+     * Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     * information and configuration examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a manifest configuration, specify this parameter with an empty value.
+     * </p>
+     * 
+     * @param manifestConfig
+     *        Configures a manifest, which is a list of files or objects that you want DataSync to transfer. For more
+     *        information and configuration examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *        what DataSync transfers by using a manifest</a>.</p>
+     *        <p>
+     *        When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     *        <code>iam:PassRole</code> permission. The <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     *        >AWSDataSyncFullAccess</a> policy includes this permission.
+     *        </p>
+     *        <p>
+     *        To remove a manifest configuration, specify this parameter with an empty value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTaskExecutionRequest withManifestConfig(ManifestConfig manifestConfig) {
+        setManifestConfig(manifestConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies how you want to configure a task report, which provides detailed information about your DataSync
+     * transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync transfers
+     * with task reports</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a task report configuration, specify this parameter as empty.
+     * </p>
+     * 
+     * @param taskReportConfig
+     *        Specifies how you want to configure a task report, which provides detailed information about your DataSync
+     *        transfer. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync
+     *        transfers with task reports</a>.</p>
+     *        <p>
+     *        When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     *        <code>iam:PassRole</code> permission. The <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     *        >AWSDataSyncFullAccess</a> policy includes this permission.
+     *        </p>
+     *        <p>
+     *        To remove a task report configuration, specify this parameter as empty.
+     */
+
+    public void setTaskReportConfig(TaskReportConfig taskReportConfig) {
+        this.taskReportConfig = taskReportConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies how you want to configure a task report, which provides detailed information about your DataSync
+     * transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync transfers
+     * with task reports</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a task report configuration, specify this parameter as empty.
+     * </p>
+     * 
+     * @return Specifies how you want to configure a task report, which provides detailed information about your
+     *         DataSync transfer. For more information, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync
+     *         transfers with task reports</a>.</p>
+     *         <p>
+     *         When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     *         <code>iam:PassRole</code> permission. The <a href=
+     *         "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     *         >AWSDataSyncFullAccess</a> policy includes this permission.
+     *         </p>
+     *         <p>
+     *         To remove a task report configuration, specify this parameter as empty.
+     */
+
+    public TaskReportConfig getTaskReportConfig() {
+        return this.taskReportConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies how you want to configure a task report, which provides detailed information about your DataSync
+     * transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync transfers
+     * with task reports</a>.
+     * </p>
+     * <p>
+     * When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     * <code>iam:PassRole</code> permission. The <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     * >AWSDataSyncFullAccess</a> policy includes this permission.
+     * </p>
+     * <p>
+     * To remove a task report configuration, specify this parameter as empty.
+     * </p>
+     * 
+     * @param taskReportConfig
+     *        Specifies how you want to configure a task report, which provides detailed information about your DataSync
+     *        transfer. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Monitoring your DataSync
+     *        transfers with task reports</a>.</p>
+     *        <p>
+     *        When using this parameter, your caller identity (the role that you're using DataSync with) must have the
+     *        <code>iam:PassRole</code> permission. The <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess"
+     *        >AWSDataSyncFullAccess</a> policy includes this permission.
+     *        </p>
+     *        <p>
+     *        To remove a task report configuration, specify this parameter as empty.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTaskExecutionRequest withTaskReportConfig(TaskReportConfig taskReportConfig) {
+        setTaskReportConfig(taskReportConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the task execution.
      * </p>
      * <p>
@@ -402,52 +649,6 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * <p>
-     * Specifies how you want to configure a task report, which provides detailed information about for your DataSync
-     * transfer.
-     * </p>
-     * 
-     * @param taskReportConfig
-     *        Specifies how you want to configure a task report, which provides detailed information about for your
-     *        DataSync transfer.
-     */
-
-    public void setTaskReportConfig(TaskReportConfig taskReportConfig) {
-        this.taskReportConfig = taskReportConfig;
-    }
-
-    /**
-     * <p>
-     * Specifies how you want to configure a task report, which provides detailed information about for your DataSync
-     * transfer.
-     * </p>
-     * 
-     * @return Specifies how you want to configure a task report, which provides detailed information about for your
-     *         DataSync transfer.
-     */
-
-    public TaskReportConfig getTaskReportConfig() {
-        return this.taskReportConfig;
-    }
-
-    /**
-     * <p>
-     * Specifies how you want to configure a task report, which provides detailed information about for your DataSync
-     * transfer.
-     * </p>
-     * 
-     * @param taskReportConfig
-     *        Specifies how you want to configure a task report, which provides detailed information about for your
-     *        DataSync transfer.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartTaskExecutionRequest withTaskReportConfig(TaskReportConfig taskReportConfig) {
-        setTaskReportConfig(taskReportConfig);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -467,10 +668,12 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("Includes: ").append(getIncludes()).append(",");
         if (getExcludes() != null)
             sb.append("Excludes: ").append(getExcludes()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+        if (getManifestConfig() != null)
+            sb.append("ManifestConfig: ").append(getManifestConfig()).append(",");
         if (getTaskReportConfig() != null)
-            sb.append("TaskReportConfig: ").append(getTaskReportConfig());
+            sb.append("TaskReportConfig: ").append(getTaskReportConfig()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -501,13 +704,17 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getExcludes() != null && other.getExcludes().equals(this.getExcludes()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
+        if (other.getManifestConfig() == null ^ this.getManifestConfig() == null)
             return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+        if (other.getManifestConfig() != null && other.getManifestConfig().equals(this.getManifestConfig()) == false)
             return false;
         if (other.getTaskReportConfig() == null ^ this.getTaskReportConfig() == null)
             return false;
         if (other.getTaskReportConfig() != null && other.getTaskReportConfig().equals(this.getTaskReportConfig()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -521,8 +728,9 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getOverrideOptions() == null) ? 0 : getOverrideOptions().hashCode());
         hashCode = prime * hashCode + ((getIncludes() == null) ? 0 : getIncludes().hashCode());
         hashCode = prime * hashCode + ((getExcludes() == null) ? 0 : getExcludes().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getManifestConfig() == null) ? 0 : getManifestConfig().hashCode());
         hashCode = prime * hashCode + ((getTaskReportConfig() == null) ? 0 : getTaskReportConfig().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

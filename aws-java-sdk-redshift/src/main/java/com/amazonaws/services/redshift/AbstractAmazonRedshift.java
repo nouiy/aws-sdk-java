@@ -620,6 +620,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public ListRecommendationsResult listRecommendations(ListRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyAquaConfigurationResult modifyAquaConfiguration(ModifyAquaConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

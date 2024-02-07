@@ -357,8 +357,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for a Microsoft Azure Blob Storage container that DataSync can use as a transfer source or
-     * destination.
+     * Creates a transfer <i>location</i> for a Microsoft Azure Blob Storage container. DataSync can use this location
+     * as a transfer source or destination.
      * </p>
      * <p>
      * Before you begin, make sure you know <a href=
@@ -430,9 +430,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon EFS file system that DataSync can access for a transfer. For more information,
-     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html">Creating a location
-     * for Amazon EFS</a>.
+     * Creates a transfer <i>location</i> for an Amazon EFS file system. DataSync can use this location as a source or
+     * destination for transferring data.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand how DataSync <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-access"
+     * >accesses Amazon EFS file systems</a>.
      * </p>
      * 
      * @param createLocationEfsRequest
@@ -492,7 +496,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon FSx for Lustre file system.
+     * Creates a transfer <i>location</i> for an Amazon FSx for Lustre file system. DataSync can use this location as a
+     * source or destination for transferring data.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand how DataSync <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-lustre-location.html#create-lustre-location-access"
+     * >accesses FSx for Lustre file systems</a>.
      * </p>
      * 
      * @param createLocationFsxLustreRequest
@@ -553,12 +563,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can use for a data transfer.
+     * Creates a transfer <i>location</i> for an Amazon FSx for NetApp ONTAP file system. DataSync can use this location
+     * as a source or destination for transferring data.
      * </p>
      * <p>
      * Before you begin, make sure that you understand how DataSync <a href=
      * "https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html#create-ontap-location-access"
-     * >accesses an FSx for ONTAP file system</a>.
+     * >accesses FSx for ONTAP file systems</a>.
      * </p>
      * 
      * @param createLocationFsxOntapRequest
@@ -618,10 +629,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon FSx for OpenZFS file system that DataSync can access for a transfer. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-openzfs-location.html">Creating a location for
-     * FSx for OpenZFS</a>.
+     * Creates a transfer <i>location</i> for an Amazon FSx for OpenZFS file system. DataSync can use this location as a
+     * source or destination for transferring data.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand how DataSync <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-openzfs-location.html#create-openzfs-access"
+     * >accesses FSx for OpenZFS file systems</a>.
      * </p>
      * <note>
      * <p>
@@ -688,13 +702,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon FSx for Windows File Server file system that DataSync can use for a data
-     * transfer.
+     * Creates a transfer <i>location</i> for an Amazon FSx for Windows File Server file system. DataSync can use this
+     * location as a source or destination for transferring data.
      * </p>
      * <p>
      * Before you begin, make sure that you understand how DataSync <a href=
      * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-location-access"
-     * >accesses an FSx for Windows File Server</a>.
+     * >accesses FSx for Windows File Server file systems</a>.
      * </p>
      * 
      * @param createLocationFsxWindowsRequest
@@ -755,7 +769,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for a Hadoop Distributed File System (HDFS).
+     * Creates a transfer <i>location</i> for a Hadoop Distributed File System (HDFS). DataSync can use this location as
+     * a source or destination for transferring data.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand how DataSync <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-hdfs-location.html#accessing-hdfs">accesses
+     * HDFS clusters</a>.
      * </p>
      * 
      * @param createLocationHdfsRequest
@@ -814,12 +834,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for a Network File System (NFS) file server that DataSync can use for a data transfer.
+     * Creates a transfer <i>location</i> for a Network File System (NFS) file server. DataSync can use this location as
+     * a source or destination for transferring data.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html">Configuring transfers to or
-     * from an NFS file server</a>.
+     * Before you begin, make sure that you understand how DataSync <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#accessing-nfs">accesses NFS
+     * file servers</a>.
      * </p>
      * <note>
      * <p>
@@ -887,9 +908,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an object storage system that DataSync can access for a transfer. For more information,
-     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a
-     * location for object storage</a>.
+     * Creates a transfer <i>location</i> for an object storage system. DataSync can use this location as a source or
+     * destination for transferring data.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand the <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html#create-object-location-prerequisites"
+     * >prerequisites</a> for DataSync to work with object storage systems.
      * </p>
      * 
      * @param createLocationObjectStorageRequest
@@ -951,12 +976,12 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * A <i>location</i> is an endpoint for an Amazon S3 bucket. DataSync can use the location as a source or
-     * destination for copying data.
+     * Creates a transfer <i>location</i> for an Amazon S3 bucket. DataSync can use this location as a source or
+     * destination for transferring data.
      * </p>
      * <important>
      * <p>
-     * Before you create your location, make sure that you read the following sections:
+     * Before you begin, make sure that you read the following topics:
      * </p>
      * <ul>
      * <li>
@@ -976,8 +1001,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * </important>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"
-     * >Creating an Amazon S3 location</a>.
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html">Configuring transfers with
+     * Amazon S3</a>.
      * </p>
      * 
      * @param createLocationS3Request
@@ -1037,12 +1062,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for a Server Message Block (SMB) file server that DataSync can use for a data transfer.
+     * Creates a transfer <i>location</i> for a Server Message Block (SMB) file server. DataSync can use this location
+     * as a source or destination for transferring data.
      * </p>
      * <p>
      * Before you begin, make sure that you understand how DataSync <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html">accesses an SMB file
-     * server</a>.
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb">accesses
+     * SMB file servers</a>.
      * </p>
      * 
      * @param createLocationSmbRequest
@@ -1240,7 +1266,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Deletes the configuration of a location used by DataSync.
+     * Deletes a transfer location resource from DataSync.
      * </p>
      * 
      * @param deleteLocationRequest
@@ -1300,7 +1326,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Deletes an DataSync transfer task.
+     * Deletes a transfer task resource from DataSync.
      * </p>
      * 
      * @param deleteTaskRequest
@@ -1549,7 +1575,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata about your DataSync location for an Amazon EFS file system.
+     * Provides details about how an DataSync transfer location for an Amazon EFS file system is configured.
      * </p>
      * 
      * @param describeLocationEfsRequest
@@ -1609,7 +1635,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Provides details about how an DataSync location for an Amazon FSx for Lustre file system is configured.
+     * Provides details about how an DataSync transfer location for an Amazon FSx for Lustre file system is configured.
      * </p>
      * 
      * @param describeLocationFsxLustreRequest
@@ -1670,7 +1696,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Provides details about how an DataSync location for an Amazon FSx for NetApp ONTAP file system is configured.
+     * Provides details about how an DataSync transfer location for an Amazon FSx for NetApp ONTAP file system is
+     * configured.
      * </p>
      * <note>
      * <p>
@@ -1737,7 +1764,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Provides details about how an DataSync location for an Amazon FSx for OpenZFS file system is configured.
+     * Provides details about how an DataSync transfer location for an Amazon FSx for OpenZFS file system is configured.
      * </p>
      * <note>
      * <p>
@@ -1804,7 +1831,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata about an Amazon FSx for Windows File Server location, such as information about its path.
+     * Provides details about how an DataSync transfer location for an Amazon FSx for Windows File Server file system is
+     * configured.
      * </p>
      * 
      * @param describeLocationFsxWindowsRequest
@@ -1865,8 +1893,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata, such as the authentication information about the Hadoop Distributed File System (HDFS)
-     * location.
+     * Provides details about how an DataSync transfer location for a Hadoop Distributed File System (HDFS) is
+     * configured.
      * </p>
      * 
      * @param describeLocationHdfsRequest
@@ -1986,7 +2014,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata about your DataSync location for an object storage system.
+     * Provides details about how an DataSync transfer location for an object storage system is configured.
      * </p>
      * 
      * @param describeLocationObjectStorageRequest
@@ -2048,7 +2076,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata, such as bucket name, about an Amazon S3 bucket location.
+     * Provides details about how an DataSync transfer location for an S3 bucket is configured.
      * </p>
      * 
      * @param describeLocationS3Request
@@ -2108,7 +2136,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata, such as the path and user information about an SMB location.
+     * Provides details about how an DataSync transfer location for a Server Message Block (SMB) file server is
+     * configured.
      * </p>
      * 
      * @param describeLocationSmbRequest
@@ -2916,7 +2945,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns a list of executed tasks.
+     * Returns a list of executions for an DataSync transfer task.
      * </p>
      * 
      * @param listTaskExecutionsRequest
@@ -3952,7 +3981,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Updates the configuration of a DataSync transfer task.
+     * Updates the configuration of an DataSync transfer task.
      * </p>
      * 
      * @param updateTaskRequest

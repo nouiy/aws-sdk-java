@@ -223,6 +223,8 @@ public enum RedshiftActions implements Action {
     GetReservedNodeExchangeOfferings("redshift:GetReservedNodeExchangeOfferings"),
     /** Action for the GetResourcePolicy operation. */
     GetResourcePolicy("redshift:GetResourcePolicy"),
+    /** Action for the ListRecommendations operation. */
+    ListRecommendations("redshift:ListRecommendations"),
     /** Action for the ModifyAquaConfiguration operation. */
     ModifyAquaConfiguration("redshift:ModifyAquaConfiguration"),
     /** Action for the ModifyAuthenticationProfile operation. */

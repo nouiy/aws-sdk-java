@@ -150,8 +150,17 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.util.List<FilterRule> includes;
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     */
+    private ManifestConfig manifestConfig;
+    /**
+     * <p>
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      */
     private TaskReportConfig taskReportConfig;
@@ -1114,12 +1123,67 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * 
+     * @param manifestConfig
+     *        The configuration of the manifest that lists the files or objects to transfer. For more information, see
+     *        <a href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *        what DataSync transfers by using a manifest</a>.
+     */
+
+    public void setManifestConfig(ManifestConfig manifestConfig) {
+        this.manifestConfig = manifestConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * 
+     * @return The configuration of the manifest that lists the files or objects to transfer. For more information, see
+     *         <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *         what DataSync transfers by using a manifest</a>.
+     */
+
+    public ManifestConfig getManifestConfig() {
+        return this.manifestConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * 
+     * @param manifestConfig
+     *        The configuration of the manifest that lists the files or objects to transfer. For more information, see
+     *        <a href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *        what DataSync transfers by using a manifest</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTaskResult withManifestConfig(ManifestConfig manifestConfig) {
+        setManifestConfig(manifestConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      * 
      * @param taskReportConfig
-     *        The configuration of your task report. For more information, see <a
+     *        The configuration of your task report, which provides detailed information about for your DataSync
+     *        transfer. For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      */
 
@@ -1129,11 +1193,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      * 
-     * @return The configuration of your task report. For more information, see <a
+     * @return The configuration of your task report, which provides detailed information about for your DataSync
+     *         transfer. For more information, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task
      *         report</a>.
      */
@@ -1144,12 +1210,14 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      * 
      * @param taskReportConfig
-     *        The configuration of your task report. For more information, see <a
+     *        The configuration of your task report, which provides detailed information about for your DataSync
+     *        transfer. For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1203,6 +1271,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getIncludes() != null)
             sb.append("Includes: ").append(getIncludes()).append(",");
+        if (getManifestConfig() != null)
+            sb.append("ManifestConfig: ").append(getManifestConfig()).append(",");
         if (getTaskReportConfig() != null)
             sb.append("TaskReportConfig: ").append(getTaskReportConfig());
         sb.append("}");
@@ -1284,6 +1354,10 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getIncludes() != null && other.getIncludes().equals(this.getIncludes()) == false)
             return false;
+        if (other.getManifestConfig() == null ^ this.getManifestConfig() == null)
+            return false;
+        if (other.getManifestConfig() != null && other.getManifestConfig().equals(this.getManifestConfig()) == false)
+            return false;
         if (other.getTaskReportConfig() == null ^ this.getTaskReportConfig() == null)
             return false;
         if (other.getTaskReportConfig() != null && other.getTaskReportConfig().equals(this.getTaskReportConfig()) == false)
@@ -1312,6 +1386,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getErrorDetail() == null) ? 0 : getErrorDetail().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getIncludes() == null) ? 0 : getIncludes().hashCode());
+        hashCode = prime * hashCode + ((getManifestConfig() == null) ? 0 : getManifestConfig().hashCode());
         hashCode = prime * hashCode + ((getTaskReportConfig() == null) ? 0 : getTaskReportConfig().hashCode());
         return hashCode;
     }

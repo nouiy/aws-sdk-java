@@ -36,10 +36,12 @@ public class StartTaskExecutionRequestMarshaller {
             .marshallLocationName("Includes").build();
     private static final MarshallingInfo<List> EXCLUDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Excludes").build();
-    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> MANIFESTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManifestConfig").build();
     private static final MarshallingInfo<StructuredPojo> TASKREPORTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskReportConfig").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final StartTaskExecutionRequestMarshaller instance = new StartTaskExecutionRequestMarshaller();
 
@@ -61,8 +63,9 @@ public class StartTaskExecutionRequestMarshaller {
             protocolMarshaller.marshall(startTaskExecutionRequest.getOverrideOptions(), OVERRIDEOPTIONS_BINDING);
             protocolMarshaller.marshall(startTaskExecutionRequest.getIncludes(), INCLUDES_BINDING);
             protocolMarshaller.marshall(startTaskExecutionRequest.getExcludes(), EXCLUDES_BINDING);
-            protocolMarshaller.marshall(startTaskExecutionRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(startTaskExecutionRequest.getManifestConfig(), MANIFESTCONFIG_BINDING);
             protocolMarshaller.marshall(startTaskExecutionRequest.getTaskReportConfig(), TASKREPORTCONFIG_BINDING);
+            protocolMarshaller.marshall(startTaskExecutionRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

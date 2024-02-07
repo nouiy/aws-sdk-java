@@ -64,6 +64,14 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     private java.util.List<FilterRule> includes;
     /**
      * <p>
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     */
+    private ManifestConfig manifestConfig;
+    /**
+     * <p>
      * The time when the task execution started.
      * </p>
      */
@@ -112,12 +120,6 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     private Long bytesTransferred;
     /**
      * <p>
-     * The result of the task execution.
-     * </p>
-     */
-    private TaskExecutionResultDetail result;
-    /**
-     * <p>
      * The physical number of bytes transferred over the network after compression was applied. In most cases, this
      * number is less than <code>BytesTransferred</code> unless the data isn't compressible.
      * </p>
@@ -125,7 +127,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     private Long bytesCompressed;
     /**
      * <p>
-     * The configuration of your task report, which provides detailed information about for your DataSync transfer.
+     * The result of the task execution.
+     * </p>
+     */
+    private TaskExecutionResultDetail result;
+    /**
+     * <p>
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      */
     private TaskReportConfig taskReportConfig;
@@ -508,6 +518,59 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * 
+     * @param manifestConfig
+     *        The configuration of the manifest that lists the files or objects to transfer. For more information, see
+     *        <a href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *        what DataSync transfers by using a manifest</a>.
+     */
+
+    public void setManifestConfig(ManifestConfig manifestConfig) {
+        this.manifestConfig = manifestConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * 
+     * @return The configuration of the manifest that lists the files or objects to transfer. For more information, see
+     *         <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *         what DataSync transfers by using a manifest</a>.
+     */
+
+    public ManifestConfig getManifestConfig() {
+        return this.manifestConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration of the manifest that lists the files or objects to transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying what
+     * DataSync transfers by using a manifest</a>.
+     * </p>
+     * 
+     * @param manifestConfig
+     *        The configuration of the manifest that lists the files or objects to transfer. For more information, see
+     *        <a href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">Specifying
+     *        what DataSync transfers by using a manifest</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTaskExecutionResult withManifestConfig(ManifestConfig manifestConfig) {
+        setManifestConfig(manifestConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * The time when the task execution started.
      * </p>
      * 
@@ -817,46 +880,6 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The result of the task execution.
-     * </p>
-     * 
-     * @param result
-     *        The result of the task execution.
-     */
-
-    public void setResult(TaskExecutionResultDetail result) {
-        this.result = result;
-    }
-
-    /**
-     * <p>
-     * The result of the task execution.
-     * </p>
-     * 
-     * @return The result of the task execution.
-     */
-
-    public TaskExecutionResultDetail getResult() {
-        return this.result;
-    }
-
-    /**
-     * <p>
-     * The result of the task execution.
-     * </p>
-     * 
-     * @param result
-     *        The result of the task execution.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeTaskExecutionResult withResult(TaskExecutionResultDetail result) {
-        setResult(result);
-        return this;
-    }
-
-    /**
-     * <p>
      * The physical number of bytes transferred over the network after compression was applied. In most cases, this
      * number is less than <code>BytesTransferred</code> unless the data isn't compressible.
      * </p>
@@ -903,12 +926,55 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The configuration of your task report, which provides detailed information about for your DataSync transfer.
+     * The result of the task execution.
+     * </p>
+     * 
+     * @param result
+     *        The result of the task execution.
+     */
+
+    public void setResult(TaskExecutionResultDetail result) {
+        this.result = result;
+    }
+
+    /**
+     * <p>
+     * The result of the task execution.
+     * </p>
+     * 
+     * @return The result of the task execution.
+     */
+
+    public TaskExecutionResultDetail getResult() {
+        return this.result;
+    }
+
+    /**
+     * <p>
+     * The result of the task execution.
+     * </p>
+     * 
+     * @param result
+     *        The result of the task execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTaskExecutionResult withResult(TaskExecutionResultDetail result) {
+        setResult(result);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      * 
      * @param taskReportConfig
      *        The configuration of your task report, which provides detailed information about for your DataSync
-     *        transfer.
+     *        transfer. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      */
 
     public void setTaskReportConfig(TaskReportConfig taskReportConfig) {
@@ -917,11 +983,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The configuration of your task report, which provides detailed information about for your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      * 
      * @return The configuration of your task report, which provides detailed information about for your DataSync
-     *         transfer.
+     *         transfer. For more information, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task
+     *         report</a>.
      */
 
     public TaskReportConfig getTaskReportConfig() {
@@ -930,12 +1000,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The configuration of your task report, which provides detailed information about for your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about for your DataSync transfer. For
+     * more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating
+     * a task report</a>.
      * </p>
      * 
      * @param taskReportConfig
      *        The configuration of your task report, which provides detailed information about for your DataSync
-     *        transfer.
+     *        transfer. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1247,6 +1320,8 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
             sb.append("Excludes: ").append(getExcludes()).append(",");
         if (getIncludes() != null)
             sb.append("Includes: ").append(getIncludes()).append(",");
+        if (getManifestConfig() != null)
+            sb.append("ManifestConfig: ").append(getManifestConfig()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getEstimatedFilesToTransfer() != null)
@@ -1259,10 +1334,10 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
             sb.append("BytesWritten: ").append(getBytesWritten()).append(",");
         if (getBytesTransferred() != null)
             sb.append("BytesTransferred: ").append(getBytesTransferred()).append(",");
-        if (getResult() != null)
-            sb.append("Result: ").append(getResult()).append(",");
         if (getBytesCompressed() != null)
             sb.append("BytesCompressed: ").append(getBytesCompressed()).append(",");
+        if (getResult() != null)
+            sb.append("Result: ").append(getResult()).append(",");
         if (getTaskReportConfig() != null)
             sb.append("TaskReportConfig: ").append(getTaskReportConfig()).append(",");
         if (getFilesDeleted() != null)
@@ -1309,6 +1384,10 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getIncludes() != null && other.getIncludes().equals(this.getIncludes()) == false)
             return false;
+        if (other.getManifestConfig() == null ^ this.getManifestConfig() == null)
+            return false;
+        if (other.getManifestConfig() != null && other.getManifestConfig().equals(this.getManifestConfig()) == false)
+            return false;
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
         if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
@@ -1333,13 +1412,13 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getBytesTransferred() != null && other.getBytesTransferred().equals(this.getBytesTransferred()) == false)
             return false;
-        if (other.getResult() == null ^ this.getResult() == null)
-            return false;
-        if (other.getResult() != null && other.getResult().equals(this.getResult()) == false)
-            return false;
         if (other.getBytesCompressed() == null ^ this.getBytesCompressed() == null)
             return false;
         if (other.getBytesCompressed() != null && other.getBytesCompressed().equals(this.getBytesCompressed()) == false)
+            return false;
+        if (other.getResult() == null ^ this.getResult() == null)
+            return false;
+        if (other.getResult() != null && other.getResult().equals(this.getResult()) == false)
             return false;
         if (other.getTaskReportConfig() == null ^ this.getTaskReportConfig() == null)
             return false;
@@ -1378,14 +1457,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getOptions() == null) ? 0 : getOptions().hashCode());
         hashCode = prime * hashCode + ((getExcludes() == null) ? 0 : getExcludes().hashCode());
         hashCode = prime * hashCode + ((getIncludes() == null) ? 0 : getIncludes().hashCode());
+        hashCode = prime * hashCode + ((getManifestConfig() == null) ? 0 : getManifestConfig().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEstimatedFilesToTransfer() == null) ? 0 : getEstimatedFilesToTransfer().hashCode());
         hashCode = prime * hashCode + ((getEstimatedBytesToTransfer() == null) ? 0 : getEstimatedBytesToTransfer().hashCode());
         hashCode = prime * hashCode + ((getFilesTransferred() == null) ? 0 : getFilesTransferred().hashCode());
         hashCode = prime * hashCode + ((getBytesWritten() == null) ? 0 : getBytesWritten().hashCode());
         hashCode = prime * hashCode + ((getBytesTransferred() == null) ? 0 : getBytesTransferred().hashCode());
-        hashCode = prime * hashCode + ((getResult() == null) ? 0 : getResult().hashCode());
         hashCode = prime * hashCode + ((getBytesCompressed() == null) ? 0 : getBytesCompressed().hashCode());
+        hashCode = prime * hashCode + ((getResult() == null) ? 0 : getResult().hashCode());
         hashCode = prime * hashCode + ((getTaskReportConfig() == null) ? 0 : getTaskReportConfig().hashCode());
         hashCode = prime * hashCode + ((getFilesDeleted() == null) ? 0 : getFilesDeleted().hashCode());
         hashCode = prime * hashCode + ((getFilesSkipped() == null) ? 0 : getFilesSkipped().hashCode());

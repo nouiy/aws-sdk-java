@@ -120,6 +120,10 @@ public class DescribeTaskResultJsonUnmarshaller implements Unmarshaller<Describe
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ManifestConfig", targetDepth)) {
+                    context.nextToken();
+                    describeTaskResult.setManifestConfig(ManifestConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("TaskReportConfig", targetDepth)) {
                     context.nextToken();
                     describeTaskResult.setTaskReportConfig(TaskReportConfigJsonUnmarshaller.getInstance().unmarshall(context));

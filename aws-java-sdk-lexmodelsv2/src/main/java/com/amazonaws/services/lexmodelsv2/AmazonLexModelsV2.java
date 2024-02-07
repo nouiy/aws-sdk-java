@@ -229,6 +229,33 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Action to create a replication of the source bot in the secondary region.
+     * </p>
+     * 
+     * @param createBotReplicaRequest
+     * @return Result of the CreateBotReplica operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.CreateBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateBotReplicaResult createBotReplica(CreateBotReplicaRequest createBotReplicaRequest);
+
+    /**
+     * <p>
      * Creates an immutable version of the bot. When you create the first version of a bot, Amazon Lex sets the version
      * number to 1. Subsequent bot versions increase in an increment of 1. The version number will always represent the
      * total number of versions created of the bot, not the current number of versions. If a bot version is deleted,
@@ -633,6 +660,33 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to delete the replicated bot in the secondary region.
+     * </p>
+     * 
+     * @param deleteBotReplicaRequest
+     * @return Result of the DeleteBotReplica operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DeleteBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotReplica" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteBotReplicaResult deleteBotReplica(DeleteBotReplicaRequest deleteBotReplicaRequest);
+
+    /**
+     * <p>
      * Deletes a specific version of a bot. To delete all versions of a bot, use the <a
      * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DeleteBot.html">DeleteBot</a> operation.
      * </p>
@@ -1024,6 +1078,30 @@ public interface AmazonLexModelsV2 {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeBotRecommendationResult describeBotRecommendation(DescribeBotRecommendationRequest describeBotRecommendationRequest);
+
+    /**
+     * <p>
+     * Monitors the bot replication status through the UI console.
+     * </p>
+     * 
+     * @param describeBotReplicaRequest
+     * @return Result of the DescribeBotReplica operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeBotReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotReplica"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeBotReplicaResult describeBotReplica(DescribeBotReplicaRequest describeBotReplicaRequest);
 
     /**
      * <p>
@@ -1442,6 +1520,27 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to list the replicated bots created from the source bot alias.
+     * </p>
+     * 
+     * @param listBotAliasReplicasRequest
+     * @return Result of the ListBotAliasReplicas operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListBotAliasReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotAliasReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListBotAliasReplicasResult listBotAliasReplicas(ListBotAliasReplicasRequest listBotAliasReplicasRequest);
+
+    /**
+     * <p>
      * Gets a list of aliases for the specified bot.
      * </p>
      * 
@@ -1506,6 +1605,27 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to list the replicated bots.
+     * </p>
+     * 
+     * @param listBotReplicasRequest
+     * @return Result of the ListBotReplicas operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListBotReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotReplicas" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListBotReplicasResult listBotReplicas(ListBotReplicasRequest listBotReplicasRequest);
+
+    /**
+     * <p>
      * Lists the generation requests made for a bot locale.
      * </p>
      * 
@@ -1525,6 +1645,27 @@ public interface AmazonLexModelsV2 {
      *      target="_top">AWS API Documentation</a>
      */
     ListBotResourceGenerationsResult listBotResourceGenerations(ListBotResourceGenerationsRequest listBotResourceGenerationsRequest);
+
+    /**
+     * <p>
+     * Contains information about all the versions replication statuses applicable for Global Resiliency.
+     * </p>
+     * 
+     * @param listBotVersionReplicasRequest
+     * @return Result of the ListBotVersionReplicas operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListBotVersionReplicas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotVersionReplicas"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListBotVersionReplicasResult listBotVersionReplicas(ListBotVersionReplicasRequest listBotVersionReplicasRequest);
 
     /**
      * <p>
