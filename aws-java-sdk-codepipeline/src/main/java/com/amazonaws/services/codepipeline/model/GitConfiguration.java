@@ -26,13 +26,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * You can specify the Git configuration trigger type for all third-party Git-based source actions that are supported by
  * the <code>CodeStarSourceConnection</code> action type.
  * </p>
- * </note> <note>
- * <p>
- * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
- * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
- * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
- * <i>CodePipeline User Guide</i>.
- * </p>
  * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/GitConfiguration" target="_top">AWS API
@@ -58,13 +51,14 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
      * The field where the repository event that will start the pipeline, such as pushing Git tags, is specified with
      * details.
      * </p>
-     * <note>
-     * <p>
-     * Git tags is the only supported event type.
-     * </p>
-     * </note>
      */
     private java.util.List<GitPushFilter> push;
+    /**
+     * <p>
+     * The field where the repository event that will start the pipeline is specified as pull requests.
+     * </p>
+     */
+    private java.util.List<GitPullRequestFilter> pullRequest;
 
     /**
      * <p>
@@ -141,17 +135,9 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
      * The field where the repository event that will start the pipeline, such as pushing Git tags, is specified with
      * details.
      * </p>
-     * <note>
-     * <p>
-     * Git tags is the only supported event type.
-     * </p>
-     * </note>
      * 
      * @return The field where the repository event that will start the pipeline, such as pushing Git tags, is specified
-     *         with details.</p> <note>
-     *         <p>
-     *         Git tags is the only supported event type.
-     *         </p>
+     *         with details.
      */
 
     public java.util.List<GitPushFilter> getPush() {
@@ -163,18 +149,10 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
      * The field where the repository event that will start the pipeline, such as pushing Git tags, is specified with
      * details.
      * </p>
-     * <note>
-     * <p>
-     * Git tags is the only supported event type.
-     * </p>
-     * </note>
      * 
      * @param push
      *        The field where the repository event that will start the pipeline, such as pushing Git tags, is specified
-     *        with details.</p> <note>
-     *        <p>
-     *        Git tags is the only supported event type.
-     *        </p>
+     *        with details.
      */
 
     public void setPush(java.util.Collection<GitPushFilter> push) {
@@ -191,11 +169,6 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
      * The field where the repository event that will start the pipeline, such as pushing Git tags, is specified with
      * details.
      * </p>
-     * <note>
-     * <p>
-     * Git tags is the only supported event type.
-     * </p>
-     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPush(java.util.Collection)} or {@link #withPush(java.util.Collection)} if you want to override the
@@ -204,10 +177,7 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
      * 
      * @param push
      *        The field where the repository event that will start the pipeline, such as pushing Git tags, is specified
-     *        with details.</p> <note>
-     *        <p>
-     *        Git tags is the only supported event type.
-     *        </p>
+     *        with details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,23 +196,85 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
      * The field where the repository event that will start the pipeline, such as pushing Git tags, is specified with
      * details.
      * </p>
-     * <note>
-     * <p>
-     * Git tags is the only supported event type.
-     * </p>
-     * </note>
      * 
      * @param push
      *        The field where the repository event that will start the pipeline, such as pushing Git tags, is specified
-     *        with details.</p> <note>
-     *        <p>
-     *        Git tags is the only supported event type.
-     *        </p>
+     *        with details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GitConfiguration withPush(java.util.Collection<GitPushFilter> push) {
         setPush(push);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The field where the repository event that will start the pipeline is specified as pull requests.
+     * </p>
+     * 
+     * @return The field where the repository event that will start the pipeline is specified as pull requests.
+     */
+
+    public java.util.List<GitPullRequestFilter> getPullRequest() {
+        return pullRequest;
+    }
+
+    /**
+     * <p>
+     * The field where the repository event that will start the pipeline is specified as pull requests.
+     * </p>
+     * 
+     * @param pullRequest
+     *        The field where the repository event that will start the pipeline is specified as pull requests.
+     */
+
+    public void setPullRequest(java.util.Collection<GitPullRequestFilter> pullRequest) {
+        if (pullRequest == null) {
+            this.pullRequest = null;
+            return;
+        }
+
+        this.pullRequest = new java.util.ArrayList<GitPullRequestFilter>(pullRequest);
+    }
+
+    /**
+     * <p>
+     * The field where the repository event that will start the pipeline is specified as pull requests.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPullRequest(java.util.Collection)} or {@link #withPullRequest(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param pullRequest
+     *        The field where the repository event that will start the pipeline is specified as pull requests.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GitConfiguration withPullRequest(GitPullRequestFilter... pullRequest) {
+        if (this.pullRequest == null) {
+            setPullRequest(new java.util.ArrayList<GitPullRequestFilter>(pullRequest.length));
+        }
+        for (GitPullRequestFilter ele : pullRequest) {
+            this.pullRequest.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The field where the repository event that will start the pipeline is specified as pull requests.
+     * </p>
+     * 
+     * @param pullRequest
+     *        The field where the repository event that will start the pipeline is specified as pull requests.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GitConfiguration withPullRequest(java.util.Collection<GitPullRequestFilter> pullRequest) {
+        setPullRequest(pullRequest);
         return this;
     }
 
@@ -261,7 +293,9 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
         if (getSourceActionName() != null)
             sb.append("SourceActionName: ").append(getSourceActionName()).append(",");
         if (getPush() != null)
-            sb.append("Push: ").append(getPush());
+            sb.append("Push: ").append(getPush()).append(",");
+        if (getPullRequest() != null)
+            sb.append("PullRequest: ").append(getPullRequest());
         sb.append("}");
         return sb.toString();
     }
@@ -284,6 +318,10 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getPush() != null && other.getPush().equals(this.getPush()) == false)
             return false;
+        if (other.getPullRequest() == null ^ this.getPullRequest() == null)
+            return false;
+        if (other.getPullRequest() != null && other.getPullRequest().equals(this.getPullRequest()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +332,7 @@ public class GitConfiguration implements Serializable, Cloneable, StructuredPojo
 
         hashCode = prime * hashCode + ((getSourceActionName() == null) ? 0 : getSourceActionName().hashCode());
         hashCode = prime * hashCode + ((getPush() == null) ? 0 : getPush().hashCode());
+        hashCode = prime * hashCode + ((getPullRequest() == null) ? 0 : getPullRequest().hashCode());
         return hashCode;
     }
 

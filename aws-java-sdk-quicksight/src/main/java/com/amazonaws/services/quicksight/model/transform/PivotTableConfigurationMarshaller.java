@@ -39,6 +39,8 @@ public class PivotTableConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FieldOptions").build();
     private static final MarshallingInfo<StructuredPojo> PAGINATEDREPORTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PaginatedReportOptions").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final PivotTableConfigurationMarshaller instance = new PivotTableConfigurationMarshaller();
 
@@ -62,6 +64,7 @@ public class PivotTableConfigurationMarshaller {
             protocolMarshaller.marshall(pivotTableConfiguration.getTotalOptions(), TOTALOPTIONS_BINDING);
             protocolMarshaller.marshall(pivotTableConfiguration.getFieldOptions(), FIELDOPTIONS_BINDING);
             protocolMarshaller.marshall(pivotTableConfiguration.getPaginatedReportOptions(), PAGINATEDREPORTOPTIONS_BINDING);
+            protocolMarshaller.marshall(pivotTableConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

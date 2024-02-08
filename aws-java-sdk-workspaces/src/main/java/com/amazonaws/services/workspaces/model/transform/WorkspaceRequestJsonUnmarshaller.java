@@ -82,6 +82,10 @@ public class WorkspaceRequestJsonUnmarshaller implements Unmarshaller<WorkspaceR
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("WorkspaceName", targetDepth)) {
+                    context.nextToken();
+                    workspaceRequest.setWorkspaceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

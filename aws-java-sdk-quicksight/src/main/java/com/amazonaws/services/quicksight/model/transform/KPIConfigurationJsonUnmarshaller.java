@@ -60,6 +60,10 @@ public class KPIConfigurationJsonUnmarshaller implements Unmarshaller<KPIConfigu
                     context.nextToken();
                     kPIConfiguration.setKPIOptions(KPIOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Interactions", targetDepth)) {
+                    context.nextToken();
+                    kPIConfiguration.setInteractions(VisualInteractionOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

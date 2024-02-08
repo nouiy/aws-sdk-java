@@ -58,6 +58,12 @@ public class GitConfigurationJsonUnmarshaller implements Unmarshaller<GitConfigu
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("pullRequest", targetDepth)) {
+                    context.nextToken();
+                    gitConfiguration.setPullRequest(new ListUnmarshaller<GitPullRequestFilter>(GitPullRequestFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

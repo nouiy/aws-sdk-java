@@ -1,3 +1,16 @@
+# __1.12.655__ __2024-02-08__
+## __AWS CodePipeline__
+  - ### Features
+    - Add ability to execute pipelines with new parallel & queued execution modes and add support for triggers with filtering on branches and file paths.
+
+## __Amazon QuickSight__
+  - ### Features
+    - General Interactions for Visuals; Waterfall Chart Color Configuration; Documentation Update
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - This release introduces User-Decoupling feature. This feature allows Workspaces Core customers to provision workspaces without providing users. CreateWorkspaces and DescribeWorkspaces APIs will now take a new optional parameter "WorkspaceName".
+
 # __1.12.654__ __2024-02-07__
 ## __AWS DataSync__
   - ### Features

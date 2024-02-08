@@ -68,6 +68,10 @@ public class GaugeChartConfigurationJsonUnmarshaller implements Unmarshaller<Gau
                     context.nextToken();
                     gaugeChartConfiguration.setVisualPalette(VisualPaletteJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Interactions", targetDepth)) {
+                    context.nextToken();
+                    gaugeChartConfiguration.setInteractions(VisualInteractionOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

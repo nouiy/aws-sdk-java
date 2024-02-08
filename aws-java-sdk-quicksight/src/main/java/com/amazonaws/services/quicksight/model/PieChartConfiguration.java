@@ -95,6 +95,12 @@ public class PieChartConfiguration implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.List<ContributionAnalysisDefault> contributionAnalysisDefaults;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -573,6 +579,46 @@ public class PieChartConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PieChartConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -605,7 +651,9 @@ public class PieChartConfiguration implements Serializable, Cloneable, Structure
         if (getVisualPalette() != null)
             sb.append("VisualPalette: ").append(getVisualPalette()).append(",");
         if (getContributionAnalysisDefaults() != null)
-            sb.append("ContributionAnalysisDefaults: ").append(getContributionAnalysisDefaults());
+            sb.append("ContributionAnalysisDefaults: ").append(getContributionAnalysisDefaults()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -664,6 +712,10 @@ public class PieChartConfiguration implements Serializable, Cloneable, Structure
             return false;
         if (other.getContributionAnalysisDefaults() != null && other.getContributionAnalysisDefaults().equals(this.getContributionAnalysisDefaults()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -683,6 +735,7 @@ public class PieChartConfiguration implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getTooltip() == null) ? 0 : getTooltip().hashCode());
         hashCode = prime * hashCode + ((getVisualPalette() == null) ? 0 : getVisualPalette().hashCode());
         hashCode = prime * hashCode + ((getContributionAnalysisDefaults() == null) ? 0 : getContributionAnalysisDefaults().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

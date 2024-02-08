@@ -43,6 +43,8 @@ public class HistogramConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tooltip").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final HistogramConfigurationMarshaller instance = new HistogramConfigurationMarshaller();
 
@@ -68,6 +70,7 @@ public class HistogramConfigurationMarshaller {
             protocolMarshaller.marshall(histogramConfiguration.getDataLabels(), DATALABELS_BINDING);
             protocolMarshaller.marshall(histogramConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(histogramConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(histogramConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

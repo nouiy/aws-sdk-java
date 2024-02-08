@@ -72,6 +72,10 @@ public class FilledMapConfigurationJsonUnmarshaller implements Unmarshaller<Fill
                     context.nextToken();
                     filledMapConfiguration.setMapStyleOptions(GeospatialMapStyleOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Interactions", targetDepth)) {
+                    context.nextToken();
+                    filledMapConfiguration.setInteractions(VisualInteractionOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

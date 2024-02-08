@@ -45,6 +45,8 @@ public class TreeMapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataLabels").build();
     private static final MarshallingInfo<StructuredPojo> TOOLTIP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tooltip").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final TreeMapConfigurationMarshaller instance = new TreeMapConfigurationMarshaller();
 
@@ -71,6 +73,7 @@ public class TreeMapConfigurationMarshaller {
             protocolMarshaller.marshall(treeMapConfiguration.getLegend(), LEGEND_BINDING);
             protocolMarshaller.marshall(treeMapConfiguration.getDataLabels(), DATALABELS_BINDING);
             protocolMarshaller.marshall(treeMapConfiguration.getTooltip(), TOOLTIP_BINDING);
+            protocolMarshaller.marshall(treeMapConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

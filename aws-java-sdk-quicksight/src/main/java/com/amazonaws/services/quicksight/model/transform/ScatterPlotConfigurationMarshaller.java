@@ -47,6 +47,8 @@ public class ScatterPlotConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tooltip").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final ScatterPlotConfigurationMarshaller instance = new ScatterPlotConfigurationMarshaller();
 
@@ -74,6 +76,7 @@ public class ScatterPlotConfigurationMarshaller {
             protocolMarshaller.marshall(scatterPlotConfiguration.getDataLabels(), DATALABELS_BINDING);
             protocolMarshaller.marshall(scatterPlotConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(scatterPlotConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(scatterPlotConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -40,10 +40,12 @@ public class PipelineExecutionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("statusSummary").build();
     private static final MarshallingInfo<List> ARTIFACTREVISIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("artifactRevisions").build();
-    private static final MarshallingInfo<StructuredPojo> TRIGGER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trigger").build();
     private static final MarshallingInfo<List> VARIABLES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("variables").build();
+    private static final MarshallingInfo<StructuredPojo> TRIGGER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trigger").build();
+    private static final MarshallingInfo<String> EXECUTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionMode").build();
 
     private static final PipelineExecutionMarshaller instance = new PipelineExecutionMarshaller();
 
@@ -67,8 +69,9 @@ public class PipelineExecutionMarshaller {
             protocolMarshaller.marshall(pipelineExecution.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(pipelineExecution.getStatusSummary(), STATUSSUMMARY_BINDING);
             protocolMarshaller.marshall(pipelineExecution.getArtifactRevisions(), ARTIFACTREVISIONS_BINDING);
-            protocolMarshaller.marshall(pipelineExecution.getTrigger(), TRIGGER_BINDING);
             protocolMarshaller.marshall(pipelineExecution.getVariables(), VARIABLES_BINDING);
+            protocolMarshaller.marshall(pipelineExecution.getTrigger(), TRIGGER_BINDING);
+            protocolMarshaller.marshall(pipelineExecution.getExecutionMode(), EXECUTIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

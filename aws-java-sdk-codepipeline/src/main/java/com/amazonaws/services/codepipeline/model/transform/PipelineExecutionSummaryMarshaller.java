@@ -42,6 +42,8 @@ public class PipelineExecutionSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trigger").build();
     private static final MarshallingInfo<StructuredPojo> STOPTRIGGER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stopTrigger").build();
+    private static final MarshallingInfo<String> EXECUTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionMode").build();
 
     private static final PipelineExecutionSummaryMarshaller instance = new PipelineExecutionSummaryMarshaller();
 
@@ -66,6 +68,7 @@ public class PipelineExecutionSummaryMarshaller {
             protocolMarshaller.marshall(pipelineExecutionSummary.getSourceRevisions(), SOURCEREVISIONS_BINDING);
             protocolMarshaller.marshall(pipelineExecutionSummary.getTrigger(), TRIGGER_BINDING);
             protocolMarshaller.marshall(pipelineExecutionSummary.getStopTrigger(), STOPTRIGGER_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionSummary.getExecutionMode(), EXECUTIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

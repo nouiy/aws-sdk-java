@@ -46,6 +46,12 @@ public class KPIConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private KPIOptions kPIOptions;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class KPIConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KPIConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class KPIConfiguration implements Serializable, Cloneable, StructuredPojo
         if (getSortConfiguration() != null)
             sb.append("SortConfiguration: ").append(getSortConfiguration()).append(",");
         if (getKPIOptions() != null)
-            sb.append("KPIOptions: ").append(getKPIOptions());
+            sb.append("KPIOptions: ").append(getKPIOptions()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class KPIConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getKPIOptions() != null && other.getKPIOptions().equals(this.getKPIOptions()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class KPIConfiguration implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getFieldWells() == null) ? 0 : getFieldWells().hashCode());
         hashCode = prime * hashCode + ((getSortConfiguration() == null) ? 0 : getSortConfiguration().hashCode());
         hashCode = prime * hashCode + ((getKPIOptions() == null) ? 0 : getKPIOptions().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

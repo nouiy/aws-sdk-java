@@ -47,6 +47,12 @@ public class CustomContentConfiguration implements Serializable, Cloneable, Stru
      * </p>
      */
     private String imageScaling;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -215,6 +221,46 @@ public class CustomContentConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomContentConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -231,7 +277,9 @@ public class CustomContentConfiguration implements Serializable, Cloneable, Stru
         if (getContentType() != null)
             sb.append("ContentType: ").append(getContentType()).append(",");
         if (getImageScaling() != null)
-            sb.append("ImageScaling: ").append(getImageScaling());
+            sb.append("ImageScaling: ").append(getImageScaling()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -258,6 +306,10 @@ public class CustomContentConfiguration implements Serializable, Cloneable, Stru
             return false;
         if (other.getImageScaling() != null && other.getImageScaling().equals(this.getImageScaling()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -269,6 +321,7 @@ public class CustomContentConfiguration implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getContentUrl() == null) ? 0 : getContentUrl().hashCode());
         hashCode = prime * hashCode + ((getContentType() == null) ? 0 : getContentType().hashCode());
         hashCode = prime * hashCode + ((getImageScaling() == null) ? 0 : getImageScaling().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

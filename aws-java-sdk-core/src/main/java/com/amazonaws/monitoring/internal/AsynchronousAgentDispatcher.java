@@ -17,11 +17,10 @@ package com.amazonaws.monitoring.internal;
 import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.annotation.SdkTestInternalApi;
 import com.amazonaws.monitoring.MonitoringEvent;
+import com.amazonaws.util.PropertyNamingStrategyUtils;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -57,13 +56,7 @@ public class AsynchronousAgentDispatcher {
 
     private AsynchronousAgentDispatcher() {
         ObjectMapper mapper = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        try {
-            mapper.setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
-        } catch (LinkageError e) {
-            // If a customer is using an older Jackson version than 2.12.x, fall back to the old (deprecated)
-            // name for the same property that might cause deadlocks.
-            mapper.setPropertyNamingStrategy(PropertyNamingStrategy.PASCAL_CASE_TO_CAMEL_CASE);
-        }
+        PropertyNamingStrategyUtils.configureUpperCamelCase(mapper);
         this.writer = mapper.writer();
     }
 

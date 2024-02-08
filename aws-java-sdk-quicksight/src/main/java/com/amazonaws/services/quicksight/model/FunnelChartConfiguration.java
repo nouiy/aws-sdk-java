@@ -70,6 +70,12 @@ public class FunnelChartConfiguration implements Serializable, Cloneable, Struct
      * </p>
      */
     private VisualPalette visualPalette;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -352,6 +358,46 @@ public class FunnelChartConfiguration implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FunnelChartConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -376,7 +422,9 @@ public class FunnelChartConfiguration implements Serializable, Cloneable, Struct
         if (getDataLabelOptions() != null)
             sb.append("DataLabelOptions: ").append(getDataLabelOptions()).append(",");
         if (getVisualPalette() != null)
-            sb.append("VisualPalette: ").append(getVisualPalette());
+            sb.append("VisualPalette: ").append(getVisualPalette()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -419,6 +467,10 @@ public class FunnelChartConfiguration implements Serializable, Cloneable, Struct
             return false;
         if (other.getVisualPalette() != null && other.getVisualPalette().equals(this.getVisualPalette()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -434,6 +486,7 @@ public class FunnelChartConfiguration implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getTooltip() == null) ? 0 : getTooltip().hashCode());
         hashCode = prime * hashCode + ((getDataLabelOptions() == null) ? 0 : getDataLabelOptions().hashCode());
         hashCode = prime * hashCode + ((getVisualPalette() == null) ? 0 : getVisualPalette().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

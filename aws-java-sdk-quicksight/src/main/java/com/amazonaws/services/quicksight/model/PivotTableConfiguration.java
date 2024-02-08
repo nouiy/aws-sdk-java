@@ -64,6 +64,12 @@ public class PivotTableConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private PivotTablePaginatedReportOptions paginatedReportOptions;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -306,6 +312,46 @@ public class PivotTableConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PivotTableConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -328,7 +374,9 @@ public class PivotTableConfiguration implements Serializable, Cloneable, Structu
         if (getFieldOptions() != null)
             sb.append("FieldOptions: ").append(getFieldOptions()).append(",");
         if (getPaginatedReportOptions() != null)
-            sb.append("PaginatedReportOptions: ").append(getPaginatedReportOptions());
+            sb.append("PaginatedReportOptions: ").append(getPaginatedReportOptions()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -367,6 +415,10 @@ public class PivotTableConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getPaginatedReportOptions() != null && other.getPaginatedReportOptions().equals(this.getPaginatedReportOptions()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -381,6 +433,7 @@ public class PivotTableConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getTotalOptions() == null) ? 0 : getTotalOptions().hashCode());
         hashCode = prime * hashCode + ((getFieldOptions() == null) ? 0 : getFieldOptions().hashCode());
         hashCode = prime * hashCode + ((getPaginatedReportOptions() == null) ? 0 : getPaginatedReportOptions().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

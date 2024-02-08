@@ -68,6 +68,8 @@ public class LineChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContributionAnalysisDefaults").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final LineChartConfigurationMarshaller instance = new LineChartConfigurationMarshaller();
 
@@ -105,6 +107,7 @@ public class LineChartConfigurationMarshaller {
             protocolMarshaller.marshall(lineChartConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(lineChartConfiguration.getContributionAnalysisDefaults(), CONTRIBUTIONANALYSISDEFAULTS_BINDING);
             protocolMarshaller.marshall(lineChartConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(lineChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

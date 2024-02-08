@@ -52,6 +52,12 @@ public class WordCloudChartConfiguration implements Serializable, Cloneable, Str
      * </p>
      */
     private WordCloudOptions wordCloudOptions;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -214,6 +220,46 @@ public class WordCloudChartConfiguration implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WordCloudChartConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +278,9 @@ public class WordCloudChartConfiguration implements Serializable, Cloneable, Str
         if (getCategoryLabelOptions() != null)
             sb.append("CategoryLabelOptions: ").append(getCategoryLabelOptions()).append(",");
         if (getWordCloudOptions() != null)
-            sb.append("WordCloudOptions: ").append(getWordCloudOptions());
+            sb.append("WordCloudOptions: ").append(getWordCloudOptions()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +311,10 @@ public class WordCloudChartConfiguration implements Serializable, Cloneable, Str
             return false;
         if (other.getWordCloudOptions() != null && other.getWordCloudOptions().equals(this.getWordCloudOptions()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +327,7 @@ public class WordCloudChartConfiguration implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getSortConfiguration() == null) ? 0 : getSortConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCategoryLabelOptions() == null) ? 0 : getCategoryLabelOptions().hashCode());
         hashCode = prime * hashCode + ((getWordCloudOptions() == null) ? 0 : getWordCloudOptions().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

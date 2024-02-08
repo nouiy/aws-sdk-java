@@ -46,6 +46,12 @@ public class SankeyDiagramChartConfiguration implements Serializable, Cloneable,
      * </p>
      */
     private DataLabelOptions dataLabels;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class SankeyDiagramChartConfiguration implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SankeyDiagramChartConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class SankeyDiagramChartConfiguration implements Serializable, Cloneable,
         if (getSortConfiguration() != null)
             sb.append("SortConfiguration: ").append(getSortConfiguration()).append(",");
         if (getDataLabels() != null)
-            sb.append("DataLabels: ").append(getDataLabels());
+            sb.append("DataLabels: ").append(getDataLabels()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class SankeyDiagramChartConfiguration implements Serializable, Cloneable,
             return false;
         if (other.getDataLabels() != null && other.getDataLabels().equals(this.getDataLabels()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class SankeyDiagramChartConfiguration implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getFieldWells() == null) ? 0 : getFieldWells().hashCode());
         hashCode = prime * hashCode + ((getSortConfiguration() == null) ? 0 : getSortConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDataLabels() == null) ? 0 : getDataLabels().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

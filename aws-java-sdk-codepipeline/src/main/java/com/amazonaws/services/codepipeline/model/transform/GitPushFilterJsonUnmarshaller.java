@@ -52,6 +52,14 @@ public class GitPushFilterJsonUnmarshaller implements Unmarshaller<GitPushFilter
                     context.nextToken();
                     gitPushFilter.setTags(GitTagFilterCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("branches", targetDepth)) {
+                    context.nextToken();
+                    gitPushFilter.setBranches(GitBranchFilterCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("filePaths", targetDepth)) {
+                    context.nextToken();
+                    gitPushFilter.setFilePaths(GitFilePathFilterCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

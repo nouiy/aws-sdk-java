@@ -60,6 +60,10 @@ public class PipelineSummaryJsonUnmarshaller implements Unmarshaller<PipelineSum
                     context.nextToken();
                     pipelineSummary.setPipelineType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("executionMode", targetDepth)) {
+                    context.nextToken();
+                    pipelineSummary.setExecutionMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("created", targetDepth)) {
                     context.nextToken();
                     pipelineSummary.setCreated(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

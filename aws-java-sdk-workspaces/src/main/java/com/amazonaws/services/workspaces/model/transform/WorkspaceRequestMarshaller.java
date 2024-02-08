@@ -44,6 +44,8 @@ public class WorkspaceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceProperties").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> WORKSPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceName").build();
 
     private static final WorkspaceRequestMarshaller instance = new WorkspaceRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class WorkspaceRequestMarshaller {
             protocolMarshaller.marshall(workspaceRequest.getRootVolumeEncryptionEnabled(), ROOTVOLUMEENCRYPTIONENABLED_BINDING);
             protocolMarshaller.marshall(workspaceRequest.getWorkspaceProperties(), WORKSPACEPROPERTIES_BINDING);
             protocolMarshaller.marshall(workspaceRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(workspaceRequest.getWorkspaceName(), WORKSPACENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

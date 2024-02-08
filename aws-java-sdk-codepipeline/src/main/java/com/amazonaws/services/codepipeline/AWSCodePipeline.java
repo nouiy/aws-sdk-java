@@ -1099,6 +1099,8 @@ public interface AWSCodePipeline {
      *         Your request cannot be handled because the pipeline is busy handling ongoing activities. Try again later.
      * @throws PipelineNotFoundException
      *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
      * @sample AWSCodePipeline.StartPipelineExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/StartPipelineExecution"
      *      target="_top">AWS API Documentation</a>

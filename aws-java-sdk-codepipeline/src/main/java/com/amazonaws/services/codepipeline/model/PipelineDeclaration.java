@@ -81,6 +81,12 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
     private Integer version;
     /**
      * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     */
+    private String executionMode;
+    /**
+     * <p>
      * CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you can
      * tailor your pipeline features and cost to the needs of your applications.
      * </p>
@@ -105,23 +111,22 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </important>
      * <p>
      * For information about pricing for CodePipeline, see <a
-     * href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     * href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      * </p>
      * <p>
      * For information about which type of pipeline to choose, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
-     * <note>
-     * <p>
-     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
-     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
-     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
-     * <i>CodePipeline User Guide</i>.
-     * </p>
-     * </note>
      */
     private String pipelineType;
+    /**
+     * <p>
+     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
+     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * </p>
+     */
+    private java.util.List<PipelineVariableDeclaration> variables;
     /**
      * <p>
      * The trigger configuration specifying a type of event, such as Git tags, that starts the pipeline.
@@ -134,13 +139,6 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </note>
      */
     private java.util.List<PipelineTriggerDeclaration> triggers;
-    /**
-     * <p>
-     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
-     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * </p>
-     */
-    private java.util.List<PipelineVariableDeclaration> variables;
 
     /**
      * <p>
@@ -529,6 +527,65 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public void setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @return The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public String getExecutionMode() {
+        return this.executionMode;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionMode
+     */
+
+    public PipelineDeclaration withExecutionMode(String executionMode) {
+        setExecutionMode(executionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionMode
+     */
+
+    public PipelineDeclaration withExecutionMode(ExecutionMode executionMode) {
+        this.executionMode = executionMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you can
      * tailor your pipeline features and cost to the needs of your applications.
      * </p>
@@ -553,21 +610,13 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </important>
      * <p>
      * For information about pricing for CodePipeline, see <a
-     * href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     * href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      * </p>
      * <p>
      * For information about which type of pipeline to choose, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
-     * <note>
-     * <p>
-     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
-     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
-     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
-     * <i>CodePipeline User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param pipelineType
      *        CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you
@@ -594,21 +643,12 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      *        </important>
      *        <p>
      *        For information about pricing for CodePipeline, see <a
-     *        href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     *        href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      *        </p>
      *        <p>
      *        For information about which type of pipeline to choose, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      *        pipeline is right for me?</a>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
-     *        supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
-     *        pipelines, see <a
-     *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in
-     *        the <i>CodePipeline User Guide</i>.
-     *        </p>
      * @see PipelineType
      */
 
@@ -642,21 +682,13 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </important>
      * <p>
      * For information about pricing for CodePipeline, see <a
-     * href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     * href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      * </p>
      * <p>
      * For information about which type of pipeline to choose, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
-     * <note>
-     * <p>
-     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
-     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
-     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
-     * <i>CodePipeline User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @return CodePipeline provides the following pipeline types, which differ in characteristics and price, so that
      *         you can tailor your pipeline features and cost to the needs of your applications.</p>
@@ -682,21 +714,12 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      *         </important>
      *         <p>
      *         For information about pricing for CodePipeline, see <a
-     *         href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     *         href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      *         </p>
      *         <p>
      *         For information about which type of pipeline to choose, see <a
      *         href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type
      *         of pipeline is right for me?</a>.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
-     *         supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
-     *         pipelines, see <a
-     *         href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a>
-     *         in the <i>CodePipeline User Guide</i>.
-     *         </p>
      * @see PipelineType
      */
 
@@ -730,21 +753,13 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </important>
      * <p>
      * For information about pricing for CodePipeline, see <a
-     * href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     * href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      * </p>
      * <p>
      * For information about which type of pipeline to choose, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
-     * <note>
-     * <p>
-     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
-     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
-     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
-     * <i>CodePipeline User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param pipelineType
      *        CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you
@@ -771,21 +786,12 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      *        </important>
      *        <p>
      *        For information about pricing for CodePipeline, see <a
-     *        href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     *        href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      *        </p>
      *        <p>
      *        For information about which type of pipeline to choose, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      *        pipeline is right for me?</a>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
-     *        supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
-     *        pipelines, see <a
-     *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in
-     *        the <i>CodePipeline User Guide</i>.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PipelineType
      */
@@ -821,21 +827,13 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </important>
      * <p>
      * For information about pricing for CodePipeline, see <a
-     * href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     * href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      * </p>
      * <p>
      * For information about which type of pipeline to choose, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
-     * <note>
-     * <p>
-     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
-     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
-     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
-     * <i>CodePipeline User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param pipelineType
      *        CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you
@@ -862,27 +860,96 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      *        </important>
      *        <p>
      *        For information about pricing for CodePipeline, see <a
-     *        href="https://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
+     *        href="http://aws.amazon.com/codepipeline/pricing/">Pricing</a>.
      *        </p>
      *        <p>
      *        For information about which type of pipeline to choose, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      *        pipeline is right for me?</a>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
-     *        supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
-     *        pipelines, see <a
-     *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in
-     *        the <i>CodePipeline User Guide</i>.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PipelineType
      */
 
     public PipelineDeclaration withPipelineType(PipelineType pipelineType) {
         this.pipelineType = pipelineType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
+     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * </p>
+     * 
+     * @return A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
+     *         and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     */
+
+    public java.util.List<PipelineVariableDeclaration> getVariables() {
+        return variables;
+    }
+
+    /**
+     * <p>
+     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
+     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * </p>
+     * 
+     * @param variables
+     *        A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
+     *        and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     */
+
+    public void setVariables(java.util.Collection<PipelineVariableDeclaration> variables) {
+        if (variables == null) {
+            this.variables = null;
+            return;
+        }
+
+        this.variables = new java.util.ArrayList<PipelineVariableDeclaration>(variables);
+    }
+
+    /**
+     * <p>
+     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
+     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVariables(java.util.Collection)} or {@link #withVariables(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param variables
+     *        A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
+     *        and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineDeclaration withVariables(PipelineVariableDeclaration... variables) {
+        if (this.variables == null) {
+            setVariables(new java.util.ArrayList<PipelineVariableDeclaration>(variables.length));
+        }
+        for (PipelineVariableDeclaration ele : variables) {
+            this.variables.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
+     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * </p>
+     * 
+     * @param variables
+     *        A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
+     *        and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineDeclaration withVariables(java.util.Collection<PipelineVariableDeclaration> variables) {
+        setVariables(variables);
         return this;
     }
 
@@ -1001,84 +1068,6 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
-     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * </p>
-     * 
-     * @return A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
-     *         and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     */
-
-    public java.util.List<PipelineVariableDeclaration> getVariables() {
-        return variables;
-    }
-
-    /**
-     * <p>
-     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
-     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * </p>
-     * 
-     * @param variables
-     *        A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
-     *        and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     */
-
-    public void setVariables(java.util.Collection<PipelineVariableDeclaration> variables) {
-        if (variables == null) {
-            this.variables = null;
-            return;
-        }
-
-        this.variables = new java.util.ArrayList<PipelineVariableDeclaration>(variables);
-    }
-
-    /**
-     * <p>
-     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
-     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setVariables(java.util.Collection)} or {@link #withVariables(java.util.Collection)} if you want to
-     * override the existing values.
-     * </p>
-     * 
-     * @param variables
-     *        A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
-     *        and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipelineDeclaration withVariables(PipelineVariableDeclaration... variables) {
-        if (this.variables == null) {
-            setVariables(new java.util.ArrayList<PipelineVariableDeclaration>(variables.length));
-        }
-        for (PipelineVariableDeclaration ele : variables) {
-            this.variables.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric and
-     * underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * </p>
-     * 
-     * @param variables
-     *        A list that defines the pipeline variables for a pipeline resource. Variable names can have alphanumeric
-     *        and underscore characters, and the values must match <code>[A-Za-z0-9@\-_]+</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipelineDeclaration withVariables(java.util.Collection<PipelineVariableDeclaration> variables) {
-        setVariables(variables);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1102,12 +1091,14 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
             sb.append("Stages: ").append(getStages()).append(",");
         if (getVersion() != null)
             sb.append("Version: ").append(getVersion()).append(",");
+        if (getExecutionMode() != null)
+            sb.append("ExecutionMode: ").append(getExecutionMode()).append(",");
         if (getPipelineType() != null)
             sb.append("PipelineType: ").append(getPipelineType()).append(",");
-        if (getTriggers() != null)
-            sb.append("Triggers: ").append(getTriggers()).append(",");
         if (getVariables() != null)
-            sb.append("Variables: ").append(getVariables());
+            sb.append("Variables: ").append(getVariables()).append(",");
+        if (getTriggers() != null)
+            sb.append("Triggers: ").append(getTriggers());
         sb.append("}");
         return sb.toString();
     }
@@ -1146,17 +1137,21 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
             return false;
+        if (other.getExecutionMode() == null ^ this.getExecutionMode() == null)
+            return false;
+        if (other.getExecutionMode() != null && other.getExecutionMode().equals(this.getExecutionMode()) == false)
+            return false;
         if (other.getPipelineType() == null ^ this.getPipelineType() == null)
             return false;
         if (other.getPipelineType() != null && other.getPipelineType().equals(this.getPipelineType()) == false)
             return false;
-        if (other.getTriggers() == null ^ this.getTriggers() == null)
-            return false;
-        if (other.getTriggers() != null && other.getTriggers().equals(this.getTriggers()) == false)
-            return false;
         if (other.getVariables() == null ^ this.getVariables() == null)
             return false;
         if (other.getVariables() != null && other.getVariables().equals(this.getVariables()) == false)
+            return false;
+        if (other.getTriggers() == null ^ this.getTriggers() == null)
+            return false;
+        if (other.getTriggers() != null && other.getTriggers().equals(this.getTriggers()) == false)
             return false;
         return true;
     }
@@ -1172,9 +1167,10 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getArtifactStores() == null) ? 0 : getArtifactStores().hashCode());
         hashCode = prime * hashCode + ((getStages() == null) ? 0 : getStages().hashCode());
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
+        hashCode = prime * hashCode + ((getExecutionMode() == null) ? 0 : getExecutionMode().hashCode());
         hashCode = prime * hashCode + ((getPipelineType() == null) ? 0 : getPipelineType().hashCode());
-        hashCode = prime * hashCode + ((getTriggers() == null) ? 0 : getTriggers().hashCode());
         hashCode = prime * hashCode + ((getVariables() == null) ? 0 : getVariables().hashCode());
+        hashCode = prime * hashCode + ((getTriggers() == null) ? 0 : getTriggers().hashCode());
         return hashCode;
     }
 

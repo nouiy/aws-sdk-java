@@ -64,6 +64,12 @@ public class FilledMapConfiguration implements Serializable, Cloneable, Structur
      * </p>
      */
     private GeospatialMapStyleOptions mapStyleOptions;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -306,6 +312,46 @@ public class FilledMapConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FilledMapConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -328,7 +374,9 @@ public class FilledMapConfiguration implements Serializable, Cloneable, Structur
         if (getWindowOptions() != null)
             sb.append("WindowOptions: ").append(getWindowOptions()).append(",");
         if (getMapStyleOptions() != null)
-            sb.append("MapStyleOptions: ").append(getMapStyleOptions());
+            sb.append("MapStyleOptions: ").append(getMapStyleOptions()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -367,6 +415,10 @@ public class FilledMapConfiguration implements Serializable, Cloneable, Structur
             return false;
         if (other.getMapStyleOptions() != null && other.getMapStyleOptions().equals(this.getMapStyleOptions()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -381,6 +433,7 @@ public class FilledMapConfiguration implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getTooltip() == null) ? 0 : getTooltip().hashCode());
         hashCode = prime * hashCode + ((getWindowOptions() == null) ? 0 : getWindowOptions().hashCode());
         hashCode = prime * hashCode + ((getMapStyleOptions() == null) ? 0 : getMapStyleOptions().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

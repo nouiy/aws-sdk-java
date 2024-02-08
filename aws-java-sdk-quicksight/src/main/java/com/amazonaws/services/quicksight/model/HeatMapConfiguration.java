@@ -76,6 +76,12 @@ public class HeatMapConfiguration implements Serializable, Cloneable, Structured
      * </p>
      */
     private TooltipOptions tooltip;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -398,6 +404,46 @@ public class HeatMapConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HeatMapConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -424,7 +470,9 @@ public class HeatMapConfiguration implements Serializable, Cloneable, Structured
         if (getDataLabels() != null)
             sb.append("DataLabels: ").append(getDataLabels()).append(",");
         if (getTooltip() != null)
-            sb.append("Tooltip: ").append(getTooltip());
+            sb.append("Tooltip: ").append(getTooltip()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -471,6 +519,10 @@ public class HeatMapConfiguration implements Serializable, Cloneable, Structured
             return false;
         if (other.getTooltip() != null && other.getTooltip().equals(this.getTooltip()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -487,6 +539,7 @@ public class HeatMapConfiguration implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getLegend() == null) ? 0 : getLegend().hashCode());
         hashCode = prime * hashCode + ((getDataLabels() == null) ? 0 : getDataLabels().hashCode());
         hashCode = prime * hashCode + ((getTooltip() == null) ? 0 : getTooltip().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

@@ -41,12 +41,14 @@ public class PipelineDeclarationMarshaller {
             .marshallLocationName("stages").build();
     private static final MarshallingInfo<Integer> VERSION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("version").build();
+    private static final MarshallingInfo<String> EXECUTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionMode").build();
     private static final MarshallingInfo<String> PIPELINETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipelineType").build();
-    private static final MarshallingInfo<List> TRIGGERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("triggers").build();
     private static final MarshallingInfo<List> VARIABLES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("variables").build();
+    private static final MarshallingInfo<List> TRIGGERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("triggers").build();
 
     private static final PipelineDeclarationMarshaller instance = new PipelineDeclarationMarshaller();
 
@@ -70,9 +72,10 @@ public class PipelineDeclarationMarshaller {
             protocolMarshaller.marshall(pipelineDeclaration.getArtifactStores(), ARTIFACTSTORES_BINDING);
             protocolMarshaller.marshall(pipelineDeclaration.getStages(), STAGES_BINDING);
             protocolMarshaller.marshall(pipelineDeclaration.getVersion(), VERSION_BINDING);
+            protocolMarshaller.marshall(pipelineDeclaration.getExecutionMode(), EXECUTIONMODE_BINDING);
             protocolMarshaller.marshall(pipelineDeclaration.getPipelineType(), PIPELINETYPE_BINDING);
-            protocolMarshaller.marshall(pipelineDeclaration.getTriggers(), TRIGGERS_BINDING);
             protocolMarshaller.marshall(pipelineDeclaration.getVariables(), VARIABLES_BINDING);
+            protocolMarshaller.marshall(pipelineDeclaration.getTriggers(), TRIGGERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

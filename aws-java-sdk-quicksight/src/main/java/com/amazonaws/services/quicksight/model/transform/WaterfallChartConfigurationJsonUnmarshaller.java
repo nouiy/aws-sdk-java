@@ -88,6 +88,14 @@ public class WaterfallChartConfigurationJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     waterfallChartConfiguration.setVisualPalette(VisualPaletteJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ColorConfiguration", targetDepth)) {
+                    context.nextToken();
+                    waterfallChartConfiguration.setColorConfiguration(WaterfallChartColorConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Interactions", targetDepth)) {
+                    context.nextToken();
+                    waterfallChartConfiguration.setInteractions(VisualInteractionOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

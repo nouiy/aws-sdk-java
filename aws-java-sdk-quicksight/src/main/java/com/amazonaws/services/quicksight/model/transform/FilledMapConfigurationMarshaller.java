@@ -39,6 +39,8 @@ public class FilledMapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WindowOptions").build();
     private static final MarshallingInfo<StructuredPojo> MAPSTYLEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MapStyleOptions").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final FilledMapConfigurationMarshaller instance = new FilledMapConfigurationMarshaller();
 
@@ -62,6 +64,7 @@ public class FilledMapConfigurationMarshaller {
             protocolMarshaller.marshall(filledMapConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(filledMapConfiguration.getWindowOptions(), WINDOWOPTIONS_BINDING);
             protocolMarshaller.marshall(filledMapConfiguration.getMapStyleOptions(), MAPSTYLEOPTIONS_BINDING);
+            protocolMarshaller.marshall(filledMapConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

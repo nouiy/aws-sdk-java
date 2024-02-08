@@ -70,6 +70,12 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private java.util.List<TableInlineVisualization> tableInlineVisualizations;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -382,6 +388,46 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -406,7 +452,9 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
         if (getPaginatedReportOptions() != null)
             sb.append("PaginatedReportOptions: ").append(getPaginatedReportOptions()).append(",");
         if (getTableInlineVisualizations() != null)
-            sb.append("TableInlineVisualizations: ").append(getTableInlineVisualizations());
+            sb.append("TableInlineVisualizations: ").append(getTableInlineVisualizations()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -449,6 +497,10 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getTableInlineVisualizations() != null && other.getTableInlineVisualizations().equals(this.getTableInlineVisualizations()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -464,6 +516,7 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getFieldOptions() == null) ? 0 : getFieldOptions().hashCode());
         hashCode = prime * hashCode + ((getPaginatedReportOptions() == null) ? 0 : getPaginatedReportOptions().hashCode());
         hashCode = prime * hashCode + ((getTableInlineVisualizations() == null) ? 0 : getTableInlineVisualizations().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

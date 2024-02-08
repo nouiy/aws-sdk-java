@@ -74,15 +74,19 @@ public class PipelineExecutionJsonUnmarshaller implements Unmarshaller<PipelineE
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("trigger", targetDepth)) {
-                    context.nextToken();
-                    pipelineExecution.setTrigger(ExecutionTriggerJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("variables", targetDepth)) {
                     context.nextToken();
                     pipelineExecution.setVariables(new ListUnmarshaller<ResolvedPipelineVariable>(ResolvedPipelineVariableJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("trigger", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecution.setTrigger(ExecutionTriggerJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("executionMode", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecution.setExecutionMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -35,6 +35,8 @@ public class WordCloudChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CategoryLabelOptions").build();
     private static final MarshallingInfo<StructuredPojo> WORDCLOUDOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WordCloudOptions").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final WordCloudChartConfigurationMarshaller instance = new WordCloudChartConfigurationMarshaller();
 
@@ -56,6 +58,7 @@ public class WordCloudChartConfigurationMarshaller {
             protocolMarshaller.marshall(wordCloudChartConfiguration.getSortConfiguration(), SORTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(wordCloudChartConfiguration.getCategoryLabelOptions(), CATEGORYLABELOPTIONS_BINDING);
             protocolMarshaller.marshall(wordCloudChartConfiguration.getWordCloudOptions(), WORDCLOUDOPTIONS_BINDING);
+            protocolMarshaller.marshall(wordCloudChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

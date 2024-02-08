@@ -41,6 +41,8 @@ public class GeospatialMapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PointStyleOptions").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final GeospatialMapConfigurationMarshaller instance = new GeospatialMapConfigurationMarshaller();
 
@@ -65,6 +67,7 @@ public class GeospatialMapConfigurationMarshaller {
             protocolMarshaller.marshall(geospatialMapConfiguration.getMapStyleOptions(), MAPSTYLEOPTIONS_BINDING);
             protocolMarshaller.marshall(geospatialMapConfiguration.getPointStyleOptions(), POINTSTYLEOPTIONS_BINDING);
             protocolMarshaller.marshall(geospatialMapConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(geospatialMapConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

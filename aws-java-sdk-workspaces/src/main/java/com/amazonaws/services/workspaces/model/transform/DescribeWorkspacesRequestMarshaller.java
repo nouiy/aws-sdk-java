@@ -40,6 +40,8 @@ public class DescribeWorkspacesRequestMarshaller {
             .marshallLocationName("Limit").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<String> WORKSPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceName").build();
 
     private static final DescribeWorkspacesRequestMarshaller instance = new DescribeWorkspacesRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class DescribeWorkspacesRequestMarshaller {
             protocolMarshaller.marshall(describeWorkspacesRequest.getBundleId(), BUNDLEID_BINDING);
             protocolMarshaller.marshall(describeWorkspacesRequest.getLimit(), LIMIT_BINDING);
             protocolMarshaller.marshall(describeWorkspacesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(describeWorkspacesRequest.getWorkspaceName(), WORKSPACENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

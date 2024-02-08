@@ -33,6 +33,8 @@ public class SankeyDiagramChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SortConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> DATALABELS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataLabels").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final SankeyDiagramChartConfigurationMarshaller instance = new SankeyDiagramChartConfigurationMarshaller();
 
@@ -53,6 +55,7 @@ public class SankeyDiagramChartConfigurationMarshaller {
             protocolMarshaller.marshall(sankeyDiagramChartConfiguration.getFieldWells(), FIELDWELLS_BINDING);
             protocolMarshaller.marshall(sankeyDiagramChartConfiguration.getSortConfiguration(), SORTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(sankeyDiagramChartConfiguration.getDataLabels(), DATALABELS_BINDING);
+            protocolMarshaller.marshall(sankeyDiagramChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

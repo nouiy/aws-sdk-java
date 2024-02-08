@@ -54,6 +54,8 @@ public class WorkspaceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserVolumeEncryptionEnabled").build();
     private static final MarshallingInfo<Boolean> ROOTVOLUMEENCRYPTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RootVolumeEncryptionEnabled").build();
+    private static final MarshallingInfo<String> WORKSPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceName").build();
     private static final MarshallingInfo<StructuredPojo> WORKSPACEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceProperties").build();
     private static final MarshallingInfo<List> MODIFICATIONSTATES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -94,6 +96,7 @@ public class WorkspaceMarshaller {
             protocolMarshaller.marshall(workspace.getVolumeEncryptionKey(), VOLUMEENCRYPTIONKEY_BINDING);
             protocolMarshaller.marshall(workspace.getUserVolumeEncryptionEnabled(), USERVOLUMEENCRYPTIONENABLED_BINDING);
             protocolMarshaller.marshall(workspace.getRootVolumeEncryptionEnabled(), ROOTVOLUMEENCRYPTIONENABLED_BINDING);
+            protocolMarshaller.marshall(workspace.getWorkspaceName(), WORKSPACENAME_BINDING);
             protocolMarshaller.marshall(workspace.getWorkspaceProperties(), WORKSPACEPROPERTIES_BINDING);
             protocolMarshaller.marshall(workspace.getModificationStates(), MODIFICATIONSTATES_BINDING);
             protocolMarshaller.marshall(workspace.getRelatedWorkspaces(), RELATEDWORKSPACES_BINDING);

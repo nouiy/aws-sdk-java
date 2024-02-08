@@ -392,6 +392,10 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConcurrentPipelineExecutionsLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codepipeline.model.transform.ConcurrentPipelineExecutionsLimitExceededExceptionUnmarshaller
+                                            .getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidStructureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.InvalidStructureExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -2798,6 +2802,8 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
      *         Your request cannot be handled because the pipeline is busy handling ongoing activities. Try again later.
      * @throws PipelineNotFoundException
      *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
      * @sample AWSCodePipeline.StartPipelineExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/StartPipelineExecution"
      *      target="_top">AWS API Documentation</a>

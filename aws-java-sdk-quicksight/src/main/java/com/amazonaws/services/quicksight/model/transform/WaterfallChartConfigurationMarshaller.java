@@ -47,6 +47,10 @@ public class WaterfallChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataLabels").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> COLORCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ColorConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final WaterfallChartConfigurationMarshaller instance = new WaterfallChartConfigurationMarshaller();
 
@@ -74,6 +78,8 @@ public class WaterfallChartConfigurationMarshaller {
             protocolMarshaller.marshall(waterfallChartConfiguration.getLegend(), LEGEND_BINDING);
             protocolMarshaller.marshall(waterfallChartConfiguration.getDataLabels(), DATALABELS_BINDING);
             protocolMarshaller.marshall(waterfallChartConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(waterfallChartConfiguration.getColorConfiguration(), COLORCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(waterfallChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

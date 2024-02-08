@@ -41,6 +41,8 @@ public class FunnelChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataLabelOptions").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final FunnelChartConfigurationMarshaller instance = new FunnelChartConfigurationMarshaller();
 
@@ -65,6 +67,7 @@ public class FunnelChartConfigurationMarshaller {
             protocolMarshaller.marshall(funnelChartConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(funnelChartConfiguration.getDataLabelOptions(), DATALABELOPTIONS_BINDING);
             protocolMarshaller.marshall(funnelChartConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(funnelChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -50,6 +50,8 @@ public class BoxPlotChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReferenceLines").build();
     private static final MarshallingInfo<StructuredPojo> VISUALPALETTE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final BoxPlotChartConfigurationMarshaller instance = new BoxPlotChartConfigurationMarshaller();
 
@@ -78,6 +80,7 @@ public class BoxPlotChartConfigurationMarshaller {
             protocolMarshaller.marshall(boxPlotChartConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(boxPlotChartConfiguration.getReferenceLines(), REFERENCELINES_BINDING);
             protocolMarshaller.marshall(boxPlotChartConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
+            protocolMarshaller.marshall(boxPlotChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

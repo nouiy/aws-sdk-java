@@ -43,6 +43,8 @@ public class HeatMapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataLabels").build();
     private static final MarshallingInfo<StructuredPojo> TOOLTIP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tooltip").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final HeatMapConfigurationMarshaller instance = new HeatMapConfigurationMarshaller();
 
@@ -68,6 +70,7 @@ public class HeatMapConfigurationMarshaller {
             protocolMarshaller.marshall(heatMapConfiguration.getLegend(), LEGEND_BINDING);
             protocolMarshaller.marshall(heatMapConfiguration.getDataLabels(), DATALABELS_BINDING);
             protocolMarshaller.marshall(heatMapConfiguration.getTooltip(), TOOLTIP_BINDING);
+            protocolMarshaller.marshall(heatMapConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

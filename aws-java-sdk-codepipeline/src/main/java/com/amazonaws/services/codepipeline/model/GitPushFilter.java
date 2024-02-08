@@ -35,6 +35,18 @@ public class GitPushFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private GitTagFilterCriteria tags;
+    /**
+     * <p>
+     * The field that specifies to filter on branches for the push trigger configuration.
+     * </p>
+     */
+    private GitBranchFilterCriteria branches;
+    /**
+     * <p>
+     * The field that specifies to filter on file paths for the push trigger configuration.
+     * </p>
+     */
+    private GitFilePathFilterCriteria filePaths;
 
     /**
      * <p>
@@ -77,6 +89,86 @@ public class GitPushFilter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The field that specifies to filter on branches for the push trigger configuration.
+     * </p>
+     * 
+     * @param branches
+     *        The field that specifies to filter on branches for the push trigger configuration.
+     */
+
+    public void setBranches(GitBranchFilterCriteria branches) {
+        this.branches = branches;
+    }
+
+    /**
+     * <p>
+     * The field that specifies to filter on branches for the push trigger configuration.
+     * </p>
+     * 
+     * @return The field that specifies to filter on branches for the push trigger configuration.
+     */
+
+    public GitBranchFilterCriteria getBranches() {
+        return this.branches;
+    }
+
+    /**
+     * <p>
+     * The field that specifies to filter on branches for the push trigger configuration.
+     * </p>
+     * 
+     * @param branches
+     *        The field that specifies to filter on branches for the push trigger configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GitPushFilter withBranches(GitBranchFilterCriteria branches) {
+        setBranches(branches);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The field that specifies to filter on file paths for the push trigger configuration.
+     * </p>
+     * 
+     * @param filePaths
+     *        The field that specifies to filter on file paths for the push trigger configuration.
+     */
+
+    public void setFilePaths(GitFilePathFilterCriteria filePaths) {
+        this.filePaths = filePaths;
+    }
+
+    /**
+     * <p>
+     * The field that specifies to filter on file paths for the push trigger configuration.
+     * </p>
+     * 
+     * @return The field that specifies to filter on file paths for the push trigger configuration.
+     */
+
+    public GitFilePathFilterCriteria getFilePaths() {
+        return this.filePaths;
+    }
+
+    /**
+     * <p>
+     * The field that specifies to filter on file paths for the push trigger configuration.
+     * </p>
+     * 
+     * @param filePaths
+     *        The field that specifies to filter on file paths for the push trigger configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GitPushFilter withFilePaths(GitFilePathFilterCriteria filePaths) {
+        setFilePaths(filePaths);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -89,7 +181,11 @@ public class GitPushFilter implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getBranches() != null)
+            sb.append("Branches: ").append(getBranches()).append(",");
+        if (getFilePaths() != null)
+            sb.append("FilePaths: ").append(getFilePaths());
         sb.append("}");
         return sb.toString();
     }
@@ -108,6 +204,14 @@ public class GitPushFilter implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getBranches() == null ^ this.getBranches() == null)
+            return false;
+        if (other.getBranches() != null && other.getBranches().equals(this.getBranches()) == false)
+            return false;
+        if (other.getFilePaths() == null ^ this.getFilePaths() == null)
+            return false;
+        if (other.getFilePaths() != null && other.getFilePaths().equals(this.getFilePaths()) == false)
+            return false;
         return true;
     }
 
@@ -117,6 +221,8 @@ public class GitPushFilter implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getBranches() == null) ? 0 : getBranches().hashCode());
+        hashCode = prime * hashCode + ((getFilePaths() == null) ? 0 : getFilePaths().hashCode());
         return hashCode;
     }
 

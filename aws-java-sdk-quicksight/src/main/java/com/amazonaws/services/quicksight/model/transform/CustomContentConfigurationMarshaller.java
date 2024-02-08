@@ -33,6 +33,8 @@ public class CustomContentConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentType").build();
     private static final MarshallingInfo<String> IMAGESCALING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImageScaling").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final CustomContentConfigurationMarshaller instance = new CustomContentConfigurationMarshaller();
 
@@ -53,6 +55,7 @@ public class CustomContentConfigurationMarshaller {
             protocolMarshaller.marshall(customContentConfiguration.getContentUrl(), CONTENTURL_BINDING);
             protocolMarshaller.marshall(customContentConfiguration.getContentType(), CONTENTTYPE_BINDING);
             protocolMarshaller.marshall(customContentConfiguration.getImageScaling(), IMAGESCALING_BINDING);
+            protocolMarshaller.marshall(customContentConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

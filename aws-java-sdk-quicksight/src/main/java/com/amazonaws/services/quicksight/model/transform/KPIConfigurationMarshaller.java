@@ -33,6 +33,8 @@ public class KPIConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SortConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> KPIOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KPIOptions").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final KPIConfigurationMarshaller instance = new KPIConfigurationMarshaller();
 
@@ -53,6 +55,7 @@ public class KPIConfigurationMarshaller {
             protocolMarshaller.marshall(kPIConfiguration.getFieldWells(), FIELDWELLS_BINDING);
             protocolMarshaller.marshall(kPIConfiguration.getSortConfiguration(), SORTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(kPIConfiguration.getKPIOptions(), KPIOPTIONS_BINDING);
+            protocolMarshaller.marshall(kPIConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

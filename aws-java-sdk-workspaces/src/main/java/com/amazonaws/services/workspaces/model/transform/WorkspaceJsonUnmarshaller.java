@@ -100,6 +100,10 @@ public class WorkspaceJsonUnmarshaller implements Unmarshaller<Workspace, JsonUn
                     context.nextToken();
                     workspace.setRootVolumeEncryptionEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("WorkspaceName", targetDepth)) {
+                    context.nextToken();
+                    workspace.setWorkspaceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("WorkspaceProperties", targetDepth)) {
                     context.nextToken();
                     workspace.setWorkspaceProperties(WorkspacePropertiesJsonUnmarshaller.getInstance().unmarshall(context));

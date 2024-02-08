@@ -76,6 +76,10 @@ public class ActionExecutionDetailJsonUnmarshaller implements Unmarshaller<Actio
                     context.nextToken();
                     actionExecutionDetail.setLastUpdateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("updatedBy", targetDepth)) {
+                    context.nextToken();
+                    actionExecutionDetail.setUpdatedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     actionExecutionDetail.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

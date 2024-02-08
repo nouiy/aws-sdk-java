@@ -42,6 +42,8 @@ public class TableConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PaginatedReportOptions").build();
     private static final MarshallingInfo<List> TABLEINLINEVISUALIZATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableInlineVisualizations").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final TableConfigurationMarshaller instance = new TableConfigurationMarshaller();
 
@@ -66,6 +68,7 @@ public class TableConfigurationMarshaller {
             protocolMarshaller.marshall(tableConfiguration.getFieldOptions(), FIELDOPTIONS_BINDING);
             protocolMarshaller.marshall(tableConfiguration.getPaginatedReportOptions(), PAGINATEDREPORTOPTIONS_BINDING);
             protocolMarshaller.marshall(tableConfiguration.getTableInlineVisualizations(), TABLEINLINEVISUALIZATIONS_BINDING);
+            protocolMarshaller.marshall(tableConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

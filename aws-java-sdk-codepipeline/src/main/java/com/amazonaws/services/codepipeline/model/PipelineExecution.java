@@ -109,14 +109,20 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private java.util.List<ArtifactRevision> artifactRevisions;
-
-    private ExecutionTrigger trigger;
     /**
      * <p>
      * A list of pipeline variables used for the pipeline execution.
      * </p>
      */
     private java.util.List<ResolvedPipelineVariable> variables;
+
+    private ExecutionTrigger trigger;
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     */
+    private String executionMode;
 
     /**
      * <p>
@@ -873,32 +879,6 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @param trigger
-     */
-
-    public void setTrigger(ExecutionTrigger trigger) {
-        this.trigger = trigger;
-    }
-
-    /**
-     * @return
-     */
-
-    public ExecutionTrigger getTrigger() {
-        return this.trigger;
-    }
-
-    /**
-     * @param trigger
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipelineExecution withTrigger(ExecutionTrigger trigger) {
-        setTrigger(trigger);
-        return this;
-    }
-
-    /**
      * <p>
      * A list of pipeline variables used for the pipeline execution.
      * </p>
@@ -969,6 +949,105 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * @param trigger
+     */
+
+    public void setTrigger(ExecutionTrigger trigger) {
+        this.trigger = trigger;
+    }
+
+    /**
+     * @return
+     */
+
+    public ExecutionTrigger getTrigger() {
+        return this.trigger;
+    }
+
+    /**
+     * @param trigger
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecution withTrigger(ExecutionTrigger trigger) {
+        setTrigger(trigger);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public void setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @return The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public String getExecutionMode() {
+        return this.executionMode;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionMode
+     */
+
+    public PipelineExecution withExecutionMode(String executionMode) {
+        setExecutionMode(executionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public void setExecutionMode(ExecutionMode executionMode) {
+        withExecutionMode(executionMode);
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionMode
+     */
+
+    public PipelineExecution withExecutionMode(ExecutionMode executionMode) {
+        this.executionMode = executionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -992,10 +1071,12 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
             sb.append("StatusSummary: ").append(getStatusSummary()).append(",");
         if (getArtifactRevisions() != null)
             sb.append("ArtifactRevisions: ").append(getArtifactRevisions()).append(",");
+        if (getVariables() != null)
+            sb.append("Variables: ").append(getVariables()).append(",");
         if (getTrigger() != null)
             sb.append("Trigger: ").append(getTrigger()).append(",");
-        if (getVariables() != null)
-            sb.append("Variables: ").append(getVariables());
+        if (getExecutionMode() != null)
+            sb.append("ExecutionMode: ").append(getExecutionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -1034,13 +1115,17 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getArtifactRevisions() != null && other.getArtifactRevisions().equals(this.getArtifactRevisions()) == false)
             return false;
+        if (other.getVariables() == null ^ this.getVariables() == null)
+            return false;
+        if (other.getVariables() != null && other.getVariables().equals(this.getVariables()) == false)
+            return false;
         if (other.getTrigger() == null ^ this.getTrigger() == null)
             return false;
         if (other.getTrigger() != null && other.getTrigger().equals(this.getTrigger()) == false)
             return false;
-        if (other.getVariables() == null ^ this.getVariables() == null)
+        if (other.getExecutionMode() == null ^ this.getExecutionMode() == null)
             return false;
-        if (other.getVariables() != null && other.getVariables().equals(this.getVariables()) == false)
+        if (other.getExecutionMode() != null && other.getExecutionMode().equals(this.getExecutionMode()) == false)
             return false;
         return true;
     }
@@ -1056,8 +1141,9 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusSummary() == null) ? 0 : getStatusSummary().hashCode());
         hashCode = prime * hashCode + ((getArtifactRevisions() == null) ? 0 : getArtifactRevisions().hashCode());
-        hashCode = prime * hashCode + ((getTrigger() == null) ? 0 : getTrigger().hashCode());
         hashCode = prime * hashCode + ((getVariables() == null) ? 0 : getVariables().hashCode());
+        hashCode = prime * hashCode + ((getTrigger() == null) ? 0 : getTrigger().hashCode());
+        hashCode = prime * hashCode + ((getExecutionMode() == null) ? 0 : getExecutionMode().hashCode());
         return hashCode;
     }
 

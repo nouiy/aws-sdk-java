@@ -32,6 +32,8 @@ public class InsightConfigurationMarshaller {
             .marshallLocationName("Computations").build();
     private static final MarshallingInfo<StructuredPojo> CUSTOMNARRATIVE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomNarrative").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final InsightConfigurationMarshaller instance = new InsightConfigurationMarshaller();
 
@@ -51,6 +53,7 @@ public class InsightConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(insightConfiguration.getComputations(), COMPUTATIONS_BINDING);
             protocolMarshaller.marshall(insightConfiguration.getCustomNarrative(), CUSTOMNARRATIVE_BINDING);
+            protocolMarshaller.marshall(insightConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

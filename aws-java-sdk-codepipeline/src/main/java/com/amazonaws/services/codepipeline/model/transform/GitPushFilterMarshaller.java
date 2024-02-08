@@ -29,6 +29,10 @@ public class GitPushFilterMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> BRANCHES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("branches").build();
+    private static final MarshallingInfo<StructuredPojo> FILEPATHS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filePaths").build();
 
     private static final GitPushFilterMarshaller instance = new GitPushFilterMarshaller();
 
@@ -47,6 +51,8 @@ public class GitPushFilterMarshaller {
 
         try {
             protocolMarshaller.marshall(gitPushFilter.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(gitPushFilter.getBranches(), BRANCHES_BINDING);
+            protocolMarshaller.marshall(gitPushFilter.getFilePaths(), FILEPATHS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

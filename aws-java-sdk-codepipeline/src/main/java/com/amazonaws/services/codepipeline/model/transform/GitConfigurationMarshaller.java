@@ -32,6 +32,8 @@ public class GitConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceActionName").build();
     private static final MarshallingInfo<List> PUSH_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("push").build();
+    private static final MarshallingInfo<List> PULLREQUEST_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("pullRequest").build();
 
     private static final GitConfigurationMarshaller instance = new GitConfigurationMarshaller();
 
@@ -51,6 +53,7 @@ public class GitConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(gitConfiguration.getSourceActionName(), SOURCEACTIONNAME_BINDING);
             protocolMarshaller.marshall(gitConfiguration.getPush(), PUSH_BINDING);
+            protocolMarshaller.marshall(gitConfiguration.getPullRequest(), PULLREQUEST_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -50,6 +50,8 @@ public class PieChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPalette").build();
     private static final MarshallingInfo<List> CONTRIBUTIONANALYSISDEFAULTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContributionAnalysisDefaults").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final PieChartConfigurationMarshaller instance = new PieChartConfigurationMarshaller();
 
@@ -78,6 +80,7 @@ public class PieChartConfigurationMarshaller {
             protocolMarshaller.marshall(pieChartConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(pieChartConfiguration.getVisualPalette(), VISUALPALETTE_BINDING);
             protocolMarshaller.marshall(pieChartConfiguration.getContributionAnalysisDefaults(), CONTRIBUTIONANALYSISDEFAULTS_BINDING);
+            protocolMarshaller.marshall(pieChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

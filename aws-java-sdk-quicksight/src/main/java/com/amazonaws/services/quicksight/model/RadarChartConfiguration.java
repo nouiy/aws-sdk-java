@@ -118,6 +118,12 @@ public class RadarChartConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private String axesRangeScale;
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     */
+    private VisualInteractionOptions interactions;
 
     /**
      * <p>
@@ -777,6 +783,46 @@ public class RadarChartConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     */
+
+    public void setInteractions(VisualInteractionOptions interactions) {
+        this.interactions = interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @return The general visual interactions setup for a visual.
+     */
+
+    public VisualInteractionOptions getInteractions() {
+        return this.interactions;
+    }
+
+    /**
+     * <p>
+     * The general visual interactions setup for a visual.
+     * </p>
+     * 
+     * @param interactions
+     *        The general visual interactions setup for a visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RadarChartConfiguration withInteractions(VisualInteractionOptions interactions) {
+        setInteractions(interactions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -817,7 +863,9 @@ public class RadarChartConfiguration implements Serializable, Cloneable, Structu
         if (getLegend() != null)
             sb.append("Legend: ").append(getLegend()).append(",");
         if (getAxesRangeScale() != null)
-            sb.append("AxesRangeScale: ").append(getAxesRangeScale());
+            sb.append("AxesRangeScale: ").append(getAxesRangeScale()).append(",");
+        if (getInteractions() != null)
+            sb.append("Interactions: ").append(getInteractions());
         sb.append("}");
         return sb.toString();
     }
@@ -893,6 +941,10 @@ public class RadarChartConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getAxesRangeScale() != null && other.getAxesRangeScale().equals(this.getAxesRangeScale()) == false)
             return false;
+        if (other.getInteractions() == null ^ this.getInteractions() == null)
+            return false;
+        if (other.getInteractions() != null && other.getInteractions().equals(this.getInteractions()) == false)
+            return false;
         return true;
     }
 
@@ -916,6 +968,7 @@ public class RadarChartConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getColorLabelOptions() == null) ? 0 : getColorLabelOptions().hashCode());
         hashCode = prime * hashCode + ((getLegend() == null) ? 0 : getLegend().hashCode());
         hashCode = prime * hashCode + ((getAxesRangeScale() == null) ? 0 : getAxesRangeScale().hashCode());
+        hashCode = prime * hashCode + ((getInteractions() == null) ? 0 : getInteractions().hashCode());
         return hashCode;
     }
 

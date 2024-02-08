@@ -111,6 +111,12 @@ public class PipelineExecutionSummary implements Serializable, Cloneable, Struct
      * </p>
      */
     private StopExecutionTrigger stopTrigger;
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     */
+    private String executionMode;
 
     /**
      * <p>
@@ -863,6 +869,79 @@ public class PipelineExecutionSummary implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public void setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @return The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public String getExecutionMode() {
+        return this.executionMode;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionMode
+     */
+
+    public PipelineExecutionSummary withExecutionMode(String executionMode) {
+        setExecutionMode(executionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @see ExecutionMode
+     */
+
+    public void setExecutionMode(ExecutionMode executionMode) {
+        withExecutionMode(executionMode);
+    }
+
+    /**
+     * <p>
+     * The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * </p>
+     * 
+     * @param executionMode
+     *        The method that the pipeline will use to handle multiple executions. The default mode is SUPERSEDED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionMode
+     */
+
+    public PipelineExecutionSummary withExecutionMode(ExecutionMode executionMode) {
+        this.executionMode = executionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -887,7 +966,9 @@ public class PipelineExecutionSummary implements Serializable, Cloneable, Struct
         if (getTrigger() != null)
             sb.append("Trigger: ").append(getTrigger()).append(",");
         if (getStopTrigger() != null)
-            sb.append("StopTrigger: ").append(getStopTrigger());
+            sb.append("StopTrigger: ").append(getStopTrigger()).append(",");
+        if (getExecutionMode() != null)
+            sb.append("ExecutionMode: ").append(getExecutionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -930,6 +1011,10 @@ public class PipelineExecutionSummary implements Serializable, Cloneable, Struct
             return false;
         if (other.getStopTrigger() != null && other.getStopTrigger().equals(this.getStopTrigger()) == false)
             return false;
+        if (other.getExecutionMode() == null ^ this.getExecutionMode() == null)
+            return false;
+        if (other.getExecutionMode() != null && other.getExecutionMode().equals(this.getExecutionMode()) == false)
+            return false;
         return true;
     }
 
@@ -945,6 +1030,7 @@ public class PipelineExecutionSummary implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getSourceRevisions() == null) ? 0 : getSourceRevisions().hashCode());
         hashCode = prime * hashCode + ((getTrigger() == null) ? 0 : getTrigger().hashCode());
         hashCode = prime * hashCode + ((getStopTrigger() == null) ? 0 : getStopTrigger().hashCode());
+        hashCode = prime * hashCode + ((getExecutionMode() == null) ? 0 : getExecutionMode().hashCode());
         return hashCode;
     }
 

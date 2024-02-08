@@ -60,6 +60,10 @@ public class ActionExecutionResultJsonUnmarshaller implements Unmarshaller<Actio
                     context.nextToken();
                     actionExecutionResult.setExternalExecutionUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("errorDetails", targetDepth)) {
+                    context.nextToken();
+                    actionExecutionResult.setErrorDetails(ErrorDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

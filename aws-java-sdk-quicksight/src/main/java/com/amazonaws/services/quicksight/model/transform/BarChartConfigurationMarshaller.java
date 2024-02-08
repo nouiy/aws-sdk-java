@@ -60,6 +60,8 @@ public class BarChartConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReferenceLines").build();
     private static final MarshallingInfo<List> CONTRIBUTIONANALYSISDEFAULTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContributionAnalysisDefaults").build();
+    private static final MarshallingInfo<StructuredPojo> INTERACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Interactions").build();
 
     private static final BarChartConfigurationMarshaller instance = new BarChartConfigurationMarshaller();
 
@@ -93,6 +95,7 @@ public class BarChartConfigurationMarshaller {
             protocolMarshaller.marshall(barChartConfiguration.getTooltip(), TOOLTIP_BINDING);
             protocolMarshaller.marshall(barChartConfiguration.getReferenceLines(), REFERENCELINES_BINDING);
             protocolMarshaller.marshall(barChartConfiguration.getContributionAnalysisDefaults(), CONTRIBUTIONANALYSISDEFAULTS_BINDING);
+            protocolMarshaller.marshall(barChartConfiguration.getInteractions(), INTERACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

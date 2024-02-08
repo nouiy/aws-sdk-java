@@ -29,8 +29,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collections;
@@ -90,13 +88,7 @@ public class EC2MetadataUtils {
     private static final ObjectMapper mapper = new ObjectMapper();
     static {
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        try {
-            mapper.setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
-        } catch (LinkageError e) {
-            // If a customer is using an older Jackson version than 2.12.x, fall back to the old (deprecated)
-            // name for the same property that might cause deadlocks.
-            mapper.setPropertyNamingStrategy(PropertyNamingStrategy.PASCAL_CASE_TO_CAMEL_CASE);
-        }
+        PropertyNamingStrategyUtils.configureUpperCamelCase(mapper);
     }
 
     private static final Log log = LogFactory.getLog(EC2MetadataUtils.class);
