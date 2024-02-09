@@ -150,6 +150,10 @@ public class ContainerPropertiesJsonUnmarshaller implements Unmarshaller<Contain
                     context.nextToken();
                     containerProperties.setRuntimePlatform(RuntimePlatformJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("repositoryCredentials", targetDepth)) {
+                    context.nextToken();
+                    containerProperties.setRepositoryCredentials(RepositoryCredentialsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

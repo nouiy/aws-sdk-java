@@ -16,13 +16,19 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Request would cause a service quota to be exceeded.
+ * Completing the request would cause a service quota to be exceeded.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServiceQuotaExceededException extends com.amazonaws.services.prometheus.model.AmazonPrometheusException {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * Service quotas code of the originating quota.
+     * </p>
+     */
+    private String quotaCode;
     /**
      * <p>
      * Identifier of the resource affected.
@@ -37,16 +43,10 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.promet
     private String resourceType;
     /**
      * <p>
-     * Service Quotas requirement to identify originating service.
+     * Service quotas code for the originating service.
      * </p>
      */
     private String serviceCode;
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating quota.
-     * </p>
-     */
-    private String quotaCode;
 
     /**
      * Constructs a new ServiceQuotaExceededException with the specified error message.
@@ -56,6 +56,48 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.promet
      */
     public ServiceQuotaExceededException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * Service quotas code of the originating quota.
+     * </p>
+     * 
+     * @param quotaCode
+     *        Service quotas code of the originating quota.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
+    public void setQuotaCode(String quotaCode) {
+        this.quotaCode = quotaCode;
+    }
+
+    /**
+     * <p>
+     * Service quotas code of the originating quota.
+     * </p>
+     * 
+     * @return Service quotas code of the originating quota.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
+    public String getQuotaCode() {
+        return this.quotaCode;
+    }
+
+    /**
+     * <p>
+     * Service quotas code of the originating quota.
+     * </p>
+     * 
+     * @param quotaCode
+     *        Service quotas code of the originating quota.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
+        setQuotaCode(quotaCode);
+        return this;
     }
 
     /**
@@ -144,11 +186,11 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.promet
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating service.
+     * Service quotas code for the originating service.
      * </p>
      * 
      * @param serviceCode
-     *        Service Quotas requirement to identify originating service.
+     *        Service quotas code for the originating service.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
@@ -158,10 +200,10 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.promet
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating service.
+     * Service quotas code for the originating service.
      * </p>
      * 
-     * @return Service Quotas requirement to identify originating service.
+     * @return Service quotas code for the originating service.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
@@ -171,58 +213,16 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.promet
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating service.
+     * Service quotas code for the originating service.
      * </p>
      * 
      * @param serviceCode
-     *        Service Quotas requirement to identify originating service.
+     *        Service quotas code for the originating service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ServiceQuotaExceededException withServiceCode(String serviceCode) {
         setServiceCode(serviceCode);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating quota.
-     * </p>
-     * 
-     * @param quotaCode
-     *        Service Quotas requirement to identify originating quota.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
-    public void setQuotaCode(String quotaCode) {
-        this.quotaCode = quotaCode;
-    }
-
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating quota.
-     * </p>
-     * 
-     * @return Service Quotas requirement to identify originating quota.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
-    public String getQuotaCode() {
-        return this.quotaCode;
-    }
-
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating quota.
-     * </p>
-     * 
-     * @param quotaCode
-     *        Service Quotas requirement to identify originating quota.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
-        setQuotaCode(quotaCode);
         return this;
     }
 

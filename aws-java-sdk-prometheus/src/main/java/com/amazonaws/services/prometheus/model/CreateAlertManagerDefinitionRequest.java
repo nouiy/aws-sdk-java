@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a CreateAlertManagerDefinition operation.
+ * Represents the input of a <code>CreateAlertManagerDefinition</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateAlertManagerDefinition" target="_top">AWS
@@ -30,66 +30,76 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the workspace in which to create the alert manager definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      */
-    private String workspaceId;
+    private String clientToken;
     /**
      * <p>
-     * The alert manager definition data.
+     * The alert manager definition to add. A base64-encoded version of the YAML alert manager definition file.
+     * </p>
+     * <p>
+     * For details about the alert manager definition, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     * >AlertManagedDefinitionData</a>.
      * </p>
      */
     private java.nio.ByteBuffer data;
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to add the alert manager definition to.
      * </p>
      */
-    private String clientToken;
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace in which to create the alert manager definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace in which to create the alert manager definition.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace in which to create the alert manager definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @return The ID of the workspace in which to create the alert manager definition.
+     * @return A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace in which to create the alert manager definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace in which to create the alert manager definition.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateAlertManagerDefinitionRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
+    public CreateAlertManagerDefinitionRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
         return this;
     }
 
     /**
      * <p>
-     * The alert manager definition data.
+     * The alert manager definition to add. A base64-encoded version of the YAML alert manager definition file.
+     * </p>
+     * <p>
+     * For details about the alert manager definition, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     * >AlertManagedDefinitionData</a>.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -103,7 +113,12 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param data
-     *        The alert manager definition data.
+     *        The alert manager definition to add. A base64-encoded version of the YAML alert manager definition
+     *        file.</p>
+     *        <p>
+     *        For details about the alert manager definition, see <a
+     *        href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     *        >AlertManagedDefinitionData</a>.
      */
 
     public void setData(java.nio.ByteBuffer data) {
@@ -112,7 +127,12 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The alert manager definition data.
+     * The alert manager definition to add. A base64-encoded version of the YAML alert manager definition file.
+     * </p>
+     * <p>
+     * For details about the alert manager definition, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     * >AlertManagedDefinitionData</a>.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -122,7 +142,12 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
      * {@code position}.
      * </p>
      * 
-     * @return The alert manager definition data.
+     * @return The alert manager definition to add. A base64-encoded version of the YAML alert manager definition
+     *         file.</p>
+     *         <p>
+     *         For details about the alert manager definition, see <a
+     *         href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     *         >AlertManagedDefinitionData</a>.
      */
 
     public java.nio.ByteBuffer getData() {
@@ -131,7 +156,12 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The alert manager definition data.
+     * The alert manager definition to add. A base64-encoded version of the YAML alert manager definition file.
+     * </p>
+     * <p>
+     * For details about the alert manager definition, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     * >AlertManagedDefinitionData</a>.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -145,7 +175,12 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param data
-     *        The alert manager definition data.
+     *        The alert manager definition to add. A base64-encoded version of the YAML alert manager definition
+     *        file.</p>
+     *        <p>
+     *        For details about the alert manager definition, see <a
+     *        href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-AlertManagerDefinitionData.html"
+     *        >AlertManagedDefinitionData</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,41 +191,41 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to add the alert manager definition to.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param workspaceId
+     *        The ID of the workspace to add the alert manager definition to.
      */
 
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to add the alert manager definition to.
      * </p>
      * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @return The ID of the workspace to add the alert manager definition to.
      */
 
-    public String getClientToken() {
-        return this.clientToken;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to add the alert manager definition to.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param workspaceId
+     *        The ID of the workspace to add the alert manager definition to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateAlertManagerDefinitionRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
+    public CreateAlertManagerDefinitionRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -206,12 +241,12 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getData() != null)
             sb.append("Data: ").append(getData()).append(",");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -226,17 +261,17 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
         if (obj instanceof CreateAlertManagerDefinitionRequest == false)
             return false;
         CreateAlertManagerDefinitionRequest other = (CreateAlertManagerDefinitionRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getData() == null ^ this.getData() == null)
             return false;
         if (other.getData() != null && other.getData().equals(this.getData()) == false)
             return false;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -246,9 +281,9 @@ public class CreateAlertManagerDefinitionRequest extends com.amazonaws.AmazonWeb
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
-        hashCode = prime * hashCode + ((getData() == null) ? 0 : getData().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getData() == null) ? 0 : getData().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

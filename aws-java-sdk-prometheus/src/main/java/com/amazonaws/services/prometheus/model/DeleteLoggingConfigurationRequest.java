@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a DeleteLoggingConfiguration operation.
+ * Represents the input of a <code>DeleteLoggingConfiguration</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteLoggingConfiguration" target="_top">AWS API
@@ -30,64 +30,24 @@ public class DeleteLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
-     * </p>
-     */
-    private String workspaceId;
-    /**
-     * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      */
     private String clientToken;
-
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * The ID of the workspace containing the logging configuration to delete.
      * </p>
-     * 
-     * @param workspaceId
-     *        The ID of the workspace to vend logs to.
      */
-
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-    }
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
-     * </p>
-     * 
-     * @return The ID of the workspace to vend logs to.
-     */
-
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
-    /**
-     * <p>
-     * The ID of the workspace to vend logs to.
-     * </p>
-     * 
-     * @param workspaceId
-     *        The ID of the workspace to vend logs to.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteLoggingConfigurationRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
      * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
     public void setClientToken(String clientToken) {
@@ -96,10 +56,10 @@ public class DeleteLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @return A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
     public String getClientToken() {
@@ -108,16 +68,56 @@ public class DeleteLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
      * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DeleteLoggingConfigurationRequest withClientToken(String clientToken) {
         setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace containing the logging configuration to delete.
+     * </p>
+     * 
+     * @param workspaceId
+     *        The ID of the workspace containing the logging configuration to delete.
+     */
+
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace containing the logging configuration to delete.
+     * </p>
+     * 
+     * @return The ID of the workspace containing the logging configuration to delete.
+     */
+
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace containing the logging configuration to delete.
+     * </p>
+     * 
+     * @param workspaceId
+     *        The ID of the workspace containing the logging configuration to delete.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteLoggingConfigurationRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -133,10 +133,10 @@ public class DeleteLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class DeleteLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         if (obj instanceof DeleteLoggingConfigurationRequest == false)
             return false;
         DeleteLoggingConfigurationRequest other = (DeleteLoggingConfigurationRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
-            return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
-            return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+            return false;
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class DeleteLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

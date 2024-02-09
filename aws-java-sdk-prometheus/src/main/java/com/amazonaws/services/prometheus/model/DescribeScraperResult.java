@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a DescribeScraper operation.
+ * Represents the output of a <code>DescribeScraper</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeScraper" target="_top">AWS API
@@ -28,18 +28,18 @@ public class DescribeScraperResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The properties of the selected scrapers.
+     * Contains details about the scraper.
      * </p>
      */
     private ScraperDescription scraper;
 
     /**
      * <p>
-     * The properties of the selected scrapers.
+     * Contains details about the scraper.
      * </p>
      * 
      * @param scraper
-     *        The properties of the selected scrapers.
+     *        Contains details about the scraper.
      */
 
     public void setScraper(ScraperDescription scraper) {
@@ -48,10 +48,10 @@ public class DescribeScraperResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The properties of the selected scrapers.
+     * Contains details about the scraper.
      * </p>
      * 
-     * @return The properties of the selected scrapers.
+     * @return Contains details about the scraper.
      */
 
     public ScraperDescription getScraper() {
@@ -60,11 +60,11 @@ public class DescribeScraperResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The properties of the selected scrapers.
+     * Contains details about the scraper.
      * </p>
      * 
      * @param scraper
-     *        The properties of the selected scrapers.
+     *        Contains details about the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

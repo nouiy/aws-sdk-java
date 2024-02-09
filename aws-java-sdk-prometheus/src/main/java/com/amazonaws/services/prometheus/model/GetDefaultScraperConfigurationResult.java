@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a GetDefaultScraperConfiguration operation.
+ * Represents the output of a <code>GetDefaultScraperConfiguration</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/GetDefaultScraperConfiguration" target="_top">AWS
@@ -29,14 +29,18 @@ public class GetDefaultScraperConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The default configuration.
+     * The configuration file. Base 64 encoded. For more information, see <a href=
+     * "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     * >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      * </p>
      */
     private java.nio.ByteBuffer configuration;
 
     /**
      * <p>
-     * The default configuration.
+     * The configuration file. Base 64 encoded. For more information, see <a href=
+     * "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     * >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -50,7 +54,9 @@ public class GetDefaultScraperConfigurationResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param configuration
-     *        The default configuration.
+     *        The configuration file. Base 64 encoded. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     *        >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      */
 
     public void setConfiguration(java.nio.ByteBuffer configuration) {
@@ -59,7 +65,9 @@ public class GetDefaultScraperConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The default configuration.
+     * The configuration file. Base 64 encoded. For more information, see <a href=
+     * "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     * >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -69,7 +77,9 @@ public class GetDefaultScraperConfigurationResult extends com.amazonaws.AmazonWe
      * {@code position}.
      * </p>
      * 
-     * @return The default configuration.
+     * @return The configuration file. Base 64 encoded. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     *         >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      */
 
     public java.nio.ByteBuffer getConfiguration() {
@@ -78,7 +88,9 @@ public class GetDefaultScraperConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The default configuration.
+     * The configuration file. Base 64 encoded. For more information, see <a href=
+     * "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     * >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -92,7 +104,9 @@ public class GetDefaultScraperConfigurationResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param configuration
-     *        The default configuration.
+     *        The configuration file. Base 64 encoded. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration"
+     *        >Scraper configuration</a>in the <i>Amazon Managed Service for Prometheus User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

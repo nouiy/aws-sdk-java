@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents the properties of a workspace.
+ * The full details about one Amazon Managed Service for Prometheus workspace in your account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/WorkspaceDescription" target="_top">AWS API
@@ -30,100 +30,60 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     */
-    private String workspaceId;
-    /**
-     * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      */
     private String alias;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this workspace.
+     * The ARN of the workspace.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The status of this workspace.
-     * </p>
-     */
-    private WorkspaceStatus status;
-    /**
-     * <p>
-     * Prometheus endpoint URI.
-     * </p>
-     */
-    private String prometheusEndpoint;
-    /**
-     * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The tags of this workspace.
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * </p>
+     */
+    private String kmsKeyArn;
+    /**
+     * <p>
+     * The Prometheus endpoint available for this workspace.
+     * </p>
+     */
+    private String prometheusEndpoint;
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     */
+    private WorkspaceStatus status;
+    /**
+     * <p>
+     * The list of tag keys and values that are associated with the workspace.
      * </p>
      */
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The customer managed KMS key of this workspace.
+     * The unique ID for the workspace.
      * </p>
      */
-    private String kmsKeyArn;
+    private String workspaceId;
 
     /**
      * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     * 
-     * @param workspaceId
-     *        Unique string identifying this workspace.
-     */
-
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-    }
-
-    /**
-     * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     * 
-     * @return Unique string identifying this workspace.
-     */
-
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
-    /**
-     * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     * 
-     * @param workspaceId
-     *        Unique string identifying this workspace.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WorkspaceDescription withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      * 
      * @param alias
-     *        Alias of this workspace.
+     *        The alias that is assigned to this workspace to help identify it. It may not be unique.
      */
 
     public void setAlias(String alias) {
@@ -132,10 +92,10 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      * 
-     * @return Alias of this workspace.
+     * @return The alias that is assigned to this workspace to help identify it. It may not be unique.
      */
 
     public String getAlias() {
@@ -144,11 +104,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      * 
      * @param alias
-     *        Alias of this workspace.
+     *        The alias that is assigned to this workspace to help identify it. It may not be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,11 +119,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this workspace.
+     * The ARN of the workspace.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this workspace.
+     *        The ARN of the workspace.
      */
 
     public void setArn(String arn) {
@@ -172,10 +132,10 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this workspace.
+     * The ARN of the workspace.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of this workspace.
+     * @return The ARN of the workspace.
      */
 
     public String getArn() {
@@ -184,11 +144,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this workspace.
+     * The ARN of the workspace.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this workspace.
+     *        The ARN of the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -199,91 +159,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The status of this workspace.
-     * </p>
-     * 
-     * @param status
-     *        The status of this workspace.
-     */
-
-    public void setStatus(WorkspaceStatus status) {
-        this.status = status;
-    }
-
-    /**
-     * <p>
-     * The status of this workspace.
-     * </p>
-     * 
-     * @return The status of this workspace.
-     */
-
-    public WorkspaceStatus getStatus() {
-        return this.status;
-    }
-
-    /**
-     * <p>
-     * The status of this workspace.
-     * </p>
-     * 
-     * @param status
-     *        The status of this workspace.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WorkspaceDescription withStatus(WorkspaceStatus status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Prometheus endpoint URI.
-     * </p>
-     * 
-     * @param prometheusEndpoint
-     *        Prometheus endpoint URI.
-     */
-
-    public void setPrometheusEndpoint(String prometheusEndpoint) {
-        this.prometheusEndpoint = prometheusEndpoint;
-    }
-
-    /**
-     * <p>
-     * Prometheus endpoint URI.
-     * </p>
-     * 
-     * @return Prometheus endpoint URI.
-     */
-
-    public String getPrometheusEndpoint() {
-        return this.prometheusEndpoint;
-    }
-
-    /**
-     * <p>
-     * Prometheus endpoint URI.
-     * </p>
-     * 
-     * @param prometheusEndpoint
-     *        Prometheus endpoint URI.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WorkspaceDescription withPrometheusEndpoint(String prometheusEndpoint) {
-        setPrometheusEndpoint(prometheusEndpoint);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the workspace was created.
+     *        The date and time that the workspace was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -292,10 +172,10 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      * 
-     * @return The time when the workspace was created.
+     * @return The date and time that the workspace was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -304,11 +184,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the workspace was created.
+     *        The date and time that the workspace was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -319,10 +199,130 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The tags of this workspace.
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
      * </p>
      * 
-     * @return The tags of this workspace.
+     * @param kmsKeyArn
+     *        (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     */
+
+    public void setKmsKeyArn(String kmsKeyArn) {
+        this.kmsKeyArn = kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * </p>
+     * 
+     * @return (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     */
+
+    public String getKmsKeyArn() {
+        return this.kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * </p>
+     * 
+     * @param kmsKeyArn
+     *        (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription withKmsKeyArn(String kmsKeyArn) {
+        setKmsKeyArn(kmsKeyArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Prometheus endpoint available for this workspace.
+     * </p>
+     * 
+     * @param prometheusEndpoint
+     *        The Prometheus endpoint available for this workspace.
+     */
+
+    public void setPrometheusEndpoint(String prometheusEndpoint) {
+        this.prometheusEndpoint = prometheusEndpoint;
+    }
+
+    /**
+     * <p>
+     * The Prometheus endpoint available for this workspace.
+     * </p>
+     * 
+     * @return The Prometheus endpoint available for this workspace.
+     */
+
+    public String getPrometheusEndpoint() {
+        return this.prometheusEndpoint;
+    }
+
+    /**
+     * <p>
+     * The Prometheus endpoint available for this workspace.
+     * </p>
+     * 
+     * @param prometheusEndpoint
+     *        The Prometheus endpoint available for this workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription withPrometheusEndpoint(String prometheusEndpoint) {
+        setPrometheusEndpoint(prometheusEndpoint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the workspace.
+     */
+
+    public void setStatus(WorkspaceStatus status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     * 
+     * @return The current status of the workspace.
+     */
+
+    public WorkspaceStatus getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription withStatus(WorkspaceStatus status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of tag keys and values that are associated with the workspace.
+     * </p>
+     * 
+     * @return The list of tag keys and values that are associated with the workspace.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -331,11 +331,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The tags of this workspace.
+     * The list of tag keys and values that are associated with the workspace.
      * </p>
      * 
      * @param tags
-     *        The tags of this workspace.
+     *        The list of tag keys and values that are associated with the workspace.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -344,11 +344,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The tags of this workspace.
+     * The list of tag keys and values that are associated with the workspace.
      * </p>
      * 
      * @param tags
-     *        The tags of this workspace.
+     *        The list of tag keys and values that are associated with the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -387,41 +387,41 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The customer managed KMS key of this workspace.
+     * The unique ID for the workspace.
      * </p>
      * 
-     * @param kmsKeyArn
-     *        The customer managed KMS key of this workspace.
+     * @param workspaceId
+     *        The unique ID for the workspace.
      */
 
-    public void setKmsKeyArn(String kmsKeyArn) {
-        this.kmsKeyArn = kmsKeyArn;
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
     }
 
     /**
      * <p>
-     * The customer managed KMS key of this workspace.
+     * The unique ID for the workspace.
      * </p>
      * 
-     * @return The customer managed KMS key of this workspace.
+     * @return The unique ID for the workspace.
      */
 
-    public String getKmsKeyArn() {
-        return this.kmsKeyArn;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     /**
      * <p>
-     * The customer managed KMS key of this workspace.
+     * The unique ID for the workspace.
      * </p>
      * 
-     * @param kmsKeyArn
-     *        The customer managed KMS key of this workspace.
+     * @param workspaceId
+     *        The unique ID for the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public WorkspaceDescription withKmsKeyArn(String kmsKeyArn) {
-        setKmsKeyArn(kmsKeyArn);
+    public WorkspaceDescription withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -437,22 +437,22 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
         if (getAlias() != null)
             sb.append("Alias: ").append(getAlias()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
-        if (getPrometheusEndpoint() != null)
-            sb.append("PrometheusEndpoint: ").append(getPrometheusEndpoint()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getKmsKeyArn() != null)
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
+        if (getPrometheusEndpoint() != null)
+            sb.append("PrometheusEndpoint: ").append(getPrometheusEndpoint()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
-        if (getKmsKeyArn() != null)
-            sb.append("KmsKeyArn: ").append(getKmsKeyArn());
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -467,10 +467,6 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         if (obj instanceof WorkspaceDescription == false)
             return false;
         WorkspaceDescription other = (WorkspaceDescription) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
-            return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
-            return false;
         if (other.getAlias() == null ^ this.getAlias() == null)
             return false;
         if (other.getAlias() != null && other.getAlias().equals(this.getAlias()) == false)
@@ -479,25 +475,29 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
+        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+            return false;
+        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
             return false;
         if (other.getPrometheusEndpoint() == null ^ this.getPrometheusEndpoint() == null)
             return false;
         if (other.getPrometheusEndpoint() != null && other.getPrometheusEndpoint().equals(this.getPrometheusEndpoint()) == false)
             return false;
-        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
+        if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
-        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
-        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
-        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -507,14 +507,14 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getAlias() == null) ? 0 : getAlias().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        hashCode = prime * hashCode + ((getPrometheusEndpoint() == null) ? 0 : getPrometheusEndpoint().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getPrometheusEndpoint() == null) ? 0 : getPrometheusEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

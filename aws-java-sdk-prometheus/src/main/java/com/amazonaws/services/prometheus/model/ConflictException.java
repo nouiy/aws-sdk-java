@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Updating or deleting a resource can cause an inconsistent state.
+ * The request would cause an inconsistent state.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

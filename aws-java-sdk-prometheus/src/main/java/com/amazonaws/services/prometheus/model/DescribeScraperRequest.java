@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a DescribeScraper operation.
+ * Represents the input of a <code>DescribeScraper</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeScraper" target="_top">AWS API
@@ -30,18 +30,18 @@ public class DescribeScraperRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IDs of the scraper to describe.
+     * The ID of the scraper to describe.
      * </p>
      */
     private String scraperId;
 
     /**
      * <p>
-     * The IDs of the scraper to describe.
+     * The ID of the scraper to describe.
      * </p>
      * 
      * @param scraperId
-     *        The IDs of the scraper to describe.
+     *        The ID of the scraper to describe.
      */
 
     public void setScraperId(String scraperId) {
@@ -50,10 +50,10 @@ public class DescribeScraperRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IDs of the scraper to describe.
+     * The ID of the scraper to describe.
      * </p>
      * 
-     * @return The IDs of the scraper to describe.
+     * @return The ID of the scraper to describe.
      */
 
     public String getScraperId() {
@@ -62,11 +62,11 @@ public class DescribeScraperRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IDs of the scraper to describe.
+     * The ID of the scraper to describe.
      * </p>
      * 
      * @param scraperId
-     *        The IDs of the scraper to describe.
+     *        The ID of the scraper to describe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

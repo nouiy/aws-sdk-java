@@ -91,6 +91,10 @@ public class DescribeDomainConfigurationResultJsonUnmarshaller implements Unmars
                     context.nextToken();
                     describeDomainConfigurationResult.setTlsConfig(TlsConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("serverCertificateConfig", targetDepth)) {
+                    context.nextToken();
+                    describeDomainConfigurationResult.setServerCertificateConfig(ServerCertificateConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

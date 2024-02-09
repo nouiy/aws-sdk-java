@@ -133,6 +133,9 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ExpiredNextTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.pricing.model.transform.ExpiredNextTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.pricing.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.pricing.model.AWSPricingException.class));
 
     public static AWSPricingClientBuilder builder() {
@@ -200,6 +203,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         The requested resource can't be found.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.DescribeServices
@@ -270,6 +275,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         The requested resource can't be found.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.GetAttributeValues
@@ -343,6 +350,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         General authentication failure. The request wasn't signed correctly.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @sample AWSPricing.GetPriceListFileUrl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
      *      API Documentation</a>
@@ -406,6 +415,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         The requested resource can't be found.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.GetProducts
@@ -485,6 +496,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         General authentication failure. The request wasn't signed correctly.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.ListPriceLists

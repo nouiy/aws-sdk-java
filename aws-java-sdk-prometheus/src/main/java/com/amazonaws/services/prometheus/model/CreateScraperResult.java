@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a CreateScraper operation.
+ * Represents the output of a <code>CreateScraper</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateScraper" target="_top">AWS API
@@ -28,76 +28,36 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The generated ID of the scraper that was just created.
-     * </p>
-     */
-    private String scraperId;
-    /**
-     * <p>
-     * The ARN of the scraper that was just created.
+     * The Amazon Resource Name (ARN) of the new scraper.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The status of the scraper that was just created (usually CREATING).
+     * The ID of the new scraper.
+     * </p>
+     */
+    private String scraperId;
+    /**
+     * <p>
+     * A structure that displays the current status of the scraper.
      * </p>
      */
     private ScraperStatus status;
     /**
      * <p>
-     * The tags of this scraper.
+     * The list of tag keys and values that are associated with the scraper.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The generated ID of the scraper that was just created.
-     * </p>
-     * 
-     * @param scraperId
-     *        The generated ID of the scraper that was just created.
-     */
-
-    public void setScraperId(String scraperId) {
-        this.scraperId = scraperId;
-    }
-
-    /**
-     * <p>
-     * The generated ID of the scraper that was just created.
-     * </p>
-     * 
-     * @return The generated ID of the scraper that was just created.
-     */
-
-    public String getScraperId() {
-        return this.scraperId;
-    }
-
-    /**
-     * <p>
-     * The generated ID of the scraper that was just created.
-     * </p>
-     * 
-     * @param scraperId
-     *        The generated ID of the scraper that was just created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateScraperResult withScraperId(String scraperId) {
-        setScraperId(scraperId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The ARN of the scraper that was just created.
+     * The Amazon Resource Name (ARN) of the new scraper.
      * </p>
      * 
      * @param arn
-     *        The ARN of the scraper that was just created.
+     *        The Amazon Resource Name (ARN) of the new scraper.
      */
 
     public void setArn(String arn) {
@@ -106,10 +66,10 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ARN of the scraper that was just created.
+     * The Amazon Resource Name (ARN) of the new scraper.
      * </p>
      * 
-     * @return The ARN of the scraper that was just created.
+     * @return The Amazon Resource Name (ARN) of the new scraper.
      */
 
     public String getArn() {
@@ -118,11 +78,11 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ARN of the scraper that was just created.
+     * The Amazon Resource Name (ARN) of the new scraper.
      * </p>
      * 
      * @param arn
-     *        The ARN of the scraper that was just created.
+     *        The Amazon Resource Name (ARN) of the new scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +93,51 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the scraper that was just created (usually CREATING).
+     * The ID of the new scraper.
+     * </p>
+     * 
+     * @param scraperId
+     *        The ID of the new scraper.
+     */
+
+    public void setScraperId(String scraperId) {
+        this.scraperId = scraperId;
+    }
+
+    /**
+     * <p>
+     * The ID of the new scraper.
+     * </p>
+     * 
+     * @return The ID of the new scraper.
+     */
+
+    public String getScraperId() {
+        return this.scraperId;
+    }
+
+    /**
+     * <p>
+     * The ID of the new scraper.
+     * </p>
+     * 
+     * @param scraperId
+     *        The ID of the new scraper.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateScraperResult withScraperId(String scraperId) {
+        setScraperId(scraperId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A structure that displays the current status of the scraper.
      * </p>
      * 
      * @param status
-     *        The status of the scraper that was just created (usually CREATING).
+     *        A structure that displays the current status of the scraper.
      */
 
     public void setStatus(ScraperStatus status) {
@@ -146,10 +146,10 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the scraper that was just created (usually CREATING).
+     * A structure that displays the current status of the scraper.
      * </p>
      * 
-     * @return The status of the scraper that was just created (usually CREATING).
+     * @return A structure that displays the current status of the scraper.
      */
 
     public ScraperStatus getStatus() {
@@ -158,11 +158,11 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the scraper that was just created (usually CREATING).
+     * A structure that displays the current status of the scraper.
      * </p>
      * 
      * @param status
-     *        The status of the scraper that was just created (usually CREATING).
+     *        A structure that displays the current status of the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,10 +173,10 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The tags of this scraper.
+     * The list of tag keys and values that are associated with the scraper.
      * </p>
      * 
-     * @return The tags of this scraper.
+     * @return The list of tag keys and values that are associated with the scraper.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -185,11 +185,11 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The tags of this scraper.
+     * The list of tag keys and values that are associated with the scraper.
      * </p>
      * 
      * @param tags
-     *        The tags of this scraper.
+     *        The list of tag keys and values that are associated with the scraper.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -198,11 +198,11 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The tags of this scraper.
+     * The list of tag keys and values that are associated with the scraper.
      * </p>
      * 
      * @param tags
-     *        The tags of this scraper.
+     *        The list of tag keys and values that are associated with the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,10 +251,10 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getScraperId() != null)
-            sb.append("ScraperId: ").append(getScraperId()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getScraperId() != null)
+            sb.append("ScraperId: ").append(getScraperId()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
@@ -273,13 +273,13 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
         if (obj instanceof CreateScraperResult == false)
             return false;
         CreateScraperResult other = (CreateScraperResult) obj;
-        if (other.getScraperId() == null ^ this.getScraperId() == null)
-            return false;
-        if (other.getScraperId() != null && other.getScraperId().equals(this.getScraperId()) == false)
-            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getScraperId() == null ^ this.getScraperId() == null)
+            return false;
+        if (other.getScraperId() != null && other.getScraperId().equals(this.getScraperId()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -297,8 +297,8 @@ public class CreateScraperResult extends com.amazonaws.AmazonWebServiceResult<co
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getScraperId() == null) ? 0 : getScraperId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getScraperId() == null) ? 0 : getScraperId().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

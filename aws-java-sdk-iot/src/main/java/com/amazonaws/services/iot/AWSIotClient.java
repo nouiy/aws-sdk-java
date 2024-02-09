@@ -7407,8 +7407,14 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
 
     /**
      * <p>
-     * Returns a unique endpoint specific to the Amazon Web Services account making the call.
+     * Returns or creates a unique endpoint specific to the Amazon Web Services account making the call.
      * </p>
+     * <note>
+     * <p>
+     * The first time <code>DescribeEndpoint</code> is called, an endpoint is created. All subsequent calls to
+     * <code>DescribeEndpoint</code> return the same endpoint.
+     * </p>
+     * </note>
      * <p>
      * Requires permission to access the <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
@@ -10123,6 +10129,10 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
     /**
      * <p>
      * Gets a registration code used to register a CA certificate with IoT.
+     * </p>
+     * <p>
+     * IoT will create a registration code as part of this API call if the registration code doesn't exist or has been
+     * deleted. If you already have a registration code, this API call will return the same registration code.
      * </p>
      * <p>
      * Requires permission to access the <a href=

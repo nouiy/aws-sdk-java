@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of an UpdateLoggingConfiguration operation.
+ * Represents the input of an <code>UpdateLoggingConfiguration</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/UpdateLoggingConfiguration" target="_top">AWS API
@@ -30,70 +30,70 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      */
-    private String workspaceId;
+    private String clientToken;
     /**
      * <p>
-     * The ARN of the CW log group to which the vended log data will be published.
+     * The ARN of the CloudWatch log group to which the vended log data will be published.
      * </p>
      */
     private String logGroupArn;
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to update the logging configuration for.
      * </p>
      */
-    private String clientToken;
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace to vend logs to.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @return The ID of the workspace to vend logs to.
+     * @return A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace to vend logs to.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateLoggingConfigurationRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
+    public UpdateLoggingConfigurationRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
         return this;
     }
 
     /**
      * <p>
-     * The ARN of the CW log group to which the vended log data will be published.
+     * The ARN of the CloudWatch log group to which the vended log data will be published.
      * </p>
      * 
      * @param logGroupArn
-     *        The ARN of the CW log group to which the vended log data will be published.
+     *        The ARN of the CloudWatch log group to which the vended log data will be published.
      */
 
     public void setLogGroupArn(String logGroupArn) {
@@ -102,10 +102,10 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the CW log group to which the vended log data will be published.
+     * The ARN of the CloudWatch log group to which the vended log data will be published.
      * </p>
      * 
-     * @return The ARN of the CW log group to which the vended log data will be published.
+     * @return The ARN of the CloudWatch log group to which the vended log data will be published.
      */
 
     public String getLogGroupArn() {
@@ -114,11 +114,11 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the CW log group to which the vended log data will be published.
+     * The ARN of the CloudWatch log group to which the vended log data will be published.
      * </p>
      * 
      * @param logGroupArn
-     *        The ARN of the CW log group to which the vended log data will be published.
+     *        The ARN of the CloudWatch log group to which the vended log data will be published.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,41 +129,41 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to update the logging configuration for.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param workspaceId
+     *        The ID of the workspace to update the logging configuration for.
      */
 
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to update the logging configuration for.
      * </p>
      * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @return The ID of the workspace to update the logging configuration for.
      */
 
-    public String getClientToken() {
-        return this.clientToken;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace to update the logging configuration for.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param workspaceId
+     *        The ID of the workspace to update the logging configuration for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateLoggingConfigurationRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
+    public UpdateLoggingConfigurationRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -179,12 +179,12 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getLogGroupArn() != null)
             sb.append("LogGroupArn: ").append(getLogGroupArn()).append(",");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -199,17 +199,17 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         if (obj instanceof UpdateLoggingConfigurationRequest == false)
             return false;
         UpdateLoggingConfigurationRequest other = (UpdateLoggingConfigurationRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getLogGroupArn() == null ^ this.getLogGroupArn() == null)
             return false;
         if (other.getLogGroupArn() != null && other.getLogGroupArn().equals(this.getLogGroupArn()) == false)
             return false;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class UpdateLoggingConfigurationRequest extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
-        hashCode = prime * hashCode + ((getLogGroupArn() == null) ? 0 : getLogGroupArn().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getLogGroupArn() == null) ? 0 : getLogGroupArn().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

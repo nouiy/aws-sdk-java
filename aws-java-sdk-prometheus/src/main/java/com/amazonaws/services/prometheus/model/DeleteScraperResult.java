@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a DeleteScraper operation.
+ * Represents the output of a <code>DeleteScraper</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteScraper" target="_top">AWS API
@@ -28,24 +28,24 @@ public class DeleteScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the scraper that was deleted.
+     * The ID of the scraper to delete.
      * </p>
      */
     private String scraperId;
     /**
      * <p>
-     * The status of the scraper that is being deleted.
+     * The current status of the scraper.
      * </p>
      */
     private ScraperStatus status;
 
     /**
      * <p>
-     * The ID of the scraper that was deleted.
+     * The ID of the scraper to delete.
      * </p>
      * 
      * @param scraperId
-     *        The ID of the scraper that was deleted.
+     *        The ID of the scraper to delete.
      */
 
     public void setScraperId(String scraperId) {
@@ -54,10 +54,10 @@ public class DeleteScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the scraper that was deleted.
+     * The ID of the scraper to delete.
      * </p>
      * 
-     * @return The ID of the scraper that was deleted.
+     * @return The ID of the scraper to delete.
      */
 
     public String getScraperId() {
@@ -66,11 +66,11 @@ public class DeleteScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the scraper that was deleted.
+     * The ID of the scraper to delete.
      * </p>
      * 
      * @param scraperId
-     *        The ID of the scraper that was deleted.
+     *        The ID of the scraper to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,11 +81,11 @@ public class DeleteScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the scraper that is being deleted.
+     * The current status of the scraper.
      * </p>
      * 
      * @param status
-     *        The status of the scraper that is being deleted.
+     *        The current status of the scraper.
      */
 
     public void setStatus(ScraperStatus status) {
@@ -94,10 +94,10 @@ public class DeleteScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the scraper that is being deleted.
+     * The current status of the scraper.
      * </p>
      * 
-     * @return The status of the scraper that is being deleted.
+     * @return The current status of the scraper.
      */
 
     public ScraperStatus getStatus() {
@@ -106,11 +106,11 @@ public class DeleteScraperResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the scraper that is being deleted.
+     * The current status of the scraper.
      * </p>
      * 
      * @param status
-     *        The status of the scraper that is being deleted.
+     *        The current status of the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

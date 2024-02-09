@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a ListRuleGroupsNamespaces operation.
+ * Represents the input of a <code>ListRuleGroupsNamespaces</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListRuleGroupsNamespaces" target="_top">AWS API
@@ -30,80 +30,85 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ID of the workspace.
+     * The maximum number of results to return. The default is 100.
      * </p>
      */
-    private String workspaceId;
+    private Integer maxResults;
     /**
      * <p>
-     * Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value will be
-     * returned.
+     * Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names that
+     * begin with the value that you specify are returned.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListRuleGroupsNamespaces request.
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups namespaces
+     * to return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     * subsequent call will return the remaining 2 namespaces.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The ID of the workspace containing the rule groups namespaces.
      * </p>
      */
-    private Integer maxResults;
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace.
+     * The maximum number of results to return. The default is 100.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace.
+     * @param maxResults
+     *        The maximum number of results to return. The default is 100.
      */
 
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
     }
 
     /**
      * <p>
-     * The ID of the workspace.
+     * The maximum number of results to return. The default is 100.
      * </p>
      * 
-     * @return The ID of the workspace.
+     * @return The maximum number of results to return. The default is 100.
      */
 
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
      * <p>
-     * The ID of the workspace.
+     * The maximum number of results to return. The default is 100.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace.
+     * @param maxResults
+     *        The maximum number of results to return. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListRuleGroupsNamespacesRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
+    public ListRuleGroupsNamespacesRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
         return this;
     }
 
     /**
      * <p>
-     * Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value will be
-     * returned.
+     * Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names that
+     * begin with the value that you specify are returned.
      * </p>
      * 
      * @param name
-     *        Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value
-     *        will be returned.
+     *        Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names
+     *        that begin with the value that you specify are returned.
      */
 
     public void setName(String name) {
@@ -112,12 +117,12 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value will be
-     * returned.
+     * Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names that
+     * begin with the value that you specify are returned.
      * </p>
      * 
-     * @return Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value
-     *         will be returned.
+     * @return Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names
+     *         that begin with the value that you specify are returned.
      */
 
     public String getName() {
@@ -126,13 +131,13 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value will be
-     * returned.
+     * Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names that
+     * begin with the value that you specify are returned.
      * </p>
      * 
      * @param name
-     *        Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value
-     *        will be returned.
+     *        Use this parameter to filter the rule groups namespaces that are returned. Only the namespaces with names
+     *        that begin with the value that you specify are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,13 +148,22 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListRuleGroupsNamespaces request.
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups namespaces
+     * to return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     * subsequent call will return the remaining 2 namespaces.
      * </p>
      * 
      * @param nextToken
-     *        Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *        the previous ListRuleGroupsNamespaces request.
+     *        The token for the next set of items to return. You receive this token from a previous call, and use it to
+     *        get the next page of results. The other parameters must be the same as the initial call.</p>
+     *        <p>
+     *        For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups
+     *        namespaces to return, then your initial request will return 10 and a <code>nextToken</code>. Using the
+     *        next token in a subsequent call will return the remaining 2 namespaces.
      */
 
     public void setNextToken(String nextToken) {
@@ -158,12 +172,21 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListRuleGroupsNamespaces request.
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups namespaces
+     * to return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     * subsequent call will return the remaining 2 namespaces.
      * </p>
      * 
-     * @return Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *         the previous ListRuleGroupsNamespaces request.
+     * @return The token for the next set of items to return. You receive this token from a previous call, and use it to
+     *         get the next page of results. The other parameters must be the same as the initial call.</p>
+     *         <p>
+     *         For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups
+     *         namespaces to return, then your initial request will return 10 and a <code>nextToken</code>. Using the
+     *         next token in a subsequent call will return the remaining 2 namespaces.
      */
 
     public String getNextToken() {
@@ -172,13 +195,22 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListRuleGroupsNamespaces request.
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups namespaces
+     * to return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     * subsequent call will return the remaining 2 namespaces.
      * </p>
      * 
      * @param nextToken
-     *        Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *        the previous ListRuleGroupsNamespaces request.
+     *        The token for the next set of items to return. You receive this token from a previous call, and use it to
+     *        get the next page of results. The other parameters must be the same as the initial call.</p>
+     *        <p>
+     *        For example, if your initial request has <code>maxResults</code> of 10, and there are 12 rule groups
+     *        namespaces to return, then your initial request will return 10 and a <code>nextToken</code>. Using the
+     *        next token in a subsequent call will return the remaining 2 namespaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -189,41 +221,41 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The ID of the workspace containing the rule groups namespaces.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum results to return in response (default=100, maximum=1000).
+     * @param workspaceId
+     *        The ID of the workspace containing the rule groups namespaces.
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
     }
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The ID of the workspace containing the rule groups namespaces.
      * </p>
      * 
-     * @return Maximum results to return in response (default=100, maximum=1000).
+     * @return The ID of the workspace containing the rule groups namespaces.
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The ID of the workspace containing the rule groups namespaces.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum results to return in response (default=100, maximum=1000).
+     * @param workspaceId
+     *        The ID of the workspace containing the rule groups namespaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListRuleGroupsNamespacesRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListRuleGroupsNamespacesRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -239,14 +271,14 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -261,9 +293,9 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
         if (obj instanceof ListRuleGroupsNamespacesRequest == false)
             return false;
         ListRuleGroupsNamespacesRequest other = (ListRuleGroupsNamespacesRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
@@ -273,9 +305,9 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -285,10 +317,10 @@ public class ListRuleGroupsNamespacesRequest extends com.amazonaws.AmazonWebServ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

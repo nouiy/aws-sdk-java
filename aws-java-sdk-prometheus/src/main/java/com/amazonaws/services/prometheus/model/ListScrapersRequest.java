@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a ListScrapers operation.
+ * Represents the input of a <code>ListScrapers</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListScrapers" target="_top">AWS API
@@ -30,30 +30,80 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of scraper filters.
+     * (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include <code>status</code>,
+     * <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.
+     * </p>
+     * <p>
+     * Filters on the same key are <code>OR</code>'d together, and filters on different keys are <code>AND</code>'d
+     * together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>, will return all scrapers
+     * that have the alias Test, and are either in status ACTIVE or CREATING.
+     * </p>
+     * <p>
+     * To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     * workspace, you would use the ARN of the workspace in a query:
+     * </p>
+     * <p>
+     * <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     * </p>
+     * <p>
+     * If this is included, it filters the results to only the scrapers that match the filter.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> filters;
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListScrapers request.
+     * Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range is
+     * 1-1000.
      * </p>
-     */
-    private String nextToken;
-    /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * If you omit this parameter, the default of 100 is used.
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     * </p>
+     */
+    private String nextToken;
 
     /**
      * <p>
-     * A list of scraper filters.
+     * (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include <code>status</code>,
+     * <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.
+     * </p>
+     * <p>
+     * Filters on the same key are <code>OR</code>'d together, and filters on different keys are <code>AND</code>'d
+     * together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>, will return all scrapers
+     * that have the alias Test, and are either in status ACTIVE or CREATING.
+     * </p>
+     * <p>
+     * To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     * workspace, you would use the ARN of the workspace in a query:
+     * </p>
+     * <p>
+     * <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     * </p>
+     * <p>
+     * If this is included, it filters the results to only the scrapers that match the filter.
      * </p>
      * 
-     * @return A list of scraper filters.
+     * @return (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include
+     *         <code>status</code>, <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.</p>
+     *         <p>
+     *         Filters on the same key are <code>OR</code>'d together, and filters on different keys are
+     *         <code>AND</code>'d together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>,
+     *         will return all scrapers that have the alias Test, and are either in status ACTIVE or CREATING.
+     *         </p>
+     *         <p>
+     *         To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     *         workspace, you would use the ARN of the workspace in a query:
+     *         </p>
+     *         <p>
+     *         <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     *         </p>
+     *         <p>
+     *         If this is included, it filters the results to only the scrapers that match the filter.
      */
 
     public java.util.Map<String, java.util.List<String>> getFilters() {
@@ -62,11 +112,42 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of scraper filters.
+     * (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include <code>status</code>,
+     * <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.
+     * </p>
+     * <p>
+     * Filters on the same key are <code>OR</code>'d together, and filters on different keys are <code>AND</code>'d
+     * together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>, will return all scrapers
+     * that have the alias Test, and are either in status ACTIVE or CREATING.
+     * </p>
+     * <p>
+     * To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     * workspace, you would use the ARN of the workspace in a query:
+     * </p>
+     * <p>
+     * <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     * </p>
+     * <p>
+     * If this is included, it filters the results to only the scrapers that match the filter.
      * </p>
      * 
      * @param filters
-     *        A list of scraper filters.
+     *        (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include
+     *        <code>status</code>, <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.</p>
+     *        <p>
+     *        Filters on the same key are <code>OR</code>'d together, and filters on different keys are <code>AND</code>
+     *        'd together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>, will return all
+     *        scrapers that have the alias Test, and are either in status ACTIVE or CREATING.
+     *        </p>
+     *        <p>
+     *        To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     *        workspace, you would use the ARN of the workspace in a query:
+     *        </p>
+     *        <p>
+     *        <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     *        </p>
+     *        <p>
+     *        If this is included, it filters the results to only the scrapers that match the filter.
      */
 
     public void setFilters(java.util.Map<String, java.util.List<String>> filters) {
@@ -75,11 +156,42 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of scraper filters.
+     * (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include <code>status</code>,
+     * <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.
+     * </p>
+     * <p>
+     * Filters on the same key are <code>OR</code>'d together, and filters on different keys are <code>AND</code>'d
+     * together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>, will return all scrapers
+     * that have the alias Test, and are either in status ACTIVE or CREATING.
+     * </p>
+     * <p>
+     * To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     * workspace, you would use the ARN of the workspace in a query:
+     * </p>
+     * <p>
+     * <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     * </p>
+     * <p>
+     * If this is included, it filters the results to only the scrapers that match the filter.
      * </p>
      * 
      * @param filters
-     *        A list of scraper filters.
+     *        (Optional) A list of key-value pairs to filter the list of scrapers returned. Keys include
+     *        <code>status</code>, <code>sourceArn</code>, <code>destinationArn</code>, and <code>alias</code>.</p>
+     *        <p>
+     *        Filters on the same key are <code>OR</code>'d together, and filters on different keys are <code>AND</code>
+     *        'd together. For example, <code>status=ACTIVE&amp;status=CREATING&amp;alias=Test</code>, will return all
+     *        scrapers that have the alias Test, and are either in status ACTIVE or CREATING.
+     *        </p>
+     *        <p>
+     *        To find all active scrapers that are sending metrics to a specific Amazon Managed Service for Prometheus
+     *        workspace, you would use the ARN of the workspace in a query:
+     *        </p>
+     *        <p>
+     *        <code>status=ACTIVE&amp;destinationArn=arn:aws:aps:us-east-1:123456789012:workspace/ws-example1-1234-abcd-56ef-123456789012</code>
+     *        </p>
+     *        <p>
+     *        If this is included, it filters the results to only the scrapers that match the filter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,57 +230,18 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListScrapers request.
+     * Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range is
+     * 1-1000.
      * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *        the previous ListScrapers request.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListScrapers request.
-     * </p>
-     * 
-     * @return Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *         the previous ListScrapers request.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListScrapers request.
-     * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *        the previous ListScrapers request.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListScrapersRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * If you omit this parameter, the default of 100 is used.
      * </p>
      * 
      * @param maxResults
-     *        Maximum results to return in response (default=100, maximum=1000).
+     *        Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range
+     *        is 1-1000.</p>
+     *        <p>
+     *        If you omit this parameter, the default of 100 is used.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -177,10 +250,17 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range is
+     * 1-1000.
+     * </p>
+     * <p>
+     * If you omit this parameter, the default of 100 is used.
      * </p>
      * 
-     * @return Maximum results to return in response (default=100, maximum=1000).
+     * @return Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range
+     *         is 1-1000.</p>
+     *         <p>
+     *         If you omit this parameter, the default of 100 is used.
      */
 
     public Integer getMaxResults() {
@@ -189,16 +269,63 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range is
+     * 1-1000.
+     * </p>
+     * <p>
+     * If you omit this parameter, the default of 100 is used.
      * </p>
      * 
      * @param maxResults
-     *        Maximum results to return in response (default=100, maximum=1000).
+     *        Optional) The maximum number of scrapers to return in one <code>ListScrapers</code> operation. The range
+     *        is 1-1000.</p>
+     *        <p>
+     *        If you omit this parameter, the default of 100 is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListScrapersRequest withMaxResults(Integer maxResults) {
         setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     * </p>
+     * 
+     * @param nextToken
+     *        (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     * </p>
+     * 
+     * @return (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     * </p>
+     * 
+     * @param nextToken
+     *        (Optional) The token for the next set of items to return. (You received this token from a previous call.)
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListScrapersRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -216,10 +343,10 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
         sb.append("{");
         if (getFilters() != null)
             sb.append("Filters: ").append(getFilters()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -238,13 +365,13 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getFilters() != null && other.getFilters().equals(this.getFilters()) == false)
             return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -255,8 +382,8 @@ public class ListScrapersRequest extends com.amazonaws.AmazonWebServiceRequest i
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of a source that a scraper can discover and collect metrics from.
+ * The source of collected metrics for a scraper.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/Source" target="_top">AWS API Documentation</a>
@@ -29,18 +29,18 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A representation of an EKS source.
+     * The Amazon EKS cluster from which a scraper collects metrics.
      * </p>
      */
     private EksConfiguration eksConfiguration;
 
     /**
      * <p>
-     * A representation of an EKS source.
+     * The Amazon EKS cluster from which a scraper collects metrics.
      * </p>
      * 
      * @param eksConfiguration
-     *        A representation of an EKS source.
+     *        The Amazon EKS cluster from which a scraper collects metrics.
      */
 
     public void setEksConfiguration(EksConfiguration eksConfiguration) {
@@ -49,10 +49,10 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A representation of an EKS source.
+     * The Amazon EKS cluster from which a scraper collects metrics.
      * </p>
      * 
-     * @return A representation of an EKS source.
+     * @return The Amazon EKS cluster from which a scraper collects metrics.
      */
 
     public EksConfiguration getEksConfiguration() {
@@ -61,11 +61,11 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A representation of an EKS source.
+     * The Amazon EKS cluster from which a scraper collects metrics.
      * </p>
      * 
      * @param eksConfiguration
-     *        A representation of an EKS source.
+     *        The Amazon EKS cluster from which a scraper collects metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

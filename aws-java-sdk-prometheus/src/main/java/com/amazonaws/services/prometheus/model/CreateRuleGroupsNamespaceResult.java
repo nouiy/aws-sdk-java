@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a CreateRuleGroupsNamespace operation.
+ * Represents the output of a <code>CreateRuleGroupsNamespace</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateRuleGroupsNamespace" target="_top">AWS API
@@ -28,76 +28,36 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The rule groups namespace name.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The Amazon Resource Name (ARN) of the new rule groups namespace.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The status of rule groups namespace.
+     * The name of the new rule groups namespace.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * A structure that returns the current status of the rule groups namespace.
      * </p>
      */
     private RuleGroupsNamespaceStatus status;
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The list of tag keys and values that are associated with the namespace.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @param name
-     *        The rule groups namespace name.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @return The rule groups namespace name.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @param name
-     *        The rule groups namespace name.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRuleGroupsNamespaceResult withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The Amazon Resource Name (ARN) of the new rule groups namespace.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this rule groups namespace.
+     *        The Amazon Resource Name (ARN) of the new rule groups namespace.
      */
 
     public void setArn(String arn) {
@@ -106,10 +66,10 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The Amazon Resource Name (ARN) of the new rule groups namespace.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of this rule groups namespace.
+     * @return The Amazon Resource Name (ARN) of the new rule groups namespace.
      */
 
     public String getArn() {
@@ -118,11 +78,11 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The Amazon Resource Name (ARN) of the new rule groups namespace.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this rule groups namespace.
+     *        The Amazon Resource Name (ARN) of the new rule groups namespace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +93,51 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status of rule groups namespace.
+     * The name of the new rule groups namespace.
+     * </p>
+     * 
+     * @param name
+     *        The name of the new rule groups namespace.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the new rule groups namespace.
+     * </p>
+     * 
+     * @return The name of the new rule groups namespace.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the new rule groups namespace.
+     * </p>
+     * 
+     * @param name
+     *        The name of the new rule groups namespace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRuleGroupsNamespaceResult withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A structure that returns the current status of the rule groups namespace.
      * </p>
      * 
      * @param status
-     *        The status of rule groups namespace.
+     *        A structure that returns the current status of the rule groups namespace.
      */
 
     public void setStatus(RuleGroupsNamespaceStatus status) {
@@ -146,10 +146,10 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status of rule groups namespace.
+     * A structure that returns the current status of the rule groups namespace.
      * </p>
      * 
-     * @return The status of rule groups namespace.
+     * @return A structure that returns the current status of the rule groups namespace.
      */
 
     public RuleGroupsNamespaceStatus getStatus() {
@@ -158,11 +158,11 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status of rule groups namespace.
+     * A structure that returns the current status of the rule groups namespace.
      * </p>
      * 
      * @param status
-     *        The status of rule groups namespace.
+     *        A structure that returns the current status of the rule groups namespace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,10 +173,10 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The list of tag keys and values that are associated with the namespace.
      * </p>
      * 
-     * @return The tags of this rule groups namespace.
+     * @return The list of tag keys and values that are associated with the namespace.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -185,11 +185,11 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The list of tag keys and values that are associated with the namespace.
      * </p>
      * 
      * @param tags
-     *        The tags of this rule groups namespace.
+     *        The list of tag keys and values that are associated with the namespace.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -198,11 +198,11 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The list of tag keys and values that are associated with the namespace.
      * </p>
      * 
      * @param tags
-     *        The tags of this rule groups namespace.
+     *        The list of tag keys and values that are associated with the namespace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,10 +251,10 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
@@ -273,13 +273,13 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
         if (obj instanceof CreateRuleGroupsNamespaceResult == false)
             return false;
         CreateRuleGroupsNamespaceResult other = (CreateRuleGroupsNamespaceResult) obj;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -297,8 +297,8 @@ public class CreateRuleGroupsNamespaceResult extends com.amazonaws.AmazonWebServ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of an UpdateWorkspaceAlias operation.
+ * Represents the input of an <code>UpdateWorkspaceAlias</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/UpdateWorkspaceAlias" target="_top">AWS API
@@ -30,70 +30,41 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID of the workspace being updated.
+     * The new alias for the workspace. It does not need to be unique.
      * </p>
-     */
-    private String workspaceId;
-    /**
      * <p>
-     * The new alias of the workspace.
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      */
     private String alias;
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      */
     private String clientToken;
-
     /**
      * <p>
-     * The ID of the workspace being updated.
+     * The ID of the workspace to update.
      * </p>
-     * 
-     * @param workspaceId
-     *        The ID of the workspace being updated.
      */
-
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-    }
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace being updated.
+     * The new alias for the workspace. It does not need to be unique.
      * </p>
-     * 
-     * @return The ID of the workspace being updated.
-     */
-
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
-    /**
      * <p>
-     * The ID of the workspace being updated.
-     * </p>
-     * 
-     * @param workspaceId
-     *        The ID of the workspace being updated.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateWorkspaceAliasRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The new alias of the workspace.
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      * 
      * @param alias
-     *        The new alias of the workspace.
+     *        The new alias for the workspace. It does not need to be unique.</p>
+     *        <p>
+     *        Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end
+     *        of the alias that you specify.
      */
 
     public void setAlias(String alias) {
@@ -102,10 +73,17 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The new alias of the workspace.
+     * The new alias for the workspace. It does not need to be unique.
+     * </p>
+     * <p>
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      * 
-     * @return The new alias of the workspace.
+     * @return The new alias for the workspace. It does not need to be unique.</p>
+     *         <p>
+     *         Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and
+     *         end of the alias that you specify.
      */
 
     public String getAlias() {
@@ -114,11 +92,18 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The new alias of the workspace.
+     * The new alias for the workspace. It does not need to be unique.
+     * </p>
+     * <p>
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      * 
      * @param alias
-     *        The new alias of the workspace.
+     *        The new alias for the workspace. It does not need to be unique.</p>
+     *        <p>
+     *        Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end
+     *        of the alias that you specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +114,11 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
      * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
     public void setClientToken(String clientToken) {
@@ -142,10 +127,10 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @return A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
     public String getClientToken() {
@@ -154,16 +139,56 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
      * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateWorkspaceAliasRequest withClientToken(String clientToken) {
         setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace to update.
+     * </p>
+     * 
+     * @param workspaceId
+     *        The ID of the workspace to update.
+     */
+
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace to update.
+     * </p>
+     * 
+     * @return The ID of the workspace to update.
+     */
+
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace to update.
+     * </p>
+     * 
+     * @param workspaceId
+     *        The ID of the workspace to update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateWorkspaceAliasRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -179,12 +204,12 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
         if (getAlias() != null)
             sb.append("Alias: ").append(getAlias()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -199,10 +224,6 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof UpdateWorkspaceAliasRequest == false)
             return false;
         UpdateWorkspaceAliasRequest other = (UpdateWorkspaceAliasRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
-            return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
-            return false;
         if (other.getAlias() == null ^ this.getAlias() == null)
             return false;
         if (other.getAlias() != null && other.getAlias().equals(this.getAlias()) == false)
@@ -210,6 +231,10 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+            return false;
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -219,9 +244,9 @@ public class UpdateWorkspaceAliasRequest extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getAlias() == null) ? 0 : getAlias().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

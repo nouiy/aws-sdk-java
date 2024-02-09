@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * State of an alert manager definition.
+ * State of an <code>AlertManagerDefinition</code>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

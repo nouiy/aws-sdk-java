@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a ListWorkspaces operation.
+ * Represents the input of a <code>ListWorkspaces</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListWorkspaces" target="_top">AWS API
@@ -30,80 +30,50 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListWorkspaces request.
+     * If this is included, it filters the results to only the workspaces with names that start with the value that you
+     * specify here.
      * </p>
-     */
-    private String nextToken;
-    /**
      * <p>
-     * Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     * returned.
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      */
     private String alias;
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The maximum number of workspaces to return per request. The default is 100.
      * </p>
      */
     private Integer maxResults;
-
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListWorkspaces request.
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
      * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *        the previous ListWorkspaces request.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListWorkspaces request.
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to return,
+     * then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a subsequent call
+     * will return the remaining 2 workspaces.
      * </p>
-     * 
-     * @return Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *         the previous ListWorkspaces request.
      */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
+    private String nextToken;
 
     /**
      * <p>
-     * Pagination token to request the next page in a paginated list. This token is obtained from the output of the
-     * previous ListWorkspaces request.
+     * If this is included, it filters the results to only the workspaces with names that start with the value that you
+     * specify here.
      * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to request the next page in a paginated list. This token is obtained from the output of
-     *        the previous ListWorkspaces request.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListWorkspacesRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * <p>
-     * Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     * returned.
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      * 
      * @param alias
-     *        Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     *        returned.
+     *        If this is included, it filters the results to only the workspaces with names that start with the value
+     *        that you specify here.</p>
+     *        <p>
+     *        Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end
+     *        of the alias that you specify.
      */
 
     public void setAlias(String alias) {
@@ -112,12 +82,19 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     * returned.
+     * If this is included, it filters the results to only the workspaces with names that start with the value that you
+     * specify here.
+     * </p>
+     * <p>
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      * 
-     * @return Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     *         returned.
+     * @return If this is included, it filters the results to only the workspaces with names that start with the value
+     *         that you specify here.</p>
+     *         <p>
+     *         Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and
+     *         end of the alias that you specify.
      */
 
     public String getAlias() {
@@ -126,13 +103,20 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     * returned.
+     * If this is included, it filters the results to only the workspaces with names that start with the value that you
+     * specify here.
+     * </p>
+     * <p>
+     * Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end of the
+     * alias that you specify.
      * </p>
      * 
      * @param alias
-     *        Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be
-     *        returned.
+     *        If this is included, it filters the results to only the workspaces with names that start with the value
+     *        that you specify here.</p>
+     *        <p>
+     *        Amazon Managed Service for Prometheus will automatically strip any blank spaces from the beginning and end
+     *        of the alias that you specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,11 +127,11 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The maximum number of workspaces to return per request. The default is 100.
      * </p>
      * 
      * @param maxResults
-     *        Maximum results to return in response (default=100, maximum=1000).
+     *        The maximum number of workspaces to return per request. The default is 100.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -156,10 +140,10 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The maximum number of workspaces to return per request. The default is 100.
      * </p>
      * 
-     * @return Maximum results to return in response (default=100, maximum=1000).
+     * @return The maximum number of workspaces to return per request. The default is 100.
      */
 
     public Integer getMaxResults() {
@@ -168,16 +152,89 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Maximum results to return in response (default=100, maximum=1000).
+     * The maximum number of workspaces to return per request. The default is 100.
      * </p>
      * 
      * @param maxResults
-     *        Maximum results to return in response (default=100, maximum=1000).
+     *        The maximum number of workspaces to return per request. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListWorkspacesRequest withMaxResults(Integer maxResults) {
         setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to return,
+     * then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a subsequent call
+     * will return the remaining 2 workspaces.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token for the next set of items to return. You receive this token from a previous call, and use it to
+     *        get the next page of results. The other parameters must be the same as the initial call.</p>
+     *        <p>
+     *        For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to
+     *        return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     *        subsequent call will return the remaining 2 workspaces.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to return,
+     * then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a subsequent call
+     * will return the remaining 2 workspaces.
+     * </p>
+     * 
+     * @return The token for the next set of items to return. You receive this token from a previous call, and use it to
+     *         get the next page of results. The other parameters must be the same as the initial call.</p>
+     *         <p>
+     *         For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to
+     *         return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     *         subsequent call will return the remaining 2 workspaces.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token for the next set of items to return. You receive this token from a previous call, and use it to get the
+     * next page of results. The other parameters must be the same as the initial call.
+     * </p>
+     * <p>
+     * For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to return,
+     * then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a subsequent call
+     * will return the remaining 2 workspaces.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token for the next set of items to return. You receive this token from a previous call, and use it to
+     *        get the next page of results. The other parameters must be the same as the initial call.</p>
+     *        <p>
+     *        For example, if your initial request has <code>maxResults</code> of 10, and there are 12 workspaces to
+     *        return, then your initial request will return 10 and a <code>nextToken</code>. Using the next token in a
+     *        subsequent call will return the remaining 2 workspaces.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListWorkspacesRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -193,12 +250,12 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getAlias() != null)
             sb.append("Alias: ").append(getAlias()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -213,10 +270,6 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
         if (obj instanceof ListWorkspacesRequest == false)
             return false;
         ListWorkspacesRequest other = (ListWorkspacesRequest) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getAlias() == null ^ this.getAlias() == null)
             return false;
         if (other.getAlias() != null && other.getAlias().equals(this.getAlias()) == false)
@@ -224,6 +277,10 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -233,9 +290,9 @@ public class ListWorkspacesRequest extends com.amazonaws.AmazonWebServiceRequest
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getAlias() == null) ? 0 : getAlias().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

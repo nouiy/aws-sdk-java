@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a CreateAlertManagerDefinition operation.
+ * Represents the output of a <code>CreateAlertManagerDefinition</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateAlertManagerDefinition" target="_top">AWS
@@ -28,18 +28,18 @@ public class CreateAlertManagerDefinitionResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The status of alert manager definition.
+     * A structure that displays the current status of the alert manager definition.
      * </p>
      */
     private AlertManagerDefinitionStatus status;
 
     /**
      * <p>
-     * The status of alert manager definition.
+     * A structure that displays the current status of the alert manager definition.
      * </p>
      * 
      * @param status
-     *        The status of alert manager definition.
+     *        A structure that displays the current status of the alert manager definition.
      */
 
     public void setStatus(AlertManagerDefinitionStatus status) {
@@ -48,10 +48,10 @@ public class CreateAlertManagerDefinitionResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The status of alert manager definition.
+     * A structure that displays the current status of the alert manager definition.
      * </p>
      * 
-     * @return The status of alert manager definition.
+     * @return A structure that displays the current status of the alert manager definition.
      */
 
     public AlertManagerDefinitionStatus getStatus() {
@@ -60,11 +60,11 @@ public class CreateAlertManagerDefinitionResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The status of alert manager definition.
+     * A structure that displays the current status of the alert manager definition.
      * </p>
      * 
      * @param status
-     *        The status of alert manager definition.
+     *        A structure that displays the current status of the alert manager definition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

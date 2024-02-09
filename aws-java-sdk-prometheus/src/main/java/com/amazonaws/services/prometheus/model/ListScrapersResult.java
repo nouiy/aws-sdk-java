@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a ListScrapers operation.
+ * Represents the output of a <code>ListScrapers</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListScrapers" target="_top">AWS API
@@ -28,23 +28,73 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of scrapers, filtered down if a set of filters was provided in the request.
-     * </p>
-     */
-    private java.util.List<ScraperSummary> scrapers;
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListScrapers</code> operation to retrieve those results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that match the
+     * filters provided.
+     * </p>
+     */
+    private java.util.List<ScraperSummary> scrapers;
 
     /**
      * <p>
-     * The list of scrapers, filtered down if a set of filters was provided in the request.
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListScrapers</code> operation to retrieve those results.
      * </p>
      * 
-     * @return The list of scrapers, filtered down if a set of filters was provided in the request.
+     * @param nextToken
+     *        A token indicating that there are more results to retrieve. You can use this token as part of your next
+     *        <code>ListScrapers</code> operation to retrieve those results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListScrapers</code> operation to retrieve those results.
+     * </p>
+     * 
+     * @return A token indicating that there are more results to retrieve. You can use this token as part of your next
+     *         <code>ListScrapers</code> operation to retrieve those results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListScrapers</code> operation to retrieve those results.
+     * </p>
+     * 
+     * @param nextToken
+     *        A token indicating that there are more results to retrieve. You can use this token as part of your next
+     *        <code>ListScrapers</code> operation to retrieve those results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListScrapersResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that match the
+     * filters provided.
+     * </p>
+     * 
+     * @return A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that
+     *         match the filters provided.
      */
 
     public java.util.List<ScraperSummary> getScrapers() {
@@ -53,11 +103,13 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of scrapers, filtered down if a set of filters was provided in the request.
+     * A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that match the
+     * filters provided.
      * </p>
      * 
      * @param scrapers
-     *        The list of scrapers, filtered down if a set of filters was provided in the request.
+     *        A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that
+     *        match the filters provided.
      */
 
     public void setScrapers(java.util.Collection<ScraperSummary> scrapers) {
@@ -71,7 +123,8 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of scrapers, filtered down if a set of filters was provided in the request.
+     * A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that match the
+     * filters provided.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +133,8 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param scrapers
-     *        The list of scrapers, filtered down if a set of filters was provided in the request.
+     *        A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that
+     *        match the filters provided.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,56 +150,18 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of scrapers, filtered down if a set of filters was provided in the request.
+     * A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that match the
+     * filters provided.
      * </p>
      * 
      * @param scrapers
-     *        The list of scrapers, filtered down if a set of filters was provided in the request.
+     *        A list of <code>ScraperSummary</code> structures giving information about scrapers in the account that
+     *        match the filters provided.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListScrapersResult withScrapers(java.util.Collection<ScraperSummary> scrapers) {
         setScrapers(scrapers);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
-     * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to use when requesting the next page in this list.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
-     * </p>
-     * 
-     * @return Pagination token to use when requesting the next page in this list.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
-     * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to use when requesting the next page in this list.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListScrapersResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
         return this;
     }
 
@@ -161,10 +177,10 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getScrapers() != null)
-            sb.append("Scrapers: ").append(getScrapers()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getScrapers() != null)
+            sb.append("Scrapers: ").append(getScrapers());
         sb.append("}");
         return sb.toString();
     }
@@ -179,13 +195,13 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
         if (obj instanceof ListScrapersResult == false)
             return false;
         ListScrapersResult other = (ListScrapersResult) obj;
-        if (other.getScrapers() == null ^ this.getScrapers() == null)
-            return false;
-        if (other.getScrapers() != null && other.getScrapers().equals(this.getScrapers()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getScrapers() == null ^ this.getScrapers() == null)
+            return false;
+        if (other.getScrapers() != null && other.getScrapers().equals(this.getScrapers()) == false)
             return false;
         return true;
     }
@@ -195,8 +211,8 @@ public class ListScrapersResult extends com.amazonaws.AmazonWebServiceResult<com
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getScrapers() == null) ? 0 : getScrapers().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getScrapers() == null) ? 0 : getScrapers().hashCode());
         return hashCode;
     }
 

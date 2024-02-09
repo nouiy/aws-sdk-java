@@ -31,8 +31,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker
-     * Hub registry are available by default. Other repositories are specified with
+     * Required. The image used to start a container. This string is passed directly to the Docker daemon. Images in the
+     * Docker Hub registry are available by default. Other repositories are specified with
      * <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can contain
      * uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.), forward slashes
      * (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -313,13 +313,23 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private EphemeralStorage ephemeralStorage;
-
+    /**
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     */
     private RuntimePlatform runtimePlatform;
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     */
+    private RepositoryCredentials repositoryCredentials;
 
     /**
      * <p>
-     * The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker
-     * Hub registry are available by default. Other repositories are specified with
+     * Required. The image used to start a container. This string is passed directly to the Docker daemon. Images in the
+     * Docker Hub registry are available by default. Other repositories are specified with
      * <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can contain
      * uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.), forward slashes
      * (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -368,8 +378,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param image
-     *        The image used to start a container. This string is passed directly to the Docker daemon. Images in the
-     *        Docker Hub registry are available by default. Other repositories are specified with
+     *        Required. The image used to start a container. This string is passed directly to the Docker daemon. Images
+     *        in the Docker Hub registry are available by default. Other repositories are specified with
      *        <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can
      *        contain uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.),
      *        forward slashes (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -421,8 +431,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker
-     * Hub registry are available by default. Other repositories are specified with
+     * Required. The image used to start a container. This string is passed directly to the Docker daemon. Images in the
+     * Docker Hub registry are available by default. Other repositories are specified with
      * <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can contain
      * uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.), forward slashes
      * (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -470,8 +480,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * </li>
      * </ul>
      * 
-     * @return The image used to start a container. This string is passed directly to the Docker daemon. Images in the
-     *         Docker Hub registry are available by default. Other repositories are specified with
+     * @return Required. The image used to start a container. This string is passed directly to the Docker daemon.
+     *         Images in the Docker Hub registry are available by default. Other repositories are specified with
      *         <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can
      *         contain uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.),
      *         forward slashes (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -523,8 +533,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker
-     * Hub registry are available by default. Other repositories are specified with
+     * Required. The image used to start a container. This string is passed directly to the Docker daemon. Images in the
+     * Docker Hub registry are available by default. Other repositories are specified with
      * <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can contain
      * uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.), forward slashes
      * (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -573,8 +583,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param image
-     *        The image used to start a container. This string is passed directly to the Docker daemon. Images in the
-     *        Docker Hub registry are available by default. Other repositories are specified with
+     *        Required. The image used to start a container. This string is passed directly to the Docker daemon. Images
+     *        in the Docker Hub registry are available by default. Other repositories are specified with
      *        <code> <i>repository-url</i>/<i>image</i>:<i>tag</i> </code>. It can be 255 characters long. It can
      *        contain uppercase and lowercase letters, numbers, hyphens (-), underscores (_), colons (:), periods (.),
      *        forward slashes (/), and number signs (#). This parameter maps to <code>Image</code> in the <a
@@ -2402,7 +2412,12 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     * 
      * @param runtimePlatform
+     *        An object that represents the compute environment architecture for Batch jobs on Fargate.
      */
 
     public void setRuntimePlatform(RuntimePlatform runtimePlatform) {
@@ -2410,7 +2425,11 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     * 
+     * @return An object that represents the compute environment architecture for Batch jobs on Fargate.
      */
 
     public RuntimePlatform getRuntimePlatform() {
@@ -2418,12 +2437,57 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     * 
      * @param runtimePlatform
+     *        An object that represents the compute environment architecture for Batch jobs on Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ContainerProperties withRuntimePlatform(RuntimePlatform runtimePlatform) {
         setRuntimePlatform(runtimePlatform);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     * 
+     * @param repositoryCredentials
+     *        The private repository authentication credentials to use.
+     */
+
+    public void setRepositoryCredentials(RepositoryCredentials repositoryCredentials) {
+        this.repositoryCredentials = repositoryCredentials;
+    }
+
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     * 
+     * @return The private repository authentication credentials to use.
+     */
+
+    public RepositoryCredentials getRepositoryCredentials() {
+        return this.repositoryCredentials;
+    }
+
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     * 
+     * @param repositoryCredentials
+     *        The private repository authentication credentials to use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerProperties withRepositoryCredentials(RepositoryCredentials repositoryCredentials) {
+        setRepositoryCredentials(repositoryCredentials);
         return this;
     }
 
@@ -2482,7 +2546,9 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
         if (getEphemeralStorage() != null)
             sb.append("EphemeralStorage: ").append(getEphemeralStorage()).append(",");
         if (getRuntimePlatform() != null)
-            sb.append("RuntimePlatform: ").append(getRuntimePlatform());
+            sb.append("RuntimePlatform: ").append(getRuntimePlatform()).append(",");
+        if (getRepositoryCredentials() != null)
+            sb.append("RepositoryCredentials: ").append(getRepositoryCredentials());
         sb.append("}");
         return sb.toString();
     }
@@ -2585,6 +2651,10 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getRuntimePlatform() != null && other.getRuntimePlatform().equals(this.getRuntimePlatform()) == false)
             return false;
+        if (other.getRepositoryCredentials() == null ^ this.getRepositoryCredentials() == null)
+            return false;
+        if (other.getRepositoryCredentials() != null && other.getRepositoryCredentials().equals(this.getRepositoryCredentials()) == false)
+            return false;
         return true;
     }
 
@@ -2615,6 +2685,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getFargatePlatformConfiguration() == null) ? 0 : getFargatePlatformConfiguration().hashCode());
         hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
         hashCode = prime * hashCode + ((getRuntimePlatform() == null) ? 0 : getRuntimePlatform().hashCode());
+        hashCode = prime * hashCode + ((getRepositoryCredentials() == null) ? 0 : getRepositoryCredentials().hashCode());
         return hashCode;
     }
 

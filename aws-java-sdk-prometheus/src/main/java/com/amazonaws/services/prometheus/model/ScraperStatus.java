@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents the status of a scraper.
+ * The <code>ScraperStatus</code> structure contains status information about the scraper.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ScraperStatus" target="_top">AWS API
@@ -30,18 +30,18 @@ public class ScraperStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Status code of this scraper.
+     * The current status of the scraper.
      * </p>
      */
     private String statusCode;
 
     /**
      * <p>
-     * Status code of this scraper.
+     * The current status of the scraper.
      * </p>
      * 
      * @param statusCode
-     *        Status code of this scraper.
+     *        The current status of the scraper.
      * @see ScraperStatusCode
      */
 
@@ -51,10 +51,10 @@ public class ScraperStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Status code of this scraper.
+     * The current status of the scraper.
      * </p>
      * 
-     * @return Status code of this scraper.
+     * @return The current status of the scraper.
      * @see ScraperStatusCode
      */
 
@@ -64,11 +64,11 @@ public class ScraperStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Status code of this scraper.
+     * The current status of the scraper.
      * </p>
      * 
      * @param statusCode
-     *        Status code of this scraper.
+     *        The current status of the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScraperStatusCode
      */
@@ -80,11 +80,11 @@ public class ScraperStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Status code of this scraper.
+     * The current status of the scraper.
      * </p>
      * 
      * @param statusCode
-     *        Status code of this scraper.
+     *        The current status of the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScraperStatusCode
      */

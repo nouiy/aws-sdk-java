@@ -66,6 +66,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * used for all non Amazon Web Services Graviton-based instance types.
      * </p>
      * </dd>
+     * <dt>ECS_AL2023</dt>
+     * <dd>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     * 2023</a>: Batch supports Amazon Linux 2023.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon Linux 2023 does not support <code>A1</code> instances.
+     * </p>
+     * </note></dd>
      * <dt>ECS_AL1</dt>
      * <dd>
      * <p>
@@ -162,6 +173,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * used for all non Amazon Web Services Graviton-based instance types.
      * </p>
      * </dd>
+     * <dt>ECS_AL2023</dt>
+     * <dd>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     * 2023</a>: Batch supports Amazon Linux 2023.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon Linux 2023 does not support <code>A1</code> instances.
+     * </p>
+     * </note></dd>
      * <dt>ECS_AL1</dt>
      * <dd>
      * <p>
@@ -230,6 +252,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      *        and can be used for all non Amazon Web Services Graviton-based instance types.
      *        </p>
      *        </dd>
+     *        <dt>ECS_AL2023</dt>
+     *        <dd>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     *        2023</a>: Batch supports Amazon Linux 2023.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Amazon Linux 2023 does not support <code>A1</code> instances.
+     *        </p>
+     *        </note></dd>
      *        <dt>ECS_AL1</dt>
      *        <dd>
      *        <p>
@@ -304,6 +337,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * used for all non Amazon Web Services Graviton-based instance types.
      * </p>
      * </dd>
+     * <dt>ECS_AL2023</dt>
+     * <dd>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     * 2023</a>: Batch supports Amazon Linux 2023.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon Linux 2023 does not support <code>A1</code> instances.
+     * </p>
+     * </note></dd>
      * <dt>ECS_AL1</dt>
      * <dd>
      * <p>
@@ -373,6 +417,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      *         ) and can be used for all non Amazon Web Services Graviton-based instance types.
      *         </p>
      *         </dd>
+     *         <dt>ECS_AL2023</dt>
+     *         <dd>
+     *         <p>
+     *         <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     *         2023</a>: Batch supports Amazon Linux 2023.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Amazon Linux 2023 does not support <code>A1</code> instances.
+     *         </p>
+     *         </note></dd>
      *         <dt>ECS_AL1</dt>
      *         <dd>
      *         <p>
@@ -447,6 +502,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * used for all non Amazon Web Services Graviton-based instance types.
      * </p>
      * </dd>
+     * <dt>ECS_AL2023</dt>
+     * <dd>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     * 2023</a>: Batch supports Amazon Linux 2023.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon Linux 2023 does not support <code>A1</code> instances.
+     * </p>
+     * </note></dd>
      * <dt>ECS_AL1</dt>
      * <dd>
      * <p>
@@ -515,6 +581,17 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      *        and can be used for all non Amazon Web Services Graviton-based instance types.
      *        </p>
      *        </dd>
+     *        <dt>ECS_AL2023</dt>
+     *        <dd>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">Amazon Linux
+     *        2023</a>: Batch supports Amazon Linux 2023.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Amazon Linux 2023 does not support <code>A1</code> instances.
+     *        </p>
+     *        </note></dd>
      *        <dt>ECS_AL1</dt>
      *        <dd>
      *        <p>

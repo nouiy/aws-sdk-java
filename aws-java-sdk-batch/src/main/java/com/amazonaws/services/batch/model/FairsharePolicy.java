@@ -45,7 +45,7 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      * </p>
      * <p>
-     * For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the maximum
+     * For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the maximum
      * available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair share
      * identifiers. It reserves 12.5% if there are three fair share identifiers. A <code>computeReservation</code> value
      * of 25 indicates that Batch should reserve 25% of the maximum available vCPU if there's only one fair share
@@ -128,7 +128,7 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      * </p>
      * <p>
-     * For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the maximum
+     * For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the maximum
      * available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair share
      * identifiers. It reserves 12.5% if there are three fair share identifiers. A <code>computeReservation</code> value
      * of 25 indicates that Batch should reserve 25% of the maximum available vCPU if there's only one fair share
@@ -146,9 +146,9 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      *        <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      *        </p>
      *        <p>
-     *        For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the maximum
-     *        available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair share
-     *        identifiers. It reserves 12.5% if there are three fair share identifiers. A
+     *        For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the
+     *        maximum available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair
+     *        share identifiers. It reserves 12.5% if there are three fair share identifiers. A
      *        <code>computeReservation</code> value of 25 indicates that Batch should reserve 25% of the maximum
      *        available vCPU if there's only one fair share identifier, 6.25% if there are two fair share identifiers,
      *        and 1.56% if there are three fair share identifiers.
@@ -170,7 +170,7 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      * </p>
      * <p>
-     * For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the maximum
+     * For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the maximum
      * available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair share
      * identifiers. It reserves 12.5% if there are three fair share identifiers. A <code>computeReservation</code> value
      * of 25 indicates that Batch should reserve 25% of the maximum available vCPU if there's only one fair share
@@ -187,7 +187,7 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      *         <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      *         </p>
      *         <p>
-     *         For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the
+     *         For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the
      *         maximum available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair
      *         share identifiers. It reserves 12.5% if there are three fair share identifiers. A
      *         <code>computeReservation</code> value of 25 indicates that Batch should reserve 25% of the maximum
@@ -211,7 +211,7 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      * </p>
      * <p>
-     * For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the maximum
+     * For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the maximum
      * available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair share
      * identifiers. It reserves 12.5% if there are three fair share identifiers. A <code>computeReservation</code> value
      * of 25 indicates that Batch should reserve 25% of the maximum available vCPU if there's only one fair share
@@ -229,9 +229,9 @@ public class FairsharePolicy implements Serializable, Cloneable, StructuredPojo 
      *        <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.
      *        </p>
      *        <p>
-     *        For example, a <code>computeReservation</code> value of 50 indicates that Batchreserves 50% of the maximum
-     *        available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair share
-     *        identifiers. It reserves 12.5% if there are three fair share identifiers. A
+     *        For example, a <code>computeReservation</code> value of 50 indicates that Batch reserves 50% of the
+     *        maximum available vCPU if there's only one fair share identifier. It reserves 25% if there are two fair
+     *        share identifiers. It reserves 12.5% if there are three fair share identifiers. A
      *        <code>computeReservation</code> value of 25 indicates that Batch should reserve 25% of the maximum
      *        available vCPU if there's only one fair share identifier, 6.25% if there are two fair share identifiers,
      *        and 1.56% if there are three fair share identifiers.

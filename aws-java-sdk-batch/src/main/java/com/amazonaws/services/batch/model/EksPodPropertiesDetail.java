@@ -96,7 +96,14 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
      * </p>
      */
     private String nodeName;
-
+    /**
+     * <p>
+     * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in
+     * or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     */
     private EksMetadata metadata;
 
     /**
@@ -626,7 +633,18 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in
+     * or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     * 
      * @param metadata
+     *        Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod
+     *        runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     *        href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     *        Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
      */
 
     public void setMetadata(EksMetadata metadata) {
@@ -634,7 +652,17 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in
+     * or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     * 
+     * @return Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod
+     *         runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     *         href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/"
+     *         >Understanding Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
      */
 
     public EksMetadata getMetadata() {
@@ -642,7 +670,18 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in
+     * or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     * 
      * @param metadata
+     *        Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod
+     *        runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a
+     *        href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     *        Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The enrollment status of a specific account ID in the organization.
+     * The account ID of a member account in the organization.
      * </p>
      */
     private String accountId;
@@ -52,11 +52,11 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The enrollment status of a specific account ID in the organization.
+     * The account ID of a member account in the organization.
      * </p>
      * 
      * @param accountId
-     *        The enrollment status of a specific account ID in the organization.
+     *        The account ID of a member account in the organization.
      */
 
     public void setAccountId(String accountId) {
@@ -65,10 +65,10 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The enrollment status of a specific account ID in the organization.
+     * The account ID of a member account in the organization.
      * </p>
      * 
-     * @return The enrollment status of a specific account ID in the organization.
+     * @return The account ID of a member account in the organization.
      */
 
     public String getAccountId() {
@@ -77,11 +77,11 @@ public class ListEnrollmentStatusesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The enrollment status of a specific account ID in the organization.
+     * The account ID of a member account in the organization.
      * </p>
      * 
      * @param accountId
-     *        The enrollment status of a specific account ID in the organization.
+     *        The account ID of a member account in the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

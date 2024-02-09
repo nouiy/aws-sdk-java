@@ -339,6 +339,12 @@ public class SDKGlobalConfiguration {
     public static final String AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY = "com.amazonaws.sdk.disableEc2MetadataV1";
 
     /**
+     * Profile file property to disable fallback to IMDS v1.
+     */
+    public static final String AWS_EC2_METADATA_V1_DISABLED_PROFILE_PROPERTY = "ec2_metadata_v1_disabled";
+
+
+    /**
      * Environment variable to enable/disable client side monitoring.
      */
     public static final String AWS_CSM_ENABLED_ENV_VAR = "AWS_CSM_ENABLED";

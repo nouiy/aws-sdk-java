@@ -48,13 +48,13 @@ public class CreateScraperResultJsonUnmarshaller implements Unmarshaller<CreateS
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("scraperId", targetDepth)) {
-                    context.nextToken();
-                    createScraperResult.setScraperId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     createScraperResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("scraperId", targetDepth)) {
+                    context.nextToken();
+                    createScraperResult.setScraperId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();

@@ -1,3 +1,32 @@
+# __1.12.656__ __2024-02-09__
+## __AWS Batch__
+  - ### Features
+    - This feature allows Batch to support configuration of repository credentials for jobs running on ECS
+
+## __AWS IoT__
+  - ### Features
+    - This release allows AWS IoT Core users to enable Online Certificate Status Protocol (OCSP) Stapling for TLS X.509 Server Certificates when creating and updating AWS IoT Domain Configurations with Custom Domain.
+
+## __AWS Price List Service__
+  - ### Features
+    - Add Throttling Exception to all APIs.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation only update for Amazon ECS.
+
+## __Amazon Prometheus Service__
+  - ### Features
+    - Overall documentation updates.
+
+## __Braket__
+  - ### Features
+    - Creating a job will result in DeviceOfflineException when using an offline device, and DeviceRetiredException when using a retired device.
+
+## __Cost Optimization Hub__
+  - ### Features
+    - Adding includeMemberAccounts field to the response of ListEnrollmentStatuses API.
+
 # __1.12.655__ __2024-02-08__
 ## __AWS CodePipeline__
   - ### Features

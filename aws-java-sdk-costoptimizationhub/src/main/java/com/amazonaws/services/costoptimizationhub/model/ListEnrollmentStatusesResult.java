@@ -25,7 +25,13 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account enrollment statuses.
+     * The enrollment status of all member accounts in the organization if the account is the management account.
+     * </p>
+     */
+    private Boolean includeMemberAccounts;
+    /**
+     * <p>
+     * The enrollment status of a specific account ID, including creation and last updated timestamps.
      * </p>
      */
     private java.util.List<AccountEnrollmentStatus> items;
@@ -38,10 +44,64 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account enrollment statuses.
+     * The enrollment status of all member accounts in the organization if the account is the management account.
      * </p>
      * 
-     * @return The account enrollment statuses.
+     * @param includeMemberAccounts
+     *        The enrollment status of all member accounts in the organization if the account is the management account.
+     */
+
+    public void setIncludeMemberAccounts(Boolean includeMemberAccounts) {
+        this.includeMemberAccounts = includeMemberAccounts;
+    }
+
+    /**
+     * <p>
+     * The enrollment status of all member accounts in the organization if the account is the management account.
+     * </p>
+     * 
+     * @return The enrollment status of all member accounts in the organization if the account is the management
+     *         account.
+     */
+
+    public Boolean getIncludeMemberAccounts() {
+        return this.includeMemberAccounts;
+    }
+
+    /**
+     * <p>
+     * The enrollment status of all member accounts in the organization if the account is the management account.
+     * </p>
+     * 
+     * @param includeMemberAccounts
+     *        The enrollment status of all member accounts in the organization if the account is the management account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListEnrollmentStatusesResult withIncludeMemberAccounts(Boolean includeMemberAccounts) {
+        setIncludeMemberAccounts(includeMemberAccounts);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The enrollment status of all member accounts in the organization if the account is the management account.
+     * </p>
+     * 
+     * @return The enrollment status of all member accounts in the organization if the account is the management
+     *         account.
+     */
+
+    public Boolean isIncludeMemberAccounts() {
+        return this.includeMemberAccounts;
+    }
+
+    /**
+     * <p>
+     * The enrollment status of a specific account ID, including creation and last updated timestamps.
+     * </p>
+     * 
+     * @return The enrollment status of a specific account ID, including creation and last updated timestamps.
      */
 
     public java.util.List<AccountEnrollmentStatus> getItems() {
@@ -50,11 +110,11 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account enrollment statuses.
+     * The enrollment status of a specific account ID, including creation and last updated timestamps.
      * </p>
      * 
      * @param items
-     *        The account enrollment statuses.
+     *        The enrollment status of a specific account ID, including creation and last updated timestamps.
      */
 
     public void setItems(java.util.Collection<AccountEnrollmentStatus> items) {
@@ -68,7 +128,7 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account enrollment statuses.
+     * The enrollment status of a specific account ID, including creation and last updated timestamps.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +137,7 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param items
-     *        The account enrollment statuses.
+     *        The enrollment status of a specific account ID, including creation and last updated timestamps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +153,11 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account enrollment statuses.
+     * The enrollment status of a specific account ID, including creation and last updated timestamps.
      * </p>
      * 
      * @param items
-     *        The account enrollment statuses.
+     *        The enrollment status of a specific account ID, including creation and last updated timestamps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -158,6 +218,8 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getIncludeMemberAccounts() != null)
+            sb.append("IncludeMemberAccounts: ").append(getIncludeMemberAccounts()).append(",");
         if (getItems() != null)
             sb.append("Items: ").append(getItems()).append(",");
         if (getNextToken() != null)
@@ -176,6 +238,10 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
         if (obj instanceof ListEnrollmentStatusesResult == false)
             return false;
         ListEnrollmentStatusesResult other = (ListEnrollmentStatusesResult) obj;
+        if (other.getIncludeMemberAccounts() == null ^ this.getIncludeMemberAccounts() == null)
+            return false;
+        if (other.getIncludeMemberAccounts() != null && other.getIncludeMemberAccounts().equals(this.getIncludeMemberAccounts()) == false)
+            return false;
         if (other.getItems() == null ^ this.getItems() == null)
             return false;
         if (other.getItems() != null && other.getItems().equals(this.getItems()) == false)
@@ -192,6 +258,7 @@ public class ListEnrollmentStatusesResult extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getIncludeMemberAccounts() == null) ? 0 : getIncludeMemberAccounts().hashCode());
         hashCode = prime * hashCode + ((getItems() == null) ? 0 : getItems().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;

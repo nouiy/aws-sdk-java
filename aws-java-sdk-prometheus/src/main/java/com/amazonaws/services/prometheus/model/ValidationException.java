@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The input fails to satisfy the constraints specified by an AWS service.
+ * The input fails to satisfy the constraints specified by an Amazon Web Services service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,17 +25,16 @@ public class ValidationException extends com.amazonaws.services.prometheus.model
 
     /**
      * <p>
+     * The field that caused the error, if applicable.
+     * </p>
+     */
+    private java.util.List<ValidationExceptionField> fieldList;
+    /**
+     * <p>
      * Reason the request failed validation.
      * </p>
      */
     private String reason;
-    /**
-     * <p>
-     * The field that caused the error, if applicable. If more than one field caused the error, pick one and elaborate
-     * in the message.
-     * </p>
-     */
-    private java.util.List<ValidationExceptionField> fieldList;
 
     /**
      * Constructs a new ValidationException with the specified error message.
@@ -45,6 +44,78 @@ public class ValidationException extends com.amazonaws.services.prometheus.model
      */
     public ValidationException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * The field that caused the error, if applicable.
+     * </p>
+     * 
+     * @return The field that caused the error, if applicable.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("fieldList")
+    public java.util.List<ValidationExceptionField> getFieldList() {
+        return fieldList;
+    }
+
+    /**
+     * <p>
+     * The field that caused the error, if applicable.
+     * </p>
+     * 
+     * @param fieldList
+     *        The field that caused the error, if applicable.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("fieldList")
+    public void setFieldList(java.util.Collection<ValidationExceptionField> fieldList) {
+        if (fieldList == null) {
+            this.fieldList = null;
+            return;
+        }
+
+        this.fieldList = new java.util.ArrayList<ValidationExceptionField>(fieldList);
+    }
+
+    /**
+     * <p>
+     * The field that caused the error, if applicable.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFieldList(java.util.Collection)} or {@link #withFieldList(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param fieldList
+     *        The field that caused the error, if applicable.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ValidationException withFieldList(ValidationExceptionField... fieldList) {
+        if (this.fieldList == null) {
+            setFieldList(new java.util.ArrayList<ValidationExceptionField>(fieldList.length));
+        }
+        for (ValidationExceptionField ele : fieldList) {
+            this.fieldList.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The field that caused the error, if applicable.
+     * </p>
+     * 
+     * @param fieldList
+     *        The field that caused the error, if applicable.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ValidationException withFieldList(java.util.Collection<ValidationExceptionField> fieldList) {
+        setFieldList(fieldList);
+        return this;
     }
 
     /**
@@ -105,86 +176,6 @@ public class ValidationException extends com.amazonaws.services.prometheus.model
 
     public ValidationException withReason(ValidationExceptionReason reason) {
         this.reason = reason.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The field that caused the error, if applicable. If more than one field caused the error, pick one and elaborate
-     * in the message.
-     * </p>
-     * 
-     * @return The field that caused the error, if applicable. If more than one field caused the error, pick one and
-     *         elaborate in the message.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("fieldList")
-    public java.util.List<ValidationExceptionField> getFieldList() {
-        return fieldList;
-    }
-
-    /**
-     * <p>
-     * The field that caused the error, if applicable. If more than one field caused the error, pick one and elaborate
-     * in the message.
-     * </p>
-     * 
-     * @param fieldList
-     *        The field that caused the error, if applicable. If more than one field caused the error, pick one and
-     *        elaborate in the message.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("fieldList")
-    public void setFieldList(java.util.Collection<ValidationExceptionField> fieldList) {
-        if (fieldList == null) {
-            this.fieldList = null;
-            return;
-        }
-
-        this.fieldList = new java.util.ArrayList<ValidationExceptionField>(fieldList);
-    }
-
-    /**
-     * <p>
-     * The field that caused the error, if applicable. If more than one field caused the error, pick one and elaborate
-     * in the message.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setFieldList(java.util.Collection)} or {@link #withFieldList(java.util.Collection)} if you want to
-     * override the existing values.
-     * </p>
-     * 
-     * @param fieldList
-     *        The field that caused the error, if applicable. If more than one field caused the error, pick one and
-     *        elaborate in the message.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ValidationException withFieldList(ValidationExceptionField... fieldList) {
-        if (this.fieldList == null) {
-            setFieldList(new java.util.ArrayList<ValidationExceptionField>(fieldList.length));
-        }
-        for (ValidationExceptionField ele : fieldList) {
-            this.fieldList.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * The field that caused the error, if applicable. If more than one field caused the error, pick one and elaborate
-     * in the message.
-     * </p>
-     * 
-     * @param fieldList
-     *        The field that caused the error, if applicable. If more than one field caused the error, pick one and
-     *        elaborate in the message.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ValidationException withFieldList(java.util.Collection<ValidationExceptionField> fieldList) {
-        setFieldList(fieldList);
         return this;
     }
 

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of an EKS source.
+ * The <code>EksConfiguration</code> structure describes the connection to the Amazon EKS cluster from which a scraper
+ * collects metrics.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/EksConfiguration" target="_top">AWS API
@@ -30,30 +31,30 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of an EKS cluster.
+     * ARN of the Amazon EKS cluster.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * A list of security group IDs specified for VPC configuration.
+     * A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      */
     private java.util.List<String> securityGroupIds;
     /**
      * <p>
-     * A list of subnet IDs specified for VPC configuration.
+     * A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      */
     private java.util.List<String> subnetIds;
 
     /**
      * <p>
-     * The ARN of an EKS cluster.
+     * ARN of the Amazon EKS cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The ARN of an EKS cluster.
+     *        ARN of the Amazon EKS cluster.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -62,10 +63,10 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of an EKS cluster.
+     * ARN of the Amazon EKS cluster.
      * </p>
      * 
-     * @return The ARN of an EKS cluster.
+     * @return ARN of the Amazon EKS cluster.
      */
 
     public String getClusterArn() {
@@ -74,11 +75,11 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of an EKS cluster.
+     * ARN of the Amazon EKS cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The ARN of an EKS cluster.
+     *        ARN of the Amazon EKS cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,10 +90,10 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of security group IDs specified for VPC configuration.
+     * A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * 
-     * @return A list of security group IDs specified for VPC configuration.
+     * @return A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -101,11 +102,11 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of security group IDs specified for VPC configuration.
+     * A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of security group IDs specified for VPC configuration.
+     *        A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -119,7 +120,7 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of security group IDs specified for VPC configuration.
+     * A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,7 +129,7 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of security group IDs specified for VPC configuration.
+     *        A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,11 +145,11 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of security group IDs specified for VPC configuration.
+     * A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of security group IDs specified for VPC configuration.
+     *        A list of the security group IDs for the Amazon EKS cluster VPC configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,10 +160,10 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of subnet IDs specified for VPC configuration.
+     * A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * 
-     * @return A list of subnet IDs specified for VPC configuration.
+     * @return A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -171,11 +172,11 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of subnet IDs specified for VPC configuration.
+     * A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * 
      * @param subnetIds
-     *        A list of subnet IDs specified for VPC configuration.
+     *        A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -189,7 +190,7 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of subnet IDs specified for VPC configuration.
+     * A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -198,7 +199,7 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param subnetIds
-     *        A list of subnet IDs specified for VPC configuration.
+     *        A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,11 +215,11 @@ public class EksConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of subnet IDs specified for VPC configuration.
+     * A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * </p>
      * 
      * @param subnetIds
-     *        A list of subnet IDs specified for VPC configuration.
+     *        A list of subnet IDs for the Amazon EKS cluster VPC configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

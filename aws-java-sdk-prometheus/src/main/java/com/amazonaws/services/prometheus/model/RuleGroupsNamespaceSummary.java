@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a summary of the rule groups namespace.
+ * The high-level information about a rule groups namespace. To retrieve more information, use
+ * <code>DescribeRuleGroupsNamespace</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/RuleGroupsNamespaceSummary" target="_top">AWS API
@@ -30,48 +31,48 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The ARN of the rule groups namespace.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The rule groups namespace name.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
-     * The status of rule groups namespace.
-     * </p>
-     */
-    private RuleGroupsNamespaceStatus status;
-    /**
-     * <p>
-     * The time when the rule groups namespace was created.
+     * The date and time that the rule groups namespace was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The time when the rule groups namespace was modified.
+     * The date and time that the rule groups namespace was most recently changed.
      * </p>
      */
     private java.util.Date modifiedAt;
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The name of the rule groups namespace.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * A structure that displays the current status of the rule groups namespace.
+     * </p>
+     */
+    private RuleGroupsNamespaceStatus status;
+    /**
+     * <p>
+     * The list of tag keys and values that are associated with the rule groups namespace.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The ARN of the rule groups namespace.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this rule groups namespace.
+     *        The ARN of the rule groups namespace.
      */
 
     public void setArn(String arn) {
@@ -80,10 +81,10 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The ARN of the rule groups namespace.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of this rule groups namespace.
+     * @return The ARN of the rule groups namespace.
      */
 
     public String getArn() {
@@ -92,11 +93,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this rule groups namespace.
+     * The ARN of the rule groups namespace.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this rule groups namespace.
+     *        The ARN of the rule groups namespace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,91 +108,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @param name
-     *        The rule groups namespace name.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @return The rule groups namespace name.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @param name
-     *        The rule groups namespace name.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RuleGroupsNamespaceSummary withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The status of rule groups namespace.
-     * </p>
-     * 
-     * @param status
-     *        The status of rule groups namespace.
-     */
-
-    public void setStatus(RuleGroupsNamespaceStatus status) {
-        this.status = status;
-    }
-
-    /**
-     * <p>
-     * The status of rule groups namespace.
-     * </p>
-     * 
-     * @return The status of rule groups namespace.
-     */
-
-    public RuleGroupsNamespaceStatus getStatus() {
-        return this.status;
-    }
-
-    /**
-     * <p>
-     * The status of rule groups namespace.
-     * </p>
-     * 
-     * @param status
-     *        The status of rule groups namespace.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RuleGroupsNamespaceSummary withStatus(RuleGroupsNamespaceStatus status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The time when the rule groups namespace was created.
+     * The date and time that the rule groups namespace was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the rule groups namespace was created.
+     *        The date and time that the rule groups namespace was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -200,10 +121,10 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time when the rule groups namespace was created.
+     * The date and time that the rule groups namespace was created.
      * </p>
      * 
-     * @return The time when the rule groups namespace was created.
+     * @return The date and time that the rule groups namespace was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -212,11 +133,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time when the rule groups namespace was created.
+     * The date and time that the rule groups namespace was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the rule groups namespace was created.
+     *        The date and time that the rule groups namespace was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +148,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time when the rule groups namespace was modified.
+     * The date and time that the rule groups namespace was most recently changed.
      * </p>
      * 
      * @param modifiedAt
-     *        The time when the rule groups namespace was modified.
+     *        The date and time that the rule groups namespace was most recently changed.
      */
 
     public void setModifiedAt(java.util.Date modifiedAt) {
@@ -240,10 +161,10 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time when the rule groups namespace was modified.
+     * The date and time that the rule groups namespace was most recently changed.
      * </p>
      * 
-     * @return The time when the rule groups namespace was modified.
+     * @return The date and time that the rule groups namespace was most recently changed.
      */
 
     public java.util.Date getModifiedAt() {
@@ -252,11 +173,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time when the rule groups namespace was modified.
+     * The date and time that the rule groups namespace was most recently changed.
      * </p>
      * 
      * @param modifiedAt
-     *        The time when the rule groups namespace was modified.
+     *        The date and time that the rule groups namespace was most recently changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,10 +188,90 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The name of the rule groups namespace.
      * </p>
      * 
-     * @return The tags of this rule groups namespace.
+     * @param name
+     *        The name of the rule groups namespace.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the rule groups namespace.
+     * </p>
+     * 
+     * @return The name of the rule groups namespace.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the rule groups namespace.
+     * </p>
+     * 
+     * @param name
+     *        The name of the rule groups namespace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupsNamespaceSummary withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A structure that displays the current status of the rule groups namespace.
+     * </p>
+     * 
+     * @param status
+     *        A structure that displays the current status of the rule groups namespace.
+     */
+
+    public void setStatus(RuleGroupsNamespaceStatus status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * A structure that displays the current status of the rule groups namespace.
+     * </p>
+     * 
+     * @return A structure that displays the current status of the rule groups namespace.
+     */
+
+    public RuleGroupsNamespaceStatus getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * A structure that displays the current status of the rule groups namespace.
+     * </p>
+     * 
+     * @param status
+     *        A structure that displays the current status of the rule groups namespace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupsNamespaceSummary withStatus(RuleGroupsNamespaceStatus status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of tag keys and values that are associated with the rule groups namespace.
+     * </p>
+     * 
+     * @return The list of tag keys and values that are associated with the rule groups namespace.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -279,11 +280,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The list of tag keys and values that are associated with the rule groups namespace.
      * </p>
      * 
      * @param tags
-     *        The tags of this rule groups namespace.
+     *        The list of tag keys and values that are associated with the rule groups namespace.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -292,11 +293,11 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The tags of this rule groups namespace.
+     * The list of tag keys and values that are associated with the rule groups namespace.
      * </p>
      * 
      * @param tags
-     *        The tags of this rule groups namespace.
+     *        The list of tag keys and values that are associated with the rule groups namespace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -347,14 +348,14 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getModifiedAt() != null)
             sb.append("ModifiedAt: ").append(getModifiedAt()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -375,14 +376,6 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
-            return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
@@ -390,6 +383,14 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
         if (other.getModifiedAt() == null ^ this.getModifiedAt() == null)
             return false;
         if (other.getModifiedAt() != null && other.getModifiedAt().equals(this.getModifiedAt()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -404,10 +405,10 @@ public class RuleGroupsNamespaceSummary implements Serializable, Cloneable, Stru
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getModifiedAt() == null) ? 0 : getModifiedAt().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

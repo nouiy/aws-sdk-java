@@ -33,15 +33,15 @@ public class CreateScraperRequestMarshaller {
 
     private static final MarshallingInfo<String> ALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("alias").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> DESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destination").build();
     private static final MarshallingInfo<StructuredPojo> SCRAPECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scrapeConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("source").build();
-    private static final MarshallingInfo<StructuredPojo> DESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destination").build();
-    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
-            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -62,10 +62,10 @@ public class CreateScraperRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createScraperRequest.getAlias(), ALIAS_BINDING);
+            protocolMarshaller.marshall(createScraperRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(createScraperRequest.getDestination(), DESTINATION_BINDING);
             protocolMarshaller.marshall(createScraperRequest.getScrapeConfiguration(), SCRAPECONFIGURATION_BINDING);
             protocolMarshaller.marshall(createScraperRequest.getSource(), SOURCE_BINDING);
-            protocolMarshaller.marshall(createScraperRequest.getDestination(), DESTINATION_BINDING);
-            protocolMarshaller.marshall(createScraperRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createScraperRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

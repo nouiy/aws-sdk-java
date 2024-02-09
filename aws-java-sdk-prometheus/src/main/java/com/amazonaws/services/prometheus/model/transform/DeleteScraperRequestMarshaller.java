@@ -29,11 +29,11 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DeleteScraperRequestMarshaller {
 
-    private static final MarshallingInfo<String> SCRAPERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("scraperId").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> SCRAPERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("scraperId").build();
 
     private static final DeleteScraperRequestMarshaller instance = new DeleteScraperRequestMarshaller();
 
@@ -51,8 +51,8 @@ public class DeleteScraperRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(deleteScraperRequest.getScraperId(), SCRAPERID_BINDING);
             protocolMarshaller.marshall(deleteScraperRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(deleteScraperRequest.getScraperId(), SCRAPERID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of a Prometheus configuration file.
+ * A scrape configuration for a scraper, base 64 encoded. For more information, see <a
+ * href="prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-configuration">Scraper configuration</a> in
+ * the <i>Amazon Managed Service for Prometheus User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ScrapeConfiguration" target="_top">AWS API
@@ -30,14 +32,14 @@ public class ScrapeConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Binary data representing a Prometheus configuration file.
+     * The base 64 encoded scrape configuration file.
      * </p>
      */
     private java.nio.ByteBuffer configurationBlob;
 
     /**
      * <p>
-     * Binary data representing a Prometheus configuration file.
+     * The base 64 encoded scrape configuration file.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -51,7 +53,7 @@ public class ScrapeConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param configurationBlob
-     *        Binary data representing a Prometheus configuration file.
+     *        The base 64 encoded scrape configuration file.
      */
 
     public void setConfigurationBlob(java.nio.ByteBuffer configurationBlob) {
@@ -60,7 +62,7 @@ public class ScrapeConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Binary data representing a Prometheus configuration file.
+     * The base 64 encoded scrape configuration file.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -70,7 +72,7 @@ public class ScrapeConfiguration implements Serializable, Cloneable, StructuredP
      * {@code position}.
      * </p>
      * 
-     * @return Binary data representing a Prometheus configuration file.
+     * @return The base 64 encoded scrape configuration file.
      */
 
     public java.nio.ByteBuffer getConfigurationBlob() {
@@ -79,7 +81,7 @@ public class ScrapeConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Binary data representing a Prometheus configuration file.
+     * The base 64 encoded scrape configuration file.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -93,7 +95,7 @@ public class ScrapeConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param configurationBlob
-     *        Binary data representing a Prometheus configuration file.
+     *        The base 64 encoded scrape configuration file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

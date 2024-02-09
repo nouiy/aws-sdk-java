@@ -98,6 +98,8 @@ public interface AWSPricing {
      *         The requested resource can't be found.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.DescribeServices
@@ -126,6 +128,8 @@ public interface AWSPricing {
      *         The requested resource can't be found.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.GetAttributeValues
@@ -157,6 +161,8 @@ public interface AWSPricing {
      *         General authentication failure. The request wasn't signed correctly.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @sample AWSPricing.GetPriceListFileUrl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
      *      API Documentation</a>
@@ -178,6 +184,8 @@ public interface AWSPricing {
      *         The requested resource can't be found.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.GetProducts
@@ -215,6 +223,8 @@ public interface AWSPricing {
      *         General authentication failure. The request wasn't signed correctly.
      * @throws InternalErrorException
      *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         You've made too many requests exceeding service quotas.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.ListPriceLists

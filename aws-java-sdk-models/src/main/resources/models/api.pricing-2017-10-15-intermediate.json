@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -115,6 +115,10 @@
         "documentation" : "<p>An error on the server occurred during the processing of your request. Try again later.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "ExpiredNextTokenException",
         "documentation" : "<p>The pagination token expired. Try again without a pagination token.</p>",
         "httpStatusCode" : null
@@ -166,6 +170,10 @@
       }, {
         "exceptionName" : "InternalErrorException",
         "documentation" : "<p>An error on the server occurred during the processing of your request. Try again later.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ExpiredNextTokenException",
@@ -220,6 +228,10 @@
         "exceptionName" : "InternalErrorException",
         "documentation" : "<p>An error on the server occurred during the processing of your request. Try again later.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -268,6 +280,10 @@
       }, {
         "exceptionName" : "InternalErrorException",
         "documentation" : "<p>An error on the server occurred during the processing of your request. Try again later.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ExpiredNextTokenException",
@@ -325,6 +341,10 @@
       }, {
         "exceptionName" : "InternalErrorException",
         "documentation" : "<p>An error on the server occurred during the processing of your request. Try again later.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ExpiredNextTokenException",
@@ -8307,6 +8327,47 @@
         "documentation" : null,
         "simpleType" : "Service",
         "variableSetterType" : "Service"
+      },
+      "wrapper" : false
+    },
+    "ThrottlingException" : {
+      "c2jName" : "ThrottlingException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "ThrottlingException",
+      "fullyQualifiedName" : "com.amazonaws.services.pricing.exception.ThrottlingException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.pricing.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ThrottlingException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ThrottlingException",
+        "variableName" : "throttlingException",
+        "variableType" : "ThrottlingException",
+        "documentation" : null,
+        "simpleType" : "ThrottlingException",
+        "variableSetterType" : "ThrottlingException"
       },
       "wrapper" : false
     }

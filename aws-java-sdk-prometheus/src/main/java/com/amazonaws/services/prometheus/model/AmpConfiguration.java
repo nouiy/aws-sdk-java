@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of an AMP destination.
+ * The <code>AmpConfiguration</code> structure defines the Amazon Managed Service for Prometheus instance a scraper
+ * should send metrics to.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/AmpConfiguration" target="_top">AWS API
@@ -30,18 +31,18 @@ public class AmpConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of an AMP workspace.
+     * ARN of the Amazon Managed Service for Prometheus workspace.
      * </p>
      */
     private String workspaceArn;
 
     /**
      * <p>
-     * The ARN of an AMP workspace.
+     * ARN of the Amazon Managed Service for Prometheus workspace.
      * </p>
      * 
      * @param workspaceArn
-     *        The ARN of an AMP workspace.
+     *        ARN of the Amazon Managed Service for Prometheus workspace.
      */
 
     public void setWorkspaceArn(String workspaceArn) {
@@ -50,10 +51,10 @@ public class AmpConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of an AMP workspace.
+     * ARN of the Amazon Managed Service for Prometheus workspace.
      * </p>
      * 
-     * @return The ARN of an AMP workspace.
+     * @return ARN of the Amazon Managed Service for Prometheus workspace.
      */
 
     public String getWorkspaceArn() {
@@ -62,11 +63,11 @@ public class AmpConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of an AMP workspace.
+     * ARN of the Amazon Managed Service for Prometheus workspace.
      * </p>
      * 
      * @param workspaceArn
-     *        The ARN of an AMP workspace.
+     *        ARN of the Amazon Managed Service for Prometheus workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

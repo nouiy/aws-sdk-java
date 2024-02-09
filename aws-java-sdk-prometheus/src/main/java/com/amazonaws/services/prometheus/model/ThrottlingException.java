@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Request was denied due to request throttling.
+ * The request was denied due to request throttling.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,13 +25,7 @@ public class ThrottlingException extends com.amazonaws.services.prometheus.model
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating service.
-     * </p>
-     */
-    private String serviceCode;
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating quota.
+     * Service quotas code for the originating quota.
      * </p>
      */
     private String quotaCode;
@@ -41,6 +35,12 @@ public class ThrottlingException extends com.amazonaws.services.prometheus.model
      * </p>
      */
     private Integer retryAfterSeconds;
+    /**
+     * <p>
+     * Service quotas code for the originating service.
+     * </p>
+     */
+    private String serviceCode;
 
     /**
      * Constructs a new ThrottlingException with the specified error message.
@@ -54,53 +54,11 @@ public class ThrottlingException extends com.amazonaws.services.prometheus.model
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating service.
-     * </p>
-     * 
-     * @param serviceCode
-     *        Service Quotas requirement to identify originating service.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
-
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating service.
-     * </p>
-     * 
-     * @return Service Quotas requirement to identify originating service.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating service.
-     * </p>
-     * 
-     * @param serviceCode
-     *        Service Quotas requirement to identify originating service.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ThrottlingException withServiceCode(String serviceCode) {
-        setServiceCode(serviceCode);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Service Quotas requirement to identify originating quota.
+     * Service quotas code for the originating quota.
      * </p>
      * 
      * @param quotaCode
-     *        Service Quotas requirement to identify originating quota.
+     *        Service quotas code for the originating quota.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
@@ -110,10 +68,10 @@ public class ThrottlingException extends com.amazonaws.services.prometheus.model
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating quota.
+     * Service quotas code for the originating quota.
      * </p>
      * 
-     * @return Service Quotas requirement to identify originating quota.
+     * @return Service quotas code for the originating quota.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
@@ -123,11 +81,11 @@ public class ThrottlingException extends com.amazonaws.services.prometheus.model
 
     /**
      * <p>
-     * Service Quotas requirement to identify originating quota.
+     * Service quotas code for the originating quota.
      * </p>
      * 
      * @param quotaCode
-     *        Service Quotas requirement to identify originating quota.
+     *        Service quotas code for the originating quota.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,6 +133,48 @@ public class ThrottlingException extends com.amazonaws.services.prometheus.model
 
     public ThrottlingException withRetryAfterSeconds(Integer retryAfterSeconds) {
         setRetryAfterSeconds(retryAfterSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Service quotas code for the originating service.
+     * </p>
+     * 
+     * @param serviceCode
+     *        Service quotas code for the originating service.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    /**
+     * <p>
+     * Service quotas code for the originating service.
+     * </p>
+     * 
+     * @return Service quotas code for the originating service.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
+     * <p>
+     * Service quotas code for the originating service.
+     * </p>
+     * 
+     * @param serviceCode
+     *        Service quotas code for the originating service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThrottlingException withServiceCode(String serviceCode) {
+        setServiceCode(serviceCode);
         return this;
     }
 

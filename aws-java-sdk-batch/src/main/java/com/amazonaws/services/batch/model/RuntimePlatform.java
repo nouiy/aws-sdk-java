@@ -42,15 +42,17 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * </note> <note>
      * <p>
-     * The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a Windows
-     * container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and the
-     * next is checked until a Windows-based compute environment is found.
+     * The Batch Scheduler checks the compute environments that are attached to the job queue before registering a task
+     * definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job requires a
+     * Windows container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and
+     * the next compute environment is checked until a Windows-based compute environment is found.
      * </p>
      * </note> <note>
      * <p>
-     * Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a Fargate
-     * Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you can attach both
-     * <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job queue.
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
      * </p>
      * </note>
      */
@@ -63,6 +65,13 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * <note>
      * <p>
      * This parameter must be set to <code>X86_64</code> for Windows containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
      * </p>
      * </note>
      */
@@ -82,15 +91,17 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * </note> <note>
      * <p>
-     * The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a Windows
-     * container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and the
-     * next is checked until a Windows-based compute environment is found.
+     * The Batch Scheduler checks the compute environments that are attached to the job queue before registering a task
+     * definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job requires a
+     * Windows container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and
+     * the next compute environment is checked until a Windows-based compute environment is found.
      * </p>
      * </note> <note>
      * <p>
-     * Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a Fargate
-     * Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you can attach both
-     * <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job queue.
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
      * </p>
      * </note>
      * 
@@ -105,16 +116,18 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        </note> <note>
      *        <p>
-     *        The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a
-     *        Windows container and the first compute environment is <code>LINUX</code>, the compute environment is
-     *        skipped and the next is checked until a Windows-based compute environment is found.
+     *        The Batch Scheduler checks the compute environments that are attached to the job queue before registering
+     *        a task definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job
+     *        requires a Windows container and the first compute environment is <code>LINUX</code>, the compute
+     *        environment is skipped and the next compute environment is checked until a Windows-based compute
+     *        environment is found.
      *        </p>
      *        </note> <note>
      *        <p>
-     *        Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a
-     *        Fargate Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you
-     *        can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job
-     *        queue.
+     *        Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue
+     *        will be blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only
+     *        Fargate Spot compute environments. However, you can attach both <code>FARGATE</code> and
+     *        <code>FARGATE_SPOT</code> compute environments to the same job queue.
      *        </p>
      */
 
@@ -136,15 +149,17 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * </note> <note>
      * <p>
-     * The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a Windows
-     * container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and the
-     * next is checked until a Windows-based compute environment is found.
+     * The Batch Scheduler checks the compute environments that are attached to the job queue before registering a task
+     * definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job requires a
+     * Windows container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and
+     * the next compute environment is checked until a Windows-based compute environment is found.
      * </p>
      * </note> <note>
      * <p>
-     * Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a Fargate
-     * Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you can attach both
-     * <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job queue.
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
      * </p>
      * </note>
      * 
@@ -158,16 +173,18 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      *         </p>
      *         </note> <note>
      *         <p>
-     *         The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a
-     *         Windows container and the first compute environment is <code>LINUX</code>, the compute environment is
-     *         skipped and the next is checked until a Windows-based compute environment is found.
+     *         The Batch Scheduler checks the compute environments that are attached to the job queue before registering
+     *         a task definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job
+     *         requires a Windows container and the first compute environment is <code>LINUX</code>, the compute
+     *         environment is skipped and the next compute environment is checked until a Windows-based compute
+     *         environment is found.
      *         </p>
      *         </note> <note>
      *         <p>
-     *         Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a
-     *         Fargate Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you
-     *         can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job
-     *         queue.
+     *         Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue
+     *         will be blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only
+     *         Fargate Spot compute environments. However, you can attach both <code>FARGATE</code> and
+     *         <code>FARGATE_SPOT</code> compute environments to the same job queue.
      *         </p>
      */
 
@@ -189,15 +206,17 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * </note> <note>
      * <p>
-     * The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a Windows
-     * container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and the
-     * next is checked until a Windows-based compute environment is found.
+     * The Batch Scheduler checks the compute environments that are attached to the job queue before registering a task
+     * definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job requires a
+     * Windows container and the first compute environment is <code>LINUX</code>, the compute environment is skipped and
+     * the next compute environment is checked until a Windows-based compute environment is found.
      * </p>
      * </note> <note>
      * <p>
-     * Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a Fargate
-     * Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you can attach both
-     * <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job queue.
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
      * </p>
      * </note>
      * 
@@ -212,16 +231,18 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        </note> <note>
      *        <p>
-     *        The Batch Scheduler checks before registering a task definition with Fargate. If the job requires a
-     *        Windows container and the first compute environment is <code>LINUX</code>, the compute environment is
-     *        skipped and the next is checked until a Windows-based compute environment is found.
+     *        The Batch Scheduler checks the compute environments that are attached to the job queue before registering
+     *        a task definition with Fargate. In this scenario, the job queue is where the job is submitted. If the job
+     *        requires a Windows container and the first compute environment is <code>LINUX</code>, the compute
+     *        environment is skipped and the next compute environment is checked until a Windows-based compute
+     *        environment is found.
      *        </p>
      *        </note> <note>
      *        <p>
-     *        Fargate Spot is not supported for Windows-based containers on Fargate. A job queue will be blocked if a
-     *        Fargate Windows job is submitted to a job queue with only Fargate Spot compute environments. However, you
-     *        can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute environments to the same job
-     *        queue.
+     *        Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue
+     *        will be blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only
+     *        Fargate Spot compute environments. However, you can attach both <code>FARGATE</code> and
+     *        <code>FARGATE_SPOT</code> compute environments to the same job queue.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -240,6 +261,13 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * This parameter must be set to <code>X86_64</code> for Windows containers.
      * </p>
+     * </note> <note>
+     * <p>
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
+     * </p>
      * </note>
      * 
      * @param cpuArchitecture
@@ -247,6 +275,13 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      *        <code>ARM64</code>.</p> <note>
      *        <p>
      *        This parameter must be set to <code>X86_64</code> for Windows containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue
+     *        will be blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only
+     *        Fargate Spot compute environments. However, you can attach both <code>FARGATE</code> and
+     *        <code>FARGATE_SPOT</code> compute environments to the same job queue.
      *        </p>
      */
 
@@ -263,12 +298,26 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * This parameter must be set to <code>X86_64</code> for Windows containers.
      * </p>
+     * </note> <note>
+     * <p>
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
+     * </p>
      * </note>
      * 
      * @return The vCPU architecture. The default value is <code>X86_64</code>. Valid values are <code>X86_64</code> and
      *         <code>ARM64</code>.</p> <note>
      *         <p>
      *         This parameter must be set to <code>X86_64</code> for Windows containers.
+     *         </p>
+     *         </note> <note>
+     *         <p>
+     *         Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue
+     *         will be blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only
+     *         Fargate Spot compute environments. However, you can attach both <code>FARGATE</code> and
+     *         <code>FARGATE_SPOT</code> compute environments to the same job queue.
      *         </p>
      */
 
@@ -285,6 +334,13 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * This parameter must be set to <code>X86_64</code> for Windows containers.
      * </p>
+     * </note> <note>
+     * <p>
+     * Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue will be
+     * blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only Fargate Spot compute
+     * environments. However, you can attach both <code>FARGATE</code> and <code>FARGATE_SPOT</code> compute
+     * environments to the same job queue.
+     * </p>
      * </note>
      * 
      * @param cpuArchitecture
@@ -292,6 +348,13 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      *        <code>ARM64</code>.</p> <note>
      *        <p>
      *        This parameter must be set to <code>X86_64</code> for Windows containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        Fargate Spot is not supported for <code>ARM64</code> and Windows-based containers on Fargate. A job queue
+     *        will be blocked if a Fargate <code>ARM64</code> or Windows job is submitted to a job queue with only
+     *        Fargate Spot compute environments. However, you can attach both <code>FARGATE</code> and
+     *        <code>FARGATE_SPOT</code> compute environments to the same job queue.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

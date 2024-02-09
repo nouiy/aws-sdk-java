@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a summary of the properties of a scraper.
+ * The <code>ScraperSummary</code> structure contains a summary of the details about one scraper in your account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ScraperSummary" target="_top">AWS API
@@ -30,79 +30,79 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Alias of this scraper.
+     * (Optional) A name associated with the scraper.
      * </p>
      */
     private String alias;
     /**
      * <p>
-     * Unique string identifying this scraper.
-     * </p>
-     */
-    private String scraperId;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of this scraper.
+     * The Amazon Resource Name (ARN) of the scraper.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover, collect,
-     * and produce metrics on your behalf.
-     * </p>
-     */
-    private String roleArn;
-    /**
-     * <p>
-     * The status of this scraper.
-     * </p>
-     */
-    private ScraperStatus status;
-    /**
-     * <p>
-     * The time when the scraper was created.
+     * The date and time that the scraper was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The time when the scraper was last modified.
+     * The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     * </p>
+     */
+    private Destination destination;
+    /**
+     * <p>
+     * The date and time that the scraper was last modified.
      * </p>
      */
     private java.util.Date lastModifiedAt;
     /**
      * <p>
-     * The tags of this scraper.
+     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and collect
+     * metrics on your behalf.
      * </p>
      */
-    private java.util.Map<String, String> tags;
+    private String roleArn;
     /**
      * <p>
-     * The reason for failure if any.
+     * The ID of the scraper.
      * </p>
      */
-    private String statusReason;
+    private String scraperId;
     /**
      * <p>
-     * The source that the scraper is discovering and collecting metrics from.
+     * The Amazon EKS cluster from which the scraper collects metrics.
      * </p>
      */
     private Source source;
     /**
      * <p>
-     * The destination that the scraper is producing metrics to.
+     * A structure that contains the current status of the scraper.
      * </p>
      */
-    private Destination destination;
+    private ScraperStatus status;
+    /**
+     * <p>
+     * If there is a failure, the reason for the failure.
+     * </p>
+     */
+    private String statusReason;
+    /**
+     * <p>
+     * (Optional) The list of tag keys and values associated with the scraper.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * Alias of this scraper.
+     * (Optional) A name associated with the scraper.
      * </p>
      * 
      * @param alias
-     *        Alias of this scraper.
+     *        (Optional) A name associated with the scraper.
      */
 
     public void setAlias(String alias) {
@@ -111,10 +111,10 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Alias of this scraper.
+     * (Optional) A name associated with the scraper.
      * </p>
      * 
-     * @return Alias of this scraper.
+     * @return (Optional) A name associated with the scraper.
      */
 
     public String getAlias() {
@@ -123,11 +123,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Alias of this scraper.
+     * (Optional) A name associated with the scraper.
      * </p>
      * 
      * @param alias
-     *        Alias of this scraper.
+     *        (Optional) A name associated with the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,51 +138,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Unique string identifying this scraper.
-     * </p>
-     * 
-     * @param scraperId
-     *        Unique string identifying this scraper.
-     */
-
-    public void setScraperId(String scraperId) {
-        this.scraperId = scraperId;
-    }
-
-    /**
-     * <p>
-     * Unique string identifying this scraper.
-     * </p>
-     * 
-     * @return Unique string identifying this scraper.
-     */
-
-    public String getScraperId() {
-        return this.scraperId;
-    }
-
-    /**
-     * <p>
-     * Unique string identifying this scraper.
-     * </p>
-     * 
-     * @param scraperId
-     *        Unique string identifying this scraper.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ScraperSummary withScraperId(String scraperId) {
-        setScraperId(scraperId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of this scraper.
+     * The Amazon Resource Name (ARN) of the scraper.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this scraper.
+     *        The Amazon Resource Name (ARN) of the scraper.
      */
 
     public void setArn(String arn) {
@@ -191,10 +151,10 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this scraper.
+     * The Amazon Resource Name (ARN) of the scraper.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of this scraper.
+     * @return The Amazon Resource Name (ARN) of the scraper.
      */
 
     public String getArn() {
@@ -203,11 +163,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of this scraper.
+     * The Amazon Resource Name (ARN) of the scraper.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of this scraper.
+     *        The Amazon Resource Name (ARN) of the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,97 +178,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover, collect,
-     * and produce metrics on your behalf.
-     * </p>
-     * 
-     * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover,
-     *        collect, and produce metrics on your behalf.
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover, collect,
-     * and produce metrics on your behalf.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover,
-     *         collect, and produce metrics on your behalf.
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover, collect,
-     * and produce metrics on your behalf.
-     * </p>
-     * 
-     * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to dsicover,
-     *        collect, and produce metrics on your behalf.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ScraperSummary withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The status of this scraper.
-     * </p>
-     * 
-     * @param status
-     *        The status of this scraper.
-     */
-
-    public void setStatus(ScraperStatus status) {
-        this.status = status;
-    }
-
-    /**
-     * <p>
-     * The status of this scraper.
-     * </p>
-     * 
-     * @return The status of this scraper.
-     */
-
-    public ScraperStatus getStatus() {
-        return this.status;
-    }
-
-    /**
-     * <p>
-     * The status of this scraper.
-     * </p>
-     * 
-     * @param status
-     *        The status of this scraper.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ScraperSummary withStatus(ScraperStatus status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The time when the scraper was created.
+     * The date and time that the scraper was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the scraper was created.
+     *        The date and time that the scraper was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -317,10 +191,10 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the scraper was created.
+     * The date and time that the scraper was created.
      * </p>
      * 
-     * @return The time when the scraper was created.
+     * @return The date and time that the scraper was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -329,11 +203,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the scraper was created.
+     * The date and time that the scraper was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the scraper was created.
+     *        The date and time that the scraper was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -344,11 +218,51 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the scraper was last modified.
+     * The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     * </p>
+     * 
+     * @param destination
+     *        The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     */
+
+    public void setDestination(Destination destination) {
+        this.destination = destination;
+    }
+
+    /**
+     * <p>
+     * The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     * </p>
+     * 
+     * @return The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     */
+
+    public Destination getDestination() {
+        return this.destination;
+    }
+
+    /**
+     * <p>
+     * The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     * </p>
+     * 
+     * @param destination
+     *        The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScraperSummary withDestination(Destination destination) {
+        setDestination(destination);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time that the scraper was last modified.
      * </p>
      * 
      * @param lastModifiedAt
-     *        The time when the scraper was last modified.
+     *        The date and time that the scraper was last modified.
      */
 
     public void setLastModifiedAt(java.util.Date lastModifiedAt) {
@@ -357,10 +271,10 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the scraper was last modified.
+     * The date and time that the scraper was last modified.
      * </p>
      * 
-     * @return The time when the scraper was last modified.
+     * @return The date and time that the scraper was last modified.
      */
 
     public java.util.Date getLastModifiedAt() {
@@ -369,11 +283,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the scraper was last modified.
+     * The date and time that the scraper was last modified.
      * </p>
      * 
      * @param lastModifiedAt
-     *        The time when the scraper was last modified.
+     *        The date and time that the scraper was last modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -384,10 +298,216 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags of this scraper.
+     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and collect
+     * metrics on your behalf.
      * </p>
      * 
-     * @return The tags of this scraper.
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and
+     *        collect metrics on your behalf.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and collect
+     * metrics on your behalf.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and
+     *         collect metrics on your behalf.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and collect
+     * metrics on your behalf.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover and
+     *        collect metrics on your behalf.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScraperSummary withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the scraper.
+     * </p>
+     * 
+     * @param scraperId
+     *        The ID of the scraper.
+     */
+
+    public void setScraperId(String scraperId) {
+        this.scraperId = scraperId;
+    }
+
+    /**
+     * <p>
+     * The ID of the scraper.
+     * </p>
+     * 
+     * @return The ID of the scraper.
+     */
+
+    public String getScraperId() {
+        return this.scraperId;
+    }
+
+    /**
+     * <p>
+     * The ID of the scraper.
+     * </p>
+     * 
+     * @param scraperId
+     *        The ID of the scraper.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScraperSummary withScraperId(String scraperId) {
+        setScraperId(scraperId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS cluster from which the scraper collects metrics.
+     * </p>
+     * 
+     * @param source
+     *        The Amazon EKS cluster from which the scraper collects metrics.
+     */
+
+    public void setSource(Source source) {
+        this.source = source;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS cluster from which the scraper collects metrics.
+     * </p>
+     * 
+     * @return The Amazon EKS cluster from which the scraper collects metrics.
+     */
+
+    public Source getSource() {
+        return this.source;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS cluster from which the scraper collects metrics.
+     * </p>
+     * 
+     * @param source
+     *        The Amazon EKS cluster from which the scraper collects metrics.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScraperSummary withSource(Source source) {
+        setSource(source);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the current status of the scraper.
+     * </p>
+     * 
+     * @param status
+     *        A structure that contains the current status of the scraper.
+     */
+
+    public void setStatus(ScraperStatus status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the current status of the scraper.
+     * </p>
+     * 
+     * @return A structure that contains the current status of the scraper.
+     */
+
+    public ScraperStatus getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * A structure that contains the current status of the scraper.
+     * </p>
+     * 
+     * @param status
+     *        A structure that contains the current status of the scraper.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScraperSummary withStatus(ScraperStatus status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If there is a failure, the reason for the failure.
+     * </p>
+     * 
+     * @param statusReason
+     *        If there is a failure, the reason for the failure.
+     */
+
+    public void setStatusReason(String statusReason) {
+        this.statusReason = statusReason;
+    }
+
+    /**
+     * <p>
+     * If there is a failure, the reason for the failure.
+     * </p>
+     * 
+     * @return If there is a failure, the reason for the failure.
+     */
+
+    public String getStatusReason() {
+        return this.statusReason;
+    }
+
+    /**
+     * <p>
+     * If there is a failure, the reason for the failure.
+     * </p>
+     * 
+     * @param statusReason
+     *        If there is a failure, the reason for the failure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScraperSummary withStatusReason(String statusReason) {
+        setStatusReason(statusReason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Optional) The list of tag keys and values associated with the scraper.
+     * </p>
+     * 
+     * @return (Optional) The list of tag keys and values associated with the scraper.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -396,11 +516,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags of this scraper.
+     * (Optional) The list of tag keys and values associated with the scraper.
      * </p>
      * 
      * @param tags
-     *        The tags of this scraper.
+     *        (Optional) The list of tag keys and values associated with the scraper.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -409,11 +529,11 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags of this scraper.
+     * (Optional) The list of tag keys and values associated with the scraper.
      * </p>
      * 
      * @param tags
-     *        The tags of this scraper.
+     *        (Optional) The list of tag keys and values associated with the scraper.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -451,126 +571,6 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * The reason for failure if any.
-     * </p>
-     * 
-     * @param statusReason
-     *        The reason for failure if any.
-     */
-
-    public void setStatusReason(String statusReason) {
-        this.statusReason = statusReason;
-    }
-
-    /**
-     * <p>
-     * The reason for failure if any.
-     * </p>
-     * 
-     * @return The reason for failure if any.
-     */
-
-    public String getStatusReason() {
-        return this.statusReason;
-    }
-
-    /**
-     * <p>
-     * The reason for failure if any.
-     * </p>
-     * 
-     * @param statusReason
-     *        The reason for failure if any.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ScraperSummary withStatusReason(String statusReason) {
-        setStatusReason(statusReason);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The source that the scraper is discovering and collecting metrics from.
-     * </p>
-     * 
-     * @param source
-     *        The source that the scraper is discovering and collecting metrics from.
-     */
-
-    public void setSource(Source source) {
-        this.source = source;
-    }
-
-    /**
-     * <p>
-     * The source that the scraper is discovering and collecting metrics from.
-     * </p>
-     * 
-     * @return The source that the scraper is discovering and collecting metrics from.
-     */
-
-    public Source getSource() {
-        return this.source;
-    }
-
-    /**
-     * <p>
-     * The source that the scraper is discovering and collecting metrics from.
-     * </p>
-     * 
-     * @param source
-     *        The source that the scraper is discovering and collecting metrics from.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ScraperSummary withSource(Source source) {
-        setSource(source);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The destination that the scraper is producing metrics to.
-     * </p>
-     * 
-     * @param destination
-     *        The destination that the scraper is producing metrics to.
-     */
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
-    }
-
-    /**
-     * <p>
-     * The destination that the scraper is producing metrics to.
-     * </p>
-     * 
-     * @return The destination that the scraper is producing metrics to.
-     */
-
-    public Destination getDestination() {
-        return this.destination;
-    }
-
-    /**
-     * <p>
-     * The destination that the scraper is producing metrics to.
-     * </p>
-     * 
-     * @param destination
-     *        The destination that the scraper is producing metrics to.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ScraperSummary withDestination(Destination destination) {
-        setDestination(destination);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -584,26 +584,26 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAlias() != null)
             sb.append("Alias: ").append(getAlias()).append(",");
-        if (getScraperId() != null)
-            sb.append("ScraperId: ").append(getScraperId()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getDestination() != null)
+            sb.append("Destination: ").append(getDestination()).append(",");
         if (getLastModifiedAt() != null)
             sb.append("LastModifiedAt: ").append(getLastModifiedAt()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
-        if (getStatusReason() != null)
-            sb.append("StatusReason: ").append(getStatusReason()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getScraperId() != null)
+            sb.append("ScraperId: ").append(getScraperId()).append(",");
         if (getSource() != null)
             sb.append("Source: ").append(getSource()).append(",");
-        if (getDestination() != null)
-            sb.append("Destination: ").append(getDestination());
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getStatusReason() != null)
+            sb.append("StatusReason: ").append(getStatusReason()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -622,45 +622,45 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAlias() != null && other.getAlias().equals(this.getAlias()) == false)
             return false;
-        if (other.getScraperId() == null ^ this.getScraperId() == null)
-            return false;
-        if (other.getScraperId() != null && other.getScraperId().equals(this.getScraperId()) == false)
-            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
-            return false;
-        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
-            return false;
-        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
-            return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
-            return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
+        if (other.getDestination() == null ^ this.getDestination() == null)
+            return false;
+        if (other.getDestination() != null && other.getDestination().equals(this.getDestination()) == false)
+            return false;
         if (other.getLastModifiedAt() == null ^ this.getLastModifiedAt() == null)
             return false;
         if (other.getLastModifiedAt() != null && other.getLastModifiedAt().equals(this.getLastModifiedAt()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
-        if (other.getStatusReason() == null ^ this.getStatusReason() == null)
+        if (other.getScraperId() == null ^ this.getScraperId() == null)
             return false;
-        if (other.getStatusReason() != null && other.getStatusReason().equals(this.getStatusReason()) == false)
+        if (other.getScraperId() != null && other.getScraperId().equals(this.getScraperId()) == false)
             return false;
         if (other.getSource() == null ^ this.getSource() == null)
             return false;
         if (other.getSource() != null && other.getSource().equals(this.getSource()) == false)
             return false;
-        if (other.getDestination() == null ^ this.getDestination() == null)
+        if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
-        if (other.getDestination() != null && other.getDestination().equals(this.getDestination()) == false)
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getStatusReason() == null ^ this.getStatusReason() == null)
+            return false;
+        if (other.getStatusReason() != null && other.getStatusReason().equals(this.getStatusReason()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -671,16 +671,16 @@ public class ScraperSummary implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAlias() == null) ? 0 : getAlias().hashCode());
-        hashCode = prime * hashCode + ((getScraperId() == null) ? 0 : getScraperId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
-        hashCode = prime * hashCode + ((getLastModifiedAt() == null) ? 0 : getLastModifiedAt().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
-        hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
-        hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedAt() == null) ? 0 : getLastModifiedAt().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getScraperId() == null) ? 0 : getScraperId().hashCode());
+        hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

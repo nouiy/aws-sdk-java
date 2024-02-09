@@ -27,20 +27,27 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the resource.
+     * The ARN of the workspace or rule groups namespace to apply tags to.
      * </p>
      */
     private String resourceArn;
-
+    /**
+     * <p>
+     * The list of tag keys and values to associate with the resource.
+     * </p>
+     * <p>
+     * Keys may not begin with <code>aws:</code>.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The ARN of the resource.
+     * The ARN of the workspace or rule groups namespace to apply tags to.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the resource.
+     *        The ARN of the workspace or rule groups namespace to apply tags to.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -49,10 +56,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the resource.
+     * The ARN of the workspace or rule groups namespace to apply tags to.
      * </p>
      * 
-     * @return The ARN of the resource.
+     * @return The ARN of the workspace or rule groups namespace to apply tags to.
      */
 
     public String getResourceArn() {
@@ -61,11 +68,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the resource.
+     * The ARN of the workspace or rule groups namespace to apply tags to.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the resource.
+     *        The ARN of the workspace or rule groups namespace to apply tags to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -75,7 +82,16 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The list of tag keys and values to associate with the resource.
+     * </p>
+     * <p>
+     * Keys may not begin with <code>aws:</code>.
+     * </p>
+     * 
+     * @return The list of tag keys and values to associate with the resource.</p>
+     *         <p>
+     *         Keys may not begin with <code>aws:</code>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -83,7 +99,17 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The list of tag keys and values to associate with the resource.
+     * </p>
+     * <p>
+     * Keys may not begin with <code>aws:</code>.
+     * </p>
+     * 
      * @param tags
+     *        The list of tag keys and values to associate with the resource.</p>
+     *        <p>
+     *        Keys may not begin with <code>aws:</code>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -91,7 +117,17 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The list of tag keys and values to associate with the resource.
+     * </p>
+     * <p>
+     * Keys may not begin with <code>aws:</code>.
+     * </p>
+     * 
      * @param tags
+     *        The list of tag keys and values to associate with the resource.</p>
+     *        <p>
+     *        Keys may not begin with <code>aws:</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

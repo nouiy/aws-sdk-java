@@ -108,8 +108,7 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     * provided for child jobs of array jobs or multi-node parallel jobs.
+     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      * </p>
      */
     private Long startedAt;
@@ -814,14 +813,12 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     * provided for child jobs of array jobs or multi-node parallel jobs.
+     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      * </p>
      * 
      * @param startedAt
      *        The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     *        transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     *        provided for child jobs of array jobs or multi-node parallel jobs.
+     *        transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      */
 
     public void setStartedAt(Long startedAt) {
@@ -831,13 +828,11 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     * provided for child jobs of array jobs or multi-node parallel jobs.
+     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      * </p>
      * 
      * @return The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     *         transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     *         provided for child jobs of array jobs or multi-node parallel jobs.
+     *         transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      */
 
     public Long getStartedAt() {
@@ -847,14 +842,12 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     * provided for child jobs of array jobs or multi-node parallel jobs.
+     * transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      * </p>
      * 
      * @param startedAt
      *        The Unix timestamp (in milliseconds) for when the job was started. More specifically, it's when the job
-     *        transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state. This parameter isn't
-     *        provided for child jobs of array jobs or multi-node parallel jobs.
+     *        transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

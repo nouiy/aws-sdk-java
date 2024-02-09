@@ -102,7 +102,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </dl>
      * <p>
      * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
      * instance.
@@ -127,12 +127,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and the
+     * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
-     * instance. For example, no more than a single instance from among those specified in your compute environment is
-     * allocated.
+     * instance.
      * </p>
      * </note>
      */
@@ -245,9 +244,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
     private String ec2KeyPair;
     /**
      * <p>
-     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify the
-     * short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     * <code> <i>ecsInstanceRole</i> </code> or
+     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter is
+     * required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name (ARN) of an
+     * instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
      * instance role</a> in the <i>Batch User Guide</i>.
@@ -577,7 +576,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </dl>
      * <p>
      * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
      * instance.
@@ -637,10 +636,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        </dl>
      *        <p>
      *        With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
-     *        <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to
-     *        meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a
-     *        single instance.
+     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and
+     *        the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
+     *        to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
+     *        a single instance.
      * @see CRAllocationStrategy
      */
 
@@ -705,7 +704,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </dl>
      * <p>
      * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
      * instance.
@@ -765,10 +764,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         </dl>
      *         <p>
      *         With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *         <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
-     *         <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to
-     *         meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a
-     *         single instance.
+     *         <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances,
+     *         and the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed
+     *         <code>maxvCpus</code> to meet your capacity requirements. In this event, Batch never exceeds
+     *         <code>maxvCpus</code> by more than a single instance.
      * @see CRAllocationStrategy
      */
 
@@ -833,7 +832,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </dl>
      * <p>
      * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
      * instance.
@@ -893,10 +892,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        </dl>
      *        <p>
      *        With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
-     *        <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to
-     *        meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a
-     *        single instance.
+     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and
+     *        the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
+     *        to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
+     *        a single instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CRAllocationStrategy
      */
@@ -963,7 +962,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </dl>
      * <p>
      * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
      * instance.
@@ -1023,10 +1022,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        </dl>
      *        <p>
      *        With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
-     *        <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to
-     *        meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a
-     *        single instance.
+     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and
+     *        the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
+     *        to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
+     *        a single instance.
      * @see CRAllocationStrategy
      */
 
@@ -1091,7 +1090,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </dl>
      * <p>
      * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
      * instance.
@@ -1151,10 +1150,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        </dl>
      *        <p>
      *        With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> strategies using On-Demand or Spot Instances, and the
-     *        <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to
-     *        meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a
-     *        single instance.
+     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and
+     *        the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
+     *        to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
+     *        a single instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CRAllocationStrategy
      */
@@ -1240,24 +1239,22 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and the
+     * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
-     * instance. For example, no more than a single instance from among those specified in your compute environment is
-     * allocated.
+     * instance.
      * </p>
      * </note>
      * 
      * @param maxvCpus
      *        The maximum number of vCPUs that a compute environment can support.</p> <note>
      *        <p>
-     *        With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and
+     *        With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and
      *        the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
      *        to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
-     *        a single instance. For example, no more than a single instance from among those specified in your compute
-     *        environment is allocated.
+     *        a single instance.
      *        </p>
      */
 
@@ -1271,23 +1268,21 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and the
+     * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
-     * instance. For example, no more than a single instance from among those specified in your compute environment is
-     * allocated.
+     * instance.
      * </p>
      * </note>
      * 
      * @return The maximum number of vCPUs that a compute environment can support.</p> <note>
      *         <p>
-     *         With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *         <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and
-     *         the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
-     *         to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
-     *         a single instance. For example, no more than a single instance from among those specified in your compute
-     *         environment is allocated.
+     *         With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     *         <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances,
+     *         and the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed
+     *         <code>maxvCpus</code> to meet your capacity requirements. In this event, Batch never exceeds
+     *         <code>maxvCpus</code> by more than a single instance.
      *         </p>
      */
 
@@ -1301,24 +1296,22 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <note>
      * <p>
-     * With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and the
+     * With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     * <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and the
      * <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code> to meet
      * your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single
-     * instance. For example, no more than a single instance from among those specified in your compute environment is
-     * allocated.
+     * instance.
      * </p>
      * </note>
      * 
      * @param maxvCpus
      *        The maximum number of vCPUs that a compute environment can support.</p> <note>
      *        <p>
-     *        With <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> and
-     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> allocation strategies using On-Demand or Spot Instances, and
+     *        With <code>BEST_FIT_PROGRESSIVE</code>,<code>SPOT_CAPACITY_OPTIMIZED</code> and
+     *        <code>SPOT_PRICE_CAPACITY_OPTIMIZED</code> (recommended) strategies using On-Demand or Spot Instances, and
      *        the <code>BEST_FIT</code> strategy using Spot Instances, Batch might need to exceed <code>maxvCpus</code>
      *        to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than
-     *        a single instance. For example, no more than a single instance from among those specified in your compute
-     *        environment is allocated.
+     *        a single instance.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2138,9 +2131,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify the
-     * short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     * <code> <i>ecsInstanceRole</i> </code> or
+     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter is
+     * required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name (ARN) of an
+     * instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
      * instance role</a> in the <i>Batch User Guide</i>.
@@ -2152,9 +2145,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </note>
      * 
      * @param instanceRole
-     *        The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify
-     *        the short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     *        <code> <i>ecsInstanceRole</i> </code> or
+     *        The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter
+     *        is required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name
+     *        (ARN) of an instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      *        <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance
@@ -2170,9 +2163,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify the
-     * short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     * <code> <i>ecsInstanceRole</i> </code> or
+     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter is
+     * required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name (ARN) of an
+     * instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
      * instance role</a> in the <i>Batch User Guide</i>.
@@ -2183,9 +2176,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * </note>
      * 
-     * @return The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify
-     *         the short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     *         <code> <i>ecsInstanceRole</i> </code> or
+     * @return The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter
+     *         is required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name
+     *         (ARN) of an instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      *         <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For
      *         more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance
@@ -2201,9 +2194,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify the
-     * short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     * <code> <i>ecsInstanceRole</i> </code> or
+     * The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter is
+     * required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name (ARN) of an
+     * instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
      * instance role</a> in the <i>Batch User Guide</i>.
@@ -2215,9 +2208,9 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </note>
      * 
      * @param instanceRole
-     *        The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify
-     *        the short name or full Amazon Resource Name (ARN) of an instance profile. For example,
-     *        <code> <i>ecsInstanceRole</i> </code> or
+     *        The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. This parameter
+     *        is required for Amazon EC2 instances types. You can specify the short name or full Amazon Resource Name
+     *        (ARN) of an instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or
      *        <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance

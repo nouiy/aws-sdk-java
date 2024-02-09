@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a DescribeLoggingConfiguration operation.
+ * Represents the input of a <code>DescribeLoggingConfiguration</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeLoggingConfiguration" target="_top">AWS
@@ -30,18 +30,18 @@ public class DescribeLoggingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * The ID of the workspace to describe the logging configuration for.
      * </p>
      */
     private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * The ID of the workspace to describe the logging configuration for.
      * </p>
      * 
      * @param workspaceId
-     *        The ID of the workspace to vend logs to.
+     *        The ID of the workspace to describe the logging configuration for.
      */
 
     public void setWorkspaceId(String workspaceId) {
@@ -50,10 +50,10 @@ public class DescribeLoggingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * The ID of the workspace to describe the logging configuration for.
      * </p>
      * 
-     * @return The ID of the workspace to vend logs to.
+     * @return The ID of the workspace to describe the logging configuration for.
      */
 
     public String getWorkspaceId() {
@@ -62,11 +62,11 @@ public class DescribeLoggingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the workspace to vend logs to.
+     * The ID of the workspace to describe the logging configuration for.
      * </p>
      * 
      * @param workspaceId
-     *        The ID of the workspace to vend logs to.
+     *        The ID of the workspace to describe the logging configuration for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

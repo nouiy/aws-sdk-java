@@ -284,8 +284,18 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private EphemeralStorage ephemeralStorage;
-
+    /**
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     */
     private RuntimePlatform runtimePlatform;
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     */
+    private RepositoryCredentials repositoryCredentials;
 
     /**
      * <p>
@@ -2225,7 +2235,12 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     * 
      * @param runtimePlatform
+     *        An object that represents the compute environment architecture for Batch jobs on Fargate.
      */
 
     public void setRuntimePlatform(RuntimePlatform runtimePlatform) {
@@ -2233,7 +2248,11 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     * 
+     * @return An object that represents the compute environment architecture for Batch jobs on Fargate.
      */
 
     public RuntimePlatform getRuntimePlatform() {
@@ -2241,12 +2260,57 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * An object that represents the compute environment architecture for Batch jobs on Fargate.
+     * </p>
+     * 
      * @param runtimePlatform
+     *        An object that represents the compute environment architecture for Batch jobs on Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ContainerDetail withRuntimePlatform(RuntimePlatform runtimePlatform) {
         setRuntimePlatform(runtimePlatform);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     * 
+     * @param repositoryCredentials
+     *        The private repository authentication credentials to use.
+     */
+
+    public void setRepositoryCredentials(RepositoryCredentials repositoryCredentials) {
+        this.repositoryCredentials = repositoryCredentials;
+    }
+
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     * 
+     * @return The private repository authentication credentials to use.
+     */
+
+    public RepositoryCredentials getRepositoryCredentials() {
+        return this.repositoryCredentials;
+    }
+
+    /**
+     * <p>
+     * The private repository authentication credentials to use.
+     * </p>
+     * 
+     * @param repositoryCredentials
+     *        The private repository authentication credentials to use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerDetail withRepositoryCredentials(RepositoryCredentials repositoryCredentials) {
+        setRepositoryCredentials(repositoryCredentials);
         return this;
     }
 
@@ -2317,7 +2381,9 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
         if (getEphemeralStorage() != null)
             sb.append("EphemeralStorage: ").append(getEphemeralStorage()).append(",");
         if (getRuntimePlatform() != null)
-            sb.append("RuntimePlatform: ").append(getRuntimePlatform());
+            sb.append("RuntimePlatform: ").append(getRuntimePlatform()).append(",");
+        if (getRepositoryCredentials() != null)
+            sb.append("RepositoryCredentials: ").append(getRepositoryCredentials());
         sb.append("}");
         return sb.toString();
     }
@@ -2444,6 +2510,10 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getRuntimePlatform() != null && other.getRuntimePlatform().equals(this.getRuntimePlatform()) == false)
             return false;
+        if (other.getRepositoryCredentials() == null ^ this.getRepositoryCredentials() == null)
+            return false;
+        if (other.getRepositoryCredentials() != null && other.getRepositoryCredentials().equals(this.getRepositoryCredentials()) == false)
+            return false;
         return true;
     }
 
@@ -2480,6 +2550,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getFargatePlatformConfiguration() == null) ? 0 : getFargatePlatformConfiguration().hashCode());
         hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
         hashCode = prime * hashCode + ((getRuntimePlatform() == null) ? 0 : getRuntimePlatform().hashCode());
+        hashCode = prime * hashCode + ((getRepositoryCredentials() == null) ? 0 : getRepositoryCredentials().hashCode());
         return hashCode;
     }
 

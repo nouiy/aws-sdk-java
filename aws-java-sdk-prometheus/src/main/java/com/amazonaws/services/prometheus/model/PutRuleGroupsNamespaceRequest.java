@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a PutRuleGroupsNamespace operation.
+ * Represents the input of a <code>PutRuleGroupsNamespace</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/PutRuleGroupsNamespace" target="_top">AWS API
@@ -30,112 +30,82 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ID of the workspace in which to update the rule group namespace.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      */
-    private String workspaceId;
+    private String clientToken;
     /**
      * <p>
-     * The rule groups namespace name.
+     * The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.
      * </p>
-     */
-    private String name;
-    /**
      * <p>
-     * The namespace data that define the rule groups.
+     * For details about the rule groups namespace structure, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     * >RuleGroupsNamespaceData</a>.
      * </p>
      */
     private java.nio.ByteBuffer data;
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The name of the rule groups namespace that you are updating.
      * </p>
      */
-    private String clientToken;
+    private String name;
+    /**
+     * <p>
+     * The ID of the workspace where you are updating the rule groups namespace.
+     * </p>
+     */
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace in which to update the rule group namespace.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace in which to update the rule group namespace.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace in which to update the rule group namespace.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @return The ID of the workspace in which to update the rule group namespace.
+     * @return A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace in which to update the rule group namespace.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace in which to update the rule group namespace.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public PutRuleGroupsNamespaceRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
+    public PutRuleGroupsNamespaceRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
         return this;
     }
 
     /**
      * <p>
-     * The rule groups namespace name.
+     * The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.
      * </p>
-     * 
-     * @param name
-     *        The rule groups namespace name.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
      * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @return The rule groups namespace name.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The rule groups namespace name.
-     * </p>
-     * 
-     * @param name
-     *        The rule groups namespace name.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PutRuleGroupsNamespaceRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The namespace data that define the rule groups.
+     * For details about the rule groups namespace structure, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     * >RuleGroupsNamespaceData</a>.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -149,7 +119,11 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param data
-     *        The namespace data that define the rule groups.
+     *        The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.</p>
+     *        <p>
+     *        For details about the rule groups namespace structure, see <a
+     *        href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     *        >RuleGroupsNamespaceData</a>.
      */
 
     public void setData(java.nio.ByteBuffer data) {
@@ -158,7 +132,12 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The namespace data that define the rule groups.
+     * The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.
+     * </p>
+     * <p>
+     * For details about the rule groups namespace structure, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     * >RuleGroupsNamespaceData</a>.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -168,7 +147,11 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
      * {@code position}.
      * </p>
      * 
-     * @return The namespace data that define the rule groups.
+     * @return The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.</p>
+     *         <p>
+     *         For details about the rule groups namespace structure, see <a
+     *         href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     *         >RuleGroupsNamespaceData</a>.
      */
 
     public java.nio.ByteBuffer getData() {
@@ -177,7 +160,12 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The namespace data that define the rule groups.
+     * The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.
+     * </p>
+     * <p>
+     * For details about the rule groups namespace structure, see <a
+     * href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     * >RuleGroupsNamespaceData</a>.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -191,7 +179,11 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param data
-     *        The namespace data that define the rule groups.
+     *        The new rules file to use in the namespace. A base64-encoded version of the YAML rule groups file.</p>
+     *        <p>
+     *        For details about the rule groups namespace structure, see <a
+     *        href="https://docs.aws.amazon.com/prometheus/latest/APIReference/yaml-RuleGroupsNamespaceData.html"
+     *        >RuleGroupsNamespaceData</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,41 +194,81 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The name of the rule groups namespace that you are updating.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param name
+     *        The name of the rule groups namespace that you are updating.
      */
 
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The name of the rule groups namespace that you are updating.
      * </p>
      * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @return The name of the rule groups namespace that you are updating.
      */
 
-    public String getClientToken() {
-        return this.clientToken;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The name of the rule groups namespace that you are updating.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param name
+     *        The name of the rule groups namespace that you are updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public PutRuleGroupsNamespaceRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
+    public PutRuleGroupsNamespaceRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace where you are updating the rule groups namespace.
+     * </p>
+     * 
+     * @param workspaceId
+     *        The ID of the workspace where you are updating the rule groups namespace.
+     */
+
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace where you are updating the rule groups namespace.
+     * </p>
+     * 
+     * @return The ID of the workspace where you are updating the rule groups namespace.
+     */
+
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    /**
+     * <p>
+     * The ID of the workspace where you are updating the rule groups namespace.
+     * </p>
+     * 
+     * @param workspaceId
+     *        The ID of the workspace where you are updating the rule groups namespace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutRuleGroupsNamespaceRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -252,14 +284,14 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getData() != null)
             sb.append("Data: ").append(getData()).append(",");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -274,21 +306,21 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof PutRuleGroupsNamespaceRequest == false)
             return false;
         PutRuleGroupsNamespaceRequest other = (PutRuleGroupsNamespaceRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getData() == null ^ this.getData() == null)
             return false;
         if (other.getData() != null && other.getData().equals(this.getData()) == false)
             return false;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+            return false;
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -298,10 +330,10 @@ public class PutRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getData() == null) ? 0 : getData().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getData() == null) ? 0 : getData().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

@@ -56,7 +56,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs with a
      * higher scheduling priority are scheduled before jobs with a lower scheduling priority. This overrides any
-     * scheduling priority in the job definition.
+     * scheduling priority in the job definition and works only within a single share identifier.
      * </p>
      * <p>
      * The minimum supported value is 0 and the maximum supported value is 9999.
@@ -328,7 +328,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs with a
      * higher scheduling priority are scheduled before jobs with a lower scheduling priority. This overrides any
-     * scheduling priority in the job definition.
+     * scheduling priority in the job definition and works only within a single share identifier.
      * </p>
      * <p>
      * The minimum supported value is 0 and the maximum supported value is 9999.
@@ -337,7 +337,8 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * @param schedulingPriorityOverride
      *        The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs
      *        with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. This
-     *        overrides any scheduling priority in the job definition.</p>
+     *        overrides any scheduling priority in the job definition and works only within a single share
+     *        identifier.</p>
      *        <p>
      *        The minimum supported value is 0 and the maximum supported value is 9999.
      */
@@ -350,7 +351,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs with a
      * higher scheduling priority are scheduled before jobs with a lower scheduling priority. This overrides any
-     * scheduling priority in the job definition.
+     * scheduling priority in the job definition and works only within a single share identifier.
      * </p>
      * <p>
      * The minimum supported value is 0 and the maximum supported value is 9999.
@@ -358,7 +359,8 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @return The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs
      *         with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. This
-     *         overrides any scheduling priority in the job definition.</p>
+     *         overrides any scheduling priority in the job definition and works only within a single share
+     *         identifier.</p>
      *         <p>
      *         The minimum supported value is 0 and the maximum supported value is 9999.
      */
@@ -371,7 +373,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs with a
      * higher scheduling priority are scheduled before jobs with a lower scheduling priority. This overrides any
-     * scheduling priority in the job definition.
+     * scheduling priority in the job definition and works only within a single share identifier.
      * </p>
      * <p>
      * The minimum supported value is 0 and the maximum supported value is 9999.
@@ -380,7 +382,8 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * @param schedulingPriorityOverride
      *        The scheduling priority for the job. This only affects jobs in job queues with a fair share policy. Jobs
      *        with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. This
-     *        overrides any scheduling priority in the job definition.</p>
+     *        overrides any scheduling priority in the job definition and works only within a single share
+     *        identifier.</p>
      *        <p>
      *        The minimum supported value is 0 and the maximum supported value is 9999.
      * @return Returns a reference to this object so that method calls can be chained together.

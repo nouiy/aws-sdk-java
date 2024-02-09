@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a summary of the properties of a workspace.
+ * The information about one Amazon Managed Service for Prometheus workspace in your account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/WorkspaceSummary" target="_top">AWS API
@@ -30,94 +30,54 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     */
-    private String workspaceId;
-    /**
-     * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      */
     private String alias;
     /**
      * <p>
-     * The AmazonResourceName of this workspace.
+     * The ARN of the workspace.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The status of this workspace.
-     * </p>
-     */
-    private WorkspaceStatus status;
-    /**
-     * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The tags of this workspace.
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * </p>
+     */
+    private String kmsKeyArn;
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     */
+    private WorkspaceStatus status;
+    /**
+     * <p>
+     * The list of tag keys and values that are associated with the workspace.
      * </p>
      */
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * Customer managed KMS key ARN for this workspace
+     * The unique ID for the workspace.
      * </p>
      */
-    private String kmsKeyArn;
+    private String workspaceId;
 
     /**
      * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     * 
-     * @param workspaceId
-     *        Unique string identifying this workspace.
-     */
-
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-    }
-
-    /**
-     * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     * 
-     * @return Unique string identifying this workspace.
-     */
-
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
-    /**
-     * <p>
-     * Unique string identifying this workspace.
-     * </p>
-     * 
-     * @param workspaceId
-     *        Unique string identifying this workspace.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WorkspaceSummary withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      * 
      * @param alias
-     *        Alias of this workspace.
+     *        The alias that is assigned to this workspace to help identify it. It may not be unique.
      */
 
     public void setAlias(String alias) {
@@ -126,10 +86,10 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      * 
-     * @return Alias of this workspace.
+     * @return The alias that is assigned to this workspace to help identify it. It may not be unique.
      */
 
     public String getAlias() {
@@ -138,11 +98,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Alias of this workspace.
+     * The alias that is assigned to this workspace to help identify it. It may not be unique.
      * </p>
      * 
      * @param alias
-     *        Alias of this workspace.
+     *        The alias that is assigned to this workspace to help identify it. It may not be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,11 +113,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AmazonResourceName of this workspace.
+     * The ARN of the workspace.
      * </p>
      * 
      * @param arn
-     *        The AmazonResourceName of this workspace.
+     *        The ARN of the workspace.
      */
 
     public void setArn(String arn) {
@@ -166,10 +126,10 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AmazonResourceName of this workspace.
+     * The ARN of the workspace.
      * </p>
      * 
-     * @return The AmazonResourceName of this workspace.
+     * @return The ARN of the workspace.
      */
 
     public String getArn() {
@@ -178,11 +138,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AmazonResourceName of this workspace.
+     * The ARN of the workspace.
      * </p>
      * 
      * @param arn
-     *        The AmazonResourceName of this workspace.
+     *        The ARN of the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,51 +153,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status of this workspace.
-     * </p>
-     * 
-     * @param status
-     *        The status of this workspace.
-     */
-
-    public void setStatus(WorkspaceStatus status) {
-        this.status = status;
-    }
-
-    /**
-     * <p>
-     * The status of this workspace.
-     * </p>
-     * 
-     * @return The status of this workspace.
-     */
-
-    public WorkspaceStatus getStatus() {
-        return this.status;
-    }
-
-    /**
-     * <p>
-     * The status of this workspace.
-     * </p>
-     * 
-     * @param status
-     *        The status of this workspace.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WorkspaceSummary withStatus(WorkspaceStatus status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the workspace was created.
+     *        The date and time that the workspace was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -246,10 +166,10 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      * 
-     * @return The time when the workspace was created.
+     * @return The date and time that the workspace was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -258,11 +178,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The time when the workspace was created.
+     * The date and time that the workspace was created.
      * </p>
      * 
      * @param createdAt
-     *        The time when the workspace was created.
+     *        The date and time that the workspace was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,10 +193,90 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags of this workspace.
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
      * </p>
      * 
-     * @return The tags of this workspace.
+     * @param kmsKeyArn
+     *        (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     */
+
+    public void setKmsKeyArn(String kmsKeyArn) {
+        this.kmsKeyArn = kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * </p>
+     * 
+     * @return (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     */
+
+    public String getKmsKeyArn() {
+        return this.kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * </p>
+     * 
+     * @param kmsKeyArn
+     *        (optional) If the workspace was created with a customer managed KMS key, the ARN for the key used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceSummary withKmsKeyArn(String kmsKeyArn) {
+        setKmsKeyArn(kmsKeyArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the workspace.
+     */
+
+    public void setStatus(WorkspaceStatus status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     * 
+     * @return The current status of the workspace.
+     */
+
+    public WorkspaceStatus getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The current status of the workspace.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceSummary withStatus(WorkspaceStatus status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of tag keys and values that are associated with the workspace.
+     * </p>
+     * 
+     * @return The list of tag keys and values that are associated with the workspace.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -285,11 +285,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags of this workspace.
+     * The list of tag keys and values that are associated with the workspace.
      * </p>
      * 
      * @param tags
-     *        The tags of this workspace.
+     *        The list of tag keys and values that are associated with the workspace.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -298,11 +298,11 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags of this workspace.
+     * The list of tag keys and values that are associated with the workspace.
      * </p>
      * 
      * @param tags
-     *        The tags of this workspace.
+     *        The list of tag keys and values that are associated with the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -341,41 +341,41 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Customer managed KMS key ARN for this workspace
+     * The unique ID for the workspace.
      * </p>
      * 
-     * @param kmsKeyArn
-     *        Customer managed KMS key ARN for this workspace
+     * @param workspaceId
+     *        The unique ID for the workspace.
      */
 
-    public void setKmsKeyArn(String kmsKeyArn) {
-        this.kmsKeyArn = kmsKeyArn;
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
     }
 
     /**
      * <p>
-     * Customer managed KMS key ARN for this workspace
+     * The unique ID for the workspace.
      * </p>
      * 
-     * @return Customer managed KMS key ARN for this workspace
+     * @return The unique ID for the workspace.
      */
 
-    public String getKmsKeyArn() {
-        return this.kmsKeyArn;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     /**
      * <p>
-     * Customer managed KMS key ARN for this workspace
+     * The unique ID for the workspace.
      * </p>
      * 
-     * @param kmsKeyArn
-     *        Customer managed KMS key ARN for this workspace
+     * @param workspaceId
+     *        The unique ID for the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public WorkspaceSummary withKmsKeyArn(String kmsKeyArn) {
-        setKmsKeyArn(kmsKeyArn);
+    public WorkspaceSummary withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -391,20 +391,20 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
         if (getAlias() != null)
             sb.append("Alias: ").append(getAlias()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getKmsKeyArn() != null)
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
-        if (getKmsKeyArn() != null)
-            sb.append("KmsKeyArn: ").append(getKmsKeyArn());
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -419,10 +419,6 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
         if (obj instanceof WorkspaceSummary == false)
             return false;
         WorkspaceSummary other = (WorkspaceSummary) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
-            return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
-            return false;
         if (other.getAlias() == null ^ this.getAlias() == null)
             return false;
         if (other.getAlias() != null && other.getAlias().equals(this.getAlias()) == false)
@@ -431,21 +427,25 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
-            return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+            return false;
+        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
+            return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
-        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
-        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -455,13 +455,13 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getAlias() == null) ? 0 : getAlias().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

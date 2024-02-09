@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of a destination that a scraper can produce metrics to.
+ * Where to send the metrics from a scraper.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/Destination" target="_top">AWS API
@@ -30,18 +30,18 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A representation of an AMP destination.
+     * The Amazon Managed Service for Prometheusworkspace to send metrics to.
      * </p>
      */
     private AmpConfiguration ampConfiguration;
 
     /**
      * <p>
-     * A representation of an AMP destination.
+     * The Amazon Managed Service for Prometheusworkspace to send metrics to.
      * </p>
      * 
      * @param ampConfiguration
-     *        A representation of an AMP destination.
+     *        The Amazon Managed Service for Prometheusworkspace to send metrics to.
      */
 
     public void setAmpConfiguration(AmpConfiguration ampConfiguration) {
@@ -50,10 +50,10 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A representation of an AMP destination.
+     * The Amazon Managed Service for Prometheusworkspace to send metrics to.
      * </p>
      * 
-     * @return A representation of an AMP destination.
+     * @return The Amazon Managed Service for Prometheusworkspace to send metrics to.
      */
 
     public AmpConfiguration getAmpConfiguration() {
@@ -62,11 +62,11 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A representation of an AMP destination.
+     * The Amazon Managed Service for Prometheusworkspace to send metrics to.
      * </p>
      * 
      * @param ampConfiguration
-     *        A representation of an AMP destination.
+     *        The Amazon Managed Service for Prometheusworkspace to send metrics to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

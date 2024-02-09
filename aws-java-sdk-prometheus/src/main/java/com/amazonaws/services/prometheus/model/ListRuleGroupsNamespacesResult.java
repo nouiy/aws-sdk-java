@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Represents the output of a ListRuleGroupsNamespaces operation.
+ * Represents the output of a <code>ListRuleGroupsNamespaces</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListRuleGroupsNamespaces" target="_top">AWS API
@@ -28,23 +28,70 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of the selected rule groups namespaces.
-     * </p>
-     */
-    private java.util.List<RuleGroupsNamespaceSummary> ruleGroupsNamespaces;
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The returned list of rule groups namespaces.
+     * </p>
+     */
+    private java.util.List<RuleGroupsNamespaceSummary> ruleGroupsNamespaces;
 
     /**
      * <p>
-     * The list of the selected rule groups namespaces.
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
      * </p>
      * 
-     * @return The list of the selected rule groups namespaces.
+     * @param nextToken
+     *        A token indicating that there are more results to retrieve. You can use this token as part of your next
+     *        <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
+     * </p>
+     * 
+     * @return A token indicating that there are more results to retrieve. You can use this token as part of your next
+     *         <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * A token indicating that there are more results to retrieve. You can use this token as part of your next
+     * <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
+     * </p>
+     * 
+     * @param nextToken
+     *        A token indicating that there are more results to retrieve. You can use this token as part of your next
+     *        <code>ListRuleGroupsNamespaces</code> request to retrieve those results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRuleGroupsNamespacesResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The returned list of rule groups namespaces.
+     * </p>
+     * 
+     * @return The returned list of rule groups namespaces.
      */
 
     public java.util.List<RuleGroupsNamespaceSummary> getRuleGroupsNamespaces() {
@@ -53,11 +100,11 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of the selected rule groups namespaces.
+     * The returned list of rule groups namespaces.
      * </p>
      * 
      * @param ruleGroupsNamespaces
-     *        The list of the selected rule groups namespaces.
+     *        The returned list of rule groups namespaces.
      */
 
     public void setRuleGroupsNamespaces(java.util.Collection<RuleGroupsNamespaceSummary> ruleGroupsNamespaces) {
@@ -71,7 +118,7 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of the selected rule groups namespaces.
+     * The returned list of rule groups namespaces.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +127,7 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param ruleGroupsNamespaces
-     *        The list of the selected rule groups namespaces.
+     *        The returned list of rule groups namespaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,56 +143,16 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of the selected rule groups namespaces.
+     * The returned list of rule groups namespaces.
      * </p>
      * 
      * @param ruleGroupsNamespaces
-     *        The list of the selected rule groups namespaces.
+     *        The returned list of rule groups namespaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListRuleGroupsNamespacesResult withRuleGroupsNamespaces(java.util.Collection<RuleGroupsNamespaceSummary> ruleGroupsNamespaces) {
         setRuleGroupsNamespaces(ruleGroupsNamespaces);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
-     * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to use when requesting the next page in this list.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
-     * </p>
-     * 
-     * @return Pagination token to use when requesting the next page in this list.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Pagination token to use when requesting the next page in this list.
-     * </p>
-     * 
-     * @param nextToken
-     *        Pagination token to use when requesting the next page in this list.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRuleGroupsNamespacesResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
         return this;
     }
 
@@ -161,10 +168,10 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getRuleGroupsNamespaces() != null)
-            sb.append("RuleGroupsNamespaces: ").append(getRuleGroupsNamespaces()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getRuleGroupsNamespaces() != null)
+            sb.append("RuleGroupsNamespaces: ").append(getRuleGroupsNamespaces());
         sb.append("}");
         return sb.toString();
     }
@@ -179,13 +186,13 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
         if (obj instanceof ListRuleGroupsNamespacesResult == false)
             return false;
         ListRuleGroupsNamespacesResult other = (ListRuleGroupsNamespacesResult) obj;
-        if (other.getRuleGroupsNamespaces() == null ^ this.getRuleGroupsNamespaces() == null)
-            return false;
-        if (other.getRuleGroupsNamespaces() != null && other.getRuleGroupsNamespaces().equals(this.getRuleGroupsNamespaces()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getRuleGroupsNamespaces() == null ^ this.getRuleGroupsNamespaces() == null)
+            return false;
+        if (other.getRuleGroupsNamespaces() != null && other.getRuleGroupsNamespaces().equals(this.getRuleGroupsNamespaces()) == false)
             return false;
         return true;
     }
@@ -195,8 +202,8 @@ public class ListRuleGroupsNamespacesResult extends com.amazonaws.AmazonWebServi
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getRuleGroupsNamespaces() == null) ? 0 : getRuleGroupsNamespaces().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getRuleGroupsNamespaces() == null) ? 0 : getRuleGroupsNamespaces().hashCode());
         return hashCode;
     }
 

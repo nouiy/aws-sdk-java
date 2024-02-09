@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a DeleteScraper operation.
+ * Represents the input of a <code>DeleteScraper</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteScraper" target="_top">AWS API
@@ -30,16 +30,59 @@ public class DeleteScraperRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the request.
+     * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
      * The ID of the scraper to delete.
      * </p>
      */
     private String scraperId;
+
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the request.
      * </p>
+     * 
+     * @param clientToken
+     *        (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the
+     *        request.
      */
-    private String clientToken;
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the request.
+     * </p>
+     * 
+     * @return (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the
+     *         request.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the request.
+     * </p>
+     * 
+     * @param clientToken
+     *        (Optional) A unique, case-sensitive identifier that you can provide to ensure the idempotency of the
+     *        request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteScraperRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -82,46 +125,6 @@ public class DeleteScraperRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-     * </p>
-     * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-     */
-
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-    }
-
-    /**
-     * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-     * </p>
-     * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-     */
-
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-     * </p>
-     * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteScraperRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +136,10 @@ public class DeleteScraperRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getScraperId() != null)
-            sb.append("ScraperId: ").append(getScraperId()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getScraperId() != null)
+            sb.append("ScraperId: ").append(getScraperId());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +154,13 @@ public class DeleteScraperRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof DeleteScraperRequest == false)
             return false;
         DeleteScraperRequest other = (DeleteScraperRequest) obj;
-        if (other.getScraperId() == null ^ this.getScraperId() == null)
-            return false;
-        if (other.getScraperId() != null && other.getScraperId().equals(this.getScraperId()) == false)
-            return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
+        if (other.getScraperId() == null ^ this.getScraperId() == null)
+            return false;
+        if (other.getScraperId() != null && other.getScraperId().equals(this.getScraperId()) == false)
             return false;
         return true;
     }
@@ -167,8 +170,8 @@ public class DeleteScraperRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getScraperId() == null) ? 0 : getScraperId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getScraperId() == null) ? 0 : getScraperId().hashCode());
         return hashCode;
     }
 

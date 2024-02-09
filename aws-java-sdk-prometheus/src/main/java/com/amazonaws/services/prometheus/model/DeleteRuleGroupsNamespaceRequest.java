@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Represents the input of a DeleteRuleGroupsNamespace operation.
+ * Represents the input of a <code>DeleteRuleGroupsNamespace</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteRuleGroupsNamespace" target="_top">AWS API
@@ -30,70 +30,70 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of the workspace to delete rule group definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      */
-    private String workspaceId;
+    private String clientToken;
     /**
      * <p>
-     * The rule groups namespace name.
+     * The name of the rule groups namespace to delete.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace containing the rule groups namespace and definition to delete.
      * </p>
      */
-    private String clientToken;
+    private String workspaceId;
 
     /**
      * <p>
-     * The ID of the workspace to delete rule group definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace to delete rule group definition.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public void setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace to delete rule group definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @return The ID of the workspace to delete rule group definition.
+     * @return A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      */
 
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
      * <p>
-     * The ID of the workspace to delete rule group definition.
+     * A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * </p>
      * 
-     * @param workspaceId
-     *        The ID of the workspace to delete rule group definition.
+     * @param clientToken
+     *        A unique identifier that you can provide to ensure the idempotency of the request. Case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public DeleteRuleGroupsNamespaceRequest withWorkspaceId(String workspaceId) {
-        setWorkspaceId(workspaceId);
+    public DeleteRuleGroupsNamespaceRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
         return this;
     }
 
     /**
      * <p>
-     * The rule groups namespace name.
+     * The name of the rule groups namespace to delete.
      * </p>
      * 
      * @param name
-     *        The rule groups namespace name.
+     *        The name of the rule groups namespace to delete.
      */
 
     public void setName(String name) {
@@ -102,10 +102,10 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The rule groups namespace name.
+     * The name of the rule groups namespace to delete.
      * </p>
      * 
-     * @return The rule groups namespace name.
+     * @return The name of the rule groups namespace to delete.
      */
 
     public String getName() {
@@ -114,11 +114,11 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The rule groups namespace name.
+     * The name of the rule groups namespace to delete.
      * </p>
      * 
      * @param name
-     *        The rule groups namespace name.
+     *        The name of the rule groups namespace to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,41 +129,41 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace containing the rule groups namespace and definition to delete.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param workspaceId
+     *        The ID of the workspace containing the rule groups namespace and definition to delete.
      */
 
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public void setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace containing the rule groups namespace and definition to delete.
      * </p>
      * 
-     * @return Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @return The ID of the workspace containing the rule groups namespace and definition to delete.
      */
 
-    public String getClientToken() {
-        return this.clientToken;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     /**
      * <p>
-     * Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * The ID of the workspace containing the rule groups namespace and definition to delete.
      * </p>
      * 
-     * @param clientToken
-     *        Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+     * @param workspaceId
+     *        The ID of the workspace containing the rule groups namespace and definition to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public DeleteRuleGroupsNamespaceRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
+    public DeleteRuleGroupsNamespaceRequest withWorkspaceId(String workspaceId) {
+        setWorkspaceId(workspaceId);
         return this;
     }
 
@@ -179,12 +179,12 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWorkspaceId() != null)
-            sb.append("WorkspaceId: ").append(getWorkspaceId()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+        if (getWorkspaceId() != null)
+            sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -199,17 +199,17 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
         if (obj instanceof DeleteRuleGroupsNamespaceRequest == false)
             return false;
         DeleteRuleGroupsNamespaceRequest other = (DeleteRuleGroupsNamespaceRequest) obj;
-        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
-        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
+        if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+        if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class DeleteRuleGroupsNamespaceRequest extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }
 

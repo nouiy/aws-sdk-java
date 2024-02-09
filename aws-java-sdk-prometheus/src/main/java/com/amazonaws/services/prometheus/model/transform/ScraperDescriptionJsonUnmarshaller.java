@@ -52,51 +52,51 @@ public class ScraperDescriptionJsonUnmarshaller implements Unmarshaller<ScraperD
                     context.nextToken();
                     scraperDescription.setAlias(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("scraperId", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setScraperId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     scraperDescription.setArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("roleArn", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("status", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setStatus(ScraperStatusJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
                     scraperDescription.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("destination", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setDestination(DestinationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("lastModifiedAt", targetDepth)) {
                     context.nextToken();
                     scraperDescription.setLastModifiedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("roleArn", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("scrapeConfiguration", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setScrapeConfiguration(ScrapeConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("scraperId", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setScraperId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("source", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setSource(SourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setStatus(ScraperStatusJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("statusReason", targetDepth)) {
+                    context.nextToken();
+                    scraperDescription.setStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     scraperDescription
                             .setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                                     .unmarshall(context));
-                }
-                if (context.testExpression("statusReason", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("scrapeConfiguration", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setScrapeConfiguration(ScrapeConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("source", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setSource(SourceJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("destination", targetDepth)) {
-                    context.nextToken();
-                    scraperDescription.setDestination(DestinationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
