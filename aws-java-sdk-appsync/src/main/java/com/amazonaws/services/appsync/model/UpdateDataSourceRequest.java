@@ -102,6 +102,19 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private EventBridgeDataSourceConfig eventBridgeConfig;
+    /**
+     * <p>
+     * Enables or disables enhanced data source metrics for specified data sources. Note that <code>metricsConfig</code>
+     * won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is set to
+     * <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     * <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However, you
+     * can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     */
+    private String metricsConfig;
 
     /**
      * <p>
@@ -630,6 +643,117 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Enables or disables enhanced data source metrics for specified data sources. Note that <code>metricsConfig</code>
+     * won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is set to
+     * <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     * <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However, you
+     * can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param metricsConfig
+     *        Enables or disables enhanced data source metrics for specified data sources. Note that
+     *        <code>metricsConfig</code> won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is
+     *        set to <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     *        <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored.
+     *        However, you can still set its value.</p>
+     *        <p>
+     *        <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @see DataSourceLevelMetricsConfig
+     */
+
+    public void setMetricsConfig(String metricsConfig) {
+        this.metricsConfig = metricsConfig;
+    }
+
+    /**
+     * <p>
+     * Enables or disables enhanced data source metrics for specified data sources. Note that <code>metricsConfig</code>
+     * won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is set to
+     * <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     * <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However, you
+     * can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @return Enables or disables enhanced data source metrics for specified data sources. Note that
+     *         <code>metricsConfig</code> won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is
+     *         set to <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     *         <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored.
+     *         However, you can still set its value.</p>
+     *         <p>
+     *         <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @see DataSourceLevelMetricsConfig
+     */
+
+    public String getMetricsConfig() {
+        return this.metricsConfig;
+    }
+
+    /**
+     * <p>
+     * Enables or disables enhanced data source metrics for specified data sources. Note that <code>metricsConfig</code>
+     * won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is set to
+     * <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     * <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However, you
+     * can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param metricsConfig
+     *        Enables or disables enhanced data source metrics for specified data sources. Note that
+     *        <code>metricsConfig</code> won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is
+     *        set to <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     *        <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored.
+     *        However, you can still set its value.</p>
+     *        <p>
+     *        <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataSourceLevelMetricsConfig
+     */
+
+    public UpdateDataSourceRequest withMetricsConfig(String metricsConfig) {
+        setMetricsConfig(metricsConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables or disables enhanced data source metrics for specified data sources. Note that <code>metricsConfig</code>
+     * won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is set to
+     * <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     * <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However, you
+     * can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param metricsConfig
+     *        Enables or disables enhanced data source metrics for specified data sources. Note that
+     *        <code>metricsConfig</code> won't be used unless the <code>dataSourceLevelMetricsBehavior</code> value is
+     *        set to <code>PER_DATA_SOURCE_METRICS</code>. If the <code>dataSourceLevelMetricsBehavior</code> is set to
+     *        <code>FULL_REQUEST_DATA_SOURCE_METRICS</code> instead, <code>metricsConfig</code> will be ignored.
+     *        However, you can still set its value.</p>
+     *        <p>
+     *        <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataSourceLevelMetricsConfig
+     */
+
+    public UpdateDataSourceRequest withMetricsConfig(DataSourceLevelMetricsConfig metricsConfig) {
+        this.metricsConfig = metricsConfig.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -664,7 +788,9 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getRelationalDatabaseConfig() != null)
             sb.append("RelationalDatabaseConfig: ").append(getRelationalDatabaseConfig()).append(",");
         if (getEventBridgeConfig() != null)
-            sb.append("EventBridgeConfig: ").append(getEventBridgeConfig());
+            sb.append("EventBridgeConfig: ").append(getEventBridgeConfig()).append(",");
+        if (getMetricsConfig() != null)
+            sb.append("MetricsConfig: ").append(getMetricsConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -727,6 +853,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getEventBridgeConfig() != null && other.getEventBridgeConfig().equals(this.getEventBridgeConfig()) == false)
             return false;
+        if (other.getMetricsConfig() == null ^ this.getMetricsConfig() == null)
+            return false;
+        if (other.getMetricsConfig() != null && other.getMetricsConfig().equals(this.getMetricsConfig()) == false)
+            return false;
         return true;
     }
 
@@ -747,6 +877,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getHttpConfig() == null) ? 0 : getHttpConfig().hashCode());
         hashCode = prime * hashCode + ((getRelationalDatabaseConfig() == null) ? 0 : getRelationalDatabaseConfig().hashCode());
         hashCode = prime * hashCode + ((getEventBridgeConfig() == null) ? 0 : getEventBridgeConfig().hashCode());
+        hashCode = prime * hashCode + ((getMetricsConfig() == null) ? 0 : getMetricsConfig().hashCode());
         return hashCode;
     }
 

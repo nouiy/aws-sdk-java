@@ -165,6 +165,27 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * </ul>
      */
     private String type;
+    /**
+     * <p>
+     * Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     */
+    private String healthMetricsConfig;
 
     /**
      * <p>
@@ -1260,6 +1281,182 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param healthMetricsConfig
+     *        Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * @see CacheHealthMetricsConfig
+     */
+
+    public void setHealthMetricsConfig(String healthMetricsConfig) {
+        this.healthMetricsConfig = healthMetricsConfig;
+    }
+
+    /**
+     * <p>
+     * Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @return Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or
+     *         <code>DISABLED</code>.
+     * @see CacheHealthMetricsConfig
+     */
+
+    public String getHealthMetricsConfig() {
+        return this.healthMetricsConfig;
+    }
+
+    /**
+     * <p>
+     * Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param healthMetricsConfig
+     *        Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CacheHealthMetricsConfig
+     */
+
+    public CreateApiCacheRequest withHealthMetricsConfig(String healthMetricsConfig) {
+        setHealthMetricsConfig(healthMetricsConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param healthMetricsConfig
+     *        Controls how cache health metrics will be emitted to CloudWatch. Cache health metrics include:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Metrics will be recorded by API ID. You can set the value to <code>ENABLED</code> or <code>DISABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CacheHealthMetricsConfig
+     */
+
+    public CreateApiCacheRequest withHealthMetricsConfig(CacheHealthMetricsConfig healthMetricsConfig) {
+        this.healthMetricsConfig = healthMetricsConfig.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1282,7 +1479,9 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getApiCachingBehavior() != null)
             sb.append("ApiCachingBehavior: ").append(getApiCachingBehavior()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getHealthMetricsConfig() != null)
+            sb.append("HealthMetricsConfig: ").append(getHealthMetricsConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1321,6 +1520,10 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getHealthMetricsConfig() == null ^ this.getHealthMetricsConfig() == null)
+            return false;
+        if (other.getHealthMetricsConfig() != null && other.getHealthMetricsConfig().equals(this.getHealthMetricsConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1335,6 +1538,7 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getAtRestEncryptionEnabled() == null) ? 0 : getAtRestEncryptionEnabled().hashCode());
         hashCode = prime * hashCode + ((getApiCachingBehavior() == null) ? 0 : getApiCachingBehavior().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getHealthMetricsConfig() == null) ? 0 : getHealthMetricsConfig().hashCode());
         return hashCode;
     }
 

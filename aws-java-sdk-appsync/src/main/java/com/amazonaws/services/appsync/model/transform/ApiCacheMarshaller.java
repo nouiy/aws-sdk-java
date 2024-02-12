@@ -39,6 +39,8 @@ public class ApiCacheMarshaller {
             .marshallLocationName("type").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> HEALTHMETRICSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("healthMetricsConfig").build();
 
     private static final ApiCacheMarshaller instance = new ApiCacheMarshaller();
 
@@ -62,6 +64,7 @@ public class ApiCacheMarshaller {
             protocolMarshaller.marshall(apiCache.getAtRestEncryptionEnabled(), ATRESTENCRYPTIONENABLED_BINDING);
             protocolMarshaller.marshall(apiCache.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(apiCache.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(apiCache.getHealthMetricsConfig(), HEALTHMETRICSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

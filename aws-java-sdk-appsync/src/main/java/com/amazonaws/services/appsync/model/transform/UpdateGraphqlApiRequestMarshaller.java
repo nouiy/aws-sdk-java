@@ -56,6 +56,8 @@ public class UpdateGraphqlApiRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("queryDepthLimit").build();
     private static final MarshallingInfo<Integer> RESOLVERCOUNTLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolverCountLimit").build();
+    private static final MarshallingInfo<StructuredPojo> ENHANCEDMETRICSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedMetricsConfig").build();
 
     private static final UpdateGraphqlApiRequestMarshaller instance = new UpdateGraphqlApiRequestMarshaller();
 
@@ -87,6 +89,7 @@ public class UpdateGraphqlApiRequestMarshaller {
             protocolMarshaller.marshall(updateGraphqlApiRequest.getIntrospectionConfig(), INTROSPECTIONCONFIG_BINDING);
             protocolMarshaller.marshall(updateGraphqlApiRequest.getQueryDepthLimit(), QUERYDEPTHLIMIT_BINDING);
             protocolMarshaller.marshall(updateGraphqlApiRequest.getResolverCountLimit(), RESOLVERCOUNTLIMIT_BINDING);
+            protocolMarshaller.marshall(updateGraphqlApiRequest.getEnhancedMetricsConfig(), ENHANCEDMETRICSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

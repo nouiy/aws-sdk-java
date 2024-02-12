@@ -37,6 +37,8 @@ public class UpdateDomainContactRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TechContact").build();
     private static final MarshallingInfo<StructuredPojo> CONSENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Consent").build();
+    private static final MarshallingInfo<StructuredPojo> BILLINGCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BillingContact").build();
 
     private static final UpdateDomainContactRequestMarshaller instance = new UpdateDomainContactRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class UpdateDomainContactRequestMarshaller {
             protocolMarshaller.marshall(updateDomainContactRequest.getRegistrantContact(), REGISTRANTCONTACT_BINDING);
             protocolMarshaller.marshall(updateDomainContactRequest.getTechContact(), TECHCONTACT_BINDING);
             protocolMarshaller.marshall(updateDomainContactRequest.getConsent(), CONSENT_BINDING);
+            protocolMarshaller.marshall(updateDomainContactRequest.getBillingContact(), BILLINGCONTACT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

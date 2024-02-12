@@ -51,6 +51,8 @@ public class UpdateDataSourceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relationalDatabaseConfig").build();
     private static final MarshallingInfo<StructuredPojo> EVENTBRIDGECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eventBridgeConfig").build();
+    private static final MarshallingInfo<String> METRICSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metricsConfig").build();
 
     private static final UpdateDataSourceRequestMarshaller instance = new UpdateDataSourceRequestMarshaller();
 
@@ -80,6 +82,7 @@ public class UpdateDataSourceRequestMarshaller {
             protocolMarshaller.marshall(updateDataSourceRequest.getHttpConfig(), HTTPCONFIG_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getRelationalDatabaseConfig(), RELATIONALDATABASECONFIG_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getEventBridgeConfig(), EVENTBRIDGECONFIG_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getMetricsConfig(), METRICSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

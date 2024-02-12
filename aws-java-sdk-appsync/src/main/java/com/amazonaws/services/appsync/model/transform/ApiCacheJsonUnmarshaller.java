@@ -72,6 +72,10 @@ public class ApiCacheJsonUnmarshaller implements Unmarshaller<ApiCache, JsonUnma
                     context.nextToken();
                     apiCache.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("healthMetricsConfig", targetDepth)) {
+                    context.nextToken();
+                    apiCache.setHealthMetricsConfig(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -65,6 +65,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      * later.
      * </p>
      * </dd>
+     * <dt>INVALID_NAME_FOR_TLD</dt>
+     * <dd>
+     * <p>
+     * The TLD isn't valid. For example, it can contain characters that aren't allowed.
+     * </p>
+     * </dd>
      * <dt>PENDING</dt>
      * <dd>
      * <p>
@@ -139,6 +145,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      * later.
      * </p>
      * </dd>
+     * <dt>INVALID_NAME_FOR_TLD</dt>
+     * <dd>
+     * <p>
+     * The TLD isn't valid. For example, it can contain characters that aren't allowed.
+     * </p>
+     * </dd>
      * <dt>PENDING</dt>
      * <dd>
      * <p>
@@ -206,6 +218,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      *        The TLD registry didn't reply with a definitive answer about whether the domain name is available. Route
      *        53 can return this response for a variety of reasons, for example, the registry is performing maintenance.
      *        Try again later.
+     *        </p>
+     *        </dd>
+     *        <dt>INVALID_NAME_FOR_TLD</dt>
+     *        <dd>
+     *        <p>
+     *        The TLD isn't valid. For example, it can contain characters that aren't allowed.
      *        </p>
      *        </dd>
      *        <dt>PENDING</dt>
@@ -285,6 +303,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      * later.
      * </p>
      * </dd>
+     * <dt>INVALID_NAME_FOR_TLD</dt>
+     * <dd>
+     * <p>
+     * The TLD isn't valid. For example, it can contain characters that aren't allowed.
+     * </p>
+     * </dd>
      * <dt>PENDING</dt>
      * <dd>
      * <p>
@@ -351,6 +375,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      *         The TLD registry didn't reply with a definitive answer about whether the domain name is available. Route
      *         53 can return this response for a variety of reasons, for example, the registry is performing
      *         maintenance. Try again later.
+     *         </p>
+     *         </dd>
+     *         <dt>INVALID_NAME_FOR_TLD</dt>
+     *         <dd>
+     *         <p>
+     *         The TLD isn't valid. For example, it can contain characters that aren't allowed.
      *         </p>
      *         </dd>
      *         <dt>PENDING</dt>
@@ -430,6 +460,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      * later.
      * </p>
      * </dd>
+     * <dt>INVALID_NAME_FOR_TLD</dt>
+     * <dd>
+     * <p>
+     * The TLD isn't valid. For example, it can contain characters that aren't allowed.
+     * </p>
+     * </dd>
      * <dt>PENDING</dt>
      * <dd>
      * <p>
@@ -497,6 +533,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      *        The TLD registry didn't reply with a definitive answer about whether the domain name is available. Route
      *        53 can return this response for a variety of reasons, for example, the registry is performing maintenance.
      *        Try again later.
+     *        </p>
+     *        </dd>
+     *        <dt>INVALID_NAME_FOR_TLD</dt>
+     *        <dd>
+     *        <p>
+     *        The TLD isn't valid. For example, it can contain characters that aren't allowed.
      *        </p>
      *        </dd>
      *        <dt>PENDING</dt>
@@ -578,6 +620,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      * later.
      * </p>
      * </dd>
+     * <dt>INVALID_NAME_FOR_TLD</dt>
+     * <dd>
+     * <p>
+     * The TLD isn't valid. For example, it can contain characters that aren't allowed.
+     * </p>
+     * </dd>
      * <dt>PENDING</dt>
      * <dd>
      * <p>
@@ -645,6 +693,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      *        The TLD registry didn't reply with a definitive answer about whether the domain name is available. Route
      *        53 can return this response for a variety of reasons, for example, the registry is performing maintenance.
      *        Try again later.
+     *        </p>
+     *        </dd>
+     *        <dt>INVALID_NAME_FOR_TLD</dt>
+     *        <dd>
+     *        <p>
+     *        The TLD isn't valid. For example, it can contain characters that aren't allowed.
      *        </p>
      *        </dd>
      *        <dt>PENDING</dt>
@@ -724,6 +778,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      * later.
      * </p>
      * </dd>
+     * <dt>INVALID_NAME_FOR_TLD</dt>
+     * <dd>
+     * <p>
+     * The TLD isn't valid. For example, it can contain characters that aren't allowed.
+     * </p>
+     * </dd>
      * <dt>PENDING</dt>
      * <dd>
      * <p>
@@ -791,6 +851,12 @@ public class CheckDomainAvailabilityResult extends com.amazonaws.AmazonWebServic
      *        The TLD registry didn't reply with a definitive answer about whether the domain name is available. Route
      *        53 can return this response for a variety of reasons, for example, the registry is performing maintenance.
      *        Try again later.
+     *        </p>
+     *        </dd>
+     *        <dt>INVALID_NAME_FOR_TLD</dt>
+     *        <dd>
+     *        <p>
+     *        The TLD isn't valid. For example, it can contain characters that aren't allowed.
      *        </p>
      *        </dd>
      *        <dt>PENDING</dt>

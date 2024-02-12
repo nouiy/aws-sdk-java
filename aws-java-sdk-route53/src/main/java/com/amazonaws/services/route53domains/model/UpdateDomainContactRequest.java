@@ -59,6 +59,12 @@ public class UpdateDomainContactRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private Consent consent;
+    /**
+     * <p>
+     * Provides detailed contact information.
+     * </p>
+     */
+    private ContactDetail billingContact;
 
     /**
      * <p>
@@ -267,6 +273,46 @@ public class UpdateDomainContactRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Provides detailed contact information.
+     * </p>
+     * 
+     * @param billingContact
+     *        Provides detailed contact information.
+     */
+
+    public void setBillingContact(ContactDetail billingContact) {
+        this.billingContact = billingContact;
+    }
+
+    /**
+     * <p>
+     * Provides detailed contact information.
+     * </p>
+     * 
+     * @return Provides detailed contact information.
+     */
+
+    public ContactDetail getBillingContact() {
+        return this.billingContact;
+    }
+
+    /**
+     * <p>
+     * Provides detailed contact information.
+     * </p>
+     * 
+     * @param billingContact
+     *        Provides detailed contact information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDomainContactRequest withBillingContact(ContactDetail billingContact) {
+        setBillingContact(billingContact);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -287,7 +333,9 @@ public class UpdateDomainContactRequest extends com.amazonaws.AmazonWebServiceRe
         if (getTechContact() != null)
             sb.append("TechContact: ").append("***Sensitive Data Redacted***").append(",");
         if (getConsent() != null)
-            sb.append("Consent: ").append(getConsent());
+            sb.append("Consent: ").append(getConsent()).append(",");
+        if (getBillingContact() != null)
+            sb.append("BillingContact: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -322,6 +370,10 @@ public class UpdateDomainContactRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getConsent() != null && other.getConsent().equals(this.getConsent()) == false)
             return false;
+        if (other.getBillingContact() == null ^ this.getBillingContact() == null)
+            return false;
+        if (other.getBillingContact() != null && other.getBillingContact().equals(this.getBillingContact()) == false)
+            return false;
         return true;
     }
 
@@ -335,6 +387,7 @@ public class UpdateDomainContactRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getRegistrantContact() == null) ? 0 : getRegistrantContact().hashCode());
         hashCode = prime * hashCode + ((getTechContact() == null) ? 0 : getTechContact().hashCode());
         hashCode = prime * hashCode + ((getConsent() == null) ? 0 : getConsent().hashCode());
+        hashCode = prime * hashCode + ((getBillingContact() == null) ? 0 : getBillingContact().hashCode());
         return hashCode;
     }
 

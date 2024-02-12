@@ -52,6 +52,10 @@ public class TransferDomainRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivacyProtectRegistrantContact").build();
     private static final MarshallingInfo<Boolean> PRIVACYPROTECTTECHCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivacyProtectTechContact").build();
+    private static final MarshallingInfo<StructuredPojo> BILLINGCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BillingContact").build();
+    private static final MarshallingInfo<Boolean> PRIVACYPROTECTBILLINGCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivacyProtectBillingContact").build();
 
     private static final TransferDomainRequestMarshaller instance = new TransferDomainRequestMarshaller();
 
@@ -81,6 +85,8 @@ public class TransferDomainRequestMarshaller {
             protocolMarshaller.marshall(transferDomainRequest.getPrivacyProtectAdminContact(), PRIVACYPROTECTADMINCONTACT_BINDING);
             protocolMarshaller.marshall(transferDomainRequest.getPrivacyProtectRegistrantContact(), PRIVACYPROTECTREGISTRANTCONTACT_BINDING);
             protocolMarshaller.marshall(transferDomainRequest.getPrivacyProtectTechContact(), PRIVACYPROTECTTECHCONTACT_BINDING);
+            protocolMarshaller.marshall(transferDomainRequest.getBillingContact(), BILLINGCONTACT_BINDING);
+            protocolMarshaller.marshall(transferDomainRequest.getPrivacyProtectBillingContact(), PRIVACYPROTECTBILLINGCONTACT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

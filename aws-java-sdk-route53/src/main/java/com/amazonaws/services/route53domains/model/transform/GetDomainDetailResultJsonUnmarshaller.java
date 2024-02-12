@@ -142,6 +142,14 @@ public class GetDomainDetailResultJsonUnmarshaller implements Unmarshaller<GetDo
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("BillingContact", targetDepth)) {
+                    context.nextToken();
+                    getDomainDetailResult.setBillingContact(ContactDetailJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("BillingPrivacy", targetDepth)) {
+                    context.nextToken();
+                    getDomainDetailResult.setBillingPrivacy(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

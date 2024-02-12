@@ -1421,6 +1421,15 @@ public interface AmazonRoute53DomainsAsync extends AmazonRoute53Domains {
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * During the transfer of any country code top-level domains (ccTLDs) to Route 53, except for .cc and .tv, updates
+     * to the owner contact are ignored and the owner contact data from the registry is used. You can update the owner
+     * contact after the transfer is complete. For more information, see <a
+     * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html"
+     * >UpdateDomainContact</a>.
+     * </p>
+     * </important>
      * <p>
      * If the registrar for your domain is also the DNS service provider for the domain, we highly recommend that you
      * transfer your DNS service to Route 53 or to another DNS service provider before you transfer your registration.
@@ -1481,6 +1490,15 @@ public interface AmazonRoute53DomainsAsync extends AmazonRoute53Domains {
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * During the transfer of any country code top-level domains (ccTLDs) to Route 53, except for .cc and .tv, updates
+     * to the owner contact are ignored and the owner contact data from the registry is used. You can update the owner
+     * contact after the transfer is complete. For more information, see <a
+     * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainContact.html"
+     * >UpdateDomainContact</a>.
+     * </p>
+     * </important>
      * <p>
      * If the registrar for your domain is also the DNS service provider for the domain, we highly recommend that you
      * transfer your DNS service to Route 53 or to another DNS service provider before you transfer your registration.

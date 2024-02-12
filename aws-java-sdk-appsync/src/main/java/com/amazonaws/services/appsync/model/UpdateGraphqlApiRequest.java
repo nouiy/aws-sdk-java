@@ -131,6 +131,12 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Integer resolverCountLimit;
+    /**
+     * <p>
+     * The <code>enhancedMetricsConfig</code> object.
+     * </p>
+     */
+    private EnhancedMetricsConfig enhancedMetricsConfig;
 
     /**
      * <p>
@@ -910,6 +916,46 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The <code>enhancedMetricsConfig</code> object.
+     * </p>
+     * 
+     * @param enhancedMetricsConfig
+     *        The <code>enhancedMetricsConfig</code> object.
+     */
+
+    public void setEnhancedMetricsConfig(EnhancedMetricsConfig enhancedMetricsConfig) {
+        this.enhancedMetricsConfig = enhancedMetricsConfig;
+    }
+
+    /**
+     * <p>
+     * The <code>enhancedMetricsConfig</code> object.
+     * </p>
+     * 
+     * @return The <code>enhancedMetricsConfig</code> object.
+     */
+
+    public EnhancedMetricsConfig getEnhancedMetricsConfig() {
+        return this.enhancedMetricsConfig;
+    }
+
+    /**
+     * <p>
+     * The <code>enhancedMetricsConfig</code> object.
+     * </p>
+     * 
+     * @param enhancedMetricsConfig
+     *        The <code>enhancedMetricsConfig</code> object.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateGraphqlApiRequest withEnhancedMetricsConfig(EnhancedMetricsConfig enhancedMetricsConfig) {
+        setEnhancedMetricsConfig(enhancedMetricsConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -948,7 +994,9 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         if (getQueryDepthLimit() != null)
             sb.append("QueryDepthLimit: ").append(getQueryDepthLimit()).append(",");
         if (getResolverCountLimit() != null)
-            sb.append("ResolverCountLimit: ").append(getResolverCountLimit());
+            sb.append("ResolverCountLimit: ").append(getResolverCountLimit()).append(",");
+        if (getEnhancedMetricsConfig() != null)
+            sb.append("EnhancedMetricsConfig: ").append(getEnhancedMetricsConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1020,6 +1068,10 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getResolverCountLimit() != null && other.getResolverCountLimit().equals(this.getResolverCountLimit()) == false)
             return false;
+        if (other.getEnhancedMetricsConfig() == null ^ this.getEnhancedMetricsConfig() == null)
+            return false;
+        if (other.getEnhancedMetricsConfig() != null && other.getEnhancedMetricsConfig().equals(this.getEnhancedMetricsConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1042,6 +1094,7 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getIntrospectionConfig() == null) ? 0 : getIntrospectionConfig().hashCode());
         hashCode = prime * hashCode + ((getQueryDepthLimit() == null) ? 0 : getQueryDepthLimit().hashCode());
         hashCode = prime * hashCode + ((getResolverCountLimit() == null) ? 0 : getResolverCountLimit().hashCode());
+        hashCode = prime * hashCode + ((getEnhancedMetricsConfig() == null) ? 0 : getEnhancedMetricsConfig().hashCode());
         return hashCode;
     }
 

@@ -142,6 +142,10 @@ public class GraphqlApiJsonUnmarshaller implements Unmarshaller<GraphqlApi, Json
                     context.nextToken();
                     graphqlApi.setResolverCountLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("enhancedMetricsConfig", targetDepth)) {
+                    context.nextToken();
+                    graphqlApi.setEnhancedMetricsConfig(EnhancedMetricsConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

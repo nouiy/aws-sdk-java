@@ -118,6 +118,18 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String code;
+    /**
+     * <p>
+     * Enables or disables enhanced resolver metrics for specified resolvers. Note that <code>metricsConfig</code> won't
+     * be used unless the <code>resolverLevelMetricsBehavior</code> value is set to <code>PER_RESOLVER_METRICS</code>.
+     * If the <code>resolverLevelMetricsBehavior</code> is set to <code>FULL_REQUEST_RESOLVER_METRICS</code> instead,
+     * <code>metricsConfig</code> will be ignored. However, you can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     */
+    private String metricsConfig;
 
     /**
      * <p>
@@ -767,6 +779,113 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Enables or disables enhanced resolver metrics for specified resolvers. Note that <code>metricsConfig</code> won't
+     * be used unless the <code>resolverLevelMetricsBehavior</code> value is set to <code>PER_RESOLVER_METRICS</code>.
+     * If the <code>resolverLevelMetricsBehavior</code> is set to <code>FULL_REQUEST_RESOLVER_METRICS</code> instead,
+     * <code>metricsConfig</code> will be ignored. However, you can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param metricsConfig
+     *        Enables or disables enhanced resolver metrics for specified resolvers. Note that
+     *        <code>metricsConfig</code> won't be used unless the <code>resolverLevelMetricsBehavior</code> value is set
+     *        to <code>PER_RESOLVER_METRICS</code>. If the <code>resolverLevelMetricsBehavior</code> is set to
+     *        <code>FULL_REQUEST_RESOLVER_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However,
+     *        you can still set its value.</p>
+     *        <p>
+     *        <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @see ResolverLevelMetricsConfig
+     */
+
+    public void setMetricsConfig(String metricsConfig) {
+        this.metricsConfig = metricsConfig;
+    }
+
+    /**
+     * <p>
+     * Enables or disables enhanced resolver metrics for specified resolvers. Note that <code>metricsConfig</code> won't
+     * be used unless the <code>resolverLevelMetricsBehavior</code> value is set to <code>PER_RESOLVER_METRICS</code>.
+     * If the <code>resolverLevelMetricsBehavior</code> is set to <code>FULL_REQUEST_RESOLVER_METRICS</code> instead,
+     * <code>metricsConfig</code> will be ignored. However, you can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @return Enables or disables enhanced resolver metrics for specified resolvers. Note that
+     *         <code>metricsConfig</code> won't be used unless the <code>resolverLevelMetricsBehavior</code> value is
+     *         set to <code>PER_RESOLVER_METRICS</code>. If the <code>resolverLevelMetricsBehavior</code> is set to
+     *         <code>FULL_REQUEST_RESOLVER_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However,
+     *         you can still set its value.</p>
+     *         <p>
+     *         <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @see ResolverLevelMetricsConfig
+     */
+
+    public String getMetricsConfig() {
+        return this.metricsConfig;
+    }
+
+    /**
+     * <p>
+     * Enables or disables enhanced resolver metrics for specified resolvers. Note that <code>metricsConfig</code> won't
+     * be used unless the <code>resolverLevelMetricsBehavior</code> value is set to <code>PER_RESOLVER_METRICS</code>.
+     * If the <code>resolverLevelMetricsBehavior</code> is set to <code>FULL_REQUEST_RESOLVER_METRICS</code> instead,
+     * <code>metricsConfig</code> will be ignored. However, you can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param metricsConfig
+     *        Enables or disables enhanced resolver metrics for specified resolvers. Note that
+     *        <code>metricsConfig</code> won't be used unless the <code>resolverLevelMetricsBehavior</code> value is set
+     *        to <code>PER_RESOLVER_METRICS</code>. If the <code>resolverLevelMetricsBehavior</code> is set to
+     *        <code>FULL_REQUEST_RESOLVER_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However,
+     *        you can still set its value.</p>
+     *        <p>
+     *        <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverLevelMetricsConfig
+     */
+
+    public Resolver withMetricsConfig(String metricsConfig) {
+        setMetricsConfig(metricsConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables or disables enhanced resolver metrics for specified resolvers. Note that <code>metricsConfig</code> won't
+     * be used unless the <code>resolverLevelMetricsBehavior</code> value is set to <code>PER_RESOLVER_METRICS</code>.
+     * If the <code>resolverLevelMetricsBehavior</code> is set to <code>FULL_REQUEST_RESOLVER_METRICS</code> instead,
+     * <code>metricsConfig</code> will be ignored. However, you can still set its value.
+     * </p>
+     * <p>
+     * <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @param metricsConfig
+     *        Enables or disables enhanced resolver metrics for specified resolvers. Note that
+     *        <code>metricsConfig</code> won't be used unless the <code>resolverLevelMetricsBehavior</code> value is set
+     *        to <code>PER_RESOLVER_METRICS</code>. If the <code>resolverLevelMetricsBehavior</code> is set to
+     *        <code>FULL_REQUEST_RESOLVER_METRICS</code> instead, <code>metricsConfig</code> will be ignored. However,
+     *        you can still set its value.</p>
+     *        <p>
+     *        <code>metricsConfig</code> can be <code>ENABLED</code> or <code>DISABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverLevelMetricsConfig
+     */
+
+    public Resolver withMetricsConfig(ResolverLevelMetricsConfig metricsConfig) {
+        this.metricsConfig = metricsConfig.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -803,7 +922,9 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
         if (getRuntime() != null)
             sb.append("Runtime: ").append(getRuntime()).append(",");
         if (getCode() != null)
-            sb.append("Code: ").append(getCode());
+            sb.append("Code: ").append(getCode()).append(",");
+        if (getMetricsConfig() != null)
+            sb.append("MetricsConfig: ").append(getMetricsConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -870,6 +991,10 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCode() != null && other.getCode().equals(this.getCode()) == false)
             return false;
+        if (other.getMetricsConfig() == null ^ this.getMetricsConfig() == null)
+            return false;
+        if (other.getMetricsConfig() != null && other.getMetricsConfig().equals(this.getMetricsConfig()) == false)
+            return false;
         return true;
     }
 
@@ -891,6 +1016,7 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMaxBatchSize() == null) ? 0 : getMaxBatchSize().hashCode());
         hashCode = prime * hashCode + ((getRuntime() == null) ? 0 : getRuntime().hashCode());
         hashCode = prime * hashCode + ((getCode() == null) ? 0 : getCode().hashCode());
+        hashCode = prime * hashCode + ((getMetricsConfig() == null) ? 0 : getMetricsConfig().hashCode());
         return hashCode;
     }
 
