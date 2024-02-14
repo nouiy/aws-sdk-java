@@ -30,7 +30,7 @@ public class TopicConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description for your topic control configuration. Use this outline how the large language model (LLM) should
+     * A description for your topic control configuration. Use this to outline how the large language model (LLM) should
      * use this topic control configuration.
      * </p>
      */
@@ -56,12 +56,12 @@ public class TopicConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description for your topic control configuration. Use this outline how the large language model (LLM) should
+     * A description for your topic control configuration. Use this to outline how the large language model (LLM) should
      * use this topic control configuration.
      * </p>
      * 
      * @param description
-     *        A description for your topic control configuration. Use this outline how the large language model (LLM)
+     *        A description for your topic control configuration. Use this to outline how the large language model (LLM)
      *        should use this topic control configuration.
      */
 
@@ -71,12 +71,12 @@ public class TopicConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description for your topic control configuration. Use this outline how the large language model (LLM) should
+     * A description for your topic control configuration. Use this to outline how the large language model (LLM) should
      * use this topic control configuration.
      * </p>
      * 
-     * @return A description for your topic control configuration. Use this outline how the large language model (LLM)
-     *         should use this topic control configuration.
+     * @return A description for your topic control configuration. Use this to outline how the large language model
+     *         (LLM) should use this topic control configuration.
      */
 
     public String getDescription() {
@@ -85,12 +85,12 @@ public class TopicConfiguration implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description for your topic control configuration. Use this outline how the large language model (LLM) should
+     * A description for your topic control configuration. Use this to outline how the large language model (LLM) should
      * use this topic control configuration.
      * </p>
      * 
      * @param description
-     *        A description for your topic control configuration. Use this outline how the large language model (LLM)
+     *        A description for your topic control configuration. Use this to outline how the large language model (LLM)
      *        should use this topic control configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

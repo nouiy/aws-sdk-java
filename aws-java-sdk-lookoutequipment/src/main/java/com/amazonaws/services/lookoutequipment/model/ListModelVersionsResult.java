@@ -36,6 +36,12 @@ public class ListModelVersionsResult extends com.amazonaws.AmazonWebServiceResul
      * Provides information on the specified model version, including the created time, model and dataset ARNs, and
      * status.
      * </p>
+     * <note>
+     * <p>
+     * If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model that
+     * doesn't exist, <code>ListModelVersions</code> returns an empty array in <code>ModelVersionSummaries</code>.
+     * </p>
+     * </note>
      */
     private java.util.List<ModelVersionSummary> modelVersionSummaries;
 
@@ -96,9 +102,20 @@ public class ListModelVersionsResult extends com.amazonaws.AmazonWebServiceResul
      * Provides information on the specified model version, including the created time, model and dataset ARNs, and
      * status.
      * </p>
+     * <note>
+     * <p>
+     * If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model that
+     * doesn't exist, <code>ListModelVersions</code> returns an empty array in <code>ModelVersionSummaries</code>.
+     * </p>
+     * </note>
      * 
      * @return Provides information on the specified model version, including the created time, model and dataset ARNs,
-     *         and status.
+     *         and status.</p> <note>
+     *         <p>
+     *         If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model
+     *         that doesn't exist, <code>ListModelVersions</code> returns an empty array in
+     *         <code>ModelVersionSummaries</code>.
+     *         </p>
      */
 
     public java.util.List<ModelVersionSummary> getModelVersionSummaries() {
@@ -110,10 +127,21 @@ public class ListModelVersionsResult extends com.amazonaws.AmazonWebServiceResul
      * Provides information on the specified model version, including the created time, model and dataset ARNs, and
      * status.
      * </p>
+     * <note>
+     * <p>
+     * If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model that
+     * doesn't exist, <code>ListModelVersions</code> returns an empty array in <code>ModelVersionSummaries</code>.
+     * </p>
+     * </note>
      * 
      * @param modelVersionSummaries
      *        Provides information on the specified model version, including the created time, model and dataset ARNs,
-     *        and status.
+     *        and status.</p> <note>
+     *        <p>
+     *        If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model
+     *        that doesn't exist, <code>ListModelVersions</code> returns an empty array in
+     *        <code>ModelVersionSummaries</code>.
+     *        </p>
      */
 
     public void setModelVersionSummaries(java.util.Collection<ModelVersionSummary> modelVersionSummaries) {
@@ -130,6 +158,12 @@ public class ListModelVersionsResult extends com.amazonaws.AmazonWebServiceResul
      * Provides information on the specified model version, including the created time, model and dataset ARNs, and
      * status.
      * </p>
+     * <note>
+     * <p>
+     * If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model that
+     * doesn't exist, <code>ListModelVersions</code> returns an empty array in <code>ModelVersionSummaries</code>.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setModelVersionSummaries(java.util.Collection)} or
@@ -138,7 +172,12 @@ public class ListModelVersionsResult extends com.amazonaws.AmazonWebServiceResul
      * 
      * @param modelVersionSummaries
      *        Provides information on the specified model version, including the created time, model and dataset ARNs,
-     *        and status.
+     *        and status.</p> <note>
+     *        <p>
+     *        If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model
+     *        that doesn't exist, <code>ListModelVersions</code> returns an empty array in
+     *        <code>ModelVersionSummaries</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,10 +196,21 @@ public class ListModelVersionsResult extends com.amazonaws.AmazonWebServiceResul
      * Provides information on the specified model version, including the created time, model and dataset ARNs, and
      * status.
      * </p>
+     * <note>
+     * <p>
+     * If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model that
+     * doesn't exist, <code>ListModelVersions</code> returns an empty array in <code>ModelVersionSummaries</code>.
+     * </p>
+     * </note>
      * 
      * @param modelVersionSummaries
      *        Provides information on the specified model version, including the created time, model and dataset ARNs,
-     *        and status.
+     *        and status.</p> <note>
+     *        <p>
+     *        If you don't supply the <code>ModelName</code> request parameter, or if you supply the name of a model
+     *        that doesn't exist, <code>ListModelVersions</code> returns an empty array in
+     *        <code>ModelVersionSummaries</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

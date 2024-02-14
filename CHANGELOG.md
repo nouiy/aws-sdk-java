@@ -1,3 +1,16 @@
+# __1.12.659__ __2024-02-14__
+## __AWS Control Tower__
+  - ### Features
+    - Adds support for new Baseline and EnabledBaseline APIs for automating multi-account governance.
+
+## __Amazon Lookout for Equipment__
+  - ### Features
+    - This feature allows customers to see pointwise model diagnostics results for their models.
+
+## __QBusiness__
+  - ### Features
+    - This release adds the metadata-boosting feature, which allows customers to easily fine-tune the underlying ranking of retrieved RAG passages in order to optimize Q&A answer relevance. It also adds new feedback reasons for the PutFeedback API.
+
 # __1.12.658__ __2024-02-13__
 ## __AWS Marketplace Catalog Service__
   - ### Features

@@ -33,6 +33,8 @@ public class UpdateModelRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LabelsInputConfiguration").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RoleArn").build();
+    private static final MarshallingInfo<StructuredPojo> MODELDIAGNOSTICSOUTPUTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDiagnosticsOutputConfiguration").build();
 
     private static final UpdateModelRequestMarshaller instance = new UpdateModelRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class UpdateModelRequestMarshaller {
             protocolMarshaller.marshall(updateModelRequest.getModelName(), MODELNAME_BINDING);
             protocolMarshaller.marshall(updateModelRequest.getLabelsInputConfiguration(), LABELSINPUTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateModelRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(updateModelRequest.getModelDiagnosticsOutputConfiguration(), MODELDIAGNOSTICSOUTPUTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

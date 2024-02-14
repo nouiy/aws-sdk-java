@@ -31,7 +31,7 @@ public class ThrottlingException extends com.amazonaws.services.controltower.mod
     private String quotaCode;
     /**
      * <p>
-     * The number of seconds to wait before retrying.
+     * The number of seconds the caller should wait before retrying.
      * </p>
      */
     private Integer retryAfterSeconds;
@@ -96,11 +96,11 @@ public class ThrottlingException extends com.amazonaws.services.controltower.mod
 
     /**
      * <p>
-     * The number of seconds to wait before retrying.
+     * The number of seconds the caller should wait before retrying.
      * </p>
      * 
      * @param retryAfterSeconds
-     *        The number of seconds to wait before retrying.
+     *        The number of seconds the caller should wait before retrying.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("Retry-After")
@@ -110,10 +110,10 @@ public class ThrottlingException extends com.amazonaws.services.controltower.mod
 
     /**
      * <p>
-     * The number of seconds to wait before retrying.
+     * The number of seconds the caller should wait before retrying.
      * </p>
      * 
-     * @return The number of seconds to wait before retrying.
+     * @return The number of seconds the caller should wait before retrying.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("Retry-After")
@@ -123,11 +123,11 @@ public class ThrottlingException extends com.amazonaws.services.controltower.mod
 
     /**
      * <p>
-     * The number of seconds to wait before retrying.
+     * The number of seconds the caller should wait before retrying.
      * </p>
      * 
      * @param retryAfterSeconds
-     *        The number of seconds to wait before retrying.
+     *        The number of seconds the caller should wait before retrying.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

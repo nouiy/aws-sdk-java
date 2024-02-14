@@ -220,23 +220,23 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.controltower.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.controltower.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.controltower.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.controltower.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.controltower.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.controltower.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.controltower.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.controltower.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.controltower.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.controltower.model.AWSControlTowerException.class));
 
     public static AWSControlTowerClientBuilder builder() {
@@ -355,9 +355,80 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * This API call turns off a control. It starts an asynchronous operation that deletes Amazon Web Services resources
-     * on the specified organizational unit and the accounts it contains. The resources will vary according to the
-     * control that you specify. For usage examples, see <a
+     * Disable an <code>EnabledBaseline</code> resource on the specified Target. This API starts an asynchronous
+     * operation to remove all resources deployed as part of the baseline enablement. The resource will vary depending
+     * on the enabled baseline.
+     * </p>
+     * 
+     * @param disableBaselineRequest
+     * @return Result of the DisableBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.DisableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DisableBaselineResult disableBaseline(DisableBaselineRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableBaseline(request);
+    }
+
+    @SdkInternalApi
+    final DisableBaselineResult executeDisableBaseline(DisableBaselineRequest disableBaselineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableBaselineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableBaselineRequest> request = null;
+        Response<DisableBaselineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableBaselineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disableBaselineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableBaseline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisableBaselineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisableBaselineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the
+     * specified organizational unit and the accounts it contains. The resources will vary according to the control that
+     * you specify. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
      * Web Services Control Tower User Guide</i> </a>.
      * </p>
@@ -416,6 +487,76 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<DisableControlResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisableControlResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enable (apply) a <code>Baseline</code> to a Target. This API starts an asynchronous operation to deploy resources
+     * specified by the <code>Baseline</code> to the specified Target.
+     * </p>
+     * 
+     * @param enableBaselineRequest
+     * @return Result of the EnableBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.EnableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public EnableBaselineResult enableBaseline(EnableBaselineRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableBaseline(request);
+    }
+
+    @SdkInternalApi
+    final EnableBaselineResult executeEnableBaseline(EnableBaselineRequest enableBaselineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableBaselineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableBaselineRequest> request = null;
+        Response<EnableBaselineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableBaselineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(enableBaselineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableBaseline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<EnableBaselineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new EnableBaselineResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -501,6 +642,138 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Retrieve details about an existing <code>Baseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getBaselineRequest
+     * @return Result of the GetBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.GetBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaseline" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetBaselineResult getBaseline(GetBaselineRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetBaseline(request);
+    }
+
+    @SdkInternalApi
+    final GetBaselineResult executeGetBaseline(GetBaselineRequest getBaselineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getBaselineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetBaselineRequest> request = null;
+        Response<GetBaselineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetBaselineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getBaselineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetBaseline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetBaselineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetBaselineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the details of an asynchronous baseline operation, as initiated by any of these APIs:
+     * <code>EnableBaseline</code>, <code>DisableBaseline</code>, <code>UpdateEnabledBaseline</code>,
+     * <code>ResetEnabledBaseline</code>. A status message is displayed in case of operation failure.
+     * </p>
+     * 
+     * @param getBaselineOperationRequest
+     * @return Result of the GetBaselineOperation operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.GetBaselineOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaselineOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetBaselineOperationResult getBaselineOperation(GetBaselineOperationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetBaselineOperation(request);
+    }
+
+    @SdkInternalApi
+    final GetBaselineOperationResult executeGetBaselineOperation(GetBaselineOperationRequest getBaselineOperationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getBaselineOperationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetBaselineOperationRequest> request = null;
+        Response<GetBaselineOperationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetBaselineOperationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getBaselineOperationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetBaselineOperation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetBaselineOperationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetBaselineOperationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays
      * a message in case of error. Details for an operation are available for 90 days. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
@@ -557,6 +830,71 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<GetControlOperationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetControlOperationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieve details of an <code>EnabledBaseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getEnabledBaselineRequest
+     * @return Result of the GetEnabledBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.GetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetEnabledBaselineResult getEnabledBaseline(GetEnabledBaselineRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEnabledBaseline(request);
+    }
+
+    @SdkInternalApi
+    final GetEnabledBaselineResult executeGetEnabledBaseline(GetEnabledBaselineRequest getEnabledBaselineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEnabledBaselineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEnabledBaselineRequest> request = null;
+        Response<GetEnabledBaselineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEnabledBaselineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getEnabledBaselineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEnabledBaseline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEnabledBaselineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEnabledBaselineResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -691,6 +1029,133 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
             HttpResponseHandler<AmazonWebServiceResponse<GetLandingZoneOperationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetLandingZoneOperationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a summary list of all available baselines.
+     * </p>
+     * 
+     * @param listBaselinesRequest
+     * @return Result of the ListBaselines operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSControlTower.ListBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListBaselines" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListBaselinesResult listBaselines(ListBaselinesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListBaselines(request);
+    }
+
+    @SdkInternalApi
+    final ListBaselinesResult executeListBaselines(ListBaselinesRequest listBaselinesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listBaselinesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListBaselinesRequest> request = null;
+        Response<ListBaselinesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListBaselinesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listBaselinesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBaselines");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListBaselinesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListBaselinesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of summaries describing <code>EnabledBaseline</code> resources. You can filter the list by the
+     * corresponding <code>Baseline</code> or <code>Target</code> of the <code>EnabledBaseline</code> resources.
+     * </p>
+     * 
+     * @param listEnabledBaselinesRequest
+     * @return Result of the ListEnabledBaselines operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSControlTower.ListEnabledBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledBaselines"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListEnabledBaselinesResult listEnabledBaselines(ListEnabledBaselinesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListEnabledBaselines(request);
+    }
+
+    @SdkInternalApi
+    final ListEnabledBaselinesResult executeListEnabledBaselines(ListEnabledBaselinesRequest listEnabledBaselinesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listEnabledBaselinesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListEnabledBaselinesRequest> request = null;
+        Response<ListEnabledBaselinesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListEnabledBaselinesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listEnabledBaselinesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListEnabledBaselines");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListEnabledBaselinesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListEnabledBaselinesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -901,6 +1366,76 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Re-enables an <code>EnabledBaseline</code> resource. For example, this API can re-apply the existing
+     * <code>Baseline</code> after a new member account is moved to the target OU.
+     * </p>
+     * 
+     * @param resetEnabledBaselineRequest
+     * @return Result of the ResetEnabledBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.ResetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ResetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ResetEnabledBaselineResult resetEnabledBaseline(ResetEnabledBaselineRequest request) {
+        request = beforeClientExecution(request);
+        return executeResetEnabledBaseline(request);
+    }
+
+    @SdkInternalApi
+    final ResetEnabledBaselineResult executeResetEnabledBaseline(ResetEnabledBaselineRequest resetEnabledBaselineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(resetEnabledBaselineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ResetEnabledBaselineRequest> request = null;
+        Response<ResetEnabledBaselineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ResetEnabledBaselineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(resetEnabledBaselineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ResetEnabledBaseline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ResetEnabledBaselineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ResetEnabledBaselineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * This API call resets a landing zone. It starts an asynchronous operation that resets the landing zone to the
      * parameters specified in its original configuration.
      * </p>
@@ -1083,6 +1618,76 @@ public class AWSControlTowerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an <code>EnabledBaseline</code> resource's applied parameters or version.
+     * </p>
+     * 
+     * @param updateEnabledBaselineRequest
+     * @return Result of the UpdateEnabledBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.UpdateEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/UpdateEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateEnabledBaselineResult updateEnabledBaseline(UpdateEnabledBaselineRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEnabledBaseline(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEnabledBaselineResult executeUpdateEnabledBaseline(UpdateEnabledBaselineRequest updateEnabledBaselineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEnabledBaselineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEnabledBaselineRequest> request = null;
+        Response<UpdateEnabledBaselineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEnabledBaselineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateEnabledBaselineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ControlTower");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEnabledBaseline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEnabledBaselineResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateEnabledBaselineResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

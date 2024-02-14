@@ -286,6 +286,12 @@ public class DescribeModelResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String retrainingSchedulerStatus;
+    /**
+     * <p>
+     * Configuration information for the model's pointwise model diagnostics.
+     * </p>
+     */
+    private ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration;
 
     /**
      * <p>
@@ -2154,6 +2160,46 @@ public class DescribeModelResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * Configuration information for the model's pointwise model diagnostics.
+     * </p>
+     * 
+     * @param modelDiagnosticsOutputConfiguration
+     *        Configuration information for the model's pointwise model diagnostics.
+     */
+
+    public void setModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration) {
+        this.modelDiagnosticsOutputConfiguration = modelDiagnosticsOutputConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for the model's pointwise model diagnostics.
+     * </p>
+     * 
+     * @return Configuration information for the model's pointwise model diagnostics.
+     */
+
+    public ModelDiagnosticsOutputConfiguration getModelDiagnosticsOutputConfiguration() {
+        return this.modelDiagnosticsOutputConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for the model's pointwise model diagnostics.
+     * </p>
+     * 
+     * @param modelDiagnosticsOutputConfiguration
+     *        Configuration information for the model's pointwise model diagnostics.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelResult withModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration) {
+        setModelDiagnosticsOutputConfiguration(modelDiagnosticsOutputConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2244,7 +2290,9 @@ public class DescribeModelResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getAccumulatedInferenceDataEndTime() != null)
             sb.append("AccumulatedInferenceDataEndTime: ").append(getAccumulatedInferenceDataEndTime()).append(",");
         if (getRetrainingSchedulerStatus() != null)
-            sb.append("RetrainingSchedulerStatus: ").append(getRetrainingSchedulerStatus());
+            sb.append("RetrainingSchedulerStatus: ").append(getRetrainingSchedulerStatus()).append(",");
+        if (getModelDiagnosticsOutputConfiguration() != null)
+            sb.append("ModelDiagnosticsOutputConfiguration: ").append(getModelDiagnosticsOutputConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -2430,6 +2478,11 @@ public class DescribeModelResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getRetrainingSchedulerStatus() != null && other.getRetrainingSchedulerStatus().equals(this.getRetrainingSchedulerStatus()) == false)
             return false;
+        if (other.getModelDiagnosticsOutputConfiguration() == null ^ this.getModelDiagnosticsOutputConfiguration() == null)
+            return false;
+        if (other.getModelDiagnosticsOutputConfiguration() != null
+                && other.getModelDiagnosticsOutputConfiguration().equals(this.getModelDiagnosticsOutputConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -2479,6 +2532,7 @@ public class DescribeModelResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getAccumulatedInferenceDataStartTime() == null) ? 0 : getAccumulatedInferenceDataStartTime().hashCode());
         hashCode = prime * hashCode + ((getAccumulatedInferenceDataEndTime() == null) ? 0 : getAccumulatedInferenceDataEndTime().hashCode());
         hashCode = prime * hashCode + ((getRetrainingSchedulerStatus() == null) ? 0 : getRetrainingSchedulerStatus().hashCode());
+        hashCode = prime * hashCode + ((getModelDiagnosticsOutputConfiguration() == null) ? 0 : getModelDiagnosticsOutputConfiguration().hashCode());
         return hashCode;
     }
 

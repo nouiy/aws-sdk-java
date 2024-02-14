@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The condition used for the target document attribute or metadata field when ingesting documents into Amazon Q. You
- * use this with <a href="https://docs.aws.amazon.com/enterpriseq/latest/APIReference/API_DocumentAttributeTarget.html">
+ * use this with <a href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeTarget.html">
  * <code>DocumentAttributeTarget</code> </a> to apply the condition.
  * </p>
  * <p>

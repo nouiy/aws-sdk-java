@@ -205,9 +205,44 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * This API call turns off a control. It starts an asynchronous operation that deletes Amazon Web Services resources
-     * on the specified organizational unit and the accounts it contains. The resources will vary according to the
-     * control that you specify. For usage examples, see <a
+     * Disable an <code>EnabledBaseline</code> resource on the specified Target. This API starts an asynchronous
+     * operation to remove all resources deployed as part of the baseline enablement. The resource will vary depending
+     * on the enabled baseline.
+     * </p>
+     * 
+     * @param disableBaselineRequest
+     * @return A Java Future containing the result of the DisableBaseline operation returned by the service.
+     * @sample AWSControlTowerAsync.DisableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableBaselineResult> disableBaselineAsync(DisableBaselineRequest disableBaselineRequest);
+
+    /**
+     * <p>
+     * Disable an <code>EnabledBaseline</code> resource on the specified Target. This API starts an asynchronous
+     * operation to remove all resources deployed as part of the baseline enablement. The resource will vary depending
+     * on the enabled baseline.
+     * </p>
+     * 
+     * @param disableBaselineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableBaseline operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.DisableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableBaselineResult> disableBaselineAsync(DisableBaselineRequest disableBaselineRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableBaselineRequest, DisableBaselineResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the
+     * specified organizational unit and the accounts it contains. The resources will vary according to the control that
+     * you specify. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
      * Web Services Control Tower User Guide</i> </a>.
      * </p>
@@ -222,9 +257,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * This API call turns off a control. It starts an asynchronous operation that deletes Amazon Web Services resources
-     * on the specified organizational unit and the accounts it contains. The resources will vary according to the
-     * control that you specify. For usage examples, see <a
+     * This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the
+     * specified organizational unit and the accounts it contains. The resources will vary according to the control that
+     * you specify. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
      * Web Services Control Tower User Guide</i> </a>.
      * </p>
@@ -241,6 +276,39 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      */
     java.util.concurrent.Future<DisableControlResult> disableControlAsync(DisableControlRequest disableControlRequest,
             com.amazonaws.handlers.AsyncHandler<DisableControlRequest, DisableControlResult> asyncHandler);
+
+    /**
+     * <p>
+     * Enable (apply) a <code>Baseline</code> to a Target. This API starts an asynchronous operation to deploy resources
+     * specified by the <code>Baseline</code> to the specified Target.
+     * </p>
+     * 
+     * @param enableBaselineRequest
+     * @return A Java Future containing the result of the EnableBaseline operation returned by the service.
+     * @sample AWSControlTowerAsync.EnableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableBaselineResult> enableBaselineAsync(EnableBaselineRequest enableBaselineRequest);
+
+    /**
+     * <p>
+     * Enable (apply) a <code>Baseline</code> to a Target. This API starts an asynchronous operation to deploy resources
+     * specified by the <code>Baseline</code> to the specified Target.
+     * </p>
+     * 
+     * @param enableBaselineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableBaseline operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.EnableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableBaselineResult> enableBaselineAsync(EnableBaselineRequest enableBaselineRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableBaselineRequest, EnableBaselineResult> asyncHandler);
 
     /**
      * <p>
@@ -283,6 +351,72 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
+     * Retrieve details about an existing <code>Baseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getBaselineRequest
+     * @return A Java Future containing the result of the GetBaseline operation returned by the service.
+     * @sample AWSControlTowerAsync.GetBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaseline" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBaselineResult> getBaselineAsync(GetBaselineRequest getBaselineRequest);
+
+    /**
+     * <p>
+     * Retrieve details about an existing <code>Baseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getBaselineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBaseline operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.GetBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaseline" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBaselineResult> getBaselineAsync(GetBaselineRequest getBaselineRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBaselineRequest, GetBaselineResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the details of an asynchronous baseline operation, as initiated by any of these APIs:
+     * <code>EnableBaseline</code>, <code>DisableBaseline</code>, <code>UpdateEnabledBaseline</code>,
+     * <code>ResetEnabledBaseline</code>. A status message is displayed in case of operation failure.
+     * </p>
+     * 
+     * @param getBaselineOperationRequest
+     * @return A Java Future containing the result of the GetBaselineOperation operation returned by the service.
+     * @sample AWSControlTowerAsync.GetBaselineOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaselineOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetBaselineOperationResult> getBaselineOperationAsync(GetBaselineOperationRequest getBaselineOperationRequest);
+
+    /**
+     * <p>
+     * Returns the details of an asynchronous baseline operation, as initiated by any of these APIs:
+     * <code>EnableBaseline</code>, <code>DisableBaseline</code>, <code>UpdateEnabledBaseline</code>,
+     * <code>ResetEnabledBaseline</code>. A status message is displayed in case of operation failure.
+     * </p>
+     * 
+     * @param getBaselineOperationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBaselineOperation operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.GetBaselineOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaselineOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetBaselineOperationResult> getBaselineOperationAsync(GetBaselineOperationRequest getBaselineOperationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBaselineOperationRequest, GetBaselineOperationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays
      * a message in case of error. Details for an operation are available for 90 days. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
@@ -317,6 +451,37 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      */
     java.util.concurrent.Future<GetControlOperationResult> getControlOperationAsync(GetControlOperationRequest getControlOperationRequest,
             com.amazonaws.handlers.AsyncHandler<GetControlOperationRequest, GetControlOperationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieve details of an <code>EnabledBaseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getEnabledBaselineRequest
+     * @return A Java Future containing the result of the GetEnabledBaseline operation returned by the service.
+     * @sample AWSControlTowerAsync.GetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEnabledBaselineResult> getEnabledBaselineAsync(GetEnabledBaselineRequest getEnabledBaselineRequest);
+
+    /**
+     * <p>
+     * Retrieve details of an <code>EnabledBaseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getEnabledBaselineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEnabledBaseline operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.GetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEnabledBaselineResult> getEnabledBaselineAsync(GetEnabledBaselineRequest getEnabledBaselineRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEnabledBaselineRequest, GetEnabledBaselineResult> asyncHandler);
 
     /**
      * <p>
@@ -383,6 +548,70 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      */
     java.util.concurrent.Future<GetLandingZoneOperationResult> getLandingZoneOperationAsync(GetLandingZoneOperationRequest getLandingZoneOperationRequest,
             com.amazonaws.handlers.AsyncHandler<GetLandingZoneOperationRequest, GetLandingZoneOperationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a summary list of all available baselines.
+     * </p>
+     * 
+     * @param listBaselinesRequest
+     * @return A Java Future containing the result of the ListBaselines operation returned by the service.
+     * @sample AWSControlTowerAsync.ListBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListBaselines" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListBaselinesResult> listBaselinesAsync(ListBaselinesRequest listBaselinesRequest);
+
+    /**
+     * <p>
+     * Returns a summary list of all available baselines.
+     * </p>
+     * 
+     * @param listBaselinesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBaselines operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.ListBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListBaselines" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListBaselinesResult> listBaselinesAsync(ListBaselinesRequest listBaselinesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBaselinesRequest, ListBaselinesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of summaries describing <code>EnabledBaseline</code> resources. You can filter the list by the
+     * corresponding <code>Baseline</code> or <code>Target</code> of the <code>EnabledBaseline</code> resources.
+     * </p>
+     * 
+     * @param listEnabledBaselinesRequest
+     * @return A Java Future containing the result of the ListEnabledBaselines operation returned by the service.
+     * @sample AWSControlTowerAsync.ListEnabledBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledBaselines"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnabledBaselinesResult> listEnabledBaselinesAsync(ListEnabledBaselinesRequest listEnabledBaselinesRequest);
+
+    /**
+     * <p>
+     * Returns a list of summaries describing <code>EnabledBaseline</code> resources. You can filter the list by the
+     * corresponding <code>Baseline</code> or <code>Target</code> of the <code>EnabledBaseline</code> resources.
+     * </p>
+     * 
+     * @param listEnabledBaselinesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEnabledBaselines operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.ListEnabledBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledBaselines"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnabledBaselinesResult> listEnabledBaselinesAsync(ListEnabledBaselinesRequest listEnabledBaselinesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEnabledBaselinesRequest, ListEnabledBaselinesResult> asyncHandler);
 
     /**
      * <p>
@@ -497,6 +726,39 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
+     * Re-enables an <code>EnabledBaseline</code> resource. For example, this API can re-apply the existing
+     * <code>Baseline</code> after a new member account is moved to the target OU.
+     * </p>
+     * 
+     * @param resetEnabledBaselineRequest
+     * @return A Java Future containing the result of the ResetEnabledBaseline operation returned by the service.
+     * @sample AWSControlTowerAsync.ResetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ResetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ResetEnabledBaselineResult> resetEnabledBaselineAsync(ResetEnabledBaselineRequest resetEnabledBaselineRequest);
+
+    /**
+     * <p>
+     * Re-enables an <code>EnabledBaseline</code> resource. For example, this API can re-apply the existing
+     * <code>Baseline</code> after a new member account is moved to the target OU.
+     * </p>
+     * 
+     * @param resetEnabledBaselineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ResetEnabledBaseline operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.ResetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ResetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ResetEnabledBaselineResult> resetEnabledBaselineAsync(ResetEnabledBaselineRequest resetEnabledBaselineRequest,
+            com.amazonaws.handlers.AsyncHandler<ResetEnabledBaselineRequest, ResetEnabledBaselineResult> asyncHandler);
+
+    /**
+     * <p>
      * This API call resets a landing zone. It starts an asynchronous operation that resets the landing zone to the
      * parameters specified in its original configuration.
      * </p>
@@ -597,5 +859,36 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an <code>EnabledBaseline</code> resource's applied parameters or version.
+     * </p>
+     * 
+     * @param updateEnabledBaselineRequest
+     * @return A Java Future containing the result of the UpdateEnabledBaseline operation returned by the service.
+     * @sample AWSControlTowerAsync.UpdateEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/UpdateEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEnabledBaselineResult> updateEnabledBaselineAsync(UpdateEnabledBaselineRequest updateEnabledBaselineRequest);
+
+    /**
+     * <p>
+     * Updates an <code>EnabledBaseline</code> resource's applied parameters or version.
+     * </p>
+     * 
+     * @param updateEnabledBaselineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEnabledBaseline operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.UpdateEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/UpdateEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEnabledBaselineResult> updateEnabledBaselineAsync(UpdateEnabledBaselineRequest updateEnabledBaselineRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEnabledBaselineRequest, UpdateEnabledBaselineResult> asyncHandler);
 
 }

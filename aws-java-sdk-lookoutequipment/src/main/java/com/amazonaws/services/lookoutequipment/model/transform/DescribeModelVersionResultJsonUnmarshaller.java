@@ -177,6 +177,15 @@ public class DescribeModelVersionResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     describeModelVersionResult.setAutoPromotionResultReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ModelDiagnosticsOutputConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describeModelVersionResult.setModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
+                if (context.testExpression("ModelDiagnosticsResultsObject", targetDepth)) {
+                    context.nextToken();
+                    describeModelVersionResult.setModelDiagnosticsResultsObject(S3ObjectJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

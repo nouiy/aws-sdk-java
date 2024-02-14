@@ -219,6 +219,20 @@ public class DescribeModelVersionResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String autoPromotionResultReason;
+    /**
+     * <p>
+     * The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     */
+    private ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration;
+    /**
+     * <p>
+     * The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     */
+    private S3Object modelDiagnosticsResultsObject;
 
     /**
      * <p>
@@ -1604,6 +1618,98 @@ public class DescribeModelVersionResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     * 
+     * @param modelDiagnosticsOutputConfiguration
+     *        The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the
+     *        model version.
+     */
+
+    public void setModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration) {
+        this.modelDiagnosticsOutputConfiguration = modelDiagnosticsOutputConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     * 
+     * @return The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the
+     *         model version.
+     */
+
+    public ModelDiagnosticsOutputConfiguration getModelDiagnosticsOutputConfiguration() {
+        return this.modelDiagnosticsOutputConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     * 
+     * @param modelDiagnosticsOutputConfiguration
+     *        The Amazon S3 location where Amazon Lookout for Equipment saves the pointwise model diagnostics for the
+     *        model version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelVersionResult withModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration) {
+        setModelDiagnosticsOutputConfiguration(modelDiagnosticsOutputConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     * 
+     * @param modelDiagnosticsResultsObject
+     *        The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the
+     *        model version.
+     */
+
+    public void setModelDiagnosticsResultsObject(S3Object modelDiagnosticsResultsObject) {
+        this.modelDiagnosticsResultsObject = modelDiagnosticsResultsObject;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     * 
+     * @return The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the
+     *         model version.
+     */
+
+    public S3Object getModelDiagnosticsResultsObject() {
+        return this.modelDiagnosticsResultsObject;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the model
+     * version.
+     * </p>
+     * 
+     * @param modelDiagnosticsResultsObject
+     *        The Amazon S3 output prefix for where Lookout for Equipment saves the pointwise model diagnostics for the
+     *        model version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelVersionResult withModelDiagnosticsResultsObject(S3Object modelDiagnosticsResultsObject) {
+        setModelDiagnosticsResultsObject(modelDiagnosticsResultsObject);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1678,7 +1784,11 @@ public class DescribeModelVersionResult extends com.amazonaws.AmazonWebServiceRe
         if (getAutoPromotionResult() != null)
             sb.append("AutoPromotionResult: ").append(getAutoPromotionResult()).append(",");
         if (getAutoPromotionResultReason() != null)
-            sb.append("AutoPromotionResultReason: ").append(getAutoPromotionResultReason());
+            sb.append("AutoPromotionResultReason: ").append(getAutoPromotionResultReason()).append(",");
+        if (getModelDiagnosticsOutputConfiguration() != null)
+            sb.append("ModelDiagnosticsOutputConfiguration: ").append(getModelDiagnosticsOutputConfiguration()).append(",");
+        if (getModelDiagnosticsResultsObject() != null)
+            sb.append("ModelDiagnosticsResultsObject: ").append(getModelDiagnosticsResultsObject());
         sb.append("}");
         return sb.toString();
     }
@@ -1823,6 +1933,16 @@ public class DescribeModelVersionResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getAutoPromotionResultReason() != null && other.getAutoPromotionResultReason().equals(this.getAutoPromotionResultReason()) == false)
             return false;
+        if (other.getModelDiagnosticsOutputConfiguration() == null ^ this.getModelDiagnosticsOutputConfiguration() == null)
+            return false;
+        if (other.getModelDiagnosticsOutputConfiguration() != null
+                && other.getModelDiagnosticsOutputConfiguration().equals(this.getModelDiagnosticsOutputConfiguration()) == false)
+            return false;
+        if (other.getModelDiagnosticsResultsObject() == null ^ this.getModelDiagnosticsResultsObject() == null)
+            return false;
+        if (other.getModelDiagnosticsResultsObject() != null
+                && other.getModelDiagnosticsResultsObject().equals(this.getModelDiagnosticsResultsObject()) == false)
+            return false;
         return true;
     }
 
@@ -1863,6 +1983,8 @@ public class DescribeModelVersionResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getRetrainingAvailableDataInDays() == null) ? 0 : getRetrainingAvailableDataInDays().hashCode());
         hashCode = prime * hashCode + ((getAutoPromotionResult() == null) ? 0 : getAutoPromotionResult().hashCode());
         hashCode = prime * hashCode + ((getAutoPromotionResultReason() == null) ? 0 : getAutoPromotionResultReason().hashCode());
+        hashCode = prime * hashCode + ((getModelDiagnosticsOutputConfiguration() == null) ? 0 : getModelDiagnosticsOutputConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getModelDiagnosticsResultsObject() == null) ? 0 : getModelDiagnosticsResultsObject().hashCode());
         return hashCode;
     }
 

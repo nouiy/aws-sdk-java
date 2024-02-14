@@ -48,6 +48,11 @@ public class NativeIndexConfigurationJsonUnmarshaller implements Unmarshaller<Na
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("boostingOverride", targetDepth)) {
+                    context.nextToken();
+                    nativeIndexConfiguration.setBoostingOverride(new MapUnmarshaller<String, DocumentAttributeBoostingConfiguration>(context
+                            .getUnmarshaller(String.class), DocumentAttributeBoostingConfigurationJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
                 if (context.testExpression("indexId", targetDepth)) {
                     context.nextToken();
                     nativeIndexConfiguration.setIndexId(context.getUnmarshaller(String.class).unmarshall(context));

@@ -24,7 +24,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * To apply advanced logic, to go beyond what you can do with basic logic, see <a
- * href="https://docs.aws.amazon.com/enterpriseq/latest/APIReference/API_HookConfiguration.html">
+ * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_HookConfiguration.html">
  * <code>HookConfiguration</code> </a>.
  * </p>
  * <p>

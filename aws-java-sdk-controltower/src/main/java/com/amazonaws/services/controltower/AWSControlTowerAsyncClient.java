@@ -247,6 +247,39 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DisableBaselineResult> disableBaselineAsync(DisableBaselineRequest request) {
+
+        return disableBaselineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableBaselineResult> disableBaselineAsync(final DisableBaselineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableBaselineRequest, DisableBaselineResult> asyncHandler) {
+        final DisableBaselineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableBaselineResult>() {
+            @Override
+            public DisableBaselineResult call() throws Exception {
+                DisableBaselineResult result = null;
+
+                try {
+                    result = executeDisableBaseline(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableControlResult> disableControlAsync(DisableControlRequest request) {
 
         return disableControlAsync(request, null);
@@ -264,6 +297,39 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
 
                 try {
                     result = executeDisableControl(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableBaselineResult> enableBaselineAsync(EnableBaselineRequest request) {
+
+        return enableBaselineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableBaselineResult> enableBaselineAsync(final EnableBaselineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableBaselineRequest, EnableBaselineResult> asyncHandler) {
+        final EnableBaselineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableBaselineResult>() {
+            @Override
+            public EnableBaselineResult call() throws Exception {
+                EnableBaselineResult result = null;
+
+                try {
+                    result = executeEnableBaseline(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -313,6 +379,72 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetBaselineResult> getBaselineAsync(GetBaselineRequest request) {
+
+        return getBaselineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBaselineResult> getBaselineAsync(final GetBaselineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBaselineRequest, GetBaselineResult> asyncHandler) {
+        final GetBaselineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBaselineResult>() {
+            @Override
+            public GetBaselineResult call() throws Exception {
+                GetBaselineResult result = null;
+
+                try {
+                    result = executeGetBaseline(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBaselineOperationResult> getBaselineOperationAsync(GetBaselineOperationRequest request) {
+
+        return getBaselineOperationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBaselineOperationResult> getBaselineOperationAsync(final GetBaselineOperationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBaselineOperationRequest, GetBaselineOperationResult> asyncHandler) {
+        final GetBaselineOperationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBaselineOperationResult>() {
+            @Override
+            public GetBaselineOperationResult call() throws Exception {
+                GetBaselineOperationResult result = null;
+
+                try {
+                    result = executeGetBaselineOperation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetControlOperationResult> getControlOperationAsync(GetControlOperationRequest request) {
 
         return getControlOperationAsync(request, null);
@@ -330,6 +462,39 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
 
                 try {
                     result = executeGetControlOperation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnabledBaselineResult> getEnabledBaselineAsync(GetEnabledBaselineRequest request) {
+
+        return getEnabledBaselineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnabledBaselineResult> getEnabledBaselineAsync(final GetEnabledBaselineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEnabledBaselineRequest, GetEnabledBaselineResult> asyncHandler) {
+        final GetEnabledBaselineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEnabledBaselineResult>() {
+            @Override
+            public GetEnabledBaselineResult call() throws Exception {
+                GetEnabledBaselineResult result = null;
+
+                try {
+                    result = executeGetEnabledBaseline(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -396,6 +561,72 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
 
                 try {
                     result = executeGetLandingZoneOperation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBaselinesResult> listBaselinesAsync(ListBaselinesRequest request) {
+
+        return listBaselinesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBaselinesResult> listBaselinesAsync(final ListBaselinesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBaselinesRequest, ListBaselinesResult> asyncHandler) {
+        final ListBaselinesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBaselinesResult>() {
+            @Override
+            public ListBaselinesResult call() throws Exception {
+                ListBaselinesResult result = null;
+
+                try {
+                    result = executeListBaselines(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnabledBaselinesResult> listEnabledBaselinesAsync(ListEnabledBaselinesRequest request) {
+
+        return listEnabledBaselinesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnabledBaselinesResult> listEnabledBaselinesAsync(final ListEnabledBaselinesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEnabledBaselinesRequest, ListEnabledBaselinesResult> asyncHandler) {
+        final ListEnabledBaselinesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEnabledBaselinesResult>() {
+            @Override
+            public ListEnabledBaselinesResult call() throws Exception {
+                ListEnabledBaselinesResult result = null;
+
+                try {
+                    result = executeListEnabledBaselines(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -511,6 +742,39 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ResetEnabledBaselineResult> resetEnabledBaselineAsync(ResetEnabledBaselineRequest request) {
+
+        return resetEnabledBaselineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetEnabledBaselineResult> resetEnabledBaselineAsync(final ResetEnabledBaselineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ResetEnabledBaselineRequest, ResetEnabledBaselineResult> asyncHandler) {
+        final ResetEnabledBaselineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ResetEnabledBaselineResult>() {
+            @Override
+            public ResetEnabledBaselineResult call() throws Exception {
+                ResetEnabledBaselineResult result = null;
+
+                try {
+                    result = executeResetEnabledBaseline(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ResetLandingZoneResult> resetLandingZoneAsync(ResetLandingZoneRequest request) {
 
         return resetLandingZoneAsync(request, null);
@@ -594,6 +858,39 @@ public class AWSControlTowerAsyncClient extends AWSControlTowerClient implements
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEnabledBaselineResult> updateEnabledBaselineAsync(UpdateEnabledBaselineRequest request) {
+
+        return updateEnabledBaselineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEnabledBaselineResult> updateEnabledBaselineAsync(final UpdateEnabledBaselineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEnabledBaselineRequest, UpdateEnabledBaselineResult> asyncHandler) {
+        final UpdateEnabledBaselineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEnabledBaselineResult>() {
+            @Override
+            public UpdateEnabledBaselineResult call() throws Exception {
+                UpdateEnabledBaselineResult result = null;
+
+                try {
+                    result = executeUpdateEnabledBaseline(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

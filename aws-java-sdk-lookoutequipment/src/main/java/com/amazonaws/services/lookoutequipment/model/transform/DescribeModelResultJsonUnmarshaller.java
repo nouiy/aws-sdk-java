@@ -211,6 +211,11 @@ public class DescribeModelResultJsonUnmarshaller implements Unmarshaller<Describ
                     context.nextToken();
                     describeModelResult.setRetrainingSchedulerStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ModelDiagnosticsOutputConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describeModelResult.setModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

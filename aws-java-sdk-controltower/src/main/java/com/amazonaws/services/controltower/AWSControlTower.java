@@ -207,9 +207,38 @@ public interface AWSControlTower {
 
     /**
      * <p>
-     * This API call turns off a control. It starts an asynchronous operation that deletes Amazon Web Services resources
-     * on the specified organizational unit and the accounts it contains. The resources will vary according to the
-     * control that you specify. For usage examples, see <a
+     * Disable an <code>EnabledBaseline</code> resource on the specified Target. This API starts an asynchronous
+     * operation to remove all resources deployed as part of the baseline enablement. The resource will vary depending
+     * on the enabled baseline.
+     * </p>
+     * 
+     * @param disableBaselineRequest
+     * @return Result of the DisableBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.DisableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DisableBaselineResult disableBaseline(DisableBaselineRequest disableBaselineRequest);
+
+    /**
+     * <p>
+     * This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the
+     * specified organizational unit and the accounts it contains. The resources will vary according to the control that
+     * you specify. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
      * Web Services Control Tower User Guide</i> </a>.
      * </p>
@@ -235,6 +264,34 @@ public interface AWSControlTower {
      *      API Documentation</a>
      */
     DisableControlResult disableControl(DisableControlRequest disableControlRequest);
+
+    /**
+     * <p>
+     * Enable (apply) a <code>Baseline</code> to a Target. This API starts an asynchronous operation to deploy resources
+     * specified by the <code>Baseline</code> to the specified Target.
+     * </p>
+     * 
+     * @param enableBaselineRequest
+     * @return Result of the EnableBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.EnableBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableBaseline" target="_top">AWS
+     *      API Documentation</a>
+     */
+    EnableBaselineResult enableBaseline(EnableBaselineRequest enableBaselineRequest);
 
     /**
      * <p>
@@ -269,6 +326,54 @@ public interface AWSControlTower {
 
     /**
      * <p>
+     * Retrieve details about an existing <code>Baseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getBaselineRequest
+     * @return Result of the GetBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.GetBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaseline" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetBaselineResult getBaseline(GetBaselineRequest getBaselineRequest);
+
+    /**
+     * <p>
+     * Returns the details of an asynchronous baseline operation, as initiated by any of these APIs:
+     * <code>EnableBaseline</code>, <code>DisableBaseline</code>, <code>UpdateEnabledBaseline</code>,
+     * <code>ResetEnabledBaseline</code>. A status message is displayed in case of operation failure.
+     * </p>
+     * 
+     * @param getBaselineOperationRequest
+     * @return Result of the GetBaselineOperation operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.GetBaselineOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetBaselineOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetBaselineOperationResult getBaselineOperation(GetBaselineOperationRequest getBaselineOperationRequest);
+
+    /**
+     * <p>
      * Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays
      * a message in case of error. Details for an operation are available for 90 days. For usage examples, see <a
      * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
@@ -292,6 +397,29 @@ public interface AWSControlTower {
      *      target="_top">AWS API Documentation</a>
      */
     GetControlOperationResult getControlOperation(GetControlOperationRequest getControlOperationRequest);
+
+    /**
+     * <p>
+     * Retrieve details of an <code>EnabledBaseline</code> resource by specifying its identifier.
+     * </p>
+     * 
+     * @param getEnabledBaselineRequest
+     * @return Result of the GetEnabledBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.GetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetEnabledBaselineResult getEnabledBaseline(GetEnabledBaselineRequest getEnabledBaselineRequest);
 
     /**
      * <p>
@@ -340,6 +468,49 @@ public interface AWSControlTower {
      *      target="_top">AWS API Documentation</a>
      */
     GetLandingZoneOperationResult getLandingZoneOperation(GetLandingZoneOperationRequest getLandingZoneOperationRequest);
+
+    /**
+     * <p>
+     * Returns a summary list of all available baselines.
+     * </p>
+     * 
+     * @param listBaselinesRequest
+     * @return Result of the ListBaselines operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSControlTower.ListBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListBaselines" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListBaselinesResult listBaselines(ListBaselinesRequest listBaselinesRequest);
+
+    /**
+     * <p>
+     * Returns a list of summaries describing <code>EnabledBaseline</code> resources. You can filter the list by the
+     * corresponding <code>Baseline</code> or <code>Target</code> of the <code>EnabledBaseline</code> resources.
+     * </p>
+     * 
+     * @param listEnabledBaselinesRequest
+     * @return Result of the ListEnabledBaselines operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSControlTower.ListEnabledBaselines
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledBaselines"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEnabledBaselinesResult listEnabledBaselines(ListEnabledBaselinesRequest listEnabledBaselinesRequest);
 
     /**
      * <p>
@@ -415,6 +586,34 @@ public interface AWSControlTower {
 
     /**
      * <p>
+     * Re-enables an <code>EnabledBaseline</code> resource. For example, this API can re-apply the existing
+     * <code>Baseline</code> after a new member account is moved to the target OU.
+     * </p>
+     * 
+     * @param resetEnabledBaselineRequest
+     * @return Result of the ResetEnabledBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.ResetEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ResetEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ResetEnabledBaselineResult resetEnabledBaseline(ResetEnabledBaselineRequest resetEnabledBaselineRequest);
+
+    /**
+     * <p>
      * This API call resets a landing zone. It starts an asynchronous operation that resets the landing zone to the
      * parameters specified in its original configuration.
      * </p>
@@ -480,6 +679,33 @@ public interface AWSControlTower {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates an <code>EnabledBaseline</code> resource's applied parameters or version.
+     * </p>
+     * 
+     * @param updateEnabledBaselineRequest
+     * @return Result of the UpdateEnabledBaseline operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ConflictException
+     *         Updating or deleting the resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     * @throws InternalServerException
+     *         An unexpected error occurred during processing of a request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @sample AWSControlTower.UpdateEnabledBaseline
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/UpdateEnabledBaseline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEnabledBaselineResult updateEnabledBaseline(UpdateEnabledBaselineRequest updateEnabledBaselineRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

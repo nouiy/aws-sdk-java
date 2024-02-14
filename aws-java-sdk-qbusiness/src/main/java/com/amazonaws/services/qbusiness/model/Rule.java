@@ -48,7 +48,7 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
     private RuleConfiguration ruleConfiguration;
     /**
      * <p>
-     * The type fo rule.
+     * The type of rule.
      * </p>
      */
     private String ruleType;
@@ -175,11 +175,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type fo rule.
+     * The type of rule.
      * </p>
      * 
      * @param ruleType
-     *        The type fo rule.
+     *        The type of rule.
      * @see RuleType
      */
 
@@ -189,10 +189,10 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type fo rule.
+     * The type of rule.
      * </p>
      * 
-     * @return The type fo rule.
+     * @return The type of rule.
      * @see RuleType
      */
 
@@ -202,11 +202,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type fo rule.
+     * The type of rule.
      * </p>
      * 
      * @param ruleType
-     *        The type fo rule.
+     *        The type of rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleType
      */
@@ -218,11 +218,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type fo rule.
+     * The type of rule.
      * </p>
      * 
      * @param ruleType
-     *        The type fo rule.
+     *        The type of rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleType
      */

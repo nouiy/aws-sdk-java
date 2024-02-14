@@ -30,10 +30,84 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
+     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * </p>
+     */
+    private java.util.Map<String, DocumentAttributeBoostingConfiguration> boostingOverride;
+    /**
+     * <p>
      * The identifier for the Amazon Q index.
      * </p>
      */
     private String indexId;
+
+    /**
+     * <p>
+     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * </p>
+     * 
+     * @return Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     */
+
+    public java.util.Map<String, DocumentAttributeBoostingConfiguration> getBoostingOverride() {
+        return boostingOverride;
+    }
+
+    /**
+     * <p>
+     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * </p>
+     * 
+     * @param boostingOverride
+     *        Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     */
+
+    public void setBoostingOverride(java.util.Map<String, DocumentAttributeBoostingConfiguration> boostingOverride) {
+        this.boostingOverride = boostingOverride;
+    }
+
+    /**
+     * <p>
+     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * </p>
+     * 
+     * @param boostingOverride
+     *        Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NativeIndexConfiguration withBoostingOverride(java.util.Map<String, DocumentAttributeBoostingConfiguration> boostingOverride) {
+        setBoostingOverride(boostingOverride);
+        return this;
+    }
+
+    /**
+     * Add a single BoostingOverride entry
+     *
+     * @see NativeIndexConfiguration#withBoostingOverride
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NativeIndexConfiguration addBoostingOverrideEntry(String key, DocumentAttributeBoostingConfiguration value) {
+        if (null == this.boostingOverride) {
+            this.boostingOverride = new java.util.HashMap<String, DocumentAttributeBoostingConfiguration>();
+        }
+        if (this.boostingOverride.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.boostingOverride.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into BoostingOverride.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NativeIndexConfiguration clearBoostingOverrideEntries() {
+        this.boostingOverride = null;
+        return this;
+    }
 
     /**
      * <p>
@@ -87,6 +161,8 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getBoostingOverride() != null)
+            sb.append("BoostingOverride: ").append(getBoostingOverride()).append(",");
         if (getIndexId() != null)
             sb.append("IndexId: ").append(getIndexId());
         sb.append("}");
@@ -103,6 +179,10 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
         if (obj instanceof NativeIndexConfiguration == false)
             return false;
         NativeIndexConfiguration other = (NativeIndexConfiguration) obj;
+        if (other.getBoostingOverride() == null ^ this.getBoostingOverride() == null)
+            return false;
+        if (other.getBoostingOverride() != null && other.getBoostingOverride().equals(this.getBoostingOverride()) == false)
+            return false;
         if (other.getIndexId() == null ^ this.getIndexId() == null)
             return false;
         if (other.getIndexId() != null && other.getIndexId().equals(this.getIndexId()) == false)
@@ -115,6 +195,7 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getBoostingOverride() == null) ? 0 : getBoostingOverride().hashCode());
         hashCode = prime * hashCode + ((getIndexId() == null) ? 0 : getIndexId().hashCode());
         return hashCode;
     }

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+ * Enables filtering of responses based on document attributes or metadata fields.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/AttributeFilter" target="_top">AWS API

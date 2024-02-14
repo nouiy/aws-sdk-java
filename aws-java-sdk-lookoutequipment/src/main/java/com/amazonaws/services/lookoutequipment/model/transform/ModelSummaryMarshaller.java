@@ -53,6 +53,8 @@ public class ModelSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NextScheduledRetrainingStartDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> RETRAININGSCHEDULERSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetrainingSchedulerStatus").build();
+    private static final MarshallingInfo<StructuredPojo> MODELDIAGNOSTICSOUTPUTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDiagnosticsOutputConfiguration").build();
 
     private static final ModelSummaryMarshaller instance = new ModelSummaryMarshaller();
 
@@ -83,6 +85,7 @@ public class ModelSummaryMarshaller {
             protocolMarshaller.marshall(modelSummary.getLatestScheduledRetrainingStartTime(), LATESTSCHEDULEDRETRAININGSTARTTIME_BINDING);
             protocolMarshaller.marshall(modelSummary.getNextScheduledRetrainingStartDate(), NEXTSCHEDULEDRETRAININGSTARTDATE_BINDING);
             protocolMarshaller.marshall(modelSummary.getRetrainingSchedulerStatus(), RETRAININGSCHEDULERSTATUS_BINDING);
+            protocolMarshaller.marshall(modelSummary.getModelDiagnosticsOutputConfiguration(), MODELDIAGNOSTICSOUTPUTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

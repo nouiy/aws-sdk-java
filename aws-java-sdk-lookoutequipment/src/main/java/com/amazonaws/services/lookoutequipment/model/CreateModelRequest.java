@@ -124,6 +124,13 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String offCondition;
+    /**
+     * <p>
+     * The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model diagnostics. You
+     * must also specify the <code>RoleArn</code> request parameter.
+     * </p>
+     */
+    private ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration;
 
     /**
      * <p>
@@ -803,6 +810,52 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model diagnostics. You
+     * must also specify the <code>RoleArn</code> request parameter.
+     * </p>
+     * 
+     * @param modelDiagnosticsOutputConfiguration
+     *        The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model
+     *        diagnostics. You must also specify the <code>RoleArn</code> request parameter.
+     */
+
+    public void setModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration) {
+        this.modelDiagnosticsOutputConfiguration = modelDiagnosticsOutputConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model diagnostics. You
+     * must also specify the <code>RoleArn</code> request parameter.
+     * </p>
+     * 
+     * @return The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model
+     *         diagnostics. You must also specify the <code>RoleArn</code> request parameter.
+     */
+
+    public ModelDiagnosticsOutputConfiguration getModelDiagnosticsOutputConfiguration() {
+        return this.modelDiagnosticsOutputConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model diagnostics. You
+     * must also specify the <code>RoleArn</code> request parameter.
+     * </p>
+     * 
+     * @param modelDiagnosticsOutputConfiguration
+     *        The Amazon S3 location where you want Amazon Lookout for Equipment to save the pointwise model
+     *        diagnostics. You must also specify the <code>RoleArn</code> request parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelRequest withModelDiagnosticsOutputConfiguration(ModelDiagnosticsOutputConfiguration modelDiagnosticsOutputConfiguration) {
+        setModelDiagnosticsOutputConfiguration(modelDiagnosticsOutputConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -841,7 +894,9 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getOffCondition() != null)
-            sb.append("OffCondition: ").append(getOffCondition());
+            sb.append("OffCondition: ").append(getOffCondition()).append(",");
+        if (getModelDiagnosticsOutputConfiguration() != null)
+            sb.append("ModelDiagnosticsOutputConfiguration: ").append(getModelDiagnosticsOutputConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -913,6 +968,11 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getOffCondition() != null && other.getOffCondition().equals(this.getOffCondition()) == false)
             return false;
+        if (other.getModelDiagnosticsOutputConfiguration() == null ^ this.getModelDiagnosticsOutputConfiguration() == null)
+            return false;
+        if (other.getModelDiagnosticsOutputConfiguration() != null
+                && other.getModelDiagnosticsOutputConfiguration().equals(this.getModelDiagnosticsOutputConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -935,6 +995,7 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getServerSideKmsKeyId() == null) ? 0 : getServerSideKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getOffCondition() == null) ? 0 : getOffCondition().hashCode());
+        hashCode = prime * hashCode + ((getModelDiagnosticsOutputConfiguration() == null) ? 0 : getModelDiagnosticsOutputConfiguration().hashCode());
         return hashCode;
     }
 

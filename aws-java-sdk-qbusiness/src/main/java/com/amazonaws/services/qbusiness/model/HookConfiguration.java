@@ -24,13 +24,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * You can configure your Lambda function using <a
- * href="https://docs.aws.amazon.com/enterpriseq/latest/APIReference/API_CustomDocumentEnrichmentConfiguration.html"
+ * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentEnrichmentConfiguration.html"
  * >PreExtractionHookConfiguration</a> if you want to apply advanced alterations on the original or raw documents.
  * </p>
  * <p>
  * If you want to apply advanced alterations on the Amazon Q structured documents, you must configure your Lambda
  * function using <a
- * href="https://docs.aws.amazon.com/enterpriseq/latest/APIReference/API_CustomDocumentEnrichmentConfiguration.html"
+ * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentEnrichmentConfiguration.html"
  * >PostExtractionHookConfiguration</a>.
  * </p>
  * <p>
