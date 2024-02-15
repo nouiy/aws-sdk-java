@@ -136,7 +136,7 @@ public class PrivateIpAddressDetails implements Serializable, Cloneable, Structu
         if (getPrivateDnsName() != null)
             sb.append("PrivateDnsName: ").append(getPrivateDnsName()).append(",");
         if (getPrivateIpAddress() != null)
-            sb.append("PrivateIpAddress: ").append(getPrivateIpAddress());
+            sb.append("PrivateIpAddress: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

@@ -114,7 +114,8 @@ public enum VoiceId {
     Isabelle("Isabelle"),
     Zayd("Zayd"),
     Danielle("Danielle"),
-    Gregory("Gregory");
+    Gregory("Gregory"),
+    Burcu("Burcu");
 
     private String value;
 

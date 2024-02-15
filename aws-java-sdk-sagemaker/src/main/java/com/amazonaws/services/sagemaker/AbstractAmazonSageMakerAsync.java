@@ -3815,6 +3815,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateClusterSoftwareResult> updateClusterSoftwareAsync(UpdateClusterSoftwareRequest request) {
+
+        return updateClusterSoftwareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateClusterSoftwareResult> updateClusterSoftwareAsync(UpdateClusterSoftwareRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateClusterSoftwareRequest, UpdateClusterSoftwareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateCodeRepositoryResult> updateCodeRepositoryAsync(UpdateCodeRepositoryRequest request) {
 
         return updateCodeRepositoryAsync(request, null);

@@ -25,7 +25,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      */
     private String graphArn;
@@ -37,7 +37,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
     private String investigationId;
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -48,18 +48,18 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
     private String nextToken;
     /**
      * <p>
-     * Indicators of compromise listed based on severity.
+     * Lists the indicators of compromise.
      * </p>
      */
     private java.util.List<Indicator> indicators;
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -68,10 +68,10 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph.
+     * @return The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -80,11 +80,11 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,7 +135,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -144,7 +144,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param nextToken
-     *        List if there are more results available. The value of nextToken is a unique pagination token for each
+     *        Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *        page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *        unchanged.</p>
      *        <p>
@@ -158,7 +158,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -166,7 +166,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
      * Exception error.
      * </p>
      * 
-     * @return List if there are more results available. The value of nextToken is a unique pagination token for each
+     * @return Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *         page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *         unchanged.</p>
      *         <p>
@@ -180,7 +180,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -189,7 +189,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param nextToken
-     *        List if there are more results available. The value of nextToken is a unique pagination token for each
+     *        Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *        page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *        unchanged.</p>
      *        <p>
@@ -205,10 +205,10 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Indicators of compromise listed based on severity.
+     * Lists the indicators of compromise.
      * </p>
      * 
-     * @return Indicators of compromise listed based on severity.
+     * @return Lists the indicators of compromise.
      */
 
     public java.util.List<Indicator> getIndicators() {
@@ -217,11 +217,11 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Indicators of compromise listed based on severity.
+     * Lists the indicators of compromise.
      * </p>
      * 
      * @param indicators
-     *        Indicators of compromise listed based on severity.
+     *        Lists the indicators of compromise.
      */
 
     public void setIndicators(java.util.Collection<Indicator> indicators) {
@@ -235,7 +235,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Indicators of compromise listed based on severity.
+     * Lists the indicators of compromise.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -244,7 +244,7 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param indicators
-     *        Indicators of compromise listed based on severity.
+     *        Lists the indicators of compromise.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -260,11 +260,11 @@ public class ListIndicatorsResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Indicators of compromise listed based on severity.
+     * Lists the indicators of compromise.
      * </p>
      * 
      * @param indicators
-     *        Indicators of compromise listed based on severity.
+     *        Lists the indicators of compromise.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -17975,7 +17975,7 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Update a SageMaker HyperPod cluster.
+     * Updates a SageMaker HyperPod cluster.
      * </p>
      * 
      * @param updateClusterRequest
@@ -18026,6 +18026,70 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateClusterResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateClusterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the platform software of a SageMaker HyperPod cluster for security patching. To learn how to use this
+     * API, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-operate.html#sagemaker-hyperpod-operate-cli-command-update-cluster-software"
+     * >Update the SageMaker HyperPod platform software of a cluster</a>.
+     * </p>
+     * 
+     * @param updateClusterSoftwareRequest
+     * @return Result of the UpdateClusterSoftware operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.UpdateClusterSoftware
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateClusterSoftware"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateClusterSoftwareResult updateClusterSoftware(UpdateClusterSoftwareRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateClusterSoftware(request);
+    }
+
+    @SdkInternalApi
+    final UpdateClusterSoftwareResult executeUpdateClusterSoftware(UpdateClusterSoftwareRequest updateClusterSoftwareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateClusterSoftwareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateClusterSoftwareRequest> request = null;
+        Response<UpdateClusterSoftwareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateClusterSoftwareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateClusterSoftwareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateClusterSoftware");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateClusterSoftwareResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateClusterSoftwareResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

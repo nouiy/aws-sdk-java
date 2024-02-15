@@ -1301,6 +1301,11 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * <p>
      * Lists Amazon GuardDuty findings statistics for the specified detector ID.
      * </p>
+     * <p>
+     * There might be regional differences because some flags might not be available in all the Regions where GuardDuty
+     * is currently supported. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
+     * </p>
      * 
      * @param getFindingsStatisticsRequest
      * @return A Java Future containing the result of the GetFindingsStatistics operation returned by the service.
@@ -1313,6 +1318,11 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Lists Amazon GuardDuty findings statistics for the specified detector ID.
+     * </p>
+     * <p>
+     * There might be regional differences because some flags might not be available in all the Regions where GuardDuty
+     * is currently supported. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      * </p>
      * 
      * @param getFindingsStatisticsRequest
@@ -1870,7 +1880,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Lists Amazon GuardDuty findings for the specified detector ID.
+     * Lists GuardDuty findings for the specified detector ID.
+     * </p>
+     * <p>
+     * There might be regional differences because some flags might not be available in all the Regions where GuardDuty
+     * is currently supported. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      * </p>
      * 
      * @param listFindingsRequest
@@ -1883,7 +1898,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Lists Amazon GuardDuty findings for the specified detector ID.
+     * Lists GuardDuty findings for the specified detector ID.
+     * </p>
+     * <p>
+     * There might be regional differences because some flags might not be available in all the Regions where GuardDuty
+     * is currently supported. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      * </p>
      * 
      * @param listFindingsRequest
@@ -2340,7 +2360,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Updates the Amazon GuardDuty detector specified by the detectorId.
+     * Updates the GuardDuty detector specified by the detectorId.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
@@ -2358,7 +2378,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Updates the Amazon GuardDuty detector specified by the detectorId.
+     * Updates the GuardDuty detector specified by the detectorId.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web

@@ -27,7 +27,7 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      */
     private String graphArn;
@@ -46,7 +46,7 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.Date scopeStartTime;
     /**
      * <p>
-     * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
+     * The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For example,
      * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
@@ -54,11 +54,11 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -67,10 +67,10 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph.
+     * @return The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -79,11 +79,11 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,12 +180,12 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
+     * The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For example,
      * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param scopeEndTime
-     *        The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
+     *        The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For example,
      *        <code>2021-08-18T16:35:56.284Z</code>.
      */
 
@@ -195,11 +195,11 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
+     * The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For example,
      * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For
+     * @return The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For
      *         example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
@@ -209,12 +209,12 @@ public class StartInvestigationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
+     * The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For example,
      * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param scopeEndTime
-     *        The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
+     *        The data and time when the investigation ended. The value is an UTC ISO8601 formatted string. For example,
      *        <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

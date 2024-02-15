@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about the investigation related to a potential security event identified by Detective
+ * Details about the investigation related to a potential security event identified by Detective.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/InvestigationDetail" target="_top">AWS API
@@ -55,7 +55,8 @@ public class InvestigationDetail implements Serializable, Cloneable, StructuredP
     private String state;
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date createdTime;
@@ -303,11 +304,13 @@ public class InvestigationDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param createdTime
-     *        The UTC time stamp of the creation time of the investigation report.
+     *        The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted
+     *        string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setCreatedTime(java.util.Date createdTime) {
@@ -316,10 +319,12 @@ public class InvestigationDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The UTC time stamp of the creation time of the investigation report.
+     * @return The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted
+     *         string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getCreatedTime() {
@@ -328,11 +333,13 @@ public class InvestigationDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param createdTime
-     *        The UTC time stamp of the creation time of the investigation report.
+     *        The time stamp of the creation time of the investigation report. The value is an UTC ISO8601 formatted
+     *        string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,21 @@ public class DescribeFHIRImportJobResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     * The properties of the Import job request, including the ID, ARN, name, status of the job, and the progress report
+     * of the job.
      * </p>
      */
     private ImportJobProperties importJobProperties;
 
     /**
      * <p>
-     * The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     * The properties of the Import job request, including the ID, ARN, name, status of the job, and the progress report
+     * of the job.
      * </p>
      * 
      * @param importJobProperties
-     *        The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     *        The properties of the Import job request, including the ID, ARN, name, status of the job, and the progress
+     *        report of the job.
      */
 
     public void setImportJobProperties(ImportJobProperties importJobProperties) {
@@ -45,10 +48,12 @@ public class DescribeFHIRImportJobResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     * The properties of the Import job request, including the ID, ARN, name, status of the job, and the progress report
+     * of the job.
      * </p>
      * 
-     * @return The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     * @return The properties of the Import job request, including the ID, ARN, name, status of the job, and the
+     *         progress report of the job.
      */
 
     public ImportJobProperties getImportJobProperties() {
@@ -57,11 +62,13 @@ public class DescribeFHIRImportJobResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     * The properties of the Import job request, including the ID, ARN, name, status of the job, and the progress report
+     * of the job.
      * </p>
      * 
      * @param importJobProperties
-     *        The properties of the Import job request, including the ID, ARN, name, and the status of the job.
+     *        The properties of the Import job request, including the ID, ARN, name, status of the job, and the progress
+     *        report of the job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

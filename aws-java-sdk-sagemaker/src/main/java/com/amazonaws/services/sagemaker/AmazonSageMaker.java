@@ -5651,7 +5651,7 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Update a SageMaker HyperPod cluster.
+     * Updates a SageMaker HyperPod cluster.
      * </p>
      * 
      * @param updateClusterRequest
@@ -5669,6 +5669,27 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     UpdateClusterResult updateCluster(UpdateClusterRequest updateClusterRequest);
+
+    /**
+     * <p>
+     * Updates the platform software of a SageMaker HyperPod cluster for security patching. To learn how to use this
+     * API, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-operate.html#sagemaker-hyperpod-operate-cli-command-update-cluster-software"
+     * >Update the SageMaker HyperPod platform software of a cluster</a>.
+     * </p>
+     * 
+     * @param updateClusterSoftwareRequest
+     * @return Result of the UpdateClusterSoftware operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.UpdateClusterSoftware
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateClusterSoftware"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateClusterSoftwareResult updateClusterSoftware(UpdateClusterSoftwareRequest updateClusterSoftwareRequest);
 
     /**
      * <p>

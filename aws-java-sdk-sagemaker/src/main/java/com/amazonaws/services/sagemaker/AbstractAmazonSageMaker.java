@@ -1464,6 +1464,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public UpdateClusterSoftwareResult updateClusterSoftware(UpdateClusterSoftwareRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateCodeRepositoryResult updateCodeRepository(UpdateCodeRepositoryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

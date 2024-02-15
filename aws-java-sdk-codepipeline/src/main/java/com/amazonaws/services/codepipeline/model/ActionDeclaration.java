@@ -103,6 +103,14 @@ public class ActionDeclaration implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String namespace;
+    /**
+     * <p>
+     * A timeout duration in minutes that can be applied against the ActionType’s default timeout value specified in <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for CodePipeline </a>. This
+     * attribute is available only to the manual approval ActionType.
+     * </p>
+     */
+    private Integer timeoutInMinutes;
 
     /**
      * <p>
@@ -679,6 +687,58 @@ public class ActionDeclaration implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * A timeout duration in minutes that can be applied against the ActionType’s default timeout value specified in <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for CodePipeline </a>. This
+     * attribute is available only to the manual approval ActionType.
+     * </p>
+     * 
+     * @param timeoutInMinutes
+     *        A timeout duration in minutes that can be applied against the ActionType’s default timeout value specified
+     *        in <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for CodePipeline
+     *        </a>. This attribute is available only to the manual approval ActionType.
+     */
+
+    public void setTimeoutInMinutes(Integer timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+    }
+
+    /**
+     * <p>
+     * A timeout duration in minutes that can be applied against the ActionType’s default timeout value specified in <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for CodePipeline </a>. This
+     * attribute is available only to the manual approval ActionType.
+     * </p>
+     * 
+     * @return A timeout duration in minutes that can be applied against the ActionType’s default timeout value
+     *         specified in <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for
+     *         CodePipeline </a>. This attribute is available only to the manual approval ActionType.
+     */
+
+    public Integer getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
+    }
+
+    /**
+     * <p>
+     * A timeout duration in minutes that can be applied against the ActionType’s default timeout value specified in <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for CodePipeline </a>. This
+     * attribute is available only to the manual approval ActionType.
+     * </p>
+     * 
+     * @param timeoutInMinutes
+     *        A timeout duration in minutes that can be applied against the ActionType’s default timeout value specified
+     *        in <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html">Quotas for CodePipeline
+     *        </a>. This attribute is available only to the manual approval ActionType.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ActionDeclaration withTimeoutInMinutes(Integer timeoutInMinutes) {
+        setTimeoutInMinutes(timeoutInMinutes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -707,7 +767,9 @@ public class ActionDeclaration implements Serializable, Cloneable, StructuredPoj
         if (getRegion() != null)
             sb.append("Region: ").append(getRegion()).append(",");
         if (getNamespace() != null)
-            sb.append("Namespace: ").append(getNamespace());
+            sb.append("Namespace: ").append(getNamespace()).append(",");
+        if (getTimeoutInMinutes() != null)
+            sb.append("TimeoutInMinutes: ").append(getTimeoutInMinutes());
         sb.append("}");
         return sb.toString();
     }
@@ -758,6 +820,10 @@ public class ActionDeclaration implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getNamespace() != null && other.getNamespace().equals(this.getNamespace()) == false)
             return false;
+        if (other.getTimeoutInMinutes() == null ^ this.getTimeoutInMinutes() == null)
+            return false;
+        if (other.getTimeoutInMinutes() != null && other.getTimeoutInMinutes().equals(this.getTimeoutInMinutes()) == false)
+            return false;
         return true;
     }
 
@@ -775,6 +841,7 @@ public class ActionDeclaration implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getNamespace() == null) ? 0 : getNamespace().hashCode());
+        hashCode = prime * hashCode + ((getTimeoutInMinutes() == null) ? 0 : getTimeoutInMinutes().hashCode());
         return hashCode;
     }
 

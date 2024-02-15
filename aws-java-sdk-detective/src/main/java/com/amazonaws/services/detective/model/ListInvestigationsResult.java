@@ -25,29 +25,27 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Investigations details lists the summary of uncommon behavior or malicious activity which indicates a compromise.
+     * Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * </p>
      */
     private java.util.List<InvestigationDetail> investigationDetails;
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
-     * Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     * InvalidToken error.
+     * Each pagination token expires after 24 hours.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * Investigations details lists the summary of uncommon behavior or malicious activity which indicates a compromise.
+     * Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * </p>
      * 
-     * @return Investigations details lists the summary of uncommon behavior or malicious activity which indicates a
-     *         compromise.
+     * @return Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      */
 
     public java.util.List<InvestigationDetail> getInvestigationDetails() {
@@ -56,12 +54,11 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Investigations details lists the summary of uncommon behavior or malicious activity which indicates a compromise.
+     * Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * </p>
      * 
      * @param investigationDetails
-     *        Investigations details lists the summary of uncommon behavior or malicious activity which indicates a
-     *        compromise.
+     *        Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      */
 
     public void setInvestigationDetails(java.util.Collection<InvestigationDetail> investigationDetails) {
@@ -75,7 +72,7 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Investigations details lists the summary of uncommon behavior or malicious activity which indicates a compromise.
+     * Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -84,8 +81,7 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param investigationDetails
-     *        Investigations details lists the summary of uncommon behavior or malicious activity which indicates a
-     *        compromise.
+     *        Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,12 +97,11 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Investigations details lists the summary of uncommon behavior or malicious activity which indicates a compromise.
+     * Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * </p>
      * 
      * @param investigationDetails
-     *        Investigations details lists the summary of uncommon behavior or malicious activity which indicates a
-     *        compromise.
+     *        Lists the summary of uncommon behavior or malicious activity which indicates a compromise.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,21 +112,19 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
-     * Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     * InvalidToken error.
+     * Each pagination token expires after 24 hours.
      * </p>
      * 
      * @param nextToken
-     *        List if there are more results available. The value of nextToken is a unique pagination token for each
+     *        Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *        page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *        unchanged.</p>
      *        <p>
-     *        Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     *        InvalidToken error.
+     *        Each pagination token expires after 24 hours.
      */
 
     public void setNextToken(String nextToken) {
@@ -140,20 +133,18 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
-     * Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     * InvalidToken error.
+     * Each pagination token expires after 24 hours.
      * </p>
      * 
-     * @return List if there are more results available. The value of nextToken is a unique pagination token for each
+     * @return Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *         page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *         unchanged.</p>
      *         <p>
-     *         Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     *         InvalidToken error.
+     *         Each pagination token expires after 24 hours.
      */
 
     public String getNextToken() {
@@ -162,21 +153,19 @@ public class ListInvestigationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
-     * Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     * InvalidToken error.
+     * Each pagination token expires after 24 hours.
      * </p>
      * 
      * @param nextToken
-     *        List if there are more results available. The value of nextToken is a unique pagination token for each
+     *        Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *        page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *        unchanged.</p>
      *        <p>
-     *        Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400
-     *        InvalidToken error.
+     *        Each pagination token expires after 24 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

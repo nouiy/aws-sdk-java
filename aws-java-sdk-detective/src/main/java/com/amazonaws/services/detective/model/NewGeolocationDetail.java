@@ -43,7 +43,7 @@ public class NewGeolocationDetail implements Serializable, Cloneable, Structured
     private String ipAddress;
     /**
      * <p>
-     * Checks if the gelocation is new for the entire account.
+     * Checks if the geolocation is new for the entire account.
      * </p>
      */
     private Boolean isNewForEntireAccount;
@@ -130,11 +130,11 @@ public class NewGeolocationDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Checks if the gelocation is new for the entire account.
+     * Checks if the geolocation is new for the entire account.
      * </p>
      * 
      * @param isNewForEntireAccount
-     *        Checks if the gelocation is new for the entire account.
+     *        Checks if the geolocation is new for the entire account.
      */
 
     public void setIsNewForEntireAccount(Boolean isNewForEntireAccount) {
@@ -143,10 +143,10 @@ public class NewGeolocationDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Checks if the gelocation is new for the entire account.
+     * Checks if the geolocation is new for the entire account.
      * </p>
      * 
-     * @return Checks if the gelocation is new for the entire account.
+     * @return Checks if the geolocation is new for the entire account.
      */
 
     public Boolean getIsNewForEntireAccount() {
@@ -155,11 +155,11 @@ public class NewGeolocationDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Checks if the gelocation is new for the entire account.
+     * Checks if the geolocation is new for the entire account.
      * </p>
      * 
      * @param isNewForEntireAccount
-     *        Checks if the gelocation is new for the entire account.
+     *        Checks if the geolocation is new for the entire account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,10 +170,10 @@ public class NewGeolocationDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Checks if the gelocation is new for the entire account.
+     * Checks if the geolocation is new for the entire account.
      * </p>
      * 
-     * @return Checks if the gelocation is new for the entire account.
+     * @return Checks if the geolocation is new for the entire account.
      */
 
     public Boolean isNewForEntireAccount() {

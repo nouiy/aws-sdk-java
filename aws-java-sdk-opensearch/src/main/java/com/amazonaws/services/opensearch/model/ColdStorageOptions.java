@@ -29,18 +29,21 @@ public class ColdStorageOptions implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Whether to enable or disable cold storage on the domain.
+     * Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     * storage.
      * </p>
      */
     private Boolean enabled;
 
     /**
      * <p>
-     * Whether to enable or disable cold storage on the domain.
+     * Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     * storage.
      * </p>
      * 
      * @param enabled
-     *        Whether to enable or disable cold storage on the domain.
+     *        Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     *        storage.
      */
 
     public void setEnabled(Boolean enabled) {
@@ -49,10 +52,12 @@ public class ColdStorageOptions implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Whether to enable or disable cold storage on the domain.
+     * Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     * storage.
      * </p>
      * 
-     * @return Whether to enable or disable cold storage on the domain.
+     * @return Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     *         storage.
      */
 
     public Boolean getEnabled() {
@@ -61,11 +66,13 @@ public class ColdStorageOptions implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Whether to enable or disable cold storage on the domain.
+     * Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     * storage.
      * </p>
      * 
      * @param enabled
-     *        Whether to enable or disable cold storage on the domain.
+     *        Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     *        storage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,10 +83,12 @@ public class ColdStorageOptions implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Whether to enable or disable cold storage on the domain.
+     * Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     * storage.
      * </p>
      * 
-     * @return Whether to enable or disable cold storage on the domain.
+     * @return Whether to enable or disable cold storage on the domain. You must enable UltraWarm storage to enable cold
+     *         storage.
      */
 
     public Boolean isEnabled() {

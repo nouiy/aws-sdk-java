@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Investigations triages indicators of compromises such as a finding and surfaces only the most critical and suspicious
- * issues, so you can focus on high-level investigations.
+ * Detective investigations triages indicators of compromises such as a finding and surfaces only the most critical and
+ * suspicious issues, so you can focus on high-level investigations. An <code>Indicator</code> lets you determine if an
+ * Amazon Web Services resource is involved in unusual activity that could indicate malicious behavior and its impact.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/Indicator" target="_top">AWS API
@@ -37,7 +38,9 @@ public class Indicator implements Serializable, Cloneable, StructuredPojo {
     private String indicatorType;
     /**
      * <p>
-     * Details about the indicator of compromise.
+     * Details about the indicators of compromise that are used to determine if a resource is involved in a security
+     * incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment
+     * that can (with a high level of confidence) identify malicious activity or a security incident.
      * </p>
      */
     private IndicatorDetail indicatorDetail;
@@ -103,11 +106,15 @@ public class Indicator implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details about the indicator of compromise.
+     * Details about the indicators of compromise that are used to determine if a resource is involved in a security
+     * incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment
+     * that can (with a high level of confidence) identify malicious activity or a security incident.
      * </p>
      * 
      * @param indicatorDetail
-     *        Details about the indicator of compromise.
+     *        Details about the indicators of compromise that are used to determine if a resource is involved in a
+     *        security incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system, or
+     *        environment that can (with a high level of confidence) identify malicious activity or a security incident.
      */
 
     public void setIndicatorDetail(IndicatorDetail indicatorDetail) {
@@ -116,10 +123,15 @@ public class Indicator implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details about the indicator of compromise.
+     * Details about the indicators of compromise that are used to determine if a resource is involved in a security
+     * incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment
+     * that can (with a high level of confidence) identify malicious activity or a security incident.
      * </p>
      * 
-     * @return Details about the indicator of compromise.
+     * @return Details about the indicators of compromise that are used to determine if a resource is involved in a
+     *         security incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system,
+     *         or environment that can (with a high level of confidence) identify malicious activity or a security
+     *         incident.
      */
 
     public IndicatorDetail getIndicatorDetail() {
@@ -128,11 +140,15 @@ public class Indicator implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details about the indicator of compromise.
+     * Details about the indicators of compromise that are used to determine if a resource is involved in a security
+     * incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment
+     * that can (with a high level of confidence) identify malicious activity or a security incident.
      * </p>
      * 
      * @param indicatorDetail
-     *        Details about the indicator of compromise.
+     *        Details about the indicators of compromise that are used to determine if a resource is involved in a
+     *        security incident. An indicator of compromise (IOC) is an artifact observed in or on a network, system, or
+     *        environment that can (with a high level of confidence) identify malicious activity or a security incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

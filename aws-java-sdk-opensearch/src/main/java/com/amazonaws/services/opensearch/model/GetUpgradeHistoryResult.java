@@ -32,7 +32,8 @@ public class GetUpgradeHistoryResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * When <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is
-     * a unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * a unique pagination token for each page. Send the request again using the returned token to retrieve the next
+     * page.
      * </p>
      */
     private String nextToken;
@@ -110,13 +111,14 @@ public class GetUpgradeHistoryResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * When <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is
-     * a unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * a unique pagination token for each page. Send the request again using the returned token to retrieve the next
+     * page.
      * </p>
      * 
      * @param nextToken
      *        When <code>nextToken</code> is returned, there are more results available. The value of
-     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *        token to retrieve the next page.
+     *        <code>nextToken</code> is a unique pagination token for each page. Send the request again using the
+     *        returned token to retrieve the next page.
      */
 
     public void setNextToken(String nextToken) {
@@ -126,12 +128,13 @@ public class GetUpgradeHistoryResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * When <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is
-     * a unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * a unique pagination token for each page. Send the request again using the returned token to retrieve the next
+     * page.
      * </p>
      * 
      * @return When <code>nextToken</code> is returned, there are more results available. The value of
-     *         <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *         token to retrieve the next page.
+     *         <code>nextToken</code> is a unique pagination token for each page. Send the request again using the
+     *         returned token to retrieve the next page.
      */
 
     public String getNextToken() {
@@ -141,13 +144,14 @@ public class GetUpgradeHistoryResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * When <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is
-     * a unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * a unique pagination token for each page. Send the request again using the returned token to retrieve the next
+     * page.
      * </p>
      * 
      * @param nextToken
      *        When <code>nextToken</code> is returned, there are more results available. The value of
-     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *        token to retrieve the next page.
+     *        <code>nextToken</code> is a unique pagination token for each page. Send the request again using the
+     *        returned token to retrieve the next page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

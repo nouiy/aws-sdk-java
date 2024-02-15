@@ -11628,7 +11628,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Update a SageMaker HyperPod cluster.
+     * Updates a SageMaker HyperPod cluster.
      * </p>
      * 
      * @param updateClusterRequest
@@ -11641,7 +11641,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Update a SageMaker HyperPod cluster.
+     * Updates a SageMaker HyperPod cluster.
      * </p>
      * 
      * @param updateClusterRequest
@@ -11656,6 +11656,43 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<UpdateClusterResult> updateClusterAsync(UpdateClusterRequest updateClusterRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateClusterRequest, UpdateClusterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the platform software of a SageMaker HyperPod cluster for security patching. To learn how to use this
+     * API, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-operate.html#sagemaker-hyperpod-operate-cli-command-update-cluster-software"
+     * >Update the SageMaker HyperPod platform software of a cluster</a>.
+     * </p>
+     * 
+     * @param updateClusterSoftwareRequest
+     * @return A Java Future containing the result of the UpdateClusterSoftware operation returned by the service.
+     * @sample AmazonSageMakerAsync.UpdateClusterSoftware
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateClusterSoftware"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateClusterSoftwareResult> updateClusterSoftwareAsync(UpdateClusterSoftwareRequest updateClusterSoftwareRequest);
+
+    /**
+     * <p>
+     * Updates the platform software of a SageMaker HyperPod cluster for security patching. To learn how to use this
+     * API, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-operate.html#sagemaker-hyperpod-operate-cli-command-update-cluster-software"
+     * >Update the SageMaker HyperPod platform software of a cluster</a>.
+     * </p>
+     * 
+     * @param updateClusterSoftwareRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateClusterSoftware operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.UpdateClusterSoftware
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateClusterSoftware"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateClusterSoftwareResult> updateClusterSoftwareAsync(UpdateClusterSoftwareRequest updateClusterSoftwareRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateClusterSoftwareRequest, UpdateClusterSoftwareResult> asyncHandler);
 
     /**
      * <p>

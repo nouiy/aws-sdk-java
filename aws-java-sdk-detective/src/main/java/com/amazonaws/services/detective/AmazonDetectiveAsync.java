@@ -135,7 +135,7 @@ import com.amazonaws.services.detective.model.*;
  * </p>
  * <note>
  * <p>
- * We replaced the term "master account" with the term "administrator account." An administrator account is used to
+ * We replaced the term "master account" with the term "administrator account". An administrator account is used to
  * centrally manage multiple accounts. In the case of Detective, the administrator account manages the accounts in their
  * behavior graph.
  * </p>
@@ -265,12 +265,6 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
      * operation is called by the account that is enabling Detective.
      * </p>
      * <p>
-     * Before you try to enable Detective, make sure that your account has been enrolled in Amazon GuardDuty for at
-     * least 48 hours. If you do not meet this requirement, you cannot enable Detective. If you do meet the GuardDuty
-     * prerequisite, then when you make the request to enable Detective, it checks whether your data volume is within
-     * the Detective quota. If it exceeds the quota, then you cannot enable Detective.
-     * </p>
-     * <p>
      * The operation also enables Detective for the calling account in the currently selected Region. It returns the ARN
      * of the new behavior graph.
      * </p>
@@ -295,12 +289,6 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
      * <p>
      * Creates a new behavior graph for the calling account, and sets that account as the administrator account. This
      * operation is called by the account that is enabling Detective.
-     * </p>
-     * <p>
-     * Before you try to enable Detective, make sure that your account has been enrolled in Amazon GuardDuty for at
-     * least 48 hours. If you do not meet this requirement, you cannot enable Detective. If you do meet the GuardDuty
-     * prerequisite, then when you make the request to enable Detective, it checks whether your data volume is within
-     * the Detective quota. If it exceeds the quota, then you cannot enable Detective.
      * </p>
      * <p>
      * The operation also enables Detective for the calling account in the currently selected Region. It returns the ARN
@@ -749,7 +737,10 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * Returns the investigation results of an investigation for a behavior graph.
+     * Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise. An
+     * indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment that can (with a
+     * high level of confidence) identify malicious activity or a security incident. <code>GetInvestigation</code>
+     * returns the investigation results of an investigation for a behavior graph.
      * </p>
      * 
      * @param getInvestigationRequest
@@ -762,7 +753,10 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * Returns the investigation results of an investigation for a behavior graph.
+     * Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise. An
+     * indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment that can (with a
+     * high level of confidence) identify malicious activity or a security incident. <code>GetInvestigation</code>
+     * returns the investigation results of an investigation for a behavior graph.
      * </p>
      * 
      * @param getInvestigationRequest
@@ -883,7 +877,8 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * Get the indicators from an investigation
+     * Gets the indicators from an investigation. You can use the information from the indicators to determine if an IAM
+     * user and/or IAM role is involved in an unusual activity that could indicate malicious behavior and its impact.
      * </p>
      * 
      * @param listIndicatorsRequest
@@ -896,7 +891,8 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * Get the indicators from an investigation
+     * Gets the indicators from an investigation. You can use the information from the indicators to determine if an IAM
+     * user and/or IAM role is involved in an unusual activity that could indicate malicious behavior and its impact.
      * </p>
      * 
      * @param listIndicatorsRequest
@@ -914,7 +910,10 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * List all Investigations.
+     * Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise. An
+     * indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment that can (with a
+     * high level of confidence) identify malicious activity or a security incident. <code>ListInvestigations</code>
+     * lists all active Detective investigations.
      * </p>
      * 
      * @param listInvestigationsRequest
@@ -927,7 +926,10 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * List all Investigations.
+     * Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise. An
+     * indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment that can (with a
+     * high level of confidence) identify malicious activity or a security incident. <code>ListInvestigations</code>
+     * lists all active Detective investigations.
      * </p>
      * 
      * @param listInvestigationsRequest
@@ -1146,7 +1148,10 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * initiate an investigation on an entity in a graph
+     * Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise. An
+     * indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment that can (with a
+     * high level of confidence) identify malicious activity or a security incident. <code>StartInvestigation</code>
+     * initiates an investigation on an entity in a behavior graph.
      * </p>
      * 
      * @param startInvestigationRequest
@@ -1159,7 +1164,10 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * initiate an investigation on an entity in a graph
+     * Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise. An
+     * indicator of compromise (IOC) is an artifact observed in or on a network, system, or environment that can (with a
+     * high level of confidence) identify malicious activity or a security incident. <code>StartInvestigation</code>
+     * initiates an investigation on an entity in a behavior graph.
      * </p>
      * 
      * @param startInvestigationRequest
@@ -1333,7 +1341,7 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * Update the state of an investigation.
+     * Updates the state of an investigation.
      * </p>
      * 
      * @param updateInvestigationStateRequest
@@ -1346,7 +1354,7 @@ public interface AmazonDetectiveAsync extends AmazonDetective {
 
     /**
      * <p>
-     * Update the state of an investigation.
+     * Updates the state of an investigation.
      * </p>
      * 
      * @param updateInvestigationStateRequest

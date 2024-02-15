@@ -27,7 +27,7 @@ public class GetInvestigationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      */
     private String graphArn;
@@ -40,11 +40,11 @@ public class GetInvestigationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -53,10 +53,10 @@ public class GetInvestigationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph.
+     * @return The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -65,11 +65,11 @@ public class GetInvestigationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

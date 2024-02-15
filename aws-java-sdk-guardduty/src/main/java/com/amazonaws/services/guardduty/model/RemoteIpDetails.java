@@ -278,7 +278,7 @@ public class RemoteIpDetails implements Serializable, Cloneable, StructuredPojo 
         if (getGeoLocation() != null)
             sb.append("GeoLocation: ").append(getGeoLocation()).append(",");
         if (getIpAddressV4() != null)
-            sb.append("IpAddressV4: ").append(getIpAddressV4()).append(",");
+            sb.append("IpAddressV4: ").append("***Sensitive Data Redacted***").append(",");
         if (getOrganization() != null)
             sb.append("Organization: ").append(getOrganization());
         sb.append("}");

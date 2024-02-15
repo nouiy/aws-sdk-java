@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Displays the properties of the import job, including the ID, Arn, Name, and the status of the data store.
+ * Displays the properties of the import job, including the ID, Arn, Name, the status of the job, and the progress
+ * report of the job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/ImportJobProperties" target="_top">AWS API
@@ -73,6 +74,13 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
     private InputDataConfig inputDataConfig;
 
     private OutputDataConfig jobOutputDataConfig;
+    /**
+     * <p>
+     * Displays the progress of the import job, including total resources scanned, total resources ingested, and total
+     * size of data ingested.
+     * </p>
+     */
+    private JobProgressReport jobProgressReport;
     /**
      * <p>
      * The Amazon Resource Name (ARN) that gives AWS HealthLake access to your input data.
@@ -421,6 +429,52 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * Displays the progress of the import job, including total resources scanned, total resources ingested, and total
+     * size of data ingested.
+     * </p>
+     * 
+     * @param jobProgressReport
+     *        Displays the progress of the import job, including total resources scanned, total resources ingested, and
+     *        total size of data ingested.
+     */
+
+    public void setJobProgressReport(JobProgressReport jobProgressReport) {
+        this.jobProgressReport = jobProgressReport;
+    }
+
+    /**
+     * <p>
+     * Displays the progress of the import job, including total resources scanned, total resources ingested, and total
+     * size of data ingested.
+     * </p>
+     * 
+     * @return Displays the progress of the import job, including total resources scanned, total resources ingested, and
+     *         total size of data ingested.
+     */
+
+    public JobProgressReport getJobProgressReport() {
+        return this.jobProgressReport;
+    }
+
+    /**
+     * <p>
+     * Displays the progress of the import job, including total resources scanned, total resources ingested, and total
+     * size of data ingested.
+     * </p>
+     * 
+     * @param jobProgressReport
+     *        Displays the progress of the import job, including total resources scanned, total resources ingested, and
+     *        total size of data ingested.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportJobProperties withJobProgressReport(JobProgressReport jobProgressReport) {
+        setJobProgressReport(jobProgressReport);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) that gives AWS HealthLake access to your input data.
      * </p>
      * 
@@ -527,6 +581,8 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
             sb.append("InputDataConfig: ").append(getInputDataConfig()).append(",");
         if (getJobOutputDataConfig() != null)
             sb.append("JobOutputDataConfig: ").append(getJobOutputDataConfig()).append(",");
+        if (getJobProgressReport() != null)
+            sb.append("JobProgressReport: ").append(getJobProgressReport()).append(",");
         if (getDataAccessRoleArn() != null)
             sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn()).append(",");
         if (getMessage() != null)
@@ -577,6 +633,10 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getJobOutputDataConfig() != null && other.getJobOutputDataConfig().equals(this.getJobOutputDataConfig()) == false)
             return false;
+        if (other.getJobProgressReport() == null ^ this.getJobProgressReport() == null)
+            return false;
+        if (other.getJobProgressReport() != null && other.getJobProgressReport().equals(this.getJobProgressReport()) == false)
+            return false;
         if (other.getDataAccessRoleArn() == null ^ this.getDataAccessRoleArn() == null)
             return false;
         if (other.getDataAccessRoleArn() != null && other.getDataAccessRoleArn().equals(this.getDataAccessRoleArn()) == false)
@@ -601,6 +661,7 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getDatastoreId() == null) ? 0 : getDatastoreId().hashCode());
         hashCode = prime * hashCode + ((getInputDataConfig() == null) ? 0 : getInputDataConfig().hashCode());
         hashCode = prime * hashCode + ((getJobOutputDataConfig() == null) ? 0 : getJobOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getJobProgressReport() == null) ? 0 : getJobProgressReport().hashCode());
         hashCode = prime * hashCode + ((getDataAccessRoleArn() == null) ? 0 : getDataAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         return hashCode;

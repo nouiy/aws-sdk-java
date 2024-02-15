@@ -9626,6 +9626,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateClusterSoftwareResult> updateClusterSoftwareAsync(UpdateClusterSoftwareRequest request) {
+
+        return updateClusterSoftwareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateClusterSoftwareResult> updateClusterSoftwareAsync(final UpdateClusterSoftwareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateClusterSoftwareRequest, UpdateClusterSoftwareResult> asyncHandler) {
+        final UpdateClusterSoftwareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateClusterSoftwareResult>() {
+            @Override
+            public UpdateClusterSoftwareResult call() throws Exception {
+                UpdateClusterSoftwareResult result = null;
+
+                try {
+                    result = executeUpdateClusterSoftware(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateCodeRepositoryResult> updateCodeRepositoryAsync(UpdateCodeRepositoryRequest request) {
 
         return updateCodeRepositoryAsync(request, null);

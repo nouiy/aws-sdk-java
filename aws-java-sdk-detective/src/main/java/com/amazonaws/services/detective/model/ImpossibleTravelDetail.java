@@ -30,7 +30,7 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * IP address where the resource was first used in the impossible travel
+     * IP address where the resource was first used in the impossible travel.
      * </p>
      */
     private String startingIpAddress;
@@ -42,7 +42,7 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
     private String endingIpAddress;
     /**
      * <p>
-     * Location where the resource was first used in the impossible travel
+     * Location where the resource was first used in the impossible travel.
      * </p>
      */
     private String startingLocation;
@@ -61,11 +61,11 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * IP address where the resource was first used in the impossible travel
+     * IP address where the resource was first used in the impossible travel.
      * </p>
      * 
      * @param startingIpAddress
-     *        IP address where the resource was first used in the impossible travel
+     *        IP address where the resource was first used in the impossible travel.
      */
 
     public void setStartingIpAddress(String startingIpAddress) {
@@ -74,10 +74,10 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * IP address where the resource was first used in the impossible travel
+     * IP address where the resource was first used in the impossible travel.
      * </p>
      * 
-     * @return IP address where the resource was first used in the impossible travel
+     * @return IP address where the resource was first used in the impossible travel.
      */
 
     public String getStartingIpAddress() {
@@ -86,11 +86,11 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * IP address where the resource was first used in the impossible travel
+     * IP address where the resource was first used in the impossible travel.
      * </p>
      * 
      * @param startingIpAddress
-     *        IP address where the resource was first used in the impossible travel
+     *        IP address where the resource was first used in the impossible travel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Location where the resource was first used in the impossible travel
+     * Location where the resource was first used in the impossible travel.
      * </p>
      * 
      * @param startingLocation
-     *        Location where the resource was first used in the impossible travel
+     *        Location where the resource was first used in the impossible travel.
      */
 
     public void setStartingLocation(String startingLocation) {
@@ -154,10 +154,10 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Location where the resource was first used in the impossible travel
+     * Location where the resource was first used in the impossible travel.
      * </p>
      * 
-     * @return Location where the resource was first used in the impossible travel
+     * @return Location where the resource was first used in the impossible travel.
      */
 
     public String getStartingLocation() {
@@ -166,11 +166,11 @@ public class ImpossibleTravelDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Location where the resource was first used in the impossible travel
+     * Location where the resource was first used in the impossible travel.
      * </p>
      * 
      * @param startingLocation
-     *        Location where the resource was first used in the impossible travel
+     *        Location where the resource was first used in the impossible travel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

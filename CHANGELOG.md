@@ -1,3 +1,40 @@
+# __1.12.660__ __2024-02-15__
+## __AWS Artifact__
+  - ### Features
+    - This is the initial SDK release for AWS Artifact. AWS Artifact provides on-demand access to compliance and third-party compliance reports. This release includes access to List and Get reports, along with their metadata. This release also includes access to AWS Artifact notifications settings.
+
+## __AWS CodePipeline__
+  - ### Features
+    - Add ability to override timeout on action level.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Doc only update for Secrets Manager
+
+## __Amazon Detective__
+  - ### Features
+    - Doc only updates for content enhancement
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Marked fields IpAddressV4, PrivateIpAddress, Email as Sensitive.
+
+## __Amazon HealthLake__
+  - ### Features
+    - This release adds a new response parameter, JobProgressReport, to the DescribeFHIRImportJob and ListFHIRImportJobs API operation. JobProgressReport provides details on the progress of the import job on the server.
+
+## __Amazon OpenSearch Service__
+  - ### Features
+    - Adds additional supported instance types.
+
+## __Amazon Polly__
+  - ### Features
+    - Amazon Polly adds 1 new voice - Burcu (tr-TR)
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release adds a new API UpdateClusterSoftware for SageMaker HyperPod. This API allows users to patch HyperPod clusters with latest platform softwares.
+
 # __1.12.659__ __2024-02-14__
 ## __AWS Control Tower__
   - ### Features

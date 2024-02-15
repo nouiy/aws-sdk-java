@@ -598,7 +598,7 @@ public class NetworkInterface implements Serializable, Cloneable, StructuredPojo
         if (getPrivateDnsName() != null)
             sb.append("PrivateDnsName: ").append(getPrivateDnsName()).append(",");
         if (getPrivateIpAddress() != null)
-            sb.append("PrivateIpAddress: ").append(getPrivateIpAddress()).append(",");
+            sb.append("PrivateIpAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getPrivateIpAddresses() != null)
             sb.append("PrivateIpAddresses: ").append(getPrivateIpAddresses()).append(",");
         if (getPublicDnsName() != null)

@@ -31,7 +31,7 @@ public class RelatedFindingDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the related finding.
+     * The Amazon Resource Name (ARN) of the related finding.
      * </p>
      */
     private String arn;
@@ -50,11 +50,11 @@ public class RelatedFindingDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the related finding.
+     * The Amazon Resource Name (ARN) of the related finding.
      * </p>
      * 
      * @param arn
-     *        The ARN of the related finding.
+     *        The Amazon Resource Name (ARN) of the related finding.
      */
 
     public void setArn(String arn) {
@@ -63,10 +63,10 @@ public class RelatedFindingDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the related finding.
+     * The Amazon Resource Name (ARN) of the related finding.
      * </p>
      * 
-     * @return The ARN of the related finding.
+     * @return The Amazon Resource Name (ARN) of the related finding.
      */
 
     public String getArn() {
@@ -75,11 +75,11 @@ public class RelatedFindingDetail implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the related finding.
+     * The Amazon Resource Name (ARN) of the related finding.
      * </p>
      * 
      * @param arn
-     *        The ARN of the related finding.
+     *        The Amazon Resource Name (ARN) of the related finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

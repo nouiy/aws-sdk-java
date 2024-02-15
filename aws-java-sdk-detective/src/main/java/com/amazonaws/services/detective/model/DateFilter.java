@@ -36,7 +36,7 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date startInclusive;
     /**
      * <p>
-     * A timestamp representing the end date of the time period until when data is filtered , including the end date.
+     * A timestamp representing the end date of the time period until when data is filtered, including the end date.
      * </p>
      */
     private java.util.Date endInclusive;
@@ -86,11 +86,11 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A timestamp representing the end date of the time period until when data is filtered , including the end date.
+     * A timestamp representing the end date of the time period until when data is filtered, including the end date.
      * </p>
      * 
      * @param endInclusive
-     *        A timestamp representing the end date of the time period until when data is filtered , including the end
+     *        A timestamp representing the end date of the time period until when data is filtered, including the end
      *        date.
      */
 
@@ -100,10 +100,10 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A timestamp representing the end date of the time period until when data is filtered , including the end date.
+     * A timestamp representing the end date of the time period until when data is filtered, including the end date.
      * </p>
      * 
-     * @return A timestamp representing the end date of the time period until when data is filtered , including the end
+     * @return A timestamp representing the end date of the time period until when data is filtered, including the end
      *         date.
      */
 
@@ -113,11 +113,11 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A timestamp representing the end date of the time period until when data is filtered , including the end date.
+     * A timestamp representing the end date of the time period until when data is filtered, including the end date.
      * </p>
      * 
      * @param endInclusive
-     *        A timestamp representing the end date of the time period until when data is filtered , including the end
+     *        A timestamp representing the end date of the time period until when data is filtered, including the end
      *        date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -25,7 +25,7 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      */
     private String graphArn;
@@ -37,50 +37,52 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
     private String investigationId;
     /**
      * <p>
-     * The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     * The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      * </p>
      */
     private String entityArn;
     /**
      * <p>
-     * Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     * Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * </p>
      */
     private String entityType;
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The creation time of the investigation report in UTC time stamp format.
      * </p>
      */
     private java.util.Date createdTime;
     /**
      * <p>
-     * The start date and time for the scope time set to generate the investigation report.
+     * The start date and time used to set the scope time within which you want to generate the investigation report.
+     * The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date scopeStartTime;
     /**
      * <p>
      * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
-     * 2021-08-18T16:35:56.284Z.
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date scopeEndTime;
     /**
      * <p>
-     * Status based on the completion status of the investigation.
+     * The status based on the completion status of the investigation.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * Severity based on the likelihood and impact of the indicators of compromise discovered in the investigation.
+     * The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in the
+     * investigation.
      * </p>
      */
     private String severity;
     /**
      * <p>
-     * The current state of the investigation. An archived investigation indicates you have completed reviewing the
+     * The current state of the investigation. An archived investigation indicates that you have completed reviewing the
      * investigation.
      * </p>
      */
@@ -88,11 +90,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -101,10 +103,10 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph.
+     * @return The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -113,11 +115,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,11 +170,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     * The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      * </p>
      * 
      * @param entityArn
-     *        The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     *        The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      */
 
     public void setEntityArn(String entityArn) {
@@ -181,10 +183,10 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     * The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      * </p>
      * 
-     * @return The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     * @return The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      */
 
     public String getEntityArn() {
@@ -193,11 +195,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     * The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      * </p>
      * 
      * @param entityArn
-     *        The unique Amazon Resource Name (ARN) of the IAM user and IAM role.
+     *        The unique Amazon Resource Name (ARN). Detective supports IAM user ARNs and IAM role ARNs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,11 +210,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     * Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * </p>
      * 
      * @param entityType
-     *        Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     *        Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * @see EntityType
      */
 
@@ -222,10 +224,10 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     * Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * </p>
      * 
-     * @return Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     * @return Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * @see EntityType
      */
 
@@ -235,11 +237,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     * Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * </p>
      * 
      * @param entityType
-     *        Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     *        Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EntityType
      */
@@ -251,11 +253,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     * Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * </p>
      * 
      * @param entityType
-     *        Type of entity. For example, Amazon Web Services accounts, such as IAM user and role.
+     *        Type of entity. For example, Amazon Web Services accounts, such as an IAM user and/or IAM role.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EntityType
      */
@@ -267,11 +269,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The creation time of the investigation report in UTC time stamp format.
      * </p>
      * 
      * @param createdTime
-     *        The UTC time stamp of the creation time of the investigation report.
+     *        The creation time of the investigation report in UTC time stamp format.
      */
 
     public void setCreatedTime(java.util.Date createdTime) {
@@ -280,10 +282,10 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The creation time of the investigation report in UTC time stamp format.
      * </p>
      * 
-     * @return The UTC time stamp of the creation time of the investigation report.
+     * @return The creation time of the investigation report in UTC time stamp format.
      */
 
     public java.util.Date getCreatedTime() {
@@ -292,11 +294,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The UTC time stamp of the creation time of the investigation report.
+     * The creation time of the investigation report in UTC time stamp format.
      * </p>
      * 
      * @param createdTime
-     *        The UTC time stamp of the creation time of the investigation report.
+     *        The creation time of the investigation report in UTC time stamp format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -307,11 +309,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The start date and time for the scope time set to generate the investigation report.
+     * The start date and time used to set the scope time within which you want to generate the investigation report.
+     * The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param scopeStartTime
-     *        The start date and time for the scope time set to generate the investigation report.
+     *        The start date and time used to set the scope time within which you want to generate the investigation
+     *        report. The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setScopeStartTime(java.util.Date scopeStartTime) {
@@ -320,10 +324,12 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The start date and time for the scope time set to generate the investigation report.
+     * The start date and time used to set the scope time within which you want to generate the investigation report.
+     * The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The start date and time for the scope time set to generate the investigation report.
+     * @return The start date and time used to set the scope time within which you want to generate the investigation
+     *         report. The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getScopeStartTime() {
@@ -332,11 +338,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The start date and time for the scope time set to generate the investigation report.
+     * The start date and time used to set the scope time within which you want to generate the investigation report.
+     * The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param scopeStartTime
-     *        The start date and time for the scope time set to generate the investigation report.
+     *        The start date and time used to set the scope time within which you want to generate the investigation
+     *        report. The value is an UTC ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -348,12 +356,12 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
-     * 2021-08-18T16:35:56.284Z.
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param scopeEndTime
      *        The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
-     *        2021-08-18T16:35:56.284Z.
+     *        <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setScopeEndTime(java.util.Date scopeEndTime) {
@@ -363,11 +371,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
-     * 2021-08-18T16:35:56.284Z.
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @return The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For
-     *         example, 2021-08-18T16:35:56.284Z.
+     *         example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getScopeEndTime() {
@@ -377,12 +385,12 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
-     * 2021-08-18T16:35:56.284Z.
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param scopeEndTime
      *        The data and time when the investigation began. The value is an UTC ISO8601 formatted string. For example,
-     *        2021-08-18T16:35:56.284Z.
+     *        <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -393,11 +401,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Status based on the completion status of the investigation.
+     * The status based on the completion status of the investigation.
      * </p>
      * 
      * @param status
-     *        Status based on the completion status of the investigation.
+     *        The status based on the completion status of the investigation.
      * @see Status
      */
 
@@ -407,10 +415,10 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Status based on the completion status of the investigation.
+     * The status based on the completion status of the investigation.
      * </p>
      * 
-     * @return Status based on the completion status of the investigation.
+     * @return The status based on the completion status of the investigation.
      * @see Status
      */
 
@@ -420,11 +428,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Status based on the completion status of the investigation.
+     * The status based on the completion status of the investigation.
      * </p>
      * 
      * @param status
-     *        Status based on the completion status of the investigation.
+     *        The status based on the completion status of the investigation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -436,11 +444,11 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Status based on the completion status of the investigation.
+     * The status based on the completion status of the investigation.
      * </p>
      * 
      * @param status
-     *        Status based on the completion status of the investigation.
+     *        The status based on the completion status of the investigation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -452,12 +460,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Severity based on the likelihood and impact of the indicators of compromise discovered in the investigation.
+     * The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in the
+     * investigation.
      * </p>
      * 
      * @param severity
-     *        Severity based on the likelihood and impact of the indicators of compromise discovered in the
-     *        investigation.
+     *        The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in
+     *        the investigation.
      * @see Severity
      */
 
@@ -467,11 +476,12 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Severity based on the likelihood and impact of the indicators of compromise discovered in the investigation.
+     * The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in the
+     * investigation.
      * </p>
      * 
-     * @return Severity based on the likelihood and impact of the indicators of compromise discovered in the
-     *         investigation.
+     * @return The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in
+     *         the investigation.
      * @see Severity
      */
 
@@ -481,12 +491,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Severity based on the likelihood and impact of the indicators of compromise discovered in the investigation.
+     * The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in the
+     * investigation.
      * </p>
      * 
      * @param severity
-     *        Severity based on the likelihood and impact of the indicators of compromise discovered in the
-     *        investigation.
+     *        The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in
+     *        the investigation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Severity
      */
@@ -498,12 +509,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Severity based on the likelihood and impact of the indicators of compromise discovered in the investigation.
+     * The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in the
+     * investigation.
      * </p>
      * 
      * @param severity
-     *        Severity based on the likelihood and impact of the indicators of compromise discovered in the
-     *        investigation.
+     *        The severity assigned is based on the likelihood and impact of the indicators of compromise discovered in
+     *        the investigation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Severity
      */
@@ -515,13 +527,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current state of the investigation. An archived investigation indicates you have completed reviewing the
+     * The current state of the investigation. An archived investigation indicates that you have completed reviewing the
      * investigation.
      * </p>
      * 
      * @param state
-     *        The current state of the investigation. An archived investigation indicates you have completed reviewing
-     *        the investigation.
+     *        The current state of the investigation. An archived investigation indicates that you have completed
+     *        reviewing the investigation.
      * @see State
      */
 
@@ -531,12 +543,12 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current state of the investigation. An archived investigation indicates you have completed reviewing the
+     * The current state of the investigation. An archived investigation indicates that you have completed reviewing the
      * investigation.
      * </p>
      * 
-     * @return The current state of the investigation. An archived investigation indicates you have completed reviewing
-     *         the investigation.
+     * @return The current state of the investigation. An archived investigation indicates that you have completed
+     *         reviewing the investigation.
      * @see State
      */
 
@@ -546,13 +558,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current state of the investigation. An archived investigation indicates you have completed reviewing the
+     * The current state of the investigation. An archived investigation indicates that you have completed reviewing the
      * investigation.
      * </p>
      * 
      * @param state
-     *        The current state of the investigation. An archived investigation indicates you have completed reviewing
-     *        the investigation.
+     *        The current state of the investigation. An archived investigation indicates that you have completed
+     *        reviewing the investigation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see State
      */
@@ -564,13 +576,13 @@ public class GetInvestigationResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current state of the investigation. An archived investigation indicates you have completed reviewing the
+     * The current state of the investigation. An archived investigation indicates that you have completed reviewing the
      * investigation.
      * </p>
      * 
      * @param state
-     *        The current state of the investigation. An archived investigation indicates you have completed reviewing
-     *        the investigation.
+     *        The current state of the investigation. An archived investigation indicates that you have completed
+     *        reviewing the investigation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see State
      */

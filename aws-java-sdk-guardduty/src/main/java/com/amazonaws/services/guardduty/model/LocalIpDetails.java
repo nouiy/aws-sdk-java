@@ -88,7 +88,7 @@ public class LocalIpDetails implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getIpAddressV4() != null)
-            sb.append("IpAddressV4: ").append(getIpAddressV4());
+            sb.append("IpAddressV4: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

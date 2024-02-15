@@ -416,7 +416,7 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
         if (getMasterId() != null)
             sb.append("MasterId: ").append(getMasterId()).append(",");
         if (getEmail() != null)
-            sb.append("Email: ").append(getEmail()).append(",");
+            sb.append("Email: ").append("***Sensitive Data Redacted***").append(",");
         if (getRelationshipStatus() != null)
             sb.append("RelationshipStatus: ").append(getRelationshipStatus()).append(",");
         if (getInvitedAt() != null)

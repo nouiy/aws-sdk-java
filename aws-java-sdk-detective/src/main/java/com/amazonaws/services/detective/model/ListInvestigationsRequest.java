@@ -27,13 +27,13 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      */
     private String graphArn;
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -44,13 +44,13 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
     private String nextToken;
     /**
      * <p>
-     * List the maximum number of investigations in a page.
+     * Lists the maximum number of investigations in a page.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * Filter the investigation results based on a criteria.
+     * Filters the investigation results based on a criteria.
      * </p>
      */
     private FilterCriteria filterCriteria;
@@ -63,11 +63,11 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -76,10 +76,10 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph.
+     * @return The Amazon Resource Name (ARN) of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -88,11 +88,11 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the behavior graph.
+     * The Amazon Resource Name (ARN) of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph.
+     *        The Amazon Resource Name (ARN) of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,7 +103,7 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -112,7 +112,7 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param nextToken
-     *        List if there are more results available. The value of nextToken is a unique pagination token for each
+     *        Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *        page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *        unchanged.</p>
      *        <p>
@@ -126,7 +126,7 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -134,7 +134,7 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
      * Exception error.
      * </p>
      * 
-     * @return List if there are more results available. The value of nextToken is a unique pagination token for each
+     * @return Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *         page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *         unchanged.</p>
      *         <p>
@@ -148,7 +148,7 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * List if there are more results available. The value of nextToken is a unique pagination token for each page.
+     * Lists if there are more results available. The value of nextToken is a unique pagination token for each page.
      * Repeat the call using the returned token to retrieve the next page. Keep all other arguments unchanged.
      * </p>
      * <p>
@@ -157,7 +157,7 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param nextToken
-     *        List if there are more results available. The value of nextToken is a unique pagination token for each
+     *        Lists if there are more results available. The value of nextToken is a unique pagination token for each
      *        page. Repeat the call using the returned token to retrieve the next page. Keep all other arguments
      *        unchanged.</p>
      *        <p>
@@ -173,11 +173,11 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * List the maximum number of investigations in a page.
+     * Lists the maximum number of investigations in a page.
      * </p>
      * 
      * @param maxResults
-     *        List the maximum number of investigations in a page.
+     *        Lists the maximum number of investigations in a page.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -186,10 +186,10 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * List the maximum number of investigations in a page.
+     * Lists the maximum number of investigations in a page.
      * </p>
      * 
-     * @return List the maximum number of investigations in a page.
+     * @return Lists the maximum number of investigations in a page.
      */
 
     public Integer getMaxResults() {
@@ -198,11 +198,11 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * List the maximum number of investigations in a page.
+     * Lists the maximum number of investigations in a page.
      * </p>
      * 
      * @param maxResults
-     *        List the maximum number of investigations in a page.
+     *        Lists the maximum number of investigations in a page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,11 +213,11 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filter the investigation results based on a criteria.
+     * Filters the investigation results based on a criteria.
      * </p>
      * 
      * @param filterCriteria
-     *        Filter the investigation results based on a criteria.
+     *        Filters the investigation results based on a criteria.
      */
 
     public void setFilterCriteria(FilterCriteria filterCriteria) {
@@ -226,10 +226,10 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filter the investigation results based on a criteria.
+     * Filters the investigation results based on a criteria.
      * </p>
      * 
-     * @return Filter the investigation results based on a criteria.
+     * @return Filters the investigation results based on a criteria.
      */
 
     public FilterCriteria getFilterCriteria() {
@@ -238,11 +238,11 @@ public class ListInvestigationsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filter the investigation results based on a criteria.
+     * Filters the investigation results based on a criteria.
      * </p>
      * 
      * @param filterCriteria
-     *        Filter the investigation results based on a criteria.
+     *        Filters the investigation results based on a criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -49,13 +49,13 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
     private String procedure;
     /**
      * <p>
-     * The IP address where the TTP was observed.
+     * The IP address where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      */
     private String ipAddress;
     /**
      * <p>
-     * The name of the API where the TTP was observed.
+     * The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      */
     private String aPIName;
@@ -194,11 +194,11 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IP address where the TTP was observed.
+     * The IP address where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address where the TTP was observed.
+     *        The IP address where the tactics, techniques, and procedure (TTP) was observed.
      */
 
     public void setIpAddress(String ipAddress) {
@@ -207,10 +207,10 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IP address where the TTP was observed.
+     * The IP address where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      * 
-     * @return The IP address where the TTP was observed.
+     * @return The IP address where the tactics, techniques, and procedure (TTP) was observed.
      */
 
     public String getIpAddress() {
@@ -219,11 +219,11 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The IP address where the TTP was observed.
+     * The IP address where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address where the TTP was observed.
+     *        The IP address where the tactics, techniques, and procedure (TTP) was observed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -234,11 +234,11 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the API where the TTP was observed.
+     * The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      * 
      * @param aPIName
-     *        The name of the API where the TTP was observed.
+     *        The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      */
 
     public void setAPIName(String aPIName) {
@@ -247,10 +247,10 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the API where the TTP was observed.
+     * The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      * 
-     * @return The name of the API where the TTP was observed.
+     * @return The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      */
 
     public String getAPIName() {
@@ -259,11 +259,11 @@ public class TTPsObservedDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the API where the TTP was observed.
+     * The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      * </p>
      * 
      * @param aPIName
-     *        The name of the API where the TTP was observed.
+     *        The name of the API where the tactics, techniques, and procedure (TTP) was observed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

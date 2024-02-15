@@ -80,6 +80,10 @@ public class ImportJobPropertiesJsonUnmarshaller implements Unmarshaller<ImportJ
                     context.nextToken();
                     importJobProperties.setJobOutputDataConfig(OutputDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JobProgressReport", targetDepth)) {
+                    context.nextToken();
+                    importJobProperties.setJobProgressReport(JobProgressReportJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("DataAccessRoleArn", targetDepth)) {
                     context.nextToken();
                     importJobProperties.setDataAccessRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
