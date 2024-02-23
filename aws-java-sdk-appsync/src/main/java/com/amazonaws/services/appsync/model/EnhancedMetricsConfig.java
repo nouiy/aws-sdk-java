@@ -73,7 +73,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
- * <code>metricConfig</code> value set to <code>ENABLED</code>.
+ * <code>metricsConfig</code> value set to <code>ENABLED</code>.
  * </p>
  * </li>
  * </ul>
@@ -114,7 +114,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
- * <code>metricConfig</code> value set to <code>ENABLED</code>.
+ * <code>metricsConfig</code> value set to <code>ENABLED</code>.
  * </p>
  * </li>
  * </ul>
@@ -194,7 +194,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -235,7 +235,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -309,7 +309,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -358,7 +358,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     *        <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *        <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *        </p>
      *        </li>
      * @see ResolverLevelMetricsBehavior
@@ -413,7 +413,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -461,7 +461,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     *         <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *         <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *         </p>
      *         </li>
      * @see ResolverLevelMetricsBehavior
@@ -516,7 +516,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -565,7 +565,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     *        <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *        <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -622,7 +622,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -671,7 +671,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>PER_RESOLVER_METRICS</code>: Records and emits metric data for resolvers that have the
-     *        <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *        <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -718,7 +718,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -757,7 +757,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     *        <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *        <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *        </p>
      *        </li>
      * @see DataSourceLevelMetricsBehavior
@@ -802,7 +802,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -840,7 +840,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     *         <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *         <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *         </p>
      *         </li>
      * @see DataSourceLevelMetricsBehavior
@@ -885,7 +885,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -924,7 +924,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     *        <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *        <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -971,7 +971,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     * <code>metricConfig</code> value set to <code>ENABLED</code>.
+     * <code>metricsConfig</code> value set to <code>ENABLED</code>.
      * </p>
      * </li>
      * </ul>
@@ -1010,7 +1010,7 @@ public class EnhancedMetricsConfig implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>PER_DATA_SOURCE_METRICS</code>: Records and emits metric data for data sources that have the
-     *        <code>metricConfig</code> value set to <code>ENABLED</code>.
+     *        <code>metricsConfig</code> value set to <code>ENABLED</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

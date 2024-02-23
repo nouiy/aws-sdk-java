@@ -37,7 +37,9 @@ public class LedgerEncryptionDescription implements Serializable, Cloneable, Str
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at rest. If
-     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption.
+     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption. It will display
+     * <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption configuration to the Amazon Web Services
+     * owned KMS key.
      * </p>
      */
     private String kmsKeyArn;
@@ -90,12 +92,16 @@ public class LedgerEncryptionDescription implements Serializable, Cloneable, Str
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at rest. If
-     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption.
+     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption. It will display
+     * <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption configuration to the Amazon Web Services
+     * owned KMS key.
      * </p>
      * 
      * @param kmsKeyArn
      *        The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at
      *        rest. If this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption.
+     *        It will display <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption configuration to the
+     *        Amazon Web Services owned KMS key.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -105,12 +111,15 @@ public class LedgerEncryptionDescription implements Serializable, Cloneable, Str
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at rest. If
-     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption.
+     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption. It will display
+     * <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption configuration to the Amazon Web Services
+     * owned KMS key.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at
      *         rest. If this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for
-     *         encryption.
+     *         encryption. It will display <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption
+     *         configuration to the Amazon Web Services owned KMS key.
      */
 
     public String getKmsKeyArn() {
@@ -120,12 +129,16 @@ public class LedgerEncryptionDescription implements Serializable, Cloneable, Str
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at rest. If
-     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption.
+     * this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption. It will display
+     * <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption configuration to the Amazon Web Services
+     * owned KMS key.
      * </p>
      * 
      * @param kmsKeyArn
      *        The Amazon Resource Name (ARN) of the customer managed KMS key that the ledger uses for encryption at
      *        rest. If this parameter is undefined, the ledger uses an Amazon Web Services owned KMS key for encryption.
+     *        It will display <code>AWS_OWNED_KMS_KEY</code> when updating the ledger's encryption configuration to the
+     *        Amazon Web Services owned KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

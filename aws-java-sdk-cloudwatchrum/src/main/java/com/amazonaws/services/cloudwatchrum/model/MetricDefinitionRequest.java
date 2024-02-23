@@ -20,9 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Use this structure to define one extended metric or custom metric that RUM will send to CloudWatch or CloudWatch
- * Evidently. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-vended-metrics.html"> Additional
- * metrics that you can send to CloudWatch and CloudWatch Evidently</a>.
+ * Evidently. For more information, see <a href=
+ * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-custom-and-extended-metrics.html">
+ * Custom metrics and extended metrics that you can send to CloudWatch and CloudWatch Evidently</a>.
  * </p>
  * <p>
  * This structure is validated differently for extended metrics and custom metrics. For extended metrics that are sent
@@ -37,8 +37,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * Only certain combinations of values for <code>Name</code>, <code>ValueKey</code>, and <code>EventPattern</code> are
- * valid. In addition to what is displayed in the list below, the <code>EventPattern</code> can also include information
- * used by the <code>DimensionKeys</code> field.
+ * valid. In addition to what is displayed in the following list, the <code>EventPattern</code> can also include
+ * information used by the <code>DimensionKeys</code> field.
  * </p>
  * <ul>
  * <li>
@@ -113,6 +113,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * If <code>Name</code> is <code>SessionCount</code>, then <code>ValueKey</code>must be null and the
  * <code>EventPattern</code> must include <code>{"event_type":["com.amazon.rum.session_start_event"]}</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * If <code>Name</code> is <code>PageViewCount</code>, then <code>ValueKey</code>must be null and the
+ * <code>EventPattern</code> must include <code>{"event_type":["com.amazon.rum.page_view_event"]}</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * If <code>Name</code> is <code>Http4xxCount</code>, then <code>ValueKey</code>must be null and the
+ * <code>EventPattern</code> must include
+ * <code>{"event_type": ["com.amazon.rum.http_event"],"event_details":{"response":{"status":[{"numeric":["&gt;=",400,"&lt;",500]}]}}} }</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * If <code>Name</code> is <code>Http5xxCount</code>, then <code>ValueKey</code>must be null and the
+ * <code>EventPattern</code> must include
+ * <code>{"event_type": ["com.amazon.rum.http_event"],"event_details":{"response":{"status":[{"numeric":["&gt;=",500,"&lt;=",599]}]}}} }</code>
  * </p>
  * </li>
  * </ul>
@@ -335,7 +355,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     * If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      * <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      * </p>
      */
@@ -425,12 +445,12 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * The field within the event object that the metric value is sourced from.
      * </p>
      * <p>
-     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just want to
-     * count the number of events that the filter catches.
+     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want to count
+     * the number of events that the filter catches.
      * </p>
      * <p>
-     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently will
-     * handle data extraction from the event.
+     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently will handle
+     * data extraction from the event.
      * </p>
      */
     private String valueKey;
@@ -769,7 +789,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     * If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      * <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      * </p>
      * 
@@ -801,7 +821,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      *        </li>
      *        </ul>
      *        <p>
-     *        If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     *        If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      *        <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      */
 
@@ -838,7 +858,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     * If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      * <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      * </p>
      * 
@@ -870,7 +890,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      *         </li>
      *         </ul>
      *         <p>
-     *         If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     *         If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      *         <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      */
 
@@ -907,7 +927,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     * If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      * <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      * </p>
      * 
@@ -939,7 +959,7 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      *        </li>
      *        </ul>
      *        <p>
-     *        If the metrics destination' is <code>CloudWatch</code> and the event also matches a value in
+     *        If the metrics destination is <code>CloudWatch</code> and the event also matches a value in
      *        <code>DimensionKeys</code>, then the metric is published with the specified dimensions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1446,23 +1466,23 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * The field within the event object that the metric value is sourced from.
      * </p>
      * <p>
-     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just want to
-     * count the number of events that the filter catches.
+     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want to count
+     * the number of events that the filter catches.
      * </p>
      * <p>
-     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently will
-     * handle data extraction from the event.
+     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently will handle
+     * data extraction from the event.
      * </p>
      * 
      * @param valueKey
      *        The field within the event object that the metric value is sourced from.</p>
      *        <p>
-     *        If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just
-     *        want to count the number of events that the filter catches.
+     *        If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want
+     *        to count the number of events that the filter catches.
      *        </p>
      *        <p>
-     *        If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently
-     *        will handle data extraction from the event.
+     *        If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently will
+     *        handle data extraction from the event.
      */
 
     public void setValueKey(String valueKey) {
@@ -1474,21 +1494,21 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * The field within the event object that the metric value is sourced from.
      * </p>
      * <p>
-     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just want to
-     * count the number of events that the filter catches.
+     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want to count
+     * the number of events that the filter catches.
      * </p>
      * <p>
-     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently will
-     * handle data extraction from the event.
+     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently will handle
+     * data extraction from the event.
      * </p>
      * 
      * @return The field within the event object that the metric value is sourced from.</p>
      *         <p>
-     *         If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just
-     *         want to count the number of events that the filter catches.
+     *         If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want
+     *         to count the number of events that the filter catches.
      *         </p>
      *         <p>
-     *         If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently
+     *         If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently
      *         will handle data extraction from the event.
      */
 
@@ -1501,23 +1521,23 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * The field within the event object that the metric value is sourced from.
      * </p>
      * <p>
-     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just want to
-     * count the number of events that the filter catches.
+     * If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want to count
+     * the number of events that the filter catches.
      * </p>
      * <p>
-     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently will
-     * handle data extraction from the event.
+     * If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently will handle
+     * data extraction from the event.
      * </p>
      * 
      * @param valueKey
      *        The field within the event object that the metric value is sourced from.</p>
      *        <p>
-     *        If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you just
-     *        want to count the number of events that the filter catches.
+     *        If you omit this field, a hardcoded value of 1 is pushed as the metric value. This is useful if you want
+     *        to count the number of events that the filter catches.
      *        </p>
      *        <p>
-     *        If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw and Evidently
-     *        will handle data extraction from the event.
+     *        If this metric is sent to CloudWatch Evidently, this field will be passed to Evidently raw. Evidently will
+     *        handle data extraction from the event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

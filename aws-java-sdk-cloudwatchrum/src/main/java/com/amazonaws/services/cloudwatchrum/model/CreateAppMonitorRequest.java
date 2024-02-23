@@ -30,9 +30,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      * A structure that contains much of the configuration data for the app monitor. If you are using Amazon Cognito for
      * authorization, you must include this structure in your request, and it must include the ID of the Amazon Cognito
      * identity pool to use for authorization. If you don't include <code>AppMonitorConfiguration</code>, you must set
-     * up your own authorization method. For more information, see <a
-     * href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize your
-     * application to send data to Amazon Web Services</a>.
+     * up your own authorization method. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     * >Authorize your application to send data to Amazon Web Services</a>.
      * </p>
      * <p>
      * If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
@@ -101,9 +101,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      * A structure that contains much of the configuration data for the app monitor. If you are using Amazon Cognito for
      * authorization, you must include this structure in your request, and it must include the ID of the Amazon Cognito
      * identity pool to use for authorization. If you don't include <code>AppMonitorConfiguration</code>, you must set
-     * up your own authorization method. For more information, see <a
-     * href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize your
-     * application to send data to Amazon Web Services</a>.
+     * up your own authorization method. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     * >Authorize your application to send data to Amazon Web Services</a>.
      * </p>
      * <p>
      * If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
@@ -114,9 +114,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      *        Cognito for authorization, you must include this structure in your request, and it must include the ID of
      *        the Amazon Cognito identity pool to use for authorization. If you don't include
      *        <code>AppMonitorConfiguration</code>, you must set up your own authorization method. For more information,
-     *        see <a
-     *        href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize your
-     *        application to send data to Amazon Web Services</a>.</p>
+     *        see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     *        >Authorize your application to send data to Amazon Web Services</a>.</p>
      *        <p>
      *        If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
      */
@@ -130,9 +130,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      * A structure that contains much of the configuration data for the app monitor. If you are using Amazon Cognito for
      * authorization, you must include this structure in your request, and it must include the ID of the Amazon Cognito
      * identity pool to use for authorization. If you don't include <code>AppMonitorConfiguration</code>, you must set
-     * up your own authorization method. For more information, see <a
-     * href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize your
-     * application to send data to Amazon Web Services</a>.
+     * up your own authorization method. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     * >Authorize your application to send data to Amazon Web Services</a>.
      * </p>
      * <p>
      * If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
@@ -142,9 +142,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      *         Cognito for authorization, you must include this structure in your request, and it must include the ID of
      *         the Amazon Cognito identity pool to use for authorization. If you don't include
      *         <code>AppMonitorConfiguration</code>, you must set up your own authorization method. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize
-     *         your application to send data to Amazon Web Services</a>.</p>
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     *         >Authorize your application to send data to Amazon Web Services</a>.</p>
      *         <p>
      *         If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
      */
@@ -158,9 +158,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      * A structure that contains much of the configuration data for the app monitor. If you are using Amazon Cognito for
      * authorization, you must include this structure in your request, and it must include the ID of the Amazon Cognito
      * identity pool to use for authorization. If you don't include <code>AppMonitorConfiguration</code>, you must set
-     * up your own authorization method. For more information, see <a
-     * href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize your
-     * application to send data to Amazon Web Services</a>.
+     * up your own authorization method. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     * >Authorize your application to send data to Amazon Web Services</a>.
      * </p>
      * <p>
      * If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
@@ -171,9 +171,9 @@ public class CreateAppMonitorRequest extends com.amazonaws.AmazonWebServiceReque
      *        Cognito for authorization, you must include this structure in your request, and it must include the ID of
      *        the Amazon Cognito identity pool to use for authorization. If you don't include
      *        <code>AppMonitorConfiguration</code>, you must set up your own authorization method. For more information,
-     *        see <a
-     *        href="https://docs.aws.amazon.com/monitoring/CloudWatch-RUM-get-started-authorization.html">Authorize your
-     *        application to send data to Amazon Web Services</a>.</p>
+     *        see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-get-started-authorization.html"
+     *        >Authorize your application to send data to Amazon Web Services</a>.</p>
      *        <p>
      *        If you omit this argument, the sample rate used for RUM is set to 10% of the user sessions.
      * @return Returns a reference to this object so that method calls can be chained together.

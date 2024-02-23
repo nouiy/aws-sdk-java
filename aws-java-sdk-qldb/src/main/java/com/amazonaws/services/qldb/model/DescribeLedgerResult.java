@@ -68,7 +68,8 @@ public class DescribeLedgerResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Information about the encryption of data at rest in the ledger. This includes the current status, the KMS key,
-     * and when the key became inaccessible (in the case of an error).
+     * and when the key became inaccessible (in the case of an error). If this parameter is undefined, the ledger uses
+     * an Amazon Web Services owned KMS key for encryption.
      * </p>
      */
     private LedgerEncryptionDescription encryptionDescription;
@@ -408,12 +409,14 @@ public class DescribeLedgerResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Information about the encryption of data at rest in the ledger. This includes the current status, the KMS key,
-     * and when the key became inaccessible (in the case of an error).
+     * and when the key became inaccessible (in the case of an error). If this parameter is undefined, the ledger uses
+     * an Amazon Web Services owned KMS key for encryption.
      * </p>
      * 
      * @param encryptionDescription
      *        Information about the encryption of data at rest in the ledger. This includes the current status, the KMS
-     *        key, and when the key became inaccessible (in the case of an error).
+     *        key, and when the key became inaccessible (in the case of an error). If this parameter is undefined, the
+     *        ledger uses an Amazon Web Services owned KMS key for encryption.
      */
 
     public void setEncryptionDescription(LedgerEncryptionDescription encryptionDescription) {
@@ -423,11 +426,13 @@ public class DescribeLedgerResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Information about the encryption of data at rest in the ledger. This includes the current status, the KMS key,
-     * and when the key became inaccessible (in the case of an error).
+     * and when the key became inaccessible (in the case of an error). If this parameter is undefined, the ledger uses
+     * an Amazon Web Services owned KMS key for encryption.
      * </p>
      * 
      * @return Information about the encryption of data at rest in the ledger. This includes the current status, the KMS
-     *         key, and when the key became inaccessible (in the case of an error).
+     *         key, and when the key became inaccessible (in the case of an error). If this parameter is undefined, the
+     *         ledger uses an Amazon Web Services owned KMS key for encryption.
      */
 
     public LedgerEncryptionDescription getEncryptionDescription() {
@@ -437,12 +442,14 @@ public class DescribeLedgerResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Information about the encryption of data at rest in the ledger. This includes the current status, the KMS key,
-     * and when the key became inaccessible (in the case of an error).
+     * and when the key became inaccessible (in the case of an error). If this parameter is undefined, the ledger uses
+     * an Amazon Web Services owned KMS key for encryption.
      * </p>
      * 
      * @param encryptionDescription
      *        Information about the encryption of data at rest in the ledger. This includes the current status, the KMS
-     *        key, and when the key became inaccessible (in the case of an error).
+     *        key, and when the key became inaccessible (in the case of an error). If this parameter is undefined, the
+     *        ledger uses an Amazon Web Services owned KMS key for encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

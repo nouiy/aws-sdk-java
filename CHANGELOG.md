@@ -1,3 +1,20 @@
+# __1.12.666__ __2024-02-23__
+## __AWS AppSync__
+  - ### Features
+    - Documentation only updates for AppSync
+
+## __Amazon QLDB__
+  - ### Features
+    - Clarify possible values for KmsKeyArn and EncryptionDescription.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Add pattern and length based validations for DBShardGroupIdentifier
+
+## __CloudWatch RUM__
+  - ### Features
+    - Doc-only update for new RUM metrics that were added
+
 # __1.12.665__ __2024-02-22__
 ## __Amazon CloudWatch Internet Monitor__
   - ### Features

@@ -160,12 +160,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the aggregated
+     * bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     * diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * </ul>
@@ -1171,12 +1173,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the aggregated
+     * bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     * diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * </ul>
@@ -1189,12 +1193,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *        NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the
+     *        aggregated bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *        EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     *        diagnosing bottlenecks in a cache configuration.
      *        </p>
      *        </li>
      *        </ul>
@@ -1214,12 +1220,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the aggregated
+     * bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     * diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * </ul>
@@ -1231,12 +1239,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <ul>
      *         <li>
      *         <p>
-     *         NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *         NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the
+     *         aggregated bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *         EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     *         diagnosing bottlenecks in a cache configuration.
      *         </p>
      *         </li>
      *         </ul>
@@ -1257,12 +1267,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the aggregated
+     * bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     * diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * </ul>
@@ -1275,12 +1287,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *        NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the
+     *        aggregated bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *        EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     *        diagnosing bottlenecks in a cache configuration.
      *        </p>
      *        </li>
      *        </ul>
@@ -1302,12 +1316,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     * NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the aggregated
+     * bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     * EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     * diagnosing bottlenecks in a cache configuration.
      * </p>
      * </li>
      * </ul>
@@ -1320,12 +1336,14 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        NetworkBandwidthOutAllowanceExceeded: The number of times a specified GraphQL operation was called.
+     *        NetworkBandwidthOutAllowanceExceeded: The network packets dropped because the throughput exceeded the
+     *        aggregated bandwidth limit. This is useful for diagnosing bottlenecks in a cache configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        EngineCPUUtilization: The number of GraphQL errors that occurred during a specified GraphQL operation.
+     *        EngineCPUUtilization: The CPU utilization (percentage) allocated to the Redis process. This is useful for
+     *        diagnosing bottlenecks in a cache configuration.
      *        </p>
      *        </li>
      *        </ul>
