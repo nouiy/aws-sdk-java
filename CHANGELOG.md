@@ -1,3 +1,8 @@
+# __1.12.668__ __2024-02-27__
+## __AWS Amplify UI Builder__
+  - ### Features
+    - We have added the ability to tag resources after they are created
+
 # __1.12.667__ __2024-02-26__
 ## __Amazon API Gateway__
   - ### Features

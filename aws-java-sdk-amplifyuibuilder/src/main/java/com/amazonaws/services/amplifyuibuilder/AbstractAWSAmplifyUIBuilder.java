@@ -118,6 +118,11 @@ public class AbstractAWSAmplifyUIBuilder implements AWSAmplifyUIBuilder {
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListThemesResult listThemes(ListThemesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -134,6 +139,16 @@ public class AbstractAWSAmplifyUIBuilder implements AWSAmplifyUIBuilder {
 
     @Override
     public StartCodegenJobResult startCodegenJob(StartCodegenJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

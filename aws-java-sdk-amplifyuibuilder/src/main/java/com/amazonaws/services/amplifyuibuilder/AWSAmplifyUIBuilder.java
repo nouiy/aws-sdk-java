@@ -398,6 +398,29 @@ public interface AWSAmplifyUIBuilder {
 
     /**
      * <p>
+     * Returns a list of tags for a specified Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws UnauthorizedException
+     *         You don't have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred. Please retry your request.
+     * @throws InvalidParameterException
+     *         An invalid or out-of-range value was supplied for the input parameter.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @sample AWSAmplifyUIBuilder.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifyuibuilder-2021-08-11/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Retrieves a list of themes for a specified Amplify app and backend environment.
      * </p>
      * 
@@ -468,6 +491,52 @@ public interface AWSAmplifyUIBuilder {
      *      target="_top">AWS API Documentation</a>
      */
     StartCodegenJobResult startCodegenJob(StartCodegenJobRequest startCodegenJobRequest);
+
+    /**
+     * <p>
+     * Tags the resource with a tag key and value.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws UnauthorizedException
+     *         You don't have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred. Please retry your request.
+     * @throws InvalidParameterException
+     *         An invalid or out-of-range value was supplied for the input parameter.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @sample AWSAmplifyUIBuilder.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifyuibuilder-2021-08-11/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Untags a resource with a specified Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws UnauthorizedException
+     *         You don't have permission to perform this operation.
+     * @throws InternalServerException
+     *         An internal error has occurred. Please retry your request.
+     * @throws InvalidParameterException
+     *         An invalid or out-of-range value was supplied for the input parameter.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @sample AWSAmplifyUIBuilder.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifyuibuilder-2021-08-11/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>
