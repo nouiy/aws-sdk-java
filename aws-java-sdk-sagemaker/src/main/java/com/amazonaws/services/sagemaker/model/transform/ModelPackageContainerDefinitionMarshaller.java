@@ -37,6 +37,8 @@ public class ModelPackageContainerDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImageDigest").build();
     private static final MarshallingInfo<String> MODELDATAURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDataUrl").build();
+    private static final MarshallingInfo<StructuredPojo> MODELDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDataSource").build();
     private static final MarshallingInfo<String> PRODUCTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ProductId").build();
     private static final MarshallingInfo<Map> ENVIRONMENT_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -72,6 +74,7 @@ public class ModelPackageContainerDefinitionMarshaller {
             protocolMarshaller.marshall(modelPackageContainerDefinition.getImage(), IMAGE_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getImageDigest(), IMAGEDIGEST_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getModelDataUrl(), MODELDATAURL_BINDING);
+            protocolMarshaller.marshall(modelPackageContainerDefinition.getModelDataSource(), MODELDATASOURCE_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getProductId(), PRODUCTID_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getEnvironment(), ENVIRONMENT_BINDING);
             protocolMarshaller.marshall(modelPackageContainerDefinition.getModelInput(), MODELINPUT_BINDING);

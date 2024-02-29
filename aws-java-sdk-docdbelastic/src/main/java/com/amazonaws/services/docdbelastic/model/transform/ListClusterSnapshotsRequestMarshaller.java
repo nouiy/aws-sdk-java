@@ -33,6 +33,8 @@ public class ListClusterSnapshotsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<String> SNAPSHOTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("snapshotType").build();
 
     private static final ListClusterSnapshotsRequestMarshaller instance = new ListClusterSnapshotsRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListClusterSnapshotsRequestMarshaller {
             protocolMarshaller.marshall(listClusterSnapshotsRequest.getClusterArn(), CLUSTERARN_BINDING);
             protocolMarshaller.marshall(listClusterSnapshotsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listClusterSnapshotsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listClusterSnapshotsRequest.getSnapshotType(), SNAPSHOTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

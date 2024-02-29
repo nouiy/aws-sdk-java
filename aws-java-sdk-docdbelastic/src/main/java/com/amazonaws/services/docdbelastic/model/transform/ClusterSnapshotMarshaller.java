@@ -42,6 +42,8 @@ public class ClusterSnapshotMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("snapshotCreationTime").build();
     private static final MarshallingInfo<String> SNAPSHOTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("snapshotName").build();
+    private static final MarshallingInfo<String> SNAPSHOTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("snapshotType").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -72,6 +74,7 @@ public class ClusterSnapshotMarshaller {
             protocolMarshaller.marshall(clusterSnapshot.getSnapshotArn(), SNAPSHOTARN_BINDING);
             protocolMarshaller.marshall(clusterSnapshot.getSnapshotCreationTime(), SNAPSHOTCREATIONTIME_BINDING);
             protocolMarshaller.marshall(clusterSnapshot.getSnapshotName(), SNAPSHOTNAME_BINDING);
+            protocolMarshaller.marshall(clusterSnapshot.getSnapshotType(), SNAPSHOTTYPE_BINDING);
             protocolMarshaller.marshall(clusterSnapshot.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(clusterSnapshot.getSubnetIds(), SUBNETIDS_BINDING);
             protocolMarshaller.marshall(clusterSnapshot.getVpcSecurityGroupIds(), VPCSECURITYGROUPIDS_BINDING);

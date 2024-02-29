@@ -28,6 +28,11 @@ public class AbstractAWSMigrationHubOrchestrator implements AWSMigrationHubOrche
     }
 
     @Override
+    public CreateTemplateResult createTemplate(CreateTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateWorkflowResult createWorkflow(CreateWorkflowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -39,6 +44,11 @@ public class AbstractAWSMigrationHubOrchestrator implements AWSMigrationHubOrche
 
     @Override
     public CreateWorkflowStepGroupResult createWorkflowStepGroup(CreateWorkflowStepGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteTemplateResult deleteTemplate(DeleteTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -149,6 +159,11 @@ public class AbstractAWSMigrationHubOrchestrator implements AWSMigrationHubOrche
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTemplateResult updateTemplate(UpdateTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

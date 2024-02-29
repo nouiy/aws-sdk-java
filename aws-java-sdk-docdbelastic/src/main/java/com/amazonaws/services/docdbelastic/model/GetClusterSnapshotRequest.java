@@ -27,18 +27,18 @@ public class GetClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      */
     private String snapshotArn;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot.
+     *        The ARN identifier of the elastic cluster snapshot.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -47,10 +47,10 @@ public class GetClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB snapshot.
+     * @return The ARN identifier of the elastic cluster snapshot.
      */
 
     public String getSnapshotArn() {
@@ -59,11 +59,11 @@ public class GetClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot.
+     *        The ARN identifier of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,6 +46,12 @@ public class FieldTooltipItem implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String visibility;
+    /**
+     * <p>
+     * Determines the target of the field tooltip item in a combo chart visual.
+     * </p>
+     */
+    private String tooltipTarget;
 
     /**
      * <p>
@@ -187,6 +193,65 @@ public class FieldTooltipItem implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Determines the target of the field tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @param tooltipTarget
+     *        Determines the target of the field tooltip item in a combo chart visual.
+     * @see TooltipTarget
+     */
+
+    public void setTooltipTarget(String tooltipTarget) {
+        this.tooltipTarget = tooltipTarget;
+    }
+
+    /**
+     * <p>
+     * Determines the target of the field tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @return Determines the target of the field tooltip item in a combo chart visual.
+     * @see TooltipTarget
+     */
+
+    public String getTooltipTarget() {
+        return this.tooltipTarget;
+    }
+
+    /**
+     * <p>
+     * Determines the target of the field tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @param tooltipTarget
+     *        Determines the target of the field tooltip item in a combo chart visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TooltipTarget
+     */
+
+    public FieldTooltipItem withTooltipTarget(String tooltipTarget) {
+        setTooltipTarget(tooltipTarget);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines the target of the field tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @param tooltipTarget
+     *        Determines the target of the field tooltip item in a combo chart visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TooltipTarget
+     */
+
+    public FieldTooltipItem withTooltipTarget(TooltipTarget tooltipTarget) {
+        this.tooltipTarget = tooltipTarget.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -203,7 +268,9 @@ public class FieldTooltipItem implements Serializable, Cloneable, StructuredPojo
         if (getLabel() != null)
             sb.append("Label: ").append(getLabel()).append(",");
         if (getVisibility() != null)
-            sb.append("Visibility: ").append(getVisibility());
+            sb.append("Visibility: ").append(getVisibility()).append(",");
+        if (getTooltipTarget() != null)
+            sb.append("TooltipTarget: ").append(getTooltipTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -230,6 +297,10 @@ public class FieldTooltipItem implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getVisibility() != null && other.getVisibility().equals(this.getVisibility()) == false)
             return false;
+        if (other.getTooltipTarget() == null ^ this.getTooltipTarget() == null)
+            return false;
+        if (other.getTooltipTarget() != null && other.getTooltipTarget().equals(this.getTooltipTarget()) == false)
+            return false;
         return true;
     }
 
@@ -241,6 +312,7 @@ public class FieldTooltipItem implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getFieldId() == null) ? 0 : getFieldId().hashCode());
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         hashCode = prime * hashCode + ((getVisibility() == null) ? 0 : getVisibility().hashCode());
+        hashCode = prime * hashCode + ((getTooltipTarget() == null) ? 0 : getTooltipTarget().hashCode());
         return hashCode;
     }
 

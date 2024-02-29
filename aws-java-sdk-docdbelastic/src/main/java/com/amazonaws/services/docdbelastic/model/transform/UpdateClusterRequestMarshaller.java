@@ -34,17 +34,23 @@ public class UpdateClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("adminUserPassword").build();
     private static final MarshallingInfo<String> AUTHTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("authType").build();
+    private static final MarshallingInfo<Integer> BACKUPRETENTIONPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("backupRetentionPeriod").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> CLUSTERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("clusterArn").build();
+    private static final MarshallingInfo<String> PREFERREDBACKUPWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preferredBackupWindow").build();
     private static final MarshallingInfo<String> PREFERREDMAINTENANCEWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preferredMaintenanceWindow").build();
     private static final MarshallingInfo<Integer> SHARDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardCapacity").build();
     private static final MarshallingInfo<Integer> SHARDCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardCount").build();
+    private static final MarshallingInfo<Integer> SHARDINSTANCECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardInstanceCount").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("subnetIds").build();
     private static final MarshallingInfo<List> VPCSECURITYGROUPIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -68,11 +74,14 @@ public class UpdateClusterRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateClusterRequest.getAdminUserPassword(), ADMINUSERPASSWORD_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getAuthType(), AUTHTYPE_BINDING);
+            protocolMarshaller.marshall(updateClusterRequest.getBackupRetentionPeriod(), BACKUPRETENTIONPERIOD_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getClusterArn(), CLUSTERARN_BINDING);
+            protocolMarshaller.marshall(updateClusterRequest.getPreferredBackupWindow(), PREFERREDBACKUPWINDOW_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getPreferredMaintenanceWindow(), PREFERREDMAINTENANCEWINDOW_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getShardCapacity(), SHARDCAPACITY_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getShardCount(), SHARDCOUNT_BINDING);
+            protocolMarshaller.marshall(updateClusterRequest.getShardInstanceCount(), SHARDINSTANCECOUNT_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getSubnetIds(), SUBNETIDS_BINDING);
             protocolMarshaller.marshall(updateClusterRequest.getVpcSecurityGroupIds(), VPCSECURITYGROUPIDS_BINDING);
         } catch (Exception e) {

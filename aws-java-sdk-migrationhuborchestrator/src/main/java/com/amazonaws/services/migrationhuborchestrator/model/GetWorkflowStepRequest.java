@@ -33,7 +33,7 @@ public class GetWorkflowStepRequest extends com.amazonaws.AmazonWebServiceReques
     private String workflowId;
     /**
      * <p>
-     * desThe ID of the step group.
+     * The ID of the step group.
      * </p>
      */
     private String stepGroupId;
@@ -86,11 +86,11 @@ public class GetWorkflowStepRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * desThe ID of the step group.
+     * The ID of the step group.
      * </p>
      * 
      * @param stepGroupId
-     *        desThe ID of the step group.
+     *        The ID of the step group.
      */
 
     public void setStepGroupId(String stepGroupId) {
@@ -99,10 +99,10 @@ public class GetWorkflowStepRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * desThe ID of the step group.
+     * The ID of the step group.
      * </p>
      * 
-     * @return desThe ID of the step group.
+     * @return The ID of the step group.
      */
 
     public String getStepGroupId() {
@@ -111,11 +111,11 @@ public class GetWorkflowStepRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * desThe ID of the step group.
+     * The ID of the step group.
      * </p>
      * 
      * @param stepGroupId
-     *        desThe ID of the step group.
+     *        The ID of the step group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

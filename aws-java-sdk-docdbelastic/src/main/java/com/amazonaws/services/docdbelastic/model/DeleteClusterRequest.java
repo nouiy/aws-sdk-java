@@ -27,18 +27,18 @@ public class DeleteClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that is to be deleted.
+     * The ARN identifier of the elastic cluster that is to be deleted.
      * </p>
      */
     private String clusterArn;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that is to be deleted.
+     * The ARN identifier of the elastic cluster that is to be deleted.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster that is to be deleted.
+     *        The ARN identifier of the elastic cluster that is to be deleted.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -47,10 +47,10 @@ public class DeleteClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that is to be deleted.
+     * The ARN identifier of the elastic cluster that is to be deleted.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster that is to be deleted.
+     * @return The ARN identifier of the elastic cluster that is to be deleted.
      */
 
     public String getClusterArn() {
@@ -59,11 +59,11 @@ public class DeleteClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that is to be deleted.
+     * The ARN identifier of the elastic cluster that is to be deleted.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster that is to be deleted.
+     *        The ARN identifier of the elastic cluster that is to be deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

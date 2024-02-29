@@ -75,6 +75,8 @@ public class ModelPackageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SamplePayloadUrl").build();
     private static final MarshallingInfo<List> ADDITIONALINFERENCESPECIFICATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalInferenceSpecifications").build();
+    private static final MarshallingInfo<String> SOURCEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SourceUri").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Map> CUSTOMERMETADATAPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
@@ -123,6 +125,7 @@ public class ModelPackageMarshaller {
             protocolMarshaller.marshall(modelPackage.getTask(), TASK_BINDING);
             protocolMarshaller.marshall(modelPackage.getSamplePayloadUrl(), SAMPLEPAYLOADURL_BINDING);
             protocolMarshaller.marshall(modelPackage.getAdditionalInferenceSpecifications(), ADDITIONALINFERENCESPECIFICATIONS_BINDING);
+            protocolMarshaller.marshall(modelPackage.getSourceUri(), SOURCEURI_BINDING);
             protocolMarshaller.marshall(modelPackage.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(modelPackage.getCustomerMetadataProperties(), CUSTOMERMETADATAPROPERTIES_BINDING);
             protocolMarshaller.marshall(modelPackage.getDriftCheckBaselines(), DRIFTCHECKBASELINES_BINDING);

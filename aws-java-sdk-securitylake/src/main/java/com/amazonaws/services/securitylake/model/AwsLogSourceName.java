@@ -25,7 +25,9 @@ public enum AwsLogSourceName {
     SH_FINDINGS("SH_FINDINGS"),
     CLOUD_TRAIL_MGMT("CLOUD_TRAIL_MGMT"),
     LAMBDA_EXECUTION("LAMBDA_EXECUTION"),
-    S3_DATA("S3_DATA");
+    S3_DATA("S3_DATA"),
+    EKS_AUDIT("EKS_AUDIT"),
+    WAF("WAF");
 
     private String value;
 

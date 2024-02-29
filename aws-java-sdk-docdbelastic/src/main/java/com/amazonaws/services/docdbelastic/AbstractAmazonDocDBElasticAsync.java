@@ -28,6 +28,19 @@ public class AbstractAmazonDocDBElasticAsync extends AbstractAmazonDocDBElastic 
     }
 
     @Override
+    public java.util.concurrent.Future<CopyClusterSnapshotResult> copyClusterSnapshotAsync(CopyClusterSnapshotRequest request) {
+
+        return copyClusterSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CopyClusterSnapshotResult> copyClusterSnapshotAsync(CopyClusterSnapshotRequest request,
+            com.amazonaws.handlers.AsyncHandler<CopyClusterSnapshotRequest, CopyClusterSnapshotResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateClusterResult> createClusterAsync(CreateClusterRequest request) {
 
         return createClusterAsync(request, null);
@@ -153,6 +166,32 @@ public class AbstractAmazonDocDBElasticAsync extends AbstractAmazonDocDBElastic 
     @Override
     public java.util.concurrent.Future<RestoreClusterFromSnapshotResult> restoreClusterFromSnapshotAsync(RestoreClusterFromSnapshotRequest request,
             com.amazonaws.handlers.AsyncHandler<RestoreClusterFromSnapshotRequest, RestoreClusterFromSnapshotResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartClusterResult> startClusterAsync(StartClusterRequest request) {
+
+        return startClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartClusterResult> startClusterAsync(StartClusterRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartClusterRequest, StartClusterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopClusterResult> stopClusterAsync(StopClusterRequest request) {
+
+        return stopClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopClusterResult> stopClusterAsync(StopClusterRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopClusterRequest, StopClusterResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

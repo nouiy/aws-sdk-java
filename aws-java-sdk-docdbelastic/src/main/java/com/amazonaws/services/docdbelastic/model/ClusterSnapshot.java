@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Returns information about a specific Elastic DocumentDB snapshot.
+ * Returns information about a specific elastic cluster snapshot.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ClusterSnapshot" target="_top">AWS API
@@ -30,72 +30,96 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      */
     private String adminUserName;
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      */
     private String clusterCreationTime;
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
+     * cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias instead of
+     * the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon DocumentDB uses the default
+     * encryption key that KMS creates for your account. Your account has a different default encryption key for each
+     * Amazon Region.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      */
     private String snapshotArn;
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      */
     private String snapshotCreationTime;
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      */
     private String snapshotName;
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String snapshotType;
+    /**
+     * <p>
+     * The status of the elastic cluster snapshot.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * A list of the IDs of subnets associated with the DB cluster snapshot.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      */
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      */
     private java.util.List<String> vpcSecurityGroupIds;
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      * 
      * @param adminUserName
-     *        The name of the Elastic DocumentDB cluster administrator.
+     *        The name of the elastic cluster administrator.
      */
 
     public void setAdminUserName(String adminUserName) {
@@ -104,10 +128,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB cluster administrator.
+     * @return The name of the elastic cluster administrator.
      */
 
     public String getAdminUserName() {
@@ -116,11 +140,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      * 
      * @param adminUserName
-     *        The name of the Elastic DocumentDB cluster administrator.
+     *        The name of the elastic cluster administrator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,11 +155,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -144,10 +168,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster.
+     * @return The ARN identifier of the elastic cluster.
      */
 
     public String getClusterArn() {
@@ -156,11 +180,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,11 +195,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param clusterCreationTime
-     *        The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      */
 
     public void setClusterCreationTime(String clusterCreationTime) {
@@ -184,10 +208,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      * 
-     * @return The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * @return The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      */
 
     public String getClusterCreationTime() {
@@ -196,11 +220,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param clusterCreationTime
-     *        The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -211,11 +235,19 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
+     * cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias instead of
+     * the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon DocumentDB uses the default
+     * encryption key that KMS creates for your account. Your account has a different default encryption key for each
+     * Amazon Region.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
+     *        cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
+     *        instead of the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon
+     *        DocumentDB uses the default encryption key that KMS creates for your account. Your account has a different
+     *        default encryption key for each Amazon Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -224,10 +256,18 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
+     * cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias instead of
+     * the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon DocumentDB uses the default
+     * encryption key that KMS creates for your account. Your account has a different default encryption key for each
+     * Amazon Region.
      * </p>
      * 
-     * @return The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * @return The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating
+     *         a cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
+     *         instead of the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon
+     *         DocumentDB uses the default encryption key that KMS creates for your account. Your account has a
+     *         different default encryption key for each Amazon Region.
      */
 
     public String getKmsKeyId() {
@@ -236,11 +276,19 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
+     * cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias instead of
+     * the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon DocumentDB uses the default
+     * encryption key that KMS creates for your account. Your account has a different default encryption key for each
+     * Amazon Region.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
+     *        cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
+     *        instead of the ARN as the KMS encryption key. If an encryption key is not specified here, Amazon
+     *        DocumentDB uses the default encryption key that KMS creates for your account. Your account has a different
+     *        default encryption key for each Amazon Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,11 +299,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot
+     *        The ARN identifier of the elastic cluster snapshot.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -264,10 +312,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB snapshot
+     * @return The ARN identifier of the elastic cluster snapshot.
      */
 
     public String getSnapshotArn() {
@@ -276,11 +324,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot
+     *        The ARN identifier of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +339,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param snapshotCreationTime
-     *        The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      */
 
     public void setSnapshotCreationTime(String snapshotCreationTime) {
@@ -304,10 +352,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      * 
-     * @return The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * @return The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      */
 
     public String getSnapshotCreationTime() {
@@ -316,11 +364,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param snapshotCreationTime
-     *        The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,11 +379,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotName
-     *        The name of the Elastic DocumentDB snapshot.
+     *        The name of the elastic cluster snapshot.
      */
 
     public void setSnapshotName(String snapshotName) {
@@ -344,10 +392,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB snapshot.
+     * @return The name of the elastic cluster snapshot.
      */
 
     public String getSnapshotName() {
@@ -356,11 +404,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotName
-     *        The name of the Elastic DocumentDB snapshot.
+     *        The name of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -371,11 +419,178 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param snapshotType
+     *        The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for
+     *        your Amazon Web Services account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *        Services account.
+     *        </p>
+     *        </li>
+     * @see SnapshotType
+     */
+
+    public void setSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+    }
+
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created
+     *         for your Amazon Web Services account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *         Services account.
+     *         </p>
+     *         </li>
+     * @see SnapshotType
+     */
+
+    public String getSnapshotType() {
+        return this.snapshotType;
+    }
+
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param snapshotType
+     *        The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for
+     *        your Amazon Web Services account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *        Services account.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SnapshotType
+     */
+
+    public ClusterSnapshot withSnapshotType(String snapshotType) {
+        setSnapshotType(snapshotType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param snapshotType
+     *        The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for
+     *        your Amazon Web Services account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *        Services account.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SnapshotType
+     */
+
+    public ClusterSnapshot withSnapshotType(SnapshotType snapshotType) {
+        this.snapshotType = snapshotType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB snapshot.
+     *        The status of the elastic cluster snapshot.
      * @see Status
      */
 
@@ -385,10 +600,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The status of the Elastic DocumentDB snapshot.
+     * @return The status of the elastic cluster snapshot.
      * @see Status
      */
 
@@ -398,11 +613,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB snapshot.
+     *        The status of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -414,11 +629,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB snapshot.
+     *        The status of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -430,10 +645,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of subnets associated with the DB cluster snapshot.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
-     * @return A list of the IDs of subnets associated with the DB cluster snapshot.
+     * @return The Amazon EC2 subnet IDs for the elastic cluster.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -442,11 +657,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of subnets associated with the DB cluster snapshot.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        A list of the IDs of subnets associated with the DB cluster snapshot.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -460,7 +675,7 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of subnets associated with the DB cluster snapshot.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -469,7 +684,7 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param subnetIds
-     *        A list of the IDs of subnets associated with the DB cluster snapshot.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -485,11 +700,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of subnets associated with the DB cluster snapshot.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        A list of the IDs of subnets associated with the DB cluster snapshot.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -500,10 +715,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * 
-     * @return A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     * @return A list of EC2 VPC security groups to associate with the elastic cluster.
      */
 
     public java.util.List<String> getVpcSecurityGroupIds() {
@@ -512,11 +727,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     *        A list of EC2 VPC security groups to associate with the elastic cluster.
      */
 
     public void setVpcSecurityGroupIds(java.util.Collection<String> vpcSecurityGroupIds) {
@@ -530,7 +745,7 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -539,7 +754,7 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     *        A list of EC2 VPC security groups to associate with the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -555,11 +770,11 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of the IDs of the VPC security groups associated with the cluster snapshot.
+     *        A list of EC2 VPC security groups to associate with the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -594,6 +809,8 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
             sb.append("SnapshotCreationTime: ").append(getSnapshotCreationTime()).append(",");
         if (getSnapshotName() != null)
             sb.append("SnapshotName: ").append(getSnapshotName()).append(",");
+        if (getSnapshotType() != null)
+            sb.append("SnapshotType: ").append(getSnapshotType()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getSubnetIds() != null)
@@ -642,6 +859,10 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getSnapshotName() != null && other.getSnapshotName().equals(this.getSnapshotName()) == false)
             return false;
+        if (other.getSnapshotType() == null ^ this.getSnapshotType() == null)
+            return false;
+        if (other.getSnapshotType() != null && other.getSnapshotType().equals(this.getSnapshotType()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -669,6 +890,7 @@ public class ClusterSnapshot implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getSnapshotArn() == null) ? 0 : getSnapshotArn().hashCode());
         hashCode = prime * hashCode + ((getSnapshotCreationTime() == null) ? 0 : getSnapshotCreationTime().hashCode());
         hashCode = prime * hashCode + ((getSnapshotName() == null) ? 0 : getSnapshotName().hashCode());
+        hashCode = prime * hashCode + ((getSnapshotType() == null) ? 0 : getSnapshotType().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getVpcSecurityGroupIds() == null) ? 0 : getVpcSecurityGroupIds().hashCode());

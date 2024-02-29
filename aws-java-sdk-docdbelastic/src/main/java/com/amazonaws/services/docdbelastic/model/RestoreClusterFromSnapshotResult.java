@@ -25,18 +25,18 @@ public class RestoreClusterFromSnapshotResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Returns information about a the restored Elastic DocumentDB cluster.
+     * Returns information about a the restored elastic cluster.
      * </p>
      */
     private Cluster cluster;
 
     /**
      * <p>
-     * Returns information about a the restored Elastic DocumentDB cluster.
+     * Returns information about a the restored elastic cluster.
      * </p>
      * 
      * @param cluster
-     *        Returns information about a the restored Elastic DocumentDB cluster.
+     *        Returns information about a the restored elastic cluster.
      */
 
     public void setCluster(Cluster cluster) {
@@ -45,10 +45,10 @@ public class RestoreClusterFromSnapshotResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Returns information about a the restored Elastic DocumentDB cluster.
+     * Returns information about a the restored elastic cluster.
      * </p>
      * 
-     * @return Returns information about a the restored Elastic DocumentDB cluster.
+     * @return Returns information about a the restored elastic cluster.
      */
 
     public Cluster getCluster() {
@@ -57,11 +57,11 @@ public class RestoreClusterFromSnapshotResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Returns information about a the restored Elastic DocumentDB cluster.
+     * Returns information about a the restored elastic cluster.
      * </p>
      * 
      * @param cluster
-     *        Returns information about a the restored Elastic DocumentDB cluster.
+     *        Returns information about a the restored elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

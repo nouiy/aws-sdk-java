@@ -132,6 +132,10 @@ public class UpdateIntentResultJsonUnmarshaller implements Unmarshaller<UpdateIn
                     context.nextToken();
                     updateIntentResult.setInitialResponseSetting(InitialResponseSettingJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("qnAIntentConfiguration", targetDepth)) {
+                    context.nextToken();
+                    updateIntentResult.setQnAIntentConfiguration(QnAIntentConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

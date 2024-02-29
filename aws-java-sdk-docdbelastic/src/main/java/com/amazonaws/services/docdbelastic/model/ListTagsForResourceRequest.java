@@ -27,18 +27,18 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      */
     private String resourceArn;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      * 
      * @param resourceArn
-     *        The arn of the Elastic DocumentDB resource.
+     *        The ARN identifier of the elastic cluster resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -47,10 +47,10 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB resource.
+     * @return The ARN identifier of the elastic cluster resource.
      */
 
     public String getResourceArn() {
@@ -59,11 +59,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      * 
      * @param resourceArn
-     *        The arn of the Elastic DocumentDB resource.
+     *        The ARN identifier of the elastic cluster resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

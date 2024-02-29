@@ -25,17 +25,17 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of tags for the specified Elastic DocumentDB resource.
+     * The list of tags for the specified elastic cluster resource.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The list of tags for the specified Elastic DocumentDB resource.
+     * The list of tags for the specified elastic cluster resource.
      * </p>
      * 
-     * @return The list of tags for the specified Elastic DocumentDB resource.
+     * @return The list of tags for the specified elastic cluster resource.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -44,11 +44,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of tags for the specified Elastic DocumentDB resource.
+     * The list of tags for the specified elastic cluster resource.
      * </p>
      * 
      * @param tags
-     *        The list of tags for the specified Elastic DocumentDB resource.
+     *        The list of tags for the specified elastic cluster resource.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -57,11 +57,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of tags for the specified Elastic DocumentDB resource.
+     * The list of tags for the specified elastic cluster resource.
      * </p>
      * 
      * @param tags
-     *        The list of tags for the specified Elastic DocumentDB resource.
+     *        The list of tags for the specified elastic cluster resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

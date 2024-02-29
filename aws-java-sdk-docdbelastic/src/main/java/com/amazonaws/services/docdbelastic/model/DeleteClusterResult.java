@@ -25,18 +25,18 @@ public class DeleteClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns information about the newly deleted Elastic DocumentDB cluster.
+     * Returns information about the newly deleted elastic cluster.
      * </p>
      */
     private Cluster cluster;
 
     /**
      * <p>
-     * Returns information about the newly deleted Elastic DocumentDB cluster.
+     * Returns information about the newly deleted elastic cluster.
      * </p>
      * 
      * @param cluster
-     *        Returns information about the newly deleted Elastic DocumentDB cluster.
+     *        Returns information about the newly deleted elastic cluster.
      */
 
     public void setCluster(Cluster cluster) {
@@ -45,10 +45,10 @@ public class DeleteClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns information about the newly deleted Elastic DocumentDB cluster.
+     * Returns information about the newly deleted elastic cluster.
      * </p>
      * 
-     * @return Returns information about the newly deleted Elastic DocumentDB cluster.
+     * @return Returns information about the newly deleted elastic cluster.
      */
 
     public Cluster getCluster() {
@@ -57,11 +57,11 @@ public class DeleteClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns information about the newly deleted Elastic DocumentDB cluster.
+     * Returns information about the newly deleted elastic cluster.
      * </p>
      * 
      * @param cluster
-     *        Returns information about the newly deleted Elastic DocumentDB cluster.
+     *        Returns information about the newly deleted elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

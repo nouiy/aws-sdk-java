@@ -143,6 +143,10 @@ public class ModelPackageJsonUnmarshaller implements Unmarshaller<ModelPackage, 
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("SourceUri", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setSourceUri(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     modelPackage.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

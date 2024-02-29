@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of Elastic DocumentDB cluster.
+ * A list of Amazon DocumentDB elastic clusters.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ClusterInList" target="_top">AWS API
@@ -30,30 +30,30 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      */
     private String clusterName;
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -62,10 +62,10 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster.
+     * @return The ARN identifier of the elastic cluster.
      */
 
     public String getClusterArn() {
@@ -74,11 +74,11 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
      * @param clusterName
-     *        The name of the Elastic DocumentDB cluster.
+     *        The name of the elastic cluster.
      */
 
     public void setClusterName(String clusterName) {
@@ -102,10 +102,10 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB cluster.
+     * @return The name of the elastic cluster.
      */
 
     public String getClusterName() {
@@ -114,11 +114,11 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
      * @param clusterName
-     *        The name of the Elastic DocumentDB cluster.
+     *        The name of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB cluster.
+     *        The status of the elastic cluster.
      * @see Status
      */
 
@@ -143,10 +143,10 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
-     * @return The status of the Elastic DocumentDB cluster.
+     * @return The status of the elastic cluster.
      * @see Status
      */
 
@@ -156,11 +156,11 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB cluster.
+     *        The status of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -172,11 +172,11 @@ public class ClusterInList implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB cluster.
+     *        The status of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */

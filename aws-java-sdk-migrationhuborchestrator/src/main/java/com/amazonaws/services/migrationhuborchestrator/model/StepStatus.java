@@ -21,6 +21,7 @@ import javax.annotation.Generated;
 public enum StepStatus {
 
     AWAITING_DEPENDENCIES("AWAITING_DEPENDENCIES"),
+    SKIPPED("SKIPPED"),
     READY("READY"),
     IN_PROGRESS("IN_PROGRESS"),
     COMPLETED("COMPLETED"),

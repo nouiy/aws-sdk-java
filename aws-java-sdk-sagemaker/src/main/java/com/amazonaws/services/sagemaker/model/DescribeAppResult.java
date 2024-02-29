@@ -81,8 +81,16 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
     private java.util.Date lastUserActivityTimestamp;
     /**
      * <p>
-     * The creation time.
+     * The creation time of the application.
      * </p>
+     * <note>
+     * <p>
+     * After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application. To be
+     * considered an update and retain application metadata, applications must be restarted within 24 hours after the
+     * previous application has been shut down. After this time window, creation of an application is considered a new
+     * application rather than an update of the previous application.
+     * </p>
+     * </note>
      */
     private java.util.Date creationTime;
     /**
@@ -510,11 +518,25 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The creation time.
+     * The creation time of the application.
      * </p>
+     * <note>
+     * <p>
+     * After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application. To be
+     * considered an update and retain application metadata, applications must be restarted within 24 hours after the
+     * previous application has been shut down. After this time window, creation of an application is considered a new
+     * application rather than an update of the previous application.
+     * </p>
+     * </note>
      * 
      * @param creationTime
-     *        The creation time.
+     *        The creation time of the application.</p> <note>
+     *        <p>
+     *        After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application.
+     *        To be considered an update and retain application metadata, applications must be restarted within 24 hours
+     *        after the previous application has been shut down. After this time window, creation of an application is
+     *        considered a new application rather than an update of the previous application.
+     *        </p>
      */
 
     public void setCreationTime(java.util.Date creationTime) {
@@ -523,10 +545,24 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The creation time.
+     * The creation time of the application.
      * </p>
+     * <note>
+     * <p>
+     * After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application. To be
+     * considered an update and retain application metadata, applications must be restarted within 24 hours after the
+     * previous application has been shut down. After this time window, creation of an application is considered a new
+     * application rather than an update of the previous application.
+     * </p>
+     * </note>
      * 
-     * @return The creation time.
+     * @return The creation time of the application.</p> <note>
+     *         <p>
+     *         After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application.
+     *         To be considered an update and retain application metadata, applications must be restarted within 24
+     *         hours after the previous application has been shut down. After this time window, creation of an
+     *         application is considered a new application rather than an update of the previous application.
+     *         </p>
      */
 
     public java.util.Date getCreationTime() {
@@ -535,11 +571,25 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The creation time.
+     * The creation time of the application.
      * </p>
+     * <note>
+     * <p>
+     * After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application. To be
+     * considered an update and retain application metadata, applications must be restarted within 24 hours after the
+     * previous application has been shut down. After this time window, creation of an application is considered a new
+     * application rather than an update of the previous application.
+     * </p>
+     * </note>
      * 
      * @param creationTime
-     *        The creation time.
+     *        The creation time of the application.</p> <note>
+     *        <p>
+     *        After an application has been shut down for 24 hours, SageMaker deletes all metadata for the application.
+     *        To be considered an update and retain application metadata, applications must be restarted within 24 hours
+     *        after the previous application has been shut down. After this time window, creation of an application is
+     *        considered a new application rather than an update of the previous application.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

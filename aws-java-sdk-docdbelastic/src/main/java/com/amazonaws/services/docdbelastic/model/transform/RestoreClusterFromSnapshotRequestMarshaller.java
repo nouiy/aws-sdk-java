@@ -33,6 +33,10 @@ public class RestoreClusterFromSnapshotRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clusterName").build();
     private static final MarshallingInfo<String> KMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("kmsKeyId").build();
+    private static final MarshallingInfo<Integer> SHARDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardCapacity").build();
+    private static final MarshallingInfo<Integer> SHARDINSTANCECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardInstanceCount").build();
     private static final MarshallingInfo<String> SNAPSHOTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("snapshotArn").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -60,6 +64,8 @@ public class RestoreClusterFromSnapshotRequestMarshaller {
         try {
             protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getClusterName(), CLUSTERNAME_BINDING);
             protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getKmsKeyId(), KMSKEYID_BINDING);
+            protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getShardCapacity(), SHARDCAPACITY_BINDING);
+            protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getShardInstanceCount(), SHARDINSTANCECOUNT_BINDING);
             protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getSnapshotArn(), SNAPSHOTARN_BINDING);
             protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getSubnetIds(), SUBNETIDS_BINDING);
             protocolMarshaller.marshall(restoreClusterFromSnapshotRequest.getTags(), TAGS_BINDING);

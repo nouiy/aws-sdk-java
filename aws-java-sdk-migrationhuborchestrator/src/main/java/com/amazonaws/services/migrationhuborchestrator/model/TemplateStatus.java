@@ -20,7 +20,11 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum TemplateStatus {
 
-    CREATED("CREATED");
+    CREATED("CREATED"),
+    READY("READY"),
+    PENDING_CREATION("PENDING_CREATION"),
+    CREATING("CREATING"),
+    CREATION_FAILED("CREATION_FAILED");
 
     private String value;
 

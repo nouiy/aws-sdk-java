@@ -27,18 +27,19 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the tags.
      * </p>
      */
     private String resourceArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the tags.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     *        The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the
+     *        tags.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -47,10 +48,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the tags.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     * @return The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the
+     *         tags.
      */
 
     public String getResourceArn() {
@@ -59,11 +61,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the tags.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     *        The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the
+     *        tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

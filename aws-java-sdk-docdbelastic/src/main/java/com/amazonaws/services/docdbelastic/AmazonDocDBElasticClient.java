@@ -52,7 +52,33 @@ import com.amazonaws.services.docdbelastic.model.transform.*;
  * the service call completes.
  * <p>
  * <p>
- * The new Amazon Elastic DocumentDB service endpoint.
+ * <fullname>Amazon DocumentDB elastic clusters</fullname>
+ * <p>
+ * Amazon DocumentDB elastic-clusters support workloads with millions of reads/writes per second and petabytes of
+ * storage capacity. Amazon DocumentDB elastic clusters also simplify how developers interact with Amazon DocumentDB
+ * elastic-clusters by eliminating the need to choose, manage or upgrade instances.
+ * </p>
+ * <p>
+ * Amazon DocumentDB elastic-clusters were created to:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * provide a solution for customers looking for a database that provides virtually limitless scale with rich query
+ * capabilities and MongoDB API compatibility.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * give customers higher connection limits, and to reduce downtime from patching.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * continue investing in a cloud-native, elastic, and class leading architecture for JSON workloads.
+ * </p>
+ * </li>
+ * </ul>
  * </p>
  */
 @ThreadSafe
@@ -82,23 +108,23 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.docdbelastic.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.docdbelastic.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.docdbelastic.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.docdbelastic.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.docdbelastic.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.docdbelastic.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.docdbelastic.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.docdbelastic.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.docdbelastic.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.docdbelastic.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.docdbelastic.model.AmazonDocDBElasticException.class));
 
     public static AmazonDocDBElasticClientBuilder builder() {
@@ -149,7 +175,76 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+     * Copies a snapshot of an elastic cluster.
+     * </p>
+     * 
+     * @param copyClusterSnapshotRequest
+     * @return Result of the CopyClusterSnapshot operation returned by the service.
+     * @throws ThrottlingException
+     *         ThrottlingException will be thrown when request was denied due to request throttling.
+     * @throws ValidationException
+     *         A structure defining a validation exception.
+     * @throws ServiceQuotaExceededException
+     *         The service quota for the action was exceeded.
+     * @throws ConflictException
+     *         There was an access conflict.
+     * @throws InternalServerException
+     *         There was an internal server error.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be located.
+     * @throws AccessDeniedException
+     *         An exception that occurs when there are not sufficient permissions to perform an action.
+     * @sample AmazonDocDBElastic.CopyClusterSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CopyClusterSnapshot"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CopyClusterSnapshotResult copyClusterSnapshot(CopyClusterSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeCopyClusterSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final CopyClusterSnapshotResult executeCopyClusterSnapshot(CopyClusterSnapshotRequest copyClusterSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(copyClusterSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CopyClusterSnapshotRequest> request = null;
+        Response<CopyClusterSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CopyClusterSnapshotRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(copyClusterSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DocDB Elastic");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CopyClusterSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CopyClusterSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CopyClusterSnapshotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new Amazon DocumentDB elastic cluster and returns its cluster structure.
      * </p>
      * 
      * @param createClusterRequest
@@ -216,7 +311,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Creates a snapshot of a cluster.
+     * Creates a snapshot of an elastic cluster.
      * </p>
      * 
      * @param createClusterSnapshotRequest
@@ -286,7 +381,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB cluster.
+     * Delete an elastic cluster.
      * </p>
      * 
      * @param deleteClusterRequest
@@ -353,7 +448,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB snapshot.
+     * Delete an elastic cluster snapshot.
      * </p>
      * 
      * @param deleteClusterSnapshotRequest
@@ -421,7 +516,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB cluster.
+     * Returns information about a specific elastic cluster.
      * </p>
      * 
      * @param getClusterRequest
@@ -486,7 +581,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB snapshot
+     * Returns information about a specific elastic cluster snapshot
      * </p>
      * 
      * @param getClusterSnapshotRequest
@@ -551,7 +646,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Returns information about Elastic DocumentDB snapshots for a specified cluster.
+     * Returns information about snapshots for a specified elastic cluster.
      * </p>
      * 
      * @param listClusterSnapshotsRequest
@@ -614,7 +709,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Returns information about provisioned Elastic DocumentDB clusters.
+     * Returns information about provisioned Amazon DocumentDB elastic clusters.
      * </p>
      * 
      * @param listClustersRequest
@@ -677,7 +772,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Lists all tags on a Elastic DocumentDB resource
+     * Lists all tags on a elastic cluster resource
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -740,7 +835,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Restores a Elastic DocumentDB cluster from a snapshot.
+     * Restores an elastic cluster from a snapshot.
      * </p>
      * 
      * @param restoreClusterFromSnapshotRequest
@@ -811,7 +906,138 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Adds metadata tags to a Elastic DocumentDB resource
+     * Restarts the stopped elastic cluster that is specified by <code>clusterARN</code>.
+     * </p>
+     * 
+     * @param startClusterRequest
+     * @return Result of the StartCluster operation returned by the service.
+     * @throws ThrottlingException
+     *         ThrottlingException will be thrown when request was denied due to request throttling.
+     * @throws ValidationException
+     *         A structure defining a validation exception.
+     * @throws InternalServerException
+     *         There was an internal server error.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be located.
+     * @throws AccessDeniedException
+     *         An exception that occurs when there are not sufficient permissions to perform an action.
+     * @sample AmazonDocDBElastic.StartCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StartCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartClusterResult startCluster(StartClusterRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartCluster(request);
+    }
+
+    @SdkInternalApi
+    final StartClusterResult executeStartCluster(StartClusterRequest startClusterRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startClusterRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartClusterRequest> request = null;
+        Response<StartClusterResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartClusterRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startClusterRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DocDB Elastic");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartCluster");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartClusterResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartClusterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops the running elastic cluster that is specified by <code>clusterArn</code>. The elastic cluster must be in
+     * the <i>available</i> state.
+     * </p>
+     * 
+     * @param stopClusterRequest
+     * @return Result of the StopCluster operation returned by the service.
+     * @throws ThrottlingException
+     *         ThrottlingException will be thrown when request was denied due to request throttling.
+     * @throws ValidationException
+     *         A structure defining a validation exception.
+     * @throws InternalServerException
+     *         There was an internal server error.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be located.
+     * @throws AccessDeniedException
+     *         An exception that occurs when there are not sufficient permissions to perform an action.
+     * @sample AmazonDocDBElastic.StopCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StopCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StopClusterResult stopCluster(StopClusterRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopCluster(request);
+    }
+
+    @SdkInternalApi
+    final StopClusterResult executeStopCluster(StopClusterRequest stopClusterRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopClusterRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopClusterRequest> request = null;
+        Response<StopClusterResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopClusterRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopClusterRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DocDB Elastic");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopCluster");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopClusterResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopClusterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Adds metadata tags to an elastic cluster resource
      * </p>
      * 
      * @param tagResourceRequest
@@ -874,7 +1100,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Removes metadata tags to a Elastic DocumentDB resource
+     * Removes metadata tags from an elastic cluster resource
      * </p>
      * 
      * @param untagResourceRequest
@@ -937,7 +1163,7 @@ public class AmazonDocDBElasticClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version
+     * Modifies an elastic cluster. This includes updating admin-username/password, upgrading the API version, and
      * setting up a backup window and maintenance window
      * </p>
      * 

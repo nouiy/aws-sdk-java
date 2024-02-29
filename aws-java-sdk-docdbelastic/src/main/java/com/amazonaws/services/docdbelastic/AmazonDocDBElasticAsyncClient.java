@@ -26,7 +26,33 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * The new Amazon Elastic DocumentDB service endpoint.
+ * <fullname>Amazon DocumentDB elastic clusters</fullname>
+ * <p>
+ * Amazon DocumentDB elastic-clusters support workloads with millions of reads/writes per second and petabytes of
+ * storage capacity. Amazon DocumentDB elastic clusters also simplify how developers interact with Amazon DocumentDB
+ * elastic-clusters by eliminating the need to choose, manage or upgrade instances.
+ * </p>
+ * <p>
+ * Amazon DocumentDB elastic-clusters were created to:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * provide a solution for customers looking for a database that provides virtually limitless scale with rich query
+ * capabilities and MongoDB API compatibility.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * give customers higher connection limits, and to reduce downtime from patching.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * continue investing in a cloud-native, elastic, and class leading architecture for JSON workloads.
+ * </p>
+ * </li>
+ * </ul>
  * </p>
  */
 @ThreadSafe
@@ -71,6 +97,39 @@ public class AmazonDocDBElasticAsyncClient extends AmazonDocDBElasticClient impl
      */
     public ExecutorService getExecutorService() {
         return executorService;
+    }
+
+    @Override
+    public java.util.concurrent.Future<CopyClusterSnapshotResult> copyClusterSnapshotAsync(CopyClusterSnapshotRequest request) {
+
+        return copyClusterSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CopyClusterSnapshotResult> copyClusterSnapshotAsync(final CopyClusterSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CopyClusterSnapshotRequest, CopyClusterSnapshotResult> asyncHandler) {
+        final CopyClusterSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CopyClusterSnapshotResult>() {
+            @Override
+            public CopyClusterSnapshotResult call() throws Exception {
+                CopyClusterSnapshotResult result = null;
+
+                try {
+                    result = executeCopyClusterSnapshot(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -388,6 +447,72 @@ public class AmazonDocDBElasticAsyncClient extends AmazonDocDBElasticClient impl
 
                 try {
                     result = executeRestoreClusterFromSnapshot(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartClusterResult> startClusterAsync(StartClusterRequest request) {
+
+        return startClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartClusterResult> startClusterAsync(final StartClusterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartClusterRequest, StartClusterResult> asyncHandler) {
+        final StartClusterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartClusterResult>() {
+            @Override
+            public StartClusterResult call() throws Exception {
+                StartClusterResult result = null;
+
+                try {
+                    result = executeStartCluster(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopClusterResult> stopClusterAsync(StopClusterRequest request) {
+
+        return stopClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopClusterResult> stopClusterAsync(final StopClusterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopClusterRequest, StopClusterResult> asyncHandler) {
+        final StopClusterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopClusterResult>() {
+            @Override
+            public StopClusterResult call() throws Exception {
+                StopClusterResult result = null;
+
+                try {
+                    result = executeStopCluster(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

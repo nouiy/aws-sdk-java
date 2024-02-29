@@ -33,6 +33,8 @@ public class FieldTooltipItemMarshaller {
             .marshallLocationName("Label").build();
     private static final MarshallingInfo<String> VISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Visibility").build();
+    private static final MarshallingInfo<String> TOOLTIPTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TooltipTarget").build();
 
     private static final FieldTooltipItemMarshaller instance = new FieldTooltipItemMarshaller();
 
@@ -53,6 +55,7 @@ public class FieldTooltipItemMarshaller {
             protocolMarshaller.marshall(fieldTooltipItem.getFieldId(), FIELDID_BINDING);
             protocolMarshaller.marshall(fieldTooltipItem.getLabel(), LABEL_BINDING);
             protocolMarshaller.marshall(fieldTooltipItem.getVisibility(), VISIBILITY_BINDING);
+            protocolMarshaller.marshall(fieldTooltipItem.getTooltipTarget(), TOOLTIPTARGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

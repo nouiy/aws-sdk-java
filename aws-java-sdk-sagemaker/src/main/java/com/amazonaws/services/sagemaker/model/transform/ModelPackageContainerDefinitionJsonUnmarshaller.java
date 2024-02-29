@@ -64,6 +64,10 @@ public class ModelPackageContainerDefinitionJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     modelPackageContainerDefinition.setModelDataUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ModelDataSource", targetDepth)) {
+                    context.nextToken();
+                    modelPackageContainerDefinition.setModelDataSource(ModelDataSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("ProductId", targetDepth)) {
                     context.nextToken();
                     modelPackageContainerDefinition.setProductId(context.getUnmarshaller(String.class).unmarshall(context));

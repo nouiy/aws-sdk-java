@@ -35,7 +35,11 @@ public class BuildtimeSettings implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private DescriptiveBotBuilderSpecification descriptiveBotBuilder;
-
+    /**
+     * <p>
+     * Contains specifications for the sample utterance generation feature.
+     * </p>
+     */
     private SampleUtteranceGenerationSpecification sampleUtteranceGeneration;
 
     /**
@@ -79,7 +83,12 @@ public class BuildtimeSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Contains specifications for the sample utterance generation feature.
+     * </p>
+     * 
      * @param sampleUtteranceGeneration
+     *        Contains specifications for the sample utterance generation feature.
      */
 
     public void setSampleUtteranceGeneration(SampleUtteranceGenerationSpecification sampleUtteranceGeneration) {
@@ -87,7 +96,11 @@ public class BuildtimeSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * Contains specifications for the sample utterance generation feature.
+     * </p>
+     * 
+     * @return Contains specifications for the sample utterance generation feature.
      */
 
     public SampleUtteranceGenerationSpecification getSampleUtteranceGeneration() {
@@ -95,7 +108,12 @@ public class BuildtimeSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Contains specifications for the sample utterance generation feature.
+     * </p>
+     * 
      * @param sampleUtteranceGeneration
+     *        Contains specifications for the sample utterance generation feature.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

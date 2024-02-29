@@ -41,6 +41,10 @@ public class UpdateModelPackageRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerMetadataPropertiesToRemove").build();
     private static final MarshallingInfo<List> ADDITIONALINFERENCESPECIFICATIONSTOADD_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalInferenceSpecificationsToAdd").build();
+    private static final MarshallingInfo<StructuredPojo> INFERENCESPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InferenceSpecification").build();
+    private static final MarshallingInfo<String> SOURCEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SourceUri").build();
 
     private static final UpdateModelPackageRequestMarshaller instance = new UpdateModelPackageRequestMarshaller();
 
@@ -64,6 +68,8 @@ public class UpdateModelPackageRequestMarshaller {
             protocolMarshaller.marshall(updateModelPackageRequest.getCustomerMetadataProperties(), CUSTOMERMETADATAPROPERTIES_BINDING);
             protocolMarshaller.marshall(updateModelPackageRequest.getCustomerMetadataPropertiesToRemove(), CUSTOMERMETADATAPROPERTIESTOREMOVE_BINDING);
             protocolMarshaller.marshall(updateModelPackageRequest.getAdditionalInferenceSpecificationsToAdd(), ADDITIONALINFERENCESPECIFICATIONSTOADD_BINDING);
+            protocolMarshaller.marshall(updateModelPackageRequest.getInferenceSpecification(), INFERENCESPECIFICATION_BINDING);
+            protocolMarshaller.marshall(updateModelPackageRequest.getSourceUri(), SOURCEURI_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

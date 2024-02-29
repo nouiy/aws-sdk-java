@@ -1172,11 +1172,6 @@ public interface AmazonSageMaker {
      * you defined for the model in the hosting environment.
      * </p>
      * <p>
-     * For an example that calls this method when deploying a model to SageMaker hosting services, see <a href=
-     * "https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-deployment.html#realtime-endpoints-deployment-create-model"
-     * >Create a Model (Amazon Web Services SDK for Python (Boto 3)).</a>
-     * </p>
-     * <p>
      * To run a batch transform using your model, you start a job with the <code>CreateTransformJob</code> API.
      * SageMaker uses your model and your dataset to get inferences which are then saved to a specified S3 location.
      * </p>
@@ -5866,7 +5861,9 @@ public interface AmazonSageMaker {
      * <code>TtlDuration</code> is specified, the default <code>TtlDuration</code> applies for all records added to the
      * feature group <i>after the feature group is updated</i>. If a record level <code>TtlDuration</code> exists from
      * using the <code>PutRecord</code> API, the record level <code>TtlDuration</code> applies to that record instead of
-     * the default <code>TtlDuration</code>.
+     * the default <code>TtlDuration</code>. To remove the default <code>TtlDuration</code> from an existing feature
+     * group, use the <code>UpdateFeatureGroup</code> API and set the <code>TtlDuration</code> <code>Unit</code> and
+     * <code>Value</code> to <code>null</code>.
      * </p>
      * 
      * @param updateFeatureGroupRequest

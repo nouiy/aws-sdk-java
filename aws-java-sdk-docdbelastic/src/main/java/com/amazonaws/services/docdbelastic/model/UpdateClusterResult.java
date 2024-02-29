@@ -25,18 +25,18 @@ public class UpdateClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns information about the updated Elastic DocumentDB cluster.
+     * Returns information about the updated elastic cluster.
      * </p>
      */
     private Cluster cluster;
 
     /**
      * <p>
-     * Returns information about the updated Elastic DocumentDB cluster.
+     * Returns information about the updated elastic cluster.
      * </p>
      * 
      * @param cluster
-     *        Returns information about the updated Elastic DocumentDB cluster.
+     *        Returns information about the updated elastic cluster.
      */
 
     public void setCluster(Cluster cluster) {
@@ -45,10 +45,10 @@ public class UpdateClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns information about the updated Elastic DocumentDB cluster.
+     * Returns information about the updated elastic cluster.
      * </p>
      * 
-     * @return Returns information about the updated Elastic DocumentDB cluster.
+     * @return Returns information about the updated elastic cluster.
      */
 
     public Cluster getCluster() {
@@ -57,11 +57,11 @@ public class UpdateClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns information about the updated Elastic DocumentDB cluster.
+     * Returns information about the updated elastic cluster.
      * </p>
      * 
      * @param cluster
-     *        Returns information about the updated Elastic DocumentDB cluster.
+     *        Returns information about the updated elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

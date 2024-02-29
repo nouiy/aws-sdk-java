@@ -122,6 +122,10 @@ public class CreateIntentResultJsonUnmarshaller implements Unmarshaller<CreateIn
                     context.nextToken();
                     createIntentResult.setInitialResponseSetting(InitialResponseSettingJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("qnAIntentConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createIntentResult.setQnAIntentConfiguration(QnAIntentConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

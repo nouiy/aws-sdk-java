@@ -35,6 +35,8 @@ public class ColumnTooltipItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Visibility").build();
     private static final MarshallingInfo<StructuredPojo> AGGREGATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Aggregation").build();
+    private static final MarshallingInfo<String> TOOLTIPTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TooltipTarget").build();
 
     private static final ColumnTooltipItemMarshaller instance = new ColumnTooltipItemMarshaller();
 
@@ -56,6 +58,7 @@ public class ColumnTooltipItemMarshaller {
             protocolMarshaller.marshall(columnTooltipItem.getLabel(), LABEL_BINDING);
             protocolMarshaller.marshall(columnTooltipItem.getVisibility(), VISIBILITY_BINDING);
             protocolMarshaller.marshall(columnTooltipItem.getAggregation(), AGGREGATION_BINDING);
+            protocolMarshaller.marshall(columnTooltipItem.getTooltipTarget(), TOOLTIPTARGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

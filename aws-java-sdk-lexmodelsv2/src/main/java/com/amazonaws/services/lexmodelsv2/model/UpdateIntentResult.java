@@ -138,6 +138,12 @@ public class UpdateIntentResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private InitialResponseSetting initialResponseSetting;
+    /**
+     * <p>
+     * Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     * </p>
+     */
+    private QnAIntentConfiguration qnAIntentConfiguration;
 
     /**
      * <p>
@@ -1026,6 +1032,46 @@ public class UpdateIntentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     * </p>
+     * 
+     * @param qnAIntentConfiguration
+     *        Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     */
+
+    public void setQnAIntentConfiguration(QnAIntentConfiguration qnAIntentConfiguration) {
+        this.qnAIntentConfiguration = qnAIntentConfiguration;
+    }
+
+    /**
+     * <p>
+     * Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     * </p>
+     * 
+     * @return Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     */
+
+    public QnAIntentConfiguration getQnAIntentConfiguration() {
+        return this.qnAIntentConfiguration;
+    }
+
+    /**
+     * <p>
+     * Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     * </p>
+     * 
+     * @param qnAIntentConfiguration
+     *        Details about the configuration of the built-in <code>Amazon.QnAIntent</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateIntentResult withQnAIntentConfiguration(QnAIntentConfiguration qnAIntentConfiguration) {
+        setQnAIntentConfiguration(qnAIntentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1074,7 +1120,9 @@ public class UpdateIntentResult extends com.amazonaws.AmazonWebServiceResult<com
         if (getLastUpdatedDateTime() != null)
             sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime()).append(",");
         if (getInitialResponseSetting() != null)
-            sb.append("InitialResponseSetting: ").append(getInitialResponseSetting());
+            sb.append("InitialResponseSetting: ").append(getInitialResponseSetting()).append(",");
+        if (getQnAIntentConfiguration() != null)
+            sb.append("QnAIntentConfiguration: ").append(getQnAIntentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1165,6 +1213,10 @@ public class UpdateIntentResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getInitialResponseSetting() != null && other.getInitialResponseSetting().equals(this.getInitialResponseSetting()) == false)
             return false;
+        if (other.getQnAIntentConfiguration() == null ^ this.getQnAIntentConfiguration() == null)
+            return false;
+        if (other.getQnAIntentConfiguration() != null && other.getQnAIntentConfiguration().equals(this.getQnAIntentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1192,6 +1244,7 @@ public class UpdateIntentResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDateTime() == null) ? 0 : getLastUpdatedDateTime().hashCode());
         hashCode = prime * hashCode + ((getInitialResponseSetting() == null) ? 0 : getInitialResponseSetting().hashCode());
+        hashCode = prime * hashCode + ((getQnAIntentConfiguration() == null) ? 0 : getQnAIntentConfiguration().hashCode());
         return hashCode;
     }
 

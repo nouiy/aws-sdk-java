@@ -25,18 +25,18 @@ public class CreateClusterSnapshotResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns information about the new Elastic DocumentDB snapshot.
+     * Returns information about the new elastic cluster snapshot.
      * </p>
      */
     private ClusterSnapshot snapshot;
 
     /**
      * <p>
-     * Returns information about the new Elastic DocumentDB snapshot.
+     * Returns information about the new elastic cluster snapshot.
      * </p>
      * 
      * @param snapshot
-     *        Returns information about the new Elastic DocumentDB snapshot.
+     *        Returns information about the new elastic cluster snapshot.
      */
 
     public void setSnapshot(ClusterSnapshot snapshot) {
@@ -45,10 +45,10 @@ public class CreateClusterSnapshotResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns information about the new Elastic DocumentDB snapshot.
+     * Returns information about the new elastic cluster snapshot.
      * </p>
      * 
-     * @return Returns information about the new Elastic DocumentDB snapshot.
+     * @return Returns information about the new elastic cluster snapshot.
      */
 
     public ClusterSnapshot getSnapshot() {
@@ -57,11 +57,11 @@ public class CreateClusterSnapshotResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns information about the new Elastic DocumentDB snapshot.
+     * Returns information about the new elastic cluster snapshot.
      * </p>
      * 
      * @param snapshot
-     *        Returns information about the new Elastic DocumentDB snapshot.
+     *        Returns information about the new elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

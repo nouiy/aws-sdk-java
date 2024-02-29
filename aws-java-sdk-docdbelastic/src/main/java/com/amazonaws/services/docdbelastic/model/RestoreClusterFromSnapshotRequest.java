@@ -27,13 +27,13 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      */
     private String clusterName;
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -41,44 +41,58 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS creates
+     * If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS creates
      * for your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The capacity of each shard in the new restored elastic cluster.
+     * </p>
+     */
+    private Integer shardCapacity;
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     */
+    private Integer shardInstanceCount;
+    /**
+     * <p>
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      */
     private String snapshotArn;
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      */
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value pairs in
-     * which the key is the tag name and the value is the key value.
+     * A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of key-value
+     * pairs in which the key is the tag name and the value is the key value.
      * </p>
      */
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      */
     private java.util.List<String> vpcSecurityGroupIds;
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
      * @param clusterName
-     *        The name of the Elastic DocumentDB cluster.
+     *        The name of the elastic cluster.
      */
 
     public void setClusterName(String clusterName) {
@@ -87,10 +101,10 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB cluster.
+     * @return The name of the elastic cluster.
      */
 
     public String getClusterName() {
@@ -99,11 +113,11 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
      * @param clusterName
-     *        The name of the Elastic DocumentDB cluster.
+     *        The name of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,7 +128,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -122,19 +136,19 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS creates
+     * If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS creates
      * for your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.</p>
+     *        The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
      *        cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
      *        instead of the ARN as the KMS encryption key.
      *        </p>
      *        <p>
-     *        If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS
+     *        If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS
      *        creates for your account. Your account has a different default encryption key for each Amazon Region.
      */
 
@@ -144,7 +158,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -152,18 +166,18 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS creates
+     * If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS creates
      * for your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      * 
-     * @return The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.</p>
+     * @return The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.</p>
      *         <p>
      *         The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating
      *         a cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
      *         instead of the ARN as the KMS encryption key.
      *         </p>
      *         <p>
-     *         If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS
+     *         If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS
      *         creates for your account. Your account has a different default encryption key for each Amazon Region.
      */
 
@@ -173,7 +187,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -181,19 +195,19 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS creates
+     * If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS creates
      * for your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.</p>
+     *        The KMS key identifier to use to encrypt the new Amazon DocumentDB elastic clusters cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
      *        cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
      *        instead of the ARN as the KMS encryption key.
      *        </p>
      *        <p>
-     *        If an encryption key is not specified here, Elastic DocumentDB uses the default encryption key that KMS
+     *        If an encryption key is not specified here, Amazon DocumentDB uses the default encryption key that KMS
      *        creates for your account. Your account has a different default encryption key for each Amazon Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -205,11 +219,103 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The capacity of each shard in the new restored elastic cluster.
+     * </p>
+     * 
+     * @param shardCapacity
+     *        The capacity of each shard in the new restored elastic cluster.
+     */
+
+    public void setShardCapacity(Integer shardCapacity) {
+        this.shardCapacity = shardCapacity;
+    }
+
+    /**
+     * <p>
+     * The capacity of each shard in the new restored elastic cluster.
+     * </p>
+     * 
+     * @return The capacity of each shard in the new restored elastic cluster.
+     */
+
+    public Integer getShardCapacity() {
+        return this.shardCapacity;
+    }
+
+    /**
+     * <p>
+     * The capacity of each shard in the new restored elastic cluster.
+     * </p>
+     * 
+     * @param shardCapacity
+     *        The capacity of each shard in the new restored elastic cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreClusterFromSnapshotRequest withShardCapacity(Integer shardCapacity) {
+        setShardCapacity(shardCapacity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     * 
+     * @param shardInstanceCount
+     *        The number of replica instances applying to all shards in the elastic cluster. A
+     *        <code>shardInstanceCount</code> value of 1 means there is one writer instance, and any additional
+     *        instances are replicas that can be used for reads and to improve availability.
+     */
+
+    public void setShardInstanceCount(Integer shardInstanceCount) {
+        this.shardInstanceCount = shardInstanceCount;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     * 
+     * @return The number of replica instances applying to all shards in the elastic cluster. A
+     *         <code>shardInstanceCount</code> value of 1 means there is one writer instance, and any additional
+     *         instances are replicas that can be used for reads and to improve availability.
+     */
+
+    public Integer getShardInstanceCount() {
+        return this.shardInstanceCount;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     * 
+     * @param shardInstanceCount
+     *        The number of replica instances applying to all shards in the elastic cluster. A
+     *        <code>shardInstanceCount</code> value of 1 means there is one writer instance, and any additional
+     *        instances are replicas that can be used for reads and to improve availability.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreClusterFromSnapshotRequest withShardInstanceCount(Integer shardInstanceCount) {
+        setShardInstanceCount(shardInstanceCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot.
+     *        The ARN identifier of the elastic cluster snapshot.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -218,10 +324,10 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB snapshot.
+     * @return The ARN identifier of the elastic cluster snapshot.
      */
 
     public String getSnapshotArn() {
@@ -230,11 +336,11 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot.
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot.
+     *        The ARN identifier of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,10 +351,10 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
-     * @return The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * @return The Amazon EC2 subnet IDs for the elastic cluster.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -257,11 +363,11 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -275,7 +381,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -284,7 +390,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,11 +406,11 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -315,12 +421,12 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value pairs in
-     * which the key is the tag name and the value is the key value.
+     * A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of key-value
+     * pairs in which the key is the tag name and the value is the key value.
      * </p>
      * 
-     * @return A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value
-     *         pairs in which the key is the tag name and the value is the key value.
+     * @return A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of
+     *         key-value pairs in which the key is the tag name and the value is the key value.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -329,13 +435,13 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value pairs in
-     * which the key is the tag name and the value is the key value.
+     * A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of key-value
+     * pairs in which the key is the tag name and the value is the key value.
      * </p>
      * 
      * @param tags
-     *        A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value
-     *        pairs in which the key is the tag name and the value is the key value.
+     *        A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of
+     *        key-value pairs in which the key is the tag name and the value is the key value.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -344,13 +450,13 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value pairs in
-     * which the key is the tag name and the value is the key value.
+     * A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of key-value
+     * pairs in which the key is the tag name and the value is the key value.
      * </p>
      * 
      * @param tags
-     *        A list of the tag names to be assigned to the restored DB cluster, in the form of an array of key-value
-     *        pairs in which the key is the tag name and the value is the key value.
+     *        A list of the tag names to be assigned to the restored elastic cluster, in the form of an array of
+     *        key-value pairs in which the key is the tag name and the value is the key value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -389,10 +495,10 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * 
-     * @return A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     * @return A list of EC2 VPC security groups to associate with the elastic cluster.
      */
 
     public java.util.List<String> getVpcSecurityGroupIds() {
@@ -401,11 +507,11 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     *        A list of EC2 VPC security groups to associate with the elastic cluster.
      */
 
     public void setVpcSecurityGroupIds(java.util.Collection<String> vpcSecurityGroupIds) {
@@ -419,7 +525,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -428,7 +534,7 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     *        A list of EC2 VPC security groups to associate with the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -444,11 +550,11 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+     *        A list of EC2 VPC security groups to associate with the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -473,6 +579,10 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
             sb.append("ClusterName: ").append(getClusterName()).append(",");
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getShardCapacity() != null)
+            sb.append("ShardCapacity: ").append(getShardCapacity()).append(",");
+        if (getShardInstanceCount() != null)
+            sb.append("ShardInstanceCount: ").append(getShardInstanceCount()).append(",");
         if (getSnapshotArn() != null)
             sb.append("SnapshotArn: ").append(getSnapshotArn()).append(",");
         if (getSubnetIds() != null)
@@ -503,6 +613,14 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getShardCapacity() == null ^ this.getShardCapacity() == null)
+            return false;
+        if (other.getShardCapacity() != null && other.getShardCapacity().equals(this.getShardCapacity()) == false)
+            return false;
+        if (other.getShardInstanceCount() == null ^ this.getShardInstanceCount() == null)
+            return false;
+        if (other.getShardInstanceCount() != null && other.getShardInstanceCount().equals(this.getShardInstanceCount()) == false)
+            return false;
         if (other.getSnapshotArn() == null ^ this.getSnapshotArn() == null)
             return false;
         if (other.getSnapshotArn() != null && other.getSnapshotArn().equals(this.getSnapshotArn()) == false)
@@ -529,6 +647,8 @@ public class RestoreClusterFromSnapshotRequest extends com.amazonaws.AmazonWebSe
 
         hashCode = prime * hashCode + ((getClusterName() == null) ? 0 : getClusterName().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getShardCapacity() == null) ? 0 : getShardCapacity().hashCode());
+        hashCode = prime * hashCode + ((getShardInstanceCount() == null) ? 0 : getShardInstanceCount().hashCode());
         hashCode = prime * hashCode + ((getSnapshotArn() == null) ? 0 : getSnapshotArn().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

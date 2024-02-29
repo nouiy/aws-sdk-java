@@ -52,6 +52,10 @@ public class SourceAlgorithmJsonUnmarshaller implements Unmarshaller<SourceAlgor
                     context.nextToken();
                     sourceAlgorithm.setModelDataUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ModelDataSource", targetDepth)) {
+                    context.nextToken();
+                    sourceAlgorithm.setModelDataSource(ModelDataSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("AlgorithmName", targetDepth)) {
                     context.nextToken();
                     sourceAlgorithm.setAlgorithmName(context.getUnmarshaller(String.class).unmarshall(context));

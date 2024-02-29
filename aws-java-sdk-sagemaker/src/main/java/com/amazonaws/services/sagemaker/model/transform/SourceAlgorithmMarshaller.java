@@ -29,6 +29,8 @@ public class SourceAlgorithmMarshaller {
 
     private static final MarshallingInfo<String> MODELDATAURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDataUrl").build();
+    private static final MarshallingInfo<StructuredPojo> MODELDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDataSource").build();
     private static final MarshallingInfo<String> ALGORITHMNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AlgorithmName").build();
 
@@ -49,6 +51,7 @@ public class SourceAlgorithmMarshaller {
 
         try {
             protocolMarshaller.marshall(sourceAlgorithm.getModelDataUrl(), MODELDATAURL_BINDING);
+            protocolMarshaller.marshall(sourceAlgorithm.getModelDataSource(), MODELDATASOURCE_BINDING);
             protocolMarshaller.marshall(sourceAlgorithm.getAlgorithmName(), ALGORITHMNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

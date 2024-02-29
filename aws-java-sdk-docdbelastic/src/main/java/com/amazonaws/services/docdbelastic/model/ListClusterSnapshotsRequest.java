@@ -27,30 +27,54 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String snapshotType;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -59,10 +83,10 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster.
+     * @return The ARN identifier of the elastic cluster.
      */
 
     public String getClusterArn() {
@@ -71,11 +95,11 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +110,11 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of entries to recieve in the response.
+     *        The maximum number of elastic cluster snapshot results to receive in the response.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -99,10 +123,10 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      * 
-     * @return The maximum number of entries to recieve in the response.
+     * @return The maximum number of elastic cluster snapshot results to receive in the response.
      */
 
     public Integer getMaxResults() {
@@ -111,11 +135,11 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of entries to recieve in the response.
+     *        The maximum number of elastic cluster snapshot results to receive in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +150,18 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The nextToken which is used the get the next page of data.
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
+     *        <p>
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public void setNextToken(String nextToken) {
@@ -139,10 +170,17 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
-     * @return The nextToken which is used the get the next page of data.
+     * @return A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *         only records beyond this token, up to the value specified by <code>max-results</code>.</p>
+     *         <p>
+     *         If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public String getNextToken() {
@@ -151,16 +189,144 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The nextToken which is used the get the next page of data.
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
+     *        <p>
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListClusterSnapshotsRequest withNextToken(String nextToken) {
         setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param snapshotType
+     *        The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for
+     *        your Amazon Web Services account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *        Services account.
+     *        </p>
+     *        </li>
+     */
+
+    public void setSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+    }
+
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created
+     *         for your Amazon Web Services account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *         Services account.
+     *         </p>
+     *         </li>
+     */
+
+    public String getSnapshotType() {
+        return this.snapshotType;
+    }
+
+    /**
+     * <p>
+     * The type of cluster snapshots to be returned. You can specify one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web Services
+     * account.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param snapshotType
+     *        The type of cluster snapshots to be returned. You can specify one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>automated</code> - Return all cluster snapshots that Amazon DocumentDB has automatically created for
+     *        your Amazon Web Services account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>manual</code> - Return all cluster snapshots that you have manually created for your Amazon Web
+     *        Services account.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListClusterSnapshotsRequest withSnapshotType(String snapshotType) {
+        setSnapshotType(snapshotType);
         return this;
     }
 
@@ -181,7 +347,9 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getSnapshotType() != null)
+            sb.append("SnapshotType: ").append(getSnapshotType());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +376,10 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getSnapshotType() == null ^ this.getSnapshotType() == null)
+            return false;
+        if (other.getSnapshotType() != null && other.getSnapshotType().equals(this.getSnapshotType()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +391,7 @@ public class ListClusterSnapshotsRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getClusterArn() == null) ? 0 : getClusterArn().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getSnapshotType() == null) ? 0 : getSnapshotType().hashCode());
         return hashCode;
     }
 

@@ -43,6 +43,12 @@ public class SourceAlgorithm implements Serializable, Cloneable, StructuredPojo 
     private String modelDataUrl;
     /**
      * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     */
+    private ModelDataSource modelDataSource;
+    /**
+     * <p>
      * The name of an algorithm that was used to create the model package. The algorithm must be either an algorithm
      * resource in your SageMaker account or an algorithm in Amazon Web Services Marketplace that you are subscribed to.
      * </p>
@@ -124,6 +130,46 @@ public class SourceAlgorithm implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     * 
+     * @param modelDataSource
+     *        Specifies the location of ML model data to deploy during endpoint creation.
+     */
+
+    public void setModelDataSource(ModelDataSource modelDataSource) {
+        this.modelDataSource = modelDataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     * 
+     * @return Specifies the location of ML model data to deploy during endpoint creation.
+     */
+
+    public ModelDataSource getModelDataSource() {
+        return this.modelDataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     * 
+     * @param modelDataSource
+     *        Specifies the location of ML model data to deploy during endpoint creation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SourceAlgorithm withModelDataSource(ModelDataSource modelDataSource) {
+        setModelDataSource(modelDataSource);
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of an algorithm that was used to create the model package. The algorithm must be either an algorithm
      * resource in your SageMaker account or an algorithm in Amazon Web Services Marketplace that you are subscribed to.
      * </p>
@@ -185,6 +231,8 @@ public class SourceAlgorithm implements Serializable, Cloneable, StructuredPojo 
         sb.append("{");
         if (getModelDataUrl() != null)
             sb.append("ModelDataUrl: ").append(getModelDataUrl()).append(",");
+        if (getModelDataSource() != null)
+            sb.append("ModelDataSource: ").append(getModelDataSource()).append(",");
         if (getAlgorithmName() != null)
             sb.append("AlgorithmName: ").append(getAlgorithmName());
         sb.append("}");
@@ -205,6 +253,10 @@ public class SourceAlgorithm implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getModelDataUrl() != null && other.getModelDataUrl().equals(this.getModelDataUrl()) == false)
             return false;
+        if (other.getModelDataSource() == null ^ this.getModelDataSource() == null)
+            return false;
+        if (other.getModelDataSource() != null && other.getModelDataSource().equals(this.getModelDataSource()) == false)
+            return false;
         if (other.getAlgorithmName() == null ^ this.getAlgorithmName() == null)
             return false;
         if (other.getAlgorithmName() != null && other.getAlgorithmName().equals(this.getAlgorithmName()) == false)
@@ -218,6 +270,7 @@ public class SourceAlgorithm implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getModelDataUrl() == null) ? 0 : getModelDataUrl().hashCode());
+        hashCode = prime * hashCode + ((getModelDataSource() == null) ? 0 : getModelDataSource().hashCode());
         hashCode = prime * hashCode + ((getAlgorithmName() == null) ? 0 : getAlgorithmName().hashCode());
         return hashCode;
     }

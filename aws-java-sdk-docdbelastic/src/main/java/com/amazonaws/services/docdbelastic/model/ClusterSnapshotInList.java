@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of Elastic DocumentDB snapshots.
+ * A list of elastic cluster snapshots.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ClusterSnapshotInList"
@@ -30,42 +30,42 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      */
     private String snapshotArn;
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      */
     private String snapshotCreationTime;
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      */
     private String snapshotName;
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -74,10 +74,10 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster.
+     * @return The ARN identifier of the elastic cluster.
      */
 
     public String getClusterArn() {
@@ -86,11 +86,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot
+     *        The ARN identifier of the elastic cluster snapshot.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -114,10 +114,10 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB snapshot
+     * @return The ARN identifier of the elastic cluster snapshot.
      */
 
     public String getSnapshotArn() {
@@ -126,11 +126,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot
+     * The ARN identifier of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot
+     *        The ARN identifier of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param snapshotCreationTime
-     *        The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      */
 
     public void setSnapshotCreationTime(String snapshotCreationTime) {
@@ -154,10 +154,10 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      * 
-     * @return The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * @return The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      */
 
     public String getSnapshotCreationTime() {
@@ -166,11 +166,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param snapshotCreationTime
-     *        The time when the Elastic DocumentDB snapshot was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster snapshot was created in Universal Coordinated Time (UTC).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,11 +181,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotName
-     *        The name of the Elastic DocumentDB snapshot.
+     *        The name of the elastic cluster snapshot.
      */
 
     public void setSnapshotName(String snapshotName) {
@@ -194,10 +194,10 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB snapshot.
+     * @return The name of the elastic cluster snapshot.
      */
 
     public String getSnapshotName() {
@@ -206,11 +206,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotName
-     *        The name of the Elastic DocumentDB snapshot.
+     *        The name of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +221,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB snapshot.
+     *        The status of the elastic cluster snapshot.
      * @see Status
      */
 
@@ -235,10 +235,10 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
-     * @return The status of the Elastic DocumentDB snapshot.
+     * @return The status of the elastic cluster snapshot.
      * @see Status
      */
 
@@ -248,11 +248,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB snapshot.
+     *        The status of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -264,11 +264,11 @@ public class ClusterSnapshotInList implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB snapshot.
+     * The status of the elastic cluster snapshot.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB snapshot.
+     *        The status of the elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */

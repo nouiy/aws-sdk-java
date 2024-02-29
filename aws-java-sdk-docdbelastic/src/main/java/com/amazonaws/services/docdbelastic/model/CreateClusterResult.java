@@ -25,18 +25,18 @@ public class CreateClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The new Elastic DocumentDB cluster that has been created.
+     * The new elastic cluster that has been created.
      * </p>
      */
     private Cluster cluster;
 
     /**
      * <p>
-     * The new Elastic DocumentDB cluster that has been created.
+     * The new elastic cluster that has been created.
      * </p>
      * 
      * @param cluster
-     *        The new Elastic DocumentDB cluster that has been created.
+     *        The new elastic cluster that has been created.
      */
 
     public void setCluster(Cluster cluster) {
@@ -45,10 +45,10 @@ public class CreateClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The new Elastic DocumentDB cluster that has been created.
+     * The new elastic cluster that has been created.
      * </p>
      * 
-     * @return The new Elastic DocumentDB cluster that has been created.
+     * @return The new elastic cluster that has been created.
      */
 
     public Cluster getCluster() {
@@ -57,11 +57,11 @@ public class CreateClusterResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The new Elastic DocumentDB cluster that has been created.
+     * The new elastic cluster that has been created.
      * </p>
      * 
      * @param cluster
-     *        The new Elastic DocumentDB cluster that has been created.
+     *        The new elastic cluster that has been created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the Amazon DocumentDB elastic clusters administrator.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -53,7 +53,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String adminUserName;
     /**
      * <p>
-     * The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII characters.
+     * The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any printable
+     * ASCII characters.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -74,19 +75,26 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String adminUserPassword;
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type used to determine where to fetch the password used for accessing the elastic cluster.
+     * Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * </p>
      */
     private String authType;
     /**
      * <p>
-     * The client token for the Elastic DocumentDB cluster.
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     */
+    private Integer backupRetentionPeriod;
+    /**
+     * <p>
+     * The client token for the elastic cluster.
      * </p>
      */
     private String clientToken;
     /**
      * <p>
-     * The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.
+     * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -115,7 +123,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String clusterName;
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new elastic cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -123,11 +131,18 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS creates for
+     * If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates for
      * your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      */
     private String kmsKeyId;
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by the <code>backupRetentionPeriod</code>.
+     * </p>
+     */
+    private String preferredBackupWindow;
     /**
      * <p>
      * The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
@@ -149,38 +164,47 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String preferredMaintenanceWindow;
     /**
      * <p>
-     * The capacity of each shard in the new Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      */
     private Integer shardCapacity;
     /**
      * <p>
-     * The number of shards to create in the new Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      */
     private Integer shardCount;
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     */
+    private Integer shardInstanceCount;
+    /**
+     * <p>
+     * The Amazon EC2 subnet IDs for the new elastic cluster.
      * </p>
      */
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB cluster.
+     * The tags to be assigned to the new elastic cluster.
      * </p>
      */
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the new elastic cluster.
      * </p>
      */
     private java.util.List<String> vpcSecurityGroupIds;
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the Amazon DocumentDB elastic clusters administrator.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -204,7 +228,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param adminUserName
-     *        The name of the Elastic DocumentDB cluster administrator.</p>
+     *        The name of the Amazon DocumentDB elastic clusters administrator.</p>
      *        <p>
      *        <i>Constraints</i>:
      *        </p>
@@ -232,7 +256,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the Amazon DocumentDB elastic clusters administrator.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -255,7 +279,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * </ul>
      * 
-     * @return The name of the Elastic DocumentDB cluster administrator.</p>
+     * @return The name of the Amazon DocumentDB elastic clusters administrator.</p>
      *         <p>
      *         <i>Constraints</i>:
      *         </p>
@@ -283,7 +307,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the Amazon DocumentDB elastic clusters administrator.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -307,7 +331,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param adminUserName
-     *        The name of the Elastic DocumentDB cluster administrator.</p>
+     *        The name of the Amazon DocumentDB elastic clusters administrator.</p>
      *        <p>
      *        <i>Constraints</i>:
      *        </p>
@@ -337,7 +361,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII characters.
+     * The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any printable
+     * ASCII characters.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -356,8 +381,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param adminUserPassword
-     *        The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII
-     *        characters.</p>
+     *        The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any
+     *        printable ASCII characters.</p>
      *        <p>
      *        <i>Constraints</i>:
      *        </p>
@@ -380,7 +405,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII characters.
+     * The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any printable
+     * ASCII characters.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -398,8 +424,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * </ul>
      * 
-     * @return The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII
-     *         characters.</p>
+     * @return The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any
+     *         printable ASCII characters.</p>
      *         <p>
      *         <i>Constraints</i>:
      *         </p>
@@ -422,7 +448,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII characters.
+     * The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any printable
+     * ASCII characters.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -441,8 +468,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param adminUserPassword
-     *        The password for the Elastic DocumentDB cluster administrator and can contain any printable ASCII
-     *        characters.</p>
+     *        The password for the Amazon DocumentDB elastic clusters administrator. The password can contain any
+     *        printable ASCII characters.</p>
      *        <p>
      *        <i>Constraints</i>:
      *        </p>
@@ -467,11 +494,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type used to determine where to fetch the password used for accessing the elastic cluster.
+     * Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * </p>
      * 
      * @param authType
-     *        The authentication type for the Elastic DocumentDB cluster.
+     *        The authentication type used to determine where to fetch the password used for accessing the elastic
+     *        cluster. Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * @see Auth
      */
 
@@ -481,10 +510,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type used to determine where to fetch the password used for accessing the elastic cluster.
+     * Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * </p>
      * 
-     * @return The authentication type for the Elastic DocumentDB cluster.
+     * @return The authentication type used to determine where to fetch the password used for accessing the elastic
+     *         cluster. Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * @see Auth
      */
 
@@ -494,11 +525,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type used to determine where to fetch the password used for accessing the elastic cluster.
+     * Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * </p>
      * 
      * @param authType
-     *        The authentication type for the Elastic DocumentDB cluster.
+     *        The authentication type used to determine where to fetch the password used for accessing the elastic
+     *        cluster. Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Auth
      */
@@ -510,11 +543,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type used to determine where to fetch the password used for accessing the elastic cluster.
+     * Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * </p>
      * 
      * @param authType
-     *        The authentication type for the Elastic DocumentDB cluster.
+     *        The authentication type used to determine where to fetch the password used for accessing the elastic
+     *        cluster. Valid types are <code>PLAIN_TEXT</code> or <code>SECRET_ARN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Auth
      */
@@ -526,11 +561,51 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The client token for the Elastic DocumentDB cluster.
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     * 
+     * @param backupRetentionPeriod
+     *        The number of days for which automatic snapshots are retained.
+     */
+
+    public void setBackupRetentionPeriod(Integer backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+    }
+
+    /**
+     * <p>
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     * 
+     * @return The number of days for which automatic snapshots are retained.
+     */
+
+    public Integer getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
+    }
+
+    /**
+     * <p>
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     * 
+     * @param backupRetentionPeriod
+     *        The number of days for which automatic snapshots are retained.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withBackupRetentionPeriod(Integer backupRetentionPeriod) {
+        setBackupRetentionPeriod(backupRetentionPeriod);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The client token for the elastic cluster.
      * </p>
      * 
      * @param clientToken
-     *        The client token for the Elastic DocumentDB cluster.
+     *        The client token for the elastic cluster.
      */
 
     public void setClientToken(String clientToken) {
@@ -539,10 +614,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The client token for the Elastic DocumentDB cluster.
+     * The client token for the elastic cluster.
      * </p>
      * 
-     * @return The client token for the Elastic DocumentDB cluster.
+     * @return The client token for the elastic cluster.
      */
 
     public String getClientToken() {
@@ -551,11 +626,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The client token for the Elastic DocumentDB cluster.
+     * The client token for the elastic cluster.
      * </p>
      * 
      * @param clientToken
-     *        The client token for the Elastic DocumentDB cluster.
+     *        The client token for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -566,7 +641,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.
+     * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -593,7 +668,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param clusterName
-     *        The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.</p>
+     *        The name of the new elastic cluster. This parameter is stored as a lowercase string.</p>
      *        <p>
      *        <i>Constraints</i>:
      *        </p>
@@ -624,7 +699,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.
+     * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -650,7 +725,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <i>Example</i>: <code>my-cluster</code>
      * </p>
      * 
-     * @return The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.</p>
+     * @return The name of the new elastic cluster. This parameter is stored as a lowercase string.</p>
      *         <p>
      *         <i>Constraints</i>:
      *         </p>
@@ -681,7 +756,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.
+     * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      * </p>
      * <p>
      * <i>Constraints</i>:
@@ -708,7 +783,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param clusterName
-     *        The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase string.</p>
+     *        The name of the new elastic cluster. This parameter is stored as a lowercase string.</p>
      *        <p>
      *        <i>Constraints</i>:
      *        </p>
@@ -741,7 +816,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new elastic cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -749,19 +824,19 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS creates for
+     * If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates for
      * your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.</p>
+     *        The KMS key identifier to use to encrypt the new elastic cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
      *        cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
      *        instead of the ARN as the KMS encryption key.
      *        </p>
      *        <p>
-     *        If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS creates
+     *        If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates
      *        for your account. Your account has a different default encryption key for each Amazon Region.
      */
 
@@ -771,7 +846,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new elastic cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -779,19 +854,19 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS creates for
+     * If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates for
      * your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      * 
-     * @return The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.</p>
+     * @return The KMS key identifier to use to encrypt the new elastic cluster.</p>
      *         <p>
      *         The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating
      *         a cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
      *         instead of the ARN as the KMS encryption key.
      *         </p>
      *         <p>
-     *         If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS
-     *         creates for your account. Your account has a different default encryption key for each Amazon Region.
+     *         If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates
+     *         for your account. Your account has a different default encryption key for each Amazon Region.
      */
 
     public String getKmsKeyId() {
@@ -800,7 +875,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the new elastic cluster.
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
@@ -808,25 +883,71 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the ARN as the KMS encryption key.
      * </p>
      * <p>
-     * If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS creates for
+     * If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates for
      * your account. Your account has a different default encryption key for each Amazon Region.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.</p>
+     *        The KMS key identifier to use to encrypt the new elastic cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
      *        cluster using the same Amazon account that owns this KMS encryption key, you can use the KMS key alias
      *        instead of the ARN as the KMS encryption key.
      *        </p>
      *        <p>
-     *        If an encryption key is not specified, Elastic DocumentDB uses the default encryption key that KMS creates
+     *        If an encryption key is not specified, Amazon DocumentDB uses the default encryption key that KMS creates
      *        for your account. Your account has a different default encryption key for each Amazon Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateClusterRequest withKmsKeyId(String kmsKeyId) {
         setKmsKeyId(kmsKeyId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by the <code>backupRetentionPeriod</code>.
+     * </p>
+     * 
+     * @param preferredBackupWindow
+     *        The daily time range during which automated backups are created if automated backups are enabled, as
+     *        determined by the <code>backupRetentionPeriod</code>.
+     */
+
+    public void setPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+    }
+
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by the <code>backupRetentionPeriod</code>.
+     * </p>
+     * 
+     * @return The daily time range during which automated backups are created if automated backups are enabled, as
+     *         determined by the <code>backupRetentionPeriod</code>.
+     */
+
+    public String getPreferredBackupWindow() {
+        return this.preferredBackupWindow;
+    }
+
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by the <code>backupRetentionPeriod</code>.
+     * </p>
+     * 
+     * @param preferredBackupWindow
+     *        The daily time range during which automated backups are created if automated backups are enabled, as
+     *        determined by the <code>backupRetentionPeriod</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withPreferredBackupWindow(String preferredBackupWindow) {
+        setPreferredBackupWindow(preferredBackupWindow);
         return this;
     }
 
@@ -947,11 +1068,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The capacity of each shard in the new Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      * 
      * @param shardCapacity
-     *        The capacity of each shard in the new Elastic DocumentDB cluster.
+     *        The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16,
+     *        32, 64.
      */
 
     public void setShardCapacity(Integer shardCapacity) {
@@ -960,10 +1083,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The capacity of each shard in the new Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      * 
-     * @return The capacity of each shard in the new Elastic DocumentDB cluster.
+     * @return The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8,
+     *         16, 32, 64.
      */
 
     public Integer getShardCapacity() {
@@ -972,11 +1097,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The capacity of each shard in the new Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      * 
      * @param shardCapacity
-     *        The capacity of each shard in the new Elastic DocumentDB cluster.
+     *        The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16,
+     *        32, 64.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -987,11 +1114,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of shards to create in the new Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      * 
      * @param shardCount
-     *        The number of shards to create in the new Elastic DocumentDB cluster.
+     *        The number of shards assigned to the elastic cluster. Maximum is 32.
      */
 
     public void setShardCount(Integer shardCount) {
@@ -1000,10 +1127,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of shards to create in the new Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      * 
-     * @return The number of shards to create in the new Elastic DocumentDB cluster.
+     * @return The number of shards assigned to the elastic cluster. Maximum is 32.
      */
 
     public Integer getShardCount() {
@@ -1012,11 +1139,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of shards to create in the new Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      * 
      * @param shardCount
-     *        The number of shards to create in the new Elastic DocumentDB cluster.
+     *        The number of shards assigned to the elastic cluster. Maximum is 32.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1027,10 +1154,62 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
      * </p>
      * 
-     * @return The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     * @param shardInstanceCount
+     *        The number of replica instances applying to all shards in the elastic cluster. A
+     *        <code>shardInstanceCount</code> value of 1 means there is one writer instance, and any additional
+     *        instances are replicas that can be used for reads and to improve availability.
+     */
+
+    public void setShardInstanceCount(Integer shardInstanceCount) {
+        this.shardInstanceCount = shardInstanceCount;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     * 
+     * @return The number of replica instances applying to all shards in the elastic cluster. A
+     *         <code>shardInstanceCount</code> value of 1 means there is one writer instance, and any additional
+     *         instances are replicas that can be used for reads and to improve availability.
+     */
+
+    public Integer getShardInstanceCount() {
+        return this.shardInstanceCount;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the elastic cluster. A <code>shardInstanceCount</code>
+     * value of 1 means there is one writer instance, and any additional instances are replicas that can be used for
+     * reads and to improve availability.
+     * </p>
+     * 
+     * @param shardInstanceCount
+     *        The number of replica instances applying to all shards in the elastic cluster. A
+     *        <code>shardInstanceCount</code> value of 1 means there is one writer instance, and any additional
+     *        instances are replicas that can be used for reads and to improve availability.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withShardInstanceCount(Integer shardInstanceCount) {
+        setShardInstanceCount(shardInstanceCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon EC2 subnet IDs for the new elastic cluster.
+     * </p>
+     * 
+     * @return The Amazon EC2 subnet IDs for the new elastic cluster.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -1039,11 +1218,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the new elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the new elastic cluster.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -1057,7 +1236,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the new elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1066,7 +1245,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the new elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1082,11 +1261,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the new elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the new elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1097,10 +1276,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB cluster.
+     * The tags to be assigned to the new elastic cluster.
      * </p>
      * 
-     * @return The tags to be assigned to the new Elastic DocumentDB cluster.
+     * @return The tags to be assigned to the new elastic cluster.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -1109,11 +1288,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB cluster.
+     * The tags to be assigned to the new elastic cluster.
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the new Elastic DocumentDB cluster.
+     *        The tags to be assigned to the new elastic cluster.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -1122,11 +1301,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB cluster.
+     * The tags to be assigned to the new elastic cluster.
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the new Elastic DocumentDB cluster.
+     *        The tags to be assigned to the new elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1165,10 +1344,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the new elastic cluster.
      * </p>
      * 
-     * @return A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     * @return A list of EC2 VPC security groups to associate with the new elastic cluster.
      */
 
     public java.util.List<String> getVpcSecurityGroupIds() {
@@ -1177,11 +1356,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the new elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     *        A list of EC2 VPC security groups to associate with the new elastic cluster.
      */
 
     public void setVpcSecurityGroupIds(java.util.Collection<String> vpcSecurityGroupIds) {
@@ -1195,7 +1374,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the new elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1204,7 +1383,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     *        A list of EC2 VPC security groups to associate with the new elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1220,11 +1399,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     * A list of EC2 VPC security groups to associate with the new elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+     *        A list of EC2 VPC security groups to associate with the new elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1251,18 +1430,24 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             sb.append("AdminUserPassword: ").append("***Sensitive Data Redacted***").append(",");
         if (getAuthType() != null)
             sb.append("AuthType: ").append(getAuthType()).append(",");
+        if (getBackupRetentionPeriod() != null)
+            sb.append("BackupRetentionPeriod: ").append(getBackupRetentionPeriod()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getClusterName() != null)
             sb.append("ClusterName: ").append(getClusterName()).append(",");
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getPreferredBackupWindow() != null)
+            sb.append("PreferredBackupWindow: ").append(getPreferredBackupWindow()).append(",");
         if (getPreferredMaintenanceWindow() != null)
             sb.append("PreferredMaintenanceWindow: ").append(getPreferredMaintenanceWindow()).append(",");
         if (getShardCapacity() != null)
             sb.append("ShardCapacity: ").append(getShardCapacity()).append(",");
         if (getShardCount() != null)
             sb.append("ShardCount: ").append(getShardCount()).append(",");
+        if (getShardInstanceCount() != null)
+            sb.append("ShardInstanceCount: ").append(getShardInstanceCount()).append(",");
         if (getSubnetIds() != null)
             sb.append("SubnetIds: ").append(getSubnetIds()).append(",");
         if (getTags() != null)
@@ -1295,6 +1480,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getAuthType() != null && other.getAuthType().equals(this.getAuthType()) == false)
             return false;
+        if (other.getBackupRetentionPeriod() == null ^ this.getBackupRetentionPeriod() == null)
+            return false;
+        if (other.getBackupRetentionPeriod() != null && other.getBackupRetentionPeriod().equals(this.getBackupRetentionPeriod()) == false)
+            return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
@@ -1307,6 +1496,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getPreferredBackupWindow() == null ^ this.getPreferredBackupWindow() == null)
+            return false;
+        if (other.getPreferredBackupWindow() != null && other.getPreferredBackupWindow().equals(this.getPreferredBackupWindow()) == false)
+            return false;
         if (other.getPreferredMaintenanceWindow() == null ^ this.getPreferredMaintenanceWindow() == null)
             return false;
         if (other.getPreferredMaintenanceWindow() != null && other.getPreferredMaintenanceWindow().equals(this.getPreferredMaintenanceWindow()) == false)
@@ -1318,6 +1511,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (other.getShardCount() == null ^ this.getShardCount() == null)
             return false;
         if (other.getShardCount() != null && other.getShardCount().equals(this.getShardCount()) == false)
+            return false;
+        if (other.getShardInstanceCount() == null ^ this.getShardInstanceCount() == null)
+            return false;
+        if (other.getShardInstanceCount() != null && other.getShardInstanceCount().equals(this.getShardInstanceCount()) == false)
             return false;
         if (other.getSubnetIds() == null ^ this.getSubnetIds() == null)
             return false;
@@ -1342,12 +1539,15 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getAdminUserName() == null) ? 0 : getAdminUserName().hashCode());
         hashCode = prime * hashCode + ((getAdminUserPassword() == null) ? 0 : getAdminUserPassword().hashCode());
         hashCode = prime * hashCode + ((getAuthType() == null) ? 0 : getAuthType().hashCode());
+        hashCode = prime * hashCode + ((getBackupRetentionPeriod() == null) ? 0 : getBackupRetentionPeriod().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getClusterName() == null) ? 0 : getClusterName().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getPreferredBackupWindow() == null) ? 0 : getPreferredBackupWindow().hashCode());
         hashCode = prime * hashCode + ((getPreferredMaintenanceWindow() == null) ? 0 : getPreferredMaintenanceWindow().hashCode());
         hashCode = prime * hashCode + ((getShardCapacity() == null) ? 0 : getShardCapacity().hashCode());
         hashCode = prime * hashCode + ((getShardCount() == null) ? 0 : getShardCount().hashCode());
+        hashCode = prime * hashCode + ((getShardInstanceCount() == null) ? 0 : getShardInstanceCount().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getVpcSecurityGroupIds() == null) ? 0 : getVpcSecurityGroupIds().hashCode());

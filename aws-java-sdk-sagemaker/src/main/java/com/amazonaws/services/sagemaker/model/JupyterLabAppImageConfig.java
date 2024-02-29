@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration for the file system and kernels in a SageMaker image running as a JupyterLab app.
+ * The configuration for the file system and kernels in a SageMaker image running as a JupyterLab app. The
+ * <code>FileSystemConfig</code> object is not supported.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/JupyterLabAppImageConfig" target="_top">AWS

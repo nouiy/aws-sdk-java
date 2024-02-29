@@ -52,6 +52,12 @@ public class ColumnTooltipItem implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private AggregationFunction aggregation;
+    /**
+     * <p>
+     * Determines the target of the column tooltip item in a combo chart visual.
+     * </p>
+     */
+    private String tooltipTarget;
 
     /**
      * <p>
@@ -233,6 +239,65 @@ public class ColumnTooltipItem implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Determines the target of the column tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @param tooltipTarget
+     *        Determines the target of the column tooltip item in a combo chart visual.
+     * @see TooltipTarget
+     */
+
+    public void setTooltipTarget(String tooltipTarget) {
+        this.tooltipTarget = tooltipTarget;
+    }
+
+    /**
+     * <p>
+     * Determines the target of the column tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @return Determines the target of the column tooltip item in a combo chart visual.
+     * @see TooltipTarget
+     */
+
+    public String getTooltipTarget() {
+        return this.tooltipTarget;
+    }
+
+    /**
+     * <p>
+     * Determines the target of the column tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @param tooltipTarget
+     *        Determines the target of the column tooltip item in a combo chart visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TooltipTarget
+     */
+
+    public ColumnTooltipItem withTooltipTarget(String tooltipTarget) {
+        setTooltipTarget(tooltipTarget);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines the target of the column tooltip item in a combo chart visual.
+     * </p>
+     * 
+     * @param tooltipTarget
+     *        Determines the target of the column tooltip item in a combo chart visual.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TooltipTarget
+     */
+
+    public ColumnTooltipItem withTooltipTarget(TooltipTarget tooltipTarget) {
+        this.tooltipTarget = tooltipTarget.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -251,7 +316,9 @@ public class ColumnTooltipItem implements Serializable, Cloneable, StructuredPoj
         if (getVisibility() != null)
             sb.append("Visibility: ").append(getVisibility()).append(",");
         if (getAggregation() != null)
-            sb.append("Aggregation: ").append(getAggregation());
+            sb.append("Aggregation: ").append(getAggregation()).append(",");
+        if (getTooltipTarget() != null)
+            sb.append("TooltipTarget: ").append(getTooltipTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -282,6 +349,10 @@ public class ColumnTooltipItem implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getAggregation() != null && other.getAggregation().equals(this.getAggregation()) == false)
             return false;
+        if (other.getTooltipTarget() == null ^ this.getTooltipTarget() == null)
+            return false;
+        if (other.getTooltipTarget() != null && other.getTooltipTarget().equals(this.getTooltipTarget()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +365,7 @@ public class ColumnTooltipItem implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         hashCode = prime * hashCode + ((getVisibility() == null) ? 0 : getVisibility().hashCode());
         hashCode = prime * hashCode + ((getAggregation() == null) ? 0 : getAggregation().hashCode());
+        hashCode = prime * hashCode + ((getTooltipTarget() == null) ? 0 : getTooltipTarget().hashCode());
         return hashCode;
     }
 

@@ -61,7 +61,7 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
     private java.util.Date creationTime;
     /**
      * <p>
-     * Details about inference jobs that can be run with models based on this model package.
+     * Details about inference jobs that you can run with models based on this model package.
      * </p>
      */
     private InferenceSpecification inferenceSpecification;
@@ -176,6 +176,12 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String skipModelValidation;
+    /**
+     * <p>
+     * The URI of the source for the model package.
+     * </p>
+     */
+    private String sourceUri;
 
     /**
      * <p>
@@ -419,11 +425,11 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Details about inference jobs that can be run with models based on this model package.
+     * Details about inference jobs that you can run with models based on this model package.
      * </p>
      * 
      * @param inferenceSpecification
-     *        Details about inference jobs that can be run with models based on this model package.
+     *        Details about inference jobs that you can run with models based on this model package.
      */
 
     public void setInferenceSpecification(InferenceSpecification inferenceSpecification) {
@@ -432,10 +438,10 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Details about inference jobs that can be run with models based on this model package.
+     * Details about inference jobs that you can run with models based on this model package.
      * </p>
      * 
-     * @return Details about inference jobs that can be run with models based on this model package.
+     * @return Details about inference jobs that you can run with models based on this model package.
      */
 
     public InferenceSpecification getInferenceSpecification() {
@@ -444,11 +450,11 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Details about inference jobs that can be run with models based on this model package.
+     * Details about inference jobs that you can run with models based on this model package.
      * </p>
      * 
      * @param inferenceSpecification
-     *        Details about inference jobs that can be run with models based on this model package.
+     *        Details about inference jobs that you can run with models based on this model package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1362,6 +1368,46 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The URI of the source for the model package.
+     * </p>
+     * 
+     * @param sourceUri
+     *        The URI of the source for the model package.
+     */
+
+    public void setSourceUri(String sourceUri) {
+        this.sourceUri = sourceUri;
+    }
+
+    /**
+     * <p>
+     * The URI of the source for the model package.
+     * </p>
+     * 
+     * @return The URI of the source for the model package.
+     */
+
+    public String getSourceUri() {
+        return this.sourceUri;
+    }
+
+    /**
+     * <p>
+     * The URI of the source for the model package.
+     * </p>
+     * 
+     * @param sourceUri
+     *        The URI of the source for the model package.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withSourceUri(String sourceUri) {
+        setSourceUri(sourceUri);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1424,7 +1470,9 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
         if (getAdditionalInferenceSpecifications() != null)
             sb.append("AdditionalInferenceSpecifications: ").append(getAdditionalInferenceSpecifications()).append(",");
         if (getSkipModelValidation() != null)
-            sb.append("SkipModelValidation: ").append(getSkipModelValidation());
+            sb.append("SkipModelValidation: ").append(getSkipModelValidation()).append(",");
+        if (getSourceUri() != null)
+            sb.append("SourceUri: ").append(getSourceUri());
         sb.append("}");
         return sb.toString();
     }
@@ -1544,6 +1592,10 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getSkipModelValidation() != null && other.getSkipModelValidation().equals(this.getSkipModelValidation()) == false)
             return false;
+        if (other.getSourceUri() == null ^ this.getSourceUri() == null)
+            return false;
+        if (other.getSourceUri() != null && other.getSourceUri().equals(this.getSourceUri()) == false)
+            return false;
         return true;
     }
 
@@ -1578,6 +1630,7 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getDriftCheckBaselines() == null) ? 0 : getDriftCheckBaselines().hashCode());
         hashCode = prime * hashCode + ((getAdditionalInferenceSpecifications() == null) ? 0 : getAdditionalInferenceSpecifications().hashCode());
         hashCode = prime * hashCode + ((getSkipModelValidation() == null) ? 0 : getSkipModelValidation().hashCode());
+        hashCode = prime * hashCode + ((getSourceUri() == null) ? 0 : getSourceUri().hashCode());
         return hashCode;
     }
 

@@ -27,24 +27,24 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      */
     private String resourceArn;
     /**
      * <p>
-     * The tag keys to be removed from the Elastic DocumentDB resource.
+     * The tag keys to be removed from the elastic cluster resource.
      * </p>
      */
     private java.util.List<String> tagKeys;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      * 
      * @param resourceArn
-     *        The arn of the Elastic DocumentDB resource.
+     *        The ARN identifier of the elastic cluster resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB resource.
+     * @return The ARN identifier of the elastic cluster resource.
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB resource.
+     * The ARN identifier of the elastic cluster resource.
      * </p>
      * 
      * @param resourceArn
-     *        The arn of the Elastic DocumentDB resource.
+     *        The ARN identifier of the elastic cluster resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag keys to be removed from the Elastic DocumentDB resource.
+     * The tag keys to be removed from the elastic cluster resource.
      * </p>
      * 
-     * @return The tag keys to be removed from the Elastic DocumentDB resource.
+     * @return The tag keys to be removed from the elastic cluster resource.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -92,11 +92,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag keys to be removed from the Elastic DocumentDB resource.
+     * The tag keys to be removed from the elastic cluster resource.
      * </p>
      * 
      * @param tagKeys
-     *        The tag keys to be removed from the Elastic DocumentDB resource.
+     *        The tag keys to be removed from the elastic cluster resource.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -110,7 +110,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag keys to be removed from the Elastic DocumentDB resource.
+     * The tag keys to be removed from the elastic cluster resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        The tag keys to be removed from the Elastic DocumentDB resource.
+     *        The tag keys to be removed from the elastic cluster resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag keys to be removed from the Elastic DocumentDB resource.
+     * The tag keys to be removed from the elastic cluster resource.
      * </p>
      * 
      * @param tagKeys
-     *        The tag keys to be removed from the Elastic DocumentDB resource.
+     *        The tag keys to be removed from the elastic cluster resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

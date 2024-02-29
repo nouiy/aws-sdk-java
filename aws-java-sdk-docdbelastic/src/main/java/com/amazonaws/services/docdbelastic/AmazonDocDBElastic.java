@@ -27,7 +27,33 @@ import com.amazonaws.services.docdbelastic.model.*;
  * </p>
  * <p>
  * <p>
- * The new Amazon Elastic DocumentDB service endpoint.
+ * <fullname>Amazon DocumentDB elastic clusters</fullname>
+ * <p>
+ * Amazon DocumentDB elastic-clusters support workloads with millions of reads/writes per second and petabytes of
+ * storage capacity. Amazon DocumentDB elastic clusters also simplify how developers interact with Amazon DocumentDB
+ * elastic-clusters by eliminating the need to choose, manage or upgrade instances.
+ * </p>
+ * <p>
+ * Amazon DocumentDB elastic-clusters were created to:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * provide a solution for customers looking for a database that provides virtually limitless scale with rich query
+ * capabilities and MongoDB API compatibility.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * give customers higher connection limits, and to reduce downtime from patching.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * continue investing in a cloud-native, elastic, and class leading architecture for JSON workloads.
+ * </p>
+ * </li>
+ * </ul>
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -43,7 +69,34 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+     * Copies a snapshot of an elastic cluster.
+     * </p>
+     * 
+     * @param copyClusterSnapshotRequest
+     * @return Result of the CopyClusterSnapshot operation returned by the service.
+     * @throws ThrottlingException
+     *         ThrottlingException will be thrown when request was denied due to request throttling.
+     * @throws ValidationException
+     *         A structure defining a validation exception.
+     * @throws ServiceQuotaExceededException
+     *         The service quota for the action was exceeded.
+     * @throws ConflictException
+     *         There was an access conflict.
+     * @throws InternalServerException
+     *         There was an internal server error.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be located.
+     * @throws AccessDeniedException
+     *         An exception that occurs when there are not sufficient permissions to perform an action.
+     * @sample AmazonDocDBElastic.CopyClusterSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CopyClusterSnapshot"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CopyClusterSnapshotResult copyClusterSnapshot(CopyClusterSnapshotRequest copyClusterSnapshotRequest);
+
+    /**
+     * <p>
+     * Creates a new Amazon DocumentDB elastic cluster and returns its cluster structure.
      * </p>
      * 
      * @param createClusterRequest
@@ -68,7 +121,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Creates a snapshot of a cluster.
+     * Creates a snapshot of an elastic cluster.
      * </p>
      * 
      * @param createClusterSnapshotRequest
@@ -95,7 +148,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB cluster.
+     * Delete an elastic cluster.
      * </p>
      * 
      * @param deleteClusterRequest
@@ -120,7 +173,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB snapshot.
+     * Delete an elastic cluster snapshot.
      * </p>
      * 
      * @param deleteClusterSnapshotRequest
@@ -145,7 +198,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB cluster.
+     * Returns information about a specific elastic cluster.
      * </p>
      * 
      * @param getClusterRequest
@@ -168,7 +221,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB snapshot
+     * Returns information about a specific elastic cluster snapshot
      * </p>
      * 
      * @param getClusterSnapshotRequest
@@ -191,7 +244,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about Elastic DocumentDB snapshots for a specified cluster.
+     * Returns information about snapshots for a specified elastic cluster.
      * </p>
      * 
      * @param listClusterSnapshotsRequest
@@ -212,7 +265,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about provisioned Elastic DocumentDB clusters.
+     * Returns information about provisioned Amazon DocumentDB elastic clusters.
      * </p>
      * 
      * @param listClustersRequest
@@ -233,7 +286,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Lists all tags on a Elastic DocumentDB resource
+     * Lists all tags on a elastic cluster resource
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -254,7 +307,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Restores a Elastic DocumentDB cluster from a snapshot.
+     * Restores an elastic cluster from a snapshot.
      * </p>
      * 
      * @param restoreClusterFromSnapshotRequest
@@ -281,7 +334,54 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Adds metadata tags to a Elastic DocumentDB resource
+     * Restarts the stopped elastic cluster that is specified by <code>clusterARN</code>.
+     * </p>
+     * 
+     * @param startClusterRequest
+     * @return Result of the StartCluster operation returned by the service.
+     * @throws ThrottlingException
+     *         ThrottlingException will be thrown when request was denied due to request throttling.
+     * @throws ValidationException
+     *         A structure defining a validation exception.
+     * @throws InternalServerException
+     *         There was an internal server error.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be located.
+     * @throws AccessDeniedException
+     *         An exception that occurs when there are not sufficient permissions to perform an action.
+     * @sample AmazonDocDBElastic.StartCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StartCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartClusterResult startCluster(StartClusterRequest startClusterRequest);
+
+    /**
+     * <p>
+     * Stops the running elastic cluster that is specified by <code>clusterArn</code>. The elastic cluster must be in
+     * the <i>available</i> state.
+     * </p>
+     * 
+     * @param stopClusterRequest
+     * @return Result of the StopCluster operation returned by the service.
+     * @throws ThrottlingException
+     *         ThrottlingException will be thrown when request was denied due to request throttling.
+     * @throws ValidationException
+     *         A structure defining a validation exception.
+     * @throws InternalServerException
+     *         There was an internal server error.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be located.
+     * @throws AccessDeniedException
+     *         An exception that occurs when there are not sufficient permissions to perform an action.
+     * @sample AmazonDocDBElastic.StopCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StopCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StopClusterResult stopCluster(StopClusterRequest stopClusterRequest);
+
+    /**
+     * <p>
+     * Adds metadata tags to an elastic cluster resource
      * </p>
      * 
      * @param tagResourceRequest
@@ -302,7 +402,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Removes metadata tags to a Elastic DocumentDB resource
+     * Removes metadata tags from an elastic cluster resource
      * </p>
      * 
      * @param untagResourceRequest
@@ -323,7 +423,7 @@ public interface AmazonDocDBElastic {
 
     /**
      * <p>
-     * Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version
+     * Modifies an elastic cluster. This includes updating admin-username/password, upgrading the API version, and
      * setting up a backup window and maintenance window
      * </p>
      * 

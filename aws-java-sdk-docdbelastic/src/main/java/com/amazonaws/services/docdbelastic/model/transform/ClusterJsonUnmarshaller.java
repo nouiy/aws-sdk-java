@@ -56,6 +56,10 @@ public class ClusterJsonUnmarshaller implements Unmarshaller<Cluster, JsonUnmars
                     context.nextToken();
                     cluster.setAuthType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("backupRetentionPeriod", targetDepth)) {
+                    context.nextToken();
+                    cluster.setBackupRetentionPeriod(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("clusterArn", targetDepth)) {
                     context.nextToken();
                     cluster.setClusterArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -76,6 +80,10 @@ public class ClusterJsonUnmarshaller implements Unmarshaller<Cluster, JsonUnmars
                     context.nextToken();
                     cluster.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("preferredBackupWindow", targetDepth)) {
+                    context.nextToken();
+                    cluster.setPreferredBackupWindow(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("preferredMaintenanceWindow", targetDepth)) {
                     context.nextToken();
                     cluster.setPreferredMaintenanceWindow(context.getUnmarshaller(String.class).unmarshall(context));
@@ -87,6 +95,16 @@ public class ClusterJsonUnmarshaller implements Unmarshaller<Cluster, JsonUnmars
                 if (context.testExpression("shardCount", targetDepth)) {
                     context.nextToken();
                     cluster.setShardCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("shardInstanceCount", targetDepth)) {
+                    context.nextToken();
+                    cluster.setShardInstanceCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("shards", targetDepth)) {
+                    context.nextToken();
+                    cluster.setShards(new ListUnmarshaller<Shard>(ShardJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();

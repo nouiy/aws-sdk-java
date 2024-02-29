@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Returns information about a specific Elastic DocumentDB cluster.
+ * Returns information about a specific elastic cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/Cluster" target="_top">AWS API
@@ -30,46 +30,59 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      */
     private String adminUserName;
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type for the elastic cluster.
      * </p>
      */
     private String authType;
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     */
+    private Integer backupRetentionPeriod;
+    /**
+     * <p>
+     * The ARN identifier of the elastic cluster.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * The URL used to connect to the Elastic DocumentDB cluster.
+     * The URL used to connect to the elastic cluster.
      * </p>
      */
     private String clusterEndpoint;
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      */
     private String clusterName;
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      */
     private String createTime;
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the elastic cluster.
      * </p>
      */
     private String kmsKeyId;
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by <code>backupRetentionPeriod</code>.
+     * </p>
+     */
+    private String preferredBackupWindow;
     /**
      * <p>
      * The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
@@ -81,42 +94,57 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private String preferredMaintenanceWindow;
     /**
      * <p>
-     * The capacity of each shard in the Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      */
     private Integer shardCapacity;
     /**
      * <p>
-     * The number of shards in the Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      */
     private Integer shardCount;
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code> value of
+     * 1 means there is one writer instance, and any additional instances are replicas that can be used for reads and to
+     * improve availability.
+     * </p>
+     */
+    private Integer shardInstanceCount;
+    /**
+     * <p>
+     * The total number of shards in the cluster.
+     * </p>
+     */
+    private java.util.List<Shard> shards;
+    /**
+     * <p>
+     * The status of the elastic cluster.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      */
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * A list of EC2 VPC security groups associated with this cluster.
+     * A list of EC2 VPC security groups associated with thie elastic cluster.
      * </p>
      */
     private java.util.List<String> vpcSecurityGroupIds;
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      * 
      * @param adminUserName
-     *        The name of the Elastic DocumentDB cluster administrator.
+     *        The name of the elastic cluster administrator.
      */
 
     public void setAdminUserName(String adminUserName) {
@@ -125,10 +153,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB cluster administrator.
+     * @return The name of the elastic cluster administrator.
      */
 
     public String getAdminUserName() {
@@ -137,11 +165,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster administrator.
+     * The name of the elastic cluster administrator.
      * </p>
      * 
      * @param adminUserName
-     *        The name of the Elastic DocumentDB cluster administrator.
+     *        The name of the elastic cluster administrator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,11 +180,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type for the elastic cluster.
      * </p>
      * 
      * @param authType
-     *        The authentication type for the Elastic DocumentDB cluster.
+     *        The authentication type for the elastic cluster.
      * @see Auth
      */
 
@@ -166,10 +194,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type for the elastic cluster.
      * </p>
      * 
-     * @return The authentication type for the Elastic DocumentDB cluster.
+     * @return The authentication type for the elastic cluster.
      * @see Auth
      */
 
@@ -179,11 +207,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type for the elastic cluster.
      * </p>
      * 
      * @param authType
-     *        The authentication type for the Elastic DocumentDB cluster.
+     *        The authentication type for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Auth
      */
@@ -195,11 +223,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The authentication type for the Elastic DocumentDB cluster.
+     * The authentication type for the elastic cluster.
      * </p>
      * 
      * @param authType
-     *        The authentication type for the Elastic DocumentDB cluster.
+     *        The authentication type for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Auth
      */
@@ -211,11 +239,51 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     * 
+     * @param backupRetentionPeriod
+     *        The number of days for which automatic snapshots are retained.
+     */
+
+    public void setBackupRetentionPeriod(Integer backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+    }
+
+    /**
+     * <p>
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     * 
+     * @return The number of days for which automatic snapshots are retained.
+     */
+
+    public Integer getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
+    }
+
+    /**
+     * <p>
+     * The number of days for which automatic snapshots are retained.
+     * </p>
+     * 
+     * @param backupRetentionPeriod
+     *        The number of days for which automatic snapshots are retained.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withBackupRetentionPeriod(Integer backupRetentionPeriod) {
+        setBackupRetentionPeriod(backupRetentionPeriod);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -224,10 +292,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster.
+     * @return The ARN identifier of the elastic cluster.
      */
 
     public String getClusterArn() {
@@ -236,11 +304,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster.
+     * The ARN identifier of the elastic cluster.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster.
+     *        The ARN identifier of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,11 +319,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL used to connect to the Elastic DocumentDB cluster.
+     * The URL used to connect to the elastic cluster.
      * </p>
      * 
      * @param clusterEndpoint
-     *        The URL used to connect to the Elastic DocumentDB cluster.
+     *        The URL used to connect to the elastic cluster.
      */
 
     public void setClusterEndpoint(String clusterEndpoint) {
@@ -264,10 +332,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL used to connect to the Elastic DocumentDB cluster.
+     * The URL used to connect to the elastic cluster.
      * </p>
      * 
-     * @return The URL used to connect to the Elastic DocumentDB cluster.
+     * @return The URL used to connect to the elastic cluster.
      */
 
     public String getClusterEndpoint() {
@@ -276,11 +344,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL used to connect to the Elastic DocumentDB cluster.
+     * The URL used to connect to the elastic cluster.
      * </p>
      * 
      * @param clusterEndpoint
-     *        The URL used to connect to the Elastic DocumentDB cluster.
+     *        The URL used to connect to the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +359,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
      * @param clusterName
-     *        The name of the Elastic DocumentDB cluster.
+     *        The name of the elastic cluster.
      */
 
     public void setClusterName(String clusterName) {
@@ -304,10 +372,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB cluster.
+     * @return The name of the elastic cluster.
      */
 
     public String getClusterName() {
@@ -316,11 +384,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB cluster.
+     * The name of the elastic cluster.
      * </p>
      * 
      * @param clusterName
-     *        The name of the Elastic DocumentDB cluster.
+     *        The name of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,11 +399,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param createTime
-     *        The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      */
 
     public void setCreateTime(String createTime) {
@@ -344,10 +412,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      * 
-     * @return The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * @return The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      */
 
     public String getCreateTime() {
@@ -356,11 +424,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     * The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param createTime
-     *        The time when the Elastic DocumentDB cluster was created in Universal Coordinated Time (UTC).
+     *        The time when the elastic cluster was created in Universal Coordinated Time (UTC).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -371,11 +439,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the elastic cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     *        The KMS key identifier to use to encrypt the elastic cluster.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -384,10 +452,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the elastic cluster.
      * </p>
      * 
-     * @return The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * @return The KMS key identifier to use to encrypt the elastic cluster.
      */
 
     public String getKmsKeyId() {
@@ -396,16 +464,62 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     * The KMS key identifier to use to encrypt the elastic cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+     *        The KMS key identifier to use to encrypt the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Cluster withKmsKeyId(String kmsKeyId) {
         setKmsKeyId(kmsKeyId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by <code>backupRetentionPeriod</code>.
+     * </p>
+     * 
+     * @param preferredBackupWindow
+     *        The daily time range during which automated backups are created if automated backups are enabled, as
+     *        determined by <code>backupRetentionPeriod</code>.
+     */
+
+    public void setPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+    }
+
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by <code>backupRetentionPeriod</code>.
+     * </p>
+     * 
+     * @return The daily time range during which automated backups are created if automated backups are enabled, as
+     *         determined by <code>backupRetentionPeriod</code>.
+     */
+
+    public String getPreferredBackupWindow() {
+        return this.preferredBackupWindow;
+    }
+
+    /**
+     * <p>
+     * The daily time range during which automated backups are created if automated backups are enabled, as determined
+     * by <code>backupRetentionPeriod</code>.
+     * </p>
+     * 
+     * @param preferredBackupWindow
+     *        The daily time range during which automated backups are created if automated backups are enabled, as
+     *        determined by <code>backupRetentionPeriod</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withPreferredBackupWindow(String preferredBackupWindow) {
+        setPreferredBackupWindow(preferredBackupWindow);
         return this;
     }
 
@@ -466,11 +580,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The capacity of each shard in the Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      * 
      * @param shardCapacity
-     *        The capacity of each shard in the Elastic DocumentDB cluster.
+     *        The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16,
+     *        32, 64.
      */
 
     public void setShardCapacity(Integer shardCapacity) {
@@ -479,10 +595,12 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The capacity of each shard in the Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      * 
-     * @return The capacity of each shard in the Elastic DocumentDB cluster.
+     * @return The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8,
+     *         16, 32, 64.
      */
 
     public Integer getShardCapacity() {
@@ -491,11 +609,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The capacity of each shard in the Elastic DocumentDB cluster.
+     * The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16, 32,
+     * 64.
      * </p>
      * 
      * @param shardCapacity
-     *        The capacity of each shard in the Elastic DocumentDB cluster.
+     *        The number of vCPUs assigned to each elastic cluster shard. Maximum is 64. Allowed values are 2, 4, 8, 16,
+     *        32, 64.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -506,11 +626,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of shards in the Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      * 
      * @param shardCount
-     *        The number of shards in the Elastic DocumentDB cluster.
+     *        The number of shards assigned to the elastic cluster. Maximum is 32.
      */
 
     public void setShardCount(Integer shardCount) {
@@ -519,10 +639,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of shards in the Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      * 
-     * @return The number of shards in the Elastic DocumentDB cluster.
+     * @return The number of shards assigned to the elastic cluster. Maximum is 32.
      */
 
     public Integer getShardCount() {
@@ -531,11 +651,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of shards in the Elastic DocumentDB cluster.
+     * The number of shards assigned to the elastic cluster. Maximum is 32.
      * </p>
      * 
      * @param shardCount
-     *        The number of shards in the Elastic DocumentDB cluster.
+     *        The number of shards assigned to the elastic cluster. Maximum is 32.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -546,11 +666,133 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code> value of
+     * 1 means there is one writer instance, and any additional instances are replicas that can be used for reads and to
+     * improve availability.
+     * </p>
+     * 
+     * @param shardInstanceCount
+     *        The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code>
+     *        value of 1 means there is one writer instance, and any additional instances are replicas that can be used
+     *        for reads and to improve availability.
+     */
+
+    public void setShardInstanceCount(Integer shardInstanceCount) {
+        this.shardInstanceCount = shardInstanceCount;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code> value of
+     * 1 means there is one writer instance, and any additional instances are replicas that can be used for reads and to
+     * improve availability.
+     * </p>
+     * 
+     * @return The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code>
+     *         value of 1 means there is one writer instance, and any additional instances are replicas that can be used
+     *         for reads and to improve availability.
+     */
+
+    public Integer getShardInstanceCount() {
+        return this.shardInstanceCount;
+    }
+
+    /**
+     * <p>
+     * The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code> value of
+     * 1 means there is one writer instance, and any additional instances are replicas that can be used for reads and to
+     * improve availability.
+     * </p>
+     * 
+     * @param shardInstanceCount
+     *        The number of replica instances applying to all shards in the cluster. A <code>shardInstanceCount</code>
+     *        value of 1 means there is one writer instance, and any additional instances are replicas that can be used
+     *        for reads and to improve availability.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withShardInstanceCount(Integer shardInstanceCount) {
+        setShardInstanceCount(shardInstanceCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of shards in the cluster.
+     * </p>
+     * 
+     * @return The total number of shards in the cluster.
+     */
+
+    public java.util.List<Shard> getShards() {
+        return shards;
+    }
+
+    /**
+     * <p>
+     * The total number of shards in the cluster.
+     * </p>
+     * 
+     * @param shards
+     *        The total number of shards in the cluster.
+     */
+
+    public void setShards(java.util.Collection<Shard> shards) {
+        if (shards == null) {
+            this.shards = null;
+            return;
+        }
+
+        this.shards = new java.util.ArrayList<Shard>(shards);
+    }
+
+    /**
+     * <p>
+     * The total number of shards in the cluster.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setShards(java.util.Collection)} or {@link #withShards(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param shards
+     *        The total number of shards in the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withShards(Shard... shards) {
+        if (this.shards == null) {
+            setShards(new java.util.ArrayList<Shard>(shards.length));
+        }
+        for (Shard ele : shards) {
+            this.shards.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of shards in the cluster.
+     * </p>
+     * 
+     * @param shards
+     *        The total number of shards in the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withShards(java.util.Collection<Shard> shards) {
+        setShards(shards);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the elastic cluster.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB cluster.
+     *        The status of the elastic cluster.
      * @see Status
      */
 
@@ -560,10 +802,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
-     * @return The status of the Elastic DocumentDB cluster.
+     * @return The status of the elastic cluster.
      * @see Status
      */
 
@@ -573,11 +815,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB cluster.
+     *        The status of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -589,11 +831,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Elastic DocumentDB cluster.
+     * The status of the elastic cluster.
      * </p>
      * 
      * @param status
-     *        The status of the Elastic DocumentDB cluster.
+     *        The status of the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -605,10 +847,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
-     * @return The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * @return The Amazon EC2 subnet IDs for the elastic cluster.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -617,11 +859,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -635,7 +877,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -644,7 +886,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -660,11 +902,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     * The Amazon EC2 subnet IDs for the elastic cluster.
      * </p>
      * 
      * @param subnetIds
-     *        The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+     *        The Amazon EC2 subnet IDs for the elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -675,10 +917,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of EC2 VPC security groups associated with this cluster.
+     * A list of EC2 VPC security groups associated with thie elastic cluster.
      * </p>
      * 
-     * @return A list of EC2 VPC security groups associated with this cluster.
+     * @return A list of EC2 VPC security groups associated with thie elastic cluster.
      */
 
     public java.util.List<String> getVpcSecurityGroupIds() {
@@ -687,11 +929,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of EC2 VPC security groups associated with this cluster.
+     * A list of EC2 VPC security groups associated with thie elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups associated with this cluster.
+     *        A list of EC2 VPC security groups associated with thie elastic cluster.
      */
 
     public void setVpcSecurityGroupIds(java.util.Collection<String> vpcSecurityGroupIds) {
@@ -705,7 +947,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of EC2 VPC security groups associated with this cluster.
+     * A list of EC2 VPC security groups associated with thie elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -714,7 +956,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups associated with this cluster.
+     *        A list of EC2 VPC security groups associated with thie elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -730,11 +972,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of EC2 VPC security groups associated with this cluster.
+     * A list of EC2 VPC security groups associated with thie elastic cluster.
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups associated with this cluster.
+     *        A list of EC2 VPC security groups associated with thie elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -759,6 +1001,8 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdminUserName: ").append(getAdminUserName()).append(",");
         if (getAuthType() != null)
             sb.append("AuthType: ").append(getAuthType()).append(",");
+        if (getBackupRetentionPeriod() != null)
+            sb.append("BackupRetentionPeriod: ").append(getBackupRetentionPeriod()).append(",");
         if (getClusterArn() != null)
             sb.append("ClusterArn: ").append(getClusterArn()).append(",");
         if (getClusterEndpoint() != null)
@@ -769,12 +1013,18 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getPreferredBackupWindow() != null)
+            sb.append("PreferredBackupWindow: ").append(getPreferredBackupWindow()).append(",");
         if (getPreferredMaintenanceWindow() != null)
             sb.append("PreferredMaintenanceWindow: ").append(getPreferredMaintenanceWindow()).append(",");
         if (getShardCapacity() != null)
             sb.append("ShardCapacity: ").append(getShardCapacity()).append(",");
         if (getShardCount() != null)
             sb.append("ShardCount: ").append(getShardCount()).append(",");
+        if (getShardInstanceCount() != null)
+            sb.append("ShardInstanceCount: ").append(getShardInstanceCount()).append(",");
+        if (getShards() != null)
+            sb.append("Shards: ").append(getShards()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getSubnetIds() != null)
@@ -803,6 +1053,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAuthType() != null && other.getAuthType().equals(this.getAuthType()) == false)
             return false;
+        if (other.getBackupRetentionPeriod() == null ^ this.getBackupRetentionPeriod() == null)
+            return false;
+        if (other.getBackupRetentionPeriod() != null && other.getBackupRetentionPeriod().equals(this.getBackupRetentionPeriod()) == false)
+            return false;
         if (other.getClusterArn() == null ^ this.getClusterArn() == null)
             return false;
         if (other.getClusterArn() != null && other.getClusterArn().equals(this.getClusterArn()) == false)
@@ -823,6 +1077,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getPreferredBackupWindow() == null ^ this.getPreferredBackupWindow() == null)
+            return false;
+        if (other.getPreferredBackupWindow() != null && other.getPreferredBackupWindow().equals(this.getPreferredBackupWindow()) == false)
+            return false;
         if (other.getPreferredMaintenanceWindow() == null ^ this.getPreferredMaintenanceWindow() == null)
             return false;
         if (other.getPreferredMaintenanceWindow() != null && other.getPreferredMaintenanceWindow().equals(this.getPreferredMaintenanceWindow()) == false)
@@ -834,6 +1092,14 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
         if (other.getShardCount() == null ^ this.getShardCount() == null)
             return false;
         if (other.getShardCount() != null && other.getShardCount().equals(this.getShardCount()) == false)
+            return false;
+        if (other.getShardInstanceCount() == null ^ this.getShardInstanceCount() == null)
+            return false;
+        if (other.getShardInstanceCount() != null && other.getShardInstanceCount().equals(this.getShardInstanceCount()) == false)
+            return false;
+        if (other.getShards() == null ^ this.getShards() == null)
+            return false;
+        if (other.getShards() != null && other.getShards().equals(this.getShards()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -857,14 +1123,18 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getAdminUserName() == null) ? 0 : getAdminUserName().hashCode());
         hashCode = prime * hashCode + ((getAuthType() == null) ? 0 : getAuthType().hashCode());
+        hashCode = prime * hashCode + ((getBackupRetentionPeriod() == null) ? 0 : getBackupRetentionPeriod().hashCode());
         hashCode = prime * hashCode + ((getClusterArn() == null) ? 0 : getClusterArn().hashCode());
         hashCode = prime * hashCode + ((getClusterEndpoint() == null) ? 0 : getClusterEndpoint().hashCode());
         hashCode = prime * hashCode + ((getClusterName() == null) ? 0 : getClusterName().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getPreferredBackupWindow() == null) ? 0 : getPreferredBackupWindow().hashCode());
         hashCode = prime * hashCode + ((getPreferredMaintenanceWindow() == null) ? 0 : getPreferredMaintenanceWindow().hashCode());
         hashCode = prime * hashCode + ((getShardCapacity() == null) ? 0 : getShardCapacity().hashCode());
         hashCode = prime * hashCode + ((getShardCount() == null) ? 0 : getShardCount().hashCode());
+        hashCode = prime * hashCode + ((getShardInstanceCount() == null) ? 0 : getShardInstanceCount().hashCode());
+        hashCode = prime * hashCode + ((getShards() == null) ? 0 : getShards().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getVpcSecurityGroupIds() == null) ? 0 : getVpcSecurityGroupIds().hashCode());

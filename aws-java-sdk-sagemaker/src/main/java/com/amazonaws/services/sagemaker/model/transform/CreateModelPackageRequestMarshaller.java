@@ -70,6 +70,8 @@ public class CreateModelPackageRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalInferenceSpecifications").build();
     private static final MarshallingInfo<String> SKIPMODELVALIDATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SkipModelValidation").build();
+    private static final MarshallingInfo<String> SOURCEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SourceUri").build();
 
     private static final CreateModelPackageRequestMarshaller instance = new CreateModelPackageRequestMarshaller();
 
@@ -106,6 +108,7 @@ public class CreateModelPackageRequestMarshaller {
             protocolMarshaller.marshall(createModelPackageRequest.getDriftCheckBaselines(), DRIFTCHECKBASELINES_BINDING);
             protocolMarshaller.marshall(createModelPackageRequest.getAdditionalInferenceSpecifications(), ADDITIONALINFERENCESPECIFICATIONS_BINDING);
             protocolMarshaller.marshall(createModelPackageRequest.getSkipModelValidation(), SKIPMODELVALIDATION_BINDING);
+            protocolMarshaller.marshall(createModelPackageRequest.getSourceUri(), SOURCEURI_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

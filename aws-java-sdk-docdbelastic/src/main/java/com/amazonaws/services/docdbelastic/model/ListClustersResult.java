@@ -25,26 +25,27 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of Elastic DocumentDB cluster.
+     * A list of Amazon DocumentDB elastic clusters.
      * </p>
      */
     private java.util.List<ClusterInList> clusters;
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * A list of Elastic DocumentDB cluster.
+     * A list of Amazon DocumentDB elastic clusters.
      * </p>
      * 
-     * @return A list of Elastic DocumentDB cluster.
+     * @return A list of Amazon DocumentDB elastic clusters.
      */
 
     public java.util.List<ClusterInList> getClusters() {
@@ -53,11 +54,11 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of Elastic DocumentDB cluster.
+     * A list of Amazon DocumentDB elastic clusters.
      * </p>
      * 
      * @param clusters
-     *        A list of Elastic DocumentDB cluster.
+     *        A list of Amazon DocumentDB elastic clusters.
      */
 
     public void setClusters(java.util.Collection<ClusterInList> clusters) {
@@ -71,7 +72,7 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of Elastic DocumentDB cluster.
+     * A list of Amazon DocumentDB elastic clusters.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +81,7 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param clusters
-     *        A list of Elastic DocumentDB cluster.
+     *        A list of Amazon DocumentDB elastic clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +97,11 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of Elastic DocumentDB cluster.
+     * A list of Amazon DocumentDB elastic clusters.
      * </p>
      * 
      * @param clusters
-     *        A list of Elastic DocumentDB cluster.
+     *        A list of Amazon DocumentDB elastic clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,16 +112,18 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The response will provide a nextToken if there is more data beyond the maxResults.</p>
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
      *        <p>
-     *        If there is no more data in the responce, the nextToken will not be returned.
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public void setNextToken(String nextToken) {
@@ -129,15 +132,17 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
-     * @return The response will provide a nextToken if there is more data beyond the maxResults.</p>
+     * @return A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *         only records beyond this token, up to the value specified by <code>max-results</code>.</p>
      *         <p>
-     *         If there is no more data in the responce, the nextToken will not be returned.
+     *         If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public String getNextToken() {
@@ -146,16 +151,18 @@ public class ListClustersResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The response will provide a nextToken if there is more data beyond the maxResults.</p>
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
      *        <p>
-     *        If there is no more data in the responce, the nextToken will not be returned.
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

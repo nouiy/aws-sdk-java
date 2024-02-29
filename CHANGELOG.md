@@ -1,3 +1,32 @@
+# __1.12.670__ __2024-02-29__
+## __AWS Migration Hub Orchestrator__
+  - ### Features
+    - Adds new CreateTemplate, UpdateTemplate and DeleteTemplate APIs.
+
+## __Amazon DocumentDB Elastic Clusters__
+  - ### Features
+    - Launched Elastic Clusters Readable Secondaries, Start/Stop, Configurable Shard Instance count, Automatic Backups and Snapshot Copying
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Added support for new AL2023 AMIs to the supported AMITypes.
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - This release makes AMAZON.QnAIntent generally available in Amazon Lex. This generative AI feature leverages large language models available through Amazon Bedrock to automate frequently asked questions (FAQ) experience for end-users.
+
+## __Amazon QuickSight__
+  - ### Features
+    - TooltipTarget for Combo chart visuals; ColumnConfiguration limit increase to 2000; Documentation Update
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Adds support for ModelDataSource in Model Packages to support unzipped models. Adds support to specify SourceUri for models which allows registration of models without mandating a container for hosting. Using SourceUri, customers can decouple the model from hosting information during registration.
+
+## __Amazon Security Lake__
+  - ### Features
+    - Add capability to update the Data Lake's MetaStoreManager Role in order to perform required data lake updates to use Iceberg table format in their data lake or update the role for any other reason.
+
 # __1.12.669__ __2024-02-28__
 ## __AWS Batch__
   - ### Features

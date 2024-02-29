@@ -19,7 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The list of key-value pairs that you specify for your resources.
+ * The list of key-value pairs used to filter your search results. If a search result contains a key from your list, it
+ * is included in the final search response if the value associated with the key in the result matches the value you
+ * specified. If the value doesn't match, the result is excluded from the search response. Any resources that don't have
+ * a key from the list that you've provided will also be included in the search response.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/VisibilityConditions" target="_top">AWS API
@@ -31,7 +34,7 @@ public class VisibilityConditions implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The key that specifies the tag that you're using to filter the search results. It must be in the following
-     * format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     * format: <code>Tags.&lt;key&gt;</code>.
      * </p>
      */
     private String key;
@@ -45,12 +48,12 @@ public class VisibilityConditions implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The key that specifies the tag that you're using to filter the search results. It must be in the following
-     * format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     * format: <code>Tags.&lt;key&gt;</code>.
      * </p>
      * 
      * @param key
      *        The key that specifies the tag that you're using to filter the search results. It must be in the following
-     *        format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     *        format: <code>Tags.&lt;key&gt;</code>.
      */
 
     public void setKey(String key) {
@@ -60,11 +63,11 @@ public class VisibilityConditions implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The key that specifies the tag that you're using to filter the search results. It must be in the following
-     * format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     * format: <code>Tags.&lt;key&gt;</code>.
      * </p>
      * 
      * @return The key that specifies the tag that you're using to filter the search results. It must be in the
-     *         following format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     *         following format: <code>Tags.&lt;key&gt;</code>.
      */
 
     public String getKey() {
@@ -74,12 +77,12 @@ public class VisibilityConditions implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The key that specifies the tag that you're using to filter the search results. It must be in the following
-     * format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     * format: <code>Tags.&lt;key&gt;</code>.
      * </p>
      * 
      * @param key
      *        The key that specifies the tag that you're using to filter the search results. It must be in the following
-     *        format: <code>Tags.&lt;key&gt;/EqualsIfExists</code>.
+     *        format: <code>Tags.&lt;key&gt;</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

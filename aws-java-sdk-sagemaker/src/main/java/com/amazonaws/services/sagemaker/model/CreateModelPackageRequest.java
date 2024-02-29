@@ -52,8 +52,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     private String modelPackageDescription;
     /**
      * <p>
-     * Specifies details about inference jobs that can be run with models based on this model package, including the
-     * following:
+     * Specifies details about inference jobs that you can run with models based on this model package, including the
+     * following information:
      * </p>
      * <ul>
      * <li>
@@ -193,6 +193,13 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String skipModelValidation;
+    /**
+     * <p>
+     * The URI of the source for the model package. If you want to clone a model package, set it to the model package
+     * Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     * </p>
+     */
+    private String sourceUri;
 
     /**
      * <p>
@@ -352,8 +359,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specifies details about inference jobs that can be run with models based on this model package, including the
-     * following:
+     * Specifies details about inference jobs that you can run with models based on this model package, including the
+     * following information:
      * </p>
      * <ul>
      * <li>
@@ -374,8 +381,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * 
      * @param inferenceSpecification
-     *        Specifies details about inference jobs that can be run with models based on this model package, including
-     *        the following:</p>
+     *        Specifies details about inference jobs that you can run with models based on this model package, including
+     *        the following information:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -401,8 +408,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specifies details about inference jobs that can be run with models based on this model package, including the
-     * following:
+     * Specifies details about inference jobs that you can run with models based on this model package, including the
+     * following information:
      * </p>
      * <ul>
      * <li>
@@ -422,8 +429,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * 
-     * @return Specifies details about inference jobs that can be run with models based on this model package, including
-     *         the following:</p>
+     * @return Specifies details about inference jobs that you can run with models based on this model package,
+     *         including the following information:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -449,8 +456,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Specifies details about inference jobs that can be run with models based on this model package, including the
-     * following:
+     * Specifies details about inference jobs that you can run with models based on this model package, including the
+     * following information:
      * </p>
      * <ul>
      * <li>
@@ -471,8 +478,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * 
      * @param inferenceSpecification
-     *        Specifies details about inference jobs that can be run with models based on this model package, including
-     *        the following:</p>
+     *        Specifies details about inference jobs that you can run with models based on this model package, including
+     *        the following information:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1452,6 +1459,52 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The URI of the source for the model package. If you want to clone a model package, set it to the model package
+     * Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     * </p>
+     * 
+     * @param sourceUri
+     *        The URI of the source for the model package. If you want to clone a model package, set it to the model
+     *        package Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     */
+
+    public void setSourceUri(String sourceUri) {
+        this.sourceUri = sourceUri;
+    }
+
+    /**
+     * <p>
+     * The URI of the source for the model package. If you want to clone a model package, set it to the model package
+     * Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     * </p>
+     * 
+     * @return The URI of the source for the model package. If you want to clone a model package, set it to the model
+     *         package Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     */
+
+    public String getSourceUri() {
+        return this.sourceUri;
+    }
+
+    /**
+     * <p>
+     * The URI of the source for the model package. If you want to clone a model package, set it to the model package
+     * Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     * </p>
+     * 
+     * @param sourceUri
+     *        The URI of the source for the model package. If you want to clone a model package, set it to the model
+     *        package Amazon Resource Name (ARN). If you want to register a model, set it to the model ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelPackageRequest withSourceUri(String sourceUri) {
+        setSourceUri(sourceUri);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1500,7 +1553,9 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         if (getAdditionalInferenceSpecifications() != null)
             sb.append("AdditionalInferenceSpecifications: ").append(getAdditionalInferenceSpecifications()).append(",");
         if (getSkipModelValidation() != null)
-            sb.append("SkipModelValidation: ").append(getSkipModelValidation());
+            sb.append("SkipModelValidation: ").append(getSkipModelValidation()).append(",");
+        if (getSourceUri() != null)
+            sb.append("SourceUri: ").append(getSourceUri());
         sb.append("}");
         return sb.toString();
     }
@@ -1592,6 +1647,10 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getSkipModelValidation() != null && other.getSkipModelValidation().equals(this.getSkipModelValidation()) == false)
             return false;
+        if (other.getSourceUri() == null ^ this.getSourceUri() == null)
+            return false;
+        if (other.getSourceUri() != null && other.getSourceUri().equals(this.getSourceUri()) == false)
+            return false;
         return true;
     }
 
@@ -1619,6 +1678,7 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getDriftCheckBaselines() == null) ? 0 : getDriftCheckBaselines().hashCode());
         hashCode = prime * hashCode + ((getAdditionalInferenceSpecifications() == null) ? 0 : getAdditionalInferenceSpecifications().hashCode());
         hashCode = prime * hashCode + ((getSkipModelValidation() == null) ? 0 : getSkipModelValidation().hashCode());
+        hashCode = prime * hashCode + ((getSourceUri() == null) ? 0 : getSourceUri().hashCode());
         return hashCode;
     }
 

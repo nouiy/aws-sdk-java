@@ -26,7 +26,33 @@ import com.amazonaws.services.docdbelastic.model.*;
  * </p>
  * <p>
  * <p>
- * The new Amazon Elastic DocumentDB service endpoint.
+ * <fullname>Amazon DocumentDB elastic clusters</fullname>
+ * <p>
+ * Amazon DocumentDB elastic-clusters support workloads with millions of reads/writes per second and petabytes of
+ * storage capacity. Amazon DocumentDB elastic clusters also simplify how developers interact with Amazon DocumentDB
+ * elastic-clusters by eliminating the need to choose, manage or upgrade instances.
+ * </p>
+ * <p>
+ * Amazon DocumentDB elastic-clusters were created to:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * provide a solution for customers looking for a database that provides virtually limitless scale with rich query
+ * capabilities and MongoDB API compatibility.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * give customers higher connection limits, and to reduce downtime from patching.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * continue investing in a cloud-native, elastic, and class leading architecture for JSON workloads.
+ * </p>
+ * </li>
+ * </ul>
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -34,7 +60,38 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+     * Copies a snapshot of an elastic cluster.
+     * </p>
+     * 
+     * @param copyClusterSnapshotRequest
+     * @return A Java Future containing the result of the CopyClusterSnapshot operation returned by the service.
+     * @sample AmazonDocDBElasticAsync.CopyClusterSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CopyClusterSnapshot"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CopyClusterSnapshotResult> copyClusterSnapshotAsync(CopyClusterSnapshotRequest copyClusterSnapshotRequest);
+
+    /**
+     * <p>
+     * Copies a snapshot of an elastic cluster.
+     * </p>
+     * 
+     * @param copyClusterSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CopyClusterSnapshot operation returned by the service.
+     * @sample AmazonDocDBElasticAsyncHandler.CopyClusterSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CopyClusterSnapshot"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CopyClusterSnapshotResult> copyClusterSnapshotAsync(CopyClusterSnapshotRequest copyClusterSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<CopyClusterSnapshotRequest, CopyClusterSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new Amazon DocumentDB elastic cluster and returns its cluster structure.
      * </p>
      * 
      * @param createClusterRequest
@@ -47,7 +104,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+     * Creates a new Amazon DocumentDB elastic cluster and returns its cluster structure.
      * </p>
      * 
      * @param createClusterRequest
@@ -65,7 +122,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Creates a snapshot of a cluster.
+     * Creates a snapshot of an elastic cluster.
      * </p>
      * 
      * @param createClusterSnapshotRequest
@@ -78,7 +135,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Creates a snapshot of a cluster.
+     * Creates a snapshot of an elastic cluster.
      * </p>
      * 
      * @param createClusterSnapshotRequest
@@ -96,7 +153,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB cluster.
+     * Delete an elastic cluster.
      * </p>
      * 
      * @param deleteClusterRequest
@@ -109,7 +166,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB cluster.
+     * Delete an elastic cluster.
      * </p>
      * 
      * @param deleteClusterRequest
@@ -127,7 +184,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB snapshot.
+     * Delete an elastic cluster snapshot.
      * </p>
      * 
      * @param deleteClusterSnapshotRequest
@@ -140,7 +197,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Delete a Elastic DocumentDB snapshot.
+     * Delete an elastic cluster snapshot.
      * </p>
      * 
      * @param deleteClusterSnapshotRequest
@@ -158,7 +215,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB cluster.
+     * Returns information about a specific elastic cluster.
      * </p>
      * 
      * @param getClusterRequest
@@ -171,7 +228,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB cluster.
+     * Returns information about a specific elastic cluster.
      * </p>
      * 
      * @param getClusterRequest
@@ -189,7 +246,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB snapshot
+     * Returns information about a specific elastic cluster snapshot
      * </p>
      * 
      * @param getClusterSnapshotRequest
@@ -202,7 +259,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about a specific Elastic DocumentDB snapshot
+     * Returns information about a specific elastic cluster snapshot
      * </p>
      * 
      * @param getClusterSnapshotRequest
@@ -220,7 +277,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about Elastic DocumentDB snapshots for a specified cluster.
+     * Returns information about snapshots for a specified elastic cluster.
      * </p>
      * 
      * @param listClusterSnapshotsRequest
@@ -233,7 +290,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about Elastic DocumentDB snapshots for a specified cluster.
+     * Returns information about snapshots for a specified elastic cluster.
      * </p>
      * 
      * @param listClusterSnapshotsRequest
@@ -251,7 +308,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about provisioned Elastic DocumentDB clusters.
+     * Returns information about provisioned Amazon DocumentDB elastic clusters.
      * </p>
      * 
      * @param listClustersRequest
@@ -264,7 +321,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Returns information about provisioned Elastic DocumentDB clusters.
+     * Returns information about provisioned Amazon DocumentDB elastic clusters.
      * </p>
      * 
      * @param listClustersRequest
@@ -282,7 +339,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Lists all tags on a Elastic DocumentDB resource
+     * Lists all tags on a elastic cluster resource
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -295,7 +352,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Lists all tags on a Elastic DocumentDB resource
+     * Lists all tags on a elastic cluster resource
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -313,7 +370,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Restores a Elastic DocumentDB cluster from a snapshot.
+     * Restores an elastic cluster from a snapshot.
      * </p>
      * 
      * @param restoreClusterFromSnapshotRequest
@@ -327,7 +384,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Restores a Elastic DocumentDB cluster from a snapshot.
+     * Restores an elastic cluster from a snapshot.
      * </p>
      * 
      * @param restoreClusterFromSnapshotRequest
@@ -346,7 +403,71 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Adds metadata tags to a Elastic DocumentDB resource
+     * Restarts the stopped elastic cluster that is specified by <code>clusterARN</code>.
+     * </p>
+     * 
+     * @param startClusterRequest
+     * @return A Java Future containing the result of the StartCluster operation returned by the service.
+     * @sample AmazonDocDBElasticAsync.StartCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StartCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartClusterResult> startClusterAsync(StartClusterRequest startClusterRequest);
+
+    /**
+     * <p>
+     * Restarts the stopped elastic cluster that is specified by <code>clusterARN</code>.
+     * </p>
+     * 
+     * @param startClusterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartCluster operation returned by the service.
+     * @sample AmazonDocDBElasticAsyncHandler.StartCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StartCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartClusterResult> startClusterAsync(StartClusterRequest startClusterRequest,
+            com.amazonaws.handlers.AsyncHandler<StartClusterRequest, StartClusterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops the running elastic cluster that is specified by <code>clusterArn</code>. The elastic cluster must be in
+     * the <i>available</i> state.
+     * </p>
+     * 
+     * @param stopClusterRequest
+     * @return A Java Future containing the result of the StopCluster operation returned by the service.
+     * @sample AmazonDocDBElasticAsync.StopCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StopCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopClusterResult> stopClusterAsync(StopClusterRequest stopClusterRequest);
+
+    /**
+     * <p>
+     * Stops the running elastic cluster that is specified by <code>clusterArn</code>. The elastic cluster must be in
+     * the <i>available</i> state.
+     * </p>
+     * 
+     * @param stopClusterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopCluster operation returned by the service.
+     * @sample AmazonDocDBElasticAsyncHandler.StopCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/StopCluster" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopClusterResult> stopClusterAsync(StopClusterRequest stopClusterRequest,
+            com.amazonaws.handlers.AsyncHandler<StopClusterRequest, StopClusterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Adds metadata tags to an elastic cluster resource
      * </p>
      * 
      * @param tagResourceRequest
@@ -359,7 +480,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Adds metadata tags to a Elastic DocumentDB resource
+     * Adds metadata tags to an elastic cluster resource
      * </p>
      * 
      * @param tagResourceRequest
@@ -377,7 +498,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Removes metadata tags to a Elastic DocumentDB resource
+     * Removes metadata tags from an elastic cluster resource
      * </p>
      * 
      * @param untagResourceRequest
@@ -390,7 +511,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Removes metadata tags to a Elastic DocumentDB resource
+     * Removes metadata tags from an elastic cluster resource
      * </p>
      * 
      * @param untagResourceRequest
@@ -408,7 +529,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version
+     * Modifies an elastic cluster. This includes updating admin-username/password, upgrading the API version, and
      * setting up a backup window and maintenance window
      * </p>
      * 
@@ -422,7 +543,7 @@ public interface AmazonDocDBElasticAsync extends AmazonDocDBElastic {
 
     /**
      * <p>
-     * Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version
+     * Modifies an elastic cluster. This includes updating admin-username/password, upgrading the API version, and
      * setting up a backup window and maintenance window
      * </p>
      * 

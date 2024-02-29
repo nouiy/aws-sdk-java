@@ -76,6 +76,10 @@ public class ClusterSnapshotJsonUnmarshaller implements Unmarshaller<ClusterSnap
                     context.nextToken();
                     clusterSnapshot.setSnapshotName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("snapshotType", targetDepth)) {
+                    context.nextToken();
+                    clusterSnapshot.setSnapshotType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     clusterSnapshot.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

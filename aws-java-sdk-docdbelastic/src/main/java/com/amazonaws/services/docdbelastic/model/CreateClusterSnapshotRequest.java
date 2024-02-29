@@ -27,30 +27,30 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     * The ARN identifier of the elastic cluster of which you want to create a snapshot.
      * </p>
      */
     private String clusterArn;
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the new elastic cluster snapshot.
      * </p>
      */
     private String snapshotName;
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB snapshot.
+     * The tags to be assigned to the new elastic cluster snapshot.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     * The ARN identifier of the elastic cluster of which you want to create a snapshot.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     *        The ARN identifier of the elastic cluster of which you want to create a snapshot.
      */
 
     public void setClusterArn(String clusterArn) {
@@ -59,10 +59,10 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     * The ARN identifier of the elastic cluster of which you want to create a snapshot.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     * @return The ARN identifier of the elastic cluster of which you want to create a snapshot.
      */
 
     public String getClusterArn() {
@@ -71,11 +71,11 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     * The ARN identifier of the elastic cluster of which you want to create a snapshot.
      * </p>
      * 
      * @param clusterArn
-     *        The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+     *        The ARN identifier of the elastic cluster of which you want to create a snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the new elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotName
-     *        The name of the Elastic DocumentDB snapshot.
+     *        The name of the new elastic cluster snapshot.
      */
 
     public void setSnapshotName(String snapshotName) {
@@ -99,10 +99,10 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the new elastic cluster snapshot.
      * </p>
      * 
-     * @return The name of the Elastic DocumentDB snapshot.
+     * @return The name of the new elastic cluster snapshot.
      */
 
     public String getSnapshotName() {
@@ -111,11 +111,11 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the Elastic DocumentDB snapshot.
+     * The name of the new elastic cluster snapshot.
      * </p>
      * 
      * @param snapshotName
-     *        The name of the Elastic DocumentDB snapshot.
+     *        The name of the new elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,10 +126,10 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB snapshot.
+     * The tags to be assigned to the new elastic cluster snapshot.
      * </p>
      * 
-     * @return The tags to be assigned to the new Elastic DocumentDB snapshot.
+     * @return The tags to be assigned to the new elastic cluster snapshot.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -138,11 +138,11 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB snapshot.
+     * The tags to be assigned to the new elastic cluster snapshot.
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the new Elastic DocumentDB snapshot.
+     *        The tags to be assigned to the new elastic cluster snapshot.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -151,11 +151,11 @@ public class CreateClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The tags to be assigned to the new Elastic DocumentDB snapshot.
+     * The tags to be assigned to the new elastic cluster snapshot.
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the new Elastic DocumentDB snapshot.
+     *        The tags to be assigned to the new elastic cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

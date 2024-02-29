@@ -27,18 +27,18 @@ public class DeleteClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     * The ARN identifier of the elastic cluster snapshot that is to be deleted.
      * </p>
      */
     private String snapshotArn;
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     * The ARN identifier of the elastic cluster snapshot that is to be deleted.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     *        The ARN identifier of the elastic cluster snapshot that is to be deleted.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -47,10 +47,10 @@ public class DeleteClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     * The ARN identifier of the elastic cluster snapshot that is to be deleted.
      * </p>
      * 
-     * @return The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     * @return The ARN identifier of the elastic cluster snapshot that is to be deleted.
      */
 
     public String getSnapshotArn() {
@@ -59,11 +59,11 @@ public class DeleteClusterSnapshotRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     * The ARN identifier of the elastic cluster snapshot that is to be deleted.
      * </p>
      * 
      * @param snapshotArn
-     *        The arn of the Elastic DocumentDB snapshot that is to be deleted.
+     *        The ARN identifier of the elastic cluster snapshot that is to be deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

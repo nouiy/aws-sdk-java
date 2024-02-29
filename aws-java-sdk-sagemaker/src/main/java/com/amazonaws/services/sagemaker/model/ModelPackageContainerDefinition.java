@@ -67,6 +67,12 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
     private String modelDataUrl;
     /**
      * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     */
+    private ModelDataSource modelDataSource;
+    /**
+     * <p>
      * The Amazon Web Services Marketplace product ID of the model package.
      * </p>
      */
@@ -336,6 +342,46 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
 
     public ModelPackageContainerDefinition withModelDataUrl(String modelDataUrl) {
         setModelDataUrl(modelDataUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     * 
+     * @param modelDataSource
+     *        Specifies the location of ML model data to deploy during endpoint creation.
+     */
+
+    public void setModelDataSource(ModelDataSource modelDataSource) {
+        this.modelDataSource = modelDataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     * 
+     * @return Specifies the location of ML model data to deploy during endpoint creation.
+     */
+
+    public ModelDataSource getModelDataSource() {
+        return this.modelDataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     * </p>
+     * 
+     * @param modelDataSource
+     *        Specifies the location of ML model data to deploy during endpoint creation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackageContainerDefinition withModelDataSource(ModelDataSource modelDataSource) {
+        setModelDataSource(modelDataSource);
         return this;
     }
 
@@ -685,6 +731,8 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
             sb.append("ImageDigest: ").append(getImageDigest()).append(",");
         if (getModelDataUrl() != null)
             sb.append("ModelDataUrl: ").append(getModelDataUrl()).append(",");
+        if (getModelDataSource() != null)
+            sb.append("ModelDataSource: ").append(getModelDataSource()).append(",");
         if (getProductId() != null)
             sb.append("ProductId: ").append(getProductId()).append(",");
         if (getEnvironment() != null)
@@ -729,6 +777,10 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
             return false;
         if (other.getModelDataUrl() != null && other.getModelDataUrl().equals(this.getModelDataUrl()) == false)
             return false;
+        if (other.getModelDataSource() == null ^ this.getModelDataSource() == null)
+            return false;
+        if (other.getModelDataSource() != null && other.getModelDataSource().equals(this.getModelDataSource()) == false)
+            return false;
         if (other.getProductId() == null ^ this.getProductId() == null)
             return false;
         if (other.getProductId() != null && other.getProductId().equals(this.getProductId()) == false)
@@ -769,6 +821,7 @@ public class ModelPackageContainerDefinition implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getImage() == null) ? 0 : getImage().hashCode());
         hashCode = prime * hashCode + ((getImageDigest() == null) ? 0 : getImageDigest().hashCode());
         hashCode = prime * hashCode + ((getModelDataUrl() == null) ? 0 : getModelDataUrl().hashCode());
+        hashCode = prime * hashCode + ((getModelDataSource() == null) ? 0 : getModelDataSource().hashCode());
         hashCode = prime * hashCode + ((getProductId() == null) ? 0 : getProductId().hashCode());
         hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
         hashCode = prime * hashCode + ((getModelInput() == null) ? 0 : getModelInput().hashCode());

@@ -64,6 +64,10 @@ public class ColumnTooltipItemJsonUnmarshaller implements Unmarshaller<ColumnToo
                     context.nextToken();
                     columnTooltipItem.setAggregation(AggregationFunctionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TooltipTarget", targetDepth)) {
+                    context.nextToken();
+                    columnTooltipItem.setTooltipTarget(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

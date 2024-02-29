@@ -37,6 +37,8 @@ public class CreateClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("adminUserPassword").build();
     private static final MarshallingInfo<String> AUTHTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("authType").build();
+    private static final MarshallingInfo<Integer> BACKUPRETENTIONPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("backupRetentionPeriod").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
@@ -44,12 +46,16 @@ public class CreateClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clusterName").build();
     private static final MarshallingInfo<String> KMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("kmsKeyId").build();
+    private static final MarshallingInfo<String> PREFERREDBACKUPWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preferredBackupWindow").build();
     private static final MarshallingInfo<String> PREFERREDMAINTENANCEWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preferredMaintenanceWindow").build();
     private static final MarshallingInfo<Integer> SHARDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardCapacity").build();
     private static final MarshallingInfo<Integer> SHARDCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardCount").build();
+    private static final MarshallingInfo<Integer> SHARDINSTANCECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shardInstanceCount").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("subnetIds").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -76,12 +82,15 @@ public class CreateClusterRequestMarshaller {
             protocolMarshaller.marshall(createClusterRequest.getAdminUserName(), ADMINUSERNAME_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getAdminUserPassword(), ADMINUSERPASSWORD_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getAuthType(), AUTHTYPE_BINDING);
+            protocolMarshaller.marshall(createClusterRequest.getBackupRetentionPeriod(), BACKUPRETENTIONPERIOD_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getClusterName(), CLUSTERNAME_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getKmsKeyId(), KMSKEYID_BINDING);
+            protocolMarshaller.marshall(createClusterRequest.getPreferredBackupWindow(), PREFERREDBACKUPWINDOW_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getPreferredMaintenanceWindow(), PREFERREDMAINTENANCEWINDOW_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getShardCapacity(), SHARDCAPACITY_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getShardCount(), SHARDCOUNT_BINDING);
+            protocolMarshaller.marshall(createClusterRequest.getShardInstanceCount(), SHARDINSTANCECOUNT_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getSubnetIds(), SUBNETIDS_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getVpcSecurityGroupIds(), VPCSECURITYGROUPIDS_BINDING);

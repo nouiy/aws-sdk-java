@@ -28,6 +28,11 @@ public class AbstractAmazonDocDBElastic implements AmazonDocDBElastic {
     }
 
     @Override
+    public CopyClusterSnapshotResult copyClusterSnapshot(CopyClusterSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateClusterResult createCluster(CreateClusterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +79,16 @@ public class AbstractAmazonDocDBElastic implements AmazonDocDBElastic {
 
     @Override
     public RestoreClusterFromSnapshotResult restoreClusterFromSnapshot(RestoreClusterFromSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartClusterResult startCluster(StartClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopClusterResult stopCluster(StopClusterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -42,7 +42,7 @@ public class ModelMetrics implements Serializable, Cloneable, StructuredPojo {
     private ModelDataQuality modelDataQuality;
     /**
      * <p>
-     * Metrics that measure bais in a model.
+     * Metrics that measure bias in a model.
      * </p>
      */
     private Bias bias;
@@ -135,11 +135,11 @@ public class ModelMetrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Metrics that measure bais in a model.
+     * Metrics that measure bias in a model.
      * </p>
      * 
      * @param bias
-     *        Metrics that measure bais in a model.
+     *        Metrics that measure bias in a model.
      */
 
     public void setBias(Bias bias) {
@@ -148,10 +148,10 @@ public class ModelMetrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Metrics that measure bais in a model.
+     * Metrics that measure bias in a model.
      * </p>
      * 
-     * @return Metrics that measure bais in a model.
+     * @return Metrics that measure bias in a model.
      */
 
     public Bias getBias() {
@@ -160,11 +160,11 @@ public class ModelMetrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Metrics that measure bais in a model.
+     * Metrics that measure bias in a model.
      * </p>
      * 
      * @param bias
-     *        Metrics that measure bais in a model.
+     *        Metrics that measure bias in a model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

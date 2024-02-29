@@ -51,19 +51,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
+     * Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>, <code>F1</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>, <code>Recall</code>
+     * <code>Precision</code>, <code>Recall</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     * <code>PrecisionMacro</code>, <code>RecallMacro</code>
      * </p>
      * </li>
      * </ul>
@@ -180,19 +180,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
+     * Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>, <code>F1</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>, <code>Recall</code>
+     * <code>Precision</code>, <code>Recall</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     * <code>PrecisionMacro</code>, <code>RecallMacro</code>
      * </p>
      * </li>
      * </ul>
@@ -305,21 +305,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>,
-     *        <code>RMSE</code>
+     *        Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>,
-     *        <code>F1</code>, <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>,
-     *        <code>Recall</code>
+     *        <code>F1</code>, <code>Precision</code>, <code>Recall</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     *        <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     *        <code>PrecisionMacro</code>, <code>RecallMacro</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -440,19 +438,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
+     * Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>, <code>F1</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>, <code>Recall</code>
+     * <code>Precision</code>, <code>Recall</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     * <code>PrecisionMacro</code>, <code>RecallMacro</code>
      * </p>
      * </li>
      * </ul>
@@ -564,22 +562,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *         <ul>
      *         <li>
      *         <p>
-     *         Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>,
-     *         <code>RMSE</code>
+     *         Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>,
-     *         <code>F1</code>, <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>,
-     *         <code>Recall</code>
+     *         <code>F1</code>, <code>Precision</code>, <code>Recall</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     *         <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>,
-     *         <code>RecallMacro</code>
+     *         <code>PrecisionMacro</code>, <code>RecallMacro</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -700,19 +695,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
+     * Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>, <code>F1</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>, <code>Recall</code>
+     * <code>Precision</code>, <code>Recall</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     * <code>PrecisionMacro</code>, <code>RecallMacro</code>
      * </p>
      * </li>
      * </ul>
@@ -825,21 +820,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>,
-     *        <code>RMSE</code>
+     *        Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>,
-     *        <code>F1</code>, <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>,
-     *        <code>Recall</code>
+     *        <code>F1</code>, <code>Precision</code>, <code>Recall</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     *        <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     *        <code>PrecisionMacro</code>, <code>RecallMacro</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -962,19 +955,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
+     * Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>, <code>F1</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>, <code>Recall</code>
+     * <code>Precision</code>, <code>Recall</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     * <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     * <code>PrecisionMacro</code>, <code>RecallMacro</code>
      * </p>
      * </li>
      * </ul>
@@ -1087,21 +1080,19 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        Regression: <code>InferenceLatency</code>, <code>MAE</code>, <code>MSE</code>, <code>R2</code>,
-     *        <code>RMSE</code>
+     *        Regression: <code>MAE</code>, <code>MSE</code>, <code>R2</code>, <code>RMSE</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Binary classification: <code>Accuracy</code>, <code>AUC</code>, <code>BalancedAccuracy</code>,
-     *        <code>F1</code>, <code>InferenceLatency</code>, <code>LogLoss</code>, <code>Precision</code>,
-     *        <code>Recall</code>
+     *        <code>F1</code>, <code>Precision</code>, <code>Recall</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Multiclass classification: <code>Accuracy</code>, <code>BalancedAccuracy</code>, <code>F1macro</code>,
-     *        <code>InferenceLatency</code>, <code>LogLoss</code>, <code>PrecisionMacro</code>, <code>RecallMacro</code>
+     *        <code>PrecisionMacro</code>, <code>RecallMacro</code>
      *        </p>
      *        </li>
      *        </ul>

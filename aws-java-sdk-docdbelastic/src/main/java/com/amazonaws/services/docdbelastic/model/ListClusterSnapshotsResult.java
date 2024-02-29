@@ -25,32 +25,35 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * A list of Elastic DocumentDB snapshots for a specified cluster.
+     * A list of snapshots for a specified elastic cluster.
      * </p>
      */
     private java.util.List<ClusterSnapshotInList> snapshots;
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The response will provide a nextToken if there is more data beyond the maxResults.</p>
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
      *        <p>
-     *        If there is no more data in the responce, the nextToken will not be returned.
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public void setNextToken(String nextToken) {
@@ -59,15 +62,17 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
-     * @return The response will provide a nextToken if there is more data beyond the maxResults.</p>
+     * @return A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *         only records beyond this token, up to the value specified by <code>max-results</code>.</p>
      *         <p>
-     *         If there is no more data in the responce, the nextToken will not be returned.
+     *         If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public String getNextToken() {
@@ -76,16 +81,18 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The response will provide a nextToken if there is more data beyond the maxResults.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
      * </p>
      * <p>
-     * If there is no more data in the responce, the nextToken will not be returned.
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The response will provide a nextToken if there is more data beyond the maxResults.</p>
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
      *        <p>
-     *        If there is no more data in the responce, the nextToken will not be returned.
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,10 +103,10 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of Elastic DocumentDB snapshots for a specified cluster.
+     * A list of snapshots for a specified elastic cluster.
      * </p>
      * 
-     * @return A list of Elastic DocumentDB snapshots for a specified cluster.
+     * @return A list of snapshots for a specified elastic cluster.
      */
 
     public java.util.List<ClusterSnapshotInList> getSnapshots() {
@@ -108,11 +115,11 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of Elastic DocumentDB snapshots for a specified cluster.
+     * A list of snapshots for a specified elastic cluster.
      * </p>
      * 
      * @param snapshots
-     *        A list of Elastic DocumentDB snapshots for a specified cluster.
+     *        A list of snapshots for a specified elastic cluster.
      */
 
     public void setSnapshots(java.util.Collection<ClusterSnapshotInList> snapshots) {
@@ -126,7 +133,7 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of Elastic DocumentDB snapshots for a specified cluster.
+     * A list of snapshots for a specified elastic cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -135,7 +142,7 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param snapshots
-     *        A list of Elastic DocumentDB snapshots for a specified cluster.
+     *        A list of snapshots for a specified elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -151,11 +158,11 @@ public class ListClusterSnapshotsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of Elastic DocumentDB snapshots for a specified cluster.
+     * A list of snapshots for a specified elastic cluster.
      * </p>
      * 
      * @param snapshots
-     *        A list of Elastic DocumentDB snapshots for a specified cluster.
+     *        A list of snapshots for a specified elastic cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

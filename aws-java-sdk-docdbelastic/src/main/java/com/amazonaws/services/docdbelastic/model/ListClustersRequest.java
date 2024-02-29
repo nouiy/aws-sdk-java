@@ -27,24 +27,28 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of entries to recieve in the response.
+     *        The maximum number of elastic cluster snapshot results to receive in the response.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -53,10 +57,10 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      * 
-     * @return The maximum number of entries to recieve in the response.
+     * @return The maximum number of elastic cluster snapshot results to receive in the response.
      */
 
     public Integer getMaxResults() {
@@ -65,11 +69,11 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of entries to recieve in the response.
+     * The maximum number of elastic cluster snapshot results to receive in the response.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of entries to recieve in the response.
+     *        The maximum number of elastic cluster snapshot results to receive in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +84,18 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The nextToken which is used the get the next page of data.
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
+     *        <p>
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public void setNextToken(String nextToken) {
@@ -93,10 +104,17 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
-     * @return The nextToken which is used the get the next page of data.
+     * @return A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *         only records beyond this token, up to the value specified by <code>max-results</code>.</p>
+     *         <p>
+     *         If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      */
 
     public String getNextToken() {
@@ -105,11 +123,18 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The nextToken which is used the get the next page of data.
+     * A pagination token provided by a previous request. If this parameter is specified, the response includes only
+     * records beyond this token, up to the value specified by <code>max-results</code>.
+     * </p>
+     * <p>
+     * If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * </p>
      * 
      * @param nextToken
-     *        The nextToken which is used the get the next page of data.
+     *        A pagination token provided by a previous request. If this parameter is specified, the response includes
+     *        only records beyond this token, up to the value specified by <code>max-results</code>.</p>
+     *        <p>
+     *        If there is no more data in the responce, the <code>nextToken</code> will not be returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
