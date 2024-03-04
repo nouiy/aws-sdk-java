@@ -1,3 +1,16 @@
+# __1.12.672__ __2024-03-04__
+## __AWS CloudFormation__
+  - ### Features
+    - Add DetailedStatus field to DescribeStackEvents and DescribeStacks APIs
+
+## __AWS Organizations__
+  - ### Features
+    - Documentation update for AWS Organizations
+
+## __Amazon FSx__
+  - ### Features
+    - Added support for creating FSx for NetApp ONTAP file systems with up to 12 HA pairs, delivering up to 72 GB/s of read throughput and 12 GB/s of write throughput.
+
 # __1.12.671__ __2024-03-01__
 ## __Access Analyzer__
   - ### Features

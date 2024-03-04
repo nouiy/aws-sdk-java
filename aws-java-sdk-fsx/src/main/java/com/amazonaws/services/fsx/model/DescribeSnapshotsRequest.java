@@ -44,9 +44,9 @@ public class DescribeSnapshotsRequest extends com.amazonaws.AmazonWebServiceRequ
     private String nextToken;
     /**
      * <p>
-     * Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services account.
-     * Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you from
-     * another account.
+     * Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web Services
+     * account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you
+     * from another account.
      * </p>
      */
     private Boolean includeShared;
@@ -253,15 +253,15 @@ public class DescribeSnapshotsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services account.
-     * Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you from
-     * another account.
+     * Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web Services
+     * account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you
+     * from another account.
      * </p>
      * 
      * @param includeShared
-     *        Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services
-     *        account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared
-     *        with you from another account.
+     *        Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web
+     *        Services account. Set to <code>true</code> if you want to see the snapshots in your account and the ones
+     *        shared with you from another account.
      */
 
     public void setIncludeShared(Boolean includeShared) {
@@ -270,14 +270,14 @@ public class DescribeSnapshotsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services account.
-     * Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you from
-     * another account.
+     * Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web Services
+     * account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you
+     * from another account.
      * </p>
      * 
-     * @return Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services
-     *         account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared
-     *         with you from another account.
+     * @return Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web
+     *         Services account. Set to <code>true</code> if you want to see the snapshots in your account and the ones
+     *         shared with you from another account.
      */
 
     public Boolean getIncludeShared() {
@@ -286,15 +286,15 @@ public class DescribeSnapshotsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services account.
-     * Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you from
-     * another account.
+     * Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web Services
+     * account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you
+     * from another account.
      * </p>
      * 
      * @param includeShared
-     *        Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services
-     *        account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared
-     *        with you from another account.
+     *        Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web
+     *        Services account. Set to <code>true</code> if you want to see the snapshots in your account and the ones
+     *        shared with you from another account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -305,14 +305,14 @@ public class DescribeSnapshotsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services account.
-     * Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you from
-     * another account.
+     * Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web Services
+     * account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared with you
+     * from another account.
      * </p>
      * 
-     * @return Set to <code>false</code> (default) if you want to only see the snapshots in your Amazon Web Services
-     *         account. Set to <code>true</code> if you want to see the snapshots in your account and the ones shared
-     *         with you from another account.
+     * @return Set to <code>false</code> (default) if you want to only see the snapshots owned by your Amazon Web
+     *         Services account. Set to <code>true</code> if you want to see the snapshots in your account and the ones
+     *         shared with you from another account.
      */
 
     public Boolean isIncludeShared() {

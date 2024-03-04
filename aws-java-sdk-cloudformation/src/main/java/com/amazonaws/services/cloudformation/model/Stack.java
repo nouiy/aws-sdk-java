@@ -206,6 +206,17 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      */
     private Boolean retainExceptOnCreate;
+    /**
+     * <p>
+     * The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the resource or
+     * resource configuration phase has completed and the stabilization of the resources is in progress. The stack sets
+     * <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     */
+    private String detailedStatus;
 
     /**
      * <p>
@@ -1673,6 +1684,129 @@ public class Stack implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the resource or
+     * resource configuration phase has completed and the stabilization of the resources is in progress. The stack sets
+     * <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * 
+     * @param detailedStatus
+     *        The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the
+     *        resource or resource configuration phase has completed and the stabilization of the resources is in
+     *        progress. The stack sets <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have
+     *        reached that event. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * @see DetailedStatus
+     */
+
+    public void setDetailedStatus(String detailedStatus) {
+        this.detailedStatus = detailedStatus;
+    }
+
+    /**
+     * <p>
+     * The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the resource or
+     * resource configuration phase has completed and the stabilization of the resources is in progress. The stack sets
+     * <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * 
+     * @return The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the
+     *         resource or resource configuration phase has completed and the stabilization of the resources is in
+     *         progress. The stack sets <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have
+     *         reached that event. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *         >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * @see DetailedStatus
+     */
+
+    public String getDetailedStatus() {
+        return this.detailedStatus;
+    }
+
+    /**
+     * <p>
+     * The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the resource or
+     * resource configuration phase has completed and the stabilization of the resources is in progress. The stack sets
+     * <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * 
+     * @param detailedStatus
+     *        The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the
+     *        resource or resource configuration phase has completed and the stabilization of the resources is in
+     *        progress. The stack sets <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have
+     *        reached that event. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DetailedStatus
+     */
+
+    public Stack withDetailedStatus(String detailedStatus) {
+        setDetailedStatus(detailedStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the resource or
+     * resource configuration phase has completed and the stabilization of the resources is in progress. The stack sets
+     * <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * 
+     * @param detailedStatus
+     *        The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the
+     *        resource or resource configuration phase has completed and the stabilization of the resources is in
+     *        progress. The stack sets <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have
+     *        reached that event. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * @see DetailedStatus
+     */
+
+    public void setDetailedStatus(DetailedStatus detailedStatus) {
+        withDetailedStatus(detailedStatus);
+    }
+
+    /**
+     * <p>
+     * The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the resource or
+     * resource configuration phase has completed and the stabilization of the resources is in progress. The stack sets
+     * <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * 
+     * @param detailedStatus
+     *        The detailed status of the resource or stack. If <code>CONFIGURATION_COMPLETE</code> is present, the
+     *        resource or resource configuration phase has completed and the stabilization of the resources is in
+     *        progress. The stack sets <code>CONFIGURATION_COMPLETE</code> when all of the resources in the stack have
+     *        reached that event. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DetailedStatus
+     */
+
+    public Stack withDetailedStatus(DetailedStatus detailedStatus) {
+        this.detailedStatus = detailedStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1729,7 +1863,9 @@ public class Stack implements Serializable, Cloneable {
         if (getDriftInformation() != null)
             sb.append("DriftInformation: ").append(getDriftInformation()).append(",");
         if (getRetainExceptOnCreate() != null)
-            sb.append("RetainExceptOnCreate: ").append(getRetainExceptOnCreate());
+            sb.append("RetainExceptOnCreate: ").append(getRetainExceptOnCreate()).append(",");
+        if (getDetailedStatus() != null)
+            sb.append("DetailedStatus: ").append(getDetailedStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -1836,6 +1972,10 @@ public class Stack implements Serializable, Cloneable {
             return false;
         if (other.getRetainExceptOnCreate() != null && other.getRetainExceptOnCreate().equals(this.getRetainExceptOnCreate()) == false)
             return false;
+        if (other.getDetailedStatus() == null ^ this.getDetailedStatus() == null)
+            return false;
+        if (other.getDetailedStatus() != null && other.getDetailedStatus().equals(this.getDetailedStatus()) == false)
+            return false;
         return true;
     }
 
@@ -1867,6 +2007,7 @@ public class Stack implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getRootId() == null) ? 0 : getRootId().hashCode());
         hashCode = prime * hashCode + ((getDriftInformation() == null) ? 0 : getDriftInformation().hashCode());
         hashCode = prime * hashCode + ((getRetainExceptOnCreate() == null) ? 0 : getRetainExceptOnCreate().hashCode());
+        hashCode = prime * hashCode + ((getDetailedStatus() == null) ? 0 : getDetailedStatus().hashCode());
         return hashCode;
     }
 

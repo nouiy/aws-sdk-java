@@ -42,7 +42,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * If the extension is a public third-party type you have activated with a type name alias, CloudFormation returns
      * the type name alias. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      */
     private String typeName;
@@ -55,7 +56,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * This applies only to private extensions you have registered in your account. For public extensions, both those
      * provided by Amazon Web Services and published by third parties, CloudFormation returns <code>null</code>. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -218,7 +220,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * Contains logging configuration information for private extensions. This applies only to private extensions you
      * have registered in your account. For public extensions, both those provided by Amazon Web Services and published
      * by third parties, CloudFormation returns <code>null</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      */
     private LoggingConfig loggingConfig;
@@ -233,7 +236,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies only to
      * private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
@@ -286,13 +290,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <li>
      * <p>
      * Private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Public extensions you have activated in your account with auto-update specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * </li>
      * </ul>
@@ -310,8 +316,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * To set the configuration data for an extension, use <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     * >SetTypeConfiguration</a>. For more information, see <a href=
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     * <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
@@ -495,7 +501,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * If the extension is a public third-party type you have activated with a type name alias, CloudFormation returns
      * the type name alias. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * 
      * @param typeName
@@ -503,8 +510,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <p>
      *        If the extension is a public third-party type you have activated with a type name alias, CloudFormation
      *        returns the type name alias. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html"
-     *        >ActivateType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     *        <code>ActivateType</code> </a>.
      */
 
     public void setTypeName(String typeName) {
@@ -518,15 +525,16 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * If the extension is a public third-party type you have activated with a type name alias, CloudFormation returns
      * the type name alias. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * 
      * @return The name of the extension.</p>
      *         <p>
      *         If the extension is a public third-party type you have activated with a type name alias, CloudFormation
      *         returns the type name alias. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html"
-     *         >ActivateType</a>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     *         <code>ActivateType</code> </a>.
      */
 
     public String getTypeName() {
@@ -540,7 +548,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * If the extension is a public third-party type you have activated with a type name alias, CloudFormation returns
      * the type name alias. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * 
      * @param typeName
@@ -548,8 +557,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <p>
      *        If the extension is a public third-party type you have activated with a type name alias, CloudFormation
      *        returns the type name alias. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html"
-     *        >ActivateType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     *        <code>ActivateType</code> </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -567,7 +576,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * This applies only to private extensions you have registered in your account. For public extensions, both those
      * provided by Amazon Web Services and published by third parties, CloudFormation returns <code>null</code>. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -580,8 +590,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        This applies only to private extensions you have registered in your account. For public extensions, both
      *        those provided by Amazon Web Services and published by third parties, CloudFormation returns
      *        <code>null</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.
      *        </p>
      *        <p>
      *        To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -600,7 +610,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * This applies only to private extensions you have registered in your account. For public extensions, both those
      * provided by Amazon Web Services and published by third parties, CloudFormation returns <code>null</code>. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -612,8 +623,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         This applies only to private extensions you have registered in your account. For public extensions, both
      *         those provided by Amazon Web Services and published by third parties, CloudFormation returns
      *         <code>null</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *         >RegisterType</a>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *         <code>RegisterType</code> </a>.
      *         </p>
      *         <p>
      *         To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -632,7 +643,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * This applies only to private extensions you have registered in your account. For public extensions, both those
      * provided by Amazon Web Services and published by third parties, CloudFormation returns <code>null</code>. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -645,8 +657,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        This applies only to private extensions you have registered in your account. For public extensions, both
      *        those provided by Amazon Web Services and published by third parties, CloudFormation returns
      *        <code>null</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.
      *        </p>
      *        <p>
      *        To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
@@ -1850,15 +1862,16 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * Contains logging configuration information for private extensions. This applies only to private extensions you
      * have registered in your account. For public extensions, both those provided by Amazon Web Services and published
      * by third parties, CloudFormation returns <code>null</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * 
      * @param loggingConfig
      *        Contains logging configuration information for private extensions. This applies only to private extensions
      *        you have registered in your account. For public extensions, both those provided by Amazon Web Services and
      *        published by third parties, CloudFormation returns <code>null</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.
      */
 
     public void setLoggingConfig(LoggingConfig loggingConfig) {
@@ -1870,14 +1883,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * Contains logging configuration information for private extensions. This applies only to private extensions you
      * have registered in your account. For public extensions, both those provided by Amazon Web Services and published
      * by third parties, CloudFormation returns <code>null</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * 
      * @return Contains logging configuration information for private extensions. This applies only to private
      *         extensions you have registered in your account. For public extensions, both those provided by Amazon Web
      *         Services and published by third parties, CloudFormation returns <code>null</code>. For more information,
      *         see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
-     *         RegisterType</a>.
+     *         <code>RegisterType</code> </a>.
      */
 
     public LoggingConfig getLoggingConfig() {
@@ -1889,15 +1903,16 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * Contains logging configuration information for private extensions. This applies only to private extensions you
      * have registered in your account. For public extensions, both those provided by Amazon Web Services and published
      * by third parties, CloudFormation returns <code>null</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * 
      * @param loggingConfig
      *        Contains logging configuration information for private extensions. This applies only to private extensions
      *        you have registered in your account. For public extensions, both those provided by Amazon Web Services and
      *        published by third parties, CloudFormation returns <code>null</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1991,7 +2006,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies only to
      * private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
@@ -2004,8 +2020,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * @param executionRoleArn
      *        The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies only
      *        to private extensions you have registered in your account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.</p>
      *        <p>
      *        If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
@@ -2022,7 +2038,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies only to
      * private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
@@ -2034,8 +2051,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * 
      * @return The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies
      *         only to private extensions you have registered in your account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *         >RegisterType</a>.</p>
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *         <code>RegisterType</code> </a>.</p>
      *         <p>
      *         If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
@@ -2052,7 +2069,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies only to
      * private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * <p>
      * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
@@ -2065,8 +2083,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * @param executionRoleArn
      *        The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies only
      *        to private extensions you have registered in your account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.</p>
      *        <p>
      *        If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
@@ -2352,13 +2370,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <li>
      * <p>
      * Private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Public extensions you have activated in your account with auto-update specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * </li>
      * </ul>
@@ -2369,15 +2389,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <li>
      *        <p>
      *        Private extensions you have registered in your account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Public extensions you have activated in your account with auto-update specified. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
-     *        ActivateType</a>.
+     *        <code>ActivateType</code> </a>.
      *        </p>
      *        </li>
      */
@@ -2394,13 +2414,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <li>
      * <p>
      * Private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Public extensions you have activated in your account with auto-update specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * </li>
      * </ul>
@@ -2410,15 +2432,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         <li>
      *         <p>
      *         Private extensions you have registered in your account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *         >RegisterType</a>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *         <code>RegisterType</code> </a>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         Public extensions you have activated in your account with auto-update specified. For more information,
      *         see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
-     *         ActivateType</a>.
+     *         <code>ActivateType</code> </a>.
      *         </p>
      *         </li>
      */
@@ -2435,13 +2457,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <li>
      * <p>
      * Private extensions you have registered in your account. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     * <code>RegisterType</code> </a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Public extensions you have activated in your account with auto-update specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">ActivateType</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
+     * <code>ActivateType</code> </a>.
      * </p>
      * </li>
      * </ul>
@@ -2452,15 +2476,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <li>
      *        <p>
      *        Private extensions you have registered in your account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
-     *        >RegisterType</a>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">
+     *        <code>RegisterType</code> </a>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Public extensions you have activated in your account with auto-update specified. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">
-     *        ActivateType</a>.
+     *        <code>ActivateType</code> </a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2517,8 +2541,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * To set the configuration data for an extension, use <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     * >SetTypeConfiguration</a>. For more information, see <a href=
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     * <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
@@ -2528,8 +2552,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        Region.</p>
      *        <p>
      *        To set the configuration data for an extension, use <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     *        >SetTypeConfiguration</a>. For more information, see <a href=
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     *        <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      *        >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      */
@@ -2544,8 +2568,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * To set the configuration data for an extension, use <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     * >SetTypeConfiguration</a>. For more information, see <a href=
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     * <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
@@ -2554,8 +2578,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         Region.</p>
      *         <p>
      *         To set the configuration data for an extension, use <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     *         >SetTypeConfiguration</a>. For more information, see <a href=
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     *         <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      *         >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      */
@@ -2570,8 +2594,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * To set the configuration data for an extension, use <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     * >SetTypeConfiguration</a>. For more information, see <a href=
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     * <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
@@ -2581,8 +2605,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        Region.</p>
      *        <p>
      *        To set the configuration data for an extension, use <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
-     *        >SetTypeConfiguration</a>. For more information, see <a href=
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html">
+     *        <code>SetTypeConfiguration</code> </a>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
      *        >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

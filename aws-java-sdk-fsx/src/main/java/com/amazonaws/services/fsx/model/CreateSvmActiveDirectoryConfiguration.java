@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The configuration that Amazon FSx uses to join the ONTAP storage virtual machine (SVM) to your self-managed
- * (including on-premises) Microsoft Active Directory (AD) directory.
+ * (including on-premises) Microsoft Active Directory directory.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateSvmActiveDirectoryConfiguration"

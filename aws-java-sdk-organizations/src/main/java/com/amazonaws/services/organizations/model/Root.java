@@ -31,7 +31,7 @@ public class Root implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the root.
+     * The unique identifier (ID) for the root. The ID is unique to the organization only.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-" followed by
@@ -77,7 +77,7 @@ public class Root implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the root.
+     * The unique identifier (ID) for the root. The ID is unique to the organization only.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-" followed by
@@ -85,7 +85,7 @@ public class Root implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param id
-     *        The unique identifier (ID) for the root.</p>
+     *        The unique identifier (ID) for the root. The ID is unique to the organization only.</p>
      *        <p>
      *        The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-"
      *        followed by from 4 to 32 lowercase letters or digits.
@@ -97,14 +97,14 @@ public class Root implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the root.
+     * The unique identifier (ID) for the root. The ID is unique to the organization only.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-" followed by
      * from 4 to 32 lowercase letters or digits.
      * </p>
      * 
-     * @return The unique identifier (ID) for the root.</p>
+     * @return The unique identifier (ID) for the root. The ID is unique to the organization only.</p>
      *         <p>
      *         The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-"
      *         followed by from 4 to 32 lowercase letters or digits.
@@ -116,7 +116,7 @@ public class Root implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier (ID) for the root.
+     * The unique identifier (ID) for the root. The ID is unique to the organization only.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-" followed by
@@ -124,7 +124,7 @@ public class Root implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param id
-     *        The unique identifier (ID) for the root.</p>
+     *        The unique identifier (ID) for the root. The ID is unique to the organization only.</p>
      *        <p>
      *        The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-"
      *        followed by from 4 to 32 lowercase letters or digits.

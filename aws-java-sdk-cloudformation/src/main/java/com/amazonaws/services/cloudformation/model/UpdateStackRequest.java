@@ -52,7 +52,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the <i>CloudFormation User Guide</i>.
+     * in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -84,8 +85,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max size:
-     * 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
-     * <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
+     * 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>. You can specify either the <code>StackPolicyDuringUpdateBody</code> or the
+     * <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
      * </p>
      * <p>
      * If you want to update protected resources, specify a temporary overriding stack policy during this update. If you
@@ -96,9 +98,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A list of <code>Parameter</code> structures that specify input parameters for the stack. For more information,
-     * see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * see the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Parameter> parameters;
@@ -147,44 +148,43 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code> AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -206,9 +206,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * update a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -293,8 +293,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB) located
-     * in an S3 bucket in the same Region as the stack. You can specify either the <code>StackPolicyBody</code> or the
-     * <code>StackPolicyURL</code> parameter, but not both.
+     * in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the <code>StackPolicyURL</code>
+     * parameter, but not both.
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
@@ -485,7 +486,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the <i>CloudFormation User Guide</i>.
+     * in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -496,7 +498,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Location of file containing the template body. The URL must point to a template that's located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
+     *        Anatomy</a> in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     *        <code>https://</code>.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *        <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -511,7 +514,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the <i>CloudFormation User Guide</i>.
+     * in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -521,7 +525,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @return Location of file containing the template body. The URL must point to a template that's located in an
      *         Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
+     *         Anatomy</a> in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     *         <code>https://</code>.</p>
      *         <p>
      *         Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *         <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -536,7 +541,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the <i>CloudFormation User Guide</i>.
+     * in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -547,7 +553,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Location of file containing the template body. The URL must point to a template that's located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
+     *        Anatomy</a> in the <i>CloudFormation User Guide</i>. The location for an Amazon S3 bucket must start with
+     *        <code>https://</code>.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *        <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -713,8 +720,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max size:
-     * 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
-     * <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
+     * 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>. You can specify either the <code>StackPolicyDuringUpdateBody</code> or the
+     * <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
      * </p>
      * <p>
      * If you want to update protected resources, specify a temporary overriding stack policy during this update. If you
@@ -723,9 +731,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param stackPolicyDuringUpdateURL
      *        Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max
-     *        size: 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
-     *        <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but not
-     *        both.</p>
+     *        size: 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket
+     *        must start with <code>https://</code>. You can specify either the <code>StackPolicyDuringUpdateBody</code>
+     *        or the <code>StackPolicyDuringUpdateURL</code> parameter, but not both.</p>
      *        <p>
      *        If you want to update protected resources, specify a temporary overriding stack policy during this update.
      *        If you don't specify a stack policy, the current policy that is associated with the stack will be used.
@@ -738,8 +746,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max size:
-     * 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
-     * <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
+     * 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>. You can specify either the <code>StackPolicyDuringUpdateBody</code> or the
+     * <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
      * </p>
      * <p>
      * If you want to update protected resources, specify a temporary overriding stack policy during this update. If you
@@ -747,7 +756,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max
-     *         size: 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
+     *         size: 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket
+     *         must start with <code>https://</code>. You can specify either the
      *         <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but
      *         not both.</p>
      *         <p>
@@ -763,8 +773,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max size:
-     * 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
-     * <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
+     * 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>. You can specify either the <code>StackPolicyDuringUpdateBody</code> or the
+     * <code>StackPolicyDuringUpdateURL</code> parameter, but not both.
      * </p>
      * <p>
      * If you want to update protected resources, specify a temporary overriding stack policy during this update. If you
@@ -773,9 +784,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param stackPolicyDuringUpdateURL
      *        Location of a file containing the temporary overriding stack policy. The URL must point to a policy (max
-     *        size: 16KB) located in an S3 bucket in the same Region as the stack. You can specify either the
-     *        <code>StackPolicyDuringUpdateBody</code> or the <code>StackPolicyDuringUpdateURL</code> parameter, but not
-     *        both.</p>
+     *        size: 16KB) located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket
+     *        must start with <code>https://</code>. You can specify either the <code>StackPolicyDuringUpdateBody</code>
+     *        or the <code>StackPolicyDuringUpdateURL</code> parameter, but not both.</p>
      *        <p>
      *        If you want to update protected resources, specify a temporary overriding stack policy during this update.
      *        If you don't specify a stack policy, the current policy that is associated with the stack will be used.
@@ -790,15 +801,14 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A list of <code>Parameter</code> structures that specify input parameters for the stack. For more information,
-     * see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * see the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * 
      * @return A list of <code>Parameter</code> structures that specify input parameters for the stack. For more
      *         information, see the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *         data type.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *         <code>Parameter</code> </a> data type.
      */
 
     public java.util.List<Parameter> getParameters() {
@@ -811,16 +821,15 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A list of <code>Parameter</code> structures that specify input parameters for the stack. For more information,
-     * see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * see the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * 
      * @param parameters
      *        A list of <code>Parameter</code> structures that specify input parameters for the stack. For more
      *        information, see the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *        data type.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *        <code>Parameter</code> </a> data type.
      */
 
     public void setParameters(java.util.Collection<Parameter> parameters) {
@@ -835,9 +844,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A list of <code>Parameter</code> structures that specify input parameters for the stack. For more information,
-     * see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * see the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -848,8 +856,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param parameters
      *        A list of <code>Parameter</code> structures that specify input parameters for the stack. For more
      *        information, see the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *        data type.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *        <code>Parameter</code> </a> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -866,16 +874,15 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A list of <code>Parameter</code> structures that specify input parameters for the stack. For more information,
-     * see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * see the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * 
      * @param parameters
      *        A list of <code>Parameter</code> structures that specify input parameters for the stack. For more
      *        information, see the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *        data type.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *        <code>Parameter</code> </a> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -929,44 +936,43 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code> AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -988,9 +994,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * update a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1062,45 +1068,45 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *         AWS::IAM::AccessKey</a>
+     *         <code>AWS::IAM::AccessKey</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *         AWS::IAM::Group</a>
+     *         <code>AWS::IAM::Group</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *         >AWS::IAM::InstanceProfile</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *         <code>AWS::IAM::InstanceProfile</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *         AWS::IAM::Policy</a>
+     *         <code> AWS::IAM::Policy</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *         AWS::IAM::Role</a>
+     *         <code>AWS::IAM::Role</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *         AWS::IAM::User</a>
+     *         <code>AWS::IAM::User</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *         >AWS::IAM::UserToGroupAddition</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *         <code>AWS::IAM::UserToGroupAddition</code> </a>
      *         </p>
      *         </li>
      *         </ul>
@@ -1123,9 +1129,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *         <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *         >AWS::Include</a> and <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *         >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *         > <code>AWS::Include</code> </a> and <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *         <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *         </p>
      *         <p>
      *         If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1207,44 +1213,43 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code> AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1266,9 +1271,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * update a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1341,45 +1346,45 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code> AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1402,9 +1407,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1488,44 +1493,43 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code> AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1547,9 +1551,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * update a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1627,45 +1631,45 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code> AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1688,9 +1692,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1776,44 +1780,43 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code> AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1835,9 +1838,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * update a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1910,45 +1913,45 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code> AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1971,9 +1974,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -2054,44 +2057,43 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code> AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -2113,9 +2115,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * update a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -2188,45 +2190,45 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code> AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -2249,9 +2251,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -2678,8 +2680,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB) located
-     * in an S3 bucket in the same Region as the stack. You can specify either the <code>StackPolicyBody</code> or the
-     * <code>StackPolicyURL</code> parameter, but not both.
+     * in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the <code>StackPolicyURL</code>
+     * parameter, but not both.
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
@@ -2689,8 +2692,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param stackPolicyURL
      *        Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB)
-     *        located in an S3 bucket in the same Region as the stack. You can specify either the
-     *        <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.</p>
+     *        located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     *        with <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the
+     *        <code>StackPolicyURL</code> parameter, but not both.</p>
      *        <p>
      *        You might update the stack policy, for example, in order to protect a new resource that you created during
      *        a stack update. If you don't specify a stack policy, the current policy that is associated with the stack
@@ -2704,8 +2708,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB) located
-     * in an S3 bucket in the same Region as the stack. You can specify either the <code>StackPolicyBody</code> or the
-     * <code>StackPolicyURL</code> parameter, but not both.
+     * in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the <code>StackPolicyURL</code>
+     * parameter, but not both.
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
@@ -2714,8 +2719,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB)
-     *         located in an S3 bucket in the same Region as the stack. You can specify either the
-     *         <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.</p>
+     *         located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     *         with <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the
+     *         <code>StackPolicyURL</code> parameter, but not both.</p>
      *         <p>
      *         You might update the stack policy, for example, in order to protect a new resource that you created
      *         during a stack update. If you don't specify a stack policy, the current policy that is associated with
@@ -2729,8 +2735,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB) located
-     * in an S3 bucket in the same Region as the stack. You can specify either the <code>StackPolicyBody</code> or the
-     * <code>StackPolicyURL</code> parameter, but not both.
+     * in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start with
+     * <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the <code>StackPolicyURL</code>
+     * parameter, but not both.
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
@@ -2740,8 +2747,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param stackPolicyURL
      *        Location of a file containing the updated stack policy. The URL must point to a policy (max size: 16KB)
-     *        located in an S3 bucket in the same Region as the stack. You can specify either the
-     *        <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.</p>
+     *        located in an S3 bucket in the same Region as the stack. The location for an Amazon S3 bucket must start
+     *        with <code>https://</code>. You can specify either the <code>StackPolicyBody</code> or the
+     *        <code>StackPolicyURL</code> parameter, but not both.</p>
      *        <p>
      *        You might update the stack policy, for example, in order to protect a new resource that you created during
      *        a stack update. If you don't specify a stack policy, the current policy that is associated with the stack

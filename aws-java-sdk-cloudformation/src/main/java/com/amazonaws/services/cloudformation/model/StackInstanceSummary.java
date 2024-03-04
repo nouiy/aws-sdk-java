@@ -61,7 +61,11 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
-     * <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     * <code>true</code>, to delete the stack instance, and then delete the stack manually. <code>INOPERABLE</code> can
+     * be returned here when the cause is a failed import. If it's due to a failed import, the operation can be retried
+     * once the failures are fixed. To see if this is due to a failed import, call the <a>DescribeStackInstance</a> API
+     * operation, look at the <code>DetailedStatus</code> member returned in the <code>StackInstanceSummary</code>
+     * member.
      * </p>
      * </li>
      * <li>
@@ -106,7 +110,7 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <p>
      * [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified for <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
-     * DeploymentTargets</a>.
+     * <code>DeploymentTargets</code> </a>.
      * </p>
      */
     private String organizationalUnitId;
@@ -332,7 +336,11 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
-     * <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     * <code>true</code>, to delete the stack instance, and then delete the stack manually. <code>INOPERABLE</code> can
+     * be returned here when the cause is a failed import. If it's due to a failed import, the operation can be retried
+     * once the failures are fixed. To see if this is due to a failed import, call the <a>DescribeStackInstance</a> API
+     * operation, look at the <code>DetailedStatus</code> member returned in the <code>StackInstanceSummary</code>
+     * member.
      * </p>
      * </li>
      * <li>
@@ -369,6 +377,10 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      *        unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You
      *        might need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
      *        <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     *        <code>INOPERABLE</code> can be returned here when the cause is a failed import. If it's due to a failed
+     *        import, the operation can be retried once the failures are fixed. To see if this is due to a failed
+     *        import, call the <a>DescribeStackInstance</a> API operation, look at the <code>DetailedStatus</code>
+     *        member returned in the <code>StackInstanceSummary</code> member.
      *        </p>
      *        </li>
      *        <li>
@@ -411,7 +423,11 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
-     * <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     * <code>true</code>, to delete the stack instance, and then delete the stack manually. <code>INOPERABLE</code> can
+     * be returned here when the cause is a failed import. If it's due to a failed import, the operation can be retried
+     * once the failures are fixed. To see if this is due to a failed import, call the <a>DescribeStackInstance</a> API
+     * operation, look at the <code>DetailedStatus</code> member returned in the <code>StackInstanceSummary</code>
+     * member.
      * </p>
      * </li>
      * <li>
@@ -447,6 +463,10 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      *         an unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations.
      *         You might need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code>
      *         set to <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     *         <code>INOPERABLE</code> can be returned here when the cause is a failed import. If it's due to a failed
+     *         import, the operation can be retried once the failures are fixed. To see if this is due to a failed
+     *         import, call the <a>DescribeStackInstance</a> API operation, look at the <code>DetailedStatus</code>
+     *         member returned in the <code>StackInstanceSummary</code> member.
      *         </p>
      *         </li>
      *         <li>
@@ -490,7 +510,11 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
-     * <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     * <code>true</code>, to delete the stack instance, and then delete the stack manually. <code>INOPERABLE</code> can
+     * be returned here when the cause is a failed import. If it's due to a failed import, the operation can be retried
+     * once the failures are fixed. To see if this is due to a failed import, call the <a>DescribeStackInstance</a> API
+     * operation, look at the <code>DetailedStatus</code> member returned in the <code>StackInstanceSummary</code>
+     * member.
      * </p>
      * </li>
      * <li>
@@ -527,6 +551,10 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      *        unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You
      *        might need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
      *        <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     *        <code>INOPERABLE</code> can be returned here when the cause is a failed import. If it's due to a failed
+     *        import, the operation can be retried once the failures are fixed. To see if this is due to a failed
+     *        import, call the <a>DescribeStackInstance</a> API operation, look at the <code>DetailedStatus</code>
+     *        member returned in the <code>StackInstanceSummary</code> member.
      *        </p>
      *        </li>
      *        <li>
@@ -571,7 +599,11 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
-     * <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     * <code>true</code>, to delete the stack instance, and then delete the stack manually. <code>INOPERABLE</code> can
+     * be returned here when the cause is a failed import. If it's due to a failed import, the operation can be retried
+     * once the failures are fixed. To see if this is due to a failed import, call the <a>DescribeStackInstance</a> API
+     * operation, look at the <code>DetailedStatus</code> member returned in the <code>StackInstanceSummary</code>
+     * member.
      * </p>
      * </li>
      * <li>
@@ -608,6 +640,10 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      *        unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You
      *        might need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
      *        <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     *        <code>INOPERABLE</code> can be returned here when the cause is a failed import. If it's due to a failed
+     *        import, the operation can be retried once the failures are fixed. To see if this is due to a failed
+     *        import, call the <a>DescribeStackInstance</a> API operation, look at the <code>DetailedStatus</code>
+     *        member returned in the <code>StackInstanceSummary</code> member.
      *        </p>
      *        </li>
      *        <li>
@@ -650,7 +686,11 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
-     * <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     * <code>true</code>, to delete the stack instance, and then delete the stack manually. <code>INOPERABLE</code> can
+     * be returned here when the cause is a failed import. If it's due to a failed import, the operation can be retried
+     * once the failures are fixed. To see if this is due to a failed import, call the <a>DescribeStackInstance</a> API
+     * operation, look at the <code>DetailedStatus</code> member returned in the <code>StackInstanceSummary</code>
+     * member.
      * </p>
      * </li>
      * <li>
@@ -687,6 +727,10 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      *        unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You
      *        might need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
      *        <code>true</code>, to delete the stack instance, and then delete the stack manually.
+     *        <code>INOPERABLE</code> can be returned here when the cause is a failed import. If it's due to a failed
+     *        import, the operation can be retried once the failures are fixed. To see if this is due to a failed
+     *        import, call the <a>DescribeStackInstance</a> API operation, look at the <code>DetailedStatus</code>
+     *        member returned in the <code>StackInstanceSummary</code> member.
      *        </p>
      *        </li>
      *        <li>
@@ -805,14 +849,14 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <p>
      * [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified for <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
-     * DeploymentTargets</a>.
+     * <code>DeploymentTargets</code> </a>.
      * </p>
      * 
      * @param organizationalUnitId
      *        [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified
      *        for <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
-     *        DeploymentTargets</a>.
+     *        <code>DeploymentTargets</code> </a>.
      */
 
     public void setOrganizationalUnitId(String organizationalUnitId) {
@@ -823,13 +867,13 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <p>
      * [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified for <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
-     * DeploymentTargets</a>.
+     * <code>DeploymentTargets</code> </a>.
      * </p>
      * 
      * @return [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified
      *         for <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html"
-     *         >DeploymentTargets</a>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
+     *         <code>DeploymentTargets</code> </a>.
      */
 
     public String getOrganizationalUnitId() {
@@ -840,14 +884,14 @@ public class StackInstanceSummary implements Serializable, Cloneable {
      * <p>
      * [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified for <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
-     * DeploymentTargets</a>.
+     * <code>DeploymentTargets</code> </a>.
      * </p>
      * 
      * @param organizationalUnitId
      *        [Service-managed permissions] The organization root ID or organizational unit (OU) IDs that you specified
      *        for <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html">
-     *        DeploymentTargets</a>.
+     *        <code>DeploymentTargets</code> </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

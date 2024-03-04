@@ -130,7 +130,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -711,7 +711,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -757,7 +757,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *        </p>
      *        </li>
      *        <li>
@@ -807,7 +807,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -852,7 +852,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *         </p>
      *         </li>
      *         <li>
@@ -902,7 +902,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -948,7 +948,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *        </p>
      *        </li>
      *        <li>

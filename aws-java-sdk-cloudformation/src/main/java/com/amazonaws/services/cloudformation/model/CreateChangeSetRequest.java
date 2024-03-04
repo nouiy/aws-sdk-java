@@ -51,7 +51,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation generates the change
-     * set by comparing this template with the stack that you specified.
+     * set by comparing this template with the stack that you specified. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -116,44 +117,43 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code>AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -175,9 +175,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -317,8 +317,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Determines what action will be taken if stack creation fails. If this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -332,16 +332,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -492,7 +492,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation generates the change
-     * set by comparing this template with the stack that you specified.
+     * set by comparing this template with the stack that you specified. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -501,7 +502,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * @param templateURL
      *        The location of the file that contains the revised template. The URL must point to a template (max size:
      *        460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation
-     *        generates the change set by comparing this template with the stack that you specified.</p>
+     *        generates the change set by comparing this template with the stack that you specified. The location for an
+     *        Amazon S3 bucket must start with <code>https://</code>.</p>
      *        <p>
      *        Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      */
@@ -514,7 +516,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation generates the change
-     * set by comparing this template with the stack that you specified.
+     * set by comparing this template with the stack that you specified. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -522,7 +525,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return The location of the file that contains the revised template. The URL must point to a template (max size:
      *         460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation
-     *         generates the change set by comparing this template with the stack that you specified.</p>
+     *         generates the change set by comparing this template with the stack that you specified. The location for
+     *         an Amazon S3 bucket must start with <code>https://</code>.</p>
      *         <p>
      *         Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      */
@@ -535,7 +539,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation generates the change
-     * set by comparing this template with the stack that you specified.
+     * set by comparing this template with the stack that you specified. The location for an Amazon S3 bucket must start
+     * with <code>https://</code>.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -544,7 +549,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * @param templateURL
      *        The location of the file that contains the revised template. The URL must point to a template (max size:
      *        460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. CloudFormation
-     *        generates the change set by comparing this template with the stack that you specified.</p>
+     *        generates the change set by comparing this template with the stack that you specified. The location for an
+     *        Amazon S3 bucket must start with <code>https://</code>.</p>
      *        <p>
      *        Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -733,44 +739,43 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code>AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -792,9 +797,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -862,45 +867,45 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *         AWS::IAM::AccessKey</a>
+     *         <code>AWS::IAM::AccessKey</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *         AWS::IAM::Group</a>
+     *         <code>AWS::IAM::Group</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *         >AWS::IAM::InstanceProfile</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *         <code>AWS::IAM::InstanceProfile</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *         AWS::IAM::Policy</a>
+     *         <code>AWS::IAM::Policy</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *         AWS::IAM::Role</a>
+     *         <code>AWS::IAM::Role</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *         AWS::IAM::User</a>
+     *         <code>AWS::IAM::User</code> </a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *         >AWS::IAM::UserToGroupAddition</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *         <code>AWS::IAM::UserToGroupAddition</code> </a>
      *         </p>
      *         </li>
      *         </ul>
@@ -923,9 +928,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *         <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *         >AWS::Include</a> and <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *         >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *         > <code>AWS::Include</code> </a> and <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *         <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *         </p>
      *         <note>
      *         <p>
@@ -1004,44 +1009,43 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code>AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1063,9 +1067,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1134,45 +1138,45 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code>AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1195,9 +1199,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1278,44 +1282,43 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code>AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1337,9 +1340,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1413,45 +1416,45 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code>AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1474,9 +1477,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1559,44 +1562,43 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code>AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1618,9 +1620,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1689,45 +1691,45 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code>AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1750,9 +1752,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1830,44 +1832,43 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     * AWS::IAM::AccessKey</a>
+     * <code>AWS::IAM::AccessKey</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     * AWS::IAM::Group</a>
+     * <code>AWS::IAM::Group</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
-     * ::IAM::InstanceProfile</a>
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     * <code>AWS::IAM::InstanceProfile</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     * AWS::IAM::Policy</a>
+     * <code>AWS::IAM::Policy</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     * AWS::IAM::Role</a>
+     * <code>AWS::IAM::Role</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     * AWS::IAM::User</a>
+     * <code>AWS::IAM::User</code> </a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     * AWS::IAM::UserToGroupAddition</a>
+     * <code>AWS::IAM::UserToGroupAddition</code> </a>
      * </p>
      * </li>
      * </ul>
@@ -1889,9 +1890,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     * >AWS::Include</a> and <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     * > <code>AWS::Include</code> </a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     * <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1960,45 +1961,45 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html">
-     *        AWS::IAM::AccessKey</a>
+     *        <code>AWS::IAM::AccessKey</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html">
-     *        AWS::IAM::Group</a>
+     *        <code>AWS::IAM::Group</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
-     *        >AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
+     *        <code>AWS::IAM::InstanceProfile</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html">
-     *        AWS::IAM::Policy</a>
+     *        <code>AWS::IAM::Policy</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html">
-     *        AWS::IAM::Role</a>
+     *        <code>AWS::IAM::Role</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html">
-     *        AWS::IAM::User</a>
+     *        <code>AWS::IAM::User</code> </a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
-     *        >AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
+     *        <code>AWS::IAM::UserToGroupAddition</code> </a>
      *        </p>
      *        </li>
      *        </ul>
@@ -2021,9 +2022,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
-     *        >AWS::Include</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
+     *        > <code>AWS::Include</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html">
+     *        <code>AWS::Serverless</code> </a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -3031,8 +3032,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Determines what action will be taken if stack creation fails. If this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -3046,16 +3047,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -3068,8 +3069,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. If this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -3082,16 +3084,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        </ul>
@@ -3110,8 +3112,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Determines what action will be taken if stack creation fails. If this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -3125,16 +3127,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -3146,8 +3148,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return Determines what action will be taken if stack creation fails. If this parameter is specified, the
      *         <code>DisableRollback</code> parameter to the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *         >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *         <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *         values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -3160,16 +3163,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *         <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *         >ExecuteChangeSet</a> API operation.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *         <code>ExecuteChangeSet</code> </a> API operation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to
      *         specifying <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *         >ExecuteChangeSet</a> API operation.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *         <code>ExecuteChangeSet</code> </a> API operation.
      *         </p>
      *         </li>
      *         </ul>
@@ -3188,8 +3191,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Determines what action will be taken if stack creation fails. If this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -3203,16 +3206,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -3225,8 +3228,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. If this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -3239,16 +3243,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        </ul>
@@ -3269,8 +3273,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Determines what action will be taken if stack creation fails. If this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -3284,16 +3288,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -3306,8 +3310,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. If this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -3320,16 +3325,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        </ul>
@@ -3348,8 +3353,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Determines what action will be taken if stack creation fails. If this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -3363,16 +3368,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -3385,8 +3390,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. If this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -3399,16 +3405,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        </ul>

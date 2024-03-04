@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Used to specify the configuration options for a volume's storage aggregate or aggregates.
+ * Used to specify the configuration options for an FSx for ONTAP volume's storage aggregate or aggregates.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateAggregateConfiguration" target="_top">AWS

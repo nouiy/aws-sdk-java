@@ -148,6 +148,30 @@ public class StackEvent implements Serializable, Cloneable {
      * </ul>
      */
     private String hookFailureMode;
+    /**
+     * <p>
+     * An optional field containing information about the detailed status of the stack event.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template. The
+     * <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String detailedStatus;
 
     /**
      * <p>
@@ -1121,6 +1145,254 @@ public class StackEvent implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * An optional field containing information about the detailed status of the stack event.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template. The
+     * <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param detailedStatus
+     *        An optional field containing information about the detailed status of the stack event.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     *        information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template.
+     *        The <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     *        </p>
+     *        </li>
+     * @see DetailedStatus
+     */
+
+    public void setDetailedStatus(String detailedStatus) {
+        this.detailedStatus = detailedStatus;
+    }
+
+    /**
+     * <p>
+     * An optional field containing information about the detailed status of the stack event.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template. The
+     * <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return An optional field containing information about the detailed status of the stack event.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *         >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the
+     *         template. The <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     *         </p>
+     *         </li>
+     * @see DetailedStatus
+     */
+
+    public String getDetailedStatus() {
+        return this.detailedStatus;
+    }
+
+    /**
+     * <p>
+     * An optional field containing information about the detailed status of the stack event.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template. The
+     * <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param detailedStatus
+     *        An optional field containing information about the detailed status of the stack event.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     *        information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template.
+     *        The <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DetailedStatus
+     */
+
+    public StackEvent withDetailedStatus(String detailedStatus) {
+        setDetailedStatus(detailedStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional field containing information about the detailed status of the stack event.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template. The
+     * <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param detailedStatus
+     *        An optional field containing information about the detailed status of the stack event.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     *        information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template.
+     *        The <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     *        </p>
+     *        </li>
+     * @see DetailedStatus
+     */
+
+    public void setDetailedStatus(DetailedStatus detailedStatus) {
+        withDetailedStatus(detailedStatus);
+    }
+
+    /**
+     * <p>
+     * An optional field containing information about the detailed status of the stack event.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     * >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template. The
+     * <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param detailedStatus
+     *        An optional field containing information about the detailed status of the stack event.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CONFIGURATION_COMPLETE</code> - all of the resources in the stack have reached that event. For more
+     *        information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-resource-configuration-complete.html"
+     *        >CloudFormation stack deployment</a> in the <i>CloudFormation User Guide</i>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VALIDATION_FAILED</code> - template validation failed because of invalid properties in the template.
+     *        The <code>ResourceStatusReason</code> field shows what properties are defined incorrectly.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DetailedStatus
+     */
+
+    public StackEvent withDetailedStatus(DetailedStatus detailedStatus) {
+        this.detailedStatus = detailedStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1163,7 +1435,9 @@ public class StackEvent implements Serializable, Cloneable {
         if (getHookInvocationPoint() != null)
             sb.append("HookInvocationPoint: ").append(getHookInvocationPoint()).append(",");
         if (getHookFailureMode() != null)
-            sb.append("HookFailureMode: ").append(getHookFailureMode());
+            sb.append("HookFailureMode: ").append(getHookFailureMode()).append(",");
+        if (getDetailedStatus() != null)
+            sb.append("DetailedStatus: ").append(getDetailedStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -1242,6 +1516,10 @@ public class StackEvent implements Serializable, Cloneable {
             return false;
         if (other.getHookFailureMode() != null && other.getHookFailureMode().equals(this.getHookFailureMode()) == false)
             return false;
+        if (other.getDetailedStatus() == null ^ this.getDetailedStatus() == null)
+            return false;
+        if (other.getDetailedStatus() != null && other.getDetailedStatus().equals(this.getDetailedStatus()) == false)
+            return false;
         return true;
     }
 
@@ -1266,6 +1544,7 @@ public class StackEvent implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getHookStatusReason() == null) ? 0 : getHookStatusReason().hashCode());
         hashCode = prime * hashCode + ((getHookInvocationPoint() == null) ? 0 : getHookInvocationPoint().hashCode());
         hashCode = prime * hashCode + ((getHookFailureMode() == null) ? 0 : getHookFailureMode().hashCode());
+        hashCode = prime * hashCode + ((getDetailedStatus() == null) ? 0 : getDetailedStatus().hashCode());
         return hashCode;
     }
 

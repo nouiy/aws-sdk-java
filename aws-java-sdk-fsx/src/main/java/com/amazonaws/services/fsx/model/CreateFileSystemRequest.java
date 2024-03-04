@@ -71,8 +71,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * <p>
      * <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the value of
-     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the maxium
-     * is calculated as 524,288 * <code>HAPairs</code>..
+     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the
+     * maximum is calculated as 524,288 * <code>HAPairs</code>.
      * </p>
      * <p>
      * <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64 GiB up to
@@ -149,6 +149,12 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of IDs specifying the security groups to apply to all network interfaces created for file system access.
      * This list isn't returned in later requests to describe the file system.
      * </p>
+     * <important>
+     * <p>
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet that
+     * has been shared with you.
+     * </p>
+     * </important>
      */
     private java.util.List<String> securityGroupIds;
     /**
@@ -352,8 +358,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * <p>
      * <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the value of
-     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the maxium
-     * is calculated as 524,288 * <code>HAPairs</code>..
+     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the
+     * maximum is calculated as 524,288 * <code>HAPairs</code>.
      * </p>
      * <p>
      * <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64 GiB up to
@@ -405,7 +411,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the
      *        value of the <code>HAPairs</code> property. The minimum value is calculated as 1,024 *
-     *        <code>HAPairs</code> and the maxium is calculated as 524,288 * <code>HAPairs</code>..
+     *        <code>HAPairs</code> and the maximum is calculated as 524,288 * <code>HAPairs</code>.
      *        </p>
      *        <p>
      *        <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64 GiB
@@ -461,8 +467,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * <p>
      * <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the value of
-     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the maxium
-     * is calculated as 524,288 * <code>HAPairs</code>..
+     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the
+     * maximum is calculated as 524,288 * <code>HAPairs</code>.
      * </p>
      * <p>
      * <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64 GiB up to
@@ -513,7 +519,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the
      *         value of the <code>HAPairs</code> property. The minimum value is calculated as 1,024 *
-     *         <code>HAPairs</code> and the maxium is calculated as 524,288 * <code>HAPairs</code>..
+     *         <code>HAPairs</code> and the maximum is calculated as 524,288 * <code>HAPairs</code>.
      *         </p>
      *         <p>
      *         <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64
@@ -569,8 +575,8 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * <p>
      * <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the value of
-     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the maxium
-     * is calculated as 524,288 * <code>HAPairs</code>..
+     * the <code>HAPairs</code> property. The minimum value is calculated as 1,024 * <code>HAPairs</code> and the
+     * maximum is calculated as 524,288 * <code>HAPairs</code>.
      * </p>
      * <p>
      * <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64 GiB up to
@@ -622,7 +628,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        <b>FSx for ONTAP file systems</b> - The amount of storage capacity that you can configure depends on the
      *        value of the <code>HAPairs</code> property. The minimum value is calculated as 1,024 *
-     *        <code>HAPairs</code> and the maxium is calculated as 524,288 * <code>HAPairs</code>..
+     *        <code>HAPairs</code> and the maximum is calculated as 524,288 * <code>HAPairs</code>.
      *        </p>
      *        <p>
      *        <b>FSx for OpenZFS file systems</b> - The amount of storage capacity that you can configure is from 64 GiB
@@ -1065,9 +1071,19 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of IDs specifying the security groups to apply to all network interfaces created for file system access.
      * This list isn't returned in later requests to describe the file system.
      * </p>
+     * <important>
+     * <p>
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet that
+     * has been shared with you.
+     * </p>
+     * </important>
      * 
      * @return A list of IDs specifying the security groups to apply to all network interfaces created for file system
-     *         access. This list isn't returned in later requests to describe the file system.
+     *         access. This list isn't returned in later requests to describe the file system.</p> <important>
+     *         <p>
+     *         You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC
+     *         subnet that has been shared with you.
+     *         </p>
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -1079,10 +1095,20 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of IDs specifying the security groups to apply to all network interfaces created for file system access.
      * This list isn't returned in later requests to describe the file system.
      * </p>
+     * <important>
+     * <p>
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet that
+     * has been shared with you.
+     * </p>
+     * </important>
      * 
      * @param securityGroupIds
      *        A list of IDs specifying the security groups to apply to all network interfaces created for file system
-     *        access. This list isn't returned in later requests to describe the file system.
+     *        access. This list isn't returned in later requests to describe the file system.</p> <important>
+     *        <p>
+     *        You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet
+     *        that has been shared with you.
+     *        </p>
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -1099,6 +1125,12 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of IDs specifying the security groups to apply to all network interfaces created for file system access.
      * This list isn't returned in later requests to describe the file system.
      * </p>
+     * <important>
+     * <p>
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet that
+     * has been shared with you.
+     * </p>
+     * </important>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSecurityGroupIds(java.util.Collection)} or {@link #withSecurityGroupIds(java.util.Collection)} if you
@@ -1107,7 +1139,11 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param securityGroupIds
      *        A list of IDs specifying the security groups to apply to all network interfaces created for file system
-     *        access. This list isn't returned in later requests to describe the file system.
+     *        access. This list isn't returned in later requests to describe the file system.</p> <important>
+     *        <p>
+     *        You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet
+     *        that has been shared with you.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1126,10 +1162,20 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of IDs specifying the security groups to apply to all network interfaces created for file system access.
      * This list isn't returned in later requests to describe the file system.
      * </p>
+     * <important>
+     * <p>
+     * You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet that
+     * has been shared with you.
+     * </p>
+     * </important>
      * 
      * @param securityGroupIds
      *        A list of IDs specifying the security groups to apply to all network interfaces created for file system
-     *        access. This list isn't returned in later requests to describe the file system.
+     *        access. This list isn't returned in later requests to describe the file system.</p> <important>
+     *        <p>
+     *        You must specify a security group if you are creating a Multi-AZ FSx for ONTAP file system in a VPC subnet
+     *        that has been shared with you.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

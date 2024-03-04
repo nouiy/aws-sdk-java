@@ -118,7 +118,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -166,7 +166,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -841,7 +841,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -864,7 +864,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <ul>
      *        <li>
      *        <p>
-     *        The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *        The value of <code>HAPairs</code> is less than 1 or greater than 12.
      *        </p>
      *        </li>
      *        <li>
@@ -893,7 +893,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -915,7 +915,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *         <ul>
      *         <li>
      *         <p>
-     *         The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *         The value of <code>HAPairs</code> is less than 1 or greater than 12.
      *         </p>
      *         </li>
      *         <li>
@@ -944,7 +944,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -967,7 +967,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <ul>
      *        <li>
      *        <p>
-     *        The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *        The value of <code>HAPairs</code> is less than 1 or greater than 12.
      *        </p>
      *        </li>
      *        <li>
@@ -1020,7 +1020,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -1066,7 +1066,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *        </p>
      *        </li>
      *        <li>
@@ -1116,7 +1116,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -1161,7 +1161,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *         <li>
      *         <p>
      *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *         </p>
      *         </li>
      *         <li>
@@ -1211,7 +1211,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -1257,7 +1257,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *        </p>
      *        </li>
      *        <li>

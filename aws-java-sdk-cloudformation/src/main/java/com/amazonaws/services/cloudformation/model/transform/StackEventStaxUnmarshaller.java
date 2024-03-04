@@ -122,6 +122,11 @@ public class StackEventStaxUnmarshaller implements Unmarshaller<StackEvent, Stax
                     stackEvent.setHookFailureMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("DetailedStatus", targetDepth)) {
+                    stackEvent.setDetailedStatus(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return stackEvent;

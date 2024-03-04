@@ -34,7 +34,7 @@ public class DiskIopsConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB of
-     * storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     * storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * </p>
      */
     private String mode;
@@ -58,12 +58,12 @@ public class DiskIopsConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB of
-     * storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     * storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * </p>
      * 
      * @param mode
      *        Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB
-     *        of storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     *        of storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * @see DiskIopsConfigurationMode
      */
 
@@ -74,11 +74,11 @@ public class DiskIopsConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB of
-     * storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     * storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * </p>
      * 
      * @return Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per
-     *         GB of storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     *         GB of storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * @see DiskIopsConfigurationMode
      */
 
@@ -89,12 +89,12 @@ public class DiskIopsConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB of
-     * storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     * storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * </p>
      * 
      * @param mode
      *        Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB
-     *        of storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     *        of storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DiskIopsConfigurationMode
      */
@@ -107,12 +107,12 @@ public class DiskIopsConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB of
-     * storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     * storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * </p>
      * 
      * @param mode
      *        Specifies whether the file system is using the <code>AUTOMATIC</code> setting of SSD IOPS of 3 IOPS per GB
-     *        of storage capacity, , or if it using a <code>USER_PROVISIONED</code> value.
+     *        of storage capacity, or if it using a <code>USER_PROVISIONED</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DiskIopsConfigurationMode
      */

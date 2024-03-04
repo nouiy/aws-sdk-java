@@ -60,8 +60,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * A list of <code>Parameter</code> structures that describes the input parameters and their values used to create
      * the change set. For more information, see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Parameter> parameters;
@@ -157,8 +157,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * Determines what action will be taken if stack creation fails. When this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -172,16 +172,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -407,14 +407,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * A list of <code>Parameter</code> structures that describes the input parameters and their values used to create
      * the change set. For more information, see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * 
      * @return A list of <code>Parameter</code> structures that describes the input parameters and their values used to
      *         create the change set. For more information, see the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *         data type.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *         <code>Parameter</code> </a> data type.
      */
 
     public java.util.List<Parameter> getParameters() {
@@ -428,15 +428,15 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * A list of <code>Parameter</code> structures that describes the input parameters and their values used to create
      * the change set. For more information, see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * 
      * @param parameters
      *        A list of <code>Parameter</code> structures that describes the input parameters and their values used to
      *        create the change set. For more information, see the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *        data type.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *        <code>Parameter</code> </a> data type.
      */
 
     public void setParameters(java.util.Collection<Parameter> parameters) {
@@ -452,8 +452,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * A list of <code>Parameter</code> structures that describes the input parameters and their values used to create
      * the change set. For more information, see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -464,8 +464,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * @param parameters
      *        A list of <code>Parameter</code> structures that describes the input parameters and their values used to
      *        create the change set. For more information, see the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *        data type.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *        <code>Parameter</code> </a> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -483,15 +483,15 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * A list of <code>Parameter</code> structures that describes the input parameters and their values used to create
      * the change set. For more information, see the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a> data
-     * type.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     * <code>Parameter</code> </a> data type.
      * </p>
      * 
      * @param parameters
      *        A list of <code>Parameter</code> structures that describes the input parameters and their values used to
      *        create the change set. For more information, see the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">Parameter</a>
-     *        data type.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html">
+     *        <code>Parameter</code> </a> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1346,8 +1346,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * Determines what action will be taken if stack creation fails. When this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -1361,16 +1361,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -1378,8 +1378,9 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. When this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1392,16 +1393,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      * @see OnStackFailure
@@ -1415,8 +1416,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * Determines what action will be taken if stack creation fails. When this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -1430,24 +1431,25 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
      * 
      * @return Determines what action will be taken if stack creation fails. When this parameter is specified, the
      *         <code>DisableRollback</code> parameter to the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *         >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *         <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *         values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1460,16 +1462,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      *         <p>
      *         <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *         <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *         >ExecuteChangeSet</a> API operation.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *         <code>ExecuteChangeSet</code> </a> API operation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to
      *         specifying <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *         >ExecuteChangeSet</a> API operation.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *         <code>ExecuteChangeSet</code> </a> API operation.
      *         </p>
      *         </li>
      * @see OnStackFailure
@@ -1483,8 +1485,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * Determines what action will be taken if stack creation fails. When this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -1498,16 +1500,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -1515,8 +1517,9 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. When this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1529,16 +1532,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1554,8 +1557,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * Determines what action will be taken if stack creation fails. When this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -1569,16 +1572,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -1586,8 +1589,9 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. When this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1600,16 +1604,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      * @see OnStackFailure
@@ -1623,8 +1627,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * Determines what action will be taken if stack creation fails. When this parameter is specified, the
      * <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these values:
      * </p>
      * <ul>
      * <li>
@@ -1638,16 +1642,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      * <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      * <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     * >ExecuteChangeSet</a> API operation.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     * <code>ExecuteChangeSet</code> </a> API operation.
      * </p>
      * </li>
      * </ul>
@@ -1655,8 +1659,9 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * @param onStackFailure
      *        Determines what action will be taken if stack creation fails. When this parameter is specified, the
      *        <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation must not be specified. This must be one of these values:</p>
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation must not be specified. This must be one of these
+     *        values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1669,16 +1674,16 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      *        <p>
      *        <code>DO_NOTHING</code> - if the stack creation fails, do nothing. This is equivalent to specifying
      *        <code>true</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ROLLBACK</code> - if the stack creation fails, roll back the stack. This is equivalent to specifying
      *        <code>false</code> for the <code>DisableRollback</code> parameter to the <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html"
-     *        >ExecuteChangeSet</a> API operation.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ExecuteChangeSet.html">
+     *        <code>ExecuteChangeSet</code> </a> API operation.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

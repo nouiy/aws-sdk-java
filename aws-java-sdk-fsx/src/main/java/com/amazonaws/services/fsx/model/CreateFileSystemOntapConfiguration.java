@@ -97,6 +97,14 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
      * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
+     * <note>
+     * <p>
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These route
+     * tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for ONTAP
+     * Multi-AZ file systems using CloudFormation we recommend that you add the
+     * <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     * </p>
+     * </note>
      */
     private java.util.List<String> routeTableIds;
     /**
@@ -128,9 +136,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private String weeklyMaintenanceStartTime;
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The value of
-     * this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     * <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
+     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
+     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     * and <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
      * FSx for ONTAP user guide.
      * </p>
@@ -140,7 +149,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -157,21 +166,22 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code> when
+     * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -188,7 +198,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -704,11 +714,25 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
      * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
+     * <note>
+     * <p>
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These route
+     * tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for ONTAP
+     * Multi-AZ file systems using CloudFormation we recommend that you add the
+     * <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     * </p>
+     * </note>
      * 
      * @return (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
      *         the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
      *         the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
-     *         table.
+     *         table.</p> <note>
+     *         <p>
+     *         Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These
+     *         route tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx
+     *         for ONTAP Multi-AZ file systems using CloudFormation we recommend that you add the
+     *         <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     *         </p>
      */
 
     public java.util.List<String> getRouteTableIds() {
@@ -721,12 +745,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
      * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
+     * <note>
+     * <p>
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These route
+     * tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for ONTAP
+     * Multi-AZ file systems using CloudFormation we recommend that you add the
+     * <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     * </p>
+     * </note>
      * 
      * @param routeTableIds
      *        (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
      *        the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
      *        the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
-     *        table.
+     *        table.</p> <note>
+     *        <p>
+     *        Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These
+     *        route tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for
+     *        ONTAP Multi-AZ file systems using CloudFormation we recommend that you add the
+     *        <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     *        </p>
      */
 
     public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
@@ -744,6 +782,14 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
      * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
+     * <note>
+     * <p>
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These route
+     * tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for ONTAP
+     * Multi-AZ file systems using CloudFormation we recommend that you add the
+     * <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRouteTableIds(java.util.Collection)} or {@link #withRouteTableIds(java.util.Collection)} if you want
@@ -754,7 +800,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
      *        the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
      *        the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
-     *        table.
+     *        table.</p> <note>
+     *        <p>
+     *        Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These
+     *        route tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for
+     *        ONTAP Multi-AZ file systems using CloudFormation we recommend that you add the
+     *        <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -774,12 +826,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
      * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
+     * <note>
+     * <p>
+     * Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These route
+     * tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for ONTAP
+     * Multi-AZ file systems using CloudFormation we recommend that you add the
+     * <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     * </p>
+     * </note>
      * 
      * @param routeTableIds
      *        (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
      *        the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
      *        the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
-     *        table.
+     *        table.</p> <note>
+     *        <p>
+     *        Amazon FSx manages these route tables for Multi-AZ file systems using tag-based authentication. These
+     *        route tables are tagged with <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code>. When creating FSx for
+     *        ONTAP Multi-AZ file systems using CloudFormation we recommend that you add the
+     *        <code>Key: AmazonFSx; Value: ManagedByAmazonFSx</code> tag manually.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -970,9 +1036,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The value of
-     * this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     * <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
+     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
+     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     * and <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
      * FSx for ONTAP user guide.
      * </p>
@@ -982,7 +1049,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -994,9 +1061,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </ul>
      * 
      * @param hAPairs
-     *        Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The
-     *        value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     *        <code>ThroughputCapacity</code>. For more information, see <a
+     *        Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
+     *        systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered
+     *        by up to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>,
+     *        <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in
      *        the FSx for ONTAP user guide.</p>
      *        <p>
@@ -1005,7 +1073,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *        The value of <code>HAPairs</code> is less than 1 or greater than 12.
      *        </p>
      *        </li>
      *        <li>
@@ -1022,9 +1090,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The value of
-     * this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     * <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
+     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
+     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     * and <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
      * FSx for ONTAP user guide.
      * </p>
@@ -1034,7 +1103,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -1045,9 +1114,11 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </li>
      * </ul>
      * 
-     * @return Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The
-     *         value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     *         <code>ThroughputCapacity</code>. For more information, see <a
+     * @return Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up
+     *         file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are
+     *         powered by up to 12 HA pairs. The value of this property affects the values of
+     *         <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more
+     *         information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a>
      *         in the FSx for ONTAP user guide.</p>
      *         <p>
@@ -1056,7 +1127,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <ul>
      *         <li>
      *         <p>
-     *         The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *         The value of <code>HAPairs</code> is less than 1 or greater than 12.
      *         </p>
      *         </li>
      *         <li>
@@ -1073,9 +1144,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The value of
-     * this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     * <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
+     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
+     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     * and <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
      * FSx for ONTAP user guide.
      * </p>
@@ -1085,7 +1157,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * The value of <code>HAPairs</code> is less than 1 or greater than 12.
      * </p>
      * </li>
      * <li>
@@ -1097,9 +1169,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </ul>
      * 
      * @param hAPairs
-     *        Specifies how many high-availability (HA) pairs the file system will have. The default value is 1. The
-     *        value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
-     *        <code>ThroughputCapacity</code>. For more information, see <a
+     *        Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
+     *        systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered
+     *        by up to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>,
+     *        <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in
      *        the FSx for ONTAP user guide.</p>
      *        <p>
@@ -1108,7 +1181,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *        The value of <code>HAPairs</code> is less than 1 or greater than 12.
      *        </p>
      *        </li>
      *        <li>
@@ -1130,21 +1203,22 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code> when
+     * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -1161,7 +1235,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -1175,22 +1249,23 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      *        </p>
      *        <p>
-     *        This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
-     *        required.
+     *        You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code>
+     *        when creating a file system, but not both.
      *        </p>
      *        <p>
-     *        This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *        This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA
+     *        pair.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
-     *        4096 MBps.
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512,
+     *        1024, 2048, or 4096 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -1207,7 +1282,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *        </p>
      *        </li>
      *        <li>
@@ -1226,21 +1301,22 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code> when
+     * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -1257,7 +1333,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -1270,22 +1346,23 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * @return Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      *         </p>
      *         <p>
-     *         This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
-     *         required.
+     *         You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code>
+     *         when creating a file system, but not both.
      *         </p>
      *         <p>
-     *         This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *         This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA
+     *         pair.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
-     *         4096 MBps.
+     *         For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512,
+     *         1024, 2048, or 4096 MBps.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *         For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      *         </p>
      *         </li>
      *         </ul>
@@ -1302,7 +1379,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *         </p>
      *         </li>
      *         <li>
@@ -1321,21 +1398,22 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code> when
+     * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -1352,7 +1430,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      * </p>
      * </li>
      * <li>
@@ -1366,22 +1444,23 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      *        </p>
      *        <p>
-     *        This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
-     *        required.
+     *        You can define either the <code>ThroughputCapacityPerHAPair</code> or the <code>ThroughputCapacity</code>
+     *        when creating a file system, but not both.
      *        </p>
      *        <p>
-     *        This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *        This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA
+     *        pair.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
-     *        4096 MBps.
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512,
+     *        1024, 2048, or 4096 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -1398,7 +1477,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
      *        </p>
      *        </li>
      *        <li>
