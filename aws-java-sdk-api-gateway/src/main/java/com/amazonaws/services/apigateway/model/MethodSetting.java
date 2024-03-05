@@ -43,7 +43,8 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs.
+     * CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We recommend
+     * that you don't enable this option for production APIs.
      * </p>
      */
     private Boolean dataTraceEnabled;
@@ -205,12 +206,14 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs.
+     * CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We recommend
+     * that you don't enable this option for production APIs.
      * </p>
      * 
      * @param dataTraceEnabled
      *        Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *        Amazon CloudWatch Logs.
+     *        Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data.
+     *        We recommend that you don't enable this option for production APIs.
      */
 
     public void setDataTraceEnabled(Boolean dataTraceEnabled) {
@@ -220,11 +223,13 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs.
+     * CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We recommend
+     * that you don't enable this option for production APIs.
      * </p>
      * 
      * @return Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *         Amazon CloudWatch Logs.
+     *         Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive
+     *         data. We recommend that you don't enable this option for production APIs.
      */
 
     public Boolean getDataTraceEnabled() {
@@ -234,12 +239,14 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs.
+     * CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We recommend
+     * that you don't enable this option for production APIs.
      * </p>
      * 
      * @param dataTraceEnabled
      *        Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *        Amazon CloudWatch Logs.
+     *        Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data.
+     *        We recommend that you don't enable this option for production APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,11 +258,13 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs.
+     * CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We recommend
+     * that you don't enable this option for production APIs.
      * </p>
      * 
      * @return Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *         Amazon CloudWatch Logs.
+     *         Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive
+     *         data. We recommend that you don't enable this option for production APIs.
      */
 
     public Boolean isDataTraceEnabled() {

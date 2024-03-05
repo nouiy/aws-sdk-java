@@ -15,7 +15,7 @@ package com.amazonaws.services.chatbot.model;
 import javax.annotation.Generated;
 
 /**
- * Base exception for all service exceptions thrown by chatbot
+ * Base exception for all service exceptions thrown by AWS Chatbot
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AWSChatbotException extends com.amazonaws.AmazonServiceException {

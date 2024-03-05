@@ -60,6 +60,12 @@ public class TemplateJsonUnmarshaller implements Unmarshaller<Template, JsonUnma
                     context.nextToken();
                     template.setTemplateData(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Headers", targetDepth)) {
+                    context.nextToken();
+                    template.setHeaders(new ListUnmarshaller<MessageHeader>(MessageHeaderJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

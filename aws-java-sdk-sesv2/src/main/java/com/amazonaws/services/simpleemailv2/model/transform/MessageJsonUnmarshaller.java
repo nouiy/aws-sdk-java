@@ -56,6 +56,12 @@ public class MessageJsonUnmarshaller implements Unmarshaller<Message, JsonUnmars
                     context.nextToken();
                     message.setBody(BodyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Headers", targetDepth)) {
+                    context.nextToken();
+                    message.setHeaders(new ListUnmarshaller<MessageHeader>(MessageHeaderJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

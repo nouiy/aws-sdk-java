@@ -21,9 +21,9 @@ import com.amazonaws.annotation.ThreadSafe;
 import java.util.concurrent.ExecutorService;
 
 /**
- * Client for accessing chatbot asynchronously. Each asynchronous method will return a Java Future object representing
- * the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive notification when
- * an asynchronous operation completes.
+ * Client for accessing AWS Chatbot asynchronously. Each asynchronous method will return a Java Future object
+ * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
+ * notification when an asynchronous operation completes.
  * <p>
  * AWS Chatbot API
  */
@@ -40,7 +40,7 @@ public class AWSChatbotAsyncClient extends AWSChatbotClient implements AWSChatbo
     }
 
     /**
-     * Constructs a new asynchronous client to invoke service methods on chatbot using the specified parameters.
+     * Constructs a new asynchronous client to invoke service methods on AWS Chatbot using the specified parameters.
      *
      * @param asyncClientParams
      *        Object providing client parameters.
@@ -50,7 +50,7 @@ public class AWSChatbotAsyncClient extends AWSChatbotClient implements AWSChatbo
     }
 
     /**
-     * Constructs a new asynchronous client to invoke service methods on chatbot using the specified parameters.
+     * Constructs a new asynchronous client to invoke service methods on AWS Chatbot using the specified parameters.
      *
      * @param asyncClientParams
      *        Object providing client parameters.

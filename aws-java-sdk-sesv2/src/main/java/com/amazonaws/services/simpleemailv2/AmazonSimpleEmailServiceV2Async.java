@@ -3779,9 +3779,14 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
 
     /**
      * <p>
-     * Updates a contact's preferences for a list. It is not necessary to specify all existing topic preferences in the
-     * TopicPreferences object, just the ones that need updating.
+     * Updates a contact's preferences for a list.
      * </p>
+     * <note>
+     * <p>
+     * You must specify all existing topic preferences in the <code>TopicPreferences</code> object, not just the ones
+     * that need updating; otherwise, all your existing preferences will be removed.
+     * </p>
+     * </note>
      * 
      * @param updateContactRequest
      * @return A Java Future containing the result of the UpdateContact operation returned by the service.
@@ -3793,9 +3798,14 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
 
     /**
      * <p>
-     * Updates a contact's preferences for a list. It is not necessary to specify all existing topic preferences in the
-     * TopicPreferences object, just the ones that need updating.
+     * Updates a contact's preferences for a list.
      * </p>
+     * <note>
+     * <p>
+     * You must specify all existing topic preferences in the <code>TopicPreferences</code> object, not just the ones
+     * that need updating; otherwise, all your existing preferences will be removed.
+     * </p>
+     * </note>
      * 
      * @param updateContactRequest
      * @param asyncHandler

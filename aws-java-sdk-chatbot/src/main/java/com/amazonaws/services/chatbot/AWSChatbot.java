@@ -20,7 +20,7 @@ import com.amazonaws.regions.*;
 import com.amazonaws.services.chatbot.model.*;
 
 /**
- * Interface for accessing chatbot.
+ * Interface for accessing AWS Chatbot.
  * <p>
  * <b>Note:</b> Do not directly implement this interface, new methods are added to it regularly. Extend from
  * {@link com.amazonaws.services.chatbot.AbstractAWSChatbot} instead.

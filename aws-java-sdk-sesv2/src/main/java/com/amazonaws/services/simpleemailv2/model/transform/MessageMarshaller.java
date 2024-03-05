@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.simpleemailv2.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class MessageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Subject").build();
     private static final MarshallingInfo<StructuredPojo> BODY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Body").build();
+    private static final MarshallingInfo<List> HEADERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Headers").build();
 
     private static final MessageMarshaller instance = new MessageMarshaller();
 
@@ -50,6 +53,7 @@ public class MessageMarshaller {
         try {
             protocolMarshaller.marshall(message.getSubject(), SUBJECT_BINDING);
             protocolMarshaller.marshall(message.getBody(), BODY_BINDING);
+            protocolMarshaller.marshall(message.getHeaders(), HEADERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

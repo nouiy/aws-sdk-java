@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 import com.amazonaws.services.chatbot.model.*;
 
 /**
- * Interface for accessing chatbot asynchronously. Each asynchronous method will return a Java Future object
+ * Interface for accessing AWS Chatbot asynchronously. Each asynchronous method will return a Java Future object
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>

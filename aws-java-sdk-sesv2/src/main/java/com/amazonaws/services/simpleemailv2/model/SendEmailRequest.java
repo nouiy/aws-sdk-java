@@ -100,8 +100,8 @@ public class SendEmailRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String feedbackForwardingEmailAddressIdentityArn;
     /**
      * <p>
-     * An object that contains the body of the message. You can send either a Simple message Raw message or a template
-     * Message.
+     * An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     * Templated message.
      * </p>
      */
     private EmailContent content;
@@ -596,13 +596,13 @@ public class SendEmailRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An object that contains the body of the message. You can send either a Simple message Raw message or a template
-     * Message.
+     * An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     * Templated message.
      * </p>
      * 
      * @param content
-     *        An object that contains the body of the message. You can send either a Simple message Raw message or a
-     *        template Message.
+     *        An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     *        Templated message.
      */
 
     public void setContent(EmailContent content) {
@@ -611,12 +611,12 @@ public class SendEmailRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An object that contains the body of the message. You can send either a Simple message Raw message or a template
-     * Message.
+     * An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     * Templated message.
      * </p>
      * 
-     * @return An object that contains the body of the message. You can send either a Simple message Raw message or a
-     *         template Message.
+     * @return An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     *         Templated message.
      */
 
     public EmailContent getContent() {
@@ -625,13 +625,13 @@ public class SendEmailRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An object that contains the body of the message. You can send either a Simple message Raw message or a template
-     * Message.
+     * An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     * Templated message.
      * </p>
      * 
      * @param content
-     *        An object that contains the body of the message. You can send either a Simple message Raw message or a
-     *        template Message.
+     *        An object that contains the body of the message. You can send either a Simple message, Raw message, or a
+     *        Templated message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

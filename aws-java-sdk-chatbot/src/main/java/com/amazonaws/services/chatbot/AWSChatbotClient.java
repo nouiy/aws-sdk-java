@@ -48,8 +48,8 @@ import com.amazonaws.services.chatbot.model.*;
 import com.amazonaws.services.chatbot.model.transform.*;
 
 /**
- * Client for accessing chatbot. All service calls made using this client are blocking, and will not return until the
- * service call completes.
+ * Client for accessing AWS Chatbot. All service calls made using this client are blocking, and will not return until
+ * the service call completes.
  * <p>
  * AWS Chatbot API
  */
@@ -167,7 +167,7 @@ public class AWSChatbotClient extends AmazonWebServiceClient implements AWSChatb
     }
 
     /**
-     * Constructs a new client to invoke service methods on chatbot using the specified parameters.
+     * Constructs a new client to invoke service methods on AWS Chatbot using the specified parameters.
      *
      * <p>
      * All service calls made using this new client object are blocking, and will not return until the service call
@@ -181,7 +181,7 @@ public class AWSChatbotClient extends AmazonWebServiceClient implements AWSChatb
     }
 
     /**
-     * Constructs a new client to invoke service methods on chatbot using the specified parameters.
+     * Constructs a new client to invoke service methods on AWS Chatbot using the specified parameters.
      *
      * <p>
      * All service calls made using this new client object are blocking, and will not return until the service call
