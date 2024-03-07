@@ -22,8 +22,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Specifies custom configurations for the associations between the web ACL and protected resources.
  * </p>
  * <p>
- * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward to
- * WAF for inspection. The default is 16 KB (16,384 bytes).
+ * Use this to customize the maximum size of the request body that your protected resources forward to WAF for
+ * inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+ * Access resources. The default setting is 16 KB (16,384 bytes).
  * </p>
  * <note>
  * <p>
@@ -31,6 +32,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
  * </p>
  * </note>
+ * <p>
+ * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/AssociationConfig" target="_top">AWS API
  *      Documentation</a>
@@ -40,8 +44,9 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Customizes the maximum size of the request body that your protected CloudFront distributions forward to WAF for
-     * inspection. The default size is 16 KB (16,384 bytes).
+     * Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon Cognito, App
+     * Runner, and Verified Access resources forward to WAF for inspection. The default size is 16 KB (16,384 bytes).
+     * You can change the setting for any of the available resource types.
      * </p>
      * <note>
      * <p>
@@ -49,13 +54,20 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     * </p>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      */
     private java.util.Map<String, RequestBodyAssociatedResourceTypeConfig> requestBody;
 
     /**
      * <p>
-     * Customizes the maximum size of the request body that your protected CloudFront distributions forward to WAF for
-     * inspection. The default size is 16 KB (16,384 bytes).
+     * Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon Cognito, App
+     * Runner, and Verified Access resources forward to WAF for inspection. The default size is 16 KB (16,384 bytes).
+     * You can change the setting for any of the available resource types.
      * </p>
      * <note>
      * <p>
@@ -63,13 +75,26 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     * </p>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      * 
-     * @return Customizes the maximum size of the request body that your protected CloudFront distributions forward to
-     *         WAF for inspection. The default size is 16 KB (16,384 bytes). </p> <note>
+     * @return Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon
+     *         Cognito, App Runner, and Verified Access resources forward to WAF for inspection. The default size is 16
+     *         KB (16,384 bytes). You can change the setting for any of the available resource types. </p> <note>
      *         <p>
      *         You are charged additional fees when your protected resources forward body sizes that are larger than the
      *         default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *         </p>
+     *         </note>
+     *         <p>
+     *         Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     *         </p>
+     *         <p>
+     *         For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
      */
 
     public java.util.Map<String, RequestBodyAssociatedResourceTypeConfig> getRequestBody() {
@@ -78,8 +103,9 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Customizes the maximum size of the request body that your protected CloudFront distributions forward to WAF for
-     * inspection. The default size is 16 KB (16,384 bytes).
+     * Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon Cognito, App
+     * Runner, and Verified Access resources forward to WAF for inspection. The default size is 16 KB (16,384 bytes).
+     * You can change the setting for any of the available resource types.
      * </p>
      * <note>
      * <p>
@@ -87,14 +113,27 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     * </p>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      * 
      * @param requestBody
-     *        Customizes the maximum size of the request body that your protected CloudFront distributions forward to
-     *        WAF for inspection. The default size is 16 KB (16,384 bytes). </p> <note>
+     *        Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon
+     *        Cognito, App Runner, and Verified Access resources forward to WAF for inspection. The default size is 16
+     *        KB (16,384 bytes). You can change the setting for any of the available resource types. </p> <note>
      *        <p>
      *        You are charged additional fees when your protected resources forward body sizes that are larger than the
      *        default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *        </p>
+     *        </note>
+     *        <p>
+     *        Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     *        </p>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
      */
 
     public void setRequestBody(java.util.Map<String, RequestBodyAssociatedResourceTypeConfig> requestBody) {
@@ -103,8 +142,9 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Customizes the maximum size of the request body that your protected CloudFront distributions forward to WAF for
-     * inspection. The default size is 16 KB (16,384 bytes).
+     * Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon Cognito, App
+     * Runner, and Verified Access resources forward to WAF for inspection. The default size is 16 KB (16,384 bytes).
+     * You can change the setting for any of the available resource types.
      * </p>
      * <note>
      * <p>
@@ -112,14 +152,27 @@ public class AssociationConfig implements Serializable, Cloneable, StructuredPoj
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     * </p>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      * 
      * @param requestBody
-     *        Customizes the maximum size of the request body that your protected CloudFront distributions forward to
-     *        WAF for inspection. The default size is 16 KB (16,384 bytes). </p> <note>
+     *        Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon
+     *        Cognito, App Runner, and Verified Access resources forward to WAF for inspection. The default size is 16
+     *        KB (16,384 bytes). You can change the setting for any of the available resource types. </p> <note>
      *        <p>
      *        You are charged additional fees when your protected resources forward body sizes that are larger than the
      *        default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *        </p>
+     *        </note>
+     *        <p>
+     *        Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+     *        </p>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

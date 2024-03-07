@@ -14687,6 +14687,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * still register an AMI from it. Just use <code>RegisterImage</code> with the Amazon S3 bucket name and image
      * manifest name you provided to the bundle task.
      * </p>
+     * </note> <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
      * </note>
      * 
      * @param describeBundleTasksRequest
@@ -16771,6 +16776,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Describes the specified attribute of the specified AMI. You can specify only one attribute at a time.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeImageAttributeRequest
      *        Contains the parameters for DescribeImageAttribute.
@@ -16837,6 +16848,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * After all instances that reference a deregistered AMI are terminated, specifying the ID of the image will
      * eventually return an error indicating that the AMI ID cannot be found.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeImagesRequest
      * @return Result of the DescribeImages operation returned by the service.
@@ -35524,8 +35541,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Registers an AMI. When you're creating an AMI, this is the final step you must complete before you can launch an
-     * instance from the AMI. For more information about creating AMIs, see <a
+     * Registers an AMI. When you're creating an instance-store backed AMI, registering the AMI is the final step in the
+     * creation process. For more information about creating AMIs, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html">Create your own AMI</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>

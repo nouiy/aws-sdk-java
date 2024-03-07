@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Customizes the maximum size of the request body that your protected CloudFront distributions forward to WAF for
- * inspection. The default size is 16 KB (16,384 bytes).
+ * Customizes the maximum size of the request body that your protected CloudFront, API Gateway, Amazon Cognito, App
+ * Runner, and Verified Access resources forward to WAF for inspection. The default size is 16 KB (16,384 bytes). You
+ * can change the setting for any of the available resource types.
  * </p>
  * <note>
  * <p>
@@ -28,6 +29,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
  * </p>
  * </note>
+ * <p>
+ * Example JSON: <code> { "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }</code>
+ * </p>
+ * <p>
+ * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+ * </p>
  * <p>
  * This is used in the <code>AssociationConfig</code> of the web ACL.
  * </p>
@@ -40,8 +47,9 @@ public class RequestBodyAssociatedResourceTypeConfig implements Serializable, Cl
 
     /**
      * <p>
-     * Specifies the maximum size of the web request body component that an associated CloudFront distribution should
-     * send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON body.
+     * Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway, Amazon
+     * Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to statements in
+     * the web ACL that inspect the body or JSON body.
      * </p>
      * <p>
      * Default: <code>16 KB (16,384 bytes)</code>
@@ -51,17 +59,18 @@ public class RequestBodyAssociatedResourceTypeConfig implements Serializable, Cl
 
     /**
      * <p>
-     * Specifies the maximum size of the web request body component that an associated CloudFront distribution should
-     * send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON body.
+     * Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway, Amazon
+     * Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to statements in
+     * the web ACL that inspect the body or JSON body.
      * </p>
      * <p>
      * Default: <code>16 KB (16,384 bytes)</code>
      * </p>
      * 
      * @param defaultSizeInspectionLimit
-     *        Specifies the maximum size of the web request body component that an associated CloudFront distribution
-     *        should send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON
-     *        body. </p>
+     *        Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway,
+     *        Amazon Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to
+     *        statements in the web ACL that inspect the body or JSON body. </p>
      *        <p>
      *        Default: <code>16 KB (16,384 bytes)</code>
      * @see SizeInspectionLimit
@@ -73,16 +82,17 @@ public class RequestBodyAssociatedResourceTypeConfig implements Serializable, Cl
 
     /**
      * <p>
-     * Specifies the maximum size of the web request body component that an associated CloudFront distribution should
-     * send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON body.
+     * Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway, Amazon
+     * Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to statements in
+     * the web ACL that inspect the body or JSON body.
      * </p>
      * <p>
      * Default: <code>16 KB (16,384 bytes)</code>
      * </p>
      * 
-     * @return Specifies the maximum size of the web request body component that an associated CloudFront distribution
-     *         should send to WAF for inspection. This applies to statements in the web ACL that inspect the body or
-     *         JSON body. </p>
+     * @return Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway,
+     *         Amazon Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies
+     *         to statements in the web ACL that inspect the body or JSON body. </p>
      *         <p>
      *         Default: <code>16 KB (16,384 bytes)</code>
      * @see SizeInspectionLimit
@@ -94,17 +104,18 @@ public class RequestBodyAssociatedResourceTypeConfig implements Serializable, Cl
 
     /**
      * <p>
-     * Specifies the maximum size of the web request body component that an associated CloudFront distribution should
-     * send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON body.
+     * Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway, Amazon
+     * Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to statements in
+     * the web ACL that inspect the body or JSON body.
      * </p>
      * <p>
      * Default: <code>16 KB (16,384 bytes)</code>
      * </p>
      * 
      * @param defaultSizeInspectionLimit
-     *        Specifies the maximum size of the web request body component that an associated CloudFront distribution
-     *        should send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON
-     *        body. </p>
+     *        Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway,
+     *        Amazon Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to
+     *        statements in the web ACL that inspect the body or JSON body. </p>
      *        <p>
      *        Default: <code>16 KB (16,384 bytes)</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -118,17 +129,18 @@ public class RequestBodyAssociatedResourceTypeConfig implements Serializable, Cl
 
     /**
      * <p>
-     * Specifies the maximum size of the web request body component that an associated CloudFront distribution should
-     * send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON body.
+     * Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway, Amazon
+     * Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to statements in
+     * the web ACL that inspect the body or JSON body.
      * </p>
      * <p>
      * Default: <code>16 KB (16,384 bytes)</code>
      * </p>
      * 
      * @param defaultSizeInspectionLimit
-     *        Specifies the maximum size of the web request body component that an associated CloudFront distribution
-     *        should send to WAF for inspection. This applies to statements in the web ACL that inspect the body or JSON
-     *        body. </p>
+     *        Specifies the maximum size of the web request body component that an associated CloudFront, API Gateway,
+     *        Amazon Cognito, App Runner, or Verified Access resource should send to WAF for inspection. This applies to
+     *        statements in the web ACL that inspect the body or JSON body. </p>
      *        <p>
      *        Default: <code>16 KB (16,384 bytes)</code>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -687,7 +687,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for the
      * <code>Iops</code> parameter.
      * </p>
      * <p>
@@ -5779,7 +5779,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for the
      * <code>Iops</code> parameter.
      * </p>
      * <p>
@@ -5803,7 +5803,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageType
      *        The storage type to associate with the DB instance.</p>
      *        <p>
-     *        If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for
+     *        If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for
      *        the <code>Iops</code> parameter.
      *        </p>
      *        <p>
@@ -5833,7 +5833,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for the
      * <code>Iops</code> parameter.
      * </p>
      * <p>
@@ -5856,7 +5856,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The storage type to associate with the DB instance.</p>
      *         <p>
-     *         If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for
+     *         If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for
      *         the <code>Iops</code> parameter.
      *         </p>
      *         <p>
@@ -5887,7 +5887,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for the
      * <code>Iops</code> parameter.
      * </p>
      * <p>
@@ -5911,7 +5911,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageType
      *        The storage type to associate with the DB instance.</p>
      *        <p>
-     *        If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for
+     *        If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code> you must also include a value for
      *        the <code>Iops</code> parameter.
      *        </p>
      *        <p>

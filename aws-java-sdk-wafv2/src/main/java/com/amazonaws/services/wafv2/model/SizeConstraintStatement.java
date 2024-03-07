@@ -24,12 +24,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * look for query strings that are longer than 100 bytes.
  * </p>
  * <p>
- * If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to the limit
- * for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for CloudFront web ACLs,
- * this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the limit in the web ACL
- * <code>AssociationConfig</code>, for additional fees. If you know that the request body for your web requests should
- * never exceed the inspection limit, you could use a size constraint statement to block requests that have a larger
- * request body size.
+ * If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to the limit
+ * for the web ACL and protected resource type. If you know that the request body for your web requests should never
+ * exceed the inspection limit, you can use a size constraint statement to block requests that have a larger request
+ * body size. For more information about the inspection limits, see <code>Body</code> and <code>JsonBody</code> settings
+ * for the <code>FieldToMatch</code> data type.
  * </p>
  * <p>
  * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one

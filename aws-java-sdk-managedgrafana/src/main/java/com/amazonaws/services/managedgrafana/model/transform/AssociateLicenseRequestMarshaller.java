@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AssociateLicenseRequestMarshaller {
 
+    private static final MarshallingInfo<String> GRAFANATOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.HEADER).marshallLocationName("Grafana-Token").build();
     private static final MarshallingInfo<String> LICENSETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("licenseType").build();
     private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
@@ -48,6 +50,7 @@ public class AssociateLicenseRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(associateLicenseRequest.getGrafanaToken(), GRAFANATOKEN_BINDING);
             protocolMarshaller.marshall(associateLicenseRequest.getLicenseType(), LICENSETYPE_BINDING);
             protocolMarshaller.marshall(associateLicenseRequest.getWorkspaceId(), WORKSPACEID_BINDING);
         } catch (Exception e) {

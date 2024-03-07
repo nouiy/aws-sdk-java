@@ -33,7 +33,7 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
     private String encryptedPinBlock;
     /**
      * <p>
-     * The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     * The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      * </p>
      */
     private DukptDerivationAttributes incomingDukptAttributes;
@@ -46,7 +46,7 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
     private String incomingKeyIdentifier;
     /**
      * <p>
-     * The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
      * </p>
      */
     private TranslationIsoFormats incomingTranslationAttributes;
@@ -65,7 +65,7 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
     private String outgoingKeyIdentifier;
     /**
      * <p>
-     * The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      * </p>
      */
     private TranslationIsoFormats outgoingTranslationAttributes;
@@ -112,11 +112,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     * The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      * </p>
      * 
      * @param incomingDukptAttributes
-     *        The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     *        The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      */
 
     public void setIncomingDukptAttributes(DukptDerivationAttributes incomingDukptAttributes) {
@@ -125,10 +125,10 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     * The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      * </p>
      * 
-     * @return The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     * @return The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      */
 
     public DukptDerivationAttributes getIncomingDukptAttributes() {
@@ -137,11 +137,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     * The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      * </p>
      * 
      * @param incomingDukptAttributes
-     *        The attributes and values to use for incoming DUKPT encryption key for PIN block tranlation.
+     *        The attributes and values to use for incoming DUKPT encryption key for PIN block translation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,11 +198,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
      * </p>
      * 
      * @param incomingTranslationAttributes
-     *        The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     *        The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
      */
 
     public void setIncomingTranslationAttributes(TranslationIsoFormats incomingTranslationAttributes) {
@@ -211,10 +211,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
      * </p>
      * 
-     * @return The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     * @return The format of the incoming PIN block data for translation within Amazon Web Services Payment
+     *         Cryptography.
      */
 
     public TranslationIsoFormats getIncomingTranslationAttributes() {
@@ -223,11 +224,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     * The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
      * </p>
      * 
      * @param incomingTranslationAttributes
-     *        The format of the incoming PIN block data for tranlation within Amazon Web Services Payment Cryptography.
+     *        The format of the incoming PIN block data for translation within Amazon Web Services Payment Cryptography.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -324,11 +325,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      * </p>
      * 
      * @param outgoingTranslationAttributes
-     *        The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     *        The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      */
 
     public void setOutgoingTranslationAttributes(TranslationIsoFormats outgoingTranslationAttributes) {
@@ -337,10 +338,10 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      * </p>
      * 
-     * @return The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     * @return The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      */
 
     public TranslationIsoFormats getOutgoingTranslationAttributes() {
@@ -349,11 +350,11 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     * The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      * </p>
      * 
      * @param outgoingTranslationAttributes
-     *        The format of the outgoing PIN block data after tranlation by Amazon Web Services Payment Cryptography.
+     *        The format of the outgoing PIN block data after translation by Amazon Web Services Payment Cryptography.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

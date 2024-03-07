@@ -32,13 +32,7 @@ public class BundleInstanceRequest extends AmazonWebServiceRequest implements Se
      * The ID of the instance to bundle.
      * </p>
      * <p>
-     * Type: String
-     * </p>
-     * <p>
      * Default: None
-     * </p>
-     * <p>
-     * Required: Yes
      * </p>
      */
     private String instanceId;
@@ -64,13 +58,7 @@ public class BundleInstanceRequest extends AmazonWebServiceRequest implements Se
      * @param instanceId
      *        The ID of the instance to bundle.</p>
      *        <p>
-     *        Type: String
-     *        </p>
-     *        <p>
      *        Default: None
-     *        </p>
-     *        <p>
-     *        Required: Yes
      * @param storage
      *        The bucket in which to store the AMI. You can specify a bucket that you already own or a new bucket that
      *        Amazon EC2 creates on your behalf. If you specify a bucket that belongs to someone else, Amazon EC2
@@ -86,25 +74,13 @@ public class BundleInstanceRequest extends AmazonWebServiceRequest implements Se
      * The ID of the instance to bundle.
      * </p>
      * <p>
-     * Type: String
-     * </p>
-     * <p>
      * Default: None
-     * </p>
-     * <p>
-     * Required: Yes
      * </p>
      * 
      * @param instanceId
      *        The ID of the instance to bundle.</p>
      *        <p>
-     *        Type: String
-     *        </p>
-     *        <p>
      *        Default: None
-     *        </p>
-     *        <p>
-     *        Required: Yes
      */
 
     public void setInstanceId(String instanceId) {
@@ -116,24 +92,12 @@ public class BundleInstanceRequest extends AmazonWebServiceRequest implements Se
      * The ID of the instance to bundle.
      * </p>
      * <p>
-     * Type: String
-     * </p>
-     * <p>
      * Default: None
-     * </p>
-     * <p>
-     * Required: Yes
      * </p>
      * 
      * @return The ID of the instance to bundle.</p>
      *         <p>
-     *         Type: String
-     *         </p>
-     *         <p>
      *         Default: None
-     *         </p>
-     *         <p>
-     *         Required: Yes
      */
 
     public String getInstanceId() {
@@ -145,25 +109,13 @@ public class BundleInstanceRequest extends AmazonWebServiceRequest implements Se
      * The ID of the instance to bundle.
      * </p>
      * <p>
-     * Type: String
-     * </p>
-     * <p>
      * Default: None
-     * </p>
-     * <p>
-     * Required: Yes
      * </p>
      * 
      * @param instanceId
      *        The ID of the instance to bundle.</p>
      *        <p>
-     *        Type: String
-     *        </p>
-     *        <p>
      *        Default: None
-     *        </p>
-     *        <p>
-     *        Required: Yes
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

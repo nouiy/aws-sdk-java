@@ -64,6 +64,10 @@ public class WorkspaceSummaryJsonUnmarshaller implements Unmarshaller<WorkspaceS
                     context.nextToken();
                     workspaceSummary.setEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("grafanaToken", targetDepth)) {
+                    context.nextToken();
+                    workspaceSummary.setGrafanaToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("grafanaVersion", targetDepth)) {
                     context.nextToken();
                     workspaceSummary.setGrafanaVersion(context.getUnmarshaller(String.class).unmarshall(context));
@@ -71,6 +75,10 @@ public class WorkspaceSummaryJsonUnmarshaller implements Unmarshaller<WorkspaceS
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     workspaceSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("licenseType", targetDepth)) {
+                    context.nextToken();
+                    workspaceSummary.setLicenseType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("modified", targetDepth)) {
                     context.nextToken();

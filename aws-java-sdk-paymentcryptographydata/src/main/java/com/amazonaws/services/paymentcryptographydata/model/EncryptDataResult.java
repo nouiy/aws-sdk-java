@@ -39,9 +39,10 @@ public class EncryptDataResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by
-     * using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     * to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      * </p>
      */
     private String keyCheckValue;
@@ -135,16 +136,17 @@ public class EncryptDataResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by
-     * using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     * to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      * </p>
      * 
      * @param keyCheckValue
      *        The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
-     *        key have the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography
-     *        calculates the KCV by using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and
-     *        then truncating the result to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     *        key have the same key or to detect that a key has changed.</p>
+     *        <p>
+     *        Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      */
 
     public void setKeyCheckValue(String keyCheckValue) {
@@ -154,15 +156,16 @@ public class EncryptDataResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by
-     * using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     * to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      * </p>
      * 
      * @return The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
-     *         key have the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography
-     *         calculates the KCV by using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01"
-     *         and then truncating the result to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     *         key have the same key or to detect that a key has changed.</p>
+     *         <p>
+     *         Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      */
 
     public String getKeyCheckValue() {
@@ -172,16 +175,17 @@ public class EncryptDataResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have
-     * the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by
-     * using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     * to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     * the same key or to detect that a key has changed.
+     * </p>
+     * <p>
+     * Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      * </p>
      * 
      * @param keyCheckValue
      *        The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given
-     *        key have the same key or to detect that a key has changed. Amazon Web Services Payment Cryptography
-     *        calculates the KCV by using standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and
-     *        then truncating the result to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     *        key have the same key or to detect that a key has changed.</p>
+     *        <p>
+     *        Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,6 +31,8 @@ public class EncryptionDecryptionAttributesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Asymmetric").build();
     private static final MarshallingInfo<StructuredPojo> DUKPT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Dukpt").build();
+    private static final MarshallingInfo<StructuredPojo> EMV_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Emv").build();
     private static final MarshallingInfo<StructuredPojo> SYMMETRIC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Symmetric").build();
 
@@ -52,6 +54,7 @@ public class EncryptionDecryptionAttributesMarshaller {
         try {
             protocolMarshaller.marshall(encryptionDecryptionAttributes.getAsymmetric(), ASYMMETRIC_BINDING);
             protocolMarshaller.marshall(encryptionDecryptionAttributes.getDukpt(), DUKPT_BINDING);
+            protocolMarshaller.marshall(encryptionDecryptionAttributes.getEmv(), EMV_BINDING);
             protocolMarshaller.marshall(encryptionDecryptionAttributes.getSymmetric(), SYMMETRIC_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -42,6 +42,15 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The plaintext to be encrypted.
      * </p>
+     * <note>
+     * <p>
+     * For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you
+     * define in <code>KeyAlgorithm</code> and padding type that you define in
+     * <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in
+     * the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     * </p>
+     * </note>
      */
     private String plainText;
 
@@ -135,9 +144,25 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The plaintext to be encrypted.
      * </p>
+     * <note>
+     * <p>
+     * For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you
+     * define in <code>KeyAlgorithm</code> and padding type that you define in
+     * <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in
+     * the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param plainText
-     *        The plaintext to be encrypted.
+     *        The plaintext to be encrypted.</p> <note>
+     *        <p>
+     *        For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that
+     *        you define in <code>KeyAlgorithm</code> and padding type that you define in
+     *        <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt
+     *        data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     *        </p>
      */
 
     public void setPlainText(String plainText) {
@@ -148,8 +173,24 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The plaintext to be encrypted.
      * </p>
+     * <note>
+     * <p>
+     * For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you
+     * define in <code>KeyAlgorithm</code> and padding type that you define in
+     * <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in
+     * the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     * </p>
+     * </note>
      * 
-     * @return The plaintext to be encrypted.
+     * @return The plaintext to be encrypted.</p> <note>
+     *         <p>
+     *         For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength
+     *         that you define in <code>KeyAlgorithm</code> and padding type that you define in
+     *         <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt
+     *         data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     *         </p>
      */
 
     public String getPlainText() {
@@ -160,9 +201,25 @@ public class EncryptDataRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The plaintext to be encrypted.
      * </p>
+     * <note>
+     * <p>
+     * For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you
+     * define in <code>KeyAlgorithm</code> and padding type that you define in
+     * <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in
+     * the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param plainText
-     *        The plaintext to be encrypted.
+     *        The plaintext to be encrypted.</p> <note>
+     *        <p>
+     *        For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that
+     *        you define in <code>KeyAlgorithm</code> and padding type that you define in
+     *        <code>AsymmetricEncryptionAttributes</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt
+     *        data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,14 +36,15 @@ public class UpdateWorkspaceConfigurationRequest extends com.amazonaws.AmazonWeb
     private String configuration;
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version of the
+     * workspace.
      * </p>
      * <p>
      * Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      * </p>
      * <p>
-     * To know what versions are available to upgrade to for a specific workspace, see the <code>ListVersions</code>
-     * operation.
+     * To know what versions are available to upgrade to for a specific workspace, see the <a
+     * href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a> operation.
      * </p>
      */
     private String grafanaVersion;
@@ -134,24 +135,27 @@ public class UpdateWorkspaceConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version of the
+     * workspace.
      * </p>
      * <p>
      * Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      * </p>
      * <p>
-     * To know what versions are available to upgrade to for a specific workspace, see the <code>ListVersions</code>
-     * operation.
+     * To know what versions are available to upgrade to for a specific workspace, see the <a
+     * href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a> operation.
      * </p>
      * 
      * @param grafanaVersion
-     *        Specifies the version of Grafana to support in the new workspace.</p>
+     *        Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version
+     *        of the workspace.</p>
      *        <p>
      *        Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      *        </p>
      *        <p>
-     *        To know what versions are available to upgrade to for a specific workspace, see the
-     *        <code>ListVersions</code> operation.
+     *        To know what versions are available to upgrade to for a specific workspace, see the <a
+     *        href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a>
+     *        operation.
      */
 
     public void setGrafanaVersion(String grafanaVersion) {
@@ -160,23 +164,26 @@ public class UpdateWorkspaceConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version of the
+     * workspace.
      * </p>
      * <p>
      * Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      * </p>
      * <p>
-     * To know what versions are available to upgrade to for a specific workspace, see the <code>ListVersions</code>
-     * operation.
+     * To know what versions are available to upgrade to for a specific workspace, see the <a
+     * href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a> operation.
      * </p>
      * 
-     * @return Specifies the version of Grafana to support in the new workspace.</p>
+     * @return Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version
+     *         of the workspace.</p>
      *         <p>
      *         Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      *         </p>
      *         <p>
-     *         To know what versions are available to upgrade to for a specific workspace, see the
-     *         <code>ListVersions</code> operation.
+     *         To know what versions are available to upgrade to for a specific workspace, see the <a
+     *         href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a>
+     *         operation.
      */
 
     public String getGrafanaVersion() {
@@ -185,24 +192,27 @@ public class UpdateWorkspaceConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version of the
+     * workspace.
      * </p>
      * <p>
      * Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      * </p>
      * <p>
-     * To know what versions are available to upgrade to for a specific workspace, see the <code>ListVersions</code>
-     * operation.
+     * To know what versions are available to upgrade to for a specific workspace, see the <a
+     * href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a> operation.
      * </p>
      * 
      * @param grafanaVersion
-     *        Specifies the version of Grafana to support in the new workspace.</p>
+     *        Specifies the version of Grafana to support in the workspace. If not specified, keeps the current version
+     *        of the workspace.</p>
      *        <p>
      *        Can only be used to upgrade (for example, from 8.4 to 9.4), not downgrade (for example, from 9.4 to 8.4).
      *        </p>
      *        <p>
-     *        To know what versions are available to upgrade to for a specific workspace, see the
-     *        <code>ListVersions</code> operation.
+     *        To know what versions are available to upgrade to for a specific workspace, see the <a
+     *        href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_ListVersions.html">ListVersions</a>
+     *        operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

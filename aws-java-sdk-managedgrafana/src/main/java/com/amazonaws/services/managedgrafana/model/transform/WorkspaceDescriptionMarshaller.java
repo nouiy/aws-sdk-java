@@ -45,6 +45,8 @@ public class WorkspaceDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("freeTrialConsumed").build();
     private static final MarshallingInfo<java.util.Date> FREETRIALEXPIRATION_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("freeTrialExpiration").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> GRAFANATOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("grafanaToken").build();
     private static final MarshallingInfo<String> GRAFANAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("grafanaVersion").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -102,6 +104,7 @@ public class WorkspaceDescriptionMarshaller {
             protocolMarshaller.marshall(workspaceDescription.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getFreeTrialConsumed(), FREETRIALCONSUMED_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getFreeTrialExpiration(), FREETRIALEXPIRATION_BINDING);
+            protocolMarshaller.marshall(workspaceDescription.getGrafanaToken(), GRAFANATOKEN_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getGrafanaVersion(), GRAFANAVERSION_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getId(), ID_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getLicenseExpiration(), LICENSEEXPIRATION_BINDING);

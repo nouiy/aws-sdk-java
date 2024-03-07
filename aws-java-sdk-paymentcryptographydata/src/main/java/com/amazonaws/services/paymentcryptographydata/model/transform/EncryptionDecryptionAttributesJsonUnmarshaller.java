@@ -56,6 +56,10 @@ public class EncryptionDecryptionAttributesJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     encryptionDecryptionAttributes.setDukpt(DukptEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Emv", targetDepth)) {
+                    context.nextToken();
+                    encryptionDecryptionAttributes.setEmv(EmvEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Symmetric", targetDepth)) {
                     context.nextToken();
                     encryptionDecryptionAttributes.setSymmetric(SymmetricEncryptionAttributesJsonUnmarshaller.getInstance().unmarshall(context));

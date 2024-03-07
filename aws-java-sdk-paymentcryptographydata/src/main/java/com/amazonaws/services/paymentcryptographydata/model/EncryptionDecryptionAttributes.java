@@ -34,6 +34,12 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
     private DukptEncryptionAttributes dukpt;
     /**
      * <p>
+     * Parameters for plaintext encryption using EMV keys.
+     * </p>
+     */
+    private EmvEncryptionAttributes emv;
+    /**
+     * <p>
      * Parameters that are required to perform encryption and decryption using symmetric keys.
      * </p>
      */
@@ -93,6 +99,46 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
 
     /**
      * <p>
+     * Parameters for plaintext encryption using EMV keys.
+     * </p>
+     * 
+     * @param emv
+     *        Parameters for plaintext encryption using EMV keys.
+     */
+
+    public void setEmv(EmvEncryptionAttributes emv) {
+        this.emv = emv;
+    }
+
+    /**
+     * <p>
+     * Parameters for plaintext encryption using EMV keys.
+     * </p>
+     * 
+     * @return Parameters for plaintext encryption using EMV keys.
+     */
+
+    public EmvEncryptionAttributes getEmv() {
+        return this.emv;
+    }
+
+    /**
+     * <p>
+     * Parameters for plaintext encryption using EMV keys.
+     * </p>
+     * 
+     * @param emv
+     *        Parameters for plaintext encryption using EMV keys.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EncryptionDecryptionAttributes withEmv(EmvEncryptionAttributes emv) {
+        setEmv(emv);
+        return this;
+    }
+
+    /**
+     * <p>
      * Parameters that are required to perform encryption and decryption using symmetric keys.
      * </p>
      * 
@@ -147,6 +193,8 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
             sb.append("Asymmetric: ").append(getAsymmetric()).append(",");
         if (getDukpt() != null)
             sb.append("Dukpt: ").append(getDukpt()).append(",");
+        if (getEmv() != null)
+            sb.append("Emv: ").append(getEmv()).append(",");
         if (getSymmetric() != null)
             sb.append("Symmetric: ").append(getSymmetric());
         sb.append("}");
@@ -171,6 +219,10 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
             return false;
         if (other.getDukpt() != null && other.getDukpt().equals(this.getDukpt()) == false)
             return false;
+        if (other.getEmv() == null ^ this.getEmv() == null)
+            return false;
+        if (other.getEmv() != null && other.getEmv().equals(this.getEmv()) == false)
+            return false;
         if (other.getSymmetric() == null ^ this.getSymmetric() == null)
             return false;
         if (other.getSymmetric() != null && other.getSymmetric().equals(this.getSymmetric()) == false)
@@ -185,6 +237,7 @@ public class EncryptionDecryptionAttributes implements Serializable, Cloneable, 
 
         hashCode = prime * hashCode + ((getAsymmetric() == null) ? 0 : getAsymmetric().hashCode());
         hashCode = prime * hashCode + ((getDukpt() == null) ? 0 : getDukpt().hashCode());
+        hashCode = prime * hashCode + ((getEmv() == null) ? 0 : getEmv().hashCode());
         hashCode = prime * hashCode + ((getSymmetric() == null) ? 0 : getSymmetric().hashCode());
         return hashCode;
     }

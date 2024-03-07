@@ -36,8 +36,8 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     private String accountAccessType;
     /**
      * <p>
-     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both to
-     * authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for using the
+     * Grafana console within a workspace. For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication in
      * Amazon Managed Grafana</a>.
      * </p>
@@ -60,10 +60,11 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     private String configuration;
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the latest
+     * version (for example, 9.4).
      * </p>
      * <p>
-     * To get a list of supported version, use the <code>ListVersions</code> operation.
+     * To get a list of supported versions, use the <code>ListVersions</code> operation.
      * </p>
      */
     private String grafanaVersion;
@@ -268,14 +269,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both to
-     * authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for using the
+     * Grafana console within a workspace. For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication in
      * Amazon Managed Grafana</a>.
      * </p>
      * 
-     * @return Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or
-     *         both to authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * @return Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for
+     *         using the Grafana console within a workspace. For more information, see <a
      *         href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User
      *         authentication in Amazon Managed Grafana</a>.
      * @see AuthenticationProviderTypes
@@ -287,15 +288,15 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both to
-     * authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for using the
+     * Grafana console within a workspace. For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication in
      * Amazon Managed Grafana</a>.
      * </p>
      * 
      * @param authenticationProviders
-     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both
-     *        to authenticate users for using the Grafana console within a workspace. For more information, see <a
+     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for
+     *        using the Grafana console within a workspace. For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication
      *        in Amazon Managed Grafana</a>.
      * @see AuthenticationProviderTypes
@@ -312,8 +313,8 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both to
-     * authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for using the
+     * Grafana console within a workspace. For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication in
      * Amazon Managed Grafana</a>.
      * </p>
@@ -324,8 +325,8 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param authenticationProviders
-     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both
-     *        to authenticate users for using the Grafana console within a workspace. For more information, see <a
+     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for
+     *        using the Grafana console within a workspace. For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication
      *        in Amazon Managed Grafana</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -344,15 +345,15 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both to
-     * authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for using the
+     * Grafana console within a workspace. For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication in
      * Amazon Managed Grafana</a>.
      * </p>
      * 
      * @param authenticationProviders
-     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both
-     *        to authenticate users for using the Grafana console within a workspace. For more information, see <a
+     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for
+     *        using the Grafana console within a workspace. For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication
      *        in Amazon Managed Grafana</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -366,15 +367,15 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both to
-     * authenticate users for using the Grafana console within a workspace. For more information, see <a
+     * Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for using the
+     * Grafana console within a workspace. For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication in
      * Amazon Managed Grafana</a>.
      * </p>
      * 
      * @param authenticationProviders
-     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center (successor to Single Sign-On), or both
-     *        to authenticate users for using the Grafana console within a workspace. For more information, see <a
+     *        Specifies whether this workspace uses SAML 2.0, IAM Identity Center, or both to authenticate users for
+     *        using the Grafana console within a workspace. For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html">User authentication
      *        in Amazon Managed Grafana</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -514,16 +515,18 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the latest
+     * version (for example, 9.4).
      * </p>
      * <p>
-     * To get a list of supported version, use the <code>ListVersions</code> operation.
+     * To get a list of supported versions, use the <code>ListVersions</code> operation.
      * </p>
      * 
      * @param grafanaVersion
-     *        Specifies the version of Grafana to support in the new workspace.</p>
+     *        Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the latest
+     *        version (for example, 9.4).</p>
      *        <p>
-     *        To get a list of supported version, use the <code>ListVersions</code> operation.
+     *        To get a list of supported versions, use the <code>ListVersions</code> operation.
      */
 
     public void setGrafanaVersion(String grafanaVersion) {
@@ -532,15 +535,17 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the latest
+     * version (for example, 9.4).
      * </p>
      * <p>
-     * To get a list of supported version, use the <code>ListVersions</code> operation.
+     * To get a list of supported versions, use the <code>ListVersions</code> operation.
      * </p>
      * 
-     * @return Specifies the version of Grafana to support in the new workspace.</p>
+     * @return Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the
+     *         latest version (for example, 9.4).</p>
      *         <p>
-     *         To get a list of supported version, use the <code>ListVersions</code> operation.
+     *         To get a list of supported versions, use the <code>ListVersions</code> operation.
      */
 
     public String getGrafanaVersion() {
@@ -549,16 +554,18 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Specifies the version of Grafana to support in the new workspace.
+     * Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the latest
+     * version (for example, 9.4).
      * </p>
      * <p>
-     * To get a list of supported version, use the <code>ListVersions</code> operation.
+     * To get a list of supported versions, use the <code>ListVersions</code> operation.
      * </p>
      * 
      * @param grafanaVersion
-     *        Specifies the version of Grafana to support in the new workspace.</p>
+     *        Specifies the version of Grafana to support in the new workspace. If not specified, defaults to the latest
+     *        version (for example, 9.4).</p>
      *        <p>
-     *        To get a list of supported version, use the <code>ListVersions</code> operation.
+     *        To get a list of supported versions, use the <code>ListVersions</code> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

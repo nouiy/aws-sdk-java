@@ -62,12 +62,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * to look for query strings that are longer than 100 bytes.
      * </p>
      * <p>
-     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to the
-     * limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for CloudFront web
-     * ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the limit in the web ACL
-     * <code>AssociationConfig</code>, for additional fees. If you know that the request body for your web requests
-     * should never exceed the inspection limit, you could use a size constraint statement to block requests that have a
-     * larger request body size.
+     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to the
+     * limit for the web ACL and protected resource type. If you know that the request body for your web requests should
+     * never exceed the inspection limit, you can use a size constraint statement to block requests that have a larger
+     * request body size. For more information about the inspection limits, see <code>Body</code> and
+     * <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      * </p>
      * <p>
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one
@@ -164,6 +163,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * rule categorizes requests according to your aggregation criteria, collects them into aggregation instances, and
      * counts and rate limits the requests for each instance.
      * </p>
+     * <note>
+     * <p>
+     * If you change any of these settings in a rule that's currently in use, the change resets the rule's rate limiting
+     * counts. This can pause the rule's rate limiting activities for up to a minute.
+     * </p>
+     * </note>
      * <p>
      * You can specify individual aggregation keys, like IP address or HTTP method. You can also specify aggregation key
      * combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.
@@ -525,12 +530,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * to look for query strings that are longer than 100 bytes.
      * </p>
      * <p>
-     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to the
-     * limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for CloudFront web
-     * ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the limit in the web ACL
-     * <code>AssociationConfig</code>, for additional fees. If you know that the request body for your web requests
-     * should never exceed the inspection limit, you could use a size constraint statement to block requests that have a
-     * larger request body size.
+     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to the
+     * limit for the web ACL and protected resource type. If you know that the request body for your web requests should
+     * never exceed the inspection limit, you can use a size constraint statement to block requests that have a larger
+     * request body size. For more information about the inspection limits, see <code>Body</code> and
+     * <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      * </p>
      * <p>
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one
@@ -542,12 +546,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size
      *        constraint statement to look for query strings that are longer than 100 bytes. </p>
      *        <p>
-     *        If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to
-     *        the limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for
-     *        CloudFront web ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the
-     *        limit in the web ACL <code>AssociationConfig</code>, for additional fees. If you know that the request
-     *        body for your web requests should never exceed the inspection limit, you could use a size constraint
-     *        statement to block requests that have a larger request body size.
+     *        If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to
+     *        the limit for the web ACL and protected resource type. If you know that the request body for your web
+     *        requests should never exceed the inspection limit, you can use a size constraint statement to block
+     *        requests that have a larger request body size. For more information about the inspection limits, see
+     *        <code>Body</code> and <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      *        </p>
      *        <p>
      *        If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as
@@ -565,12 +568,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * to look for query strings that are longer than 100 bytes.
      * </p>
      * <p>
-     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to the
-     * limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for CloudFront web
-     * ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the limit in the web ACL
-     * <code>AssociationConfig</code>, for additional fees. If you know that the request body for your web requests
-     * should never exceed the inspection limit, you could use a size constraint statement to block requests that have a
-     * larger request body size.
+     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to the
+     * limit for the web ACL and protected resource type. If you know that the request body for your web requests should
+     * never exceed the inspection limit, you can use a size constraint statement to block requests that have a larger
+     * request body size. For more information about the inspection limits, see <code>Body</code> and
+     * <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      * </p>
      * <p>
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one
@@ -581,12 +583,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *         comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size
      *         constraint statement to look for query strings that are longer than 100 bytes. </p>
      *         <p>
-     *         If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to
-     *         the limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for
-     *         CloudFront web ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the
-     *         limit in the web ACL <code>AssociationConfig</code>, for additional fees. If you know that the request
-     *         body for your web requests should never exceed the inspection limit, you could use a size constraint
-     *         statement to block requests that have a larger request body size.
+     *         If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to
+     *         the limit for the web ACL and protected resource type. If you know that the request body for your web
+     *         requests should never exceed the inspection limit, you can use a size constraint statement to block
+     *         requests that have a larger request body size. For more information about the inspection limits, see
+     *         <code>Body</code> and <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      *         </p>
      *         <p>
      *         If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as
@@ -604,12 +605,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * to look for query strings that are longer than 100 bytes.
      * </p>
      * <p>
-     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to the
-     * limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for CloudFront web
-     * ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the limit in the web ACL
-     * <code>AssociationConfig</code>, for additional fees. If you know that the request body for your web requests
-     * should never exceed the inspection limit, you could use a size constraint statement to block requests that have a
-     * larger request body size.
+     * If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to the
+     * limit for the web ACL and protected resource type. If you know that the request body for your web requests should
+     * never exceed the inspection limit, you can use a size constraint statement to block requests that have a larger
+     * request body size. For more information about the inspection limits, see <code>Body</code> and
+     * <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      * </p>
      * <p>
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as one
@@ -621,12 +621,11 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        comparison operator, such as greater than (&gt;) or less than (&lt;). For example, you can use a size
      *        constraint statement to look for query strings that are longer than 100 bytes. </p>
      *        <p>
-     *        If you configure WAF to inspect the request body, WAF inspects only the number of bytes of the body up to
-     *        the limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB (8,192 bytes) and for
-     *        CloudFront web ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web ACLs, you can increase the
-     *        limit in the web ACL <code>AssociationConfig</code>, for additional fees. If you know that the request
-     *        body for your web requests should never exceed the inspection limit, you could use a size constraint
-     *        statement to block requests that have a larger request body size.
+     *        If you configure WAF to inspect the request body, WAF inspects only the number of bytes in the body up to
+     *        the limit for the web ACL and protected resource type. If you know that the request body for your web
+     *        requests should never exceed the inspection limit, you can use a size constraint statement to block
+     *        requests that have a larger request body size. For more information about the inspection limits, see
+     *        <code>Body</code> and <code>JsonBody</code> settings for the <code>FieldToMatch</code> data type.
      *        </p>
      *        <p>
      *        If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI counts as
@@ -1153,6 +1152,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * rule categorizes requests according to your aggregation criteria, collects them into aggregation instances, and
      * counts and rate limits the requests for each instance.
      * </p>
+     * <note>
+     * <p>
+     * If you change any of these settings in a rule that's currently in use, the change resets the rule's rate limiting
+     * counts. This can pause the rule's rate limiting activities for up to a minute.
+     * </p>
+     * </note>
      * <p>
      * You can specify individual aggregation keys, like IP address or HTTP method. You can also specify aggregation key
      * combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.
@@ -1289,7 +1294,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * @param rateBasedStatement
      *        A rate-based rule counts incoming requests and rate limits requests when they are coming at too fast a
      *        rate. The rule categorizes requests according to your aggregation criteria, collects them into aggregation
-     *        instances, and counts and rate limits the requests for each instance. </p>
+     *        instances, and counts and rate limits the requests for each instance. </p> <note>
+     *        <p>
+     *        If you change any of these settings in a rule that's currently in use, the change resets the rule's rate
+     *        limiting counts. This can pause the rule's rate limiting activities for up to a minute.
+     *        </p>
+     *        </note>
      *        <p>
      *        You can specify individual aggregation keys, like IP address or HTTP method. You can also specify
      *        aggregation key combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.
@@ -1435,6 +1445,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * rule categorizes requests according to your aggregation criteria, collects them into aggregation instances, and
      * counts and rate limits the requests for each instance.
      * </p>
+     * <note>
+     * <p>
+     * If you change any of these settings in a rule that's currently in use, the change resets the rule's rate limiting
+     * counts. This can pause the rule's rate limiting activities for up to a minute.
+     * </p>
+     * </note>
      * <p>
      * You can specify individual aggregation keys, like IP address or HTTP method. You can also specify aggregation key
      * combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.
@@ -1570,7 +1586,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return A rate-based rule counts incoming requests and rate limits requests when they are coming at too fast a
      *         rate. The rule categorizes requests according to your aggregation criteria, collects them into
-     *         aggregation instances, and counts and rate limits the requests for each instance. </p>
+     *         aggregation instances, and counts and rate limits the requests for each instance. </p> <note>
+     *         <p>
+     *         If you change any of these settings in a rule that's currently in use, the change resets the rule's rate
+     *         limiting counts. This can pause the rule's rate limiting activities for up to a minute.
+     *         </p>
+     *         </note>
      *         <p>
      *         You can specify individual aggregation keys, like IP address or HTTP method. You can also specify
      *         aggregation key combinations, like IP address and HTTP method, or HTTP method, query argument, and
@@ -1719,6 +1740,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * rule categorizes requests according to your aggregation criteria, collects them into aggregation instances, and
      * counts and rate limits the requests for each instance.
      * </p>
+     * <note>
+     * <p>
+     * If you change any of these settings in a rule that's currently in use, the change resets the rule's rate limiting
+     * counts. This can pause the rule's rate limiting activities for up to a minute.
+     * </p>
+     * </note>
      * <p>
      * You can specify individual aggregation keys, like IP address or HTTP method. You can also specify aggregation key
      * combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.
@@ -1855,7 +1882,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * @param rateBasedStatement
      *        A rate-based rule counts incoming requests and rate limits requests when they are coming at too fast a
      *        rate. The rule categorizes requests according to your aggregation criteria, collects them into aggregation
-     *        instances, and counts and rate limits the requests for each instance. </p>
+     *        instances, and counts and rate limits the requests for each instance. </p> <note>
+     *        <p>
+     *        If you change any of these settings in a rule that's currently in use, the change resets the rule's rate
+     *        limiting counts. This can pause the rule's rate limiting activities for up to a minute.
+     *        </p>
+     *        </note>
      *        <p>
      *        You can specify individual aggregation keys, like IP address or HTTP method. You can also specify
      *        aggregation key combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.

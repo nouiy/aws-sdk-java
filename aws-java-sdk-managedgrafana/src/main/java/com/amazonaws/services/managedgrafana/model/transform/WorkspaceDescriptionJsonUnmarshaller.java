@@ -82,6 +82,10 @@ public class WorkspaceDescriptionJsonUnmarshaller implements Unmarshaller<Worksp
                     context.nextToken();
                     workspaceDescription.setFreeTrialExpiration(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("grafanaToken", targetDepth)) {
+                    context.nextToken();
+                    workspaceDescription.setGrafanaToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("grafanaVersion", targetDepth)) {
                     context.nextToken();
                     workspaceDescription.setGrafanaVersion(context.getUnmarshaller(String.class).unmarshall(context));

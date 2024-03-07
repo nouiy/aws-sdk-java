@@ -154,8 +154,9 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Specifies custom configurations for the associations between the web ACL and protected resources.
      * </p>
      * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources forward to WAF for
+     * inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+     * Access resources. The default setting is 16 KB (16,384 bytes).
      * </p>
      * <note>
      * <p>
@@ -163,6 +164,9 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      */
     private AssociationConfig associationConfig;
 
@@ -1131,8 +1135,9 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Specifies custom configurations for the associations between the web ACL and protected resources.
      * </p>
      * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources forward to WAF for
+     * inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+     * Access resources. The default setting is 16 KB (16,384 bytes).
      * </p>
      * <note>
      * <p>
@@ -1140,18 +1145,25 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      * 
      * @param associationConfig
      *        Specifies custom configurations for the associations between the web ACL and protected resources. </p>
      *        <p>
-     *        Use this to customize the maximum size of the request body that your protected CloudFront distributions
-     *        forward to WAF for inspection. The default is 16 KB (16,384 bytes).
+     *        Use this to customize the maximum size of the request body that your protected resources forward to WAF
+     *        for inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or
+     *        Verified Access resources. The default setting is 16 KB (16,384 bytes).
      *        </p>
      *        <note>
      *        <p>
      *        You are charged additional fees when your protected resources forward body sizes that are larger than the
      *        default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *        </p>
+     *        </note>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
      */
 
     public void setAssociationConfig(AssociationConfig associationConfig) {
@@ -1163,8 +1175,9 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Specifies custom configurations for the associations between the web ACL and protected resources.
      * </p>
      * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources forward to WAF for
+     * inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+     * Access resources. The default setting is 16 KB (16,384 bytes).
      * </p>
      * <note>
      * <p>
@@ -1172,17 +1185,24 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      * 
      * @return Specifies custom configurations for the associations between the web ACL and protected resources. </p>
      *         <p>
-     *         Use this to customize the maximum size of the request body that your protected CloudFront distributions
-     *         forward to WAF for inspection. The default is 16 KB (16,384 bytes).
+     *         Use this to customize the maximum size of the request body that your protected resources forward to WAF
+     *         for inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner,
+     *         or Verified Access resources. The default setting is 16 KB (16,384 bytes).
      *         </p>
      *         <note>
      *         <p>
      *         You are charged additional fees when your protected resources forward body sizes that are larger than the
      *         default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *         </p>
+     *         </note>
+     *         <p>
+     *         For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
      */
 
     public AssociationConfig getAssociationConfig() {
@@ -1194,8 +1214,9 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Specifies custom configurations for the associations between the web ACL and protected resources.
      * </p>
      * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources forward to WAF for
+     * inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+     * Access resources. The default setting is 16 KB (16,384 bytes).
      * </p>
      * <note>
      * <p>
@@ -1203,18 +1224,25 @@ public class UpdateWebACLRequest extends com.amazonaws.AmazonWebServiceRequest i
      * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
      * 
      * @param associationConfig
      *        Specifies custom configurations for the associations between the web ACL and protected resources. </p>
      *        <p>
-     *        Use this to customize the maximum size of the request body that your protected CloudFront distributions
-     *        forward to WAF for inspection. The default is 16 KB (16,384 bytes).
+     *        Use this to customize the maximum size of the request body that your protected resources forward to WAF
+     *        for inspection. You can customize this setting for CloudFront, API Gateway, Amazon Cognito, App Runner, or
+     *        Verified Access resources. The default setting is 16 KB (16,384 bytes).
      *        </p>
      *        <note>
      *        <p>
      *        You are charged additional fees when your protected resources forward body sizes that are larger than the
      *        default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *        </p>
+     *        </note>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,7 +46,7 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private Integer macLength;
     /**
      * <p>
-     * The data on for which MAC is under verification.
+     * The data on for which MAC is under verification. This value must be hexBinary.
      * </p>
      */
     private String messageData;
@@ -185,11 +185,11 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The data on for which MAC is under verification.
+     * The data on for which MAC is under verification. This value must be hexBinary.
      * </p>
      * 
      * @param messageData
-     *        The data on for which MAC is under verification.
+     *        The data on for which MAC is under verification. This value must be hexBinary.
      */
 
     public void setMessageData(String messageData) {
@@ -198,10 +198,10 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The data on for which MAC is under verification.
+     * The data on for which MAC is under verification. This value must be hexBinary.
      * </p>
      * 
-     * @return The data on for which MAC is under verification.
+     * @return The data on for which MAC is under verification. This value must be hexBinary.
      */
 
     public String getMessageData() {
@@ -210,11 +210,11 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The data on for which MAC is under verification.
+     * The data on for which MAC is under verification. This value must be hexBinary.
      * </p>
      * 
      * @param messageData
-     *        The data on for which MAC is under verification.
+     *        The data on for which MAC is under verification. This value must be hexBinary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

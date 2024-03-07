@@ -48,7 +48,7 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
     private MacAlgorithmDukpt dukptIso9797Algorithm1;
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      * </p>
      */
     private MacAlgorithmDukpt dukptIso9797Algorithm3;
@@ -200,11 +200,11 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      * </p>
      * 
      * @param dukptIso9797Algorithm3
-     *        Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     *        Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      */
 
     public void setDukptIso9797Algorithm3(MacAlgorithmDukpt dukptIso9797Algorithm3) {
@@ -213,10 +213,10 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      * </p>
      * 
-     * @return Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     * @return Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      */
 
     public MacAlgorithmDukpt getDukptIso9797Algorithm3() {
@@ -225,11 +225,11 @@ public class MacAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     * Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      * </p>
      * 
      * @param dukptIso9797Algorithm3
-     *        Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm2.
+     *        Parameters that are required for MAC generation or verification using DUKPT ISO 9797 algorithm3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

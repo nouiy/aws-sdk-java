@@ -27,7 +27,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -64,7 +64,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -92,7 +92,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param functionName
-     *        The name of the Lambda function, version, or alias.</p>
+     *        The name or ARN of the Lambda function, version, or alias.</p>
      *        <p class="title">
      *        <b>Name formats</b>
      *        </p>
@@ -124,7 +124,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -151,7 +151,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
      * ARN. If you specify only the function name, it is limited to 64 characters in length.
      * </p>
      * 
-     * @return The name of the Lambda function, version, or alias.</p>
+     * @return The name or ARN of the Lambda function, version, or alias.</p>
      *         <p class="title">
      *         <b>Name formats</b>
      *         </p>
@@ -183,7 +183,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -211,7 +211,7 @@ public class GetFunctionEventInvokeConfigRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param functionName
-     *        The name of the Lambda function, version, or alias.</p>
+     *        The name or ARN of the Lambda function, version, or alias.</p>
      *        <p class="title">
      *        <b>Name formats</b>
      *        </p>

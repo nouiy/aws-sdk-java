@@ -31,18 +31,14 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * An input to cryptographic primitive used to provide the intial state. The <code>InitializationVector</code> is
-     * typically required have a random or psuedo-random value, but sometimes it only needs to be unpredictable or
-     * unique. If a value is not provided, Amazon Web Services Payment Cryptography generates a random value.
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      */
     private String initializationVector;
     /**
      * <p>
-     * The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size (for
-     * example, 128 bits). The size of the input block is usually same as the size of the encrypted output block, while
-     * the key length can be different. A mode of operation describes how to repeatedly apply a cipher's single-block
-     * operation to securely transform amounts of data larger than a block.
+     * The block cipher method to use for encryption.
      * </p>
      */
     private String mode;
@@ -55,16 +51,13 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * An input to cryptographic primitive used to provide the intial state. The <code>InitializationVector</code> is
-     * typically required have a random or psuedo-random value, but sometimes it only needs to be unpredictable or
-     * unique. If a value is not provided, Amazon Web Services Payment Cryptography generates a random value.
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      * 
      * @param initializationVector
-     *        An input to cryptographic primitive used to provide the intial state. The
-     *        <code>InitializationVector</code> is typically required have a random or psuedo-random value, but
-     *        sometimes it only needs to be unpredictable or unique. If a value is not provided, Amazon Web Services
-     *        Payment Cryptography generates a random value.
+     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *        Cryptography defaults it to zero.
      */
 
     public void setInitializationVector(String initializationVector) {
@@ -73,15 +66,12 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * An input to cryptographic primitive used to provide the intial state. The <code>InitializationVector</code> is
-     * typically required have a random or psuedo-random value, but sometimes it only needs to be unpredictable or
-     * unique. If a value is not provided, Amazon Web Services Payment Cryptography generates a random value.
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      * 
-     * @return An input to cryptographic primitive used to provide the intial state. The
-     *         <code>InitializationVector</code> is typically required have a random or psuedo-random value, but
-     *         sometimes it only needs to be unpredictable or unique. If a value is not provided, Amazon Web Services
-     *         Payment Cryptography generates a random value.
+     * @return An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *         Cryptography defaults it to zero.
      */
 
     public String getInitializationVector() {
@@ -90,16 +80,13 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * An input to cryptographic primitive used to provide the intial state. The <code>InitializationVector</code> is
-     * typically required have a random or psuedo-random value, but sometimes it only needs to be unpredictable or
-     * unique. If a value is not provided, Amazon Web Services Payment Cryptography generates a random value.
+     * An input used to provide the intial state. If no value is provided, Amazon Web Services Payment Cryptography
+     * defaults it to zero.
      * </p>
      * 
      * @param initializationVector
-     *        An input to cryptographic primitive used to provide the intial state. The
-     *        <code>InitializationVector</code> is typically required have a random or psuedo-random value, but
-     *        sometimes it only needs to be unpredictable or unique. If a value is not provided, Amazon Web Services
-     *        Payment Cryptography generates a random value.
+     *        An input used to provide the intial state. If no value is provided, Amazon Web Services Payment
+     *        Cryptography defaults it to zero.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,17 +97,11 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size (for
-     * example, 128 bits). The size of the input block is usually same as the size of the encrypted output block, while
-     * the key length can be different. A mode of operation describes how to repeatedly apply a cipher's single-block
-     * operation to securely transform amounts of data larger than a block.
+     * The block cipher method to use for encryption.
      * </p>
      * 
      * @param mode
-     *        The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size
-     *        (for example, 128 bits). The size of the input block is usually same as the size of the encrypted output
-     *        block, while the key length can be different. A mode of operation describes how to repeatedly apply a
-     *        cipher's single-block operation to securely transform amounts of data larger than a block.
+     *        The block cipher method to use for encryption.
      * @see EncryptionMode
      */
 
@@ -130,16 +111,10 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size (for
-     * example, 128 bits). The size of the input block is usually same as the size of the encrypted output block, while
-     * the key length can be different. A mode of operation describes how to repeatedly apply a cipher's single-block
-     * operation to securely transform amounts of data larger than a block.
+     * The block cipher method to use for encryption.
      * </p>
      * 
-     * @return The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size
-     *         (for example, 128 bits). The size of the input block is usually same as the size of the encrypted output
-     *         block, while the key length can be different. A mode of operation describes how to repeatedly apply a
-     *         cipher's single-block operation to securely transform amounts of data larger than a block.
+     * @return The block cipher method to use for encryption.
      * @see EncryptionMode
      */
 
@@ -149,17 +124,11 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size (for
-     * example, 128 bits). The size of the input block is usually same as the size of the encrypted output block, while
-     * the key length can be different. A mode of operation describes how to repeatedly apply a cipher's single-block
-     * operation to securely transform amounts of data larger than a block.
+     * The block cipher method to use for encryption.
      * </p>
      * 
      * @param mode
-     *        The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size
-     *        (for example, 128 bits). The size of the input block is usually same as the size of the encrypted output
-     *        block, while the key length can be different. A mode of operation describes how to repeatedly apply a
-     *        cipher's single-block operation to securely transform amounts of data larger than a block.
+     *        The block cipher method to use for encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionMode
      */
@@ -171,17 +140,11 @@ public class SymmetricEncryptionAttributes implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size (for
-     * example, 128 bits). The size of the input block is usually same as the size of the encrypted output block, while
-     * the key length can be different. A mode of operation describes how to repeatedly apply a cipher's single-block
-     * operation to securely transform amounts of data larger than a block.
+     * The block cipher method to use for encryption.
      * </p>
      * 
      * @param mode
-     *        The block cipher mode of operation. Block ciphers are designed to encrypt a block of data of fixed size
-     *        (for example, 128 bits). The size of the input block is usually same as the size of the encrypted output
-     *        block, while the key length can be different. A mode of operation describes how to repeatedly apply a
-     *        cipher's single-block operation to securely transform amounts of data larger than a block.
+     *        The block cipher method to use for encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionMode
      */

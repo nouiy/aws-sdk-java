@@ -27,6 +27,13 @@ public class WAFLimitsExceededException extends com.amazonaws.services.wafv2.mod
     private static final long serialVersionUID = 1L;
 
     /**
+     * <p>
+     * Source type for the exception.
+     * </p>
+     */
+    private String sourceType;
+
+    /**
      * Constructs a new WAFLimitsExceededException with the specified error message.
      *
      * @param message
@@ -34,6 +41,48 @@ public class WAFLimitsExceededException extends com.amazonaws.services.wafv2.mod
      */
     public WAFLimitsExceededException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * Source type for the exception.
+     * </p>
+     * 
+     * @param sourceType
+     *        Source type for the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("SourceType")
+    public void setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+    }
+
+    /**
+     * <p>
+     * Source type for the exception.
+     * </p>
+     * 
+     * @return Source type for the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("SourceType")
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
+     * <p>
+     * Source type for the exception.
+     * </p>
+     * 
+     * @param sourceType
+     *        Source type for the exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WAFLimitsExceededException withSourceType(String sourceType) {
+        setSourceType(sourceType);
+        return this;
     }
 
 }

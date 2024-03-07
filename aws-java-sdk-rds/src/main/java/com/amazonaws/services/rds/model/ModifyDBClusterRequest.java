@@ -598,7 +598,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * Multi-AZ DB clusters - <code>io1</code>
+     * Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      * </p>
      * </li>
      * </ul>
@@ -950,6 +950,11 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a
+     * connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for Cluster Type: Multi-AZ DB clusters
@@ -4548,7 +4553,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * Multi-AZ DB clusters - <code>io1</code>
+     * Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      * </p>
      * </li>
      * </ul>
@@ -4595,7 +4600,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        Multi-AZ DB clusters - <code>io1</code>
+     *        Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -4648,7 +4653,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * Multi-AZ DB clusters - <code>io1</code>
+     * Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      * </p>
      * </li>
      * </ul>
@@ -4694,7 +4699,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         Multi-AZ DB clusters - <code>io1</code>
+     *         Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -4747,7 +4752,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * Multi-AZ DB clusters - <code>io1</code>
+     * Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      * </p>
      * </li>
      * </ul>
@@ -4794,7 +4799,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        Multi-AZ DB clusters - <code>io1</code>
+     *        Multi-AZ DB clusters - <code>io1 | io2 | gp3</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -7074,11 +7079,21 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The CA certificate identifier to use for the DB cluster's server certificate.
      * </p>
      * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a
+     * connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
      * Valid for Cluster Type: Multi-AZ DB clusters
      * </p>
      * 
      * @param cACertificateIdentifier
      *        The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to
+     *        encrypt a connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
      *        <p>
      *        Valid for Cluster Type: Multi-AZ DB clusters
      */
@@ -7092,10 +7107,20 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The CA certificate identifier to use for the DB cluster's server certificate.
      * </p>
      * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a
+     * connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
      * Valid for Cluster Type: Multi-AZ DB clusters
      * </p>
      * 
      * @return The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to
+     *         encrypt a connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
      *         <p>
      *         Valid for Cluster Type: Multi-AZ DB clusters
      */
@@ -7109,11 +7134,21 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The CA certificate identifier to use for the DB cluster's server certificate.
      * </p>
      * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a
+     * connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
      * Valid for Cluster Type: Multi-AZ DB clusters
      * </p>
      * 
      * @param cACertificateIdentifier
      *        The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to
+     *        encrypt a connection to a DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
      *        <p>
      *        Valid for Cluster Type: Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.

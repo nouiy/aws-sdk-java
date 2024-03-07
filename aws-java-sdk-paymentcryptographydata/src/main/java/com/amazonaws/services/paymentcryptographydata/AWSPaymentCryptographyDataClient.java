@@ -159,8 +159,8 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Decrypts ciphertext data to plaintext using symmetric, asymmetric, or DUKPT data encryption key. For more
-     * information, see <a
+     * Decrypts ciphertext data to plaintext using a symmetric (TDES, AES), asymmetric (RSA), or derived (DUKPT or EMV)
+     * encryption key scheme. For more information, see <a
      * href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/decrypt-data.html">Decrypt data</a> in
      * the <i>Amazon Web Services Payment Cryptography User Guide</i>.
      * </p>
@@ -177,9 +177,14 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * For symmetric and DUKPT decryption, Amazon Web Services Payment Cryptography supports <code>TDES</code> and
-     * <code>AES</code> algorithms. For asymmetric decryption, Amazon Web Services Payment Cryptography supports
-     * <code>RSA</code>. When you use DUKPT, for <code>TDES</code> algorithm, the ciphertext data length must be a
-     * multiple of 16 bytes. For <code>AES</code> algorithm, the ciphertext data length must be a multiple of 32 bytes.
+     * <code>AES</code> algorithms. For EMV decryption, Amazon Web Services Payment Cryptography supports
+     * <code>TDES</code> algorithms. For asymmetric decryption, Amazon Web Services Payment Cryptography supports
+     * <code>RSA</code>.
+     * </p>
+     * <p>
+     * When you use TDES or TDES DUKPT, the ciphertext data length must be a multiple of 8 bytes. For AES or AES DUKPT,
+     * the ciphertext data length must be a multiple of 16 bytes. For RSA, it sould be equal to the key size unless
+     * padding is enabled.
      * </p>
      * <p>
      * For information about valid keys for this operation, see <a
@@ -275,8 +280,8 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Encrypts plaintext data to ciphertext using symmetric, asymmetric, or DUKPT data encryption key. For more
-     * information, see <a
+     * Encrypts plaintext data to ciphertext using a symmetric (TDES, AES), asymmetric (RSA), or derived (DUKPT or EMV)
+     * encryption key scheme. For more information, see <a
      * href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in
      * the <i>Amazon Web Services Payment Cryptography User Guide</i>.
      * </p>
@@ -288,14 +293,25 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
      * this operation, the key must have <code>KeyModesOfUse</code> set to <code>Encrypt</code>. In asymmetric
      * encryption, plaintext is encrypted using public component. You can import the public component of an asymmetric
      * key pair created outside Amazon Web Services Payment Cryptography by calling <a
-     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ImportKey.html">ImportKey</a>).
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ImportKey.html">ImportKey</a>.
      * </p>
      * <p>
-     * for symmetric and DUKPT encryption, Amazon Web Services Payment Cryptography supports <code>TDES</code> and
-     * <code>AES</code> algorithms. For asymmetric encryption, Amazon Web Services Payment Cryptography supports
-     * <code>RSA</code>. To encrypt using DUKPT, you must already have a DUKPT key in your account with
+     * For symmetric and DUKPT encryption, Amazon Web Services Payment Cryptography supports <code>TDES</code> and
+     * <code>AES</code> algorithms. For EMV encryption, Amazon Web Services Payment Cryptography supports
+     * <code>TDES</code> algorithms.For asymmetric encryption, Amazon Web Services Payment Cryptography supports
+     * <code>RSA</code>.
+     * </p>
+     * <p>
+     * When you use TDES or TDES DUKPT, the plaintext data length must be a multiple of 8 bytes. For AES or AES DUKPT,
+     * the plaintext data length must be a multiple of 16 bytes. For RSA, it sould be equal to the key size unless
+     * padding is enabled.
+     * </p>
+     * <p>
+     * To encrypt using DUKPT, you must already have a BDK (Base Derivation Key) key in your account with
      * <code>KeyModesOfUse</code> set to <code>DeriveKey</code>, or you can generate a new DUKPT key by calling <a
-     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_CreateKey.html">CreateKey</a>.
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_CreateKey.html">CreateKey</a>. To
+     * encrypt using EMV, you must already have an IMK (Issuer Master Key) key in your account with
+     * <code>KeyModesOfUse</code> set to <code>DeriveKey</code>.
      * </p>
      * <p>
      * For information about valid keys for this operation, see <a
@@ -505,12 +521,16 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
      * Generates a Message Authentication Code (MAC) cryptogram within Amazon Web Services Payment Cryptography.
      * </p>
      * <p>
-     * You can use this operation when keys won't be shared but mutual data is present on both ends for validation. In
-     * this case, known data values are used to generate a MAC on both ends for comparision without sending or receiving
-     * data in ciphertext or plaintext. You can use this operation to generate a DUPKT, HMAC or EMV MAC by setting
-     * generation attributes and algorithm to the associated values. The MAC generation encryption key must have valid
-     * values for <code>KeyUsage</code> such as <code>TR31_M7_HMAC_KEY</code> for HMAC generation, and they key must
-     * have <code>KeyModesOfUse</code> set to <code>Generate</code> and <code>Verify</code>.
+     * You can use this operation to authenticate card-related data by using known data values to generate MAC for data
+     * validation between the sending and receiving parties. This operation uses message data, a secret encryption key
+     * and MAC algorithm to generate a unique MAC value for transmission. The receiving party of the MAC must use the
+     * same message data, secret encryption key and MAC algorithm to reproduce another MAC value for comparision.
+     * </p>
+     * <p>
+     * You can use this operation to generate a DUPKT, CMAC, HMAC or EMV MAC by setting generation attributes and
+     * algorithm to the associated values. The MAC generation encryption key must have valid values for
+     * <code>KeyUsage</code> such as <code>TR31_M7_HMAC_KEY</code> for HMAC generation, and they key must have
+     * <code>KeyModesOfUse</code> set to <code>Generate</code> and <code>Verify</code>.
      * </p>
      * <p>
      * For information about valid keys for this operation, see <a
@@ -827,9 +847,7 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
      * key and changing PIN block format from one to another without PIN block data leaving Amazon Web Services Payment
      * Cryptography. The encryption key transformation can be from PEK (Pin Encryption Key) to BDK (Base Derivation Key)
      * for DUKPT or from BDK for DUKPT to PEK. Amazon Web Services Payment Cryptography supports <code>TDES</code> and
-     * <code>AES</code> key derivation type for DUKPT tranlations. You can use this operation for P2PE (Point to Point
-     * Encryption) use cases where the encryption keys should change but the processing system either does not need to,
-     * or is not permitted to, decrypt the data.
+     * <code>AES</code> key derivation type for DUKPT translations.
      * </p>
      * <p>
      * The allowed combinations of PIN block format translations are guided by PCI. It is important to note that not all
@@ -846,7 +864,8 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
      * </p>
      * <note>
      * <p>
-     * At this time, Amazon Web Services Payment Cryptography does not support translations to PIN format 4.
+     * Amazon Web Services Payment Cryptography currently supports ISO PIN block 4 translation for PIN block built using
+     * legacy PAN length. That is, PAN is the right most 12 digits excluding the check digits.
      * </p>
      * </note>
      * <p>
@@ -1154,11 +1173,10 @@ public class AWSPaymentCryptographyDataClient extends AmazonWebServiceClient imp
      * Verifies a Message Authentication Code (MAC).
      * </p>
      * <p>
-     * You can use this operation when keys won't be shared but mutual data is present on both ends for validation. In
-     * this case, known data values are used to generate a MAC on both ends for verification without sending or
-     * receiving data in ciphertext or plaintext. You can use this operation to verify a DUPKT, HMAC or EMV MAC by
-     * setting generation attributes and algorithm to the associated values. Use the same encryption key for MAC
-     * verification as you use for <a>GenerateMac</a>.
+     * You can use this operation to verify MAC for message data authentication such as . In this operation, you must
+     * use the same message data, secret encryption key and MAC algorithm that was used to generate MAC. You can use
+     * this operation to verify a DUPKT, CMAC, HMAC or EMV MAC by setting generation attributes and algorithm to the
+     * associated values.
      * </p>
      * <p>
      * For information about valid keys for this operation, see <a

@@ -77,6 +77,11 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * <p>
      * Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      */
     private Boolean freeTrialConsumed;
     /**
@@ -84,8 +89,21 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when that
      * free trial ends.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      */
     private java.util.Date freeTrialExpiration;
+    /**
+     * <p>
+     * The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     * "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     * >Register with Grafana Labs</a>.
+     * </p>
+     */
+    private String grafanaToken;
     /**
      * <p>
      * The version of Grafana supported in this workspace.
@@ -100,15 +118,21 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
     private String id;
     /**
      * <p>
-     * If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will need to be
-     * renewed.
+     * If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services Marketplace, this
+     * specifies when the license ends and will need to be renewed. Purchasing the Enterprise plugins option through
+     * Amazon Managed Grafana does not have an expiration. It is valid until the license is removed.
      * </p>
      */
     private java.util.Date licenseExpiration;
     /**
      * <p>
-     * Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     * Specifies whether this workspace has a full Grafana Enterprise license.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      */
     private String licenseType;
     /**
@@ -601,9 +625,17 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * <p>
      * Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param freeTrialConsumed
-     *        Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
+     *        Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      */
 
     public void setFreeTrialConsumed(Boolean freeTrialConsumed) {
@@ -614,8 +646,16 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * <p>
      * Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
-     * @return Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
+     * @return Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.</p> <note>
+     *         <p>
+     *         Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *         </p>
      */
 
     public Boolean getFreeTrialConsumed() {
@@ -626,9 +666,17 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * <p>
      * Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param freeTrialConsumed
-     *        Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
+     *        Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,8 +689,16 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * <p>
      * Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
-     * @return Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.
+     * @return Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.</p> <note>
+     *         <p>
+     *         Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *         </p>
      */
 
     public Boolean isFreeTrialConsumed() {
@@ -654,10 +710,18 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when that
      * free trial ends.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param freeTrialExpiration
      *        If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when
-     *        that free trial ends.
+     *        that free trial ends.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      */
 
     public void setFreeTrialExpiration(java.util.Date freeTrialExpiration) {
@@ -669,9 +733,17 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when that
      * free trial ends.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @return If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when
-     *         that free trial ends.
+     *         that free trial ends.</p> <note>
+     *         <p>
+     *         Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *         </p>
      */
 
     public java.util.Date getFreeTrialExpiration() {
@@ -683,15 +755,75 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when that
      * free trial ends.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param freeTrialExpiration
      *        If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when
-     *        that free trial ends.
+     *        that free trial ends.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public WorkspaceDescription withFreeTrialExpiration(java.util.Date freeTrialExpiration) {
         setFreeTrialExpiration(freeTrialExpiration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     * "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     * >Register with Grafana Labs</a>.
+     * </p>
+     * 
+     * @param grafanaToken
+     *        The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     *        >Register with Grafana Labs</a>.
+     */
+
+    public void setGrafanaToken(String grafanaToken) {
+        this.grafanaToken = grafanaToken;
+    }
+
+    /**
+     * <p>
+     * The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     * "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     * >Register with Grafana Labs</a>.
+     * </p>
+     * 
+     * @return The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     *         >Register with Grafana Labs</a>.
+     */
+
+    public String getGrafanaToken() {
+        return this.grafanaToken;
+    }
+
+    /**
+     * <p>
+     * The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     * "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     * >Register with Grafana Labs</a>.
+     * </p>
+     * 
+     * @param grafanaToken
+     *        The token that ties this workspace to a Grafana Labs account. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html#AMG-workspace-register-enterprise"
+     *        >Register with Grafana Labs</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription withGrafanaToken(String grafanaToken) {
+        setGrafanaToken(grafanaToken);
         return this;
     }
 
@@ -777,13 +909,15 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will need to be
-     * renewed.
+     * If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services Marketplace, this
+     * specifies when the license ends and will need to be renewed. Purchasing the Enterprise plugins option through
+     * Amazon Managed Grafana does not have an expiration. It is valid until the license is removed.
      * </p>
      * 
      * @param licenseExpiration
-     *        If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will
-     *        need to be renewed.
+     *        If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services Marketplace,
+     *        this specifies when the license ends and will need to be renewed. Purchasing the Enterprise plugins option
+     *        through Amazon Managed Grafana does not have an expiration. It is valid until the license is removed.
      */
 
     public void setLicenseExpiration(java.util.Date licenseExpiration) {
@@ -792,12 +926,15 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will need to be
-     * renewed.
+     * If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services Marketplace, this
+     * specifies when the license ends and will need to be renewed. Purchasing the Enterprise plugins option through
+     * Amazon Managed Grafana does not have an expiration. It is valid until the license is removed.
      * </p>
      * 
-     * @return If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will
-     *         need to be renewed.
+     * @return If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services
+     *         Marketplace, this specifies when the license ends and will need to be renewed. Purchasing the Enterprise
+     *         plugins option through Amazon Managed Grafana does not have an expiration. It is valid until the license
+     *         is removed.
      */
 
     public java.util.Date getLicenseExpiration() {
@@ -806,13 +943,15 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will need to be
-     * renewed.
+     * If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services Marketplace, this
+     * specifies when the license ends and will need to be renewed. Purchasing the Enterprise plugins option through
+     * Amazon Managed Grafana does not have an expiration. It is valid until the license is removed.
      * </p>
      * 
      * @param licenseExpiration
-     *        If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will
-     *        need to be renewed.
+     *        If this workspace has a full Grafana Enterprise license purchased through Amazon Web Services Marketplace,
+     *        this specifies when the license ends and will need to be renewed. Purchasing the Enterprise plugins option
+     *        through Amazon Managed Grafana does not have an expiration. It is valid until the license is removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -823,11 +962,19 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     * Specifies whether this workspace has a full Grafana Enterprise license.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param licenseType
-     *        Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     *        Specifies whether this workspace has a full Grafana Enterprise license.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      * @see LicenseType
      */
 
@@ -837,10 +984,18 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     * Specifies whether this workspace has a full Grafana Enterprise license.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
-     * @return Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     * @return Specifies whether this workspace has a full Grafana Enterprise license.</p> <note>
+     *         <p>
+     *         Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *         </p>
      * @see LicenseType
      */
 
@@ -850,11 +1005,19 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     * Specifies whether this workspace has a full Grafana Enterprise license.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param licenseType
-     *        Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     *        Specifies whether this workspace has a full Grafana Enterprise license.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LicenseType
      */
@@ -866,11 +1029,19 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     * Specifies whether this workspace has a full Grafana Enterprise license.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     * </p>
+     * </note>
      * 
      * @param licenseType
-     *        Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.
+     *        Specifies whether this workspace has a full Grafana Enterprise license.</p> <note>
+     *        <p>
+     *        Amazon Managed Grafana workspaces no longer support Grafana Enterprise free trials.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LicenseType
      */
@@ -1707,6 +1878,8 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
             sb.append("FreeTrialConsumed: ").append(getFreeTrialConsumed()).append(",");
         if (getFreeTrialExpiration() != null)
             sb.append("FreeTrialExpiration: ").append(getFreeTrialExpiration()).append(",");
+        if (getGrafanaToken() != null)
+            sb.append("GrafanaToken: ").append(getGrafanaToken()).append(",");
         if (getGrafanaVersion() != null)
             sb.append("GrafanaVersion: ").append(getGrafanaVersion()).append(",");
         if (getId() != null)
@@ -1784,6 +1957,10 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         if (other.getFreeTrialExpiration() == null ^ this.getFreeTrialExpiration() == null)
             return false;
         if (other.getFreeTrialExpiration() != null && other.getFreeTrialExpiration().equals(this.getFreeTrialExpiration()) == false)
+            return false;
+        if (other.getGrafanaToken() == null ^ this.getGrafanaToken() == null)
+            return false;
+        if (other.getGrafanaToken() != null && other.getGrafanaToken().equals(this.getGrafanaToken()) == false)
             return false;
         if (other.getGrafanaVersion() == null ^ this.getGrafanaVersion() == null)
             return false;
@@ -1865,6 +2042,7 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getFreeTrialConsumed() == null) ? 0 : getFreeTrialConsumed().hashCode());
         hashCode = prime * hashCode + ((getFreeTrialExpiration() == null) ? 0 : getFreeTrialExpiration().hashCode());
+        hashCode = prime * hashCode + ((getGrafanaToken() == null) ? 0 : getGrafanaToken().hashCode());
         hashCode = prime * hashCode + ((getGrafanaVersion() == null) ? 0 : getGrafanaVersion().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getLicenseExpiration() == null) ? 0 : getLicenseExpiration().hashCode());

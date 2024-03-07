@@ -27,7 +27,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -58,7 +58,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -86,7 +86,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param functionName
-     *        The name of the Lambda function.</p>
+     *        The name or ARN of the Lambda function.</p>
      *        <p class="title">
      *        <b>Name formats</b>
      *        </p>
@@ -118,7 +118,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -145,7 +145,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
      * characters in length.
      * </p>
      * 
-     * @return The name of the Lambda function.</p>
+     * @return The name or ARN of the Lambda function.</p>
      *         <p class="title">
      *         <b>Name formats</b>
      *         </p>
@@ -177,7 +177,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      * </p>
      * <p class="title">
      * <b>Name formats</b>
@@ -205,7 +205,7 @@ public class GetFunctionConcurrencyRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param functionName
-     *        The name of the Lambda function.</p>
+     *        The name or ARN of the Lambda function.</p>
      *        <p class="title">
      *        <b>Name formats</b>
      *        </p>

@@ -45,7 +45,7 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
     private Integer macLength;
     /**
      * <p>
-     * The data for which a MAC is under generation.
+     * The data for which a MAC is under generation. This value must be hexBinary.
      * </p>
      */
     private String messageData;
@@ -172,11 +172,11 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The data for which a MAC is under generation.
+     * The data for which a MAC is under generation. This value must be hexBinary.
      * </p>
      * 
      * @param messageData
-     *        The data for which a MAC is under generation.
+     *        The data for which a MAC is under generation. This value must be hexBinary.
      */
 
     public void setMessageData(String messageData) {
@@ -185,10 +185,10 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The data for which a MAC is under generation.
+     * The data for which a MAC is under generation. This value must be hexBinary.
      * </p>
      * 
-     * @return The data for which a MAC is under generation.
+     * @return The data for which a MAC is under generation. This value must be hexBinary.
      */
 
     public String getMessageData() {
@@ -197,11 +197,11 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The data for which a MAC is under generation.
+     * The data for which a MAC is under generation. This value must be hexBinary.
      * </p>
      * 
      * @param messageData
-     *        The data for which a MAC is under generation.
+     *        The data for which a MAC is under generation. This value must be hexBinary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

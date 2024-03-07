@@ -20,7 +20,11 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AssociatedResourceType {
 
-    CLOUDFRONT("CLOUDFRONT");
+    CLOUDFRONT("CLOUDFRONT"),
+    API_GATEWAY("API_GATEWAY"),
+    COGNITO_USER_POOL("COGNITO_USER_POOL"),
+    APP_RUNNER_SERVICE("APP_RUNNER_SERVICE"),
+    VERIFIED_ACCESS_INSTANCE("VERIFIED_ACCESS_INSTANCE");
 
     private String value;
 

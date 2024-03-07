@@ -36,7 +36,7 @@ public class EKSOnDeviceServiceConfiguration implements Serializable, Cloneable,
     private String kubernetesVersion;
     /**
      * <p>
-     * The version of EKS Anywhere on the Snow Family device.
+     * The optional version of EKS Anywhere on the Snow Family device.
      * </p>
      */
     private String eKSAnywhereVersion;
@@ -83,11 +83,11 @@ public class EKSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The version of EKS Anywhere on the Snow Family device.
+     * The optional version of EKS Anywhere on the Snow Family device.
      * </p>
      * 
      * @param eKSAnywhereVersion
-     *        The version of EKS Anywhere on the Snow Family device.
+     *        The optional version of EKS Anywhere on the Snow Family device.
      */
 
     public void setEKSAnywhereVersion(String eKSAnywhereVersion) {
@@ -96,10 +96,10 @@ public class EKSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The version of EKS Anywhere on the Snow Family device.
+     * The optional version of EKS Anywhere on the Snow Family device.
      * </p>
      * 
-     * @return The version of EKS Anywhere on the Snow Family device.
+     * @return The optional version of EKS Anywhere on the Snow Family device.
      */
 
     public String getEKSAnywhereVersion() {
@@ -108,11 +108,11 @@ public class EKSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The version of EKS Anywhere on the Snow Family device.
+     * The optional version of EKS Anywhere on the Snow Family device.
      * </p>
      * 
      * @param eKSAnywhereVersion
-     *        The version of EKS Anywhere on the Snow Family device.
+     *        The optional version of EKS Anywhere on the Snow Family device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

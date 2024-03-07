@@ -76,6 +76,13 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String kmsKeyIdentifier;
+    /**
+     * <p>
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * <code>PRE_START_DEPLOYMENT</code> actions.
+     * </p>
+     */
+    private java.util.Map<String, String> dynamicExtensionParameters;
 
     /**
      * <p>
@@ -447,6 +454,80 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * <code>PRE_START_DEPLOYMENT</code> actions.
+     * </p>
+     * 
+     * @return A map of dynamic extension parameter names to values to pass to associated extensions with
+     *         <code>PRE_START_DEPLOYMENT</code> actions.
+     */
+
+    public java.util.Map<String, String> getDynamicExtensionParameters() {
+        return dynamicExtensionParameters;
+    }
+
+    /**
+     * <p>
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * <code>PRE_START_DEPLOYMENT</code> actions.
+     * </p>
+     * 
+     * @param dynamicExtensionParameters
+     *        A map of dynamic extension parameter names to values to pass to associated extensions with
+     *        <code>PRE_START_DEPLOYMENT</code> actions.
+     */
+
+    public void setDynamicExtensionParameters(java.util.Map<String, String> dynamicExtensionParameters) {
+        this.dynamicExtensionParameters = dynamicExtensionParameters;
+    }
+
+    /**
+     * <p>
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * <code>PRE_START_DEPLOYMENT</code> actions.
+     * </p>
+     * 
+     * @param dynamicExtensionParameters
+     *        A map of dynamic extension parameter names to values to pass to associated extensions with
+     *        <code>PRE_START_DEPLOYMENT</code> actions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartDeploymentRequest withDynamicExtensionParameters(java.util.Map<String, String> dynamicExtensionParameters) {
+        setDynamicExtensionParameters(dynamicExtensionParameters);
+        return this;
+    }
+
+    /**
+     * Add a single DynamicExtensionParameters entry
+     *
+     * @see StartDeploymentRequest#withDynamicExtensionParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartDeploymentRequest addDynamicExtensionParametersEntry(String key, String value) {
+        if (null == this.dynamicExtensionParameters) {
+            this.dynamicExtensionParameters = new java.util.HashMap<String, String>();
+        }
+        if (this.dynamicExtensionParameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.dynamicExtensionParameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into DynamicExtensionParameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartDeploymentRequest clearDynamicExtensionParametersEntries() {
+        this.dynamicExtensionParameters = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -473,7 +554,9 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getKmsKeyIdentifier() != null)
-            sb.append("KmsKeyIdentifier: ").append(getKmsKeyIdentifier());
+            sb.append("KmsKeyIdentifier: ").append(getKmsKeyIdentifier()).append(",");
+        if (getDynamicExtensionParameters() != null)
+            sb.append("DynamicExtensionParameters: ").append(getDynamicExtensionParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -520,6 +603,10 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getKmsKeyIdentifier() != null && other.getKmsKeyIdentifier().equals(this.getKmsKeyIdentifier()) == false)
             return false;
+        if (other.getDynamicExtensionParameters() == null ^ this.getDynamicExtensionParameters() == null)
+            return false;
+        if (other.getDynamicExtensionParameters() != null && other.getDynamicExtensionParameters().equals(this.getDynamicExtensionParameters()) == false)
+            return false;
         return true;
     }
 
@@ -536,6 +623,7 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyIdentifier() == null) ? 0 : getKmsKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getDynamicExtensionParameters() == null) ? 0 : getDynamicExtensionParameters().hashCode());
         return hashCode;
     }
 

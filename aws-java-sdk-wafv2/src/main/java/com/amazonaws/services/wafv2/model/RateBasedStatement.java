@@ -23,6 +23,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * categorizes requests according to your aggregation criteria, collects them into aggregation instances, and counts and
  * rate limits the requests for each instance.
  * </p>
+ * <note>
+ * <p>
+ * If you change any of these settings in a rule that's currently in use, the change resets the rule's rate limiting
+ * counts. This can pause the rule's rate limiting activities for up to a minute.
+ * </p>
+ * </note>
  * <p>
  * You can specify individual aggregation keys, like IP address or HTTP method. You can also specify aggregation key
  * combinations, like IP address and HTTP method, or HTTP method, query argument, and cookie.

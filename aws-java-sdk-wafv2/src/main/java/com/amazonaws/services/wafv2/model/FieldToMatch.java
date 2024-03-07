@@ -19,10 +19,15 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The part of the web request that you want WAF to inspect. Include the single <code>FieldToMatch</code> type that you
- * want to inspect, with additional specifications as needed, according to the type. You specify a single request
- * component in <code>FieldToMatch</code> for each rule statement that requires it. To inspect more than one component
- * of the web request, create a separate rule statement for each component.
+ * Specifies a web request component to be used in a rule match statement or in a logging configuration.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * In a rule statement, this is the part of the web request that you want WAF to inspect. Include the single
+ * <code>FieldToMatch</code> type that you want to inspect, with additional specifications as needed, according to the
+ * type. You specify a single request component in <code>FieldToMatch</code> for each rule statement that requires it.
+ * To inspect more than one component of the web request, create a separate rule statement for each component.
  * </p>
  * <p>
  * Example JSON for a <code>QueryString</code> field to match:
@@ -36,6 +41,28 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * <code> "FieldToMatch": { "Method": { "Name": "DELETE" } }</code>
  * </p>
+ * </li>
+ * <li>
+ * <p>
+ * In a logging configuration, this is used in the <code>RedactedFields</code> property to specify a field to redact
+ * from the logging records. For this use case, note the following:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Even though all <code>FieldToMatch</code> settings are available, the only valid settings for field redaction are
+ * <code>UriPath</code>, <code>QueryString</code>, <code>SingleHeader</code>, and <code>Method</code>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * In this documentation, the descriptions of the individual fields talk about specifying the web request component to
+ * inspect, but for field redaction, you are specifying the component type to redact from the logs.
+ * </p>
+ * </li>
+ * </ul>
+ * </li>
+ * </ul>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/FieldToMatch" target="_top">AWS API
  *      Documentation</a>
@@ -93,11 +120,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>Body</code> object configuration.
      * </p>
@@ -117,11 +157,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration.
      * </p>
@@ -471,11 +524,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>Body</code> object configuration.
      * </p>
@@ -485,11 +551,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        the part of a request that contains any additional data that you want to send to your web server as the
      *        HTTP request body, such as data from a form. </p>
      *        <p>
-     *        A limited amount of the request body is forwarded to WAF for inspection by the underlying host service.
-     *        For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16
-     *        KB (16,384 bytes). For CloudFront distributions, you can increase the limit in the web ACL's
+     *        WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit
+     *        for the resource type. When a web request body is larger than the limit, the underlying host service only
+     *        forwards the contents that are within the limit to WAF for inspection.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB
+     *        (16,384 bytes), and you can increase the limit for each resource type in the web ACL
      *        <code>AssociationConfig</code>, for additional processing fees.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        For information about how to handle oversized request bodies, see the <code>Body</code> object
      *        configuration.
@@ -506,11 +585,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>Body</code> object configuration.
      * </p>
@@ -519,11 +611,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *         the part of a request that contains any additional data that you want to send to your web server as the
      *         HTTP request body, such as data from a form. </p>
      *         <p>
-     *         A limited amount of the request body is forwarded to WAF for inspection by the underlying host service.
-     *         For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16
-     *         KB (16,384 bytes). For CloudFront distributions, you can increase the limit in the web ACL's
+     *         WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit
+     *         for the resource type. When a web request body is larger than the limit, the underlying host service only
+     *         forwards the contents that are within the limit to WAF for inspection.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB
+     *         (16,384 bytes), and you can increase the limit for each resource type in the web ACL
      *         <code>AssociationConfig</code>, for additional processing fees.
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         For information about how to handle oversized request bodies, see the <code>Body</code> object
      *         configuration.
@@ -540,11 +645,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>Body</code> object configuration.
      * </p>
@@ -554,11 +672,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        the part of a request that contains any additional data that you want to send to your web server as the
      *        HTTP request body, such as data from a form. </p>
      *        <p>
-     *        A limited amount of the request body is forwarded to WAF for inspection by the underlying host service.
-     *        For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16
-     *        KB (16,384 bytes). For CloudFront distributions, you can increase the limit in the web ACL's
+     *        WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit
+     *        for the resource type. When a web request body is larger than the limit, the underlying host service only
+     *        forwards the contents that are within the limit to WAF for inspection.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB
+     *        (16,384 bytes), and you can increase the limit for each resource type in the web ACL
      *        <code>AssociationConfig</code>, for additional processing fees.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        For information about how to handle oversized request bodies, see the <code>Body</code> object
      *        configuration.
@@ -623,11 +754,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration.
      * </p>
@@ -637,11 +781,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        part of a request that contains any additional data that you want to send to your web server as the HTTP
      *        request body, such as data from a form. </p>
      *        <p>
-     *        A limited amount of the request body is forwarded to WAF for inspection by the underlying host service.
-     *        For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16
-     *        KB (16,384 bytes). For CloudFront distributions, you can increase the limit in the web ACL's
+     *        WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit
+     *        for the resource type. When a web request body is larger than the limit, the underlying host service only
+     *        forwards the contents that are within the limit to WAF for inspection.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB
+     *        (16,384 bytes), and you can increase the limit for each resource type in the web ACL
      *        <code>AssociationConfig</code>, for additional processing fees.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
      *        configuration.
@@ -658,11 +815,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration.
      * </p>
@@ -671,11 +841,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *         part of a request that contains any additional data that you want to send to your web server as the HTTP
      *         request body, such as data from a form. </p>
      *         <p>
-     *         A limited amount of the request body is forwarded to WAF for inspection by the underlying host service.
-     *         For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16
-     *         KB (16,384 bytes). For CloudFront distributions, you can increase the limit in the web ACL's
+     *         WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit
+     *         for the resource type. When a web request body is larger than the limit, the underlying host service only
+     *         forwards the contents that are within the limit to WAF for inspection.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB
+     *         (16,384 bytes), and you can increase the limit for each resource type in the web ACL
      *         <code>AssociationConfig</code>, for additional processing fees.
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
      *         configuration.
@@ -692,11 +875,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * A limited amount of the request body is forwarded to WAF for inspection by the underlying host service. For
-     * regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16 KB (16,384
-     * bytes). For CloudFront distributions, you can increase the limit in the web ACL's <code>AssociationConfig</code>,
-     * for additional processing fees.
+     * WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit for the
+     * resource type. When a web request body is larger than the limit, the underlying host service only forwards the
+     * contents that are within the limit to WAF for inspection.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB (16,384
+     * bytes), and you can increase the limit for each resource type in the web ACL <code>AssociationConfig</code>, for
+     * additional processing fees.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration.
      * </p>
@@ -706,11 +902,24 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        part of a request that contains any additional data that you want to send to your web server as the HTTP
      *        request body, such as data from a form. </p>
      *        <p>
-     *        A limited amount of the request body is forwarded to WAF for inspection by the underlying host service.
-     *        For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront distributions, the limit is 16
-     *        KB (16,384 bytes). For CloudFront distributions, you can increase the limit in the web ACL's
+     *        WAF does not support inspecting the entire contents of the web request body if the body exceeds the limit
+     *        for the resource type. When a web request body is larger than the limit, the underlying host service only
+     *        forwards the contents that are within the limit to WAF for inspection.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For Application Load Balancer and AppSync, the limit is fixed at 8 KB (8,192 bytes).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default limit is 16 KB
+     *        (16,384 bytes), and you can increase the limit for each resource type in the web ACL
      *        <code>AssociationConfig</code>, for additional processing fees.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
      *        configuration.
