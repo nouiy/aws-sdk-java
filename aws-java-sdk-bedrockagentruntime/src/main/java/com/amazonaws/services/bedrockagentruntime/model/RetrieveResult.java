@@ -23,12 +23,73 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
+     * A list of results from querying the knowledge base.
+     * </p>
+     */
     private java.util.List<KnowledgeBaseRetrievalResult> retrievalResults;
 
-    private String nextToken;
+    /**
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use
+     *        this token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
 
     /**
-     * @return
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     * 
+     * @return If there are more results than can fit in the response, the response returns a <code>nextToken</code>.
+     *         Use this token in the <code>nextToken</code> field of another request to retrieve the next batch of
+     *         results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use
+     *        this token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrieveResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of results from querying the knowledge base.
+     * </p>
+     * 
+     * @return A list of results from querying the knowledge base.
      */
 
     public java.util.List<KnowledgeBaseRetrievalResult> getRetrievalResults() {
@@ -36,7 +97,12 @@ public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     }
 
     /**
+     * <p>
+     * A list of results from querying the knowledge base.
+     * </p>
+     * 
      * @param retrievalResults
+     *        A list of results from querying the knowledge base.
      */
 
     public void setRetrievalResults(java.util.Collection<KnowledgeBaseRetrievalResult> retrievalResults) {
@@ -50,12 +116,16 @@ public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
+     * A list of results from querying the knowledge base.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRetrievalResults(java.util.Collection)} or {@link #withRetrievalResults(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param retrievalResults
+     *        A list of results from querying the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,38 +140,17 @@ public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     }
 
     /**
+     * <p>
+     * A list of results from querying the knowledge base.
+     * </p>
+     * 
      * @param retrievalResults
+     *        A list of results from querying the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RetrieveResult withRetrievalResults(java.util.Collection<KnowledgeBaseRetrievalResult> retrievalResults) {
         setRetrievalResults(retrievalResults);
-        return this;
-    }
-
-    /**
-     * @param nextToken
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * @param nextToken
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RetrieveResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
         return this;
     }
 
@@ -117,10 +166,10 @@ public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getRetrievalResults() != null)
-            sb.append("RetrievalResults: ").append("***Sensitive Data Redacted***").append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getRetrievalResults() != null)
+            sb.append("RetrievalResults: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -135,13 +184,13 @@ public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         if (obj instanceof RetrieveResult == false)
             return false;
         RetrieveResult other = (RetrieveResult) obj;
-        if (other.getRetrievalResults() == null ^ this.getRetrievalResults() == null)
-            return false;
-        if (other.getRetrievalResults() != null && other.getRetrievalResults().equals(this.getRetrievalResults()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getRetrievalResults() == null ^ this.getRetrievalResults() == null)
+            return false;
+        if (other.getRetrievalResults() != null && other.getRetrievalResults().equals(this.getRetrievalResults()) == false)
             return false;
         return true;
     }
@@ -151,8 +200,8 @@ public class RetrieveResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getRetrievalResults() == null) ? 0 : getRetrievalResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getRetrievalResults() == null) ? 0 : getRetrievalResults().hashCode());
         return hashCode;
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Result item returned from a knowledge base retrieval.
+ * Details about a result from querying the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/KnowledgeBaseRetrievalResult"
@@ -28,18 +28,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains a chunk of text from a data source in the knowledge base.
+     * </p>
+     */
     private RetrievalResultContent content;
-
+    /**
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     */
     private RetrievalResultLocation location;
     /**
      * <p>
-     * The relevance score of a result.
+     * The level of relevance of the result to the query.
      * </p>
      */
     private Double score;
 
     /**
+     * <p>
+     * Contains a chunk of text from a data source in the knowledge base.
+     * </p>
+     * 
      * @param content
+     *        Contains a chunk of text from a data source in the knowledge base.
      */
 
     public void setContent(RetrievalResultContent content) {
@@ -47,7 +61,11 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * Contains a chunk of text from a data source in the knowledge base.
+     * </p>
+     * 
+     * @return Contains a chunk of text from a data source in the knowledge base.
      */
 
     public RetrievalResultContent getContent() {
@@ -55,7 +73,12 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Contains a chunk of text from a data source in the knowledge base.
+     * </p>
+     * 
      * @param content
+     *        Contains a chunk of text from a data source in the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -65,7 +88,12 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     * 
      * @param location
+     *        Contains information about the location of the data source.
      */
 
     public void setLocation(RetrievalResultLocation location) {
@@ -73,7 +101,11 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     * 
+     * @return Contains information about the location of the data source.
      */
 
     public RetrievalResultLocation getLocation() {
@@ -81,7 +113,12 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     * 
      * @param location
+     *        Contains information about the location of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +129,11 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The relevance score of a result.
+     * The level of relevance of the result to the query.
      * </p>
      * 
      * @param score
-     *        The relevance score of a result.
+     *        The level of relevance of the result to the query.
      */
 
     public void setScore(Double score) {
@@ -105,10 +142,10 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The relevance score of a result.
+     * The level of relevance of the result to the query.
      * </p>
      * 
-     * @return The relevance score of a result.
+     * @return The level of relevance of the result to the query.
      */
 
     public Double getScore() {
@@ -117,11 +154,11 @@ public class KnowledgeBaseRetrievalResult implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The relevance score of a result.
+     * The level of relevance of the result to the query.
      * </p>
      * 
      * @param score
-     *        The relevance score of a result.
+     *        The level of relevance of the result to the query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

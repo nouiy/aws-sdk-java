@@ -29,12 +29,12 @@ public class RetrieveRequestMarshaller {
 
     private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
-    private static final MarshallingInfo<StructuredPojo> RETRIEVALQUERY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retrievalQuery").build();
-    private static final MarshallingInfo<StructuredPojo> RETRIEVALCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retrievalConfiguration").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<StructuredPojo> RETRIEVALCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retrievalConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> RETRIEVALQUERY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retrievalQuery").build();
 
     private static final RetrieveRequestMarshaller instance = new RetrieveRequestMarshaller();
 
@@ -53,9 +53,9 @@ public class RetrieveRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(retrieveRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
-            protocolMarshaller.marshall(retrieveRequest.getRetrievalQuery(), RETRIEVALQUERY_BINDING);
-            protocolMarshaller.marshall(retrieveRequest.getRetrievalConfiguration(), RETRIEVALCONFIGURATION_BINDING);
             protocolMarshaller.marshall(retrieveRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(retrieveRequest.getRetrievalConfiguration(), RETRIEVALCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(retrieveRequest.getRetrievalQuery(), RETRIEVALQUERY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

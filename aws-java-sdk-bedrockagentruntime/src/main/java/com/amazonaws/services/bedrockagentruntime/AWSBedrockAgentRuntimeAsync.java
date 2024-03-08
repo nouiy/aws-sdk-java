@@ -26,7 +26,7 @@ import com.amazonaws.services.bedrockagentruntime.model.*;
  * </p>
  * <p>
  * <p>
- * Amazon Bedrock Agent
+ * Contains APIs related to model invocation and querying of knowledge bases.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -34,7 +34,7 @@ public interface AWSBedrockAgentRuntimeAsync extends AWSBedrockAgentRuntime {
 
     /**
      * <p>
-     * Retrieve from knowledge base.
+     * Queries a knowledge base and retrieves information from it.
      * </p>
      * 
      * @param retrieveRequest
@@ -47,7 +47,7 @@ public interface AWSBedrockAgentRuntimeAsync extends AWSBedrockAgentRuntime {
 
     /**
      * <p>
-     * Retrieve from knowledge base.
+     * Queries a knowledge base and retrieves information from it.
      * </p>
      * 
      * @param retrieveRequest
@@ -65,8 +65,17 @@ public interface AWSBedrockAgentRuntimeAsync extends AWSBedrockAgentRuntime {
 
     /**
      * <p>
-     * RetrieveAndGenerate API
+     * Queries a knowledge base and generates responses based on the retrieved results. The response cites up to five
+     * sources but only selects the ones that are relevant to the query.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in the <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_KnowledgeBaseVectorSearchConfiguration.html"
+     * >vectorSearchConfiguration</a> object.
+     * </p>
+     * </note>
      * 
      * @param retrieveAndGenerateRequest
      * @return A Java Future containing the result of the RetrieveAndGenerate operation returned by the service.
@@ -78,8 +87,17 @@ public interface AWSBedrockAgentRuntimeAsync extends AWSBedrockAgentRuntime {
 
     /**
      * <p>
-     * RetrieveAndGenerate API
+     * Queries a knowledge base and generates responses based on the retrieved results. The response cites up to five
+     * sources but only selects the ones that are relevant to the query.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in the <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_KnowledgeBaseVectorSearchConfiguration.html"
+     * >vectorSearchConfiguration</a> object.
+     * </p>
+     * </note>
      * 
      * @param retrieveAndGenerateRequest
      * @param asyncHandler

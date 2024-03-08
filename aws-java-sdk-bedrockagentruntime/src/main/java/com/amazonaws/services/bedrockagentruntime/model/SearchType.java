@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagentruntime.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Query type to be performed on data store.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum SearchType {

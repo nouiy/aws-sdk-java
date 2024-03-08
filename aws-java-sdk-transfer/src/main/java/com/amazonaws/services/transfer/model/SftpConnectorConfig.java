@@ -22,6 +22,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Contains the details for an SFTP connector object. The connector object is used for transferring files to and from a
  * partner's SFTP server.
  * </p>
+ * <note>
+ * <p>
+ * Because the <code>SftpConnectorConfig</code> data type is used for both creating and updating SFTP connectors, its
+ * parameters, <code>TrustedHostKeys</code> and <code>UserSecretId</code> are marked as not required. This is a bit
+ * misleading, as they are not required when you are updating an existing SFTP connector, but <i>are required</i> when
+ * you are creating a new SFTP connector.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/SftpConnectorConfig" target="_top">AWS API
  *      Documentation</a>
@@ -65,6 +73,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Run this command to retrieve the SFTP server host key, where your SFTP server name is <code>ftp.host.com</code>.
+     * </p>
+     * <p>
+     * <code>ssh-keyscan ftp.host.com</code>
+     * </p>
+     * <p>
+     * This prints the public host key to standard output.
+     * </p>
+     * <p>
+     * <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     * </p>
+     * <p>
+     * Copy and paste this string into the <code>TrustedHostKeys</code> field for the <code>create-connector</code>
+     * command or into the <b>Trusted host keys</b> field in the console.
+     * </p>
      */
     private java.util.List<String> trustedHostKeys;
 
@@ -143,6 +167,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Run this command to retrieve the SFTP server host key, where your SFTP server name is <code>ftp.host.com</code>.
+     * </p>
+     * <p>
+     * <code>ssh-keyscan ftp.host.com</code>
+     * </p>
+     * <p>
+     * This prints the public host key to standard output.
+     * </p>
+     * <p>
+     * <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     * </p>
+     * <p>
+     * Copy and paste this string into the <code>TrustedHostKeys</code> field for the <code>create-connector</code>
+     * command or into the <b>Trusted host keys</b> field in the console.
+     * </p>
      * 
      * @return The public portion of the host key, or keys, that are used to identify the external server to which you
      *         are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the
@@ -169,6 +209,23 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *         you generated.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         Run this command to retrieve the SFTP server host key, where your SFTP server name is
+     *         <code>ftp.host.com</code>.
+     *         </p>
+     *         <p>
+     *         <code>ssh-keyscan ftp.host.com</code>
+     *         </p>
+     *         <p>
+     *         This prints the public host key to standard output.
+     *         </p>
+     *         <p>
+     *         <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     *         </p>
+     *         <p>
+     *         Copy and paste this string into the <code>TrustedHostKeys</code> field for the
+     *         <code>create-connector</code> command or into the <b>Trusted host keys</b> field in the console.
      */
 
     public java.util.List<String> getTrustedHostKeys() {
@@ -204,6 +261,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Run this command to retrieve the SFTP server host key, where your SFTP server name is <code>ftp.host.com</code>.
+     * </p>
+     * <p>
+     * <code>ssh-keyscan ftp.host.com</code>
+     * </p>
+     * <p>
+     * This prints the public host key to standard output.
+     * </p>
+     * <p>
+     * <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     * </p>
+     * <p>
+     * Copy and paste this string into the <code>TrustedHostKeys</code> field for the <code>create-connector</code>
+     * command or into the <b>Trusted host keys</b> field in the console.
+     * </p>
      * 
      * @param trustedHostKeys
      *        The public portion of the host key, or keys, that are used to identify the external server to which you
@@ -231,6 +304,23 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        you generated.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        Run this command to retrieve the SFTP server host key, where your SFTP server name is
+     *        <code>ftp.host.com</code>.
+     *        </p>
+     *        <p>
+     *        <code>ssh-keyscan ftp.host.com</code>
+     *        </p>
+     *        <p>
+     *        This prints the public host key to standard output.
+     *        </p>
+     *        <p>
+     *        <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     *        </p>
+     *        <p>
+     *        Copy and paste this string into the <code>TrustedHostKeys</code> field for the
+     *        <code>create-connector</code> command or into the <b>Trusted host keys</b> field in the console.
      */
 
     public void setTrustedHostKeys(java.util.Collection<String> trustedHostKeys) {
@@ -272,6 +362,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * </li>
      * </ul>
      * <p>
+     * Run this command to retrieve the SFTP server host key, where your SFTP server name is <code>ftp.host.com</code>.
+     * </p>
+     * <p>
+     * <code>ssh-keyscan ftp.host.com</code>
+     * </p>
+     * <p>
+     * This prints the public host key to standard output.
+     * </p>
+     * <p>
+     * <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     * </p>
+     * <p>
+     * Copy and paste this string into the <code>TrustedHostKeys</code> field for the <code>create-connector</code>
+     * command or into the <b>Trusted host keys</b> field in the console.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTrustedHostKeys(java.util.Collection)} or {@link #withTrustedHostKeys(java.util.Collection)} if you
      * want to override the existing values.
@@ -303,6 +409,23 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        you generated.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        Run this command to retrieve the SFTP server host key, where your SFTP server name is
+     *        <code>ftp.host.com</code>.
+     *        </p>
+     *        <p>
+     *        <code>ssh-keyscan ftp.host.com</code>
+     *        </p>
+     *        <p>
+     *        This prints the public host key to standard output.
+     *        </p>
+     *        <p>
+     *        <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     *        </p>
+     *        <p>
+     *        Copy and paste this string into the <code>TrustedHostKeys</code> field for the
+     *        <code>create-connector</code> command or into the <b>Trusted host keys</b> field in the console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,6 +468,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Run this command to retrieve the SFTP server host key, where your SFTP server name is <code>ftp.host.com</code>.
+     * </p>
+     * <p>
+     * <code>ssh-keyscan ftp.host.com</code>
+     * </p>
+     * <p>
+     * This prints the public host key to standard output.
+     * </p>
+     * <p>
+     * <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     * </p>
+     * <p>
+     * Copy and paste this string into the <code>TrustedHostKeys</code> field for the <code>create-connector</code>
+     * command or into the <b>Trusted host keys</b> field in the console.
+     * </p>
      * 
      * @param trustedHostKeys
      *        The public portion of the host key, or keys, that are used to identify the external server to which you
@@ -372,6 +511,23 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        you generated.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        Run this command to retrieve the SFTP server host key, where your SFTP server name is
+     *        <code>ftp.host.com</code>.
+     *        </p>
+     *        <p>
+     *        <code>ssh-keyscan ftp.host.com</code>
+     *        </p>
+     *        <p>
+     *        This prints the public host key to standard output.
+     *        </p>
+     *        <p>
+     *        <code>ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key</code>
+     *        </p>
+     *        <p>
+     *        Copy and paste this string into the <code>TrustedHostKeys</code> field for the
+     *        <code>create-connector</code> command or into the <b>Trusted host keys</b> field in the console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Span of text
+ * Contains information about where the text with a citation begins and ends in the generated output.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/Span" target="_top">AWS API
@@ -30,64 +30,24 @@ public class Span implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Start of span
-     * </p>
-     */
-    private Integer start;
-    /**
-     * <p>
-     * End of span
+     * Where the text with a citation ends in the generated output.
      * </p>
      */
     private Integer end;
-
     /**
      * <p>
-     * Start of span
+     * Where the text with a citation starts in the generated output.
      * </p>
-     * 
-     * @param start
-     *        Start of span
      */
-
-    public void setStart(Integer start) {
-        this.start = start;
-    }
+    private Integer start;
 
     /**
      * <p>
-     * Start of span
-     * </p>
-     * 
-     * @return Start of span
-     */
-
-    public Integer getStart() {
-        return this.start;
-    }
-
-    /**
-     * <p>
-     * Start of span
-     * </p>
-     * 
-     * @param start
-     *        Start of span
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Span withStart(Integer start) {
-        setStart(start);
-        return this;
-    }
-
-    /**
-     * <p>
-     * End of span
+     * Where the text with a citation ends in the generated output.
      * </p>
      * 
      * @param end
-     *        End of span
+     *        Where the text with a citation ends in the generated output.
      */
 
     public void setEnd(Integer end) {
@@ -96,10 +56,10 @@ public class Span implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * End of span
+     * Where the text with a citation ends in the generated output.
      * </p>
      * 
-     * @return End of span
+     * @return Where the text with a citation ends in the generated output.
      */
 
     public Integer getEnd() {
@@ -108,16 +68,56 @@ public class Span implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * End of span
+     * Where the text with a citation ends in the generated output.
      * </p>
      * 
      * @param end
-     *        End of span
+     *        Where the text with a citation ends in the generated output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Span withEnd(Integer end) {
         setEnd(end);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Where the text with a citation starts in the generated output.
+     * </p>
+     * 
+     * @param start
+     *        Where the text with a citation starts in the generated output.
+     */
+
+    public void setStart(Integer start) {
+        this.start = start;
+    }
+
+    /**
+     * <p>
+     * Where the text with a citation starts in the generated output.
+     * </p>
+     * 
+     * @return Where the text with a citation starts in the generated output.
+     */
+
+    public Integer getStart() {
+        return this.start;
+    }
+
+    /**
+     * <p>
+     * Where the text with a citation starts in the generated output.
+     * </p>
+     * 
+     * @param start
+     *        Where the text with a citation starts in the generated output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Span withStart(Integer start) {
+        setStart(start);
         return this;
     }
 
@@ -133,10 +133,10 @@ public class Span implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getStart() != null)
-            sb.append("Start: ").append(getStart()).append(",");
         if (getEnd() != null)
-            sb.append("End: ").append(getEnd());
+            sb.append("End: ").append(getEnd()).append(",");
+        if (getStart() != null)
+            sb.append("Start: ").append(getStart());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class Span implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Span == false)
             return false;
         Span other = (Span) obj;
-        if (other.getStart() == null ^ this.getStart() == null)
-            return false;
-        if (other.getStart() != null && other.getStart().equals(this.getStart()) == false)
-            return false;
         if (other.getEnd() == null ^ this.getEnd() == null)
             return false;
         if (other.getEnd() != null && other.getEnd().equals(this.getEnd()) == false)
+            return false;
+        if (other.getStart() == null ^ this.getStart() == null)
+            return false;
+        if (other.getStart() != null && other.getStart().equals(this.getStart()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class Span implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getStart() == null) ? 0 : getStart().hashCode());
         hashCode = prime * hashCode + ((getEnd() == null) ? 0 : getEnd().hashCode());
+        hashCode = prime * hashCode + ((getStart() == null) ? 0 : getStart().hashCode());
         return hashCode;
     }
 

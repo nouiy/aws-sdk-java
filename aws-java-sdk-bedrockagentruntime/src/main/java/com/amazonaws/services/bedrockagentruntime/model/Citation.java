@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Citation associated with the agent response
+ * An object containing a segment of the generated response that is based on a source in the knowledge base, alongside
+ * information about the source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/Citation" target="_top">AWS API
@@ -28,12 +29,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Citation implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains the generated response and metadata
+     * </p>
+     */
     private GeneratedResponsePart generatedResponsePart;
-
+    /**
+     * <p>
+     * Contains metadata about the sources cited for the generated response.
+     * </p>
+     */
     private java.util.List<RetrievedReference> retrievedReferences;
 
     /**
+     * <p>
+     * Contains the generated response and metadata
+     * </p>
+     * 
      * @param generatedResponsePart
+     *        Contains the generated response and metadata
      */
 
     public void setGeneratedResponsePart(GeneratedResponsePart generatedResponsePart) {
@@ -41,7 +56,11 @@ public class Citation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the generated response and metadata
+     * </p>
+     * 
+     * @return Contains the generated response and metadata
      */
 
     public GeneratedResponsePart getGeneratedResponsePart() {
@@ -49,7 +68,12 @@ public class Citation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains the generated response and metadata
+     * </p>
+     * 
      * @param generatedResponsePart
+     *        Contains the generated response and metadata
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +83,11 @@ public class Citation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Contains metadata about the sources cited for the generated response.
+     * </p>
+     * 
+     * @return Contains metadata about the sources cited for the generated response.
      */
 
     public java.util.List<RetrievedReference> getRetrievedReferences() {
@@ -67,7 +95,12 @@ public class Citation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains metadata about the sources cited for the generated response.
+     * </p>
+     * 
      * @param retrievedReferences
+     *        Contains metadata about the sources cited for the generated response.
      */
 
     public void setRetrievedReferences(java.util.Collection<RetrievedReference> retrievedReferences) {
@@ -81,12 +114,16 @@ public class Citation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Contains metadata about the sources cited for the generated response.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRetrievedReferences(java.util.Collection)} or {@link #withRetrievedReferences(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param retrievedReferences
+     *        Contains metadata about the sources cited for the generated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,7 +138,12 @@ public class Citation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains metadata about the sources cited for the generated response.
+     * </p>
+     * 
      * @param retrievedReferences
+     *        Contains metadata about the sources cited for the generated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

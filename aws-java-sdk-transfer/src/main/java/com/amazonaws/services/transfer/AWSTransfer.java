@@ -114,9 +114,8 @@ public interface AWSTransfer {
      * Creates the connector, which captures the parameters for a connection for the AS2 or SFTP protocol. For AS2, the
      * connector is required for sending files to an externally hosted AS2 server. For SFTP, the connector is required
      * when sending files to an SFTP server or receiving files from an SFTP server. For more details about connectors,
-     * see <a
-     * href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector"
-     * >Create AS2 connectors</a> and <a
+     * see <a href="https://docs.aws.amazon.com/transfer/latest/userguide/configure-as2-connector.html">Configure AS2
+     * connectors</a> and <a
      * href="https://docs.aws.amazon.com/transfer/latest/userguide/configure-sftp-connector.html">Create SFTP
      * connectors</a>.
      * </p>
@@ -1609,6 +1608,20 @@ public interface AWSTransfer {
      * </p>
      * <p>
      * The response returns the <code>ServerId</code> and the <code>UserName</code> for the updated user.
+     * </p>
+     * <p>
+     * In the console, you can select <i>Restricted</i> when you create or update a user. This ensures that the user
+     * can't access anything outside of their home directory. The programmatic way to configure this behavior is to
+     * update the user. Set their <code>HomeDirectoryType</code> to <code>LOGICAL</code>, and specify
+     * <code>HomeDirectoryMappings</code> with <code>Entry</code> as root (<code>/</code>) and <code>Target</code> as
+     * their home directory.
+     * </p>
+     * <p>
+     * For example, if the user's home directory is <code>/test/admin-user</code>, the following command updates the
+     * user so that their configuration in the console shows the <i>Restricted</i> flag as selected.
+     * </p>
+     * <p>
+     * <code> aws transfer update-user --server-id &lt;server-id&gt; --user-name admin-user --home-directory-type LOGICAL --home-directory-mappings "[{\"Entry\":\"/\", \"Target\":\"/test/admin-user\"}]"</code>
      * </p>
      * 
      * @param updateUserRequest

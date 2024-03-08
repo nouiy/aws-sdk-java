@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Knowledge base input query.
+ * Contains the query made to the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/KnowledgeBaseQuery"
@@ -30,18 +30,18 @@ public class KnowledgeBaseQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Knowledge base input query in text
+     * The text of the query made to the knowledge base.
      * </p>
      */
     private String text;
 
     /**
      * <p>
-     * Knowledge base input query in text
+     * The text of the query made to the knowledge base.
      * </p>
      * 
      * @param text
-     *        Knowledge base input query in text
+     *        The text of the query made to the knowledge base.
      */
 
     public void setText(String text) {
@@ -50,10 +50,10 @@ public class KnowledgeBaseQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Knowledge base input query in text
+     * The text of the query made to the knowledge base.
      * </p>
      * 
-     * @return Knowledge base input query in text
+     * @return The text of the query made to the knowledge base.
      */
 
     public String getText() {
@@ -62,11 +62,11 @@ public class KnowledgeBaseQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Knowledge base input query in text
+     * The text of the query made to the knowledge base.
      * </p>
      * 
      * @param text
-     *        Knowledge base input query in text
+     *        The text of the query made to the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

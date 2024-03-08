@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The S3 location of a retrieval result.
+ * Contains the S3 location of the data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrievalResultS3Location"
@@ -30,18 +30,18 @@ public class RetrievalResultS3Location implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * URI of S3 location
+     * The S3 URI of the data source.
      * </p>
      */
     private String uri;
 
     /**
      * <p>
-     * URI of S3 location
+     * The S3 URI of the data source.
      * </p>
      * 
      * @param uri
-     *        URI of S3 location
+     *        The S3 URI of the data source.
      */
 
     public void setUri(String uri) {
@@ -50,10 +50,10 @@ public class RetrievalResultS3Location implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * URI of S3 location
+     * The S3 URI of the data source.
      * </p>
      * 
-     * @return URI of S3 location
+     * @return The S3 URI of the data source.
      */
 
     public String getUri() {
@@ -62,11 +62,11 @@ public class RetrievalResultS3Location implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * URI of S3 location
+     * The S3 URI of the data source.
      * </p>
      * 
      * @param uri
-     *        URI of S3 location
+     *        The S3 URI of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

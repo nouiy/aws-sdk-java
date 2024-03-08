@@ -19,8 +19,27 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Search parameters for retrieving from knowledge base.
+ * Contains details about how the results should be returned.
  * </p>
+ * <p>
+ * This data type is used in the following API operations:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href=
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Retrieve.html#API_agent-runtime_Retrieve_RequestSyntax"
+ * >Retrieve request body</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href=
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html#API_agent-runtime_RetrieveAndGenerate_RequestSyntax"
+ * >RetrieveAndGenerate request body</a>
+ * </p>
+ * </li>
+ * </ul>
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/KnowledgeBaseRetrievalConfiguration"
@@ -29,10 +48,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBaseRetrievalConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains details about how the results from the vector search should be returned.
+     * </p>
+     */
     private KnowledgeBaseVectorSearchConfiguration vectorSearchConfiguration;
 
     /**
+     * <p>
+     * Contains details about how the results from the vector search should be returned.
+     * </p>
+     * 
      * @param vectorSearchConfiguration
+     *        Contains details about how the results from the vector search should be returned.
      */
 
     public void setVectorSearchConfiguration(KnowledgeBaseVectorSearchConfiguration vectorSearchConfiguration) {
@@ -40,7 +69,11 @@ public class KnowledgeBaseRetrievalConfiguration implements Serializable, Clonea
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about how the results from the vector search should be returned.
+     * </p>
+     * 
+     * @return Contains details about how the results from the vector search should be returned.
      */
 
     public KnowledgeBaseVectorSearchConfiguration getVectorSearchConfiguration() {
@@ -48,7 +81,12 @@ public class KnowledgeBaseRetrievalConfiguration implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * Contains details about how the results from the vector search should be returned.
+     * </p>
+     * 
      * @param vectorSearchConfiguration
+     *        Contains details about how the results from the vector search should be returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

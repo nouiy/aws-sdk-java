@@ -88,6 +88,13 @@ public class JobQueueDetailJsonUnmarshaller implements Unmarshaller<JobQueueDeta
                     jobQueueDetail.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("jobStateTimeLimitActions", targetDepth)) {
+                    context.nextToken();
+                    jobQueueDetail.setJobStateTimeLimitActions(new ListUnmarshaller<JobStateTimeLimitAction>(JobStateTimeLimitActionJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

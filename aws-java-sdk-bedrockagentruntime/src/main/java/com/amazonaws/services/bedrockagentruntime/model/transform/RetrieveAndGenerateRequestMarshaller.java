@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RetrieveAndGenerateRequestMarshaller {
 
-    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("sessionId").build();
     private static final MarshallingInfo<StructuredPojo> INPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("input").build();
     private static final MarshallingInfo<StructuredPojo> RETRIEVEANDGENERATECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retrieveAndGenerateConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> SESSIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sessionConfiguration").build();
+    private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sessionId").build();
 
     private static final RetrieveAndGenerateRequestMarshaller instance = new RetrieveAndGenerateRequestMarshaller();
 
@@ -52,10 +52,10 @@ public class RetrieveAndGenerateRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(retrieveAndGenerateRequest.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(retrieveAndGenerateRequest.getInput(), INPUT_BINDING);
             protocolMarshaller.marshall(retrieveAndGenerateRequest.getRetrieveAndGenerateConfiguration(), RETRIEVEANDGENERATECONFIGURATION_BINDING);
             protocolMarshaller.marshall(retrieveAndGenerateRequest.getSessionConfiguration(), SESSIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(retrieveAndGenerateRequest.getSessionId(), SESSIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

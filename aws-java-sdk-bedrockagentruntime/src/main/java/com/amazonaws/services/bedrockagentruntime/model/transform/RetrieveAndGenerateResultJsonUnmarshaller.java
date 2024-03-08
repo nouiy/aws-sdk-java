@@ -48,19 +48,19 @@ public class RetrieveAndGenerateResultJsonUnmarshaller implements Unmarshaller<R
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("sessionId", targetDepth)) {
-                    context.nextToken();
-                    retrieveAndGenerateResult.setSessionId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("output", targetDepth)) {
-                    context.nextToken();
-                    retrieveAndGenerateResult.setOutput(RetrieveAndGenerateOutputJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("citations", targetDepth)) {
                     context.nextToken();
                     retrieveAndGenerateResult.setCitations(new ListUnmarshaller<Citation>(CitationJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("output", targetDepth)) {
+                    context.nextToken();
+                    retrieveAndGenerateResult.setOutput(RetrieveAndGenerateOutputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("sessionId", targetDepth)) {
+                    context.nextToken();
+                    retrieveAndGenerateResult.setSessionId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

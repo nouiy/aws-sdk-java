@@ -23,66 +23,34 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     * information about the sources.
+     * </p>
+     */
+    private java.util.List<Citation> citations;
+    /**
+     * <p>
+     * Contains the response generated from querying the knowledge base.
+     * </p>
+     */
+    private RetrieveAndGenerateOutput output;
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     */
     private String sessionId;
 
-    private RetrieveAndGenerateOutput output;
-
-    private java.util.List<Citation> citations;
-
     /**
-     * @param sessionId
-     */
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
-    /**
-     * @param sessionId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RetrieveAndGenerateResult withSessionId(String sessionId) {
-        setSessionId(sessionId);
-        return this;
-    }
-
-    /**
-     * @param output
-     */
-
-    public void setOutput(RetrieveAndGenerateOutput output) {
-        this.output = output;
-    }
-
-    /**
-     * @return
-     */
-
-    public RetrieveAndGenerateOutput getOutput() {
-        return this.output;
-    }
-
-    /**
-     * @param output
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RetrieveAndGenerateResult withOutput(RetrieveAndGenerateOutput output) {
-        setOutput(output);
-        return this;
-    }
-
-    /**
-     * @return
+     * <p>
+     * A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     * information about the sources.
+     * </p>
+     * 
+     * @return A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     *         information about the sources.
      */
 
     public java.util.List<Citation> getCitations() {
@@ -90,7 +58,14 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     * information about the sources.
+     * </p>
+     * 
      * @param citations
+     *        A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     *        information about the sources.
      */
 
     public void setCitations(java.util.Collection<Citation> citations) {
@@ -104,12 +79,18 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
+     * A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     * information about the sources.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCitations(java.util.Collection)} or {@link #withCitations(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param citations
+     *        A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     *        information about the sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,12 +105,102 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     * information about the sources.
+     * </p>
+     * 
      * @param citations
+     *        A list of segments of the generated response that are based on sources in the knowledge base, alongside
+     *        information about the sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RetrieveAndGenerateResult withCitations(java.util.Collection<Citation> citations) {
         setCitations(citations);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the response generated from querying the knowledge base.
+     * </p>
+     * 
+     * @param output
+     *        Contains the response generated from querying the knowledge base.
+     */
+
+    public void setOutput(RetrieveAndGenerateOutput output) {
+        this.output = output;
+    }
+
+    /**
+     * <p>
+     * Contains the response generated from querying the knowledge base.
+     * </p>
+     * 
+     * @return Contains the response generated from querying the knowledge base.
+     */
+
+    public RetrieveAndGenerateOutput getOutput() {
+        return this.output;
+    }
+
+    /**
+     * <p>
+     * Contains the response generated from querying the knowledge base.
+     * </p>
+     * 
+     * @param output
+     *        Contains the response generated from querying the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrieveAndGenerateResult withOutput(RetrieveAndGenerateOutput output) {
+        setOutput(output);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     * 
+     * @param sessionId
+     *        The unique identifier of the session. Reuse the same value to continue the same session with the knowledge
+     *        base.
+     */
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     * 
+     * @return The unique identifier of the session. Reuse the same value to continue the same session with the
+     *         knowledge base.
+     */
+
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     * 
+     * @param sessionId
+     *        The unique identifier of the session. Reuse the same value to continue the same session with the knowledge
+     *        base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrieveAndGenerateResult withSessionId(String sessionId) {
+        setSessionId(sessionId);
         return this;
     }
 
@@ -145,12 +216,12 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSessionId() != null)
-            sb.append("SessionId: ").append(getSessionId()).append(",");
+        if (getCitations() != null)
+            sb.append("Citations: ").append(getCitations()).append(",");
         if (getOutput() != null)
             sb.append("Output: ").append("***Sensitive Data Redacted***").append(",");
-        if (getCitations() != null)
-            sb.append("Citations: ").append(getCitations());
+        if (getSessionId() != null)
+            sb.append("SessionId: ").append(getSessionId());
         sb.append("}");
         return sb.toString();
     }
@@ -165,17 +236,17 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
         if (obj instanceof RetrieveAndGenerateResult == false)
             return false;
         RetrieveAndGenerateResult other = (RetrieveAndGenerateResult) obj;
-        if (other.getSessionId() == null ^ this.getSessionId() == null)
+        if (other.getCitations() == null ^ this.getCitations() == null)
             return false;
-        if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
+        if (other.getCitations() != null && other.getCitations().equals(this.getCitations()) == false)
             return false;
         if (other.getOutput() == null ^ this.getOutput() == null)
             return false;
         if (other.getOutput() != null && other.getOutput().equals(this.getOutput()) == false)
             return false;
-        if (other.getCitations() == null ^ this.getCitations() == null)
+        if (other.getSessionId() == null ^ this.getSessionId() == null)
             return false;
-        if (other.getCitations() != null && other.getCitations().equals(this.getCitations()) == false)
+        if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
             return false;
         return true;
     }
@@ -185,9 +256,9 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
-        hashCode = prime * hashCode + ((getOutput() == null) ? 0 : getOutput().hashCode());
         hashCode = prime * hashCode + ((getCitations() == null) ? 0 : getCitations().hashCode());
+        hashCode = prime * hashCode + ((getOutput() == null) ? 0 : getOutput().hashCode());
+        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         return hashCode;
     }
 

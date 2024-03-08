@@ -48,14 +48,14 @@ public class RetrieveAndGenerateConfigurationJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("type", targetDepth)) {
-                    context.nextToken();
-                    retrieveAndGenerateConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("knowledgeBaseConfiguration", targetDepth)) {
                     context.nextToken();
                     retrieveAndGenerateConfiguration.setKnowledgeBaseConfiguration(KnowledgeBaseRetrieveAndGenerateConfigurationJsonUnmarshaller.getInstance()
                             .unmarshall(context));
+                }
+                if (context.testExpression("type", targetDepth)) {
+                    context.nextToken();
+                    retrieveAndGenerateConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

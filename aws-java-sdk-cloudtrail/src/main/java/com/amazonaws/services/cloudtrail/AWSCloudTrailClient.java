@@ -1070,6 +1070,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the limit is 50.
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
      * @throws KmsKeyNotFoundException
      *         This exception is thrown when the KMS key does not exist, when the S3 bucket and the KMS key are not in
      *         the same Region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
@@ -1763,6 +1765,19 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Not be in IP address format (for example, 192.168.5.4)
      *         </p>
      *         </li>
+     * @throws CloudTrailARNInvalidException
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
+     *         <p>
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @sample AWSCloudTrail.DescribeTrails
@@ -3014,6 +3029,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not permitted.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
      * @sample AWSCloudTrail.ListImportFailures
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListImportFailures" target="_top">AWS
      *      API Documentation</a>

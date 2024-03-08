@@ -21,6 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Contains information about a GuardDuty feature.
  * </p>
+ * <p>
+ * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+ * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+ * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+ * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DetectorFeatureConfiguration"
  *      target="_top">AWS API Documentation</a>

@@ -53,7 +53,8 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The username of the user that you want to query or modify. The value of this parameter is typically your user's
      * username, but it can be any of their alias attributes. If <code>username</code> isn't an alias attribute in your
-     * user pool, you can also use their <code>sub</code> in this request.
+     * user pool, this value must be the <code>sub</code> of a local user or the username of a user from a third-party
+     * IdP.
      * </p>
      */
     private String username;
@@ -250,13 +251,15 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The username of the user that you want to query or modify. The value of this parameter is typically your user's
      * username, but it can be any of their alias attributes. If <code>username</code> isn't an alias attribute in your
-     * user pool, you can also use their <code>sub</code> in this request.
+     * user pool, this value must be the <code>sub</code> of a local user or the username of a user from a third-party
+     * IdP.
      * </p>
      * 
      * @param username
      *        The username of the user that you want to query or modify. The value of this parameter is typically your
      *        user's username, but it can be any of their alias attributes. If <code>username</code> isn't an alias
-     *        attribute in your user pool, you can also use their <code>sub</code> in this request.
+     *        attribute in your user pool, this value must be the <code>sub</code> of a local user or the username of a
+     *        user from a third-party IdP.
      */
 
     public void setUsername(String username) {
@@ -267,12 +270,14 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The username of the user that you want to query or modify. The value of this parameter is typically your user's
      * username, but it can be any of their alias attributes. If <code>username</code> isn't an alias attribute in your
-     * user pool, you can also use their <code>sub</code> in this request.
+     * user pool, this value must be the <code>sub</code> of a local user or the username of a user from a third-party
+     * IdP.
      * </p>
      * 
      * @return The username of the user that you want to query or modify. The value of this parameter is typically your
      *         user's username, but it can be any of their alias attributes. If <code>username</code> isn't an alias
-     *         attribute in your user pool, you can also use their <code>sub</code> in this request.
+     *         attribute in your user pool, this value must be the <code>sub</code> of a local user or the username of a
+     *         user from a third-party IdP.
      */
 
     public String getUsername() {
@@ -283,13 +288,15 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The username of the user that you want to query or modify. The value of this parameter is typically your user's
      * username, but it can be any of their alias attributes. If <code>username</code> isn't an alias attribute in your
-     * user pool, you can also use their <code>sub</code> in this request.
+     * user pool, this value must be the <code>sub</code> of a local user or the username of a user from a third-party
+     * IdP.
      * </p>
      * 
      * @param username
      *        The username of the user that you want to query or modify. The value of this parameter is typically your
      *        user's username, but it can be any of their alias attributes. If <code>username</code> isn't an alias
-     *        attribute in your user pool, you can also use their <code>sub</code> in this request.
+     *        attribute in your user pool, this value must be the <code>sub</code> of a local user or the username of a
+     *        user from a third-party IdP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

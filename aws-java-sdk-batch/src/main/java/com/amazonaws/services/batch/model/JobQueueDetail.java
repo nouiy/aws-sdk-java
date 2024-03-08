@@ -94,6 +94,13 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified state
+     * longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has passed.
+     * </p>
+     */
+    private java.util.List<JobStateTimeLimitAction> jobStateTimeLimitActions;
 
     /**
      * <p>
@@ -665,6 +672,88 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified state
+     * longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has passed.
+     * </p>
+     * 
+     * @return The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified
+     *         state longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has
+     *         passed.
+     */
+
+    public java.util.List<JobStateTimeLimitAction> getJobStateTimeLimitActions() {
+        return jobStateTimeLimitActions;
+    }
+
+    /**
+     * <p>
+     * The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified state
+     * longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has passed.
+     * </p>
+     * 
+     * @param jobStateTimeLimitActions
+     *        The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified
+     *        state longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has
+     *        passed.
+     */
+
+    public void setJobStateTimeLimitActions(java.util.Collection<JobStateTimeLimitAction> jobStateTimeLimitActions) {
+        if (jobStateTimeLimitActions == null) {
+            this.jobStateTimeLimitActions = null;
+            return;
+        }
+
+        this.jobStateTimeLimitActions = new java.util.ArrayList<JobStateTimeLimitAction>(jobStateTimeLimitActions);
+    }
+
+    /**
+     * <p>
+     * The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified state
+     * longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has passed.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setJobStateTimeLimitActions(java.util.Collection)} or
+     * {@link #withJobStateTimeLimitActions(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param jobStateTimeLimitActions
+     *        The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified
+     *        state longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has
+     *        passed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobQueueDetail withJobStateTimeLimitActions(JobStateTimeLimitAction... jobStateTimeLimitActions) {
+        if (this.jobStateTimeLimitActions == null) {
+            setJobStateTimeLimitActions(new java.util.ArrayList<JobStateTimeLimitAction>(jobStateTimeLimitActions.length));
+        }
+        for (JobStateTimeLimitAction ele : jobStateTimeLimitActions) {
+            this.jobStateTimeLimitActions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified state
+     * longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has passed.
+     * </p>
+     * 
+     * @param jobStateTimeLimitActions
+     *        The set of actions that Batch perform on jobs that remain at the head of the job queue in the specified
+     *        state longer than specified times. Batch will perform each action after <code>maxTimeSeconds</code> has
+     *        passed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobQueueDetail withJobStateTimeLimitActions(java.util.Collection<JobStateTimeLimitAction> jobStateTimeLimitActions) {
+        setJobStateTimeLimitActions(jobStateTimeLimitActions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -693,7 +782,9 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
         if (getComputeEnvironmentOrder() != null)
             sb.append("ComputeEnvironmentOrder: ").append(getComputeEnvironmentOrder()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getJobStateTimeLimitActions() != null)
+            sb.append("JobStateTimeLimitActions: ").append(getJobStateTimeLimitActions());
         sb.append("}");
         return sb.toString();
     }
@@ -744,6 +835,10 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getJobStateTimeLimitActions() == null ^ this.getJobStateTimeLimitActions() == null)
+            return false;
+        if (other.getJobStateTimeLimitActions() != null && other.getJobStateTimeLimitActions().equals(this.getJobStateTimeLimitActions()) == false)
+            return false;
         return true;
     }
 
@@ -761,6 +856,7 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
         hashCode = prime * hashCode + ((getComputeEnvironmentOrder() == null) ? 0 : getComputeEnvironmentOrder().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getJobStateTimeLimitActions() == null) ? 0 : getJobStateTimeLimitActions().hashCode());
         return hashCode;
     }
 

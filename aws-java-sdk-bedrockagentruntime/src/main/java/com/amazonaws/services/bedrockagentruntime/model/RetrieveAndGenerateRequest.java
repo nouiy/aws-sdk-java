@@ -25,42 +25,38 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains the query made to the knowledge base.
+     * </p>
+     */
+    private RetrieveAndGenerateInput input;
+    /**
+     * <p>
+     * Contains details about the resource being queried and the foundation model used for generation.
+     * </p>
+     */
+    private RetrieveAndGenerateConfiguration retrieveAndGenerateConfiguration;
+    /**
+     * <p>
+     * Contains details about the session with the knowledge base.
+     * </p>
+     */
+    private RetrieveAndGenerateSessionConfiguration sessionConfiguration;
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     */
     private String sessionId;
 
-    private RetrieveAndGenerateInput input;
-
-    private RetrieveAndGenerateConfiguration retrieveAndGenerateConfiguration;
-
-    private RetrieveAndGenerateSessionConfiguration sessionConfiguration;
-
     /**
-     * @param sessionId
-     */
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
-    /**
-     * @param sessionId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RetrieveAndGenerateRequest withSessionId(String sessionId) {
-        setSessionId(sessionId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains the query made to the knowledge base.
+     * </p>
+     * 
      * @param input
+     *        Contains the query made to the knowledge base.
      */
 
     public void setInput(RetrieveAndGenerateInput input) {
@@ -68,7 +64,11 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the query made to the knowledge base.
+     * </p>
+     * 
+     * @return Contains the query made to the knowledge base.
      */
 
     public RetrieveAndGenerateInput getInput() {
@@ -76,7 +76,12 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains the query made to the knowledge base.
+     * </p>
+     * 
      * @param input
+     *        Contains the query made to the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +91,12 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains details about the resource being queried and the foundation model used for generation.
+     * </p>
+     * 
      * @param retrieveAndGenerateConfiguration
+     *        Contains details about the resource being queried and the foundation model used for generation.
      */
 
     public void setRetrieveAndGenerateConfiguration(RetrieveAndGenerateConfiguration retrieveAndGenerateConfiguration) {
@@ -94,7 +104,11 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the resource being queried and the foundation model used for generation.
+     * </p>
+     * 
+     * @return Contains details about the resource being queried and the foundation model used for generation.
      */
 
     public RetrieveAndGenerateConfiguration getRetrieveAndGenerateConfiguration() {
@@ -102,7 +116,12 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains details about the resource being queried and the foundation model used for generation.
+     * </p>
+     * 
      * @param retrieveAndGenerateConfiguration
+     *        Contains details about the resource being queried and the foundation model used for generation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +131,12 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains details about the session with the knowledge base.
+     * </p>
+     * 
      * @param sessionConfiguration
+     *        Contains details about the session with the knowledge base.
      */
 
     public void setSessionConfiguration(RetrieveAndGenerateSessionConfiguration sessionConfiguration) {
@@ -120,7 +144,11 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the session with the knowledge base.
+     * </p>
+     * 
+     * @return Contains details about the session with the knowledge base.
      */
 
     public RetrieveAndGenerateSessionConfiguration getSessionConfiguration() {
@@ -128,12 +156,60 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains details about the session with the knowledge base.
+     * </p>
+     * 
      * @param sessionConfiguration
+     *        Contains details about the session with the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RetrieveAndGenerateRequest withSessionConfiguration(RetrieveAndGenerateSessionConfiguration sessionConfiguration) {
         setSessionConfiguration(sessionConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     * 
+     * @param sessionId
+     *        The unique identifier of the session. Reuse the same value to continue the same session with the knowledge
+     *        base.
+     */
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     * 
+     * @return The unique identifier of the session. Reuse the same value to continue the same session with the
+     *         knowledge base.
+     */
+
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.
+     * </p>
+     * 
+     * @param sessionId
+     *        The unique identifier of the session. Reuse the same value to continue the same session with the knowledge
+     *        base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrieveAndGenerateRequest withSessionId(String sessionId) {
+        setSessionId(sessionId);
         return this;
     }
 
@@ -149,14 +225,14 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSessionId() != null)
-            sb.append("SessionId: ").append(getSessionId()).append(",");
         if (getInput() != null)
             sb.append("Input: ").append("***Sensitive Data Redacted***").append(",");
         if (getRetrieveAndGenerateConfiguration() != null)
             sb.append("RetrieveAndGenerateConfiguration: ").append(getRetrieveAndGenerateConfiguration()).append(",");
         if (getSessionConfiguration() != null)
-            sb.append("SessionConfiguration: ").append(getSessionConfiguration());
+            sb.append("SessionConfiguration: ").append(getSessionConfiguration()).append(",");
+        if (getSessionId() != null)
+            sb.append("SessionId: ").append(getSessionId());
         sb.append("}");
         return sb.toString();
     }
@@ -171,10 +247,6 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
         if (obj instanceof RetrieveAndGenerateRequest == false)
             return false;
         RetrieveAndGenerateRequest other = (RetrieveAndGenerateRequest) obj;
-        if (other.getSessionId() == null ^ this.getSessionId() == null)
-            return false;
-        if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
-            return false;
         if (other.getInput() == null ^ this.getInput() == null)
             return false;
         if (other.getInput() != null && other.getInput().equals(this.getInput()) == false)
@@ -188,6 +260,10 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getSessionConfiguration() != null && other.getSessionConfiguration().equals(this.getSessionConfiguration()) == false)
             return false;
+        if (other.getSessionId() == null ^ this.getSessionId() == null)
+            return false;
+        if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
+            return false;
         return true;
     }
 
@@ -196,10 +272,10 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getInput() == null) ? 0 : getInput().hashCode());
         hashCode = prime * hashCode + ((getRetrieveAndGenerateConfiguration() == null) ? 0 : getRetrieveAndGenerateConfiguration().hashCode());
         hashCode = prime * hashCode + ((getSessionConfiguration() == null) ? 0 : getSessionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         return hashCode;
     }
 

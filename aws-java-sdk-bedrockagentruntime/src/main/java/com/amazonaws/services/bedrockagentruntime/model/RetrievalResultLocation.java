@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The source location of a retrieval result.
+ * Contains information about the location of the data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrievalResultLocation"
@@ -28,12 +28,66 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrievalResultLocation implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains the S3 location of the data source.
+     * </p>
+     */
+    private RetrievalResultS3Location s3Location;
+    /**
+     * <p>
+     * The type of the location of the data source.
+     * </p>
+     */
     private String type;
 
-    private RetrievalResultS3Location s3Location;
+    /**
+     * <p>
+     * Contains the S3 location of the data source.
+     * </p>
+     * 
+     * @param s3Location
+     *        Contains the S3 location of the data source.
+     */
+
+    public void setS3Location(RetrievalResultS3Location s3Location) {
+        this.s3Location = s3Location;
+    }
 
     /**
+     * <p>
+     * Contains the S3 location of the data source.
+     * </p>
+     * 
+     * @return Contains the S3 location of the data source.
+     */
+
+    public RetrievalResultS3Location getS3Location() {
+        return this.s3Location;
+    }
+
+    /**
+     * <p>
+     * Contains the S3 location of the data source.
+     * </p>
+     * 
+     * @param s3Location
+     *        Contains the S3 location of the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrievalResultLocation withS3Location(RetrievalResultS3Location s3Location) {
+        setS3Location(s3Location);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the location of the data source.
+     * </p>
+     * 
      * @param type
+     *        The type of the location of the data source.
      * @see RetrievalResultLocationType
      */
 
@@ -42,7 +96,11 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * The type of the location of the data source.
+     * </p>
+     * 
+     * @return The type of the location of the data source.
      * @see RetrievalResultLocationType
      */
 
@@ -51,7 +109,12 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The type of the location of the data source.
+     * </p>
+     * 
      * @param type
+     *        The type of the location of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RetrievalResultLocationType
      */
@@ -62,39 +125,18 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The type of the location of the data source.
+     * </p>
+     * 
      * @param type
+     *        The type of the location of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RetrievalResultLocationType
      */
 
     public RetrievalResultLocation withType(RetrievalResultLocationType type) {
         this.type = type.toString();
-        return this;
-    }
-
-    /**
-     * @param s3Location
-     */
-
-    public void setS3Location(RetrievalResultS3Location s3Location) {
-        this.s3Location = s3Location;
-    }
-
-    /**
-     * @return
-     */
-
-    public RetrievalResultS3Location getS3Location() {
-        return this.s3Location;
-    }
-
-    /**
-     * @param s3Location
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RetrievalResultLocation withS3Location(RetrievalResultS3Location s3Location) {
-        setS3Location(s3Location);
         return this;
     }
 
@@ -110,10 +152,10 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getType() != null)
-            sb.append("Type: ").append(getType()).append(",");
         if (getS3Location() != null)
-            sb.append("S3Location: ").append(getS3Location());
+            sb.append("S3Location: ").append(getS3Location()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -128,13 +170,13 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
         if (obj instanceof RetrievalResultLocation == false)
             return false;
         RetrievalResultLocation other = (RetrievalResultLocation) obj;
-        if (other.getType() == null ^ this.getType() == null)
-            return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
-            return false;
         if (other.getS3Location() == null ^ this.getS3Location() == null)
             return false;
         if (other.getS3Location() != null && other.getS3Location().equals(this.getS3Location()) == false)
+            return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
         return true;
     }
@@ -144,8 +186,8 @@ public class RetrievalResultLocation implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getS3Location() == null) ? 0 : getS3Location().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

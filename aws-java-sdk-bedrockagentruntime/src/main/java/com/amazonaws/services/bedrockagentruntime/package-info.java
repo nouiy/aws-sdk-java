@@ -13,7 +13,7 @@
 
 /**
  * <p>
- * Amazon Bedrock Agent
+ * Contains APIs related to model invocation and querying of knowledge bases.
  * </p>
  */
 package com.amazonaws.services.bedrockagentruntime;

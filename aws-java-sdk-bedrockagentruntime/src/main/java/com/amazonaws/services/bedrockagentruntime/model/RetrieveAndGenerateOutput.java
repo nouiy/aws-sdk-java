@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Service response of the turn
+ * Contains the response generated from querying the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrieveAndGenerateOutput"
@@ -30,18 +30,18 @@ public class RetrieveAndGenerateOutput implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Service response of the turn in text
+     * The response generated from querying the knowledge base.
      * </p>
      */
     private String text;
 
     /**
      * <p>
-     * Service response of the turn in text
+     * The response generated from querying the knowledge base.
      * </p>
      * 
      * @param text
-     *        Service response of the turn in text
+     *        The response generated from querying the knowledge base.
      */
 
     public void setText(String text) {
@@ -50,10 +50,10 @@ public class RetrieveAndGenerateOutput implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Service response of the turn in text
+     * The response generated from querying the knowledge base.
      * </p>
      * 
-     * @return Service response of the turn in text
+     * @return The response generated from querying the knowledge base.
      */
 
     public String getText() {
@@ -62,11 +62,11 @@ public class RetrieveAndGenerateOutput implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Service response of the turn in text
+     * The response generated from querying the knowledge base.
      * </p>
      * 
      * @param text
-     *        Service response of the turn in text
+     *        The response generated from querying the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

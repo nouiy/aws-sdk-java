@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutorService;
  * receive notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Amazon Bedrock Agent
+ * Contains APIs related to model invocation and querying of knowledge bases.
  * </p>
  */
 @ThreadSafe

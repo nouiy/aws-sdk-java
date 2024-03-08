@@ -88,6 +88,32 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A short, human-readable string to provide more details for the current status of the job.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient capacity to
+     * service the job.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     * <code>maxVcpu</code> setting that is smaller than the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected instances
+     * that meet the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the service
+     * role permissions.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String statusReason;
     /**
@@ -683,9 +709,60 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A short, human-readable string to provide more details for the current status of the job.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient capacity to
+     * service the job.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     * <code>maxVcpu</code> setting that is smaller than the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected instances
+     * that meet the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the service
+     * role permissions.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param statusReason
-     *        A short, human-readable string to provide more details for the current status of the job.
+     *        A short, human-readable string to provide more details for the current status of the job.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient capacity
+     *        to service the job.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     *        <code>maxVcpu</code> setting that is smaller than the job requirements.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected
+     *        instances that meet the job requirements.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the
+     *        service role permissions.
+     *        </p>
+     *        </li>
      */
 
     public void setStatusReason(String statusReason) {
@@ -696,8 +773,59 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A short, human-readable string to provide more details for the current status of the job.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient capacity to
+     * service the job.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     * <code>maxVcpu</code> setting that is smaller than the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected instances
+     * that meet the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the service
+     * role permissions.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return A short, human-readable string to provide more details for the current status of the job.
+     * @return A short, human-readable string to provide more details for the current status of the job.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient
+     *         capacity to service the job.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     *         <code>maxVcpu</code> setting that is smaller than the job requirements.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected
+     *         instances that meet the job requirements.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the
+     *         service role permissions.
+     *         </p>
+     *         </li>
      */
 
     public String getStatusReason() {
@@ -708,9 +836,60 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A short, human-readable string to provide more details for the current status of the job.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient capacity to
+     * service the job.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     * <code>maxVcpu</code> setting that is smaller than the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected instances
+     * that meet the job requirements.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the service
+     * role permissions.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param statusReason
-     *        A short, human-readable string to provide more details for the current status of the job.
+     *        A short, human-readable string to provide more details for the current status of the job.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY</code> - All compute environments have insufficient capacity
+     *        to service the job.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE</code> - All compute environments have a
+     *        <code>maxVcpu</code> setting that is smaller than the job requirements.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT</code> - All compute environments have no connected
+     *        instances that meet the job requirements.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS</code> - All compute environments have problems with the
+     *        service role permissions.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

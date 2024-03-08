@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagentruntime.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * The location type of a retrieval result.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum RetrievalResultLocationType {

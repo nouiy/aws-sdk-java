@@ -66,8 +66,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation marks
-     * within the filter string must be escaped using the backslash (\) character. For example, "
-     * <code>family_name</code> = \"Reddy\"".
+     * within the filter string must be escaped using the backslash (<code>\</code>) character. For example,
+     * <code>"family_name = \"Reddy\""</code>.
      * </p>
      * <ul>
      * <li>
@@ -77,8 +77,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a prefix
-     * ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     * <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "<code>given_name = \"Jon\"</code>
+     * ". For a prefix ("starts with") match, use <code>^=</code>, for example, "<code>given_name ^= \"Jon\"</code>".
      * </p>
      * </li>
      * <li>
@@ -445,8 +445,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation marks
-     * within the filter string must be escaped using the backslash (\) character. For example, "
-     * <code>family_name</code> = \"Reddy\"".
+     * within the filter string must be escaped using the backslash (<code>\</code>) character. For example,
+     * <code>"family_name = \"Reddy\""</code>.
      * </p>
      * <ul>
      * <li>
@@ -456,8 +456,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a prefix
-     * ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     * <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "<code>given_name = \"Jon\"</code>
+     * ". For a prefix ("starts with") match, use <code>^=</code>, for example, "<code>given_name ^= \"Jon\"</code>".
      * </p>
      * </li>
      * <li>
@@ -553,8 +553,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param filter
      *        A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation
-     *        marks within the filter string must be escaped using the backslash (\) character. For example, "
-     *        <code>family_name</code> = \"Reddy\"".</p>
+     *        marks within the filter string must be escaped using the backslash (<code>\</code>) character. For
+     *        example, <code>"family_name = \"Reddy\""</code>.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -564,8 +564,9 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a
-     *        prefix ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     *        <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "
+     *        <code>given_name = \"Jon\"</code>". For a prefix ("starts with") match, use <code>^=</code>, for example,
+     *        "<code>given_name ^= \"Jon\"</code>".
      *        </p>
      *        </li>
      *        <li>
@@ -666,8 +667,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation marks
-     * within the filter string must be escaped using the backslash (\) character. For example, "
-     * <code>family_name</code> = \"Reddy\"".
+     * within the filter string must be escaped using the backslash (<code>\</code>) character. For example,
+     * <code>"family_name = \"Reddy\""</code>.
      * </p>
      * <ul>
      * <li>
@@ -677,8 +678,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a prefix
-     * ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     * <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "<code>given_name = \"Jon\"</code>
+     * ". For a prefix ("starts with") match, use <code>^=</code>, for example, "<code>given_name ^= \"Jon\"</code>".
      * </p>
      * </li>
      * <li>
@@ -773,8 +774,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @return A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation
-     *         marks within the filter string must be escaped using the backslash (\) character. For example, "
-     *         <code>family_name</code> = \"Reddy\"".</p>
+     *         marks within the filter string must be escaped using the backslash (<code>\</code>) character. For
+     *         example, <code>"family_name = \"Reddy\""</code>.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -784,8 +785,9 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a
-     *         prefix ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     *         <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "
+     *         <code>given_name = \"Jon\"</code>". For a prefix ("starts with") match, use <code>^=</code>, for example,
+     *         "<code>given_name ^= \"Jon\"</code>".
      *         </p>
      *         </li>
      *         <li>
@@ -886,8 +888,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation marks
-     * within the filter string must be escaped using the backslash (\) character. For example, "
-     * <code>family_name</code> = \"Reddy\"".
+     * within the filter string must be escaped using the backslash (<code>\</code>) character. For example,
+     * <code>"family_name = \"Reddy\""</code>.
      * </p>
      * <ul>
      * <li>
@@ -897,8 +899,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a prefix
-     * ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     * <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "<code>given_name = \"Jon\"</code>
+     * ". For a prefix ("starts with") match, use <code>^=</code>, for example, "<code>given_name ^= \"Jon\"</code>".
      * </p>
      * </li>
      * <li>
@@ -994,8 +996,8 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param filter
      *        A filter string of the form "<i>AttributeName</i> <i>Filter-Type</i> "<i>AttributeValue</i>"". Quotation
-     *        marks within the filter string must be escaped using the backslash (\) character. For example, "
-     *        <code>family_name</code> = \"Reddy\"".</p>
+     *        marks within the filter string must be escaped using the backslash (<code>\</code>) character. For
+     *        example, <code>"family_name = \"Reddy\""</code>.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1005,8 +1007,9 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Filter-Type</i>: For an exact match, use =, for example, "<code>given_name</code> = \"Jon\"". For a
-     *        prefix ("starts with") match, use ^=, for example, "<code>given_name</code> ^= \"Jon\"".
+     *        <i>Filter-Type</i>: For an exact match, use <code>=</code>, for example, "
+     *        <code>given_name = \"Jon\"</code>". For a prefix ("starts with") match, use <code>^=</code>, for example,
+     *        "<code>given_name ^= \"Jon\"</code>".
      *        </p>
      *        </li>
      *        <li>

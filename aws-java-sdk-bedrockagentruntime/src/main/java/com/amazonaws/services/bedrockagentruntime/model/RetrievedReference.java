@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Retrieved reference
+ * Contains metadata about a sources cited for the generated response.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrievedReference"
@@ -28,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrievedReference implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains the cited text from the data source.
+     * </p>
+     */
     private RetrievalResultContent content;
-
+    /**
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     */
     private RetrievalResultLocation location;
 
     /**
+     * <p>
+     * Contains the cited text from the data source.
+     * </p>
+     * 
      * @param content
+     *        Contains the cited text from the data source.
      */
 
     public void setContent(RetrievalResultContent content) {
@@ -41,7 +55,11 @@ public class RetrievedReference implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the cited text from the data source.
+     * </p>
+     * 
+     * @return Contains the cited text from the data source.
      */
 
     public RetrievalResultContent getContent() {
@@ -49,7 +67,12 @@ public class RetrievedReference implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Contains the cited text from the data source.
+     * </p>
+     * 
      * @param content
+     *        Contains the cited text from the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +82,12 @@ public class RetrievedReference implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     * 
      * @param location
+     *        Contains information about the location of the data source.
      */
 
     public void setLocation(RetrievalResultLocation location) {
@@ -67,7 +95,11 @@ public class RetrievedReference implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     * 
+     * @return Contains information about the location of the data source.
      */
 
     public RetrievalResultLocation getLocation() {
@@ -75,7 +107,12 @@ public class RetrievedReference implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Contains information about the location of the data source.
+     * </p>
+     * 
      * @param location
+     *        Contains information about the location of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

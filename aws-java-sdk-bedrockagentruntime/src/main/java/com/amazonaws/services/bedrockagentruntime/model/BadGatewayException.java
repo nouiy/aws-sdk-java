@@ -16,13 +16,18 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when a request fails due to dependency like Lambda, Bedrock, STS resource
+ * There was an issue with a dependency due to a server issue. Retry your request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BadGatewayException extends com.amazonaws.services.bedrockagentruntime.model.AWSBedrockAgentRuntimeException {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     */
     private String resourceName;
 
     /**
@@ -36,7 +41,12 @@ public class BadGatewayException extends com.amazonaws.services.bedrockagentrunt
     }
 
     /**
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     * 
      * @param resourceName
+     *        The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceName")
@@ -45,7 +55,11 @@ public class BadGatewayException extends com.amazonaws.services.bedrockagentrunt
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     * 
+     * @return The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceName")
@@ -54,7 +68,12 @@ public class BadGatewayException extends com.amazonaws.services.bedrockagentrunt
     }
 
     /**
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     * 
      * @param resourceName
+     *        The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

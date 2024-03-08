@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures common parameters of the session.
+ * Contains configuration about the session with the knowledge base.
  * </p>
  * 
  * @see <a
@@ -31,18 +31,18 @@ public class RetrieveAndGenerateSessionConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * The KMS key arn to encrypt the customer data of the session.
+     * The ARN of the KMS key encrypting the session.
      * </p>
      */
     private String kmsKeyArn;
 
     /**
      * <p>
-     * The KMS key arn to encrypt the customer data of the session.
+     * The ARN of the KMS key encrypting the session.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The KMS key arn to encrypt the customer data of the session.
+     *        The ARN of the KMS key encrypting the session.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -51,10 +51,10 @@ public class RetrieveAndGenerateSessionConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * The KMS key arn to encrypt the customer data of the session.
+     * The ARN of the KMS key encrypting the session.
      * </p>
      * 
-     * @return The KMS key arn to encrypt the customer data of the session.
+     * @return The ARN of the KMS key encrypting the session.
      */
 
     public String getKmsKeyArn() {
@@ -63,11 +63,11 @@ public class RetrieveAndGenerateSessionConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * The KMS key arn to encrypt the customer data of the session.
+     * The ARN of the KMS key encrypting the session.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The KMS key arn to encrypt the customer data of the session.
+     *        The ARN of the KMS key encrypting the session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

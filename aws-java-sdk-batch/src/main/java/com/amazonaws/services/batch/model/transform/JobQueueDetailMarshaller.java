@@ -47,6 +47,8 @@ public class JobQueueDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeEnvironmentOrder").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<List> JOBSTATETIMELIMITACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobStateTimeLimitActions").build();
 
     private static final JobQueueDetailMarshaller instance = new JobQueueDetailMarshaller();
 
@@ -73,6 +75,7 @@ public class JobQueueDetailMarshaller {
             protocolMarshaller.marshall(jobQueueDetail.getPriority(), PRIORITY_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getComputeEnvironmentOrder(), COMPUTEENVIRONMENTORDER_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(jobQueueDetail.getJobStateTimeLimitActions(), JOBSTATETIMELIMITACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

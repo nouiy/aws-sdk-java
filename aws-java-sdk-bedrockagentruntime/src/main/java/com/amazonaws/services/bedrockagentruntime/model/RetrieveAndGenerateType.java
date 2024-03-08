@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagentruntime.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * The type of RetrieveAndGenerate.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum RetrieveAndGenerateType {

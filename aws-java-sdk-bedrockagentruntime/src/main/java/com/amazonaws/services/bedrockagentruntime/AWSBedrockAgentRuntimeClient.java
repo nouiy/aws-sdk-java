@@ -52,7 +52,7 @@ import com.amazonaws.services.bedrockagentruntime.model.transform.*;
  * will not return until the service call completes.
  * <p>
  * <p>
- * Amazon Bedrock Agent
+ * Contains APIs related to model invocation and querying of knowledge bases.
  * </p>
  */
 @ThreadSafe
@@ -157,30 +157,30 @@ public class AWSBedrockAgentRuntimeClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Retrieve from knowledge base.
+     * Queries a knowledge base and retrieves information from it.
      * </p>
      * 
      * @param retrieveRequest
      * @return Result of the Retrieve operation returned by the service.
      * @throws ConflictException
-     *         This exception is thrown when there is a conflict performing an operation
+     *         There was a conflict performing an operation. Resolve the conflict and retry your request.
      * @throws ResourceNotFoundException
-     *         This exception is thrown when a resource referenced by the operation does not exist
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
      * @throws ValidationException
-     *         This exception is thrown when the request's input validation fails
+     *         Input validation failed. Check your request parameters and retry the request.
      * @throws InternalServerException
-     *         This exception is thrown if there was an unexpected error during processing of request
+     *         An internal server error occurred. Retry your request.
      * @throws DependencyFailedException
-     *         This exception is thrown when a request fails due to dependency like Lambda, Bedrock, STS resource due to
-     *         a customer fault (i.e. bad configuration)
+     *         There was an issue with a dependency. Check the resource configurations and retry the request.
      * @throws BadGatewayException
-     *         This exception is thrown when a request fails due to dependency like Lambda, Bedrock, STS resource
+     *         There was an issue with a dependency due to a server issue. Retry your request.
      * @throws ThrottlingException
-     *         This exception is thrown when the number of requests exceeds the limit
+     *         The number of requests exceeds the limit. Resubmit your request later.
      * @throws AccessDeniedException
-     *         This exception is thrown when a request is denied per access permissions
+     *         The request is denied because of missing access permissions. Check your permissions and retry your
+     *         request.
      * @throws ServiceQuotaExceededException
-     *         This exception is thrown when a request is made beyond the service quota
+     *         The number of requests exceeds the service quota. Resubmit your request later.
      * @sample AWSBedrockAgentRuntime.Retrieve
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/Retrieve" target="_top">AWS
      *      API Documentation</a>
@@ -231,30 +231,39 @@ public class AWSBedrockAgentRuntimeClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * RetrieveAndGenerate API
+     * Queries a knowledge base and generates responses based on the retrieved results. The response cites up to five
+     * sources but only selects the ones that are relevant to the query.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in the <a href=
+     * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_KnowledgeBaseVectorSearchConfiguration.html"
+     * >vectorSearchConfiguration</a> object.
+     * </p>
+     * </note>
      * 
      * @param retrieveAndGenerateRequest
      * @return Result of the RetrieveAndGenerate operation returned by the service.
      * @throws ConflictException
-     *         This exception is thrown when there is a conflict performing an operation
+     *         There was a conflict performing an operation. Resolve the conflict and retry your request.
      * @throws ResourceNotFoundException
-     *         This exception is thrown when a resource referenced by the operation does not exist
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
      * @throws ValidationException
-     *         This exception is thrown when the request's input validation fails
+     *         Input validation failed. Check your request parameters and retry the request.
      * @throws InternalServerException
-     *         This exception is thrown if there was an unexpected error during processing of request
+     *         An internal server error occurred. Retry your request.
      * @throws DependencyFailedException
-     *         This exception is thrown when a request fails due to dependency like Lambda, Bedrock, STS resource due to
-     *         a customer fault (i.e. bad configuration)
+     *         There was an issue with a dependency. Check the resource configurations and retry the request.
      * @throws BadGatewayException
-     *         This exception is thrown when a request fails due to dependency like Lambda, Bedrock, STS resource
+     *         There was an issue with a dependency due to a server issue. Retry your request.
      * @throws ThrottlingException
-     *         This exception is thrown when the number of requests exceeds the limit
+     *         The number of requests exceeds the limit. Resubmit your request later.
      * @throws AccessDeniedException
-     *         This exception is thrown when a request is denied per access permissions
+     *         The request is denied because of missing access permissions. Check your permissions and retry your
+     *         request.
      * @throws ServiceQuotaExceededException
-     *         This exception is thrown when a request is made beyond the service quota
+     *         The number of requests exceeds the service quota. Resubmit your request later.
      * @sample AWSBedrockAgentRuntime.RetrieveAndGenerate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrieveAndGenerate"
      *      target="_top">AWS API Documentation</a>

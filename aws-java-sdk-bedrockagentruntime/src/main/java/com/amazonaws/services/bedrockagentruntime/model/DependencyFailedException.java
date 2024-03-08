@@ -16,14 +16,18 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when a request fails due to dependency like Lambda, Bedrock, STS resource due to a customer
- * fault (i.e. bad configuration)
+ * There was an issue with a dependency. Check the resource configurations and retry the request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DependencyFailedException extends com.amazonaws.services.bedrockagentruntime.model.AWSBedrockAgentRuntimeException {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     */
     private String resourceName;
 
     /**
@@ -37,7 +41,12 @@ public class DependencyFailedException extends com.amazonaws.services.bedrockage
     }
 
     /**
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     * 
      * @param resourceName
+     *        The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceName")
@@ -46,7 +55,11 @@ public class DependencyFailedException extends com.amazonaws.services.bedrockage
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     * 
+     * @return The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceName")
@@ -55,7 +68,12 @@ public class DependencyFailedException extends com.amazonaws.services.bedrockage
     }
 
     /**
+     * <p>
+     * The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
+     * </p>
+     * 
      * @param resourceName
+     *        The name of the dependency that caused the issue, such as Amazon Bedrock, Lambda, or STS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

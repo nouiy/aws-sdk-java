@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the request's input validation fails
+ * Input validation failed. Check your request parameters and retry the request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

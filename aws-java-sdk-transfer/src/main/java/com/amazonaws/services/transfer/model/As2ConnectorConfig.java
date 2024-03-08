@@ -57,12 +57,23 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
      * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
+     * Note the following:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires it, as
+     * it is a weak encryption algorithm.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that no
+     * traffic is sent in clear text.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String encryptionAlgorithm;
     /**
@@ -335,19 +346,42 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
      * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
+     * Note the following:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires it, as
+     * it is a weak encryption algorithm.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that no
+     * traffic is sent in clear text.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param encryptionAlgorithm
-     *        The algorithm that is used to encrypt the file.</p> <note>
+     *        The algorithm that is used to encrypt the file.</p>
      *        <p>
-     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *        traffic is sent in clear text.
+     *        Note the following:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires
+     *        it, as it is a weak encryption algorithm.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that
+     *        no traffic is sent in clear text.
+     *        </p>
+     *        </li>
      * @see EncryptionAlg
      */
 
@@ -359,18 +393,41 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
      * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
+     * Note the following:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires it, as
+     * it is a weak encryption algorithm.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that no
+     * traffic is sent in clear text.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The algorithm that is used to encrypt the file.</p> <note>
+     * @return The algorithm that is used to encrypt the file.</p>
      *         <p>
-     *         You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *         traffic is sent in clear text.
+     *         Note the following:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires
+     *         it, as it is a weak encryption algorithm.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that
+     *         no traffic is sent in clear text.
+     *         </p>
+     *         </li>
      * @see EncryptionAlg
      */
 
@@ -382,19 +439,42 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
      * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
+     * Note the following:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires it, as
+     * it is a weak encryption algorithm.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that no
+     * traffic is sent in clear text.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param encryptionAlgorithm
-     *        The algorithm that is used to encrypt the file.</p> <note>
+     *        The algorithm that is used to encrypt the file.</p>
      *        <p>
-     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *        traffic is sent in clear text.
+     *        Note the following:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires
+     *        it, as it is a weak encryption algorithm.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that
+     *        no traffic is sent in clear text.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlg
      */
@@ -408,19 +488,42 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
      * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
+     * Note the following:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires it, as
+     * it is a weak encryption algorithm.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that no
+     * traffic is sent in clear text.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param encryptionAlgorithm
-     *        The algorithm that is used to encrypt the file.</p> <note>
+     *        The algorithm that is used to encrypt the file.</p>
      *        <p>
-     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *        traffic is sent in clear text.
+     *        Note the following:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Do not use the <code>DES_EDE3_CBC</code> algorithm unless you must support a legacy client that requires
+     *        it, as it is a weak encryption algorithm.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. Using HTTPS ensures that
+     *        no traffic is sent in clear text.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlg
      */

@@ -36,7 +36,8 @@ public class NumberAttributeConstraintsType implements Serializable, Cloneable, 
     private String minValue;
     /**
      * <p>
-     * The maximum value of an attribute that is of the number data type.
+     * The maximum length of a number attribute value. Must be a number less than or equal to <code>2^1023</code>,
+     * represented as a string with a length of 131072 characters or fewer.
      * </p>
      */
     private String maxValue;
@@ -83,11 +84,13 @@ public class NumberAttributeConstraintsType implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum value of an attribute that is of the number data type.
+     * The maximum length of a number attribute value. Must be a number less than or equal to <code>2^1023</code>,
+     * represented as a string with a length of 131072 characters or fewer.
      * </p>
      * 
      * @param maxValue
-     *        The maximum value of an attribute that is of the number data type.
+     *        The maximum length of a number attribute value. Must be a number less than or equal to <code>2^1023</code>
+     *        , represented as a string with a length of 131072 characters or fewer.
      */
 
     public void setMaxValue(String maxValue) {
@@ -96,10 +99,12 @@ public class NumberAttributeConstraintsType implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum value of an attribute that is of the number data type.
+     * The maximum length of a number attribute value. Must be a number less than or equal to <code>2^1023</code>,
+     * represented as a string with a length of 131072 characters or fewer.
      * </p>
      * 
-     * @return The maximum value of an attribute that is of the number data type.
+     * @return The maximum length of a number attribute value. Must be a number less than or equal to
+     *         <code>2^1023</code>, represented as a string with a length of 131072 characters or fewer.
      */
 
     public String getMaxValue() {
@@ -108,11 +113,13 @@ public class NumberAttributeConstraintsType implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum value of an attribute that is of the number data type.
+     * The maximum length of a number attribute value. Must be a number less than or equal to <code>2^1023</code>,
+     * represented as a string with a length of 131072 characters or fewer.
      * </p>
      * 
      * @param maxValue
-     *        The maximum value of an attribute that is of the number data type.
+     *        The maximum length of a number attribute value. Must be a number less than or equal to <code>2^1023</code>
+     *        , represented as a string with a length of 131072 characters or fewer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

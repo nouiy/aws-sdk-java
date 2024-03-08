@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures the retrieval and generation for the session.
+ * Contains details about the resource being queried.
  * </p>
  * 
  * @see <a
@@ -29,12 +29,66 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains details about the resource being queried.
+     * </p>
+     */
+    private KnowledgeBaseRetrieveAndGenerateConfiguration knowledgeBaseConfiguration;
+    /**
+     * <p>
+     * The type of resource that is queried by the request.
+     * </p>
+     */
     private String type;
 
-    private KnowledgeBaseRetrieveAndGenerateConfiguration knowledgeBaseConfiguration;
+    /**
+     * <p>
+     * Contains details about the resource being queried.
+     * </p>
+     * 
+     * @param knowledgeBaseConfiguration
+     *        Contains details about the resource being queried.
+     */
+
+    public void setKnowledgeBaseConfiguration(KnowledgeBaseRetrieveAndGenerateConfiguration knowledgeBaseConfiguration) {
+        this.knowledgeBaseConfiguration = knowledgeBaseConfiguration;
+    }
 
     /**
+     * <p>
+     * Contains details about the resource being queried.
+     * </p>
+     * 
+     * @return Contains details about the resource being queried.
+     */
+
+    public KnowledgeBaseRetrieveAndGenerateConfiguration getKnowledgeBaseConfiguration() {
+        return this.knowledgeBaseConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the resource being queried.
+     * </p>
+     * 
+     * @param knowledgeBaseConfiguration
+     *        Contains details about the resource being queried.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrieveAndGenerateConfiguration withKnowledgeBaseConfiguration(KnowledgeBaseRetrieveAndGenerateConfiguration knowledgeBaseConfiguration) {
+        setKnowledgeBaseConfiguration(knowledgeBaseConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of resource that is queried by the request.
+     * </p>
+     * 
      * @param type
+     *        The type of resource that is queried by the request.
      * @see RetrieveAndGenerateType
      */
 
@@ -43,7 +97,11 @@ public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable
     }
 
     /**
-     * @return
+     * <p>
+     * The type of resource that is queried by the request.
+     * </p>
+     * 
+     * @return The type of resource that is queried by the request.
      * @see RetrieveAndGenerateType
      */
 
@@ -52,7 +110,12 @@ public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The type of resource that is queried by the request.
+     * </p>
+     * 
      * @param type
+     *        The type of resource that is queried by the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RetrieveAndGenerateType
      */
@@ -63,39 +126,18 @@ public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The type of resource that is queried by the request.
+     * </p>
+     * 
      * @param type
+     *        The type of resource that is queried by the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RetrieveAndGenerateType
      */
 
     public RetrieveAndGenerateConfiguration withType(RetrieveAndGenerateType type) {
         this.type = type.toString();
-        return this;
-    }
-
-    /**
-     * @param knowledgeBaseConfiguration
-     */
-
-    public void setKnowledgeBaseConfiguration(KnowledgeBaseRetrieveAndGenerateConfiguration knowledgeBaseConfiguration) {
-        this.knowledgeBaseConfiguration = knowledgeBaseConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public KnowledgeBaseRetrieveAndGenerateConfiguration getKnowledgeBaseConfiguration() {
-        return this.knowledgeBaseConfiguration;
-    }
-
-    /**
-     * @param knowledgeBaseConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RetrieveAndGenerateConfiguration withKnowledgeBaseConfiguration(KnowledgeBaseRetrieveAndGenerateConfiguration knowledgeBaseConfiguration) {
-        setKnowledgeBaseConfiguration(knowledgeBaseConfiguration);
         return this;
     }
 
@@ -111,10 +153,10 @@ public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getType() != null)
-            sb.append("Type: ").append(getType()).append(",");
         if (getKnowledgeBaseConfiguration() != null)
-            sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration());
+            sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -129,13 +171,13 @@ public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable
         if (obj instanceof RetrieveAndGenerateConfiguration == false)
             return false;
         RetrieveAndGenerateConfiguration other = (RetrieveAndGenerateConfiguration) obj;
-        if (other.getType() == null ^ this.getType() == null)
-            return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
-            return false;
         if (other.getKnowledgeBaseConfiguration() == null ^ this.getKnowledgeBaseConfiguration() == null)
             return false;
         if (other.getKnowledgeBaseConfiguration() != null && other.getKnowledgeBaseConfiguration().equals(this.getKnowledgeBaseConfiguration()) == false)
+            return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
         return true;
     }
@@ -145,8 +187,8 @@ public class RetrieveAndGenerateConfiguration implements Serializable, Cloneable
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseConfiguration() == null) ? 0 : getKnowledgeBaseConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

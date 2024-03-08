@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Customer input of the turn
+ * Contains the query made to the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrieveAndGenerateInput"
@@ -30,18 +30,18 @@ public class RetrieveAndGenerateInput implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Customer input of the turn in text
+     * The query made to the knowledge base.
      * </p>
      */
     private String text;
 
     /**
      * <p>
-     * Customer input of the turn in text
+     * The query made to the knowledge base.
      * </p>
      * 
      * @param text
-     *        Customer input of the turn in text
+     *        The query made to the knowledge base.
      */
 
     public void setText(String text) {
@@ -50,10 +50,10 @@ public class RetrieveAndGenerateInput implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Customer input of the turn in text
+     * The query made to the knowledge base.
      * </p>
      * 
-     * @return Customer input of the turn in text
+     * @return The query made to the knowledge base.
      */
 
     public String getText() {
@@ -62,11 +62,11 @@ public class RetrieveAndGenerateInput implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Customer input of the turn in text
+     * The query made to the knowledge base.
      * </p>
      * 
      * @param text
-     *        Customer input of the turn in text
+     *        The query made to the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

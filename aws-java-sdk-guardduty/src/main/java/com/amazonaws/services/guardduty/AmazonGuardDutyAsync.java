@@ -165,9 +165,29 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Creates a single Amazon GuardDuty detector. A detector is a resource that represents the GuardDuty service. To
-     * start using GuardDuty, you must create a detector in each Region where you enable the service. You can have only
-     * one detector per account per Region. All data sources are enabled in a new detector by default.
+     * Creates a single GuardDuty detector. A detector is a resource that represents the GuardDuty service. To start
+     * using GuardDuty, you must create a detector in each Region where you enable the service. You can have only one
+     * detector per account per Region. All data sources are enabled in a new detector by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you don't specify any <code>features</code>, with an exception to <code>RUNTIME_MONITORING</code>, all the
+     * optional features are enabled by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When you specify some of the <code>features</code>, any feature that is not specified in the API call gets
+     * enabled by default, with an exception to <code>RUNTIME_MONITORING</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
@@ -185,9 +205,29 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Creates a single Amazon GuardDuty detector. A detector is a resource that represents the GuardDuty service. To
-     * start using GuardDuty, you must create a detector in each Region where you enable the service. You can have only
-     * one detector per account per Region. All data sources are enabled in a new detector by default.
+     * Creates a single GuardDuty detector. A detector is a resource that represents the GuardDuty service. To start
+     * using GuardDuty, you must create a detector in each Region where you enable the service. You can have only one
+     * detector per account per Region. All data sources are enabled in a new detector by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you don't specify any <code>features</code>, with an exception to <code>RUNTIME_MONITORING</code>, all the
+     * optional features are enabled by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When you specify some of the <code>features</code>, any feature that is not specified in the API call gets
+     * enabled by default, with an exception to <code>RUNTIME_MONITORING</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
@@ -1554,12 +1594,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Retrieves how many active member accounts in your Amazon Web Services organization have each feature enabled
-     * within GuardDuty. Only a delegated GuardDuty administrator of an organization can run this API.
+     * Retrieves how many active member accounts have each feature enabled within GuardDuty. Only a delegated GuardDuty
+     * administrator of an organization can run this API.
      * </p>
      * <p>
-     * When you create a new Amazon Web Services organization, it might take up to 24 hours to generate the statistics
-     * for the entire organization.
+     * When you create a new organization, it might take up to 24 hours to generate the statistics for the entire
+     * organization.
      * </p>
      * 
      * @param getOrganizationStatisticsRequest
@@ -1573,12 +1613,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Retrieves how many active member accounts in your Amazon Web Services organization have each feature enabled
-     * within GuardDuty. Only a delegated GuardDuty administrator of an organization can run this API.
+     * Retrieves how many active member accounts have each feature enabled within GuardDuty. Only a delegated GuardDuty
+     * administrator of an organization can run this API.
      * </p>
      * <p>
-     * When you create a new Amazon Web Services organization, it might take up to 24 hours to generate the statistics
-     * for the entire organization.
+     * When you create a new organization, it might take up to 24 hours to generate the statistics for the entire
+     * organization.
      * </p>
      * 
      * @param getOrganizationStatisticsRequest
@@ -2156,7 +2196,13 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * <p>
      * Initiates the malware scan. Invoking this API will automatically create the <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/slr-permissions-malware-protection.html">Service-linked
-     * role </a> in the corresponding account.
+     * role</a> in the corresponding account.
+     * </p>
+     * <p>
+     * When the malware scan starts, you can use the associated scan ID to track the status of the scan. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DescribeMalwareScans.html"
+     * >DescribeMalwareScans</a>.
      * </p>
      * 
      * @param startMalwareScanRequest
@@ -2171,7 +2217,13 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * <p>
      * Initiates the malware scan. Invoking this API will automatically create the <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/slr-permissions-malware-protection.html">Service-linked
-     * role </a> in the corresponding account.
+     * role</a> in the corresponding account.
+     * </p>
+     * <p>
+     * When the malware scan starts, you can use the associated scan ID to track the status of the scan. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DescribeMalwareScans.html"
+     * >DescribeMalwareScans</a>.
      * </p>
      * 
      * @param startMalwareScanRequest
@@ -2360,7 +2412,13 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Updates the GuardDuty detector specified by the detectorId.
+     * Updates the GuardDuty detector specified by the detector ID.
+     * </p>
+     * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
@@ -2378,7 +2436,13 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Updates the GuardDuty detector specified by the detectorId.
+     * Updates the GuardDuty detector specified by the detector ID.
+     * </p>
+     * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
@@ -2540,6 +2604,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * Contains information on member accounts to be updated.
      * </p>
      * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
+     * </p>
+     * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
      * Services Regions where GuardDuty is presently supported. For more information, see <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
@@ -2556,6 +2626,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Contains information on member accounts to be updated.
+     * </p>
+     * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
@@ -2582,6 +2658,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>, but not both.
      * </p>
      * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
+     * </p>
+     * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web
      * Services Regions where GuardDuty is presently supported. For more information, see <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
@@ -2601,6 +2683,12 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * <p>
      * Configures the delegated administrator account with the provided values. You must provide a value for either
      * <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>, but not both.
+     * </p>
+     * <p>
+     * Specifying both EKS Runtime Monitoring (<code>EKS_RUNTIME_MONITORING</code>) and Runtime Monitoring (
+     * <code>RUNTIME_MONITORING</code>) will cause an error. You can add only one of these two features because Runtime
+     * Monitoring already includes the threat detection for Amazon EKS resources. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/runtime-monitoring.html">Runtime Monitoring</a>.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web

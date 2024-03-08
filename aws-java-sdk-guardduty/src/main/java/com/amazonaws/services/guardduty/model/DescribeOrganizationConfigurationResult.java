@@ -63,26 +63,34 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
     private String nextToken;
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for the
+     * member accounts in the organization.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
-     * automatically.
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or any of
+     * the corresponding protection plans enabled automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
-     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
-     * removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the corresponding
+     * protection plans enabled automatically. This includes <code>NEW</code> accounts that join the organization and
+     * accounts that may have been suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     * organization. The administrator must manage GuardDuty for each account in the organization individually.
+     * <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     * automatically enabled for any account in the organization. The administrator must manage GuardDuty for each
+     * account in the organization individually.
+     * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
      * </p>
      * </li>
      * </ul>
@@ -381,50 +389,66 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for the
+     * member accounts in the organization.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
-     * automatically.
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or any of
+     * the corresponding protection plans enabled automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
-     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
-     * removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the corresponding
+     * protection plans enabled automatically. This includes <code>NEW</code> accounts that join the organization and
+     * accounts that may have been suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     * organization. The administrator must manage GuardDuty for each account in the organization individually.
+     * <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     * automatically enabled for any account in the organization. The administrator must manage GuardDuty for each
+     * account in the organization individually.
+     * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
      * </p>
      * </li>
      * </ul>
      * 
      * @param autoEnableOrganizationMembers
-     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *        Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for
+     *        the member accounts in the organization.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
-     *        enabled automatically.
+     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or
+     *        any of the corresponding protection plans enabled automatically.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
-     *        This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     *        suspended or removed from the organization in GuardDuty.
+     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the
+     *        corresponding protection plans enabled automatically. This includes <code>NEW</code> accounts that join
+     *        the organization and accounts that may have been suspended or removed from the organization in GuardDuty.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     *        organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *        <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     *        automatically enabled for any account in the organization. The administrator must manage GuardDuty for
+     *        each account in the organization individually.
+     *        </p>
+     *        <p>
+     *        When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *        this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *        apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *        account will have the corresponding option as enabled.
      *        </p>
      *        </li>
      * @see AutoEnableMembers
@@ -436,49 +460,65 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for the
+     * member accounts in the organization.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
-     * automatically.
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or any of
+     * the corresponding protection plans enabled automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
-     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
-     * removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the corresponding
+     * protection plans enabled automatically. This includes <code>NEW</code> accounts that join the organization and
+     * accounts that may have been suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     * organization. The administrator must manage GuardDuty for each account in the organization individually.
+     * <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     * automatically enabled for any account in the organization. The administrator must manage GuardDuty for each
+     * account in the organization individually.
+     * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     * @return Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for
+     *         the member accounts in the organization.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
-     *         enabled automatically.
+     *         <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or
+     *         any of the corresponding protection plans enabled automatically.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
-     *         This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     *         suspended or removed from the organization in GuardDuty.
+     *         <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the
+     *         corresponding protection plans enabled automatically. This includes <code>NEW</code> accounts that join
+     *         the organization and accounts that may have been suspended or removed from the organization in GuardDuty.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     *         organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *         <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     *         automatically enabled for any account in the organization. The administrator must manage GuardDuty for
+     *         each account in the organization individually.
+     *         </p>
+     *         <p>
+     *         When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *         this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *         apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *         account will have the corresponding option as enabled.
      *         </p>
      *         </li>
      * @see AutoEnableMembers
@@ -490,50 +530,66 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for the
+     * member accounts in the organization.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
-     * automatically.
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or any of
+     * the corresponding protection plans enabled automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
-     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
-     * removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the corresponding
+     * protection plans enabled automatically. This includes <code>NEW</code> accounts that join the organization and
+     * accounts that may have been suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     * organization. The administrator must manage GuardDuty for each account in the organization individually.
+     * <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     * automatically enabled for any account in the organization. The administrator must manage GuardDuty for each
+     * account in the organization individually.
+     * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
      * </p>
      * </li>
      * </ul>
      * 
      * @param autoEnableOrganizationMembers
-     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *        Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for
+     *        the member accounts in the organization.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
-     *        enabled automatically.
+     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or
+     *        any of the corresponding protection plans enabled automatically.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
-     *        This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     *        suspended or removed from the organization in GuardDuty.
+     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the
+     *        corresponding protection plans enabled automatically. This includes <code>NEW</code> accounts that join
+     *        the organization and accounts that may have been suspended or removed from the organization in GuardDuty.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     *        organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *        <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     *        automatically enabled for any account in the organization. The administrator must manage GuardDuty for
+     *        each account in the organization individually.
+     *        </p>
+     *        <p>
+     *        When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *        this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *        apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *        account will have the corresponding option as enabled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -547,50 +603,66 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for the
+     * member accounts in the organization.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
-     * automatically.
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or any of
+     * the corresponding protection plans enabled automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
-     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
-     * removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the corresponding
+     * protection plans enabled automatically. This includes <code>NEW</code> accounts that join the organization and
+     * accounts that may have been suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     * organization. The administrator must manage GuardDuty for each account in the organization individually.
+     * <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     * automatically enabled for any account in the organization. The administrator must manage GuardDuty for each
+     * account in the organization individually.
+     * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
      * </p>
      * </li>
      * </ul>
      * 
      * @param autoEnableOrganizationMembers
-     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *        Indicates the auto-enablement configuration of GuardDuty or any of the corresponding protection plans for
+     *        the member accounts in the organization.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
-     *        enabled automatically.
+     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty or
+     *        any of the corresponding protection plans enabled automatically.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
-     *        This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     *        suspended or removed from the organization in GuardDuty.
+     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty and any of the
+     *        corresponding protection plans enabled automatically. This includes <code>NEW</code> accounts that join
+     *        the organization and accounts that may have been suspended or removed from the organization in GuardDuty.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
-     *        organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *        <code>NONE</code>: Indicates that GuardDuty or any of the corresponding protection plans will not be
+     *        automatically enabled for any account in the organization. The administrator must manage GuardDuty for
+     *        each account in the organization individually.
+     *        </p>
+     *        <p>
+     *        When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *        this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *        apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *        account will have the corresponding option as enabled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

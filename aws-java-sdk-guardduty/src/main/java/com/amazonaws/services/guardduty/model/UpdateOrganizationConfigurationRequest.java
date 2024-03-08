@@ -86,6 +86,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
+     * </p>
      * </li>
      * </ul>
      */
@@ -359,6 +365,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
+     * </p>
      * </li>
      * </ul>
      * 
@@ -390,6 +402,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        <p>
      *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      *        organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *        </p>
+     *        <p>
+     *        When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *        this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *        apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *        account will have the corresponding option as enabled.
      *        </p>
      *        </li>
      * @see AutoEnableMembers
@@ -429,6 +447,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
+     * </p>
      * </li>
      * </ul>
      * 
@@ -459,6 +483,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *         <p>
      *         <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      *         organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *         </p>
+     *         <p>
+     *         When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *         this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *         apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *         account will have the corresponding option as enabled.
      *         </p>
      *         </li>
      * @see AutoEnableMembers
@@ -498,6 +528,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
+     * </p>
      * </li>
      * </ul>
      * 
@@ -529,6 +565,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        <p>
      *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      *        organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *        </p>
+     *        <p>
+     *        When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *        this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *        apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *        account will have the corresponding option as enabled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -570,6 +612,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
+     * <p>
+     * When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>, this
+     * action doesn't disable the corresponding option for your existing accounts. This configuration will apply to the
+     * new accounts that join the organization. After you update the auto-enable settings, no new account will have the
+     * corresponding option as enabled.
+     * </p>
      * </li>
      * </ul>
      * 
@@ -601,6 +649,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        <p>
      *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
      *        organization. The administrator must manage GuardDuty for each account in the organization individually.
+     *        </p>
+     *        <p>
+     *        When you update the auto-enable setting from <code>ALL</code> or <code>NEW</code> to <code>NONE</code>,
+     *        this action doesn't disable the corresponding option for your existing accounts. This configuration will
+     *        apply to the new accounts that join the organization. After you update the auto-enable settings, no new
+     *        account will have the corresponding option as enabled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

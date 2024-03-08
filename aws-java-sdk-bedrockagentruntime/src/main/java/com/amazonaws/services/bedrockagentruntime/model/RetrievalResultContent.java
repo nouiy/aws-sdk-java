@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Content of a retrieval result.
+ * Contains the cited text from the data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrievalResultContent"
@@ -30,18 +30,18 @@ public class RetrievalResultContent implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Content of a retrieval result in text
+     * The cited text from the data source.
      * </p>
      */
     private String text;
 
     /**
      * <p>
-     * Content of a retrieval result in text
+     * The cited text from the data source.
      * </p>
      * 
      * @param text
-     *        Content of a retrieval result in text
+     *        The cited text from the data source.
      */
 
     public void setText(String text) {
@@ -50,10 +50,10 @@ public class RetrievalResultContent implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Content of a retrieval result in text
+     * The cited text from the data source.
      * </p>
      * 
-     * @return Content of a retrieval result in text
+     * @return The cited text from the data source.
      */
 
     public String getText() {
@@ -62,11 +62,11 @@ public class RetrievalResultContent implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Content of a retrieval result in text
+     * The cited text from the data source.
      * </p>
      * 
      * @param text
-     *        Content of a retrieval result in text
+     *        The cited text from the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

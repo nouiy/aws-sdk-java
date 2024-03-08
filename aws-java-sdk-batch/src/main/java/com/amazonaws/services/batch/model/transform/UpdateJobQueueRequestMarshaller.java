@@ -38,6 +38,8 @@ public class UpdateJobQueueRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("priority").build();
     private static final MarshallingInfo<List> COMPUTEENVIRONMENTORDER_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeEnvironmentOrder").build();
+    private static final MarshallingInfo<List> JOBSTATETIMELIMITACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobStateTimeLimitActions").build();
 
     private static final UpdateJobQueueRequestMarshaller instance = new UpdateJobQueueRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class UpdateJobQueueRequestMarshaller {
             protocolMarshaller.marshall(updateJobQueueRequest.getSchedulingPolicyArn(), SCHEDULINGPOLICYARN_BINDING);
             protocolMarshaller.marshall(updateJobQueueRequest.getPriority(), PRIORITY_BINDING);
             protocolMarshaller.marshall(updateJobQueueRequest.getComputeEnvironmentOrder(), COMPUTEENVIRONMENTORDER_BINDING);
+            protocolMarshaller.marshall(updateJobQueueRequest.getJobStateTimeLimitActions(), JOBSTATETIMELIMITACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

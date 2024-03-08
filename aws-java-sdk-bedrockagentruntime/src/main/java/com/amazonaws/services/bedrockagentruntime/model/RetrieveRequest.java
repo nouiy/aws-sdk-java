@@ -25,16 +25,39 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to query.
+     * </p>
+     */
     private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
+     * Contains details about how the results should be returned.
+     * </p>
+     */
+    private KnowledgeBaseRetrievalConfiguration retrievalConfiguration;
+    /**
+     * <p>
+     * The query to send the knowledge base.
+     * </p>
+     */
     private KnowledgeBaseQuery retrievalQuery;
 
-    private KnowledgeBaseRetrievalConfiguration retrievalConfiguration;
-
-    private String nextToken;
-
     /**
+     * <p>
+     * The unique identifier of the knowledge base to query.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to query.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -42,7 +65,11 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the knowledge base to query.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to query.
      */
 
     public String getKnowledgeBaseId() {
@@ -50,7 +77,12 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base to query.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,33 +92,59 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
-     * @param retrievalQuery
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use
+     *        this token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
      */
 
-    public void setRetrievalQuery(KnowledgeBaseQuery retrievalQuery) {
-        this.retrievalQuery = retrievalQuery;
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
     }
 
     /**
-     * @return
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     * 
+     * @return If there are more results than can fit in the response, the response returns a <code>nextToken</code>.
+     *         Use this token in the <code>nextToken</code> field of another request to retrieve the next batch of
+     *         results.
      */
 
-    public KnowledgeBaseQuery getRetrievalQuery() {
-        return this.retrievalQuery;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
-     * @param retrievalQuery
+     * <p>
+     * If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use this
+     * token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        If there are more results than can fit in the response, the response returns a <code>nextToken</code>. Use
+     *        this token in the <code>nextToken</code> field of another request to retrieve the next batch of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public RetrieveRequest withRetrievalQuery(KnowledgeBaseQuery retrievalQuery) {
-        setRetrievalQuery(retrievalQuery);
+    public RetrieveRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
     /**
+     * <p>
+     * Contains details about how the results should be returned.
+     * </p>
+     * 
      * @param retrievalConfiguration
+     *        Contains details about how the results should be returned.
      */
 
     public void setRetrievalConfiguration(KnowledgeBaseRetrievalConfiguration retrievalConfiguration) {
@@ -94,7 +152,11 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about how the results should be returned.
+     * </p>
+     * 
+     * @return Contains details about how the results should be returned.
      */
 
     public KnowledgeBaseRetrievalConfiguration getRetrievalConfiguration() {
@@ -102,7 +164,12 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * Contains details about how the results should be returned.
+     * </p>
+     * 
      * @param retrievalConfiguration
+     *        Contains details about how the results should be returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,28 +179,42 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
-     * @param nextToken
+     * <p>
+     * The query to send the knowledge base.
+     * </p>
+     * 
+     * @param retrievalQuery
+     *        The query to send the knowledge base.
      */
 
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public void setRetrievalQuery(KnowledgeBaseQuery retrievalQuery) {
+        this.retrievalQuery = retrievalQuery;
     }
 
     /**
-     * @return
+     * <p>
+     * The query to send the knowledge base.
+     * </p>
+     * 
+     * @return The query to send the knowledge base.
      */
 
-    public String getNextToken() {
-        return this.nextToken;
+    public KnowledgeBaseQuery getRetrievalQuery() {
+        return this.retrievalQuery;
     }
 
     /**
-     * @param nextToken
+     * <p>
+     * The query to send the knowledge base.
+     * </p>
+     * 
+     * @param retrievalQuery
+     *        The query to send the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public RetrieveRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
+    public RetrieveRequest withRetrievalQuery(KnowledgeBaseQuery retrievalQuery) {
+        setRetrievalQuery(retrievalQuery);
         return this;
     }
 
@@ -151,12 +232,12 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
         sb.append("{");
         if (getKnowledgeBaseId() != null)
             sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
-        if (getRetrievalQuery() != null)
-            sb.append("RetrievalQuery: ").append("***Sensitive Data Redacted***").append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getRetrievalConfiguration() != null)
             sb.append("RetrievalConfiguration: ").append(getRetrievalConfiguration()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+        if (getRetrievalQuery() != null)
+            sb.append("RetrievalQuery: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -175,17 +256,17 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
-        if (other.getRetrievalQuery() == null ^ this.getRetrievalQuery() == null)
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
-        if (other.getRetrievalQuery() != null && other.getRetrievalQuery().equals(this.getRetrievalQuery()) == false)
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         if (other.getRetrievalConfiguration() == null ^ this.getRetrievalConfiguration() == null)
             return false;
         if (other.getRetrievalConfiguration() != null && other.getRetrievalConfiguration().equals(this.getRetrievalConfiguration()) == false)
             return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
+        if (other.getRetrievalQuery() == null ^ this.getRetrievalQuery() == null)
             return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+        if (other.getRetrievalQuery() != null && other.getRetrievalQuery().equals(this.getRetrievalQuery()) == false)
             return false;
         return true;
     }
@@ -196,9 +277,9 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
-        hashCode = prime * hashCode + ((getRetrievalQuery() == null) ? 0 : getRetrievalQuery().hashCode());
-        hashCode = prime * hashCode + ((getRetrievalConfiguration() == null) ? 0 : getRetrievalConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getRetrievalConfiguration() == null) ? 0 : getRetrievalConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRetrievalQuery() == null) ? 0 : getRetrievalQuery().hashCode());
         return hashCode;
     }
 

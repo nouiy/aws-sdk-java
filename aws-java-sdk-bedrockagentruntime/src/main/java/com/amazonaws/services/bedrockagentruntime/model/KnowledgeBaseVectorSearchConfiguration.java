@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Knowledge base vector search configuration
+ * Configurations for how to carry out the search.
  * </p>
  * 
  * @see <a
@@ -31,24 +31,45 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Top-K results to retrieve from knowledge base.
+     * The number of results to return.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     * </p>
+     * </note>
      */
     private Integer numberOfResults;
     /**
      * <p>
-     * Override the type of query to be performed on data store
+     * By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch Serverless
+     * vector store that contains a filterable text field, you can specify whether to query the knowledge base with a
+     * <code>HYBRID</code> search using both vector embeddings and raw text, or <code>SEMANTIC</code> search using only
+     * vector embeddings. For other vector store configurations, only <code>SEMANTIC</code> search is available. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge base</a>.
      * </p>
      */
     private String overrideSearchType;
 
     /**
      * <p>
-     * Top-K results to retrieve from knowledge base.
+     * The number of results to return.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     * </p>
+     * </note>
      * 
      * @param numberOfResults
-     *        Top-K results to retrieve from knowledge base.
+     *        The number of results to return.</p> <note>
+     *        <p>
+     *        The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>.
+     *        Don't include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     *        </p>
      */
 
     public void setNumberOfResults(Integer numberOfResults) {
@@ -57,10 +78,20 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Top-K results to retrieve from knowledge base.
+     * The number of results to return.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     * </p>
+     * </note>
      * 
-     * @return Top-K results to retrieve from knowledge base.
+     * @return The number of results to return.</p> <note>
+     *         <p>
+     *         The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>.
+     *         Don't include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     *         </p>
      */
 
     public Integer getNumberOfResults() {
@@ -69,11 +100,21 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Top-K results to retrieve from knowledge base.
+     * The number of results to return.
      * </p>
+     * <note>
+     * <p>
+     * The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>. Don't
+     * include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     * </p>
+     * </note>
      * 
      * @param numberOfResults
-     *        Top-K results to retrieve from knowledge base.
+     *        The number of results to return.</p> <note>
+     *        <p>
+     *        The <code>numberOfResults</code> field is currently unsupported for <code>RetrieveAndGenerate</code>.
+     *        Don't include it in this field if you are sending a <code>RetrieveAndGenerate</code> request.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +125,22 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Override the type of query to be performed on data store
+     * By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch Serverless
+     * vector store that contains a filterable text field, you can specify whether to query the knowledge base with a
+     * <code>HYBRID</code> search using both vector embeddings and raw text, or <code>SEMANTIC</code> search using only
+     * vector embeddings. For other vector store configurations, only <code>SEMANTIC</code> search is available. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge base</a>.
      * </p>
      * 
      * @param overrideSearchType
-     *        Override the type of query to be performed on data store
+     *        By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch
+     *        Serverless vector store that contains a filterable text field, you can specify whether to query the
+     *        knowledge base with a <code>HYBRID</code> search using both vector embeddings and raw text, or
+     *        <code>SEMANTIC</code> search using only vector embeddings. For other vector store configurations, only
+     *        <code>SEMANTIC</code> search is available. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge
+     *        base</a>.
      * @see SearchType
      */
 
@@ -98,10 +150,21 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Override the type of query to be performed on data store
+     * By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch Serverless
+     * vector store that contains a filterable text field, you can specify whether to query the knowledge base with a
+     * <code>HYBRID</code> search using both vector embeddings and raw text, or <code>SEMANTIC</code> search using only
+     * vector embeddings. For other vector store configurations, only <code>SEMANTIC</code> search is available. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge base</a>.
      * </p>
      * 
-     * @return Override the type of query to be performed on data store
+     * @return By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch
+     *         Serverless vector store that contains a filterable text field, you can specify whether to query the
+     *         knowledge base with a <code>HYBRID</code> search using both vector embeddings and raw text, or
+     *         <code>SEMANTIC</code> search using only vector embeddings. For other vector store configurations, only
+     *         <code>SEMANTIC</code> search is available. For more information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge
+     *         base</a>.
      * @see SearchType
      */
 
@@ -111,11 +174,22 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Override the type of query to be performed on data store
+     * By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch Serverless
+     * vector store that contains a filterable text field, you can specify whether to query the knowledge base with a
+     * <code>HYBRID</code> search using both vector embeddings and raw text, or <code>SEMANTIC</code> search using only
+     * vector embeddings. For other vector store configurations, only <code>SEMANTIC</code> search is available. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge base</a>.
      * </p>
      * 
      * @param overrideSearchType
-     *        Override the type of query to be performed on data store
+     *        By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch
+     *        Serverless vector store that contains a filterable text field, you can specify whether to query the
+     *        knowledge base with a <code>HYBRID</code> search using both vector embeddings and raw text, or
+     *        <code>SEMANTIC</code> search using only vector embeddings. For other vector store configurations, only
+     *        <code>SEMANTIC</code> search is available. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge
+     *        base</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchType
      */
@@ -127,11 +201,22 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * Override the type of query to be performed on data store
+     * By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch Serverless
+     * vector store that contains a filterable text field, you can specify whether to query the knowledge base with a
+     * <code>HYBRID</code> search using both vector embeddings and raw text, or <code>SEMANTIC</code> search using only
+     * vector embeddings. For other vector store configurations, only <code>SEMANTIC</code> search is available. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge base</a>.
      * </p>
      * 
      * @param overrideSearchType
-     *        Override the type of query to be performed on data store
+     *        By default, Amazon Bedrock decides a search strategy for you. If you're using an Amazon OpenSearch
+     *        Serverless vector store that contains a filterable text field, you can specify whether to query the
+     *        knowledge base with a <code>HYBRID</code> search using both vector embeddings and raw text, or
+     *        <code>SEMANTIC</code> search using only vector embeddings. For other vector store configurations, only
+     *        <code>SEMANTIC</code> search is available. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-test.html">Test a knowledge
+     *        base</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchType
      */

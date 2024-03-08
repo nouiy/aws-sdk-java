@@ -145,8 +145,8 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private GitSubmodulesConfig gitSubmodulesConfigOverride;
     /**
      * <p>
-     * A buildspec file declaration that overrides, for this build only, the latest one already defined in the build
-     * project.
+     * A buildspec file declaration that overrides the latest one defined in the build project, for this build only. The
+     * buildspec defined on the project is not changed.
      * </p>
      * <p>
      * If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec file
@@ -158,6 +158,14 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      * >Buildspec File Name and Storage Location</a>.
      * </p>
+     * <note>
+     * <p>
+     * Since this property allows you to change the build commands that will run in the container, you should note that
+     * an IAM principal with the ability to call this API and set this parameter can override the default settings.
+     * Moreover, we encourage that you use a trustworthy buildspec location like a file in your source repository or a
+     * Amazon S3 bucket.
+     * </p>
+     * </note>
      */
     private String buildspecOverride;
     /**
@@ -1225,8 +1233,8 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A buildspec file declaration that overrides, for this build only, the latest one already defined in the build
-     * project.
+     * A buildspec file declaration that overrides the latest one defined in the build project, for this build only. The
+     * buildspec defined on the project is not changed.
      * </p>
      * <p>
      * If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec file
@@ -1238,10 +1246,18 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      * >Buildspec File Name and Storage Location</a>.
      * </p>
+     * <note>
+     * <p>
+     * Since this property allows you to change the build commands that will run in the container, you should note that
+     * an IAM principal with the ability to call this API and set this parameter can override the default settings.
+     * Moreover, we encourage that you use a trustworthy buildspec location like a file in your source repository or a
+     * Amazon S3 bucket.
+     * </p>
+     * </note>
      * 
      * @param buildspecOverride
-     *        A buildspec file declaration that overrides, for this build only, the latest one already defined in the
-     *        build project.</p>
+     *        A buildspec file declaration that overrides the latest one defined in the build project, for this build
+     *        only. The buildspec defined on the project is not changed.</p>
      *        <p>
      *        If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec
      *        file relative to the value of the built-in <code>CODEBUILD_SRC_DIR</code> environment variable, or the
@@ -1252,6 +1268,14 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      *        >Buildspec File Name and Storage Location</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Since this property allows you to change the build commands that will run in the container, you should
+     *        note that an IAM principal with the ability to call this API and set this parameter can override the
+     *        default settings. Moreover, we encourage that you use a trustworthy buildspec location like a file in your
+     *        source repository or a Amazon S3 bucket.
+     *        </p>
      */
 
     public void setBuildspecOverride(String buildspecOverride) {
@@ -1260,8 +1284,8 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A buildspec file declaration that overrides, for this build only, the latest one already defined in the build
-     * project.
+     * A buildspec file declaration that overrides the latest one defined in the build project, for this build only. The
+     * buildspec defined on the project is not changed.
      * </p>
      * <p>
      * If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec file
@@ -1273,9 +1297,17 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      * >Buildspec File Name and Storage Location</a>.
      * </p>
+     * <note>
+     * <p>
+     * Since this property allows you to change the build commands that will run in the container, you should note that
+     * an IAM principal with the ability to call this API and set this parameter can override the default settings.
+     * Moreover, we encourage that you use a trustworthy buildspec location like a file in your source repository or a
+     * Amazon S3 bucket.
+     * </p>
+     * </note>
      * 
-     * @return A buildspec file declaration that overrides, for this build only, the latest one already defined in the
-     *         build project.</p>
+     * @return A buildspec file declaration that overrides the latest one defined in the build project, for this build
+     *         only. The buildspec defined on the project is not changed.</p>
      *         <p>
      *         If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec
      *         file relative to the value of the built-in <code>CODEBUILD_SRC_DIR</code> environment variable, or the
@@ -1286,6 +1318,14 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      *         >Buildspec File Name and Storage Location</a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Since this property allows you to change the build commands that will run in the container, you should
+     *         note that an IAM principal with the ability to call this API and set this parameter can override the
+     *         default settings. Moreover, we encourage that you use a trustworthy buildspec location like a file in
+     *         your source repository or a Amazon S3 bucket.
+     *         </p>
      */
 
     public String getBuildspecOverride() {
@@ -1294,8 +1334,8 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A buildspec file declaration that overrides, for this build only, the latest one already defined in the build
-     * project.
+     * A buildspec file declaration that overrides the latest one defined in the build project, for this build only. The
+     * buildspec defined on the project is not changed.
      * </p>
      * <p>
      * If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec file
@@ -1307,10 +1347,18 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      * >Buildspec File Name and Storage Location</a>.
      * </p>
+     * <note>
+     * <p>
+     * Since this property allows you to change the build commands that will run in the container, you should note that
+     * an IAM principal with the ability to call this API and set this parameter can override the default settings.
+     * Moreover, we encourage that you use a trustworthy buildspec location like a file in your source repository or a
+     * Amazon S3 bucket.
+     * </p>
+     * </note>
      * 
      * @param buildspecOverride
-     *        A buildspec file declaration that overrides, for this build only, the latest one already defined in the
-     *        build project.</p>
+     *        A buildspec file declaration that overrides the latest one defined in the build project, for this build
+     *        only. The buildspec defined on the project is not changed.</p>
      *        <p>
      *        If this value is set, it can be either an inline buildspec definition, the path to an alternate buildspec
      *        file relative to the value of the built-in <code>CODEBUILD_SRC_DIR</code> environment variable, or the
@@ -1321,6 +1369,14 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage"
      *        >Buildspec File Name and Storage Location</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Since this property allows you to change the build commands that will run in the container, you should
+     *        note that an IAM principal with the ability to call this API and set this parameter can override the
+     *        default settings. Moreover, we encourage that you use a trustworthy buildspec location like a file in your
+     *        source repository or a Amazon S3 bucket.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

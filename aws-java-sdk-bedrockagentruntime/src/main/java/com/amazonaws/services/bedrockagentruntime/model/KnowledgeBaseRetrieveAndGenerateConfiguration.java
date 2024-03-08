@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configurations for retrieval and generation for knowledge base.
+ * Contains details about the resource being queried.
  * </p>
  * 
  * @see <a
@@ -29,14 +29,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The unique identifier of the knowledge base that is queried and the foundation model used for generation.
+     * </p>
+     */
     private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * The ARN of the foundation model used to generate a response.
+     * </p>
+     */
     private String modelArn;
-
+    /**
+     * <p>
+     * Contains configurations for how to retrieve and return the knowledge base query.
+     * </p>
+     */
     private KnowledgeBaseRetrievalConfiguration retrievalConfiguration;
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base that is queried and the foundation model used for generation.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base that is queried and the foundation model used for generation.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -44,7 +62,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the knowledge base that is queried and the foundation model used for generation.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base that is queried and the foundation model used for generation.
      */
 
     public String getKnowledgeBaseId() {
@@ -52,7 +74,12 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base that is queried and the foundation model used for generation.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base that is queried and the foundation model used for generation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +89,12 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
+     * <p>
+     * The ARN of the foundation model used to generate a response.
+     * </p>
+     * 
      * @param modelArn
+     *        The ARN of the foundation model used to generate a response.
      */
 
     public void setModelArn(String modelArn) {
@@ -70,7 +102,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the foundation model used to generate a response.
+     * </p>
+     * 
+     * @return The ARN of the foundation model used to generate a response.
      */
 
     public String getModelArn() {
@@ -78,7 +114,12 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
+     * <p>
+     * The ARN of the foundation model used to generate a response.
+     * </p>
+     * 
      * @param modelArn
+     *        The ARN of the foundation model used to generate a response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,7 +129,12 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
+     * <p>
+     * Contains configurations for how to retrieve and return the knowledge base query.
+     * </p>
+     * 
      * @param retrievalConfiguration
+     *        Contains configurations for how to retrieve and return the knowledge base query.
      */
 
     public void setRetrievalConfiguration(KnowledgeBaseRetrievalConfiguration retrievalConfiguration) {
@@ -96,7 +142,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
-     * @return
+     * <p>
+     * Contains configurations for how to retrieve and return the knowledge base query.
+     * </p>
+     * 
+     * @return Contains configurations for how to retrieve and return the knowledge base query.
      */
 
     public KnowledgeBaseRetrievalConfiguration getRetrievalConfiguration() {
@@ -104,7 +154,12 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     }
 
     /**
+     * <p>
+     * Contains configurations for how to retrieve and return the knowledge base query.
+     * </p>
+     * 
      * @param retrievalConfiguration
+     *        Contains configurations for how to retrieve and return the knowledge base query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,7 +36,12 @@ public class LookupAttribute implements Serializable, Cloneable, StructuredPojo 
     private String attributeKey;
     /**
      * <p>
-     * Specifies a value for the specified AttributeKey.
+     * Specifies a value for the specified <code>AttributeKey</code>.
+     * </p>
+     * <p>
+     * The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     * <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards the 2000
+     * character limit.
      * </p>
      */
     private String attributeValue;
@@ -116,11 +121,20 @@ public class LookupAttribute implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a value for the specified AttributeKey.
+     * Specifies a value for the specified <code>AttributeKey</code>.
+     * </p>
+     * <p>
+     * The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     * <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards the 2000
+     * character limit.
      * </p>
      * 
      * @param attributeValue
-     *        Specifies a value for the specified AttributeKey.
+     *        Specifies a value for the specified <code>AttributeKey</code>.</p>
+     *        <p>
+     *        The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     *        <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards
+     *        the 2000 character limit.
      */
 
     public void setAttributeValue(String attributeValue) {
@@ -129,10 +143,19 @@ public class LookupAttribute implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a value for the specified AttributeKey.
+     * Specifies a value for the specified <code>AttributeKey</code>.
+     * </p>
+     * <p>
+     * The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     * <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards the 2000
+     * character limit.
      * </p>
      * 
-     * @return Specifies a value for the specified AttributeKey.
+     * @return Specifies a value for the specified <code>AttributeKey</code>.</p>
+     *         <p>
+     *         The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     *         <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards
+     *         the 2000 character limit.
      */
 
     public String getAttributeValue() {
@@ -141,11 +164,20 @@ public class LookupAttribute implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a value for the specified AttributeKey.
+     * Specifies a value for the specified <code>AttributeKey</code>.
+     * </p>
+     * <p>
+     * The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     * <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards the 2000
+     * character limit.
      * </p>
      * 
      * @param attributeValue
-     *        Specifies a value for the specified AttributeKey.
+     *        Specifies a value for the specified <code>AttributeKey</code>.</p>
+     *        <p>
+     *        The maximum length for the <code>AttributeValue</code> is 2000 characters. The following characters ('
+     *        <code>_</code>', '<code> </code>', '<code>,</code>', '<code>\\n</code>') count as two characters towards
+     *        the 2000 character limit.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

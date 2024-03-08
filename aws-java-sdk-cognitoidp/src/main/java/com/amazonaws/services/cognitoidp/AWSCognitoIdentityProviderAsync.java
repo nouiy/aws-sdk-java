@@ -1814,6 +1814,11 @@ public interface AWSCognitoIdentityProviderAsync extends AWSCognitoIdentityProvi
      * <p>
      * Resets the specified user's password in a user pool as an administrator. Works on any user.
      * </p>
+     * <p>
+     * To use this API operation, your user pool must have self-service account recovery configured. Use <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminSetUserPassword.html"
+     * >AdminSetUserPassword</a> if you manage passwords as an administrator.
+     * </p>
      * <note>
      * <p>
      * This action might generate an SMS text message. Starting June 1, 2021, US telecom carriers require you to
@@ -1878,6 +1883,11 @@ public interface AWSCognitoIdentityProviderAsync extends AWSCognitoIdentityProvi
     /**
      * <p>
      * Resets the specified user's password in a user pool as an administrator. Works on any user.
+     * </p>
+     * <p>
+     * To use this API operation, your user pool must have self-service account recovery configured. Use <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminSetUserPassword.html"
+     * >AdminSetUserPassword</a> if you manage passwords as an administrator.
      * </p>
      * <note>
      * <p>
@@ -4502,6 +4512,11 @@ public interface AWSCognitoIdentityProviderAsync extends AWSCognitoIdentityProvi
      * <code>InvalidParameterException</code>. If your app client has a client secret and you don't provide a
      * <code>SECRET_HASH</code> parameter, this API returns <code>NotAuthorizedException</code>.
      * </p>
+     * <p>
+     * To use this API operation, your user pool must have self-service account recovery configured. Use <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminSetUserPassword.html"
+     * >AdminSetUserPassword</a> if you manage passwords as an administrator.
+     * </p>
      * <note>
      * <p>
      * Amazon Cognito doesn't evaluate Identity and Access Management (IAM) policies in requests for this API operation.
@@ -4555,6 +4570,11 @@ public interface AWSCognitoIdentityProviderAsync extends AWSCognitoIdentityProvi
      * If neither a verified phone number nor a verified email exists, this API returns
      * <code>InvalidParameterException</code>. If your app client has a client secret and you don't provide a
      * <code>SECRET_HASH</code> parameter, this API returns <code>NotAuthorizedException</code>.
+     * </p>
+     * <p>
+     * To use this API operation, your user pool must have self-service account recovery configured. Use <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminSetUserPassword.html"
+     * >AdminSetUserPassword</a> if you manage passwords as an administrator.
      * </p>
      * <note>
      * <p>

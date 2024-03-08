@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Generate response part
+ * Contains metadata about a part of the generated response that is accompanied by a citation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/GeneratedResponsePart"
@@ -28,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GeneratedResponsePart implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains metadata about a textual part of the generated response that is accompanied by a citation.
+     * </p>
+     */
     private TextResponsePart textResponsePart;
 
     /**
+     * <p>
+     * Contains metadata about a textual part of the generated response that is accompanied by a citation.
+     * </p>
+     * 
      * @param textResponsePart
+     *        Contains metadata about a textual part of the generated response that is accompanied by a citation.
      */
 
     public void setTextResponsePart(TextResponsePart textResponsePart) {
@@ -39,7 +49,11 @@ public class GeneratedResponsePart implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * Contains metadata about a textual part of the generated response that is accompanied by a citation.
+     * </p>
+     * 
+     * @return Contains metadata about a textual part of the generated response that is accompanied by a citation.
      */
 
     public TextResponsePart getTextResponsePart() {
@@ -47,7 +61,12 @@ public class GeneratedResponsePart implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Contains metadata about a textual part of the generated response that is accompanied by a citation.
+     * </p>
+     * 
      * @param textResponsePart
+     *        Contains metadata about a textual part of the generated response that is accompanied by a citation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

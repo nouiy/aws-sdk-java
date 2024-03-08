@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class TextResponsePartMarshaller {
 
-    private static final MarshallingInfo<String> TEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("text").build();
     private static final MarshallingInfo<StructuredPojo> SPAN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("span").build();
+    private static final MarshallingInfo<String> TEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("text").build();
 
     private static final TextResponsePartMarshaller instance = new TextResponsePartMarshaller();
 
@@ -48,8 +48,8 @@ public class TextResponsePartMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(textResponsePart.getText(), TEXT_BINDING);
             protocolMarshaller.marshall(textResponsePart.getSpan(), SPAN_BINDING);
+            protocolMarshaller.marshall(textResponsePart.getText(), TEXT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

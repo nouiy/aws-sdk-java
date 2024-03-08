@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Text response part
+ * Contains the part of the generated text that contains a citation, alongside where it begins and ends.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/TextResponsePart"
@@ -30,20 +30,64 @@ public class TextResponsePart implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Response part in text
+     * Contains information about where the text with a citation begins and ends in the generated output.
+     * </p>
+     */
+    private Span span;
+    /**
+     * <p>
+     * The part of the generated text that contains a citation.
      * </p>
      */
     private String text;
 
-    private Span span;
+    /**
+     * <p>
+     * Contains information about where the text with a citation begins and ends in the generated output.
+     * </p>
+     * 
+     * @param span
+     *        Contains information about where the text with a citation begins and ends in the generated output.
+     */
+
+    public void setSpan(Span span) {
+        this.span = span;
+    }
 
     /**
      * <p>
-     * Response part in text
+     * Contains information about where the text with a citation begins and ends in the generated output.
+     * </p>
+     * 
+     * @return Contains information about where the text with a citation begins and ends in the generated output.
+     */
+
+    public Span getSpan() {
+        return this.span;
+    }
+
+    /**
+     * <p>
+     * Contains information about where the text with a citation begins and ends in the generated output.
+     * </p>
+     * 
+     * @param span
+     *        Contains information about where the text with a citation begins and ends in the generated output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TextResponsePart withSpan(Span span) {
+        setSpan(span);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The part of the generated text that contains a citation.
      * </p>
      * 
      * @param text
-     *        Response part in text
+     *        The part of the generated text that contains a citation.
      */
 
     public void setText(String text) {
@@ -52,10 +96,10 @@ public class TextResponsePart implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Response part in text
+     * The part of the generated text that contains a citation.
      * </p>
      * 
-     * @return Response part in text
+     * @return The part of the generated text that contains a citation.
      */
 
     public String getText() {
@@ -64,42 +108,16 @@ public class TextResponsePart implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Response part in text
+     * The part of the generated text that contains a citation.
      * </p>
      * 
      * @param text
-     *        Response part in text
+     *        The part of the generated text that contains a citation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public TextResponsePart withText(String text) {
         setText(text);
-        return this;
-    }
-
-    /**
-     * @param span
-     */
-
-    public void setSpan(Span span) {
-        this.span = span;
-    }
-
-    /**
-     * @return
-     */
-
-    public Span getSpan() {
-        return this.span;
-    }
-
-    /**
-     * @param span
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TextResponsePart withSpan(Span span) {
-        setSpan(span);
         return this;
     }
 
@@ -115,10 +133,10 @@ public class TextResponsePart implements Serializable, Cloneable, StructuredPojo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getText() != null)
-            sb.append("Text: ").append(getText()).append(",");
         if (getSpan() != null)
-            sb.append("Span: ").append(getSpan());
+            sb.append("Span: ").append(getSpan()).append(",");
+        if (getText() != null)
+            sb.append("Text: ").append(getText());
         sb.append("}");
         return sb.toString();
     }
@@ -133,13 +151,13 @@ public class TextResponsePart implements Serializable, Cloneable, StructuredPojo
         if (obj instanceof TextResponsePart == false)
             return false;
         TextResponsePart other = (TextResponsePart) obj;
-        if (other.getText() == null ^ this.getText() == null)
-            return false;
-        if (other.getText() != null && other.getText().equals(this.getText()) == false)
-            return false;
         if (other.getSpan() == null ^ this.getSpan() == null)
             return false;
         if (other.getSpan() != null && other.getSpan().equals(this.getSpan()) == false)
+            return false;
+        if (other.getText() == null ^ this.getText() == null)
+            return false;
+        if (other.getText() != null && other.getText().equals(this.getText()) == false)
             return false;
         return true;
     }
@@ -149,8 +167,8 @@ public class TextResponsePart implements Serializable, Cloneable, StructuredPojo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
         hashCode = prime * hashCode + ((getSpan() == null) ? 0 : getSpan().hashCode());
+        hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
         return hashCode;
     }
 
