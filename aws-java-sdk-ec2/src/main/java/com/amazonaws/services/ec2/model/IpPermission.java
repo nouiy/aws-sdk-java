@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes a set of permissions for a security group rule.
+ * Describes the permissions for a security group rule.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/IpPermission" target="_top">AWS API
@@ -29,8 +29,7 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      */
     private Integer fromPort;
@@ -50,7 +49,7 @@ public class IpPermission implements Serializable, Cloneable {
     private String ipProtocol;
     /**
      * <p>
-     * The IPv6 ranges.
+     * The IPv6 address ranges.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv6Range> ipv6Ranges;
@@ -63,8 +62,8 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must specify all
-     * ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      */
     private Integer toPort;
@@ -76,7 +75,7 @@ public class IpPermission implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<UserIdGroupPair> userIdGroupPairs;
     /**
      * <p>
-     * The IPv4 ranges.
+     * The IPv4 address ranges.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<IpRange> ipv4Ranges;
@@ -84,14 +83,12 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      * 
      * @param fromPort
      *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6,
-     *        this is the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6
-     *        types, you must specify all ICMP/ICMPv6 codes.
+     *        this is the ICMP type or -1 (all ICMP types).
      */
 
     public void setFromPort(Integer fromPort) {
@@ -101,13 +98,11 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      * 
      * @return If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6,
-     *         this is the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6
-     *         types, you must specify all ICMP/ICMPv6 codes.
+     *         this is the ICMP type or -1 (all ICMP types).
      */
 
     public Integer getFromPort() {
@@ -117,14 +112,12 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      * 
      * @param fromPort
      *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6,
-     *        this is the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6
-     *        types, you must specify all ICMP/ICMPv6 codes.
+     *        this is the ICMP type or -1 (all ICMP types).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,10 +219,10 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 ranges.
+     * The IPv6 address ranges.
      * </p>
      * 
-     * @return The IPv6 ranges.
+     * @return The IPv6 address ranges.
      */
 
     public java.util.List<Ipv6Range> getIpv6Ranges() {
@@ -241,11 +234,11 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 ranges.
+     * The IPv6 address ranges.
      * </p>
      * 
      * @param ipv6Ranges
-     *        The IPv6 ranges.
+     *        The IPv6 address ranges.
      */
 
     public void setIpv6Ranges(java.util.Collection<Ipv6Range> ipv6Ranges) {
@@ -259,7 +252,7 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 ranges.
+     * The IPv6 address ranges.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -268,7 +261,7 @@ public class IpPermission implements Serializable, Cloneable {
      * </p>
      * 
      * @param ipv6Ranges
-     *        The IPv6 ranges.
+     *        The IPv6 address ranges.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -284,11 +277,11 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 ranges.
+     * The IPv6 address ranges.
      * </p>
      * 
      * @param ipv6Ranges
-     *        The IPv6 ranges.
+     *        The IPv6 address ranges.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -373,14 +366,14 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must specify all
-     * ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      * 
      * @param toPort
      *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this
-     *        is the code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must
-     *        specify all ICMP/ICMPv6 codes.
+     *        is the ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must
+     *        be -1 (all ICMP codes).
      */
 
     public void setToPort(Integer toPort) {
@@ -390,13 +383,13 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must specify all
-     * ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      * 
      * @return If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this
-     *         is the code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you
-     *         must specify all ICMP/ICMPv6 codes.
+     *         is the ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must
+     *         be -1 (all ICMP codes).
      */
 
     public Integer getToPort() {
@@ -406,14 +399,14 @@ public class IpPermission implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must specify all
-     * ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      * 
      * @param toPort
      *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this
-     *        is the code. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must
-     *        specify all ICMP/ICMPv6 codes.
+     *        is the ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must
+     *        be -1 (all ICMP codes).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -497,10 +490,10 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 ranges.
+     * The IPv4 address ranges.
      * </p>
      * 
-     * @return The IPv4 ranges.
+     * @return The IPv4 address ranges.
      */
 
     public java.util.List<IpRange> getIpv4Ranges() {
@@ -512,11 +505,11 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 ranges.
+     * The IPv4 address ranges.
      * </p>
      * 
      * @param ipv4Ranges
-     *        The IPv4 ranges.
+     *        The IPv4 address ranges.
      */
 
     public void setIpv4Ranges(java.util.Collection<IpRange> ipv4Ranges) {
@@ -530,7 +523,7 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 ranges.
+     * The IPv4 address ranges.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -539,7 +532,7 @@ public class IpPermission implements Serializable, Cloneable {
      * </p>
      * 
      * @param ipv4Ranges
-     *        The IPv4 ranges.
+     *        The IPv4 address ranges.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -555,11 +548,11 @@ public class IpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 ranges.
+     * The IPv4 address ranges.
      * </p>
      * 
      * @param ipv4Ranges
-     *        The IPv4 ranges.
+     *        The IPv4 address ranges.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

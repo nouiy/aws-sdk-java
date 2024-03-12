@@ -127,8 +127,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </p>
      * <p>
      * For more information about using tags with Amazon Elastic Compute Cloud (Amazon EC2) instances, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param addTagsToResourceRequest
@@ -190,8 +190,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </p>
      * <p>
      * For more information about using tags with Amazon Elastic Compute Cloud (Amazon EC2) instances, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param addTagsToResourceRequest
@@ -322,8 +322,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * installing SSM Agent on machines in your hybrid environment. For more information about requirements for managing
      * on-premises machines using Systems Manager, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting
-     * up Amazon Web Services Systems Manager for hybrid environments</a> in the <i>Amazon Web Services Systems Manager
-     * User Guide</i>.
+     * up Amazon Web Services Systems Manager for hybrid and multicloud environments</a> in the <i>Amazon Web Services
+     * Systems Manager User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -348,8 +348,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * installing SSM Agent on machines in your hybrid environment. For more information about requirements for managing
      * on-premises machines using Systems Manager, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting
-     * up Amazon Web Services Systems Manager for hybrid environments</a> in the <i>Amazon Web Services Systems Manager
-     * User Guide</i>.
+     * up Amazon Web Services Systems Manager for hybrid and multicloud environments</a> in the <i>Amazon Web Services
+     * Systems Manager User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1237,8 +1237,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * <code>Parameter</code> - The resource policy is used to share a parameter with other accounts using Resource
      * Access Manager (RAM). For more information about cross-account sharing of parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1268,8 +1268,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * <code>Parameter</code> - The resource policy is used to share a parameter with other accounts using Resource
      * Access Manager (RAM). For more information about cross-account sharing of parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1748,7 +1748,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * All associations for the managed node(s).
+     * All associations for the managed nodes.
      * </p>
      * 
      * @param describeEffectiveInstanceAssociationsRequest
@@ -1763,7 +1763,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * All associations for the managed node(s).
+     * All associations for the managed nodes.
      * </p>
      * 
      * @param describeEffectiveInstanceAssociationsRequest
@@ -1820,7 +1820,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * The status of the associations for the managed node(s).
+     * The status of the associations for the managed nodes.
      * </p>
      * 
      * @param describeInstanceAssociationsStatusRequest
@@ -1835,7 +1835,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * The status of the associations for the managed node(s).
+     * The status of the associations for the managed nodes.
      * </p>
      * 
      * @param describeInstanceAssociationsStatusRequest
@@ -2357,8 +2357,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param describeOpsItemsRequest
@@ -2380,8 +2380,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param describeOpsItemsRequest
@@ -3355,8 +3355,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param getOpsItemRequest
@@ -3378,8 +3378,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param getOpsItemRequest
@@ -4614,7 +4614,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <li>
      * <p>
      * InstalledTime: The time the association, patch, or custom compliance item was applied to the resource. Specify
-     * the time by using the following format: yyyy-MM-dd'T'HH:mm:ss'Z'
+     * the time by using the following format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * </li>
      * </ul>
@@ -4711,7 +4711,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <li>
      * <p>
      * InstalledTime: The time the association, patch, or custom compliance item was applied to the resource. Specify
-     * the time by using the following format: yyyy-MM-dd'T'HH:mm:ss'Z'
+     * the time by using the following format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * </li>
      * </ul>
@@ -4813,9 +4813,10 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </p>
      * <p>
      * To share a parameter, it must be in the advanced parameter tier. For information about parameter tiers, see <a
-     * href="https://docs.aws.amazon.com/parameter-store- advanced-parameters.html">Managing parameter tiers</a>. For
-     * information about changing an existing standard parameter to an advanced parameter, see <a href=
-     * "https://docs.aws.amazon.com/parameter-store-advanced-parameters.html#parameter- store-advanced-parameters-enabling"
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html">
+     * Managing parameter tiers</a>. For information about changing an existing standard parameter to an advanced
+     * parameter, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#parameter-store-advanced-parameters-enabling"
      * >Changing a standard parameter to an advanced parameter</a>.
      * </p>
      * <p>
@@ -4823,8 +4824,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * share the key separately through Key Management Service. Amazon Web Services managed keys cannot be shared.
      * Parameters encrypted with the default Amazon Web Services managed key can be updated to use a customer managed
      * key instead. For KMS key definitions, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-mgmt">KMS concepts</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">KMS concepts</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * <important>
      * <p>
@@ -4873,9 +4874,10 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </p>
      * <p>
      * To share a parameter, it must be in the advanced parameter tier. For information about parameter tiers, see <a
-     * href="https://docs.aws.amazon.com/parameter-store- advanced-parameters.html">Managing parameter tiers</a>. For
-     * information about changing an existing standard parameter to an advanced parameter, see <a href=
-     * "https://docs.aws.amazon.com/parameter-store-advanced-parameters.html#parameter- store-advanced-parameters-enabling"
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html">
+     * Managing parameter tiers</a>. For information about changing an existing standard parameter to an advanced
+     * parameter, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#parameter-store-advanced-parameters-enabling"
      * >Changing a standard parameter to an advanced parameter</a>.
      * </p>
      * <p>
@@ -4883,8 +4885,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * share the key separately through Key Management Service. Amazon Web Services managed keys cannot be shared.
      * Parameters encrypted with the default Amazon Web Services managed key can be updated to use a customer managed
      * key instead. For KMS key definitions, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-mgmt">KMS concepts</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">KMS concepts</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * <important>
      * <p>
@@ -6106,8 +6108,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param updateOpsItemRequest
@@ -6129,8 +6131,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param updateOpsItemRequest

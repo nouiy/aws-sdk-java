@@ -1,3 +1,24 @@
+# __1.12.678__ __2024-03-12__
+## __AWS CloudFormation__
+  - ### Features
+    - CloudFormation documentation update for March, 2024
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release increases MaxResults limit to 500 in request for SearchUsers, SearchQueues and SearchRoutingProfiles APIs of Amazon Connect.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Amazon EC2.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - March 2024 doc-only updates for Systems Manager.
+
+## __Managed Streaming for Kafka__
+  - ### Features
+    - Added support for specifying the starting position of topic replication in MSK-Replicator.
+
 # __1.12.677__ __2024-03-11__
 ## __AWS CodeStar connections__
   - ### Features

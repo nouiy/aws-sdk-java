@@ -31,6 +31,26 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * to 20 characters. If you are using SAML for identity management, the user name can include up to 64 characters
      * from [a-zA-Z0-9_-.\@]+.
      * </p>
+     * <p>
+     * Username can include @ only if used in an email format. For example:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Correct: testuser
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Correct: testuser@example.com
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Incorrect: testuser@example
+     * </p>
+     * </li>
+     * </ul>
      */
     private String username;
     /**
@@ -106,11 +126,50 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * to 20 characters. If you are using SAML for identity management, the user name can include up to 64 characters
      * from [a-zA-Z0-9_-.\@]+.
      * </p>
+     * <p>
+     * Username can include @ only if used in an email format. For example:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Correct: testuser
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Correct: testuser@example.com
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Incorrect: testuser@example
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param username
      *        The user name for the account. For instances not using SAML for identity management, the user name can
      *        include up to 20 characters. If you are using SAML for identity management, the user name can include up
-     *        to 64 characters from [a-zA-Z0-9_-.\@]+.
+     *        to 64 characters from [a-zA-Z0-9_-.\@]+.</p>
+     *        <p>
+     *        Username can include @ only if used in an email format. For example:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Correct: testuser
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Correct: testuser@example.com
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Incorrect: testuser@example
+     *        </p>
+     *        </li>
      */
 
     public void setUsername(String username) {
@@ -123,10 +182,49 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * to 20 characters. If you are using SAML for identity management, the user name can include up to 64 characters
      * from [a-zA-Z0-9_-.\@]+.
      * </p>
+     * <p>
+     * Username can include @ only if used in an email format. For example:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Correct: testuser
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Correct: testuser@example.com
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Incorrect: testuser@example
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The user name for the account. For instances not using SAML for identity management, the user name can
      *         include up to 20 characters. If you are using SAML for identity management, the user name can include up
-     *         to 64 characters from [a-zA-Z0-9_-.\@]+.
+     *         to 64 characters from [a-zA-Z0-9_-.\@]+.</p>
+     *         <p>
+     *         Username can include @ only if used in an email format. For example:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Correct: testuser
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Correct: testuser@example.com
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Incorrect: testuser@example
+     *         </p>
+     *         </li>
      */
 
     public String getUsername() {
@@ -139,11 +237,50 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * to 20 characters. If you are using SAML for identity management, the user name can include up to 64 characters
      * from [a-zA-Z0-9_-.\@]+.
      * </p>
+     * <p>
+     * Username can include @ only if used in an email format. For example:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Correct: testuser
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Correct: testuser@example.com
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Incorrect: testuser@example
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param username
      *        The user name for the account. For instances not using SAML for identity management, the user name can
      *        include up to 20 characters. If you are using SAML for identity management, the user name can include up
-     *        to 64 characters from [a-zA-Z0-9_-.\@]+.
+     *        to 64 characters from [a-zA-Z0-9_-.\@]+.</p>
+     *        <p>
+     *        Username can include @ only if used in an email format. For example:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Correct: testuser
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Correct: testuser@example.com
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Incorrect: testuser@example
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : {
       "DescribeEventsRequest" : [ "SourceType" ],
       "Event" : [ "SourceType" ],
@@ -39,6 +39,7 @@
     "serviceClientHoldInputStream" : false,
     "shapeModifiers" : null,
     "shapeSubstitutions" : null,
+    "shapesToSkipPruning" : [ ],
     "simpleMethods" : null,
     "skipClientMethodForOperations" : [ ],
     "skipInterfaceAdditions" : false,

@@ -121,10 +121,10 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      * <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation Code and
      * Activation ID when you install SSM Agent on the node, as explained in <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html">Install SSM
-     * Agent for a hybrid environment (Linux)</a> and <a
+     * Agent for a hybrid and multicloud environment (Linux)</a> and <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html">Install SSM
-     * Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2 instance, use the
-     * Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     * Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2
+     * instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html">DescribeInstances</a> in
      * the <i>Amazon EC2 API Reference</i> or <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html">describe-instances</a> in the
@@ -881,10 +881,10 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      * <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation Code and
      * Activation ID when you install SSM Agent on the node, as explained in <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html">Install SSM
-     * Agent for a hybrid environment (Linux)</a> and <a
+     * Agent for a hybrid and multicloud environment (Linux)</a> and <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html">Install SSM
-     * Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2 instance, use the
-     * Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     * Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2
+     * instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html">DescribeInstances</a> in
      * the <i>Amazon EC2 API Reference</i> or <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html">describe-instances</a> in the
@@ -897,10 +897,11 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      *        the <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation Code
      *        and Activation ID when you install SSM Agent on the node, as explained in <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html"
-     *        >Install SSM Agent for a hybrid environment (Linux)</a> and <a
+     *        >Install SSM Agent for a hybrid and multicloud environment (Linux)</a> and <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html"
-     *        >Install SSM Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2
-     *        instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     *        >Install SSM Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the
+     *        <code>Name</code> tag of an EC2 instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html"
      *        >DescribeInstances</a> in the <i>Amazon EC2 API Reference</i> or <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html">describe-instances</a>
@@ -918,10 +919,10 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      * <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation Code and
      * Activation ID when you install SSM Agent on the node, as explained in <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html">Install SSM
-     * Agent for a hybrid environment (Linux)</a> and <a
+     * Agent for a hybrid and multicloud environment (Linux)</a> and <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html">Install SSM
-     * Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2 instance, use the
-     * Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     * Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2
+     * instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html">DescribeInstances</a> in
      * the <i>Amazon EC2 API Reference</i> or <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html">describe-instances</a> in the
@@ -933,10 +934,11 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      *         using the <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation
      *         Code and Activation ID when you install SSM Agent on the node, as explained in <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html"
-     *         >Install SSM Agent for a hybrid environment (Linux)</a> and <a
+     *         >Install SSM Agent for a hybrid and multicloud environment (Linux)</a> and <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html"
-     *         >Install SSM Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an
-     *         EC2 instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     *         >Install SSM Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the
+     *         <code>Name</code> tag of an EC2 instance, use the Amazon EC2 <code>DescribeInstances</code> operation.
+     *         For information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html"
      *         >DescribeInstances</a> in the <i>Amazon EC2 API Reference</i> or <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html"
@@ -954,10 +956,10 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      * <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation Code and
      * Activation ID when you install SSM Agent on the node, as explained in <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html">Install SSM
-     * Agent for a hybrid environment (Linux)</a> and <a
+     * Agent for a hybrid and multicloud environment (Linux)</a> and <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html">Install SSM
-     * Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2 instance, use the
-     * Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     * Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2
+     * instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html">DescribeInstances</a> in
      * the <i>Amazon EC2 API Reference</i> or <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html">describe-instances</a> in the
@@ -970,10 +972,11 @@ public class InstanceInformation implements Serializable, Cloneable, StructuredP
      *        the <a>CreateActivation</a> command. It is applied to the managed node by specifying the Activation Code
      *        and Activation ID when you install SSM Agent on the node, as explained in <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-linux.html"
-     *        >Install SSM Agent for a hybrid environment (Linux)</a> and <a
+     *        >Install SSM Agent for a hybrid and multicloud environment (Linux)</a> and <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-managed-win.html"
-     *        >Install SSM Agent for a hybrid environment (Windows)</a>. To retrieve the <code>Name</code> tag of an EC2
-     *        instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For information, see <a
+     *        >Install SSM Agent for a hybrid and multicloud environment (Windows)</a>. To retrieve the
+     *        <code>Name</code> tag of an EC2 instance, use the Amazon EC2 <code>DescribeInstances</code> operation. For
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html"
      *        >DescribeInstances</a> in the <i>Amazon EC2 API Reference</i> or <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html">describe-instances</a>

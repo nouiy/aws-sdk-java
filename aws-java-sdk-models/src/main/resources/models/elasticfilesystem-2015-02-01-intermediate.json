@@ -39,6 +39,7 @@
     "serviceClientHoldInputStream" : false,
     "shapeModifiers" : null,
     "shapeSubstitutions" : null,
+    "shapesToSkipPruning" : [ ],
     "simpleMethods" : {
       "DescribeFileSystems" : {
         "deprecated" : null,

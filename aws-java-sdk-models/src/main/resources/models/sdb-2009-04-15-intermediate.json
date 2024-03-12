@@ -120,6 +120,7 @@
       }
     },
     "shapeSubstitutions" : null,
+    "shapesToSkipPruning" : [ ],
     "simpleMethods" : {
       "ListDomains" : {
         "deprecated" : null,

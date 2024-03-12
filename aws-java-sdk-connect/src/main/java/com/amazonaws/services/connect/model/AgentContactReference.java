@@ -52,6 +52,13 @@ public class AgentContactReference implements Serializable, Cloneable, Structure
      * The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
      * contact</a>.
      * </p>
+     * <note>
+     * <p>
+     * When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>, <code>StateStartTimestamp</code> is
+     * not changed. Instead, <code>StateStartTimestamp</code> reflects the time the contact was <code>CONNECTED</code>
+     * to the agent.
+     * </p>
+     * </note>
      */
     private String agentContactState;
     /**
@@ -232,10 +239,22 @@ public class AgentContactReference implements Serializable, Cloneable, Structure
      * The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
      * contact</a>.
      * </p>
+     * <note>
+     * <p>
+     * When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>, <code>StateStartTimestamp</code> is
+     * not changed. Instead, <code>StateStartTimestamp</code> reflects the time the contact was <code>CONNECTED</code>
+     * to the agent.
+     * </p>
+     * </note>
      * 
      * @param agentContactState
      *        The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
-     *        contact</a>.
+     *        contact</a>.</p> <note>
+     *        <p>
+     *        When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>,
+     *        <code>StateStartTimestamp</code> is not changed. Instead, <code>StateStartTimestamp</code> reflects the
+     *        time the contact was <code>CONNECTED</code> to the agent.
+     *        </p>
      * @see ContactState
      */
 
@@ -248,9 +267,21 @@ public class AgentContactReference implements Serializable, Cloneable, Structure
      * The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
      * contact</a>.
      * </p>
+     * <note>
+     * <p>
+     * When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>, <code>StateStartTimestamp</code> is
+     * not changed. Instead, <code>StateStartTimestamp</code> reflects the time the contact was <code>CONNECTED</code>
+     * to the agent.
+     * </p>
+     * </note>
      * 
      * @return The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of
-     *         the contact</a>.
+     *         the contact</a>.</p> <note>
+     *         <p>
+     *         When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>,
+     *         <code>StateStartTimestamp</code> is not changed. Instead, <code>StateStartTimestamp</code> reflects the
+     *         time the contact was <code>CONNECTED</code> to the agent.
+     *         </p>
      * @see ContactState
      */
 
@@ -263,10 +294,22 @@ public class AgentContactReference implements Serializable, Cloneable, Structure
      * The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
      * contact</a>.
      * </p>
+     * <note>
+     * <p>
+     * When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>, <code>StateStartTimestamp</code> is
+     * not changed. Instead, <code>StateStartTimestamp</code> reflects the time the contact was <code>CONNECTED</code>
+     * to the agent.
+     * </p>
+     * </note>
      * 
      * @param agentContactState
      *        The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
-     *        contact</a>.
+     *        contact</a>.</p> <note>
+     *        <p>
+     *        When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>,
+     *        <code>StateStartTimestamp</code> is not changed. Instead, <code>StateStartTimestamp</code> reflects the
+     *        time the contact was <code>CONNECTED</code> to the agent.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactState
      */
@@ -281,10 +324,22 @@ public class AgentContactReference implements Serializable, Cloneable, Structure
      * The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
      * contact</a>.
      * </p>
+     * <note>
+     * <p>
+     * When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>, <code>StateStartTimestamp</code> is
+     * not changed. Instead, <code>StateStartTimestamp</code> reflects the time the contact was <code>CONNECTED</code>
+     * to the agent.
+     * </p>
+     * </note>
      * 
      * @param agentContactState
      *        The <a href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">state of the
-     *        contact</a>.
+     *        contact</a>.</p> <note>
+     *        <p>
+     *        When <code>AgentContactState</code> is set to <code>CONNECTED_ONHOLD</code>,
+     *        <code>StateStartTimestamp</code> is not changed. Instead, <code>StateStartTimestamp</code> reflects the
+     *        time the contact was <code>CONNECTED</code> to the agent.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactState
      */

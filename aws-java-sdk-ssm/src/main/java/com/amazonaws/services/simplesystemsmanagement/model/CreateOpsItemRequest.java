@@ -94,7 +94,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the OpsItem. To view
      * Amazon Web Services CLI example commands that use these keys, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     * >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      */
     private java.util.Map<String, OpsItemDataValue> operationalData;
@@ -487,7 +487,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the OpsItem. To view
      * Amazon Web Services CLI example commands that use these keys, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     * >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @return Operational data is custom data that provides useful reference details about the OpsItem. For example,
@@ -512,7 +512,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         Use the <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the
      *         OpsItem. To view Amazon Web Services CLI example commands that use these keys, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     *         >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
 
     public java.util.Map<String, OpsItemDataValue> getOperationalData() {
@@ -545,7 +545,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the OpsItem. To view
      * Amazon Web Services CLI example commands that use these keys, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     * >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param operationalData
@@ -571,7 +571,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Use the <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the
      *        OpsItem. To view Amazon Web Services CLI example commands that use these keys, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     *        >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
 
     public void setOperationalData(java.util.Map<String, OpsItemDataValue> operationalData) {
@@ -604,7 +604,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the OpsItem. To view
      * Amazon Web Services CLI example commands that use these keys, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     * >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param operationalData
@@ -630,7 +630,7 @@ public class CreateOpsItemRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Use the <code>/aws/automations</code> key in OperationalData to associate an Automation runbook with the
      *        OpsItem. To view Amazon Web Services CLI example commands that use these keys, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-manually-create-OpsItems.html"
-     *        >Creating OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Create OpsItems manually</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

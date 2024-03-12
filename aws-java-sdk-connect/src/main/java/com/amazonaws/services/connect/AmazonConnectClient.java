@@ -4216,6 +4216,32 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * <p>
      * Deletes a quick connect.
      * </p>
+     * <important>
+     * <p>
+     * After calling <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteUser.html">DeleteUser</a>, it's important
+     * to call <code>DeleteQuickConnect</code> to delete any records related to the deleted users. This will help you:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Avoid dangling resources that impact your service quotas.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Remove deleted users so they don't appear to agents as transfer options.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Avoid the disruption of other Amazon Connect processes, such as instance replication and syncing if you're using
+     * <a href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-connect-global-resiliency.html">Amazon
+     * Connect Global Resiliency</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      * 
      * @param deleteQuickConnectRequest
      * @return Result of the DeleteQuickConnect operation returned by the service.
@@ -4689,6 +4715,32 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/delete-users.html">Delete Users from Your Amazon
      * Connect Instance</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * After calling DeleteUser, call <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteQuickConnect.html">DeleteQuickConnect</a>
+     * to delete any records related to the deleted users. This will help you:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Avoid dangling resources that impact your service quotas.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Remove deleted users so they don't appear to agents as transfer options.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Avoid the disruption of other Amazon Connect processes, such as instance replication and syncing if you're using
+     * <a href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-connect-global-resiliency.html">Amazon
+     * Connect Global Resiliency</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      * 
      * @param deleteUserRequest
      * @return Result of the DeleteUser operation returned by the service.
@@ -8902,6 +8954,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * </p>
      * <p>
      * For the specified <code>referenceTypes</code>, returns a list of references associated with the contact.
+     * <i>References</i> are links to documents that are related to a contact, such as emails, attachments, or URLs.
      * </p>
      * 
      * @param listContactReferencesRequest
@@ -13487,7 +13540,8 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
-     * Ends the specified contact. This call does not work for voice contacts that use the following initiation methods:
+     * Ends the specified contact. Use this API to stop queued callbacks. It does not work for voice contacts that use
+     * the following initiation methods:
      * </p>
      * <ul>
      * <li>
@@ -13507,7 +13561,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * </li>
      * </ul>
      * <p>
-     * Chat and task contacts, however, can be terminated in any state, regardless of initiation method.
+     * Chat and task contacts can be terminated in any state, regardless of initiation method.
      * </p>
      * 
      * @param stopContactRequest

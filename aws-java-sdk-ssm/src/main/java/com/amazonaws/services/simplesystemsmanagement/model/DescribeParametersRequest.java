@@ -65,8 +65,8 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For more information about sharing parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </note>
      */
@@ -319,8 +319,8 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For more information about sharing parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </note>
      * 
@@ -336,9 +336,9 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      *        >PromoteResourceShareCreatedFromPolicy</a> API operation.
      *        </p>
      *        <p>
-     *        For more information about sharing parameters, see <a
-     *        href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared
-     *        parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about sharing parameters, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *        </p>
      */
 
@@ -361,8 +361,8 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For more information about sharing parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </note>
      * 
@@ -377,9 +377,9 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      *         >PromoteResourceShareCreatedFromPolicy</a> API operation.
      *         </p>
      *         <p>
-     *         For more information about sharing parameters, see <a
-     *         href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared
-     *         parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         For more information about sharing parameters, see <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *         >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *         </p>
      */
 
@@ -402,8 +402,8 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For more information about sharing parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </note>
      * 
@@ -419,9 +419,9 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      *        >PromoteResourceShareCreatedFromPolicy</a> API operation.
      *        </p>
      *        <p>
-     *        For more information about sharing parameters, see <a
-     *        href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared
-     *        parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about sharing parameters, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -446,8 +446,8 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For more information about sharing parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </note>
      * 
@@ -462,9 +462,9 @@ public class DescribeParametersRequest extends com.amazonaws.AmazonWebServiceReq
      *         >PromoteResourceShareCreatedFromPolicy</a> API operation.
      *         </p>
      *         <p>
-     *         For more information about sharing parameters, see <a
-     *         href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared
-     *         parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         For more information about sharing parameters, see <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *         >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *         </p>
      */
 

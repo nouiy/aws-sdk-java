@@ -37,7 +37,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
-     * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -93,7 +94,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
-     * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -106,8 +108,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      *        This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
      *        principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
-     *        service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User
-     *        Guide</i>.</p> <note>
+     *        service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems Manager
+     *        User Guide</i>.</p> <note>
      *        <p>
      *        You can't specify an IAM service-linked role for this parameter. You must create a unique role.
      *        </p>
@@ -123,7 +125,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
-     * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -135,8 +138,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      *         This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
      *         principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an
-     *         IAM service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User
-     *         Guide</i>.</p> <note>
+     *         IAM service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems
+     *         Manager User Guide</i>.</p> <note>
      *         <p>
      *         You can't specify an IAM service-linked role for this parameter. You must create a unique role.
      *         </p>
@@ -152,7 +155,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      * role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
-     * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -165,8 +169,8 @@ public class UpdateManagedInstanceRoleRequest extends com.amazonaws.AmazonWebSer
      *        This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
      *        principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
-     *        service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User
-     *        Guide</i>.</p> <note>
+     *        service role for a hybrid and multicloud environment</a> in the <i>Amazon Web Services Systems Manager
+     *        User Guide</i>.</p> <note>
      *        <p>
      *        You can't specify an IAM service-linked role for this parameter. You must create a unique role.
      *        </p>

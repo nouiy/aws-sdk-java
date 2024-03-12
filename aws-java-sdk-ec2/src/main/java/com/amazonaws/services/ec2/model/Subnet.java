@@ -68,9 +68,9 @@ public class Subnet implements Serializable, Cloneable {
      * Indicates whether instances launched in this subnet receive a public IPv4 address.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      */
     private Boolean mapPublicIpOnLaunch;
@@ -432,18 +432,17 @@ public class Subnet implements Serializable, Cloneable {
      * Indicates whether instances launched in this subnet receive a public IPv4 address.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @param mapPublicIpOnLaunch
      *        Indicates whether instances launched in this subnet receive a public IPv4 address.</p>
      *        <p>
-     *        Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *        public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *        see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *        pricing page</a>.
+     *        Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     *        running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab
+     *        on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      */
 
     public void setMapPublicIpOnLaunch(Boolean mapPublicIpOnLaunch) {
@@ -455,17 +454,16 @@ public class Subnet implements Serializable, Cloneable {
      * Indicates whether instances launched in this subnet receive a public IPv4 address.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @return Indicates whether instances launched in this subnet receive a public IPv4 address.</p>
      *         <p>
-     *         Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *         public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *         see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *         pricing page</a>.
+     *         Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated
+     *         with running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i>
+     *         tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      */
 
     public Boolean getMapPublicIpOnLaunch() {
@@ -477,18 +475,17 @@ public class Subnet implements Serializable, Cloneable {
      * Indicates whether instances launched in this subnet receive a public IPv4 address.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @param mapPublicIpOnLaunch
      *        Indicates whether instances launched in this subnet receive a public IPv4 address.</p>
      *        <p>
-     *        Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *        public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *        see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *        pricing page</a>.
+     *        Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     *        running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab
+     *        on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -502,17 +499,16 @@ public class Subnet implements Serializable, Cloneable {
      * Indicates whether instances launched in this subnet receive a public IPv4 address.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @return Indicates whether instances launched in this subnet receive a public IPv4 address.</p>
      *         <p>
-     *         Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *         public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *         see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *         pricing page</a>.
+     *         Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated
+     *         with running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i>
+     *         tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      */
 
     public Boolean isMapPublicIpOnLaunch() {

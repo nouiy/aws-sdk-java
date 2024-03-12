@@ -49,7 +49,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200
      * bytes. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -61,7 +61,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The location of the file that contains the template body. The URL must point to a template (maximum size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -442,7 +442,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200
      * bytes. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -452,7 +452,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The structure that contains the template body, with a minimum length of 1 byte and a maximum length of
      *        51,200 bytes. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
      *        <p>
      *        Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
      */
@@ -466,7 +466,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200
      * bytes. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -475,7 +475,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * @return The structure that contains the template body, with a minimum length of 1 byte and a maximum length of
      *         51,200 bytes. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the CloudFormation User Guide.</p>
+     *         Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
      *         <p>
      *         Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
      */
@@ -489,7 +489,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200
      * bytes. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -499,7 +499,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The structure that contains the template body, with a minimum length of 1 byte and a maximum length of
      *        51,200 bytes. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
      *        <p>
      *        Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -515,7 +515,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The location of the file that contains the template body. The URL must point to a template (maximum size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -526,7 +526,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information,
      *        see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
      *        <p>
      *        Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
      */
@@ -540,7 +540,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The location of the file that contains the template body. The URL must point to a template (maximum size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -550,7 +550,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *         460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information,
      *         see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the CloudFormation User Guide.</p>
+     *         Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
      *         <p>
      *         Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
      */
@@ -564,7 +564,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * The location of the file that contains the template body. The URL must point to a template (maximum size: 460,800
      * bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the CloudFormation User Guide.
+     * in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
@@ -575,7 +575,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information,
      *        see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        Anatomy</a> in the <i>CloudFormation User Guide</i>.</p>
      *        <p>
      *        Conditional: You must specify either the TemplateBody or the TemplateURL parameter, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.

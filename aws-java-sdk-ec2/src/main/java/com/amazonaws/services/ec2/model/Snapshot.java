@@ -115,8 +115,8 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
-     * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local snapshots on
+     * Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      */
     private String outpostArn;
@@ -773,14 +773,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
-     * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local snapshots on
+     * Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param outpostArn
      *        The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local
-     *        snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local snapshots
+     *        on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      */
 
     public void setOutpostArn(String outpostArn) {
@@ -790,13 +790,13 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
-     * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local snapshots on
+     * Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @return The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local
-     *         snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local
+     *         snapshots on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      */
 
     public String getOutpostArn() {
@@ -806,14 +806,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
-     * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local snapshots on
+     * Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param outpostArn
      *        The ARN of the Outpost on which the snapshot is stored. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local
-     *        snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html">Amazon EBS local snapshots
+     *        on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

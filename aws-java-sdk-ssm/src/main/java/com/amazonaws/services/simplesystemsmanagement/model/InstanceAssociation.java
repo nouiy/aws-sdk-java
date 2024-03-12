@@ -42,7 +42,7 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
     private String instanceId;
     /**
      * <p>
-     * The content of the association document for the managed node(s).
+     * The content of the association document for the managed nodes.
      * </p>
      */
     private String content;
@@ -135,11 +135,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The content of the association document for the managed node(s).
+     * The content of the association document for the managed nodes.
      * </p>
      * 
      * @param content
-     *        The content of the association document for the managed node(s).
+     *        The content of the association document for the managed nodes.
      */
 
     public void setContent(String content) {
@@ -148,10 +148,10 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The content of the association document for the managed node(s).
+     * The content of the association document for the managed nodes.
      * </p>
      * 
-     * @return The content of the association document for the managed node(s).
+     * @return The content of the association document for the managed nodes.
      */
 
     public String getContent() {
@@ -160,11 +160,11 @@ public class InstanceAssociation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The content of the association document for the managed node(s).
+     * The content of the association document for the managed nodes.
      * </p>
      * 
      * @param content
-     *        The content of the association document for the managed node(s).
+     *        The content of the association document for the managed nodes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

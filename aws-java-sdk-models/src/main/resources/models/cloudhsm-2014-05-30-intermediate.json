@@ -71,6 +71,7 @@
       }
     },
     "shapeSubstitutions" : null,
+    "shapesToSkipPruning" : [ ],
     "simpleMethods" : {
       "DescribeHsm" : {
         "deprecated" : null,

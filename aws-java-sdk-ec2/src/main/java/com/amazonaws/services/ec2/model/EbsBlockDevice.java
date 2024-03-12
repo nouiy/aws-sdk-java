@@ -119,8 +119,8 @@ public class EbsBlockDevice implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      */
     private String volumeType;
@@ -166,16 +166,16 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * The effect of setting the encryption state to <code>true</code> depends on the volume origin (new or from a
      * snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon EBS
-     * encryption</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * In no case can you remove encryption from an encrypted volume.
      * </p>
      * <p>
      * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * <p>
@@ -791,14 +791,14 @@ public class EbsBlockDevice implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param volumeType
      *        The volume type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.
      * @see VolumeType
      */
 
@@ -809,13 +809,13 @@ public class EbsBlockDevice implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @return The volume type. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume
-     *         types</a> in the <i>Amazon EC2 User Guide</i>.
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *         in the <i>Amazon EBS User Guide</i>.
      * @see VolumeType
      */
 
@@ -826,14 +826,14 @@ public class EbsBlockDevice implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param volumeType
      *        The volume type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -846,14 +846,14 @@ public class EbsBlockDevice implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param volumeType
      *        The volume type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.
      * @see VolumeType
      */
 
@@ -864,14 +864,14 @@ public class EbsBlockDevice implements Serializable, Cloneable {
     /**
      * <p>
      * The volume type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param volumeType
      *        The volume type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -1109,16 +1109,16 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * The effect of setting the encryption state to <code>true</code> depends on the volume origin (new or from a
      * snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon EBS
-     * encryption</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * In no case can you remove encryption from an encrypted volume.
      * </p>
      * <p>
      * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * <p>
@@ -1165,15 +1165,15 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *        snapshot. The effect of setting the encryption state to <code>true</code> depends on the volume origin
      *        (new or from a snapshot), starting encryption state, ownership, and whether encryption by default is
      *        enabled. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon
-     *        EBS encryption</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon
+     *        EBS encryption</a> in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        In no case can you remove encryption from an encrypted volume.
      *        </p>
      *        <p>
      *        Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more
      *        information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     *        "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      *        >Supported instance types</a>.
      *        </p>
      *        <p>
@@ -1225,16 +1225,16 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * The effect of setting the encryption state to <code>true</code> depends on the volume origin (new or from a
      * snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon EBS
-     * encryption</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * In no case can you remove encryption from an encrypted volume.
      * </p>
      * <p>
      * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * <p>
@@ -1280,15 +1280,15 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *         snapshot. The effect of setting the encryption state to <code>true</code> depends on the volume origin
      *         (new or from a snapshot), starting encryption state, ownership, and whether encryption by default is
      *         enabled. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters"
-     *         >Amazon EBS encryption</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon
+     *         EBS encryption</a> in the <i>Amazon EBS User Guide</i>.</p>
      *         <p>
      *         In no case can you remove encryption from an encrypted volume.
      *         </p>
      *         <p>
      *         Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more
      *         information, see <a href=
-     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     *         "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      *         >Supported instance types</a>.
      *         </p>
      *         <p>
@@ -1340,16 +1340,16 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * The effect of setting the encryption state to <code>true</code> depends on the volume origin (new or from a
      * snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon EBS
-     * encryption</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * In no case can you remove encryption from an encrypted volume.
      * </p>
      * <p>
      * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * <p>
@@ -1396,15 +1396,15 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *        snapshot. The effect of setting the encryption state to <code>true</code> depends on the volume origin
      *        (new or from a snapshot), starting encryption state, ownership, and whether encryption by default is
      *        enabled. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon
-     *        EBS encryption</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon
+     *        EBS encryption</a> in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        In no case can you remove encryption from an encrypted volume.
      *        </p>
      *        <p>
      *        Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more
      *        information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     *        "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      *        >Supported instance types</a>.
      *        </p>
      *        <p>
@@ -1458,16 +1458,16 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * The effect of setting the encryption state to <code>true</code> depends on the volume origin (new or from a
      * snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon EBS
-     * encryption</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * In no case can you remove encryption from an encrypted volume.
      * </p>
      * <p>
      * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * <p>
@@ -1513,15 +1513,15 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *         snapshot. The effect of setting the encryption state to <code>true</code> depends on the volume origin
      *         (new or from a snapshot), starting encryption state, ownership, and whether encryption by default is
      *         enabled. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters"
-     *         >Amazon EBS encryption</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon
+     *         EBS encryption</a> in the <i>Amazon EBS User Guide</i>.</p>
      *         <p>
      *         In no case can you remove encryption from an encrypted volume.
      *         </p>
      *         <p>
      *         Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For more
      *         information, see <a href=
-     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     *         "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      *         >Supported instance types</a>.
      *         </p>
      *         <p>

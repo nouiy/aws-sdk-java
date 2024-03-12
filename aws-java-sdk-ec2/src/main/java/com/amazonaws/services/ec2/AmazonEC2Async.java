@@ -27,43 +27,9 @@ import com.amazonaws.services.ec2.model.*;
  * <p>
  * <fullname>Amazon Elastic Compute Cloud</fullname>
  * <p>
- * Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
- * Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy
- * applications faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section
- * of the Amazon Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've
- * defined. Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS
- * volumes are highly available and reliable storage volumes that can be attached to any running instance and used like
- * a hard drive.
+ * You can access the features of Amazon Elastic Compute Cloud (Amazon EC2) programmatically. For more information, see
+ * the <a href="https://docs.aws.amazon.com/ec2/latest/devguide">Amazon EC2 Developer Guide</a>.
  * </p>
- * <p>
- * To learn more, see the following resources:
- * </p>
- * <ul>
- * <li>
- * <p>
- * Amazon EC2: <a href="http://aws.amazon.com/ec2">Amazon EC2 product page</a>, <a
- * href="https://docs.aws.amazon.com/ec2/index.html">Amazon EC2 documentation</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * Amazon EBS: <a href="http://aws.amazon.com/ebs">Amazon EBS product page</a>, <a
- * href="https://docs.aws.amazon.com/ebs/index.html">Amazon EBS documentation</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * Amazon VPC: <a href="http://aws.amazon.com/vpc">Amazon VPC product page</a>, <a
- * href="https://docs.aws.amazon.com/vpc/index.html">Amazon VPC documentation</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * VPN: <a href="http://aws.amazon.com/vpn">VPN product page</a>, <a
- * href="https://docs.aws.amazon.com/vpn/index.html">VPN documentation</a>
- * </p>
- * </li>
- * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonEC2Async extends AmazonEC2 {
@@ -1782,13 +1748,13 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * After you attach an EBS volume, you must make it available. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html">Make an EBS volume available
-     * for use</a>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-using-volumes.html">Make an EBS volume available for
+     * use</a>.
      * </p>
      * <p>
      * If a volume has an Amazon Web Services Marketplace product code:
@@ -1818,8 +1784,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Attach an Amazon EBS volume
-     * to an instance</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-attaching-volume.html">Attach an Amazon EBS volume to
+     * an instance</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param attachVolumeRequest
@@ -1837,13 +1803,13 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * After you attach an EBS volume, you must make it available. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html">Make an EBS volume available
-     * for use</a>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-using-volumes.html">Make an EBS volume available for
+     * use</a>.
      * </p>
      * <p>
      * If a volume has an Amazon Web Services Marketplace product code:
@@ -1873,8 +1839,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Attach an Amazon EBS volume
-     * to an instance</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-attaching-volume.html">Attach an Amazon EBS volume to
+     * an instance</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param attachVolumeRequest
@@ -1970,33 +1936,34 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Adds the specified outbound (egress) rules to a security group for use with a VPC.
+     * Adds the specified outbound (egress) rules to a security group.
      * </p>
      * <p>
-     * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 CIDR address ranges, or to the
-     * instances that are associated with the specified source security groups. When specifying an outbound rule for
-     * your security group in a VPC, the <code>IpPermissions</code> must include a destination for the traffic.
+     * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address ranges, the IP address
+     * ranges specified by a prefix list, or the instances that are associated with a source security group. For more
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html">Security
+     * group rules</a>.
      * </p>
      * <p>
-     * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you must also specify the
-     * destination port or port range. For the ICMP protocol, you must also specify the ICMP type and code. You can use
-     * -1 for the type or code to mean all types or all codes.
+     * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a prefix list, or a
+     * security group. You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP, you
+     * must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also specify the ICMP type
+     * and code.
      * </p>
      * <p>
-     * Rule changes are propagated to affected instances as quickly as possible. However, a small delay might occur.
+     * Rule changes are propagated to instances associated with the security group as quickly as possible. However, a
+     * small delay might occur.
      * </p>
      * <p>
-     * For information about VPC security group quotas, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a>.
+     * For examples of rules that you can add to security groups for specific access scenarios, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html">Security group
+     * rules for different use cases</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <note>
      * <p>
-     * If you want to reference a security group across VPCs attached to a transit gateway using the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">security group referencing
-     * feature</a>, note that you can only reference security groups for ingress rules. You cannot reference a security
-     * group for egress rules.
+     * For information about security group quotas, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a> in the
+     * <i>Amazon VPC User Guide</i>.
      * </p>
-     * </note>
      * 
      * @param authorizeSecurityGroupEgressRequest
      * @return A Java Future containing the result of the AuthorizeSecurityGroupEgress operation returned by the
@@ -2010,33 +1977,34 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Adds the specified outbound (egress) rules to a security group for use with a VPC.
+     * Adds the specified outbound (egress) rules to a security group.
      * </p>
      * <p>
-     * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 CIDR address ranges, or to the
-     * instances that are associated with the specified source security groups. When specifying an outbound rule for
-     * your security group in a VPC, the <code>IpPermissions</code> must include a destination for the traffic.
+     * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address ranges, the IP address
+     * ranges specified by a prefix list, or the instances that are associated with a source security group. For more
+     * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html">Security
+     * group rules</a>.
      * </p>
      * <p>
-     * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you must also specify the
-     * destination port or port range. For the ICMP protocol, you must also specify the ICMP type and code. You can use
-     * -1 for the type or code to mean all types or all codes.
+     * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a prefix list, or a
+     * security group. You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP, you
+     * must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also specify the ICMP type
+     * and code.
      * </p>
      * <p>
-     * Rule changes are propagated to affected instances as quickly as possible. However, a small delay might occur.
+     * Rule changes are propagated to instances associated with the security group as quickly as possible. However, a
+     * small delay might occur.
      * </p>
      * <p>
-     * For information about VPC security group quotas, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a>.
+     * For examples of rules that you can add to security groups for specific access scenarios, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html">Security group
+     * rules for different use cases</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <note>
      * <p>
-     * If you want to reference a security group across VPCs attached to a transit gateway using the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">security group referencing
-     * feature</a>, note that you can only reference security groups for ingress rules. You cannot reference a security
-     * group for egress rules.
+     * For information about security group quotas, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a> in the
+     * <i>Amazon VPC User Guide</i>.
      * </p>
-     * </note>
      * 
      * @param authorizeSecurityGroupEgressRequest
      * @param asyncHandler
@@ -2058,22 +2026,30 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Adds the specified inbound (ingress) rules to a security group.
      * </p>
      * <p>
-     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address range, or from
-     * the instances that are associated with the specified destination security groups. When specifying an inbound rule
-     * for your security group in a VPC, the <code>IpPermissions</code> must include a source for the traffic.
+     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 address range, the IP
+     * address ranges that are specified by a prefix list, or the instances that are associated with a destination
+     * security group. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html">Security group rules</a>.
      * </p>
      * <p>
-     * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also specify the destination
-     * port or port range. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code. You can use -1 to mean
-     * all types or all codes.
+     * You must specify exactly one of the following sources: an IPv4 or IPv6 address range, a prefix list, or a
+     * security group. You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP, you
+     * must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also specify the ICMP/ICMPv6
+     * type and code.
      * </p>
      * <p>
-     * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay
-     * might occur.
+     * Rule changes are propagated to instances associated with the security group as quickly as possible. However, a
+     * small delay might occur.
      * </p>
      * <p>
-     * For more information about VPC security group quotas, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a>.
+     * For examples of rules that you can add to security groups for specific access scenarios, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html">Security group
+     * rules for different use cases</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about security group quotas, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a> in the
+     * <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param authorizeSecurityGroupIngressRequest
@@ -2091,22 +2067,30 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Adds the specified inbound (ingress) rules to a security group.
      * </p>
      * <p>
-     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address range, or from
-     * the instances that are associated with the specified destination security groups. When specifying an inbound rule
-     * for your security group in a VPC, the <code>IpPermissions</code> must include a source for the traffic.
+     * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 address range, the IP
+     * address ranges that are specified by a prefix list, or the instances that are associated with a destination
+     * security group. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html">Security group rules</a>.
      * </p>
      * <p>
-     * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also specify the destination
-     * port or port range. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code. You can use -1 to mean
-     * all types or all codes.
+     * You must specify exactly one of the following sources: an IPv4 or IPv6 address range, a prefix list, or a
+     * security group. You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP, you
+     * must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also specify the ICMP/ICMPv6
+     * type and code.
      * </p>
      * <p>
-     * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay
-     * might occur.
+     * Rule changes are propagated to instances associated with the security group as quickly as possible. However, a
+     * small delay might occur.
      * </p>
      * <p>
-     * For more information about VPC security group quotas, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a>.
+     * For examples of rules that you can add to security groups for specific access scenarios, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html">Security group
+     * rules for different use cases</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about security group quotas, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a> in the
+     * <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param authorizeSecurityGroupIngressRequest
@@ -2719,8 +2703,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * and specify the ARN of the destination Outpost using <b>DestinationOutpostArn</b>. Backing snapshots copied to an
      * Outpost are encrypted by default using the default encryption key for the Region, or a different key that you
      * specify in the request using <b>KmsKeyId</b>. Outposts do not support unencrypted snapshots. For more
-     * information, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#ami"> Amazon
-     * EBS local snapshots on Outposts</a> in the <i>Amazon EC2 User Guide</i>.
+     * information, <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#ami"> Amazon EBS
+     * local snapshots on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * For more information about the prerequisites and limits when copying an AMI, see <a
@@ -2756,8 +2740,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * and specify the ARN of the destination Outpost using <b>DestinationOutpostArn</b>. Backing snapshots copied to an
      * Outpost are encrypted by default using the default encryption key for the Region, or a different key that you
      * specify in the request using <b>KmsKeyId</b>. Outposts do not support unencrypted snapshots. For more
-     * information, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#ami"> Amazon
-     * EBS local snapshots on Outposts</a> in the <i>Amazon EC2 User Guide</i>.
+     * information, <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#ami"> Amazon EBS
+     * local snapshots on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * For more information about the prerequisites and limits when copying an AMI, see <a
@@ -2799,17 +2783,16 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Snapshots copied to an Outpost are encrypted by default using the default encryption key for the Region, or a
      * different key that you specify in the request using <b>KmsKeyId</b>. Outposts do not support unencrypted
      * snapshots. For more information, <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#ami"> Amazon EBS local
-     * snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#ami"> Amazon EBS local snapshots
+     * on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any
      * purpose.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-copy-snapshot.html">Copy an Amazon EBS snapshot</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-copy-snapshot.html">Copy
+     * an Amazon EBS snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param copySnapshotRequest
@@ -2840,17 +2823,16 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Snapshots copied to an Outpost are encrypted by default using the default encryption key for the Region, or a
      * different key that you specify in the request using <b>KmsKeyId</b>. Outposts do not support unencrypted
      * snapshots. For more information, <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#ami"> Amazon EBS local
-     * snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#ami"> Amazon EBS local snapshots
+     * on Outposts</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any
      * purpose.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-copy-snapshot.html">Copy an Amazon EBS snapshot</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-copy-snapshot.html">Copy
+     * an Amazon EBS snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param copySnapshotRequest
@@ -3294,35 +3276,42 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Creates a set of DHCP options for your VPC. After creating the set, you must associate it with the VPC, causing
-     * all existing and new instances that you launch in the VPC to use this set of DHCP options. The following are the
-     * individual DHCP options you can specify. For more information about the options, see <a
-     * href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
+     * Creates a custom set of DHCP options. After you create a DHCP option set, you associate it with a VPC. After you
+     * associate a DHCP option set with a VPC, all existing and newly launched instances in the VPC use this set of DHCP
+     * options.
+     * </p>
+     * <p>
+     * The following are the individual DHCP options you can specify. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options sets</a> in the
+     * <i>Amazon VPC User Guide</i>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>domain-name-servers</code> - The IP addresses of up to four domain name servers, or AmazonProvidedDNS. The
-     * default DHCP option set specifies AmazonProvidedDNS. If specifying more than one domain name server, specify the
-     * IP addresses in a single parameter, separated by commas. To have your instance receive a custom DNS hostname as
-     * specified in <code>domain-name</code>, you must set <code>domain-name-servers</code> to a custom DNS server.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>domain-name</code> - If you're using AmazonProvidedDNS in <code>us-east-1</code>, specify
-     * <code>ec2.internal</code>. If you're using AmazonProvidedDNS in another Region, specify
-     * <code>region.compute.internal</code> (for example, <code>ap-northeast-1.compute.internal</code>). Otherwise,
-     * specify a domain name (for example, <code>ExampleCompany.com</code>). This value is used to complete unqualified
-     * DNS hostnames. <b>Important</b>: Some Linux operating systems accept multiple domain names separated by spaces.
-     * However, Windows and other Linux operating systems treat the value as a single domain, which results in
-     * unexpected behavior. If your DHCP options set is associated with a VPC that has instances with multiple operating
-     * systems, specify only one domain name.
+     * <code>ec2.internal</code>. If you're using AmazonProvidedDNS in any other Region, specify
+     * <code>region.compute.internal</code>. Otherwise, specify a custom domain name. This value is used to complete
+     * unqualified DNS hostnames.
+     * </p>
+     * <p>
+     * Some Linux operating systems accept multiple domain names separated by spaces. However, Windows and other Linux
+     * operating systems treat the value as a single domain, which results in unexpected behavior. If your DHCP option
+     * set is associated with a VPC that has instances running operating systems that treat the value as a single
+     * domain, specify only one domain name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ntp-servers</code> - The IP addresses of up to four Network Time Protocol (NTP) servers.
+     * <code>domain-name-servers</code> - The IP addresses of up to four DNS servers, or AmazonProvidedDNS. To specify
+     * multiple domain name servers in a single parameter, separate the IP addresses using commas. To have your
+     * instances receive custom DNS hostnames as specified in <code>domain-name</code>, you must specify a custom DNS
+     * server.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ntp-servers</code> - The IP addresses of up to eight Network Time Protocol (NTP) servers (four IPv4
+     * addresses and four IPv6 addresses).
      * </p>
      * </li>
      * <li>
@@ -3332,20 +3321,21 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </li>
      * <li>
      * <p>
-     * <code>netbios-node-type</code> - The NetBIOS node type (1, 2, 4, or 8). We recommend that you specify 2
-     * (broadcast and multicast are not currently supported). For more information about these node types, see <a
+     * <code>netbios-node-type</code> - The NetBIOS node type (1, 2, 4, or 8). We recommend that you specify 2.
+     * Broadcast and multicast are not supported. For more information about NetBIOS node types, see <a
      * href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * Your VPC automatically starts out with a set of DHCP options that includes only a DNS server that we provide
-     * (AmazonProvidedDNS). If you create a set of options, and if your VPC has an internet gateway, make sure to set
-     * the <code>domain-name-servers</code> option either to <code>AmazonProvidedDNS</code> or to a domain name server
-     * of your choice. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options sets</a> in the
-     * <i>Amazon VPC User Guide</i>.
+     * <code>ipv6-preferred-lease-time</code> - A value (in seconds, minutes, hours, or years) for how frequently a
+     * running instance with an IPv6 assigned to it goes through DHCPv6 lease renewal. Acceptable values are between 140
+     * and 2147483647 seconds (approximately 68 years). If no value is entered, the default lease time is 140 seconds.
+     * If you use long-term addressing for EC2 instances, you can increase the lease time and avoid frequent lease
+     * renewal requests. Lease renewal typically occurs when half of the lease time has elapsed.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param createDhcpOptionsRequest
      * @return A Java Future containing the result of the CreateDhcpOptions operation returned by the service.
@@ -3357,35 +3347,42 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Creates a set of DHCP options for your VPC. After creating the set, you must associate it with the VPC, causing
-     * all existing and new instances that you launch in the VPC to use this set of DHCP options. The following are the
-     * individual DHCP options you can specify. For more information about the options, see <a
-     * href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
+     * Creates a custom set of DHCP options. After you create a DHCP option set, you associate it with a VPC. After you
+     * associate a DHCP option set with a VPC, all existing and newly launched instances in the VPC use this set of DHCP
+     * options.
+     * </p>
+     * <p>
+     * The following are the individual DHCP options you can specify. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options sets</a> in the
+     * <i>Amazon VPC User Guide</i>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>domain-name-servers</code> - The IP addresses of up to four domain name servers, or AmazonProvidedDNS. The
-     * default DHCP option set specifies AmazonProvidedDNS. If specifying more than one domain name server, specify the
-     * IP addresses in a single parameter, separated by commas. To have your instance receive a custom DNS hostname as
-     * specified in <code>domain-name</code>, you must set <code>domain-name-servers</code> to a custom DNS server.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>domain-name</code> - If you're using AmazonProvidedDNS in <code>us-east-1</code>, specify
-     * <code>ec2.internal</code>. If you're using AmazonProvidedDNS in another Region, specify
-     * <code>region.compute.internal</code> (for example, <code>ap-northeast-1.compute.internal</code>). Otherwise,
-     * specify a domain name (for example, <code>ExampleCompany.com</code>). This value is used to complete unqualified
-     * DNS hostnames. <b>Important</b>: Some Linux operating systems accept multiple domain names separated by spaces.
-     * However, Windows and other Linux operating systems treat the value as a single domain, which results in
-     * unexpected behavior. If your DHCP options set is associated with a VPC that has instances with multiple operating
-     * systems, specify only one domain name.
+     * <code>ec2.internal</code>. If you're using AmazonProvidedDNS in any other Region, specify
+     * <code>region.compute.internal</code>. Otherwise, specify a custom domain name. This value is used to complete
+     * unqualified DNS hostnames.
+     * </p>
+     * <p>
+     * Some Linux operating systems accept multiple domain names separated by spaces. However, Windows and other Linux
+     * operating systems treat the value as a single domain, which results in unexpected behavior. If your DHCP option
+     * set is associated with a VPC that has instances running operating systems that treat the value as a single
+     * domain, specify only one domain name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ntp-servers</code> - The IP addresses of up to four Network Time Protocol (NTP) servers.
+     * <code>domain-name-servers</code> - The IP addresses of up to four DNS servers, or AmazonProvidedDNS. To specify
+     * multiple domain name servers in a single parameter, separate the IP addresses using commas. To have your
+     * instances receive custom DNS hostnames as specified in <code>domain-name</code>, you must specify a custom DNS
+     * server.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ntp-servers</code> - The IP addresses of up to eight Network Time Protocol (NTP) servers (four IPv4
+     * addresses and four IPv6 addresses).
      * </p>
      * </li>
      * <li>
@@ -3395,20 +3392,21 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </li>
      * <li>
      * <p>
-     * <code>netbios-node-type</code> - The NetBIOS node type (1, 2, 4, or 8). We recommend that you specify 2
-     * (broadcast and multicast are not currently supported). For more information about these node types, see <a
+     * <code>netbios-node-type</code> - The NetBIOS node type (1, 2, 4, or 8). We recommend that you specify 2.
+     * Broadcast and multicast are not supported. For more information about NetBIOS node types, see <a
      * href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * Your VPC automatically starts out with a set of DHCP options that includes only a DNS server that we provide
-     * (AmazonProvidedDNS). If you create a set of options, and if your VPC has an internet gateway, make sure to set
-     * the <code>domain-name-servers</code> option either to <code>AmazonProvidedDNS</code> or to a domain name server
-     * of your choice. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options sets</a> in the
-     * <i>Amazon VPC User Guide</i>.
+     * <code>ipv6-preferred-lease-time</code> - A value (in seconds, minutes, hours, or years) for how frequently a
+     * running instance with an IPv6 assigned to it goes through DHCPv6 lease renewal. Acceptable values are between 140
+     * and 2147483647 seconds (approximately 68 years). If no value is entered, the default lease time is 140 seconds.
+     * If you use long-term addressing for EC2 instances, you can increase the lease time and avoid frequent lease
+     * renewal requests. Lease renewal typically occurs when half of the lease time has elapsed.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param createDhcpOptionsRequest
      * @param asyncHandler
@@ -5382,10 +5380,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html">Amazon
-     * Elastic Block Store</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html">Amazon
+     * Elastic Block Store</a> and <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param createSnapshotRequest
@@ -5434,10 +5431,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html">Amazon
-     * Elastic Block Store</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html">Amazon
+     * Elastic Block Store</a> and <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param createSnapshotRequest
@@ -6647,8 +6643,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * You can create encrypted volumes. Encrypted volumes must be attached to instances that support Amazon EBS
      * encryption. Volumes that are created from encrypted snapshots are also automatically encrypted. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * You can tag your volumes during creation. For more information, see <a
@@ -6657,8 +6653,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html">Create an Amazon EBS
-     * volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-creating-volume.html">Create an Amazon EBS volume</a>
+     * in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param createVolumeRequest
@@ -6680,8 +6676,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * You can create encrypted volumes. Encrypted volumes must be attached to instances that support Amazon EBS
      * encryption. Volumes that are created from encrypted snapshots are also automatically encrypted. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
-     * encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * You can tag your volumes during creation. For more information, see <a
@@ -6690,8 +6686,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html">Create an Amazon EBS
-     * volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-creating-volume.html">Create an Amazon EBS volume</a>
+     * in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param createVolumeRequest
@@ -8753,8 +8749,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-snapshot.html">Delete an Amazon EBS
-     * snapshot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-deleting-snapshot.html">Delete an Amazon EBS
+     * snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param deleteSnapshotRequest
@@ -8781,8 +8777,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-snapshot.html">Delete an Amazon EBS
-     * snapshot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-deleting-snapshot.html">Delete an Amazon EBS
+     * snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param deleteSnapshotRequest
@@ -9631,8 +9627,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-volume.html">Delete an Amazon EBS
-     * volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-deleting-volume.html">Delete an Amazon EBS volume</a>
+     * in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param deleteVolumeRequest
@@ -9653,8 +9649,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-volume.html">Delete an Amazon EBS
-     * volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-deleting-volume.html">Delete an Amazon EBS volume</a>
+     * in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param deleteVolumeRequest
@@ -10374,6 +10370,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeAccountAttributesRequest
      * @return A Java Future containing the result of the DescribeAccountAttributes operation returned by the service.
@@ -10424,6 +10426,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeAccountAttributesRequest
      * @param asyncHandler
@@ -10665,6 +10673,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions and
      * zones</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeAvailabilityZonesRequest
      * @return A Java Future containing the result of the DescribeAvailabilityZones operation returned by the service.
@@ -10685,6 +10699,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions and
      * zones</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeAvailabilityZonesRequest
      * @param asyncHandler
@@ -14498,6 +14518,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing Amazon Web Services Regions</a>
      * in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeRegionsRequest
      * @return A Java Future containing the result of the DescribeRegions operation returned by the service.
@@ -14521,6 +14547,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing Amazon Web Services Regions</a>
      * in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeRegionsRequest
      * @param asyncHandler
@@ -15090,8 +15122,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes the VPCs on the other side of a VPC peering connection or the VPCs attached to a transit gateway that
-     * are referencing the security groups you've specified in this request.
+     * Describes the VPCs on the other side of a VPC peering connection that are referencing the security groups you've
+     * specified in this request.
      * </p>
      * 
      * @param describeSecurityGroupReferencesRequest
@@ -15106,8 +15138,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes the VPCs on the other side of a VPC peering connection or the VPCs attached to a transit gateway that
-     * are referencing the security groups you've specified in this request.
+     * Describes the VPCs on the other side of a VPC peering connection that are referencing the security groups you've
+     * specified in this request.
      * </p>
      * 
      * @param describeSecurityGroupReferencesRequest
@@ -15210,8 +15242,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS snapshots, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS snapshots</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html">Amazon EBS snapshots</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeSnapshotAttributeRequest
@@ -15229,8 +15261,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS snapshots, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS snapshots</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html">Amazon EBS snapshots</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeSnapshotAttributeRequest
@@ -15341,8 +15373,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS snapshots, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS snapshots</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html">Amazon EBS snapshots</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeSnapshotsRequest
@@ -15414,8 +15446,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS snapshots, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS snapshots</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html">Amazon EBS snapshots</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeSnapshotsRequest
@@ -15800,11 +15832,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Describes the stale security group rules for security groups in a specified VPC. Rules are stale when they
-     * reference a deleted security group in the same VPC, peered VPC, or in separate VPCs attached to a transit gateway
-     * (with <a href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">security group
-     * referencing support</a> enabled). Rules can also be stale if they reference a security group in a peer VPC for
-     * which the VPC peering connection has been deleted or if they reference a security group in a VPC that has been
-     * detached from a transit gateway.
+     * reference a deleted security group in the same VPC or peered VPC. Rules can also be stale if they reference a
+     * security group in a peer VPC for which the VPC peering connection has been deleted.
      * </p>
      * 
      * @param describeStaleSecurityGroupsRequest
@@ -15819,11 +15848,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Describes the stale security group rules for security groups in a specified VPC. Rules are stale when they
-     * reference a deleted security group in the same VPC, peered VPC, or in separate VPCs attached to a transit gateway
-     * (with <a href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">security group
-     * referencing support</a> enabled). Rules can also be stale if they reference a security group in a peer VPC for
-     * which the VPC peering connection has been deleted or if they reference a security group in a VPC that has been
-     * detached from a transit gateway.
+     * reference a deleted security group in the same VPC or peered VPC. Rules can also be stale if they reference a
+     * security group in a peer VPC for which the VPC peering connection has been deleted.
      * </p>
      * 
      * @param describeStaleSecurityGroupsRequest
@@ -15974,6 +16000,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
      * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeTagsRequest
      * @return A Java Future containing the result of the DescribeTags operation returned by the service.
@@ -15992,6 +16024,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
      * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeTagsRequest
      * @param asyncHandler
@@ -16703,8 +16741,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS volumes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html">Amazon EBS volumes</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html">Amazon EBS volumes</a> in the <i>Amazon
+     * EBS User Guide</i>.
      * </p>
      * 
      * @param describeVolumeAttributeRequest
@@ -16721,8 +16759,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS volumes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html">Amazon EBS volumes</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html">Amazon EBS volumes</a> in the <i>Amazon
+     * EBS User Guide</i>.
      * </p>
      * 
      * @param describeVolumeAttributeRequest
@@ -16756,8 +16794,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * status of the volume is <code>ok</code>. If the check fails, the overall status is <code>impaired</code>. If the
      * status is <code>insufficient-data</code>, then the checks might still be taking place on your volume at the time.
      * We recommend that you retry the request. For more information about volume status, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html">Monitor the status of
-     * your volumes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-status.html">Monitor the status of your
+     * volumes</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * <i>Events</i>: Reflect the cause of a volume status and might require you to take action. For example, if your
@@ -16776,6 +16814,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * status does not indicate volumes in the <code>error</code> state (for example, when a volume is incapable of
      * accepting I/O.)
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeVolumeStatusRequest
      * @return A Java Future containing the result of the DescribeVolumeStatus operation returned by the service.
@@ -16803,8 +16847,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * status of the volume is <code>ok</code>. If the check fails, the overall status is <code>impaired</code>. If the
      * status is <code>insufficient-data</code>, then the checks might still be taking place on your volume at the time.
      * We recommend that you retry the request. For more information about volume status, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html">Monitor the status of
-     * your volumes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-status.html">Monitor the status of your
+     * volumes</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * <i>Events</i>: Reflect the cause of a volume status and might require you to take action. For example, if your
@@ -16823,6 +16867,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * status does not indicate volumes in the <code>error</code> state (for example, when a volume is incapable of
      * accepting I/O.)
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeVolumeStatusRequest
      * @param asyncHandler
@@ -16863,9 +16913,15 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS volumes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html">Amazon EBS volumes</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html">Amazon EBS volumes</a> in the <i>Amazon
+     * EBS User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeVolumesRequest
      * @return A Java Future containing the result of the DescribeVolumes operation returned by the service.
@@ -16886,9 +16942,15 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about EBS volumes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html">Amazon EBS volumes</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html">Amazon EBS volumes</a> in the <i>Amazon
+     * EBS User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The order of the elements in the response, including those within nested structures, might vary. Applications
+     * should not assume the elements appear in a particular order.
+     * </p>
+     * </note>
      * 
      * @param describeVolumesRequest
      * @param asyncHandler
@@ -16930,8 +16992,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about
      * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon
      * CloudWatch Events User Guide</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the
-     * progress of volume modifications</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress
+     * of volume modifications</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeVolumesModificationsRequest
@@ -16956,8 +17018,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about
      * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon
      * CloudWatch Events User Guide</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the
-     * progress of volume modifications</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress
+     * of volume modifications</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeVolumesModificationsRequest
@@ -17739,8 +17801,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detach an Amazon EBS
-     * volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-detaching-volume.html">Detach an Amazon EBS volume</a>
+     * in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param detachVolumeRequest
@@ -17771,8 +17833,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detach an Amazon EBS
-     * volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-detaching-volume.html">Detach an Amazon EBS volume</a>
+     * in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param detachVolumeRequest
@@ -17917,8 +17979,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Disabling encryption by default does not change the encryption status of your existing volumes.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param disableEbsEncryptionByDefaultRequest
@@ -17943,8 +18005,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Disabling encryption by default does not change the encryption status of your existing volumes.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param disableEbsEncryptionByDefaultRequest
@@ -18310,8 +18372,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
-     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> .
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html"> Block public access
+     * for snapshots</a> in the <i>Amazon EBS User Guide</i> .
      * </p>
      * <p/>
      * 
@@ -18338,8 +18400,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
-     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> .
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html"> Block public access
+     * for snapshots</a> in the <i>Amazon EBS User Guide</i> .
      * </p>
      * <p/>
      * 
@@ -19240,8 +19302,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * After you enable encryption by default, the EBS volumes that you create are always encrypted, either using the
      * default KMS key or the KMS key that you specified when you created each volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * You can specify the default KMS key for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or
@@ -19252,8 +19314,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * After you enable encryption by default, you can no longer launch instances using instance types that do not
-     * support encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * support encryption. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * 
@@ -19274,8 +19336,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * After you enable encryption by default, the EBS volumes that you create are always encrypted, either using the
      * default KMS key or the KMS key that you specified when you created each volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * You can specify the default KMS key for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or
@@ -19286,8 +19348,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * After you enable encryption by default, you can no longer launch instances using instance types that do not
-     * support encryption. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances"
+     * support encryption. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances"
      * >Supported instance types</a>.
      * </p>
      * 
@@ -19366,8 +19428,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-fast-snapshot-restore.html">Amazon EBS fast
-     * snapshot restore</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html">Amazon EBS fast snapshot
+     * restore</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param enableFastSnapshotRestoresRequest
@@ -19390,8 +19452,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-fast-snapshot-restore.html">Amazon EBS fast
-     * snapshot restore</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html">Amazon EBS fast snapshot
+     * restore</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param enableFastSnapshotRestoresRequest
@@ -19704,8 +19766,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
-     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html"> Block public access
+     * for snapshots</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param enableSnapshotBlockPublicAccessRequest
@@ -19732,8 +19794,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
-     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html"> Block public access
+     * for snapshots</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param enableSnapshotBlockPublicAccessRequest
@@ -20441,8 +20503,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <a>ResetEbsDefaultKmsKeyId</a>.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param getEbsDefaultKmsKeyIdRequest
@@ -20460,8 +20522,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <a>ResetEbsDefaultKmsKeyId</a>.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param getEbsDefaultKmsKeyIdRequest
@@ -20482,8 +20544,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Describes whether EBS encryption by default is enabled for your account in the current Region.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param getEbsEncryptionByDefaultRequest
@@ -20500,8 +20562,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Describes whether EBS encryption by default is enabled for your account in the current Region.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param getEbsEncryptionByDefaultRequest
@@ -21520,8 +21582,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
-     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html"> Block public access
+     * for snapshots</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param getSnapshotBlockPublicAccessStateRequest
@@ -21540,8 +21602,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
-     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/block-public-access-snapshots.html"> Block public access
+     * for snapshots</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param getSnapshotBlockPublicAccessStateRequest
@@ -22862,8 +22924,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * instances will fail to launch.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param modifyEbsDefaultKmsKeyIdRequest
@@ -22889,8 +22951,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * instances will fail to launch.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
+     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param modifyEbsDefaultKmsKeyIdRequest
@@ -24177,8 +24239,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about modifying snapshot permissions, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Share a
-     * snapshot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modifying-snapshot-permissions.html">Share a
+     * snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param modifySnapshotAttributeRequest
@@ -24202,8 +24264,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about modifying snapshot permissions, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Share a
-     * snapshot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modifying-snapshot-permissions.html">Share a
+     * snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param modifySnapshotAttributeRequest
@@ -24224,8 +24286,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes
      * all of the blocks of data that were written to the volume at the time the snapshot was created, and moved from
      * the standard tier to the archive tier. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-archive.html">Archive Amazon EBS snapshots</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param modifySnapshotTierRequest
@@ -24241,8 +24303,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes
      * all of the blocks of data that were written to the volume at the time the snapshot was created, and moved from
      * the standard tier to the archive tier. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-archive.html">Archive Amazon EBS snapshots</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param modifySnapshotTierRequest
@@ -24918,26 +24980,22 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS
      * capacity. If your EBS volume is attached to a current-generation EC2 instance type, you might be able to apply
      * these changes without stopping the instance or detaching the volume from it. For more information about modifying
-     * EBS volumes, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modify-volume.html">Amazon EBS
-     * Elastic Volumes</a> (Linux instances) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-modify-volume.html">Amazon EBS Elastic
-     * Volumes</a> (Windows instances).
+     * EBS volumes, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modify-volume.html">Amazon EBS
+     * Elastic Volumes</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * When you complete a resize operation on your volume, you need to extend the volume's file-system size to take
-     * advantage of the new storage capacity. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux"
-     * >Extend a Linux file system</a> or <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html#recognize-expanded-volume-windows"
-     * >Extend a Windows file system</a>.
+     * advantage of the new storage capacity. For more information, see <a
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/recognize-expanded-volume-linux.html">Extend the file
+     * system</a>.
      * </p>
      * <p>
      * You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about
      * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon
      * CloudWatch Events User Guide</a>. You can also track the status of a modification using
      * <a>DescribeVolumesModifications</a>. For information about tracking status changes using either method, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the
-     * progress of volume modifications</a>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress
+     * of volume modifications</a>.
      * </p>
      * <p>
      * With previous-generation instance types, resizing an EBS volume might require detaching and reattaching the
@@ -24962,26 +25020,22 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS
      * capacity. If your EBS volume is attached to a current-generation EC2 instance type, you might be able to apply
      * these changes without stopping the instance or detaching the volume from it. For more information about modifying
-     * EBS volumes, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modify-volume.html">Amazon EBS
-     * Elastic Volumes</a> (Linux instances) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-modify-volume.html">Amazon EBS Elastic
-     * Volumes</a> (Windows instances).
+     * EBS volumes, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modify-volume.html">Amazon EBS
+     * Elastic Volumes</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * When you complete a resize operation on your volume, you need to extend the volume's file-system size to take
-     * advantage of the new storage capacity. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux"
-     * >Extend a Linux file system</a> or <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html#recognize-expanded-volume-windows"
-     * >Extend a Windows file system</a>.
+     * advantage of the new storage capacity. For more information, see <a
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/recognize-expanded-volume-linux.html">Extend the file
+     * system</a>.
      * </p>
      * <p>
      * You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about
      * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon
      * CloudWatch Events User Guide</a>. You can also track the status of a modification using
      * <a>DescribeVolumesModifications</a>. For information about tracking status changes using either method, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the
-     * progress of volume modifications</a>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress
+     * of volume modifications</a>.
      * </p>
      * <p>
      * With previous-generation instance types, resizing an EBS volume might require detaching and reattaching the
@@ -27456,8 +27510,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * After resetting the default KMS key to the Amazon Web Services managed KMS key, you can continue to encrypt by a
      * customer managed KMS key by specifying it when you create the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param resetEbsDefaultKmsKeyIdRequest
@@ -27476,8 +27530,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * After resetting the default KMS key to the Amazon Web Services managed KMS key, you can continue to encrypt by a
      * customer managed KMS key by specifying it when you create the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param resetEbsDefaultKmsKeyIdRequest
@@ -27651,8 +27705,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about modifying snapshot permissions, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Share a
-     * snapshot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modifying-snapshot-permissions.html">Share a
+     * snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param resetSnapshotAttributeRequest
@@ -27669,8 +27723,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about modifying snapshot permissions, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Share a
-     * snapshot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modifying-snapshot-permissions.html">Share a
+     * snapshot</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param resetSnapshotAttributeRequest
@@ -27806,8 +27860,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Restores a snapshot from the Recycle Bin. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
-     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
+     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param restoreSnapshotFromRecycleBinRequest
@@ -27823,8 +27877,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Restores a snapshot from the Recycle Bin. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
-     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps"
+     * >Restore snapshots from the Recycle Bin</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param restoreSnapshotFromRecycleBinRequest
@@ -27849,11 +27903,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot"
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/working-with-snapshot-archiving.html#restore-archived-snapshot"
      * > Restore an archived snapshot</a> and <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period"
-     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic
-     * Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/working-with-snapshot-archiving.html#modify-temp-restore-period"
+     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon EBS User
+     * Guide</i>.
      * </p>
      * 
      * @param restoreSnapshotTierRequest
@@ -27871,11 +27925,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot"
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/working-with-snapshot-archiving.html#restore-archived-snapshot"
      * > Restore an archived snapshot</a> and <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period"
-     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic
-     * Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/ebs/latest/userguide/working-with-snapshot-archiving.html#modify-temp-restore-period"
+     * > modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon EBS User
+     * Guide</i>.
      * </p>
      * 
      * @param restoreSnapshotTierRequest

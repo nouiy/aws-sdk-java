@@ -189,8 +189,8 @@ public interface AWSSimpleSystemsManagement {
      * </p>
      * <p>
      * For more information about using tags with Amazon Elastic Compute Cloud (Amazon EC2) instances, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param addTagsToResourceRequest
@@ -262,7 +262,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -272,7 +272,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -316,8 +316,8 @@ public interface AWSSimpleSystemsManagement {
      * installing SSM Agent on machines in your hybrid environment. For more information about requirements for managing
      * on-premises machines using Systems Manager, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting
-     * up Amazon Web Services Systems Manager for hybrid environments</a> in the <i>Amazon Web Services Systems Manager
-     * User Guide</i>.
+     * up Amazon Web Services Systems Manager for hybrid and multicloud environments</a> in the <i>Amazon Web Services
+     * Systems Manager User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -374,7 +374,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -384,13 +384,13 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
      *         </li>
      * @throws UnsupportedPlatformTypeException
-     *         The document doesn't support the platform type of the given managed node ID(s). For example, you sent an
+     *         The document doesn't support the platform type of the given managed node IDs. For example, you sent an
      *         document for a Windows managed node to a Linux node.
      * @throws InvalidOutputLocationException
      *         The output location isn't valid or doesn't exist.
@@ -445,7 +445,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -455,7 +455,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -468,7 +468,7 @@ public interface AWSSimpleSystemsManagement {
      * @throws AssociationLimitExceededException
      *         You can have at most 2,000 active associations.
      * @throws UnsupportedPlatformTypeException
-     *         The document doesn't support the platform type of the given managed node ID(s). For example, you sent an
+     *         The document doesn't support the platform type of the given managed node IDs. For example, you sent an
      *         document for a Windows managed node to a Linux node.
      * @throws InvalidOutputLocationException
      *         The output location isn't valid or doesn't exist.
@@ -744,7 +744,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -754,7 +754,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -993,8 +993,8 @@ public interface AWSSimpleSystemsManagement {
      * <p>
      * <code>Parameter</code> - The resource policy is used to share a parameter with other accounts using Resource
      * Access Manager (RAM). For more information about cross-account sharing of parameters, see <a
-     * href="systems-manager/latest/userguide/parameter-store-shared-parameters.html">Working with shared parameters</a>
-     * in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1040,7 +1040,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -1050,7 +1050,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -1179,7 +1179,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -1189,7 +1189,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -1353,7 +1353,7 @@ public interface AWSSimpleSystemsManagement {
 
     /**
      * <p>
-     * All associations for the managed node(s).
+     * All associations for the managed nodes.
      * </p>
      * 
      * @param describeEffectiveInstanceAssociationsRequest
@@ -1370,7 +1370,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -1380,7 +1380,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -1425,7 +1425,7 @@ public interface AWSSimpleSystemsManagement {
 
     /**
      * <p>
-     * The status of the associations for the managed node(s).
+     * The status of the associations for the managed nodes.
      * </p>
      * 
      * @param describeInstanceAssociationsStatusRequest
@@ -1442,7 +1442,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -1452,7 +1452,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -1498,7 +1498,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -1508,7 +1508,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -1582,7 +1582,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -1592,7 +1592,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -1807,8 +1807,8 @@ public interface AWSSimpleSystemsManagement {
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param describeOpsItemsRequest
@@ -2118,7 +2118,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -2128,7 +2128,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -2207,7 +2207,7 @@ public interface AWSSimpleSystemsManagement {
      *         instances. To patch applications released by Microsoft on on-premises servers and VMs, you must enable
      *         advanced instances. For more information, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances-advanced.html"
-     *         >Enabling the advanced-instances tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         >Turning on the advanced-instances tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @sample AWSSimpleSystemsManagement.GetDeployablePatchSnapshotForInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetDeployablePatchSnapshotForInstance"
      *      target="_top">AWS API Documentation</a>
@@ -2417,8 +2417,8 @@ public interface AWSSimpleSystemsManagement {
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param getOpsItemRequest
@@ -2823,7 +2823,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -2833,7 +2833,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -2869,7 +2869,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -2879,7 +2879,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -3027,7 +3027,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -3037,7 +3037,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -3299,7 +3299,7 @@ public interface AWSSimpleSystemsManagement {
      * <li>
      * <p>
      * InstalledTime: The time the association, patch, or custom compliance item was applied to the resource. Specify
-     * the time by using the following format: yyyy-MM-dd'T'HH:mm:ss'Z'
+     * the time by using the following format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * </li>
      * </ul>
@@ -3347,7 +3347,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -3357,7 +3357,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -3478,9 +3478,10 @@ public interface AWSSimpleSystemsManagement {
      * </p>
      * <p>
      * To share a parameter, it must be in the advanced parameter tier. For information about parameter tiers, see <a
-     * href="https://docs.aws.amazon.com/parameter-store- advanced-parameters.html">Managing parameter tiers</a>. For
-     * information about changing an existing standard parameter to an advanced parameter, see <a href=
-     * "https://docs.aws.amazon.com/parameter-store-advanced-parameters.html#parameter- store-advanced-parameters-enabling"
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html">
+     * Managing parameter tiers</a>. For information about changing an existing standard parameter to an advanced
+     * parameter, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#parameter-store-advanced-parameters-enabling"
      * >Changing a standard parameter to an advanced parameter</a>.
      * </p>
      * <p>
@@ -3488,8 +3489,8 @@ public interface AWSSimpleSystemsManagement {
      * share the key separately through Key Management Service. Amazon Web Services managed keys cannot be shared.
      * Parameters encrypted with the default Amazon Web Services managed key can be updated to use a customer managed
      * key instead. For KMS key definitions, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-mgmt">KMS concepts</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">KMS concepts</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * <important>
      * <p>
@@ -3802,7 +3803,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -3812,7 +3813,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -3827,7 +3828,7 @@ public interface AWSSimpleSystemsManagement {
      *         You must specify values for all required parameters in the Amazon Web Services Systems Manager document
      *         (SSM document). You can only supply values to parameters defined in the SSM document.
      * @throws UnsupportedPlatformTypeException
-     *         The document doesn't support the platform type of the given managed node ID(s). For example, you sent an
+     *         The document doesn't support the platform type of the given managed node IDs. For example, you sent an
      *         document for a Windows managed node to a Linux node.
      * @throws MaxDocumentSizeExceededException
      *         The size limit of a document is 64 KB.
@@ -3835,9 +3836,9 @@ public interface AWSSimpleSystemsManagement {
      *         The role name can't contain invalid characters. Also verify that you specified an IAM role for
      *         notifications that includes the required trust policy. For information about configuring the IAM role for
      *         Run Command notifications, see <a
-     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/rc-sns-notifications.html">Configuring
-     *         Amazon SNS Notifications for Run Command</a> in the <i>Amazon Web Services Systems Manager User
-     *         Guide</i>.
+     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html"
+     *         >Monitoring Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web
+     *         Services Systems Manager User Guide</i>.
      * @throws InvalidNotificationConfigException
      *         One or more configuration items isn't valid. Verify that a valid Amazon Resource Name (ARN) was provided
      *         for an Amazon Simple Notification Service topic.
@@ -4107,7 +4108,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -4117,7 +4118,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -4414,7 +4415,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Web Services Systems Manager Agent(SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
      *         </p>
      *         </li>
      *         <li>
@@ -4424,7 +4425,7 @@ public interface AWSSimpleSystemsManagement {
      *         </li>
      *         <li>
      *         <p>
-     *         The managed node isn't in valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
      *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
      *         <code>Terminated</code>.
      *         </p>
@@ -4448,8 +4449,8 @@ public interface AWSSimpleSystemsManagement {
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
      * and remediate operational issues impacting the performance and health of their Amazon Web Services resources. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in the <i>Amazon
-     * Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web Services Systems
+     * Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param updateOpsItemRequest

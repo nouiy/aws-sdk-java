@@ -34,6 +34,8 @@ public class TopicReplicationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("copyTopicConfigurations").build();
     private static final MarshallingInfo<Boolean> DETECTANDCOPYNEWTOPICS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("detectAndCopyNewTopics").build();
+    private static final MarshallingInfo<StructuredPojo> STARTINGPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startingPosition").build();
     private static final MarshallingInfo<List> TOPICSTOEXCLUDE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("topicsToExclude").build();
     private static final MarshallingInfo<List> TOPICSTOREPLICATE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -58,6 +60,7 @@ public class TopicReplicationMarshaller {
             protocolMarshaller.marshall(topicReplication.getCopyAccessControlListsForTopics(), COPYACCESSCONTROLLISTSFORTOPICS_BINDING);
             protocolMarshaller.marshall(topicReplication.getCopyTopicConfigurations(), COPYTOPICCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(topicReplication.getDetectAndCopyNewTopics(), DETECTANDCOPYNEWTOPICS_BINDING);
+            protocolMarshaller.marshall(topicReplication.getStartingPosition(), STARTINGPOSITION_BINDING);
             protocolMarshaller.marshall(topicReplication.getTopicsToExclude(), TOPICSTOEXCLUDE_BINDING);
             protocolMarshaller.marshall(topicReplication.getTopicsToReplicate(), TOPICSTOREPLICATE_BINDING);
         } catch (Exception e) {

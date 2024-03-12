@@ -33,10 +33,17 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
      */
     private String dnsSupport;
     /**
+     * <note>
      * <p>
-     * For important information about this feature, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
-     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * This parameter is in preview and may not be available for your account.
+     * </p>
+     * </note>
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to simplify
+     * security group management and control of instance-to-instance traffic across VPCs that are connected by transit
+     * gateway. You can also use this option to migrate from VPC peering (which was the only option that supported
+     * security group referencing) to transit gateways (which now also support security group referencing). This option
+     * is disabled by default and there are no additional costs to use this feature.
      * </p>
      */
     private String securityGroupReferencingSupport;
@@ -113,16 +120,31 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
     }
 
     /**
+     * <note>
      * <p>
-     * For important information about this feature, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
-     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * This parameter is in preview and may not be available for your account.
+     * </p>
+     * </note>
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to simplify
+     * security group management and control of instance-to-instance traffic across VPCs that are connected by transit
+     * gateway. You can also use this option to migrate from VPC peering (which was the only option that supported
+     * security group referencing) to transit gateways (which now also support security group referencing). This option
+     * is disabled by default and there are no additional costs to use this feature.
      * </p>
      * 
      * @param securityGroupReferencingSupport
-     *        For important information about this feature, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
-     *        transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     *        <p>
+     *        This parameter is in preview and may not be available for your account.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to
+     *        simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *        connected by transit gateway. You can also use this option to migrate from VPC peering (which was the only
+     *        option that supported security group referencing) to transit gateways (which now also support security
+     *        group referencing). This option is disabled by default and there are no additional costs to use this
+     *        feature.
      * @see SecurityGroupReferencingSupportValue
      */
 
@@ -131,15 +153,30 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
     }
 
     /**
+     * <note>
      * <p>
-     * For important information about this feature, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
-     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * This parameter is in preview and may not be available for your account.
+     * </p>
+     * </note>
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to simplify
+     * security group management and control of instance-to-instance traffic across VPCs that are connected by transit
+     * gateway. You can also use this option to migrate from VPC peering (which was the only option that supported
+     * security group referencing) to transit gateways (which now also support security group referencing). This option
+     * is disabled by default and there are no additional costs to use this feature.
      * </p>
      * 
-     * @return For important information about this feature, see <a
-     *         href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
-     *         transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @return <p>
+     *         This parameter is in preview and may not be available for your account.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to
+     *         simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *         connected by transit gateway. You can also use this option to migrate from VPC peering (which was the
+     *         only option that supported security group referencing) to transit gateways (which now also support
+     *         security group referencing). This option is disabled by default and there are no additional costs to use
+     *         this feature.
      * @see SecurityGroupReferencingSupportValue
      */
 
@@ -148,16 +185,31 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
     }
 
     /**
+     * <note>
      * <p>
-     * For important information about this feature, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
-     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * This parameter is in preview and may not be available for your account.
+     * </p>
+     * </note>
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to simplify
+     * security group management and control of instance-to-instance traffic across VPCs that are connected by transit
+     * gateway. You can also use this option to migrate from VPC peering (which was the only option that supported
+     * security group referencing) to transit gateways (which now also support security group referencing). This option
+     * is disabled by default and there are no additional costs to use this feature.
      * </p>
      * 
      * @param securityGroupReferencingSupport
-     *        For important information about this feature, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
-     *        transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     *        <p>
+     *        This parameter is in preview and may not be available for your account.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to
+     *        simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *        connected by transit gateway. You can also use this option to migrate from VPC peering (which was the only
+     *        option that supported security group referencing) to transit gateways (which now also support security
+     *        group referencing). This option is disabled by default and there are no additional costs to use this
+     *        feature.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SecurityGroupReferencingSupportValue
      */
@@ -168,16 +220,31 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
     }
 
     /**
+     * <note>
      * <p>
-     * For important information about this feature, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
-     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * This parameter is in preview and may not be available for your account.
+     * </p>
+     * </note>
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to simplify
+     * security group management and control of instance-to-instance traffic across VPCs that are connected by transit
+     * gateway. You can also use this option to migrate from VPC peering (which was the only option that supported
+     * security group referencing) to transit gateways (which now also support security group referencing). This option
+     * is disabled by default and there are no additional costs to use this feature.
      * </p>
      * 
      * @param securityGroupReferencingSupport
-     *        For important information about this feature, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
-     *        transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     *        <p>
+     *        This parameter is in preview and may not be available for your account.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Enables you to reference a security group across VPCs attached to a transit gateway. Use this option to
+     *        simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *        connected by transit gateway. You can also use this option to migrate from VPC peering (which was the only
+     *        option that supported security group referencing) to transit gateways (which now also support security
+     *        group referencing). This option is disabled by default and there are no additional costs to use this
+     *        feature.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SecurityGroupReferencingSupportValue
      */

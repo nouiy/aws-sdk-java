@@ -34,9 +34,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * subnet, the default value is <code>true</code>.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      */
     private Boolean associatePublicIpAddress;
@@ -224,9 +224,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * subnet, the default value is <code>true</code>.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @param associatePublicIpAddress
@@ -235,10 +235,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      *        interface, not an existing one. You cannot specify more than one network interface in the request. If
      *        launching into a default subnet, the default value is <code>true</code>.</p>
      *        <p>
-     *        Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *        public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *        see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *        pricing page</a>.
+     *        Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     *        running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab
+     *        on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      */
 
     public void setAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
@@ -253,9 +252,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * subnet, the default value is <code>true</code>.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @return Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP
@@ -263,10 +262,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      *         interface, not an existing one. You cannot specify more than one network interface in the request. If
      *         launching into a default subnet, the default value is <code>true</code>.</p>
      *         <p>
-     *         Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *         public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *         see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *         pricing page</a>.
+     *         Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated
+     *         with running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i>
+     *         tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      */
 
     public Boolean getAssociatePublicIpAddress() {
@@ -281,9 +279,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * subnet, the default value is <code>true</code>.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @param associatePublicIpAddress
@@ -292,10 +290,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      *        interface, not an existing one. You cannot specify more than one network interface in the request. If
      *        launching into a default subnet, the default value is <code>true</code>.</p>
      *        <p>
-     *        Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *        public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *        see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *        pricing page</a>.
+     *        Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     *        running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab
+     *        on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,9 +309,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * subnet, the default value is <code>true</code>.
      * </p>
      * <p>
-     * Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including public
-     * IPv4 addresses associated with running instances and Elastic IP addresses. For more information, see the
-     * <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
+     * Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the
+     * <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      * </p>
      * 
      * @return Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP
@@ -322,10 +319,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      *         interface, not an existing one. You cannot specify more than one network interface in the request. If
      *         launching into a default subnet, the default value is <code>true</code>.</p>
      *         <p>
-     *         Starting on February 1, 2024, Amazon Web Services will charge for all public IPv4 addresses, including
-     *         public IPv4 addresses associated with running instances and Elastic IP addresses. For more information,
-     *         see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC
-     *         pricing page</a>.
+     *         Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses associated
+     *         with running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i>
+     *         tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.
      */
 
     public Boolean isAssociatePublicIpAddress() {

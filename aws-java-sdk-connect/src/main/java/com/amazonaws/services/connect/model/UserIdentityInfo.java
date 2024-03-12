@@ -21,6 +21,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Contains information about the identity of a user.
  * </p>
+ * <note>
+ * <p>
+ * For Amazon Connect instances that are created with the <code>EXISTING_DIRECTORY</code> identity management type,
+ * <code>FirstName</code>, <code>LastName</code>, and <code>Email</code> cannot be updated from within Amazon Connect
+ * because they are managed by the directory.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UserIdentityInfo" target="_top">AWS API
  *      Documentation</a>

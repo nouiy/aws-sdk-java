@@ -68,10 +68,10 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * instance metadata requests can travel.
      * </p>
      * <p>
-     * Default: 1
+     * Default: <code>1</code>
      * </p>
      * <p>
-     * Possible values: Integers from 1 to 64
+     * Possible values: Integers from <code>1</code> to <code>64</code>
      * </p>
      */
     private Integer httpPutResponseHopLimit;
@@ -87,6 +87,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
     /**
      * <p>
      * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
      * </p>
      */
     private String httpProtocolIpv6;
@@ -408,20 +411,20 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * instance metadata requests can travel.
      * </p>
      * <p>
-     * Default: 1
+     * Default: <code>1</code>
      * </p>
      * <p>
-     * Possible values: Integers from 1 to 64
+     * Possible values: Integers from <code>1</code> to <code>64</code>
      * </p>
      * 
      * @param httpPutResponseHopLimit
      *        The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
      *        instance metadata requests can travel.</p>
      *        <p>
-     *        Default: 1
+     *        Default: <code>1</code>
      *        </p>
      *        <p>
-     *        Possible values: Integers from 1 to 64
+     *        Possible values: Integers from <code>1</code> to <code>64</code>
      */
 
     public void setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
@@ -434,19 +437,19 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * instance metadata requests can travel.
      * </p>
      * <p>
-     * Default: 1
+     * Default: <code>1</code>
      * </p>
      * <p>
-     * Possible values: Integers from 1 to 64
+     * Possible values: Integers from <code>1</code> to <code>64</code>
      * </p>
      * 
      * @return The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the
      *         further instance metadata requests can travel.</p>
      *         <p>
-     *         Default: 1
+     *         Default: <code>1</code>
      *         </p>
      *         <p>
-     *         Possible values: Integers from 1 to 64
+     *         Possible values: Integers from <code>1</code> to <code>64</code>
      */
 
     public Integer getHttpPutResponseHopLimit() {
@@ -459,20 +462,20 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * instance metadata requests can travel.
      * </p>
      * <p>
-     * Default: 1
+     * Default: <code>1</code>
      * </p>
      * <p>
-     * Possible values: Integers from 1 to 64
+     * Possible values: Integers from <code>1</code> to <code>64</code>
      * </p>
      * 
      * @param httpPutResponseHopLimit
      *        The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
      *        instance metadata requests can travel.</p>
      *        <p>
-     *        Default: 1
+     *        Default: <code>1</code>
      *        </p>
      *        <p>
-     *        Possible values: Integers from 1 to 64
+     *        Possible values: Integers from <code>1</code> to <code>64</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -564,9 +567,14 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
      * @param httpProtocolIpv6
-     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @see InstanceMetadataProtocolState
      */
 
@@ -578,8 +586,13 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
-     * @return Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     * @return Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.</p>
+     *         <p>
+     *         Default: <code>disabled</code>
      * @see InstanceMetadataProtocolState
      */
 
@@ -591,9 +604,14 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
      * @param httpProtocolIpv6
-     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataProtocolState
      */
@@ -607,9 +625,14 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
      * @param httpProtocolIpv6
-     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.
+     *        Indicates whether the IPv6 endpoint for the instance metadata service is enabled or disabled.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataProtocolState
      */

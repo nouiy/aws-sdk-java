@@ -36,8 +36,8 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * For more information about shared parameters, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     * parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> names;
@@ -60,8 +60,8 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * For more information about shared parameters, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     * parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @return The names or Amazon Resource Names (ARNs) of the parameters that you want to query. For parameters shared
@@ -71,9 +71,9 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <code>"Name": "name:version"</code>.
      *         </p>
      *         <p>
-     *         For more information about shared parameters, see <a
-     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     *         parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         For more information about shared parameters, see <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *         >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
 
     public java.util.List<String> getNames() {
@@ -94,8 +94,8 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * For more information about shared parameters, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     * parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param names
@@ -106,9 +106,9 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>"Name": "name:version"</code>.
      *        </p>
      *        <p>
-     *        For more information about shared parameters, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     *        parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about shared parameters, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
 
     public void setNames(java.util.Collection<String> names) {
@@ -131,8 +131,8 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * For more information about shared parameters, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     * parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -148,9 +148,9 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>"Name": "name:version"</code>.
      *        </p>
      *        <p>
-     *        For more information about shared parameters, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     *        parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about shared parameters, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,8 +175,8 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * For more information about shared parameters, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     * parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param names
@@ -187,9 +187,9 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>"Name": "name:version"</code>.
      *        </p>
      *        <p>
-     *        For more information about shared parameters, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sharing.html">Working with shared
-     *        parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about shared parameters, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
+     *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

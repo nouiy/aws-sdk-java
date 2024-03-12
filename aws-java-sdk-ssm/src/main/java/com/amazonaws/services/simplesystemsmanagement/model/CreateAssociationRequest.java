@@ -55,7 +55,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The document version you want to associate with the target(s). Can be a specific version or the default version.
+     * The document version you want to associate with the targets. Can be a specific version or the default version.
      * </p>
      * <important>
      * <p>
@@ -97,14 +97,14 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
      * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
-     * Manager User Guide</i>.
+     * >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Target> targets;
     /**
      * <p>
-     * A cron expression when the association will be applied to the target(s).
+     * A cron expression when the association will be applied to the targets.
      * </p>
      */
     private String scheduleExpression;
@@ -440,7 +440,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The document version you want to associate with the target(s). Can be a specific version or the default version.
+     * The document version you want to associate with the targets. Can be a specific version or the default version.
      * </p>
      * <important>
      * <p>
@@ -453,7 +453,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </important>
      * 
      * @param documentVersion
-     *        The document version you want to associate with the target(s). Can be a specific version or the default
+     *        The document version you want to associate with the targets. Can be a specific version or the default
      *        version.</p> <important>
      *        <p>
      *        State Manager doesn't support running associations that use a new version of a document if that document
@@ -470,7 +470,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The document version you want to associate with the target(s). Can be a specific version or the default version.
+     * The document version you want to associate with the targets. Can be a specific version or the default version.
      * </p>
      * <important>
      * <p>
@@ -482,7 +482,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * </important>
      * 
-     * @return The document version you want to associate with the target(s). Can be a specific version or the default
+     * @return The document version you want to associate with the targets. Can be a specific version or the default
      *         version.</p> <important>
      *         <p>
      *         State Manager doesn't support running associations that use a new version of a document if that document
@@ -499,7 +499,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The document version you want to associate with the target(s). Can be a specific version or the default version.
+     * The document version you want to associate with the targets. Can be a specific version or the default version.
      * </p>
      * <important>
      * <p>
@@ -512,7 +512,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </important>
      * 
      * @param documentVersion
-     *        The document version you want to associate with the target(s). Can be a specific version or the default
+     *        The document version you want to associate with the targets. Can be a specific version or the default
      *        version.</p> <important>
      *        <p>
      *        State Manager doesn't support running associations that use a new version of a document if that document
@@ -701,8 +701,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
      * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
-     * Manager User Guide</i>.
+     * >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
      * </p>
      * 
      * @return The targets for the association. You can target managed nodes by using tags, Amazon Web Services resource
@@ -711,8 +711,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *         with a value of <code>*</code>. For more information about choosing targets for an association, see <a
      *         href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     *         >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services
-     *         Systems Manager User Guide</i>.
+     *         >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems
+     *         Manager User Guide</i>.
      */
 
     public java.util.List<Target> getTargets() {
@@ -729,8 +729,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
      * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
-     * Manager User Guide</i>.
+     * >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
      * </p>
      * 
      * @param targets
@@ -740,7 +740,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        with a value of <code>*</code>. For more information about choosing targets for an association, see <a
      *        href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
+     *        >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
      */
 
@@ -760,8 +760,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
      * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
-     * Manager User Guide</i>.
+     * >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -776,7 +776,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        with a value of <code>*</code>. For more information about choosing targets for an association, see <a
      *        href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
+     *        >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -798,8 +798,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * nodes in an Amazon Web Services account by specifying the <code>InstanceIds</code> key with a value of
      * <code>*</code>. For more information about choosing targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
-     * Manager User Guide</i>.
+     * >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
      * </p>
      * 
      * @param targets
@@ -809,7 +809,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        with a value of <code>*</code>. For more information about choosing targets for an association, see <a
      *        href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
-     *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
+     *        >About targets and rate controls in State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -821,11 +821,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A cron expression when the association will be applied to the target(s).
+     * A cron expression when the association will be applied to the targets.
      * </p>
      * 
      * @param scheduleExpression
-     *        A cron expression when the association will be applied to the target(s).
+     *        A cron expression when the association will be applied to the targets.
      */
 
     public void setScheduleExpression(String scheduleExpression) {
@@ -834,10 +834,10 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A cron expression when the association will be applied to the target(s).
+     * A cron expression when the association will be applied to the targets.
      * </p>
      * 
-     * @return A cron expression when the association will be applied to the target(s).
+     * @return A cron expression when the association will be applied to the targets.
      */
 
     public String getScheduleExpression() {
@@ -846,11 +846,11 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A cron expression when the association will be applied to the target(s).
+     * A cron expression when the association will be applied to the targets.
      * </p>
      * 
      * @param scheduleExpression
-     *        A cron expression when the association will be applied to the target(s).
+     *        A cron expression when the association will be applied to the targets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

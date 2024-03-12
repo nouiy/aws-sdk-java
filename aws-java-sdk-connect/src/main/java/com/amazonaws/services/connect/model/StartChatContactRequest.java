@@ -65,7 +65,8 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     private ParticipantDetails participantDetails;
     /**
      * <p>
-     * The initial message to be sent to the newly created chat.
+     * The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial message
+     * is not delivered to the Lex bot.
      * </p>
      */
     private ChatMessage initialMessage;
@@ -413,11 +414,13 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The initial message to be sent to the newly created chat.
+     * The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial message
+     * is not delivered to the Lex bot.
      * </p>
      * 
      * @param initialMessage
-     *        The initial message to be sent to the newly created chat.
+     *        The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial
+     *        message is not delivered to the Lex bot.
      */
 
     public void setInitialMessage(ChatMessage initialMessage) {
@@ -426,10 +429,12 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The initial message to be sent to the newly created chat.
+     * The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial message
+     * is not delivered to the Lex bot.
      * </p>
      * 
-     * @return The initial message to be sent to the newly created chat.
+     * @return The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial
+     *         message is not delivered to the Lex bot.
      */
 
     public ChatMessage getInitialMessage() {
@@ -438,11 +443,13 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The initial message to be sent to the newly created chat.
+     * The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial message
+     * is not delivered to the Lex bot.
      * </p>
      * 
      * @param initialMessage
-     *        The initial message to be sent to the newly created chat.
+     *        The initial message to be sent to the newly created chat. If you have a Lex bot in your flow, the initial
+     *        message is not delivered to the Lex bot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

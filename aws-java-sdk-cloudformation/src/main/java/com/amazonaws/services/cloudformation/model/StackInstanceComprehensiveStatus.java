@@ -44,14 +44,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * </li>
      * <li>
      * <p>
-     * <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed and left
-     * the stack in an unstable state. Once the issues causing the failure are fixed, the import operation can be
-     * retried. If enough stack set operations fail in enough accounts within a Region, the failure tolerance for the
-     * stack set operation as a whole might be exceeded.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
@@ -101,14 +93,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * </li>
      * <li>
      * <p>
-     * <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed and left
-     * the stack in an unstable state. Once the issues causing the failure are fixed, the import operation can be
-     * retried. If enough stack set operations fail in enough accounts within a Region, the failure tolerance for the
-     * stack set operation as a whole might be exceeded.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
@@ -150,13 +134,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      *        <code>FAILED</code>: The operation in the specified account and Region failed. If the stack set operation
      *        fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole
      *        might be exceeded.
-     *        </p>
-     *        </li> <li>
-     *        <p>
-     *        <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed
-     *        and left the stack in an unstable state. Once the issues causing the failure are fixed, the import
-     *        operation can be retried. If enough stack set operations fail in enough accounts within a Region, the
-     *        failure tolerance for the stack set operation as a whole might be exceeded.
      *        </p>
      *        </li> <li>
      *        <p>
@@ -208,14 +185,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * </li>
      * <li>
      * <p>
-     * <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed and left
-     * the stack in an unstable state. Once the issues causing the failure are fixed, the import operation can be
-     * retried. If enough stack set operations fail in enough accounts within a Region, the failure tolerance for the
-     * stack set operation as a whole might be exceeded.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
@@ -256,13 +225,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      *         <code>FAILED</code>: The operation in the specified account and Region failed. If the stack set operation
      *         fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole
      *         might be exceeded.
-     *         </p>
-     *         </li> <li>
-     *         <p>
-     *         <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed
-     *         and left the stack in an unstable state. Once the issues causing the failure are fixed, the import
-     *         operation can be retried. If enough stack set operations fail in enough accounts within a Region, the
-     *         failure tolerance for the stack set operation as a whole might be exceeded.
      *         </p>
      *         </li> <li>
      *         <p>
@@ -314,14 +276,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * </li>
      * <li>
      * <p>
-     * <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed and left
-     * the stack in an unstable state. Once the issues causing the failure are fixed, the import operation can be
-     * retried. If enough stack set operations fail in enough accounts within a Region, the failure tolerance for the
-     * stack set operation as a whole might be exceeded.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
@@ -363,13 +317,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      *        <code>FAILED</code>: The operation in the specified account and Region failed. If the stack set operation
      *        fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole
      *        might be exceeded.
-     *        </p>
-     *        </li> <li>
-     *        <p>
-     *        <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed
-     *        and left the stack in an unstable state. Once the issues causing the failure are fixed, the import
-     *        operation can be retried. If enough stack set operations fail in enough accounts within a Region, the
-     *        failure tolerance for the stack set operation as a whole might be exceeded.
      *        </p>
      *        </li> <li>
      *        <p>
@@ -423,14 +370,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * </li>
      * <li>
      * <p>
-     * <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed and left
-     * the stack in an unstable state. Once the issues causing the failure are fixed, the import operation can be
-     * retried. If enough stack set operations fail in enough accounts within a Region, the failure tolerance for the
-     * stack set operation as a whole might be exceeded.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>INOPERABLE</code>: A <code>DeleteStackInstances</code> operation has failed and left the stack in an
      * unstable state. Stacks in this state are excluded from further <code>UpdateStackSet</code> operations. You might
      * need to perform a <code>DeleteStackInstances</code> operation, with <code>RetainStacks</code> set to
@@ -472,13 +411,6 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      *        <code>FAILED</code>: The operation in the specified account and Region failed. If the stack set operation
      *        fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole
      *        might be exceeded.
-     *        </p>
-     *        </li> <li>
-     *        <p>
-     *        <code>FAILED_IMPORT</code>: The import of the stack instance in the specified account and Region failed
-     *        and left the stack in an unstable state. Once the issues causing the failure are fixed, the import
-     *        operation can be retried. If enough stack set operations fail in enough accounts within a Region, the
-     *        failure tolerance for the stack set operation as a whole might be exceeded.
      *        </p>
      *        </li> <li>
      *        <p>

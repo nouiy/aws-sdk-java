@@ -48,7 +48,7 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A summary of the call execution that includes an execution ID, the type of execution (for example,
      * <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the following
-     * format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      */
     private ComplianceExecutionSummary executionSummary;
@@ -215,13 +215,13 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A summary of the call execution that includes an execution ID, the type of execution (for example,
      * <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the following
-     * format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * 
      * @param executionSummary
      *        A summary of the call execution that includes an execution ID, the type of execution (for example,
      *        <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the
-     *        following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     *        following format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      */
 
     public void setExecutionSummary(ComplianceExecutionSummary executionSummary) {
@@ -232,12 +232,12 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A summary of the call execution that includes an execution ID, the type of execution (for example,
      * <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the following
-     * format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * 
      * @return A summary of the call execution that includes an execution ID, the type of execution (for example,
      *         <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the
-     *         following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     *         following format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      */
 
     public ComplianceExecutionSummary getExecutionSummary() {
@@ -248,13 +248,13 @@ public class PutComplianceItemsRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A summary of the call execution that includes an execution ID, the type of execution (for example,
      * <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the following
-     * format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * 
      * @param executionSummary
      *        A summary of the call execution that includes an execution ID, the type of execution (for example,
      *        <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the
-     *        following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     *        following format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -60,6 +60,10 @@ public class TopicReplicationJsonUnmarshaller implements Unmarshaller<TopicRepli
                     context.nextToken();
                     topicReplication.setDetectAndCopyNewTopics(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("startingPosition", targetDepth)) {
+                    context.nextToken();
+                    topicReplication.setStartingPosition(ReplicationStartingPositionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("topicsToExclude", targetDepth)) {
                     context.nextToken();
                     topicReplication.setTopicsToExclude(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

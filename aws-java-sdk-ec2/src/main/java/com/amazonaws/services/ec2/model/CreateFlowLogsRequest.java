@@ -35,11 +35,12 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
     private String clientToken;
     /**
      * <p>
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your
-     * account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      * </p>
      * <p>
-     * This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported otherwise.
+     * This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the destination type
+     * is <code>kinesis-data-firehose</code> and the delivery stream and the resources to monitor are in different
+     * accounts.
      * </p>
      */
     private String deliverLogsPermissionArn;
@@ -231,19 +232,20 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your
-     * account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      * </p>
      * <p>
-     * This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported otherwise.
+     * This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the destination type
+     * is <code>kinesis-data-firehose</code> and the delivery stream and the resources to monitor are in different
+     * accounts.
      * </p>
      * 
      * @param deliverLogsPermissionArn
-     *        The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your
-     *        account.</p>
+     *        The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.</p>
      *        <p>
-     *        This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported
-     *        otherwise.
+     *        This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the destination
+     *        type is <code>kinesis-data-firehose</code> and the delivery stream and the resources to monitor are in
+     *        different accounts.
      */
 
     public void setDeliverLogsPermissionArn(String deliverLogsPermissionArn) {
@@ -252,18 +254,19 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your
-     * account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      * </p>
      * <p>
-     * This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported otherwise.
+     * This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the destination type
+     * is <code>kinesis-data-firehose</code> and the delivery stream and the resources to monitor are in different
+     * accounts.
      * </p>
      * 
-     * @return The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in
-     *         your account.</p>
+     * @return The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.</p>
      *         <p>
-     *         This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported
-     *         otherwise.
+     *         This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the
+     *         destination type is <code>kinesis-data-firehose</code> and the delivery stream and the resources to
+     *         monitor are in different accounts.
      */
 
     public String getDeliverLogsPermissionArn() {
@@ -272,19 +275,20 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your
-     * account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      * </p>
      * <p>
-     * This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported otherwise.
+     * This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the destination type
+     * is <code>kinesis-data-firehose</code> and the delivery stream and the resources to monitor are in different
+     * accounts.
      * </p>
      * 
      * @param deliverLogsPermissionArn
-     *        The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your
-     *        account.</p>
+     *        The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.</p>
      *        <p>
-     *        This parameter is required if the destination type is <code>cloud-watch-logs</code> and unsupported
-     *        otherwise.
+     *        This parameter is required if the destination type is <code>cloud-watch-logs</code>, or if the destination
+     *        type is <code>kinesis-data-firehose</code> and the delivery stream and the resources to monitor are in
+     *        different accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

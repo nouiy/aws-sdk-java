@@ -82,6 +82,9 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <p>
      * Enables or disables the IPv6 endpoint for the instance metadata service.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      */
     private String httpProtocolIpv6;
     /**
@@ -506,9 +509,14 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <p>
      * Enables or disables the IPv6 endpoint for the instance metadata service.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
      * @param httpProtocolIpv6
-     *        Enables or disables the IPv6 endpoint for the instance metadata service.
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @see InstanceMetadataProtocolState
      */
 
@@ -520,8 +528,13 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <p>
      * Enables or disables the IPv6 endpoint for the instance metadata service.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
-     * @return Enables or disables the IPv6 endpoint for the instance metadata service.
+     * @return Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *         <p>
+     *         Default: <code>disabled</code>
      * @see InstanceMetadataProtocolState
      */
 
@@ -533,9 +546,14 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <p>
      * Enables or disables the IPv6 endpoint for the instance metadata service.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
      * @param httpProtocolIpv6
-     *        Enables or disables the IPv6 endpoint for the instance metadata service.
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataProtocolState
      */
@@ -549,9 +567,14 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <p>
      * Enables or disables the IPv6 endpoint for the instance metadata service.
      * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
      * 
      * @param httpProtocolIpv6
-     *        Enables or disables the IPv6 endpoint for the instance metadata service.
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataProtocolState
      */

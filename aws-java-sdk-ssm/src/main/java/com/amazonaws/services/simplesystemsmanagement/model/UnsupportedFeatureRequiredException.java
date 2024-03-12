@@ -20,7 +20,7 @@ import javax.annotation.Generated;
  * applications released by Microsoft on on-premises servers and VMs, you must enable advanced instances. For more
  * information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances-advanced.html"
- * >Enabling the advanced-instances tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+ * >Turning on the advanced-instances tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

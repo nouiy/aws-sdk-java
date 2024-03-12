@@ -47,8 +47,9 @@ public class ModifyDocumentPermissionRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services user can
-     * either be a group of account IDs or <i>All</i>. This action has a higher priority than <i>AccountIdsToAdd</i>. If
-     * you specify an ID to add and the same ID to remove, the system removes access to the document.
+     * either be a group of account IDs or <i>All</i>. This action has a higher priority than
+     * <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes access to
+     * the document.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> accountIdsToRemove;
@@ -257,14 +258,15 @@ public class ModifyDocumentPermissionRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services user can
-     * either be a group of account IDs or <i>All</i>. This action has a higher priority than <i>AccountIdsToAdd</i>. If
-     * you specify an ID to add and the same ID to remove, the system removes access to the document.
+     * either be a group of account IDs or <i>All</i>. This action has a higher priority than
+     * <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes access to
+     * the document.
      * </p>
      * 
      * @return The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services
      *         user can either be a group of account IDs or <i>All</i>. This action has a higher priority than
-     *         <i>AccountIdsToAdd</i>. If you specify an ID to add and the same ID to remove, the system removes access
-     *         to the document.
+     *         <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes
+     *         access to the document.
      */
 
     public java.util.List<String> getAccountIdsToRemove() {
@@ -277,15 +279,16 @@ public class ModifyDocumentPermissionRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services user can
-     * either be a group of account IDs or <i>All</i>. This action has a higher priority than <i>AccountIdsToAdd</i>. If
-     * you specify an ID to add and the same ID to remove, the system removes access to the document.
+     * either be a group of account IDs or <i>All</i>. This action has a higher priority than
+     * <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes access to
+     * the document.
      * </p>
      * 
      * @param accountIdsToRemove
      *        The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services
      *        user can either be a group of account IDs or <i>All</i>. This action has a higher priority than
-     *        <i>AccountIdsToAdd</i>. If you specify an ID to add and the same ID to remove, the system removes access
-     *        to the document.
+     *        <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes
+     *        access to the document.
      */
 
     public void setAccountIdsToRemove(java.util.Collection<String> accountIdsToRemove) {
@@ -300,8 +303,9 @@ public class ModifyDocumentPermissionRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services user can
-     * either be a group of account IDs or <i>All</i>. This action has a higher priority than <i>AccountIdsToAdd</i>. If
-     * you specify an ID to add and the same ID to remove, the system removes access to the document.
+     * either be a group of account IDs or <i>All</i>. This action has a higher priority than
+     * <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes access to
+     * the document.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -312,8 +316,8 @@ public class ModifyDocumentPermissionRequest extends com.amazonaws.AmazonWebServ
      * @param accountIdsToRemove
      *        The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services
      *        user can either be a group of account IDs or <i>All</i>. This action has a higher priority than
-     *        <i>AccountIdsToAdd</i>. If you specify an ID to add and the same ID to remove, the system removes access
-     *        to the document.
+     *        <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes
+     *        access to the document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -330,15 +334,16 @@ public class ModifyDocumentPermissionRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services user can
-     * either be a group of account IDs or <i>All</i>. This action has a higher priority than <i>AccountIdsToAdd</i>. If
-     * you specify an ID to add and the same ID to remove, the system removes access to the document.
+     * either be a group of account IDs or <i>All</i>. This action has a higher priority than
+     * <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes access to
+     * the document.
      * </p>
      * 
      * @param accountIdsToRemove
      *        The Amazon Web Services users that should no longer have access to the document. The Amazon Web Services
      *        user can either be a group of account IDs or <i>All</i>. This action has a higher priority than
-     *        <i>AccountIdsToAdd</i>. If you specify an ID to add and the same ID to remove, the system removes access
-     *        to the document.
+     *        <code>AccountIdsToAdd</code>. If you specify an ID to add and the same ID to remove, the system removes
+     *        access to the document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

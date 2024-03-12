@@ -48,7 +48,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the CloudFormation User Guide.
+     * >property</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String requiresRecreation;
@@ -189,7 +189,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the CloudFormation User Guide.
+     * >property</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param requiresRecreation
@@ -198,7 +198,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the CloudFormation User Guide.
+     *        >property</a> in the <i>CloudFormation User Guide</i>.
      * @see RequiresRecreation
      */
 
@@ -213,7 +213,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the CloudFormation User Guide.
+     * >property</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return If the <code>Attribute</code> value is <code>Properties</code>, indicates whether a change to this
@@ -221,7 +221,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *         or <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation,
      *         see the update behavior for that <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *         >property</a> in the CloudFormation User Guide.
+     *         >property</a> in the <i>CloudFormation User Guide</i>.
      * @see RequiresRecreation
      */
 
@@ -236,7 +236,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the CloudFormation User Guide.
+     * >property</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param requiresRecreation
@@ -245,7 +245,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the CloudFormation User Guide.
+     *        >property</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RequiresRecreation
      */
@@ -262,7 +262,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the CloudFormation User Guide.
+     * >property</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param requiresRecreation
@@ -271,7 +271,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the CloudFormation User Guide.
+     *        >property</a> in the <i>CloudFormation User Guide</i>.
      * @see RequiresRecreation
      */
 
@@ -286,7 +286,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the CloudFormation User Guide.
+     * >property</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param requiresRecreation
@@ -295,7 +295,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the CloudFormation User Guide.
+     *        >property</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RequiresRecreation
      */

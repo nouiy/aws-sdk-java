@@ -48,6 +48,12 @@ public class TopicReplication implements Serializable, Cloneable, StructuredPojo
     private Boolean detectAndCopyNewTopics;
     /**
      * <p>
+     * Configuration for specifying the position in the topics to start replicating from.
+     * </p>
+     */
+    private ReplicationStartingPosition startingPosition;
+    /**
+     * <p>
      * List of regular expression patterns indicating the topics that should not be replicated.
      * </p>
      */
@@ -217,6 +223,46 @@ public class TopicReplication implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * Configuration for specifying the position in the topics to start replicating from.
+     * </p>
+     * 
+     * @param startingPosition
+     *        Configuration for specifying the position in the topics to start replicating from.
+     */
+
+    public void setStartingPosition(ReplicationStartingPosition startingPosition) {
+        this.startingPosition = startingPosition;
+    }
+
+    /**
+     * <p>
+     * Configuration for specifying the position in the topics to start replicating from.
+     * </p>
+     * 
+     * @return Configuration for specifying the position in the topics to start replicating from.
+     */
+
+    public ReplicationStartingPosition getStartingPosition() {
+        return this.startingPosition;
+    }
+
+    /**
+     * <p>
+     * Configuration for specifying the position in the topics to start replicating from.
+     * </p>
+     * 
+     * @param startingPosition
+     *        Configuration for specifying the position in the topics to start replicating from.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TopicReplication withStartingPosition(ReplicationStartingPosition startingPosition) {
+        setStartingPosition(startingPosition);
+        return this;
+    }
+
+    /**
+     * <p>
      * List of regular expression patterns indicating the topics that should not be replicated.
      * </p>
      * 
@@ -373,6 +419,8 @@ public class TopicReplication implements Serializable, Cloneable, StructuredPojo
             sb.append("CopyTopicConfigurations: ").append(getCopyTopicConfigurations()).append(",");
         if (getDetectAndCopyNewTopics() != null)
             sb.append("DetectAndCopyNewTopics: ").append(getDetectAndCopyNewTopics()).append(",");
+        if (getStartingPosition() != null)
+            sb.append("StartingPosition: ").append(getStartingPosition()).append(",");
         if (getTopicsToExclude() != null)
             sb.append("TopicsToExclude: ").append(getTopicsToExclude()).append(",");
         if (getTopicsToReplicate() != null)
@@ -404,6 +452,10 @@ public class TopicReplication implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDetectAndCopyNewTopics() != null && other.getDetectAndCopyNewTopics().equals(this.getDetectAndCopyNewTopics()) == false)
             return false;
+        if (other.getStartingPosition() == null ^ this.getStartingPosition() == null)
+            return false;
+        if (other.getStartingPosition() != null && other.getStartingPosition().equals(this.getStartingPosition()) == false)
+            return false;
         if (other.getTopicsToExclude() == null ^ this.getTopicsToExclude() == null)
             return false;
         if (other.getTopicsToExclude() != null && other.getTopicsToExclude().equals(this.getTopicsToExclude()) == false)
@@ -423,6 +475,7 @@ public class TopicReplication implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getCopyAccessControlListsForTopics() == null) ? 0 : getCopyAccessControlListsForTopics().hashCode());
         hashCode = prime * hashCode + ((getCopyTopicConfigurations() == null) ? 0 : getCopyTopicConfigurations().hashCode());
         hashCode = prime * hashCode + ((getDetectAndCopyNewTopics() == null) ? 0 : getDetectAndCopyNewTopics().hashCode());
+        hashCode = prime * hashCode + ((getStartingPosition() == null) ? 0 : getStartingPosition().hashCode());
         hashCode = prime * hashCode + ((getTopicsToExclude() == null) ? 0 : getTopicsToExclude().hashCode());
         hashCode = prime * hashCode + ((getTopicsToReplicate() == null) ? 0 : getTopicsToReplicate().hashCode());
         return hashCode;

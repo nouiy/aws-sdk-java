@@ -74,8 +74,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The target EBS volume type of the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Default: The existing type is retained.
@@ -138,8 +138,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      */
     private Boolean multiAttachEnabled;
@@ -428,8 +428,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The target EBS volume type of the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Default: The existing type is retained.
@@ -437,8 +437,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @param volumeType
      *        The target EBS volume type of the volume. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        Default: The existing type is retained.
      * @see VolumeType
@@ -451,16 +451,16 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The target EBS volume type of the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Default: The existing type is retained.
      * </p>
      * 
      * @return The target EBS volume type of the volume. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume
-     *         types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *         in the <i>Amazon EBS User Guide</i>.</p>
      *         <p>
      *         Default: The existing type is retained.
      * @see VolumeType
@@ -473,8 +473,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The target EBS volume type of the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Default: The existing type is retained.
@@ -482,8 +482,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @param volumeType
      *        The target EBS volume type of the volume. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        Default: The existing type is retained.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -498,8 +498,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The target EBS volume type of the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Default: The existing type is retained.
@@ -507,8 +507,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @param volumeType
      *        The target EBS volume type of the volume. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        Default: The existing type is retained.
      * @see VolumeType
@@ -521,8 +521,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The target EBS volume type of the volume. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a> in the
+     * <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * Default: The existing type is retained.
@@ -530,8 +530,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @param volumeType
      *        The target EBS volume type of the volume. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
-     *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html">Amazon EBS volume types</a>
+     *        in the <i>Amazon EBS User Guide</i>.</p>
      *        <p>
      *        Default: The existing type is retained.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -854,8 +854,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param multiAttachEnabled
@@ -864,8 +864,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      *        Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
      *        and <code>io2</code> volumes only. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS
-     *        Multi-Attach</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
+     *        Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
 
     public void setMultiAttachEnabled(Boolean multiAttachEnabled) {
@@ -878,8 +878,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @return Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the
@@ -887,8 +887,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      *         Nitro-based instances</a> in the same Availability Zone. This parameter is supported with
      *         <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS
-     *         Multi-Attach</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
+     *         Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
 
     public Boolean getMultiAttachEnabled() {
@@ -901,8 +901,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param multiAttachEnabled
@@ -911,8 +911,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      *        Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
      *        and <code>io2</code> volumes only. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS
-     *        Multi-Attach</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
+     *        Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -927,8 +927,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
+     * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @return Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the
@@ -936,8 +936,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
      *         Nitro-based instances</a> in the same Availability Zone. This parameter is supported with
      *         <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"> Amazon EBS
-     *         Multi-Attach</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
+     *         Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
 
     public Boolean isMultiAttachEnabled() {

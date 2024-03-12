@@ -63,16 +63,15 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      */
     private Integer fromPort;
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      */
     private Integer toPort;
@@ -352,14 +351,12 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      * 
      * @param fromPort
      *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6,
-     *        this is the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6
-     *        types, you must specify all ICMP/ICMPv6 codes.
+     *        this is the ICMP type or -1 (all ICMP types).
      */
 
     public void setFromPort(Integer fromPort) {
@@ -369,13 +366,11 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      * 
      * @return If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6,
-     *         this is the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6
-     *         types, you must specify all ICMP/ICMPv6 codes.
+     *         this is the ICMP type or -1 (all ICMP types).
      */
 
     public Integer getFromPort() {
@@ -385,14 +380,12 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6, this is
-     * the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * the ICMP type or -1 (all ICMP types).
      * </p>
      * 
      * @param fromPort
      *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP or ICMPv6,
-     *        this is the type number. A value of -1 indicates all ICMP/ICMPv6 types. If you specify all ICMP/ICMPv6
-     *        types, you must specify all ICMP/ICMPv6 codes.
+     *        this is the ICMP type or -1 (all ICMP types).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -404,14 +397,14 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      * 
      * @param toPort
      *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this
-     *        is the type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types,
-     *        you must specify all ICMP/ICMPv6 codes.
+     *        is the ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must
+     *        be -1 (all ICMP codes).
      */
 
     public void setToPort(Integer toPort) {
@@ -421,13 +414,13 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      * 
      * @return If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this
-     *         is the type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types,
-     *         you must specify all ICMP/ICMPv6 codes.
+     *         is the ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must
+     *         be -1 (all ICMP codes).
      */
 
     public Integer getToPort() {
@@ -437,14 +430,14 @@ public class SecurityGroupRule implements Serializable, Cloneable {
     /**
      * <p>
      * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this is the
-     * type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types, you must
-     * specify all ICMP/ICMPv6 codes.
+     * ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must be -1 (all
+     * ICMP codes).
      * </p>
      * 
      * @param toPort
      *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP or ICMPv6, this
-     *        is the type number. A value of -1 indicates all ICMP/ICMPv6 codes. If you specify all ICMP/ICMPv6 types,
-     *        you must specify all ICMP/ICMPv6 codes.
+     *        is the ICMP code or -1 (all ICMP codes). If the start port is -1 (all ICMP types), then the end port must
+     *        be -1 (all ICMP codes).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -37,20 +37,22 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (Amazon Web Services API)</a>
+     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console">
+     * Create an SSM document (console)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create an SSM
-     * document (Amazon Web Services CLI)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     * >Create an SSM document (command line)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (API)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     * >Create an SSM document (API)</a>
      * </p>
      * </li>
      * </ul>
@@ -183,20 +185,22 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (Amazon Web Services API)</a>
+     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console">
+     * Create an SSM document (console)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create an SSM
-     * document (Amazon Web Services CLI)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     * >Create an SSM document (command line)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (API)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     * >Create an SSM document (API)</a>
      * </p>
      * </li>
      * </ul>
@@ -212,20 +216,23 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create
-     *        an SSM document (Amazon Web Services API)</a>
+     *        <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console"
+     *        >Create an SSM document (console)</a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create
-     *        an SSM document (Amazon Web Services CLI)</a>
+     *        <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     *        >Create an SSM document (command line)</a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create
-     *        an SSM document (API)</a>
+     *        <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     *        >Create an SSM document (API)</a>
      *        </p>
      *        </li>
      */
@@ -246,20 +253,22 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (Amazon Web Services API)</a>
+     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console">
+     * Create an SSM document (console)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create an SSM
-     * document (Amazon Web Services CLI)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     * >Create an SSM document (command line)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (API)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     * >Create an SSM document (API)</a>
      * </p>
      * </li>
      * </ul>
@@ -274,23 +283,23 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <ul>
      *         <li>
      *         <p>
-     *         <a
-     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create
-     *         an SSM document (Amazon Web Services API)</a>
+     *         <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console"
+     *         >Create an SSM document (console)</a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <a
-     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create
-     *         an SSM document (Amazon Web Services CLI)</a>
+     *         <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     *         >Create an SSM document (command line)</a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <a
-     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create
-     *         an SSM document (API)</a>
+     *         <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     *         >Create an SSM document (API)</a>
      *         </p>
      *         </li>
      */
@@ -311,20 +320,22 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (Amazon Web Services API)</a>
+     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console">
+     * Create an SSM document (console)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create an SSM
-     * document (Amazon Web Services CLI)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     * >Create an SSM document (command line)</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create an SSM
-     * document (API)</a>
+     * <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     * >Create an SSM document (API)</a>
      * </p>
      * </li>
      * </ul>
@@ -340,20 +351,23 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create
-     *        an SSM document (Amazon Web Services API)</a>
+     *        <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-console"
+     *        >Create an SSM document (console)</a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html">Create
-     *        an SSM document (Amazon Web Services CLI)</a>
+     *        <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-cli"
+     *        >Create an SSM document (command line)</a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html">Create
-     *        an SSM document (API)</a>
+     *        <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/documents-using.html#create-ssm-document-api"
+     *        >Create an SSM document (API)</a>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

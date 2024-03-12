@@ -126,7 +126,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * For more information about how to send commands that target managed nodes using <code>Key,Value</code> parameters,
  * see <a href=
  * "https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-targeting"
- * >Targeting multiple instances</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+ * >Targeting multiple managed nodes</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/Target" target="_top">AWS API Documentation</a>

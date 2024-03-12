@@ -216,7 +216,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account. Advanced
      * parameters incur a charge. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     * >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced parameter
@@ -286,9 +286,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * For more information about configuring the default tier option, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a default
-     * parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * For more information about configuring the default tier option, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     * >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      */
     private String tier;
@@ -365,7 +365,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * notifications or trigger actions based on Parameter Store events</a>. For more information about AMI format
      * validation , see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html">Native
-     * parameter support for Amazon Machine Image (AMI) IDs</a>.
+     * parameter support for Amazon Machine Image IDs</a>.
      * </p>
      * </note>
      */
@@ -1641,7 +1641,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account. Advanced
      * parameters incur a charge. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     * >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced parameter
@@ -1711,9 +1711,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * For more information about configuring the default tier option, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a default
-     * parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * For more information about configuring the default tier option, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     * >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param tier
@@ -1729,7 +1729,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        can create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account.
      *        Advanced parameters incur a charge. For more information, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     *        >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *        </p>
      *        <p>
      *        You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced
@@ -1799,9 +1799,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information about configuring the default tier option, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a
-     *        default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about configuring the default tier option, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     *        >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @see ParameterTier
      */
 
@@ -1824,7 +1824,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account. Advanced
      * parameters incur a charge. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     * >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced parameter
@@ -1894,9 +1894,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * For more information about configuring the default tier option, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a default
-     * parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * For more information about configuring the default tier option, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     * >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @return The parameter tier to assign to a parameter.</p>
@@ -1911,7 +1911,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         You can create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services
      *         account. Advanced parameters incur a charge. For more information, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     *         >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *         </p>
      *         <p>
      *         You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced
@@ -1981,9 +1981,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information about configuring the default tier option, see <a
-     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a
-     *         default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         For more information about configuring the default tier option, see <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     *         >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @see ParameterTier
      */
 
@@ -2006,7 +2006,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account. Advanced
      * parameters incur a charge. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     * >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced parameter
@@ -2076,9 +2076,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * For more information about configuring the default tier option, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a default
-     * parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * For more information about configuring the default tier option, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     * >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param tier
@@ -2094,7 +2094,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        can create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account.
      *        Advanced parameters incur a charge. For more information, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     *        >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *        </p>
      *        <p>
      *        You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced
@@ -2164,9 +2164,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information about configuring the default tier option, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a
-     *        default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about configuring the default tier option, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     *        >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParameterTier
      */
@@ -2191,7 +2191,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account. Advanced
      * parameters incur a charge. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     * >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced parameter
@@ -2261,9 +2261,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * For more information about configuring the default tier option, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a default
-     * parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * For more information about configuring the default tier option, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     * >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param tier
@@ -2279,7 +2279,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        can create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account.
      *        Advanced parameters incur a charge. For more information, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     *        >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *        </p>
      *        <p>
      *        You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced
@@ -2349,9 +2349,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information about configuring the default tier option, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a
-     *        default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about configuring the default tier option, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     *        >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @see ParameterTier
      */
 
@@ -2374,7 +2374,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account. Advanced
      * parameters incur a charge. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     * >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced parameter
@@ -2444,9 +2444,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * For more information about configuring the default tier option, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a default
-     * parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * For more information about configuring the default tier option, see <a href=
+     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     * >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param tier
@@ -2462,7 +2462,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        can create a maximum of 100,000 advanced parameters for each Region in an Amazon Web Services account.
      *        Advanced parameters incur a charge. For more information, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html"
-     *        >Standard and advanced parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Managing parameter tiers</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      *        </p>
      *        <p>
      *        You can change a standard parameter to an advanced parameter any time. But you can't revert an advanced
@@ -2532,9 +2532,9 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information about configuring the default tier option, see <a
-     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-default-tier.html">Specifying a
-     *        default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        For more information about configuring the default tier option, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html#ps-default-tier"
+     *        >Specifying a default parameter tier</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParameterTier
      */
@@ -2763,7 +2763,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * notifications or trigger actions based on Parameter Store events</a>. For more information about AMI format
      * validation , see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html">Native
-     * parameter support for Amazon Machine Image (AMI) IDs</a>.
+     * parameter support for Amazon Machine Image IDs</a>.
      * </p>
      * </note>
      * 
@@ -2810,7 +2810,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        notifications or trigger actions based on Parameter Store events</a>. For more information about AMI
      *        format validation , see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html"
-     *        >Native parameter support for Amazon Machine Image (AMI) IDs</a>.
+     *        >Native parameter support for Amazon Machine Image IDs</a>.
      *        </p>
      */
 
@@ -2862,7 +2862,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * notifications or trigger actions based on Parameter Store events</a>. For more information about AMI format
      * validation , see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html">Native
-     * parameter support for Amazon Machine Image (AMI) IDs</a>.
+     * parameter support for Amazon Machine Image IDs</a>.
      * </p>
      * </note>
      * 
@@ -2908,7 +2908,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         notifications or trigger actions based on Parameter Store events</a>. For more information about AMI
      *         format validation , see <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html"
-     *         >Native parameter support for Amazon Machine Image (AMI) IDs</a>.
+     *         >Native parameter support for Amazon Machine Image IDs</a>.
      *         </p>
      */
 
@@ -2960,7 +2960,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * notifications or trigger actions based on Parameter Store events</a>. For more information about AMI format
      * validation , see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html">Native
-     * parameter support for Amazon Machine Image (AMI) IDs</a>.
+     * parameter support for Amazon Machine Image IDs</a>.
      * </p>
      * </note>
      * 
@@ -3007,7 +3007,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        notifications or trigger actions based on Parameter Store events</a>. For more information about AMI
      *        format validation , see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html"
-     *        >Native parameter support for Amazon Machine Image (AMI) IDs</a>.
+     *        >Native parameter support for Amazon Machine Image IDs</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

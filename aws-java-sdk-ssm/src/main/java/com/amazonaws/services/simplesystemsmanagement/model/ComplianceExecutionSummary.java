@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * A summary of the call execution that includes an execution ID, the type of execution (for example,
  * <code>Command</code>), and the date/time of the execution using a datetime object that is saved in the following
- * format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+ * format: <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/ComplianceExecutionSummary" target="_top">AWS API
@@ -32,7 +32,8 @@ public class ComplianceExecutionSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time the execution ran as a datetime object that is saved in the following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * The time the execution ran as a datetime object that is saved in the following format:
+     * <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      */
     private java.util.Date executionTime;
@@ -52,12 +53,13 @@ public class ComplianceExecutionSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time the execution ran as a datetime object that is saved in the following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * The time the execution ran as a datetime object that is saved in the following format:
+     * <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * 
      * @param executionTime
      *        The time the execution ran as a datetime object that is saved in the following format:
-     *        yyyy-MM-dd'T'HH:mm:ss'Z'.
+     *        <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      */
 
     public void setExecutionTime(java.util.Date executionTime) {
@@ -66,11 +68,12 @@ public class ComplianceExecutionSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time the execution ran as a datetime object that is saved in the following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * The time the execution ran as a datetime object that is saved in the following format:
+     * <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * 
      * @return The time the execution ran as a datetime object that is saved in the following format:
-     *         yyyy-MM-dd'T'HH:mm:ss'Z'.
+     *         <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      */
 
     public java.util.Date getExecutionTime() {
@@ -79,12 +82,13 @@ public class ComplianceExecutionSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The time the execution ran as a datetime object that is saved in the following format: yyyy-MM-dd'T'HH:mm:ss'Z'.
+     * The time the execution ran as a datetime object that is saved in the following format:
+     * <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * </p>
      * 
      * @param executionTime
      *        The time the execution ran as a datetime object that is saved in the following format:
-     *        yyyy-MM-dd'T'HH:mm:ss'Z'.
+     *        <code>yyyy-MM-dd'T'HH:mm:ss'Z'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

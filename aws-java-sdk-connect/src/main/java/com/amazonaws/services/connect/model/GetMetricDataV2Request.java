@@ -176,8 +176,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      * <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     * <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     * <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * </li>
      * <li>
@@ -218,8 +219,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      * <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     * <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      */
     private java.util.List<String> groupings;
@@ -240,6 +241,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     * >Abandonment rate</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ADHERENT_TIME</dt>
      * <dd>
@@ -254,6 +260,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     * >Adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ANSWER_RATE</dt>
      * <dd>
@@ -262,6 +273,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     * >Agent answer rate</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -272,6 +288,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     * >Non-adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE</dt>
      * <dd>
@@ -280,6 +301,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     * >Agent non-response</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -293,6 +319,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     * >Agent non-response without customer abandons</a>
+     * </p>
      * </dd>
      * <dt>AGENT_OCCUPANCY</dt>
      * <dd>
@@ -301,6 +332,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     * >Occupancy</a>
      * </p>
      * </dd>
      * <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -316,6 +352,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     * >Adherence</a>
+     * </p>
      * </dd>
      * <dt>AGENT_SCHEDULED_TIME</dt>
      * <dd>
@@ -330,6 +371,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     * >Scheduled time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ABANDON_TIME</dt>
      * <dd>
@@ -340,6 +386,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     * >Average queue abandon time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ACTIVE_TIME</dt>
      * <dd>
@@ -348,6 +399,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     * >Average active time</a>
      * </p>
      * </dd>
      * <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -361,6 +417,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     * >Average after contact work time</a>
      * </p>
      * <note>
      * <p>
@@ -380,6 +441,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     * >Average agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -393,6 +459,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     * >Average agent pause time</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     * >Average contacts per case</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     * <dd>
+     * <p>
+     * Unit: Seconds
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     * >Average case resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_CONTACT_DURATION</dt>
      * <dd>
@@ -402,6 +507,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     * >Average contact duration</a>
      * </p>
      * <note>
      * <p>
@@ -417,6 +527,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     * >Average conversation duration</a>
+     * </p>
      * </dd>
      * <dt>AVG_GREETING_TIME_AGENT</dt>
      * <dd>
@@ -430,6 +545,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     * >Average greeting time agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
      * <dd>
@@ -439,6 +559,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     * >Average handle time</a>
      * </p>
      * <note>
      * <p>
@@ -454,6 +579,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     * >Average customer hold time</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -468,6 +598,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     * >Average customer hold time all contacts</a>
+     * </p>
      * </dd>
      * <dt>AVG_HOLDS</dt>
      * <dd>
@@ -477,6 +612,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     * >Average holds</a>
      * </p>
      * <note>
      * <p>
@@ -492,6 +632,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     * >Average agent interaction and customer hold time</a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERACTION_TIME</dt>
      * <dd>
@@ -503,6 +648,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     * >Average agent interaction time</a>
      * </p>
      * <note>
      * <p>
@@ -521,6 +671,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     * >Average interruptions agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      * <dd>
@@ -533,6 +688,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     * >Average interruption time agent</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -547,6 +707,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     * >Average non-talk time</a>
+     * </p>
      * </dd>
      * <dt>AVG_QUEUE_ANSWER_TIME</dt>
      * <dd>
@@ -555,6 +720,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     * >Average queue answer time</a>
      * </p>
      * <note>
      * <p>
@@ -569,6 +739,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     * >Average resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME</dt>
      * <dd>
@@ -581,6 +756,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     * >Average talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_AGENT</dt>
@@ -595,6 +775,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     * >Average talk time agent</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -608,6 +793,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     * >Average talk time customer</a>
+     * </p>
+     * </dd>
+     * <dt>CASES_CREATED</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     * >Cases created</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ABANDONED</dt>
      * <dd>
@@ -617,6 +824,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     * >Contact abandoned</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_CREATED</dt>
@@ -629,6 +841,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     * >Contacts created</a>
      * </p>
      * <note>
      * <p>
@@ -647,6 +864,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     * >API contacts handled</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -663,6 +885,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts handled by Connected to agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
@@ -673,6 +900,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts hold disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      * <dd>
@@ -681,6 +913,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     * >Contacts hold agent disconnect</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -691,6 +928,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts hold customer disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_PUT_ON_HOLD</dt>
      * <dd>
@@ -699,6 +941,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts put on hold</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -709,6 +956,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     * >Contacts transferred out external</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      * <dd>
@@ -717,6 +969,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     * >Contacts transferred out internal</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED</dt>
@@ -728,6 +985,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     * >Contacts queued</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      * <dd>
@@ -736,6 +998,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     * >Contacts queued by Enqueue</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -750,6 +1017,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     * >Contacts resolved in X</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT</dt>
      * <dd>
@@ -759,6 +1031,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     * >Contacts transferred out</a>
      * </p>
      * <note>
      * <p>
@@ -774,6 +1051,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out by agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      * <dd>
@@ -783,6 +1065,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out queue</a>
+     * </p>
+     * </dd>
+     * <dt>CURRENT_CASES</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     * >Current cases</a>
      * </p>
      * </dd>
      * <dt>MAX_QUEUED_TIME</dt>
@@ -794,6 +1098,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     * >Maximum queued time</a>
+     * </p>
+     * </dd>
+     * <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     * <dd>
+     * <p>
+     * Unit: Percent
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     * >Cases resolved on first contact</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      * <dd>
@@ -803,6 +1129,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      * <dd>
@@ -811,6 +1140,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: Not available
      * </p>
      * </dd>
      * <dt>PERCENT_NON_TALK_TIME</dt>
@@ -825,6 +1157,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     * >Non-talk time percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME</dt>
      * <dd>
@@ -837,6 +1174,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     * >Talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -851,6 +1193,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     * >Talk time agent percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -863,6 +1210,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     * >Talk time customer percent</a>
+     * </p>
+     * </dd>
+     * <dt>REOPENED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     * >Cases reopened</a>
+     * </p>
+     * </dd>
+     * <dt>RESOLVED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     * >Cases resolved</a>
      * </p>
      * </dd>
      * <dt>SERVICE_LEVEL</dt>
@@ -880,6 +1266,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     * >Service level X</a>
+     * </p>
      * </dd>
      * <dt>STEP_CONTACTS_QUEUED</dt>
      * <dd>
@@ -889,6 +1280,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      * <dd>
@@ -897,6 +1291,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     * >After contact work time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -912,6 +1311,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     * >Agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -925,6 +1329,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     * >Contact flow time</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACT_TIME_AGENT</dt>
      * <dd>
@@ -933,6 +1342,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     * >Agent on contact time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -947,6 +1361,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     * >Contacts answered in X seconds</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -959,6 +1378,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     * >Contacts abandoned in X seconds</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -973,6 +1397,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     * >Contact disconnected</a>
+     * </p>
      * </dd>
      * <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      * <dd>
@@ -981,6 +1410,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     * >Error status time</a>
      * </p>
      * </dd>
      * <dt>SUM_HANDLE_TIME</dt>
@@ -991,6 +1425,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     * >Contact handle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_HOLD_TIME</dt>
      * <dd>
@@ -999,6 +1438,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     * >Customer hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -1009,6 +1453,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     * >Agent idle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      * <dd>
@@ -1017,6 +1466,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     * >Agent interaction and hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_INTERACTION_TIME</dt>
@@ -1027,6 +1481,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     * >Agent interaction time</a>
+     * </p>
      * </dd>
      * <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      * <dd>
@@ -1035,6 +1494,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     * >Non-Productive Time</a>
      * </p>
      * </dd>
      * <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -1045,6 +1509,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     * >Online time</a>
+     * </p>
      * </dd>
      * <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      * <dd>
@@ -1053,6 +1522,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     * >Callback attempts</a>
      * </p>
      * </dd>
      * </dl>
@@ -1696,8 +2170,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      * <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     * <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     * <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * </li>
      * <li>
@@ -1780,8 +2255,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      *         <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *         <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *         <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     *         <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     *         <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     *         <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     *         <code>ROUTING_STEP_EXPRESSION</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1871,8 +2347,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      * <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     * <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     * <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * </li>
      * <li>
@@ -1956,8 +2433,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     *        <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     *        <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     *        <code>ROUTING_STEP_EXPRESSION</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2052,8 +2530,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      * <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     * <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     * <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * </li>
      * <li>
@@ -2142,8 +2621,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     *        <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     *        <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     *        <code>ROUTING_STEP_EXPRESSION</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2240,8 +2720,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      * <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     * <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     * <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * </li>
      * <li>
@@ -2325,8 +2806,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> | <code>CHANNEL</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> |
-     *        <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
+     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>FEATURE</code> | <code>CASE_TEMPLATE_ARN</code> |
+     *        <code>CASE_STATUS</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+     *        <code>ROUTING_STEP_EXPRESSION</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2372,8 +2854,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      * <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     * <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * 
      * @return The grouping applied to the metrics that are returned. For example, when results are grouped by queue,
@@ -2386,8 +2868,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      *         <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *         <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *         <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     *         <code>ROUTING_STEP_EXPRESSION</code>
+     *         <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     *         <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      */
 
     public java.util.List<String> getGroupings() {
@@ -2407,8 +2889,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      * <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     * <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * 
      * @param groupings
@@ -2422,8 +2904,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      *        <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     *        <code>ROUTING_STEP_EXPRESSION</code>
+     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     *        <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      */
 
     public void setGroupings(java.util.Collection<String> groupings) {
@@ -2448,8 +2930,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      * <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     * <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2468,8 +2950,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      *        <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     *        <code>ROUTING_STEP_EXPRESSION</code>
+     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     *        <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2496,8 +2978,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      * <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      * <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     * <code>ROUTING_STEP_EXPRESSION</code>
+     * <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     * <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * </p>
      * 
      * @param groupings
@@ -2511,8 +2993,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid grouping keys: <code>QUEUE</code> | <code>ROUTING_PROFILE</code> | <code>AGENT</code> |
      *        <code>CHANNEL</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
      *        <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code>, <code>contact/segmentAttributes/connect:Subtype</code> |
-     *        <code>ROUTING_STEP_EXPRESSION</code>
+     *        <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+     *        <code>contact/segmentAttributes/connect:Subtype</code> | <code>ROUTING_STEP_EXPRESSION</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2538,6 +3020,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     * >Abandonment rate</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ADHERENT_TIME</dt>
      * <dd>
@@ -2552,6 +3039,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     * >Adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ANSWER_RATE</dt>
      * <dd>
@@ -2560,6 +3052,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     * >Agent answer rate</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -2570,6 +3067,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     * >Non-adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE</dt>
      * <dd>
@@ -2578,6 +3080,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     * >Agent non-response</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -2591,6 +3098,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     * >Agent non-response without customer abandons</a>
+     * </p>
      * </dd>
      * <dt>AGENT_OCCUPANCY</dt>
      * <dd>
@@ -2599,6 +3111,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     * >Occupancy</a>
      * </p>
      * </dd>
      * <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -2614,6 +3131,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     * >Adherence</a>
+     * </p>
      * </dd>
      * <dt>AGENT_SCHEDULED_TIME</dt>
      * <dd>
@@ -2628,6 +3150,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     * >Scheduled time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ABANDON_TIME</dt>
      * <dd>
@@ -2638,6 +3165,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     * >Average queue abandon time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ACTIVE_TIME</dt>
      * <dd>
@@ -2646,6 +3178,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     * >Average active time</a>
      * </p>
      * </dd>
      * <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -2659,6 +3196,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     * >Average after contact work time</a>
      * </p>
      * <note>
      * <p>
@@ -2678,6 +3220,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     * >Average agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -2691,6 +3238,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     * >Average agent pause time</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     * >Average contacts per case</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     * <dd>
+     * <p>
+     * Unit: Seconds
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     * >Average case resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_CONTACT_DURATION</dt>
      * <dd>
@@ -2700,6 +3286,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     * >Average contact duration</a>
      * </p>
      * <note>
      * <p>
@@ -2715,6 +3306,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     * >Average conversation duration</a>
+     * </p>
      * </dd>
      * <dt>AVG_GREETING_TIME_AGENT</dt>
      * <dd>
@@ -2728,6 +3324,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     * >Average greeting time agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
      * <dd>
@@ -2737,6 +3338,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     * >Average handle time</a>
      * </p>
      * <note>
      * <p>
@@ -2752,6 +3358,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     * >Average customer hold time</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -2766,6 +3377,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     * >Average customer hold time all contacts</a>
+     * </p>
      * </dd>
      * <dt>AVG_HOLDS</dt>
      * <dd>
@@ -2775,6 +3391,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     * >Average holds</a>
      * </p>
      * <note>
      * <p>
@@ -2790,6 +3411,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     * >Average agent interaction and customer hold time</a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERACTION_TIME</dt>
      * <dd>
@@ -2801,6 +3427,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     * >Average agent interaction time</a>
      * </p>
      * <note>
      * <p>
@@ -2819,6 +3450,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     * >Average interruptions agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      * <dd>
@@ -2831,6 +3467,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     * >Average interruption time agent</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -2845,6 +3486,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     * >Average non-talk time</a>
+     * </p>
      * </dd>
      * <dt>AVG_QUEUE_ANSWER_TIME</dt>
      * <dd>
@@ -2853,6 +3499,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     * >Average queue answer time</a>
      * </p>
      * <note>
      * <p>
@@ -2867,6 +3518,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     * >Average resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME</dt>
      * <dd>
@@ -2879,6 +3535,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     * >Average talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_AGENT</dt>
@@ -2893,6 +3554,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     * >Average talk time agent</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -2906,6 +3572,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     * >Average talk time customer</a>
+     * </p>
+     * </dd>
+     * <dt>CASES_CREATED</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     * >Cases created</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ABANDONED</dt>
      * <dd>
@@ -2915,6 +3603,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     * >Contact abandoned</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_CREATED</dt>
@@ -2927,6 +3620,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     * >Contacts created</a>
      * </p>
      * <note>
      * <p>
@@ -2945,6 +3643,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     * >API contacts handled</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -2961,6 +3664,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts handled by Connected to agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
@@ -2971,6 +3679,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts hold disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      * <dd>
@@ -2979,6 +3692,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     * >Contacts hold agent disconnect</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -2989,6 +3707,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts hold customer disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_PUT_ON_HOLD</dt>
      * <dd>
@@ -2997,6 +3720,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts put on hold</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -3007,6 +3735,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     * >Contacts transferred out external</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      * <dd>
@@ -3015,6 +3748,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     * >Contacts transferred out internal</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED</dt>
@@ -3026,6 +3764,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     * >Contacts queued</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      * <dd>
@@ -3034,6 +3777,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     * >Contacts queued by Enqueue</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -3048,6 +3796,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     * >Contacts resolved in X</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT</dt>
      * <dd>
@@ -3057,6 +3810,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     * >Contacts transferred out</a>
      * </p>
      * <note>
      * <p>
@@ -3072,6 +3830,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out by agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      * <dd>
@@ -3081,6 +3844,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out queue</a>
+     * </p>
+     * </dd>
+     * <dt>CURRENT_CASES</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     * >Current cases</a>
      * </p>
      * </dd>
      * <dt>MAX_QUEUED_TIME</dt>
@@ -3092,6 +3877,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     * >Maximum queued time</a>
+     * </p>
+     * </dd>
+     * <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     * <dd>
+     * <p>
+     * Unit: Percent
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     * >Cases resolved on first contact</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      * <dd>
@@ -3101,6 +3908,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      * <dd>
@@ -3109,6 +3919,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: Not available
      * </p>
      * </dd>
      * <dt>PERCENT_NON_TALK_TIME</dt>
@@ -3123,6 +3936,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     * >Non-talk time percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME</dt>
      * <dd>
@@ -3135,6 +3953,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     * >Talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -3149,6 +3972,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     * >Talk time agent percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -3161,6 +3989,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     * >Talk time customer percent</a>
+     * </p>
+     * </dd>
+     * <dt>REOPENED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     * >Cases reopened</a>
+     * </p>
+     * </dd>
+     * <dt>RESOLVED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     * >Cases resolved</a>
      * </p>
      * </dd>
      * <dt>SERVICE_LEVEL</dt>
@@ -3178,6 +4045,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     * >Service level X</a>
+     * </p>
      * </dd>
      * <dt>STEP_CONTACTS_QUEUED</dt>
      * <dd>
@@ -3187,6 +4059,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      * <dd>
@@ -3195,6 +4070,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     * >After contact work time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -3210,6 +4090,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     * >Agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -3223,6 +4108,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     * >Contact flow time</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACT_TIME_AGENT</dt>
      * <dd>
@@ -3231,6 +4121,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     * >Agent on contact time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -3245,6 +4140,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     * >Contacts answered in X seconds</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -3257,6 +4157,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     * >Contacts abandoned in X seconds</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -3271,6 +4176,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     * >Contact disconnected</a>
+     * </p>
      * </dd>
      * <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      * <dd>
@@ -3279,6 +4189,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     * >Error status time</a>
      * </p>
      * </dd>
      * <dt>SUM_HANDLE_TIME</dt>
@@ -3289,6 +4204,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     * >Contact handle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_HOLD_TIME</dt>
      * <dd>
@@ -3297,6 +4217,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     * >Customer hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -3307,6 +4232,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     * >Agent idle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      * <dd>
@@ -3315,6 +4245,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     * >Agent interaction and hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_INTERACTION_TIME</dt>
@@ -3325,6 +4260,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     * >Agent interaction time</a>
+     * </p>
      * </dd>
      * <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      * <dd>
@@ -3333,6 +4273,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     * >Non-Productive Time</a>
      * </p>
      * </dd>
      * <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -3343,6 +4288,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     * >Online time</a>
+     * </p>
      * </dd>
      * <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      * <dd>
@@ -3351,6 +4301,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     * >Callback attempts</a>
      * </p>
      * </dd>
      * </dl>
@@ -3369,6 +4324,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     *         >Abandonment rate</a>
+     *         </p>
      *         </dd>
      *         <dt>AGENT_ADHERENT_TIME</dt>
      *         <dd>
@@ -3383,6 +4343,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     *         >Adherent time</a>
+     *         </p>
      *         </dd>
      *         <dt>AGENT_ANSWER_RATE</dt>
      *         <dd>
@@ -3391,6 +4356,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     *         >Agent answer rate</a>
      *         </p>
      *         </dd>
      *         <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -3401,6 +4371,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     *         >Non-adherent time</a>
+     *         </p>
      *         </dd>
      *         <dt>AGENT_NON_RESPONSE</dt>
      *         <dd>
@@ -3409,6 +4384,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     *         >Agent non-response</a>
      *         </p>
      *         </dd>
      *         <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -3422,6 +4402,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     *         >Agent non-response without customer abandons</a>
+     *         </p>
      *         </dd>
      *         <dt>AGENT_OCCUPANCY</dt>
      *         <dd>
@@ -3430,6 +4415,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     *         >Occupancy</a>
      *         </p>
      *         </dd>
      *         <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -3445,6 +4435,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     *         >Adherence</a>
+     *         </p>
      *         </dd>
      *         <dt>AGENT_SCHEDULED_TIME</dt>
      *         <dd>
@@ -3459,6 +4454,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     *         >Scheduled time</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_ABANDON_TIME</dt>
      *         <dd>
@@ -3469,6 +4469,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     *         >Average queue abandon time</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_ACTIVE_TIME</dt>
      *         <dd>
@@ -3477,6 +4482,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     *         >Average active time</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -3490,6 +4500,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     *         >Average after contact work time</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3509,6 +4524,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     *         >Average agent API connecting time</a>
+     *         </p>
      *         <note>
      *         <p>
      *         The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -3522,6 +4542,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     *         >Average agent pause time</a>
+     *         </p>
+     *         </dd>
+     *         <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     *         >Average contacts per case</a>
+     *         </p>
+     *         </dd>
+     *         <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Seconds
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     *         >Average case resolution time</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_CONTACT_DURATION</dt>
      *         <dd>
@@ -3531,6 +4590,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     *         >Average contact duration</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3546,6 +4610,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     *         >Average conversation duration</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_GREETING_TIME_AGENT</dt>
      *         <dd>
@@ -3559,6 +4628,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     *         >Average greeting time agent </a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_HANDLE_TIME</dt>
      *         <dd>
@@ -3568,6 +4642,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     *         >Average handle time</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3583,6 +4662,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     *         >Average customer hold time</a>
+     *         </p>
      *         <note>
      *         <p>
      *         Feature is a valid filter but not a valid grouping.
@@ -3597,6 +4681,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     *         >Average customer hold time all contacts</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_HOLDS</dt>
      *         <dd>
@@ -3606,6 +4695,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     *         >Average holds</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3621,6 +4715,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     *         >Average agent interaction and customer hold time</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_INTERACTION_TIME</dt>
      *         <dd>
@@ -3633,6 +4732,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     *         >Average agent interaction time</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3651,6 +4755,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     *         >Average interruptions agent </a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      *         <dd>
@@ -3663,6 +4772,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     *         >Average interruption time agent</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_NON_TALK_TIME</dt>
@@ -3677,6 +4791,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     *         >Average non-talk time</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_QUEUE_ANSWER_TIME</dt>
      *         <dd>
@@ -3686,6 +4805,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     *         >Average queue answer time</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3700,6 +4824,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     *         >Average resolution time</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_TALK_TIME</dt>
      *         <dd>
@@ -3712,6 +4841,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     *         >Average talk time</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_TALK_TIME_AGENT</dt>
@@ -3726,6 +4860,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     *         >Average talk time agent</a>
+     *         </p>
      *         </dd>
      *         <dt>AVG_TALK_TIME_CUSTOMER</dt>
      *         <dd>
@@ -3739,6 +4878,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     *         >Average talk time customer</a>
+     *         </p>
+     *         </dd>
+     *         <dt>CASES_CREATED</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     *         >Cases created</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_ABANDONED</dt>
      *         <dd>
@@ -3748,6 +4909,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     *         >Contact abandoned</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_CREATED</dt>
@@ -3761,6 +4927,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     *         >Contacts created</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3779,6 +4950,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     *         >API contacts handled</a>
+     *         </p>
      *         <note>
      *         <p>
      *         Feature is a valid filter but not a valid grouping.
@@ -3796,6 +4972,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *         >Contacts handled by Connected to agent</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_HOLD_ABANDONS</dt>
      *         <dd>
@@ -3806,6 +4987,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *         >Contacts hold disconnect</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      *         <dd>
@@ -3814,6 +5000,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     *         >Contacts hold agent disconnect</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -3824,6 +5015,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *         >Contacts hold customer disconnect</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_PUT_ON_HOLD</dt>
      *         <dd>
@@ -3832,6 +5028,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *         >Contacts put on hold</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -3842,6 +5043,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     *         >Contacts transferred out external</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      *         <dd>
@@ -3850,6 +5056,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     *         >Contacts transferred out internal</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_QUEUED</dt>
@@ -3861,6 +5072,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     *         >Contacts queued</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      *         <dd>
@@ -3870,6 +5086,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     *         >Contacts queued by Enqueue</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -3884,6 +5105,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in
      *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     *         >Contacts resolved in X</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_TRANSFERRED_OUT</dt>
      *         <dd>
@@ -3893,6 +5119,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     *         >Contacts transferred out</a>
      *         </p>
      *         <note>
      *         <p>
@@ -3908,6 +5139,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *         >Contacts transferred out by agent</a>
+     *         </p>
      *         </dd>
      *         <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      *         <dd>
@@ -3917,6 +5153,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *         >Contacts transferred out queue</a>
+     *         </p>
+     *         </dd>
+     *         <dt>CURRENT_CASES</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     *         >Current cases</a>
      *         </p>
      *         </dd>
      *         <dt>MAX_QUEUED_TIME</dt>
@@ -3928,6 +5186,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     *         >Maximum queued time</a>
+     *         </p>
+     *         </dd>
+     *         <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Percent
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     *         >Cases resolved on first contact</a>
+     *         </p>
      *         </dd>
      *         <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      *         <dd>
@@ -3937,6 +5217,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, RoutingStepExpression
      *         </p>
+     *         <p>
+     *         UI name: Not available
+     *         </p>
      *         </dd>
      *         <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      *         <dd>
@@ -3945,6 +5228,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, RoutingStepExpression
+     *         </p>
+     *         <p>
+     *         UI name: Not available
      *         </p>
      *         </dd>
      *         <dt>PERCENT_NON_TALK_TIME</dt>
@@ -3959,6 +5245,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     *         >Non-talk time percent</a>
+     *         </p>
      *         </dd>
      *         <dt>PERCENT_TALK_TIME</dt>
      *         <dd>
@@ -3971,6 +5262,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     *         >Talk time percent</a>
      *         </p>
      *         </dd>
      *         <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -3985,6 +5281,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     *         >Talk time agent percent</a>
+     *         </p>
      *         </dd>
      *         <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      *         <dd>
@@ -3997,6 +5298,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     *         >Talk time customer percent</a>
+     *         </p>
+     *         </dd>
+     *         <dt>REOPENED_CASE_ACTIONS</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     *         >Cases reopened</a>
+     *         </p>
+     *         </dd>
+     *         <dt>RESOLVED_CASE_ACTIONS</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Required filter key: CASE_TEMPLATE_ARN
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     *         >Cases resolved</a>
      *         </p>
      *         </dd>
      *         <dt>SERVICE_LEVEL</dt>
@@ -4014,6 +5354,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     *         >Service level X</a>
+     *         </p>
      *         </dd>
      *         <dt>STEP_CONTACTS_QUEUED</dt>
      *         <dd>
@@ -4023,6 +5368,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, RoutingStepExpression
      *         </p>
+     *         <p>
+     *         UI name: Not available
+     *         </p>
      *         </dd>
      *         <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      *         <dd>
@@ -4031,6 +5379,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     *         >After contact work time</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -4046,6 +5399,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     *         >Agent API connecting time</a>
+     *         </p>
      *         <note>
      *         <p>
      *         The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -4059,6 +5417,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     *         >Contact flow time</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_CONTACT_TIME_AGENT</dt>
      *         <dd>
@@ -4067,6 +5430,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     *         >Agent on contact time</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -4081,6 +5449,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     *         >Contacts answered in X seconds</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *         <dd>
@@ -4093,6 +5466,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     *         >Contacts abandoned in X seconds</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -4107,6 +5485,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     *         >Contact disconnected</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      *         <dd>
@@ -4115,6 +5498,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     *         >Error status time</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_HANDLE_TIME</dt>
@@ -4125,6 +5513,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     *         >Contact handle time</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_HOLD_TIME</dt>
      *         <dd>
@@ -4133,6 +5526,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     *         >Customer hold time</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -4143,6 +5541,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     *         >Agent idle time</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      *         <dd>
@@ -4151,6 +5554,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     *         >Agent interaction and hold time</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_INTERACTION_TIME</dt>
@@ -4161,6 +5569,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     *         >Agent interaction time</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      *         <dd>
@@ -4169,6 +5582,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     *         >Non-Productive Time</a>
      *         </p>
      *         </dd>
      *         <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -4179,6 +5597,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     *         >Online time</a>
+     *         </p>
      *         </dd>
      *         <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      *         <dd>
@@ -4187,6 +5610,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         <p>
+     *         UI name: <a href=
+     *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     *         >Callback attempts</a>
      *         </p>
      *         </dd>
      */
@@ -4212,6 +5640,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     * >Abandonment rate</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ADHERENT_TIME</dt>
      * <dd>
@@ -4226,6 +5659,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     * >Adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ANSWER_RATE</dt>
      * <dd>
@@ -4234,6 +5672,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     * >Agent answer rate</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -4244,6 +5687,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     * >Non-adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE</dt>
      * <dd>
@@ -4252,6 +5700,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     * >Agent non-response</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -4265,6 +5718,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     * >Agent non-response without customer abandons</a>
+     * </p>
      * </dd>
      * <dt>AGENT_OCCUPANCY</dt>
      * <dd>
@@ -4273,6 +5731,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     * >Occupancy</a>
      * </p>
      * </dd>
      * <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -4288,6 +5751,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     * >Adherence</a>
+     * </p>
      * </dd>
      * <dt>AGENT_SCHEDULED_TIME</dt>
      * <dd>
@@ -4302,6 +5770,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     * >Scheduled time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ABANDON_TIME</dt>
      * <dd>
@@ -4312,6 +5785,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     * >Average queue abandon time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ACTIVE_TIME</dt>
      * <dd>
@@ -4320,6 +5798,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     * >Average active time</a>
      * </p>
      * </dd>
      * <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -4333,6 +5816,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     * >Average after contact work time</a>
      * </p>
      * <note>
      * <p>
@@ -4352,6 +5840,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     * >Average agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -4365,6 +5858,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     * >Average agent pause time</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     * >Average contacts per case</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     * <dd>
+     * <p>
+     * Unit: Seconds
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     * >Average case resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_CONTACT_DURATION</dt>
      * <dd>
@@ -4374,6 +5906,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     * >Average contact duration</a>
      * </p>
      * <note>
      * <p>
@@ -4389,6 +5926,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     * >Average conversation duration</a>
+     * </p>
      * </dd>
      * <dt>AVG_GREETING_TIME_AGENT</dt>
      * <dd>
@@ -4402,6 +5944,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     * >Average greeting time agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
      * <dd>
@@ -4411,6 +5958,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     * >Average handle time</a>
      * </p>
      * <note>
      * <p>
@@ -4426,6 +5978,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     * >Average customer hold time</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -4440,6 +5997,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     * >Average customer hold time all contacts</a>
+     * </p>
      * </dd>
      * <dt>AVG_HOLDS</dt>
      * <dd>
@@ -4449,6 +6011,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     * >Average holds</a>
      * </p>
      * <note>
      * <p>
@@ -4464,6 +6031,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     * >Average agent interaction and customer hold time</a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERACTION_TIME</dt>
      * <dd>
@@ -4475,6 +6047,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     * >Average agent interaction time</a>
      * </p>
      * <note>
      * <p>
@@ -4493,6 +6070,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     * >Average interruptions agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      * <dd>
@@ -4505,6 +6087,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     * >Average interruption time agent</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -4519,6 +6106,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     * >Average non-talk time</a>
+     * </p>
      * </dd>
      * <dt>AVG_QUEUE_ANSWER_TIME</dt>
      * <dd>
@@ -4527,6 +6119,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     * >Average queue answer time</a>
      * </p>
      * <note>
      * <p>
@@ -4541,6 +6138,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     * >Average resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME</dt>
      * <dd>
@@ -4553,6 +6155,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     * >Average talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_AGENT</dt>
@@ -4567,6 +6174,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     * >Average talk time agent</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -4580,6 +6192,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     * >Average talk time customer</a>
+     * </p>
+     * </dd>
+     * <dt>CASES_CREATED</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     * >Cases created</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ABANDONED</dt>
      * <dd>
@@ -4589,6 +6223,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     * >Contact abandoned</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_CREATED</dt>
@@ -4601,6 +6240,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     * >Contacts created</a>
      * </p>
      * <note>
      * <p>
@@ -4619,6 +6263,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     * >API contacts handled</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -4635,6 +6284,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts handled by Connected to agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
@@ -4645,6 +6299,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts hold disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      * <dd>
@@ -4653,6 +6312,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     * >Contacts hold agent disconnect</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -4663,6 +6327,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts hold customer disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_PUT_ON_HOLD</dt>
      * <dd>
@@ -4671,6 +6340,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts put on hold</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -4681,6 +6355,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     * >Contacts transferred out external</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      * <dd>
@@ -4689,6 +6368,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     * >Contacts transferred out internal</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED</dt>
@@ -4700,6 +6384,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     * >Contacts queued</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      * <dd>
@@ -4708,6 +6397,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     * >Contacts queued by Enqueue</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -4722,6 +6416,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     * >Contacts resolved in X</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT</dt>
      * <dd>
@@ -4731,6 +6430,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     * >Contacts transferred out</a>
      * </p>
      * <note>
      * <p>
@@ -4746,6 +6450,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out by agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      * <dd>
@@ -4755,6 +6464,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out queue</a>
+     * </p>
+     * </dd>
+     * <dt>CURRENT_CASES</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     * >Current cases</a>
      * </p>
      * </dd>
      * <dt>MAX_QUEUED_TIME</dt>
@@ -4766,6 +6497,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     * >Maximum queued time</a>
+     * </p>
+     * </dd>
+     * <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     * <dd>
+     * <p>
+     * Unit: Percent
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     * >Cases resolved on first contact</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      * <dd>
@@ -4775,6 +6528,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      * <dd>
@@ -4783,6 +6539,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: Not available
      * </p>
      * </dd>
      * <dt>PERCENT_NON_TALK_TIME</dt>
@@ -4797,6 +6556,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     * >Non-talk time percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME</dt>
      * <dd>
@@ -4809,6 +6573,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     * >Talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -4823,6 +6592,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     * >Talk time agent percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -4835,6 +6609,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     * >Talk time customer percent</a>
+     * </p>
+     * </dd>
+     * <dt>REOPENED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     * >Cases reopened</a>
+     * </p>
+     * </dd>
+     * <dt>RESOLVED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     * >Cases resolved</a>
      * </p>
      * </dd>
      * <dt>SERVICE_LEVEL</dt>
@@ -4852,6 +6665,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     * >Service level X</a>
+     * </p>
      * </dd>
      * <dt>STEP_CONTACTS_QUEUED</dt>
      * <dd>
@@ -4861,6 +6679,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      * <dd>
@@ -4869,6 +6690,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     * >After contact work time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -4884,6 +6710,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     * >Agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -4897,6 +6728,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     * >Contact flow time</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACT_TIME_AGENT</dt>
      * <dd>
@@ -4905,6 +6741,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     * >Agent on contact time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -4919,6 +6760,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     * >Contacts answered in X seconds</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -4931,6 +6777,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     * >Contacts abandoned in X seconds</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -4945,6 +6796,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     * >Contact disconnected</a>
+     * </p>
      * </dd>
      * <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      * <dd>
@@ -4953,6 +6809,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     * >Error status time</a>
      * </p>
      * </dd>
      * <dt>SUM_HANDLE_TIME</dt>
@@ -4963,6 +6824,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     * >Contact handle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_HOLD_TIME</dt>
      * <dd>
@@ -4971,6 +6837,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     * >Customer hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -4981,6 +6852,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     * >Agent idle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      * <dd>
@@ -4989,6 +6865,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     * >Agent interaction and hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_INTERACTION_TIME</dt>
@@ -4999,6 +6880,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     * >Agent interaction time</a>
+     * </p>
      * </dd>
      * <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      * <dd>
@@ -5007,6 +6893,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     * >Non-Productive Time</a>
      * </p>
      * </dd>
      * <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -5017,6 +6908,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     * >Online time</a>
+     * </p>
      * </dd>
      * <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      * <dd>
@@ -5025,6 +6921,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     * >Callback attempts</a>
      * </p>
      * </dd>
      * </dl>
@@ -5044,6 +6945,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     *        >Abandonment rate</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_ADHERENT_TIME</dt>
      *        <dd>
@@ -5058,6 +6964,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     *        >Adherent time</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_ANSWER_RATE</dt>
      *        <dd>
@@ -5066,6 +6977,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     *        >Agent answer rate</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -5076,6 +6992,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     *        >Non-adherent time</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_NON_RESPONSE</dt>
      *        <dd>
@@ -5084,6 +7005,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     *        >Agent non-response</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -5097,6 +7023,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     *        >Agent non-response without customer abandons</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_OCCUPANCY</dt>
      *        <dd>
@@ -5105,6 +7036,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     *        >Occupancy</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -5120,6 +7056,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     *        >Adherence</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_SCHEDULED_TIME</dt>
      *        <dd>
@@ -5134,6 +7075,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     *        >Scheduled time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_ABANDON_TIME</dt>
      *        <dd>
@@ -5144,6 +7090,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     *        >Average queue abandon time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_ACTIVE_TIME</dt>
      *        <dd>
@@ -5152,6 +7103,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     *        >Average active time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -5165,6 +7121,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     *        >Average after contact work time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5184,6 +7145,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     *        >Average agent API connecting time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -5197,6 +7163,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     *        >Average agent pause time</a>
+     *        </p>
+     *        </dd>
+     *        <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     *        >Average contacts per case</a>
+     *        </p>
+     *        </dd>
+     *        <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Seconds
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     *        >Average case resolution time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_CONTACT_DURATION</dt>
      *        <dd>
@@ -5206,6 +7211,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     *        >Average contact duration</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5221,6 +7231,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     *        >Average conversation duration</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_GREETING_TIME_AGENT</dt>
      *        <dd>
@@ -5234,6 +7249,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     *        >Average greeting time agent </a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_HANDLE_TIME</dt>
      *        <dd>
@@ -5243,6 +7263,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     *        >Average handle time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5258,6 +7283,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     *        >Average customer hold time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        Feature is a valid filter but not a valid grouping.
@@ -5272,6 +7302,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     *        >Average customer hold time all contacts</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_HOLDS</dt>
      *        <dd>
@@ -5281,6 +7316,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     *        >Average holds</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5296,6 +7336,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     *        >Average agent interaction and customer hold time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_INTERACTION_TIME</dt>
      *        <dd>
@@ -5308,6 +7353,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     *        >Average agent interaction time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5326,6 +7376,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     *        >Average interruptions agent </a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      *        <dd>
@@ -5338,6 +7393,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     *        >Average interruption time agent</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_NON_TALK_TIME</dt>
@@ -5352,6 +7412,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     *        >Average non-talk time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_QUEUE_ANSWER_TIME</dt>
      *        <dd>
@@ -5361,6 +7426,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     *        >Average queue answer time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5375,6 +7445,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     *        >Average resolution time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME</dt>
      *        <dd>
@@ -5387,6 +7462,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     *        >Average talk time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_AGENT</dt>
@@ -5401,6 +7481,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     *        >Average talk time agent</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_CUSTOMER</dt>
      *        <dd>
@@ -5414,6 +7499,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     *        >Average talk time customer</a>
+     *        </p>
+     *        </dd>
+     *        <dt>CASES_CREATED</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     *        >Cases created</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_ABANDONED</dt>
      *        <dd>
@@ -5423,6 +7530,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     *        >Contact abandoned</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_CREATED</dt>
@@ -5436,6 +7548,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     *        >Contacts created</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5454,6 +7571,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     *        >API contacts handled</a>
+     *        </p>
      *        <note>
      *        <p>
      *        Feature is a valid filter but not a valid grouping.
@@ -5471,6 +7593,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *        >Contacts handled by Connected to agent</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
      *        <dd>
@@ -5481,6 +7608,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *        >Contacts hold disconnect</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      *        <dd>
@@ -5489,6 +7621,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     *        >Contacts hold agent disconnect</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -5499,6 +7636,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *        >Contacts hold customer disconnect</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_PUT_ON_HOLD</dt>
      *        <dd>
@@ -5507,6 +7649,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *        >Contacts put on hold</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -5517,6 +7664,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     *        >Contacts transferred out external</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      *        <dd>
@@ -5525,6 +7677,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     *        >Contacts transferred out internal</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_QUEUED</dt>
@@ -5536,6 +7693,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     *        >Contacts queued</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      *        <dd>
@@ -5545,6 +7707,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     *        >Contacts queued by Enqueue</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -5559,6 +7726,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     *        >Contacts resolved in X</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT</dt>
      *        <dd>
@@ -5568,6 +7740,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     *        >Contacts transferred out</a>
      *        </p>
      *        <note>
      *        <p>
@@ -5583,6 +7760,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *        >Contacts transferred out by agent</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      *        <dd>
@@ -5592,6 +7774,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *        >Contacts transferred out queue</a>
+     *        </p>
+     *        </dd>
+     *        <dt>CURRENT_CASES</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     *        >Current cases</a>
      *        </p>
      *        </dd>
      *        <dt>MAX_QUEUED_TIME</dt>
@@ -5603,6 +7807,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     *        >Maximum queued time</a>
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Percent
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     *        >Cases resolved on first contact</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      *        <dd>
@@ -5612,6 +7838,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: Not available
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      *        <dd>
@@ -5620,6 +7849,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: Not available
      *        </p>
      *        </dd>
      *        <dt>PERCENT_NON_TALK_TIME</dt>
@@ -5634,6 +7866,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     *        >Non-talk time percent</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME</dt>
      *        <dd>
@@ -5646,6 +7883,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     *        >Talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -5660,6 +7902,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     *        >Talk time agent percent</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      *        <dd>
@@ -5672,6 +7919,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     *        >Talk time customer percent</a>
+     *        </p>
+     *        </dd>
+     *        <dt>REOPENED_CASE_ACTIONS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     *        >Cases reopened</a>
+     *        </p>
+     *        </dd>
+     *        <dt>RESOLVED_CASE_ACTIONS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     *        >Cases resolved</a>
      *        </p>
      *        </dd>
      *        <dt>SERVICE_LEVEL</dt>
@@ -5689,6 +7975,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     *        >Service level X</a>
+     *        </p>
      *        </dd>
      *        <dt>STEP_CONTACTS_QUEUED</dt>
      *        <dd>
@@ -5698,6 +7989,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: Not available
+     *        </p>
      *        </dd>
      *        <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      *        <dd>
@@ -5706,6 +8000,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     *        >After contact work time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -5721,6 +8020,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     *        >Agent API connecting time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -5734,6 +8038,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     *        >Contact flow time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACT_TIME_AGENT</dt>
      *        <dd>
@@ -5742,6 +8051,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     *        >Agent on contact time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -5756,6 +8070,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     *        >Contacts answered in X seconds</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *        <dd>
@@ -5768,6 +8087,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     *        >Contacts abandoned in X seconds</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -5782,6 +8106,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     *        >Contact disconnected</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      *        <dd>
@@ -5790,6 +8119,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     *        >Error status time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_HANDLE_TIME</dt>
@@ -5800,6 +8134,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     *        >Contact handle time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_HOLD_TIME</dt>
      *        <dd>
@@ -5808,6 +8147,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     *        >Customer hold time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -5818,6 +8162,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     *        >Agent idle time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      *        <dd>
@@ -5826,6 +8175,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     *        >Agent interaction and hold time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_INTERACTION_TIME</dt>
@@ -5836,6 +8190,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     *        >Agent interaction time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      *        <dd>
@@ -5844,6 +8203,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     *        >Non-Productive Time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -5854,6 +8218,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     *        >Online time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      *        <dd>
@@ -5862,6 +8231,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     *        >Callback attempts</a>
      *        </p>
      *        </dd>
      */
@@ -5892,6 +8266,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     * >Abandonment rate</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ADHERENT_TIME</dt>
      * <dd>
@@ -5906,6 +8285,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     * >Adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ANSWER_RATE</dt>
      * <dd>
@@ -5914,6 +8298,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     * >Agent answer rate</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -5924,6 +8313,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     * >Non-adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE</dt>
      * <dd>
@@ -5932,6 +8326,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     * >Agent non-response</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -5945,6 +8344,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     * >Agent non-response without customer abandons</a>
+     * </p>
      * </dd>
      * <dt>AGENT_OCCUPANCY</dt>
      * <dd>
@@ -5953,6 +8357,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     * >Occupancy</a>
      * </p>
      * </dd>
      * <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -5968,6 +8377,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     * >Adherence</a>
+     * </p>
      * </dd>
      * <dt>AGENT_SCHEDULED_TIME</dt>
      * <dd>
@@ -5982,6 +8396,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     * >Scheduled time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ABANDON_TIME</dt>
      * <dd>
@@ -5992,6 +8411,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     * >Average queue abandon time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ACTIVE_TIME</dt>
      * <dd>
@@ -6000,6 +8424,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     * >Average active time</a>
      * </p>
      * </dd>
      * <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -6013,6 +8442,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     * >Average after contact work time</a>
      * </p>
      * <note>
      * <p>
@@ -6032,6 +8466,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     * >Average agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -6045,6 +8484,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     * >Average agent pause time</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     * >Average contacts per case</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     * <dd>
+     * <p>
+     * Unit: Seconds
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     * >Average case resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_CONTACT_DURATION</dt>
      * <dd>
@@ -6054,6 +8532,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     * >Average contact duration</a>
      * </p>
      * <note>
      * <p>
@@ -6069,6 +8552,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     * >Average conversation duration</a>
+     * </p>
      * </dd>
      * <dt>AVG_GREETING_TIME_AGENT</dt>
      * <dd>
@@ -6082,6 +8570,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     * >Average greeting time agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
      * <dd>
@@ -6091,6 +8584,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     * >Average handle time</a>
      * </p>
      * <note>
      * <p>
@@ -6106,6 +8604,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     * >Average customer hold time</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -6120,6 +8623,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     * >Average customer hold time all contacts</a>
+     * </p>
      * </dd>
      * <dt>AVG_HOLDS</dt>
      * <dd>
@@ -6129,6 +8637,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     * >Average holds</a>
      * </p>
      * <note>
      * <p>
@@ -6144,6 +8657,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     * >Average agent interaction and customer hold time</a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERACTION_TIME</dt>
      * <dd>
@@ -6155,6 +8673,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     * >Average agent interaction time</a>
      * </p>
      * <note>
      * <p>
@@ -6173,6 +8696,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     * >Average interruptions agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      * <dd>
@@ -6185,6 +8713,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     * >Average interruption time agent</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -6199,6 +8732,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     * >Average non-talk time</a>
+     * </p>
      * </dd>
      * <dt>AVG_QUEUE_ANSWER_TIME</dt>
      * <dd>
@@ -6207,6 +8745,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     * >Average queue answer time</a>
      * </p>
      * <note>
      * <p>
@@ -6221,6 +8764,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     * >Average resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME</dt>
      * <dd>
@@ -6233,6 +8781,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     * >Average talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_AGENT</dt>
@@ -6247,6 +8800,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     * >Average talk time agent</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -6260,6 +8818,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     * >Average talk time customer</a>
+     * </p>
+     * </dd>
+     * <dt>CASES_CREATED</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     * >Cases created</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ABANDONED</dt>
      * <dd>
@@ -6269,6 +8849,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     * >Contact abandoned</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_CREATED</dt>
@@ -6281,6 +8866,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     * >Contacts created</a>
      * </p>
      * <note>
      * <p>
@@ -6299,6 +8889,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     * >API contacts handled</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -6315,6 +8910,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts handled by Connected to agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
@@ -6325,6 +8925,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts hold disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      * <dd>
@@ -6333,6 +8938,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     * >Contacts hold agent disconnect</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -6343,6 +8953,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts hold customer disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_PUT_ON_HOLD</dt>
      * <dd>
@@ -6351,6 +8966,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts put on hold</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -6361,6 +8981,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     * >Contacts transferred out external</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      * <dd>
@@ -6369,6 +8994,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     * >Contacts transferred out internal</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED</dt>
@@ -6380,6 +9010,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     * >Contacts queued</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      * <dd>
@@ -6388,6 +9023,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     * >Contacts queued by Enqueue</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -6402,6 +9042,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     * >Contacts resolved in X</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT</dt>
      * <dd>
@@ -6411,6 +9056,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     * >Contacts transferred out</a>
      * </p>
      * <note>
      * <p>
@@ -6426,6 +9076,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out by agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      * <dd>
@@ -6435,6 +9090,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out queue</a>
+     * </p>
+     * </dd>
+     * <dt>CURRENT_CASES</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     * >Current cases</a>
      * </p>
      * </dd>
      * <dt>MAX_QUEUED_TIME</dt>
@@ -6446,6 +9123,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     * >Maximum queued time</a>
+     * </p>
+     * </dd>
+     * <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     * <dd>
+     * <p>
+     * Unit: Percent
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     * >Cases resolved on first contact</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      * <dd>
@@ -6455,6 +9154,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      * <dd>
@@ -6463,6 +9165,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: Not available
      * </p>
      * </dd>
      * <dt>PERCENT_NON_TALK_TIME</dt>
@@ -6477,6 +9182,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     * >Non-talk time percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME</dt>
      * <dd>
@@ -6489,6 +9199,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     * >Talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -6503,6 +9218,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     * >Talk time agent percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -6515,6 +9235,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     * >Talk time customer percent</a>
+     * </p>
+     * </dd>
+     * <dt>REOPENED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     * >Cases reopened</a>
+     * </p>
+     * </dd>
+     * <dt>RESOLVED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     * >Cases resolved</a>
      * </p>
      * </dd>
      * <dt>SERVICE_LEVEL</dt>
@@ -6532,6 +9291,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     * >Service level X</a>
+     * </p>
      * </dd>
      * <dt>STEP_CONTACTS_QUEUED</dt>
      * <dd>
@@ -6541,6 +9305,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      * <dd>
@@ -6549,6 +9316,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     * >After contact work time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -6564,6 +9336,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     * >Agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -6577,6 +9354,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     * >Contact flow time</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACT_TIME_AGENT</dt>
      * <dd>
@@ -6585,6 +9367,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     * >Agent on contact time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -6599,6 +9386,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     * >Contacts answered in X seconds</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -6611,6 +9403,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     * >Contacts abandoned in X seconds</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -6625,6 +9422,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     * >Contact disconnected</a>
+     * </p>
      * </dd>
      * <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      * <dd>
@@ -6633,6 +9435,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     * >Error status time</a>
      * </p>
      * </dd>
      * <dt>SUM_HANDLE_TIME</dt>
@@ -6643,6 +9450,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     * >Contact handle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_HOLD_TIME</dt>
      * <dd>
@@ -6651,6 +9463,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     * >Customer hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -6661,6 +9478,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     * >Agent idle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      * <dd>
@@ -6669,6 +9491,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     * >Agent interaction and hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_INTERACTION_TIME</dt>
@@ -6679,6 +9506,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     * >Agent interaction time</a>
+     * </p>
      * </dd>
      * <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      * <dd>
@@ -6687,6 +9519,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     * >Non-Productive Time</a>
      * </p>
      * </dd>
      * <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -6697,6 +9534,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     * >Online time</a>
+     * </p>
      * </dd>
      * <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      * <dd>
@@ -6705,6 +9547,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     * >Callback attempts</a>
      * </p>
      * </dd>
      * </dl>
@@ -6729,6 +9576,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     *        >Abandonment rate</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_ADHERENT_TIME</dt>
      *        <dd>
@@ -6743,6 +9595,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     *        >Adherent time</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_ANSWER_RATE</dt>
      *        <dd>
@@ -6751,6 +9608,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     *        >Agent answer rate</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -6761,6 +9623,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     *        >Non-adherent time</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_NON_RESPONSE</dt>
      *        <dd>
@@ -6769,6 +9636,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     *        >Agent non-response</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -6782,6 +9654,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     *        >Agent non-response without customer abandons</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_OCCUPANCY</dt>
      *        <dd>
@@ -6790,6 +9667,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     *        >Occupancy</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -6805,6 +9687,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     *        >Adherence</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_SCHEDULED_TIME</dt>
      *        <dd>
@@ -6819,6 +9706,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     *        >Scheduled time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_ABANDON_TIME</dt>
      *        <dd>
@@ -6829,6 +9721,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     *        >Average queue abandon time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_ACTIVE_TIME</dt>
      *        <dd>
@@ -6837,6 +9734,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     *        >Average active time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -6850,6 +9752,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     *        >Average after contact work time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -6869,6 +9776,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     *        >Average agent API connecting time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -6882,6 +9794,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     *        >Average agent pause time</a>
+     *        </p>
+     *        </dd>
+     *        <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     *        >Average contacts per case</a>
+     *        </p>
+     *        </dd>
+     *        <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Seconds
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     *        >Average case resolution time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_CONTACT_DURATION</dt>
      *        <dd>
@@ -6891,6 +9842,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     *        >Average contact duration</a>
      *        </p>
      *        <note>
      *        <p>
@@ -6906,6 +9862,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     *        >Average conversation duration</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_GREETING_TIME_AGENT</dt>
      *        <dd>
@@ -6919,6 +9880,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     *        >Average greeting time agent </a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_HANDLE_TIME</dt>
      *        <dd>
@@ -6928,6 +9894,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     *        >Average handle time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -6943,6 +9914,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     *        >Average customer hold time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        Feature is a valid filter but not a valid grouping.
@@ -6957,6 +9933,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     *        >Average customer hold time all contacts</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_HOLDS</dt>
      *        <dd>
@@ -6966,6 +9947,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     *        >Average holds</a>
      *        </p>
      *        <note>
      *        <p>
@@ -6981,6 +9967,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     *        >Average agent interaction and customer hold time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_INTERACTION_TIME</dt>
      *        <dd>
@@ -6993,6 +9984,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     *        >Average agent interaction time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -7011,6 +10007,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     *        >Average interruptions agent </a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      *        <dd>
@@ -7023,6 +10024,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     *        >Average interruption time agent</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_NON_TALK_TIME</dt>
@@ -7037,6 +10043,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     *        >Average non-talk time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_QUEUE_ANSWER_TIME</dt>
      *        <dd>
@@ -7046,6 +10057,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     *        >Average queue answer time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -7060,6 +10076,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     *        >Average resolution time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME</dt>
      *        <dd>
@@ -7072,6 +10093,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     *        >Average talk time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_AGENT</dt>
@@ -7086,6 +10112,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     *        >Average talk time agent</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_CUSTOMER</dt>
      *        <dd>
@@ -7099,6 +10130,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     *        >Average talk time customer</a>
+     *        </p>
+     *        </dd>
+     *        <dt>CASES_CREATED</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     *        >Cases created</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_ABANDONED</dt>
      *        <dd>
@@ -7108,6 +10161,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     *        >Contact abandoned</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_CREATED</dt>
@@ -7121,6 +10179,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     *        >Contacts created</a>
      *        </p>
      *        <note>
      *        <p>
@@ -7139,6 +10202,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     *        >API contacts handled</a>
+     *        </p>
      *        <note>
      *        <p>
      *        Feature is a valid filter but not a valid grouping.
@@ -7156,6 +10224,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *        >Contacts handled by Connected to agent</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
      *        <dd>
@@ -7166,6 +10239,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *        >Contacts hold disconnect</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      *        <dd>
@@ -7174,6 +10252,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     *        >Contacts hold agent disconnect</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -7184,6 +10267,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *        >Contacts hold customer disconnect</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_PUT_ON_HOLD</dt>
      *        <dd>
@@ -7192,6 +10280,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *        >Contacts put on hold</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -7202,6 +10295,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     *        >Contacts transferred out external</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      *        <dd>
@@ -7210,6 +10308,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     *        >Contacts transferred out internal</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_QUEUED</dt>
@@ -7221,6 +10324,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     *        >Contacts queued</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      *        <dd>
@@ -7230,6 +10338,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     *        >Contacts queued by Enqueue</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -7244,6 +10357,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     *        >Contacts resolved in X</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT</dt>
      *        <dd>
@@ -7253,6 +10371,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     *        >Contacts transferred out</a>
      *        </p>
      *        <note>
      *        <p>
@@ -7268,6 +10391,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *        >Contacts transferred out by agent</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      *        <dd>
@@ -7277,6 +10405,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *        >Contacts transferred out queue</a>
+     *        </p>
+     *        </dd>
+     *        <dt>CURRENT_CASES</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     *        >Current cases</a>
      *        </p>
      *        </dd>
      *        <dt>MAX_QUEUED_TIME</dt>
@@ -7288,6 +10438,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     *        >Maximum queued time</a>
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Percent
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     *        >Cases resolved on first contact</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      *        <dd>
@@ -7297,6 +10469,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: Not available
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      *        <dd>
@@ -7305,6 +10480,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: Not available
      *        </p>
      *        </dd>
      *        <dt>PERCENT_NON_TALK_TIME</dt>
@@ -7319,6 +10497,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     *        >Non-talk time percent</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME</dt>
      *        <dd>
@@ -7331,6 +10514,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     *        >Talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -7345,6 +10533,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     *        >Talk time agent percent</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      *        <dd>
@@ -7357,6 +10550,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     *        >Talk time customer percent</a>
+     *        </p>
+     *        </dd>
+     *        <dt>REOPENED_CASE_ACTIONS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     *        >Cases reopened</a>
+     *        </p>
+     *        </dd>
+     *        <dt>RESOLVED_CASE_ACTIONS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     *        >Cases resolved</a>
      *        </p>
      *        </dd>
      *        <dt>SERVICE_LEVEL</dt>
@@ -7374,6 +10606,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     *        >Service level X</a>
+     *        </p>
      *        </dd>
      *        <dt>STEP_CONTACTS_QUEUED</dt>
      *        <dd>
@@ -7383,6 +10620,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: Not available
+     *        </p>
      *        </dd>
      *        <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      *        <dd>
@@ -7391,6 +10631,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     *        >After contact work time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -7406,6 +10651,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     *        >Agent API connecting time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -7419,6 +10669,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     *        >Contact flow time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACT_TIME_AGENT</dt>
      *        <dd>
@@ -7427,6 +10682,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     *        >Agent on contact time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -7441,6 +10701,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     *        >Contacts answered in X seconds</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *        <dd>
@@ -7453,6 +10718,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     *        >Contacts abandoned in X seconds</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -7467,6 +10737,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     *        >Contact disconnected</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      *        <dd>
@@ -7475,6 +10750,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     *        >Error status time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_HANDLE_TIME</dt>
@@ -7485,6 +10765,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     *        >Contact handle time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_HOLD_TIME</dt>
      *        <dd>
@@ -7493,6 +10778,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     *        >Customer hold time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -7503,6 +10793,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     *        >Agent idle time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      *        <dd>
@@ -7511,6 +10806,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     *        >Agent interaction and hold time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_INTERACTION_TIME</dt>
@@ -7521,6 +10821,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     *        >Agent interaction time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      *        <dd>
@@ -7529,6 +10834,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     *        >Non-Productive Time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -7539,6 +10849,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     *        >Online time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      *        <dd>
@@ -7547,6 +10862,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     *        >Callback attempts</a>
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -7579,6 +10899,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     * >Abandonment rate</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ADHERENT_TIME</dt>
      * <dd>
@@ -7593,6 +10918,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     * >Adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_ANSWER_RATE</dt>
      * <dd>
@@ -7601,6 +10931,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     * >Agent answer rate</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -7611,6 +10946,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     * >Non-adherent time</a>
+     * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE</dt>
      * <dd>
@@ -7619,6 +10959,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     * >Agent non-response</a>
      * </p>
      * </dd>
      * <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -7632,6 +10977,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     * >Agent non-response without customer abandons</a>
+     * </p>
      * </dd>
      * <dt>AGENT_OCCUPANCY</dt>
      * <dd>
@@ -7640,6 +10990,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     * >Occupancy</a>
      * </p>
      * </dd>
      * <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -7655,6 +11010,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     * >Adherence</a>
+     * </p>
      * </dd>
      * <dt>AGENT_SCHEDULED_TIME</dt>
      * <dd>
@@ -7669,6 +11029,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     * >Scheduled time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ABANDON_TIME</dt>
      * <dd>
@@ -7679,6 +11044,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     * >Average queue abandon time</a>
+     * </p>
      * </dd>
      * <dt>AVG_ACTIVE_TIME</dt>
      * <dd>
@@ -7687,6 +11057,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     * >Average active time</a>
      * </p>
      * </dd>
      * <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -7700,6 +11075,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     * >Average after contact work time</a>
      * </p>
      * <note>
      * <p>
@@ -7719,6 +11099,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     * >Average agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -7732,6 +11117,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     * >Average agent pause time</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     * >Average contacts per case</a>
+     * </p>
+     * </dd>
+     * <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     * <dd>
+     * <p>
+     * Unit: Seconds
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     * >Average case resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_CONTACT_DURATION</dt>
      * <dd>
@@ -7741,6 +11165,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     * >Average contact duration</a>
      * </p>
      * <note>
      * <p>
@@ -7756,6 +11185,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     * >Average conversation duration</a>
+     * </p>
      * </dd>
      * <dt>AVG_GREETING_TIME_AGENT</dt>
      * <dd>
@@ -7769,6 +11203,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     * >Average greeting time agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
      * <dd>
@@ -7778,6 +11217,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     * >Average handle time</a>
      * </p>
      * <note>
      * <p>
@@ -7793,6 +11237,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     * >Average customer hold time</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -7807,6 +11256,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     * >Average customer hold time all contacts</a>
+     * </p>
      * </dd>
      * <dt>AVG_HOLDS</dt>
      * <dd>
@@ -7816,6 +11270,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     * >Average holds</a>
      * </p>
      * <note>
      * <p>
@@ -7831,6 +11290,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     * >Average agent interaction and customer hold time</a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERACTION_TIME</dt>
      * <dd>
@@ -7842,6 +11306,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     * >Average agent interaction time</a>
      * </p>
      * <note>
      * <p>
@@ -7860,6 +11329,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     * >Average interruptions agent </a>
+     * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      * <dd>
@@ -7872,6 +11346,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     * >Average interruption time agent</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -7886,6 +11365,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     * >Average non-talk time</a>
+     * </p>
      * </dd>
      * <dt>AVG_QUEUE_ANSWER_TIME</dt>
      * <dd>
@@ -7894,6 +11378,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     * >Average queue answer time</a>
      * </p>
      * <note>
      * <p>
@@ -7908,6 +11397,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     * >Average resolution time</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME</dt>
      * <dd>
@@ -7920,6 +11414,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     * >Average talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_AGENT</dt>
@@ -7934,6 +11433,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     * >Average talk time agent</a>
+     * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -7947,6 +11451,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     * >Average talk time customer</a>
+     * </p>
+     * </dd>
+     * <dt>CASES_CREATED</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     * >Cases created</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ABANDONED</dt>
      * <dd>
@@ -7956,6 +11482,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     * >Contact abandoned</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_CREATED</dt>
@@ -7968,6 +11499,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     * >Contacts created</a>
      * </p>
      * <note>
      * <p>
@@ -7986,6 +11522,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     * >API contacts handled</a>
+     * </p>
      * <note>
      * <p>
      * Feature is a valid filter but not a valid grouping.
@@ -8002,6 +11543,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts handled by Connected to agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
@@ -8012,6 +11558,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     * >Contacts hold disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      * <dd>
@@ -8020,6 +11571,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     * >Contacts hold agent disconnect</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -8030,6 +11586,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts hold customer disconnect</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_PUT_ON_HOLD</dt>
      * <dd>
@@ -8038,6 +11599,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     * >Contacts put on hold</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -8048,6 +11614,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     * >Contacts transferred out external</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      * <dd>
@@ -8056,6 +11627,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     * >Contacts transferred out internal</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED</dt>
@@ -8067,6 +11643,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     * >Contacts queued</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      * <dd>
@@ -8075,6 +11656,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     * >Contacts queued by Enqueue</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -8089,6 +11675,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     * >Contacts resolved in X</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT</dt>
      * <dd>
@@ -8098,6 +11689,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     * >Contacts transferred out</a>
      * </p>
      * <note>
      * <p>
@@ -8113,6 +11709,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out by agent</a>
+     * </p>
      * </dd>
      * <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      * <dd>
@@ -8122,6 +11723,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     * >Contacts transferred out queue</a>
+     * </p>
+     * </dd>
+     * <dt>CURRENT_CASES</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     * >Current cases</a>
      * </p>
      * </dd>
      * <dt>MAX_QUEUED_TIME</dt>
@@ -8133,6 +11756,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     * >Maximum queued time</a>
+     * </p>
+     * </dd>
+     * <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     * <dd>
+     * <p>
+     * Unit: Percent
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     * >Cases resolved on first contact</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      * <dd>
@@ -8142,6 +11787,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      * <dd>
@@ -8150,6 +11798,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
+     * </p>
+     * <p>
+     * UI name: Not available
      * </p>
      * </dd>
      * <dt>PERCENT_NON_TALK_TIME</dt>
@@ -8164,6 +11815,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     * >Non-talk time percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME</dt>
      * <dd>
@@ -8176,6 +11832,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     * >Talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -8190,6 +11851,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     * >Talk time agent percent</a>
+     * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      * <dd>
@@ -8202,6 +11868,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     * >Talk time customer percent</a>
+     * </p>
+     * </dd>
+     * <dt>REOPENED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     * >Cases reopened</a>
+     * </p>
+     * </dd>
+     * <dt>RESOLVED_CASE_ACTIONS</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Required filter key: CASE_TEMPLATE_ARN
+     * </p>
+     * <p>
+     * Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     * >Cases resolved</a>
      * </p>
      * </dd>
      * <dt>SERVICE_LEVEL</dt>
@@ -8219,6 +11924,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     * >Service level X</a>
+     * </p>
      * </dd>
      * <dt>STEP_CONTACTS_QUEUED</dt>
      * <dd>
@@ -8228,6 +11938,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, RoutingStepExpression
      * </p>
+     * <p>
+     * UI name: Not available
+     * </p>
      * </dd>
      * <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      * <dd>
@@ -8236,6 +11949,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     * >After contact work time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -8251,6 +11969,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     * >Agent API connecting time</a>
+     * </p>
      * <note>
      * <p>
      * The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -8264,6 +11987,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     * >Contact flow time</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACT_TIME_AGENT</dt>
      * <dd>
@@ -8272,6 +12000,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     * >Agent on contact time</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -8286,6 +12019,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     * >Contacts answered in X seconds</a>
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -8298,6 +12036,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
      * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     * >Contacts abandoned in X seconds</a>
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -8312,6 +12055,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     * >Contact disconnected</a>
+     * </p>
      * </dd>
      * <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      * <dd>
@@ -8320,6 +12068,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     * >Error status time</a>
      * </p>
      * </dd>
      * <dt>SUM_HANDLE_TIME</dt>
@@ -8330,6 +12083,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     * >Contact handle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_HOLD_TIME</dt>
      * <dd>
@@ -8338,6 +12096,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     * >Customer hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -8348,6 +12111,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     * >Agent idle time</a>
+     * </p>
      * </dd>
      * <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      * <dd>
@@ -8356,6 +12124,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     * >Agent interaction and hold time</a>
      * </p>
      * </dd>
      * <dt>SUM_INTERACTION_TIME</dt>
@@ -8366,6 +12139,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     * >Agent interaction time</a>
+     * </p>
      * </dd>
      * <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      * <dd>
@@ -8374,6 +12152,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * <p>
+     * UI name: <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     * >Non-Productive Time</a>
      * </p>
      * </dd>
      * <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -8384,6 +12167,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     * >Online time</a>
+     * </p>
      * </dd>
      * <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      * <dd>
@@ -8392,6 +12180,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * <p>
+     * UI name: <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     * >Callback attempts</a>
      * </p>
      * </dd>
      * </dl>
@@ -8411,6 +12204,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#abandonment-rate-historical"
+     *        >Abandonment rate</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_ADHERENT_TIME</dt>
      *        <dd>
@@ -8425,6 +12223,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherent-time-historical"
+     *        >Adherent time</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_ANSWER_RATE</dt>
      *        <dd>
@@ -8433,6 +12236,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-answer-rate-historical"
+     *        >Agent answer rate</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_NON_ADHERENT_TIME</dt>
@@ -8443,6 +12251,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#non-adherent-time"
+     *        >Non-adherent time</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_NON_RESPONSE</dt>
      *        <dd>
@@ -8451,6 +12264,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-non-response"
+     *        >Agent non-response</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS</dt>
@@ -8464,6 +12282,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Data for this metric is available starting from October 1, 2023 0:00:00 GMT.
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-nonresponse-no-abandon-historical"
+     *        >Agent non-response without customer abandons</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_OCCUPANCY</dt>
      *        <dd>
@@ -8472,6 +12295,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#occupancy-historical"
+     *        >Occupancy</a>
      *        </p>
      *        </dd>
      *        <dt>AGENT_SCHEDULE_ADHERENCE</dt>
@@ -8487,6 +12315,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#adherence-historical"
+     *        >Adherence</a>
+     *        </p>
      *        </dd>
      *        <dt>AGENT_SCHEDULED_TIME</dt>
      *        <dd>
@@ -8501,6 +12334,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#scheduled-time-historical"
+     *        >Scheduled time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_ABANDON_TIME</dt>
      *        <dd>
@@ -8511,6 +12349,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-abandon-time-historical"
+     *        >Average queue abandon time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_ACTIVE_TIME</dt>
      *        <dd>
@@ -8519,6 +12362,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-active-time-historical"
+     *        >Average active time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_AFTER_CONTACT_WORK_TIME</dt>
@@ -8532,6 +12380,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-acw-time-historical"
+     *        >Average after contact work time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8551,6 +12404,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-avg-agent-api-connecting-time"
+     *        >Average agent API connecting time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -8564,6 +12422,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-pause-time-historical"
+     *        >Average agent pause time</a>
+     *        </p>
+     *        </dd>
+     *        <dt>AVG_CASE_RELATED_CONTACTS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contacts-case-historical"
+     *        >Average contacts per case</a>
+     *        </p>
+     *        </dd>
+     *        <dt>AVG_CASE_RESOLUTION_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Seconds
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-case-resolution-time-historical"
+     *        >Average case resolution time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_CONTACT_DURATION</dt>
      *        <dd>
@@ -8573,6 +12470,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-contact-duration-historical"
+     *        >Average contact duration</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8588,6 +12490,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical"
+     *        >Average conversation duration</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_GREETING_TIME_AGENT</dt>
      *        <dd>
@@ -8601,6 +12508,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
+     *        >Average greeting time agent </a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_HANDLE_TIME</dt>
      *        <dd>
@@ -8610,6 +12522,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-handle-time-historical"
+     *        >Average handle time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8625,6 +12542,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-customer-hold-time-historical"
+     *        >Average customer hold time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        Feature is a valid filter but not a valid grouping.
@@ -8639,6 +12561,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#avg-customer-hold-time-all-contacts-historical"
+     *        >Average customer hold time all contacts</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_HOLDS</dt>
      *        <dd>
@@ -8648,6 +12575,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-holds-historical"
+     *        >Average holds</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8663,6 +12595,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-customer-hold-time-historical"
+     *        >Average agent interaction and customer hold time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_INTERACTION_TIME</dt>
      *        <dd>
@@ -8675,6 +12612,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-agent-interaction-time-historical"
+     *        >Average agent interaction time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8693,6 +12635,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
+     *        >Average interruptions agent </a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
      *        <dd>
@@ -8705,6 +12652,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
+     *        >Average interruption time agent</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_NON_TALK_TIME</dt>
@@ -8719,6 +12671,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##average-non-talk-time-historical"
+     *        >Average non-talk time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_QUEUE_ANSWER_TIME</dt>
      *        <dd>
@@ -8728,6 +12685,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-queue-answer-time-historical"
+     *        >Average queue answer time</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8742,6 +12704,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-resolution-time-historical"
+     *        >Average resolution time</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME</dt>
      *        <dd>
@@ -8754,6 +12721,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-historical"
+     *        >Average talk time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_AGENT</dt>
@@ -8768,6 +12740,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
+     *        >Average talk time agent</a>
+     *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_CUSTOMER</dt>
      *        <dd>
@@ -8781,6 +12758,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
+     *        >Average talk time customer</a>
+     *        </p>
+     *        </dd>
+     *        <dt>CASES_CREATED</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical"
+     *        >Cases created</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_ABANDONED</dt>
      *        <dd>
@@ -8790,6 +12789,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical"
+     *        >Contact abandoned</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_CREATED</dt>
@@ -8803,6 +12807,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-created-historical"
+     *        >Contacts created</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8821,6 +12830,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#api-contacts-handled-historical"
+     *        >API contacts handled</a>
+     *        </p>
      *        <note>
      *        <p>
      *        Feature is a valid filter but not a valid grouping.
@@ -8838,6 +12852,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *        >Contacts handled by Connected to agent</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
      *        <dd>
@@ -8848,6 +12867,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
+     *        >Contacts hold disconnect</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_ON_HOLD_AGENT_DISCONNECT</dt>
      *        <dd>
@@ -8856,6 +12880,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-agent-disconnect-historical"
+     *        >Contacts hold agent disconnect</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT</dt>
@@ -8866,6 +12895,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *        >Contacts hold customer disconnect</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_PUT_ON_HOLD</dt>
      *        <dd>
@@ -8874,6 +12908,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-hold-customer-disconnect-historical"
+     *        >Contacts put on hold</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_EXTERNAL</dt>
@@ -8884,6 +12923,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-external-historical"
+     *        >Contacts transferred out external</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_INTERNAL</dt>
      *        <dd>
@@ -8892,6 +12936,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-internal-historical"
+     *        >Contacts transferred out internal</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_QUEUED</dt>
@@ -8903,6 +12952,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-historical"
+     *        >Contacts queued</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
      *        <dd>
@@ -8912,6 +12966,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
+     *        >Contacts queued by Enqueue</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -8926,6 +12985,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code> enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-resolved-historical"
+     *        >Contacts resolved in X</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT</dt>
      *        <dd>
@@ -8935,6 +12999,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-historical"
+     *        >Contacts transferred out</a>
      *        </p>
      *        <note>
      *        <p>
@@ -8950,6 +13019,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *        >Contacts transferred out by agent</a>
+     *        </p>
      *        </dd>
      *        <dt>CONTACTS_TRANSFERRED_OUT_FROM_QUEUE</dt>
      *        <dd>
@@ -8959,6 +13033,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-transferred-out-by-agent-historical"
+     *        >Contacts transferred out queue</a>
+     *        </p>
+     *        </dd>
+     *        <dt>CURRENT_CASES</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical"
+     *        >Current cases</a>
      *        </p>
      *        </dd>
      *        <dt>MAX_QUEUED_TIME</dt>
@@ -8970,6 +13066,28 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#maximum-queued-time-historical"
+     *        >Maximum queued time</a>
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_CASES_FIRST_CONTACT_RESOLVED</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Percent
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-first-contact-historical"
+     *        >Cases resolved on first contact</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_CONTACTS_STEP_EXPIRED</dt>
      *        <dd>
@@ -8979,6 +13097,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: Not available
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
      *        <dd>
@@ -8987,6 +13108,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
+     *        </p>
+     *        <p>
+     *        UI name: Not available
      *        </p>
      *        </dd>
      *        <dt>PERCENT_NON_TALK_TIME</dt>
@@ -9001,6 +13125,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ntt-historical"
+     *        >Non-talk time percent</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME</dt>
      *        <dd>
@@ -9013,6 +13142,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#tt-historical"
+     *        >Talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_AGENT</dt>
@@ -9027,6 +13161,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
+     *        >Talk time agent percent</a>
+     *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
      *        <dd>
@@ -9039,6 +13178,45 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
+     *        >Talk time customer percent</a>
+     *        </p>
+     *        </dd>
+     *        <dt>REOPENED_CASE_ACTIONS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-reopened-historical"
+     *        >Cases reopened</a>
+     *        </p>
+     *        </dd>
+     *        <dt>RESOLVED_CASE_ACTIONS</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Required filter key: CASE_TEMPLATE_ARN
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall"
+     *        >Cases resolved</a>
      *        </p>
      *        </dd>
      *        <dt>SERVICE_LEVEL</dt>
@@ -9056,6 +13234,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#service-level-historical"
+     *        >Service level X</a>
+     *        </p>
      *        </dd>
      *        <dt>STEP_CONTACTS_QUEUED</dt>
      *        <dd>
@@ -9065,6 +13248,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, RoutingStepExpression
      *        </p>
+     *        <p>
+     *        UI name: Not available
+     *        </p>
      *        </dd>
      *        <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
      *        <dd>
@@ -9073,6 +13259,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#acw-historical"
+     *        >After contact work time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONNECTING_TIME_AGENT</dt>
@@ -9088,6 +13279,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#htm-agent-api-connecting-time"
+     *        >Agent API connecting time</a>
+     *        </p>
      *        <note>
      *        <p>
      *        The <code>Negate</code> key in Metric Level Filters is not applicable for this metric.
@@ -9101,6 +13297,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-flow-time-historical"
+     *        >Contact flow time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACT_TIME_AGENT</dt>
      *        <dd>
@@ -9109,6 +13310,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical"
+     *        >Agent on contact time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
@@ -9123,6 +13329,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical"
+     *        >Contacts answered in X seconds</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *        <dd>
@@ -9135,6 +13346,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
      *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical"
+     *        >Contacts abandoned in X seconds</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -9149,6 +13365,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical"
+     *        >Contact disconnected</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
      *        <dd>
@@ -9157,6 +13378,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical"
+     *        >Error status time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_HANDLE_TIME</dt>
@@ -9167,6 +13393,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-handle-time-historical"
+     *        >Contact handle time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_HOLD_TIME</dt>
      *        <dd>
@@ -9175,6 +13406,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#customer-hold-time-historical"
+     *        >Customer hold time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_IDLE_TIME_AGENT</dt>
@@ -9185,6 +13421,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-idle-time-historica"
+     *        >Agent idle time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_INTERACTION_AND_HOLD_TIME</dt>
      *        <dd>
@@ -9193,6 +13434,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-hold-time-historical"
+     *        >Agent interaction and hold time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_INTERACTION_TIME</dt>
@@ -9203,6 +13449,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-interaction-time-historical"
+     *        >Agent interaction time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_NON_PRODUCTIVE_TIME_AGENT</dt>
      *        <dd>
@@ -9211,6 +13462,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#npt-historical"
+     *        >Non-Productive Time</a>
      *        </p>
      *        </dd>
      *        <dt>SUM_ONLINE_TIME_AGENT</dt>
@@ -9221,6 +13477,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy
      *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#online-time-historical"
+     *        >Online time</a>
+     *        </p>
      *        </dd>
      *        <dt>SUM_RETRY_CALLBACK_ATTEMPTS</dt>
      *        <dd>
@@ -9229,6 +13490,11 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        <p>
+     *        UI name: <a href=
+     *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical"
+     *        >Callback attempts</a>
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.

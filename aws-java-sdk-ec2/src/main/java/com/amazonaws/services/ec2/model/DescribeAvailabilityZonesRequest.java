@@ -35,7 +35,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <p>
      * <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of the group
      * associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones, use the name of
-     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1-bos-wlz-1</code>).
+     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      * </p>
      * </li>
      * <li>
@@ -126,7 +126,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <p>
      * <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of the group
      * associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones, use the name of
-     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1-bos-wlz-1</code>).
+     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      * </p>
      * </li>
      * <li>
@@ -191,7 +191,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *         <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of
      *         the group associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength
      *         Zones, use the name of the group associated with the Wavelength Zone (for example,
-     *         <code>us-east-1-wl1-bos-wlz-1</code>).
+     *         <code>us-east-1-wl1</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -266,7 +266,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <p>
      * <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of the group
      * associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones, use the name of
-     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1-bos-wlz-1</code>).
+     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      * </p>
      * </li>
      * <li>
@@ -331,8 +331,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *        <p>
      *        <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of
      *        the group associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones,
-     *        use the name of the group associated with the Wavelength Zone (for example,
-     *        <code>us-east-1-wl1-bos-wlz-1</code>).
+     *        use the name of the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -409,7 +408,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <p>
      * <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of the group
      * associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones, use the name of
-     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1-bos-wlz-1</code>).
+     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      * </p>
      * </li>
      * <li>
@@ -479,8 +478,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *        <p>
      *        <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of
      *        the group associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones,
-     *        use the name of the group associated with the Wavelength Zone (for example,
-     *        <code>us-east-1-wl1-bos-wlz-1</code>).
+     *        use the name of the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -559,7 +557,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <p>
      * <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of the group
      * associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones, use the name of
-     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1-bos-wlz-1</code>).
+     * the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      * </p>
      * </li>
      * <li>
@@ -624,8 +622,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *        <p>
      *        <code>group-name</code> - For Availability Zones, use the Region name. For Local Zones, use the name of
      *        the group associated with the Local Zone (for example, <code>us-west-2-lax-1</code>) For Wavelength Zones,
-     *        use the name of the group associated with the Wavelength Zone (for example,
-     *        <code>us-east-1-wl1-bos-wlz-1</code>).
+     *        use the name of the group associated with the Wavelength Zone (for example, <code>us-east-1-wl1</code>).
      *        </p>
      *        </li>
      *        <li>

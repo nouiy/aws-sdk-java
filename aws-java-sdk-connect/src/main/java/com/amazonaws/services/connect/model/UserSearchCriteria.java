@@ -51,9 +51,8 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
      * A leaf node condition which can be used to specify a string condition.
      * </p>
      * <p>
-     * The currently supported values for <code>FieldName</code> are <code>username</code>, <code>firstname</code>,
-     * <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>, <code>securityProfileId</code>,
-     * <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     * The currently supported values for <code>FieldName</code> are <code>Username</code>, <code>FirstName</code>,
+     * <code>LastName</code>, <code>RoutingProfileId</code>, <code>SecurityProfileId</code>, <code>ResourceId</code>.
      * </p>
      */
     private StringCondition stringCondition;
@@ -209,17 +208,16 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
      * A leaf node condition which can be used to specify a string condition.
      * </p>
      * <p>
-     * The currently supported values for <code>FieldName</code> are <code>username</code>, <code>firstname</code>,
-     * <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>, <code>securityProfileId</code>,
-     * <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     * The currently supported values for <code>FieldName</code> are <code>Username</code>, <code>FirstName</code>,
+     * <code>LastName</code>, <code>RoutingProfileId</code>, <code>SecurityProfileId</code>, <code>ResourceId</code>.
      * </p>
      * 
      * @param stringCondition
      *        A leaf node condition which can be used to specify a string condition.</p>
      *        <p>
-     *        The currently supported values for <code>FieldName</code> are <code>username</code>,
-     *        <code>firstname</code>, <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>,
-     *        <code>securityProfileId</code>, <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     *        The currently supported values for <code>FieldName</code> are <code>Username</code>,
+     *        <code>FirstName</code>, <code>LastName</code>, <code>RoutingProfileId</code>,
+     *        <code>SecurityProfileId</code>, <code>ResourceId</code>.
      */
 
     public void setStringCondition(StringCondition stringCondition) {
@@ -231,16 +229,15 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
      * A leaf node condition which can be used to specify a string condition.
      * </p>
      * <p>
-     * The currently supported values for <code>FieldName</code> are <code>username</code>, <code>firstname</code>,
-     * <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>, <code>securityProfileId</code>,
-     * <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     * The currently supported values for <code>FieldName</code> are <code>Username</code>, <code>FirstName</code>,
+     * <code>LastName</code>, <code>RoutingProfileId</code>, <code>SecurityProfileId</code>, <code>ResourceId</code>.
      * </p>
      * 
      * @return A leaf node condition which can be used to specify a string condition.</p>
      *         <p>
-     *         The currently supported values for <code>FieldName</code> are <code>username</code>,
-     *         <code>firstname</code>, <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>,
-     *         <code>securityProfileId</code>, <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     *         The currently supported values for <code>FieldName</code> are <code>Username</code>,
+     *         <code>FirstName</code>, <code>LastName</code>, <code>RoutingProfileId</code>,
+     *         <code>SecurityProfileId</code>, <code>ResourceId</code>.
      */
 
     public StringCondition getStringCondition() {
@@ -252,17 +249,16 @@ public class UserSearchCriteria implements Serializable, Cloneable, StructuredPo
      * A leaf node condition which can be used to specify a string condition.
      * </p>
      * <p>
-     * The currently supported values for <code>FieldName</code> are <code>username</code>, <code>firstname</code>,
-     * <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>, <code>securityProfileId</code>,
-     * <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     * The currently supported values for <code>FieldName</code> are <code>Username</code>, <code>FirstName</code>,
+     * <code>LastName</code>, <code>RoutingProfileId</code>, <code>SecurityProfileId</code>, <code>ResourceId</code>.
      * </p>
      * 
      * @param stringCondition
      *        A leaf node condition which can be used to specify a string condition.</p>
      *        <p>
-     *        The currently supported values for <code>FieldName</code> are <code>username</code>,
-     *        <code>firstname</code>, <code>lastname</code>, <code>resourceId</code>, <code>routingProfileId</code>,
-     *        <code>securityProfileId</code>, <code>agentGroupId</code>, and <code>agentGroupPathIds</code>.
+     *        The currently supported values for <code>FieldName</code> are <code>Username</code>,
+     *        <code>FirstName</code>, <code>LastName</code>, <code>RoutingProfileId</code>,
+     *        <code>SecurityProfileId</code>, <code>ResourceId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

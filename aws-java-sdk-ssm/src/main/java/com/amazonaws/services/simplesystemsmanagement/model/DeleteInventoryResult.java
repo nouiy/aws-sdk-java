@@ -41,7 +41,7 @@ public class DeleteInventoryResult extends com.amazonaws.AmazonWebServiceResult<
      * <p>
      * A summary of the delete operation. For more information about this summary, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     * >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      */
     private InventoryDeletionSummary deletionSummary;
@@ -142,13 +142,14 @@ public class DeleteInventoryResult extends com.amazonaws.AmazonWebServiceResult<
      * <p>
      * A summary of the delete operation. For more information about this summary, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     * >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param deletionSummary
      *        A summary of the delete operation. For more information about this summary, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     *        >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User
+     *        Guide</i>.
      */
 
     public void setDeletionSummary(InventoryDeletionSummary deletionSummary) {
@@ -159,12 +160,13 @@ public class DeleteInventoryResult extends com.amazonaws.AmazonWebServiceResult<
      * <p>
      * A summary of the delete operation. For more information about this summary, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     * >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @return A summary of the delete operation. For more information about this summary, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     *         >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *         >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User
+     *         Guide</i>.
      */
 
     public InventoryDeletionSummary getDeletionSummary() {
@@ -175,13 +177,14 @@ public class DeleteInventoryResult extends com.amazonaws.AmazonWebServiceResult<
      * <p>
      * A summary of the delete operation. For more information about this summary, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     * >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param deletionSummary
      *        A summary of the delete operation. For more information about this summary, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-custom.html#sysman-inventory-delete-summary"
-     *        >Deleting custom inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     *        >Understanding the delete inventory summary</a> in the <i>Amazon Web Services Systems Manager User
+     *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -93,9 +93,6 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
      * instance tags using the instance metadata</a>.
      * </p>
-     * <p>
-     * Default: <code>disabled</code>
-     * </p>
      */
     private String instanceMetadataTags;
 
@@ -585,18 +582,13 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
      * instance tags using the instance metadata</a>.
      * </p>
-     * <p>
-     * Default: <code>disabled</code>
-     * </p>
      * 
      * @param instanceMetadataTags
      *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
      *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
-     *        with instance tags using the instance metadata</a>.</p>
-     *        <p>
-     *        Default: <code>disabled</code>
+     *        with instance tags using the instance metadata</a>.
      * @see InstanceMetadataTagsState
      */
 
@@ -611,17 +603,12 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
      * instance tags using the instance metadata</a>.
      * </p>
-     * <p>
-     * Default: <code>disabled</code>
-     * </p>
      * 
      * @return Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
      *         <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
-     *         with instance tags using the instance metadata</a>.</p>
-     *         <p>
-     *         Default: <code>disabled</code>
+     *         with instance tags using the instance metadata</a>.
      * @see InstanceMetadataTagsState
      */
 
@@ -636,18 +623,13 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
      * instance tags using the instance metadata</a>.
      * </p>
-     * <p>
-     * Default: <code>disabled</code>
-     * </p>
      * 
      * @param instanceMetadataTags
      *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
      *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
-     *        with instance tags using the instance metadata</a>.</p>
-     *        <p>
-     *        Default: <code>disabled</code>
+     *        with instance tags using the instance metadata</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataTagsState
      */
@@ -664,18 +646,13 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
      * instance tags using the instance metadata</a>.
      * </p>
-     * <p>
-     * Default: <code>disabled</code>
-     * </p>
      * 
      * @param instanceMetadataTags
      *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
      *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
-     *        with instance tags using the instance metadata</a>.</p>
-     *        <p>
-     *        Default: <code>disabled</code>
+     *        with instance tags using the instance metadata</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataTagsState
      */
