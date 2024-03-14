@@ -39,7 +39,7 @@ public class CreateTargetAccountConfigurationRequest extends com.amazonaws.Amazo
     private String experimentTemplateId;
     /**
      * <p>
-     * The AWS account ID of the target account.
+     * The Amazon Web Services account ID of the target account.
      * </p>
      */
     private String accountId;
@@ -138,11 +138,11 @@ public class CreateTargetAccountConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The AWS account ID of the target account.
+     * The Amazon Web Services account ID of the target account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the target account.
+     *        The Amazon Web Services account ID of the target account.
      */
 
     public void setAccountId(String accountId) {
@@ -151,10 +151,10 @@ public class CreateTargetAccountConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The AWS account ID of the target account.
+     * The Amazon Web Services account ID of the target account.
      * </p>
      * 
-     * @return The AWS account ID of the target account.
+     * @return The Amazon Web Services account ID of the target account.
      */
 
     public String getAccountId() {
@@ -163,11 +163,11 @@ public class CreateTargetAccountConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The AWS account ID of the target account.
+     * The Amazon Web Services account ID of the target account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the target account.
+     *        The Amazon Web Services account ID of the target account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

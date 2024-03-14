@@ -40,6 +40,12 @@ public class ExperimentOptions implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String emptyTargetResolutionMode;
+    /**
+     * <p>
+     * The actions mode of the experiment that is set from the StartExperiment API command.
+     * </p>
+     */
+    private String actionsMode;
 
     /**
      * <p>
@@ -160,6 +166,65 @@ public class ExperimentOptions implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The actions mode of the experiment that is set from the StartExperiment API command.
+     * </p>
+     * 
+     * @param actionsMode
+     *        The actions mode of the experiment that is set from the StartExperiment API command.
+     * @see ActionsMode
+     */
+
+    public void setActionsMode(String actionsMode) {
+        this.actionsMode = actionsMode;
+    }
+
+    /**
+     * <p>
+     * The actions mode of the experiment that is set from the StartExperiment API command.
+     * </p>
+     * 
+     * @return The actions mode of the experiment that is set from the StartExperiment API command.
+     * @see ActionsMode
+     */
+
+    public String getActionsMode() {
+        return this.actionsMode;
+    }
+
+    /**
+     * <p>
+     * The actions mode of the experiment that is set from the StartExperiment API command.
+     * </p>
+     * 
+     * @param actionsMode
+     *        The actions mode of the experiment that is set from the StartExperiment API command.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ActionsMode
+     */
+
+    public ExperimentOptions withActionsMode(String actionsMode) {
+        setActionsMode(actionsMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The actions mode of the experiment that is set from the StartExperiment API command.
+     * </p>
+     * 
+     * @param actionsMode
+     *        The actions mode of the experiment that is set from the StartExperiment API command.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ActionsMode
+     */
+
+    public ExperimentOptions withActionsMode(ActionsMode actionsMode) {
+        this.actionsMode = actionsMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -174,7 +239,9 @@ public class ExperimentOptions implements Serializable, Cloneable, StructuredPoj
         if (getAccountTargeting() != null)
             sb.append("AccountTargeting: ").append(getAccountTargeting()).append(",");
         if (getEmptyTargetResolutionMode() != null)
-            sb.append("EmptyTargetResolutionMode: ").append(getEmptyTargetResolutionMode());
+            sb.append("EmptyTargetResolutionMode: ").append(getEmptyTargetResolutionMode()).append(",");
+        if (getActionsMode() != null)
+            sb.append("ActionsMode: ").append(getActionsMode());
         sb.append("}");
         return sb.toString();
     }
@@ -197,6 +264,10 @@ public class ExperimentOptions implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getEmptyTargetResolutionMode() != null && other.getEmptyTargetResolutionMode().equals(this.getEmptyTargetResolutionMode()) == false)
             return false;
+        if (other.getActionsMode() == null ^ this.getActionsMode() == null)
+            return false;
+        if (other.getActionsMode() != null && other.getActionsMode().equals(this.getActionsMode()) == false)
+            return false;
         return true;
     }
 
@@ -207,6 +278,7 @@ public class ExperimentOptions implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getAccountTargeting() == null) ? 0 : getAccountTargeting().hashCode());
         hashCode = prime * hashCode + ((getEmptyTargetResolutionMode() == null) ? 0 : getEmptyTargetResolutionMode().hashCode());
+        hashCode = prime * hashCode + ((getActionsMode() == null) ? 0 : getActionsMode().hashCode());
         return hashCode;
     }
 

@@ -52,6 +52,10 @@ public class ExperimentSummaryJsonUnmarshaller implements Unmarshaller<Experimen
                     context.nextToken();
                     experimentSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("arn", targetDepth)) {
+                    context.nextToken();
+                    experimentSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("experimentTemplateId", targetDepth)) {
                     context.nextToken();
                     experimentSummary.setExperimentTemplateId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -68,6 +72,10 @@ public class ExperimentSummaryJsonUnmarshaller implements Unmarshaller<Experimen
                     context.nextToken();
                     experimentSummary.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
+                }
+                if (context.testExpression("experimentOptions", targetDepth)) {
+                    context.nextToken();
+                    experimentSummary.setExperimentOptions(ExperimentOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

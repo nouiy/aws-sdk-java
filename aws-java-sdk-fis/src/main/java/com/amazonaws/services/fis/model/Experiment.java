@@ -36,6 +36,12 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the experiment.
+     * </p>
+     */
+    private String arn;
+    /**
+     * <p>
      * The ID of the experiment template.
      * </p>
      */
@@ -151,6 +157,46 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     public Experiment withId(String id) {
         setId(id);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the experiment.
+     * </p>
+     * 
+     * @param arn
+     *        The Amazon Resource Name (ARN) of the experiment.
+     */
+
+    public void setArn(String arn) {
+        this.arn = arn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the experiment.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the experiment.
+     */
+
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the experiment.
+     * </p>
+     * 
+     * @param arn
+     *        The Amazon Resource Name (ARN) of the experiment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Experiment withArn(String arn) {
+        setArn(arn);
         return this;
     }
 
@@ -808,6 +854,8 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
         if (getExperimentTemplateId() != null)
             sb.append("ExperimentTemplateId: ").append(getExperimentTemplateId()).append(",");
         if (getRoleArn() != null)
@@ -851,6 +899,10 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
+            return false;
+        if (other.getArn() == null ^ this.getArn() == null)
+            return false;
+        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
         if (other.getExperimentTemplateId() == null ^ this.getExperimentTemplateId() == null)
             return false;
@@ -914,6 +966,7 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getExperimentTemplateId() == null) ? 0 : getExperimentTemplateId().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());

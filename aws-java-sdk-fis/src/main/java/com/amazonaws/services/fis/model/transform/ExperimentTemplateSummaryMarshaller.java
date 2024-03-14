@@ -31,6 +31,8 @@ public class ExperimentTemplateSummaryMarshaller {
 
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -57,6 +59,7 @@ public class ExperimentTemplateSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(experimentTemplateSummary.getId(), ID_BINDING);
+            protocolMarshaller.marshall(experimentTemplateSummary.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(experimentTemplateSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(experimentTemplateSummary.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(experimentTemplateSummary.getLastUpdateTime(), LASTUPDATETIME_BINDING);

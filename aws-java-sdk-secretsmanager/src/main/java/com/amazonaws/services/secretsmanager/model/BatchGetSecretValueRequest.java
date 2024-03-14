@@ -45,7 +45,8 @@ public class BatchGetSecretValueRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
-     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>.
+     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>. To use this
+     * parameter, you must also use the <code>Filters</code> parameter.
      * </p>
      */
     private Integer maxResults;
@@ -219,7 +220,8 @@ public class BatchGetSecretValueRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
-     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>.
+     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>. To use this
+     * parameter, you must also use the <code>Filters</code> parameter.
      * </p>
      * 
      * @param maxResults
@@ -227,7 +229,7 @@ public class BatchGetSecretValueRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
      *        get the next results, call <code>BatchGetSecretValue</code> again with the value from
-     *        <code>NextToken</code>.
+     *        <code>NextToken</code>. To use this parameter, you must also use the <code>Filters</code> parameter.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -240,14 +242,15 @@ public class BatchGetSecretValueRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
-     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>.
+     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>. To use this
+     * parameter, you must also use the <code>Filters</code> parameter.
      * </p>
      * 
      * @return The number of results to include in the response.</p>
      *         <p>
      *         If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
      *         get the next results, call <code>BatchGetSecretValue</code> again with the value from
-     *         <code>NextToken</code>.
+     *         <code>NextToken</code>. To use this parameter, you must also use the <code>Filters</code> parameter.
      */
 
     public Integer getMaxResults() {
@@ -260,7 +263,8 @@ public class BatchGetSecretValueRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
-     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>.
+     * next results, call <code>BatchGetSecretValue</code> again with the value from <code>NextToken</code>. To use this
+     * parameter, you must also use the <code>Filters</code> parameter.
      * </p>
      * 
      * @param maxResults
@@ -268,7 +272,7 @@ public class BatchGetSecretValueRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
      *        get the next results, call <code>BatchGetSecretValue</code> again with the value from
-     *        <code>NextToken</code>.
+     *        <code>NextToken</code>. To use this parameter, you must also use the <code>Filters</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

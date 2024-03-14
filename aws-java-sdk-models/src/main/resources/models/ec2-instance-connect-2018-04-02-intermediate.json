@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -58,7 +58,7 @@
     "defaultEndpoint" : "ec2-instance-connect.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "ec2-instance-connect.us-east-1.amazonaws.com",
     "defaultRegion" : null,
-    "documentation" : "<p>Amazon EC2 Instance Connect enables system administrators to publish one-time use SSH public keys to EC2, providing users a simple and secure way to connect to their instances.</p>",
+    "documentation" : "<p>This is the <i> Amazon EC2 Instance Connect API Reference</i>. It provides descriptions, syntax, and usage examples for each of the actions for Amazon EC2 Instance Connect. Amazon EC2 Instance Connect enables system administrators to publish one-time use SSH public keys to EC2, providing users a simple and secure way to connect to their instances.</p> <p>To view the Amazon EC2 Instance Connect content in the <i> Amazon EC2 User Guide</i>, see <a href=\"https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html\">Connect to your Linux instance using EC2 Instance Connect</a>.</p> <p>For Amazon EC2 APIs, see the <a href=\"https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Welcome.html\">Amazon EC2 API Reference</a>.</p>",
     "endpointPrefix" : "ec2-instance-connect",
     "hasApiWithStreamInput" : false,
     "ionProtocol" : false,
@@ -203,6 +203,10 @@
       }, {
         "exceptionName" : "EC2InstanceUnavailableException",
         "documentation" : "<p>The instance is currently unavailable. Wait a few minutes and try again.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "SerialConsoleSessionUnsupportedException",
+        "documentation" : "<p>Your instance's BIOS version is unsupported for serial console connection. Reboot your instance to update its BIOS, and then try again to connect.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2310,6 +2314,47 @@
         "documentation" : null,
         "simpleType" : "SerialConsoleSessionUnavailableException",
         "variableSetterType" : "SerialConsoleSessionUnavailableException"
+      },
+      "wrapper" : false
+    },
+    "SerialConsoleSessionUnsupportedException" : {
+      "c2jName" : "SerialConsoleSessionUnsupportedException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>Your instance's BIOS version is unsupported for serial console connection. Reboot your instance to update its BIOS, and then try again to connect.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "SerialConsoleSessionUnsupportedException",
+      "fullyQualifiedName" : "com.amazonaws.services.ec2instanceconnect.exception.SerialConsoleSessionUnsupportedException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.ec2instanceconnect.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "SerialConsoleSessionUnsupportedException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "SerialConsoleSessionUnsupportedException",
+        "variableName" : "serialConsoleSessionUnsupportedException",
+        "variableType" : "SerialConsoleSessionUnsupportedException",
+        "documentation" : null,
+        "simpleType" : "SerialConsoleSessionUnsupportedException",
+        "variableSetterType" : "SerialConsoleSessionUnsupportedException"
       },
       "wrapper" : false
     },

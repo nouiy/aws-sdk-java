@@ -52,6 +52,10 @@ public class ActionSummaryJsonUnmarshaller implements Unmarshaller<ActionSummary
                     context.nextToken();
                     actionSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("arn", targetDepth)) {
+                    context.nextToken();
+                    actionSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     actionSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

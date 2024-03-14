@@ -52,6 +52,10 @@ public class ExperimentTemplateJsonUnmarshaller implements Unmarshaller<Experime
                     context.nextToken();
                     experimentTemplate.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("arn", targetDepth)) {
+                    context.nextToken();
+                    experimentTemplate.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     experimentTemplate.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

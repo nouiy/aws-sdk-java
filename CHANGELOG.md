@@ -1,3 +1,32 @@
+# __1.12.680__ __2024-03-14__
+## __AWS Amplify__
+  - ### Features
+    - Documentation updates for Amplify. Identifies the APIs available only to apps created using Amplify Gen 1.
+
+## __AWS EC2 Instance Connect__
+  - ### Features
+    - This release includes a new exception type "SerialConsoleSessionUnsupportedException" for SendSerialConsoleSSHPublicKey API.
+
+## __AWS Fault Injection Simulator__
+  - ### Features
+    - This release adds support for previewing target resources before running a FIS experiment. It also adds resource ARNs for actions, experiments, and experiment templates to API responses.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Doc only update for Secrets Manager
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Updates Amazon RDS documentation for EBCDIC collation for RDS for Db2.
+
+## __Elastic Load Balancing__
+  - ### Features
+    - This release allows you to configure HTTP client keep-alive duration for communication between clients and Application Load Balancers.
+
+## __Timestream InfluxDB__
+  - ### Features
+    - This is the initial SDK release for Amazon Timestream for InfluxDB. Amazon Timestream for InfluxDB is a new time-series database engine that makes it easy for application developers and DevOps teams to run InfluxDB databases on AWS for near real-time time-series applications using open source APIs.
+
 # __1.12.679__ __2024-03-13__
 ## __Amazon Interactive Video Service RealTime__
   - ### Features

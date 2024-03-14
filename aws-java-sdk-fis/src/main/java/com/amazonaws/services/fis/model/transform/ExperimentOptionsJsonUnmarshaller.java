@@ -56,6 +56,10 @@ public class ExperimentOptionsJsonUnmarshaller implements Unmarshaller<Experimen
                     context.nextToken();
                     experimentOptions.setEmptyTargetResolutionMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("actionsMode", targetDepth)) {
+                    context.nextToken();
+                    experimentOptions.setActionsMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

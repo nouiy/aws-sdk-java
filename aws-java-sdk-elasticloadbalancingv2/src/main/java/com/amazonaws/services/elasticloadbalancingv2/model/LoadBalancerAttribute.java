@@ -91,6 +91,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
+     * <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is 60-604800
+     * seconds. The default is 3600 seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection_logs.s3.enabled</code> - Indicates whether connection logs are enabled. The value is
      * <code>true</code> or <code>false</code>. The default is <code>false</code>.
      * </p>
@@ -276,6 +282,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
+     * <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is 60-604800
+     * seconds. The default is 3600 seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection_logs.s3.enabled</code> - Indicates whether connection logs are enabled. The value is
      * <code>true</code> or <code>false</code>. The default is <code>false</code>.
      * </p>
@@ -447,6 +459,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *        <p>
      *        <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000
      *        seconds. The default is 60 seconds.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is
+     *        60-604800 seconds. The default is 3600 seconds.
      *        </p>
      *        </li>
      *        <li>
@@ -634,6 +652,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
+     * <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is 60-604800
+     * seconds. The default is 3600 seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection_logs.s3.enabled</code> - Indicates whether connection logs are enabled. The value is
      * <code>true</code> or <code>false</code>. The default is <code>false</code>.
      * </p>
@@ -804,6 +828,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *         <p>
      *         <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000
      *         seconds. The default is 60 seconds.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is
+     *         60-604800 seconds. The default is 3600 seconds.
      *         </p>
      *         </li>
      *         <li>
@@ -992,6 +1022,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
+     * <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is 60-604800
+     * seconds. The default is 3600 seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>connection_logs.s3.enabled</code> - Indicates whether connection logs are enabled. The value is
      * <code>true</code> or <code>false</code>. The default is <code>false</code>.
      * </p>
@@ -1163,6 +1199,12 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *        <p>
      *        <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000
      *        seconds. The default is 60 seconds.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>client_keep_alive.seconds</code> - The client keep alive value, in seconds. The valid range is
+     *        60-604800 seconds. The default is 3600 seconds.
      *        </p>
      *        </li>
      *        <li>

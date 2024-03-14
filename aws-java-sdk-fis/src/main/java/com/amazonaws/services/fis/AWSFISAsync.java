@@ -26,9 +26,9 @@ import com.amazonaws.services.fis.model.*;
  * </p>
  * <p>
  * <p>
- * Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ * Fault Injection Service is a managed service that enables you to perform fault injection experiments on your Amazon
  * Web Services workloads. For more information, see the <a
- * href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault Injection Simulator User Guide</a>.
+ * href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault Injection Service User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -64,7 +64,7 @@ public interface AWSFISAsync extends AWSFIS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">experiment templates</a> in the
-     * <i>Fault Injection Simulator User Guide</i>.
+     * <i>Fault Injection Service User Guide</i>.
      * </p>
      * 
      * @param createExperimentTemplateRequest
@@ -105,7 +105,7 @@ public interface AWSFISAsync extends AWSFIS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">experiment templates</a> in the
-     * <i>Fault Injection Simulator User Guide</i>.
+     * <i>Fault Injection Service User Guide</i>.
      * </p>
      * 
      * @param createExperimentTemplateRequest
@@ -127,7 +127,7 @@ public interface AWSFISAsync extends AWSFIS {
      * when <code>accountTargeting</code> of <code>experimentOptions</code> is set to <code>multi-account</code>. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-options.html">experiment options</a> in the
-     * <i>Fault Injection Simulator User Guide</i>.
+     * <i>Fault Injection Service User Guide</i>.
      * </p>
      * 
      * @param createTargetAccountConfigurationRequest
@@ -146,7 +146,7 @@ public interface AWSFISAsync extends AWSFIS {
      * when <code>accountTargeting</code> of <code>experimentOptions</code> is set to <code>multi-account</code>. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-options.html">experiment options</a> in the
-     * <i>Fault Injection Simulator User Guide</i>.
+     * <i>Fault Injection Service User Guide</i>.
      * </p>
      * 
      * @param createTargetAccountConfigurationRequest

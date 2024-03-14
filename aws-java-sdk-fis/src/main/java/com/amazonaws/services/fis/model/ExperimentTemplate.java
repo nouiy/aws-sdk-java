@@ -36,6 +36,12 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
     private String id;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the experiment template.
+     * </p>
+     */
+    private String arn;
+    /**
+     * <p>
      * The description for the experiment template.
      * </p>
      */
@@ -138,6 +144,46 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
 
     public ExperimentTemplate withId(String id) {
         setId(id);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the experiment template.
+     * </p>
+     * 
+     * @param arn
+     *        The Amazon Resource Name (ARN) of the experiment template.
+     */
+
+    public void setArn(String arn) {
+        this.arn = arn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the experiment template.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the experiment template.
+     */
+
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the experiment template.
+     * </p>
+     * 
+     * @param arn
+     *        The Amazon Resource Name (ARN) of the experiment template.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExperimentTemplate withArn(String arn) {
+        setArn(arn);
         return this;
     }
 
@@ -709,6 +755,8 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         sb.append("{");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getTargets() != null)
@@ -748,6 +796,10 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
+            return false;
+        if (other.getArn() == null ^ this.getArn() == null)
+            return false;
+        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
@@ -803,6 +855,7 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTargets() == null) ? 0 : getTargets().hashCode());
         hashCode = prime * hashCode + ((getActions() == null) ? 0 : getActions().hashCode());

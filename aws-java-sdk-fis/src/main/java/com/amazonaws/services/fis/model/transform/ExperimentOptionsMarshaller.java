@@ -31,6 +31,8 @@ public class ExperimentOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accountTargeting").build();
     private static final MarshallingInfo<String> EMPTYTARGETRESOLUTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("emptyTargetResolutionMode").build();
+    private static final MarshallingInfo<String> ACTIONSMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionsMode").build();
 
     private static final ExperimentOptionsMarshaller instance = new ExperimentOptionsMarshaller();
 
@@ -50,6 +52,7 @@ public class ExperimentOptionsMarshaller {
         try {
             protocolMarshaller.marshall(experimentOptions.getAccountTargeting(), ACCOUNTTARGETING_BINDING);
             protocolMarshaller.marshall(experimentOptions.getEmptyTargetResolutionMode(), EMPTYTARGETRESOLUTIONMODE_BINDING);
+            protocolMarshaller.marshall(experimentOptions.getActionsMode(), ACTIONSMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

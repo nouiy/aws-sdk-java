@@ -52,9 +52,9 @@ import com.amazonaws.services.fis.model.transform.*;
  * service call completes.
  * <p>
  * <p>
- * Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ * Fault Injection Service is a managed service that enables you to perform fault injection experiments on your Amazon
  * Web Services workloads. For more information, see the <a
- * href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault Injection Simulator User Guide</a>.
+ * href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault Injection Service User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -170,7 +170,7 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">experiment templates</a> in the
-     * <i>Fault Injection Simulator User Guide</i>.
+     * <i>Fault Injection Service User Guide</i>.
      * </p>
      * 
      * @param createExperimentTemplateRequest
@@ -239,7 +239,7 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
      * when <code>accountTargeting</code> of <code>experimentOptions</code> is set to <code>multi-account</code>. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-options.html">experiment options</a> in the
-     * <i>Fault Injection Simulator User Guide</i>.
+     * <i>Fault Injection Service User Guide</i>.
      * </p>
      * 
      * @param createTargetAccountConfigurationRequest

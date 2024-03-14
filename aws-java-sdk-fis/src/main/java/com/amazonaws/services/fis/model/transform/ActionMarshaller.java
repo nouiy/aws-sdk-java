@@ -31,6 +31,8 @@ public class ActionMarshaller {
 
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<Map> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -57,6 +59,7 @@ public class ActionMarshaller {
 
         try {
             protocolMarshaller.marshall(action.getId(), ID_BINDING);
+            protocolMarshaller.marshall(action.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(action.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(action.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(action.getTargets(), TARGETS_BINDING);

@@ -31,6 +31,8 @@ public class ExperimentMarshaller {
 
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> EXPERIMENTTEMPLATEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("experimentTemplateId").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -75,6 +77,7 @@ public class ExperimentMarshaller {
 
         try {
             protocolMarshaller.marshall(experiment.getId(), ID_BINDING);
+            protocolMarshaller.marshall(experiment.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(experiment.getExperimentTemplateId(), EXPERIMENTTEMPLATEID_BINDING);
             protocolMarshaller.marshall(experiment.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(experiment.getState(), STATE_BINDING);

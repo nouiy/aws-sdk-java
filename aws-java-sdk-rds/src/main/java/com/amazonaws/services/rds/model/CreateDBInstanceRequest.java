@@ -121,7 +121,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     * database is created in the DB instance.
+     * database is created in the DB instance. In some cases, we recommend that you don't add a database name. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     * >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -2489,7 +2492,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     * database is created in the DB instance.
+     * database is created in the DB instance. In some cases, we recommend that you don't add a database name. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     * >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -2716,7 +2722,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     *        database is created in the DB instance.
+     *        database is created in the DB instance. In some cases, we recommend that you don't add a database name.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     *        >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -2948,7 +2957,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     * database is created in the DB instance.
+     * database is created in the DB instance. In some cases, we recommend that you don't add a database name. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     * >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -3174,7 +3186,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <dd>
      *         <p>
      *         The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     *         database is created in the DB instance.
+     *         database is created in the DB instance. In some cases, we recommend that you don't add a database name.
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     *         >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         Constraints:
@@ -3406,7 +3421,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     * database is created in the DB instance.
+     * database is created in the DB instance. In some cases, we recommend that you don't add a database name. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     * >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -3633,7 +3651,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created. If this parameter isn't specified, no
-     *        database is created in the DB instance.
+     *        database is created in the DB instance. In some cases, we recommend that you don't add a database name.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-db-instance-prereqs.html#db2-prereqs-additional-considerations"
+     *        >Additional considerations</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
