@@ -30,7 +30,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The name of the table containing the requested items.
+     * The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      */
     private String tableName;
@@ -455,7 +456,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table containing the requested items.
+     *        The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      */
     public QueryRequest(String tableName) {
         setTableName(tableName);
@@ -463,11 +465,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The name of the table containing the requested items.
+     * The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table containing the requested items.
+     *        The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -476,10 +480,12 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The name of the table containing the requested items.
+     * The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
-     * @return The name of the table containing the requested items.
+     * @return The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN)
+     *         of the table in this parameter.
      */
 
     public String getTableName() {
@@ -488,11 +494,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The name of the table containing the requested items.
+     * The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table containing the requested items.
+     *        The name of the table containing the requested items. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

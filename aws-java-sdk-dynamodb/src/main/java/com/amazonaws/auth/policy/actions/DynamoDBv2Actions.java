@@ -41,6 +41,8 @@ public enum DynamoDBv2Actions implements Action {
     DeleteBackup("dynamodb:DeleteBackup"),
     /** Action for the DeleteItem operation. */
     DeleteItem("dynamodb:DeleteItem"),
+    /** Action for the DeleteResourcePolicy operation. */
+    DeleteResourcePolicy("dynamodb:DeleteResourcePolicy"),
     /** Action for the DeleteTable operation. */
     DeleteTable("dynamodb:DeleteTable"),
     /** Action for the DescribeBackup operation. */
@@ -81,6 +83,8 @@ public enum DynamoDBv2Actions implements Action {
     ExportTableToPointInTime("dynamodb:ExportTableToPointInTime"),
     /** Action for the GetItem operation. */
     GetItem("dynamodb:GetItem"),
+    /** Action for the GetResourcePolicy operation. */
+    GetResourcePolicy("dynamodb:GetResourcePolicy"),
     /** Action for the ImportTable operation. */
     ImportTable("dynamodb:ImportTable"),
     /** Action for the ListBackups operation. */
@@ -99,6 +103,8 @@ public enum DynamoDBv2Actions implements Action {
     ListTagsOfResource("dynamodb:ListTagsOfResource"),
     /** Action for the PutItem operation. */
     PutItem("dynamodb:PutItem"),
+    /** Action for the PutResourcePolicy operation. */
+    PutResourcePolicy("dynamodb:PutResourcePolicy"),
     /** Action for the Query operation. */
     Query("dynamodb:Query"),
     /** Action for the RestoreTableFromBackup operation. */

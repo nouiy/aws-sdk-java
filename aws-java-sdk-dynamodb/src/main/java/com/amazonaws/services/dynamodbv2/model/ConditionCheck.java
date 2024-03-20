@@ -38,7 +38,8 @@ public class ConditionCheck implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, AttributeValue> key;
     /**
      * <p>
-     * Name of the table for the check item request.
+     * Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      */
     private String tableName;
@@ -151,11 +152,13 @@ public class ConditionCheck implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the table for the check item request.
+     * Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      * 
      * @param tableName
-     *        Name of the table for the check item request.
+     *        Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -164,10 +167,12 @@ public class ConditionCheck implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the table for the check item request.
+     * Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      * 
-     * @return Name of the table for the check item request.
+     * @return Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the
+     *         table in this parameter.
      */
 
     public String getTableName() {
@@ -176,11 +181,13 @@ public class ConditionCheck implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the table for the check item request.
+     * Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      * 
      * @param tableName
-     *        Name of the table for the check item request.
+     *        Name of the table for the check item request. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,8 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The name of the table to contain the item.
+     * The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      */
     private String tableName;
@@ -280,7 +281,8 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table to contain the item.
+     *        The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      * @param item
      *        A map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required;
      *        you can optionally provide other attribute name-value pairs for the item.</p>
@@ -315,7 +317,8 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table to contain the item.
+     *        The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      * @param item
      *        A map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required;
      *        you can optionally provide other attribute name-value pairs for the item.</p>
@@ -381,7 +384,8 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table to contain the item.
+     *        The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      * @param item
      *        A map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required;
      *        you can optionally provide other attribute name-value pairs for the item.</p>
@@ -444,11 +448,13 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The name of the table to contain the item.
+     * The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to contain the item.
+     *        The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -457,10 +463,12 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The name of the table to contain the item.
+     * The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      * 
-     * @return The name of the table to contain the item.
+     * @return The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the
+     *         table in this parameter.
      */
 
     public String getTableName() {
@@ -469,11 +477,13 @@ public class PutItemRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The name of the table to contain the item.
+     * The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the table in
+     * this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to contain the item.
+     *        The name of the table to contain the item. You can also provide the Amazon Resource Name (ARN) of the
+     *        table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

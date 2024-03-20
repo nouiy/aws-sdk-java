@@ -111,6 +111,11 @@ public class AbstractAmazonDynamoDB implements AmazonDynamoDB {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteTableResult deleteTable(DeleteTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -231,6 +236,11 @@ public class AbstractAmazonDynamoDB implements AmazonDynamoDB {
     }
 
     @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportTableResult importTable(ImportTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -303,6 +313,11 @@ public class AbstractAmazonDynamoDB implements AmazonDynamoDB {
     @Override
     public PutItemResult putItem(String tableName, java.util.Map<String, AttributeValue> item, String returnValues) {
         return putItem(new PutItemRequest().withTableName(tableName).withItem(item).withReturnValues(returnValues));
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override

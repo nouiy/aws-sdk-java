@@ -25,7 +25,9 @@ public enum SavingsPlanState {
     Active("active"),
     Retired("retired"),
     Queued("queued"),
-    QueuedDeleted("queued-deleted");
+    QueuedDeleted("queued-deleted"),
+    PendingReturn("pending-return"),
+    Returned("returned");
 
     private String value;
 

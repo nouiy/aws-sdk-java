@@ -30,7 +30,8 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table from which to delete the item.
+     * The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      */
     private String tableName;
@@ -260,7 +261,8 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table from which to delete the item.
+     *        The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @param key
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
@@ -279,7 +281,8 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table from which to delete the item.
+     *        The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @param key
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
@@ -326,7 +329,8 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table from which to delete the item.
+     *        The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @param key
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
@@ -370,11 +374,13 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table from which to delete the item.
+     * The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table from which to delete the item.
+     *        The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -383,10 +389,12 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table from which to delete the item.
+     * The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
-     * @return The name of the table from which to delete the item.
+     * @return The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN)
+     *         of the table in this parameter.
      */
 
     public String getTableName() {
@@ -395,11 +403,13 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table from which to delete the item.
+     * The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table from which to delete the item.
+     *        The name of the table from which to delete the item. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

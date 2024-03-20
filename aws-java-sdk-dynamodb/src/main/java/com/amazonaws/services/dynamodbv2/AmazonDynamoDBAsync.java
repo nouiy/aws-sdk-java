@@ -1070,6 +1070,75 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
+     * Deletes the resource-based policy attached to the resource, which can be a table or stream.
+     * </p>
+     * <p>
+     * <code>DeleteResourcePolicy</code> is an idempotent operation; running it multiple times on the same resource
+     * <i>doesn't</i> result in an error response, unless you specify an <code>ExpectedRevisionId</code>, which will
+     * then return a <code>PolicyNotFoundException</code>.
+     * </p>
+     * <important>
+     * <p>
+     * To make sure that you don't inadvertently lock yourself out of your own resources, the root principal in your
+     * Amazon Web Services account can perform <code>DeleteResourcePolicy</code> requests, even if your resource-based
+     * policy explicitly denies the root principal's access.
+     * </p>
+     * </important> <note>
+     * <p>
+     * <code>DeleteResourcePolicy</code> is an asynchronous operation. If you issue a <code>GetResourcePolicy</code>
+     * request immediately after running the <code>DeleteResourcePolicy</code> request, DynamoDB might still return the
+     * deleted policy. This is because the policy for your resource might not have been deleted yet. Wait for a few
+     * seconds, and then try the <code>GetResourcePolicy</code> request again.
+     * </p>
+     * </note>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return A Java Future containing the result of the DeleteResourcePolicy operation returned by the service.
+     * @sample AmazonDynamoDBAsync.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DeleteResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Deletes the resource-based policy attached to the resource, which can be a table or stream.
+     * </p>
+     * <p>
+     * <code>DeleteResourcePolicy</code> is an idempotent operation; running it multiple times on the same resource
+     * <i>doesn't</i> result in an error response, unless you specify an <code>ExpectedRevisionId</code>, which will
+     * then return a <code>PolicyNotFoundException</code>.
+     * </p>
+     * <important>
+     * <p>
+     * To make sure that you don't inadvertently lock yourself out of your own resources, the root principal in your
+     * Amazon Web Services account can perform <code>DeleteResourcePolicy</code> requests, even if your resource-based
+     * policy explicitly denies the root principal's access.
+     * </p>
+     * </important> <note>
+     * <p>
+     * <code>DeleteResourcePolicy</code> is an asynchronous operation. If you issue a <code>GetResourcePolicy</code>
+     * request immediately after running the <code>DeleteResourcePolicy</code> request, DynamoDB might still return the
+     * deleted policy. This is because the policy for your resource might not have been deleted yet. Wait for a few
+     * seconds, and then try the <code>GetResourcePolicy</code> request again.
+     * </p>
+     * </note>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteResourcePolicy operation returned by the service.
+     * @sample AmazonDynamoDBAsyncHandler.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DeleteResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest deleteResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteResourcePolicyRequest, DeleteResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * The <code>DeleteTable</code> operation deletes a table and all of its items. After a <code>DeleteTable</code>
      * request, the specified table is in the <code>DELETING</code> state until DynamoDB completes the deletion. If the
      * table is in the <code>ACTIVE</code> state, you can delete it. If a table is in <code>CREATING</code> or
@@ -2214,6 +2283,117 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
+     * Returns the resource-based policy document attached to the resource, which can be a table or stream, in JSON
+     * format.
+     * </p>
+     * <p>
+     * <code>GetResourcePolicy</code> follows an <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
+     * <i>eventually consistent</i> </a> model. The following list describes the outcomes when you issue the
+     * <code>GetResourcePolicy</code> request immediately after issuing another request:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you issue a <code>GetResourcePolicy</code> request immediately after a <code>PutResourcePolicy</code> request,
+     * DynamoDB might return a <code>PolicyNotFoundException</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you issue a <code>GetResourcePolicy</code>request immediately after a <code>DeleteResourcePolicy</code>
+     * request, DynamoDB might return the policy that was present before the deletion request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you issue a <code>GetResourcePolicy</code> request immediately after a <code>CreateTable</code> request, which
+     * includes a resource-based policy, DynamoDB might return a <code>ResourceNotFoundException</code> or a
+     * <code>PolicyNotFoundException</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Because <code>GetResourcePolicy</code> uses an <i>eventually consistent</i> query, the metadata for your policy
+     * or table might not be available at that moment. Wait for a few seconds, and then retry the
+     * <code>GetResourcePolicy</code> request.
+     * </p>
+     * <p>
+     * After a <code>GetResourcePolicy</code> request returns a policy created using the <code>PutResourcePolicy</code>
+     * request, you can assume the policy will start getting applied in the authorization of requests to the resource.
+     * Because this process is eventually consistent, it will take some time to apply the policy to all requests to a
+     * resource. Policies that you attach while creating a table using the <code>CreateTable</code> request will always
+     * be applied to all requests for that table.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return A Java Future containing the result of the GetResourcePolicy operation returned by the service.
+     * @sample AmazonDynamoDBAsync.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/GetResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest getResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Returns the resource-based policy document attached to the resource, which can be a table or stream, in JSON
+     * format.
+     * </p>
+     * <p>
+     * <code>GetResourcePolicy</code> follows an <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
+     * <i>eventually consistent</i> </a> model. The following list describes the outcomes when you issue the
+     * <code>GetResourcePolicy</code> request immediately after issuing another request:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you issue a <code>GetResourcePolicy</code> request immediately after a <code>PutResourcePolicy</code> request,
+     * DynamoDB might return a <code>PolicyNotFoundException</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you issue a <code>GetResourcePolicy</code>request immediately after a <code>DeleteResourcePolicy</code>
+     * request, DynamoDB might return the policy that was present before the deletion request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you issue a <code>GetResourcePolicy</code> request immediately after a <code>CreateTable</code> request, which
+     * includes a resource-based policy, DynamoDB might return a <code>ResourceNotFoundException</code> or a
+     * <code>PolicyNotFoundException</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Because <code>GetResourcePolicy</code> uses an <i>eventually consistent</i> query, the metadata for your policy
+     * or table might not be available at that moment. Wait for a few seconds, and then retry the
+     * <code>GetResourcePolicy</code> request.
+     * </p>
+     * <p>
+     * After a <code>GetResourcePolicy</code> request returns a policy created using the <code>PutResourcePolicy</code>
+     * request, you can assume the policy will start getting applied in the authorization of requests to the resource.
+     * Because this process is eventually consistent, it will take some time to apply the policy to all requests to a
+     * resource. Policies that you attach while creating a table using the <code>CreateTable</code> request will always
+     * be applied to all requests for that table.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourcePolicy operation returned by the service.
+     * @sample AmazonDynamoDBAsyncHandler.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/GetResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest getResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Imports table data from an S3 bucket.
      * </p>
      * 
@@ -2713,6 +2893,75 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      */
     java.util.concurrent.Future<PutItemResult> putItemAsync(String tableName, java.util.Map<String, AttributeValue> item, String returnValues,
             com.amazonaws.handlers.AsyncHandler<PutItemRequest, PutItemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Attaches a resource-based policy document to the resource, which can be a table or stream. When you attach a
+     * resource-based policy using this API, the policy application is <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
+     * <i>eventually consistent</i> </a>.
+     * </p>
+     * <p>
+     * <code>PutResourcePolicy</code> is an idempotent operation; running it multiple times on the same resource using
+     * the same policy document will return the same revision ID. If you specify an <code>ExpectedRevisionId</code>
+     * which doesn't match the current policy's <code>RevisionId</code>, the <code>PolicyNotFoundException</code> will
+     * be returned.
+     * </p>
+     * <note>
+     * <p>
+     * <code>PutResourcePolicy</code> is an asynchronous operation. If you issue a <code>GetResourcePolicy</code>
+     * request immediately after a <code>PutResourcePolicy</code> request, DynamoDB might return your previous policy,
+     * if there was one, or return the <code>PolicyNotFoundException</code>. This is because
+     * <code>GetResourcePolicy</code> uses an eventually consistent query, and the metadata for your policy or table
+     * might not be available at that moment. Wait for a few seconds, and then try the <code>GetResourcePolicy</code>
+     * request again.
+     * </p>
+     * </note>
+     * 
+     * @param putResourcePolicyRequest
+     * @return A Java Future containing the result of the PutResourcePolicy operation returned by the service.
+     * @sample AmazonDynamoDBAsync.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest putResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Attaches a resource-based policy document to the resource, which can be a table or stream. When you attach a
+     * resource-based policy using this API, the policy application is <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
+     * <i>eventually consistent</i> </a>.
+     * </p>
+     * <p>
+     * <code>PutResourcePolicy</code> is an idempotent operation; running it multiple times on the same resource using
+     * the same policy document will return the same revision ID. If you specify an <code>ExpectedRevisionId</code>
+     * which doesn't match the current policy's <code>RevisionId</code>, the <code>PolicyNotFoundException</code> will
+     * be returned.
+     * </p>
+     * <note>
+     * <p>
+     * <code>PutResourcePolicy</code> is an asynchronous operation. If you issue a <code>GetResourcePolicy</code>
+     * request immediately after a <code>PutResourcePolicy</code> request, DynamoDB might return your previous policy,
+     * if there was one, or return the <code>PolicyNotFoundException</code>. This is because
+     * <code>GetResourcePolicy</code> uses an eventually consistent query, and the metadata for your policy or table
+     * might not be available at that moment. Wait for a few seconds, and then try the <code>GetResourcePolicy</code>
+     * request again.
+     * </p>
+     * </note>
+     * 
+     * @param putResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutResourcePolicy operation returned by the service.
+     * @sample AmazonDynamoDBAsyncHandler.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest putResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutResourcePolicyRequest, PutResourcePolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -4122,8 +4371,8 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <p>
      * <code>UpdateTable</code> is an asynchronous operation; while it's executing, the table status changes from
      * <code>ACTIVE</code> to <code>UPDATING</code>. While it's <code>UPDATING</code>, you can't issue another
-     * <code>UpdateTable</code> request on the base table nor any replicas. When the table returns to the
-     * <code>ACTIVE</code> state, the <code>UpdateTable</code> operation is complete.
+     * <code>UpdateTable</code> request. When the table returns to the <code>ACTIVE</code> state, the
+     * <code>UpdateTable</code> operation is complete.
      * </p>
      * 
      * @param updateTableRequest
@@ -4171,8 +4420,8 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <p>
      * <code>UpdateTable</code> is an asynchronous operation; while it's executing, the table status changes from
      * <code>ACTIVE</code> to <code>UPDATING</code>. While it's <code>UPDATING</code>, you can't issue another
-     * <code>UpdateTable</code> request on the base table nor any replicas. When the table returns to the
-     * <code>ACTIVE</code> state, the <code>UpdateTable</code> operation is complete.
+     * <code>UpdateTable</code> request. When the table returns to the <code>ACTIVE</code> state, the
+     * <code>UpdateTable</code> operation is complete.
      * </p>
      * 
      * @param updateTableRequest

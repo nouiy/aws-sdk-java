@@ -33,7 +33,9 @@ public enum ResourceType {
     AWSRDSDBSnapshot("AWS::RDS::DBSnapshot"),
     AWSRDSDBClusterSnapshot("AWS::RDS::DBClusterSnapshot"),
     AWSSNSTopic("AWS::SNS::Topic"),
-    AWSS3ExpressDirectoryBucket("AWS::S3Express::DirectoryBucket");
+    AWSS3ExpressDirectoryBucket("AWS::S3Express::DirectoryBucket"),
+    AWSDynamoDBTable("AWS::DynamoDB::Table"),
+    AWSDynamoDBStream("AWS::DynamoDB::Stream");
 
     private String value;
 

@@ -121,6 +121,19 @@ public class AbstractAWSSavingsPlansAsync extends AbstractAWSSavingsPlans implem
     }
 
     @Override
+    public java.util.concurrent.Future<ReturnSavingsPlanResult> returnSavingsPlanAsync(ReturnSavingsPlanRequest request) {
+
+        return returnSavingsPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ReturnSavingsPlanResult> returnSavingsPlanAsync(ReturnSavingsPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<ReturnSavingsPlanRequest, ReturnSavingsPlanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);

@@ -27,13 +27,14 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The table name for the Kinesis streaming destination input.
+     * The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in this
+     * parameter.
      * </p>
      */
     private String tableName;
     /**
      * <p>
-     * The ARN for the Kinesis stream input.
+     * The Amazon Resource Name (ARN) for the Kinesis stream input.
      * </p>
      */
     private String streamArn;
@@ -46,11 +47,13 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The table name for the Kinesis streaming destination input.
+     * The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The table name for the Kinesis streaming destination input.
+     *        The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in
+     *        this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -59,10 +62,12 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The table name for the Kinesis streaming destination input.
+     * The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in this
+     * parameter.
      * </p>
      * 
-     * @return The table name for the Kinesis streaming destination input.
+     * @return The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in
+     *         this parameter.
      */
 
     public String getTableName() {
@@ -71,11 +76,13 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The table name for the Kinesis streaming destination input.
+     * The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The table name for the Kinesis streaming destination input.
+     *        The table name for the Kinesis streaming destination input. You can also provide the ARN of the table in
+     *        this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +93,11 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The ARN for the Kinesis stream input.
+     * The Amazon Resource Name (ARN) for the Kinesis stream input.
      * </p>
      * 
      * @param streamArn
-     *        The ARN for the Kinesis stream input.
+     *        The Amazon Resource Name (ARN) for the Kinesis stream input.
      */
 
     public void setStreamArn(String streamArn) {
@@ -99,10 +106,10 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The ARN for the Kinesis stream input.
+     * The Amazon Resource Name (ARN) for the Kinesis stream input.
      * </p>
      * 
-     * @return The ARN for the Kinesis stream input.
+     * @return The Amazon Resource Name (ARN) for the Kinesis stream input.
      */
 
     public String getStreamArn() {
@@ -111,11 +118,11 @@ public class UpdateKinesisStreamingDestinationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The ARN for the Kinesis stream input.
+     * The Amazon Resource Name (ARN) for the Kinesis stream input.
      * </p>
      * 
      * @param streamArn
-     *        The ARN for the Kinesis stream input.
+     *        The Amazon Resource Name (ARN) for the Kinesis stream input.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,6 +36,12 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
     private String transactionHash;
     /**
      * <p>
+     * The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     * </p>
+     */
+    private String transactionId;
+    /**
+     * <p>
      * The blockchain network where the transaction occurred.
      * </p>
      */
@@ -90,6 +96,46 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
 
     public TransactionOutputItem withTransactionHash(String transactionHash) {
         setTransactionHash(transactionHash);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     * </p>
+     * 
+     * @param transactionId
+     *        The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     */
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    /**
+     * <p>
+     * The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     * </p>
+     * 
+     * @return The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     */
+
+    public String getTransactionId() {
+        return this.transactionId;
+    }
+
+    /**
+     * <p>
+     * The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     * </p>
+     * 
+     * @param transactionId
+     *        The identifier of a Bitcoin transaction. It is generated when a transaction is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TransactionOutputItem withTransactionId(String transactionId) {
+        setTransactionId(transactionId);
         return this;
     }
 
@@ -265,6 +311,8 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
         sb.append("{");
         if (getTransactionHash() != null)
             sb.append("TransactionHash: ").append(getTransactionHash()).append(",");
+        if (getTransactionId() != null)
+            sb.append("TransactionId: ").append(getTransactionId()).append(",");
         if (getNetwork() != null)
             sb.append("Network: ").append(getNetwork()).append(",");
         if (getTransactionTimestamp() != null)
@@ -289,6 +337,10 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
             return false;
         if (other.getTransactionHash() != null && other.getTransactionHash().equals(this.getTransactionHash()) == false)
             return false;
+        if (other.getTransactionId() == null ^ this.getTransactionId() == null)
+            return false;
+        if (other.getTransactionId() != null && other.getTransactionId().equals(this.getTransactionId()) == false)
+            return false;
         if (other.getNetwork() == null ^ this.getNetwork() == null)
             return false;
         if (other.getNetwork() != null && other.getNetwork().equals(this.getNetwork()) == false)
@@ -310,6 +362,7 @@ public class TransactionOutputItem implements Serializable, Cloneable, Structure
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getTransactionHash() == null) ? 0 : getTransactionHash().hashCode());
+        hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
         hashCode = prime * hashCode + ((getNetwork() == null) ? 0 : getNetwork().hashCode());
         hashCode = prime * hashCode + ((getTransactionTimestamp() == null) ? 0 : getTransactionTimestamp().hashCode());
         hashCode = prime * hashCode + ((getConfirmationStatus() == null) ? 0 : getConfirmationStatus().hashCode());

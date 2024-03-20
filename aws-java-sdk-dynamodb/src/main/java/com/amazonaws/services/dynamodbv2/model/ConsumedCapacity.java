@@ -34,7 +34,8 @@ public class ConsumedCapacity implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the table that was affected by the operation.
+     * The name of the table that was affected by the operation. If you had specified the Amazon Resource Name (ARN) of
+     * a table in the input, you'll see the table ARN in the response.
      * </p>
      */
     private String tableName;
@@ -77,11 +78,13 @@ public class ConsumedCapacity implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the table that was affected by the operation.
+     * The name of the table that was affected by the operation. If you had specified the Amazon Resource Name (ARN) of
+     * a table in the input, you'll see the table ARN in the response.
      * </p>
      * 
      * @param tableName
-     *        The name of the table that was affected by the operation.
+     *        The name of the table that was affected by the operation. If you had specified the Amazon Resource Name
+     *        (ARN) of a table in the input, you'll see the table ARN in the response.
      */
 
     public void setTableName(String tableName) {
@@ -90,10 +93,12 @@ public class ConsumedCapacity implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the table that was affected by the operation.
+     * The name of the table that was affected by the operation. If you had specified the Amazon Resource Name (ARN) of
+     * a table in the input, you'll see the table ARN in the response.
      * </p>
      * 
-     * @return The name of the table that was affected by the operation.
+     * @return The name of the table that was affected by the operation. If you had specified the Amazon Resource Name
+     *         (ARN) of a table in the input, you'll see the table ARN in the response.
      */
 
     public String getTableName() {
@@ -102,11 +107,13 @@ public class ConsumedCapacity implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the table that was affected by the operation.
+     * The name of the table that was affected by the operation. If you had specified the Amazon Resource Name (ARN) of
+     * a table in the input, you'll see the table ARN in the response.
      * </p>
      * 
      * @param tableName
-     *        The name of the table that was affected by the operation.
+     *        The name of the table that was affected by the operation. If you had specified the Amazon Resource Name
+     *        (ARN) of a table in the input, you'll see the table ARN in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

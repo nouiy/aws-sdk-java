@@ -29,6 +29,8 @@ public class GetTransactionRequestMarshaller {
 
     private static final MarshallingInfo<String> TRANSACTIONHASH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionHash").build();
+    private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionId").build();
     private static final MarshallingInfo<String> NETWORK_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("network").build();
 
@@ -49,6 +51,7 @@ public class GetTransactionRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getTransactionRequest.getTransactionHash(), TRANSACTIONHASH_BINDING);
+            protocolMarshaller.marshall(getTransactionRequest.getTransactionId(), TRANSACTIONID_BINDING);
             protocolMarshaller.marshall(getTransactionRequest.getNetwork(), NETWORK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

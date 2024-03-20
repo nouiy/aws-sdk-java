@@ -30,7 +30,8 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table containing the item to update.
+     * The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      */
     private String tableName;
@@ -396,7 +397,8 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table containing the item to update.
+     *        The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @param key
      *        The primary key of the item to be updated. Each element consists of an attribute name and a value for that
      *        attribute.</p>
@@ -420,7 +422,8 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table containing the item to update.
+     *        The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @param key
      *        The primary key of the item to be updated. Each element consists of an attribute name and a value for that
      *        attribute.</p>
@@ -488,7 +491,8 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table containing the item to update.
+     *        The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @param key
      *        The primary key of the item to be updated. Each element consists of an attribute name and a value for that
      *        attribute.</p>
@@ -553,11 +557,13 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table containing the item to update.
+     * The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table containing the item to update.
+     *        The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -566,10 +572,12 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table containing the item to update.
+     * The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
-     * @return The name of the table containing the item to update.
+     * @return The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN)
+     *         of the table in this parameter.
      */
 
     public String getTableName() {
@@ -578,11 +586,13 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the table containing the item to update.
+     * The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN) of the
+     * table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table containing the item to update.
+     *        The name of the table containing the item to update. You can also provide the Amazon Resource Name (ARN)
+     *        of the table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

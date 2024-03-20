@@ -37,7 +37,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<AttributeDefinition> attributeDefinitions;
     /**
      * <p>
-     * The name of the table to be updated.
+     * The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      */
     private String tableName;
@@ -163,7 +164,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table to be updated.
+     *        The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in
+     *        this parameter.
      * @param provisionedThroughput
      *        The new provisioned throughput settings for the specified table or index.
      */
@@ -256,11 +258,13 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to be updated.
+     * The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to be updated.
+     *        The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in
+     *        this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -269,10 +273,12 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to be updated.
+     * The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
-     * @return The name of the table to be updated.
+     * @return The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in
+     *         this parameter.
      */
 
     public String getTableName() {
@@ -281,11 +287,13 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to be updated.
+     * The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to be updated.
+     *        The name of the table to be updated. You can also provide the Amazon Resource Name (ARN) of the table in
+     *        this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

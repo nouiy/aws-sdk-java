@@ -66,7 +66,7 @@ public class SavingsPlanRate implements Serializable, Cloneable, StructuredPojo 
     private String usageType;
     /**
      * <p>
-     * The specific AWS operation for the line item in the billing report.
+     * The specific Amazon Web Services operation for the line item in the billing report.
      * </p>
      */
     private String operation;
@@ -395,11 +395,11 @@ public class SavingsPlanRate implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The specific AWS operation for the line item in the billing report.
+     * The specific Amazon Web Services operation for the line item in the billing report.
      * </p>
      * 
      * @param operation
-     *        The specific AWS operation for the line item in the billing report.
+     *        The specific Amazon Web Services operation for the line item in the billing report.
      */
 
     public void setOperation(String operation) {
@@ -408,10 +408,10 @@ public class SavingsPlanRate implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The specific AWS operation for the line item in the billing report.
+     * The specific Amazon Web Services operation for the line item in the billing report.
      * </p>
      * 
-     * @return The specific AWS operation for the line item in the billing report.
+     * @return The specific Amazon Web Services operation for the line item in the billing report.
      */
 
     public String getOperation() {
@@ -420,11 +420,11 @@ public class SavingsPlanRate implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The specific AWS operation for the line item in the billing report.
+     * The specific Amazon Web Services operation for the line item in the billing report.
      * </p>
      * 
      * @param operation
-     *        The specific AWS operation for the line item in the billing report.
+     *        The specific Amazon Web Services operation for the line item in the billing report.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

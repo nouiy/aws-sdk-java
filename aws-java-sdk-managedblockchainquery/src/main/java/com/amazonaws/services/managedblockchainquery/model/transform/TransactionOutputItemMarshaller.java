@@ -29,6 +29,8 @@ public class TransactionOutputItemMarshaller {
 
     private static final MarshallingInfo<String> TRANSACTIONHASH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionHash").build();
+    private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionId").build();
     private static final MarshallingInfo<String> NETWORK_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("network").build();
     private static final MarshallingInfo<java.util.Date> TRANSACTIONTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -53,6 +55,7 @@ public class TransactionOutputItemMarshaller {
 
         try {
             protocolMarshaller.marshall(transactionOutputItem.getTransactionHash(), TRANSACTIONHASH_BINDING);
+            protocolMarshaller.marshall(transactionOutputItem.getTransactionId(), TRANSACTIONID_BINDING);
             protocolMarshaller.marshall(transactionOutputItem.getNetwork(), NETWORK_BINDING);
             protocolMarshaller.marshall(transactionOutputItem.getTransactionTimestamp(), TRANSACTIONTIMESTAMP_BINDING);
             protocolMarshaller.marshall(transactionOutputItem.getConfirmationStatus(), CONFIRMATIONSTATUS_BINDING);

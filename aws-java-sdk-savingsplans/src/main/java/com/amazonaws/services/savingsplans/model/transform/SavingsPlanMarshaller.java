@@ -65,6 +65,8 @@ public class SavingsPlanMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("termDurationInSeconds").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> RETURNABLEUNTIL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("returnableUntil").build();
 
     private static final SavingsPlanMarshaller instance = new SavingsPlanMarshaller();
 
@@ -100,6 +102,7 @@ public class SavingsPlanMarshaller {
             protocolMarshaller.marshall(savingsPlan.getRecurringPaymentAmount(), RECURRINGPAYMENTAMOUNT_BINDING);
             protocolMarshaller.marshall(savingsPlan.getTermDurationInSeconds(), TERMDURATIONINSECONDS_BINDING);
             protocolMarshaller.marshall(savingsPlan.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(savingsPlan.getReturnableUntil(), RETURNABLEUNTIL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

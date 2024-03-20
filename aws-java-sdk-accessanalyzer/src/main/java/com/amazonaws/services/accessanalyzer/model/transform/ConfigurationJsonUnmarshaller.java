@@ -96,6 +96,14 @@ public class ConfigurationJsonUnmarshaller implements Unmarshaller<Configuration
                     context.nextToken();
                     configuration.setS3ExpressDirectoryBucket(S3ExpressDirectoryBucketConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("dynamodbStream", targetDepth)) {
+                    context.nextToken();
+                    configuration.setDynamodbStream(DynamodbStreamConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("dynamodbTable", targetDepth)) {
+                    context.nextToken();
+                    configuration.setDynamodbTable(DynamodbTableConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

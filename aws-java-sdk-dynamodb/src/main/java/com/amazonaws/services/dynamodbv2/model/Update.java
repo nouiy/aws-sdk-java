@@ -44,7 +44,8 @@ public class Update implements Serializable, Cloneable, StructuredPojo {
     private String updateExpression;
     /**
      * <p>
-     * Name of the table for the <code>UpdateItem</code> request.
+     * Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name (ARN) of
+     * the table in this parameter.
      * </p>
      */
     private String tableName;
@@ -196,11 +197,13 @@ public class Update implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the table for the <code>UpdateItem</code> request.
+     * Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name (ARN) of
+     * the table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        Name of the table for the <code>UpdateItem</code> request.
+     *        Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name
+     *        (ARN) of the table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -209,10 +212,12 @@ public class Update implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the table for the <code>UpdateItem</code> request.
+     * Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name (ARN) of
+     * the table in this parameter.
      * </p>
      * 
-     * @return Name of the table for the <code>UpdateItem</code> request.
+     * @return Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name
+     *         (ARN) of the table in this parameter.
      */
 
     public String getTableName() {
@@ -221,11 +226,13 @@ public class Update implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the table for the <code>UpdateItem</code> request.
+     * Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name (ARN) of
+     * the table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        Name of the table for the <code>UpdateItem</code> request.
+     *        Name of the table for the <code>UpdateItem</code> request. You can also provide the Amazon Resource Name
+     *        (ARN) of the table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

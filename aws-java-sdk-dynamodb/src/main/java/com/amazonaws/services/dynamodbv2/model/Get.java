@@ -36,7 +36,8 @@ public class Get implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, AttributeValue> key;
     /**
      * <p>
-     * The name of the table from which to retrieve the specified item.
+     * The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource Name
+     * (ARN) of the table in this parameter.
      * </p>
      */
     private String tableName;
@@ -131,11 +132,13 @@ public class Get implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the table from which to retrieve the specified item.
+     * The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource Name
+     * (ARN) of the table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table from which to retrieve the specified item.
+     *        The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource
+     *        Name (ARN) of the table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -144,10 +147,12 @@ public class Get implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the table from which to retrieve the specified item.
+     * The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource Name
+     * (ARN) of the table in this parameter.
      * </p>
      * 
-     * @return The name of the table from which to retrieve the specified item.
+     * @return The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource
+     *         Name (ARN) of the table in this parameter.
      */
 
     public String getTableName() {
@@ -156,11 +161,13 @@ public class Get implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the table from which to retrieve the specified item.
+     * The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource Name
+     * (ARN) of the table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table from which to retrieve the specified item.
+     *        The name of the table from which to retrieve the specified item. You can also provide the Amazon Resource
+     *        Name (ARN) of the table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -101,6 +101,18 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private S3ExpressDirectoryBucketConfiguration s3ExpressDirectoryBucket;
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB stream.
+     * </p>
+     */
+    private DynamodbStreamConfiguration dynamodbStream;
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB table or index.
+     * </p>
+     */
+    private DynamodbTableConfiguration dynamodbTable;
 
     /**
      * <p>
@@ -583,6 +595,86 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The access control configuration is for a DynamoDB stream.
+     * </p>
+     * 
+     * @param dynamodbStream
+     *        The access control configuration is for a DynamoDB stream.
+     */
+
+    public void setDynamodbStream(DynamodbStreamConfiguration dynamodbStream) {
+        this.dynamodbStream = dynamodbStream;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB stream.
+     * </p>
+     * 
+     * @return The access control configuration is for a DynamoDB stream.
+     */
+
+    public DynamodbStreamConfiguration getDynamodbStream() {
+        return this.dynamodbStream;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB stream.
+     * </p>
+     * 
+     * @param dynamodbStream
+     *        The access control configuration is for a DynamoDB stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Configuration withDynamodbStream(DynamodbStreamConfiguration dynamodbStream) {
+        setDynamodbStream(dynamodbStream);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB table or index.
+     * </p>
+     * 
+     * @param dynamodbTable
+     *        The access control configuration is for a DynamoDB table or index.
+     */
+
+    public void setDynamodbTable(DynamodbTableConfiguration dynamodbTable) {
+        this.dynamodbTable = dynamodbTable;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB table or index.
+     * </p>
+     * 
+     * @return The access control configuration is for a DynamoDB table or index.
+     */
+
+    public DynamodbTableConfiguration getDynamodbTable() {
+        return this.dynamodbTable;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for a DynamoDB table or index.
+     * </p>
+     * 
+     * @param dynamodbTable
+     *        The access control configuration is for a DynamoDB table or index.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Configuration withDynamodbTable(DynamodbTableConfiguration dynamodbTable) {
+        setDynamodbTable(dynamodbTable);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -617,7 +709,11 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
         if (getSqsQueue() != null)
             sb.append("SqsQueue: ").append(getSqsQueue()).append(",");
         if (getS3ExpressDirectoryBucket() != null)
-            sb.append("S3ExpressDirectoryBucket: ").append(getS3ExpressDirectoryBucket());
+            sb.append("S3ExpressDirectoryBucket: ").append(getS3ExpressDirectoryBucket()).append(",");
+        if (getDynamodbStream() != null)
+            sb.append("DynamodbStream: ").append(getDynamodbStream()).append(",");
+        if (getDynamodbTable() != null)
+            sb.append("DynamodbTable: ").append(getDynamodbTable());
         sb.append("}");
         return sb.toString();
     }
@@ -680,6 +776,14 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getS3ExpressDirectoryBucket() != null && other.getS3ExpressDirectoryBucket().equals(this.getS3ExpressDirectoryBucket()) == false)
             return false;
+        if (other.getDynamodbStream() == null ^ this.getDynamodbStream() == null)
+            return false;
+        if (other.getDynamodbStream() != null && other.getDynamodbStream().equals(this.getDynamodbStream()) == false)
+            return false;
+        if (other.getDynamodbTable() == null ^ this.getDynamodbTable() == null)
+            return false;
+        if (other.getDynamodbTable() != null && other.getDynamodbTable().equals(this.getDynamodbTable()) == false)
+            return false;
         return true;
     }
 
@@ -700,6 +804,8 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSnsTopic() == null) ? 0 : getSnsTopic().hashCode());
         hashCode = prime * hashCode + ((getSqsQueue() == null) ? 0 : getSqsQueue().hashCode());
         hashCode = prime * hashCode + ((getS3ExpressDirectoryBucket() == null) ? 0 : getS3ExpressDirectoryBucket().hashCode());
+        hashCode = prime * hashCode + ((getDynamodbStream() == null) ? 0 : getDynamodbStream().hashCode());
+        hashCode = prime * hashCode + ((getDynamodbTable() == null) ? 0 : getDynamodbTable().hashCode());
         return hashCode;
     }
 

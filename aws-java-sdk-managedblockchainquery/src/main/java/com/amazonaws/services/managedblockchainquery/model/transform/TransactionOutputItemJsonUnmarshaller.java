@@ -52,6 +52,10 @@ public class TransactionOutputItemJsonUnmarshaller implements Unmarshaller<Trans
                     context.nextToken();
                     transactionOutputItem.setTransactionHash(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("transactionId", targetDepth)) {
+                    context.nextToken();
+                    transactionOutputItem.setTransactionId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("network", targetDepth)) {
                     context.nextToken();
                     transactionOutputItem.setNetwork(context.getUnmarshaller(String.class).unmarshall(context));

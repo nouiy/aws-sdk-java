@@ -30,7 +30,8 @@ public class DeleteTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to delete.
+     * The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      */
     private String tableName;
@@ -47,7 +48,8 @@ public class DeleteTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table to delete.
+     *        The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      */
     public DeleteTableRequest(String tableName) {
         setTableName(tableName);
@@ -55,11 +57,13 @@ public class DeleteTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to delete.
+     * The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to delete.
+     *        The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      */
 
     public void setTableName(String tableName) {
@@ -68,10 +72,12 @@ public class DeleteTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to delete.
+     * The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
-     * @return The name of the table to delete.
+     * @return The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *         parameter.
      */
 
     public String getTableName() {
@@ -80,11 +86,13 @@ public class DeleteTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to delete.
+     * The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to delete.
+     *        The name of the table to delete. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

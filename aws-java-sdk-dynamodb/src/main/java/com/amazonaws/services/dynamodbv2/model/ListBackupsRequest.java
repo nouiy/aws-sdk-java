@@ -27,7 +27,8 @@ public class ListBackupsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The backups from the table specified by <code>TableName</code> are listed.
+     * Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon Resource
+     * Name (ARN) of the table in this parameter.
      * </p>
      */
     private String tableName;
@@ -88,11 +89,13 @@ public class ListBackupsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The backups from the table specified by <code>TableName</code> are listed.
+     * Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon Resource
+     * Name (ARN) of the table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The backups from the table specified by <code>TableName</code> are listed.
+     *        Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon
+     *        Resource Name (ARN) of the table in this parameter.
      */
 
     public void setTableName(String tableName) {
@@ -101,10 +104,12 @@ public class ListBackupsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The backups from the table specified by <code>TableName</code> are listed.
+     * Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon Resource
+     * Name (ARN) of the table in this parameter.
      * </p>
      * 
-     * @return The backups from the table specified by <code>TableName</code> are listed.
+     * @return Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon
+     *         Resource Name (ARN) of the table in this parameter.
      */
 
     public String getTableName() {
@@ -113,11 +118,13 @@ public class ListBackupsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The backups from the table specified by <code>TableName</code> are listed.
+     * Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon Resource
+     * Name (ARN) of the table in this parameter.
      * </p>
      * 
      * @param tableName
-     *        The backups from the table specified by <code>TableName</code> are listed.
+     *        Lists the backups from the table specified in <code>TableName</code>. You can also provide the Amazon
+     *        Resource Name (ARN) of the table in this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

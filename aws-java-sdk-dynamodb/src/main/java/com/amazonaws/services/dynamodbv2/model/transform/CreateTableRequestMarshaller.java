@@ -52,6 +52,8 @@ public class CreateTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableClass").build();
     private static final MarshallingInfo<Boolean> DELETIONPROTECTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeletionProtectionEnabled").build();
+    private static final MarshallingInfo<String> RESOURCEPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourcePolicy").build();
 
     private static final CreateTableRequestMarshaller instance = new CreateTableRequestMarshaller();
 
@@ -81,6 +83,7 @@ public class CreateTableRequestMarshaller {
             protocolMarshaller.marshall(createTableRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createTableRequest.getTableClass(), TABLECLASS_BINDING);
             protocolMarshaller.marshall(createTableRequest.getDeletionProtectionEnabled(), DELETIONPROTECTIONENABLED_BINDING);
+            protocolMarshaller.marshall(createTableRequest.getResourcePolicy(), RESOURCEPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

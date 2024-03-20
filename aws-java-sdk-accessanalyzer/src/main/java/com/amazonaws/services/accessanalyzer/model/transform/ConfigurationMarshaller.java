@@ -51,6 +51,10 @@ public class ConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sqsQueue").build();
     private static final MarshallingInfo<StructuredPojo> S3EXPRESSDIRECTORYBUCKET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3ExpressDirectoryBucket").build();
+    private static final MarshallingInfo<StructuredPojo> DYNAMODBSTREAM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dynamodbStream").build();
+    private static final MarshallingInfo<StructuredPojo> DYNAMODBTABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dynamodbTable").build();
 
     private static final ConfigurationMarshaller instance = new ConfigurationMarshaller();
 
@@ -80,6 +84,8 @@ public class ConfigurationMarshaller {
             protocolMarshaller.marshall(configuration.getSnsTopic(), SNSTOPIC_BINDING);
             protocolMarshaller.marshall(configuration.getSqsQueue(), SQSQUEUE_BINDING);
             protocolMarshaller.marshall(configuration.getS3ExpressDirectoryBucket(), S3EXPRESSDIRECTORYBUCKET_BINDING);
+            protocolMarshaller.marshall(configuration.getDynamodbStream(), DYNAMODBSTREAM_BINDING);
+            protocolMarshaller.marshall(configuration.getDynamodbTable(), DYNAMODBTABLE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

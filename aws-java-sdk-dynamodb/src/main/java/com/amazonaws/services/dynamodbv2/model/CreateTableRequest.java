@@ -36,7 +36,8 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<AttributeDefinition> attributeDefinitions;
     /**
      * <p>
-     * The name of the table to create.
+     * The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      */
     private String tableName;
@@ -339,6 +340,23 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private Boolean deletionProtectionEnabled;
+    /**
+     * <p>
+     * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
+     * </p>
+     * <p>
+     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * consistent</i>.
+     * </p>
+     * <p>
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
+     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
+     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
+     * policy considerations</a>.
+     * </p>
+     */
+    private String resourcePolicy;
 
     /**
      * Default constructor for CreateTableRequest object. Callers should use the setter or fluent setter (with...)
@@ -352,7 +370,8 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * initialize any additional object members.
      * 
      * @param tableName
-     *        The name of the table to create.
+     *        The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      * @param keySchema
      *        Specifies the attributes that make up the primary key for a table or an index. The attributes in
      *        <code>KeySchema</code> must also be defined in the <code>AttributeDefinitions</code> array. For more
@@ -424,7 +443,8 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param attributeDefinitions
      *        An array of attributes that describe the key schema for the table and indexes.
      * @param tableName
-     *        The name of the table to create.
+     *        The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      * @param keySchema
      *        Specifies the attributes that make up the primary key for a table or an index. The attributes in
      *        <code>KeySchema</code> must also be defined in the <code>AttributeDefinitions</code> array. For more
@@ -576,11 +596,13 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to create.
+     * The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to create.
+     *        The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      */
 
     public void setTableName(String tableName) {
@@ -589,10 +611,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to create.
+     * The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
-     * @return The name of the table to create.
+     * @return The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *         parameter.
      */
 
     public String getTableName() {
@@ -601,11 +625,13 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the table to create.
+     * The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     * parameter.
      * </p>
      * 
      * @param tableName
-     *        The name of the table to create.
+     *        The name of the table to create. You can also provide the Amazon Resource Name (ARN) of the table in this
+     *        parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3003,6 +3029,113 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
+     * </p>
+     * <p>
+     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * consistent</i>.
+     * </p>
+     * <p>
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
+     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
+     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
+     * policy considerations</a>.
+     * </p>
+     * 
+     * @param resourcePolicy
+     *        An Amazon Web Services resource-based policy document in JSON format that will be attached to the
+     *        table.</p>
+     *        <p>
+     *        When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     *        consistent</i>.
+     *        </p>
+     *        <p>
+     *        The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
+     *        calculating the size of a policy against this limit. You can’t request an increase for this limit. For a
+     *        full list of all considerations that you should keep in mind while attaching a resource-based policy, see
+     *        <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">
+     *        Resource-based policy considerations</a>.
+     */
+
+    public void setResourcePolicy(String resourcePolicy) {
+        this.resourcePolicy = resourcePolicy;
+    }
+
+    /**
+     * <p>
+     * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
+     * </p>
+     * <p>
+     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * consistent</i>.
+     * </p>
+     * <p>
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
+     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
+     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
+     * policy considerations</a>.
+     * </p>
+     * 
+     * @return An Amazon Web Services resource-based policy document in JSON format that will be attached to the
+     *         table.</p>
+     *         <p>
+     *         When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     *         consistent</i>.
+     *         </p>
+     *         <p>
+     *         The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces
+     *         when calculating the size of a policy against this limit. You can’t request an increase for this limit.
+     *         For a full list of all considerations that you should keep in mind while attaching a resource-based
+     *         policy, see <a
+     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
+     *         >Resource-based policy considerations</a>.
+     */
+
+    public String getResourcePolicy() {
+        return this.resourcePolicy;
+    }
+
+    /**
+     * <p>
+     * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
+     * </p>
+     * <p>
+     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * consistent</i>.
+     * </p>
+     * <p>
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
+     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
+     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
+     * policy considerations</a>.
+     * </p>
+     * 
+     * @param resourcePolicy
+     *        An Amazon Web Services resource-based policy document in JSON format that will be attached to the
+     *        table.</p>
+     *        <p>
+     *        When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     *        consistent</i>.
+     *        </p>
+     *        <p>
+     *        The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
+     *        calculating the size of a policy against this limit. You can’t request an increase for this limit. For a
+     *        full list of all considerations that you should keep in mind while attaching a resource-based policy, see
+     *        <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">
+     *        Resource-based policy considerations</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTableRequest withResourcePolicy(String resourcePolicy) {
+        setResourcePolicy(resourcePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3037,7 +3170,9 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTableClass() != null)
             sb.append("TableClass: ").append(getTableClass()).append(",");
         if (getDeletionProtectionEnabled() != null)
-            sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled());
+            sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled()).append(",");
+        if (getResourcePolicy() != null)
+            sb.append("ResourcePolicy: ").append(getResourcePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -3100,6 +3235,10 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getDeletionProtectionEnabled() != null && other.getDeletionProtectionEnabled().equals(this.getDeletionProtectionEnabled()) == false)
             return false;
+        if (other.getResourcePolicy() == null ^ this.getResourcePolicy() == null)
+            return false;
+        if (other.getResourcePolicy() != null && other.getResourcePolicy().equals(this.getResourcePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -3120,6 +3259,7 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTableClass() == null) ? 0 : getTableClass().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtectionEnabled() == null) ? 0 : getDeletionProtectionEnabled().hashCode());
+        hashCode = prime * hashCode + ((getResourcePolicy() == null) ? 0 : getResourcePolicy().hashCode());
         return hashCode;
     }
 

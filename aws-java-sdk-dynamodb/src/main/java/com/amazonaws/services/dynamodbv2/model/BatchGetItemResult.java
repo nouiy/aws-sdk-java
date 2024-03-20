@@ -28,8 +28,8 @@ public class BatchGetItemResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name, along
-     * with a map of attribute data consisting of the data type and attribute value.
+     * A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a table
+     * name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      * </p>
      */
     private java.util.Map<String, java.util.List<java.util.Map<String, AttributeValue>>> responses;
@@ -91,12 +91,12 @@ public class BatchGetItemResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name, along
-     * with a map of attribute data consisting of the data type and attribute value.
+     * A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a table
+     * name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      * </p>
      * 
-     * @return A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name,
-     *         along with a map of attribute data consisting of the data type and attribute value.
+     * @return A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a
+     *         table name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      */
 
     public java.util.Map<String, java.util.List<java.util.Map<String, AttributeValue>>> getResponses() {
@@ -105,13 +105,13 @@ public class BatchGetItemResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name, along
-     * with a map of attribute data consisting of the data type and attribute value.
+     * A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a table
+     * name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      * </p>
      * 
      * @param responses
-     *        A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name,
-     *        along with a map of attribute data consisting of the data type and attribute value.
+     *        A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a
+     *        table name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      */
 
     public void setResponses(java.util.Map<String, java.util.List<java.util.Map<String, AttributeValue>>> responses) {
@@ -120,13 +120,13 @@ public class BatchGetItemResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name, along
-     * with a map of attribute data consisting of the data type and attribute value.
+     * A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a table
+     * name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      * </p>
      * 
      * @param responses
-     *        A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name,
-     *        along with a map of attribute data consisting of the data type and attribute value.
+     *        A map of table name or table ARN to a list of items. Each object in <code>Responses</code> consists of a
+     *        table name or ARN, along with a map of attribute data consisting of the data type and attribute value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
