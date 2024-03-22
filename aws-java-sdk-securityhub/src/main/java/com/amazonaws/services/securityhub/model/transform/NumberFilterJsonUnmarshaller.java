@@ -56,10 +56,6 @@ public class NumberFilterJsonUnmarshaller implements Unmarshaller<NumberFilter, 
                     context.nextToken();
                     numberFilter.setLte(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("Eq", targetDepth)) {
-                    context.nextToken();
-                    numberFilter.setEq(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("Gt", targetDepth)) {
                     context.nextToken();
                     numberFilter.setGt(context.getUnmarshaller(Double.class).unmarshall(context));
@@ -67,6 +63,10 @@ public class NumberFilterJsonUnmarshaller implements Unmarshaller<NumberFilter, 
                 if (context.testExpression("Lt", targetDepth)) {
                     context.nextToken();
                     numberFilter.setLt(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("Eq", targetDepth)) {
+                    context.nextToken();
+                    numberFilter.setEq(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

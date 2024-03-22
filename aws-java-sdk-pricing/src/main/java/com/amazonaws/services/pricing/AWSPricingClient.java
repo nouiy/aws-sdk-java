@@ -136,6 +136,9 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.pricing.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.pricing.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.pricing.model.AWSPricingException.class));
 
     public static AWSPricingClientBuilder builder() {
@@ -352,6 +355,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         An error on the server occurred during the processing of your request. Try again later.
      * @throws ThrottlingException
      *         You've made too many requests exceeding service quotas.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
      * @sample AWSPricing.GetPriceListFileUrl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
      *      API Documentation</a>
@@ -498,6 +503,8 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
      *         An error on the server occurred during the processing of your request. Try again later.
      * @throws ThrottlingException
      *         You've made too many requests exceeding service quotas.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
      * @throws ExpiredNextTokenException
      *         The pagination token expired. Try again without a pagination token.
      * @sample AWSPricing.ListPriceLists

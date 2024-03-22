@@ -33,7 +33,7 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String id;
     /**
      * <p>
-     * The name of the index you want to update.
+     * A new name for the index.
      * </p>
      */
     private String name;
@@ -82,9 +82,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String userContextPolicy;
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an IAM Identity Center identity source. To configure
-     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      */
     private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
@@ -131,11 +132,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the index you want to update.
+     * A new name for the index.
      * </p>
      * 
      * @param name
-     *        The name of the index you want to update.
+     *        A new name for the index.
      */
 
     public void setName(String name) {
@@ -144,10 +145,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the index you want to update.
+     * A new name for the index.
      * </p>
      * 
-     * @return The name of the index you want to update.
+     * @return A new name for the index.
      */
 
     public String getName() {
@@ -156,11 +157,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the index you want to update.
+     * A new name for the index.
      * </p>
      * 
      * @param name
-     *        The name of the index you want to update.
+     *        A new name for the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -536,16 +537,17 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an IAM Identity Center identity source. To configure
-     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Enables fetching access levels of groups and users from an IAM Identity Center identity source. To
-     *        configure this, see <a
+     *        Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     *        >UserGroupResolutionConfiguration</a>.
+     *        >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     *        filtered based on the user or their group access to documents.
      */
 
     public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
@@ -554,15 +556,16 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an IAM Identity Center identity source. To configure
-     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      * 
-     * @return Enables fetching access levels of groups and users from an IAM Identity Center identity source. To
-     *         configure this, see <a
+     * @return Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     *         >UserGroupResolutionConfiguration</a>.
+     *         >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results
+     *         are filtered based on the user or their group access to documents.
      */
 
     public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
@@ -571,16 +574,17 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Enables fetching access levels of groups and users from an IAM Identity Center identity source. To configure
-     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
-     * UserGroupResolutionConfiguration</a>.
+     * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Enables fetching access levels of groups and users from an IAM Identity Center identity source. To
-     *        configure this, see <a
+     *        Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     *        >UserGroupResolutionConfiguration</a>.
+     *        >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     *        filtered based on the user or their group access to documents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

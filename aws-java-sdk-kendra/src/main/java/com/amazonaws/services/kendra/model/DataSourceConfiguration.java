@@ -32,6 +32,26 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to an Amazon S3 bucket as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon S3 connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      */
     private S3DataSourceConfiguration s3Configuration;
     /**
@@ -88,12 +108,52 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Amazon FSx as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      */
     private FsxConfiguration fsxConfiguration;
     /**
      * <p>
      * Provides the configuration information to connect to Slack as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Slack connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      */
     private SlackConfiguration slackConfiguration;
     /**
@@ -118,18 +178,40 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to GitHub as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded GitHub connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won’t be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      */
     private GitHubConfiguration gitHubConfiguration;
     /**
      * <p>
      * Provides the configuration information to connect to Alfresco as your data source.
      * </p>
+     * <note>
      * <p>
      * Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the Alfresco
      * data source template schema / <a
      * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      * >TemplateConfiguration</a> API.
      * </p>
+     * </note>
      */
     @Deprecated
     private AlfrescoConfiguration alfrescoConfiguration;
@@ -144,9 +226,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to an Amazon S3 bucket as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon S3 connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param s3Configuration
-     *        Provides the configuration information to connect to an Amazon S3 bucket as your data source.
+     *        Provides the configuration information to connect to an Amazon S3 bucket as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded Amazon S3 connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to
+     *        configure your connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      */
 
     public void setS3Configuration(S3DataSourceConfiguration s3Configuration) {
@@ -157,8 +277,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to an Amazon S3 bucket as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon S3 connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
-     * @return Provides the configuration information to connect to an Amazon S3 bucket as your data source.
+     * @return Provides the configuration information to connect to an Amazon S3 bucket as your data source.</p> <note>
+     *         <p>
+     *         Amazon Kendra now supports an upgraded Amazon S3 connector.
+     *         </p>
+     *         <p>
+     *         You must now use the <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *         >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to
+     *         configure your connector.
+     *         </p>
+     *         <p>
+     *         Connectors configured using the older console and API architecture will continue to function as
+     *         configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *         connector configuration, you must create a new connector.
+     *         </p>
+     *         <p>
+     *         We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *         configured using the older architecture is scheduled to end by June 2024.
+     *         </p>
      */
 
     public S3DataSourceConfiguration getS3Configuration() {
@@ -169,9 +327,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to an Amazon S3 bucket as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon S3 connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param s3Configuration
-     *        Provides the configuration information to connect to an Amazon S3 bucket as your data source.
+     *        Provides the configuration information to connect to an Amazon S3 bucket as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded Amazon S3 connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>S3DataSourceConfiguration</code> object to
+     *        configure your connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -530,9 +726,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Amazon FSx as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param fsxConfiguration
-     *        Provides the configuration information to connect to Amazon FSx as your data source.
+     *        Provides the configuration information to connect to Amazon FSx as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     *        connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      */
 
     public void setFsxConfiguration(FsxConfiguration fsxConfiguration) {
@@ -543,8 +777,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Amazon FSx as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
-     * @return Provides the configuration information to connect to Amazon FSx as your data source.
+     * @return Provides the configuration information to connect to Amazon FSx as your data source.</p> <note>
+     *         <p>
+     *         Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     *         </p>
+     *         <p>
+     *         You must now use the <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *         >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     *         connector.
+     *         </p>
+     *         <p>
+     *         Connectors configured using the older console and API architecture will continue to function as
+     *         configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *         connector configuration, you must create a new connector.
+     *         </p>
+     *         <p>
+     *         We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *         configured using the older architecture is scheduled to end by June 2024.
+     *         </p>
      */
 
     public FsxConfiguration getFsxConfiguration() {
@@ -555,9 +827,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Amazon FSx as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param fsxConfiguration
-     *        Provides the configuration information to connect to Amazon FSx as your data source.
+     *        Provides the configuration information to connect to Amazon FSx as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded Amazon FSx Windows connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>FsxConfiguration</code> object to configure your
+     *        connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -570,9 +880,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Slack as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Slack connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param slackConfiguration
-     *        Provides the configuration information to connect to Slack as your data source.
+     *        Provides the configuration information to connect to Slack as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded Slack connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     *        connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      */
 
     public void setSlackConfiguration(SlackConfiguration slackConfiguration) {
@@ -583,8 +931,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Slack as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Slack connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
-     * @return Provides the configuration information to connect to Slack as your data source.
+     * @return Provides the configuration information to connect to Slack as your data source.</p> <note>
+     *         <p>
+     *         Amazon Kendra now supports an upgraded Slack connector.
+     *         </p>
+     *         <p>
+     *         You must now use the <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *         >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     *         connector.
+     *         </p>
+     *         <p>
+     *         Connectors configured using the older console and API architecture will continue to function as
+     *         configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *         connector configuration, you must create a new connector.
+     *         </p>
+     *         <p>
+     *         We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *         configured using the older architecture is scheduled to end by June 2024.
+     *         </p>
      */
 
     public SlackConfiguration getSlackConfiguration() {
@@ -595,9 +981,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Slack as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded Slack connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won't be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param slackConfiguration
-     *        Provides the configuration information to connect to Slack as your data source.
+     *        Provides the configuration information to connect to Slack as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded Slack connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>SlackConfiguration</code> object to configure your
+     *        connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won't be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -730,9 +1154,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to GitHub as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded GitHub connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won’t be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param gitHubConfiguration
-     *        Provides the configuration information to connect to GitHub as your data source.
+     *        Provides the configuration information to connect to GitHub as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded GitHub connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure your
+     *        connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won’t be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      */
 
     public void setGitHubConfiguration(GitHubConfiguration gitHubConfiguration) {
@@ -743,8 +1205,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to GitHub as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded GitHub connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won’t be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
-     * @return Provides the configuration information to connect to GitHub as your data source.
+     * @return Provides the configuration information to connect to GitHub as your data source.</p> <note>
+     *         <p>
+     *         Amazon Kendra now supports an upgraded GitHub connector.
+     *         </p>
+     *         <p>
+     *         You must now use the <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *         >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure
+     *         your connector.
+     *         </p>
+     *         <p>
+     *         Connectors configured using the older console and API architecture will continue to function as
+     *         configured. However, you won’t be able to edit or update them. If you want to edit or update your
+     *         connector configuration, you must create a new connector.
+     *         </p>
+     *         <p>
+     *         We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *         configured using the older architecture is scheduled to end by June 2024.
+     *         </p>
      */
 
     public GitHubConfiguration getGitHubConfiguration() {
@@ -755,9 +1255,47 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to GitHub as your data source.
      * </p>
+     * <note>
+     * <p>
+     * Amazon Kendra now supports an upgraded GitHub connector.
+     * </p>
+     * <p>
+     * You must now use the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     * >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure your
+     * connector.
+     * </p>
+     * <p>
+     * Connectors configured using the older console and API architecture will continue to function as configured.
+     * However, you won’t be able to edit or update them. If you want to edit or update your connector configuration,
+     * you must create a new connector.
+     * </p>
+     * <p>
+     * We recommended migrating your connector workflow to the upgraded version. Support for connectors configured using
+     * the older architecture is scheduled to end by June 2024.
+     * </p>
+     * </note>
      * 
      * @param gitHubConfiguration
-     *        Provides the configuration information to connect to GitHub as your data source.
+     *        Provides the configuration information to connect to GitHub as your data source.</p> <note>
+     *        <p>
+     *        Amazon Kendra now supports an upgraded GitHub connector.
+     *        </p>
+     *        <p>
+     *        You must now use the <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
+     *        >TemplateConfiguration</a> object instead of the <code>GitHubConfiguration</code> object to configure your
+     *        connector.
+     *        </p>
+     *        <p>
+     *        Connectors configured using the older console and API architecture will continue to function as
+     *        configured. However, you won’t be able to edit or update them. If you want to edit or update your
+     *        connector configuration, you must create a new connector.
+     *        </p>
+     *        <p>
+     *        We recommended migrating your connector workflow to the upgraded version. Support for connectors
+     *        configured using the older architecture is scheduled to end by June 2024.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -770,20 +1308,23 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Alfresco as your data source.
      * </p>
+     * <note>
      * <p>
      * Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the Alfresco
      * data source template schema / <a
      * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      * >TemplateConfiguration</a> API.
      * </p>
+     * </note>
      * 
      * @param alfrescoConfiguration
-     *        Provides the configuration information to connect to Alfresco as your data source.</p>
+     *        Provides the configuration information to connect to Alfresco as your data source.</p> <note>
      *        <p>
      *        Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the
      *        Alfresco data source template schema / <a
      *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      *        >TemplateConfiguration</a> API.
+     *        </p>
      */
     @Deprecated
     public void setAlfrescoConfiguration(AlfrescoConfiguration alfrescoConfiguration) {
@@ -794,19 +1335,22 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Alfresco as your data source.
      * </p>
+     * <note>
      * <p>
      * Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the Alfresco
      * data source template schema / <a
      * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      * >TemplateConfiguration</a> API.
      * </p>
+     * </note>
      * 
-     * @return Provides the configuration information to connect to Alfresco as your data source.</p>
+     * @return Provides the configuration information to connect to Alfresco as your data source.</p> <note>
      *         <p>
      *         Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the
      *         Alfresco data source template schema / <a
      *         href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      *         >TemplateConfiguration</a> API.
+     *         </p>
      */
     @Deprecated
     public AlfrescoConfiguration getAlfrescoConfiguration() {
@@ -817,20 +1361,23 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * Provides the configuration information to connect to Alfresco as your data source.
      * </p>
+     * <note>
      * <p>
      * Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the Alfresco
      * data source template schema / <a
      * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      * >TemplateConfiguration</a> API.
      * </p>
+     * </note>
      * 
      * @param alfrescoConfiguration
-     *        Provides the configuration information to connect to Alfresco as your data source.</p>
+     *        Provides the configuration information to connect to Alfresco as your data source.</p> <note>
      *        <p>
      *        Support for <code>AlfrescoConfiguration</code> ended May 2023. We recommend migrating to or using the
      *        Alfresco data source template schema / <a
      *        href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html"
      *        >TemplateConfiguration</a> API.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated

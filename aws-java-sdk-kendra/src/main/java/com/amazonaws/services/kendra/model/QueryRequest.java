@@ -33,7 +33,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
-     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries.
+     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries. For
+     * example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens: <code>timeoff</code>,
+     * <code>october</code>, <code>hr</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      * </p>
      */
     private String queryText;
@@ -194,12 +198,20 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
-     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries.
+     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries. For
+     * example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens: <code>timeoff</code>,
+     * <code>october</code>, <code>hr</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      * </p>
      * 
      * @param queryText
      *        The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
      *        punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries.
+     *        For example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens: <code>timeoff</code>
+     *        , <code>october</code>, <code>hr</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *        >Searching with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      */
 
     public void setQueryText(String queryText) {
@@ -209,12 +221,19 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
-     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries.
+     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries. For
+     * example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens: <code>timeoff</code>,
+     * <code>october</code>, <code>hr</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      * </p>
      * 
      * @return The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
      *         punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex
-     *         queries.
+     *         queries. For example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens:
+     *         <code>timeoff</code>, <code>october</code>, <code>hr</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *         >Searching with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      */
 
     public String getQueryText() {
@@ -224,12 +243,20 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
-     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries.
+     * punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries. For
+     * example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens: <code>timeoff</code>,
+     * <code>october</code>, <code>hr</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax">Searching
+     * with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      * </p>
      * 
      * @param queryText
      *        The input query text for the search. Amazon Kendra truncates queries at 30 token words, which excludes
      *        punctuation and stop words. Truncation still applies if you use Boolean or more advanced, complex queries.
+     *        For example, <code>Timeoff AND October AND Category:HR</code> is counted as 3 tokens: <code>timeoff</code>
+     *        , <code>october</code>, <code>hr</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/searching-example.html#searching-index-query-syntax"
+     *        >Searching with advanced query syntax</a> in the Amazon Kendra Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

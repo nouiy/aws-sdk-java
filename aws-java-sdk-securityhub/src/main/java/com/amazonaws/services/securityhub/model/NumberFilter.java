@@ -42,12 +42,6 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
     private Double lte;
     /**
      * <p>
-     * The equal-to condition to be applied to a single field when querying for findings.
-     * </p>
-     */
-    private Double eq;
-    /**
-     * <p>
      * The greater-than condition to be applied to a single field when querying for findings.
      * </p>
      */
@@ -58,6 +52,12 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Double lt;
+    /**
+     * <p>
+     * The equal-to condition to be applied to a single field when querying for findings.
+     * </p>
+     */
+    private Double eq;
 
     /**
      * <p>
@@ -136,46 +136,6 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
 
     public NumberFilter withLte(Double lte) {
         setLte(lte);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The equal-to condition to be applied to a single field when querying for findings.
-     * </p>
-     * 
-     * @param eq
-     *        The equal-to condition to be applied to a single field when querying for findings.
-     */
-
-    public void setEq(Double eq) {
-        this.eq = eq;
-    }
-
-    /**
-     * <p>
-     * The equal-to condition to be applied to a single field when querying for findings.
-     * </p>
-     * 
-     * @return The equal-to condition to be applied to a single field when querying for findings.
-     */
-
-    public Double getEq() {
-        return this.eq;
-    }
-
-    /**
-     * <p>
-     * The equal-to condition to be applied to a single field when querying for findings.
-     * </p>
-     * 
-     * @param eq
-     *        The equal-to condition to be applied to a single field when querying for findings.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public NumberFilter withEq(Double eq) {
-        setEq(eq);
         return this;
     }
 
@@ -260,6 +220,46 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The equal-to condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @param eq
+     *        The equal-to condition to be applied to a single field when querying for findings.
+     */
+
+    public void setEq(Double eq) {
+        this.eq = eq;
+    }
+
+    /**
+     * <p>
+     * The equal-to condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @return The equal-to condition to be applied to a single field when querying for findings.
+     */
+
+    public Double getEq() {
+        return this.eq;
+    }
+
+    /**
+     * <p>
+     * The equal-to condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @param eq
+     *        The equal-to condition to be applied to a single field when querying for findings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NumberFilter withEq(Double eq) {
+        setEq(eq);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -275,12 +275,12 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
             sb.append("Gte: ").append(getGte()).append(",");
         if (getLte() != null)
             sb.append("Lte: ").append(getLte()).append(",");
-        if (getEq() != null)
-            sb.append("Eq: ").append(getEq()).append(",");
         if (getGt() != null)
             sb.append("Gt: ").append(getGt()).append(",");
         if (getLt() != null)
-            sb.append("Lt: ").append(getLt());
+            sb.append("Lt: ").append(getLt()).append(",");
+        if (getEq() != null)
+            sb.append("Eq: ").append(getEq());
         sb.append("}");
         return sb.toString();
     }
@@ -303,10 +303,6 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLte() != null && other.getLte().equals(this.getLte()) == false)
             return false;
-        if (other.getEq() == null ^ this.getEq() == null)
-            return false;
-        if (other.getEq() != null && other.getEq().equals(this.getEq()) == false)
-            return false;
         if (other.getGt() == null ^ this.getGt() == null)
             return false;
         if (other.getGt() != null && other.getGt().equals(this.getGt()) == false)
@@ -314,6 +310,10 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
         if (other.getLt() == null ^ this.getLt() == null)
             return false;
         if (other.getLt() != null && other.getLt().equals(this.getLt()) == false)
+            return false;
+        if (other.getEq() == null ^ this.getEq() == null)
+            return false;
+        if (other.getEq() != null && other.getEq().equals(this.getEq()) == false)
             return false;
         return true;
     }
@@ -325,9 +325,9 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getGte() == null) ? 0 : getGte().hashCode());
         hashCode = prime * hashCode + ((getLte() == null) ? 0 : getLte().hashCode());
-        hashCode = prime * hashCode + ((getEq() == null) ? 0 : getEq().hashCode());
         hashCode = prime * hashCode + ((getGt() == null) ? 0 : getGt().hashCode());
         hashCode = prime * hashCode + ((getLt() == null) ? 0 : getLt().hashCode());
+        hashCode = prime * hashCode + ((getEq() == null) ? 0 : getEq().hashCode());
         return hashCode;
     }
 

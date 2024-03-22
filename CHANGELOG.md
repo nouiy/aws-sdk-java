@@ -1,3 +1,24 @@
+# __1.12.686__ __2024-03-22__
+## __AWS Price List Service__
+  - ### Features
+    - Add ResourceNotFoundException to ListPriceLists and GetPriceListFileUrl APIs
+
+## __AWS SecurityHub__
+  - ### Features
+    - Added new resource detail object to ASFF, including resource for LastKnownExploitAt
+
+## __AWSKendraFrontendService__
+  - ### Features
+    - Documentation update, March 2024. Corrects some docs for Amazon Kendra.
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - Updates Amazon Firehose documentation for message regarding Enforcing Tags IAM Policy.
+
+## __IAM Roles Anywhere__
+  - ### Features
+    - This release relaxes constraints on the durationSeconds request parameter for the *Profile APIs that support it. This parameter can now take on values that go up to 43200.
+
 # __1.12.685__ __2024-03-21__
 ## __CodeArtifact__
   - ### Features

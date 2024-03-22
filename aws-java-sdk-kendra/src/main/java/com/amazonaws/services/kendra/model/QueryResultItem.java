@@ -35,7 +35,9 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for the query result.
+     * The unique identifier for the query result item id (<code>Id</code>) and the query result item document id (
+     * <code>DocumentId</code>) combined. The value of this field changes with every request, even when you have the
+     * same documents.
      * </p>
      */
     private String id;
@@ -129,11 +131,15 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for the query result.
+     * The unique identifier for the query result item id (<code>Id</code>) and the query result item document id (
+     * <code>DocumentId</code>) combined. The value of this field changes with every request, even when you have the
+     * same documents.
      * </p>
      * 
      * @param id
-     *        The identifier for the query result.
+     *        The unique identifier for the query result item id (<code>Id</code>) and the query result item document id
+     *        (<code>DocumentId</code>) combined. The value of this field changes with every request, even when you have
+     *        the same documents.
      */
 
     public void setId(String id) {
@@ -142,10 +148,14 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for the query result.
+     * The unique identifier for the query result item id (<code>Id</code>) and the query result item document id (
+     * <code>DocumentId</code>) combined. The value of this field changes with every request, even when you have the
+     * same documents.
      * </p>
      * 
-     * @return The identifier for the query result.
+     * @return The unique identifier for the query result item id (<code>Id</code>) and the query result item document
+     *         id (<code>DocumentId</code>) combined. The value of this field changes with every request, even when you
+     *         have the same documents.
      */
 
     public String getId() {
@@ -154,11 +164,15 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for the query result.
+     * The unique identifier for the query result item id (<code>Id</code>) and the query result item document id (
+     * <code>DocumentId</code>) combined. The value of this field changes with every request, even when you have the
+     * same documents.
      * </p>
      * 
      * @param id
-     *        The identifier for the query result.
+     *        The unique identifier for the query result item id (<code>Id</code>) and the query result item document id
+     *        (<code>DocumentId</code>) combined. The value of this field changes with every request, even when you have
+     *        the same documents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -233,6 +233,10 @@
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The requested resource can't be found.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -346,6 +350,10 @@
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>You've made too many requests exceeding service quotas. </p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The requested resource can't be found.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ExpiredNextTokenException",
@@ -7837,6 +7845,47 @@
         "documentation" : null,
         "simpleType" : "PriceList",
         "variableSetterType" : "PriceList"
+      },
+      "wrapper" : false
+    },
+    "ResourceNotFoundException" : {
+      "c2jName" : "ResourceNotFoundException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The requested resource can't be found.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "ResourceNotFoundException",
+      "fullyQualifiedName" : "com.amazonaws.services.pricing.exception.ResourceNotFoundException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.pricing.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ResourceNotFoundException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ResourceNotFoundException",
+        "variableName" : "resourceNotFoundException",
+        "variableType" : "ResourceNotFoundException",
+        "documentation" : null,
+        "simpleType" : "ResourceNotFoundException",
+        "variableSetterType" : "ResourceNotFoundException"
       },
       "wrapper" : false
     },

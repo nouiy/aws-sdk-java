@@ -116,7 +116,8 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     * >UserGroupResolutionConfiguration</a>.
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      */
     private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
@@ -832,13 +833,15 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     * >UserGroupResolutionConfiguration</a>.
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
      *        Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     *        >UserGroupResolutionConfiguration</a>.
+     *        >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     *        filtered based on the user or their group access to documents.
      */
 
     public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
@@ -849,12 +852,14 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     * >UserGroupResolutionConfiguration</a>.
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      * 
      * @return Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     *         >UserGroupResolutionConfiguration</a>.
+     *         >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results
+     *         are filtered based on the user or their group access to documents.
      */
 
     public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
@@ -865,13 +870,15 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     * >UserGroupResolutionConfiguration</a>.
+     * >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
      *        Gets users and groups from IAM Identity Center identity source. To configure this, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
-     *        >UserGroupResolutionConfiguration</a>.
+     *        >UserGroupResolutionConfiguration</a>. This is useful for user context filtering, where search results are
+     *        filtered based on the user or their group access to documents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

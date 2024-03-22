@@ -27,7 +27,10 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of seconds the vended session credentials are valid for.
+     * Used to determine how long sessions vended using this profile are valid for. See the <code>Expiration</code>
+     * section of the <a href=
+     * "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     * >CreateSession API documentation</a> page for more details.
      * </p>
      */
     private Integer durationSeconds;
@@ -64,11 +67,17 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of seconds the vended session credentials are valid for.
+     * Used to determine how long sessions vended using this profile are valid for. See the <code>Expiration</code>
+     * section of the <a href=
+     * "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     * >CreateSession API documentation</a> page for more details.
      * </p>
      * 
      * @param durationSeconds
-     *        The number of seconds the vended session credentials are valid for.
+     *        Used to determine how long sessions vended using this profile are valid for. See the
+     *        <code>Expiration</code> section of the <a href=
+     *        "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     *        >CreateSession API documentation</a> page for more details.
      */
 
     public void setDurationSeconds(Integer durationSeconds) {
@@ -77,10 +86,16 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of seconds the vended session credentials are valid for.
+     * Used to determine how long sessions vended using this profile are valid for. See the <code>Expiration</code>
+     * section of the <a href=
+     * "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     * >CreateSession API documentation</a> page for more details.
      * </p>
      * 
-     * @return The number of seconds the vended session credentials are valid for.
+     * @return Used to determine how long sessions vended using this profile are valid for. See the
+     *         <code>Expiration</code> section of the <a href=
+     *         "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     *         >CreateSession API documentation</a> page for more details.
      */
 
     public Integer getDurationSeconds() {
@@ -89,11 +104,17 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of seconds the vended session credentials are valid for.
+     * Used to determine how long sessions vended using this profile are valid for. See the <code>Expiration</code>
+     * section of the <a href=
+     * "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     * >CreateSession API documentation</a> page for more details.
      * </p>
      * 
      * @param durationSeconds
-     *        The number of seconds the vended session credentials are valid for.
+     *        Used to determine how long sessions vended using this profile are valid for. See the
+     *        <code>Expiration</code> section of the <a href=
+     *        "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
+     *        >CreateSession API documentation</a> page for more details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

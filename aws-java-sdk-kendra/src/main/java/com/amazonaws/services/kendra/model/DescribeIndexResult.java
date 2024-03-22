@@ -44,13 +44,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon
-     * Cloudwatch logs.
+     * CloudWatch logs.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
      * support asymmetric CMKs.
      * </p>
      */
@@ -77,7 +77,7 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private java.util.Date createdAt;
     /**
      * <p>
-     * The Unix when the index was last updated.
+     * The Unix timestamp when the index was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -124,8 +124,8 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private String userContextPolicy;
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
-     * Center identity source.
+     * Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful for user
+     * context filtering, where search results are filtered based on the user or their group access to documents.
      * </p>
      */
     private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
@@ -272,12 +272,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon
-     * Cloudwatch logs.
+     * CloudWatch logs.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon
-     *        Cloudwatch logs.
+     *        CloudWatch logs.
      */
 
     public void setRoleArn(String roleArn) {
@@ -287,11 +287,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon
-     * Cloudwatch logs.
+     * CloudWatch logs.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your
-     *         Amazon Cloudwatch logs.
+     *         Amazon CloudWatch logs.
      */
 
     public String getRoleArn() {
@@ -301,12 +301,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon
-     * Cloudwatch logs.
+     * CloudWatch logs.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon
-     *        Cloudwatch logs.
+     *        CloudWatch logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -317,12 +317,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
      * support asymmetric CMKs.
      * </p>
      * 
      * @param serverSideEncryptionConfiguration
-     *        The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra
+     *        The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra
      *        doesn't support asymmetric CMKs.
      */
 
@@ -332,11 +332,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
      * support asymmetric CMKs.
      * </p>
      * 
-     * @return The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra
+     * @return The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra
      *         doesn't support asymmetric CMKs.
      */
 
@@ -346,12 +346,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
      * support asymmetric CMKs.
      * </p>
      * 
      * @param serverSideEncryptionConfiguration
-     *        The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra
+     *        The identifier of the KMS customer master key (CMK) that is used to encrypt your data. Amazon Kendra
      *        doesn't support asymmetric CMKs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -518,11 +518,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix when the index was last updated.
+     * The Unix timestamp when the index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix when the index was last updated.
+     *        The Unix timestamp when the index was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -531,10 +531,10 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix when the index was last updated.
+     * The Unix timestamp when the index was last updated.
      * </p>
      * 
-     * @return The Unix when the index was last updated.
+     * @return The Unix timestamp when the index was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -543,11 +543,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix when the index was last updated.
+     * The Unix timestamp when the index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix when the index was last updated.
+     *        The Unix timestamp when the index was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -915,13 +915,14 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
-     * Center identity source.
+     * Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful for user
+     * context filtering, where search results are filtered based on the user or their group access to documents.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Whether you have enabled the configuration for fetching access levels of groups and users from an IAM
-     *        Identity Center identity source.
+     *        Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful for
+     *        user context filtering, where search results are filtered based on the user or their group access to
+     *        documents.
      */
 
     public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
@@ -930,12 +931,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
-     * Center identity source.
+     * Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful for user
+     * context filtering, where search results are filtered based on the user or their group access to documents.
      * </p>
      * 
-     * @return Whether you have enabled the configuration for fetching access levels of groups and users from an IAM
-     *         Identity Center identity source.
+     * @return Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful
+     *         for user context filtering, where search results are filtered based on the user or their group access to
+     *         documents.
      */
 
     public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
@@ -944,13 +946,14 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
-     * Center identity source.
+     * Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful for user
+     * context filtering, where search results are filtered based on the user or their group access to documents.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Whether you have enabled the configuration for fetching access levels of groups and users from an IAM
-     *        Identity Center identity source.
+     *        Whether you have enabled IAM Identity Center identity source for your users and groups. This is useful for
+     *        user context filtering, where search results are filtered based on the user or their group access to
+     *        documents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
