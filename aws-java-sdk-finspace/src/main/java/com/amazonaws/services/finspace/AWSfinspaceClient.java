@@ -932,6 +932,71 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Deletes the specified nodes from a cluster.
+     * </p>
+     * 
+     * @param deleteKxClusterNodeRequest
+     * @return Result of the DeleteKxClusterNode operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.DeleteKxClusterNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxClusterNode" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteKxClusterNodeResult deleteKxClusterNode(DeleteKxClusterNodeRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteKxClusterNode(request);
+    }
+
+    @SdkInternalApi
+    final DeleteKxClusterNodeResult executeDeleteKxClusterNode(DeleteKxClusterNodeRequest deleteKxClusterNodeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteKxClusterNodeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteKxClusterNodeRequest> request = null;
+        Response<DeleteKxClusterNodeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteKxClusterNodeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteKxClusterNodeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteKxClusterNode");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteKxClusterNodeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteKxClusterNodeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified database and all of its associated data. This action is irreversible. You must copy any
      * data out of the database before deleting it if the data is to be retained.
      * </p>

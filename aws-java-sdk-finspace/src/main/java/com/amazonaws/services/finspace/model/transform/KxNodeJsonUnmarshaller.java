@@ -60,6 +60,10 @@ public class KxNodeJsonUnmarshaller implements Unmarshaller<KxNode, JsonUnmarsha
                     context.nextToken();
                     kxNode.setLaunchTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    kxNode.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

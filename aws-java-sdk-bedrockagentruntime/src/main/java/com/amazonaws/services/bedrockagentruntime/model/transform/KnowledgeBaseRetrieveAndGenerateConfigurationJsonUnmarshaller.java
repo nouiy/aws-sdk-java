@@ -49,6 +49,11 @@ public class KnowledgeBaseRetrieveAndGenerateConfigurationJsonUnmarshaller imple
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("generationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBaseRetrieveAndGenerateConfiguration.setGenerationConfiguration(GenerationConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("knowledgeBaseId", targetDepth)) {
                     context.nextToken();
                     knowledgeBaseRetrieveAndGenerateConfiguration.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));

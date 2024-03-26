@@ -95,7 +95,7 @@ public class SearchTransitGatewayRoutesRequest extends AmazonWebServiceRequest i
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
      * <p>
-     * The maximum number of routes to return. If a value is not provided, the default is 1000.
+     * The maximum number of routes to return.
      * </p>
      */
     private Integer maxResults;
@@ -652,11 +652,11 @@ public class SearchTransitGatewayRoutesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of routes to return. If a value is not provided, the default is 1000.
+     * The maximum number of routes to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of routes to return. If a value is not provided, the default is 1000.
+     *        The maximum number of routes to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -665,10 +665,10 @@ public class SearchTransitGatewayRoutesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of routes to return. If a value is not provided, the default is 1000.
+     * The maximum number of routes to return.
      * </p>
      * 
-     * @return The maximum number of routes to return. If a value is not provided, the default is 1000.
+     * @return The maximum number of routes to return.
      */
 
     public Integer getMaxResults() {
@@ -677,11 +677,11 @@ public class SearchTransitGatewayRoutesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of routes to return. If a value is not provided, the default is 1000.
+     * The maximum number of routes to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of routes to return. If a value is not provided, the default is 1000.
+     *        The maximum number of routes to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

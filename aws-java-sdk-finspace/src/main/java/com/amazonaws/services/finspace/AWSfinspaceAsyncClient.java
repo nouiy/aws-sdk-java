@@ -441,6 +441,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKxClusterNodeResult> deleteKxClusterNodeAsync(DeleteKxClusterNodeRequest request) {
+
+        return deleteKxClusterNodeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxClusterNodeResult> deleteKxClusterNodeAsync(final DeleteKxClusterNodeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteKxClusterNodeRequest, DeleteKxClusterNodeResult> asyncHandler) {
+        final DeleteKxClusterNodeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteKxClusterNodeResult>() {
+            @Override
+            public DeleteKxClusterNodeResult call() throws Exception {
+                DeleteKxClusterNodeResult result = null;
+
+                try {
+                    result = executeDeleteKxClusterNode(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKxDatabaseResult> deleteKxDatabaseAsync(DeleteKxDatabaseRequest request) {
 
         return deleteKxDatabaseAsync(request, null);

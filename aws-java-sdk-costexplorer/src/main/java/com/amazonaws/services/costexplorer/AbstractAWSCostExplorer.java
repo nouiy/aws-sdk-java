@@ -164,6 +164,11 @@ public class AbstractAWSCostExplorer implements AWSCostExplorer {
     }
 
     @Override
+    public ListCostAllocationTagBackfillHistoryResult listCostAllocationTagBackfillHistory(ListCostAllocationTagBackfillHistoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCostAllocationTagsResult listCostAllocationTags(ListCostAllocationTagsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -186,6 +191,11 @@ public class AbstractAWSCostExplorer implements AWSCostExplorer {
 
     @Override
     public ProvideAnomalyFeedbackResult provideAnomalyFeedback(ProvideAnomalyFeedbackRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartCostAllocationTagBackfillResult startCostAllocationTagBackfill(StartCostAllocationTagBackfillRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

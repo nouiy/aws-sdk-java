@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains details about how the results should be returned.
+ * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
  * </p>
  * <p>
  * This data type is used in the following API operations:
@@ -29,14 +30,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * <a href=
  * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Retrieve.html#API_agent-runtime_Retrieve_RequestSyntax"
- * >Retrieve request body</a>
+ * >Retrieve request</a> – in the <code>retrievalConfiguration</code> field
  * </p>
  * </li>
  * <li>
  * <p>
  * <a href=
  * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html#API_agent-runtime_RetrieveAndGenerate_RequestSyntax"
- * >RetrieveAndGenerate request body</a>
+ * >RetrieveAndGenerate request</a> – in the <code>retrievalConfiguration</code> field
  * </p>
  * </li>
  * </ul>
@@ -50,18 +51,22 @@ public class KnowledgeBaseRetrievalConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains details about how the results from the vector search should be returned.
+     * Contains details about how the results from the vector search should be returned. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      */
     private KnowledgeBaseVectorSearchConfiguration vectorSearchConfiguration;
 
     /**
      * <p>
-     * Contains details about how the results from the vector search should be returned.
+     * Contains details about how the results from the vector search should be returned. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
      * @param vectorSearchConfiguration
-     *        Contains details about how the results from the vector search should be returned.
+     *        Contains details about how the results from the vector search should be returned. For more information,
+     *        see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     *        configurations</a>.
      */
 
     public void setVectorSearchConfiguration(KnowledgeBaseVectorSearchConfiguration vectorSearchConfiguration) {
@@ -70,10 +75,13 @@ public class KnowledgeBaseRetrievalConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains details about how the results from the vector search should be returned.
+     * Contains details about how the results from the vector search should be returned. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
-     * @return Contains details about how the results from the vector search should be returned.
+     * @return Contains details about how the results from the vector search should be returned. For more information,
+     *         see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     *         configurations</a>.
      */
 
     public KnowledgeBaseVectorSearchConfiguration getVectorSearchConfiguration() {
@@ -82,11 +90,14 @@ public class KnowledgeBaseRetrievalConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains details about how the results from the vector search should be returned.
+     * Contains details about how the results from the vector search should be returned. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
      * @param vectorSearchConfiguration
-     *        Contains details about how the results from the vector search should be returned.
+     *        Contains details about how the results from the vector search should be returned. For more information,
+     *        see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     *        configurations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -385,6 +385,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Deletes the specified nodes from a cluster.
+     * </p>
+     * 
+     * @param deleteKxClusterNodeRequest
+     * @return A Java Future containing the result of the DeleteKxClusterNode operation returned by the service.
+     * @sample AWSfinspaceAsync.DeleteKxClusterNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxClusterNode" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxClusterNodeResult> deleteKxClusterNodeAsync(DeleteKxClusterNodeRequest deleteKxClusterNodeRequest);
+
+    /**
+     * <p>
+     * Deletes the specified nodes from a cluster.
+     * </p>
+     * 
+     * @param deleteKxClusterNodeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteKxClusterNode operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.DeleteKxClusterNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxClusterNode" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxClusterNodeResult> deleteKxClusterNodeAsync(DeleteKxClusterNodeRequest deleteKxClusterNodeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxClusterNodeRequest, DeleteKxClusterNodeResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified database and all of its associated data. This action is irreversible. You must copy any
      * data out of the database before deleting it if the data is to be retained.
      * </p>

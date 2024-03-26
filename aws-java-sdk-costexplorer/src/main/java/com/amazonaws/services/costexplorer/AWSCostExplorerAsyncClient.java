@@ -995,6 +995,41 @@ public class AWSCostExplorerAsyncClient extends AWSCostExplorerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListCostAllocationTagBackfillHistoryResult> listCostAllocationTagBackfillHistoryAsync(
+            ListCostAllocationTagBackfillHistoryRequest request) {
+
+        return listCostAllocationTagBackfillHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCostAllocationTagBackfillHistoryResult> listCostAllocationTagBackfillHistoryAsync(
+            final ListCostAllocationTagBackfillHistoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCostAllocationTagBackfillHistoryRequest, ListCostAllocationTagBackfillHistoryResult> asyncHandler) {
+        final ListCostAllocationTagBackfillHistoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCostAllocationTagBackfillHistoryResult>() {
+            @Override
+            public ListCostAllocationTagBackfillHistoryResult call() throws Exception {
+                ListCostAllocationTagBackfillHistoryResult result = null;
+
+                try {
+                    result = executeListCostAllocationTagBackfillHistory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCostAllocationTagsResult> listCostAllocationTagsAsync(ListCostAllocationTagsRequest request) {
 
         return listCostAllocationTagsAsync(request, null);
@@ -1146,6 +1181,40 @@ public class AWSCostExplorerAsyncClient extends AWSCostExplorerClient implements
 
                 try {
                     result = executeProvideAnomalyFeedback(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCostAllocationTagBackfillResult> startCostAllocationTagBackfillAsync(StartCostAllocationTagBackfillRequest request) {
+
+        return startCostAllocationTagBackfillAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCostAllocationTagBackfillResult> startCostAllocationTagBackfillAsync(
+            final StartCostAllocationTagBackfillRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartCostAllocationTagBackfillRequest, StartCostAllocationTagBackfillResult> asyncHandler) {
+        final StartCostAllocationTagBackfillRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartCostAllocationTagBackfillResult>() {
+            @Override
+            public StartCostAllocationTagBackfillResult call() throws Exception {
+                StartCostAllocationTagBackfillResult result = null;
+
+                try {
+                    result = executeStartCostAllocationTagBackfill(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

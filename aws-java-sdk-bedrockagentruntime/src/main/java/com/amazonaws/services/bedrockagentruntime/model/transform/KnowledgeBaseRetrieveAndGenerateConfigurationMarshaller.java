@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KnowledgeBaseRetrieveAndGenerateConfigurationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> GENERATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("generationConfiguration").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> MODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -50,6 +52,7 @@ public class KnowledgeBaseRetrieveAndGenerateConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(knowledgeBaseRetrieveAndGenerateConfiguration.getGenerationConfiguration(), GENERATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(knowledgeBaseRetrieveAndGenerateConfiguration.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(knowledgeBaseRetrieveAndGenerateConfiguration.getModelArn(), MODELARN_BINDING);
             protocolMarshaller.marshall(knowledgeBaseRetrieveAndGenerateConfiguration.getRetrievalConfiguration(), RETRIEVALCONFIGURATION_BINDING);

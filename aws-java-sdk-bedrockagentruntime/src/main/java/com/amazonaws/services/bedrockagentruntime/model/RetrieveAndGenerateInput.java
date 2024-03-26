@@ -21,6 +21,18 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Contains the query made to the knowledge base.
  * </p>
+ * <p>
+ * This data type is used in the following API operations:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href=
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html#API_agent-runtime_RetrieveAndGenerate_RequestSyntax"
+ * >RetrieveAndGenerate request</a> – in the <code>input</code> field
+ * </p>
+ * </li>
+ * </ul>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/RetrieveAndGenerateInput"
  *      target="_top">AWS API Documentation</a>

@@ -21,6 +21,25 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Contains details about the resource being queried.
  * </p>
+ * <p>
+ * This data type is used in the following API operations:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href=
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Retrieve.html#API_agent-runtime_Retrieve_RequestSyntax"
+ * >Retrieve request</a> – in the <code>knowledgeBaseConfiguration</code> field
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href=
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html#API_agent-runtime_RetrieveAndGenerate_RequestSyntax"
+ * >RetrieveAndGenerate request</a> – in the <code>knowledgeBaseConfiguration</code> field
+ * </p>
+ * </li>
+ * </ul>
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-runtime-2023-07-26/KnowledgeBaseRetrieveAndGenerateConfiguration"
@@ -29,6 +48,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains configurations for response generation based on the knowwledge base query results.
+     * </p>
+     */
+    private GenerationConfiguration generationConfiguration;
     /**
      * <p>
      * The unique identifier of the knowledge base that is queried and the foundation model used for generation.
@@ -47,6 +72,46 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
      * </p>
      */
     private KnowledgeBaseRetrievalConfiguration retrievalConfiguration;
+
+    /**
+     * <p>
+     * Contains configurations for response generation based on the knowwledge base query results.
+     * </p>
+     * 
+     * @param generationConfiguration
+     *        Contains configurations for response generation based on the knowwledge base query results.
+     */
+
+    public void setGenerationConfiguration(GenerationConfiguration generationConfiguration) {
+        this.generationConfiguration = generationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configurations for response generation based on the knowwledge base query results.
+     * </p>
+     * 
+     * @return Contains configurations for response generation based on the knowwledge base query results.
+     */
+
+    public GenerationConfiguration getGenerationConfiguration() {
+        return this.generationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configurations for response generation based on the knowwledge base query results.
+     * </p>
+     * 
+     * @param generationConfiguration
+     *        Contains configurations for response generation based on the knowwledge base query results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBaseRetrieveAndGenerateConfiguration withGenerationConfiguration(GenerationConfiguration generationConfiguration) {
+        setGenerationConfiguration(generationConfiguration);
+        return this;
+    }
 
     /**
      * <p>
@@ -180,6 +245,8 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getGenerationConfiguration() != null)
+            sb.append("GenerationConfiguration: ").append(getGenerationConfiguration()).append(",");
         if (getKnowledgeBaseId() != null)
             sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getModelArn() != null)
@@ -200,6 +267,10 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
         if (obj instanceof KnowledgeBaseRetrieveAndGenerateConfiguration == false)
             return false;
         KnowledgeBaseRetrieveAndGenerateConfiguration other = (KnowledgeBaseRetrieveAndGenerateConfiguration) obj;
+        if (other.getGenerationConfiguration() == null ^ this.getGenerationConfiguration() == null)
+            return false;
+        if (other.getGenerationConfiguration() != null && other.getGenerationConfiguration().equals(this.getGenerationConfiguration()) == false)
+            return false;
         if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
         if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
@@ -220,6 +291,7 @@ public class KnowledgeBaseRetrieveAndGenerateConfiguration implements Serializab
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getGenerationConfiguration() == null) ? 0 : getGenerationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getModelArn() == null) ? 0 : getModelArn().hashCode());
         hashCode = prime * hashCode + ((getRetrievalConfiguration() == null) ? 0 : getRetrievalConfiguration().hashCode());

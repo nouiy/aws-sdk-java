@@ -40,7 +40,7 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A list of change request objects that are run in order. A change request object consists of
-     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the following
      * values:
      * </p>
      * <ul>
@@ -200,7 +200,7 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A list of change request objects that are run in order. A change request object consists of
-     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the following
      * values:
      * </p>
      * <ul>
@@ -270,7 +270,7 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </ol>
      * 
      * @return A list of change request objects that are run in order. A change request object consists of
-     *         <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the
+     *         <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the
      *         following values: </p>
      *         <ul>
      *         <li>
@@ -346,7 +346,7 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A list of change request objects that are run in order. A change request object consists of
-     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the following
      * values:
      * </p>
      * <ul>
@@ -417,8 +417,8 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param changeRequests
      *        A list of change request objects that are run in order. A change request object consists of
-     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
-     *        values: </p>
+     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the
+     *        following values: </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -498,7 +498,7 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A list of change request objects that are run in order. A change request object consists of
-     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the following
      * values:
      * </p>
      * <ul>
@@ -574,8 +574,8 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param changeRequests
      *        A list of change request objects that are run in order. A change request object consists of
-     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
-     *        values: </p>
+     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the
+     *        following values: </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -657,7 +657,7 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A list of change request objects that are run in order. A change request object consists of
-     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the following
      * values:
      * </p>
      * <ul>
@@ -728,8 +728,8 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param changeRequests
      *        A list of change request objects that are run in order. A change request object consists of
-     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
-     *        values: </p>
+     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can have the
+     *        following values: </p>
      *        <ul>
      *        <li>
      *        <p>

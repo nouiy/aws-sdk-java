@@ -27,13 +27,14 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains the query made to the knowledge base.
+     * Contains the query to be made to the knowledge base.
      * </p>
      */
     private RetrieveAndGenerateInput input;
     /**
      * <p>
-     * Contains details about the resource being queried and the foundation model used for generation.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      */
     private RetrieveAndGenerateConfiguration retrieveAndGenerateConfiguration;
@@ -52,11 +53,11 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains the query made to the knowledge base.
+     * Contains the query to be made to the knowledge base.
      * </p>
      * 
      * @param input
-     *        Contains the query made to the knowledge base.
+     *        Contains the query to be made to the knowledge base.
      */
 
     public void setInput(RetrieveAndGenerateInput input) {
@@ -65,10 +66,10 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains the query made to the knowledge base.
+     * Contains the query to be made to the knowledge base.
      * </p>
      * 
-     * @return Contains the query made to the knowledge base.
+     * @return Contains the query to be made to the knowledge base.
      */
 
     public RetrieveAndGenerateInput getInput() {
@@ -77,11 +78,11 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains the query made to the knowledge base.
+     * Contains the query to be made to the knowledge base.
      * </p>
      * 
      * @param input
-     *        Contains the query made to the knowledge base.
+     *        Contains the query to be made to the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +93,13 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains details about the resource being queried and the foundation model used for generation.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
      * @param retrieveAndGenerateConfiguration
-     *        Contains details about the resource being queried and the foundation model used for generation.
+     *        Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      */
 
     public void setRetrieveAndGenerateConfiguration(RetrieveAndGenerateConfiguration retrieveAndGenerateConfiguration) {
@@ -105,10 +108,12 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains details about the resource being queried and the foundation model used for generation.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
-     * @return Contains details about the resource being queried and the foundation model used for generation.
+     * @return Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      */
 
     public RetrieveAndGenerateConfiguration getRetrieveAndGenerateConfiguration() {
@@ -117,11 +122,13 @@ public class RetrieveAndGenerateRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Contains details about the resource being queried and the foundation model used for generation.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
      * @param retrieveAndGenerateConfiguration
-     *        Contains details about the resource being queried and the foundation model used for generation.
+     *        Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

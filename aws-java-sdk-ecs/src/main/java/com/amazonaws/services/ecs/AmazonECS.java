@@ -192,8 +192,8 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
-     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
-     * resolves the task definition revision before it authorizes the task definition.
+     * On March 21, 2024, a change was made to resolve the task definition revision before authorization. When a task
+     * definition revision is not specified, authorization will occur using the latest revision of a task definition.
      * </p>
      * </note>
      * <p>
@@ -338,8 +338,8 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
-     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
-     * resolves the task definition revision before it authorizes the task definition.
+     * On March 21, 2024, a change was made to resolve the task definition revision before authorization. When a task
+     * definition revision is not specified, authorization will occur using the latest revision of a task definition.
      * </p>
      * </note>
      * <p>
@@ -1533,8 +1533,8 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
-     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
-     * resolves the task definition revision before it authorizes the task definition.
+     * On March 21, 2024, a change was made to resolve the task definition revision before authorization. When a task
+     * definition revision is not specified, authorization will occur using the latest revision of a task definition.
      * </p>
      * </note>
      * <p>
@@ -1642,8 +1642,8 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
-     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
-     * resolves the task definition revision before it authorizes the task definition.
+     * On March 21, 2024, a change was made to resolve the task definition revision before authorization. When a task
+     * definition revision is not specified, authorization will occur using the latest revision of a task definition.
      * </p>
      * </note>
      * <p>
@@ -2090,8 +2090,8 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
-     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
-     * resolves the task definition revision before it authorizes the task definition.
+     * On March 21, 2024, a change was made to resolve the task definition revision before authorization. When a task
+     * definition revision is not specified, authorization will occur using the latest revision of a task definition.
      * </p>
      * </note>
      * <p>

@@ -762,6 +762,24 @@ public interface AWSCostExplorer {
 
     /**
      * <p>
+     * Retrieves a list of your historical cost allocation tag backfill requests.
+     * </p>
+     * 
+     * @param listCostAllocationTagBackfillHistoryRequest
+     * @return Result of the ListCostAllocationTagBackfillHistory operation returned by the service.
+     * @throws LimitExceededException
+     *         You made too many calls in a short period of time. Try again later.
+     * @throws InvalidNextTokenException
+     *         The pagination token is invalid. Try again without a pagination token.
+     * @sample AWSCostExplorer.ListCostAllocationTagBackfillHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListCostAllocationTagBackfillHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCostAllocationTagBackfillHistoryResult listCostAllocationTagBackfillHistory(
+            ListCostAllocationTagBackfillHistoryRequest listCostAllocationTagBackfillHistoryRequest);
+
+    /**
+     * <p>
      * Get a list of cost allocation tags. All inputs in the API are optional and serve as filters. By default, all cost
      * allocation tags are returned.
      * </p>
@@ -850,6 +868,28 @@ public interface AWSCostExplorer {
      *      Documentation</a>
      */
     ProvideAnomalyFeedbackResult provideAnomalyFeedback(ProvideAnomalyFeedbackRequest provideAnomalyFeedbackRequest);
+
+    /**
+     * <p>
+     * Request a cost allocation tag backfill. This will backfill the activation status (either <code>active</code> or
+     * <code>inactive</code>) for all tag keys from <code>para:BackfillFrom</code> up to the when this request is made.
+     * </p>
+     * <p>
+     * You can request a backfill once every 24 hours.
+     * </p>
+     * 
+     * @param startCostAllocationTagBackfillRequest
+     * @return Result of the StartCostAllocationTagBackfill operation returned by the service.
+     * @throws LimitExceededException
+     *         You made too many calls in a short period of time. Try again later.
+     * @throws BackfillLimitExceededException
+     *         A request to backfill is already in progress. Once the previous request is complete, you can create
+     *         another request.
+     * @sample AWSCostExplorer.StartCostAllocationTagBackfill
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/StartCostAllocationTagBackfill"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartCostAllocationTagBackfillResult startCostAllocationTagBackfill(StartCostAllocationTagBackfillRequest startCostAllocationTagBackfillRequest);
 
     /**
      * <p>

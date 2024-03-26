@@ -40,13 +40,14 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String nextToken;
     /**
      * <p>
-     * Contains details about how the results should be returned.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      */
     private KnowledgeBaseRetrievalConfiguration retrievalConfiguration;
     /**
      * <p>
-     * The query to send the knowledge base.
+     * Contains the query to send the knowledge base.
      * </p>
      */
     private KnowledgeBaseQuery retrievalQuery;
@@ -140,11 +141,13 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Contains details about how the results should be returned.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
      * @param retrievalConfiguration
-     *        Contains details about how the results should be returned.
+     *        Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      */
 
     public void setRetrievalConfiguration(KnowledgeBaseRetrievalConfiguration retrievalConfiguration) {
@@ -153,10 +156,12 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Contains details about how the results should be returned.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
-     * @return Contains details about how the results should be returned.
+     * @return Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      */
 
     public KnowledgeBaseRetrievalConfiguration getRetrievalConfiguration() {
@@ -165,11 +170,13 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Contains details about how the results should be returned.
+     * Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * </p>
      * 
      * @param retrievalConfiguration
-     *        Contains details about how the results should be returned.
+     *        Contains configurations for the knowledge base query and retrieval process. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,11 +187,11 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The query to send the knowledge base.
+     * Contains the query to send the knowledge base.
      * </p>
      * 
      * @param retrievalQuery
-     *        The query to send the knowledge base.
+     *        Contains the query to send the knowledge base.
      */
 
     public void setRetrievalQuery(KnowledgeBaseQuery retrievalQuery) {
@@ -193,10 +200,10 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The query to send the knowledge base.
+     * Contains the query to send the knowledge base.
      * </p>
      * 
-     * @return The query to send the knowledge base.
+     * @return Contains the query to send the knowledge base.
      */
 
     public KnowledgeBaseQuery getRetrievalQuery() {
@@ -205,11 +212,11 @@ public class RetrieveRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The query to send the knowledge base.
+     * Contains the query to send the knowledge base.
      * </p>
      * 
      * @param retrievalQuery
-     *        The query to send the knowledge base.
+     *        Contains the query to send the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1,3 +1,24 @@
+# __1.12.688__ __2024-03-26__
+## __AWS Cost Explorer Service__
+  - ### Features
+    - Adds support for backfill of cost allocation tags, with new StartCostAllocationTagBackfill and ListCostAllocationTagBackfillHistory API.
+
+## __Agents for Amazon Bedrock Runtime__
+  - ### Features
+    - This release adds support to customize prompts sent through the RetrieveAndGenerate API in Agents for Amazon Bedrock.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - This is a documentation update for Amazon ECS.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Elastic Compute Cloud (EC2).
+
+## __FinSpace User Environment Management service__
+  - ### Features
+    - Add new operation delete-kx-cluster-node and add status parameter to list-kx-cluster-node operation.
+
 # __1.12.687__ __2024-03-25__
 ## __AWS CodeBuild__
   - ### Features

@@ -33,6 +33,8 @@ public class KxNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("availabilityZoneId").build();
     private static final MarshallingInfo<java.util.Date> LAUNCHTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("status").build();
 
     private static final KxNodeMarshaller instance = new KxNodeMarshaller();
 
@@ -53,6 +55,7 @@ public class KxNodeMarshaller {
             protocolMarshaller.marshall(kxNode.getNodeId(), NODEID_BINDING);
             protocolMarshaller.marshall(kxNode.getAvailabilityZoneId(), AVAILABILITYZONEID_BINDING);
             protocolMarshaller.marshall(kxNode.getLaunchTime(), LAUNCHTIME_BINDING);
+            protocolMarshaller.marshall(kxNode.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

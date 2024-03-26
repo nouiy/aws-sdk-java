@@ -1310,6 +1310,41 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
 
     /**
      * <p>
+     * Retrieves a list of your historical cost allocation tag backfill requests.
+     * </p>
+     * 
+     * @param listCostAllocationTagBackfillHistoryRequest
+     * @return A Java Future containing the result of the ListCostAllocationTagBackfillHistory operation returned by the
+     *         service.
+     * @sample AWSCostExplorerAsync.ListCostAllocationTagBackfillHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListCostAllocationTagBackfillHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCostAllocationTagBackfillHistoryResult> listCostAllocationTagBackfillHistoryAsync(
+            ListCostAllocationTagBackfillHistoryRequest listCostAllocationTagBackfillHistoryRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of your historical cost allocation tag backfill requests.
+     * </p>
+     * 
+     * @param listCostAllocationTagBackfillHistoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCostAllocationTagBackfillHistory operation returned by the
+     *         service.
+     * @sample AWSCostExplorerAsyncHandler.ListCostAllocationTagBackfillHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListCostAllocationTagBackfillHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCostAllocationTagBackfillHistoryResult> listCostAllocationTagBackfillHistoryAsync(
+            ListCostAllocationTagBackfillHistoryRequest listCostAllocationTagBackfillHistoryRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCostAllocationTagBackfillHistoryRequest, ListCostAllocationTagBackfillHistoryResult> asyncHandler);
+
+    /**
+     * <p>
      * Get a list of cost allocation tags. All inputs in the API are optional and serve as filters. By default, all cost
      * allocation tags are returned.
      * </p>
@@ -1482,6 +1517,49 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
      */
     java.util.concurrent.Future<ProvideAnomalyFeedbackResult> provideAnomalyFeedbackAsync(ProvideAnomalyFeedbackRequest provideAnomalyFeedbackRequest,
             com.amazonaws.handlers.AsyncHandler<ProvideAnomalyFeedbackRequest, ProvideAnomalyFeedbackResult> asyncHandler);
+
+    /**
+     * <p>
+     * Request a cost allocation tag backfill. This will backfill the activation status (either <code>active</code> or
+     * <code>inactive</code>) for all tag keys from <code>para:BackfillFrom</code> up to the when this request is made.
+     * </p>
+     * <p>
+     * You can request a backfill once every 24 hours.
+     * </p>
+     * 
+     * @param startCostAllocationTagBackfillRequest
+     * @return A Java Future containing the result of the StartCostAllocationTagBackfill operation returned by the
+     *         service.
+     * @sample AWSCostExplorerAsync.StartCostAllocationTagBackfill
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/StartCostAllocationTagBackfill"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartCostAllocationTagBackfillResult> startCostAllocationTagBackfillAsync(
+            StartCostAllocationTagBackfillRequest startCostAllocationTagBackfillRequest);
+
+    /**
+     * <p>
+     * Request a cost allocation tag backfill. This will backfill the activation status (either <code>active</code> or
+     * <code>inactive</code>) for all tag keys from <code>para:BackfillFrom</code> up to the when this request is made.
+     * </p>
+     * <p>
+     * You can request a backfill once every 24 hours.
+     * </p>
+     * 
+     * @param startCostAllocationTagBackfillRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartCostAllocationTagBackfill operation returned by the
+     *         service.
+     * @sample AWSCostExplorerAsyncHandler.StartCostAllocationTagBackfill
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/StartCostAllocationTagBackfill"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartCostAllocationTagBackfillResult> startCostAllocationTagBackfillAsync(
+            StartCostAllocationTagBackfillRequest startCostAllocationTagBackfillRequest,
+            com.amazonaws.handlers.AsyncHandler<StartCostAllocationTagBackfillRequest, StartCostAllocationTagBackfillResult> asyncHandler);
 
     /**
      * <p>

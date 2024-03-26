@@ -355,6 +355,29 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Deletes the specified nodes from a cluster.
+     * </p>
+     * 
+     * @param deleteKxClusterNodeRequest
+     * @return Result of the DeleteKxClusterNode operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.DeleteKxClusterNode
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxClusterNode" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteKxClusterNodeResult deleteKxClusterNode(DeleteKxClusterNodeRequest deleteKxClusterNodeRequest);
+
+    /**
+     * <p>
      * Deletes the specified database and all of its associated data. This action is irreversible. You must copy any
      * data out of the database before deleting it if the data is to be retained.
      * </p>

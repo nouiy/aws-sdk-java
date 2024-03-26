@@ -175,6 +175,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKxClusterNodeResult> deleteKxClusterNodeAsync(DeleteKxClusterNodeRequest request) {
+
+        return deleteKxClusterNodeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxClusterNodeResult> deleteKxClusterNodeAsync(DeleteKxClusterNodeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxClusterNodeRequest, DeleteKxClusterNodeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKxDatabaseResult> deleteKxDatabaseAsync(DeleteKxDatabaseRequest request) {
 
         return deleteKxDatabaseAsync(request, null);

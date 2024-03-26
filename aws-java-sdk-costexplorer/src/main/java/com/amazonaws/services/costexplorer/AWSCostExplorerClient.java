@@ -115,6 +115,9 @@ public class AWSCostExplorerClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.costexplorer.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("BackfillLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.costexplorer.model.transform.BackfillLimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.costexplorer.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -2051,6 +2054,68 @@ public class AWSCostExplorerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Retrieves a list of your historical cost allocation tag backfill requests.
+     * </p>
+     * 
+     * @param listCostAllocationTagBackfillHistoryRequest
+     * @return Result of the ListCostAllocationTagBackfillHistory operation returned by the service.
+     * @throws LimitExceededException
+     *         You made too many calls in a short period of time. Try again later.
+     * @throws InvalidNextTokenException
+     *         The pagination token is invalid. Try again without a pagination token.
+     * @sample AWSCostExplorer.ListCostAllocationTagBackfillHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListCostAllocationTagBackfillHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCostAllocationTagBackfillHistoryResult listCostAllocationTagBackfillHistory(ListCostAllocationTagBackfillHistoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCostAllocationTagBackfillHistory(request);
+    }
+
+    @SdkInternalApi
+    final ListCostAllocationTagBackfillHistoryResult executeListCostAllocationTagBackfillHistory(
+            ListCostAllocationTagBackfillHistoryRequest listCostAllocationTagBackfillHistoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCostAllocationTagBackfillHistoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCostAllocationTagBackfillHistoryRequest> request = null;
+        Response<ListCostAllocationTagBackfillHistoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCostAllocationTagBackfillHistoryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCostAllocationTagBackfillHistoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Cost Explorer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCostAllocationTagBackfillHistory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCostAllocationTagBackfillHistoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListCostAllocationTagBackfillHistoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get a list of cost allocation tags. All inputs in the API are optional and serve as filters. By default, all cost
      * allocation tags are returned.
      * </p>
@@ -2347,6 +2412,72 @@ public class AWSCostExplorerClient extends AmazonWebServiceClient implements AWS
             HttpResponseHandler<AmazonWebServiceResponse<ProvideAnomalyFeedbackResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ProvideAnomalyFeedbackResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Request a cost allocation tag backfill. This will backfill the activation status (either <code>active</code> or
+     * <code>inactive</code>) for all tag keys from <code>para:BackfillFrom</code> up to the when this request is made.
+     * </p>
+     * <p>
+     * You can request a backfill once every 24 hours.
+     * </p>
+     * 
+     * @param startCostAllocationTagBackfillRequest
+     * @return Result of the StartCostAllocationTagBackfill operation returned by the service.
+     * @throws LimitExceededException
+     *         You made too many calls in a short period of time. Try again later.
+     * @throws BackfillLimitExceededException
+     *         A request to backfill is already in progress. Once the previous request is complete, you can create
+     *         another request.
+     * @sample AWSCostExplorer.StartCostAllocationTagBackfill
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/StartCostAllocationTagBackfill"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartCostAllocationTagBackfillResult startCostAllocationTagBackfill(StartCostAllocationTagBackfillRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartCostAllocationTagBackfill(request);
+    }
+
+    @SdkInternalApi
+    final StartCostAllocationTagBackfillResult executeStartCostAllocationTagBackfill(StartCostAllocationTagBackfillRequest startCostAllocationTagBackfillRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startCostAllocationTagBackfillRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartCostAllocationTagBackfillRequest> request = null;
+        Response<StartCostAllocationTagBackfillResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartCostAllocationTagBackfillRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startCostAllocationTagBackfillRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Cost Explorer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartCostAllocationTagBackfill");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartCostAllocationTagBackfillResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartCostAllocationTagBackfillResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -85,6 +85,11 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public DeleteKxClusterNodeResult deleteKxClusterNode(DeleteKxClusterNodeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteKxDatabaseResult deleteKxDatabase(DeleteKxDatabaseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

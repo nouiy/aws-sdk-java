@@ -387,6 +387,21 @@ public class AbstractAWSCostExplorerAsync extends AbstractAWSCostExplorer implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListCostAllocationTagBackfillHistoryResult> listCostAllocationTagBackfillHistoryAsync(
+            ListCostAllocationTagBackfillHistoryRequest request) {
+
+        return listCostAllocationTagBackfillHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCostAllocationTagBackfillHistoryResult> listCostAllocationTagBackfillHistoryAsync(
+            ListCostAllocationTagBackfillHistoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCostAllocationTagBackfillHistoryRequest, ListCostAllocationTagBackfillHistoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCostAllocationTagsResult> listCostAllocationTagsAsync(ListCostAllocationTagsRequest request) {
 
         return listCostAllocationTagsAsync(request, null);
@@ -449,6 +464,19 @@ public class AbstractAWSCostExplorerAsync extends AbstractAWSCostExplorer implem
     @Override
     public java.util.concurrent.Future<ProvideAnomalyFeedbackResult> provideAnomalyFeedbackAsync(ProvideAnomalyFeedbackRequest request,
             com.amazonaws.handlers.AsyncHandler<ProvideAnomalyFeedbackRequest, ProvideAnomalyFeedbackResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCostAllocationTagBackfillResult> startCostAllocationTagBackfillAsync(StartCostAllocationTagBackfillRequest request) {
+
+        return startCostAllocationTagBackfillAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCostAllocationTagBackfillResult> startCostAllocationTagBackfillAsync(StartCostAllocationTagBackfillRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartCostAllocationTagBackfillRequest, StartCostAllocationTagBackfillResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

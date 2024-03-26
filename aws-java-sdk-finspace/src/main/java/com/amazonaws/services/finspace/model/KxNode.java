@@ -47,6 +47,24 @@ public class KxNode implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date launchTime;
+    /**
+     * <p>
+     * Specifies the status of the cluster nodes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RUNNING</code> – The node is actively serving.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PROVISIONING</code> – The node is being prepared.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String status;
 
     /**
      * <p>
@@ -175,6 +193,157 @@ public class KxNode implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies the status of the cluster nodes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RUNNING</code> – The node is actively serving.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PROVISIONING</code> – The node is being prepared.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param status
+     *        Specifies the status of the cluster nodes. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RUNNING</code> – The node is actively serving.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PROVISIONING</code> – The node is being prepared.
+     *        </p>
+     *        </li>
+     * @see KxNodeStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the cluster nodes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RUNNING</code> – The node is actively serving.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PROVISIONING</code> – The node is being prepared.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Specifies the status of the cluster nodes. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>RUNNING</code> – The node is actively serving.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PROVISIONING</code> – The node is being prepared.
+     *         </p>
+     *         </li>
+     * @see KxNodeStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the cluster nodes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RUNNING</code> – The node is actively serving.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PROVISIONING</code> – The node is being prepared.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param status
+     *        Specifies the status of the cluster nodes. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RUNNING</code> – The node is actively serving.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PROVISIONING</code> – The node is being prepared.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KxNodeStatus
+     */
+
+    public KxNode withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the cluster nodes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RUNNING</code> – The node is actively serving.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PROVISIONING</code> – The node is being prepared.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param status
+     *        Specifies the status of the cluster nodes. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RUNNING</code> – The node is actively serving.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PROVISIONING</code> – The node is being prepared.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KxNodeStatus
+     */
+
+    public KxNode withStatus(KxNodeStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -191,7 +360,9 @@ public class KxNode implements Serializable, Cloneable, StructuredPojo {
         if (getAvailabilityZoneId() != null)
             sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId()).append(",");
         if (getLaunchTime() != null)
-            sb.append("LaunchTime: ").append(getLaunchTime());
+            sb.append("LaunchTime: ").append(getLaunchTime()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -218,6 +389,10 @@ public class KxNode implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLaunchTime() != null && other.getLaunchTime().equals(this.getLaunchTime()) == false)
             return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         return true;
     }
 
@@ -229,6 +404,7 @@ public class KxNode implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getNodeId() == null) ? 0 : getNodeId().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         hashCode = prime * hashCode + ((getLaunchTime() == null) ? 0 : getLaunchTime().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 
