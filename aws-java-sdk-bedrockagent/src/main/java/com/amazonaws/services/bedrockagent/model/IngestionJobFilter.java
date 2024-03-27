@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Filters the response returned by ListIngestionJobs operation.
+ * Defines a filter by which to filter the results.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/IngestionJobFilter" target="_top">AWS
@@ -28,14 +28,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class IngestionJobFilter implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The attribute by which to filter the results.
+     * </p>
+     */
     private String attribute;
-
+    /**
+     * <p>
+     * The operation to carry out between the attribute and the values.
+     * </p>
+     */
     private String operator;
-
+    /**
+     * <p>
+     * A list of values for the attribute.
+     * </p>
+     */
     private java.util.List<String> values;
 
     /**
+     * <p>
+     * The attribute by which to filter the results.
+     * </p>
+     * 
      * @param attribute
+     *        The attribute by which to filter the results.
      * @see IngestionJobFilterAttribute
      */
 
@@ -44,7 +62,11 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The attribute by which to filter the results.
+     * </p>
+     * 
+     * @return The attribute by which to filter the results.
      * @see IngestionJobFilterAttribute
      */
 
@@ -53,7 +75,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The attribute by which to filter the results.
+     * </p>
+     * 
      * @param attribute
+     *        The attribute by which to filter the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IngestionJobFilterAttribute
      */
@@ -64,7 +91,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The attribute by which to filter the results.
+     * </p>
+     * 
      * @param attribute
+     *        The attribute by which to filter the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IngestionJobFilterAttribute
      */
@@ -75,7 +107,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The operation to carry out between the attribute and the values.
+     * </p>
+     * 
      * @param operator
+     *        The operation to carry out between the attribute and the values.
      * @see IngestionJobFilterOperator
      */
 
@@ -84,7 +121,11 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The operation to carry out between the attribute and the values.
+     * </p>
+     * 
+     * @return The operation to carry out between the attribute and the values.
      * @see IngestionJobFilterOperator
      */
 
@@ -93,7 +134,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The operation to carry out between the attribute and the values.
+     * </p>
+     * 
      * @param operator
+     *        The operation to carry out between the attribute and the values.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IngestionJobFilterOperator
      */
@@ -104,7 +150,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The operation to carry out between the attribute and the values.
+     * </p>
+     * 
      * @param operator
+     *        The operation to carry out between the attribute and the values.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IngestionJobFilterOperator
      */
@@ -115,7 +166,11 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * A list of values for the attribute.
+     * </p>
+     * 
+     * @return A list of values for the attribute.
      */
 
     public java.util.List<String> getValues() {
@@ -123,7 +178,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A list of values for the attribute.
+     * </p>
+     * 
      * @param values
+     *        A list of values for the attribute.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -137,12 +197,16 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * A list of values for the attribute.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setValues(java.util.Collection)} or {@link #withValues(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param values
+     *        A list of values for the attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,7 +221,12 @@ public class IngestionJobFilter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A list of values for the attribute.
+     * </p>
+     * 
      * @param values
+     *        A list of values for the attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

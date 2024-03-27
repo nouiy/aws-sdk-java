@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configurations for a vector knowledge base.
+ * Contains details about the model used to create vector embeddings for the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/VectorKnowledgeBaseConfiguration"
@@ -28,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * </p>
+     */
     private String embeddingModelArn;
 
     /**
+     * <p>
+     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * </p>
+     * 
      * @param embeddingModelArn
+     *        The ARN of the model used to create vector embeddings for the knowledge base.
      */
 
     public void setEmbeddingModelArn(String embeddingModelArn) {
@@ -39,7 +49,11 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * </p>
+     * 
+     * @return The ARN of the model used to create vector embeddings for the knowledge base.
      */
 
     public String getEmbeddingModelArn() {
@@ -47,7 +61,12 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * </p>
+     * 
      * @param embeddingModelArn
+     *        The ARN of the model used to create vector embeddings for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

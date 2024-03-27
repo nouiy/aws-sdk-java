@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the configurations to use Pinecone to store knowledge base data.
+ * Contains details about the storage configuration of the knowledge base in Pinecone. For more information, see <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-pinecone.html">Create a vector index
+ * in Pinecone</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PineconeConfiguration"
@@ -28,16 +30,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PineconeConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The endpoint URL for your index management page.
+     * </p>
+     */
     private String connectionString;
-
+    /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * </p>
+     */
     private String credentialsSecretArn;
-
+    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     */
+    private PineconeFieldMapping fieldMapping;
+    /**
+     * <p>
+     * The namespace to be used to write new data to your database.
+     * </p>
+     */
     private String namespace;
 
-    private PineconeFieldMapping fieldMapping;
-
     /**
+     * <p>
+     * The endpoint URL for your index management page.
+     * </p>
+     * 
      * @param connectionString
+     *        The endpoint URL for your index management page.
      */
 
     public void setConnectionString(String connectionString) {
@@ -45,7 +69,11 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The endpoint URL for your index management page.
+     * </p>
+     * 
+     * @return The endpoint URL for your index management page.
      */
 
     public String getConnectionString() {
@@ -53,7 +81,12 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The endpoint URL for your index management page.
+     * </p>
+     * 
      * @param connectionString
+     *        The endpoint URL for your index management page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,7 +96,12 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * </p>
+     * 
      * @param credentialsSecretArn
+     *        The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
      */
 
     public void setCredentialsSecretArn(String credentialsSecretArn) {
@@ -71,7 +109,11 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * </p>
+     * 
+     * @return The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
      */
 
     public String getCredentialsSecretArn() {
@@ -79,7 +121,12 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * </p>
+     * 
      * @param credentialsSecretArn
+     *        The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,33 +136,12 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @param namespace
-     */
-
-    public void setNamespace(String namespace) {
-        this.namespace = namespace;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getNamespace() {
-        return this.namespace;
-    }
-
-    /**
-     * @param namespace
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PineconeConfiguration withNamespace(String namespace) {
-        setNamespace(namespace);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      */
 
     public void setFieldMapping(PineconeFieldMapping fieldMapping) {
@@ -123,7 +149,11 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
+     * @return Contains the names of the fields to which to map information about the vector store.
      */
 
     public PineconeFieldMapping getFieldMapping() {
@@ -131,12 +161,57 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public PineconeConfiguration withFieldMapping(PineconeFieldMapping fieldMapping) {
         setFieldMapping(fieldMapping);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The namespace to be used to write new data to your database.
+     * </p>
+     * 
+     * @param namespace
+     *        The namespace to be used to write new data to your database.
+     */
+
+    public void setNamespace(String namespace) {
+        this.namespace = namespace;
+    }
+
+    /**
+     * <p>
+     * The namespace to be used to write new data to your database.
+     * </p>
+     * 
+     * @return The namespace to be used to write new data to your database.
+     */
+
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
+     * <p>
+     * The namespace to be used to write new data to your database.
+     * </p>
+     * 
+     * @param namespace
+     *        The namespace to be used to write new data to your database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PineconeConfiguration withNamespace(String namespace) {
+        setNamespace(namespace);
         return this;
     }
 
@@ -156,10 +231,10 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
             sb.append("ConnectionString: ").append(getConnectionString()).append(",");
         if (getCredentialsSecretArn() != null)
             sb.append("CredentialsSecretArn: ").append(getCredentialsSecretArn()).append(",");
-        if (getNamespace() != null)
-            sb.append("Namespace: ").append(getNamespace()).append(",");
         if (getFieldMapping() != null)
-            sb.append("FieldMapping: ").append(getFieldMapping());
+            sb.append("FieldMapping: ").append(getFieldMapping()).append(",");
+        if (getNamespace() != null)
+            sb.append("Namespace: ").append(getNamespace());
         sb.append("}");
         return sb.toString();
     }
@@ -182,13 +257,13 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
             return false;
         if (other.getCredentialsSecretArn() != null && other.getCredentialsSecretArn().equals(this.getCredentialsSecretArn()) == false)
             return false;
-        if (other.getNamespace() == null ^ this.getNamespace() == null)
-            return false;
-        if (other.getNamespace() != null && other.getNamespace().equals(this.getNamespace()) == false)
-            return false;
         if (other.getFieldMapping() == null ^ this.getFieldMapping() == null)
             return false;
         if (other.getFieldMapping() != null && other.getFieldMapping().equals(this.getFieldMapping()) == false)
+            return false;
+        if (other.getNamespace() == null ^ this.getNamespace() == null)
+            return false;
+        if (other.getNamespace() != null && other.getNamespace().equals(this.getNamespace()) == false)
             return false;
         return true;
     }
@@ -200,8 +275,8 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
 
         hashCode = prime * hashCode + ((getConnectionString() == null) ? 0 : getConnectionString().hashCode());
         hashCode = prime * hashCode + ((getCredentialsSecretArn() == null) ? 0 : getCredentialsSecretArn().hashCode());
-        hashCode = prime * hashCode + ((getNamespace() == null) ? 0 : getNamespace().hashCode());
         hashCode = prime * hashCode + ((getFieldMapping() == null) ? 0 : getFieldMapping().hashCode());
+        hashCode = prime * hashCode + ((getNamespace() == null) ? 0 : getNamespace().hashCode());
         return hashCode;
     }
 

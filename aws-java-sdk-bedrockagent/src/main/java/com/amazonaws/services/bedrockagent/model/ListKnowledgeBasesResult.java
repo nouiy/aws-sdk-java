@@ -23,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of objects, each of which contains information about a knowledge base.
+     * </p>
+     */
     private java.util.List<KnowledgeBaseSummary> knowledgeBaseSummaries;
-
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * A list of objects, each of which contains information about a knowledge base.
+     * </p>
+     * 
+     * @return A list of objects, each of which contains information about a knowledge base.
      */
 
     public java.util.List<KnowledgeBaseSummary> getKnowledgeBaseSummaries() {
@@ -36,7 +50,12 @@ public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about a knowledge base.
+     * </p>
+     * 
      * @param knowledgeBaseSummaries
+     *        A list of objects, each of which contains information about a knowledge base.
      */
 
     public void setKnowledgeBaseSummaries(java.util.Collection<KnowledgeBaseSummary> knowledgeBaseSummaries) {
@@ -50,12 +69,16 @@ public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
+     * A list of objects, each of which contains information about a knowledge base.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setKnowledgeBaseSummaries(java.util.Collection)} or
      * {@link #withKnowledgeBaseSummaries(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param knowledgeBaseSummaries
+     *        A list of objects, each of which contains information about a knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +93,12 @@ public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about a knowledge base.
+     * </p>
+     * 
      * @param knowledgeBaseSummaries
+     *        A list of objects, each of which contains information about a knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +108,15 @@ public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +124,14 @@ public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         use this token when making another request in the <code>nextToken</code> field to return the next batch
+     *         of results.
      */
 
     public String getNextToken() {
@@ -96,7 +139,15 @@ public class ListKnowledgeBasesResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

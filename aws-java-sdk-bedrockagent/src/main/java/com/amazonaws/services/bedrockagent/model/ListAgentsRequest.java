@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * List Agent Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgents" target="_top">AWS API
  *      Documentation</a>
@@ -28,12 +25,34 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListAgentsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     */
     private Integer maxResults;
-
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     */
     private String nextToken;
 
     /**
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in the response. If the total number of results is greater than
+     *        this value, use the token returned in the response in the <code>nextToken</code> field when making another
+     *        request to return the next batch of results.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -41,7 +60,15 @@ public class ListAgentsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     * 
+     * @return The maximum number of results to return in the response. If the total number of results is greater than
+     *         this value, use the token returned in the response in the <code>nextToken</code> field when making
+     *         another request to return the next batch of results.
      */
 
     public Integer getMaxResults() {
@@ -49,7 +76,16 @@ public class ListAgentsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in the response. If the total number of results is greater than
+     *        this value, use the token returned in the response in the <code>nextToken</code> field when making another
+     *        request to return the next batch of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +95,16 @@ public class ListAgentsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        enter the token returned in the <code>nextToken</code> field in the response in this field to return the
+     *        next batch of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -67,7 +112,15 @@ public class ListAgentsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         enter the token returned in the <code>nextToken</code> field in the response in this field to return the
+     *         next batch of results.
      */
 
     public String getNextToken() {
@@ -75,7 +128,16 @@ public class ListAgentsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        enter the token returned in the <code>nextToken</code> field in the response in this field to return the
+     *        next batch of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

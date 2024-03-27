@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Get Agent Knowledge Base Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentKnowledgeBase"
  *      target="_top">AWS API Documentation</a>
@@ -30,30 +27,30 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which the knowledge base is associated.
      * </p>
      */
     private String agentId;
     /**
      * <p>
-     * Version number generated when a version is created
+     * The version of the agent with which the knowledge base is associated.
      * </p>
      */
     private String agentVersion;
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated
+     * The unique identifier of the knowledge base associated with the agent.
      * </p>
      */
     private String knowledgeBaseId;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which the knowledge base is associated.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent with which the knowledge base is associated.
      */
 
     public void setAgentId(String agentId) {
@@ -62,10 +59,10 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which the knowledge base is associated.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent with which the knowledge base is associated.
      */
 
     public String getAgentId() {
@@ -74,11 +71,11 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which the knowledge base is associated.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent with which the knowledge base is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +86,11 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Version number generated when a version is created
+     * The version of the agent with which the knowledge base is associated.
      * </p>
      * 
      * @param agentVersion
-     *        Version number generated when a version is created
+     *        The version of the agent with which the knowledge base is associated.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -102,10 +99,10 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Version number generated when a version is created
+     * The version of the agent with which the knowledge base is associated.
      * </p>
      * 
-     * @return Version number generated when a version is created
+     * @return The version of the agent with which the knowledge base is associated.
      */
 
     public String getAgentVersion() {
@@ -114,11 +111,11 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Version number generated when a version is created
+     * The version of the agent with which the knowledge base is associated.
      * </p>
      * 
      * @param agentVersion
-     *        Version number generated when a version is created
+     *        The version of the agent with which the knowledge base is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +126,11 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated
+     * The unique identifier of the knowledge base associated with the agent.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        Id generated at the server side when a Knowledge Base is associated
+     *        The unique identifier of the knowledge base associated with the agent.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -142,10 +139,10 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated
+     * The unique identifier of the knowledge base associated with the agent.
      * </p>
      * 
-     * @return Id generated at the server side when a Knowledge Base is associated
+     * @return The unique identifier of the knowledge base associated with the agent.
      */
 
     public String getKnowledgeBaseId() {
@@ -154,11 +151,11 @@ public class GetAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated
+     * The unique identifier of the knowledge base associated with the agent.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        Id generated at the server side when a Knowledge Base is associated
+     *        The unique identifier of the knowledge base associated with the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

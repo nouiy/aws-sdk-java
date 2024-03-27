@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * History event for an alias for an Agent.
+ * Contains details about the history of the alias.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentAliasHistoryEvent"
@@ -28,14 +28,74 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentAliasHistoryEvent implements Serializable, Cloneable, StructuredPojo {
 
-    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
-
+    /**
+     * <p>
+     * The date that the alias stopped being associated to the version in the <code>routingConfiguration</code> object
+     * </p>
+     */
     private java.util.Date endDate;
-
+    /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     */
+    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
+    /**
+     * <p>
+     * The date that the alias began being associated to the version in the <code>routingConfiguration</code> object.
+     * </p>
+     */
     private java.util.Date startDate;
 
     /**
-     * @return
+     * <p>
+     * The date that the alias stopped being associated to the version in the <code>routingConfiguration</code> object
+     * </p>
+     * 
+     * @param endDate
+     *        The date that the alias stopped being associated to the version in the <code>routingConfiguration</code>
+     *        object
+     */
+
+    public void setEndDate(java.util.Date endDate) {
+        this.endDate = endDate;
+    }
+
+    /**
+     * <p>
+     * The date that the alias stopped being associated to the version in the <code>routingConfiguration</code> object
+     * </p>
+     * 
+     * @return The date that the alias stopped being associated to the version in the <code>routingConfiguration</code>
+     *         object
+     */
+
+    public java.util.Date getEndDate() {
+        return this.endDate;
+    }
+
+    /**
+     * <p>
+     * The date that the alias stopped being associated to the version in the <code>routingConfiguration</code> object
+     * </p>
+     * 
+     * @param endDate
+     *        The date that the alias stopped being associated to the version in the <code>routingConfiguration</code>
+     *        object
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAliasHistoryEvent withEndDate(java.util.Date endDate) {
+        setEndDate(endDate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * 
+     * @return Contains details about the version of the agent with which the alias is associated.
      */
 
     public java.util.List<AgentAliasRoutingConfigurationListItem> getRoutingConfiguration() {
@@ -43,7 +103,12 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * 
      * @param routingConfiguration
+     *        Contains details about the version of the agent with which the alias is associated.
      */
 
     public void setRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
@@ -57,12 +122,16 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
 
     /**
      * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRoutingConfiguration(java.util.Collection)} or {@link #withRoutingConfiguration(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param routingConfiguration
+     *        Contains details about the version of the agent with which the alias is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -77,7 +146,12 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * 
      * @param routingConfiguration
+     *        Contains details about the version of the agent with which the alias is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,33 +161,13 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @param endDate
-     */
-
-    public void setEndDate(java.util.Date endDate) {
-        this.endDate = endDate;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.Date getEndDate() {
-        return this.endDate;
-    }
-
-    /**
-     * @param endDate
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAliasHistoryEvent withEndDate(java.util.Date endDate) {
-        setEndDate(endDate);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The date that the alias began being associated to the version in the <code>routingConfiguration</code> object.
+     * </p>
+     * 
      * @param startDate
+     *        The date that the alias began being associated to the version in the <code>routingConfiguration</code>
+     *        object.
      */
 
     public void setStartDate(java.util.Date startDate) {
@@ -121,7 +175,12 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * The date that the alias began being associated to the version in the <code>routingConfiguration</code> object.
+     * </p>
+     * 
+     * @return The date that the alias began being associated to the version in the <code>routingConfiguration</code>
+     *         object.
      */
 
     public java.util.Date getStartDate() {
@@ -129,7 +188,13 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The date that the alias began being associated to the version in the <code>routingConfiguration</code> object.
+     * </p>
+     * 
      * @param startDate
+     *        The date that the alias began being associated to the version in the <code>routingConfiguration</code>
+     *        object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,10 +215,10 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getRoutingConfiguration() != null)
-            sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
         if (getEndDate() != null)
             sb.append("EndDate: ").append(getEndDate()).append(",");
+        if (getRoutingConfiguration() != null)
+            sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
         if (getStartDate() != null)
             sb.append("StartDate: ").append(getStartDate());
         sb.append("}");
@@ -170,13 +235,13 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
         if (obj instanceof AgentAliasHistoryEvent == false)
             return false;
         AgentAliasHistoryEvent other = (AgentAliasHistoryEvent) obj;
-        if (other.getRoutingConfiguration() == null ^ this.getRoutingConfiguration() == null)
-            return false;
-        if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
-            return false;
         if (other.getEndDate() == null ^ this.getEndDate() == null)
             return false;
         if (other.getEndDate() != null && other.getEndDate().equals(this.getEndDate()) == false)
+            return false;
+        if (other.getRoutingConfiguration() == null ^ this.getRoutingConfiguration() == null)
+            return false;
+        if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
             return false;
         if (other.getStartDate() == null ^ this.getStartDate() == null)
             return false;
@@ -190,8 +255,8 @@ public class AgentAliasHistoryEvent implements Serializable, Cloneable, Structur
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getEndDate() == null) ? 0 : getEndDate().hashCode());
+        hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getStartDate() == null) ? 0 : getStartDate().hashCode());
         return hashCode;
     }

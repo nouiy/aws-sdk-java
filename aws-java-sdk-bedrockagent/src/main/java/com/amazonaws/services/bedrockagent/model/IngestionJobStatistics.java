@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The document level statistics of an ingestion job
+ * Contains the statistics for the ingestion job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/IngestionJobStatistics"
@@ -30,162 +30,54 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of scanned documents
-     * </p>
-     */
-    private Long numberOfDocumentsScanned;
-    /**
-     * <p>
-     * Number of indexed documents
-     * </p>
-     */
-    private Long numberOfNewDocumentsIndexed;
-    /**
-     * <p>
-     * Number of modified documents indexed
-     * </p>
-     */
-    private Long numberOfModifiedDocumentsIndexed;
-    /**
-     * <p>
-     * Number of deleted documents
+     * The number of source documents that was deleted.
      * </p>
      */
     private Long numberOfDocumentsDeleted;
     /**
      * <p>
-     * Number of failed documents
+     * The number of source documents that failed to be ingested.
      * </p>
      */
     private Long numberOfDocumentsFailed;
-
     /**
      * <p>
-     * Number of scanned documents
+     * The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
      * </p>
-     * 
-     * @param numberOfDocumentsScanned
-     *        Number of scanned documents
      */
-
-    public void setNumberOfDocumentsScanned(Long numberOfDocumentsScanned) {
-        this.numberOfDocumentsScanned = numberOfDocumentsScanned;
-    }
-
+    private Long numberOfDocumentsScanned;
     /**
      * <p>
-     * Number of scanned documents
+     * The number of metadata files that were updated or deleted.
      * </p>
-     * 
-     * @return Number of scanned documents
      */
-
-    public Long getNumberOfDocumentsScanned() {
-        return this.numberOfDocumentsScanned;
-    }
-
+    private Long numberOfMetadataDocumentsModified;
     /**
      * <p>
-     * Number of scanned documents
+     * The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
      * </p>
-     * 
-     * @param numberOfDocumentsScanned
-     *        Number of scanned documents
-     * @return Returns a reference to this object so that method calls can be chained together.
      */
-
-    public IngestionJobStatistics withNumberOfDocumentsScanned(Long numberOfDocumentsScanned) {
-        setNumberOfDocumentsScanned(numberOfDocumentsScanned);
-        return this;
-    }
-
+    private Long numberOfMetadataDocumentsScanned;
     /**
      * <p>
-     * Number of indexed documents
+     * The number of modified source documents in the data source that were successfully indexed.
      * </p>
-     * 
-     * @param numberOfNewDocumentsIndexed
-     *        Number of indexed documents
      */
-
-    public void setNumberOfNewDocumentsIndexed(Long numberOfNewDocumentsIndexed) {
-        this.numberOfNewDocumentsIndexed = numberOfNewDocumentsIndexed;
-    }
-
+    private Long numberOfModifiedDocumentsIndexed;
     /**
      * <p>
-     * Number of indexed documents
+     * The number of new source documents in the data source that were successfully indexed.
      * </p>
-     * 
-     * @return Number of indexed documents
      */
-
-    public Long getNumberOfNewDocumentsIndexed() {
-        return this.numberOfNewDocumentsIndexed;
-    }
+    private Long numberOfNewDocumentsIndexed;
 
     /**
      * <p>
-     * Number of indexed documents
-     * </p>
-     * 
-     * @param numberOfNewDocumentsIndexed
-     *        Number of indexed documents
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public IngestionJobStatistics withNumberOfNewDocumentsIndexed(Long numberOfNewDocumentsIndexed) {
-        setNumberOfNewDocumentsIndexed(numberOfNewDocumentsIndexed);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Number of modified documents indexed
-     * </p>
-     * 
-     * @param numberOfModifiedDocumentsIndexed
-     *        Number of modified documents indexed
-     */
-
-    public void setNumberOfModifiedDocumentsIndexed(Long numberOfModifiedDocumentsIndexed) {
-        this.numberOfModifiedDocumentsIndexed = numberOfModifiedDocumentsIndexed;
-    }
-
-    /**
-     * <p>
-     * Number of modified documents indexed
-     * </p>
-     * 
-     * @return Number of modified documents indexed
-     */
-
-    public Long getNumberOfModifiedDocumentsIndexed() {
-        return this.numberOfModifiedDocumentsIndexed;
-    }
-
-    /**
-     * <p>
-     * Number of modified documents indexed
-     * </p>
-     * 
-     * @param numberOfModifiedDocumentsIndexed
-     *        Number of modified documents indexed
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public IngestionJobStatistics withNumberOfModifiedDocumentsIndexed(Long numberOfModifiedDocumentsIndexed) {
-        setNumberOfModifiedDocumentsIndexed(numberOfModifiedDocumentsIndexed);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Number of deleted documents
+     * The number of source documents that was deleted.
      * </p>
      * 
      * @param numberOfDocumentsDeleted
-     *        Number of deleted documents
+     *        The number of source documents that was deleted.
      */
 
     public void setNumberOfDocumentsDeleted(Long numberOfDocumentsDeleted) {
@@ -194,10 +86,10 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of deleted documents
+     * The number of source documents that was deleted.
      * </p>
      * 
-     * @return Number of deleted documents
+     * @return The number of source documents that was deleted.
      */
 
     public Long getNumberOfDocumentsDeleted() {
@@ -206,11 +98,11 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of deleted documents
+     * The number of source documents that was deleted.
      * </p>
      * 
      * @param numberOfDocumentsDeleted
-     *        Number of deleted documents
+     *        The number of source documents that was deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +113,11 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of failed documents
+     * The number of source documents that failed to be ingested.
      * </p>
      * 
      * @param numberOfDocumentsFailed
-     *        Number of failed documents
+     *        The number of source documents that failed to be ingested.
      */
 
     public void setNumberOfDocumentsFailed(Long numberOfDocumentsFailed) {
@@ -234,10 +126,10 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of failed documents
+     * The number of source documents that failed to be ingested.
      * </p>
      * 
-     * @return Number of failed documents
+     * @return The number of source documents that failed to be ingested.
      */
 
     public Long getNumberOfDocumentsFailed() {
@@ -246,16 +138,216 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Number of failed documents
+     * The number of source documents that failed to be ingested.
      * </p>
      * 
      * @param numberOfDocumentsFailed
-     *        Number of failed documents
+     *        The number of source documents that failed to be ingested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public IngestionJobStatistics withNumberOfDocumentsFailed(Long numberOfDocumentsFailed) {
         setNumberOfDocumentsFailed(numberOfDocumentsFailed);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
+     * </p>
+     * 
+     * @param numberOfDocumentsScanned
+     *        The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
+     */
+
+    public void setNumberOfDocumentsScanned(Long numberOfDocumentsScanned) {
+        this.numberOfDocumentsScanned = numberOfDocumentsScanned;
+    }
+
+    /**
+     * <p>
+     * The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
+     * </p>
+     * 
+     * @return The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
+     */
+
+    public Long getNumberOfDocumentsScanned() {
+        return this.numberOfDocumentsScanned;
+    }
+
+    /**
+     * <p>
+     * The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
+     * </p>
+     * 
+     * @param numberOfDocumentsScanned
+     *        The total number of source documents that were scanned. Includes new, updated, and unchanged documents.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IngestionJobStatistics withNumberOfDocumentsScanned(Long numberOfDocumentsScanned) {
+        setNumberOfDocumentsScanned(numberOfDocumentsScanned);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of metadata files that were updated or deleted.
+     * </p>
+     * 
+     * @param numberOfMetadataDocumentsModified
+     *        The number of metadata files that were updated or deleted.
+     */
+
+    public void setNumberOfMetadataDocumentsModified(Long numberOfMetadataDocumentsModified) {
+        this.numberOfMetadataDocumentsModified = numberOfMetadataDocumentsModified;
+    }
+
+    /**
+     * <p>
+     * The number of metadata files that were updated or deleted.
+     * </p>
+     * 
+     * @return The number of metadata files that were updated or deleted.
+     */
+
+    public Long getNumberOfMetadataDocumentsModified() {
+        return this.numberOfMetadataDocumentsModified;
+    }
+
+    /**
+     * <p>
+     * The number of metadata files that were updated or deleted.
+     * </p>
+     * 
+     * @param numberOfMetadataDocumentsModified
+     *        The number of metadata files that were updated or deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IngestionJobStatistics withNumberOfMetadataDocumentsModified(Long numberOfMetadataDocumentsModified) {
+        setNumberOfMetadataDocumentsModified(numberOfMetadataDocumentsModified);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
+     * </p>
+     * 
+     * @param numberOfMetadataDocumentsScanned
+     *        The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
+     */
+
+    public void setNumberOfMetadataDocumentsScanned(Long numberOfMetadataDocumentsScanned) {
+        this.numberOfMetadataDocumentsScanned = numberOfMetadataDocumentsScanned;
+    }
+
+    /**
+     * <p>
+     * The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
+     * </p>
+     * 
+     * @return The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
+     */
+
+    public Long getNumberOfMetadataDocumentsScanned() {
+        return this.numberOfMetadataDocumentsScanned;
+    }
+
+    /**
+     * <p>
+     * The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
+     * </p>
+     * 
+     * @param numberOfMetadataDocumentsScanned
+     *        The total number of metadata files that were scanned. Includes new, updated, and unchanged files.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IngestionJobStatistics withNumberOfMetadataDocumentsScanned(Long numberOfMetadataDocumentsScanned) {
+        setNumberOfMetadataDocumentsScanned(numberOfMetadataDocumentsScanned);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of modified source documents in the data source that were successfully indexed.
+     * </p>
+     * 
+     * @param numberOfModifiedDocumentsIndexed
+     *        The number of modified source documents in the data source that were successfully indexed.
+     */
+
+    public void setNumberOfModifiedDocumentsIndexed(Long numberOfModifiedDocumentsIndexed) {
+        this.numberOfModifiedDocumentsIndexed = numberOfModifiedDocumentsIndexed;
+    }
+
+    /**
+     * <p>
+     * The number of modified source documents in the data source that were successfully indexed.
+     * </p>
+     * 
+     * @return The number of modified source documents in the data source that were successfully indexed.
+     */
+
+    public Long getNumberOfModifiedDocumentsIndexed() {
+        return this.numberOfModifiedDocumentsIndexed;
+    }
+
+    /**
+     * <p>
+     * The number of modified source documents in the data source that were successfully indexed.
+     * </p>
+     * 
+     * @param numberOfModifiedDocumentsIndexed
+     *        The number of modified source documents in the data source that were successfully indexed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IngestionJobStatistics withNumberOfModifiedDocumentsIndexed(Long numberOfModifiedDocumentsIndexed) {
+        setNumberOfModifiedDocumentsIndexed(numberOfModifiedDocumentsIndexed);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of new source documents in the data source that were successfully indexed.
+     * </p>
+     * 
+     * @param numberOfNewDocumentsIndexed
+     *        The number of new source documents in the data source that were successfully indexed.
+     */
+
+    public void setNumberOfNewDocumentsIndexed(Long numberOfNewDocumentsIndexed) {
+        this.numberOfNewDocumentsIndexed = numberOfNewDocumentsIndexed;
+    }
+
+    /**
+     * <p>
+     * The number of new source documents in the data source that were successfully indexed.
+     * </p>
+     * 
+     * @return The number of new source documents in the data source that were successfully indexed.
+     */
+
+    public Long getNumberOfNewDocumentsIndexed() {
+        return this.numberOfNewDocumentsIndexed;
+    }
+
+    /**
+     * <p>
+     * The number of new source documents in the data source that were successfully indexed.
+     * </p>
+     * 
+     * @param numberOfNewDocumentsIndexed
+     *        The number of new source documents in the data source that were successfully indexed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IngestionJobStatistics withNumberOfNewDocumentsIndexed(Long numberOfNewDocumentsIndexed) {
+        setNumberOfNewDocumentsIndexed(numberOfNewDocumentsIndexed);
         return this;
     }
 
@@ -271,16 +363,20 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNumberOfDocumentsScanned() != null)
-            sb.append("NumberOfDocumentsScanned: ").append(getNumberOfDocumentsScanned()).append(",");
-        if (getNumberOfNewDocumentsIndexed() != null)
-            sb.append("NumberOfNewDocumentsIndexed: ").append(getNumberOfNewDocumentsIndexed()).append(",");
-        if (getNumberOfModifiedDocumentsIndexed() != null)
-            sb.append("NumberOfModifiedDocumentsIndexed: ").append(getNumberOfModifiedDocumentsIndexed()).append(",");
         if (getNumberOfDocumentsDeleted() != null)
             sb.append("NumberOfDocumentsDeleted: ").append(getNumberOfDocumentsDeleted()).append(",");
         if (getNumberOfDocumentsFailed() != null)
-            sb.append("NumberOfDocumentsFailed: ").append(getNumberOfDocumentsFailed());
+            sb.append("NumberOfDocumentsFailed: ").append(getNumberOfDocumentsFailed()).append(",");
+        if (getNumberOfDocumentsScanned() != null)
+            sb.append("NumberOfDocumentsScanned: ").append(getNumberOfDocumentsScanned()).append(",");
+        if (getNumberOfMetadataDocumentsModified() != null)
+            sb.append("NumberOfMetadataDocumentsModified: ").append(getNumberOfMetadataDocumentsModified()).append(",");
+        if (getNumberOfMetadataDocumentsScanned() != null)
+            sb.append("NumberOfMetadataDocumentsScanned: ").append(getNumberOfMetadataDocumentsScanned()).append(",");
+        if (getNumberOfModifiedDocumentsIndexed() != null)
+            sb.append("NumberOfModifiedDocumentsIndexed: ").append(getNumberOfModifiedDocumentsIndexed()).append(",");
+        if (getNumberOfNewDocumentsIndexed() != null)
+            sb.append("NumberOfNewDocumentsIndexed: ").append(getNumberOfNewDocumentsIndexed());
         sb.append("}");
         return sb.toString();
     }
@@ -295,19 +391,6 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
         if (obj instanceof IngestionJobStatistics == false)
             return false;
         IngestionJobStatistics other = (IngestionJobStatistics) obj;
-        if (other.getNumberOfDocumentsScanned() == null ^ this.getNumberOfDocumentsScanned() == null)
-            return false;
-        if (other.getNumberOfDocumentsScanned() != null && other.getNumberOfDocumentsScanned().equals(this.getNumberOfDocumentsScanned()) == false)
-            return false;
-        if (other.getNumberOfNewDocumentsIndexed() == null ^ this.getNumberOfNewDocumentsIndexed() == null)
-            return false;
-        if (other.getNumberOfNewDocumentsIndexed() != null && other.getNumberOfNewDocumentsIndexed().equals(this.getNumberOfNewDocumentsIndexed()) == false)
-            return false;
-        if (other.getNumberOfModifiedDocumentsIndexed() == null ^ this.getNumberOfModifiedDocumentsIndexed() == null)
-            return false;
-        if (other.getNumberOfModifiedDocumentsIndexed() != null
-                && other.getNumberOfModifiedDocumentsIndexed().equals(this.getNumberOfModifiedDocumentsIndexed()) == false)
-            return false;
         if (other.getNumberOfDocumentsDeleted() == null ^ this.getNumberOfDocumentsDeleted() == null)
             return false;
         if (other.getNumberOfDocumentsDeleted() != null && other.getNumberOfDocumentsDeleted().equals(this.getNumberOfDocumentsDeleted()) == false)
@@ -315,6 +398,29 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
         if (other.getNumberOfDocumentsFailed() == null ^ this.getNumberOfDocumentsFailed() == null)
             return false;
         if (other.getNumberOfDocumentsFailed() != null && other.getNumberOfDocumentsFailed().equals(this.getNumberOfDocumentsFailed()) == false)
+            return false;
+        if (other.getNumberOfDocumentsScanned() == null ^ this.getNumberOfDocumentsScanned() == null)
+            return false;
+        if (other.getNumberOfDocumentsScanned() != null && other.getNumberOfDocumentsScanned().equals(this.getNumberOfDocumentsScanned()) == false)
+            return false;
+        if (other.getNumberOfMetadataDocumentsModified() == null ^ this.getNumberOfMetadataDocumentsModified() == null)
+            return false;
+        if (other.getNumberOfMetadataDocumentsModified() != null
+                && other.getNumberOfMetadataDocumentsModified().equals(this.getNumberOfMetadataDocumentsModified()) == false)
+            return false;
+        if (other.getNumberOfMetadataDocumentsScanned() == null ^ this.getNumberOfMetadataDocumentsScanned() == null)
+            return false;
+        if (other.getNumberOfMetadataDocumentsScanned() != null
+                && other.getNumberOfMetadataDocumentsScanned().equals(this.getNumberOfMetadataDocumentsScanned()) == false)
+            return false;
+        if (other.getNumberOfModifiedDocumentsIndexed() == null ^ this.getNumberOfModifiedDocumentsIndexed() == null)
+            return false;
+        if (other.getNumberOfModifiedDocumentsIndexed() != null
+                && other.getNumberOfModifiedDocumentsIndexed().equals(this.getNumberOfModifiedDocumentsIndexed()) == false)
+            return false;
+        if (other.getNumberOfNewDocumentsIndexed() == null ^ this.getNumberOfNewDocumentsIndexed() == null)
+            return false;
+        if (other.getNumberOfNewDocumentsIndexed() != null && other.getNumberOfNewDocumentsIndexed().equals(this.getNumberOfNewDocumentsIndexed()) == false)
             return false;
         return true;
     }
@@ -324,11 +430,13 @@ public class IngestionJobStatistics implements Serializable, Cloneable, Structur
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNumberOfDocumentsScanned() == null) ? 0 : getNumberOfDocumentsScanned().hashCode());
-        hashCode = prime * hashCode + ((getNumberOfNewDocumentsIndexed() == null) ? 0 : getNumberOfNewDocumentsIndexed().hashCode());
-        hashCode = prime * hashCode + ((getNumberOfModifiedDocumentsIndexed() == null) ? 0 : getNumberOfModifiedDocumentsIndexed().hashCode());
         hashCode = prime * hashCode + ((getNumberOfDocumentsDeleted() == null) ? 0 : getNumberOfDocumentsDeleted().hashCode());
         hashCode = prime * hashCode + ((getNumberOfDocumentsFailed() == null) ? 0 : getNumberOfDocumentsFailed().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfDocumentsScanned() == null) ? 0 : getNumberOfDocumentsScanned().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfMetadataDocumentsModified() == null) ? 0 : getNumberOfMetadataDocumentsModified().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfMetadataDocumentsScanned() == null) ? 0 : getNumberOfMetadataDocumentsScanned().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfModifiedDocumentsIndexed() == null) ? 0 : getNumberOfModifiedDocumentsIndexed().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfNewDocumentsIndexed() == null) ? 0 : getNumberOfNewDocumentsIndexed().hashCode());
         return hashCode;
     }
 

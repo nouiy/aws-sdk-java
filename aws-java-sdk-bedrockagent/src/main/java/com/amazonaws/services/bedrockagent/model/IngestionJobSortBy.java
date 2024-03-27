@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Sorts the response returned by ListIngestionJobs operation.
+ * Parameters by which to sort the results.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/IngestionJobSortBy" target="_top">AWS
@@ -28,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The attribute by which to sort the results.
+     * </p>
+     */
     private String attribute;
-
+    /**
+     * <p>
+     * The order by which to sort the results.
+     * </p>
+     */
     private String order;
 
     /**
+     * <p>
+     * The attribute by which to sort the results.
+     * </p>
+     * 
      * @param attribute
+     *        The attribute by which to sort the results.
      * @see IngestionJobSortByAttribute
      */
 
@@ -42,7 +56,11 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The attribute by which to sort the results.
+     * </p>
+     * 
+     * @return The attribute by which to sort the results.
      * @see IngestionJobSortByAttribute
      */
 
@@ -51,7 +69,12 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The attribute by which to sort the results.
+     * </p>
+     * 
      * @param attribute
+     *        The attribute by which to sort the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IngestionJobSortByAttribute
      */
@@ -62,7 +85,12 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The attribute by which to sort the results.
+     * </p>
+     * 
      * @param attribute
+     *        The attribute by which to sort the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IngestionJobSortByAttribute
      */
@@ -73,7 +101,12 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The order by which to sort the results.
+     * </p>
+     * 
      * @param order
+     *        The order by which to sort the results.
      * @see SortOrder
      */
 
@@ -82,7 +115,11 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The order by which to sort the results.
+     * </p>
+     * 
+     * @return The order by which to sort the results.
      * @see SortOrder
      */
 
@@ -91,7 +128,12 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The order by which to sort the results.
+     * </p>
+     * 
      * @param order
+     *        The order by which to sort the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SortOrder
      */
@@ -102,7 +144,12 @@ public class IngestionJobSortBy implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The order by which to sort the results.
+     * </p>
+     * 
      * @param order
+     *        The order by which to sort the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SortOrder
      */

@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagent.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Action Group Signature for a BuiltIn Action
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ActionGroupSignature {

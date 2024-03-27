@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Delete Agent Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgent" target="_top">AWS API
  *      Documentation</a>
@@ -30,24 +27,25 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent to delete.
      * </p>
      */
     private String agentId;
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      */
     private Boolean skipResourceInUseCheck;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent to delete.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent to delete.
      */
 
     public void setAgentId(String agentId) {
@@ -56,10 +54,10 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent to delete.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent to delete.
      */
 
     public String getAgentId() {
@@ -68,11 +66,11 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent to delete.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +81,13 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
      * @param skipResourceInUseCheck
-     *        Skips checking if resource is in use when set to true. Defaults to false
+     *        By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set
+     *        it to <code>true</code>, the resource will be deleted even if the resource is in use.
      */
 
     public void setSkipResourceInUseCheck(Boolean skipResourceInUseCheck) {
@@ -96,10 +96,12 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
-     * @return Skips checking if resource is in use when set to true. Defaults to false
+     * @return By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you
+     *         set it to <code>true</code>, the resource will be deleted even if the resource is in use.
      */
 
     public Boolean getSkipResourceInUseCheck() {
@@ -108,11 +110,13 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
      * @param skipResourceInUseCheck
-     *        Skips checking if resource is in use when set to true. Defaults to false
+     *        By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set
+     *        it to <code>true</code>, the resource will be deleted even if the resource is in use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,10 +127,12 @@ public class DeleteAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
-     * @return Skips checking if resource is in use when set to true. Defaults to false
+     * @return By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you
+     *         set it to <code>true</code>, the resource will be deleted even if the resource is in use.
      */
 
     public Boolean isSkipResourceInUseCheck() {

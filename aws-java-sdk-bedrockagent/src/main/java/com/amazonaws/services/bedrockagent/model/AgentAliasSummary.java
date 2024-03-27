@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary of an alias for an Agent.
+ * Contains details about an alias of an agent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentAliasSummary" target="_top">AWS
@@ -28,22 +28,56 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentAliasSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains details about
+     * </p>
+     */
     private String agentAliasId;
-
+    /**
+     * <p>
+     * The name of the alias.
+     * </p>
+     */
     private String agentAliasName;
-
-    private String description;
-
-    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
-
+    /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     */
     private String agentAliasStatus;
-
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     */
     private java.util.Date createdAt;
-
+    /**
+     * <p>
+     * The description of the alias.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     */
+    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
+    /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
     /**
+     * <p>
+     * Contains details about
+     * </p>
+     * 
      * @param agentAliasId
+     *        Contains details about
      */
 
     public void setAgentAliasId(String agentAliasId) {
@@ -51,7 +85,11 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about
+     * </p>
+     * 
+     * @return Contains details about
      */
 
     public String getAgentAliasId() {
@@ -59,7 +97,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Contains details about
+     * </p>
+     * 
      * @param agentAliasId
+     *        Contains details about
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -69,7 +112,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The name of the alias.
+     * </p>
+     * 
      * @param agentAliasName
+     *        The name of the alias.
      */
 
     public void setAgentAliasName(String agentAliasName) {
@@ -77,7 +125,11 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the alias.
+     * </p>
+     * 
+     * @return The name of the alias.
      */
 
     public String getAgentAliasName() {
@@ -85,7 +137,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The name of the alias.
+     * </p>
+     * 
      * @param agentAliasName
+     *        The name of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,7 +152,111 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
+     * @param agentAliasStatus
+     *        The status of the alias.
+     * @see AgentAliasStatus
+     */
+
+    public void setAgentAliasStatus(String agentAliasStatus) {
+        this.agentAliasStatus = agentAliasStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
+     * @return The status of the alias.
+     * @see AgentAliasStatus
+     */
+
+    public String getAgentAliasStatus() {
+        return this.agentAliasStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
+     * @param agentAliasStatus
+     *        The status of the alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AgentAliasStatus
+     */
+
+    public AgentAliasSummary withAgentAliasStatus(String agentAliasStatus) {
+        setAgentAliasStatus(agentAliasStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
+     * @param agentAliasStatus
+     *        The status of the alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AgentAliasStatus
+     */
+
+    public AgentAliasSummary withAgentAliasStatus(AgentAliasStatus agentAliasStatus) {
+        this.agentAliasStatus = agentAliasStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     * 
+     * @param createdAt
+     *        The time at which the alias of the agent was created.
+     */
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     * 
+     * @return The time at which the alias of the agent was created.
+     */
+
+    public java.util.Date getCreatedAt() {
+        return this.createdAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     * 
+     * @param createdAt
+     *        The time at which the alias of the agent was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAliasSummary withCreatedAt(java.util.Date createdAt) {
+        setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the alias.
+     * </p>
+     * 
      * @param description
+     *        The description of the alias.
      */
 
     public void setDescription(String description) {
@@ -103,7 +264,11 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the alias.
+     * </p>
+     * 
+     * @return The description of the alias.
      */
 
     public String getDescription() {
@@ -111,7 +276,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The description of the alias.
+     * </p>
+     * 
      * @param description
+     *        The description of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -121,7 +291,11 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * 
+     * @return Contains details about the version of the agent with which the alias is associated.
      */
 
     public java.util.List<AgentAliasRoutingConfigurationListItem> getRoutingConfiguration() {
@@ -129,7 +303,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * 
      * @param routingConfiguration
+     *        Contains details about the version of the agent with which the alias is associated.
      */
 
     public void setRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
@@ -143,12 +322,16 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRoutingConfiguration(java.util.Collection)} or {@link #withRoutingConfiguration(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param routingConfiguration
+     *        Contains details about the version of the agent with which the alias is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,7 +346,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Contains details about the version of the agent with which the alias is associated.
+     * </p>
+     * 
      * @param routingConfiguration
+     *        Contains details about the version of the agent with which the alias is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,73 +361,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @param agentAliasStatus
-     * @see AgentAliasStatus
-     */
-
-    public void setAgentAliasStatus(String agentAliasStatus) {
-        this.agentAliasStatus = agentAliasStatus;
-    }
-
-    /**
-     * @return
-     * @see AgentAliasStatus
-     */
-
-    public String getAgentAliasStatus() {
-        return this.agentAliasStatus;
-    }
-
-    /**
-     * @param agentAliasStatus
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see AgentAliasStatus
-     */
-
-    public AgentAliasSummary withAgentAliasStatus(String agentAliasStatus) {
-        setAgentAliasStatus(agentAliasStatus);
-        return this;
-    }
-
-    /**
-     * @param agentAliasStatus
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see AgentAliasStatus
-     */
-
-    public AgentAliasSummary withAgentAliasStatus(AgentAliasStatus agentAliasStatus) {
-        this.agentAliasStatus = agentAliasStatus.toString();
-        return this;
-    }
-
-    /**
-     * @param createdAt
-     */
-
-    public void setCreatedAt(java.util.Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.Date getCreatedAt() {
-        return this.createdAt;
-    }
-
-    /**
-     * @param createdAt
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAliasSummary withCreatedAt(java.util.Date createdAt) {
-        setCreatedAt(createdAt);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the alias was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -247,7 +374,11 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     * 
+     * @return The time at which the alias was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -255,7 +386,12 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the alias was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -280,14 +416,14 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
             sb.append("AgentAliasId: ").append(getAgentAliasId()).append(",");
         if (getAgentAliasName() != null)
             sb.append("AgentAliasName: ").append(getAgentAliasName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getRoutingConfiguration() != null)
-            sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
         if (getAgentAliasStatus() != null)
             sb.append("AgentAliasStatus: ").append(getAgentAliasStatus()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getRoutingConfiguration() != null)
+            sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
@@ -312,14 +448,6 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getAgentAliasName() != null && other.getAgentAliasName().equals(this.getAgentAliasName()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getRoutingConfiguration() == null ^ this.getRoutingConfiguration() == null)
-            return false;
-        if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
-            return false;
         if (other.getAgentAliasStatus() == null ^ this.getAgentAliasStatus() == null)
             return false;
         if (other.getAgentAliasStatus() != null && other.getAgentAliasStatus().equals(this.getAgentAliasStatus()) == false)
@@ -327,6 +455,14 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getRoutingConfiguration() == null ^ this.getRoutingConfiguration() == null)
+            return false;
+        if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
             return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
@@ -342,10 +478,10 @@ public class AgentAliasSummary implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getAgentAliasId() == null) ? 0 : getAgentAliasId().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasName() == null) ? 0 : getAgentAliasName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasStatus() == null) ? 0 : getAgentAliasStatus().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;
     }

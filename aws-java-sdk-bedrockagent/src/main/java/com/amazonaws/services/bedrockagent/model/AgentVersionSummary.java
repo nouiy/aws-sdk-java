@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary of agent version.
+ * Contains details about a version of an agent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentVersionSummary" target="_top">AWS
@@ -28,20 +28,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentVersionSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The name of the agent to which the version belongs.
+     * </p>
+     */
     private String agentName;
-
+    /**
+     * <p>
+     * The status of the agent to which the version belongs.
+     * </p>
+     */
     private String agentStatus;
-
+    /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     */
     private String agentVersion;
-
+    /**
+     * <p>
+     * The time at which the version was created.
+     * </p>
+     */
     private java.util.Date createdAt;
-
+    /**
+     * <p>
+     * The description of the version of the agent.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The time at which the version was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
-    private String description;
-
     /**
+     * <p>
+     * The name of the agent to which the version belongs.
+     * </p>
+     * 
      * @param agentName
+     *        The name of the agent to which the version belongs.
      */
 
     public void setAgentName(String agentName) {
@@ -49,7 +79,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the agent to which the version belongs.
+     * </p>
+     * 
+     * @return The name of the agent to which the version belongs.
      */
 
     public String getAgentName() {
@@ -57,7 +91,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The name of the agent to which the version belongs.
+     * </p>
+     * 
      * @param agentName
+     *        The name of the agent to which the version belongs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,7 +106,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The status of the agent to which the version belongs.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent to which the version belongs.
      * @see AgentStatus
      */
 
@@ -76,7 +120,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the agent to which the version belongs.
+     * </p>
+     * 
+     * @return The status of the agent to which the version belongs.
      * @see AgentStatus
      */
 
@@ -85,7 +133,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The status of the agent to which the version belongs.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent to which the version belongs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -96,7 +149,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The status of the agent to which the version belongs.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent to which the version belongs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -107,7 +165,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -115,7 +178,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
+     * @return The version of the agent.
      */
 
     public String getAgentVersion() {
@@ -123,7 +190,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,7 +205,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which the version was created.
+     * </p>
+     * 
      * @param createdAt
+     *        The time at which the version was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -141,7 +218,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the version was created.
+     * </p>
+     * 
+     * @return The time at which the version was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -149,7 +230,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which the version was created.
+     * </p>
+     * 
      * @param createdAt
+     *        The time at which the version was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,33 +245,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @param updatedAt
-     */
-
-    public void setUpdatedAt(java.util.Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.Date getUpdatedAt() {
-        return this.updatedAt;
-    }
-
-    /**
-     * @param updatedAt
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentVersionSummary withUpdatedAt(java.util.Date updatedAt) {
-        setUpdatedAt(updatedAt);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The description of the version of the agent.
+     * </p>
+     * 
      * @param description
+     *        The description of the version of the agent.
      */
 
     public void setDescription(String description) {
@@ -193,7 +258,11 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the version of the agent.
+     * </p>
+     * 
+     * @return The description of the version of the agent.
      */
 
     public String getDescription() {
@@ -201,12 +270,57 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The description of the version of the agent.
+     * </p>
+     * 
      * @param description
+     *        The description of the version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AgentVersionSummary withDescription(String description) {
         setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time at which the version was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the version was last updated.
+     */
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the version was last updated.
+     * </p>
+     * 
+     * @return The time at which the version was last updated.
+     */
+
+    public java.util.Date getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the version was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the version was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentVersionSummary withUpdatedAt(java.util.Date updatedAt) {
+        setUpdatedAt(updatedAt);
         return this;
     }
 
@@ -230,10 +344,10 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
             sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
-        if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getUpdatedAt() != null)
+            sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -264,13 +378,13 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
-        if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
-            return false;
-        if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
+            return false;
+        if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
         return true;
     }
@@ -284,8 +398,8 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getAgentStatus() == null) ? 0 : getAgentStatus().hashCode());
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
-        hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;
     }
 

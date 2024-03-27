@@ -48,13 +48,17 @@ public class DataSourceSummaryJsonUnmarshaller implements Unmarshaller<DataSourc
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
-                    context.nextToken();
-                    dataSourceSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("dataSourceId", targetDepth)) {
                     context.nextToken();
                     dataSourceSummary.setDataSourceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    dataSourceSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                    context.nextToken();
+                    dataSourceSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
@@ -63,10 +67,6 @@ public class DataSourceSummaryJsonUnmarshaller implements Unmarshaller<DataSourc
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     dataSourceSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    dataSourceSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();

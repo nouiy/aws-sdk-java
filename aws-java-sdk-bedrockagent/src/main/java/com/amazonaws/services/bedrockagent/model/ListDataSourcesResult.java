@@ -23,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of objects, each of which contains information about a data source.
+     * </p>
+     */
     private java.util.List<DataSourceSummary> dataSourceSummaries;
-
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * A list of objects, each of which contains information about a data source.
+     * </p>
+     * 
+     * @return A list of objects, each of which contains information about a data source.
      */
 
     public java.util.List<DataSourceSummary> getDataSourceSummaries() {
@@ -36,7 +50,12 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about a data source.
+     * </p>
+     * 
      * @param dataSourceSummaries
+     *        A list of objects, each of which contains information about a data source.
      */
 
     public void setDataSourceSummaries(java.util.Collection<DataSourceSummary> dataSourceSummaries) {
@@ -50,12 +69,16 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
+     * A list of objects, each of which contains information about a data source.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setDataSourceSummaries(java.util.Collection)} or {@link #withDataSourceSummaries(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param dataSourceSummaries
+     *        A list of objects, each of which contains information about a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +93,12 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about a data source.
+     * </p>
+     * 
      * @param dataSourceSummaries
+     *        A list of objects, each of which contains information about a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +108,15 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +124,14 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         use this token when making another request in the <code>nextToken</code> field to return the next batch
+     *         of results.
      */
 
     public String getNextToken() {
@@ -96,7 +139,15 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

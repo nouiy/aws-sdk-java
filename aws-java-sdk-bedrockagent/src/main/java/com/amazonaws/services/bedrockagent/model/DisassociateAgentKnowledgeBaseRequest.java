@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Disassociate Agent Knowledge Base Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DisassociateAgentKnowledgeBase"
  *      target="_top">AWS API Documentation</a>
@@ -30,30 +27,30 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent from which to disassociate the knowledge base.
      * </p>
      */
     private String agentId;
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent from which to disassociate the knowledge base.
      * </p>
      */
     private String agentVersion;
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
+     * The unique identifier of the knowledge base to disassociate.
      * </p>
      */
     private String knowledgeBaseId;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent from which to disassociate the knowledge base.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent from which to disassociate the knowledge base.
      */
 
     public void setAgentId(String agentId) {
@@ -62,10 +59,10 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent from which to disassociate the knowledge base.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent from which to disassociate the knowledge base.
      */
 
     public String getAgentId() {
@@ -74,11 +71,11 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent from which to disassociate the knowledge base.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent from which to disassociate the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +86,11 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent from which to disassociate the knowledge base.
      * </p>
      * 
      * @param agentVersion
-     *        Draft Version of the Agent.
+     *        The version of the agent from which to disassociate the knowledge base.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -102,10 +99,10 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent from which to disassociate the knowledge base.
      * </p>
      * 
-     * @return Draft Version of the Agent.
+     * @return The version of the agent from which to disassociate the knowledge base.
      */
 
     public String getAgentVersion() {
@@ -114,11 +111,11 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent from which to disassociate the knowledge base.
      * </p>
      * 
      * @param agentVersion
-     *        Draft Version of the Agent.
+     *        The version of the agent from which to disassociate the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +126,11 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
+     * The unique identifier of the knowledge base to disassociate.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        Id generated at the server side when a Knowledge Base is associated to an Agent
+     *        The unique identifier of the knowledge base to disassociate.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -142,10 +139,10 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
+     * The unique identifier of the knowledge base to disassociate.
      * </p>
      * 
-     * @return Id generated at the server side when a Knowledge Base is associated to an Agent
+     * @return The unique identifier of the knowledge base to disassociate.
      */
 
     public String getKnowledgeBaseId() {
@@ -154,11 +151,11 @@ public class DisassociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
+     * The unique identifier of the knowledge base to disassociate.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        Id generated at the server side when a Knowledge Base is associated to an Agent
+     *        The unique identifier of the knowledge base to disassociate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RdsConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceArn").build();
     private static final MarshallingInfo<String> CREDENTIALSSECRETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("credentialsSecretArn").build();
     private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("databaseName").build();
-    private static final MarshallingInfo<String> TABLENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("tableName").build();
     private static final MarshallingInfo<StructuredPojo> FIELDMAPPING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fieldMapping").build();
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceArn").build();
+    private static final MarshallingInfo<String> TABLENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tableName").build();
 
     private static final RdsConfigurationMarshaller instance = new RdsConfigurationMarshaller();
 
@@ -54,11 +54,11 @@ public class RdsConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(rdsConfiguration.getResourceArn(), RESOURCEARN_BINDING);
             protocolMarshaller.marshall(rdsConfiguration.getCredentialsSecretArn(), CREDENTIALSSECRETARN_BINDING);
             protocolMarshaller.marshall(rdsConfiguration.getDatabaseName(), DATABASENAME_BINDING);
-            protocolMarshaller.marshall(rdsConfiguration.getTableName(), TABLENAME_BINDING);
             protocolMarshaller.marshall(rdsConfiguration.getFieldMapping(), FIELDMAPPING_BINDING);
+            protocolMarshaller.marshall(rdsConfiguration.getResourceArn(), RESOURCEARN_BINDING);
+            protocolMarshaller.marshall(rdsConfiguration.getTableName(), TABLENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

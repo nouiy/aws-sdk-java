@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagent.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * The type of chunking strategy
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ChunkingStrategy {

@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * List Agent Versions Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentVersions" target="_top">AWS
  *      API Documentation</a>
@@ -26,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of objects, each of which contains information about a version of the agent.
+     * </p>
+     */
     private java.util.List<AgentVersionSummary> agentVersionSummaries;
-
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * A list of objects, each of which contains information about a version of the agent.
+     * </p>
+     * 
+     * @return A list of objects, each of which contains information about a version of the agent.
      */
 
     public java.util.List<AgentVersionSummary> getAgentVersionSummaries() {
@@ -39,7 +50,12 @@ public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about a version of the agent.
+     * </p>
+     * 
      * @param agentVersionSummaries
+     *        A list of objects, each of which contains information about a version of the agent.
      */
 
     public void setAgentVersionSummaries(java.util.Collection<AgentVersionSummary> agentVersionSummaries) {
@@ -53,12 +69,16 @@ public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * A list of objects, each of which contains information about a version of the agent.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAgentVersionSummaries(java.util.Collection)} or
      * {@link #withAgentVersionSummaries(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param agentVersionSummaries
+     *        A list of objects, each of which contains information about a version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -73,7 +93,12 @@ public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about a version of the agent.
+     * </p>
+     * 
      * @param agentVersionSummaries
+     *        A list of objects, each of which contains information about a version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,7 +108,15 @@ public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      */
 
     public void setNextToken(String nextToken) {
@@ -91,7 +124,14 @@ public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         use this token when making another request in the <code>nextToken</code> field to return the next batch
+     *         of results.
      */
 
     public String getNextToken() {
@@ -99,7 +139,15 @@ public class ListAgentVersionsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

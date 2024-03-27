@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Create Agent Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgent" target="_top">AWS API
  *      Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the agent created.
+     * </p>
+     */
     private Agent agent;
 
     /**
+     * <p>
+     * Contains details about the agent created.
+     * </p>
+     * 
      * @param agent
+     *        Contains details about the agent created.
      */
 
     public void setAgent(Agent agent) {
@@ -37,7 +44,11 @@ public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the agent created.
+     * </p>
+     * 
+     * @return Contains details about the agent created.
      */
 
     public Agent getAgent() {
@@ -45,7 +56,12 @@ public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * Contains details about the agent created.
+     * </p>
+     * 
      * @param agent
+     *        Contains details about the agent created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

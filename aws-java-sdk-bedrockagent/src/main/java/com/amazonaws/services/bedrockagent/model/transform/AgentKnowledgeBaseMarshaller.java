@@ -31,16 +31,16 @@ public class AgentKnowledgeBaseMarshaller {
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASESTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseState").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
     private static final AgentKnowledgeBaseMarshaller instance = new AgentKnowledgeBaseMarshaller();
 
@@ -60,11 +60,11 @@ public class AgentKnowledgeBaseMarshaller {
         try {
             protocolMarshaller.marshall(agentKnowledgeBase.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(agentKnowledgeBase.getAgentVersion(), AGENTVERSION_BINDING);
-            protocolMarshaller.marshall(agentKnowledgeBase.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
-            protocolMarshaller.marshall(agentKnowledgeBase.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(agentKnowledgeBase.getCreatedAt(), CREATEDAT_BINDING);
-            protocolMarshaller.marshall(agentKnowledgeBase.getUpdatedAt(), UPDATEDAT_BINDING);
+            protocolMarshaller.marshall(agentKnowledgeBase.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentKnowledgeBase.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(agentKnowledgeBase.getKnowledgeBaseState(), KNOWLEDGEBASESTATE_BINDING);
+            protocolMarshaller.marshall(agentKnowledgeBase.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Get Agent Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgent" target="_top">AWS API
  *      Documentation</a>
@@ -30,18 +27,18 @@ public class GetAgentRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      */
     private String agentId;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent.
      */
 
     public void setAgentId(String agentId) {
@@ -50,10 +47,10 @@ public class GetAgentRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent.
      */
 
     public String getAgentId() {
@@ -62,11 +59,11 @@ public class GetAgentRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

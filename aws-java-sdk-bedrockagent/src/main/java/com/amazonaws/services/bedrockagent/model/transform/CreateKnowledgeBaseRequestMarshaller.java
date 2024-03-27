@@ -34,14 +34,14 @@ public class CreateKnowledgeBaseRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("name").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<StructuredPojo> KNOWLEDGEBASECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseConfiguration").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<StructuredPojo> STORAGECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageConfiguration").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -64,10 +64,10 @@ public class CreateKnowledgeBaseRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createKnowledgeBaseRequest.getClientToken(), CLIENTTOKEN_BINDING);
-            protocolMarshaller.marshall(createKnowledgeBaseRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createKnowledgeBaseRequest.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(createKnowledgeBaseRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createKnowledgeBaseRequest.getKnowledgeBaseConfiguration(), KNOWLEDGEBASECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createKnowledgeBaseRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(createKnowledgeBaseRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createKnowledgeBaseRequest.getStorageConfiguration(), STORAGECONFIGURATION_BINDING);
             protocolMarshaller.marshall(createKnowledgeBaseRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

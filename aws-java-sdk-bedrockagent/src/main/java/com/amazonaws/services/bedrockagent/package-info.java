@@ -13,7 +13,7 @@
 
 /**
  * <p>
- * An example service, deployed with the Octane Service creator, which will echo the string
+ * Describes the API operations for creating and managing Amazon Bedrock agents.
  * </p>
  */
 package com.amazonaws.services.bedrockagent;

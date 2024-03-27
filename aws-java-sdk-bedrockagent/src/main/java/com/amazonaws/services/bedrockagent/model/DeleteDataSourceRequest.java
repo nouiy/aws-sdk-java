@@ -25,38 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the data source to delete.
+     * </p>
+     */
+    private String dataSourceId;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base from which to delete the data source.
+     * </p>
+     */
     private String knowledgeBaseId;
 
-    private String dataSourceId;
-
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteDataSourceRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The unique identifier of the data source to delete.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source to delete.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -64,7 +52,11 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the data source to delete.
+     * </p>
+     * 
+     * @return The unique identifier of the data source to delete.
      */
 
     public String getDataSourceId() {
@@ -72,12 +64,57 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source to delete.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DeleteDataSourceRequest withDataSourceId(String dataSourceId) {
         setDataSourceId(dataSourceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base from which to delete the data source.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base from which to delete the data source.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base from which to delete the data source.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base from which to delete the data source.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base from which to delete the data source.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base from which to delete the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteDataSourceRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
         return this;
     }
 
@@ -93,10 +130,10 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDataSourceId() != null)
-            sb.append("DataSourceId: ").append(getDataSourceId());
+            sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId());
         sb.append("}");
         return sb.toString();
     }
@@ -111,13 +148,13 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof DeleteDataSourceRequest == false)
             return false;
         DeleteDataSourceRequest other = (DeleteDataSourceRequest) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         return true;
     }
@@ -127,8 +164,8 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         return hashCode;
     }
 

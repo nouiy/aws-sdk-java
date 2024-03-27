@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KnowledgeBaseSummaryMarshaller {
 
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -54,9 +54,9 @@ public class KnowledgeBaseSummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(knowledgeBaseSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(knowledgeBaseSummary.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(knowledgeBaseSummary.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(knowledgeBaseSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(knowledgeBaseSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(knowledgeBaseSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {

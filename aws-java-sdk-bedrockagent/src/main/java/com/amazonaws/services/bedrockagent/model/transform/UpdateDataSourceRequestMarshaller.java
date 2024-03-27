@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateDataSourceRequestMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
-    private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("dataSourceId").build();
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<StructuredPojo> DATASOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSourceConfiguration").build();
+    private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("dataSourceId").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
     private static final MarshallingInfo<StructuredPojo> SERVERSIDEENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serverSideEncryptionConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> VECTORINGESTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -58,11 +58,11 @@ public class UpdateDataSourceRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateDataSourceRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
-            protocolMarshaller.marshall(updateDataSourceRequest.getDataSourceId(), DATASOURCEID_BINDING);
-            protocolMarshaller.marshall(updateDataSourceRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(updateDataSourceRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getDataSourceConfiguration(), DATASOURCECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getDataSourceId(), DATASOURCEID_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getServerSideEncryptionConfiguration(), SERVERSIDEENCRYPTIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getVectorIngestionConfiguration(), VECTORINGESTIONCONFIGURATION_BINDING);
         } catch (Exception e) {

@@ -48,6 +48,10 @@ public class AgentJsonUnmarshaller implements Unmarshaller<Agent, JsonUnmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("agentArn", targetDepth)) {
+                    context.nextToken();
+                    agent.setAgentArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("agentId", targetDepth)) {
                     context.nextToken();
                     agent.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -56,9 +60,13 @@ public class AgentJsonUnmarshaller implements Unmarshaller<Agent, JsonUnmarshall
                     context.nextToken();
                     agent.setAgentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("agentArn", targetDepth)) {
+                if (context.testExpression("agentResourceRoleArn", targetDepth)) {
                     context.nextToken();
-                    agent.setAgentArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    agent.setAgentResourceRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("agentStatus", targetDepth)) {
+                    context.nextToken();
+                    agent.setAgentStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("agentVersion", targetDepth)) {
                     context.nextToken();
@@ -68,45 +76,17 @@ public class AgentJsonUnmarshaller implements Unmarshaller<Agent, JsonUnmarshall
                     context.nextToken();
                     agent.setClientToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("instruction", targetDepth)) {
+                if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
-                    agent.setInstruction(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("agentStatus", targetDepth)) {
-                    context.nextToken();
-                    agent.setAgentStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("foundationModel", targetDepth)) {
-                    context.nextToken();
-                    agent.setFoundationModel(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    agent.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("idleSessionTTLInSeconds", targetDepth)) {
-                    context.nextToken();
-                    agent.setIdleSessionTTLInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("agentResourceRoleArn", targetDepth)) {
-                    context.nextToken();
-                    agent.setAgentResourceRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    agent.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("customerEncryptionKeyArn", targetDepth)) {
                     context.nextToken();
                     agent.setCustomerEncryptionKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
+                if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
-                    agent.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("updatedAt", targetDepth)) {
-                    context.nextToken();
-                    agent.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("preparedAt", targetDepth)) {
-                    context.nextToken();
-                    agent.setPreparedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    agent.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("failureReasons", targetDepth)) {
                     context.nextToken();
@@ -114,15 +94,35 @@ public class AgentJsonUnmarshaller implements Unmarshaller<Agent, JsonUnmarshall
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("foundationModel", targetDepth)) {
+                    context.nextToken();
+                    agent.setFoundationModel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("idleSessionTTLInSeconds", targetDepth)) {
+                    context.nextToken();
+                    agent.setIdleSessionTTLInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("instruction", targetDepth)) {
+                    context.nextToken();
+                    agent.setInstruction(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("preparedAt", targetDepth)) {
+                    context.nextToken();
+                    agent.setPreparedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("promptOverrideConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agent.setPromptOverrideConfiguration(PromptOverrideConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("recommendedActions", targetDepth)) {
                     context.nextToken();
                     agent.setRecommendedActions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("promptOverrideConfiguration", targetDepth)) {
+                if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
-                    agent.setPromptOverrideConfiguration(PromptOverrideConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                    agent.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

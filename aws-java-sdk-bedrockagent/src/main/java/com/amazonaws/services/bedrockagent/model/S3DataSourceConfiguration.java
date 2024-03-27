@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures an S3 data source location.
+ * Contains information about the S3 configuration of the data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/S3DataSourceConfiguration"
@@ -28,12 +28,28 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class S3DataSourceConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the bucket that contains the data source.
+     * </p>
+     */
     private String bucketArn;
-
+    /**
+     * <p>
+     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a>.
+     * </p>
+     */
     private java.util.List<String> inclusionPrefixes;
 
     /**
+     * <p>
+     * The ARN of the bucket that contains the data source.
+     * </p>
+     * 
      * @param bucketArn
+     *        The ARN of the bucket that contains the data source.
      */
 
     public void setBucketArn(String bucketArn) {
@@ -41,7 +57,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the bucket that contains the data source.
+     * </p>
+     * 
+     * @return The ARN of the bucket that contains the data source.
      */
 
     public String getBucketArn() {
@@ -49,7 +69,12 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The ARN of the bucket that contains the data source.
+     * </p>
+     * 
      * @param bucketArn
+     *        The ARN of the bucket that contains the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +84,15 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a>.
+     * </p>
+     * 
+     * @return A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *         prefixes</a>.
      */
 
     public java.util.List<String> getInclusionPrefixes() {
@@ -67,7 +100,16 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a>.
+     * </p>
+     * 
      * @param inclusionPrefixes
+     *        A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *        prefixes</a>.
      */
 
     public void setInclusionPrefixes(java.util.Collection<String> inclusionPrefixes) {
@@ -81,12 +123,20 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
+     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInclusionPrefixes(java.util.Collection)} or {@link #withInclusionPrefixes(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param inclusionPrefixes
+     *        A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *        prefixes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,7 +151,16 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a>.
+     * </p>
+     * 
      * @param inclusionPrefixes
+     *        A list of S3 prefixes that define the object containing the data sources. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *        prefixes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

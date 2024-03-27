@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the information of a knowledge base.
+ * Contains information about a knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/KnowledgeBase" target="_top">AWS API
@@ -28,252 +28,108 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
-    private String knowledgeBaseId;
-
-    private String name;
-
-    private String knowledgeBaseArn;
-
-    private String description;
-
-    private String roleArn;
-
-    private KnowledgeBaseConfiguration knowledgeBaseConfiguration;
-
-    private StorageConfiguration storageConfiguration;
-
-    private String status;
-
+    /**
+     * <p>
+     * The time at which the knowledge base was created.
+     * </p>
+     */
     private java.util.Date createdAt;
-
+    /**
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * A list of reasons that the API operation on the knowledge base failed.
+     * </p>
+     */
+    private java.util.List<String> failureReasons;
+    /**
+     * <p>
+     * The ARN of the knowledge base.
+     * </p>
+     */
+    private String knowledgeBaseArn;
+    /**
+     * <p>
+     * Contains details about the embeddings configuration of the knowledge base.
+     * </p>
+     */
+    private KnowledgeBaseConfiguration knowledgeBaseConfiguration;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
+     * The status of the knowledge base. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The knowledge base is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ACTIVE – The knowledge base is ready to be queried.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The knowledge base is being deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The knowledge base is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The knowledge base API operation failed.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String status;
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base.
+     * </p>
+     */
+    private StorageConfiguration storageConfiguration;
+    /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
-    private java.util.List<String> failureReasons;
-
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
-     * @param name
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @param name
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * @param knowledgeBaseArn
-     */
-
-    public void setKnowledgeBaseArn(String knowledgeBaseArn) {
-        this.knowledgeBaseArn = knowledgeBaseArn;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseArn() {
-        return this.knowledgeBaseArn;
-    }
-
-    /**
-     * @param knowledgeBaseArn
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withKnowledgeBaseArn(String knowledgeBaseArn) {
-        setKnowledgeBaseArn(knowledgeBaseArn);
-        return this;
-    }
-
-    /**
-     * @param description
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param description
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * @param roleArn
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * @param roleArn
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
-        return this;
-    }
-
-    /**
-     * @param knowledgeBaseConfiguration
-     */
-
-    public void setKnowledgeBaseConfiguration(KnowledgeBaseConfiguration knowledgeBaseConfiguration) {
-        this.knowledgeBaseConfiguration = knowledgeBaseConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public KnowledgeBaseConfiguration getKnowledgeBaseConfiguration() {
-        return this.knowledgeBaseConfiguration;
-    }
-
-    /**
-     * @param knowledgeBaseConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withKnowledgeBaseConfiguration(KnowledgeBaseConfiguration knowledgeBaseConfiguration) {
-        setKnowledgeBaseConfiguration(knowledgeBaseConfiguration);
-        return this;
-    }
-
-    /**
-     * @param storageConfiguration
-     */
-
-    public void setStorageConfiguration(StorageConfiguration storageConfiguration) {
-        this.storageConfiguration = storageConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public StorageConfiguration getStorageConfiguration() {
-        return this.storageConfiguration;
-    }
-
-    /**
-     * @param storageConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBase withStorageConfiguration(StorageConfiguration storageConfiguration) {
-        setStorageConfiguration(storageConfiguration);
-        return this;
-    }
-
-    /**
-     * @param status
-     * @see KnowledgeBaseStatus
-     */
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    /**
-     * @return
-     * @see KnowledgeBaseStatus
-     */
-
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @param status
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KnowledgeBaseStatus
-     */
-
-    public KnowledgeBase withStatus(String status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * @param status
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KnowledgeBaseStatus
-     */
-
-    public KnowledgeBase withStatus(KnowledgeBaseStatus status) {
-        this.status = status.toString();
-        return this;
-    }
-
-    /**
+     * <p>
+     * The time at which the knowledge base was created.
+     * </p>
+     * 
      * @param createdAt
+     *        The time at which the knowledge base was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -281,7 +137,11 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the knowledge base was created.
+     * </p>
+     * 
+     * @return The time at which the knowledge base was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -289,7 +149,12 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the knowledge base was created.
+     * </p>
+     * 
      * @param createdAt
+     *        The time at which the knowledge base was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -299,33 +164,51 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @param updatedAt
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     * 
+     * @param description
+     *        The description of the knowledge base.
      */
 
-    public void setUpdatedAt(java.util.Date updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     * 
+     * @return The description of the knowledge base.
      */
 
-    public java.util.Date getUpdatedAt() {
-        return this.updatedAt;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
-     * @param updatedAt
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     * 
+     * @param description
+     *        The description of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public KnowledgeBase withUpdatedAt(java.util.Date updatedAt) {
-        setUpdatedAt(updatedAt);
+    public KnowledgeBase withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
     /**
-     * @return
+     * <p>
+     * A list of reasons that the API operation on the knowledge base failed.
+     * </p>
+     * 
+     * @return A list of reasons that the API operation on the knowledge base failed.
      */
 
     public java.util.List<String> getFailureReasons() {
@@ -333,7 +216,12 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A list of reasons that the API operation on the knowledge base failed.
+     * </p>
+     * 
      * @param failureReasons
+     *        A list of reasons that the API operation on the knowledge base failed.
      */
 
     public void setFailureReasons(java.util.Collection<String> failureReasons) {
@@ -347,12 +235,16 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * A list of reasons that the API operation on the knowledge base failed.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFailureReasons(java.util.Collection)} or {@link #withFailureReasons(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param failureReasons
+     *        A list of reasons that the API operation on the knowledge base failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -367,12 +259,574 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A list of reasons that the API operation on the knowledge base failed.
+     * </p>
+     * 
      * @param failureReasons
+     *        A list of reasons that the API operation on the knowledge base failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public KnowledgeBase withFailureReasons(java.util.Collection<String> failureReasons) {
         setFailureReasons(failureReasons);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseArn
+     *        The ARN of the knowledge base.
+     */
+
+    public void setKnowledgeBaseArn(String knowledgeBaseArn) {
+        this.knowledgeBaseArn = knowledgeBaseArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the knowledge base.
+     * </p>
+     * 
+     * @return The ARN of the knowledge base.
+     */
+
+    public String getKnowledgeBaseArn() {
+        return this.knowledgeBaseArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseArn
+     *        The ARN of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withKnowledgeBaseArn(String knowledgeBaseArn) {
+        setKnowledgeBaseArn(knowledgeBaseArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the embeddings configuration of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseConfiguration
+     *        Contains details about the embeddings configuration of the knowledge base.
+     */
+
+    public void setKnowledgeBaseConfiguration(KnowledgeBaseConfiguration knowledgeBaseConfiguration) {
+        this.knowledgeBaseConfiguration = knowledgeBaseConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the embeddings configuration of the knowledge base.
+     * </p>
+     * 
+     * @return Contains details about the embeddings configuration of the knowledge base.
+     */
+
+    public KnowledgeBaseConfiguration getKnowledgeBaseConfiguration() {
+        return this.knowledgeBaseConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the embeddings configuration of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseConfiguration
+     *        Contains details about the embeddings configuration of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withKnowledgeBaseConfiguration(KnowledgeBaseConfiguration knowledgeBaseConfiguration) {
+        setKnowledgeBaseConfiguration(knowledgeBaseConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        The name of the knowledge base.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     * 
+     * @return The name of the knowledge base.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        The name of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * </p>
+     * 
+     * @param roleArn
+     *        The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must
+     *        begin with <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * </p>
+     * 
+     * @return The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must
+     *         begin with <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * </p>
+     * 
+     * @param roleArn
+     *        The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must
+     *        begin with <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the knowledge base. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The knowledge base is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ACTIVE – The knowledge base is ready to be queried.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The knowledge base is being deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The knowledge base is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The knowledge base API operation failed.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param status
+     *        The status of the knowledge base. The following statuses are possible:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CREATING – The knowledge base is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        ACTIVE – The knowledge base is ready to be queried.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETING – The knowledge base is being deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        UPDATING – The knowledge base is being updated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FAILED – The knowledge base API operation failed.
+     *        </p>
+     *        </li>
+     * @see KnowledgeBaseStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The status of the knowledge base. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The knowledge base is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ACTIVE – The knowledge base is ready to be queried.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The knowledge base is being deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The knowledge base is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The knowledge base API operation failed.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The status of the knowledge base. The following statuses are possible:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         CREATING – The knowledge base is being created.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         ACTIVE – The knowledge base is ready to be queried.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DELETING – The knowledge base is being deleted.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         UPDATING – The knowledge base is being updated.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         FAILED – The knowledge base API operation failed.
+     *         </p>
+     *         </li>
+     * @see KnowledgeBaseStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The status of the knowledge base. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The knowledge base is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ACTIVE – The knowledge base is ready to be queried.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The knowledge base is being deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The knowledge base is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The knowledge base API operation failed.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param status
+     *        The status of the knowledge base. The following statuses are possible:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CREATING – The knowledge base is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        ACTIVE – The knowledge base is ready to be queried.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETING – The knowledge base is being deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        UPDATING – The knowledge base is being updated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FAILED – The knowledge base API operation failed.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KnowledgeBaseStatus
+     */
+
+    public KnowledgeBase withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the knowledge base. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The knowledge base is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ACTIVE – The knowledge base is ready to be queried.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The knowledge base is being deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The knowledge base is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The knowledge base API operation failed.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param status
+     *        The status of the knowledge base. The following statuses are possible:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CREATING – The knowledge base is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        ACTIVE – The knowledge base is ready to be queried.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETING – The knowledge base is being deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        UPDATING – The knowledge base is being updated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FAILED – The knowledge base API operation failed.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KnowledgeBaseStatus
+     */
+
+    public KnowledgeBase withStatus(KnowledgeBaseStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base.
+     * </p>
+     * 
+     * @param storageConfiguration
+     *        Contains details about the storage configuration of the knowledge base.
+     */
+
+    public void setStorageConfiguration(StorageConfiguration storageConfiguration) {
+        this.storageConfiguration = storageConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base.
+     * </p>
+     * 
+     * @return Contains details about the storage configuration of the knowledge base.
+     */
+
+    public StorageConfiguration getStorageConfiguration() {
+        return this.storageConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base.
+     * </p>
+     * 
+     * @param storageConfiguration
+     *        Contains details about the storage configuration of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withStorageConfiguration(StorageConfiguration storageConfiguration) {
+        setStorageConfiguration(storageConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the knowledge base was last updated.
+     */
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     * 
+     * @return The time at which the knowledge base was last updated.
+     */
+
+    public java.util.Date getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the knowledge base was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBase withUpdatedAt(java.util.Date updatedAt) {
+        setUpdatedAt(updatedAt);
         return this;
     }
 
@@ -388,28 +842,28 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getCreatedAt() != null)
+            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getFailureReasons() != null)
+            sb.append("FailureReasons: ").append(getFailureReasons()).append(",");
+        if (getKnowledgeBaseArn() != null)
+            sb.append("KnowledgeBaseArn: ").append(getKnowledgeBaseArn()).append(",");
+        if (getKnowledgeBaseConfiguration() != null)
+            sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration()).append(",");
         if (getKnowledgeBaseId() != null)
             sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getKnowledgeBaseArn() != null)
-            sb.append("KnowledgeBaseArn: ").append(getKnowledgeBaseArn()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
-        if (getKnowledgeBaseConfiguration() != null)
-            sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration()).append(",");
-        if (getStorageConfiguration() != null)
-            sb.append("StorageConfiguration: ").append(getStorageConfiguration()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
-        if (getCreatedAt() != null)
-            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getStorageConfiguration() != null)
+            sb.append("StorageConfiguration: ").append(getStorageConfiguration()).append(",");
         if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
-        if (getFailureReasons() != null)
-            sb.append("FailureReasons: ").append(getFailureReasons());
+            sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -424,6 +878,26 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof KnowledgeBase == false)
             return false;
         KnowledgeBase other = (KnowledgeBase) obj;
+        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
+            return false;
+        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getFailureReasons() == null ^ this.getFailureReasons() == null)
+            return false;
+        if (other.getFailureReasons() != null && other.getFailureReasons().equals(this.getFailureReasons()) == false)
+            return false;
+        if (other.getKnowledgeBaseArn() == null ^ this.getKnowledgeBaseArn() == null)
+            return false;
+        if (other.getKnowledgeBaseArn() != null && other.getKnowledgeBaseArn().equals(this.getKnowledgeBaseArn()) == false)
+            return false;
+        if (other.getKnowledgeBaseConfiguration() == null ^ this.getKnowledgeBaseConfiguration() == null)
+            return false;
+        if (other.getKnowledgeBaseConfiguration() != null && other.getKnowledgeBaseConfiguration().equals(this.getKnowledgeBaseConfiguration()) == false)
+            return false;
         if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
         if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
@@ -432,41 +906,21 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getKnowledgeBaseArn() == null ^ this.getKnowledgeBaseArn() == null)
-            return false;
-        if (other.getKnowledgeBaseArn() != null && other.getKnowledgeBaseArn().equals(this.getKnowledgeBaseArn()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
-            return false;
-        if (other.getKnowledgeBaseConfiguration() == null ^ this.getKnowledgeBaseConfiguration() == null)
-            return false;
-        if (other.getKnowledgeBaseConfiguration() != null && other.getKnowledgeBaseConfiguration().equals(this.getKnowledgeBaseConfiguration()) == false)
-            return false;
-        if (other.getStorageConfiguration() == null ^ this.getStorageConfiguration() == null)
-            return false;
-        if (other.getStorageConfiguration() != null && other.getStorageConfiguration().equals(this.getStorageConfiguration()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
-        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
+        if (other.getStorageConfiguration() == null ^ this.getStorageConfiguration() == null)
             return false;
-        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+        if (other.getStorageConfiguration() != null && other.getStorageConfiguration().equals(this.getStorageConfiguration()) == false)
             return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
-            return false;
-        if (other.getFailureReasons() == null ^ this.getFailureReasons() == null)
-            return false;
-        if (other.getFailureReasons() != null && other.getFailureReasons().equals(this.getFailureReasons()) == false)
             return false;
         return true;
     }
@@ -476,17 +930,17 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getFailureReasons() == null) ? 0 : getFailureReasons().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseArn() == null) ? 0 : getKnowledgeBaseArn().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseConfiguration() == null) ? 0 : getKnowledgeBaseConfiguration().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getKnowledgeBaseArn() == null) ? 0 : getKnowledgeBaseArn().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getKnowledgeBaseConfiguration() == null) ? 0 : getKnowledgeBaseConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getStorageConfiguration() == null) ? 0 : getStorageConfiguration().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getStorageConfiguration() == null) ? 0 : getStorageConfiguration().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
-        hashCode = prime * hashCode + ((getFailureReasons() == null) ? 0 : getFailureReasons().hashCode());
         return hashCode;
     }
 

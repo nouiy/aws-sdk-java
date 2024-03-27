@@ -25,22 +25,68 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     */
     private String clientToken;
-
-    private String name;
-
+    /**
+     * <p>
+     * A description of the knowledge base.
+     * </p>
+     */
     private String description;
-
-    private String roleArn;
-
+    /**
+     * <p>
+     * Contains details about the embeddings model used for the knowledge base.
+     * </p>
+     */
     private KnowledgeBaseConfiguration knowledgeBaseConfiguration;
-
+    /**
+     * <p>
+     * A name for the knowledge base.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the knowledge base.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
+     * Contains details about the configuration of the vector database used for the knowledge base.
+     * </p>
+     */
     private StorageConfiguration storageConfiguration;
-
+    /**
+     * <p>
+     * Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -48,7 +94,19 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *         this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -56,7 +114,20 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,33 +137,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @param name
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @param name
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKnowledgeBaseRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
+     * <p>
+     * A description of the knowledge base.
+     * </p>
+     * 
      * @param description
+     *        A description of the knowledge base.
      */
 
     public void setDescription(String description) {
@@ -100,7 +150,11 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * A description of the knowledge base.
+     * </p>
+     * 
+     * @return A description of the knowledge base.
      */
 
     public String getDescription() {
@@ -108,7 +162,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A description of the knowledge base.
+     * </p>
+     * 
      * @param description
+     *        A description of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,33 +177,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @param roleArn
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * @param roleArn
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKnowledgeBaseRequest withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains details about the embeddings model used for the knowledge base.
+     * </p>
+     * 
      * @param knowledgeBaseConfiguration
+     *        Contains details about the embeddings model used for the knowledge base.
      */
 
     public void setKnowledgeBaseConfiguration(KnowledgeBaseConfiguration knowledgeBaseConfiguration) {
@@ -152,7 +190,11 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the embeddings model used for the knowledge base.
+     * </p>
+     * 
+     * @return Contains details about the embeddings model used for the knowledge base.
      */
 
     public KnowledgeBaseConfiguration getKnowledgeBaseConfiguration() {
@@ -160,7 +202,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains details about the embeddings model used for the knowledge base.
+     * </p>
+     * 
      * @param knowledgeBaseConfiguration
+     *        Contains details about the embeddings model used for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +217,92 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A name for the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        A name for the knowledge base.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * A name for the knowledge base.
+     * </p>
+     * 
+     * @return A name for the knowledge base.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * A name for the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        A name for the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKnowledgeBaseRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the knowledge base.
+     * </p>
+     * 
+     * @param roleArn
+     *        The ARN of the IAM role with permissions to create the knowledge base.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the knowledge base.
+     * </p>
+     * 
+     * @return The ARN of the IAM role with permissions to create the knowledge base.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the knowledge base.
+     * </p>
+     * 
+     * @param roleArn
+     *        The ARN of the IAM role with permissions to create the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKnowledgeBaseRequest withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the configuration of the vector database used for the knowledge base.
+     * </p>
+     * 
      * @param storageConfiguration
+     *        Contains details about the configuration of the vector database used for the knowledge base.
      */
 
     public void setStorageConfiguration(StorageConfiguration storageConfiguration) {
@@ -178,7 +310,11 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the configuration of the vector database used for the knowledge base.
+     * </p>
+     * 
+     * @return Contains details about the configuration of the vector database used for the knowledge base.
      */
 
     public StorageConfiguration getStorageConfiguration() {
@@ -186,7 +322,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains details about the configuration of the vector database used for the knowledge base.
+     * </p>
+     * 
      * @param storageConfiguration
+     *        Contains details about the configuration of the vector database used for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +337,11 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
+     * </p>
+     * 
+     * @return Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -204,7 +349,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
+     * </p>
+     * 
      * @param tags
+     *        Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -212,7 +362,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
+     * </p>
+     * 
      * @param tags
+     *        Specify the key-value pairs for the tags that you want to attach to your knowledge base in this object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,14 +418,14 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
         sb.append("{");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
-        if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getKnowledgeBaseConfiguration() != null)
             sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getStorageConfiguration() != null)
             sb.append("StorageConfiguration: ").append(getStorageConfiguration()).append(",");
         if (getTags() != null)
@@ -293,21 +448,21 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
-            return false;
-        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
-            return false;
         if (other.getKnowledgeBaseConfiguration() == null ^ this.getKnowledgeBaseConfiguration() == null)
             return false;
         if (other.getKnowledgeBaseConfiguration() != null && other.getKnowledgeBaseConfiguration().equals(this.getKnowledgeBaseConfiguration()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
+            return false;
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
         if (other.getStorageConfiguration() == null ^ this.getStorageConfiguration() == null)
             return false;
@@ -326,10 +481,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseConfiguration() == null) ? 0 : getKnowledgeBaseConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getStorageConfiguration() == null) ? 0 : getStorageConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

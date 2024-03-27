@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagent.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * The status of an ingestion job.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum IngestionJobStatus {

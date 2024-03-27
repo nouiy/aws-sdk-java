@@ -27,22 +27,22 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class IngestionJobSummaryMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSourceId").build();
-    private static final MarshallingInfo<String> INGESTIONJOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestionJobId").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> INGESTIONJOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestionJobId").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<java.util.Date> STARTEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startedAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<StructuredPojo> STATISTICS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("statistics").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("status").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
     private static final IngestionJobSummaryMarshaller instance = new IngestionJobSummaryMarshaller();
 
@@ -60,14 +60,14 @@ public class IngestionJobSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(ingestionJobSummary.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(ingestionJobSummary.getDataSourceId(), DATASOURCEID_BINDING);
-            protocolMarshaller.marshall(ingestionJobSummary.getIngestionJobId(), INGESTIONJOBID_BINDING);
             protocolMarshaller.marshall(ingestionJobSummary.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(ingestionJobSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(ingestionJobSummary.getIngestionJobId(), INGESTIONJOBID_BINDING);
+            protocolMarshaller.marshall(ingestionJobSummary.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(ingestionJobSummary.getStartedAt(), STARTEDAT_BINDING);
-            protocolMarshaller.marshall(ingestionJobSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(ingestionJobSummary.getStatistics(), STATISTICS_BINDING);
+            protocolMarshaller.marshall(ingestionJobSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(ingestionJobSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -34,6 +34,12 @@ public class DataStorage implements Serializable, Cloneable {
     private Integer maximum;
     /**
      * <p>
+     * The lower limit for data storage the cache is set to use.
+     * </p>
+     */
+    private Integer minimum;
+    /**
+     * <p>
      * The unit that the storage is measured in, in GB.
      * </p>
      */
@@ -76,6 +82,46 @@ public class DataStorage implements Serializable, Cloneable {
 
     public DataStorage withMaximum(Integer maximum) {
         setMaximum(maximum);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The lower limit for data storage the cache is set to use.
+     * </p>
+     * 
+     * @param minimum
+     *        The lower limit for data storage the cache is set to use.
+     */
+
+    public void setMinimum(Integer minimum) {
+        this.minimum = minimum;
+    }
+
+    /**
+     * <p>
+     * The lower limit for data storage the cache is set to use.
+     * </p>
+     * 
+     * @return The lower limit for data storage the cache is set to use.
+     */
+
+    public Integer getMinimum() {
+        return this.minimum;
+    }
+
+    /**
+     * <p>
+     * The lower limit for data storage the cache is set to use.
+     * </p>
+     * 
+     * @param minimum
+     *        The lower limit for data storage the cache is set to use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataStorage withMinimum(Integer minimum) {
+        setMinimum(minimum);
         return this;
     }
 
@@ -152,6 +198,8 @@ public class DataStorage implements Serializable, Cloneable {
         sb.append("{");
         if (getMaximum() != null)
             sb.append("Maximum: ").append(getMaximum()).append(",");
+        if (getMinimum() != null)
+            sb.append("Minimum: ").append(getMinimum()).append(",");
         if (getUnit() != null)
             sb.append("Unit: ").append(getUnit());
         sb.append("}");
@@ -172,6 +220,10 @@ public class DataStorage implements Serializable, Cloneable {
             return false;
         if (other.getMaximum() != null && other.getMaximum().equals(this.getMaximum()) == false)
             return false;
+        if (other.getMinimum() == null ^ this.getMinimum() == null)
+            return false;
+        if (other.getMinimum() != null && other.getMinimum().equals(this.getMinimum()) == false)
+            return false;
         if (other.getUnit() == null ^ this.getUnit() == null)
             return false;
         if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
@@ -185,6 +237,7 @@ public class DataStorage implements Serializable, Cloneable {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMaximum() == null) ? 0 : getMaximum().hashCode());
+        hashCode = prime * hashCode + ((getMinimum() == null) ? 0 : getMinimum().hashCode());
         hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
         return hashCode;
     }

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * ActionGroup Summary
+ * Contains details about an action group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ActionGroupSummary" target="_top">AWS
@@ -28,18 +28,46 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ActionGroupSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The unique identifier of the action group.
+     * </p>
+     */
     private String actionGroupId;
-
+    /**
+     * <p>
+     * The name of the action group.
+     * </p>
+     */
     private String actionGroupName;
-
+    /**
+     * <p>
+     * Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     */
     private String actionGroupState;
-
+    /**
+     * <p>
+     * The description of the action group.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The time at which the action group was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
     /**
+     * <p>
+     * The unique identifier of the action group.
+     * </p>
+     * 
      * @param actionGroupId
+     *        The unique identifier of the action group.
      */
 
     public void setActionGroupId(String actionGroupId) {
@@ -47,7 +75,11 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the action group.
+     * </p>
+     * 
+     * @return The unique identifier of the action group.
      */
 
     public String getActionGroupId() {
@@ -55,7 +87,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The unique identifier of the action group.
+     * </p>
+     * 
      * @param actionGroupId
+     *        The unique identifier of the action group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -65,7 +102,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The name of the action group.
+     * </p>
+     * 
      * @param actionGroupName
+     *        The name of the action group.
      */
 
     public void setActionGroupName(String actionGroupName) {
@@ -73,7 +115,11 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the action group.
+     * </p>
+     * 
+     * @return The name of the action group.
      */
 
     public String getActionGroupName() {
@@ -81,7 +127,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The name of the action group.
+     * </p>
+     * 
      * @param actionGroupName
+     *        The name of the action group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,7 +142,16 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param actionGroupState
+     *        Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @see ActionGroupState
      */
 
@@ -100,7 +160,15 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
+     * @return Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *         >InvokeAgent</a> request.
      * @see ActionGroupState
      */
 
@@ -109,7 +177,16 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param actionGroupState
+     *        Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionGroupState
      */
@@ -120,7 +197,16 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param actionGroupState
+     *        Specifies whether the action group is available for the agent to invoke or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionGroupState
      */
@@ -131,7 +217,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The description of the action group.
+     * </p>
+     * 
      * @param description
+     *        The description of the action group.
      */
 
     public void setDescription(String description) {
@@ -139,7 +230,11 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the action group.
+     * </p>
+     * 
+     * @return The description of the action group.
      */
 
     public String getDescription() {
@@ -147,7 +242,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The description of the action group.
+     * </p>
+     * 
      * @param description
+     *        The description of the action group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,7 +257,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The time at which the action group was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the action group was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -165,7 +270,11 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the action group was last updated.
+     * </p>
+     * 
+     * @return The time at which the action group was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -173,7 +282,12 @@ public class ActionGroupSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The time at which the action group was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the action group was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

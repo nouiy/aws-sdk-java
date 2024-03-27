@@ -56,6 +56,14 @@ public class AgentAliasSummaryJsonUnmarshaller implements Unmarshaller<AgentAlia
                     context.nextToken();
                     agentAliasSummary.setAgentAliasName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("agentAliasStatus", targetDepth)) {
+                    context.nextToken();
+                    agentAliasSummary.setAgentAliasStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    agentAliasSummary.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     agentAliasSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
@@ -66,14 +74,6 @@ public class AgentAliasSummaryJsonUnmarshaller implements Unmarshaller<AgentAlia
                             AgentAliasRoutingConfigurationListItemJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("agentAliasStatus", targetDepth)) {
-                    context.nextToken();
-                    agentAliasSummary.setAgentAliasStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("createdAt", targetDepth)) {
-                    context.nextToken();
-                    agentAliasSummary.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();

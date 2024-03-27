@@ -48,45 +48,45 @@ public class DataSourceJsonUnmarshaller implements Unmarshaller<DataSource, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
-                    dataSource.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("dataSourceId", targetDepth)) {
-                    context.nextToken();
-                    dataSource.setDataSourceId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    dataSource.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("status", targetDepth)) {
-                    context.nextToken();
-                    dataSource.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    dataSource.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    dataSource.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("dataSourceConfiguration", targetDepth)) {
                     context.nextToken();
                     dataSource.setDataSourceConfiguration(DataSourceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("dataSourceId", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setDataSourceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("serverSideEncryptionConfiguration", targetDepth)) {
                     context.nextToken();
                     dataSource.setServerSideEncryptionConfiguration(ServerSideEncryptionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("vectorIngestionConfiguration", targetDepth)) {
+                if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
-                    dataSource.setVectorIngestionConfiguration(VectorIngestionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("createdAt", targetDepth)) {
-                    context.nextToken();
-                    dataSource.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    dataSource.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
                     dataSource.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("vectorIngestionConfiguration", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setVectorIngestionConfiguration(VectorIngestionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

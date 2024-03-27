@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Update Agent Alias Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgentAlias" target="_top">AWS API
  *      Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateAgentAliasResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the alias that was updated.
+     * </p>
+     */
     private AgentAlias agentAlias;
 
     /**
+     * <p>
+     * Contains details about the alias that was updated.
+     * </p>
+     * 
      * @param agentAlias
+     *        Contains details about the alias that was updated.
      */
 
     public void setAgentAlias(AgentAlias agentAlias) {
@@ -37,7 +44,11 @@ public class UpdateAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the alias that was updated.
+     * </p>
+     * 
+     * @return Contains details about the alias that was updated.
      */
 
     public AgentAlias getAgentAlias() {
@@ -45,7 +56,12 @@ public class UpdateAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Contains details about the alias that was updated.
+     * </p>
+     * 
      * @param agentAlias
+     *        Contains details about the alias that was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

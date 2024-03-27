@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Delete Agent Alias Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentAlias" target="_top">AWS API
  *      Documentation</a>
@@ -30,64 +27,24 @@ public class DeleteAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     */
-    private String agentId;
-    /**
-     * <p>
-     * Id generated at the server side when an Agent Alias is created
+     * The unique identifier of the alias to delete.
      * </p>
      */
     private String agentAliasId;
-
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent that the alias belongs to.
      * </p>
-     * 
-     * @param agentId
-     *        Id generated at the server side when an Agent is created
      */
-
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
-    }
+    private String agentId;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @return Id generated at the server side when an Agent is created
-     */
-
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @param agentId
-     *        Id generated at the server side when an Agent is created
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteAgentAliasRequest withAgentId(String agentId) {
-        setAgentId(agentId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent Alias is created
+     * The unique identifier of the alias to delete.
      * </p>
      * 
      * @param agentAliasId
-     *        Id generated at the server side when an Agent Alias is created
+     *        The unique identifier of the alias to delete.
      */
 
     public void setAgentAliasId(String agentAliasId) {
@@ -96,10 +53,10 @@ public class DeleteAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Id generated at the server side when an Agent Alias is created
+     * The unique identifier of the alias to delete.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent Alias is created
+     * @return The unique identifier of the alias to delete.
      */
 
     public String getAgentAliasId() {
@@ -108,16 +65,56 @@ public class DeleteAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Id generated at the server side when an Agent Alias is created
+     * The unique identifier of the alias to delete.
      * </p>
      * 
      * @param agentAliasId
-     *        Id generated at the server side when an Agent Alias is created
+     *        The unique identifier of the alias to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DeleteAgentAliasRequest withAgentAliasId(String agentAliasId) {
         setAgentAliasId(agentAliasId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent that the alias belongs to.
+     */
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     * 
+     * @return The unique identifier of the agent that the alias belongs to.
+     */
+
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent that the alias belongs to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteAgentAliasRequest withAgentId(String agentId) {
+        setAgentId(agentId);
         return this;
     }
 
@@ -133,10 +130,10 @@ public class DeleteAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAgentId() != null)
-            sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getAgentAliasId() != null)
-            sb.append("AgentAliasId: ").append(getAgentAliasId());
+            sb.append("AgentAliasId: ").append(getAgentAliasId()).append(",");
+        if (getAgentId() != null)
+            sb.append("AgentId: ").append(getAgentId());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +148,13 @@ public class DeleteAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof DeleteAgentAliasRequest == false)
             return false;
         DeleteAgentAliasRequest other = (DeleteAgentAliasRequest) obj;
-        if (other.getAgentId() == null ^ this.getAgentId() == null)
-            return false;
-        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
-            return false;
         if (other.getAgentAliasId() == null ^ this.getAgentAliasId() == null)
             return false;
         if (other.getAgentAliasId() != null && other.getAgentAliasId().equals(this.getAgentAliasId()) == false)
+            return false;
+        if (other.getAgentId() == null ^ this.getAgentId() == null)
+            return false;
+        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
             return false;
         return true;
     }
@@ -167,8 +164,8 @@ public class DeleteAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasId() == null) ? 0 : getAgentAliasId().hashCode());
+        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         return hashCode;
     }
 

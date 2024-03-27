@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Associate Agent Knowledge Base Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AssociateAgentKnowledgeBase"
  *      target="_top">AWS API Documentation</a>
@@ -30,30 +27,44 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which you want to associate the knowledge base.
      * </p>
      */
     private String agentId;
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent with which you want to associate the knowledge base.
      * </p>
      */
     private String agentVersion;
-
-    private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * A description of what the agent should use the knowledge base for.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to associate with the agent.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * Specifies whether to use the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     */
     private String knowledgeBaseState;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which you want to associate the knowledge base.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent with which you want to associate the knowledge base.
      */
 
     public void setAgentId(String agentId) {
@@ -62,10 +73,10 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which you want to associate the knowledge base.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent with which you want to associate the knowledge base.
      */
 
     public String getAgentId() {
@@ -74,11 +85,11 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent with which you want to associate the knowledge base.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent with which you want to associate the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +100,11 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent with which you want to associate the knowledge base.
      * </p>
      * 
      * @param agentVersion
-     *        Draft Version of the Agent.
+     *        The version of the agent with which you want to associate the knowledge base.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -102,10 +113,10 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent with which you want to associate the knowledge base.
      * </p>
      * 
-     * @return Draft Version of the Agent.
+     * @return The version of the agent with which you want to associate the knowledge base.
      */
 
     public String getAgentVersion() {
@@ -114,11 +125,11 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent with which you want to associate the knowledge base.
      * </p>
      * 
      * @param agentVersion
-     *        Draft Version of the Agent.
+     *        The version of the agent with which you want to associate the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,33 +139,12 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AssociateAgentKnowledgeBaseRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * A description of what the agent should use the knowledge base for.
+     * </p>
+     * 
      * @param description
+     *        A description of what the agent should use the knowledge base for.
      */
 
     public void setDescription(String description) {
@@ -162,7 +152,11 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * A description of what the agent should use the knowledge base for.
+     * </p>
+     * 
+     * @return A description of what the agent should use the knowledge base for.
      */
 
     public String getDescription() {
@@ -170,7 +164,12 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * A description of what the agent should use the knowledge base for.
+     * </p>
+     * 
      * @param description
+     *        A description of what the agent should use the knowledge base for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,7 +179,56 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base to associate with the agent.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to associate with the agent.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to associate with the agent.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to associate with the agent.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to associate with the agent.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to associate with the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateAgentKnowledgeBaseRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether to use the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @see KnowledgeBaseState
      */
 
@@ -189,7 +237,15 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether to use the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
+     * @return Specifies whether to use the knowledge base or not when sending an <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *         >InvokeAgent</a> request.
      * @see KnowledgeBaseState
      */
 
@@ -198,7 +254,16 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Specifies whether to use the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether to use the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseState
      */
@@ -209,7 +274,16 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Specifies whether to use the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether to use the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseState
      */
@@ -235,10 +309,10 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
             sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getAgentVersion() != null)
             sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getKnowledgeBaseState() != null)
             sb.append("KnowledgeBaseState: ").append(getKnowledgeBaseState());
         sb.append("}");
@@ -263,13 +337,13 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
             return false;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         if (other.getKnowledgeBaseState() == null ^ this.getKnowledgeBaseState() == null)
             return false;
@@ -285,8 +359,8 @@ public class AssociateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebS
 
         hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseState() == null) ? 0 : getKnowledgeBaseState().hashCode());
         return hashCode;
     }

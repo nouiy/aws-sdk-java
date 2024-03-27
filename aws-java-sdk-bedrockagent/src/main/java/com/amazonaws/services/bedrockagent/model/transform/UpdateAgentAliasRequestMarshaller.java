@@ -28,12 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateAgentAliasRequestMarshaller {
 
-    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTALIASID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentAliasId").build();
     private static final MarshallingInfo<String> AGENTALIASNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentAliasName").build();
+    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<List> ROUTINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -55,9 +55,9 @@ public class UpdateAgentAliasRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateAgentAliasRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(updateAgentAliasRequest.getAgentAliasId(), AGENTALIASID_BINDING);
             protocolMarshaller.marshall(updateAgentAliasRequest.getAgentAliasName(), AGENTALIASNAME_BINDING);
+            protocolMarshaller.marshall(updateAgentAliasRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(updateAgentAliasRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateAgentAliasRequest.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);
         } catch (Exception e) {

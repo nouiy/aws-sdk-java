@@ -34,6 +34,8 @@ public class EksPodPropertiesDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hostNetwork").build();
     private static final MarshallingInfo<String> DNSPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("dnsPolicy").build();
+    private static final MarshallingInfo<List> IMAGEPULLSECRETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imagePullSecrets").build();
     private static final MarshallingInfo<List> CONTAINERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("containers").build();
     private static final MarshallingInfo<List> INITCONTAINERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -68,6 +70,7 @@ public class EksPodPropertiesDetailMarshaller {
             protocolMarshaller.marshall(eksPodPropertiesDetail.getServiceAccountName(), SERVICEACCOUNTNAME_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getHostNetwork(), HOSTNETWORK_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getDnsPolicy(), DNSPOLICY_BINDING);
+            protocolMarshaller.marshall(eksPodPropertiesDetail.getImagePullSecrets(), IMAGEPULLSECRETS_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getContainers(), CONTAINERS_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getInitContainers(), INITCONTAINERS_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getVolumes(), VOLUMES_BINDING);

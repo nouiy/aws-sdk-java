@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Delete Agent Alias Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentAlias" target="_top">AWS API
  *      Documentation</a>
@@ -26,40 +23,32 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the alias that was deleted.
+     * </p>
+     */
+    private String agentAliasId;
+    /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     */
+    private String agentAliasStatus;
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     */
     private String agentId;
 
-    private String agentAliasId;
-
-    private String agentAliasStatus;
-
     /**
-     * @param agentId
-     */
-
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    /**
-     * @param agentId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteAgentAliasResult withAgentId(String agentId) {
-        setAgentId(agentId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The unique identifier of the alias that was deleted.
+     * </p>
+     * 
      * @param agentAliasId
+     *        The unique identifier of the alias that was deleted.
      */
 
     public void setAgentAliasId(String agentAliasId) {
@@ -67,7 +56,11 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the alias that was deleted.
+     * </p>
+     * 
+     * @return The unique identifier of the alias that was deleted.
      */
 
     public String getAgentAliasId() {
@@ -75,7 +68,12 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The unique identifier of the alias that was deleted.
+     * </p>
+     * 
      * @param agentAliasId
+     *        The unique identifier of the alias that was deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,7 +83,12 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
      * @param agentAliasStatus
+     *        The status of the alias.
      * @see AgentAliasStatus
      */
 
@@ -94,7 +97,11 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
+     * @return The status of the alias.
      * @see AgentAliasStatus
      */
 
@@ -103,7 +110,12 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
      * @param agentAliasStatus
+     *        The status of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentAliasStatus
      */
@@ -114,13 +126,58 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The status of the alias.
+     * </p>
+     * 
      * @param agentAliasStatus
+     *        The status of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentAliasStatus
      */
 
     public DeleteAgentAliasResult withAgentAliasStatus(AgentAliasStatus agentAliasStatus) {
         this.agentAliasStatus = agentAliasStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent that the alias belongs to.
+     */
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     * 
+     * @return The unique identifier of the agent that the alias belongs to.
+     */
+
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the alias belongs to.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent that the alias belongs to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteAgentAliasResult withAgentId(String agentId) {
+        setAgentId(agentId);
         return this;
     }
 
@@ -136,12 +193,12 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAgentId() != null)
-            sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getAgentAliasId() != null)
             sb.append("AgentAliasId: ").append(getAgentAliasId()).append(",");
         if (getAgentAliasStatus() != null)
-            sb.append("AgentAliasStatus: ").append(getAgentAliasStatus());
+            sb.append("AgentAliasStatus: ").append(getAgentAliasStatus()).append(",");
+        if (getAgentId() != null)
+            sb.append("AgentId: ").append(getAgentId());
         sb.append("}");
         return sb.toString();
     }
@@ -156,10 +213,6 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof DeleteAgentAliasResult == false)
             return false;
         DeleteAgentAliasResult other = (DeleteAgentAliasResult) obj;
-        if (other.getAgentId() == null ^ this.getAgentId() == null)
-            return false;
-        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
-            return false;
         if (other.getAgentAliasId() == null ^ this.getAgentAliasId() == null)
             return false;
         if (other.getAgentAliasId() != null && other.getAgentAliasId().equals(this.getAgentAliasId()) == false)
@@ -167,6 +220,10 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
         if (other.getAgentAliasStatus() == null ^ this.getAgentAliasStatus() == null)
             return false;
         if (other.getAgentAliasStatus() != null && other.getAgentAliasStatus().equals(this.getAgentAliasStatus()) == false)
+            return false;
+        if (other.getAgentId() == null ^ this.getAgentId() == null)
+            return false;
+        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
             return false;
         return true;
     }
@@ -176,9 +233,9 @@ public class DeleteAgentAliasResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasId() == null) ? 0 : getAgentAliasId().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasStatus() == null) ? 0 : getAgentAliasStatus().hashCode());
+        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         return hashCode;
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary of Agent.
+ * Contains details about an agent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentSummary" target="_top">AWS API
@@ -28,20 +28,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     */
     private String agentId;
-
+    /**
+     * <p>
+     * The name of the agent.
+     * </p>
+     */
     private String agentName;
-
+    /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     */
     private String agentStatus;
-
+    /**
+     * <p>
+     * The description of the agent.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The latest version of the agent.
+     * </p>
+     */
+    private String latestAgentVersion;
+    /**
+     * <p>
+     * The time at which the agent was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
-    private String latestAgentVersion;
-
     /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent.
      */
 
     public void setAgentId(String agentId) {
@@ -49,7 +79,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @return The unique identifier of the agent.
      */
 
     public String getAgentId() {
@@ -57,7 +91,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,7 +106,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the agent.
+     * </p>
+     * 
      * @param agentName
+     *        The name of the agent.
      */
 
     public void setAgentName(String agentName) {
@@ -75,7 +119,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the agent.
+     * </p>
+     * 
+     * @return The name of the agent.
      */
 
     public String getAgentName() {
@@ -83,7 +131,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the agent.
+     * </p>
+     * 
      * @param agentName
+     *        The name of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,7 +146,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent.
      * @see AgentStatus
      */
 
@@ -102,7 +160,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
+     * @return The status of the agent.
      * @see AgentStatus
      */
 
@@ -111,7 +173,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -122,7 +189,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -133,7 +205,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The description of the agent.
+     * </p>
+     * 
      * @param description
+     *        The description of the agent.
      */
 
     public void setDescription(String description) {
@@ -141,7 +218,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the agent.
+     * </p>
+     * 
+     * @return The description of the agent.
      */
 
     public String getDescription() {
@@ -149,7 +230,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The description of the agent.
+     * </p>
+     * 
      * @param description
+     *        The description of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,33 +245,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @param updatedAt
-     */
-
-    public void setUpdatedAt(java.util.Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.Date getUpdatedAt() {
-        return this.updatedAt;
-    }
-
-    /**
-     * @param updatedAt
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentSummary withUpdatedAt(java.util.Date updatedAt) {
-        setUpdatedAt(updatedAt);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The latest version of the agent.
+     * </p>
+     * 
      * @param latestAgentVersion
+     *        The latest version of the agent.
      */
 
     public void setLatestAgentVersion(String latestAgentVersion) {
@@ -193,7 +258,11 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The latest version of the agent.
+     * </p>
+     * 
+     * @return The latest version of the agent.
      */
 
     public String getLatestAgentVersion() {
@@ -201,12 +270,57 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The latest version of the agent.
+     * </p>
+     * 
      * @param latestAgentVersion
+     *        The latest version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AgentSummary withLatestAgentVersion(String latestAgentVersion) {
         setLatestAgentVersion(latestAgentVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time at which the agent was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the agent was last updated.
+     */
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the agent was last updated.
+     * </p>
+     * 
+     * @return The time at which the agent was last updated.
+     */
+
+    public java.util.Date getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the agent was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the agent was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentSummary withUpdatedAt(java.util.Date updatedAt) {
+        setUpdatedAt(updatedAt);
         return this;
     }
 
@@ -230,10 +344,10 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("AgentStatus: ").append(getAgentStatus()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
-        if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getLatestAgentVersion() != null)
-            sb.append("LatestAgentVersion: ").append(getLatestAgentVersion());
+            sb.append("LatestAgentVersion: ").append(getLatestAgentVersion()).append(",");
+        if (getUpdatedAt() != null)
+            sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -264,13 +378,13 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
-            return false;
-        if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
-            return false;
         if (other.getLatestAgentVersion() == null ^ this.getLatestAgentVersion() == null)
             return false;
         if (other.getLatestAgentVersion() != null && other.getLatestAgentVersion().equals(this.getLatestAgentVersion()) == false)
+            return false;
+        if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
+            return false;
+        if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
         return true;
     }
@@ -284,8 +398,8 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAgentName() == null) ? 0 : getAgentName().hashCode());
         hashCode = prime * hashCode + ((getAgentStatus() == null) ? 0 : getAgentStatus().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getLatestAgentVersion() == null) ? 0 : getLatestAgentVersion().hashCode());
+        hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;
     }
 

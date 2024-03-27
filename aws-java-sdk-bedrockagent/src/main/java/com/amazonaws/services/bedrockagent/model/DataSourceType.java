@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagent.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * The type of the data source location.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DataSourceType {

@@ -48,18 +48,6 @@ public class IngestionJobStatisticsJsonUnmarshaller implements Unmarshaller<Inge
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("numberOfDocumentsScanned", targetDepth)) {
-                    context.nextToken();
-                    ingestionJobStatistics.setNumberOfDocumentsScanned(context.getUnmarshaller(Long.class).unmarshall(context));
-                }
-                if (context.testExpression("numberOfNewDocumentsIndexed", targetDepth)) {
-                    context.nextToken();
-                    ingestionJobStatistics.setNumberOfNewDocumentsIndexed(context.getUnmarshaller(Long.class).unmarshall(context));
-                }
-                if (context.testExpression("numberOfModifiedDocumentsIndexed", targetDepth)) {
-                    context.nextToken();
-                    ingestionJobStatistics.setNumberOfModifiedDocumentsIndexed(context.getUnmarshaller(Long.class).unmarshall(context));
-                }
                 if (context.testExpression("numberOfDocumentsDeleted", targetDepth)) {
                     context.nextToken();
                     ingestionJobStatistics.setNumberOfDocumentsDeleted(context.getUnmarshaller(Long.class).unmarshall(context));
@@ -67,6 +55,26 @@ public class IngestionJobStatisticsJsonUnmarshaller implements Unmarshaller<Inge
                 if (context.testExpression("numberOfDocumentsFailed", targetDepth)) {
                     context.nextToken();
                     ingestionJobStatistics.setNumberOfDocumentsFailed(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfDocumentsScanned", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobStatistics.setNumberOfDocumentsScanned(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfMetadataDocumentsModified", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobStatistics.setNumberOfMetadataDocumentsModified(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfMetadataDocumentsScanned", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobStatistics.setNumberOfMetadataDocumentsScanned(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfModifiedDocumentsIndexed", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobStatistics.setNumberOfModifiedDocumentsIndexed(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("numberOfNewDocumentsIndexed", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobStatistics.setNumberOfNewDocumentsIndexed(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

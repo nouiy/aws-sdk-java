@@ -48,6 +48,11 @@ public class DataStorageStaxUnmarshaller implements Unmarshaller<DataStorage, St
                     continue;
                 }
 
+                if (context.testExpression("Minimum", targetDepth)) {
+                    dataStorage.setMinimum(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("Unit", targetDepth)) {
                     dataStorage.setUnit(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

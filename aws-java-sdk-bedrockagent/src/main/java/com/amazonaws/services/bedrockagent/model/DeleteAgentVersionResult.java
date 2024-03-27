@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Delete Agent Version Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentVersion" target="_top">AWS
  *      API Documentation</a>
@@ -26,14 +23,32 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the agent that the version belongs to.
+     * </p>
+     */
     private String agentId;
-
+    /**
+     * <p>
+     * The status of the agent version.
+     * </p>
+     */
+    private String agentStatus;
+    /**
+     * <p>
+     * The version that was deleted.
+     * </p>
+     */
     private String agentVersion;
 
-    private String agentStatus;
-
     /**
+     * <p>
+     * The unique identifier of the agent that the version belongs to.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent that the version belongs to.
      */
 
     public void setAgentId(String agentId) {
@@ -41,7 +56,11 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the agent that the version belongs to.
+     * </p>
+     * 
+     * @return The unique identifier of the agent that the version belongs to.
      */
 
     public String getAgentId() {
@@ -49,7 +68,12 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The unique identifier of the agent that the version belongs to.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent that the version belongs to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,33 +83,12 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @param agentVersion
-     */
-
-    public void setAgentVersion(String agentVersion) {
-        this.agentVersion = agentVersion;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getAgentVersion() {
-        return this.agentVersion;
-    }
-
-    /**
-     * @param agentVersion
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteAgentVersionResult withAgentVersion(String agentVersion) {
-        setAgentVersion(agentVersion);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The status of the agent version.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent version.
      * @see AgentStatus
      */
 
@@ -94,7 +97,11 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the agent version.
+     * </p>
+     * 
+     * @return The status of the agent version.
      * @see AgentStatus
      */
 
@@ -103,7 +110,12 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The status of the agent version.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent version.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -114,13 +126,58 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The status of the agent version.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent version.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
 
     public DeleteAgentVersionResult withAgentStatus(AgentStatus agentStatus) {
         this.agentStatus = agentStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The version that was deleted.
+     * </p>
+     * 
+     * @param agentVersion
+     *        The version that was deleted.
+     */
+
+    public void setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+    }
+
+    /**
+     * <p>
+     * The version that was deleted.
+     * </p>
+     * 
+     * @return The version that was deleted.
+     */
+
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
+    /**
+     * <p>
+     * The version that was deleted.
+     * </p>
+     * 
+     * @param agentVersion
+     *        The version that was deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteAgentVersionResult withAgentVersion(String agentVersion) {
+        setAgentVersion(agentVersion);
         return this;
     }
 
@@ -138,10 +195,10 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
         sb.append("{");
         if (getAgentId() != null)
             sb.append("AgentId: ").append(getAgentId()).append(",");
-        if (getAgentVersion() != null)
-            sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
         if (getAgentStatus() != null)
-            sb.append("AgentStatus: ").append(getAgentStatus());
+            sb.append("AgentStatus: ").append(getAgentStatus()).append(",");
+        if (getAgentVersion() != null)
+            sb.append("AgentVersion: ").append(getAgentVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -160,13 +217,13 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
             return false;
-        if (other.getAgentVersion() == null ^ this.getAgentVersion() == null)
-            return false;
-        if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
-            return false;
         if (other.getAgentStatus() == null ^ this.getAgentStatus() == null)
             return false;
         if (other.getAgentStatus() != null && other.getAgentStatus().equals(this.getAgentStatus()) == false)
+            return false;
+        if (other.getAgentVersion() == null ^ this.getAgentVersion() == null)
+            return false;
+        if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
             return false;
         return true;
     }
@@ -177,8 +234,8 @@ public class DeleteAgentVersionResult extends com.amazonaws.AmazonWebServiceResu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
-        hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
         hashCode = prime * hashCode + ((getAgentStatus() == null) ? 0 : getAgentStatus().hashCode());
+        hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
         return hashCode;
     }
 

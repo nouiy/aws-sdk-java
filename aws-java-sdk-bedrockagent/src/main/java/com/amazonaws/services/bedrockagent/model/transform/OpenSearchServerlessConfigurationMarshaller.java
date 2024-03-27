@@ -29,10 +29,10 @@ public class OpenSearchServerlessConfigurationMarshaller {
 
     private static final MarshallingInfo<String> COLLECTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collectionArn").build();
-    private static final MarshallingInfo<String> VECTORINDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorIndexName").build();
     private static final MarshallingInfo<StructuredPojo> FIELDMAPPING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fieldMapping").build();
+    private static final MarshallingInfo<String> VECTORINDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorIndexName").build();
 
     private static final OpenSearchServerlessConfigurationMarshaller instance = new OpenSearchServerlessConfigurationMarshaller();
 
@@ -51,8 +51,8 @@ public class OpenSearchServerlessConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(openSearchServerlessConfiguration.getCollectionArn(), COLLECTIONARN_BINDING);
-            protocolMarshaller.marshall(openSearchServerlessConfiguration.getVectorIndexName(), VECTORINDEXNAME_BINDING);
             protocolMarshaller.marshall(openSearchServerlessConfiguration.getFieldMapping(), FIELDMAPPING_BINDING);
+            protocolMarshaller.marshall(openSearchServerlessConfiguration.getVectorIndexName(), VECTORINDEXNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

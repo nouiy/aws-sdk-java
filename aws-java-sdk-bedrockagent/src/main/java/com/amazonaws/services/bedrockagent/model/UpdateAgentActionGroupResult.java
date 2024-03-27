@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Update Action Group Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgentActionGroup"
  *      target="_top">AWS API Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateAgentActionGroupResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the action group that was updated.
+     * </p>
+     */
     private AgentActionGroup agentActionGroup;
 
     /**
+     * <p>
+     * Contains details about the action group that was updated.
+     * </p>
+     * 
      * @param agentActionGroup
+     *        Contains details about the action group that was updated.
      */
 
     public void setAgentActionGroup(AgentActionGroup agentActionGroup) {
@@ -37,7 +44,11 @@ public class UpdateAgentActionGroupResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the action group that was updated.
+     * </p>
+     * 
+     * @return Contains details about the action group that was updated.
      */
 
     public AgentActionGroup getAgentActionGroup() {
@@ -45,7 +56,12 @@ public class UpdateAgentActionGroupResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * Contains details about the action group that was updated.
+     * </p>
+     * 
      * @param agentActionGroup
+     *        Contains details about the action group that was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

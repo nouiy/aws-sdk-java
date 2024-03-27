@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateKnowledgeBaseRequestMarshaller {
 
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<StructuredPojo> KNOWLEDGEBASECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseConfiguration").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
-    private static final MarshallingInfo<StructuredPojo> KNOWLEDGEBASECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> STORAGECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageConfiguration").build();
 
@@ -56,11 +56,11 @@ public class UpdateKnowledgeBaseRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateKnowledgeBaseRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updateKnowledgeBaseRequest.getKnowledgeBaseConfiguration(), KNOWLEDGEBASECONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateKnowledgeBaseRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(updateKnowledgeBaseRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(updateKnowledgeBaseRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateKnowledgeBaseRequest.getRoleArn(), ROLEARN_BINDING);
-            protocolMarshaller.marshall(updateKnowledgeBaseRequest.getKnowledgeBaseConfiguration(), KNOWLEDGEBASECONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateKnowledgeBaseRequest.getStorageConfiguration(), STORAGECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

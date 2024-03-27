@@ -48,13 +48,9 @@ public class AgentActionGroupJsonUnmarshaller implements Unmarshaller<AgentActio
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("agentId", targetDepth)) {
+                if (context.testExpression("actionGroupExecutor", targetDepth)) {
                     context.nextToken();
-                    agentActionGroup.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("agentVersion", targetDepth)) {
-                    context.nextToken();
-                    agentActionGroup.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentActionGroup.setActionGroupExecutor(ActionGroupExecutorJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("actionGroupId", targetDepth)) {
                     context.nextToken();
@@ -64,37 +60,41 @@ public class AgentActionGroupJsonUnmarshaller implements Unmarshaller<AgentActio
                     context.nextToken();
                     agentActionGroup.setActionGroupName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("clientToken", targetDepth)) {
+                if (context.testExpression("actionGroupState", targetDepth)) {
                     context.nextToken();
-                    agentActionGroup.setClientToken(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentActionGroup.setActionGroupState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("description", targetDepth)) {
+                if (context.testExpression("agentId", targetDepth)) {
                     context.nextToken();
-                    agentActionGroup.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentActionGroup.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
+                if (context.testExpression("agentVersion", targetDepth)) {
                     context.nextToken();
-                    agentActionGroup.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("updatedAt", targetDepth)) {
-                    context.nextToken();
-                    agentActionGroup.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("parentActionSignature", targetDepth)) {
-                    context.nextToken();
-                    agentActionGroup.setParentActionSignature(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("actionGroupExecutor", targetDepth)) {
-                    context.nextToken();
-                    agentActionGroup.setActionGroupExecutor(ActionGroupExecutorJsonUnmarshaller.getInstance().unmarshall(context));
+                    agentActionGroup.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("apiSchema", targetDepth)) {
                     context.nextToken();
                     agentActionGroup.setApiSchema(APISchemaJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("actionGroupState", targetDepth)) {
+                if (context.testExpression("clientToken", targetDepth)) {
                     context.nextToken();
-                    agentActionGroup.setActionGroupState(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentActionGroup.setClientToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    agentActionGroup.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    agentActionGroup.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("parentActionSignature", targetDepth)) {
+                    context.nextToken();
+                    agentActionGroup.setParentActionSignature(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("updatedAt", targetDepth)) {
+                    context.nextToken();
+                    agentActionGroup.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

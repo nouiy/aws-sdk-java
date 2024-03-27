@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetIngestionJobResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the ingestion job.
+     * </p>
+     */
     private IngestionJob ingestionJob;
 
     /**
+     * <p>
+     * Contains details about the ingestion job.
+     * </p>
+     * 
      * @param ingestionJob
+     *        Contains details about the ingestion job.
      */
 
     public void setIngestionJob(IngestionJob ingestionJob) {
@@ -34,7 +44,11 @@ public class GetIngestionJobResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the ingestion job.
+     * </p>
+     * 
+     * @return Contains details about the ingestion job.
      */
 
     public IngestionJob getIngestionJob() {
@@ -42,7 +56,12 @@ public class GetIngestionJobResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * Contains details about the ingestion job.
+     * </p>
+     * 
      * @param ingestionJob
+     *        Contains details about the ingestion job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

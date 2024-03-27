@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RedisEnterpriseCloudConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> ENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("endpoint").build();
-    private static final MarshallingInfo<String> VECTORINDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorIndexName").build();
     private static final MarshallingInfo<String> CREDENTIALSSECRETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("credentialsSecretArn").build();
+    private static final MarshallingInfo<String> ENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("endpoint").build();
     private static final MarshallingInfo<StructuredPojo> FIELDMAPPING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fieldMapping").build();
+    private static final MarshallingInfo<String> VECTORINDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorIndexName").build();
 
     private static final RedisEnterpriseCloudConfigurationMarshaller instance = new RedisEnterpriseCloudConfigurationMarshaller();
 
@@ -52,10 +52,10 @@ public class RedisEnterpriseCloudConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(redisEnterpriseCloudConfiguration.getEndpoint(), ENDPOINT_BINDING);
-            protocolMarshaller.marshall(redisEnterpriseCloudConfiguration.getVectorIndexName(), VECTORINDEXNAME_BINDING);
             protocolMarshaller.marshall(redisEnterpriseCloudConfiguration.getCredentialsSecretArn(), CREDENTIALSSECRETARN_BINDING);
+            protocolMarshaller.marshall(redisEnterpriseCloudConfiguration.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(redisEnterpriseCloudConfiguration.getFieldMapping(), FIELDMAPPING_BINDING);
+            protocolMarshaller.marshall(redisEnterpriseCloudConfiguration.getVectorIndexName(), VECTORINDEXNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

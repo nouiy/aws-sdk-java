@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The identifier for the S3 resource.
+ * Contains information about the S3 object containing the resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/S3Identifier" target="_top">AWS API
@@ -28,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class S3Identifier implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The name of the S3 bucket.
+     * </p>
+     */
     private String s3BucketName;
-
+    /**
+     * <p>
+     * The S3 object key containing the resource.
+     * </p>
+     */
     private String s3ObjectKey;
 
     /**
+     * <p>
+     * The name of the S3 bucket.
+     * </p>
+     * 
      * @param s3BucketName
+     *        The name of the S3 bucket.
      */
 
     public void setS3BucketName(String s3BucketName) {
@@ -41,7 +55,11 @@ public class S3Identifier implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the S3 bucket.
+     * </p>
+     * 
+     * @return The name of the S3 bucket.
      */
 
     public String getS3BucketName() {
@@ -49,7 +67,12 @@ public class S3Identifier implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the S3 bucket.
+     * </p>
+     * 
      * @param s3BucketName
+     *        The name of the S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +82,12 @@ public class S3Identifier implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The S3 object key containing the resource.
+     * </p>
+     * 
      * @param s3ObjectKey
+     *        The S3 object key containing the resource.
      */
 
     public void setS3ObjectKey(String s3ObjectKey) {
@@ -67,7 +95,11 @@ public class S3Identifier implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The S3 object key containing the resource.
+     * </p>
+     * 
+     * @return The S3 object key containing the resource.
      */
 
     public String getS3ObjectKey() {
@@ -75,7 +107,12 @@ public class S3Identifier implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The S3 object key containing the resource.
+     * </p>
+     * 
      * @param s3ObjectKey
+     *        The S3 object key containing the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

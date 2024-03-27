@@ -48,10 +48,6 @@ public class DeleteAgentAliasResultJsonUnmarshaller implements Unmarshaller<Dele
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("agentId", targetDepth)) {
-                    context.nextToken();
-                    deleteAgentAliasResult.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("agentAliasId", targetDepth)) {
                     context.nextToken();
                     deleteAgentAliasResult.setAgentAliasId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class DeleteAgentAliasResultJsonUnmarshaller implements Unmarshaller<Dele
                 if (context.testExpression("agentAliasStatus", targetDepth)) {
                     context.nextToken();
                     deleteAgentAliasResult.setAgentAliasStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("agentId", targetDepth)) {
+                    context.nextToken();
+                    deleteAgentAliasResult.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

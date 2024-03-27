@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Associate Agent Knowledge Base Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AssociateAgentKnowledgeBase"
  *      target="_top">AWS API Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AssociateAgentKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the knowledge base that has been associated with the agent.
+     * </p>
+     */
     private AgentKnowledgeBase agentKnowledgeBase;
 
     /**
+     * <p>
+     * Contains details about the knowledge base that has been associated with the agent.
+     * </p>
+     * 
      * @param agentKnowledgeBase
+     *        Contains details about the knowledge base that has been associated with the agent.
      */
 
     public void setAgentKnowledgeBase(AgentKnowledgeBase agentKnowledgeBase) {
@@ -37,7 +44,11 @@ public class AssociateAgentKnowledgeBaseResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the knowledge base that has been associated with the agent.
+     * </p>
+     * 
+     * @return Contains details about the knowledge base that has been associated with the agent.
      */
 
     public AgentKnowledgeBase getAgentKnowledgeBase() {
@@ -45,7 +56,12 @@ public class AssociateAgentKnowledgeBaseResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Contains details about the knowledge base that has been associated with the agent.
+     * </p>
+     * 
      * @param agentKnowledgeBase
+     *        Contains details about the knowledge base that has been associated with the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the information of an agent alias
+ * Contains details about an alias of an agent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentAlias" target="_top">AWS API
@@ -28,108 +28,111 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
-    private String agentId;
-
-    private String agentAliasId;
-
-    private String agentAliasName;
-
+    /**
+     * <p>
+     * The ARN of the alias of the agent.
+     * </p>
+     */
     private String agentAliasArn;
-
+    /**
+     * <p>
+     * Contains details about the history of the alias.
+     * </p>
+     */
+    private java.util.List<AgentAliasHistoryEvent> agentAliasHistoryEvents;
+    /**
+     * <p>
+     * The unique identifier of the alias of the agent.
+     * </p>
+     */
+    private String agentAliasId;
+    /**
+     * <p>
+     * The name of the alias of the agent.
+     * </p>
+     */
+    private String agentAliasName;
+    /**
+     * <p>
+     * The status of the alias of the agent and whether it is ready for use. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The agent alias is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The agent alias API operation failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The agent alias is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The agent alias is being deleted.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String agentAliasStatus;
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     */
+    private String agentId;
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     */
     private String clientToken;
-
-    private String description;
-
-    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
-
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     */
     private java.util.Date createdAt;
-
+    /**
+     * <p>
+     * The description of the alias of the agent.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     */
+    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
+    /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
-    private java.util.List<AgentAliasHistoryEvent> agentAliasHistoryEvents;
-
-    private String agentAliasStatus;
-
     /**
-     * @param agentId
-     */
-
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    /**
-     * @param agentId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withAgentId(String agentId) {
-        setAgentId(agentId);
-        return this;
-    }
-
-    /**
-     * @param agentAliasId
-     */
-
-    public void setAgentAliasId(String agentAliasId) {
-        this.agentAliasId = agentAliasId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getAgentAliasId() {
-        return this.agentAliasId;
-    }
-
-    /**
-     * @param agentAliasId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withAgentAliasId(String agentAliasId) {
-        setAgentAliasId(agentAliasId);
-        return this;
-    }
-
-    /**
-     * @param agentAliasName
-     */
-
-    public void setAgentAliasName(String agentAliasName) {
-        this.agentAliasName = agentAliasName;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getAgentAliasName() {
-        return this.agentAliasName;
-    }
-
-    /**
-     * @param agentAliasName
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withAgentAliasName(String agentAliasName) {
-        setAgentAliasName(agentAliasName);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The ARN of the alias of the agent.
+     * </p>
+     * 
      * @param agentAliasArn
+     *        The ARN of the alias of the agent.
      */
 
     public void setAgentAliasArn(String agentAliasArn) {
@@ -137,7 +140,11 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the alias of the agent.
+     * </p>
+     * 
+     * @return The ARN of the alias of the agent.
      */
 
     public String getAgentAliasArn() {
@@ -145,7 +152,12 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the alias of the agent.
+     * </p>
+     * 
      * @param agentAliasArn
+     *        The ARN of the alias of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -155,163 +167,11 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @param clientToken
-     */
-
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @param clientToken
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withClientToken(String clientToken) {
-        setClientToken(clientToken);
-        return this;
-    }
-
-    /**
-     * @param description
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param description
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.List<AgentAliasRoutingConfigurationListItem> getRoutingConfiguration() {
-        return routingConfiguration;
-    }
-
-    /**
-     * @param routingConfiguration
-     */
-
-    public void setRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
-        if (routingConfiguration == null) {
-            this.routingConfiguration = null;
-            return;
-        }
-
-        this.routingConfiguration = new java.util.ArrayList<AgentAliasRoutingConfigurationListItem>(routingConfiguration);
-    }
-
-    /**
      * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setRoutingConfiguration(java.util.Collection)} or {@link #withRoutingConfiguration(java.util.Collection)}
-     * if you want to override the existing values.
+     * Contains details about the history of the alias.
      * </p>
      * 
-     * @param routingConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withRoutingConfiguration(AgentAliasRoutingConfigurationListItem... routingConfiguration) {
-        if (this.routingConfiguration == null) {
-            setRoutingConfiguration(new java.util.ArrayList<AgentAliasRoutingConfigurationListItem>(routingConfiguration.length));
-        }
-        for (AgentAliasRoutingConfigurationListItem ele : routingConfiguration) {
-            this.routingConfiguration.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * @param routingConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
-        setRoutingConfiguration(routingConfiguration);
-        return this;
-    }
-
-    /**
-     * @param createdAt
-     */
-
-    public void setCreatedAt(java.util.Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.Date getCreatedAt() {
-        return this.createdAt;
-    }
-
-    /**
-     * @param createdAt
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withCreatedAt(java.util.Date createdAt) {
-        setCreatedAt(createdAt);
-        return this;
-    }
-
-    /**
-     * @param updatedAt
-     */
-
-    public void setUpdatedAt(java.util.Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    /**
-     * @return
-     */
-
-    public java.util.Date getUpdatedAt() {
-        return this.updatedAt;
-    }
-
-    /**
-     * @param updatedAt
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentAlias withUpdatedAt(java.util.Date updatedAt) {
-        setUpdatedAt(updatedAt);
-        return this;
-    }
-
-    /**
-     * @return
+     * @return Contains details about the history of the alias.
      */
 
     public java.util.List<AgentAliasHistoryEvent> getAgentAliasHistoryEvents() {
@@ -319,7 +179,12 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains details about the history of the alias.
+     * </p>
+     * 
      * @param agentAliasHistoryEvents
+     *        Contains details about the history of the alias.
      */
 
     public void setAgentAliasHistoryEvents(java.util.Collection<AgentAliasHistoryEvent> agentAliasHistoryEvents) {
@@ -333,12 +198,16 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Contains details about the history of the alias.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAgentAliasHistoryEvents(java.util.Collection)} or
      * {@link #withAgentAliasHistoryEvents(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param agentAliasHistoryEvents
+     *        Contains details about the history of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -353,7 +222,12 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains details about the history of the alias.
+     * </p>
+     * 
      * @param agentAliasHistoryEvents
+     *        Contains details about the history of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -363,7 +237,146 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The unique identifier of the alias of the agent.
+     * </p>
+     * 
+     * @param agentAliasId
+     *        The unique identifier of the alias of the agent.
+     */
+
+    public void setAgentAliasId(String agentAliasId) {
+        this.agentAliasId = agentAliasId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the alias of the agent.
+     * </p>
+     * 
+     * @return The unique identifier of the alias of the agent.
+     */
+
+    public String getAgentAliasId() {
+        return this.agentAliasId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the alias of the agent.
+     * </p>
+     * 
+     * @param agentAliasId
+     *        The unique identifier of the alias of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withAgentAliasId(String agentAliasId) {
+        setAgentAliasId(agentAliasId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the alias of the agent.
+     * </p>
+     * 
+     * @param agentAliasName
+     *        The name of the alias of the agent.
+     */
+
+    public void setAgentAliasName(String agentAliasName) {
+        this.agentAliasName = agentAliasName;
+    }
+
+    /**
+     * <p>
+     * The name of the alias of the agent.
+     * </p>
+     * 
+     * @return The name of the alias of the agent.
+     */
+
+    public String getAgentAliasName() {
+        return this.agentAliasName;
+    }
+
+    /**
+     * <p>
+     * The name of the alias of the agent.
+     * </p>
+     * 
+     * @param agentAliasName
+     *        The name of the alias of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withAgentAliasName(String agentAliasName) {
+        setAgentAliasName(agentAliasName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the alias of the agent and whether it is ready for use. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The agent alias is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The agent alias API operation failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The agent alias is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The agent alias is being deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param agentAliasStatus
+     *        The status of the alias of the agent and whether it is ready for use. The following statuses are
+     *        possible:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CREATING – The agent alias is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FAILED – The agent alias API operation failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        UPDATING – The agent alias is being updated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETING – The agent alias is being deleted.
+     *        </p>
+     *        </li>
      * @see AgentAliasStatus
      */
 
@@ -372,7 +385,65 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the alias of the agent and whether it is ready for use. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The agent alias is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The agent alias API operation failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The agent alias is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The agent alias is being deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The status of the alias of the agent and whether it is ready for use. The following statuses are
+     *         possible:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         CREATING – The agent alias is being created.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         FAILED – The agent alias API operation failed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         UPDATING – The agent alias is being updated.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DELETING – The agent alias is being deleted.
+     *         </p>
+     *         </li>
      * @see AgentAliasStatus
      */
 
@@ -381,7 +452,66 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the alias of the agent and whether it is ready for use. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The agent alias is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The agent alias API operation failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The agent alias is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The agent alias is being deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param agentAliasStatus
+     *        The status of the alias of the agent and whether it is ready for use. The following statuses are
+     *        possible:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CREATING – The agent alias is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FAILED – The agent alias API operation failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        UPDATING – The agent alias is being updated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETING – The agent alias is being deleted.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentAliasStatus
      */
@@ -392,13 +522,366 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the alias of the agent and whether it is ready for use. The following statuses are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATING – The agent alias is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * FAILED – The agent alias API operation failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING – The agent alias is being updated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETING – The agent alias is being deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param agentAliasStatus
+     *        The status of the alias of the agent and whether it is ready for use. The following statuses are
+     *        possible:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CREATING – The agent alias is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        PREPARED – The agent alias is finished being created or updated and is ready to be invoked.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        FAILED – The agent alias API operation failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        UPDATING – The agent alias is being updated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETING – The agent alias is being deleted.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentAliasStatus
      */
 
     public AgentAlias withAgentAliasStatus(AgentAliasStatus agentAliasStatus) {
         this.agentAliasStatus = agentAliasStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent.
+     */
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @return The unique identifier of the agent.
+     */
+
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withAgentId(String agentId) {
+        setAgentId(agentId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *         this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency</a>.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     * 
+     * @param createdAt
+     *        The time at which the alias of the agent was created.
+     */
+
+    public void setCreatedAt(java.util.Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     * 
+     * @return The time at which the alias of the agent was created.
+     */
+
+    public java.util.Date getCreatedAt() {
+        return this.createdAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias of the agent was created.
+     * </p>
+     * 
+     * @param createdAt
+     *        The time at which the alias of the agent was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withCreatedAt(java.util.Date createdAt) {
+        setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the alias of the agent.
+     * </p>
+     * 
+     * @param description
+     *        The description of the alias of the agent.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The description of the alias of the agent.
+     * </p>
+     * 
+     * @return The description of the alias of the agent.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The description of the alias of the agent.
+     * </p>
+     * 
+     * @param description
+     *        The description of the alias of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * 
+     * @return Contains details about the routing configuration of the alias.
+     */
+
+    public java.util.List<AgentAliasRoutingConfigurationListItem> getRoutingConfiguration() {
+        return routingConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * 
+     * @param routingConfiguration
+     *        Contains details about the routing configuration of the alias.
+     */
+
+    public void setRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
+        if (routingConfiguration == null) {
+            this.routingConfiguration = null;
+            return;
+        }
+
+        this.routingConfiguration = new java.util.ArrayList<AgentAliasRoutingConfigurationListItem>(routingConfiguration);
+    }
+
+    /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRoutingConfiguration(java.util.Collection)} or {@link #withRoutingConfiguration(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param routingConfiguration
+     *        Contains details about the routing configuration of the alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withRoutingConfiguration(AgentAliasRoutingConfigurationListItem... routingConfiguration) {
+        if (this.routingConfiguration == null) {
+            setRoutingConfiguration(new java.util.ArrayList<AgentAliasRoutingConfigurationListItem>(routingConfiguration.length));
+        }
+        for (AgentAliasRoutingConfigurationListItem ele : routingConfiguration) {
+            this.routingConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * 
+     * @param routingConfiguration
+     *        Contains details about the routing configuration of the alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
+        setRoutingConfiguration(routingConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the alias was last updated.
+     */
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     * 
+     * @return The time at which the alias was last updated.
+     */
+
+    public java.util.Date getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    /**
+     * <p>
+     * The time at which the alias was last updated.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The time at which the alias was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withUpdatedAt(java.util.Date updatedAt) {
+        setUpdatedAt(updatedAt);
         return this;
     }
 
@@ -414,28 +897,28 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAgentId() != null)
-            sb.append("AgentId: ").append(getAgentId()).append(",");
+        if (getAgentAliasArn() != null)
+            sb.append("AgentAliasArn: ").append(getAgentAliasArn()).append(",");
+        if (getAgentAliasHistoryEvents() != null)
+            sb.append("AgentAliasHistoryEvents: ").append(getAgentAliasHistoryEvents()).append(",");
         if (getAgentAliasId() != null)
             sb.append("AgentAliasId: ").append(getAgentAliasId()).append(",");
         if (getAgentAliasName() != null)
             sb.append("AgentAliasName: ").append(getAgentAliasName()).append(",");
-        if (getAgentAliasArn() != null)
-            sb.append("AgentAliasArn: ").append(getAgentAliasArn()).append(",");
+        if (getAgentAliasStatus() != null)
+            sb.append("AgentAliasStatus: ").append(getAgentAliasStatus()).append(",");
+        if (getAgentId() != null)
+            sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getCreatedAt() != null)
+            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getRoutingConfiguration() != null)
             sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
-        if (getCreatedAt() != null)
-            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
-        if (getAgentAliasHistoryEvents() != null)
-            sb.append("AgentAliasHistoryEvents: ").append(getAgentAliasHistoryEvents()).append(",");
-        if (getAgentAliasStatus() != null)
-            sb.append("AgentAliasStatus: ").append(getAgentAliasStatus());
+            sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -450,9 +933,13 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof AgentAlias == false)
             return false;
         AgentAlias other = (AgentAlias) obj;
-        if (other.getAgentId() == null ^ this.getAgentId() == null)
+        if (other.getAgentAliasArn() == null ^ this.getAgentAliasArn() == null)
             return false;
-        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
+        if (other.getAgentAliasArn() != null && other.getAgentAliasArn().equals(this.getAgentAliasArn()) == false)
+            return false;
+        if (other.getAgentAliasHistoryEvents() == null ^ this.getAgentAliasHistoryEvents() == null)
+            return false;
+        if (other.getAgentAliasHistoryEvents() != null && other.getAgentAliasHistoryEvents().equals(this.getAgentAliasHistoryEvents()) == false)
             return false;
         if (other.getAgentAliasId() == null ^ this.getAgentAliasId() == null)
             return false;
@@ -462,13 +949,21 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAgentAliasName() != null && other.getAgentAliasName().equals(this.getAgentAliasName()) == false)
             return false;
-        if (other.getAgentAliasArn() == null ^ this.getAgentAliasArn() == null)
+        if (other.getAgentAliasStatus() == null ^ this.getAgentAliasStatus() == null)
             return false;
-        if (other.getAgentAliasArn() != null && other.getAgentAliasArn().equals(this.getAgentAliasArn()) == false)
+        if (other.getAgentAliasStatus() != null && other.getAgentAliasStatus().equals(this.getAgentAliasStatus()) == false)
+            return false;
+        if (other.getAgentId() == null ^ this.getAgentId() == null)
+            return false;
+        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
             return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
+        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
+            return false;
+        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
@@ -478,21 +973,9 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
             return false;
-        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
-            return false;
-        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
-            return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
-            return false;
-        if (other.getAgentAliasHistoryEvents() == null ^ this.getAgentAliasHistoryEvents() == null)
-            return false;
-        if (other.getAgentAliasHistoryEvents() != null && other.getAgentAliasHistoryEvents().equals(this.getAgentAliasHistoryEvents()) == false)
-            return false;
-        if (other.getAgentAliasStatus() == null ^ this.getAgentAliasStatus() == null)
-            return false;
-        if (other.getAgentAliasStatus() != null && other.getAgentAliasStatus().equals(this.getAgentAliasStatus()) == false)
             return false;
         return true;
     }
@@ -502,17 +985,17 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
+        hashCode = prime * hashCode + ((getAgentAliasArn() == null) ? 0 : getAgentAliasArn().hashCode());
+        hashCode = prime * hashCode + ((getAgentAliasHistoryEvents() == null) ? 0 : getAgentAliasHistoryEvents().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasId() == null) ? 0 : getAgentAliasId().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasName() == null) ? 0 : getAgentAliasName().hashCode());
-        hashCode = prime * hashCode + ((getAgentAliasArn() == null) ? 0 : getAgentAliasArn().hashCode());
+        hashCode = prime * hashCode + ((getAgentAliasStatus() == null) ? 0 : getAgentAliasStatus().hashCode());
+        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
-        hashCode = prime * hashCode + ((getAgentAliasHistoryEvents() == null) ? 0 : getAgentAliasHistoryEvents().hashCode());
-        hashCode = prime * hashCode + ((getAgentAliasStatus() == null) ? 0 : getAgentAliasStatus().hashCode());
         return hashCode;
     }
 

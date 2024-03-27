@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StorageConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("type").build();
     private static final MarshallingInfo<StructuredPojo> OPENSEARCHSERVERLESSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("opensearchServerlessConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> PINECONECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pineconeConfiguration").build();
-    private static final MarshallingInfo<StructuredPojo> REDISENTERPRISECLOUDCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redisEnterpriseCloudConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> RDSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> REDISENTERPRISECLOUDCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redisEnterpriseCloudConfiguration").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
 
     private static final StorageConfigurationMarshaller instance = new StorageConfigurationMarshaller();
 
@@ -54,11 +54,11 @@ public class StorageConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(storageConfiguration.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getOpensearchServerlessConfiguration(), OPENSEARCHSERVERLESSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getPineconeConfiguration(), PINECONECONFIGURATION_BINDING);
-            protocolMarshaller.marshall(storageConfiguration.getRedisEnterpriseCloudConfiguration(), REDISENTERPRISECLOUDCONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getRdsConfiguration(), RDSCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(storageConfiguration.getRedisEnterpriseCloudConfiguration(), REDISENTERPRISECLOUDCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(storageConfiguration.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

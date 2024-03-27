@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RedisEnterpriseCloudFieldMappingMarshaller {
 
-    private static final MarshallingInfo<String> VECTORFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorField").build();
-    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("textField").build();
     private static final MarshallingInfo<String> METADATAFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadataField").build();
+    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("textField").build();
+    private static final MarshallingInfo<String> VECTORFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorField").build();
 
     private static final RedisEnterpriseCloudFieldMappingMarshaller instance = new RedisEnterpriseCloudFieldMappingMarshaller();
 
@@ -50,9 +50,9 @@ public class RedisEnterpriseCloudFieldMappingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(redisEnterpriseCloudFieldMapping.getVectorField(), VECTORFIELD_BINDING);
-            protocolMarshaller.marshall(redisEnterpriseCloudFieldMapping.getTextField(), TEXTFIELD_BINDING);
             protocolMarshaller.marshall(redisEnterpriseCloudFieldMapping.getMetadataField(), METADATAFIELD_BINDING);
+            protocolMarshaller.marshall(redisEnterpriseCloudFieldMapping.getTextField(), TEXTFIELD_BINDING);
+            protocolMarshaller.marshall(redisEnterpriseCloudFieldMapping.getVectorField(), VECTORFIELD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

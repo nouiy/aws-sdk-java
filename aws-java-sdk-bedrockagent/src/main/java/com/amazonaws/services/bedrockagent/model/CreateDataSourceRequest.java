@@ -25,48 +25,68 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     */
     private String clientToken;
-
-    private String name;
-
-    private String description;
-
+    /**
+     * <p>
+     * Contains metadata about where the data source is stored.
+     * </p>
+     */
     private DataSourceConfiguration dataSourceConfiguration;
-
+    /**
+     * <p>
+     * A description of the data source.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * Contains details about the server-side encryption for the data source.
+     * </p>
+     */
     private ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
-
+    /**
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     */
     private VectorIngestionConfiguration vectorIngestionConfiguration;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateDataSourceRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -74,7 +94,19 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *         this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -82,7 +114,20 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,59 +137,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @param name
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @param name
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateDataSourceRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * @param description
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param description
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateDataSourceRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains metadata about where the data source is stored.
+     * </p>
+     * 
      * @param dataSourceConfiguration
+     *        Contains metadata about where the data source is stored.
      */
 
     public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
@@ -152,7 +150,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains metadata about where the data source is stored.
+     * </p>
+     * 
+     * @return Contains metadata about where the data source is stored.
      */
 
     public DataSourceConfiguration getDataSourceConfiguration() {
@@ -160,7 +162,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains metadata about where the data source is stored.
+     * </p>
+     * 
      * @param dataSourceConfiguration
+     *        Contains metadata about where the data source is stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +177,132 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A description of the data source.
+     * </p>
+     * 
+     * @param description
+     *        A description of the data source.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * A description of the data source.
+     * </p>
+     * 
+     * @return A description of the data source.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * A description of the data source.
+     * </p>
+     * 
+     * @param description
+     *        A description of the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which to add the data source.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to which to add the data source.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which to add the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     * 
+     * @param name
+     *        The name of the data source.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     * 
+     * @return The name of the data source.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     * 
+     * @param name
+     *        The name of the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the server-side encryption for the data source.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        Contains details about the server-side encryption for the data source.
      */
 
     public void setServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
@@ -178,7 +310,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the server-side encryption for the data source.
+     * </p>
+     * 
+     * @return Contains details about the server-side encryption for the data source.
      */
 
     public ServerSideEncryptionConfiguration getServerSideEncryptionConfiguration() {
@@ -186,7 +322,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about the server-side encryption for the data source.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        Contains details about the server-side encryption for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +337,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     * 
      * @param vectorIngestionConfiguration
+     *        Contains details about how to ingest the documents in the data source.
      */
 
     public void setVectorIngestionConfiguration(VectorIngestionConfiguration vectorIngestionConfiguration) {
@@ -204,7 +350,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     * 
+     * @return Contains details about how to ingest the documents in the data source.
      */
 
     public VectorIngestionConfiguration getVectorIngestionConfiguration() {
@@ -212,7 +362,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     * 
      * @param vectorIngestionConfiguration
+     *        Contains details about how to ingest the documents in the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,16 +388,16 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getDataSourceConfiguration() != null)
             sb.append("DataSourceConfiguration: ").append(getDataSourceConfiguration()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getServerSideEncryptionConfiguration() != null)
             sb.append("ServerSideEncryptionConfiguration: ").append(getServerSideEncryptionConfiguration()).append(",");
         if (getVectorIngestionConfiguration() != null)
@@ -261,25 +416,25 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof CreateDataSourceRequest == false)
             return false;
         CreateDataSourceRequest other = (CreateDataSourceRequest) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
-        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getServerSideEncryptionConfiguration() == null ^ this.getServerSideEncryptionConfiguration() == null)
             return false;
@@ -298,11 +453,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDataSourceConfiguration() == null) ? 0 : getDataSourceConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getServerSideEncryptionConfiguration() == null) ? 0 : getServerSideEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getVectorIngestionConfiguration() == null) ? 0 : getVectorIngestionConfiguration().hashCode());
         return hashCode;

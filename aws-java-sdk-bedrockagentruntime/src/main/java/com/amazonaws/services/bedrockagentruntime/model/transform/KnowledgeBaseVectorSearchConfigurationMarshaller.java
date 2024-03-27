@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KnowledgeBaseVectorSearchConfigurationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> FILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filter").build();
     private static final MarshallingInfo<Integer> NUMBEROFRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfResults").build();
     private static final MarshallingInfo<String> OVERRIDESEARCHTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -48,6 +50,7 @@ public class KnowledgeBaseVectorSearchConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(knowledgeBaseVectorSearchConfiguration.getFilter(), FILTER_BINDING);
             protocolMarshaller.marshall(knowledgeBaseVectorSearchConfiguration.getNumberOfResults(), NUMBEROFRESULTS_BINDING);
             protocolMarshaller.marshall(knowledgeBaseVectorSearchConfiguration.getOverrideSearchType(), OVERRIDESEARCHTYPE_BINDING);
         } catch (Exception e) {

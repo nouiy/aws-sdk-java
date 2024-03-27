@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * PrepareAgent Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PrepareAgent" target="_top">AWS API
  *      Documentation</a>
@@ -26,16 +23,38 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the agent for which the <code>DRAFT</code> version was created.
+     * </p>
+     */
     private String agentId;
-
+    /**
+     * <p>
+     * The status of the <code>DRAFT</code> version and whether it is ready for use.
+     * </p>
+     */
     private String agentStatus;
-
+    /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     */
     private String agentVersion;
-
+    /**
+     * <p>
+     * The time at which the <code>DRAFT</code> version of the agent was last prepared.
+     * </p>
+     */
     private java.util.Date preparedAt;
 
     /**
+     * <p>
+     * The unique identifier of the agent for which the <code>DRAFT</code> version was created.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent for which the <code>DRAFT</code> version was created.
      */
 
     public void setAgentId(String agentId) {
@@ -43,7 +62,11 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the agent for which the <code>DRAFT</code> version was created.
+     * </p>
+     * 
+     * @return The unique identifier of the agent for which the <code>DRAFT</code> version was created.
      */
 
     public String getAgentId() {
@@ -51,7 +74,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The unique identifier of the agent for which the <code>DRAFT</code> version was created.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent for which the <code>DRAFT</code> version was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -61,7 +89,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The status of the <code>DRAFT</code> version and whether it is ready for use.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the <code>DRAFT</code> version and whether it is ready for use.
      * @see AgentStatus
      */
 
@@ -70,7 +103,11 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the <code>DRAFT</code> version and whether it is ready for use.
+     * </p>
+     * 
+     * @return The status of the <code>DRAFT</code> version and whether it is ready for use.
      * @see AgentStatus
      */
 
@@ -79,7 +116,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The status of the <code>DRAFT</code> version and whether it is ready for use.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the <code>DRAFT</code> version and whether it is ready for use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -90,7 +132,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The status of the <code>DRAFT</code> version and whether it is ready for use.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the <code>DRAFT</code> version and whether it is ready for use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -101,7 +148,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -109,7 +161,11 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * @return
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
+     * @return The version of the agent.
      */
 
     public String getAgentVersion() {
@@ -117,7 +173,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,7 +188,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The time at which the <code>DRAFT</code> version of the agent was last prepared.
+     * </p>
+     * 
      * @param preparedAt
+     *        The time at which the <code>DRAFT</code> version of the agent was last prepared.
      */
 
     public void setPreparedAt(java.util.Date preparedAt) {
@@ -135,7 +201,11 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the <code>DRAFT</code> version of the agent was last prepared.
+     * </p>
+     * 
+     * @return The time at which the <code>DRAFT</code> version of the agent was last prepared.
      */
 
     public java.util.Date getPreparedAt() {
@@ -143,7 +213,12 @@ public class PrepareAgentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The time at which the <code>DRAFT</code> version of the agent was last prepared.
+     * </p>
+     * 
      * @param preparedAt
+     *        The time at which the <code>DRAFT</code> version of the agent was last prepared.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Get Agent Version Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentVersion" target="_top">AWS API
  *      Documentation</a>
@@ -30,20 +27,24 @@ public class GetAgentVersionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      */
     private String agentId;
-
+    /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     */
     private String agentVersion;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent.
      */
 
     public void setAgentId(String agentId) {
@@ -52,10 +53,10 @@ public class GetAgentVersionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent.
      */
 
     public String getAgentId() {
@@ -64,11 +65,11 @@ public class GetAgentVersionRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,7 +79,12 @@ public class GetAgentVersionRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -86,7 +92,11 @@ public class GetAgentVersionRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * @return
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
+     * @return The version of the agent.
      */
 
     public String getAgentVersion() {
@@ -94,7 +104,12 @@ public class GetAgentVersionRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

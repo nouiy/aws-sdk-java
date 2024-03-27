@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PromptOverrideConfigurationMarshaller {
 
-    private static final MarshallingInfo<List> PROMPTCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptConfigurations").build();
     private static final MarshallingInfo<String> OVERRIDELAMBDA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("overrideLambda").build();
+    private static final MarshallingInfo<List> PROMPTCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptConfigurations").build();
 
     private static final PromptOverrideConfigurationMarshaller instance = new PromptOverrideConfigurationMarshaller();
 
@@ -49,8 +49,8 @@ public class PromptOverrideConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(promptOverrideConfiguration.getPromptConfigurations(), PROMPTCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(promptOverrideConfiguration.getOverrideLambda(), OVERRIDELAMBDA_BINDING);
+            protocolMarshaller.marshall(promptOverrideConfiguration.getPromptConfigurations(), PROMPTCONFIGURATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

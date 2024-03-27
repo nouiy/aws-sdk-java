@@ -48,6 +48,10 @@ public class KnowledgeBaseSummaryJsonUnmarshaller implements Unmarshaller<Knowle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBaseSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("knowledgeBaseId", targetDepth)) {
                     context.nextToken();
                     knowledgeBaseSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,10 +59,6 @@ public class KnowledgeBaseSummaryJsonUnmarshaller implements Unmarshaller<Knowle
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     knowledgeBaseSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    knowledgeBaseSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();

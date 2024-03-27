@@ -29,15 +29,15 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StartIngestionJobRequestMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
-    private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("dataSourceId").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("dataSourceId").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
 
     private static final StartIngestionJobRequestMarshaller instance = new StartIngestionJobRequestMarshaller();
 
@@ -55,10 +55,10 @@ public class StartIngestionJobRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(startIngestionJobRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
-            protocolMarshaller.marshall(startIngestionJobRequest.getDataSourceId(), DATASOURCEID_BINDING);
             protocolMarshaller.marshall(startIngestionJobRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(startIngestionJobRequest.getDataSourceId(), DATASOURCEID_BINDING);
             protocolMarshaller.marshall(startIngestionJobRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(startIngestionJobRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

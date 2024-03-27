@@ -48,13 +48,13 @@ public class APISchemaJsonUnmarshaller implements Unmarshaller<APISchema, JsonUn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("s3", targetDepth)) {
-                    context.nextToken();
-                    aPISchema.setS3(S3IdentifierJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("payload", targetDepth)) {
                     context.nextToken();
                     aPISchema.setPayload(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("s3", targetDepth)) {
+                    context.nextToken();
+                    aPISchema.setS3(S3IdentifierJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

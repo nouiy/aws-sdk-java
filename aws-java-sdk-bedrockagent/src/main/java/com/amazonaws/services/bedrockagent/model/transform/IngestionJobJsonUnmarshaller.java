@@ -48,29 +48,13 @@ public class IngestionJobJsonUnmarshaller implements Unmarshaller<IngestionJob, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
-                    context.nextToken();
-                    ingestionJob.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("dataSourceId", targetDepth)) {
                     context.nextToken();
                     ingestionJob.setDataSourceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("ingestionJobId", targetDepth)) {
-                    context.nextToken();
-                    ingestionJob.setIngestionJobId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     ingestionJob.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("status", targetDepth)) {
-                    context.nextToken();
-                    ingestionJob.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("statistics", targetDepth)) {
-                    context.nextToken();
-                    ingestionJob.setStatistics(IngestionJobStatisticsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("failureReasons", targetDepth)) {
                     context.nextToken();
@@ -78,9 +62,25 @@ public class IngestionJobJsonUnmarshaller implements Unmarshaller<IngestionJob, 
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ingestionJobId", targetDepth)) {
+                    context.nextToken();
+                    ingestionJob.setIngestionJobId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                    context.nextToken();
+                    ingestionJob.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("startedAt", targetDepth)) {
                     context.nextToken();
                     ingestionJob.setStartedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("statistics", targetDepth)) {
+                    context.nextToken();
+                    ingestionJob.setStatistics(IngestionJobStatisticsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    ingestionJob.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();

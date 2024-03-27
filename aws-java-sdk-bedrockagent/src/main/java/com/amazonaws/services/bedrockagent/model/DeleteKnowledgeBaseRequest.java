@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to delete.
+     * </p>
+     */
     private String knowledgeBaseId;
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base to delete.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to delete.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -36,7 +46,11 @@ public class DeleteKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the knowledge base to delete.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to delete.
      */
 
     public String getKnowledgeBaseId() {
@@ -44,7 +58,12 @@ public class DeleteKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base to delete.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

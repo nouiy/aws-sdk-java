@@ -52,13 +52,13 @@ public class DeleteAgentVersionResultJsonUnmarshaller implements Unmarshaller<De
                     context.nextToken();
                     deleteAgentVersionResult.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("agentVersion", targetDepth)) {
-                    context.nextToken();
-                    deleteAgentVersionResult.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("agentStatus", targetDepth)) {
                     context.nextToken();
                     deleteAgentVersionResult.setAgentStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("agentVersion", targetDepth)) {
+                    context.nextToken();
+                    deleteAgentVersionResult.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -31,18 +31,18 @@ public class UpdateAgentRequestMarshaller {
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("agentName").build();
-    private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
-    private static final MarshallingInfo<String> FOUNDATIONMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("foundationModel").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<Integer> IDLESESSIONTTLINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
     private static final MarshallingInfo<String> AGENTRESOURCEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentResourceRoleArn").build();
     private static final MarshallingInfo<String> CUSTOMERENCRYPTIONKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customerEncryptionKeyArn").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> FOUNDATIONMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("foundationModel").build();
+    private static final MarshallingInfo<Integer> IDLESESSIONTTLINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
+    private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
     private static final MarshallingInfo<StructuredPojo> PROMPTOVERRIDECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptOverrideConfiguration").build();
 
@@ -64,12 +64,12 @@ public class UpdateAgentRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateAgentRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getAgentName(), AGENTNAME_BINDING);
-            protocolMarshaller.marshall(updateAgentRequest.getInstruction(), INSTRUCTION_BINDING);
-            protocolMarshaller.marshall(updateAgentRequest.getFoundationModel(), FOUNDATIONMODEL_BINDING);
-            protocolMarshaller.marshall(updateAgentRequest.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(updateAgentRequest.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getAgentResourceRoleArn(), AGENTRESOURCEROLEARN_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getCustomerEncryptionKeyArn(), CUSTOMERENCRYPTIONKEYARN_BINDING);
+            protocolMarshaller.marshall(updateAgentRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updateAgentRequest.getFoundationModel(), FOUNDATIONMODEL_BINDING);
+            protocolMarshaller.marshall(updateAgentRequest.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
+            protocolMarshaller.marshall(updateAgentRequest.getInstruction(), INSTRUCTION_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getPromptOverrideConfiguration(), PROMPTOVERRIDECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

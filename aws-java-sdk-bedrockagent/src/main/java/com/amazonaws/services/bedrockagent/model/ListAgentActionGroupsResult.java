@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * List Action Groups Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentActionGroups"
  *      target="_top">AWS API Documentation</a>
@@ -26,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of objects, each of which contains information about an action group.
+     * </p>
+     */
     private java.util.List<ActionGroupSummary> actionGroupSummaries;
-
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * A list of objects, each of which contains information about an action group.
+     * </p>
+     * 
+     * @return A list of objects, each of which contains information about an action group.
      */
 
     public java.util.List<ActionGroupSummary> getActionGroupSummaries() {
@@ -39,7 +50,12 @@ public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about an action group.
+     * </p>
+     * 
      * @param actionGroupSummaries
+     *        A list of objects, each of which contains information about an action group.
      */
 
     public void setActionGroupSummaries(java.util.Collection<ActionGroupSummary> actionGroupSummaries) {
@@ -53,12 +69,16 @@ public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * A list of objects, each of which contains information about an action group.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setActionGroupSummaries(java.util.Collection)} or {@link #withActionGroupSummaries(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param actionGroupSummaries
+     *        A list of objects, each of which contains information about an action group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -73,7 +93,12 @@ public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about an action group.
+     * </p>
+     * 
      * @param actionGroupSummaries
+     *        A list of objects, each of which contains information about an action group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,7 +108,15 @@ public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      */
 
     public void setNextToken(String nextToken) {
@@ -91,7 +124,14 @@ public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         use this token when making another request in the <code>nextToken</code> field to return the next batch
+     *         of results.
      */
 
     public String getNextToken() {
@@ -99,7 +139,15 @@ public class ListAgentActionGroupsResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the configurations to use OpenSearch Serverless to store knowledge base data.
+ * Contains details about the storage configuration of the knowledge base in Amazon OpenSearch Service. For more
+ * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-oss.html">Create
+ * a vector index in Amazon OpenSearch Service</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/OpenSearchServerlessConfiguration"
@@ -28,14 +30,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OpenSearchServerlessConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the OpenSearch Service vector store.
+     * </p>
+     */
     private String collectionArn;
-
+    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     */
+    private OpenSearchServerlessFieldMapping fieldMapping;
+    /**
+     * <p>
+     * The name of the vector store.
+     * </p>
+     */
     private String vectorIndexName;
 
-    private OpenSearchServerlessFieldMapping fieldMapping;
-
     /**
+     * <p>
+     * The ARN of the OpenSearch Service vector store.
+     * </p>
+     * 
      * @param collectionArn
+     *        The ARN of the OpenSearch Service vector store.
      */
 
     public void setCollectionArn(String collectionArn) {
@@ -43,7 +63,11 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the OpenSearch Service vector store.
+     * </p>
+     * 
+     * @return The ARN of the OpenSearch Service vector store.
      */
 
     public String getCollectionArn() {
@@ -51,7 +75,12 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The ARN of the OpenSearch Service vector store.
+     * </p>
+     * 
      * @param collectionArn
+     *        The ARN of the OpenSearch Service vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -61,33 +90,12 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @param vectorIndexName
-     */
-
-    public void setVectorIndexName(String vectorIndexName) {
-        this.vectorIndexName = vectorIndexName;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getVectorIndexName() {
-        return this.vectorIndexName;
-    }
-
-    /**
-     * @param vectorIndexName
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public OpenSearchServerlessConfiguration withVectorIndexName(String vectorIndexName) {
-        setVectorIndexName(vectorIndexName);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      */
 
     public void setFieldMapping(OpenSearchServerlessFieldMapping fieldMapping) {
@@ -95,7 +103,11 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
+     * @return Contains the names of the fields to which to map information about the vector store.
      */
 
     public OpenSearchServerlessFieldMapping getFieldMapping() {
@@ -103,12 +115,57 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public OpenSearchServerlessConfiguration withFieldMapping(OpenSearchServerlessFieldMapping fieldMapping) {
         setFieldMapping(fieldMapping);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the vector store.
+     * </p>
+     * 
+     * @param vectorIndexName
+     *        The name of the vector store.
+     */
+
+    public void setVectorIndexName(String vectorIndexName) {
+        this.vectorIndexName = vectorIndexName;
+    }
+
+    /**
+     * <p>
+     * The name of the vector store.
+     * </p>
+     * 
+     * @return The name of the vector store.
+     */
+
+    public String getVectorIndexName() {
+        return this.vectorIndexName;
+    }
+
+    /**
+     * <p>
+     * The name of the vector store.
+     * </p>
+     * 
+     * @param vectorIndexName
+     *        The name of the vector store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OpenSearchServerlessConfiguration withVectorIndexName(String vectorIndexName) {
+        setVectorIndexName(vectorIndexName);
         return this;
     }
 
@@ -126,10 +183,10 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
         sb.append("{");
         if (getCollectionArn() != null)
             sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
-        if (getVectorIndexName() != null)
-            sb.append("VectorIndexName: ").append(getVectorIndexName()).append(",");
         if (getFieldMapping() != null)
-            sb.append("FieldMapping: ").append(getFieldMapping());
+            sb.append("FieldMapping: ").append(getFieldMapping()).append(",");
+        if (getVectorIndexName() != null)
+            sb.append("VectorIndexName: ").append(getVectorIndexName());
         sb.append("}");
         return sb.toString();
     }
@@ -148,13 +205,13 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
             return false;
         if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
             return false;
-        if (other.getVectorIndexName() == null ^ this.getVectorIndexName() == null)
-            return false;
-        if (other.getVectorIndexName() != null && other.getVectorIndexName().equals(this.getVectorIndexName()) == false)
-            return false;
         if (other.getFieldMapping() == null ^ this.getFieldMapping() == null)
             return false;
         if (other.getFieldMapping() != null && other.getFieldMapping().equals(this.getFieldMapping()) == false)
+            return false;
+        if (other.getVectorIndexName() == null ^ this.getVectorIndexName() == null)
+            return false;
+        if (other.getVectorIndexName() != null && other.getVectorIndexName().equals(this.getVectorIndexName()) == false)
             return false;
         return true;
     }
@@ -165,8 +222,8 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
-        hashCode = prime * hashCode + ((getVectorIndexName() == null) ? 0 : getVectorIndexName().hashCode());
         hashCode = prime * hashCode + ((getFieldMapping() == null) ? 0 : getFieldMapping().hashCode());
+        hashCode = prime * hashCode + ((getVectorIndexName() == null) ? 0 : getVectorIndexName().hashCode());
         return hashCode;
     }
 

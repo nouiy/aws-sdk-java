@@ -15,9 +15,7 @@ package com.amazonaws.services.bedrockagent.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Creation Mode for Prompt Configuration.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum CreationMode {

@@ -27,30 +27,30 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AgentActionGroupMarshaller {
 
-    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("agentId").build();
-    private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
+    private static final MarshallingInfo<StructuredPojo> ACTIONGROUPEXECUTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupExecutor").build();
     private static final MarshallingInfo<String> ACTIONGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupId").build();
     private static final MarshallingInfo<String> ACTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupName").build();
-    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> PARENTACTIONSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionSignature").build();
-    private static final MarshallingInfo<StructuredPojo> ACTIONGROUPEXECUTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupExecutor").build();
-    private static final MarshallingInfo<StructuredPojo> APISCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
     private static final MarshallingInfo<String> ACTIONGROUPSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupState").build();
+    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("agentId").build();
+    private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
+    private static final MarshallingInfo<StructuredPojo> APISCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken").build();
+    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> PARENTACTIONSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionSignature").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
     private static final AgentActionGroupMarshaller instance = new AgentActionGroupMarshaller();
 
@@ -68,18 +68,18 @@ public class AgentActionGroupMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(agentActionGroup.getAgentId(), AGENTID_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getAgentVersion(), AGENTVERSION_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getActionGroupExecutor(), ACTIONGROUPEXECUTOR_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getActionGroupId(), ACTIONGROUPID_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getActionGroupName(), ACTIONGROUPNAME_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getClientToken(), CLIENTTOKEN_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getCreatedAt(), CREATEDAT_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getUpdatedAt(), UPDATEDAT_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getParentActionSignature(), PARENTACTIONSIGNATURE_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getActionGroupExecutor(), ACTIONGROUPEXECUTOR_BINDING);
-            protocolMarshaller.marshall(agentActionGroup.getApiSchema(), APISCHEMA_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getActionGroupState(), ACTIONGROUPSTATE_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getAgentId(), AGENTID_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getAgentVersion(), AGENTVERSION_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getApiSchema(), APISCHEMA_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getParentActionSignature(), PARENTACTIONSIGNATURE_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

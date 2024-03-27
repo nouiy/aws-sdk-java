@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a raw data source location to ingest.
+ * Contains details about how a data source is stored.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DataSourceConfiguration"
@@ -28,12 +28,66 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DataSourceConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains details about the configuration of the S3 object containing the data source.
+     * </p>
+     */
+    private S3DataSourceConfiguration s3Configuration;
+    /**
+     * <p>
+     * The type of storage for the data source.
+     * </p>
+     */
     private String type;
 
-    private S3DataSourceConfiguration s3Configuration;
+    /**
+     * <p>
+     * Contains details about the configuration of the S3 object containing the data source.
+     * </p>
+     * 
+     * @param s3Configuration
+     *        Contains details about the configuration of the S3 object containing the data source.
+     */
+
+    public void setS3Configuration(S3DataSourceConfiguration s3Configuration) {
+        this.s3Configuration = s3Configuration;
+    }
 
     /**
+     * <p>
+     * Contains details about the configuration of the S3 object containing the data source.
+     * </p>
+     * 
+     * @return Contains details about the configuration of the S3 object containing the data source.
+     */
+
+    public S3DataSourceConfiguration getS3Configuration() {
+        return this.s3Configuration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the configuration of the S3 object containing the data source.
+     * </p>
+     * 
+     * @param s3Configuration
+     *        Contains details about the configuration of the S3 object containing the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withS3Configuration(S3DataSourceConfiguration s3Configuration) {
+        setS3Configuration(s3Configuration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of storage for the data source.
+     * </p>
+     * 
      * @param type
+     *        The type of storage for the data source.
      * @see DataSourceType
      */
 
@@ -42,7 +96,11 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * The type of storage for the data source.
+     * </p>
+     * 
+     * @return The type of storage for the data source.
      * @see DataSourceType
      */
 
@@ -51,7 +109,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The type of storage for the data source.
+     * </p>
+     * 
      * @param type
+     *        The type of storage for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceType
      */
@@ -62,39 +125,18 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The type of storage for the data source.
+     * </p>
+     * 
      * @param type
+     *        The type of storage for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceType
      */
 
     public DataSourceConfiguration withType(DataSourceType type) {
         this.type = type.toString();
-        return this;
-    }
-
-    /**
-     * @param s3Configuration
-     */
-
-    public void setS3Configuration(S3DataSourceConfiguration s3Configuration) {
-        this.s3Configuration = s3Configuration;
-    }
-
-    /**
-     * @return
-     */
-
-    public S3DataSourceConfiguration getS3Configuration() {
-        return this.s3Configuration;
-    }
-
-    /**
-     * @param s3Configuration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DataSourceConfiguration withS3Configuration(S3DataSourceConfiguration s3Configuration) {
-        setS3Configuration(s3Configuration);
         return this;
     }
 
@@ -110,10 +152,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getType() != null)
-            sb.append("Type: ").append(getType()).append(",");
         if (getS3Configuration() != null)
-            sb.append("S3Configuration: ").append(getS3Configuration());
+            sb.append("S3Configuration: ").append(getS3Configuration()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -128,13 +170,13 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (obj instanceof DataSourceConfiguration == false)
             return false;
         DataSourceConfiguration other = (DataSourceConfiguration) obj;
-        if (other.getType() == null ^ this.getType() == null)
-            return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
-            return false;
         if (other.getS3Configuration() == null ^ this.getS3Configuration() == null)
             return false;
         if (other.getS3Configuration() != null && other.getS3Configuration().equals(this.getS3Configuration()) == false)
+            return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
         return true;
     }
@@ -144,8 +186,8 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getS3Configuration() == null) ? 0 : getS3Configuration().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

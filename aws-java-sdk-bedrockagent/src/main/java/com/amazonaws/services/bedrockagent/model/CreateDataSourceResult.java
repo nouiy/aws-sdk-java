@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the data source.
+     * </p>
+     */
     private DataSource dataSource;
 
     /**
+     * <p>
+     * Contains details about the data source.
+     * </p>
+     * 
      * @param dataSource
+     *        Contains details about the data source.
      */
 
     public void setDataSource(DataSource dataSource) {
@@ -34,7 +44,11 @@ public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the data source.
+     * </p>
+     * 
+     * @return Contains details about the data source.
      */
 
     public DataSource getDataSource() {
@@ -42,7 +56,12 @@ public class CreateDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Contains details about the data source.
+     * </p>
+     * 
      * @param dataSource
+     *        Contains details about the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

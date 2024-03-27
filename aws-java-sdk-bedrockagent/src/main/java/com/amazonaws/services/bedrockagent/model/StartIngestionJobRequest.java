@@ -25,68 +25,50 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
+     * The unique identifier of the data source to ingest.
+     * </p>
+     */
+    private String dataSourceId;
+    /**
+     * <p>
+     * A description of the ingestion job.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     */
     private String knowledgeBaseId;
 
-    private String dataSourceId;
-
-    private String clientToken;
-
-    private String description;
-
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartIngestionJobRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
-     * @param dataSourceId
-     */
-
-    public void setDataSourceId(String dataSourceId) {
-        this.dataSourceId = dataSourceId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDataSourceId() {
-        return this.dataSourceId;
-    }
-
-    /**
-     * @param dataSourceId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartIngestionJobRequest withDataSourceId(String dataSourceId) {
-        setDataSourceId(dataSourceId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -94,7 +76,19 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *         this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -102,7 +96,20 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +119,52 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source to ingest.
+     * </p>
+     * 
+     * @param dataSourceId
+     *        The unique identifier of the data source to ingest.
+     */
+
+    public void setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the data source to ingest.
+     * </p>
+     * 
+     * @return The unique identifier of the data source to ingest.
+     */
+
+    public String getDataSourceId() {
+        return this.dataSourceId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the data source to ingest.
+     * </p>
+     * 
+     * @param dataSourceId
+     *        The unique identifier of the data source to ingest.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartIngestionJobRequest withDataSourceId(String dataSourceId) {
+        setDataSourceId(dataSourceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A description of the ingestion job.
+     * </p>
+     * 
      * @param description
+     *        A description of the ingestion job.
      */
 
     public void setDescription(String description) {
@@ -120,7 +172,11 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * A description of the ingestion job.
+     * </p>
+     * 
+     * @return A description of the ingestion job.
      */
 
     public String getDescription() {
@@ -128,12 +184,57 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * A description of the ingestion job.
+     * </p>
+     * 
      * @param description
+     *        A description of the ingestion job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public StartIngestionJobRequest withDescription(String description) {
         setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which to add the data source.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to which to add the data source.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which to add the data source.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which to add the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartIngestionJobRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
         return this;
     }
 
@@ -149,14 +250,14 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
-        if (getDataSourceId() != null)
-            sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getDataSourceId() != null)
+            sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId());
         sb.append("}");
         return sb.toString();
     }
@@ -171,21 +272,21 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
         if (obj instanceof StartIngestionJobRequest == false)
             return false;
         StartIngestionJobRequest other = (StartIngestionJobRequest) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
             return false;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
-            return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         return true;
     }
@@ -195,10 +296,10 @@ public class StartIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
-        hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         return hashCode;
     }
 

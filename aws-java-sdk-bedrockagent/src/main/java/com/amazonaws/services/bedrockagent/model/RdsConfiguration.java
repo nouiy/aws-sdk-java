@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the configurations to use RDS to store knowledge base data.
+ * Contains details about the storage configuration of the knowledge base in Amazon RDS. For more information, see <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector index in
+ * Amazon RDS</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/RdsConfiguration" target="_top">AWS API
@@ -28,44 +30,44 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo {
 
-    private String resourceArn;
-
+    /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * </p>
+     */
     private String credentialsSecretArn;
-
+    /**
+     * <p>
+     * The name of your Amazon RDS database.
+     * </p>
+     */
     private String databaseName;
-
+    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     */
+    private RdsFieldMapping fieldMapping;
+    /**
+     * <p>
+     * The ARN of the vector store.
+     * </p>
+     */
+    private String resourceArn;
+    /**
+     * <p>
+     * The name of the table in the database.
+     * </p>
+     */
     private String tableName;
 
-    private RdsFieldMapping fieldMapping;
-
     /**
-     * @param resourceArn
-     */
-
-    public void setResourceArn(String resourceArn) {
-        this.resourceArn = resourceArn;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getResourceArn() {
-        return this.resourceArn;
-    }
-
-    /**
-     * @param resourceArn
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RdsConfiguration withResourceArn(String resourceArn) {
-        setResourceArn(resourceArn);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * </p>
+     * 
      * @param credentialsSecretArn
+     *        The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
      */
 
     public void setCredentialsSecretArn(String credentialsSecretArn) {
@@ -73,7 +75,11 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * </p>
+     * 
+     * @return The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
      */
 
     public String getCredentialsSecretArn() {
@@ -81,7 +87,12 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * </p>
+     * 
      * @param credentialsSecretArn
+     *        The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,7 +102,12 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The name of your Amazon RDS database.
+     * </p>
+     * 
      * @param databaseName
+     *        The name of your Amazon RDS database.
      */
 
     public void setDatabaseName(String databaseName) {
@@ -99,7 +115,11 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The name of your Amazon RDS database.
+     * </p>
+     * 
+     * @return The name of your Amazon RDS database.
      */
 
     public String getDatabaseName() {
@@ -107,7 +127,12 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The name of your Amazon RDS database.
+     * </p>
+     * 
      * @param databaseName
+     *        The name of your Amazon RDS database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,33 +142,12 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @param tableName
-     */
-
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getTableName() {
-        return this.tableName;
-    }
-
-    /**
-     * @param tableName
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RdsConfiguration withTableName(String tableName) {
-        setTableName(tableName);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      */
 
     public void setFieldMapping(RdsFieldMapping fieldMapping) {
@@ -151,7 +155,11 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
+     * @return Contains the names of the fields to which to map information about the vector store.
      */
 
     public RdsFieldMapping getFieldMapping() {
@@ -159,12 +167,97 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RdsConfiguration withFieldMapping(RdsFieldMapping fieldMapping) {
         setFieldMapping(fieldMapping);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the vector store.
+     * </p>
+     * 
+     * @param resourceArn
+     *        The ARN of the vector store.
+     */
+
+    public void setResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the vector store.
+     * </p>
+     * 
+     * @return The ARN of the vector store.
+     */
+
+    public String getResourceArn() {
+        return this.resourceArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the vector store.
+     * </p>
+     * 
+     * @param resourceArn
+     *        The ARN of the vector store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RdsConfiguration withResourceArn(String resourceArn) {
+        setResourceArn(resourceArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the table in the database.
+     * </p>
+     * 
+     * @param tableName
+     *        The name of the table in the database.
+     */
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
+
+    /**
+     * <p>
+     * The name of the table in the database.
+     * </p>
+     * 
+     * @return The name of the table in the database.
+     */
+
+    public String getTableName() {
+        return this.tableName;
+    }
+
+    /**
+     * <p>
+     * The name of the table in the database.
+     * </p>
+     * 
+     * @param tableName
+     *        The name of the table in the database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RdsConfiguration withTableName(String tableName) {
+        setTableName(tableName);
         return this;
     }
 
@@ -180,16 +273,16 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getResourceArn() != null)
-            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
         if (getCredentialsSecretArn() != null)
             sb.append("CredentialsSecretArn: ").append(getCredentialsSecretArn()).append(",");
         if (getDatabaseName() != null)
             sb.append("DatabaseName: ").append(getDatabaseName()).append(",");
-        if (getTableName() != null)
-            sb.append("TableName: ").append(getTableName()).append(",");
         if (getFieldMapping() != null)
-            sb.append("FieldMapping: ").append(getFieldMapping());
+            sb.append("FieldMapping: ").append(getFieldMapping()).append(",");
+        if (getResourceArn() != null)
+            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
+        if (getTableName() != null)
+            sb.append("TableName: ").append(getTableName());
         sb.append("}");
         return sb.toString();
     }
@@ -204,10 +297,6 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
         if (obj instanceof RdsConfiguration == false)
             return false;
         RdsConfiguration other = (RdsConfiguration) obj;
-        if (other.getResourceArn() == null ^ this.getResourceArn() == null)
-            return false;
-        if (other.getResourceArn() != null && other.getResourceArn().equals(this.getResourceArn()) == false)
-            return false;
         if (other.getCredentialsSecretArn() == null ^ this.getCredentialsSecretArn() == null)
             return false;
         if (other.getCredentialsSecretArn() != null && other.getCredentialsSecretArn().equals(this.getCredentialsSecretArn()) == false)
@@ -216,13 +305,17 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDatabaseName() != null && other.getDatabaseName().equals(this.getDatabaseName()) == false)
             return false;
-        if (other.getTableName() == null ^ this.getTableName() == null)
-            return false;
-        if (other.getTableName() != null && other.getTableName().equals(this.getTableName()) == false)
-            return false;
         if (other.getFieldMapping() == null ^ this.getFieldMapping() == null)
             return false;
         if (other.getFieldMapping() != null && other.getFieldMapping().equals(this.getFieldMapping()) == false)
+            return false;
+        if (other.getResourceArn() == null ^ this.getResourceArn() == null)
+            return false;
+        if (other.getResourceArn() != null && other.getResourceArn().equals(this.getResourceArn()) == false)
+            return false;
+        if (other.getTableName() == null ^ this.getTableName() == null)
+            return false;
+        if (other.getTableName() != null && other.getTableName().equals(this.getTableName()) == false)
             return false;
         return true;
     }
@@ -232,11 +325,11 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getCredentialsSecretArn() == null) ? 0 : getCredentialsSecretArn().hashCode());
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
-        hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
         hashCode = prime * hashCode + ((getFieldMapping() == null) ? 0 : getFieldMapping().hashCode());
+        hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
+        hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
         return hashCode;
     }
 

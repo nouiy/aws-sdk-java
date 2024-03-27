@@ -48,18 +48,6 @@ public class InferenceConfigurationJsonUnmarshaller implements Unmarshaller<Infe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("temperature", targetDepth)) {
-                    context.nextToken();
-                    inferenceConfiguration.setTemperature(context.getUnmarshaller(Float.class).unmarshall(context));
-                }
-                if (context.testExpression("topP", targetDepth)) {
-                    context.nextToken();
-                    inferenceConfiguration.setTopP(context.getUnmarshaller(Float.class).unmarshall(context));
-                }
-                if (context.testExpression("topK", targetDepth)) {
-                    context.nextToken();
-                    inferenceConfiguration.setTopK(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("maximumLength", targetDepth)) {
                     context.nextToken();
                     inferenceConfiguration.setMaximumLength(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -69,6 +57,18 @@ public class InferenceConfigurationJsonUnmarshaller implements Unmarshaller<Infe
                     inferenceConfiguration.setStopSequences(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("temperature", targetDepth)) {
+                    context.nextToken();
+                    inferenceConfiguration.setTemperature(context.getUnmarshaller(Float.class).unmarshall(context));
+                }
+                if (context.testExpression("topK", targetDepth)) {
+                    context.nextToken();
+                    inferenceConfiguration.setTopK(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("topP", targetDepth)) {
+                    context.nextToken();
+                    inferenceConfiguration.setTopP(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PromptConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> PROMPTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptType").build();
-    private static final MarshallingInfo<String> PROMPTCREATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptCreationMode").build();
-    private static final MarshallingInfo<String> PROMPTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptState").build();
     private static final MarshallingInfo<String> BASEPROMPTTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("basePromptTemplate").build();
     private static final MarshallingInfo<StructuredPojo> INFERENCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceConfiguration").build();
     private static final MarshallingInfo<String> PARSERMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parserMode").build();
+    private static final MarshallingInfo<String> PROMPTCREATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptCreationMode").build();
+    private static final MarshallingInfo<String> PROMPTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptState").build();
+    private static final MarshallingInfo<String> PROMPTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptType").build();
 
     private static final PromptConfigurationMarshaller instance = new PromptConfigurationMarshaller();
 
@@ -56,12 +56,12 @@ public class PromptConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(promptConfiguration.getPromptType(), PROMPTTYPE_BINDING);
-            protocolMarshaller.marshall(promptConfiguration.getPromptCreationMode(), PROMPTCREATIONMODE_BINDING);
-            protocolMarshaller.marshall(promptConfiguration.getPromptState(), PROMPTSTATE_BINDING);
             protocolMarshaller.marshall(promptConfiguration.getBasePromptTemplate(), BASEPROMPTTEMPLATE_BINDING);
             protocolMarshaller.marshall(promptConfiguration.getInferenceConfiguration(), INFERENCECONFIGURATION_BINDING);
             protocolMarshaller.marshall(promptConfiguration.getParserMode(), PARSERMODE_BINDING);
+            protocolMarshaller.marshall(promptConfiguration.getPromptCreationMode(), PROMPTCREATIONMODE_BINDING);
+            protocolMarshaller.marshall(promptConfiguration.getPromptState(), PROMPTSTATE_BINDING);
+            protocolMarshaller.marshall(promptConfiguration.getPromptType(), PROMPTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

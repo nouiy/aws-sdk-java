@@ -60,6 +60,12 @@ public class EksPodPropertiesJsonUnmarshaller implements Unmarshaller<EksPodProp
                     context.nextToken();
                     eksPodProperties.setDnsPolicy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("imagePullSecrets", targetDepth)) {
+                    context.nextToken();
+                    eksPodProperties.setImagePullSecrets(new ListUnmarshaller<ImagePullSecret>(ImagePullSecretJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("containers", targetDepth)) {
                     context.nextToken();
                     eksPodProperties.setContainers(new ListUnmarshaller<EksContainer>(EksContainerJsonUnmarshaller.getInstance())

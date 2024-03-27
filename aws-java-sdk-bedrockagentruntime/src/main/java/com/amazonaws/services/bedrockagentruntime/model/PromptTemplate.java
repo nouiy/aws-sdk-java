@@ -31,7 +31,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * <a href=
  * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html#API_agent-runtime_RetrieveAndGenerate_RequestSyntax"
- * >RetrieveAndGenerate request</a>
+ * >RetrieveAndGenerate request</a> – in the <code>filter</code> field
  * </p>
  * </li>
  * </ul>

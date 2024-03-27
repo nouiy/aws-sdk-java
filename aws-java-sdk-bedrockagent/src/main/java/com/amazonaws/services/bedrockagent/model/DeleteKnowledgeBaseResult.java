@@ -23,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the knowledge base that was deleted.
+     * </p>
+     */
     private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * The status of the knowledge base and whether it has been successfully deleted.
+     * </p>
+     */
     private String status;
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base that was deleted.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base that was deleted.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -36,7 +50,11 @@ public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the knowledge base that was deleted.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base that was deleted.
      */
 
     public String getKnowledgeBaseId() {
@@ -44,7 +62,12 @@ public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base that was deleted.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base that was deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -54,7 +77,12 @@ public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The status of the knowledge base and whether it has been successfully deleted.
+     * </p>
+     * 
      * @param status
+     *        The status of the knowledge base and whether it has been successfully deleted.
      * @see KnowledgeBaseStatus
      */
 
@@ -63,7 +91,11 @@ public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the knowledge base and whether it has been successfully deleted.
+     * </p>
+     * 
+     * @return The status of the knowledge base and whether it has been successfully deleted.
      * @see KnowledgeBaseStatus
      */
 
@@ -72,7 +104,12 @@ public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The status of the knowledge base and whether it has been successfully deleted.
+     * </p>
+     * 
      * @param status
+     *        The status of the knowledge base and whether it has been successfully deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseStatus
      */
@@ -83,7 +120,12 @@ public class DeleteKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The status of the knowledge base and whether it has been successfully deleted.
+     * </p>
+     * 
      * @param status
+     *        The status of the knowledge base and whether it has been successfully deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseStatus
      */

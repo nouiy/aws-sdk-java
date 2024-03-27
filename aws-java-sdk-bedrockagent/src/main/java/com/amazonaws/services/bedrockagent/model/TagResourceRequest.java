@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ARN of the resource to tag.
+     * </p>
+     */
     private String resourceArn;
-
+    /**
+     * <p>
+     * An object containing key-value pairs that define the tags to attach to the resource.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
+     * <p>
+     * The ARN of the resource to tag.
+     * </p>
+     * 
      * @param resourceArn
+     *        The ARN of the resource to tag.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -38,7 +52,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the resource to tag.
+     * </p>
+     * 
+     * @return The ARN of the resource to tag.
      */
 
     public String getResourceArn() {
@@ -46,7 +64,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The ARN of the resource to tag.
+     * </p>
+     * 
      * @param resourceArn
+     *        The ARN of the resource to tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * An object containing key-value pairs that define the tags to attach to the resource.
+     * </p>
+     * 
+     * @return An object containing key-value pairs that define the tags to attach to the resource.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -64,7 +91,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * An object containing key-value pairs that define the tags to attach to the resource.
+     * </p>
+     * 
      * @param tags
+     *        An object containing key-value pairs that define the tags to attach to the resource.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -72,7 +104,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * An object containing key-value pairs that define the tags to attach to the resource.
+     * </p>
+     * 
      * @param tags
+     *        An object containing key-value pairs that define the tags to attach to the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

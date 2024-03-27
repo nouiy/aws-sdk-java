@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Agent Knowledge Base Summary
+ * Contains details about a knowledge base associated with an agent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentKnowledgeBaseSummary"
@@ -28,42 +28,40 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, StructuredPojo {
 
-    private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * The description of the knowledge base associated with an agent.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base associated with an agent.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     */
     private String knowledgeBaseState;
-
+    /**
+     * <p>
+     * The time at which the knowledge base associated with an agent was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AgentKnowledgeBaseSummary withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The description of the knowledge base associated with an agent.
+     * </p>
+     * 
      * @param description
+     *        The description of the knowledge base associated with an agent.
      */
 
     public void setDescription(String description) {
@@ -71,7 +69,11 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the knowledge base associated with an agent.
+     * </p>
+     * 
+     * @return The description of the knowledge base associated with an agent.
      */
 
     public String getDescription() {
@@ -79,7 +81,12 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The description of the knowledge base associated with an agent.
+     * </p>
+     * 
      * @param description
+     *        The description of the knowledge base associated with an agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,7 +96,56 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base associated with an agent.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base associated with an agent.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base associated with an agent.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base associated with an agent.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base associated with an agent.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base associated with an agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentKnowledgeBaseSummary withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether the agent uses the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @see KnowledgeBaseState
      */
 
@@ -98,7 +154,15 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
+     * @return Specifies whether the agent uses the knowledge base or not when sending an <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *         >InvokeAgent</a> request.
      * @see KnowledgeBaseState
      */
 
@@ -107,7 +171,16 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether the agent uses the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseState
      */
@@ -118,7 +191,16 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether the agent uses the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseState
      */
@@ -129,7 +211,12 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The time at which the knowledge base associated with an agent was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the knowledge base associated with an agent was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -137,7 +224,11 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the knowledge base associated with an agent was last updated.
+     * </p>
+     * 
+     * @return The time at which the knowledge base associated with an agent was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -145,7 +236,12 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The time at which the knowledge base associated with an agent was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the knowledge base associated with an agent was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,10 +262,10 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getKnowledgeBaseState() != null)
             sb.append("KnowledgeBaseState: ").append(getKnowledgeBaseState()).append(",");
         if (getUpdatedAt() != null)
@@ -188,13 +284,13 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
         if (obj instanceof AgentKnowledgeBaseSummary == false)
             return false;
         AgentKnowledgeBaseSummary other = (AgentKnowledgeBaseSummary) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         if (other.getKnowledgeBaseState() == null ^ this.getKnowledgeBaseState() == null)
             return false;
@@ -212,8 +308,8 @@ public class AgentKnowledgeBaseSummary implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseState() == null) ? 0 : getKnowledgeBaseState().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;

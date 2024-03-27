@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Delete Agent Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgent" target="_top">AWS API
  *      Documentation</a>
@@ -26,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the agent that was deleted.
+     * </p>
+     */
     private String agentId;
-
+    /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     */
     private String agentStatus;
 
     /**
+     * <p>
+     * The unique identifier of the agent that was deleted.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent that was deleted.
      */
 
     public void setAgentId(String agentId) {
@@ -39,7 +50,11 @@ public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the agent that was deleted.
+     * </p>
+     * 
+     * @return The unique identifier of the agent that was deleted.
      */
 
     public String getAgentId() {
@@ -47,7 +62,12 @@ public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The unique identifier of the agent that was deleted.
+     * </p>
+     * 
      * @param agentId
+     *        The unique identifier of the agent that was deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +77,12 @@ public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent.
      * @see AgentStatus
      */
 
@@ -66,7 +91,11 @@ public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
+     * @return The status of the agent.
      * @see AgentStatus
      */
 
@@ -75,7 +104,12 @@ public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */
@@ -86,7 +120,12 @@ public class DeleteAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * The status of the agent.
+     * </p>
+     * 
      * @param agentStatus
+     *        The status of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentStatus
      */

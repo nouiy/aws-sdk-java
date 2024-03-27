@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * PrepareAgent Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PrepareAgent" target="_top">AWS API
  *      Documentation</a>
@@ -30,18 +27,18 @@ public class PrepareAgentRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      * </p>
      */
     private String agentId;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      */
 
     public void setAgentId(String agentId) {
@@ -50,10 +47,10 @@ public class PrepareAgentRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      */
 
     public String getAgentId() {
@@ -62,11 +59,11 @@ public class PrepareAgentRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent for which to create a <code>DRAFT</code> version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

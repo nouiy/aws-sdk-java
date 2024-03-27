@@ -47,6 +47,11 @@ public class ECPUPerSecondStaxUnmarshaller implements Unmarshaller<ECPUPerSecond
                     eCPUPerSecond.setMaximum(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Minimum", targetDepth)) {
+                    eCPUPerSecond.setMinimum(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return eCPUPerSecond;

@@ -27,16 +27,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class IngestionJobStatisticsMarshaller {
 
-    private static final MarshallingInfo<Long> NUMBEROFDOCUMENTSSCANNED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfDocumentsScanned").build();
-    private static final MarshallingInfo<Long> NUMBEROFNEWDOCUMENTSINDEXED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfNewDocumentsIndexed").build();
-    private static final MarshallingInfo<Long> NUMBEROFMODIFIEDDOCUMENTSINDEXED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfModifiedDocumentsIndexed").build();
     private static final MarshallingInfo<Long> NUMBEROFDOCUMENTSDELETED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfDocumentsDeleted").build();
     private static final MarshallingInfo<Long> NUMBEROFDOCUMENTSFAILED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfDocumentsFailed").build();
+    private static final MarshallingInfo<Long> NUMBEROFDOCUMENTSSCANNED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfDocumentsScanned").build();
+    private static final MarshallingInfo<Long> NUMBEROFMETADATADOCUMENTSMODIFIED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfMetadataDocumentsModified").build();
+    private static final MarshallingInfo<Long> NUMBEROFMETADATADOCUMENTSSCANNED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfMetadataDocumentsScanned").build();
+    private static final MarshallingInfo<Long> NUMBEROFMODIFIEDDOCUMENTSINDEXED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfModifiedDocumentsIndexed").build();
+    private static final MarshallingInfo<Long> NUMBEROFNEWDOCUMENTSINDEXED_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("numberOfNewDocumentsIndexed").build();
 
     private static final IngestionJobStatisticsMarshaller instance = new IngestionJobStatisticsMarshaller();
 
@@ -54,11 +58,13 @@ public class IngestionJobStatisticsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfDocumentsScanned(), NUMBEROFDOCUMENTSSCANNED_BINDING);
-            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfNewDocumentsIndexed(), NUMBEROFNEWDOCUMENTSINDEXED_BINDING);
-            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfModifiedDocumentsIndexed(), NUMBEROFMODIFIEDDOCUMENTSINDEXED_BINDING);
             protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfDocumentsDeleted(), NUMBEROFDOCUMENTSDELETED_BINDING);
             protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfDocumentsFailed(), NUMBEROFDOCUMENTSFAILED_BINDING);
+            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfDocumentsScanned(), NUMBEROFDOCUMENTSSCANNED_BINDING);
+            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfMetadataDocumentsModified(), NUMBEROFMETADATADOCUMENTSMODIFIED_BINDING);
+            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfMetadataDocumentsScanned(), NUMBEROFMETADATADOCUMENTSSCANNED_BINDING);
+            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfModifiedDocumentsIndexed(), NUMBEROFMODIFIEDDOCUMENTSINDEXED_BINDING);
+            protocolMarshaller.marshall(ingestionJobStatistics.getNumberOfNewDocumentsIndexed(), NUMBEROFNEWDOCUMENTSINDEXED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

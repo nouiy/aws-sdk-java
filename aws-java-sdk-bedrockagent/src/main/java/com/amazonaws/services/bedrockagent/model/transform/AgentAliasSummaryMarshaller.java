@@ -32,14 +32,14 @@ public class AgentAliasSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentAliasId").build();
     private static final MarshallingInfo<String> AGENTALIASNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentAliasName").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<List> ROUTINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("routingConfiguration").build();
     private static final MarshallingInfo<String> AGENTALIASSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentAliasStatus").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<List> ROUTINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("routingConfiguration").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
@@ -61,10 +61,10 @@ public class AgentAliasSummaryMarshaller {
         try {
             protocolMarshaller.marshall(agentAliasSummary.getAgentAliasId(), AGENTALIASID_BINDING);
             protocolMarshaller.marshall(agentAliasSummary.getAgentAliasName(), AGENTALIASNAME_BINDING);
-            protocolMarshaller.marshall(agentAliasSummary.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(agentAliasSummary.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentAliasSummary.getAgentAliasStatus(), AGENTALIASSTATUS_BINDING);
             protocolMarshaller.marshall(agentAliasSummary.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(agentAliasSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentAliasSummary.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentAliasSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

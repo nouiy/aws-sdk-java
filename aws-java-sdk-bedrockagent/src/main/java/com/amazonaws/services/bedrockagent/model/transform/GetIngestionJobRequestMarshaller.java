@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetIngestionJobRequestMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("dataSourceId").build();
     private static final MarshallingInfo<String> INGESTIONJOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("ingestionJobId").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
 
     private static final GetIngestionJobRequestMarshaller instance = new GetIngestionJobRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class GetIngestionJobRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getIngestionJobRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(getIngestionJobRequest.getDataSourceId(), DATASOURCEID_BINDING);
             protocolMarshaller.marshall(getIngestionJobRequest.getIngestionJobId(), INGESTIONJOBID_BINDING);
+            protocolMarshaller.marshall(getIngestionJobRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

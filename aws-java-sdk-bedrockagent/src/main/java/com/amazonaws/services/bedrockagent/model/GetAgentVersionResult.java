@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Get Agent Version Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentVersion" target="_top">AWS API
  *      Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetAgentVersionResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the version of the agent.
+     * </p>
+     */
     private AgentVersion agentVersion;
 
     /**
+     * <p>
+     * Contains details about the version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        Contains details about the version of the agent.
      */
 
     public void setAgentVersion(AgentVersion agentVersion) {
@@ -37,7 +44,11 @@ public class GetAgentVersionResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the version of the agent.
+     * </p>
+     * 
+     * @return Contains details about the version of the agent.
      */
 
     public AgentVersion getAgentVersion() {
@@ -45,7 +56,12 @@ public class GetAgentVersionResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * Contains details about the version of the agent.
+     * </p>
+     * 
      * @param agentVersion
+     *        Contains details about the version of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

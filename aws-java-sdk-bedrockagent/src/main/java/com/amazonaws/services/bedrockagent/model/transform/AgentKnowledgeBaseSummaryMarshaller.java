@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AgentKnowledgeBaseSummaryMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASESTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseState").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -52,8 +52,8 @@ public class AgentKnowledgeBaseSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(agentKnowledgeBaseSummary.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(agentKnowledgeBaseSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentKnowledgeBaseSummary.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(agentKnowledgeBaseSummary.getKnowledgeBaseState(), KNOWLEDGEBASESTATE_BINDING);
             protocolMarshaller.marshall(agentKnowledgeBaseSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {

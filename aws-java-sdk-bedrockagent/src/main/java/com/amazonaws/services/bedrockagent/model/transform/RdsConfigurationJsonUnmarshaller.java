@@ -48,10 +48,6 @@ public class RdsConfigurationJsonUnmarshaller implements Unmarshaller<RdsConfigu
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("resourceArn", targetDepth)) {
-                    context.nextToken();
-                    rdsConfiguration.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("credentialsSecretArn", targetDepth)) {
                     context.nextToken();
                     rdsConfiguration.setCredentialsSecretArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -60,13 +56,17 @@ public class RdsConfigurationJsonUnmarshaller implements Unmarshaller<RdsConfigu
                     context.nextToken();
                     rdsConfiguration.setDatabaseName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("tableName", targetDepth)) {
-                    context.nextToken();
-                    rdsConfiguration.setTableName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("fieldMapping", targetDepth)) {
                     context.nextToken();
                     rdsConfiguration.setFieldMapping(RdsFieldMappingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("resourceArn", targetDepth)) {
+                    context.nextToken();
+                    rdsConfiguration.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("tableName", targetDepth)) {
+                    context.nextToken();
+                    rdsConfiguration.setTableName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

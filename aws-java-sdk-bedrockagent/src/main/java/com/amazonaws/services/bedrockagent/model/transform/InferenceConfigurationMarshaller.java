@@ -28,16 +28,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class InferenceConfigurationMarshaller {
 
-    private static final MarshallingInfo<Float> TEMPERATURE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("temperature").build();
-    private static final MarshallingInfo<Float> TOPP_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("topP").build();
-    private static final MarshallingInfo<Integer> TOPK_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("topK").build();
     private static final MarshallingInfo<Integer> MAXIMUMLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumLength").build();
     private static final MarshallingInfo<List> STOPSEQUENCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("stopSequences").build();
+    private static final MarshallingInfo<Float> TEMPERATURE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("temperature").build();
+    private static final MarshallingInfo<Integer> TOPK_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("topK").build();
+    private static final MarshallingInfo<Float> TOPP_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("topP").build();
 
     private static final InferenceConfigurationMarshaller instance = new InferenceConfigurationMarshaller();
 
@@ -55,11 +55,11 @@ public class InferenceConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(inferenceConfiguration.getTemperature(), TEMPERATURE_BINDING);
-            protocolMarshaller.marshall(inferenceConfiguration.getTopP(), TOPP_BINDING);
-            protocolMarshaller.marshall(inferenceConfiguration.getTopK(), TOPK_BINDING);
             protocolMarshaller.marshall(inferenceConfiguration.getMaximumLength(), MAXIMUMLENGTH_BINDING);
             protocolMarshaller.marshall(inferenceConfiguration.getStopSequences(), STOPSEQUENCES_BINDING);
+            protocolMarshaller.marshall(inferenceConfiguration.getTemperature(), TEMPERATURE_BINDING);
+            protocolMarshaller.marshall(inferenceConfiguration.getTopK(), TOPK_BINDING);
+            protocolMarshaller.marshall(inferenceConfiguration.getTopP(), TOPP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

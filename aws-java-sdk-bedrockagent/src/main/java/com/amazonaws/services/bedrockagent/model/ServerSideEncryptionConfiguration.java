@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Server-side encryption configuration.
+ * Contains the configuration for server-side encryption.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ServerSideEncryptionConfiguration"
@@ -28,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServerSideEncryptionConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the KMS key used to encrypt the resource.
+     * </p>
+     */
     private String kmsKeyArn;
 
     /**
+     * <p>
+     * The ARN of the KMS key used to encrypt the resource.
+     * </p>
+     * 
      * @param kmsKeyArn
+     *        The ARN of the KMS key used to encrypt the resource.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -39,7 +49,11 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the KMS key used to encrypt the resource.
+     * </p>
+     * 
+     * @return The ARN of the KMS key used to encrypt the resource.
      */
 
     public String getKmsKeyArn() {
@@ -47,7 +61,12 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The ARN of the KMS key used to encrypt the resource.
+     * </p>
+     * 
      * @param kmsKeyArn
+     *        The ARN of the KMS key used to encrypt the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

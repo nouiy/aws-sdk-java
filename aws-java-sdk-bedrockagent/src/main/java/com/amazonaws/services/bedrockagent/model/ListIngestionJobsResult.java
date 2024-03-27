@@ -23,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of objects, each of which contains information about an ingestion job.
+     * </p>
+     */
     private java.util.List<IngestionJobSummary> ingestionJobSummaries;
-
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * A list of objects, each of which contains information about an ingestion job.
+     * </p>
+     * 
+     * @return A list of objects, each of which contains information about an ingestion job.
      */
 
     public java.util.List<IngestionJobSummary> getIngestionJobSummaries() {
@@ -36,7 +50,12 @@ public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about an ingestion job.
+     * </p>
+     * 
      * @param ingestionJobSummaries
+     *        A list of objects, each of which contains information about an ingestion job.
      */
 
     public void setIngestionJobSummaries(java.util.Collection<IngestionJobSummary> ingestionJobSummaries) {
@@ -50,12 +69,16 @@ public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * A list of objects, each of which contains information about an ingestion job.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setIngestionJobSummaries(java.util.Collection)} or
      * {@link #withIngestionJobSummaries(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param ingestionJobSummaries
+     *        A list of objects, each of which contains information about an ingestion job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +93,12 @@ public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * A list of objects, each of which contains information about an ingestion job.
+     * </p>
+     * 
      * @param ingestionJobSummaries
+     *        A list of objects, each of which contains information about an ingestion job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +108,15 @@ public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +124,14 @@ public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         use this token when making another request in the <code>nextToken</code> field to return the next batch
+     *         of results.
      */
 
     public String getNextToken() {
@@ -96,7 +139,15 @@ public class ListIngestionJobsResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, use
+     * this token when making another request in the <code>nextToken</code> field to return the next batch of results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        use this token when making another request in the <code>nextToken</code> field to return the next batch of
+     *        results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

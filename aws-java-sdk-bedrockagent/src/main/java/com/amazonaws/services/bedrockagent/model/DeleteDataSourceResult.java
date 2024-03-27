@@ -23,40 +23,32 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * The unique identifier of the data source that was deleted.
+     * </p>
+     */
     private String dataSourceId;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     */
     private String status;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteDataSourceResult withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The unique identifier of the data source that was deleted.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source that was deleted.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -64,7 +56,11 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the data source that was deleted.
+     * </p>
+     * 
+     * @return The unique identifier of the data source that was deleted.
      */
 
     public String getDataSourceId() {
@@ -72,7 +68,12 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source that was deleted.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source that was deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,7 +83,52 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which the data source that was deleted belonged.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteDataSourceResult withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
      * @param status
+     *        The status of the data source.
      * @see DataSourceStatus
      */
 
@@ -91,7 +137,11 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
+     * @return The status of the data source.
      * @see DataSourceStatus
      */
 
@@ -100,7 +150,12 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
      * @param status
+     *        The status of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -111,7 +166,12 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
      * @param status
+     *        The status of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -133,10 +193,10 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDataSourceId() != null)
             sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus());
         sb.append("}");
@@ -153,13 +213,13 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof DeleteDataSourceResult == false)
             return false;
         DeleteDataSourceResult other = (DeleteDataSourceResult) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -173,8 +233,8 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }

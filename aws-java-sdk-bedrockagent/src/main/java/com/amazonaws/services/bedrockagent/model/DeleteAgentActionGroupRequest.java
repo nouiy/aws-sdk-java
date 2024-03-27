@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Delete Action Group Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentActionGroup"
  *      target="_top">AWS API Documentation</a>
@@ -30,116 +27,37 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     */
-    private String agentId;
-    /**
-     * <p>
-     * Draft Version of the Agent.
-     * </p>
-     */
-    private String agentVersion;
-    /**
-     * <p>
-     * Id generated at the server side when an Agent ActionGroup is created
+     * The unique identifier of the action group to delete.
      * </p>
      */
     private String actionGroupId;
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * The unique identifier of the agent that the action group belongs to.
+     * </p>
+     */
+    private String agentId;
+    /**
+     * <p>
+     * The version of the agent that the action group belongs to.
+     * </p>
+     */
+    private String agentVersion;
+    /**
+     * <p>
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      */
     private Boolean skipResourceInUseCheck;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @param agentId
-     *        Id generated at the server side when an Agent is created
-     */
-
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @return Id generated at the server side when an Agent is created
-     */
-
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @param agentId
-     *        Id generated at the server side when an Agent is created
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteAgentActionGroupRequest withAgentId(String agentId) {
-        setAgentId(agentId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Draft Version of the Agent.
-     * </p>
-     * 
-     * @param agentVersion
-     *        Draft Version of the Agent.
-     */
-
-    public void setAgentVersion(String agentVersion) {
-        this.agentVersion = agentVersion;
-    }
-
-    /**
-     * <p>
-     * Draft Version of the Agent.
-     * </p>
-     * 
-     * @return Draft Version of the Agent.
-     */
-
-    public String getAgentVersion() {
-        return this.agentVersion;
-    }
-
-    /**
-     * <p>
-     * Draft Version of the Agent.
-     * </p>
-     * 
-     * @param agentVersion
-     *        Draft Version of the Agent.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteAgentActionGroupRequest withAgentVersion(String agentVersion) {
-        setAgentVersion(agentVersion);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent ActionGroup is created
+     * The unique identifier of the action group to delete.
      * </p>
      * 
      * @param actionGroupId
-     *        Id generated at the server side when an Agent ActionGroup is created
+     *        The unique identifier of the action group to delete.
      */
 
     public void setActionGroupId(String actionGroupId) {
@@ -148,10 +66,10 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Id generated at the server side when an Agent ActionGroup is created
+     * The unique identifier of the action group to delete.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent ActionGroup is created
+     * @return The unique identifier of the action group to delete.
      */
 
     public String getActionGroupId() {
@@ -160,11 +78,11 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Id generated at the server side when an Agent ActionGroup is created
+     * The unique identifier of the action group to delete.
      * </p>
      * 
      * @param actionGroupId
-     *        Id generated at the server side when an Agent ActionGroup is created
+     *        The unique identifier of the action group to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +93,93 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * The unique identifier of the agent that the action group belongs to.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent that the action group belongs to.
+     */
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the action group belongs to.
+     * </p>
+     * 
+     * @return The unique identifier of the agent that the action group belongs to.
+     */
+
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent that the action group belongs to.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent that the action group belongs to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteAgentActionGroupRequest withAgentId(String agentId) {
+        setAgentId(agentId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The version of the agent that the action group belongs to.
+     * </p>
+     * 
+     * @param agentVersion
+     *        The version of the agent that the action group belongs to.
+     */
+
+    public void setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the agent that the action group belongs to.
+     * </p>
+     * 
+     * @return The version of the agent that the action group belongs to.
+     */
+
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the agent that the action group belongs to.
+     * </p>
+     * 
+     * @param agentVersion
+     *        The version of the agent that the action group belongs to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteAgentActionGroupRequest withAgentVersion(String agentVersion) {
+        setAgentVersion(agentVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
      * @param skipResourceInUseCheck
-     *        Skips checking if resource is in use when set to true. Defaults to false
+     *        By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set
+     *        it to <code>true</code>, the resource will be deleted even if the resource is in use.
      */
 
     public void setSkipResourceInUseCheck(Boolean skipResourceInUseCheck) {
@@ -188,10 +188,12 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
-     * @return Skips checking if resource is in use when set to true. Defaults to false
+     * @return By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you
+     *         set it to <code>true</code>, the resource will be deleted even if the resource is in use.
      */
 
     public Boolean getSkipResourceInUseCheck() {
@@ -200,11 +202,13 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
      * @param skipResourceInUseCheck
-     *        Skips checking if resource is in use when set to true. Defaults to false
+     *        By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set
+     *        it to <code>true</code>, the resource will be deleted even if the resource is in use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,10 +219,12 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Skips checking if resource is in use when set to true. Defaults to false
+     * By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you set it to
+     * <code>true</code>, the resource will be deleted even if the resource is in use.
      * </p>
      * 
-     * @return Skips checking if resource is in use when set to true. Defaults to false
+     * @return By default, this value is <code>false</code> and deletion is stopped if the resource is in use. If you
+     *         set it to <code>true</code>, the resource will be deleted even if the resource is in use.
      */
 
     public Boolean isSkipResourceInUseCheck() {
@@ -237,12 +243,12 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getActionGroupId() != null)
+            sb.append("ActionGroupId: ").append(getActionGroupId()).append(",");
         if (getAgentId() != null)
             sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getAgentVersion() != null)
             sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
-        if (getActionGroupId() != null)
-            sb.append("ActionGroupId: ").append(getActionGroupId()).append(",");
         if (getSkipResourceInUseCheck() != null)
             sb.append("SkipResourceInUseCheck: ").append(getSkipResourceInUseCheck());
         sb.append("}");
@@ -259,6 +265,10 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof DeleteAgentActionGroupRequest == false)
             return false;
         DeleteAgentActionGroupRequest other = (DeleteAgentActionGroupRequest) obj;
+        if (other.getActionGroupId() == null ^ this.getActionGroupId() == null)
+            return false;
+        if (other.getActionGroupId() != null && other.getActionGroupId().equals(this.getActionGroupId()) == false)
+            return false;
         if (other.getAgentId() == null ^ this.getAgentId() == null)
             return false;
         if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
@@ -266,10 +276,6 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
         if (other.getAgentVersion() == null ^ this.getAgentVersion() == null)
             return false;
         if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
-            return false;
-        if (other.getActionGroupId() == null ^ this.getActionGroupId() == null)
-            return false;
-        if (other.getActionGroupId() != null && other.getActionGroupId().equals(this.getActionGroupId()) == false)
             return false;
         if (other.getSkipResourceInUseCheck() == null ^ this.getSkipResourceInUseCheck() == null)
             return false;
@@ -283,9 +289,9 @@ public class DeleteAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getActionGroupId() == null) ? 0 : getActionGroupId().hashCode());
         hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
-        hashCode = prime * hashCode + ((getActionGroupId() == null) ? 0 : getActionGroupId().hashCode());
         hashCode = prime * hashCode + ((getSkipResourceInUseCheck() == null) ? 0 : getSkipResourceInUseCheck().hashCode());
         return hashCode;
     }

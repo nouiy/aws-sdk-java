@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DeleteAgentActionGroupRequestMarshaller {
 
+    private static final MarshallingInfo<String> ACTIONGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("actionGroupId").build();
     private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentVersion").build();
-    private static final MarshallingInfo<String> ACTIONGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("actionGroupId").build();
     private static final MarshallingInfo<Boolean> SKIPRESOURCEINUSECHECK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("skipResourceInUseCheck").build();
 
@@ -52,9 +52,9 @@ public class DeleteAgentActionGroupRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(deleteAgentActionGroupRequest.getActionGroupId(), ACTIONGROUPID_BINDING);
             protocolMarshaller.marshall(deleteAgentActionGroupRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(deleteAgentActionGroupRequest.getAgentVersion(), AGENTVERSION_BINDING);
-            protocolMarshaller.marshall(deleteAgentActionGroupRequest.getActionGroupId(), ACTIONGROUPID_BINDING);
             protocolMarshaller.marshall(deleteAgentActionGroupRequest.getSkipResourceInUseCheck(), SKIPRESOURCEINUSECHECK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

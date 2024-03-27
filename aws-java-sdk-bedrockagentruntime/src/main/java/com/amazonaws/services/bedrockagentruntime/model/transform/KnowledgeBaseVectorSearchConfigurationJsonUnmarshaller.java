@@ -48,6 +48,10 @@ public class KnowledgeBaseVectorSearchConfigurationJsonUnmarshaller implements U
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("filter", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBaseVectorSearchConfiguration.setFilter(RetrievalFilterJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("numberOfResults", targetDepth)) {
                     context.nextToken();
                     knowledgeBaseVectorSearchConfiguration.setNumberOfResults(context.getUnmarshaller(Integer.class).unmarshall(context));

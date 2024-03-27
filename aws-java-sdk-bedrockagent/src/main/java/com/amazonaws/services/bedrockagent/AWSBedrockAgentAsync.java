@@ -26,7 +26,7 @@ import com.amazonaws.services.bedrockagent.model.*;
  * </p>
  * <p>
  * <p>
- * An example service, deployed with the Octane Service creator, which will echo the string
+ * Describes the API operations for creating and managing Amazon Bedrock agents.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -34,11 +34,12 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Associate a Knowledge Base to an existing Amazon Bedrock Agent
+     * Associates a knowledge base with an agent. If a knowledge base is associated and its <code>indexState</code> is
+     * set to <code>Enabled</code>, the agent queries the knowledge base for information to augment its response to the
+     * user.
      * </p>
      * 
      * @param associateAgentKnowledgeBaseRequest
-     *        Associate Agent Knowledge Base Request
      * @return A Java Future containing the result of the AssociateAgentKnowledgeBase operation returned by the service.
      * @sample AWSBedrockAgentAsync.AssociateAgentKnowledgeBase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AssociateAgentKnowledgeBase"
@@ -49,11 +50,12 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Associate a Knowledge Base to an existing Amazon Bedrock Agent
+     * Associates a knowledge base with an agent. If a knowledge base is associated and its <code>indexState</code> is
+     * set to <code>Enabled</code>, the agent queries the knowledge base for information to augment its response to the
+     * user.
      * </p>
      * 
      * @param associateAgentKnowledgeBaseRequest
-     *        Associate Agent Knowledge Base Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -69,11 +71,50 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Creates an Amazon Bedrock Agent
+     * Creates an agent that orchestrates interactions between foundation models, data sources, software applications,
+     * user conversations, and APIs to carry out tasks to help customers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Specify the following fields for security purposes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>agentResourceRoleArn</code> – The ARN of the role with permissions to create an agent.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * (Optional) <code>customerEncryptionKeyArn</code> – The ARN of a KMS key to encrypt the creation of the agent.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * (Optional) <code>idleSessionTTLinSeconds</code> – Specify the number of seconds for which the agent should
+     * maintain session information. After this time expires, the subsequent <code>InvokeAgent</code> request begins a
+     * new session.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * To override the default prompt behavior for agent orchestration and to use advanced prompts, include a
+     * <code>promptOverrideConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you agent fails to be created, the response returns a list of <code>failureReasons</code> alongside a list of
+     * <code>recommendedActions</code> for you to troubleshoot.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createAgentRequest
-     *        Create Agent Request
      * @return A Java Future containing the result of the CreateAgent operation returned by the service.
      * @sample AWSBedrockAgentAsync.CreateAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgent" target="_top">AWS API
@@ -83,11 +124,50 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Creates an Amazon Bedrock Agent
+     * Creates an agent that orchestrates interactions between foundation models, data sources, software applications,
+     * user conversations, and APIs to carry out tasks to help customers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Specify the following fields for security purposes.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>agentResourceRoleArn</code> – The ARN of the role with permissions to create an agent.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * (Optional) <code>customerEncryptionKeyArn</code> – The ARN of a KMS key to encrypt the creation of the agent.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * (Optional) <code>idleSessionTTLinSeconds</code> – Specify the number of seconds for which the agent should
+     * maintain session information. After this time expires, the subsequent <code>InvokeAgent</code> request begins a
+     * new session.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * To override the default prompt behavior for agent orchestration and to use advanced prompts, include a
+     * <code>promptOverrideConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you agent fails to be created, the response returns a list of <code>failureReasons</code> alongside a list of
+     * <code>recommendedActions</code> for you to troubleshoot.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createAgentRequest
-     *        Create Agent Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -102,11 +182,21 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Creates an Action Group for existing Amazon Bedrock Agent
+     * Creates an action group for an agent. An action group represents the actions that an agent can carry out for the
+     * customer by defining the APIs that an agent can call and the logic for calling them.
+     * </p>
+     * <p>
+     * To allow your agent to request the user for additional information when trying to complete a task, add an action
+     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>. You must leave
+     * the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields blank for this
+     * action group. During orchestration, if your agent determines that it needs to invoke an API in an action group,
+     * but doesn't have enough information to complete the API request, it will invoke this action group instead and
+     * return an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Observation.html">Observation</a>
+     * reprompting the user for more information.
      * </p>
      * 
      * @param createAgentActionGroupRequest
-     *        Create Action Group Request
      * @return A Java Future containing the result of the CreateAgentActionGroup operation returned by the service.
      * @sample AWSBedrockAgentAsync.CreateAgentActionGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgentActionGroup"
@@ -116,11 +206,21 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Creates an Action Group for existing Amazon Bedrock Agent
+     * Creates an action group for an agent. An action group represents the actions that an agent can carry out for the
+     * customer by defining the APIs that an agent can call and the logic for calling them.
+     * </p>
+     * <p>
+     * To allow your agent to request the user for additional information when trying to complete a task, add an action
+     * group with the <code>parentActionGroupSignature</code> field set to <code>AMAZON.UserInput</code>. You must leave
+     * the <code>description</code>, <code>apiSchema</code>, and <code>actionGroupExecutor</code> fields blank for this
+     * action group. During orchestration, if your agent determines that it needs to invoke an API in an action group,
+     * but doesn't have enough information to complete the API request, it will invoke this action group instead and
+     * return an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Observation.html">Observation</a>
+     * reprompting the user for more information.
      * </p>
      * 
      * @param createAgentActionGroupRequest
-     *        Create Action Group Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -135,11 +235,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Creates an Alias for an existing Amazon Bedrock Agent
+     * Creates an alias of an agent that can be used to deploy the agent.
      * </p>
      * 
      * @param createAgentAliasRequest
-     *        Create Agent Alias Request
      * @return A Java Future containing the result of the CreateAgentAlias operation returned by the service.
      * @sample AWSBedrockAgentAsync.CreateAgentAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgentAlias" target="_top">AWS
@@ -149,11 +248,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Creates an Alias for an existing Amazon Bedrock Agent
+     * Creates an alias of an agent that can be used to deploy the agent.
      * </p>
      * 
      * @param createAgentAliasRequest
-     *        Create Agent Alias Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -168,8 +266,13 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Create a new data source
+     * Sets up a data source to be added to a knowledge base.
      * </p>
+     * <important>
+     * <p>
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source.
+     * </p>
+     * </important>
      * 
      * @param createDataSourceRequest
      * @return A Java Future containing the result of the CreateDataSource operation returned by the service.
@@ -181,8 +284,13 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Create a new data source
+     * Sets up a data source to be added to a knowledge base.
      * </p>
+     * <important>
+     * <p>
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source.
+     * </p>
+     * </important>
      * 
      * @param createDataSourceRequest
      * @param asyncHandler
@@ -199,8 +307,73 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Create a new knowledge base
+     * Creates a knowledge base that contains data sources from which information can be queried and used by LLMs. To
+     * create a knowledge base, you must first set up your data sources and configure a supported vector store. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html">Set up
+     * your data for ingestion</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you prefer to let Amazon Bedrock create and manage a vector store for you in Amazon OpenSearch Service, use
+     * the console. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create">Create a knowledge base</a>.
+     * </p>
+     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Provide the <code>name</code> and an optional <code>description</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provide the ARN with permissions to create a knowledge base in the <code>roleArn</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provide the embedding model to use in the <code>embeddingModelArn</code> field in the
+     * <code>knowledgeBaseConfiguration</code> object.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provide the configuration for your vector store in the <code>storageConfiguration</code> object.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For an Amazon OpenSearch Service database, use the <code>opensearchServerlessConfiguration</code> object. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-oss.html">Create a vector store
+     * in Amazon OpenSearch Service</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For an Amazon Aurora database, use the <code>RdsConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector store
+     * in Amazon Aurora</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Pinecone database, use the <code>pineconeConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-pinecone.html">Create a vector
+     * store in Pinecone</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Redis Enterprise Cloud database, use the <code>redisEnterpriseCloudConfiguration</code> object. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-redis.html">Create a vector store
+     * in Redis Enterprise Cloud</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param createKnowledgeBaseRequest
      * @return A Java Future containing the result of the CreateKnowledgeBase operation returned by the service.
@@ -212,8 +385,73 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Create a new knowledge base
+     * Creates a knowledge base that contains data sources from which information can be queried and used by LLMs. To
+     * create a knowledge base, you must first set up your data sources and configure a supported vector store. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html">Set up
+     * your data for ingestion</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you prefer to let Amazon Bedrock create and manage a vector store for you in Amazon OpenSearch Service, use
+     * the console. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create">Create a knowledge base</a>.
+     * </p>
+     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * Provide the <code>name</code> and an optional <code>description</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provide the ARN with permissions to create a knowledge base in the <code>roleArn</code> field.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provide the embedding model to use in the <code>embeddingModelArn</code> field in the
+     * <code>knowledgeBaseConfiguration</code> object.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provide the configuration for your vector store in the <code>storageConfiguration</code> object.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For an Amazon OpenSearch Service database, use the <code>opensearchServerlessConfiguration</code> object. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-oss.html">Create a vector store
+     * in Amazon OpenSearch Service</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For an Amazon Aurora database, use the <code>RdsConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector store
+     * in Amazon Aurora</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Pinecone database, use the <code>pineconeConfiguration</code> object. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-pinecone.html">Create a vector
+     * store in Pinecone</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Redis Enterprise Cloud database, use the <code>redisEnterpriseCloudConfiguration</code> object. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-redis.html">Create a vector store
+     * in Redis Enterprise Cloud</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param createKnowledgeBaseRequest
      * @param asyncHandler
@@ -230,11 +468,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Agent for existing Amazon Bedrock Agent
+     * Deletes an agent.
      * </p>
      * 
      * @param deleteAgentRequest
-     *        Delete Agent Request
      * @return A Java Future containing the result of the DeleteAgent operation returned by the service.
      * @sample AWSBedrockAgentAsync.DeleteAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgent" target="_top">AWS API
@@ -244,11 +481,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Agent for existing Amazon Bedrock Agent
+     * Deletes an agent.
      * </p>
      * 
      * @param deleteAgentRequest
-     *        Delete Agent Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -263,11 +499,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Action Group for existing Amazon Bedrock Agent.
+     * Deletes an action group in an agent.
      * </p>
      * 
      * @param deleteAgentActionGroupRequest
-     *        Delete Action Group Request
      * @return A Java Future containing the result of the DeleteAgentActionGroup operation returned by the service.
      * @sample AWSBedrockAgentAsync.DeleteAgentActionGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentActionGroup"
@@ -277,11 +512,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Action Group for existing Amazon Bedrock Agent.
+     * Deletes an action group in an agent.
      * </p>
      * 
      * @param deleteAgentActionGroupRequest
-     *        Delete Action Group Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -296,11 +530,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Alias for a Amazon Bedrock Agent
+     * Deletes an alias of an agent.
      * </p>
      * 
      * @param deleteAgentAliasRequest
-     *        Delete Agent Alias Request
      * @return A Java Future containing the result of the DeleteAgentAlias operation returned by the service.
      * @sample AWSBedrockAgentAsync.DeleteAgentAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentAlias" target="_top">AWS
@@ -310,11 +543,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Alias for a Amazon Bedrock Agent
+     * Deletes an alias of an agent.
      * </p>
      * 
      * @param deleteAgentAliasRequest
-     *        Delete Agent Alias Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -329,11 +561,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Agent version for existing Amazon Bedrock Agent
+     * Deletes a version of an agent.
      * </p>
      * 
      * @param deleteAgentVersionRequest
-     *        Delete Agent Version Request
      * @return A Java Future containing the result of the DeleteAgentVersion operation returned by the service.
      * @sample AWSBedrockAgentAsync.DeleteAgentVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentVersion"
@@ -343,11 +574,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Deletes an Agent version for existing Amazon Bedrock Agent
+     * Deletes a version of an agent.
      * </p>
      * 
      * @param deleteAgentVersionRequest
-     *        Delete Agent Version Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -362,7 +592,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Delete an existing data source
+     * Deletes a data source from a knowledge base.
      * </p>
      * 
      * @param deleteDataSourceRequest
@@ -375,7 +605,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Delete an existing data source
+     * Deletes a data source from a knowledge base.
      * </p>
      * 
      * @param deleteDataSourceRequest
@@ -393,7 +623,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Delete an existing knowledge base
+     * Deletes a knowledge base. Before deleting a knowledge base, you should disassociate the knowledge base from any
+     * agents that it is associated with by making a <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_DisassociateAgentKnowledgeBase.html"
+     * >DisassociateAgentKnowledgeBase</a> request.
      * </p>
      * 
      * @param deleteKnowledgeBaseRequest
@@ -406,7 +639,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Delete an existing knowledge base
+     * Deletes a knowledge base. Before deleting a knowledge base, you should disassociate the knowledge base from any
+     * agents that it is associated with by making a <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_DisassociateAgentKnowledgeBase.html"
+     * >DisassociateAgentKnowledgeBase</a> request.
      * </p>
      * 
      * @param deleteKnowledgeBaseRequest
@@ -424,11 +660,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Disassociate an existing Knowledge Base from an Amazon Bedrock Agent
+     * Disassociates a knowledge base from an agent.
      * </p>
      * 
      * @param disassociateAgentKnowledgeBaseRequest
-     *        Disassociate Agent Knowledge Base Request
      * @return A Java Future containing the result of the DisassociateAgentKnowledgeBase operation returned by the
      *         service.
      * @sample AWSBedrockAgentAsync.DisassociateAgentKnowledgeBase
@@ -440,11 +675,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Disassociate an existing Knowledge Base from an Amazon Bedrock Agent
+     * Disassociates a knowledge base from an agent.
      * </p>
      * 
      * @param disassociateAgentKnowledgeBaseRequest
-     *        Disassociate Agent Knowledge Base Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -461,11 +695,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets an Agent for existing Amazon Bedrock Agent
+     * Gets information about an agent.
      * </p>
      * 
      * @param getAgentRequest
-     *        Get Agent Request
      * @return A Java Future containing the result of the GetAgent operation returned by the service.
      * @sample AWSBedrockAgentAsync.GetAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgent" target="_top">AWS API
@@ -475,11 +708,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets an Agent for existing Amazon Bedrock Agent
+     * Gets information about an agent.
      * </p>
      * 
      * @param getAgentRequest
-     *        Get Agent Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -494,11 +726,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets an Action Group for existing Amazon Bedrock Agent Version
+     * Gets information about an action group for an agent.
      * </p>
      * 
      * @param getAgentActionGroupRequest
-     *        Get Action Group Request
      * @return A Java Future containing the result of the GetAgentActionGroup operation returned by the service.
      * @sample AWSBedrockAgentAsync.GetAgentActionGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentActionGroup"
@@ -508,11 +739,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets an Action Group for existing Amazon Bedrock Agent Version
+     * Gets information about an action group for an agent.
      * </p>
      * 
      * @param getAgentActionGroupRequest
-     *        Get Action Group Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -527,11 +757,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Describes an Alias for a Amazon Bedrock Agent
+     * Gets information about an alias of an agent.
      * </p>
      * 
      * @param getAgentAliasRequest
-     *        Get Agent Alias Request
      * @return A Java Future containing the result of the GetAgentAlias operation returned by the service.
      * @sample AWSBedrockAgentAsync.GetAgentAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentAlias" target="_top">AWS
@@ -541,11 +770,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Describes an Alias for a Amazon Bedrock Agent
+     * Gets information about an alias of an agent.
      * </p>
      * 
      * @param getAgentAliasRequest
-     *        Get Agent Alias Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -560,11 +788,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets a knowledge base associated to an existing Amazon Bedrock Agent Version
+     * Gets information about a knowledge base associated with an agent.
      * </p>
      * 
      * @param getAgentKnowledgeBaseRequest
-     *        Get Agent Knowledge Base Request
      * @return A Java Future containing the result of the GetAgentKnowledgeBase operation returned by the service.
      * @sample AWSBedrockAgentAsync.GetAgentKnowledgeBase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentKnowledgeBase"
@@ -574,11 +801,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets a knowledge base associated to an existing Amazon Bedrock Agent Version
+     * Gets information about a knowledge base associated with an agent.
      * </p>
      * 
      * @param getAgentKnowledgeBaseRequest
-     *        Get Agent Knowledge Base Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -593,11 +819,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets an Agent version for existing Amazon Bedrock Agent
+     * Gets details about a version of an agent.
      * </p>
      * 
      * @param getAgentVersionRequest
-     *        Get Agent Version Request
      * @return A Java Future containing the result of the GetAgentVersion operation returned by the service.
      * @sample AWSBedrockAgentAsync.GetAgentVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentVersion" target="_top">AWS
@@ -607,11 +832,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Gets an Agent version for existing Amazon Bedrock Agent
+     * Gets details about a version of an agent.
      * </p>
      * 
      * @param getAgentVersionRequest
-     *        Get Agent Version Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -626,7 +850,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Get an existing data source
+     * Gets information about a data source.
      * </p>
      * 
      * @param getDataSourceRequest
@@ -639,7 +863,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Get an existing data source
+     * Gets information about a data source.
      * </p>
      * 
      * @param getDataSourceRequest
@@ -657,7 +881,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Get an ingestion job
+     * Gets information about a ingestion job, in which a data source is added to a knowledge base.
      * </p>
      * 
      * @param getIngestionJobRequest
@@ -670,7 +894,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Get an ingestion job
+     * Gets information about a ingestion job, in which a data source is added to a knowledge base.
      * </p>
      * 
      * @param getIngestionJobRequest
@@ -688,7 +912,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Get an existing knowledge base
+     * Gets information about a knoweldge base.
      * </p>
      * 
      * @param getKnowledgeBaseRequest
@@ -701,7 +925,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Get an existing knowledge base
+     * Gets information about a knoweldge base.
      * </p>
      * 
      * @param getKnowledgeBaseRequest
@@ -719,11 +943,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists an Action Group for existing Amazon Bedrock Agent Version
+     * Lists the action groups for an agent and information about each one.
      * </p>
      * 
      * @param listAgentActionGroupsRequest
-     *        List Action Groups Request
      * @return A Java Future containing the result of the ListAgentActionGroups operation returned by the service.
      * @sample AWSBedrockAgentAsync.ListAgentActionGroups
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentActionGroups"
@@ -733,11 +956,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists an Action Group for existing Amazon Bedrock Agent Version
+     * Lists the action groups for an agent and information about each one.
      * </p>
      * 
      * @param listAgentActionGroupsRequest
-     *        List Action Groups Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -752,11 +974,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists all the Aliases for an Amazon Bedrock Agent
+     * Lists the aliases of an agent and information about each one.
      * </p>
      * 
      * @param listAgentAliasesRequest
-     *        List Agent Aliases Request
      * @return A Java Future containing the result of the ListAgentAliases operation returned by the service.
      * @sample AWSBedrockAgentAsync.ListAgentAliases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentAliases" target="_top">AWS
@@ -766,11 +987,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists all the Aliases for an Amazon Bedrock Agent
+     * Lists the aliases of an agent and information about each one.
      * </p>
      * 
      * @param listAgentAliasesRequest
-     *        List Agent Aliases Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -785,11 +1005,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List of Knowledge Bases associated to an existing Amazon Bedrock Agent Version
+     * Lists knowledge bases associated with an agent and information about each one.
      * </p>
      * 
      * @param listAgentKnowledgeBasesRequest
-     *        List Agent Knowledge Bases Request
      * @return A Java Future containing the result of the ListAgentKnowledgeBases operation returned by the service.
      * @sample AWSBedrockAgentAsync.ListAgentKnowledgeBases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentKnowledgeBases"
@@ -799,11 +1018,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List of Knowledge Bases associated to an existing Amazon Bedrock Agent Version
+     * Lists knowledge bases associated with an agent and information about each one.
      * </p>
      * 
      * @param listAgentKnowledgeBasesRequest
-     *        List Agent Knowledge Bases Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -818,11 +1036,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists Agent Versions
+     * Lists the versions of an agent and information about each version.
      * </p>
      * 
      * @param listAgentVersionsRequest
-     *        List Agent Versions Request
      * @return A Java Future containing the result of the ListAgentVersions operation returned by the service.
      * @sample AWSBedrockAgentAsync.ListAgentVersions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentVersions"
@@ -832,11 +1049,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists Agent Versions
+     * Lists the versions of an agent and information about each version.
      * </p>
      * 
      * @param listAgentVersionsRequest
-     *        List Agent Versions Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -851,11 +1067,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists Agents
+     * Lists the agents belonging to an account and information about each agent.
      * </p>
      * 
      * @param listAgentsRequest
-     *        List Agent Request
      * @return A Java Future containing the result of the ListAgents operation returned by the service.
      * @sample AWSBedrockAgentAsync.ListAgents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgents" target="_top">AWS API
@@ -865,11 +1080,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Lists Agents
+     * Lists the agents belonging to an account and information about each agent.
      * </p>
      * 
      * @param listAgentsRequest
-     *        List Agent Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -884,7 +1098,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List data sources
+     * Lists the data sources in a knowledge base and information about each one.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -897,7 +1111,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List data sources
+     * Lists the data sources in a knowledge base and information about each one.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -915,7 +1129,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List ingestion jobs
+     * Lists the ingestion jobs for a data source and information about each of them.
      * </p>
      * 
      * @param listIngestionJobsRequest
@@ -928,7 +1142,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List ingestion jobs
+     * Lists the ingestion jobs for a data source and information about each of them.
      * </p>
      * 
      * @param listIngestionJobsRequest
@@ -946,7 +1160,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List Knowledge Bases
+     * Lists the knowledge bases in an account and information about each of them.
      * </p>
      * 
      * @param listKnowledgeBasesRequest
@@ -959,7 +1173,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List Knowledge Bases
+     * Lists the knowledge bases in an account and information about each of them.
      * </p>
      * 
      * @param listKnowledgeBasesRequest
@@ -977,7 +1191,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List tags for a resource
+     * List all the tags for the resource you specify.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -990,7 +1204,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * List tags for a resource
+     * List all the tags for the resource you specify.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1008,11 +1222,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Prepares an existing Amazon Bedrock Agent to receive runtime requests
+     * Creates a <code>DRAFT</code> version of the agent that can be used for internal testing.
      * </p>
      * 
      * @param prepareAgentRequest
-     *        PrepareAgent Request
      * @return A Java Future containing the result of the PrepareAgent operation returned by the service.
      * @sample AWSBedrockAgentAsync.PrepareAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PrepareAgent" target="_top">AWS API
@@ -1022,11 +1235,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Prepares an existing Amazon Bedrock Agent to receive runtime requests
+     * Creates a <code>DRAFT</code> version of the agent that can be used for internal testing.
      * </p>
      * 
      * @param prepareAgentRequest
-     *        PrepareAgent Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1041,7 +1253,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Start a new ingestion job
+     * Begins an ingestion job, in which a data source is added to a knowledge base.
      * </p>
      * 
      * @param startIngestionJobRequest
@@ -1054,7 +1266,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Start a new ingestion job
+     * Begins an ingestion job, in which a data source is added to a knowledge base.
      * </p>
      * 
      * @param startIngestionJobRequest
@@ -1072,7 +1284,9 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Tag a resource
+     * Associate tags with a resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Tagging resources</a> in the
+     * Amazon Bedrock User Guide.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1085,7 +1299,9 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Tag a resource
+     * Associate tags with a resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Tagging resources</a> in the
+     * Amazon Bedrock User Guide.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1103,7 +1319,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Untag a resource
+     * Remove tags from a resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1116,7 +1332,7 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Untag a resource
+     * Remove tags from a resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1134,11 +1350,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Amazon Bedrock Agent
+     * Updates the configuration of an agent.
      * </p>
      * 
      * @param updateAgentRequest
-     *        Update Agent Request
      * @return A Java Future containing the result of the UpdateAgent operation returned by the service.
      * @sample AWSBedrockAgentAsync.UpdateAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgent" target="_top">AWS API
@@ -1148,11 +1363,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Amazon Bedrock Agent
+     * Updates the configuration of an agent.
      * </p>
      * 
      * @param updateAgentRequest
-     *        Update Agent Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1167,11 +1381,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Action Group for Amazon Bedrock Agent
+     * Updates the configuration for an action group for an agent.
      * </p>
      * 
      * @param updateAgentActionGroupRequest
-     *        Update Action Group Request
      * @return A Java Future containing the result of the UpdateAgentActionGroup operation returned by the service.
      * @sample AWSBedrockAgentAsync.UpdateAgentActionGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgentActionGroup"
@@ -1181,11 +1394,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Action Group for Amazon Bedrock Agent
+     * Updates the configuration for an action group for an agent.
      * </p>
      * 
      * @param updateAgentActionGroupRequest
-     *        Update Action Group Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1200,11 +1412,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Alias for an Amazon Bedrock Agent
+     * Updates configurations for an alias of an agent.
      * </p>
      * 
      * @param updateAgentAliasRequest
-     *        Update Agent Alias Request
      * @return A Java Future containing the result of the UpdateAgentAlias operation returned by the service.
      * @sample AWSBedrockAgentAsync.UpdateAgentAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgentAlias" target="_top">AWS
@@ -1214,11 +1425,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Alias for an Amazon Bedrock Agent
+     * Updates configurations for an alias of an agent.
      * </p>
      * 
      * @param updateAgentAliasRequest
-     *        Update Agent Alias Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1233,11 +1443,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Knowledge Base associated to an Amazon Bedrock Agent
+     * Updates the configuration for a knowledge base that has been associated with an agent.
      * </p>
      * 
      * @param updateAgentKnowledgeBaseRequest
-     *        Update Agent Knowledge Base Request
      * @return A Java Future containing the result of the UpdateAgentKnowledgeBase operation returned by the service.
      * @sample AWSBedrockAgentAsync.UpdateAgentKnowledgeBase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgentKnowledgeBase"
@@ -1247,11 +1456,10 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Updates an existing Knowledge Base associated to an Amazon Bedrock Agent
+     * Updates the configuration for a knowledge base that has been associated with an agent.
      * </p>
      * 
      * @param updateAgentKnowledgeBaseRequest
-     *        Update Agent Knowledge Base Request
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1266,8 +1474,14 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Update an existing data source
+     * Updates configurations for a data source.
      * </p>
+     * <important>
+     * <p>
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source. Specify the existing
+     * <code>chunkingConfiguration</code>.
+     * </p>
+     * </important>
      * 
      * @param updateDataSourceRequest
      * @return A Java Future containing the result of the UpdateDataSource operation returned by the service.
@@ -1279,8 +1493,14 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Update an existing data source
+     * Updates configurations for a data source.
      * </p>
+     * <important>
+     * <p>
+     * You can't change the <code>chunkingConfiguration</code> after you create the data source. Specify the existing
+     * <code>chunkingConfiguration</code>.
+     * </p>
+     * </important>
      * 
      * @param updateDataSourceRequest
      * @param asyncHandler
@@ -1297,7 +1517,34 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Update an existing knowledge base
+     * Updates the configuration of a knowledge base with the fields that you specify. Because all fields will be
+     * overwritten, you must include the same values for fields that you want to keep the same.
+     * </p>
+     * <p>
+     * You can change the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>roleArn</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't change the <code>knowledgeBaseConfiguration</code> or <code>storageConfiguration</code> fields, so you
+     * must specify the same configurations as when you created the knowledge base. You can send a <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetKnowledgeBase.html"
+     * >GetKnowledgeBase</a> request and copy the same configurations.
      * </p>
      * 
      * @param updateKnowledgeBaseRequest
@@ -1310,7 +1557,34 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
 
     /**
      * <p>
-     * Update an existing knowledge base
+     * Updates the configuration of a knowledge base with the fields that you specify. Because all fields will be
+     * overwritten, you must include the same values for fields that you want to keep the same.
+     * </p>
+     * <p>
+     * You can change the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>roleArn</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't change the <code>knowledgeBaseConfiguration</code> or <code>storageConfiguration</code> fields, so you
+     * must specify the same configurations as when you created the knowledge base. You can send a <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetKnowledgeBase.html"
+     * >GetKnowledgeBase</a> request and copy the same configurations.
      * </p>
      * 
      * @param updateKnowledgeBaseRequest

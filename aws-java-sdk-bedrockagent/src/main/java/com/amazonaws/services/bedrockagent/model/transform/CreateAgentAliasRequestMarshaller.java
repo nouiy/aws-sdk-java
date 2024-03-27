@@ -31,10 +31,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateAgentAliasRequestMarshaller {
 
-    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTALIASNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentAliasName").build();
+    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
@@ -61,8 +61,8 @@ public class CreateAgentAliasRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createAgentAliasRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(createAgentAliasRequest.getAgentAliasName(), AGENTALIASNAME_BINDING);
+            protocolMarshaller.marshall(createAgentAliasRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(createAgentAliasRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createAgentAliasRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createAgentAliasRequest.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);

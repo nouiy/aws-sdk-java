@@ -29,12 +29,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateAgentActionGroupRequestMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> ACTIONGROUPEXECUTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupExecutor").build();
+    private static final MarshallingInfo<String> ACTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupName").build();
+    private static final MarshallingInfo<String> ACTIONGROUPSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupState").build();
     private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentVersion").build();
-    private static final MarshallingInfo<String> ACTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupName").build();
+    private static final MarshallingInfo<StructuredPojo> APISCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
@@ -42,12 +48,6 @@ public class CreateAgentActionGroupRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> PARENTACTIONGROUPSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionGroupSignature").build();
-    private static final MarshallingInfo<StructuredPojo> ACTIONGROUPEXECUTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupExecutor").build();
-    private static final MarshallingInfo<StructuredPojo> APISCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
-    private static final MarshallingInfo<String> ACTIONGROUPSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupState").build();
 
     private static final CreateAgentActionGroupRequestMarshaller instance = new CreateAgentActionGroupRequestMarshaller();
 
@@ -65,15 +65,15 @@ public class CreateAgentActionGroupRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createAgentActionGroupRequest.getActionGroupExecutor(), ACTIONGROUPEXECUTOR_BINDING);
+            protocolMarshaller.marshall(createAgentActionGroupRequest.getActionGroupName(), ACTIONGROUPNAME_BINDING);
+            protocolMarshaller.marshall(createAgentActionGroupRequest.getActionGroupState(), ACTIONGROUPSTATE_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getAgentVersion(), AGENTVERSION_BINDING);
-            protocolMarshaller.marshall(createAgentActionGroupRequest.getActionGroupName(), ACTIONGROUPNAME_BINDING);
+            protocolMarshaller.marshall(createAgentActionGroupRequest.getApiSchema(), APISCHEMA_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getParentActionGroupSignature(), PARENTACTIONGROUPSIGNATURE_BINDING);
-            protocolMarshaller.marshall(createAgentActionGroupRequest.getActionGroupExecutor(), ACTIONGROUPEXECUTOR_BINDING);
-            protocolMarshaller.marshall(createAgentActionGroupRequest.getApiSchema(), APISCHEMA_BINDING);
-            protocolMarshaller.marshall(createAgentActionGroupRequest.getActionGroupState(), ACTIONGROUPSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetAgentAliasRequestMarshaller {
 
-    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTALIASID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentAliasId").build();
+    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("agentId").build();
 
     private static final GetAgentAliasRequestMarshaller instance = new GetAgentAliasRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class GetAgentAliasRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getAgentAliasRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(getAgentAliasRequest.getAgentAliasId(), AGENTALIASID_BINDING);
+            protocolMarshaller.marshall(getAgentAliasRequest.getAgentId(), AGENTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

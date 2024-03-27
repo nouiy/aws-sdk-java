@@ -56,25 +56,25 @@ public class AgentKnowledgeBaseJsonUnmarshaller implements Unmarshaller<AgentKno
                     context.nextToken();
                     agentKnowledgeBase.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
-                    agentKnowledgeBase.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentKnowledgeBase.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     agentKnowledgeBase.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
                     context.nextToken();
-                    agentKnowledgeBase.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("updatedAt", targetDepth)) {
-                    context.nextToken();
-                    agentKnowledgeBase.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    agentKnowledgeBase.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("knowledgeBaseState", targetDepth)) {
                     context.nextToken();
                     agentKnowledgeBase.setKnowledgeBaseState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("updatedAt", targetDepth)) {
+                    context.nextToken();
+                    agentKnowledgeBase.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

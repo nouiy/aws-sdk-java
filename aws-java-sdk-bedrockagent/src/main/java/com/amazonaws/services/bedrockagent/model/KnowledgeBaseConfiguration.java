@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures a bedrock knowledge base.
+ * Contains details about the embeddings configuration of the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/KnowledgeBaseConfiguration"
@@ -28,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBaseConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The type of data that the data source is converted into for the knowledge base.
+     * </p>
+     */
     private String type;
-
+    /**
+     * <p>
+     * Contains details about the embeddings model that'sused to convert the data source.
+     * </p>
+     */
     private VectorKnowledgeBaseConfiguration vectorKnowledgeBaseConfiguration;
 
     /**
+     * <p>
+     * The type of data that the data source is converted into for the knowledge base.
+     * </p>
+     * 
      * @param type
+     *        The type of data that the data source is converted into for the knowledge base.
      * @see KnowledgeBaseType
      */
 
@@ -42,7 +56,11 @@ public class KnowledgeBaseConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * The type of data that the data source is converted into for the knowledge base.
+     * </p>
+     * 
+     * @return The type of data that the data source is converted into for the knowledge base.
      * @see KnowledgeBaseType
      */
 
@@ -51,7 +69,12 @@ public class KnowledgeBaseConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The type of data that the data source is converted into for the knowledge base.
+     * </p>
+     * 
      * @param type
+     *        The type of data that the data source is converted into for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseType
      */
@@ -62,7 +85,12 @@ public class KnowledgeBaseConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The type of data that the data source is converted into for the knowledge base.
+     * </p>
+     * 
      * @param type
+     *        The type of data that the data source is converted into for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseType
      */
@@ -73,7 +101,12 @@ public class KnowledgeBaseConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Contains details about the embeddings model that'sused to convert the data source.
+     * </p>
+     * 
      * @param vectorKnowledgeBaseConfiguration
+     *        Contains details about the embeddings model that'sused to convert the data source.
      */
 
     public void setVectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfiguration vectorKnowledgeBaseConfiguration) {
@@ -81,7 +114,11 @@ public class KnowledgeBaseConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the embeddings model that'sused to convert the data source.
+     * </p>
+     * 
+     * @return Contains details about the embeddings model that'sused to convert the data source.
      */
 
     public VectorKnowledgeBaseConfiguration getVectorKnowledgeBaseConfiguration() {
@@ -89,7 +126,12 @@ public class KnowledgeBaseConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Contains details about the embeddings model that'sused to convert the data source.
+     * </p>
+     * 
      * @param vectorKnowledgeBaseConfiguration
+     *        Contains details about the embeddings model that'sused to convert the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

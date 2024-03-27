@@ -28,42 +28,42 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AgentMarshaller {
 
+    private static final MarshallingInfo<String> AGENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("agentArn").build();
     private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("agentName").build();
-    private static final MarshallingInfo<String> AGENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("agentArn").build();
+    private static final MarshallingInfo<String> AGENTRESOURCEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentResourceRoleArn").build();
+    private static final MarshallingInfo<String> AGENTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentStatus").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken").build();
-    private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
-    private static final MarshallingInfo<String> AGENTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentStatus").build();
-    private static final MarshallingInfo<String> FOUNDATIONMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("foundationModel").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<Integer> IDLESESSIONTTLINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
-    private static final MarshallingInfo<String> AGENTRESOURCEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentResourceRoleArn").build();
-    private static final MarshallingInfo<String> CUSTOMERENCRYPTIONKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customerEncryptionKeyArn").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<java.util.Date> PREPAREDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preparedAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> CUSTOMERENCRYPTIONKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customerEncryptionKeyArn").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<List> FAILUREREASONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReasons").build();
-    private static final MarshallingInfo<List> RECOMMENDEDACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendedActions").build();
+    private static final MarshallingInfo<String> FOUNDATIONMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("foundationModel").build();
+    private static final MarshallingInfo<Integer> IDLESESSIONTTLINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
+    private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instruction").build();
+    private static final MarshallingInfo<java.util.Date> PREPAREDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preparedAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<StructuredPojo> PROMPTOVERRIDECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptOverrideConfiguration").build();
+    private static final MarshallingInfo<List> RECOMMENDEDACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendedActions").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
     private static final AgentMarshaller instance = new AgentMarshaller();
 
@@ -81,24 +81,24 @@ public class AgentMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(agent.getAgentArn(), AGENTARN_BINDING);
             protocolMarshaller.marshall(agent.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(agent.getAgentName(), AGENTNAME_BINDING);
-            protocolMarshaller.marshall(agent.getAgentArn(), AGENTARN_BINDING);
+            protocolMarshaller.marshall(agent.getAgentResourceRoleArn(), AGENTRESOURCEROLEARN_BINDING);
+            protocolMarshaller.marshall(agent.getAgentStatus(), AGENTSTATUS_BINDING);
             protocolMarshaller.marshall(agent.getAgentVersion(), AGENTVERSION_BINDING);
             protocolMarshaller.marshall(agent.getClientToken(), CLIENTTOKEN_BINDING);
-            protocolMarshaller.marshall(agent.getInstruction(), INSTRUCTION_BINDING);
-            protocolMarshaller.marshall(agent.getAgentStatus(), AGENTSTATUS_BINDING);
-            protocolMarshaller.marshall(agent.getFoundationModel(), FOUNDATIONMODEL_BINDING);
-            protocolMarshaller.marshall(agent.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(agent.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
-            protocolMarshaller.marshall(agent.getAgentResourceRoleArn(), AGENTRESOURCEROLEARN_BINDING);
-            protocolMarshaller.marshall(agent.getCustomerEncryptionKeyArn(), CUSTOMERENCRYPTIONKEYARN_BINDING);
             protocolMarshaller.marshall(agent.getCreatedAt(), CREATEDAT_BINDING);
-            protocolMarshaller.marshall(agent.getUpdatedAt(), UPDATEDAT_BINDING);
-            protocolMarshaller.marshall(agent.getPreparedAt(), PREPAREDAT_BINDING);
+            protocolMarshaller.marshall(agent.getCustomerEncryptionKeyArn(), CUSTOMERENCRYPTIONKEYARN_BINDING);
+            protocolMarshaller.marshall(agent.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(agent.getFailureReasons(), FAILUREREASONS_BINDING);
-            protocolMarshaller.marshall(agent.getRecommendedActions(), RECOMMENDEDACTIONS_BINDING);
+            protocolMarshaller.marshall(agent.getFoundationModel(), FOUNDATIONMODEL_BINDING);
+            protocolMarshaller.marshall(agent.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
+            protocolMarshaller.marshall(agent.getInstruction(), INSTRUCTION_BINDING);
+            protocolMarshaller.marshall(agent.getPreparedAt(), PREPAREDAT_BINDING);
             protocolMarshaller.marshall(agent.getPromptOverrideConfiguration(), PROMPTOVERRIDECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(agent.getRecommendedActions(), RECOMMENDEDACTIONS_BINDING);
+            protocolMarshaller.marshall(agent.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

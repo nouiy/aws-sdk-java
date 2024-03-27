@@ -64,13 +64,13 @@ public class AgentSummaryJsonUnmarshaller implements Unmarshaller<AgentSummary, 
                     context.nextToken();
                     agentSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("updatedAt", targetDepth)) {
-                    context.nextToken();
-                    agentSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("latestAgentVersion", targetDepth)) {
                     context.nextToken();
                     agentSummary.setLatestAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("updatedAt", targetDepth)) {
+                    context.nextToken();
+                    agentSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

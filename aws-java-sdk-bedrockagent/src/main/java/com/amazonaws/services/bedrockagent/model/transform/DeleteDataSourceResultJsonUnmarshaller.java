@@ -48,13 +48,13 @@ public class DeleteDataSourceResultJsonUnmarshaller implements Unmarshaller<Dele
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
-                    context.nextToken();
-                    deleteDataSourceResult.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("dataSourceId", targetDepth)) {
                     context.nextToken();
                     deleteDataSourceResult.setDataSourceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                    context.nextToken();
+                    deleteDataSourceResult.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();

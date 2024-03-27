@@ -31,10 +31,10 @@ public class UpdateAgentKnowledgeBaseRequestMarshaller {
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentVersion").build();
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASESTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseState").build();
 
@@ -56,8 +56,8 @@ public class UpdateAgentKnowledgeBaseRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateAgentKnowledgeBaseRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(updateAgentKnowledgeBaseRequest.getAgentVersion(), AGENTVERSION_BINDING);
-            protocolMarshaller.marshall(updateAgentKnowledgeBaseRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(updateAgentKnowledgeBaseRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updateAgentKnowledgeBaseRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(updateAgentKnowledgeBaseRequest.getKnowledgeBaseState(), KNOWLEDGEBASESTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

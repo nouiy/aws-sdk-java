@@ -51,6 +51,14 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
 
     /**
      * <p>
+     * Specifies the filters to use on the metadata in the knowledge base data sources before returning results. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     * configurations</a>.
+     * </p>
+     */
+    private RetrievalFilter filter;
+    /**
+     * <p>
      * The number of source chunks to retrieve.
      * </p>
      */
@@ -66,6 +74,58 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
      * </p>
      */
     private String overrideSearchType;
+
+    /**
+     * <p>
+     * Specifies the filters to use on the metadata in the knowledge base data sources before returning results. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     * configurations</a>.
+     * </p>
+     * 
+     * @param filter
+     *        Specifies the filters to use on the metadata in the knowledge base data sources before returning results.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
+     */
+
+    public void setFilter(RetrievalFilter filter) {
+        this.filter = filter;
+    }
+
+    /**
+     * <p>
+     * Specifies the filters to use on the metadata in the knowledge base data sources before returning results. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     * configurations</a>.
+     * </p>
+     * 
+     * @return Specifies the filters to use on the metadata in the knowledge base data sources before returning results.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
+     */
+
+    public RetrievalFilter getFilter() {
+        return this.filter;
+    }
+
+    /**
+     * <p>
+     * Specifies the filters to use on the metadata in the knowledge base data sources before returning results. For
+     * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query
+     * configurations</a>.
+     * </p>
+     * 
+     * @param filter
+     *        Specifies the filters to use on the metadata in the knowledge base data sources before returning results.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html">Query configurations</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBaseVectorSearchConfiguration withFilter(RetrievalFilter filter) {
+        setFilter(filter);
+        return this;
+    }
 
     /**
      * <p>
@@ -222,6 +282,8 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getFilter() != null)
+            sb.append("Filter: ").append("***Sensitive Data Redacted***").append(",");
         if (getNumberOfResults() != null)
             sb.append("NumberOfResults: ").append(getNumberOfResults()).append(",");
         if (getOverrideSearchType() != null)
@@ -240,6 +302,10 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
         if (obj instanceof KnowledgeBaseVectorSearchConfiguration == false)
             return false;
         KnowledgeBaseVectorSearchConfiguration other = (KnowledgeBaseVectorSearchConfiguration) obj;
+        if (other.getFilter() == null ^ this.getFilter() == null)
+            return false;
+        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
+            return false;
         if (other.getNumberOfResults() == null ^ this.getNumberOfResults() == null)
             return false;
         if (other.getNumberOfResults() != null && other.getNumberOfResults().equals(this.getNumberOfResults()) == false)
@@ -256,6 +322,7 @@ public class KnowledgeBaseVectorSearchConfiguration implements Serializable, Clo
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         hashCode = prime * hashCode + ((getNumberOfResults() == null) ? 0 : getNumberOfResults().hashCode());
         hashCode = prime * hashCode + ((getOverrideSearchType() == null) ? 0 : getOverrideSearchType().hashCode());
         return hashCode;

@@ -48,13 +48,13 @@ public class AgentKnowledgeBaseSummaryJsonUnmarshaller implements Unmarshaller<A
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
-                    context.nextToken();
-                    agentKnowledgeBaseSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     agentKnowledgeBaseSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                    context.nextToken();
+                    agentKnowledgeBaseSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("knowledgeBaseState", targetDepth)) {
                     context.nextToken();

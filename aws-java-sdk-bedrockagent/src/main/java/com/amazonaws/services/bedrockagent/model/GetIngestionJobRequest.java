@@ -25,40 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the data source in the ingestion job.
+     * </p>
+     */
+    private String dataSourceId;
+    /**
+     * <p>
+     * The unique identifier of the ingestion job.
+     * </p>
+     */
+    private String ingestionJobId;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base for which the ingestion job applies.
+     * </p>
+     */
     private String knowledgeBaseId;
 
-    private String dataSourceId;
-
-    private String ingestionJobId;
-
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetIngestionJobRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The unique identifier of the data source in the ingestion job.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source in the ingestion job.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -66,7 +58,11 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the data source in the ingestion job.
+     * </p>
+     * 
+     * @return The unique identifier of the data source in the ingestion job.
      */
 
     public String getDataSourceId() {
@@ -74,7 +70,12 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source in the ingestion job.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source in the ingestion job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +85,12 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The unique identifier of the ingestion job.
+     * </p>
+     * 
      * @param ingestionJobId
+     *        The unique identifier of the ingestion job.
      */
 
     public void setIngestionJobId(String ingestionJobId) {
@@ -92,7 +98,11 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the ingestion job.
+     * </p>
+     * 
+     * @return The unique identifier of the ingestion job.
      */
 
     public String getIngestionJobId() {
@@ -100,12 +110,57 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The unique identifier of the ingestion job.
+     * </p>
+     * 
      * @param ingestionJobId
+     *        The unique identifier of the ingestion job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GetIngestionJobRequest withIngestionJobId(String ingestionJobId) {
         setIngestionJobId(ingestionJobId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base for which the ingestion job applies.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base for which the ingestion job applies.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base for which the ingestion job applies.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base for which the ingestion job applies.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base for which the ingestion job applies.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base for which the ingestion job applies.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetIngestionJobRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
         return this;
     }
 
@@ -121,12 +176,12 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDataSourceId() != null)
             sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
         if (getIngestionJobId() != null)
-            sb.append("IngestionJobId: ").append(getIngestionJobId());
+            sb.append("IngestionJobId: ").append(getIngestionJobId()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId());
         sb.append("}");
         return sb.toString();
     }
@@ -141,10 +196,6 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
         if (obj instanceof GetIngestionJobRequest == false)
             return false;
         GetIngestionJobRequest other = (GetIngestionJobRequest) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
@@ -152,6 +203,10 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
         if (other.getIngestionJobId() == null ^ this.getIngestionJobId() == null)
             return false;
         if (other.getIngestionJobId() != null && other.getIngestionJobId().equals(this.getIngestionJobId()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         return true;
     }
@@ -161,9 +216,9 @@ public class GetIngestionJobRequest extends com.amazonaws.AmazonWebServiceReques
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
         hashCode = prime * hashCode + ((getIngestionJobId() == null) ? 0 : getIngestionJobId().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         return hashCode;
     }
 

@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Create Agent Alias Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgentAlias" target="_top">AWS API
  *      Documentation</a>
@@ -30,63 +27,52 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The name of the alias.
+     * </p>
+     */
+    private String agentAliasName;
+    /**
+     * <p>
+     * The unique identifier of the agent.
      * </p>
      */
     private String agentId;
-
-    private String agentAliasName;
-
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     */
     private String clientToken;
-
+    /**
+     * <p>
+     * A description of the alias of the agent.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     */
     private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
-
+    /**
+     * <p>
+     * Any tags that you want to attach to the alias of the agent.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The name of the alias.
      * </p>
      * 
-     * @param agentId
-     *        Id generated at the server side when an Agent is created
-     */
-
-    public void setAgentId(String agentId) {
-        this.agentId = agentId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @return Id generated at the server side when an Agent is created
-     */
-
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when an Agent is created
-     * </p>
-     * 
-     * @param agentId
-     *        Id generated at the server side when an Agent is created
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentAliasRequest withAgentId(String agentId) {
-        setAgentId(agentId);
-        return this;
-    }
-
-    /**
      * @param agentAliasName
+     *        The name of the alias.
      */
 
     public void setAgentAliasName(String agentAliasName) {
@@ -94,7 +80,11 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the alias.
+     * </p>
+     * 
+     * @return The name of the alias.
      */
 
     public String getAgentAliasName() {
@@ -102,7 +92,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The name of the alias.
+     * </p>
+     * 
      * @param agentAliasName
+     *        The name of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +107,60 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent.
+     */
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @return The unique identifier of the agent.
+     */
+
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the agent.
+     * </p>
+     * 
+     * @param agentId
+     *        The unique identifier of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withAgentId(String agentId) {
+        setAgentId(agentId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -120,7 +168,19 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *         this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -128,7 +188,20 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
      * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,7 +211,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A description of the alias of the agent.
+     * </p>
+     * 
      * @param description
+     *        A description of the alias of the agent.
      */
 
     public void setDescription(String description) {
@@ -146,7 +224,11 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * A description of the alias of the agent.
+     * </p>
+     * 
+     * @return A description of the alias of the agent.
      */
 
     public String getDescription() {
@@ -154,7 +236,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A description of the alias of the agent.
+     * </p>
+     * 
      * @param description
+     *        A description of the alias of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,7 +251,11 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * 
+     * @return Contains details about the routing configuration of the alias.
      */
 
     public java.util.List<AgentAliasRoutingConfigurationListItem> getRoutingConfiguration() {
@@ -172,7 +263,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * 
      * @param routingConfiguration
+     *        Contains details about the routing configuration of the alias.
      */
 
     public void setRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
@@ -186,12 +282,16 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRoutingConfiguration(java.util.Collection)} or {@link #withRoutingConfiguration(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param routingConfiguration
+     *        Contains details about the routing configuration of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -206,7 +306,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about the routing configuration of the alias.
+     * </p>
+     * 
      * @param routingConfiguration
+     *        Contains details about the routing configuration of the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,7 +321,11 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Any tags that you want to attach to the alias of the agent.
+     * </p>
+     * 
+     * @return Any tags that you want to attach to the alias of the agent.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -224,7 +333,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Any tags that you want to attach to the alias of the agent.
+     * </p>
+     * 
      * @param tags
+     *        Any tags that you want to attach to the alias of the agent.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -232,7 +346,12 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Any tags that you want to attach to the alias of the agent.
+     * </p>
+     * 
      * @param tags
+     *        Any tags that you want to attach to the alias of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -281,10 +400,10 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAgentId() != null)
-            sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getAgentAliasName() != null)
             sb.append("AgentAliasName: ").append(getAgentAliasName()).append(",");
+        if (getAgentId() != null)
+            sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getDescription() != null)
@@ -307,13 +426,13 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof CreateAgentAliasRequest == false)
             return false;
         CreateAgentAliasRequest other = (CreateAgentAliasRequest) obj;
-        if (other.getAgentId() == null ^ this.getAgentId() == null)
-            return false;
-        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
-            return false;
         if (other.getAgentAliasName() == null ^ this.getAgentAliasName() == null)
             return false;
         if (other.getAgentAliasName() != null && other.getAgentAliasName().equals(this.getAgentAliasName()) == false)
+            return false;
+        if (other.getAgentId() == null ^ this.getAgentId() == null)
+            return false;
+        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
             return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
@@ -339,8 +458,8 @@ public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getAgentAliasName() == null) ? 0 : getAgentAliasName().hashCode());
+        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());

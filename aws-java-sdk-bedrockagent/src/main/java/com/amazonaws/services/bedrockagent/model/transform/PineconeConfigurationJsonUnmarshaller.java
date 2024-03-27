@@ -56,13 +56,13 @@ public class PineconeConfigurationJsonUnmarshaller implements Unmarshaller<Pinec
                     context.nextToken();
                     pineconeConfiguration.setCredentialsSecretArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("namespace", targetDepth)) {
-                    context.nextToken();
-                    pineconeConfiguration.setNamespace(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("fieldMapping", targetDepth)) {
                     context.nextToken();
                     pineconeConfiguration.setFieldMapping(PineconeFieldMappingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("namespace", targetDepth)) {
+                    context.nextToken();
+                    pineconeConfiguration.setNamespace(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration for prompt override.
+ * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/PromptOverrideConfiguration"
@@ -28,12 +29,83 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PromptOverrideConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * </p>
+     */
+    private String overrideLambda;
+    /**
+     * <p>
+     * Contains configurations to override a prompt template in one part of an agent sequence. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     */
     private java.util.List<PromptConfiguration> promptConfigurations;
 
-    private String overrideLambda;
+    /**
+     * <p>
+     * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * </p>
+     * 
+     * @param overrideLambda
+     *        The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     *        sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     *        <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     */
+
+    public void setOverrideLambda(String overrideLambda) {
+        this.overrideLambda = overrideLambda;
+    }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * </p>
+     * 
+     * @return The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     *         sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     *         <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     */
+
+    public String getOverrideLambda() {
+        return this.overrideLambda;
+    }
+
+    /**
+     * <p>
+     * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * </p>
+     * 
+     * @param overrideLambda
+     *        The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
+     *        sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
+     *        <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PromptOverrideConfiguration withOverrideLambda(String overrideLambda) {
+        setOverrideLambda(overrideLambda);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains configurations to override a prompt template in one part of an agent sequence. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * 
+     * @return Contains configurations to override a prompt template in one part of an agent sequence. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
      */
 
     public java.util.List<PromptConfiguration> getPromptConfigurations() {
@@ -41,7 +113,15 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Contains configurations to override a prompt template in one part of an agent sequence. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * 
      * @param promptConfigurations
+     *        Contains configurations to override a prompt template in one part of an agent sequence. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
      */
 
     public void setPromptConfigurations(java.util.Collection<PromptConfiguration> promptConfigurations) {
@@ -55,12 +135,19 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
+     * Contains configurations to override a prompt template in one part of an agent sequence. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPromptConfigurations(java.util.Collection)} or {@link #withPromptConfigurations(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param promptConfigurations
+     *        Contains configurations to override a prompt template in one part of an agent sequence. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -75,38 +162,20 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Contains configurations to override a prompt template in one part of an agent sequence. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * 
      * @param promptConfigurations
+     *        Contains configurations to override a prompt template in one part of an agent sequence. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public PromptOverrideConfiguration withPromptConfigurations(java.util.Collection<PromptConfiguration> promptConfigurations) {
         setPromptConfigurations(promptConfigurations);
-        return this;
-    }
-
-    /**
-     * @param overrideLambda
-     */
-
-    public void setOverrideLambda(String overrideLambda) {
-        this.overrideLambda = overrideLambda;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getOverrideLambda() {
-        return this.overrideLambda;
-    }
-
-    /**
-     * @param overrideLambda
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PromptOverrideConfiguration withOverrideLambda(String overrideLambda) {
-        setOverrideLambda(overrideLambda);
         return this;
     }
 
@@ -122,10 +191,10 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getPromptConfigurations() != null)
-            sb.append("PromptConfigurations: ").append(getPromptConfigurations()).append(",");
         if (getOverrideLambda() != null)
-            sb.append("OverrideLambda: ").append(getOverrideLambda());
+            sb.append("OverrideLambda: ").append(getOverrideLambda()).append(",");
+        if (getPromptConfigurations() != null)
+            sb.append("PromptConfigurations: ").append(getPromptConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -140,13 +209,13 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
         if (obj instanceof PromptOverrideConfiguration == false)
             return false;
         PromptOverrideConfiguration other = (PromptOverrideConfiguration) obj;
-        if (other.getPromptConfigurations() == null ^ this.getPromptConfigurations() == null)
-            return false;
-        if (other.getPromptConfigurations() != null && other.getPromptConfigurations().equals(this.getPromptConfigurations()) == false)
-            return false;
         if (other.getOverrideLambda() == null ^ this.getOverrideLambda() == null)
             return false;
         if (other.getOverrideLambda() != null && other.getOverrideLambda().equals(this.getOverrideLambda()) == false)
+            return false;
+        if (other.getPromptConfigurations() == null ^ this.getPromptConfigurations() == null)
+            return false;
+        if (other.getPromptConfigurations() != null && other.getPromptConfigurations().equals(this.getPromptConfigurations()) == false)
             return false;
         return true;
     }
@@ -156,8 +225,8 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getPromptConfigurations() == null) ? 0 : getPromptConfigurations().hashCode());
         hashCode = prime * hashCode + ((getOverrideLambda() == null) ? 0 : getOverrideLambda().hashCode());
+        hashCode = prime * hashCode + ((getPromptConfigurations() == null) ? 0 : getPromptConfigurations().hashCode());
         return hashCode;
     }
 

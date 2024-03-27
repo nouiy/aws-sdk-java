@@ -48,6 +48,28 @@ public class KnowledgeBaseJsonUnmarshaller implements Unmarshaller<KnowledgeBase
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBase.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBase.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("failureReasons", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBase.setFailureReasons(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseArn", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBase.setKnowledgeBaseArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseConfiguration", targetDepth)) {
+                    context.nextToken();
+                    knowledgeBase.setKnowledgeBaseConfiguration(KnowledgeBaseConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("knowledgeBaseId", targetDepth)) {
                     context.nextToken();
                     knowledgeBase.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -56,43 +78,21 @@ public class KnowledgeBaseJsonUnmarshaller implements Unmarshaller<KnowledgeBase
                     context.nextToken();
                     knowledgeBase.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("knowledgeBaseArn", targetDepth)) {
-                    context.nextToken();
-                    knowledgeBase.setKnowledgeBaseArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    knowledgeBase.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("roleArn", targetDepth)) {
                     context.nextToken();
                     knowledgeBase.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("knowledgeBaseConfiguration", targetDepth)) {
-                    context.nextToken();
-                    knowledgeBase.setKnowledgeBaseConfiguration(KnowledgeBaseConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("storageConfiguration", targetDepth)) {
-                    context.nextToken();
-                    knowledgeBase.setStorageConfiguration(StorageConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     knowledgeBase.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
+                if (context.testExpression("storageConfiguration", targetDepth)) {
                     context.nextToken();
-                    knowledgeBase.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    knowledgeBase.setStorageConfiguration(StorageConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
                     knowledgeBase.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("failureReasons", targetDepth)) {
-                    context.nextToken();
-                    knowledgeBase.setFailureReasons(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

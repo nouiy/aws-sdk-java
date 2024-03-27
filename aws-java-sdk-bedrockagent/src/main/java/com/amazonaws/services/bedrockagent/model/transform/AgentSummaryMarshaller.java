@@ -35,10 +35,10 @@ public class AgentSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentStatus").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> LATESTAGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestAgentVersion").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
     private static final AgentSummaryMarshaller instance = new AgentSummaryMarshaller();
 
@@ -60,8 +60,8 @@ public class AgentSummaryMarshaller {
             protocolMarshaller.marshall(agentSummary.getAgentName(), AGENTNAME_BINDING);
             protocolMarshaller.marshall(agentSummary.getAgentStatus(), AGENTSTATUS_BINDING);
             protocolMarshaller.marshall(agentSummary.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(agentSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(agentSummary.getLatestAgentVersion(), LATESTAGENTVERSION_BINDING);
+            protocolMarshaller.marshall(agentSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

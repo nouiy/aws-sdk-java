@@ -60,6 +60,10 @@ public class EksContainerSecurityContextJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     eksContainerSecurityContext.setPrivileged(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("allowPrivilegeEscalation", targetDepth)) {
+                    context.nextToken();
+                    eksContainerSecurityContext.setAllowPrivilegeEscalation(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("readOnlyRootFilesystem", targetDepth)) {
                     context.nextToken();
                     eksContainerSecurityContext.setReadOnlyRootFilesystem(context.getUnmarshaller(Boolean.class).unmarshall(context));

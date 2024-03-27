@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures ingestion for a vector knowledge base
+ * Contains details about how to ingest the documents in a data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/VectorIngestionConfiguration"
@@ -28,10 +28,23 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VectorIngestionConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a data
+     * source that is returned when the knowledge base that it belongs to is queried.
+     * </p>
+     */
     private ChunkingConfiguration chunkingConfiguration;
 
     /**
+     * <p>
+     * Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a data
+     * source that is returned when the knowledge base that it belongs to is queried.
+     * </p>
+     * 
      * @param chunkingConfiguration
+     *        Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a
+     *        data source that is returned when the knowledge base that it belongs to is queried.
      */
 
     public void setChunkingConfiguration(ChunkingConfiguration chunkingConfiguration) {
@@ -39,7 +52,13 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a data
+     * source that is returned when the knowledge base that it belongs to is queried.
+     * </p>
+     * 
+     * @return Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a
+     *         data source that is returned when the knowledge base that it belongs to is queried.
      */
 
     public ChunkingConfiguration getChunkingConfiguration() {
@@ -47,7 +66,14 @@ public class VectorIngestionConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a data
+     * source that is returned when the knowledge base that it belongs to is queried.
+     * </p>
+     * 
      * @param chunkingConfiguration
+     *        Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a
+     *        data source that is returned when the knowledge base that it belongs to is queried.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

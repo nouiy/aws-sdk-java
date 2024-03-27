@@ -28,28 +28,28 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KnowledgeBaseMarshaller {
 
+    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<List> FAILUREREASONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReasons").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseArn").build();
+    private static final MarshallingInfo<StructuredPojo> KNOWLEDGEBASECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseConfiguration").build();
     private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> KNOWLEDGEBASEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseArn").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
-    private static final MarshallingInfo<StructuredPojo> KNOWLEDGEBASECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("knowledgeBaseConfiguration").build();
-    private static final MarshallingInfo<StructuredPojo> STORAGECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageConfiguration").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
-    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> STORAGECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageConfiguration").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<List> FAILUREREASONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReasons").build();
 
     private static final KnowledgeBaseMarshaller instance = new KnowledgeBaseMarshaller();
 
@@ -67,17 +67,17 @@ public class KnowledgeBaseMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(knowledgeBase.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(knowledgeBase.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(knowledgeBase.getFailureReasons(), FAILUREREASONS_BINDING);
+            protocolMarshaller.marshall(knowledgeBase.getKnowledgeBaseArn(), KNOWLEDGEBASEARN_BINDING);
+            protocolMarshaller.marshall(knowledgeBase.getKnowledgeBaseConfiguration(), KNOWLEDGEBASECONFIGURATION_BINDING);
             protocolMarshaller.marshall(knowledgeBase.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(knowledgeBase.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(knowledgeBase.getKnowledgeBaseArn(), KNOWLEDGEBASEARN_BINDING);
-            protocolMarshaller.marshall(knowledgeBase.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(knowledgeBase.getRoleArn(), ROLEARN_BINDING);
-            protocolMarshaller.marshall(knowledgeBase.getKnowledgeBaseConfiguration(), KNOWLEDGEBASECONFIGURATION_BINDING);
-            protocolMarshaller.marshall(knowledgeBase.getStorageConfiguration(), STORAGECONFIGURATION_BINDING);
             protocolMarshaller.marshall(knowledgeBase.getStatus(), STATUS_BINDING);
-            protocolMarshaller.marshall(knowledgeBase.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(knowledgeBase.getStorageConfiguration(), STORAGECONFIGURATION_BINDING);
             protocolMarshaller.marshall(knowledgeBase.getUpdatedAt(), UPDATEDAT_BINDING);
-            protocolMarshaller.marshall(knowledgeBase.getFailureReasons(), FAILUREREASONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

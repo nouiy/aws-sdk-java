@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures the physical storage of ingested data in a knowledge base.
+ * Contains the storage configuration of the knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/StorageConfiguration" target="_top">AWS
@@ -28,18 +28,221 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StorageConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     * </p>
+     */
+    private OpenSearchServerlessConfiguration opensearchServerlessConfiguration;
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Pinecone.
+     * </p>
+     */
+    private PineconeConfiguration pineconeConfiguration;
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base in Amazon RDS. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     * index in Amazon RDS</a>.
+     * </p>
+     */
+    private RdsConfiguration rdsConfiguration;
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     * </p>
+     */
+    private RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration;
+    /**
+     * <p>
+     * The vector store service in which the knowledge base is stored.
+     * </p>
+     */
     private String type;
 
-    private OpenSearchServerlessConfiguration opensearchServerlessConfiguration;
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     * </p>
+     * 
+     * @param opensearchServerlessConfiguration
+     *        Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     */
 
-    private PineconeConfiguration pineconeConfiguration;
-
-    private RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration;
-
-    private RdsConfiguration rdsConfiguration;
+    public void setOpensearchServerlessConfiguration(OpenSearchServerlessConfiguration opensearchServerlessConfiguration) {
+        this.opensearchServerlessConfiguration = opensearchServerlessConfiguration;
+    }
 
     /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     * </p>
+     * 
+     * @return Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     */
+
+    public OpenSearchServerlessConfiguration getOpensearchServerlessConfiguration() {
+        return this.opensearchServerlessConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     * </p>
+     * 
+     * @param opensearchServerlessConfiguration
+     *        Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withOpensearchServerlessConfiguration(OpenSearchServerlessConfiguration opensearchServerlessConfiguration) {
+        setOpensearchServerlessConfiguration(opensearchServerlessConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Pinecone.
+     * </p>
+     * 
+     * @param pineconeConfiguration
+     *        Contains the storage configuration of the knowledge base in Pinecone.
+     */
+
+    public void setPineconeConfiguration(PineconeConfiguration pineconeConfiguration) {
+        this.pineconeConfiguration = pineconeConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Pinecone.
+     * </p>
+     * 
+     * @return Contains the storage configuration of the knowledge base in Pinecone.
+     */
+
+    public PineconeConfiguration getPineconeConfiguration() {
+        return this.pineconeConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Pinecone.
+     * </p>
+     * 
+     * @param pineconeConfiguration
+     *        Contains the storage configuration of the knowledge base in Pinecone.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withPineconeConfiguration(PineconeConfiguration pineconeConfiguration) {
+        setPineconeConfiguration(pineconeConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base in Amazon RDS. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     * index in Amazon RDS</a>.
+     * </p>
+     * 
+     * @param rdsConfiguration
+     *        Contains details about the storage configuration of the knowledge base in Amazon RDS. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     *        index in Amazon RDS</a>.
+     */
+
+    public void setRdsConfiguration(RdsConfiguration rdsConfiguration) {
+        this.rdsConfiguration = rdsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base in Amazon RDS. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     * index in Amazon RDS</a>.
+     * </p>
+     * 
+     * @return Contains details about the storage configuration of the knowledge base in Amazon RDS. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     *         index in Amazon RDS</a>.
+     */
+
+    public RdsConfiguration getRdsConfiguration() {
+        return this.rdsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains details about the storage configuration of the knowledge base in Amazon RDS. For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     * index in Amazon RDS</a>.
+     * </p>
+     * 
+     * @param rdsConfiguration
+     *        Contains details about the storage configuration of the knowledge base in Amazon RDS. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html">Create a vector
+     *        index in Amazon RDS</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withRdsConfiguration(RdsConfiguration rdsConfiguration) {
+        setRdsConfiguration(rdsConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     * </p>
+     * 
+     * @param redisEnterpriseCloudConfiguration
+     *        Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     */
+
+    public void setRedisEnterpriseCloudConfiguration(RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration) {
+        this.redisEnterpriseCloudConfiguration = redisEnterpriseCloudConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     * </p>
+     * 
+     * @return Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     */
+
+    public RedisEnterpriseCloudConfiguration getRedisEnterpriseCloudConfiguration() {
+        return this.redisEnterpriseCloudConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     * </p>
+     * 
+     * @param redisEnterpriseCloudConfiguration
+     *        Contains the storage configuration of the knowledge base in Redis Enterprise Cloud.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withRedisEnterpriseCloudConfiguration(RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration) {
+        setRedisEnterpriseCloudConfiguration(redisEnterpriseCloudConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The vector store service in which the knowledge base is stored.
+     * </p>
+     * 
      * @param type
+     *        The vector store service in which the knowledge base is stored.
      * @see KnowledgeBaseStorageType
      */
 
@@ -48,7 +251,11 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The vector store service in which the knowledge base is stored.
+     * </p>
+     * 
+     * @return The vector store service in which the knowledge base is stored.
      * @see KnowledgeBaseStorageType
      */
 
@@ -57,7 +264,12 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The vector store service in which the knowledge base is stored.
+     * </p>
+     * 
      * @param type
+     *        The vector store service in which the knowledge base is stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseStorageType
      */
@@ -68,117 +280,18 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The vector store service in which the knowledge base is stored.
+     * </p>
+     * 
      * @param type
+     *        The vector store service in which the knowledge base is stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseStorageType
      */
 
     public StorageConfiguration withType(KnowledgeBaseStorageType type) {
         this.type = type.toString();
-        return this;
-    }
-
-    /**
-     * @param opensearchServerlessConfiguration
-     */
-
-    public void setOpensearchServerlessConfiguration(OpenSearchServerlessConfiguration opensearchServerlessConfiguration) {
-        this.opensearchServerlessConfiguration = opensearchServerlessConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public OpenSearchServerlessConfiguration getOpensearchServerlessConfiguration() {
-        return this.opensearchServerlessConfiguration;
-    }
-
-    /**
-     * @param opensearchServerlessConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StorageConfiguration withOpensearchServerlessConfiguration(OpenSearchServerlessConfiguration opensearchServerlessConfiguration) {
-        setOpensearchServerlessConfiguration(opensearchServerlessConfiguration);
-        return this;
-    }
-
-    /**
-     * @param pineconeConfiguration
-     */
-
-    public void setPineconeConfiguration(PineconeConfiguration pineconeConfiguration) {
-        this.pineconeConfiguration = pineconeConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public PineconeConfiguration getPineconeConfiguration() {
-        return this.pineconeConfiguration;
-    }
-
-    /**
-     * @param pineconeConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StorageConfiguration withPineconeConfiguration(PineconeConfiguration pineconeConfiguration) {
-        setPineconeConfiguration(pineconeConfiguration);
-        return this;
-    }
-
-    /**
-     * @param redisEnterpriseCloudConfiguration
-     */
-
-    public void setRedisEnterpriseCloudConfiguration(RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration) {
-        this.redisEnterpriseCloudConfiguration = redisEnterpriseCloudConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public RedisEnterpriseCloudConfiguration getRedisEnterpriseCloudConfiguration() {
-        return this.redisEnterpriseCloudConfiguration;
-    }
-
-    /**
-     * @param redisEnterpriseCloudConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StorageConfiguration withRedisEnterpriseCloudConfiguration(RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration) {
-        setRedisEnterpriseCloudConfiguration(redisEnterpriseCloudConfiguration);
-        return this;
-    }
-
-    /**
-     * @param rdsConfiguration
-     */
-
-    public void setRdsConfiguration(RdsConfiguration rdsConfiguration) {
-        this.rdsConfiguration = rdsConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public RdsConfiguration getRdsConfiguration() {
-        return this.rdsConfiguration;
-    }
-
-    /**
-     * @param rdsConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StorageConfiguration withRdsConfiguration(RdsConfiguration rdsConfiguration) {
-        setRdsConfiguration(rdsConfiguration);
         return this;
     }
 
@@ -194,16 +307,16 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getType() != null)
-            sb.append("Type: ").append(getType()).append(",");
         if (getOpensearchServerlessConfiguration() != null)
             sb.append("OpensearchServerlessConfiguration: ").append(getOpensearchServerlessConfiguration()).append(",");
         if (getPineconeConfiguration() != null)
             sb.append("PineconeConfiguration: ").append(getPineconeConfiguration()).append(",");
+        if (getRdsConfiguration() != null)
+            sb.append("RdsConfiguration: ").append(getRdsConfiguration()).append(",");
         if (getRedisEnterpriseCloudConfiguration() != null)
             sb.append("RedisEnterpriseCloudConfiguration: ").append(getRedisEnterpriseCloudConfiguration()).append(",");
-        if (getRdsConfiguration() != null)
-            sb.append("RdsConfiguration: ").append(getRdsConfiguration());
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -218,10 +331,6 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         if (obj instanceof StorageConfiguration == false)
             return false;
         StorageConfiguration other = (StorageConfiguration) obj;
-        if (other.getType() == null ^ this.getType() == null)
-            return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
-            return false;
         if (other.getOpensearchServerlessConfiguration() == null ^ this.getOpensearchServerlessConfiguration() == null)
             return false;
         if (other.getOpensearchServerlessConfiguration() != null
@@ -231,14 +340,18 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
             return false;
         if (other.getPineconeConfiguration() != null && other.getPineconeConfiguration().equals(this.getPineconeConfiguration()) == false)
             return false;
+        if (other.getRdsConfiguration() == null ^ this.getRdsConfiguration() == null)
+            return false;
+        if (other.getRdsConfiguration() != null && other.getRdsConfiguration().equals(this.getRdsConfiguration()) == false)
+            return false;
         if (other.getRedisEnterpriseCloudConfiguration() == null ^ this.getRedisEnterpriseCloudConfiguration() == null)
             return false;
         if (other.getRedisEnterpriseCloudConfiguration() != null
                 && other.getRedisEnterpriseCloudConfiguration().equals(this.getRedisEnterpriseCloudConfiguration()) == false)
             return false;
-        if (other.getRdsConfiguration() == null ^ this.getRdsConfiguration() == null)
+        if (other.getType() == null ^ this.getType() == null)
             return false;
-        if (other.getRdsConfiguration() != null && other.getRdsConfiguration().equals(this.getRdsConfiguration()) == false)
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
         return true;
     }
@@ -248,11 +361,11 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getOpensearchServerlessConfiguration() == null) ? 0 : getOpensearchServerlessConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPineconeConfiguration() == null) ? 0 : getPineconeConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getRedisEnterpriseCloudConfiguration() == null) ? 0 : getRedisEnterpriseCloudConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRdsConfiguration() == null) ? 0 : getRdsConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRedisEnterpriseCloudConfiguration() == null) ? 0 : getRedisEnterpriseCloudConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

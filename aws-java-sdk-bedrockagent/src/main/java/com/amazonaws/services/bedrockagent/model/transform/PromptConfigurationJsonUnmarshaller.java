@@ -48,18 +48,6 @@ public class PromptConfigurationJsonUnmarshaller implements Unmarshaller<PromptC
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("promptType", targetDepth)) {
-                    context.nextToken();
-                    promptConfiguration.setPromptType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("promptCreationMode", targetDepth)) {
-                    context.nextToken();
-                    promptConfiguration.setPromptCreationMode(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("promptState", targetDepth)) {
-                    context.nextToken();
-                    promptConfiguration.setPromptState(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("basePromptTemplate", targetDepth)) {
                     context.nextToken();
                     promptConfiguration.setBasePromptTemplate(context.getUnmarshaller(String.class).unmarshall(context));
@@ -71,6 +59,18 @@ public class PromptConfigurationJsonUnmarshaller implements Unmarshaller<PromptC
                 if (context.testExpression("parserMode", targetDepth)) {
                     context.nextToken();
                     promptConfiguration.setParserMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("promptCreationMode", targetDepth)) {
+                    context.nextToken();
+                    promptConfiguration.setPromptCreationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("promptState", targetDepth)) {
+                    context.nextToken();
+                    promptConfiguration.setPromptState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("promptType", targetDepth)) {
+                    context.nextToken();
+                    promptConfiguration.setPromptType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetDataSourceRequestMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> DATASOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("dataSourceId").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
 
     private static final GetDataSourceRequestMarshaller instance = new GetDataSourceRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class GetDataSourceRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getDataSourceRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(getDataSourceRequest.getDataSourceId(), DATASOURCEID_BINDING);
+            protocolMarshaller.marshall(getDataSourceRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

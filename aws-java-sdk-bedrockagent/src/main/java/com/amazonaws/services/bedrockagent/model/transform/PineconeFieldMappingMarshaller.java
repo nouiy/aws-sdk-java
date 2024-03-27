@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PineconeFieldMappingMarshaller {
 
-    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("textField").build();
     private static final MarshallingInfo<String> METADATAFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadataField").build();
+    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("textField").build();
 
     private static final PineconeFieldMappingMarshaller instance = new PineconeFieldMappingMarshaller();
 
@@ -48,8 +48,8 @@ public class PineconeFieldMappingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pineconeFieldMapping.getTextField(), TEXTFIELD_BINDING);
             protocolMarshaller.marshall(pineconeFieldMapping.getMetadataField(), METADATAFIELD_BINDING);
+            protocolMarshaller.marshall(pineconeFieldMapping.getTextField(), TEXTFIELD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

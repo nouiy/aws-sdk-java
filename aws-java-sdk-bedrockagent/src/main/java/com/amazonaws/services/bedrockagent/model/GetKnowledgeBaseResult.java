@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the knowledge base.
+     * </p>
+     */
     private KnowledgeBase knowledgeBase;
 
     /**
+     * <p>
+     * Contains details about the knowledge base.
+     * </p>
+     * 
      * @param knowledgeBase
+     *        Contains details about the knowledge base.
      */
 
     public void setKnowledgeBase(KnowledgeBase knowledgeBase) {
@@ -34,7 +44,11 @@ public class GetKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the knowledge base.
+     * </p>
+     * 
+     * @return Contains details about the knowledge base.
      */
 
     public KnowledgeBase getKnowledgeBase() {
@@ -42,7 +56,12 @@ public class GetKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Contains details about the knowledge base.
+     * </p>
+     * 
      * @param knowledgeBase
+     *        Contains details about the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

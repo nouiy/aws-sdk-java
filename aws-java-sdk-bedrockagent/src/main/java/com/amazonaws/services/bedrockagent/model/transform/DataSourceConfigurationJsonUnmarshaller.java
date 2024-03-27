@@ -48,13 +48,13 @@ public class DataSourceConfigurationJsonUnmarshaller implements Unmarshaller<Dat
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("type", targetDepth)) {
-                    context.nextToken();
-                    dataSourceConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("s3Configuration", targetDepth)) {
                     context.nextToken();
                     dataSourceConfiguration.setS3Configuration(S3DataSourceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("type", targetDepth)) {
+                    context.nextToken();
+                    dataSourceConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

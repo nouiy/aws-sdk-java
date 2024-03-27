@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Get Agent Knowledge Base Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentKnowledgeBase"
  *      target="_top">AWS API Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetAgentKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about a knowledge base attached to an agent.
+     * </p>
+     */
     private AgentKnowledgeBase agentKnowledgeBase;
 
     /**
+     * <p>
+     * Contains details about a knowledge base attached to an agent.
+     * </p>
+     * 
      * @param agentKnowledgeBase
+     *        Contains details about a knowledge base attached to an agent.
      */
 
     public void setAgentKnowledgeBase(AgentKnowledgeBase agentKnowledgeBase) {
@@ -37,7 +44,11 @@ public class GetAgentKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about a knowledge base attached to an agent.
+     * </p>
+     * 
+     * @return Contains details about a knowledge base attached to an agent.
      */
 
     public AgentKnowledgeBase getAgentKnowledgeBase() {
@@ -45,7 +56,12 @@ public class GetAgentKnowledgeBaseResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Contains details about a knowledge base attached to an agent.
+     * </p>
+     * 
      * @param agentKnowledgeBase
+     *        Contains details about a knowledge base attached to an agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A mapping of Bedrock Knowledge Base fields to RDS column names
+ * Contains the names of the fields to which to map information about the vector store.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/RdsFieldMapping" target="_top">AWS API
@@ -28,16 +28,79 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     */
+    private String metadataField;
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the ID for each entry.
+     * </p>
+     */
     private String primaryKeyField;
-
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     */
+    private String textField;
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     */
     private String vectorField;
 
-    private String textField;
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     * 
+     * @param metadataField
+     *        The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     */
 
-    private String metadataField;
+    public void setMetadataField(String metadataField) {
+        this.metadataField = metadataField;
+    }
 
     /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     */
+
+    public String getMetadataField() {
+        return this.metadataField;
+    }
+
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     * 
+     * @param metadataField
+     *        The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RdsFieldMapping withMetadataField(String metadataField) {
+        setMetadataField(metadataField);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the ID for each entry.
+     * </p>
+     * 
      * @param primaryKeyField
+     *        The name of the field in which Amazon Bedrock stores the ID for each entry.
      */
 
     public void setPrimaryKeyField(String primaryKeyField) {
@@ -45,7 +108,11 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the ID for each entry.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores the ID for each entry.
      */
 
     public String getPrimaryKeyField() {
@@ -53,7 +120,12 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the ID for each entry.
+     * </p>
+     * 
      * @param primaryKeyField
+     *        The name of the field in which Amazon Bedrock stores the ID for each entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,33 +135,14 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @param vectorField
-     */
-
-    public void setVectorField(String vectorField) {
-        this.vectorField = vectorField;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getVectorField() {
-        return this.vectorField;
-    }
-
-    /**
-     * @param vectorField
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RdsFieldMapping withVectorField(String vectorField) {
-        setVectorField(vectorField);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     * 
      * @param textField
+     *        The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split
+     *        according to the chunking strategy you choose.
      */
 
     public void setTextField(String textField) {
@@ -97,7 +150,13 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split
+     *         according to the chunking strategy you choose.
      */
 
     public String getTextField() {
@@ -105,7 +164,14 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     * 
      * @param textField
+     *        The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split
+     *        according to the chunking strategy you choose.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,28 +181,42 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @param metadataField
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     * 
+     * @param vectorField
+     *        The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
      */
 
-    public void setMetadataField(String metadataField) {
-        this.metadataField = metadataField;
+    public void setVectorField(String vectorField) {
+        this.vectorField = vectorField;
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
      */
 
-    public String getMetadataField() {
-        return this.metadataField;
+    public String getVectorField() {
+        return this.vectorField;
     }
 
     /**
-     * @param metadataField
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     * 
+     * @param vectorField
+     *        The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public RdsFieldMapping withMetadataField(String metadataField) {
-        setMetadataField(metadataField);
+    public RdsFieldMapping withVectorField(String vectorField) {
+        setVectorField(vectorField);
         return this;
     }
 
@@ -152,14 +232,14 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getMetadataField() != null)
+            sb.append("MetadataField: ").append(getMetadataField()).append(",");
         if (getPrimaryKeyField() != null)
             sb.append("PrimaryKeyField: ").append(getPrimaryKeyField()).append(",");
-        if (getVectorField() != null)
-            sb.append("VectorField: ").append(getVectorField()).append(",");
         if (getTextField() != null)
             sb.append("TextField: ").append(getTextField()).append(",");
-        if (getMetadataField() != null)
-            sb.append("MetadataField: ").append(getMetadataField());
+        if (getVectorField() != null)
+            sb.append("VectorField: ").append(getVectorField());
         sb.append("}");
         return sb.toString();
     }
@@ -174,21 +254,21 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
         if (obj instanceof RdsFieldMapping == false)
             return false;
         RdsFieldMapping other = (RdsFieldMapping) obj;
+        if (other.getMetadataField() == null ^ this.getMetadataField() == null)
+            return false;
+        if (other.getMetadataField() != null && other.getMetadataField().equals(this.getMetadataField()) == false)
+            return false;
         if (other.getPrimaryKeyField() == null ^ this.getPrimaryKeyField() == null)
             return false;
         if (other.getPrimaryKeyField() != null && other.getPrimaryKeyField().equals(this.getPrimaryKeyField()) == false)
-            return false;
-        if (other.getVectorField() == null ^ this.getVectorField() == null)
-            return false;
-        if (other.getVectorField() != null && other.getVectorField().equals(this.getVectorField()) == false)
             return false;
         if (other.getTextField() == null ^ this.getTextField() == null)
             return false;
         if (other.getTextField() != null && other.getTextField().equals(this.getTextField()) == false)
             return false;
-        if (other.getMetadataField() == null ^ this.getMetadataField() == null)
+        if (other.getVectorField() == null ^ this.getVectorField() == null)
             return false;
-        if (other.getMetadataField() != null && other.getMetadataField().equals(this.getMetadataField()) == false)
+        if (other.getVectorField() != null && other.getVectorField().equals(this.getVectorField()) == false)
             return false;
         return true;
     }
@@ -198,10 +278,10 @@ public class RdsFieldMapping implements Serializable, Cloneable, StructuredPojo 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getPrimaryKeyField() == null) ? 0 : getPrimaryKeyField().hashCode());
-        hashCode = prime * hashCode + ((getVectorField() == null) ? 0 : getVectorField().hashCode());
-        hashCode = prime * hashCode + ((getTextField() == null) ? 0 : getTextField().hashCode());
         hashCode = prime * hashCode + ((getMetadataField() == null) ? 0 : getMetadataField().hashCode());
+        hashCode = prime * hashCode + ((getPrimaryKeyField() == null) ? 0 : getPrimaryKeyField().hashCode());
+        hashCode = prime * hashCode + ((getTextField() == null) ? 0 : getTextField().hashCode());
+        hashCode = prime * hashCode + ((getVectorField() == null) ? 0 : getVectorField().hashCode());
         return hashCode;
     }
 

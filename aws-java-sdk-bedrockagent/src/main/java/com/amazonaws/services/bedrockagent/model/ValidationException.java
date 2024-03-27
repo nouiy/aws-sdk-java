@@ -16,13 +16,19 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the request's input validation fails
+ * Input validation failed. Check your request parameters and retry the request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.bedrockagent.model.AWSBedrockAgentException {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * A list of objects containing fields that caused validation errors and their corresponding validation error
+     * messages.
+     * </p>
+     */
     private java.util.List<ValidationExceptionField> fieldList;
 
     /**
@@ -36,7 +42,13 @@ public class ValidationException extends com.amazonaws.services.bedrockagent.mod
     }
 
     /**
-     * @return
+     * <p>
+     * A list of objects containing fields that caused validation errors and their corresponding validation error
+     * messages.
+     * </p>
+     * 
+     * @return A list of objects containing fields that caused validation errors and their corresponding validation
+     *         error messages.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("fieldList")
@@ -45,7 +57,14 @@ public class ValidationException extends com.amazonaws.services.bedrockagent.mod
     }
 
     /**
+     * <p>
+     * A list of objects containing fields that caused validation errors and their corresponding validation error
+     * messages.
+     * </p>
+     * 
      * @param fieldList
+     *        A list of objects containing fields that caused validation errors and their corresponding validation error
+     *        messages.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("fieldList")
@@ -60,12 +79,18 @@ public class ValidationException extends com.amazonaws.services.bedrockagent.mod
 
     /**
      * <p>
+     * A list of objects containing fields that caused validation errors and their corresponding validation error
+     * messages.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFieldList(java.util.Collection)} or {@link #withFieldList(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param fieldList
+     *        A list of objects containing fields that caused validation errors and their corresponding validation error
+     *        messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +105,14 @@ public class ValidationException extends com.amazonaws.services.bedrockagent.mod
     }
 
     /**
+     * <p>
+     * A list of objects containing fields that caused validation errors and their corresponding validation error
+     * messages.
+     * </p>
+     * 
      * @param fieldList
+     *        A list of objects containing fields that caused validation errors and their corresponding validation error
+     *        messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

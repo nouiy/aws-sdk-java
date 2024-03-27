@@ -33,6 +33,8 @@ public class EksContainerSecurityContextMarshaller {
             .marshallLocationName("runAsGroup").build();
     private static final MarshallingInfo<Boolean> PRIVILEGED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("privileged").build();
+    private static final MarshallingInfo<Boolean> ALLOWPRIVILEGEESCALATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowPrivilegeEscalation").build();
     private static final MarshallingInfo<Boolean> READONLYROOTFILESYSTEM_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("readOnlyRootFilesystem").build();
     private static final MarshallingInfo<Boolean> RUNASNONROOT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -57,6 +59,7 @@ public class EksContainerSecurityContextMarshaller {
             protocolMarshaller.marshall(eksContainerSecurityContext.getRunAsUser(), RUNASUSER_BINDING);
             protocolMarshaller.marshall(eksContainerSecurityContext.getRunAsGroup(), RUNASGROUP_BINDING);
             protocolMarshaller.marshall(eksContainerSecurityContext.getPrivileged(), PRIVILEGED_BINDING);
+            protocolMarshaller.marshall(eksContainerSecurityContext.getAllowPrivilegeEscalation(), ALLOWPRIVILEGEESCALATION_BINDING);
             protocolMarshaller.marshall(eksContainerSecurityContext.getReadOnlyRootFilesystem(), READONLYROOTFILESYSTEM_BINDING);
             protocolMarshaller.marshall(eksContainerSecurityContext.getRunAsNonRoot(), RUNASNONROOT_BINDING);
         } catch (Exception e) {

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures chunking strategy
+ * Details about how to chunk the documents in the data source. A <i>chunk</i> refers to an excerpt from a data source
+ * that is returned when the knowledge base that it belongs to is queried.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ChunkingConfiguration"
@@ -28,12 +29,77 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ChunkingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data source
+     * that is returned when the knowledge base that it belongs to is queried. You have the following options for
+     * chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your files by splitting
+     * them up such that each file corresponds to a chunk.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that you set
+     * in the <code>fixedSizeChunkingConfiguration</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
+     * pre-process your documents by splitting them into separate files.
+     * </p>
+     * </li>
+     * </ul>
+     */
     private String chunkingStrategy;
-
+    /**
+     * <p>
+     * Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     * <code>NONE</code>, exclude this field.
+     * </p>
+     */
     private FixedSizeChunkingConfiguration fixedSizeChunkingConfiguration;
 
     /**
+     * <p>
+     * Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data source
+     * that is returned when the knowledge base that it belongs to is queried. You have the following options for
+     * chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your files by splitting
+     * them up such that each file corresponds to a chunk.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that you set
+     * in the <code>fixedSizeChunkingConfiguration</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
+     * pre-process your documents by splitting them into separate files.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param chunkingStrategy
+     *        Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data
+     *        source that is returned when the knowledge base that it belongs to is queried. You have the following
+     *        options for chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your
+     *        files by splitting them up such that each file corresponds to a chunk.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
+     *        you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want
+     *        to pre-process your documents by splitting them into separate files.
+     *        </p>
+     *        </li>
      * @see ChunkingStrategy
      */
 
@@ -42,7 +108,44 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data source
+     * that is returned when the knowledge base that it belongs to is queried. You have the following options for
+     * chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your files by splitting
+     * them up such that each file corresponds to a chunk.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that you set
+     * in the <code>fixedSizeChunkingConfiguration</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
+     * pre-process your documents by splitting them into separate files.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data
+     *         source that is returned when the knowledge base that it belongs to is queried. You have the following
+     *         options for chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your
+     *         files by splitting them up such that each file corresponds to a chunk.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
+     *         you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want
+     *         to pre-process your documents by splitting them into separate files.
+     *         </p>
+     *         </li>
      * @see ChunkingStrategy
      */
 
@@ -51,7 +154,45 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data source
+     * that is returned when the knowledge base that it belongs to is queried. You have the following options for
+     * chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your files by splitting
+     * them up such that each file corresponds to a chunk.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that you set
+     * in the <code>fixedSizeChunkingConfiguration</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
+     * pre-process your documents by splitting them into separate files.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param chunkingStrategy
+     *        Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data
+     *        source that is returned when the knowledge base that it belongs to is queried. You have the following
+     *        options for chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your
+     *        files by splitting them up such that each file corresponds to a chunk.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
+     *        you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want
+     *        to pre-process your documents by splitting them into separate files.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChunkingStrategy
      */
@@ -62,7 +203,45 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data source
+     * that is returned when the knowledge base that it belongs to is queried. You have the following options for
+     * chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your files by splitting
+     * them up such that each file corresponds to a chunk.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that you set
+     * in the <code>fixedSizeChunkingConfiguration</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want to
+     * pre-process your documents by splitting them into separate files.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param chunkingStrategy
+     *        Knowledge base can split your source data into chunks. A <i>chunk</i> refers to an excerpt from a data
+     *        source that is returned when the knowledge base that it belongs to is queried. You have the following
+     *        options for chunking your data. If you opt for <code>NONE</code>, then you may want to pre-process your
+     *        files by splitting them up such that each file corresponds to a chunk.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>FIXED_SIZE</code> – Amazon Bedrock splits your source data into chunks of the approximate size that
+     *        you set in the <code>fixedSizeChunkingConfiguration</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code> – Amazon Bedrock treats each file as one chunk. If you choose this option, you may want
+     *        to pre-process your documents by splitting them into separate files.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChunkingStrategy
      */
@@ -73,7 +252,14 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     * <code>NONE</code>, exclude this field.
+     * </p>
+     * 
      * @param fixedSizeChunkingConfiguration
+     *        Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     *        <code>NONE</code>, exclude this field.
      */
 
     public void setFixedSizeChunkingConfiguration(FixedSizeChunkingConfiguration fixedSizeChunkingConfiguration) {
@@ -81,7 +267,13 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     * <code>NONE</code>, exclude this field.
+     * </p>
+     * 
+     * @return Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     *         <code>NONE</code>, exclude this field.
      */
 
     public FixedSizeChunkingConfiguration getFixedSizeChunkingConfiguration() {
@@ -89,7 +281,14 @@ public class ChunkingConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     * <code>NONE</code>, exclude this field.
+     * </p>
+     * 
      * @param fixedSizeChunkingConfiguration
+     *        Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+     *        <code>NONE</code>, exclude this field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

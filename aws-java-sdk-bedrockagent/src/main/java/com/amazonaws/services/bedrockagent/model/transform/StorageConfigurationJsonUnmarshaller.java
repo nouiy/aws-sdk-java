@@ -48,10 +48,6 @@ public class StorageConfigurationJsonUnmarshaller implements Unmarshaller<Storag
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("type", targetDepth)) {
-                    context.nextToken();
-                    storageConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("opensearchServerlessConfiguration", targetDepth)) {
                     context.nextToken();
                     storageConfiguration.setOpensearchServerlessConfiguration(OpenSearchServerlessConfigurationJsonUnmarshaller.getInstance().unmarshall(
@@ -61,14 +57,18 @@ public class StorageConfigurationJsonUnmarshaller implements Unmarshaller<Storag
                     context.nextToken();
                     storageConfiguration.setPineconeConfiguration(PineconeConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("rdsConfiguration", targetDepth)) {
+                    context.nextToken();
+                    storageConfiguration.setRdsConfiguration(RdsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("redisEnterpriseCloudConfiguration", targetDepth)) {
                     context.nextToken();
                     storageConfiguration.setRedisEnterpriseCloudConfiguration(RedisEnterpriseCloudConfigurationJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
-                if (context.testExpression("rdsConfiguration", targetDepth)) {
+                if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
-                    storageConfiguration.setRdsConfiguration(RdsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                    storageConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

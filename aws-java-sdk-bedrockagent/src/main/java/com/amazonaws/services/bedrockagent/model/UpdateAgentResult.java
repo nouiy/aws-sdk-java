@@ -16,9 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Update Agent Response
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgent" target="_top">AWS API
  *      Documentation</a>
@@ -26,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Contains details about the agent that was updated.
+     * </p>
+     */
     private Agent agent;
 
     /**
+     * <p>
+     * Contains details about the agent that was updated.
+     * </p>
+     * 
      * @param agent
+     *        Contains details about the agent that was updated.
      */
 
     public void setAgent(Agent agent) {
@@ -37,7 +44,11 @@ public class UpdateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the agent that was updated.
+     * </p>
+     * 
+     * @return Contains details about the agent that was updated.
      */
 
     public Agent getAgent() {
@@ -45,7 +56,12 @@ public class UpdateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * Contains details about the agent that was updated.
+     * </p>
+     * 
      * @param agent
+     *        Contains details about the agent that was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The unique identifier of the knowledge base for which to get information.
+     * </p>
+     */
     private String knowledgeBaseId;
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base for which to get information.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base for which to get information.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -36,7 +46,11 @@ public class GetKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the knowledge base for which to get information.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base for which to get information.
      */
 
     public String getKnowledgeBaseId() {
@@ -44,7 +58,12 @@ public class GetKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base for which to get information.
+     * </p>
+     * 
      * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base for which to get information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -48,37 +48,37 @@ public class IngestionJobSummaryJsonUnmarshaller implements Unmarshaller<Ingesti
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("knowledgeBaseId", targetDepth)) {
-                    context.nextToken();
-                    ingestionJobSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("dataSourceId", targetDepth)) {
                     context.nextToken();
                     ingestionJobSummary.setDataSourceId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("ingestionJobId", targetDepth)) {
-                    context.nextToken();
-                    ingestionJobSummary.setIngestionJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     ingestionJobSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("status", targetDepth)) {
+                if (context.testExpression("ingestionJobId", targetDepth)) {
                     context.nextToken();
-                    ingestionJobSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                    ingestionJobSummary.setIngestionJobId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("knowledgeBaseId", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobSummary.setKnowledgeBaseId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("startedAt", targetDepth)) {
                     context.nextToken();
                     ingestionJobSummary.setStartedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("updatedAt", targetDepth)) {
-                    context.nextToken();
-                    ingestionJobSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("statistics", targetDepth)) {
                     context.nextToken();
                     ingestionJobSummary.setStatistics(IngestionJobStatisticsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("updatedAt", targetDepth)) {
+                    context.nextToken();
+                    ingestionJobSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

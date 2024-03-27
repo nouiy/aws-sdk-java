@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A mapping of Bedrock Knowledge Base fields to OpenSearch Serverless field names
+ * Contains the names of the fields to which to map information about the vector store.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/OpenSearchServerlessFieldMapping"
@@ -28,40 +28,75 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     */
+    private String metadataField;
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     */
+    private String textField;
+    /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     */
     private String vectorField;
 
-    private String textField;
-
-    private String metadataField;
-
     /**
-     * @param vectorField
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     * 
+     * @param metadataField
+     *        The name of the field in which Amazon Bedrock stores metadata about the vector store.
      */
 
-    public void setVectorField(String vectorField) {
-        this.vectorField = vectorField;
+    public void setMetadataField(String metadataField) {
+        this.metadataField = metadataField;
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores metadata about the vector store.
      */
 
-    public String getVectorField() {
-        return this.vectorField;
+    public String getMetadataField() {
+        return this.metadataField;
     }
 
     /**
-     * @param vectorField
+     * <p>
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     * </p>
+     * 
+     * @param metadataField
+     *        The name of the field in which Amazon Bedrock stores metadata about the vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public OpenSearchServerlessFieldMapping withVectorField(String vectorField) {
-        setVectorField(vectorField);
+    public OpenSearchServerlessFieldMapping withMetadataField(String metadataField) {
+        setMetadataField(metadataField);
         return this;
     }
 
     /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     * 
      * @param textField
+     *        The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split
+     *        according to the chunking strategy you choose.
      */
 
     public void setTextField(String textField) {
@@ -69,7 +104,13 @@ public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split
+     *         according to the chunking strategy you choose.
      */
 
     public String getTextField() {
@@ -77,7 +118,14 @@ public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split according to
+     * the chunking strategy you choose.
+     * </p>
+     * 
      * @param textField
+     *        The name of the field in which Amazon Bedrock stores the raw text from your data. The text is split
+     *        according to the chunking strategy you choose.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,28 +135,42 @@ public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable
     }
 
     /**
-     * @param metadataField
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     * 
+     * @param vectorField
+     *        The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
      */
 
-    public void setMetadataField(String metadataField) {
-        this.metadataField = metadataField;
+    public void setVectorField(String vectorField) {
+        this.vectorField = vectorField;
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     * 
+     * @return The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
      */
 
-    public String getMetadataField() {
-        return this.metadataField;
+    public String getVectorField() {
+        return this.vectorField;
     }
 
     /**
-     * @param metadataField
+     * <p>
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
+     * </p>
+     * 
+     * @param vectorField
+     *        The name of the field in which Amazon Bedrock stores the vector embeddings for your data sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public OpenSearchServerlessFieldMapping withMetadataField(String metadataField) {
-        setMetadataField(metadataField);
+    public OpenSearchServerlessFieldMapping withVectorField(String vectorField) {
+        setVectorField(vectorField);
         return this;
     }
 
@@ -124,12 +186,12 @@ public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getVectorField() != null)
-            sb.append("VectorField: ").append(getVectorField()).append(",");
+        if (getMetadataField() != null)
+            sb.append("MetadataField: ").append(getMetadataField()).append(",");
         if (getTextField() != null)
             sb.append("TextField: ").append(getTextField()).append(",");
-        if (getMetadataField() != null)
-            sb.append("MetadataField: ").append(getMetadataField());
+        if (getVectorField() != null)
+            sb.append("VectorField: ").append(getVectorField());
         sb.append("}");
         return sb.toString();
     }
@@ -144,17 +206,17 @@ public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable
         if (obj instanceof OpenSearchServerlessFieldMapping == false)
             return false;
         OpenSearchServerlessFieldMapping other = (OpenSearchServerlessFieldMapping) obj;
-        if (other.getVectorField() == null ^ this.getVectorField() == null)
+        if (other.getMetadataField() == null ^ this.getMetadataField() == null)
             return false;
-        if (other.getVectorField() != null && other.getVectorField().equals(this.getVectorField()) == false)
+        if (other.getMetadataField() != null && other.getMetadataField().equals(this.getMetadataField()) == false)
             return false;
         if (other.getTextField() == null ^ this.getTextField() == null)
             return false;
         if (other.getTextField() != null && other.getTextField().equals(this.getTextField()) == false)
             return false;
-        if (other.getMetadataField() == null ^ this.getMetadataField() == null)
+        if (other.getVectorField() == null ^ this.getVectorField() == null)
             return false;
-        if (other.getMetadataField() != null && other.getMetadataField().equals(this.getMetadataField()) == false)
+        if (other.getVectorField() != null && other.getVectorField().equals(this.getVectorField()) == false)
             return false;
         return true;
     }
@@ -164,9 +226,9 @@ public class OpenSearchServerlessFieldMapping implements Serializable, Cloneable
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getVectorField() == null) ? 0 : getVectorField().hashCode());
-        hashCode = prime * hashCode + ((getTextField() == null) ? 0 : getTextField().hashCode());
         hashCode = prime * hashCode + ((getMetadataField() == null) ? 0 : getMetadataField().hashCode());
+        hashCode = prime * hashCode + ((getTextField() == null) ? 0 : getTextField().hashCode());
+        hashCode = prime * hashCode + ((getVectorField() == null) ? 0 : getVectorField().hashCode());
         return hashCode;
     }
 

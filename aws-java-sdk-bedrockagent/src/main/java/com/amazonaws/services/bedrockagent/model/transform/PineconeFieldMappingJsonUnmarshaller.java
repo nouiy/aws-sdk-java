@@ -48,13 +48,13 @@ public class PineconeFieldMappingJsonUnmarshaller implements Unmarshaller<Pineco
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("textField", targetDepth)) {
-                    context.nextToken();
-                    pineconeFieldMapping.setTextField(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("metadataField", targetDepth)) {
                     context.nextToken();
                     pineconeFieldMapping.setMetadataField(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("textField", targetDepth)) {
+                    context.nextToken();
+                    pineconeFieldMapping.setTextField(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

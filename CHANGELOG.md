@@ -1,3 +1,24 @@
+# __1.12.689__ __2024-03-27__
+## __AWS Batch__
+  - ### Features
+    - This feature allows AWS Batch to support configuration of imagePullSecrets and allowPrivilegeEscalation for jobs running on EKS
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Documentation updates for Secrets Manager
+
+## __Agents for Amazon Bedrock__
+  - ### Features
+    - This changes introduces metadata documents statistics and also updates the documentation for bedrock agent.
+
+## __Agents for Amazon Bedrock Runtime__
+  - ### Features
+    - This release introduces filtering support on Retrieve and RetrieveAndGenerate APIs.
+
+## __Amazon ElastiCache__
+  - ### Features
+    - Added minimum capacity to  Amazon ElastiCache Serverless. This feature allows customer to ensure minimum capacity even without current load
+
 # __1.12.688__ __2024-03-26__
 ## __AWS Cost Explorer Service__
   - ### Features

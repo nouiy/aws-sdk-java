@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information of a data source.
+ * Contains details about a data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DataSourceSummary" target="_top">AWS
@@ -28,46 +28,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DataSourceSummary implements Serializable, Cloneable, StructuredPojo {
 
-    private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     */
     private String dataSourceId;
-
-    private String name;
-
-    private String status;
-
+    /**
+     * <p>
+     * The description of the data source.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     */
+    private String status;
+    /**
+     * <p>
+     * The time at which the data source was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DataSourceSummary withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -75,7 +79,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     * 
+     * @return The unique identifier of the data source.
      */
 
     public String getDataSourceId() {
@@ -83,7 +91,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,7 +106,92 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The description of the data source.
+     * </p>
+     * 
+     * @param description
+     *        The description of the data source.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The description of the data source.
+     * </p>
+     * 
+     * @return The description of the data source.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The description of the data source.
+     * </p>
+     * 
+     * @param description
+     *        The description of the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceSummary withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which the data source belongs.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to which the data source belongs.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which the data source belongs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceSummary withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     * 
      * @param name
+     *        The name of the data source.
      */
 
     public void setName(String name) {
@@ -101,7 +199,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the data source.
+     * </p>
+     * 
+     * @return The name of the data source.
      */
 
     public String getName() {
@@ -109,7 +211,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The name of the data source.
+     * </p>
+     * 
      * @param name
+     *        The name of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,7 +226,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
      * @param status
+     *        The status of the data source.
      * @see DataSourceStatus
      */
 
@@ -128,7 +240,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
+     * @return The status of the data source.
      * @see DataSourceStatus
      */
 
@@ -137,7 +253,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
      * @param status
+     *        The status of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -148,7 +269,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The status of the data source.
+     * </p>
+     * 
      * @param status
+     *        The status of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -159,33 +285,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @param description
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param description
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DataSourceSummary withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The time at which the data source was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the data source was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -193,7 +298,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the data source was last updated.
+     * </p>
+     * 
+     * @return The time at which the data source was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -201,7 +310,12 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which the data source was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the data source was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,16 +336,16 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDataSourceId() != null)
             sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
@@ -248,13 +362,17 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof DataSourceSummary == false)
             return false;
         DataSourceSummary other = (DataSourceSummary) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
@@ -263,10 +381,6 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
@@ -280,11 +394,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;
     }

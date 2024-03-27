@@ -27,24 +27,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateAgentActionGroupRequestMarshaller {
 
-    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("agentId").build();
-    private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("agentVersion").build();
+    private static final MarshallingInfo<StructuredPojo> ACTIONGROUPEXECUTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupExecutor").build();
     private static final MarshallingInfo<String> ACTIONGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("actionGroupId").build();
     private static final MarshallingInfo<String> ACTIONGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupName").build();
+    private static final MarshallingInfo<String> ACTIONGROUPSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupState").build();
+    private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("agentId").build();
+    private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("agentVersion").build();
+    private static final MarshallingInfo<StructuredPojo> APISCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> PARENTACTIONGROUPSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionGroupSignature").build();
-    private static final MarshallingInfo<StructuredPojo> ACTIONGROUPEXECUTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupExecutor").build();
-    private static final MarshallingInfo<String> ACTIONGROUPSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("actionGroupState").build();
-    private static final MarshallingInfo<StructuredPojo> APISCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
 
     private static final UpdateAgentActionGroupRequestMarshaller instance = new UpdateAgentActionGroupRequestMarshaller();
 
@@ -62,15 +62,15 @@ public class UpdateAgentActionGroupRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateAgentActionGroupRequest.getAgentId(), AGENTID_BINDING);
-            protocolMarshaller.marshall(updateAgentActionGroupRequest.getAgentVersion(), AGENTVERSION_BINDING);
+            protocolMarshaller.marshall(updateAgentActionGroupRequest.getActionGroupExecutor(), ACTIONGROUPEXECUTOR_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getActionGroupId(), ACTIONGROUPID_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getActionGroupName(), ACTIONGROUPNAME_BINDING);
+            protocolMarshaller.marshall(updateAgentActionGroupRequest.getActionGroupState(), ACTIONGROUPSTATE_BINDING);
+            protocolMarshaller.marshall(updateAgentActionGroupRequest.getAgentId(), AGENTID_BINDING);
+            protocolMarshaller.marshall(updateAgentActionGroupRequest.getAgentVersion(), AGENTVERSION_BINDING);
+            protocolMarshaller.marshall(updateAgentActionGroupRequest.getApiSchema(), APISCHEMA_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getParentActionGroupSignature(), PARENTACTIONGROUPSIGNATURE_BINDING);
-            protocolMarshaller.marshall(updateAgentActionGroupRequest.getActionGroupExecutor(), ACTIONGROUPEXECUTOR_BINDING);
-            protocolMarshaller.marshall(updateAgentActionGroupRequest.getActionGroupState(), ACTIONGROUPSTATE_BINDING);
-            protocolMarshaller.marshall(updateAgentActionGroupRequest.getApiSchema(), APISCHEMA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

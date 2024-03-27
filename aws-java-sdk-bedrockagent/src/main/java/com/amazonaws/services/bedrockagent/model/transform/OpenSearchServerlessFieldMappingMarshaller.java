@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class OpenSearchServerlessFieldMappingMarshaller {
 
-    private static final MarshallingInfo<String> VECTORFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorField").build();
-    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("textField").build();
     private static final MarshallingInfo<String> METADATAFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadataField").build();
+    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("textField").build();
+    private static final MarshallingInfo<String> VECTORFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorField").build();
 
     private static final OpenSearchServerlessFieldMappingMarshaller instance = new OpenSearchServerlessFieldMappingMarshaller();
 
@@ -50,9 +50,9 @@ public class OpenSearchServerlessFieldMappingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(openSearchServerlessFieldMapping.getVectorField(), VECTORFIELD_BINDING);
-            protocolMarshaller.marshall(openSearchServerlessFieldMapping.getTextField(), TEXTFIELD_BINDING);
             protocolMarshaller.marshall(openSearchServerlessFieldMapping.getMetadataField(), METADATAFIELD_BINDING);
+            protocolMarshaller.marshall(openSearchServerlessFieldMapping.getTextField(), TEXTFIELD_BINDING);
+            protocolMarshaller.marshall(openSearchServerlessFieldMapping.getVectorField(), VECTORFIELD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

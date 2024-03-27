@@ -32,6 +32,12 @@ public class ECPUPerSecond implements Serializable, Cloneable {
      * </p>
      */
     private Integer maximum;
+    /**
+     * <p>
+     * The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     * </p>
+     */
+    private Integer minimum;
 
     /**
      * <p>
@@ -74,6 +80,46 @@ public class ECPUPerSecond implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     * </p>
+     * 
+     * @param minimum
+     *        The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     */
+
+    public void setMinimum(Integer minimum) {
+        this.minimum = minimum;
+    }
+
+    /**
+     * <p>
+     * The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     * </p>
+     * 
+     * @return The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     */
+
+    public Integer getMinimum() {
+        return this.minimum;
+    }
+
+    /**
+     * <p>
+     * The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     * </p>
+     * 
+     * @param minimum
+     *        The configuration for the minimum number of ECPUs the cache should be able consume per second.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ECPUPerSecond withMinimum(Integer minimum) {
+        setMinimum(minimum);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -86,7 +132,9 @@ public class ECPUPerSecond implements Serializable, Cloneable {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getMaximum() != null)
-            sb.append("Maximum: ").append(getMaximum());
+            sb.append("Maximum: ").append(getMaximum()).append(",");
+        if (getMinimum() != null)
+            sb.append("Minimum: ").append(getMinimum());
         sb.append("}");
         return sb.toString();
     }
@@ -105,6 +153,10 @@ public class ECPUPerSecond implements Serializable, Cloneable {
             return false;
         if (other.getMaximum() != null && other.getMaximum().equals(this.getMaximum()) == false)
             return false;
+        if (other.getMinimum() == null ^ this.getMinimum() == null)
+            return false;
+        if (other.getMinimum() != null && other.getMinimum().equals(this.getMinimum()) == false)
+            return false;
         return true;
     }
 
@@ -114,6 +166,7 @@ public class ECPUPerSecond implements Serializable, Cloneable {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMaximum() == null) ? 0 : getMaximum().hashCode());
+        hashCode = prime * hashCode + ((getMinimum() == null) ? 0 : getMinimum().hashCode());
         return hashCode;
     }
 

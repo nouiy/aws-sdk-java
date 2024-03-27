@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about the routing configuration for an Agent alias.
+ * Contains details about the routing configuration of the alias.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/AgentAliasRoutingConfigurationListItem"
@@ -28,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AgentAliasRoutingConfigurationListItem implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The version of the agent with which the alias is associated.
+     * </p>
+     */
     private String agentVersion;
 
     /**
+     * <p>
+     * The version of the agent with which the alias is associated.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent with which the alias is associated.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -39,7 +49,11 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
     }
 
     /**
-     * @return
+     * <p>
+     * The version of the agent with which the alias is associated.
+     * </p>
+     * 
+     * @return The version of the agent with which the alias is associated.
      */
 
     public String getAgentVersion() {
@@ -47,7 +61,12 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * The version of the agent with which the alias is associated.
+     * </p>
+     * 
      * @param agentVersion
+     *        The version of the agent with which the alias is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

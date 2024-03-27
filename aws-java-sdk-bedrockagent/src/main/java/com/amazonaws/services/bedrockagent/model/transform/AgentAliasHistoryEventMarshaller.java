@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AgentAliasHistoryEventMarshaller {
 
-    private static final MarshallingInfo<List> ROUTINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("routingConfiguration").build();
     private static final MarshallingInfo<java.util.Date> ENDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endDate").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<List> ROUTINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("routingConfiguration").build();
     private static final MarshallingInfo<java.util.Date> STARTDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startDate").timestampFormat("iso8601").build();
 
@@ -51,8 +51,8 @@ public class AgentAliasHistoryEventMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(agentAliasHistoryEvent.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentAliasHistoryEvent.getEndDate(), ENDDATE_BINDING);
+            protocolMarshaller.marshall(agentAliasHistoryEvent.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentAliasHistoryEvent.getStartDate(), STARTDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

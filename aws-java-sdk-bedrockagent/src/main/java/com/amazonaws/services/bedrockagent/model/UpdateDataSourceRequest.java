@@ -25,126 +25,56 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    private String knowledgeBaseId;
-
-    private String dataSourceId;
-
-    private String name;
-
-    private String description;
-
+    /**
+     * <p>
+     * Contains details about the storage configuration of the data source.
+     * </p>
+     */
     private DataSourceConfiguration dataSourceConfiguration;
-
+    /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     */
+    private String dataSourceId;
+    /**
+     * <p>
+     * Specifies a new description for the data source.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * Specifies a new name for the data source.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * Contains details about server-side encryption of the data source.
+     * </p>
+     */
     private ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
-
+    /**
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     */
     private VectorIngestionConfiguration vectorIngestionConfiguration;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateDataSourceRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
-     * @param dataSourceId
-     */
-
-    public void setDataSourceId(String dataSourceId) {
-        this.dataSourceId = dataSourceId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDataSourceId() {
-        return this.dataSourceId;
-    }
-
-    /**
-     * @param dataSourceId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateDataSourceRequest withDataSourceId(String dataSourceId) {
-        setDataSourceId(dataSourceId);
-        return this;
-    }
-
-    /**
-     * @param name
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @param name
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateDataSourceRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * @param description
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param description
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateDataSourceRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Contains details about the storage configuration of the data source.
+     * </p>
+     * 
      * @param dataSourceConfiguration
+     *        Contains details about the storage configuration of the data source.
      */
 
     public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
@@ -152,7 +82,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about the storage configuration of the data source.
+     * </p>
+     * 
+     * @return Contains details about the storage configuration of the data source.
      */
 
     public DataSourceConfiguration getDataSourceConfiguration() {
@@ -160,7 +94,12 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about the storage configuration of the data source.
+     * </p>
+     * 
      * @param dataSourceConfiguration
+     *        Contains details about the storage configuration of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +109,172 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     * 
+     * @param dataSourceId
+     *        The unique identifier of the data source.
+     */
+
+    public void setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     * 
+     * @return The unique identifier of the data source.
+     */
+
+    public String getDataSourceId() {
+        return this.dataSourceId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the data source.
+     * </p>
+     * 
+     * @param dataSourceId
+     *        The unique identifier of the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withDataSourceId(String dataSourceId) {
+        setDataSourceId(dataSourceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a new description for the data source.
+     * </p>
+     * 
+     * @param description
+     *        Specifies a new description for the data source.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Specifies a new description for the data source.
+     * </p>
+     * 
+     * @return Specifies a new description for the data source.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Specifies a new description for the data source.
+     * </p>
+     * 
+     * @param description
+     *        Specifies a new description for the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which the data source belongs.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to which the data source belongs.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to which the data source belongs.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to which the data source belongs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a new name for the data source.
+     * </p>
+     * 
+     * @param name
+     *        Specifies a new name for the data source.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Specifies a new name for the data source.
+     * </p>
+     * 
+     * @return Specifies a new name for the data source.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Specifies a new name for the data source.
+     * </p>
+     * 
+     * @param name
+     *        Specifies a new name for the data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about server-side encryption of the data source.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        Contains details about server-side encryption of the data source.
      */
 
     public void setServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
@@ -178,7 +282,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about server-side encryption of the data source.
+     * </p>
+     * 
+     * @return Contains details about server-side encryption of the data source.
      */
 
     public ServerSideEncryptionConfiguration getServerSideEncryptionConfiguration() {
@@ -186,7 +294,12 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about server-side encryption of the data source.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        Contains details about server-side encryption of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +309,12 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     * 
      * @param vectorIngestionConfiguration
+     *        Contains details about how to ingest the documents in the data source.
      */
 
     public void setVectorIngestionConfiguration(VectorIngestionConfiguration vectorIngestionConfiguration) {
@@ -204,7 +322,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     * 
+     * @return Contains details about how to ingest the documents in the data source.
      */
 
     public VectorIngestionConfiguration getVectorIngestionConfiguration() {
@@ -212,7 +334,12 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Contains details about how to ingest the documents in the data source.
+     * </p>
+     * 
      * @param vectorIngestionConfiguration
+     *        Contains details about how to ingest the documents in the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,16 +360,16 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
-        if (getDataSourceId() != null)
-            sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getDataSourceConfiguration() != null)
             sb.append("DataSourceConfiguration: ").append(getDataSourceConfiguration()).append(",");
+        if (getDataSourceId() != null)
+            sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getServerSideEncryptionConfiguration() != null)
             sb.append("ServerSideEncryptionConfiguration: ").append(getServerSideEncryptionConfiguration()).append(",");
         if (getVectorIngestionConfiguration() != null)
@@ -261,25 +388,25 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof UpdateDataSourceRequest == false)
             return false;
         UpdateDataSourceRequest other = (UpdateDataSourceRequest) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
             return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
+        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
             return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
-        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getServerSideEncryptionConfiguration() == null ^ this.getServerSideEncryptionConfiguration() == null)
             return false;
@@ -298,11 +425,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
-        hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDataSourceConfiguration() == null) ? 0 : getDataSourceConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getServerSideEncryptionConfiguration() == null) ? 0 : getServerSideEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getVectorIngestionConfiguration() == null) ? 0 : getVectorIngestionConfiguration().hashCode());
         return hashCode;

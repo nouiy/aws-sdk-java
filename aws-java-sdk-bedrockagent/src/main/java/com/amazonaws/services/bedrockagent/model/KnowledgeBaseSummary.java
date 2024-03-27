@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information of a knowledge base.
+ * Contains details about a knowledge base.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/KnowledgeBaseSummary" target="_top">AWS
@@ -28,70 +28,44 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class KnowledgeBaseSummary implements Serializable, Cloneable, StructuredPojo {
 
-    private String knowledgeBaseId;
-
-    private String name;
-
+    /**
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The status of the knowledge base.
+     * </p>
+     */
     private String status;
-
+    /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     */
     private java.util.Date updatedAt;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBaseSummary withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
-     * @param name
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @param name
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KnowledgeBaseSummary withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     * 
      * @param description
+     *        The description of the knowledge base.
      */
 
     public void setDescription(String description) {
@@ -99,7 +73,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     * 
+     * @return The description of the knowledge base.
      */
 
     public String getDescription() {
@@ -107,7 +85,12 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The description of the knowledge base.
+     * </p>
+     * 
      * @param description
+     *        The description of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,7 +100,92 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBaseSummary withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        The name of the knowledge base.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     * 
+     * @return The name of the knowledge base.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        The name of the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KnowledgeBaseSummary withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the knowledge base.
+     * </p>
+     * 
      * @param status
+     *        The status of the knowledge base.
      * @see KnowledgeBaseStatus
      */
 
@@ -126,7 +194,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the knowledge base.
+     * </p>
+     * 
+     * @return The status of the knowledge base.
      * @see KnowledgeBaseStatus
      */
 
@@ -135,7 +207,12 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The status of the knowledge base.
+     * </p>
+     * 
      * @param status
+     *        The status of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseStatus
      */
@@ -146,7 +223,12 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The status of the knowledge base.
+     * </p>
+     * 
      * @param status
+     *        The status of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseStatus
      */
@@ -157,7 +239,12 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the knowledge base was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -165,7 +252,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     * 
+     * @return The time at which the knowledge base was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -173,7 +264,12 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The time at which the knowledge base was last updated.
+     * </p>
+     * 
      * @param updatedAt
+     *        The time at which the knowledge base was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,12 +290,12 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getKnowledgeBaseId() != null)
             sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getUpdatedAt() != null)
@@ -218,6 +314,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
         if (obj instanceof KnowledgeBaseSummary == false)
             return false;
         KnowledgeBaseSummary other = (KnowledgeBaseSummary) obj;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
         if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
@@ -225,10 +325,6 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -246,9 +342,9 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;

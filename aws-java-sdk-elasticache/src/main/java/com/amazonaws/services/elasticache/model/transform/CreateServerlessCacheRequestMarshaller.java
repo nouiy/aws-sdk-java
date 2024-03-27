@@ -68,6 +68,10 @@ public class CreateServerlessCacheRequestMarshaller implements Marshaller<Reques
                             request.addParameter("CacheUsageLimits.DataStorage.Maximum", StringUtils.fromInteger(dataStorage.getMaximum()));
                         }
 
+                        if (dataStorage.getMinimum() != null) {
+                            request.addParameter("CacheUsageLimits.DataStorage.Minimum", StringUtils.fromInteger(dataStorage.getMinimum()));
+                        }
+
                         if (dataStorage.getUnit() != null) {
                             request.addParameter("CacheUsageLimits.DataStorage.Unit", StringUtils.fromString(dataStorage.getUnit()));
                         }
@@ -80,6 +84,10 @@ public class CreateServerlessCacheRequestMarshaller implements Marshaller<Reques
 
                         if (eCPUPerSecond.getMaximum() != null) {
                             request.addParameter("CacheUsageLimits.ECPUPerSecond.Maximum", StringUtils.fromInteger(eCPUPerSecond.getMaximum()));
+                        }
+
+                        if (eCPUPerSecond.getMinimum() != null) {
+                            request.addParameter("CacheUsageLimits.ECPUPerSecond.Minimum", StringUtils.fromInteger(eCPUPerSecond.getMinimum()));
                         }
                     }
                 }

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetAgentActionGroupRequestMarshaller {
 
+    private static final MarshallingInfo<String> ACTIONGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("actionGroupId").build();
     private static final MarshallingInfo<String> AGENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentId").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("agentVersion").build();
-    private static final MarshallingInfo<String> ACTIONGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("actionGroupId").build();
 
     private static final GetAgentActionGroupRequestMarshaller instance = new GetAgentActionGroupRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class GetAgentActionGroupRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(getAgentActionGroupRequest.getActionGroupId(), ACTIONGROUPID_BINDING);
             protocolMarshaller.marshall(getAgentActionGroupRequest.getAgentId(), AGENTID_BINDING);
             protocolMarshaller.marshall(getAgentActionGroupRequest.getAgentVersion(), AGENTVERSION_BINDING);
-            protocolMarshaller.marshall(getAgentActionGroupRequest.getActionGroupId(), ACTIONGROUPID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

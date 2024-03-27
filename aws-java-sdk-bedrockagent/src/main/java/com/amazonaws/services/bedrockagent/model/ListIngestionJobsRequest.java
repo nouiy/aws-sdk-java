@@ -25,46 +25,54 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    private String knowledgeBaseId;
-
+    /**
+     * <p>
+     * The unique identifier of the data source for which to return ingestion jobs.
+     * </p>
+     */
     private String dataSourceId;
-
+    /**
+     * <p>
+     * Contains a definition of a filter for which to filter the results.
+     * </p>
+     */
     private java.util.List<IngestionJobFilter> filters;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base for which to return ingestion jobs.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     */
+    private Integer maxResults;
+    /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
+     * Contains details about how to sort the results.
+     * </p>
+     */
     private IngestionJobSortBy sortBy;
 
-    private Integer maxResults;
-
-    private String nextToken;
-
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListIngestionJobsRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The unique identifier of the data source for which to return ingestion jobs.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source for which to return ingestion jobs.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -72,7 +80,11 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the data source for which to return ingestion jobs.
+     * </p>
+     * 
+     * @return The unique identifier of the data source for which to return ingestion jobs.
      */
 
     public String getDataSourceId() {
@@ -80,7 +92,12 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The unique identifier of the data source for which to return ingestion jobs.
+     * </p>
+     * 
      * @param dataSourceId
+     *        The unique identifier of the data source for which to return ingestion jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +107,11 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * Contains a definition of a filter for which to filter the results.
+     * </p>
+     * 
+     * @return Contains a definition of a filter for which to filter the results.
      */
 
     public java.util.List<IngestionJobFilter> getFilters() {
@@ -98,7 +119,12 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Contains a definition of a filter for which to filter the results.
+     * </p>
+     * 
      * @param filters
+     *        Contains a definition of a filter for which to filter the results.
      */
 
     public void setFilters(java.util.Collection<IngestionJobFilter> filters) {
@@ -112,12 +138,16 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
+     * Contains a definition of a filter for which to filter the results.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param filters
+     *        Contains a definition of a filter for which to filter the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,7 +162,12 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Contains a definition of a filter for which to filter the results.
+     * </p>
+     * 
      * @param filters
+     *        Contains a definition of a filter for which to filter the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,33 +177,56 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @param sortBy
+     * <p>
+     * The unique identifier of the knowledge base for which to return ingestion jobs.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base for which to return ingestion jobs.
      */
 
-    public void setSortBy(IngestionJobSortBy sortBy) {
-        this.sortBy = sortBy;
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier of the knowledge base for which to return ingestion jobs.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base for which to return ingestion jobs.
      */
 
-    public IngestionJobSortBy getSortBy() {
-        return this.sortBy;
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
     }
 
     /**
-     * @param sortBy
+     * <p>
+     * The unique identifier of the knowledge base for which to return ingestion jobs.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base for which to return ingestion jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListIngestionJobsRequest withSortBy(IngestionJobSortBy sortBy) {
-        setSortBy(sortBy);
+    public ListIngestionJobsRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
         return this;
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in the response. If the total number of results is greater than
+     *        this value, use the token returned in the response in the <code>nextToken</code> field when making another
+     *        request to return the next batch of results.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -176,7 +234,15 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     * 
+     * @return The maximum number of results to return in the response. If the total number of results is greater than
+     *         this value, use the token returned in the response in the <code>nextToken</code> field when making
+     *         another request to return the next batch of results.
      */
 
     public Integer getMaxResults() {
@@ -184,7 +250,16 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in the response. If the total number of results is greater than this
+     * value, use the token returned in the response in the <code>nextToken</code> field when making another request to
+     * return the next batch of results.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in the response. If the total number of results is greater than
+     *        this value, use the token returned in the response in the <code>nextToken</code> field when making another
+     *        request to return the next batch of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,7 +269,16 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        enter the token returned in the <code>nextToken</code> field in the response in this field to return the
+     *        next batch of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -202,7 +286,15 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     * 
+     * @return If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *         enter the token returned in the <code>nextToken</code> field in the response in this field to return the
+     *         next batch of results.
      */
 
     public String getNextToken() {
@@ -210,12 +302,61 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter
+     * the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of
+     * results.
+     * </p>
+     * 
      * @param nextToken
+     *        If the total number of results is greater than the <code>maxResults</code> value provided in the request,
+     *        enter the token returned in the <code>nextToken</code> field in the response in this field to return the
+     *        next batch of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListIngestionJobsRequest withNextToken(String nextToken) {
         setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about how to sort the results.
+     * </p>
+     * 
+     * @param sortBy
+     *        Contains details about how to sort the results.
+     */
+
+    public void setSortBy(IngestionJobSortBy sortBy) {
+        this.sortBy = sortBy;
+    }
+
+    /**
+     * <p>
+     * Contains details about how to sort the results.
+     * </p>
+     * 
+     * @return Contains details about how to sort the results.
+     */
+
+    public IngestionJobSortBy getSortBy() {
+        return this.sortBy;
+    }
+
+    /**
+     * <p>
+     * Contains details about how to sort the results.
+     * </p>
+     * 
+     * @param sortBy
+     *        Contains details about how to sort the results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListIngestionJobsRequest withSortBy(IngestionJobSortBy sortBy) {
+        setSortBy(sortBy);
         return this;
     }
 
@@ -231,18 +372,18 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDataSourceId() != null)
             sb.append("DataSourceId: ").append(getDataSourceId()).append(",");
         if (getFilters() != null)
             sb.append("Filters: ").append(getFilters()).append(",");
-        if (getSortBy() != null)
-            sb.append("SortBy: ").append(getSortBy()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getSortBy() != null)
+            sb.append("SortBy: ").append(getSortBy());
         sb.append("}");
         return sb.toString();
     }
@@ -257,10 +398,6 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
         if (obj instanceof ListIngestionJobsRequest == false)
             return false;
         ListIngestionJobsRequest other = (ListIngestionJobsRequest) obj;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDataSourceId() == null ^ this.getDataSourceId() == null)
             return false;
         if (other.getDataSourceId() != null && other.getDataSourceId().equals(this.getDataSourceId()) == false)
@@ -269,9 +406,9 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getFilters() != null && other.getFilters().equals(this.getFilters()) == false)
             return false;
-        if (other.getSortBy() == null ^ this.getSortBy() == null)
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
-        if (other.getSortBy() != null && other.getSortBy().equals(this.getSortBy()) == false)
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
@@ -281,6 +418,10 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getSortBy() == null ^ this.getSortBy() == null)
+            return false;
+        if (other.getSortBy() != null && other.getSortBy().equals(this.getSortBy()) == false)
+            return false;
         return true;
     }
 
@@ -289,12 +430,12 @@ public class ListIngestionJobsRequest extends com.amazonaws.AmazonWebServiceRequ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDataSourceId() == null) ? 0 : getDataSourceId().hashCode());
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
-        hashCode = prime * hashCode + ((getSortBy() == null) ? 0 : getSortBy().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getSortBy() == null) ? 0 : getSortBy().hashCode());
         return hashCode;
     }
 

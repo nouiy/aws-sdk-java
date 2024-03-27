@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Create Agent Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgent" target="_top">AWS API
  *      Documentation</a>
@@ -28,28 +25,84 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A name for the agent that you create.
+     * </p>
+     */
     private String agentName;
-
-    private String clientToken;
-
-    private String instruction;
-
-    private String foundationModel;
-
-    private String description;
-
-    private Integer idleSessionTTLInSeconds;
-
+    /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * </p>
+     */
     private String agentResourceRoleArn;
-
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
+     * The ARN of the KMS key with which to encrypt the agent.
+     * </p>
+     */
     private String customerEncryptionKeyArn;
-
+    /**
+     * <p>
+     * A description of the agent.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The foundation model to be used for orchestration by the agent you create.
+     * </p>
+     */
+    private String foundationModel;
+    /**
+     * <p>
+     * The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.
+     * </p>
+     * <p>
+     * A user interaction remains active for the amount of time specified. If no conversation occurs during this time,
+     * the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     * </p>
+     */
+    private Integer idleSessionTTLInSeconds;
+    /**
+     * <p>
+     * Instructions that tell the agent what it should do and how it should interact with users.
+     * </p>
+     */
+    private String instruction;
+    /**
+     * <p>
+     * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     */
+    private PromptOverrideConfiguration promptOverrideConfiguration;
+    /**
+     * <p>
+     * Any tags that you want to attach to the agent.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
-    private PromptOverrideConfiguration promptOverrideConfiguration;
-
     /**
+     * <p>
+     * A name for the agent that you create.
+     * </p>
+     * 
      * @param agentName
+     *        A name for the agent that you create.
      */
 
     public void setAgentName(String agentName) {
@@ -57,7 +110,11 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * A name for the agent that you create.
+     * </p>
+     * 
+     * @return A name for the agent that you create.
      */
 
     public String getAgentName() {
@@ -65,7 +122,12 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * A name for the agent that you create.
+     * </p>
+     * 
      * @param agentName
+     *        A name for the agent that you create.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -75,137 +137,14 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @param clientToken
-     */
-
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @param clientToken
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
-        return this;
-    }
-
-    /**
-     * @param instruction
-     */
-
-    public void setInstruction(String instruction) {
-        this.instruction = instruction;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getInstruction() {
-        return this.instruction;
-    }
-
-    /**
-     * @param instruction
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentRequest withInstruction(String instruction) {
-        setInstruction(instruction);
-        return this;
-    }
-
-    /**
-     * @param foundationModel
-     */
-
-    public void setFoundationModel(String foundationModel) {
-        this.foundationModel = foundationModel;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getFoundationModel() {
-        return this.foundationModel;
-    }
-
-    /**
-     * @param foundationModel
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentRequest withFoundationModel(String foundationModel) {
-        setFoundationModel(foundationModel);
-        return this;
-    }
-
-    /**
-     * @param description
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param description
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * @param idleSessionTTLInSeconds
-     */
-
-    public void setIdleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
-        this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
-    }
-
-    /**
-     * @return
-     */
-
-    public Integer getIdleSessionTTLInSeconds() {
-        return this.idleSessionTTLInSeconds;
-    }
-
-    /**
-     * @param idleSessionTTLInSeconds
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentRequest withIdleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
-        setIdleSessionTTLInSeconds(idleSessionTTLInSeconds);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * </p>
+     * 
      * @param agentResourceRoleArn
+     *        The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     *        <code>AmazonBedrockExecutionRoleForAgents_</code>.
      */
 
     public void setAgentResourceRoleArn(String agentResourceRoleArn) {
@@ -213,7 +152,13 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * </p>
+     * 
+     * @return The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     *         <code>AmazonBedrockExecutionRoleForAgents_</code>.
      */
 
     public String getAgentResourceRoleArn() {
@@ -221,7 +166,14 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * </p>
+     * 
      * @param agentResourceRoleArn
+     *        The ARN of the IAM role with permissions to create the agent. The ARN must begin with
+     *        <code>AmazonBedrockExecutionRoleForAgents_</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -231,7 +183,76 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *         this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency</a>.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token
+     * matches a previous request, Amazon Bedrock ignores the request, but does not return an error. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If
+     *        this token matches a previous request, Amazon Bedrock ignores the request, but does not return an error.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the KMS key with which to encrypt the agent.
+     * </p>
+     * 
      * @param customerEncryptionKeyArn
+     *        The ARN of the KMS key with which to encrypt the agent.
      */
 
     public void setCustomerEncryptionKeyArn(String customerEncryptionKeyArn) {
@@ -239,7 +260,11 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the KMS key with which to encrypt the agent.
+     * </p>
+     * 
+     * @return The ARN of the KMS key with which to encrypt the agent.
      */
 
     public String getCustomerEncryptionKeyArn() {
@@ -247,7 +272,12 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The ARN of the KMS key with which to encrypt the agent.
+     * </p>
+     * 
      * @param customerEncryptionKeyArn
+     *        The ARN of the KMS key with which to encrypt the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -257,7 +287,244 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * A description of the agent.
+     * </p>
+     * 
+     * @param description
+     *        A description of the agent.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * A description of the agent.
+     * </p>
+     * 
+     * @return A description of the agent.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * A description of the agent.
+     * </p>
+     * 
+     * @param description
+     *        A description of the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The foundation model to be used for orchestration by the agent you create.
+     * </p>
+     * 
+     * @param foundationModel
+     *        The foundation model to be used for orchestration by the agent you create.
+     */
+
+    public void setFoundationModel(String foundationModel) {
+        this.foundationModel = foundationModel;
+    }
+
+    /**
+     * <p>
+     * The foundation model to be used for orchestration by the agent you create.
+     * </p>
+     * 
+     * @return The foundation model to be used for orchestration by the agent you create.
+     */
+
+    public String getFoundationModel() {
+        return this.foundationModel;
+    }
+
+    /**
+     * <p>
+     * The foundation model to be used for orchestration by the agent you create.
+     * </p>
+     * 
+     * @param foundationModel
+     *        The foundation model to be used for orchestration by the agent you create.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentRequest withFoundationModel(String foundationModel) {
+        setFoundationModel(foundationModel);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.
+     * </p>
+     * <p>
+     * A user interaction remains active for the amount of time specified. If no conversation occurs during this time,
+     * the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     * </p>
+     * 
+     * @param idleSessionTTLInSeconds
+     *        The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the
+     *        agent.</p>
+     *        <p>
+     *        A user interaction remains active for the amount of time specified. If no conversation occurs during this
+     *        time, the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     */
+
+    public void setIdleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
+        this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
+    }
+
+    /**
+     * <p>
+     * The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.
+     * </p>
+     * <p>
+     * A user interaction remains active for the amount of time specified. If no conversation occurs during this time,
+     * the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     * </p>
+     * 
+     * @return The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the
+     *         agent.</p>
+     *         <p>
+     *         A user interaction remains active for the amount of time specified. If no conversation occurs during this
+     *         time, the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     */
+
+    public Integer getIdleSessionTTLInSeconds() {
+        return this.idleSessionTTLInSeconds;
+    }
+
+    /**
+     * <p>
+     * The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.
+     * </p>
+     * <p>
+     * A user interaction remains active for the amount of time specified. If no conversation occurs during this time,
+     * the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     * </p>
+     * 
+     * @param idleSessionTTLInSeconds
+     *        The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the
+     *        agent.</p>
+     *        <p>
+     *        A user interaction remains active for the amount of time specified. If no conversation occurs during this
+     *        time, the session expires and Amazon Bedrock deletes any data provided before the timeout.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentRequest withIdleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
+        setIdleSessionTTLInSeconds(idleSessionTTLInSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Instructions that tell the agent what it should do and how it should interact with users.
+     * </p>
+     * 
+     * @param instruction
+     *        Instructions that tell the agent what it should do and how it should interact with users.
+     */
+
+    public void setInstruction(String instruction) {
+        this.instruction = instruction;
+    }
+
+    /**
+     * <p>
+     * Instructions that tell the agent what it should do and how it should interact with users.
+     * </p>
+     * 
+     * @return Instructions that tell the agent what it should do and how it should interact with users.
+     */
+
+    public String getInstruction() {
+        return this.instruction;
+    }
+
+    /**
+     * <p>
+     * Instructions that tell the agent what it should do and how it should interact with users.
+     * </p>
+     * 
+     * @param instruction
+     *        Instructions that tell the agent what it should do and how it should interact with users.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentRequest withInstruction(String instruction) {
+        setInstruction(instruction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * 
+     * @param promptOverrideConfiguration
+     *        Contains configurations to override prompts in different parts of an agent sequence. For more information,
+     *        see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced
+     *        prompts</a>.
+     */
+
+    public void setPromptOverrideConfiguration(PromptOverrideConfiguration promptOverrideConfiguration) {
+        this.promptOverrideConfiguration = promptOverrideConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * 
+     * @return Contains configurations to override prompts in different parts of an agent sequence. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     */
+
+    public PromptOverrideConfiguration getPromptOverrideConfiguration() {
+        return this.promptOverrideConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configurations to override prompts in different parts of an agent sequence. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.
+     * </p>
+     * 
+     * @param promptOverrideConfiguration
+     *        Contains configurations to override prompts in different parts of an agent sequence. For more information,
+     *        see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced
+     *        prompts</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentRequest withPromptOverrideConfiguration(PromptOverrideConfiguration promptOverrideConfiguration) {
+        setPromptOverrideConfiguration(promptOverrideConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Any tags that you want to attach to the agent.
+     * </p>
+     * 
+     * @return Any tags that you want to attach to the agent.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -265,7 +532,12 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Any tags that you want to attach to the agent.
+     * </p>
+     * 
      * @param tags
+     *        Any tags that you want to attach to the agent.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -273,7 +545,12 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Any tags that you want to attach to the agent.
+     * </p>
+     * 
      * @param tags
+     *        Any tags that you want to attach to the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,32 +588,6 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @param promptOverrideConfiguration
-     */
-
-    public void setPromptOverrideConfiguration(PromptOverrideConfiguration promptOverrideConfiguration) {
-        this.promptOverrideConfiguration = promptOverrideConfiguration;
-    }
-
-    /**
-     * @return
-     */
-
-    public PromptOverrideConfiguration getPromptOverrideConfiguration() {
-        return this.promptOverrideConfiguration;
-    }
-
-    /**
-     * @param promptOverrideConfiguration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAgentRequest withPromptOverrideConfiguration(PromptOverrideConfiguration promptOverrideConfiguration) {
-        setPromptOverrideConfiguration(promptOverrideConfiguration);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -350,24 +601,24 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
         sb.append("{");
         if (getAgentName() != null)
             sb.append("AgentName: ").append(getAgentName()).append(",");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken()).append(",");
-        if (getInstruction() != null)
-            sb.append("Instruction: ").append("***Sensitive Data Redacted***").append(",");
-        if (getFoundationModel() != null)
-            sb.append("FoundationModel: ").append(getFoundationModel()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getIdleSessionTTLInSeconds() != null)
-            sb.append("IdleSessionTTLInSeconds: ").append(getIdleSessionTTLInSeconds()).append(",");
         if (getAgentResourceRoleArn() != null)
             sb.append("AgentResourceRoleArn: ").append(getAgentResourceRoleArn()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getCustomerEncryptionKeyArn() != null)
             sb.append("CustomerEncryptionKeyArn: ").append(getCustomerEncryptionKeyArn()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getFoundationModel() != null)
+            sb.append("FoundationModel: ").append(getFoundationModel()).append(",");
+        if (getIdleSessionTTLInSeconds() != null)
+            sb.append("IdleSessionTTLInSeconds: ").append(getIdleSessionTTLInSeconds()).append(",");
+        if (getInstruction() != null)
+            sb.append("Instruction: ").append("***Sensitive Data Redacted***").append(",");
         if (getPromptOverrideConfiguration() != null)
-            sb.append("PromptOverrideConfiguration: ").append("***Sensitive Data Redacted***");
+            sb.append("PromptOverrideConfiguration: ").append("***Sensitive Data Redacted***").append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -386,41 +637,41 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getAgentName() != null && other.getAgentName().equals(this.getAgentName()) == false)
             return false;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
-            return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
-            return false;
-        if (other.getInstruction() == null ^ this.getInstruction() == null)
-            return false;
-        if (other.getInstruction() != null && other.getInstruction().equals(this.getInstruction()) == false)
-            return false;
-        if (other.getFoundationModel() == null ^ this.getFoundationModel() == null)
-            return false;
-        if (other.getFoundationModel() != null && other.getFoundationModel().equals(this.getFoundationModel()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getIdleSessionTTLInSeconds() == null ^ this.getIdleSessionTTLInSeconds() == null)
-            return false;
-        if (other.getIdleSessionTTLInSeconds() != null && other.getIdleSessionTTLInSeconds().equals(this.getIdleSessionTTLInSeconds()) == false)
-            return false;
         if (other.getAgentResourceRoleArn() == null ^ this.getAgentResourceRoleArn() == null)
             return false;
         if (other.getAgentResourceRoleArn() != null && other.getAgentResourceRoleArn().equals(this.getAgentResourceRoleArn()) == false)
+            return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getCustomerEncryptionKeyArn() == null ^ this.getCustomerEncryptionKeyArn() == null)
             return false;
         if (other.getCustomerEncryptionKeyArn() != null && other.getCustomerEncryptionKeyArn().equals(this.getCustomerEncryptionKeyArn()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getFoundationModel() == null ^ this.getFoundationModel() == null)
+            return false;
+        if (other.getFoundationModel() != null && other.getFoundationModel().equals(this.getFoundationModel()) == false)
+            return false;
+        if (other.getIdleSessionTTLInSeconds() == null ^ this.getIdleSessionTTLInSeconds() == null)
+            return false;
+        if (other.getIdleSessionTTLInSeconds() != null && other.getIdleSessionTTLInSeconds().equals(this.getIdleSessionTTLInSeconds()) == false)
+            return false;
+        if (other.getInstruction() == null ^ this.getInstruction() == null)
+            return false;
+        if (other.getInstruction() != null && other.getInstruction().equals(this.getInstruction()) == false)
             return false;
         if (other.getPromptOverrideConfiguration() == null ^ this.getPromptOverrideConfiguration() == null)
             return false;
         if (other.getPromptOverrideConfiguration() != null && other.getPromptOverrideConfiguration().equals(this.getPromptOverrideConfiguration()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -431,15 +682,15 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAgentName() == null) ? 0 : getAgentName().hashCode());
-        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
-        hashCode = prime * hashCode + ((getInstruction() == null) ? 0 : getInstruction().hashCode());
-        hashCode = prime * hashCode + ((getFoundationModel() == null) ? 0 : getFoundationModel().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getIdleSessionTTLInSeconds() == null) ? 0 : getIdleSessionTTLInSeconds().hashCode());
         hashCode = prime * hashCode + ((getAgentResourceRoleArn() == null) ? 0 : getAgentResourceRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getCustomerEncryptionKeyArn() == null) ? 0 : getCustomerEncryptionKeyArn().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getFoundationModel() == null) ? 0 : getFoundationModel().hashCode());
+        hashCode = prime * hashCode + ((getIdleSessionTTLInSeconds() == null) ? 0 : getIdleSessionTTLInSeconds().hashCode());
+        hashCode = prime * hashCode + ((getInstruction() == null) ? 0 : getInstruction().hashCode());
         hashCode = prime * hashCode + ((getPromptOverrideConfiguration() == null) ? 0 : getPromptOverrideConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

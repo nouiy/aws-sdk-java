@@ -18,9 +18,6 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceRequest;
 
 /**
- * <p>
- * Update Agent Knowledge Base Request
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UpdateAgentKnowledgeBase"
  *      target="_top">AWS API Documentation</a>
@@ -30,34 +27,44 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent associated with the knowledge base that you want to update.
      * </p>
      */
     private String agentId;
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent associated with the knowledge base that you want to update.
      * </p>
      */
     private String agentVersion;
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
+     * Specifies a new description for the knowledge base associated with an agent.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The unique identifier of the knowledge base that has been associated with an agent.
      * </p>
      */
     private String knowledgeBaseId;
-
-    private String description;
-
+    /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     */
     private String knowledgeBaseState;
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent associated with the knowledge base that you want to update.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent associated with the knowledge base that you want to update.
      */
 
     public void setAgentId(String agentId) {
@@ -66,10 +73,10 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent associated with the knowledge base that you want to update.
      * </p>
      * 
-     * @return Id generated at the server side when an Agent is created
+     * @return The unique identifier of the agent associated with the knowledge base that you want to update.
      */
 
     public String getAgentId() {
@@ -78,11 +85,11 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Id generated at the server side when an Agent is created
+     * The unique identifier of the agent associated with the knowledge base that you want to update.
      * </p>
      * 
      * @param agentId
-     *        Id generated at the server side when an Agent is created
+     *        The unique identifier of the agent associated with the knowledge base that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +100,11 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent associated with the knowledge base that you want to update.
      * </p>
      * 
      * @param agentVersion
-     *        Draft Version of the Agent.
+     *        The version of the agent associated with the knowledge base that you want to update.
      */
 
     public void setAgentVersion(String agentVersion) {
@@ -106,10 +113,10 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent associated with the knowledge base that you want to update.
      * </p>
      * 
-     * @return Draft Version of the Agent.
+     * @return The version of the agent associated with the knowledge base that you want to update.
      */
 
     public String getAgentVersion() {
@@ -118,11 +125,11 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Draft Version of the Agent.
+     * The version of the agent associated with the knowledge base that you want to update.
      * </p>
      * 
      * @param agentVersion
-     *        Draft Version of the Agent.
+     *        The version of the agent associated with the knowledge base that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,46 +140,11 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
+     * Specifies a new description for the knowledge base associated with an agent.
      * </p>
      * 
-     * @param knowledgeBaseId
-     *        Id generated at the server side when a Knowledge Base is associated to an Agent
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
-     * </p>
-     * 
-     * @return Id generated at the server side when a Knowledge Base is associated to an Agent
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * <p>
-     * Id generated at the server side when a Knowledge Base is associated to an Agent
-     * </p>
-     * 
-     * @param knowledgeBaseId
-     *        Id generated at the server side when a Knowledge Base is associated to an Agent
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateAgentKnowledgeBaseRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
      * @param description
+     *        Specifies a new description for the knowledge base associated with an agent.
      */
 
     public void setDescription(String description) {
@@ -180,7 +152,11 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies a new description for the knowledge base associated with an agent.
+     * </p>
+     * 
+     * @return Specifies a new description for the knowledge base associated with an agent.
      */
 
     public String getDescription() {
@@ -188,7 +164,12 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Specifies a new description for the knowledge base associated with an agent.
+     * </p>
+     * 
      * @param description
+     *        Specifies a new description for the knowledge base associated with an agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,7 +179,56 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base that has been associated with an agent.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base that has been associated with an agent.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base that has been associated with an agent.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base that has been associated with an agent.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base that has been associated with an agent.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base that has been associated with an agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAgentKnowledgeBaseRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether the agent uses the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @see KnowledgeBaseState
      */
 
@@ -207,7 +237,15 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
+     * @return Specifies whether the agent uses the knowledge base or not when sending an <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *         >InvokeAgent</a> request.
      * @see KnowledgeBaseState
      */
 
@@ -216,7 +254,16 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether the agent uses the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseState
      */
@@ -227,7 +274,16 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Specifies whether the agent uses the knowledge base or not when sending an <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html">InvokeAgent</a>
+     * request.
+     * </p>
+     * 
      * @param knowledgeBaseState
+     *        Specifies whether the agent uses the knowledge base or not when sending an <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html"
+     *        >InvokeAgent</a> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KnowledgeBaseState
      */
@@ -253,10 +309,10 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
             sb.append("AgentId: ").append(getAgentId()).append(",");
         if (getAgentVersion() != null)
             sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
-        if (getKnowledgeBaseId() != null)
-            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseId() != null)
+            sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getKnowledgeBaseState() != null)
             sb.append("KnowledgeBaseState: ").append(getKnowledgeBaseState());
         sb.append("}");
@@ -281,13 +337,13 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
             return false;
-        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
-            return false;
-        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
+            return false;
+        if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
             return false;
         if (other.getKnowledgeBaseState() == null ^ this.getKnowledgeBaseState() == null)
             return false;
@@ -303,8 +359,8 @@ public class UpdateAgentKnowledgeBaseRequest extends com.amazonaws.AmazonWebServ
 
         hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
-        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseState() == null) ? 0 : getKnowledgeBaseState().hashCode());
         return hashCode;
     }

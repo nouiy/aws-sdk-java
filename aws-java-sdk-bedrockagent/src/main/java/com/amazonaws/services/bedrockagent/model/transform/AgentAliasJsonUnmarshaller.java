@@ -48,9 +48,15 @@ public class AgentAliasJsonUnmarshaller implements Unmarshaller<AgentAlias, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("agentId", targetDepth)) {
+                if (context.testExpression("agentAliasArn", targetDepth)) {
                     context.nextToken();
-                    agentAlias.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentAlias.setAgentAliasArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("agentAliasHistoryEvents", targetDepth)) {
+                    context.nextToken();
+                    agentAlias.setAgentAliasHistoryEvents(new ListUnmarshaller<AgentAliasHistoryEvent>(AgentAliasHistoryEventJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
                 if (context.testExpression("agentAliasId", targetDepth)) {
                     context.nextToken();
@@ -60,13 +66,21 @@ public class AgentAliasJsonUnmarshaller implements Unmarshaller<AgentAlias, Json
                     context.nextToken();
                     agentAlias.setAgentAliasName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("agentAliasArn", targetDepth)) {
+                if (context.testExpression("agentAliasStatus", targetDepth)) {
                     context.nextToken();
-                    agentAlias.setAgentAliasArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentAlias.setAgentAliasStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("agentId", targetDepth)) {
+                    context.nextToken();
+                    agentAlias.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("clientToken", targetDepth)) {
                     context.nextToken();
                     agentAlias.setClientToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    agentAlias.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
@@ -79,23 +93,9 @@ public class AgentAliasJsonUnmarshaller implements Unmarshaller<AgentAlias, Json
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
-                    context.nextToken();
-                    agentAlias.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
                     agentAlias.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("agentAliasHistoryEvents", targetDepth)) {
-                    context.nextToken();
-                    agentAlias.setAgentAliasHistoryEvents(new ListUnmarshaller<AgentAliasHistoryEvent>(AgentAliasHistoryEventJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
-                }
-                if (context.testExpression("agentAliasStatus", targetDepth)) {
-                    context.nextToken();
-                    agentAlias.setAgentAliasStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

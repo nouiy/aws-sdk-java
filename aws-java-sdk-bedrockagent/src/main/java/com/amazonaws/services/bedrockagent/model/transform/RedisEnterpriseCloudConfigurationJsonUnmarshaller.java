@@ -48,21 +48,21 @@ public class RedisEnterpriseCloudConfigurationJsonUnmarshaller implements Unmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("endpoint", targetDepth)) {
-                    context.nextToken();
-                    redisEnterpriseCloudConfiguration.setEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("vectorIndexName", targetDepth)) {
-                    context.nextToken();
-                    redisEnterpriseCloudConfiguration.setVectorIndexName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("credentialsSecretArn", targetDepth)) {
                     context.nextToken();
                     redisEnterpriseCloudConfiguration.setCredentialsSecretArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("endpoint", targetDepth)) {
+                    context.nextToken();
+                    redisEnterpriseCloudConfiguration.setEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("fieldMapping", targetDepth)) {
                     context.nextToken();
                     redisEnterpriseCloudConfiguration.setFieldMapping(RedisEnterpriseCloudFieldMappingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("vectorIndexName", targetDepth)) {
+                    context.nextToken();
+                    redisEnterpriseCloudConfiguration.setVectorIndexName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

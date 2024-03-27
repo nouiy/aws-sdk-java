@@ -25,72 +25,52 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    private String knowledgeBaseId;
-
-    private String name;
-
+    /**
+     * <p>
+     * Specifies a new description for the knowledge base.
+     * </p>
+     */
     private String description;
-
-    private String roleArn;
-
+    /**
+     * <p>
+     * Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     * configuration as when the knowledge base was created.
+     * </p>
+     */
     private KnowledgeBaseConfiguration knowledgeBaseConfiguration;
-
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to update.
+     * </p>
+     */
+    private String knowledgeBaseId;
+    /**
+     * <p>
+     * Specifies a new name for the knowledge base.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
+     * Specifies the configuration for the vector store used for the knowledge base. You must use the same configuration
+     * as when the knowledge base was created.
+     * </p>
+     */
     private StorageConfiguration storageConfiguration;
 
     /**
-     * @param knowledgeBaseId
-     */
-
-    public void setKnowledgeBaseId(String knowledgeBaseId) {
-        this.knowledgeBaseId = knowledgeBaseId;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getKnowledgeBaseId() {
-        return this.knowledgeBaseId;
-    }
-
-    /**
-     * @param knowledgeBaseId
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateKnowledgeBaseRequest withKnowledgeBaseId(String knowledgeBaseId) {
-        setKnowledgeBaseId(knowledgeBaseId);
-        return this;
-    }
-
-    /**
-     * @param name
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @param name
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateKnowledgeBaseRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Specifies a new description for the knowledge base.
+     * </p>
+     * 
      * @param description
+     *        Specifies a new description for the knowledge base.
      */
 
     public void setDescription(String description) {
@@ -98,7 +78,11 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies a new description for the knowledge base.
+     * </p>
+     * 
+     * @return Specifies a new description for the knowledge base.
      */
 
     public String getDescription() {
@@ -106,7 +90,12 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Specifies a new description for the knowledge base.
+     * </p>
+     * 
      * @param description
+     *        Specifies a new description for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,33 +105,14 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @param roleArn
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * @param roleArn
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateKnowledgeBaseRequest withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
-        return this;
-    }
-
-    /**
+     * <p>
+     * Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     * configuration as when the knowledge base was created.
+     * </p>
+     * 
      * @param knowledgeBaseConfiguration
+     *        Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     *        configuration as when the knowledge base was created.
      */
 
     public void setKnowledgeBaseConfiguration(KnowledgeBaseConfiguration knowledgeBaseConfiguration) {
@@ -150,7 +120,13 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     * configuration as when the knowledge base was created.
+     * </p>
+     * 
+     * @return Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     *         configuration as when the knowledge base was created.
      */
 
     public KnowledgeBaseConfiguration getKnowledgeBaseConfiguration() {
@@ -158,7 +134,14 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     * configuration as when the knowledge base was created.
+     * </p>
+     * 
      * @param knowledgeBaseConfiguration
+     *        Specifies the configuration for the embeddings model used for the knowledge base. You must use the same
+     *        configuration as when the knowledge base was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +151,137 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The unique identifier of the knowledge base to update.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to update.
+     */
+
+    public void setKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to update.
+     * </p>
+     * 
+     * @return The unique identifier of the knowledge base to update.
+     */
+
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the knowledge base to update.
+     * </p>
+     * 
+     * @param knowledgeBaseId
+     *        The unique identifier of the knowledge base to update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateKnowledgeBaseRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        setKnowledgeBaseId(knowledgeBaseId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a new name for the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        Specifies a new name for the knowledge base.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Specifies a new name for the knowledge base.
+     * </p>
+     * 
+     * @return Specifies a new name for the knowledge base.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Specifies a new name for the knowledge base.
+     * </p>
+     * 
+     * @param name
+     *        Specifies a new name for the knowledge base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateKnowledgeBaseRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * </p>
+     * 
+     * @param roleArn
+     *        Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge
+     *        base.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * </p>
+     * 
+     * @return Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge
+     *         base.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * </p>
+     * 
+     * @param roleArn
+     *        Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge
+     *        base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateKnowledgeBaseRequest withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the configuration for the vector store used for the knowledge base. You must use the same configuration
+     * as when the knowledge base was created.
+     * </p>
+     * 
      * @param storageConfiguration
+     *        Specifies the configuration for the vector store used for the knowledge base. You must use the same
+     *        configuration as when the knowledge base was created.
      */
 
     public void setStorageConfiguration(StorageConfiguration storageConfiguration) {
@@ -176,7 +289,13 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies the configuration for the vector store used for the knowledge base. You must use the same configuration
+     * as when the knowledge base was created.
+     * </p>
+     * 
+     * @return Specifies the configuration for the vector store used for the knowledge base. You must use the same
+     *         configuration as when the knowledge base was created.
      */
 
     public StorageConfiguration getStorageConfiguration() {
@@ -184,7 +303,14 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Specifies the configuration for the vector store used for the knowledge base. You must use the same configuration
+     * as when the knowledge base was created.
+     * </p>
+     * 
      * @param storageConfiguration
+     *        Specifies the configuration for the vector store used for the knowledge base. You must use the same
+     *        configuration as when the knowledge base was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -205,16 +331,16 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getKnowledgeBaseConfiguration() != null)
+            sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration()).append(",");
         if (getKnowledgeBaseId() != null)
             sb.append("KnowledgeBaseId: ").append(getKnowledgeBaseId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
-        if (getKnowledgeBaseConfiguration() != null)
-            sb.append("KnowledgeBaseConfiguration: ").append(getKnowledgeBaseConfiguration()).append(",");
         if (getStorageConfiguration() != null)
             sb.append("StorageConfiguration: ").append(getStorageConfiguration());
         sb.append("}");
@@ -231,6 +357,14 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
         if (obj instanceof UpdateKnowledgeBaseRequest == false)
             return false;
         UpdateKnowledgeBaseRequest other = (UpdateKnowledgeBaseRequest) obj;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getKnowledgeBaseConfiguration() == null ^ this.getKnowledgeBaseConfiguration() == null)
+            return false;
+        if (other.getKnowledgeBaseConfiguration() != null && other.getKnowledgeBaseConfiguration().equals(this.getKnowledgeBaseConfiguration()) == false)
+            return false;
         if (other.getKnowledgeBaseId() == null ^ this.getKnowledgeBaseId() == null)
             return false;
         if (other.getKnowledgeBaseId() != null && other.getKnowledgeBaseId().equals(this.getKnowledgeBaseId()) == false)
@@ -239,17 +373,9 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
-            return false;
-        if (other.getKnowledgeBaseConfiguration() == null ^ this.getKnowledgeBaseConfiguration() == null)
-            return false;
-        if (other.getKnowledgeBaseConfiguration() != null && other.getKnowledgeBaseConfiguration().equals(this.getKnowledgeBaseConfiguration()) == false)
             return false;
         if (other.getStorageConfiguration() == null ^ this.getStorageConfiguration() == null)
             return false;
@@ -263,11 +389,11 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getKnowledgeBaseConfiguration() == null) ? 0 : getKnowledgeBaseConfiguration().hashCode());
         hashCode = prime * hashCode + ((getKnowledgeBaseId() == null) ? 0 : getKnowledgeBaseId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getKnowledgeBaseConfiguration() == null) ? 0 : getKnowledgeBaseConfiguration().hashCode());
         hashCode = prime * hashCode + ((getStorageConfiguration() == null) ? 0 : getStorageConfiguration().hashCode());
         return hashCode;
     }

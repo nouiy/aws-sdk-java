@@ -29,17 +29,17 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateDataSourceRequestMarshaller {
 
-    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<StructuredPojo> DATASOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSourceConfiguration").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> KNOWLEDGEBASEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("knowledgeBaseId").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
     private static final MarshallingInfo<StructuredPojo> SERVERSIDEENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serverSideEncryptionConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> VECTORINGESTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -61,11 +61,11 @@ public class CreateDataSourceRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createDataSourceRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
             protocolMarshaller.marshall(createDataSourceRequest.getClientToken(), CLIENTTOKEN_BINDING);
-            protocolMarshaller.marshall(createDataSourceRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(createDataSourceRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createDataSourceRequest.getDataSourceConfiguration(), DATASOURCECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createDataSourceRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(createDataSourceRequest.getKnowledgeBaseId(), KNOWLEDGEBASEID_BINDING);
+            protocolMarshaller.marshall(createDataSourceRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createDataSourceRequest.getServerSideEncryptionConfiguration(), SERVERSIDEENCRYPTIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createDataSourceRequest.getVectorIngestionConfiguration(), VECTORINGESTIONCONFIGURATION_BINDING);
         } catch (Exception e) {

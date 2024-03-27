@@ -66,6 +66,16 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
     private String dnsPolicy;
     /**
      * <p>
+     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * </p>
+     * <p>
+     * <code>ImagePullSecret$name</code> is required when this object is used.
+     * </p>
+     */
+    private java.util.List<ImagePullSecret> imagePullSecrets;
+    /**
+     * <p>
      * The properties of the container that's used on the Amazon EKS pod.
      * </p>
      */
@@ -360,6 +370,108 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
 
     public EksPodProperties withDnsPolicy(String dnsPolicy) {
         setDnsPolicy(dnsPolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * </p>
+     * <p>
+     * <code>ImagePullSecret$name</code> is required when this object is used.
+     * </p>
+     * 
+     * @return References a Kubernetes secret resource. This object must start and end with an alphanumeric character,
+     *         is required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
+     *         characters.</p>
+     *         <p>
+     *         <code>ImagePullSecret$name</code> is required when this object is used.
+     */
+
+    public java.util.List<ImagePullSecret> getImagePullSecrets() {
+        return imagePullSecrets;
+    }
+
+    /**
+     * <p>
+     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * </p>
+     * <p>
+     * <code>ImagePullSecret$name</code> is required when this object is used.
+     * </p>
+     * 
+     * @param imagePullSecrets
+     *        References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     *        required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
+     *        characters.</p>
+     *        <p>
+     *        <code>ImagePullSecret$name</code> is required when this object is used.
+     */
+
+    public void setImagePullSecrets(java.util.Collection<ImagePullSecret> imagePullSecrets) {
+        if (imagePullSecrets == null) {
+            this.imagePullSecrets = null;
+            return;
+        }
+
+        this.imagePullSecrets = new java.util.ArrayList<ImagePullSecret>(imagePullSecrets);
+    }
+
+    /**
+     * <p>
+     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * </p>
+     * <p>
+     * <code>ImagePullSecret$name</code> is required when this object is used.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setImagePullSecrets(java.util.Collection)} or {@link #withImagePullSecrets(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param imagePullSecrets
+     *        References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     *        required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
+     *        characters.</p>
+     *        <p>
+     *        <code>ImagePullSecret$name</code> is required when this object is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EksPodProperties withImagePullSecrets(ImagePullSecret... imagePullSecrets) {
+        if (this.imagePullSecrets == null) {
+            setImagePullSecrets(new java.util.ArrayList<ImagePullSecret>(imagePullSecrets.length));
+        }
+        for (ImagePullSecret ele : imagePullSecrets) {
+            this.imagePullSecrets.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * </p>
+     * <p>
+     * <code>ImagePullSecret$name</code> is required when this object is used.
+     * </p>
+     * 
+     * @param imagePullSecrets
+     *        References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
+     *        required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
+     *        characters.</p>
+     *        <p>
+     *        <code>ImagePullSecret$name</code> is required when this object is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EksPodProperties withImagePullSecrets(java.util.Collection<ImagePullSecret> imagePullSecrets) {
+        setImagePullSecrets(imagePullSecrets);
         return this;
     }
 
@@ -783,6 +895,8 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
             sb.append("HostNetwork: ").append(getHostNetwork()).append(",");
         if (getDnsPolicy() != null)
             sb.append("DnsPolicy: ").append(getDnsPolicy()).append(",");
+        if (getImagePullSecrets() != null)
+            sb.append("ImagePullSecrets: ").append(getImagePullSecrets()).append(",");
         if (getContainers() != null)
             sb.append("Containers: ").append(getContainers()).append(",");
         if (getInitContainers() != null)
@@ -819,6 +933,10 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDnsPolicy() != null && other.getDnsPolicy().equals(this.getDnsPolicy()) == false)
             return false;
+        if (other.getImagePullSecrets() == null ^ this.getImagePullSecrets() == null)
+            return false;
+        if (other.getImagePullSecrets() != null && other.getImagePullSecrets().equals(this.getImagePullSecrets()) == false)
+            return false;
         if (other.getContainers() == null ^ this.getContainers() == null)
             return false;
         if (other.getContainers() != null && other.getContainers().equals(this.getContainers()) == false)
@@ -850,6 +968,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getServiceAccountName() == null) ? 0 : getServiceAccountName().hashCode());
         hashCode = prime * hashCode + ((getHostNetwork() == null) ? 0 : getHostNetwork().hashCode());
         hashCode = prime * hashCode + ((getDnsPolicy() == null) ? 0 : getDnsPolicy().hashCode());
+        hashCode = prime * hashCode + ((getImagePullSecrets() == null) ? 0 : getImagePullSecrets().hashCode());
         hashCode = prime * hashCode + ((getContainers() == null) ? 0 : getContainers().hashCode());
         hashCode = prime * hashCode + ((getInitContainers() == null) ? 0 : getInitContainers().hashCode());
         hashCode = prime * hashCode + ((getVolumes() == null) ? 0 : getVolumes().hashCode());

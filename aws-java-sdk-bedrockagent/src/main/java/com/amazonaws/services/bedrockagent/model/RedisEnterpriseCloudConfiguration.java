@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the configurations to use Redis Enterprise Cloud to store knowledge base data.
+ * Contains details about the storage configuration of the knowledge base in Redis Enterprise Cloud. For more
+ * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-oss.html">Create
+ * a vector index in Redis Enterprise Cloud</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/RedisEnterpriseCloudConfiguration"
@@ -28,68 +30,39 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * </p>
+     */
+    private String credentialsSecretArn;
+    /**
+     * <p>
+     * The endpoint URL of the Redis Enterprise Cloud database.
+     * </p>
+     */
     private String endpoint;
-
+    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     */
+    private RedisEnterpriseCloudFieldMapping fieldMapping;
+    /**
+     * <p>
+     * The name of the vector index.
+     * </p>
+     */
     private String vectorIndexName;
 
-    private String credentialsSecretArn;
-
-    private RedisEnterpriseCloudFieldMapping fieldMapping;
-
     /**
-     * @param endpoint
-     */
-
-    public void setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    /**
-     * @param endpoint
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedisEnterpriseCloudConfiguration withEndpoint(String endpoint) {
-        setEndpoint(endpoint);
-        return this;
-    }
-
-    /**
-     * @param vectorIndexName
-     */
-
-    public void setVectorIndexName(String vectorIndexName) {
-        this.vectorIndexName = vectorIndexName;
-    }
-
-    /**
-     * @return
-     */
-
-    public String getVectorIndexName() {
-        return this.vectorIndexName;
-    }
-
-    /**
-     * @param vectorIndexName
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public RedisEnterpriseCloudConfiguration withVectorIndexName(String vectorIndexName) {
-        setVectorIndexName(vectorIndexName);
-        return this;
-    }
-
-    /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * </p>
+     * 
      * @param credentialsSecretArn
+     *        The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud
+     *        database.
      */
 
     public void setCredentialsSecretArn(String credentialsSecretArn) {
@@ -97,7 +70,12 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * </p>
+     * 
+     * @return The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud
+     *         database.
      */
 
     public String getCredentialsSecretArn() {
@@ -105,7 +83,13 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * </p>
+     * 
      * @param credentialsSecretArn
+     *        The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud
+     *        database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,7 +99,52 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The endpoint URL of the Redis Enterprise Cloud database.
+     * </p>
+     * 
+     * @param endpoint
+     *        The endpoint URL of the Redis Enterprise Cloud database.
+     */
+
+    public void setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+    }
+
+    /**
+     * <p>
+     * The endpoint URL of the Redis Enterprise Cloud database.
+     * </p>
+     * 
+     * @return The endpoint URL of the Redis Enterprise Cloud database.
+     */
+
+    public String getEndpoint() {
+        return this.endpoint;
+    }
+
+    /**
+     * <p>
+     * The endpoint URL of the Redis Enterprise Cloud database.
+     * </p>
+     * 
+     * @param endpoint
+     *        The endpoint URL of the Redis Enterprise Cloud database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedisEnterpriseCloudConfiguration withEndpoint(String endpoint) {
+        setEndpoint(endpoint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      */
 
     public void setFieldMapping(RedisEnterpriseCloudFieldMapping fieldMapping) {
@@ -123,7 +152,11 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
+     * @return Contains the names of the fields to which to map information about the vector store.
      */
 
     public RedisEnterpriseCloudFieldMapping getFieldMapping() {
@@ -131,12 +164,57 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * Contains the names of the fields to which to map information about the vector store.
+     * </p>
+     * 
      * @param fieldMapping
+     *        Contains the names of the fields to which to map information about the vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RedisEnterpriseCloudConfiguration withFieldMapping(RedisEnterpriseCloudFieldMapping fieldMapping) {
         setFieldMapping(fieldMapping);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the vector index.
+     * </p>
+     * 
+     * @param vectorIndexName
+     *        The name of the vector index.
+     */
+
+    public void setVectorIndexName(String vectorIndexName) {
+        this.vectorIndexName = vectorIndexName;
+    }
+
+    /**
+     * <p>
+     * The name of the vector index.
+     * </p>
+     * 
+     * @return The name of the vector index.
+     */
+
+    public String getVectorIndexName() {
+        return this.vectorIndexName;
+    }
+
+    /**
+     * <p>
+     * The name of the vector index.
+     * </p>
+     * 
+     * @param vectorIndexName
+     *        The name of the vector index.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedisEnterpriseCloudConfiguration withVectorIndexName(String vectorIndexName) {
+        setVectorIndexName(vectorIndexName);
         return this;
     }
 
@@ -152,14 +230,14 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEndpoint() != null)
-            sb.append("Endpoint: ").append(getEndpoint()).append(",");
-        if (getVectorIndexName() != null)
-            sb.append("VectorIndexName: ").append(getVectorIndexName()).append(",");
         if (getCredentialsSecretArn() != null)
             sb.append("CredentialsSecretArn: ").append(getCredentialsSecretArn()).append(",");
+        if (getEndpoint() != null)
+            sb.append("Endpoint: ").append(getEndpoint()).append(",");
         if (getFieldMapping() != null)
-            sb.append("FieldMapping: ").append(getFieldMapping());
+            sb.append("FieldMapping: ").append(getFieldMapping()).append(",");
+        if (getVectorIndexName() != null)
+            sb.append("VectorIndexName: ").append(getVectorIndexName());
         sb.append("}");
         return sb.toString();
     }
@@ -174,21 +252,21 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
         if (obj instanceof RedisEnterpriseCloudConfiguration == false)
             return false;
         RedisEnterpriseCloudConfiguration other = (RedisEnterpriseCloudConfiguration) obj;
-        if (other.getEndpoint() == null ^ this.getEndpoint() == null)
-            return false;
-        if (other.getEndpoint() != null && other.getEndpoint().equals(this.getEndpoint()) == false)
-            return false;
-        if (other.getVectorIndexName() == null ^ this.getVectorIndexName() == null)
-            return false;
-        if (other.getVectorIndexName() != null && other.getVectorIndexName().equals(this.getVectorIndexName()) == false)
-            return false;
         if (other.getCredentialsSecretArn() == null ^ this.getCredentialsSecretArn() == null)
             return false;
         if (other.getCredentialsSecretArn() != null && other.getCredentialsSecretArn().equals(this.getCredentialsSecretArn()) == false)
             return false;
+        if (other.getEndpoint() == null ^ this.getEndpoint() == null)
+            return false;
+        if (other.getEndpoint() != null && other.getEndpoint().equals(this.getEndpoint()) == false)
+            return false;
         if (other.getFieldMapping() == null ^ this.getFieldMapping() == null)
             return false;
         if (other.getFieldMapping() != null && other.getFieldMapping().equals(this.getFieldMapping()) == false)
+            return false;
+        if (other.getVectorIndexName() == null ^ this.getVectorIndexName() == null)
+            return false;
+        if (other.getVectorIndexName() != null && other.getVectorIndexName().equals(this.getVectorIndexName()) == false)
             return false;
         return true;
     }
@@ -198,10 +276,10 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
-        hashCode = prime * hashCode + ((getVectorIndexName() == null) ? 0 : getVectorIndexName().hashCode());
         hashCode = prime * hashCode + ((getCredentialsSecretArn() == null) ? 0 : getCredentialsSecretArn().hashCode());
+        hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getFieldMapping() == null) ? 0 : getFieldMapping().hashCode());
+        hashCode = prime * hashCode + ((getVectorIndexName() == null) ? 0 : getVectorIndexName().hashCode());
         return hashCode;
     }
 

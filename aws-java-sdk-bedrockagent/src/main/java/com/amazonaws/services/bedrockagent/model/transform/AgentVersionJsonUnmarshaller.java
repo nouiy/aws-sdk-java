@@ -48,6 +48,10 @@ public class AgentVersionJsonUnmarshaller implements Unmarshaller<AgentVersion, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("agentArn", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setAgentArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("agentId", targetDepth)) {
                     context.nextToken();
                     agentVersion.setAgentId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -56,49 +60,25 @@ public class AgentVersionJsonUnmarshaller implements Unmarshaller<AgentVersion, 
                     context.nextToken();
                     agentVersion.setAgentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("agentArn", targetDepth)) {
+                if (context.testExpression("agentResourceRoleArn", targetDepth)) {
                     context.nextToken();
-                    agentVersion.setAgentArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("version", targetDepth)) {
-                    context.nextToken();
-                    agentVersion.setVersion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("instruction", targetDepth)) {
-                    context.nextToken();
-                    agentVersion.setInstruction(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentVersion.setAgentResourceRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("agentStatus", targetDepth)) {
                     context.nextToken();
                     agentVersion.setAgentStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("foundationModel", targetDepth)) {
+                if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
-                    agentVersion.setFoundationModel(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("description", targetDepth)) {
-                    context.nextToken();
-                    agentVersion.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("idleSessionTTLInSeconds", targetDepth)) {
-                    context.nextToken();
-                    agentVersion.setIdleSessionTTLInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("agentResourceRoleArn", targetDepth)) {
-                    context.nextToken();
-                    agentVersion.setAgentResourceRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    agentVersion.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("customerEncryptionKeyArn", targetDepth)) {
                     context.nextToken();
                     agentVersion.setCustomerEncryptionKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createdAt", targetDepth)) {
+                if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
-                    agentVersion.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("updatedAt", targetDepth)) {
-                    context.nextToken();
-                    agentVersion.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    agentVersion.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("failureReasons", targetDepth)) {
                     context.nextToken();
@@ -106,15 +86,35 @@ public class AgentVersionJsonUnmarshaller implements Unmarshaller<AgentVersion, 
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("foundationModel", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setFoundationModel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("idleSessionTTLInSeconds", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setIdleSessionTTLInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("instruction", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setInstruction(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("promptOverrideConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setPromptOverrideConfiguration(PromptOverrideConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("recommendedActions", targetDepth)) {
                     context.nextToken();
                     agentVersion.setRecommendedActions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("promptOverrideConfiguration", targetDepth)) {
+                if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
-                    agentVersion.setPromptOverrideConfiguration(PromptOverrideConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                    agentVersion.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("version", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

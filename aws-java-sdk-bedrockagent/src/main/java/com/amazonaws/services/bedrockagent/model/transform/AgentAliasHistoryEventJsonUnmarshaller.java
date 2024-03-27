@@ -48,16 +48,16 @@ public class AgentAliasHistoryEventJsonUnmarshaller implements Unmarshaller<Agen
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("endDate", targetDepth)) {
+                    context.nextToken();
+                    agentAliasHistoryEvent.setEndDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("routingConfiguration", targetDepth)) {
                     context.nextToken();
                     agentAliasHistoryEvent.setRoutingConfiguration(new ListUnmarshaller<AgentAliasRoutingConfigurationListItem>(
                             AgentAliasRoutingConfigurationListItemJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("endDate", targetDepth)) {
-                    context.nextToken();
-                    agentAliasHistoryEvent.setEndDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("startDate", targetDepth)) {
                     context.nextToken();

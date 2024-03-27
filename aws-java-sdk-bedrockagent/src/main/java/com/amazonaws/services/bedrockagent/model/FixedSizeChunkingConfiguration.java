@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures fixed size chunking strategy
+ * Configurations for when you choose fixed-size chunking. If you set the <code>chunkingStrategy</code> as
+ * <code>NONE</code>, exclude this field.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/FixedSizeChunkingConfiguration"
@@ -30,24 +31,24 @@ public class FixedSizeChunkingConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum number of tokens per chunk.
+     * The maximum number of tokens to include in a chunk.
      * </p>
      */
     private Integer maxTokens;
     /**
      * <p>
-     * The overlap percentage between adjacent chunks.
+     * The percentage of overlap between adjacent chunks of a data source.
      * </p>
      */
     private Integer overlapPercentage;
 
     /**
      * <p>
-     * The maximum number of tokens per chunk.
+     * The maximum number of tokens to include in a chunk.
      * </p>
      * 
      * @param maxTokens
-     *        The maximum number of tokens per chunk.
+     *        The maximum number of tokens to include in a chunk.
      */
 
     public void setMaxTokens(Integer maxTokens) {
@@ -56,10 +57,10 @@ public class FixedSizeChunkingConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum number of tokens per chunk.
+     * The maximum number of tokens to include in a chunk.
      * </p>
      * 
-     * @return The maximum number of tokens per chunk.
+     * @return The maximum number of tokens to include in a chunk.
      */
 
     public Integer getMaxTokens() {
@@ -68,11 +69,11 @@ public class FixedSizeChunkingConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The maximum number of tokens per chunk.
+     * The maximum number of tokens to include in a chunk.
      * </p>
      * 
      * @param maxTokens
-     *        The maximum number of tokens per chunk.
+     *        The maximum number of tokens to include in a chunk.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +84,11 @@ public class FixedSizeChunkingConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The overlap percentage between adjacent chunks.
+     * The percentage of overlap between adjacent chunks of a data source.
      * </p>
      * 
      * @param overlapPercentage
-     *        The overlap percentage between adjacent chunks.
+     *        The percentage of overlap between adjacent chunks of a data source.
      */
 
     public void setOverlapPercentage(Integer overlapPercentage) {
@@ -96,10 +97,10 @@ public class FixedSizeChunkingConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The overlap percentage between adjacent chunks.
+     * The percentage of overlap between adjacent chunks of a data source.
      * </p>
      * 
-     * @return The overlap percentage between adjacent chunks.
+     * @return The percentage of overlap between adjacent chunks of a data source.
      */
 
     public Integer getOverlapPercentage() {
@@ -108,11 +109,11 @@ public class FixedSizeChunkingConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The overlap percentage between adjacent chunks.
+     * The percentage of overlap between adjacent chunks of a data source.
      * </p>
      * 
      * @param overlapPercentage
-     *        The overlap percentage between adjacent chunks.
+     *        The percentage of overlap between adjacent chunks of a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

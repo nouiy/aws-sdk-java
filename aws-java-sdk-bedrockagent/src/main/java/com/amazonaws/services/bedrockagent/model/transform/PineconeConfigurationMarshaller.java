@@ -31,10 +31,10 @@ public class PineconeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectionString").build();
     private static final MarshallingInfo<String> CREDENTIALSSECRETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("credentialsSecretArn").build();
-    private static final MarshallingInfo<String> NAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("namespace").build();
     private static final MarshallingInfo<StructuredPojo> FIELDMAPPING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fieldMapping").build();
+    private static final MarshallingInfo<String> NAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("namespace").build();
 
     private static final PineconeConfigurationMarshaller instance = new PineconeConfigurationMarshaller();
 
@@ -54,8 +54,8 @@ public class PineconeConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(pineconeConfiguration.getConnectionString(), CONNECTIONSTRING_BINDING);
             protocolMarshaller.marshall(pineconeConfiguration.getCredentialsSecretArn(), CREDENTIALSSECRETARN_BINDING);
-            protocolMarshaller.marshall(pineconeConfiguration.getNamespace(), NAMESPACE_BINDING);
             protocolMarshaller.marshall(pineconeConfiguration.getFieldMapping(), FIELDMAPPING_BINDING);
+            protocolMarshaller.marshall(pineconeConfiguration.getNamespace(), NAMESPACE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

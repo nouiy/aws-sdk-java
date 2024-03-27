@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RdsFieldMappingMarshaller {
 
-    private static final MarshallingInfo<String> PRIMARYKEYFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("primaryKeyField").build();
-    private static final MarshallingInfo<String> VECTORFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorField").build();
-    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("textField").build();
     private static final MarshallingInfo<String> METADATAFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadataField").build();
+    private static final MarshallingInfo<String> PRIMARYKEYFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("primaryKeyField").build();
+    private static final MarshallingInfo<String> TEXTFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("textField").build();
+    private static final MarshallingInfo<String> VECTORFIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vectorField").build();
 
     private static final RdsFieldMappingMarshaller instance = new RdsFieldMappingMarshaller();
 
@@ -52,10 +52,10 @@ public class RdsFieldMappingMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(rdsFieldMapping.getPrimaryKeyField(), PRIMARYKEYFIELD_BINDING);
-            protocolMarshaller.marshall(rdsFieldMapping.getVectorField(), VECTORFIELD_BINDING);
-            protocolMarshaller.marshall(rdsFieldMapping.getTextField(), TEXTFIELD_BINDING);
             protocolMarshaller.marshall(rdsFieldMapping.getMetadataField(), METADATAFIELD_BINDING);
+            protocolMarshaller.marshall(rdsFieldMapping.getPrimaryKeyField(), PRIMARYKEYFIELD_BINDING);
+            protocolMarshaller.marshall(rdsFieldMapping.getTextField(), TEXTFIELD_BINDING);
+            protocolMarshaller.marshall(rdsFieldMapping.getVectorField(), VECTORFIELD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
