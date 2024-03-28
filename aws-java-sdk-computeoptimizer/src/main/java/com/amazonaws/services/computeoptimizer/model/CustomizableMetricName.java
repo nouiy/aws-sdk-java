@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum CustomizableMetricName {
 
-    CpuUtilization("CpuUtilization");
+    CpuUtilization("CpuUtilization"),
+    MemoryUtilization("MemoryUtilization");
 
     private String value;
 

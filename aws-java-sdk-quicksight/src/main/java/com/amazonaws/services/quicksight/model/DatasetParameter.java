@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A dataset parameter.
+ * A parameter that is created in a dataset. The parameter can be a string, integer, decimal, or datetime data type.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DatasetParameter" target="_top">AWS API

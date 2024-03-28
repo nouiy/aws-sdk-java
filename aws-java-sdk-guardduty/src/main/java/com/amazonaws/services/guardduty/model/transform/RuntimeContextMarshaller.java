@@ -68,6 +68,16 @@ public class RuntimeContextMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ianaProtocolNumber").build();
     private static final MarshallingInfo<List> MEMORYREGIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("memoryRegions").build();
+    private static final MarshallingInfo<String> TOOLNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("toolName").build();
+    private static final MarshallingInfo<String> TOOLCATEGORY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("toolCategory").build();
+    private static final MarshallingInfo<String> SERVICENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceName").build();
+    private static final MarshallingInfo<String> COMMANDLINEEXAMPLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("commandLineExample").build();
+    private static final MarshallingInfo<String> THREATFILEPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("threatFilePath").build();
 
     private static final RuntimeContextMarshaller instance = new RuntimeContextMarshaller();
 
@@ -105,6 +115,11 @@ public class RuntimeContextMarshaller {
             protocolMarshaller.marshall(runtimeContext.getAddressFamily(), ADDRESSFAMILY_BINDING);
             protocolMarshaller.marshall(runtimeContext.getIanaProtocolNumber(), IANAPROTOCOLNUMBER_BINDING);
             protocolMarshaller.marshall(runtimeContext.getMemoryRegions(), MEMORYREGIONS_BINDING);
+            protocolMarshaller.marshall(runtimeContext.getToolName(), TOOLNAME_BINDING);
+            protocolMarshaller.marshall(runtimeContext.getToolCategory(), TOOLCATEGORY_BINDING);
+            protocolMarshaller.marshall(runtimeContext.getServiceName(), SERVICENAME_BINDING);
+            protocolMarshaller.marshall(runtimeContext.getCommandLineExample(), COMMANDLINEEXAMPLE_BINDING);
+            protocolMarshaller.marshall(runtimeContext.getThreatFilePath(), THREATFILEPATH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

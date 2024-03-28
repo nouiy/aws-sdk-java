@@ -14830,6 +14830,9 @@
       }, {
         "name" : "AWSApplicationInsightsApplication",
         "value" : "AWS::ApplicationInsights::Application"
+      }, {
+        "name" : "AWSInternetMonitorMonitor",
+        "value" : "AWS::InternetMonitor::Monitor"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.oam.enum.ResourceType",

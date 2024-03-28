@@ -15,7 +15,9 @@ package com.amazonaws.services.quicksight.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The value type of the parameter. The value type is used to validate the parameter before it is evaluated.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DatasetParameterValueType {

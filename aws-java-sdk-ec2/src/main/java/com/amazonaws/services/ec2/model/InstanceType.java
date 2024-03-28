@@ -802,7 +802,10 @@ public enum InstanceType {
     R7iMetal24xl("r7i.metal-24xl"),
     R7iMetal48xl("r7i.metal-48xl"),
     R7izMetal16xl("r7iz.metal-16xl"),
-    R7izMetal32xl("r7iz.metal-32xl");
+    R7izMetal32xl("r7iz.metal-32xl"),
+    C7gdMetal("c7gd.metal"),
+    M7gdMetal("m7gd.metal"),
+    R7gdMetal("r7gd.metal");
 
     private String value;
 

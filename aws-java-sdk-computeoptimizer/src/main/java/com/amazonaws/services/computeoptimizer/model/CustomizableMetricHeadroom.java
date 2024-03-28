@@ -22,6 +22,7 @@ public enum CustomizableMetricHeadroom {
 
     PERCENT_30("PERCENT_30"),
     PERCENT_20("PERCENT_20"),
+    PERCENT_10("PERCENT_10"),
     PERCENT_0("PERCENT_0");
 
     private String value;

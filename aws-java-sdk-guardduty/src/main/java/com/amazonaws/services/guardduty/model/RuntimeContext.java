@@ -151,6 +151,37 @@ public class RuntimeContext implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> memoryRegions;
+    /**
+     * <p>
+     * Name of the potentially suspicious tool.
+     * </p>
+     */
+    private String toolName;
+    /**
+     * <p>
+     * Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner, and
+     * Network Sniffer.
+     * </p>
+     */
+    private String toolCategory;
+    /**
+     * <p>
+     * Name of the security service that has been potentially disabled.
+     * </p>
+     */
+    private String serviceName;
+    /**
+     * <p>
+     * Example of the command line involved in the suspicious activity.
+     * </p>
+     */
+    private String commandLineExample;
+    /**
+     * <p>
+     * The suspicious file path for which the threat intelligence details were found.
+     * </p>
+     */
+    private String threatFilePath;
 
     /**
      * <p>
@@ -1039,6 +1070,212 @@ public class RuntimeContext implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Name of the potentially suspicious tool.
+     * </p>
+     * 
+     * @param toolName
+     *        Name of the potentially suspicious tool.
+     */
+
+    public void setToolName(String toolName) {
+        this.toolName = toolName;
+    }
+
+    /**
+     * <p>
+     * Name of the potentially suspicious tool.
+     * </p>
+     * 
+     * @return Name of the potentially suspicious tool.
+     */
+
+    public String getToolName() {
+        return this.toolName;
+    }
+
+    /**
+     * <p>
+     * Name of the potentially suspicious tool.
+     * </p>
+     * 
+     * @param toolName
+     *        Name of the potentially suspicious tool.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuntimeContext withToolName(String toolName) {
+        setToolName(toolName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner, and
+     * Network Sniffer.
+     * </p>
+     * 
+     * @param toolCategory
+     *        Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner,
+     *        and Network Sniffer.
+     */
+
+    public void setToolCategory(String toolCategory) {
+        this.toolCategory = toolCategory;
+    }
+
+    /**
+     * <p>
+     * Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner, and
+     * Network Sniffer.
+     * </p>
+     * 
+     * @return Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner,
+     *         and Network Sniffer.
+     */
+
+    public String getToolCategory() {
+        return this.toolCategory;
+    }
+
+    /**
+     * <p>
+     * Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner, and
+     * Network Sniffer.
+     * </p>
+     * 
+     * @param toolCategory
+     *        Category that the tool belongs to. Some of the examples are Backdoor Tool, Pentest Tool, Network Scanner,
+     *        and Network Sniffer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuntimeContext withToolCategory(String toolCategory) {
+        setToolCategory(toolCategory);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Name of the security service that has been potentially disabled.
+     * </p>
+     * 
+     * @param serviceName
+     *        Name of the security service that has been potentially disabled.
+     */
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    /**
+     * <p>
+     * Name of the security service that has been potentially disabled.
+     * </p>
+     * 
+     * @return Name of the security service that has been potentially disabled.
+     */
+
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
+     * <p>
+     * Name of the security service that has been potentially disabled.
+     * </p>
+     * 
+     * @param serviceName
+     *        Name of the security service that has been potentially disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuntimeContext withServiceName(String serviceName) {
+        setServiceName(serviceName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Example of the command line involved in the suspicious activity.
+     * </p>
+     * 
+     * @param commandLineExample
+     *        Example of the command line involved in the suspicious activity.
+     */
+
+    public void setCommandLineExample(String commandLineExample) {
+        this.commandLineExample = commandLineExample;
+    }
+
+    /**
+     * <p>
+     * Example of the command line involved in the suspicious activity.
+     * </p>
+     * 
+     * @return Example of the command line involved in the suspicious activity.
+     */
+
+    public String getCommandLineExample() {
+        return this.commandLineExample;
+    }
+
+    /**
+     * <p>
+     * Example of the command line involved in the suspicious activity.
+     * </p>
+     * 
+     * @param commandLineExample
+     *        Example of the command line involved in the suspicious activity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuntimeContext withCommandLineExample(String commandLineExample) {
+        setCommandLineExample(commandLineExample);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The suspicious file path for which the threat intelligence details were found.
+     * </p>
+     * 
+     * @param threatFilePath
+     *        The suspicious file path for which the threat intelligence details were found.
+     */
+
+    public void setThreatFilePath(String threatFilePath) {
+        this.threatFilePath = threatFilePath;
+    }
+
+    /**
+     * <p>
+     * The suspicious file path for which the threat intelligence details were found.
+     * </p>
+     * 
+     * @return The suspicious file path for which the threat intelligence details were found.
+     */
+
+    public String getThreatFilePath() {
+        return this.threatFilePath;
+    }
+
+    /**
+     * <p>
+     * The suspicious file path for which the threat intelligence details were found.
+     * </p>
+     * 
+     * @param threatFilePath
+     *        The suspicious file path for which the threat intelligence details were found.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuntimeContext withThreatFilePath(String threatFilePath) {
+        setThreatFilePath(threatFilePath);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1089,7 +1326,17 @@ public class RuntimeContext implements Serializable, Cloneable, StructuredPojo {
         if (getIanaProtocolNumber() != null)
             sb.append("IanaProtocolNumber: ").append(getIanaProtocolNumber()).append(",");
         if (getMemoryRegions() != null)
-            sb.append("MemoryRegions: ").append(getMemoryRegions());
+            sb.append("MemoryRegions: ").append(getMemoryRegions()).append(",");
+        if (getToolName() != null)
+            sb.append("ToolName: ").append(getToolName()).append(",");
+        if (getToolCategory() != null)
+            sb.append("ToolCategory: ").append(getToolCategory()).append(",");
+        if (getServiceName() != null)
+            sb.append("ServiceName: ").append(getServiceName()).append(",");
+        if (getCommandLineExample() != null)
+            sb.append("CommandLineExample: ").append(getCommandLineExample()).append(",");
+        if (getThreatFilePath() != null)
+            sb.append("ThreatFilePath: ").append(getThreatFilePath());
         sb.append("}");
         return sb.toString();
     }
@@ -1184,6 +1431,26 @@ public class RuntimeContext implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMemoryRegions() != null && other.getMemoryRegions().equals(this.getMemoryRegions()) == false)
             return false;
+        if (other.getToolName() == null ^ this.getToolName() == null)
+            return false;
+        if (other.getToolName() != null && other.getToolName().equals(this.getToolName()) == false)
+            return false;
+        if (other.getToolCategory() == null ^ this.getToolCategory() == null)
+            return false;
+        if (other.getToolCategory() != null && other.getToolCategory().equals(this.getToolCategory()) == false)
+            return false;
+        if (other.getServiceName() == null ^ this.getServiceName() == null)
+            return false;
+        if (other.getServiceName() != null && other.getServiceName().equals(this.getServiceName()) == false)
+            return false;
+        if (other.getCommandLineExample() == null ^ this.getCommandLineExample() == null)
+            return false;
+        if (other.getCommandLineExample() != null && other.getCommandLineExample().equals(this.getCommandLineExample()) == false)
+            return false;
+        if (other.getThreatFilePath() == null ^ this.getThreatFilePath() == null)
+            return false;
+        if (other.getThreatFilePath() != null && other.getThreatFilePath().equals(this.getThreatFilePath()) == false)
+            return false;
         return true;
     }
 
@@ -1212,6 +1479,11 @@ public class RuntimeContext implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAddressFamily() == null) ? 0 : getAddressFamily().hashCode());
         hashCode = prime * hashCode + ((getIanaProtocolNumber() == null) ? 0 : getIanaProtocolNumber().hashCode());
         hashCode = prime * hashCode + ((getMemoryRegions() == null) ? 0 : getMemoryRegions().hashCode());
+        hashCode = prime * hashCode + ((getToolName() == null) ? 0 : getToolName().hashCode());
+        hashCode = prime * hashCode + ((getToolCategory() == null) ? 0 : getToolCategory().hashCode());
+        hashCode = prime * hashCode + ((getServiceName() == null) ? 0 : getServiceName().hashCode());
+        hashCode = prime * hashCode + ((getCommandLineExample() == null) ? 0 : getCommandLineExample().hashCode());
+        hashCode = prime * hashCode + ((getThreatFilePath() == null) ? 0 : getThreatFilePath().hashCode());
         return hashCode;
     }
 

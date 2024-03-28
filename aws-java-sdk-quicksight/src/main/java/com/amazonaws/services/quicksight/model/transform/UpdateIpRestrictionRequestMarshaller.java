@@ -33,6 +33,10 @@ public class UpdateIpRestrictionRequestMarshaller {
             .marshallLocationName("AwsAccountId").build();
     private static final MarshallingInfo<Map> IPRESTRICTIONRULEMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IpRestrictionRuleMap").build();
+    private static final MarshallingInfo<Map> VPCIDRESTRICTIONRULEMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcIdRestrictionRuleMap").build();
+    private static final MarshallingInfo<Map> VPCENDPOINTIDRESTRICTIONRULEMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcEndpointIdRestrictionRuleMap").build();
     private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Enabled").build();
 
@@ -54,6 +58,8 @@ public class UpdateIpRestrictionRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateIpRestrictionRequest.getAwsAccountId(), AWSACCOUNTID_BINDING);
             protocolMarshaller.marshall(updateIpRestrictionRequest.getIpRestrictionRuleMap(), IPRESTRICTIONRULEMAP_BINDING);
+            protocolMarshaller.marshall(updateIpRestrictionRequest.getVpcIdRestrictionRuleMap(), VPCIDRESTRICTIONRULEMAP_BINDING);
+            protocolMarshaller.marshall(updateIpRestrictionRequest.getVpcEndpointIdRestrictionRuleMap(), VPCENDPOINTIDRESTRICTIONRULEMAP_BINDING);
             protocolMarshaller.marshall(updateIpRestrictionRequest.getEnabled(), ENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

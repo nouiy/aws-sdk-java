@@ -1,3 +1,36 @@
+# __1.12.690__ __2024-03-28__
+## __AWS Compute Optimizer__
+  - ### Features
+    - This release enables AWS Compute Optimizer to analyze and generate recommendations with a new customization preference, Memory Utilization.
+
+## __Amazon CodeCatalyst__
+  - ### Features
+    - This release adds support for understanding pending changes to subscriptions by including two new response parameters for the GetSubscription API for Amazon CodeCatalyst.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Amazon EC2 C7gd, M7gd and R7gd metal instances with up to 3.8 TB of local NVMe-based SSD block-level storage have up to 45% improved real-time NVMe storage performance than comparable Graviton2-based instances.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Add multiple customer error code to handle customer caused failure when managing EKS node groups
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Add EC2 support for GuardDuty Runtime Monitoring auto management.
+
+## __Amazon Neptune Graph__
+  - ### Features
+    - Update ImportTaskCancelled waiter to evaluate task state correctly and minor documentation changes.
+
+## __Amazon QuickSight__
+  - ### Features
+    - Amazon QuickSight: Adds support for setting up VPC Endpoint restrictions for accessing QuickSight Website.
+
+## __CloudWatch Observability Access Manager__
+  - ### Features
+    - This release adds support for sharing AWS::InternetMonitor::Monitor resources.
+
 # __1.12.689__ __2024-03-27__
 ## __AWS Batch__
   - ### Features

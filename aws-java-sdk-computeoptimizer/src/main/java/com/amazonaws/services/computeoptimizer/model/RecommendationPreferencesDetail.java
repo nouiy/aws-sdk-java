@@ -98,8 +98,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
     private String lookBackPeriod;
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
-     * isn’t set, this object is null.
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. If the preference isn’t set, this object is null.
      * </p>
      * <note>
      * <p>
@@ -660,8 +660,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
-     * isn’t set, this object is null.
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. If the preference isn’t set, this object is null.
      * </p>
      * <note>
      * <p>
@@ -669,8 +669,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * </note>
      * 
-     * @return The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
-     *         preference isn’t set, this object is null. </p> <note>
+     * @return The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *         utilization headroom. If the preference isn’t set, this object is null. </p> <note>
      *         <p>
      *         This preference is only available for the Amazon EC2 instance resource type.
      *         </p>
@@ -682,8 +682,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
-     * isn’t set, this object is null.
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. If the preference isn’t set, this object is null.
      * </p>
      * <note>
      * <p>
@@ -692,8 +692,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </note>
      * 
      * @param utilizationPreferences
-     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
-     *        preference isn’t set, this object is null. </p> <note>
+     *        The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *        utilization headroom. If the preference isn’t set, this object is null. </p> <note>
      *        <p>
      *        This preference is only available for the Amazon EC2 instance resource type.
      *        </p>
@@ -710,8 +710,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
-     * isn’t set, this object is null.
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. If the preference isn’t set, this object is null.
      * </p>
      * <note>
      * <p>
@@ -725,8 +725,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * 
      * @param utilizationPreferences
-     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
-     *        preference isn’t set, this object is null. </p> <note>
+     *        The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *        utilization headroom. If the preference isn’t set, this object is null. </p> <note>
      *        <p>
      *        This preference is only available for the Amazon EC2 instance resource type.
      *        </p>
@@ -745,8 +745,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
-     * isn’t set, this object is null.
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. If the preference isn’t set, this object is null.
      * </p>
      * <note>
      * <p>
@@ -755,8 +755,8 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </note>
      * 
      * @param utilizationPreferences
-     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
-     *        preference isn’t set, this object is null. </p> <note>
+     *        The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *        utilization headroom. If the preference isn’t set, this object is null. </p> <note>
      *        <p>
      *        This preference is only available for the Amazon EC2 instance resource type.
      *        </p>

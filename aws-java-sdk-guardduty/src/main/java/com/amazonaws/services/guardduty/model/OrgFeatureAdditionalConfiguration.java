@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum OrgFeatureAdditionalConfiguration {
 
     EKS_ADDON_MANAGEMENT("EKS_ADDON_MANAGEMENT"),
-    ECS_FARGATE_AGENT_MANAGEMENT("ECS_FARGATE_AGENT_MANAGEMENT");
+    ECS_FARGATE_AGENT_MANAGEMENT("ECS_FARGATE_AGENT_MANAGEMENT"),
+    EC2_AGENT_MANAGEMENT("EC2_AGENT_MANAGEMENT");
 
     private String value;
 

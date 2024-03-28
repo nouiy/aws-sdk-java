@@ -47,13 +47,6 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      */
     private CoverageEcsClusterDetails ecsClusterDetails;
     /**
-     * <note>
-     * <p>
-     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     * </p>
-     * </note>
      * <p>
      * Information about the Amazon EC2 instance assessed for runtime coverage.
      * </p>
@@ -200,25 +193,11 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <note>
-     * <p>
-     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     * </p>
-     * </note>
      * <p>
      * Information about the Amazon EC2 instance assessed for runtime coverage.
      * </p>
      * 
      * @param ec2InstanceDetails
-     *        <p>
-     *        This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
-     *        in preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     *        href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     *        </p>
-     *        </note>
-     *        <p>
      *        Information about the Amazon EC2 instance assessed for runtime coverage.
      */
 
@@ -227,25 +206,11 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <note>
-     * <p>
-     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     * </p>
-     * </note>
      * <p>
      * Information about the Amazon EC2 instance assessed for runtime coverage.
      * </p>
      * 
-     * @return <p>
-     *         This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
-     *         in preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     *         href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     *         </p>
-     *         </note>
-     *         <p>
-     *         Information about the Amazon EC2 instance assessed for runtime coverage.
+     * @return Information about the Amazon EC2 instance assessed for runtime coverage.
      */
 
     public CoverageEc2InstanceDetails getEc2InstanceDetails() {
@@ -253,25 +218,11 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <note>
-     * <p>
-     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     * </p>
-     * </note>
      * <p>
      * Information about the Amazon EC2 instance assessed for runtime coverage.
      * </p>
      * 
      * @param ec2InstanceDetails
-     *        <p>
-     *        This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
-     *        in preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
-     *        href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
-     *        </p>
-     *        </note>
-     *        <p>
      *        Information about the Amazon EC2 instance assessed for runtime coverage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -32,12 +32,32 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
      * <p>
      * The threshold value used for the specified metric parameter.
      * </p>
+     * <note>
+     * <p>
+     * You can only specify the threshold value for CPU utilization.
+     * </p>
+     * </note>
      */
     private String threshold;
     /**
      * <p>
-     * The headroom threshold value in percentage used for the specified metric parameter.
+     * The headroom value in percentage used for the specified metric parameter.
      * </p>
+     * <p>
+     * The following lists the valid values for CPU and memory utilization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String headroom;
 
@@ -45,9 +65,17 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
      * <p>
      * The threshold value used for the specified metric parameter.
      * </p>
+     * <note>
+     * <p>
+     * You can only specify the threshold value for CPU utilization.
+     * </p>
+     * </note>
      * 
      * @param threshold
-     *        The threshold value used for the specified metric parameter.
+     *        The threshold value used for the specified metric parameter. </p> <note>
+     *        <p>
+     *        You can only specify the threshold value for CPU utilization.
+     *        </p>
      * @see CustomizableMetricThreshold
      */
 
@@ -59,8 +87,16 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
      * <p>
      * The threshold value used for the specified metric parameter.
      * </p>
+     * <note>
+     * <p>
+     * You can only specify the threshold value for CPU utilization.
+     * </p>
+     * </note>
      * 
-     * @return The threshold value used for the specified metric parameter.
+     * @return The threshold value used for the specified metric parameter. </p> <note>
+     *         <p>
+     *         You can only specify the threshold value for CPU utilization.
+     *         </p>
      * @see CustomizableMetricThreshold
      */
 
@@ -72,9 +108,17 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
      * <p>
      * The threshold value used for the specified metric parameter.
      * </p>
+     * <note>
+     * <p>
+     * You can only specify the threshold value for CPU utilization.
+     * </p>
+     * </note>
      * 
      * @param threshold
-     *        The threshold value used for the specified metric parameter.
+     *        The threshold value used for the specified metric parameter. </p> <note>
+     *        <p>
+     *        You can only specify the threshold value for CPU utilization.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomizableMetricThreshold
      */
@@ -88,9 +132,17 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
      * <p>
      * The threshold value used for the specified metric parameter.
      * </p>
+     * <note>
+     * <p>
+     * You can only specify the threshold value for CPU utilization.
+     * </p>
+     * </note>
      * 
      * @param threshold
-     *        The threshold value used for the specified metric parameter.
+     *        The threshold value used for the specified metric parameter. </p> <note>
+     *        <p>
+     *        You can only specify the threshold value for CPU utilization.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomizableMetricThreshold
      */
@@ -102,11 +154,40 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The headroom threshold value in percentage used for the specified metric parameter.
+     * The headroom value in percentage used for the specified metric parameter.
      * </p>
+     * <p>
+     * The following lists the valid values for CPU and memory utilization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param headroom
-     *        The headroom threshold value in percentage used for the specified metric parameter.
+     *        The headroom value in percentage used for the specified metric parameter. </p>
+     *        <p>
+     *        The following lists the valid values for CPU and memory utilization.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     *        </p>
+     *        </li>
      * @see CustomizableMetricHeadroom
      */
 
@@ -116,10 +197,39 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The headroom threshold value in percentage used for the specified metric parameter.
+     * The headroom value in percentage used for the specified metric parameter.
      * </p>
+     * <p>
+     * The following lists the valid values for CPU and memory utilization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The headroom threshold value in percentage used for the specified metric parameter.
+     * @return The headroom value in percentage used for the specified metric parameter. </p>
+     *         <p>
+     *         The following lists the valid values for CPU and memory utilization.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     *         </p>
+     *         </li>
      * @see CustomizableMetricHeadroom
      */
 
@@ -129,11 +239,40 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The headroom threshold value in percentage used for the specified metric parameter.
+     * The headroom value in percentage used for the specified metric parameter.
      * </p>
+     * <p>
+     * The following lists the valid values for CPU and memory utilization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param headroom
-     *        The headroom threshold value in percentage used for the specified metric parameter.
+     *        The headroom value in percentage used for the specified metric parameter. </p>
+     *        <p>
+     *        The following lists the valid values for CPU and memory utilization.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomizableMetricHeadroom
      */
@@ -145,11 +284,40 @@ public class CustomizableMetricParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The headroom threshold value in percentage used for the specified metric parameter.
+     * The headroom value in percentage used for the specified metric parameter.
      * </p>
+     * <p>
+     * The following lists the valid values for CPU and memory utilization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param headroom
-     *        The headroom threshold value in percentage used for the specified metric parameter.
+     *        The headroom value in percentage used for the specified metric parameter. </p>
+     *        <p>
+     *        The following lists the valid values for CPU and memory utilization.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        CPU utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_0</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Memory utilization: <code>PERCENT_30 | PERCENT_20 | PERCENT_10</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomizableMetricHeadroom
      */

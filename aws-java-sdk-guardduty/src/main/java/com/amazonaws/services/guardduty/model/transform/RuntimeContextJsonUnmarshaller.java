@@ -132,6 +132,26 @@ public class RuntimeContextJsonUnmarshaller implements Unmarshaller<RuntimeConte
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("toolName", targetDepth)) {
+                    context.nextToken();
+                    runtimeContext.setToolName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("toolCategory", targetDepth)) {
+                    context.nextToken();
+                    runtimeContext.setToolCategory(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("serviceName", targetDepth)) {
+                    context.nextToken();
+                    runtimeContext.setServiceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("commandLineExample", targetDepth)) {
+                    context.nextToken();
+                    runtimeContext.setCommandLineExample(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("threatFilePath", targetDepth)) {
+                    context.nextToken();
+                    runtimeContext.setThreatFilePath(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

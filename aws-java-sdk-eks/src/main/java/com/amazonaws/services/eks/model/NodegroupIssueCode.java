@@ -52,7 +52,9 @@ public enum NodegroupIssueCode {
     SourceEc2LaunchTemplateNotFound("SourceEc2LaunchTemplateNotFound"),
     LimitExceeded("LimitExceeded"),
     Unknown("Unknown"),
-    AutoScalingGroupInstanceRefreshActive("AutoScalingGroupInstanceRefreshActive");
+    AutoScalingGroupInstanceRefreshActive("AutoScalingGroupInstanceRefreshActive"),
+    KubernetesLabelInvalid("KubernetesLabelInvalid"),
+    Ec2LaunchTemplateVersionMaxLimitExceeded("Ec2LaunchTemplateVersionMaxLimitExceeded");
 
     private String value;
 

@@ -23,7 +23,8 @@ public enum ResourceType {
     AWSCloudWatchMetric("AWS::CloudWatch::Metric"),
     AWSLogsLogGroup("AWS::Logs::LogGroup"),
     AWSXRayTrace("AWS::XRay::Trace"),
-    AWSApplicationInsightsApplication("AWS::ApplicationInsights::Application");
+    AWSApplicationInsightsApplication("AWS::ApplicationInsights::Application"),
+    AWSInternetMonitorMonitor("AWS::InternetMonitor::Monitor");
 
     private String value;
 

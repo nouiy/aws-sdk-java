@@ -48,7 +48,9 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
     private Boolean blocked;
     /**
      * <p>
-     * The second and top level domain involved in the activity that prompted GuardDuty to generate this finding.
+     * The second and top level domain involved in the activity that potentially prompted GuardDuty to generate this
+     * finding. For a list of top-level and second-level domains, see <a href="https://publicsuffix.org/">public suffix
+     * list</a>.
      * </p>
      */
     private String domainWithSuffix;
@@ -187,11 +189,15 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The second and top level domain involved in the activity that prompted GuardDuty to generate this finding.
+     * The second and top level domain involved in the activity that potentially prompted GuardDuty to generate this
+     * finding. For a list of top-level and second-level domains, see <a href="https://publicsuffix.org/">public suffix
+     * list</a>.
      * </p>
      * 
      * @param domainWithSuffix
-     *        The second and top level domain involved in the activity that prompted GuardDuty to generate this finding.
+     *        The second and top level domain involved in the activity that potentially prompted GuardDuty to generate
+     *        this finding. For a list of top-level and second-level domains, see <a
+     *        href="https://publicsuffix.org/">public suffix list</a>.
      */
 
     public void setDomainWithSuffix(String domainWithSuffix) {
@@ -200,11 +206,14 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The second and top level domain involved in the activity that prompted GuardDuty to generate this finding.
+     * The second and top level domain involved in the activity that potentially prompted GuardDuty to generate this
+     * finding. For a list of top-level and second-level domains, see <a href="https://publicsuffix.org/">public suffix
+     * list</a>.
      * </p>
      * 
-     * @return The second and top level domain involved in the activity that prompted GuardDuty to generate this
-     *         finding.
+     * @return The second and top level domain involved in the activity that potentially prompted GuardDuty to generate
+     *         this finding. For a list of top-level and second-level domains, see <a
+     *         href="https://publicsuffix.org/">public suffix list</a>.
      */
 
     public String getDomainWithSuffix() {
@@ -213,11 +222,15 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The second and top level domain involved in the activity that prompted GuardDuty to generate this finding.
+     * The second and top level domain involved in the activity that potentially prompted GuardDuty to generate this
+     * finding. For a list of top-level and second-level domains, see <a href="https://publicsuffix.org/">public suffix
+     * list</a>.
      * </p>
      * 
      * @param domainWithSuffix
-     *        The second and top level domain involved in the activity that prompted GuardDuty to generate this finding.
+     *        The second and top level domain involved in the activity that potentially prompted GuardDuty to generate
+     *        this finding. For a list of top-level and second-level domains, see <a
+     *        href="https://publicsuffix.org/">public suffix list</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -59,6 +59,16 @@ public class DescribeIpRestrictionResultJsonUnmarshaller implements Unmarshaller
                     describeIpRestrictionResult.setIpRestrictionRuleMap(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("VpcIdRestrictionRuleMap", targetDepth)) {
+                    context.nextToken();
+                    describeIpRestrictionResult.setVpcIdRestrictionRuleMap(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("VpcEndpointIdRestrictionRuleMap", targetDepth)) {
+                    context.nextToken();
+                    describeIpRestrictionResult.setVpcEndpointIdRestrictionRuleMap(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class),
+                            context.getUnmarshaller(String.class)).unmarshall(context));
+                }
                 if (context.testExpression("Enabled", targetDepth)) {
                     context.nextToken();
                     describeIpRestrictionResult.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));

@@ -130,8 +130,11 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
     private String lookBackPeriod;
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     * preference isn't specified, we use the following default values:
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. When this preference isn't specified, we use the following default values.
+     * </p>
+     * <p>
+     * CPU utilization:
      * </p>
      * <ul>
      * <li>
@@ -141,14 +144,33 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * </li>
      * <li>
      * <p>
-     * <code>PERCENT_17</code> for headroom
+     * <code>PERCENT_20</code> for headroom
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Memory utilization:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PERCENT_20</code> for headroom
      * </p>
      * </li>
      * </ul>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * You can only set this preference for the Amazon EC2 instance resource type.
+     * You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The threshold setting isn’t available for memory utilization.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      */
     private java.util.List<UtilizationPreference> utilizationPreferences;
@@ -964,8 +986,11 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     * preference isn't specified, we use the following default values:
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. When this preference isn't specified, we use the following default values.
+     * </p>
+     * <p>
+     * CPU utilization:
      * </p>
      * <ul>
      * <li>
@@ -975,18 +1000,40 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * </li>
      * <li>
      * <p>
-     * <code>PERCENT_17</code> for headroom
+     * <code>PERCENT_20</code> for headroom
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Memory utilization:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PERCENT_20</code> for headroom
      * </p>
      * </li>
      * </ul>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * You can only set this preference for the Amazon EC2 instance resource type.
+     * You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The threshold setting isn’t available for memory utilization.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
-     * @return The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     *         preference isn't specified, we use the following default values: </p>
+     * @return The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *         utilization headroom. When this preference isn't specified, we use the following default values. </p>
+     *         <p>
+     *         CPU utilization:
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -995,14 +1042,33 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *         </li>
      *         <li>
      *         <p>
-     *         <code>PERCENT_17</code> for headroom
+     *         <code>PERCENT_20</code> for headroom
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Memory utilization:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>PERCENT_20</code> for headroom
      *         </p>
      *         </li>
      *         </ul>
      *         <note>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         You can only set this preference for the Amazon EC2 instance resource type.
+     *         You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The threshold setting isn’t available for memory utilization.
+     *         </p>
+     *         </li>
+     *         </ul>
      */
 
     public java.util.List<UtilizationPreference> getUtilizationPreferences() {
@@ -1011,8 +1077,11 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     * preference isn't specified, we use the following default values:
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. When this preference isn't specified, we use the following default values.
+     * </p>
+     * <p>
+     * CPU utilization:
      * </p>
      * <ul>
      * <li>
@@ -1022,19 +1091,41 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * </li>
      * <li>
      * <p>
-     * <code>PERCENT_17</code> for headroom
+     * <code>PERCENT_20</code> for headroom
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Memory utilization:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PERCENT_20</code> for headroom
      * </p>
      * </li>
      * </ul>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * You can only set this preference for the Amazon EC2 instance resource type.
+     * You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The threshold setting isn’t available for memory utilization.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param utilizationPreferences
-     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     *        preference isn't specified, we use the following default values: </p>
+     *        The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *        utilization headroom. When this preference isn't specified, we use the following default values. </p>
+     *        <p>
+     *        CPU utilization:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1043,14 +1134,33 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PERCENT_17</code> for headroom
+     *        <code>PERCENT_20</code> for headroom
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Memory utilization:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PERCENT_20</code> for headroom
      *        </p>
      *        </li>
      *        </ul>
      *        <note>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        You can only set this preference for the Amazon EC2 instance resource type.
+     *        You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The threshold setting isn’t available for memory utilization.
+     *        </p>
+     *        </li>
+     *        </ul>
      */
 
     public void setUtilizationPreferences(java.util.Collection<UtilizationPreference> utilizationPreferences) {
@@ -1064,8 +1174,11 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     * preference isn't specified, we use the following default values:
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. When this preference isn't specified, we use the following default values.
+     * </p>
+     * <p>
+     * CPU utilization:
      * </p>
      * <ul>
      * <li>
@@ -1075,14 +1188,33 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * </li>
      * <li>
      * <p>
-     * <code>PERCENT_17</code> for headroom
+     * <code>PERCENT_20</code> for headroom
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Memory utilization:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PERCENT_20</code> for headroom
      * </p>
      * </li>
      * </ul>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * You can only set this preference for the Amazon EC2 instance resource type.
+     * You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The threshold setting isn’t available for memory utilization.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1091,8 +1223,11 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param utilizationPreferences
-     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     *        preference isn't specified, we use the following default values: </p>
+     *        The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *        utilization headroom. When this preference isn't specified, we use the following default values. </p>
+     *        <p>
+     *        CPU utilization:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1101,14 +1236,33 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PERCENT_17</code> for headroom
+     *        <code>PERCENT_20</code> for headroom
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Memory utilization:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PERCENT_20</code> for headroom
      *        </p>
      *        </li>
      *        </ul>
      *        <note>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        You can only set this preference for the Amazon EC2 instance resource type.
+     *        You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The threshold setting isn’t available for memory utilization.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1124,8 +1278,11 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     * preference isn't specified, we use the following default values:
+     * The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     * utilization headroom. When this preference isn't specified, we use the following default values.
+     * </p>
+     * <p>
+     * CPU utilization:
      * </p>
      * <ul>
      * <li>
@@ -1135,19 +1292,41 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * </li>
      * <li>
      * <p>
-     * <code>PERCENT_17</code> for headroom
+     * <code>PERCENT_20</code> for headroom
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Memory utilization:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PERCENT_20</code> for headroom
      * </p>
      * </li>
      * </ul>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * You can only set this preference for the Amazon EC2 instance resource type.
+     * You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The threshold setting isn’t available for memory utilization.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param utilizationPreferences
-     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. When this
-     *        preference isn't specified, we use the following default values: </p>
+     *        The preference to control the resource’s CPU utilization threshold, CPU utilization headroom, and memory
+     *        utilization headroom. When this preference isn't specified, we use the following default values. </p>
+     *        <p>
+     *        CPU utilization:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1156,14 +1335,33 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PERCENT_17</code> for headroom
+     *        <code>PERCENT_20</code> for headroom
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Memory utilization:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PERCENT_20</code> for headroom
      *        </p>
      *        </li>
      *        </ul>
      *        <note>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        You can only set this preference for the Amazon EC2 instance resource type.
+     *        You can only set CPU and memory utilization preferences for the Amazon EC2 instance resource type.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The threshold setting isn’t available for memory utilization.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

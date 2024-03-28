@@ -101,7 +101,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
     private String lookBackPeriod;
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to generate
      * rightsizing recommendations.
      * </p>
      * <note>
@@ -789,7 +789,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to generate
      * rightsizing recommendations.
      * </p>
      * <note>
@@ -798,7 +798,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * </p>
      * </note>
      * 
-     * @return The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to
+     * @return The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to
      *         generate rightsizing recommendations. </p> <note>
      *         <p>
      *         This preference is only available for the Amazon EC2 instance resource type.
@@ -811,7 +811,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to generate
      * rightsizing recommendations.
      * </p>
      * <note>
@@ -821,7 +821,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * </note>
      * 
      * @param utilizationPreferences
-     *        The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to
+     *        The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to
      *        generate rightsizing recommendations. </p> <note>
      *        <p>
      *        This preference is only available for the Amazon EC2 instance resource type.
@@ -839,7 +839,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to generate
      * rightsizing recommendations.
      * </p>
      * <note>
@@ -854,7 +854,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * </p>
      * 
      * @param utilizationPreferences
-     *        The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to
+     *        The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to
      *        generate rightsizing recommendations. </p> <note>
      *        <p>
      *        This preference is only available for the Amazon EC2 instance resource type.
@@ -874,7 +874,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to generate
      * rightsizing recommendations.
      * </p>
      * <note>
@@ -884,7 +884,7 @@ public class EffectiveRecommendationPreferences implements Serializable, Cloneab
      * </note>
      * 
      * @param utilizationPreferences
-     *        The resource’s CPU utilization threshold preferences, such as threshold and headroom, that are used to
+     *        The resource’s CPU and memory utilization preferences, such as threshold and headroom, that are used to
      *        generate rightsizing recommendations. </p> <note>
      *        <p>
      *        This preference is only available for the Amazon EC2 instance resource type.

@@ -37,11 +37,6 @@ public class UtilizationPreference implements Serializable, Cloneable, Structure
      * <p>
      * The name of the resource utilization metric name to customize.
      * </p>
-     * <note>
-     * <p>
-     * Compute Optimizer only supports <code>CpuUtilization</code>.
-     * </p>
-     * </note>
      */
     private String metricName;
     /**
@@ -55,17 +50,9 @@ public class UtilizationPreference implements Serializable, Cloneable, Structure
      * <p>
      * The name of the resource utilization metric name to customize.
      * </p>
-     * <note>
-     * <p>
-     * Compute Optimizer only supports <code>CpuUtilization</code>.
-     * </p>
-     * </note>
      * 
      * @param metricName
-     *        The name of the resource utilization metric name to customize. </p> <note>
-     *        <p>
-     *        Compute Optimizer only supports <code>CpuUtilization</code>.
-     *        </p>
+     *        The name of the resource utilization metric name to customize.
      * @see CustomizableMetricName
      */
 
@@ -77,16 +64,8 @@ public class UtilizationPreference implements Serializable, Cloneable, Structure
      * <p>
      * The name of the resource utilization metric name to customize.
      * </p>
-     * <note>
-     * <p>
-     * Compute Optimizer only supports <code>CpuUtilization</code>.
-     * </p>
-     * </note>
      * 
-     * @return The name of the resource utilization metric name to customize. </p> <note>
-     *         <p>
-     *         Compute Optimizer only supports <code>CpuUtilization</code>.
-     *         </p>
+     * @return The name of the resource utilization metric name to customize.
      * @see CustomizableMetricName
      */
 
@@ -98,17 +77,9 @@ public class UtilizationPreference implements Serializable, Cloneable, Structure
      * <p>
      * The name of the resource utilization metric name to customize.
      * </p>
-     * <note>
-     * <p>
-     * Compute Optimizer only supports <code>CpuUtilization</code>.
-     * </p>
-     * </note>
      * 
      * @param metricName
-     *        The name of the resource utilization metric name to customize. </p> <note>
-     *        <p>
-     *        Compute Optimizer only supports <code>CpuUtilization</code>.
-     *        </p>
+     *        The name of the resource utilization metric name to customize.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomizableMetricName
      */
@@ -122,17 +93,9 @@ public class UtilizationPreference implements Serializable, Cloneable, Structure
      * <p>
      * The name of the resource utilization metric name to customize.
      * </p>
-     * <note>
-     * <p>
-     * Compute Optimizer only supports <code>CpuUtilization</code>.
-     * </p>
-     * </note>
      * 
      * @param metricName
-     *        The name of the resource utilization metric name to customize. </p> <note>
-     *        <p>
-     *        Compute Optimizer only supports <code>CpuUtilization</code>.
-     *        </p>
+     *        The name of the resource utilization metric name to customize.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomizableMetricName
      */

@@ -67,7 +67,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * you want the user to be able to view.
      * </p>
      * <p>
-     * Currently, you can pass up to 25 dashboard ARNs in each API call.
+     * If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the anonymous
+     * users need access to.
+     * </p>
+     * <p>
+     * Currently, you can pass up to 25 theme ARNs in each API call.
      * </p>
      */
     private java.util.List<String> authorizedResourceArns;
@@ -349,7 +353,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * you want the user to be able to view.
      * </p>
      * <p>
-     * Currently, you can pass up to 25 dashboard ARNs in each API call.
+     * If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the anonymous
+     * users need access to.
+     * </p>
+     * <p>
+     * Currently, you can pass up to 25 theme ARNs in each API call.
      * </p>
      * 
      * @return The Amazon Resource Names (ARNs) for the Amazon QuickSight resources that the user is authorized to
@@ -359,7 +367,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      *         that you want the user to be able to view.
      *         </p>
      *         <p>
-     *         Currently, you can pass up to 25 dashboard ARNs in each API call.
+     *         If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the
+     *         anonymous users need access to.
+     *         </p>
+     *         <p>
+     *         Currently, you can pass up to 25 theme ARNs in each API call.
      */
 
     public java.util.List<String> getAuthorizedResourceArns() {
@@ -376,7 +388,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * you want the user to be able to view.
      * </p>
      * <p>
-     * Currently, you can pass up to 25 dashboard ARNs in each API call.
+     * If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the anonymous
+     * users need access to.
+     * </p>
+     * <p>
+     * Currently, you can pass up to 25 theme ARNs in each API call.
      * </p>
      * 
      * @param authorizedResourceArns
@@ -387,7 +403,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      *        that you want the user to be able to view.
      *        </p>
      *        <p>
-     *        Currently, you can pass up to 25 dashboard ARNs in each API call.
+     *        If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the
+     *        anonymous users need access to.
+     *        </p>
+     *        <p>
+     *        Currently, you can pass up to 25 theme ARNs in each API call.
      */
 
     public void setAuthorizedResourceArns(java.util.Collection<String> authorizedResourceArns) {
@@ -409,7 +429,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * you want the user to be able to view.
      * </p>
      * <p>
-     * Currently, you can pass up to 25 dashboard ARNs in each API call.
+     * If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the anonymous
+     * users need access to.
+     * </p>
+     * <p>
+     * Currently, you can pass up to 25 theme ARNs in each API call.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -425,7 +449,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      *        that you want the user to be able to view.
      *        </p>
      *        <p>
-     *        Currently, you can pass up to 25 dashboard ARNs in each API call.
+     *        If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the
+     *        anonymous users need access to.
+     *        </p>
+     *        <p>
+     *        Currently, you can pass up to 25 theme ARNs in each API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -449,7 +477,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * you want the user to be able to view.
      * </p>
      * <p>
-     * Currently, you can pass up to 25 dashboard ARNs in each API call.
+     * If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the anonymous
+     * users need access to.
+     * </p>
+     * <p>
+     * Currently, you can pass up to 25 theme ARNs in each API call.
      * </p>
      * 
      * @param authorizedResourceArns
@@ -460,7 +492,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      *        that you want the user to be able to view.
      *        </p>
      *        <p>
-     *        Currently, you can pass up to 25 dashboard ARNs in each API call.
+     *        If you want to make changes to the theme of your embedded content, pass a list of theme ARNs that the
+     *        anonymous users need access to.
+     *        </p>
+     *        <p>
+     *        Currently, you can pass up to 25 theme ARNs in each API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

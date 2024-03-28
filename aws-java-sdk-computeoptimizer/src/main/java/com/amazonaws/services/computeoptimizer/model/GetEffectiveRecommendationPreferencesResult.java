@@ -81,7 +81,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
     private String lookBackPeriod;
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to generate
      * rightsizing recommendations. It considers all applicable preferences that you set at the resource, account, and
      * organization level.
      * </p>
@@ -511,7 +511,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to generate
      * rightsizing recommendations. It considers all applicable preferences that you set at the resource, account, and
      * organization level.
      * </p>
@@ -521,7 +521,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * or GetEC2InstanceRecommendations actions.
      * </p>
      * 
-     * @return The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to
+     * @return The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to
      *         generate rightsizing recommendations. It considers all applicable preferences that you set at the
      *         resource, account, and organization level. </p>
      *         <p>
@@ -536,7 +536,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to generate
      * rightsizing recommendations. It considers all applicable preferences that you set at the resource, account, and
      * organization level.
      * </p>
@@ -547,7 +547,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * 
      * @param utilizationPreferences
-     *        The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to
+     *        The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to
      *        generate rightsizing recommendations. It considers all applicable preferences that you set at the
      *        resource, account, and organization level. </p>
      *        <p>
@@ -567,7 +567,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to generate
      * rightsizing recommendations. It considers all applicable preferences that you set at the resource, account, and
      * organization level.
      * </p>
@@ -583,7 +583,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * 
      * @param utilizationPreferences
-     *        The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to
+     *        The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to
      *        generate rightsizing recommendations. It considers all applicable preferences that you set at the
      *        resource, account, and organization level. </p>
      *        <p>
@@ -605,7 +605,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to generate
+     * The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to generate
      * rightsizing recommendations. It considers all applicable preferences that you set at the resource, account, and
      * organization level.
      * </p>
@@ -616,7 +616,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * 
      * @param utilizationPreferences
-     *        The resource’s CPU utilization threshold preferences, such as threshold and headroom, that were used to
+     *        The resource’s CPU and memory utilization preferences, such as threshold and headroom, that were used to
      *        generate rightsizing recommendations. It considers all applicable preferences that you set at the
      *        resource, account, and organization level. </p>
      *        <p>
