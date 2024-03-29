@@ -23,6 +23,7 @@ public enum OfferSortBy {
     EntityId("EntityId"),
     Name("Name"),
     ProductId("ProductId"),
+    ResaleAuthorizationId("ResaleAuthorizationId"),
     ReleaseDate("ReleaseDate"),
     AvailabilityEndDate("AvailabilityEndDate"),
     BuyerAccounts("BuyerAccounts"),

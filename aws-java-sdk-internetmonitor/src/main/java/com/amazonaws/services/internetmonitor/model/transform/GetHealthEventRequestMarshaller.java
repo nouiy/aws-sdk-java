@@ -31,6 +31,8 @@ public class GetHealthEventRequestMarshaller {
             .marshallLocationName("MonitorName").build();
     private static final MarshallingInfo<String> EVENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("EventId").build();
+    private static final MarshallingInfo<String> LINKEDACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LinkedAccountId").build();
 
     private static final GetHealthEventRequestMarshaller instance = new GetHealthEventRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class GetHealthEventRequestMarshaller {
         try {
             protocolMarshaller.marshall(getHealthEventRequest.getMonitorName(), MONITORNAME_BINDING);
             protocolMarshaller.marshall(getHealthEventRequest.getEventId(), EVENTID_BINDING);
+            protocolMarshaller.marshall(getHealthEventRequest.getLinkedAccountId(), LINKEDACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

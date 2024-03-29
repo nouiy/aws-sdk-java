@@ -49,6 +49,18 @@ public class OfferFilters implements Serializable, Cloneable, StructuredPojo {
     private OfferProductIdFilter productId;
     /**
      * <p>
+     * Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.
+     * </p>
+     * <note>
+     * <p>
+     * Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which you
+     * have permissions.
+     * </p>
+     * </note>
+     */
+    private OfferResaleAuthorizationIdFilter resaleAuthorizationId;
+    /**
+     * <p>
      * Allows filtering on the <code>ReleaseDate</code> of an offer.
      * </p>
      */
@@ -201,6 +213,76 @@ public class OfferFilters implements Serializable, Cloneable, StructuredPojo {
 
     public OfferFilters withProductId(OfferProductIdFilter productId) {
         setProductId(productId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.
+     * </p>
+     * <note>
+     * <p>
+     * Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which you
+     * have permissions.
+     * </p>
+     * </note>
+     * 
+     * @param resaleAuthorizationId
+     *        Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.</p> <note>
+     *        <p>
+     *        Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which
+     *        you have permissions.
+     *        </p>
+     */
+
+    public void setResaleAuthorizationId(OfferResaleAuthorizationIdFilter resaleAuthorizationId) {
+        this.resaleAuthorizationId = resaleAuthorizationId;
+    }
+
+    /**
+     * <p>
+     * Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.
+     * </p>
+     * <note>
+     * <p>
+     * Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which you
+     * have permissions.
+     * </p>
+     * </note>
+     * 
+     * @return Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.</p> <note>
+     *         <p>
+     *         Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which
+     *         you have permissions.
+     *         </p>
+     */
+
+    public OfferResaleAuthorizationIdFilter getResaleAuthorizationId() {
+        return this.resaleAuthorizationId;
+    }
+
+    /**
+     * <p>
+     * Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.
+     * </p>
+     * <note>
+     * <p>
+     * Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which you
+     * have permissions.
+     * </p>
+     * </note>
+     * 
+     * @param resaleAuthorizationId
+     *        Allows filtering on the <code>ResaleAuthorizationId</code> of an offer.</p> <note>
+     *        <p>
+     *        Not all offers have a <code>ResaleAuthorizationId</code>. The response will only include offers for which
+     *        you have permissions.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OfferFilters withResaleAuthorizationId(OfferResaleAuthorizationIdFilter resaleAuthorizationId) {
+        setResaleAuthorizationId(resaleAuthorizationId);
         return this;
     }
 
@@ -462,6 +544,8 @@ public class OfferFilters implements Serializable, Cloneable, StructuredPojo {
             sb.append("Name: ").append(getName()).append(",");
         if (getProductId() != null)
             sb.append("ProductId: ").append(getProductId()).append(",");
+        if (getResaleAuthorizationId() != null)
+            sb.append("ResaleAuthorizationId: ").append(getResaleAuthorizationId()).append(",");
         if (getReleaseDate() != null)
             sb.append("ReleaseDate: ").append(getReleaseDate()).append(",");
         if (getAvailabilityEndDate() != null)
@@ -500,6 +584,10 @@ public class OfferFilters implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProductId() != null && other.getProductId().equals(this.getProductId()) == false)
             return false;
+        if (other.getResaleAuthorizationId() == null ^ this.getResaleAuthorizationId() == null)
+            return false;
+        if (other.getResaleAuthorizationId() != null && other.getResaleAuthorizationId().equals(this.getResaleAuthorizationId()) == false)
+            return false;
         if (other.getReleaseDate() == null ^ this.getReleaseDate() == null)
             return false;
         if (other.getReleaseDate() != null && other.getReleaseDate().equals(this.getReleaseDate()) == false)
@@ -535,6 +623,7 @@ public class OfferFilters implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEntityId() == null) ? 0 : getEntityId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProductId() == null) ? 0 : getProductId().hashCode());
+        hashCode = prime * hashCode + ((getResaleAuthorizationId() == null) ? 0 : getResaleAuthorizationId().hashCode());
         hashCode = prime * hashCode + ((getReleaseDate() == null) ? 0 : getReleaseDate().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityEndDate() == null) ? 0 : getAvailabilityEndDate().hashCode());
         hashCode = prime * hashCode + ((getBuyerAccounts() == null) ? 0 : getBuyerAccounts().hashCode());

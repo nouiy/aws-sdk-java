@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -43565,12 +43565,12 @@
         "c2jName" : "version",
         "c2jShape" : "X12Version",
         "deprecated" : false,
-        "documentation" : "<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>",
+        "documentation" : "<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>",
         "endpointDiscoveryId" : false,
         "enumType" : "X12Version",
-        "fluentSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@param version Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
+        "fluentSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@param version Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
         "fluentSetterMethodName" : "withVersion",
-        "getterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@return Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@see X12Version*/",
+        "getterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@return Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@see X12Version*/",
         "getterMethodName" : "getVersion",
         "getterModel" : {
           "returnType" : "String",
@@ -43604,7 +43604,7 @@
         "marshallingType" : "STRING",
         "name" : "Version",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@param version Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@see X12Version*/",
+        "setterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@param version Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@see X12Version*/",
         "setterMethodName" : "setVersion",
         "setterModel" : {
           "timestampFormat" : null,
@@ -43619,13 +43619,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@param version Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
+        "varargSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@param version Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "version",
           "variableType" : "String",
-          "documentation" : "<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>",
+          "documentation" : "<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -43706,12 +43706,12 @@
           "c2jName" : "version",
           "c2jShape" : "X12Version",
           "deprecated" : false,
-          "documentation" : "<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>",
+          "documentation" : "<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>",
           "endpointDiscoveryId" : false,
           "enumType" : "X12Version",
-          "fluentSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@param version Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
+          "fluentSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@param version Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
           "fluentSetterMethodName" : "withVersion",
-          "getterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@return Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@see X12Version*/",
+          "getterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@return Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@see X12Version*/",
           "getterMethodName" : "getVersion",
           "getterModel" : {
             "returnType" : "String",
@@ -43745,7 +43745,7 @@
           "marshallingType" : "STRING",
           "name" : "Version",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@param version Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@see X12Version*/",
+          "setterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@param version Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@see X12Version*/",
           "setterMethodName" : "setVersion",
           "setterModel" : {
             "timestampFormat" : null,
@@ -43760,13 +43760,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>\n@param version Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
+          "varargSetterDocumentation" : "/**<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>\n@param version Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.\n@see X12Version*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "version",
             "variableType" : "String",
-            "documentation" : "<p>Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>, <code>4030</code>, and <code>5010</code>.</p>",
+            "documentation" : "<p>Returns the version to use for the specified X12 transaction set. <pre><code> &lt;/p&gt; </code></pre>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -43819,11 +43819,47 @@
         "name" : "X12_210",
         "value" : "X12_210"
       }, {
+        "name" : "X12_211",
+        "value" : "X12_211"
+      }, {
         "name" : "X12_214",
         "value" : "X12_214"
       }, {
         "name" : "X12_215",
         "value" : "X12_215"
+      }, {
+        "name" : "X12_259",
+        "value" : "X12_259"
+      }, {
+        "name" : "X12_260",
+        "value" : "X12_260"
+      }, {
+        "name" : "X12_266",
+        "value" : "X12_266"
+      }, {
+        "name" : "X12_269",
+        "value" : "X12_269"
+      }, {
+        "name" : "X12_270",
+        "value" : "X12_270"
+      }, {
+        "name" : "X12_271",
+        "value" : "X12_271"
+      }, {
+        "name" : "X12_274",
+        "value" : "X12_274"
+      }, {
+        "name" : "X12_275",
+        "value" : "X12_275"
+      }, {
+        "name" : "X12_276",
+        "value" : "X12_276"
+      }, {
+        "name" : "X12_277",
+        "value" : "X12_277"
+      }, {
+        "name" : "X12_278",
+        "value" : "X12_278"
       }, {
         "name" : "X12_310",
         "value" : "X12_310"
@@ -43840,6 +43876,18 @@
         "name" : "X12_410",
         "value" : "X12_410"
       }, {
+        "name" : "X12_417",
+        "value" : "X12_417"
+      }, {
+        "name" : "X12_421",
+        "value" : "X12_421"
+      }, {
+        "name" : "X12_426",
+        "value" : "X12_426"
+      }, {
+        "name" : "X12_810",
+        "value" : "X12_810"
+      }, {
         "name" : "X12_820",
         "value" : "X12_820"
       }, {
@@ -43849,8 +43897,26 @@
         "name" : "X12_830",
         "value" : "X12_830"
       }, {
+        "name" : "X12_832",
+        "value" : "X12_832"
+      }, {
+        "name" : "X12_834",
+        "value" : "X12_834"
+      }, {
+        "name" : "X12_835",
+        "value" : "X12_835"
+      }, {
+        "name" : "X12_837",
+        "value" : "X12_837"
+      }, {
+        "name" : "X12_844",
+        "value" : "X12_844"
+      }, {
         "name" : "X12_846",
         "value" : "X12_846"
+      }, {
+        "name" : "X12_849",
+        "value" : "X12_849"
       }, {
         "name" : "X12_850",
         "value" : "X12_850"
@@ -43873,14 +43939,29 @@
         "name" : "X12_864",
         "value" : "X12_864"
       }, {
+        "name" : "X12_865",
+        "value" : "X12_865"
+      }, {
+        "name" : "X12_869",
+        "value" : "X12_869"
+      }, {
+        "name" : "X12_870",
+        "value" : "X12_870"
+      }, {
         "name" : "X12_940",
         "value" : "X12_940"
+      }, {
+        "name" : "X12_945",
+        "value" : "X12_945"
       }, {
         "name" : "X12_990",
         "value" : "X12_990"
       }, {
         "name" : "X12_997",
         "value" : "X12_997"
+      }, {
+        "name" : "X12_999",
+        "value" : "X12_999"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.b2bi.enum.X12TransactionSet",

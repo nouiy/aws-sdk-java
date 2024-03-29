@@ -56,6 +56,10 @@ public class OfferSummaryJsonUnmarshaller implements Unmarshaller<OfferSummary, 
                     context.nextToken();
                     offerSummary.setProductId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ResaleAuthorizationId", targetDepth)) {
+                    context.nextToken();
+                    offerSummary.setResaleAuthorizationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ReleaseDate", targetDepth)) {
                     context.nextToken();
                     offerSummary.setReleaseDate(context.getUnmarshaller(String.class).unmarshall(context));

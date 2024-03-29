@@ -44,9 +44,11 @@ public class X12Details implements Serializable, Cloneable, StructuredPojo {
     private String transactionSet;
     /**
      * <p>
-     * Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>,
-     * <code>4030</code>, and <code>5010</code>.
-     * </p>
+     * Returns the version to use for the specified X12 transaction set.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      */
     private String version;
 
@@ -119,14 +121,18 @@ public class X12Details implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>,
-     * <code>4030</code>, and <code>5010</code>.
-     * </p>
+     * Returns the version to use for the specified X12 transaction set.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      * 
      * @param version
-     *        Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>
-     *        , <code>4030</code>, and <code>5010</code>.
-     * @see X12Version
+     *        Returns the version to use for the specified X12 transaction set.
+     * 
+     *        <pre>
+     * 
+     *        <code> &lt;/p&gt; </code> @see X12Version
      */
 
     public void setVersion(String version) {
@@ -135,13 +141,17 @@ public class X12Details implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>,
-     * <code>4030</code>, and <code>5010</code>.
-     * </p>
+     * Returns the version to use for the specified X12 transaction set.
      * 
-     * @return Returns the version to use for the specified X12 transaction set. Supported versions are
-     *         <code>4010</code>, <code>4030</code>, and <code>5010</code>.
-     * @see X12Version
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @return Returns the version to use for the specified X12 transaction set.
+     * 
+     *         <pre>
+     * 
+     *         <code> &lt;/p&gt; </code> @see X12Version
      */
 
     public String getVersion() {
@@ -150,15 +160,19 @@ public class X12Details implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>,
-     * <code>4030</code>, and <code>5010</code>.
-     * </p>
+     * Returns the version to use for the specified X12 transaction set.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      * 
      * @param version
-     *        Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>
-     *        , <code>4030</code>, and <code>5010</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see X12Version
+     *        Returns the version to use for the specified X12 transaction set.
+     * 
+     *        <pre>
+     * 
+     *        <code> &lt;/p&gt; </code> @return Returns a reference to this object so that method calls can be chained
+     *        together. @see X12Version
      */
 
     public X12Details withVersion(String version) {
@@ -168,15 +182,19 @@ public class X12Details implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>,
-     * <code>4030</code>, and <code>5010</code>.
-     * </p>
+     * Returns the version to use for the specified X12 transaction set.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      * 
      * @param version
-     *        Returns the version to use for the specified X12 transaction set. Supported versions are <code>4010</code>
-     *        , <code>4030</code>, and <code>5010</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see X12Version
+     *        Returns the version to use for the specified X12 transaction set.
+     * 
+     *        <pre>
+     * 
+     *        <code> &lt;/p&gt; </code> @return Returns a reference to this object so that method calls can be chained
+     *        together. @see X12Version
      */
 
     public X12Details withVersion(X12Version version) {

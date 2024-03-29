@@ -91,6 +91,12 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private java.util.List<FilterParameter> filterParameters;
+    /**
+     * <p>
+     * TBD
+     * </p>
+     */
+    private String linkedAccountId;
 
     /**
      * <p>
@@ -626,6 +632,46 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param linkedAccountId
+     *        TBD
+     */
+
+    public void setLinkedAccountId(String linkedAccountId) {
+        this.linkedAccountId = linkedAccountId;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @return TBD
+     */
+
+    public String getLinkedAccountId() {
+        return this.linkedAccountId;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param linkedAccountId
+     *        TBD
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartQueryRequest withLinkedAccountId(String linkedAccountId) {
+        setLinkedAccountId(linkedAccountId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -646,7 +692,9 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getQueryType() != null)
             sb.append("QueryType: ").append(getQueryType()).append(",");
         if (getFilterParameters() != null)
-            sb.append("FilterParameters: ").append(getFilterParameters());
+            sb.append("FilterParameters: ").append(getFilterParameters()).append(",");
+        if (getLinkedAccountId() != null)
+            sb.append("LinkedAccountId: ").append(getLinkedAccountId());
         sb.append("}");
         return sb.toString();
     }
@@ -681,6 +729,10 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getFilterParameters() != null && other.getFilterParameters().equals(this.getFilterParameters()) == false)
             return false;
+        if (other.getLinkedAccountId() == null ^ this.getLinkedAccountId() == null)
+            return false;
+        if (other.getLinkedAccountId() != null && other.getLinkedAccountId().equals(this.getLinkedAccountId()) == false)
+            return false;
         return true;
     }
 
@@ -694,6 +746,7 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getQueryType() == null) ? 0 : getQueryType().hashCode());
         hashCode = prime * hashCode + ((getFilterParameters() == null) ? 0 : getFilterParameters().hashCode());
+        hashCode = prime * hashCode + ((getLinkedAccountId() == null) ? 0 : getLinkedAccountId().hashCode());
         return hashCode;
     }
 

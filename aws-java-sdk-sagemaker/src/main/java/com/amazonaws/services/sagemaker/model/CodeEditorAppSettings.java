@@ -36,6 +36,12 @@ public class CodeEditorAppSettings implements Serializable, Cloneable, Structure
     private ResourceSpec defaultResourceSpec;
     /**
      * <p>
+     * A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * </p>
+     */
+    private java.util.List<CustomImage> customImages;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the Code Editor application lifecycle configuration.
      * </p>
      */
@@ -64,6 +70,76 @@ public class CodeEditorAppSettings implements Serializable, Cloneable, Structure
 
     public CodeEditorAppSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
         setDefaultResourceSpec(defaultResourceSpec);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * </p>
+     * 
+     * @return A list of custom SageMaker images that are configured to run as a Code Editor app.
+     */
+
+    public java.util.List<CustomImage> getCustomImages() {
+        return customImages;
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * </p>
+     * 
+     * @param customImages
+     *        A list of custom SageMaker images that are configured to run as a Code Editor app.
+     */
+
+    public void setCustomImages(java.util.Collection<CustomImage> customImages) {
+        if (customImages == null) {
+            this.customImages = null;
+            return;
+        }
+
+        this.customImages = new java.util.ArrayList<CustomImage>(customImages);
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomImages(java.util.Collection)} or {@link #withCustomImages(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param customImages
+     *        A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeEditorAppSettings withCustomImages(CustomImage... customImages) {
+        if (this.customImages == null) {
+            setCustomImages(new java.util.ArrayList<CustomImage>(customImages.length));
+        }
+        for (CustomImage ele : customImages) {
+            this.customImages.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * </p>
+     * 
+     * @param customImages
+     *        A list of custom SageMaker images that are configured to run as a Code Editor app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeEditorAppSettings withCustomImages(java.util.Collection<CustomImage> customImages) {
+        setCustomImages(customImages);
         return this;
     }
 
@@ -151,6 +227,8 @@ public class CodeEditorAppSettings implements Serializable, Cloneable, Structure
         sb.append("{");
         if (getDefaultResourceSpec() != null)
             sb.append("DefaultResourceSpec: ").append(getDefaultResourceSpec()).append(",");
+        if (getCustomImages() != null)
+            sb.append("CustomImages: ").append(getCustomImages()).append(",");
         if (getLifecycleConfigArns() != null)
             sb.append("LifecycleConfigArns: ").append(getLifecycleConfigArns());
         sb.append("}");
@@ -171,6 +249,10 @@ public class CodeEditorAppSettings implements Serializable, Cloneable, Structure
             return false;
         if (other.getDefaultResourceSpec() != null && other.getDefaultResourceSpec().equals(this.getDefaultResourceSpec()) == false)
             return false;
+        if (other.getCustomImages() == null ^ this.getCustomImages() == null)
+            return false;
+        if (other.getCustomImages() != null && other.getCustomImages().equals(this.getCustomImages()) == false)
+            return false;
         if (other.getLifecycleConfigArns() == null ^ this.getLifecycleConfigArns() == null)
             return false;
         if (other.getLifecycleConfigArns() != null && other.getLifecycleConfigArns().equals(this.getLifecycleConfigArns()) == false)
@@ -184,6 +266,7 @@ public class CodeEditorAppSettings implements Serializable, Cloneable, Structure
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDefaultResourceSpec() == null) ? 0 : getDefaultResourceSpec().hashCode());
+        hashCode = prime * hashCode + ((getCustomImages() == null) ? 0 : getCustomImages().hashCode());
         hashCode = prime * hashCode + ((getLifecycleConfigArns() == null) ? 0 : getLifecycleConfigArns().hashCode());
         return hashCode;
     }

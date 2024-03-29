@@ -31,6 +31,12 @@ public class GetMonitorRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private String monitorName;
+    /**
+     * <p>
+     * TBD
+     * </p>
+     */
+    private String linkedAccountId;
 
     /**
      * <p>
@@ -73,6 +79,46 @@ public class GetMonitorRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param linkedAccountId
+     *        TBD
+     */
+
+    public void setLinkedAccountId(String linkedAccountId) {
+        this.linkedAccountId = linkedAccountId;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @return TBD
+     */
+
+    public String getLinkedAccountId() {
+        return this.linkedAccountId;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param linkedAccountId
+     *        TBD
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMonitorRequest withLinkedAccountId(String linkedAccountId) {
+        setLinkedAccountId(linkedAccountId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -85,7 +131,9 @@ public class GetMonitorRequest extends com.amazonaws.AmazonWebServiceRequest imp
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getMonitorName() != null)
-            sb.append("MonitorName: ").append(getMonitorName());
+            sb.append("MonitorName: ").append(getMonitorName()).append(",");
+        if (getLinkedAccountId() != null)
+            sb.append("LinkedAccountId: ").append(getLinkedAccountId());
         sb.append("}");
         return sb.toString();
     }
@@ -104,6 +152,10 @@ public class GetMonitorRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getMonitorName() != null && other.getMonitorName().equals(this.getMonitorName()) == false)
             return false;
+        if (other.getLinkedAccountId() == null ^ this.getLinkedAccountId() == null)
+            return false;
+        if (other.getLinkedAccountId() != null && other.getLinkedAccountId().equals(this.getLinkedAccountId()) == false)
+            return false;
         return true;
     }
 
@@ -113,6 +165,7 @@ public class GetMonitorRequest extends com.amazonaws.AmazonWebServiceRequest imp
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMonitorName() == null) ? 0 : getMonitorName().hashCode());
+        hashCode = prime * hashCode + ((getLinkedAccountId() == null) ? 0 : getLinkedAccountId().hashCode());
         return hashCode;
     }
 

@@ -41,6 +41,11 @@ import com.amazonaws.services.iotwireless.model.*;
  * create a FUOTA task and schedule a session to update the firmware of individual devices or an entire group of devices
  * in a multicast group.
  * </p>
+ * <p>
+ * To connect to the AWS IoT Wireless Service, use the Service endpoints as described in <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/iot-lorawan.html#iot-wireless_region">IoT Wireless Service
+ * endpoints</a> in the <i>AWS General Reference</i>.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSIoTWirelessAsync extends AWSIoTWireless {
@@ -1487,6 +1492,68 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
     java.util.concurrent.Future<GetLogLevelsByResourceTypesResult> getLogLevelsByResourceTypesAsync(
             GetLogLevelsByResourceTypesRequest getLogLevelsByResourceTypesRequest,
             com.amazonaws.handlers.AsyncHandler<GetLogLevelsByResourceTypesRequest, GetLogLevelsByResourceTypesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get the metric configuration status for this account.
+     * </p>
+     * 
+     * @param getMetricConfigurationRequest
+     * @return A Java Future containing the result of the GetMetricConfiguration operation returned by the service.
+     * @sample AWSIoTWirelessAsync.GetMetricConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetMetricConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMetricConfigurationResult> getMetricConfigurationAsync(GetMetricConfigurationRequest getMetricConfigurationRequest);
+
+    /**
+     * <p>
+     * Get the metric configuration status for this account.
+     * </p>
+     * 
+     * @param getMetricConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMetricConfiguration operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.GetMetricConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetMetricConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMetricConfigurationResult> getMetricConfigurationAsync(GetMetricConfigurationRequest getMetricConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMetricConfigurationRequest, GetMetricConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get metrics.
+     * </p>
+     * 
+     * @param getMetricsRequest
+     * @return A Java Future containing the result of the GetMetrics operation returned by the service.
+     * @sample AWSIoTWirelessAsync.GetMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetMetrics" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMetricsResult> getMetricsAsync(GetMetricsRequest getMetricsRequest);
+
+    /**
+     * <p>
+     * Get metrics.
+     * </p>
+     * 
+     * @param getMetricsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMetrics operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.GetMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetMetrics" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMetricsResult> getMetricsAsync(GetMetricsRequest getMetricsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMetricsRequest, GetMetricsResult> asyncHandler);
 
     /**
      * <p>
@@ -3422,6 +3489,39 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
     java.util.concurrent.Future<UpdateLogLevelsByResourceTypesResult> updateLogLevelsByResourceTypesAsync(
             UpdateLogLevelsByResourceTypesRequest updateLogLevelsByResourceTypesRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateLogLevelsByResourceTypesRequest, UpdateLogLevelsByResourceTypesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update the metric configuration.
+     * </p>
+     * 
+     * @param updateMetricConfigurationRequest
+     * @return A Java Future containing the result of the UpdateMetricConfiguration operation returned by the service.
+     * @sample AWSIoTWirelessAsync.UpdateMetricConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateMetricConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMetricConfigurationResult> updateMetricConfigurationAsync(
+            UpdateMetricConfigurationRequest updateMetricConfigurationRequest);
+
+    /**
+     * <p>
+     * Update the metric configuration.
+     * </p>
+     * 
+     * @param updateMetricConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMetricConfiguration operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.UpdateMetricConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateMetricConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMetricConfigurationResult> updateMetricConfigurationAsync(
+            UpdateMetricConfigurationRequest updateMetricConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMetricConfigurationRequest, UpdateMetricConfigurationResult> asyncHandler);
 
     /**
      * <p>

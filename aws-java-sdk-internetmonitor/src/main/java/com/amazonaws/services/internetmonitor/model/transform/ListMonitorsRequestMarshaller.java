@@ -33,6 +33,8 @@ public class ListMonitorsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> MONITORSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("MonitorStatus").build();
+    private static final MarshallingInfo<Boolean> INCLUDELINKEDACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("IncludeLinkedAccounts").build();
 
     private static final ListMonitorsRequestMarshaller instance = new ListMonitorsRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListMonitorsRequestMarshaller {
             protocolMarshaller.marshall(listMonitorsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listMonitorsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listMonitorsRequest.getMonitorStatus(), MONITORSTATUS_BINDING);
+            protocolMarshaller.marshall(listMonitorsRequest.getIncludeLinkedAccounts(), INCLUDELINKEDACCOUNTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

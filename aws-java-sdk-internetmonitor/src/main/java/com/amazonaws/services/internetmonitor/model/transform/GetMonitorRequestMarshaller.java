@@ -29,6 +29,8 @@ public class GetMonitorRequestMarshaller {
 
     private static final MarshallingInfo<String> MONITORNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("MonitorName").build();
+    private static final MarshallingInfo<String> LINKEDACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LinkedAccountId").build();
 
     private static final GetMonitorRequestMarshaller instance = new GetMonitorRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class GetMonitorRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getMonitorRequest.getMonitorName(), MONITORNAME_BINDING);
+            protocolMarshaller.marshall(getMonitorRequest.getLinkedAccountId(), LINKEDACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

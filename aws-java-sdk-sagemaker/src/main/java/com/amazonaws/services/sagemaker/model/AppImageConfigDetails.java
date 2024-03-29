@@ -64,6 +64,12 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
      * </p>
      */
     private JupyterLabAppImageConfig jupyterLabAppImageConfig;
+    /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     */
+    private CodeEditorAppImageConfig codeEditorAppImageConfig;
 
     /**
      * <p>
@@ -306,6 +312,46 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     * 
+     * @param codeEditorAppImageConfig
+     *        The configuration for the file system and the runtime, such as the environment variables and entry point.
+     */
+
+    public void setCodeEditorAppImageConfig(CodeEditorAppImageConfig codeEditorAppImageConfig) {
+        this.codeEditorAppImageConfig = codeEditorAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     * 
+     * @return The configuration for the file system and the runtime, such as the environment variables and entry point.
+     */
+
+    public CodeEditorAppImageConfig getCodeEditorAppImageConfig() {
+        return this.codeEditorAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     * 
+     * @param codeEditorAppImageConfig
+     *        The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AppImageConfigDetails withCodeEditorAppImageConfig(CodeEditorAppImageConfig codeEditorAppImageConfig) {
+        setCodeEditorAppImageConfig(codeEditorAppImageConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -328,7 +374,9 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
         if (getKernelGatewayImageConfig() != null)
             sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig()).append(",");
         if (getJupyterLabAppImageConfig() != null)
-            sb.append("JupyterLabAppImageConfig: ").append(getJupyterLabAppImageConfig());
+            sb.append("JupyterLabAppImageConfig: ").append(getJupyterLabAppImageConfig()).append(",");
+        if (getCodeEditorAppImageConfig() != null)
+            sb.append("CodeEditorAppImageConfig: ").append(getCodeEditorAppImageConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -367,6 +415,10 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
             return false;
         if (other.getJupyterLabAppImageConfig() != null && other.getJupyterLabAppImageConfig().equals(this.getJupyterLabAppImageConfig()) == false)
             return false;
+        if (other.getCodeEditorAppImageConfig() == null ^ this.getCodeEditorAppImageConfig() == null)
+            return false;
+        if (other.getCodeEditorAppImageConfig() != null && other.getCodeEditorAppImageConfig().equals(this.getCodeEditorAppImageConfig()) == false)
+            return false;
         return true;
     }
 
@@ -381,6 +433,7 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getKernelGatewayImageConfig() == null) ? 0 : getKernelGatewayImageConfig().hashCode());
         hashCode = prime * hashCode + ((getJupyterLabAppImageConfig() == null) ? 0 : getJupyterLabAppImageConfig().hashCode());
+        hashCode = prime * hashCode + ((getCodeEditorAppImageConfig() == null) ? 0 : getCodeEditorAppImageConfig().hashCode());
         return hashCode;
     }
 

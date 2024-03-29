@@ -38,6 +38,8 @@ public class StartQueryRequestMarshaller {
             .marshallLocationName("QueryType").build();
     private static final MarshallingInfo<List> FILTERPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterParameters").build();
+    private static final MarshallingInfo<String> LINKEDACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LinkedAccountId").build();
 
     private static final StartQueryRequestMarshaller instance = new StartQueryRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class StartQueryRequestMarshaller {
             protocolMarshaller.marshall(startQueryRequest.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(startQueryRequest.getQueryType(), QUERYTYPE_BINDING);
             protocolMarshaller.marshall(startQueryRequest.getFilterParameters(), FILTERPARAMETERS_BINDING);
+            protocolMarshaller.marshall(startQueryRequest.getLinkedAccountId(), LINKEDACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

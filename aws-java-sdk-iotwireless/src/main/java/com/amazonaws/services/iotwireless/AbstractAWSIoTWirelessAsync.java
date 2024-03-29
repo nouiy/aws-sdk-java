@@ -625,6 +625,32 @@ public class AbstractAWSIoTWirelessAsync extends AbstractAWSIoTWireless implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetMetricConfigurationResult> getMetricConfigurationAsync(GetMetricConfigurationRequest request) {
+
+        return getMetricConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricConfigurationResult> getMetricConfigurationAsync(GetMetricConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMetricConfigurationRequest, GetMetricConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricsResult> getMetricsAsync(GetMetricsRequest request) {
+
+        return getMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricsResult> getMetricsAsync(GetMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMetricsRequest, GetMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMulticastGroupResult> getMulticastGroupAsync(GetMulticastGroupRequest request) {
 
         return getMulticastGroupAsync(request, null);
@@ -1389,6 +1415,19 @@ public class AbstractAWSIoTWirelessAsync extends AbstractAWSIoTWireless implemen
     @Override
     public java.util.concurrent.Future<UpdateLogLevelsByResourceTypesResult> updateLogLevelsByResourceTypesAsync(UpdateLogLevelsByResourceTypesRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateLogLevelsByResourceTypesRequest, UpdateLogLevelsByResourceTypesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMetricConfigurationResult> updateMetricConfigurationAsync(UpdateMetricConfigurationRequest request) {
+
+        return updateMetricConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMetricConfigurationResult> updateMetricConfigurationAsync(UpdateMetricConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateMetricConfigurationRequest, UpdateMetricConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

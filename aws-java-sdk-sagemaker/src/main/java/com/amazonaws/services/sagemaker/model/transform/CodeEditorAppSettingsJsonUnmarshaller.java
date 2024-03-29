@@ -52,6 +52,12 @@ public class CodeEditorAppSettingsJsonUnmarshaller implements Unmarshaller<CodeE
                     context.nextToken();
                     codeEditorAppSettings.setDefaultResourceSpec(ResourceSpecJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CustomImages", targetDepth)) {
+                    context.nextToken();
+                    codeEditorAppSettings.setCustomImages(new ListUnmarshaller<CustomImage>(CustomImageJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("LifecycleConfigArns", targetDepth)) {
                     context.nextToken();
                     codeEditorAppSettings.setLifecycleConfigArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

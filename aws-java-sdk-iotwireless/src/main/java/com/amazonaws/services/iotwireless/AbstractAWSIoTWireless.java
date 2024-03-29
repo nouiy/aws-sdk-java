@@ -244,6 +244,16 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
     }
 
     @Override
+    public GetMetricConfigurationResult getMetricConfiguration(GetMetricConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetMetricsResult getMetrics(GetMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMulticastGroupResult getMulticastGroup(GetMulticastGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -531,6 +541,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public UpdateLogLevelsByResourceTypesResult updateLogLevelsByResourceTypes(UpdateLogLevelsByResourceTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMetricConfigurationResult updateMetricConfiguration(UpdateMetricConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

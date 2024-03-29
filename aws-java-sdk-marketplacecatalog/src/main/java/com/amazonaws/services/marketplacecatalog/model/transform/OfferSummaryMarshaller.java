@@ -32,6 +32,8 @@ public class OfferSummaryMarshaller {
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> PRODUCTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ProductId").build();
+    private static final MarshallingInfo<String> RESALEAUTHORIZATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResaleAuthorizationId").build();
     private static final MarshallingInfo<String> RELEASEDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReleaseDate").build();
     private static final MarshallingInfo<String> AVAILABILITYENDDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -61,6 +63,7 @@ public class OfferSummaryMarshaller {
         try {
             protocolMarshaller.marshall(offerSummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(offerSummary.getProductId(), PRODUCTID_BINDING);
+            protocolMarshaller.marshall(offerSummary.getResaleAuthorizationId(), RESALEAUTHORIZATIONID_BINDING);
             protocolMarshaller.marshall(offerSummary.getReleaseDate(), RELEASEDATE_BINDING);
             protocolMarshaller.marshall(offerSummary.getAvailabilityEndDate(), AVAILABILITYENDDATE_BINDING);
             protocolMarshaller.marshall(offerSummary.getBuyerAccounts(), BUYERACCOUNTS_BINDING);

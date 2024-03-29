@@ -33,6 +33,8 @@ public class OfferFiltersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Name").build();
     private static final MarshallingInfo<StructuredPojo> PRODUCTID_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProductId").build();
+    private static final MarshallingInfo<StructuredPojo> RESALEAUTHORIZATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResaleAuthorizationId").build();
     private static final MarshallingInfo<StructuredPojo> RELEASEDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReleaseDate").build();
     private static final MarshallingInfo<StructuredPojo> AVAILABILITYENDDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -65,6 +67,7 @@ public class OfferFiltersMarshaller {
             protocolMarshaller.marshall(offerFilters.getEntityId(), ENTITYID_BINDING);
             protocolMarshaller.marshall(offerFilters.getName(), NAME_BINDING);
             protocolMarshaller.marshall(offerFilters.getProductId(), PRODUCTID_BINDING);
+            protocolMarshaller.marshall(offerFilters.getResaleAuthorizationId(), RESALEAUTHORIZATIONID_BINDING);
             protocolMarshaller.marshall(offerFilters.getReleaseDate(), RELEASEDATE_BINDING);
             protocolMarshaller.marshall(offerFilters.getAvailabilityEndDate(), AVAILABILITYENDDATE_BINDING);
             protocolMarshaller.marshall(offerFilters.getBuyerAccounts(), BUYERACCOUNTS_BINDING);

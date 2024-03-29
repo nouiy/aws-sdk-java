@@ -36,13 +36,13 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
     private String appKey;
     /**
      * <p>
-     * The AppEUI value.
+     * The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      * </p>
      */
     private String appEui;
     /**
      * <p>
-     * The JoinEUI value.
+     * The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      * </p>
      */
     private String joinEui;
@@ -95,11 +95,11 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AppEUI value.
+     * The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      * </p>
      * 
      * @param appEui
-     *        The AppEUI value.
+     *        The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      */
 
     public void setAppEui(String appEui) {
@@ -108,10 +108,10 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AppEUI value.
+     * The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      * </p>
      * 
-     * @return The AppEUI value.
+     * @return The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      */
 
     public String getAppEui() {
@@ -120,11 +120,11 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AppEUI value.
+     * The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      * </p>
      * 
      * @param appEui
-     *        The AppEUI value.
+     *        The AppEUI value. You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The JoinEUI value.
+     * The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      * </p>
      * 
      * @param joinEui
-     *        The JoinEUI value.
+     *        The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      */
 
     public void setJoinEui(String joinEui) {
@@ -148,10 +148,10 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The JoinEUI value.
+     * The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      * </p>
      * 
-     * @return The JoinEUI value.
+     * @return The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      */
 
     public String getJoinEui() {
@@ -160,11 +160,11 @@ public class OtaaV10X implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The JoinEUI value.
+     * The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      * </p>
      * 
      * @param joinEui
-     *        The JoinEUI value.
+     *        The JoinEUI value. You specify this value instead of the AppEUI when using LoRaWAN version v1.0.4.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -3669,6 +3669,20 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                     new S3VersionHeaderHandler<CompleteMultipartUploadHandler>(),
                     new S3RequesterChargedHeaderHandler<CompleteMultipartUploadHandler>());
             handler = invoke(request, responseHandler, bucketName, key);
+
+            /**
+             * When the number of parts is greater than 1000, CompleteMultipartUpload will return an HTTP 200 OK code
+             * even when there is an error, e.g., Slowdown, EntityTooSmall. We need to manually set the status code and
+             * service name in this case of a 200 error response, similar to CopyObject.
+             */
+            AmazonS3Exception ase = handler.getAmazonS3Exception();
+            if (ase != null) {
+                ase.setStatusCode(200);
+                ase.setServiceName(request.getServiceName());
+
+                throw ase;
+            }
+
             if (handler.getCompleteMultipartUploadResult() != null) {
                 return handler.getCompleteMultipartUploadResult();
             }

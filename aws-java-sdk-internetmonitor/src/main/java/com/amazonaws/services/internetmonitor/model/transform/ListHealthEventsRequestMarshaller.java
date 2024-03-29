@@ -39,6 +39,8 @@ public class ListHealthEventsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> EVENTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("EventStatus").build();
+    private static final MarshallingInfo<String> LINKEDACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("LinkedAccountId").build();
 
     private static final ListHealthEventsRequestMarshaller instance = new ListHealthEventsRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class ListHealthEventsRequestMarshaller {
             protocolMarshaller.marshall(listHealthEventsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listHealthEventsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listHealthEventsRequest.getEventStatus(), EVENTSTATUS_BINDING);
+            protocolMarshaller.marshall(listHealthEventsRequest.getLinkedAccountId(), LINKEDACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

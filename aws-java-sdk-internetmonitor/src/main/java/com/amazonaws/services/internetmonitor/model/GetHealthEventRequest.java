@@ -38,6 +38,12 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String eventId;
+    /**
+     * <p>
+     * TBD
+     * </p>
+     */
+    private String linkedAccountId;
 
     /**
      * <p>
@@ -126,6 +132,46 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param linkedAccountId
+     *        TBD
+     */
+
+    public void setLinkedAccountId(String linkedAccountId) {
+        this.linkedAccountId = linkedAccountId;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @return TBD
+     */
+
+    public String getLinkedAccountId() {
+        return this.linkedAccountId;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param linkedAccountId
+     *        TBD
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetHealthEventRequest withLinkedAccountId(String linkedAccountId) {
+        setLinkedAccountId(linkedAccountId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -140,7 +186,9 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getMonitorName() != null)
             sb.append("MonitorName: ").append(getMonitorName()).append(",");
         if (getEventId() != null)
-            sb.append("EventId: ").append(getEventId());
+            sb.append("EventId: ").append(getEventId()).append(",");
+        if (getLinkedAccountId() != null)
+            sb.append("LinkedAccountId: ").append(getLinkedAccountId());
         sb.append("}");
         return sb.toString();
     }
@@ -163,6 +211,10 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getEventId() != null && other.getEventId().equals(this.getEventId()) == false)
             return false;
+        if (other.getLinkedAccountId() == null ^ this.getLinkedAccountId() == null)
+            return false;
+        if (other.getLinkedAccountId() != null && other.getLinkedAccountId().equals(this.getLinkedAccountId()) == false)
+            return false;
         return true;
     }
 
@@ -173,6 +225,7 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
 
         hashCode = prime * hashCode + ((getMonitorName() == null) ? 0 : getMonitorName().hashCode());
         hashCode = prime * hashCode + ((getEventId() == null) ? 0 : getEventId().hashCode());
+        hashCode = prime * hashCode + ((getLinkedAccountId() == null) ? 0 : getLinkedAccountId().hashCode());
         return hashCode;
     }
 

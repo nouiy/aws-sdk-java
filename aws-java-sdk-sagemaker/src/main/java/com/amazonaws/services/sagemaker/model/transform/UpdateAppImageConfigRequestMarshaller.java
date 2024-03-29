@@ -33,6 +33,8 @@ public class UpdateAppImageConfigRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KernelGatewayImageConfig").build();
     private static final MarshallingInfo<StructuredPojo> JUPYTERLABAPPIMAGECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JupyterLabAppImageConfig").build();
+    private static final MarshallingInfo<StructuredPojo> CODEEDITORAPPIMAGECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CodeEditorAppImageConfig").build();
 
     private static final UpdateAppImageConfigRequestMarshaller instance = new UpdateAppImageConfigRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class UpdateAppImageConfigRequestMarshaller {
             protocolMarshaller.marshall(updateAppImageConfigRequest.getAppImageConfigName(), APPIMAGECONFIGNAME_BINDING);
             protocolMarshaller.marshall(updateAppImageConfigRequest.getKernelGatewayImageConfig(), KERNELGATEWAYIMAGECONFIG_BINDING);
             protocolMarshaller.marshall(updateAppImageConfigRequest.getJupyterLabAppImageConfig(), JUPYTERLABAPPIMAGECONFIG_BINDING);
+            protocolMarshaller.marshall(updateAppImageConfigRequest.getCodeEditorAppImageConfig(), CODEEDITORAPPIMAGECONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

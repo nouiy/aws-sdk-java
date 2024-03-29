@@ -42,6 +42,12 @@ public class OfferSummary implements Serializable, Cloneable, StructuredPojo {
     private String productId;
     /**
      * <p>
+     * The ResaleAuthorizationId of the offer.
+     * </p>
+     */
+    private String resaleAuthorizationId;
+    /**
+     * <p>
      * The release date of the offer.
      * </p>
      */
@@ -148,6 +154,46 @@ public class OfferSummary implements Serializable, Cloneable, StructuredPojo {
 
     public OfferSummary withProductId(String productId) {
         setProductId(productId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ResaleAuthorizationId of the offer.
+     * </p>
+     * 
+     * @param resaleAuthorizationId
+     *        The ResaleAuthorizationId of the offer.
+     */
+
+    public void setResaleAuthorizationId(String resaleAuthorizationId) {
+        this.resaleAuthorizationId = resaleAuthorizationId;
+    }
+
+    /**
+     * <p>
+     * The ResaleAuthorizationId of the offer.
+     * </p>
+     * 
+     * @return The ResaleAuthorizationId of the offer.
+     */
+
+    public String getResaleAuthorizationId() {
+        return this.resaleAuthorizationId;
+    }
+
+    /**
+     * <p>
+     * The ResaleAuthorizationId of the offer.
+     * </p>
+     * 
+     * @param resaleAuthorizationId
+     *        The ResaleAuthorizationId of the offer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OfferSummary withResaleAuthorizationId(String resaleAuthorizationId) {
+        setResaleAuthorizationId(resaleAuthorizationId);
         return this;
     }
 
@@ -474,6 +520,8 @@ public class OfferSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("Name: ").append(getName()).append(",");
         if (getProductId() != null)
             sb.append("ProductId: ").append(getProductId()).append(",");
+        if (getResaleAuthorizationId() != null)
+            sb.append("ResaleAuthorizationId: ").append(getResaleAuthorizationId()).append(",");
         if (getReleaseDate() != null)
             sb.append("ReleaseDate: ").append(getReleaseDate()).append(",");
         if (getAvailabilityEndDate() != null)
@@ -506,6 +554,10 @@ public class OfferSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProductId() != null && other.getProductId().equals(this.getProductId()) == false)
             return false;
+        if (other.getResaleAuthorizationId() == null ^ this.getResaleAuthorizationId() == null)
+            return false;
+        if (other.getResaleAuthorizationId() != null && other.getResaleAuthorizationId().equals(this.getResaleAuthorizationId()) == false)
+            return false;
         if (other.getReleaseDate() == null ^ this.getReleaseDate() == null)
             return false;
         if (other.getReleaseDate() != null && other.getReleaseDate().equals(this.getReleaseDate()) == false)
@@ -536,6 +588,7 @@ public class OfferSummary implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProductId() == null) ? 0 : getProductId().hashCode());
+        hashCode = prime * hashCode + ((getResaleAuthorizationId() == null) ? 0 : getResaleAuthorizationId().hashCode());
         hashCode = prime * hashCode + ((getReleaseDate() == null) ? 0 : getReleaseDate().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityEndDate() == null) ? 0 : getAvailabilityEndDate().hashCode());
         hashCode = prime * hashCode + ((getBuyerAccounts() == null) ? 0 : getBuyerAccounts().hashCode());

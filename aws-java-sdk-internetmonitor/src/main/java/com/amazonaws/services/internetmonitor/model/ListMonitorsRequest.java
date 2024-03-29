@@ -48,6 +48,12 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String monitorStatus;
+    /**
+     * <p>
+     * TBD
+     * </p>
+     */
+    private Boolean includeLinkedAccounts;
 
     /**
      * <p>
@@ -197,6 +203,58 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param includeLinkedAccounts
+     *        TBD
+     */
+
+    public void setIncludeLinkedAccounts(Boolean includeLinkedAccounts) {
+        this.includeLinkedAccounts = includeLinkedAccounts;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @return TBD
+     */
+
+    public Boolean getIncludeLinkedAccounts() {
+        return this.includeLinkedAccounts;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @param includeLinkedAccounts
+     *        TBD
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListMonitorsRequest withIncludeLinkedAccounts(Boolean includeLinkedAccounts) {
+        setIncludeLinkedAccounts(includeLinkedAccounts);
+        return this;
+    }
+
+    /**
+     * <p>
+     * TBD
+     * </p>
+     * 
+     * @return TBD
+     */
+
+    public Boolean isIncludeLinkedAccounts() {
+        return this.includeLinkedAccounts;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -213,7 +271,9 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getMonitorStatus() != null)
-            sb.append("MonitorStatus: ").append(getMonitorStatus());
+            sb.append("MonitorStatus: ").append(getMonitorStatus()).append(",");
+        if (getIncludeLinkedAccounts() != null)
+            sb.append("IncludeLinkedAccounts: ").append(getIncludeLinkedAccounts());
         sb.append("}");
         return sb.toString();
     }
@@ -240,6 +300,10 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getMonitorStatus() != null && other.getMonitorStatus().equals(this.getMonitorStatus()) == false)
             return false;
+        if (other.getIncludeLinkedAccounts() == null ^ this.getIncludeLinkedAccounts() == null)
+            return false;
+        if (other.getIncludeLinkedAccounts() != null && other.getIncludeLinkedAccounts().equals(this.getIncludeLinkedAccounts()) == false)
+            return false;
         return true;
     }
 
@@ -251,6 +315,7 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getMonitorStatus() == null) ? 0 : getMonitorStatus().hashCode());
+        hashCode = prime * hashCode + ((getIncludeLinkedAccounts() == null) ? 0 : getIncludeLinkedAccounts().hashCode());
         return hashCode;
     }
 

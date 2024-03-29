@@ -30,6 +30,8 @@ public class CodeEditorAppSettingsMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> DEFAULTRESOURCESPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultResourceSpec").build();
+    private static final MarshallingInfo<List> CUSTOMIMAGES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("CustomImages").build();
     private static final MarshallingInfo<List> LIFECYCLECONFIGARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifecycleConfigArns").build();
 
@@ -50,6 +52,7 @@ public class CodeEditorAppSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(codeEditorAppSettings.getDefaultResourceSpec(), DEFAULTRESOURCESPEC_BINDING);
+            protocolMarshaller.marshall(codeEditorAppSettings.getCustomImages(), CUSTOMIMAGES_BINDING);
             protocolMarshaller.marshall(codeEditorAppSettings.getLifecycleConfigArns(), LIFECYCLECONFIGARNS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

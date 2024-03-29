@@ -41,6 +41,11 @@ import java.util.concurrent.ExecutorService;
  * create a FUOTA task and schedule a session to update the firmware of individual devices or an entire group of devices
  * in a multicast group.
  * </p>
+ * <p>
+ * To connect to the AWS IoT Wireless Service, use the Service endpoints as described in <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/iot-lorawan.html#iot-wireless_region">IoT Wireless Service
+ * endpoints</a> in the <i>AWS General Reference</i>.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -1531,6 +1536,72 @@ public class AWSIoTWirelessAsyncClient extends AWSIoTWirelessClient implements A
 
                 try {
                     result = executeGetLogLevelsByResourceTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricConfigurationResult> getMetricConfigurationAsync(GetMetricConfigurationRequest request) {
+
+        return getMetricConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricConfigurationResult> getMetricConfigurationAsync(final GetMetricConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMetricConfigurationRequest, GetMetricConfigurationResult> asyncHandler) {
+        final GetMetricConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMetricConfigurationResult>() {
+            @Override
+            public GetMetricConfigurationResult call() throws Exception {
+                GetMetricConfigurationResult result = null;
+
+                try {
+                    result = executeGetMetricConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricsResult> getMetricsAsync(GetMetricsRequest request) {
+
+        return getMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetricsResult> getMetricsAsync(final GetMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMetricsRequest, GetMetricsResult> asyncHandler) {
+        final GetMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMetricsResult>() {
+            @Override
+            public GetMetricsResult call() throws Exception {
+                GetMetricsResult result = null;
+
+                try {
+                    result = executeGetMetrics(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3446,6 +3517,39 @@ public class AWSIoTWirelessAsyncClient extends AWSIoTWirelessClient implements A
 
                 try {
                     result = executeUpdateLogLevelsByResourceTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMetricConfigurationResult> updateMetricConfigurationAsync(UpdateMetricConfigurationRequest request) {
+
+        return updateMetricConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMetricConfigurationResult> updateMetricConfigurationAsync(final UpdateMetricConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMetricConfigurationRequest, UpdateMetricConfigurationResult> asyncHandler) {
+        final UpdateMetricConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMetricConfigurationResult>() {
+            @Override
+            public UpdateMetricConfigurationResult call() throws Exception {
+                UpdateMetricConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateMetricConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

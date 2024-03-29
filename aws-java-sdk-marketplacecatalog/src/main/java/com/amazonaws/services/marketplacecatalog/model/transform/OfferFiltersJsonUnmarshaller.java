@@ -60,6 +60,10 @@ public class OfferFiltersJsonUnmarshaller implements Unmarshaller<OfferFilters, 
                     context.nextToken();
                     offerFilters.setProductId(OfferProductIdFilterJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ResaleAuthorizationId", targetDepth)) {
+                    context.nextToken();
+                    offerFilters.setResaleAuthorizationId(OfferResaleAuthorizationIdFilterJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("ReleaseDate", targetDepth)) {
                     context.nextToken();
                     offerFilters.setReleaseDate(OfferReleaseDateFilterJsonUnmarshaller.getInstance().unmarshall(context));
