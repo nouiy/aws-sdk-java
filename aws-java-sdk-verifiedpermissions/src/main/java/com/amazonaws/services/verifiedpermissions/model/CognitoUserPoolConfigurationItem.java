@@ -31,7 +31,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * Example:
- * <code>"CognitoUserPoolConfiguration":{"UserPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","ClientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}</code>
+ * <code>"CognitoUserPoolConfiguration":{"UserPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","ClientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/CognitoUserPoolConfigurationItem"
@@ -69,6 +69,12 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
      * </p>
      */
     private String issuer;
+    /**
+     * <p>
+     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * </p>
+     */
+    private CognitoGroupConfigurationItem groupConfiguration;
 
     /**
      * <p>
@@ -286,6 +292,46 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * </p>
+     * 
+     * @param groupConfiguration
+     *        The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     */
+
+    public void setGroupConfiguration(CognitoGroupConfigurationItem groupConfiguration) {
+        this.groupConfiguration = groupConfiguration;
+    }
+
+    /**
+     * <p>
+     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * </p>
+     * 
+     * @return The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     */
+
+    public CognitoGroupConfigurationItem getGroupConfiguration() {
+        return this.groupConfiguration;
+    }
+
+    /**
+     * <p>
+     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * </p>
+     * 
+     * @param groupConfiguration
+     *        The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CognitoUserPoolConfigurationItem withGroupConfiguration(CognitoGroupConfigurationItem groupConfiguration) {
+        setGroupConfiguration(groupConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -302,7 +348,9 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
         if (getClientIds() != null)
             sb.append("ClientIds: ").append("***Sensitive Data Redacted***").append(",");
         if (getIssuer() != null)
-            sb.append("Issuer: ").append(getIssuer());
+            sb.append("Issuer: ").append(getIssuer()).append(",");
+        if (getGroupConfiguration() != null)
+            sb.append("GroupConfiguration: ").append(getGroupConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -329,6 +377,10 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
             return false;
         if (other.getIssuer() != null && other.getIssuer().equals(this.getIssuer()) == false)
             return false;
+        if (other.getGroupConfiguration() == null ^ this.getGroupConfiguration() == null)
+            return false;
+        if (other.getGroupConfiguration() != null && other.getGroupConfiguration().equals(this.getGroupConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -340,6 +392,7 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
         hashCode = prime * hashCode + ((getUserPoolArn() == null) ? 0 : getUserPoolArn().hashCode());
         hashCode = prime * hashCode + ((getClientIds() == null) ? 0 : getClientIds().hashCode());
         hashCode = prime * hashCode + ((getIssuer() == null) ? 0 : getIssuer().hashCode());
+        hashCode = prime * hashCode + ((getGroupConfiguration() == null) ? 0 : getGroupConfiguration().hashCode());
         return hashCode;
     }
 

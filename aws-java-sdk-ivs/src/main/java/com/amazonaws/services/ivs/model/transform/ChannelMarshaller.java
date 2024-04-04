@@ -49,6 +49,8 @@ public class ChannelMarshaller {
             .marshallLocationName("preset").build();
     private static final MarshallingInfo<String> RECORDINGCONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingConfigurationArn").build();
+    private static final MarshallingInfo<StructuredPojo> SRT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("srt").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -80,6 +82,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getPlaybackUrl(), PLAYBACKURL_BINDING);
             protocolMarshaller.marshall(channel.getPreset(), PRESET_BINDING);
             protocolMarshaller.marshall(channel.getRecordingConfigurationArn(), RECORDINGCONFIGURATIONARN_BINDING);
+            protocolMarshaller.marshall(channel.getSrt(), SRT_BINDING);
             protocolMarshaller.marshall(channel.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(channel.getType(), TYPE_BINDING);
         } catch (Exception e) {

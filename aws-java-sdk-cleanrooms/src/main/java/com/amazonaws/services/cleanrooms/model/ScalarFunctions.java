@@ -20,19 +20,30 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ScalarFunctions {
 
-    TRUNC("TRUNC"),
     ABS("ABS"),
+    CAST("CAST"),
     CEILING("CEILING"),
+    COALESCE("COALESCE"),
+    CONVERT("CONVERT"),
+    CURRENT_DATE("CURRENT_DATE"),
+    DATEADD("DATEADD"),
+    EXTRACT("EXTRACT"),
     FLOOR("FLOOR"),
+    GETDATE("GETDATE"),
     LN("LN"),
     LOG("LOG"),
-    ROUND("ROUND"),
-    SQRT("SQRT"),
-    CAST("CAST"),
     LOWER("LOWER"),
+    ROUND("ROUND"),
     RTRIM("RTRIM"),
-    UPPER("UPPER"),
-    COALESCE("COALESCE");
+    SQRT("SQRT"),
+    SUBSTRING("SUBSTRING"),
+    TO_CHAR("TO_CHAR"),
+    TO_DATE("TO_DATE"),
+    TO_NUMBER("TO_NUMBER"),
+    TO_TIMESTAMP("TO_TIMESTAMP"),
+    TRIM("TRIM"),
+    TRUNC("TRUNC"),
+    UPPER("UPPER");
 
     private String value;
 

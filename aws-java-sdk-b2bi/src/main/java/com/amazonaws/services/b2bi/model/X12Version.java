@@ -22,7 +22,8 @@ public enum X12Version {
 
     VERSION_4010("VERSION_4010"),
     VERSION_4030("VERSION_4030"),
-    VERSION_5010("VERSION_5010");
+    VERSION_5010("VERSION_5010"),
+    VERSION_5010_HIPAA("VERSION_5010_HIPAA");
 
     private String value;
 

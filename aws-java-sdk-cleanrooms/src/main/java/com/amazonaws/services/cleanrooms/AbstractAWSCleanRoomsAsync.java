@@ -56,6 +56,19 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetSchemaAnalysisRuleResult> batchGetSchemaAnalysisRuleAsync(BatchGetSchemaAnalysisRuleRequest request) {
+
+        return batchGetSchemaAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetSchemaAnalysisRuleResult> batchGetSchemaAnalysisRuleAsync(BatchGetSchemaAnalysisRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetSchemaAnalysisRuleRequest, BatchGetSchemaAnalysisRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAnalysisTemplateResult> createAnalysisTemplateAsync(CreateAnalysisTemplateRequest request) {
 
         return createAnalysisTemplateAsync(request, null);

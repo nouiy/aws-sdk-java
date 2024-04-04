@@ -157,6 +157,39 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetSchemaAnalysisRuleResult> batchGetSchemaAnalysisRuleAsync(BatchGetSchemaAnalysisRuleRequest request) {
+
+        return batchGetSchemaAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetSchemaAnalysisRuleResult> batchGetSchemaAnalysisRuleAsync(final BatchGetSchemaAnalysisRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetSchemaAnalysisRuleRequest, BatchGetSchemaAnalysisRuleResult> asyncHandler) {
+        final BatchGetSchemaAnalysisRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetSchemaAnalysisRuleResult>() {
+            @Override
+            public BatchGetSchemaAnalysisRuleResult call() throws Exception {
+                BatchGetSchemaAnalysisRuleResult result = null;
+
+                try {
+                    result = executeBatchGetSchemaAnalysisRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAnalysisTemplateResult> createAnalysisTemplateAsync(CreateAnalysisTemplateRequest request) {
 
         return createAnalysisTemplateAsync(request, null);

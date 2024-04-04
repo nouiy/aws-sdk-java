@@ -100,6 +100,12 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * Details about the status of the schema. Currently, only one entry is present.
+     * </p>
+     */
+    private java.util.List<SchemaStatusDetail> schemaStatusDetails;
 
     /**
      * <p>
@@ -738,6 +744,76 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Details about the status of the schema. Currently, only one entry is present.
+     * </p>
+     * 
+     * @return Details about the status of the schema. Currently, only one entry is present.
+     */
+
+    public java.util.List<SchemaStatusDetail> getSchemaStatusDetails() {
+        return schemaStatusDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the status of the schema. Currently, only one entry is present.
+     * </p>
+     * 
+     * @param schemaStatusDetails
+     *        Details about the status of the schema. Currently, only one entry is present.
+     */
+
+    public void setSchemaStatusDetails(java.util.Collection<SchemaStatusDetail> schemaStatusDetails) {
+        if (schemaStatusDetails == null) {
+            this.schemaStatusDetails = null;
+            return;
+        }
+
+        this.schemaStatusDetails = new java.util.ArrayList<SchemaStatusDetail>(schemaStatusDetails);
+    }
+
+    /**
+     * <p>
+     * Details about the status of the schema. Currently, only one entry is present.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSchemaStatusDetails(java.util.Collection)} or {@link #withSchemaStatusDetails(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param schemaStatusDetails
+     *        Details about the status of the schema. Currently, only one entry is present.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Schema withSchemaStatusDetails(SchemaStatusDetail... schemaStatusDetails) {
+        if (this.schemaStatusDetails == null) {
+            setSchemaStatusDetails(new java.util.ArrayList<SchemaStatusDetail>(schemaStatusDetails.length));
+        }
+        for (SchemaStatusDetail ele : schemaStatusDetails) {
+            this.schemaStatusDetails.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about the status of the schema. Currently, only one entry is present.
+     * </p>
+     * 
+     * @param schemaStatusDetails
+     *        Details about the status of the schema. Currently, only one entry is present.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Schema withSchemaStatusDetails(java.util.Collection<SchemaStatusDetail> schemaStatusDetails) {
+        setSchemaStatusDetails(schemaStatusDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -772,7 +848,9 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getSchemaStatusDetails() != null)
+            sb.append("SchemaStatusDetails: ").append(getSchemaStatusDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -835,6 +913,10 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getSchemaStatusDetails() == null ^ this.getSchemaStatusDetails() == null)
+            return false;
+        if (other.getSchemaStatusDetails() != null && other.getSchemaStatusDetails().equals(this.getSchemaStatusDetails()) == false)
+            return false;
         return true;
     }
 
@@ -855,6 +937,7 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getSchemaStatusDetails() == null) ? 0 : getSchemaStatusDetails().hashCode());
         return hashCode;
     }
 

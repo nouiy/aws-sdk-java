@@ -52,6 +52,8 @@ public class SchemaMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<List> SCHEMASTATUSDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaStatusDetails").build();
 
     private static final SchemaMarshaller instance = new SchemaMarshaller();
 
@@ -81,6 +83,7 @@ public class SchemaMarshaller {
             protocolMarshaller.marshall(schema.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(schema.getUpdateTime(), UPDATETIME_BINDING);
             protocolMarshaller.marshall(schema.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(schema.getSchemaStatusDetails(), SCHEMASTATUSDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

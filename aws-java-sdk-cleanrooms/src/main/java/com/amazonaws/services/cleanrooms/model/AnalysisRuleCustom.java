@@ -31,13 +31,13 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The analysis templates that are allowed by the custom analysis rule.
+     * The ARN of the analysis templates that are allowed by the custom analysis rule.
      * </p>
      */
     private java.util.List<String> allowedAnalyses;
     /**
      * <p>
-     * The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
+     * The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
      * <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * </p>
      */
@@ -51,10 +51,10 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The analysis templates that are allowed by the custom analysis rule.
+     * The ARN of the analysis templates that are allowed by the custom analysis rule.
      * </p>
      * 
-     * @return The analysis templates that are allowed by the custom analysis rule.
+     * @return The ARN of the analysis templates that are allowed by the custom analysis rule.
      */
 
     public java.util.List<String> getAllowedAnalyses() {
@@ -63,11 +63,11 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The analysis templates that are allowed by the custom analysis rule.
+     * The ARN of the analysis templates that are allowed by the custom analysis rule.
      * </p>
      * 
      * @param allowedAnalyses
-     *        The analysis templates that are allowed by the custom analysis rule.
+     *        The ARN of the analysis templates that are allowed by the custom analysis rule.
      */
 
     public void setAllowedAnalyses(java.util.Collection<String> allowedAnalyses) {
@@ -81,7 +81,7 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The analysis templates that are allowed by the custom analysis rule.
+     * The ARN of the analysis templates that are allowed by the custom analysis rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -90,7 +90,7 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param allowedAnalyses
-     *        The analysis templates that are allowed by the custom analysis rule.
+     *        The ARN of the analysis templates that are allowed by the custom analysis rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,11 +106,11 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The analysis templates that are allowed by the custom analysis rule.
+     * The ARN of the analysis templates that are allowed by the custom analysis rule.
      * </p>
      * 
      * @param allowedAnalyses
-     *        The analysis templates that are allowed by the custom analysis rule.
+     *        The ARN of the analysis templates that are allowed by the custom analysis rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -121,12 +121,12 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
+     * The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
      * <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * </p>
      * 
-     * @return The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
-     *         <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
+     * @return The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule.
+     *         Required when <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      */
 
     public java.util.List<String> getAllowedAnalysisProviders() {
@@ -135,13 +135,13 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
+     * The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
      * <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * </p>
      * 
      * @param allowedAnalysisProviders
-     *        The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
-     *        <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
+     *        The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule.
+     *        Required when <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      */
 
     public void setAllowedAnalysisProviders(java.util.Collection<String> allowedAnalysisProviders) {
@@ -155,7 +155,7 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
+     * The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
      * <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * </p>
      * <p>
@@ -165,8 +165,8 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param allowedAnalysisProviders
-     *        The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
-     *        <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
+     *        The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule.
+     *        Required when <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,13 +182,13 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
+     * The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
      * <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * </p>
      * 
      * @param allowedAnalysisProviders
-     *        The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when
-     *        <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
+     *        The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule.
+     *        Required when <code>allowedAnalyses</code> is <code>ANY_QUERY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

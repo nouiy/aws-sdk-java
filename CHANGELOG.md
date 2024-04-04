@@ -1,3 +1,28 @@
+# __1.12.695__ __2024-04-04__
+## __AWS B2B Data Interchange__
+  - ### Features
+    - Adding support for X12 5010 HIPAA EDI version and associated transaction sets.
+
+## __AWS Clean Rooms Service__
+  - ### Features
+    - Feature: New schemaStatusDetails field to the existing Schema object that displays a status on Schema API responses to show whether a schema is queryable or not. New BatchGetSchemaAnalysisRule API to retrieve multiple schemaAnalysisRules using a single API call.
+
+## __Amazon EMR Containers__
+  - ### Features
+    - This release adds support for integration with EKS AccessEntry APIs to enable automatic Cluster Access for EMR on EKS.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Amazon EC2 G6 instances powered by NVIDIA L4 Tensor Core GPUs can be used for a wide range of graphics-intensive and machine learning use cases. Gr6 instances also feature NVIDIA L4 GPUs and can be used for graphics workloads with higher memory requirements.
+
+## __Amazon Interactive Video Service__
+  - ### Features
+    - API update to include an SRT ingest endpoint and passphrase for all channels.
+
+## __Amazon Verified Permissions__
+  - ### Features
+    - Adds GroupConfiguration field to Identity Source API's
+
 # __1.12.694__ __2024-04-03__
 ## __AWS Clean Rooms ML__
   - ### Features

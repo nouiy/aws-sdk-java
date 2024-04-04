@@ -14,6 +14,7 @@
  */
 package com.amazonaws.services.s3;
 
+import com.amazonaws.services.s3.model.MultiObjectDeleteSlowdownException;
 import com.amazonaws.services.s3.model.WriteGetObjectResponseRequest;
 import com.amazonaws.services.s3.model.WriteGetObjectResponseResult;
 import java.io.File;
@@ -3887,13 +3888,19 @@ public interface AmazonS3 extends S3DirectSpi {
      * In some cases, some objects will be successfully deleted, while some
      * attempts will cause an error. If any object in the request cannot be
      * deleted, this method throws a {@link MultiObjectDeleteException} with
-     * details of the error.
+     * details of the error. In the exceptional case of a SlowDown error,
+     * the returned S3 response will not provide details of the progress
+     * made, and this method will throw a
+     * {@link MultiObjectDeleteSlowdownException}.
      *
      * @param deleteObjectsRequest
      *            The request object containing all options for deleting
      *            multiple objects.
      * @throws MultiObjectDeleteException
      *             if one or more of the objects couldn't be deleted.
+     * @throws MultiObjectDeleteSlowdownException
+     *             if one or more of the objects couldn't be deleted due to
+     *             a SlowDown error
      * @throws SdkClientException
      *             If any errors are encountered in the client while making the
      *             request or handling the response.

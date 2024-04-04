@@ -33,7 +33,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private Boolean authorized;
     /**
      * <p>
-     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      * </p>
      */
     private Boolean insecureIngest;
@@ -146,11 +146,11 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      * </p>
      * 
      * @param insecureIngest
-     *        Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     *        Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      */
 
     public void setInsecureIngest(Boolean insecureIngest) {
@@ -159,10 +159,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      * </p>
      * 
-     * @return Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * @return Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      */
 
     public Boolean getInsecureIngest() {
@@ -171,11 +171,11 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      * </p>
      * 
      * @param insecureIngest
-     *        Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     *        Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,10 +186,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      * </p>
      * 
-     * @return Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * @return Whether the channel allows insecure RTMP and SRT ingest. Default: <code>false</code>.
      */
 
     public Boolean isInsecureIngest() {

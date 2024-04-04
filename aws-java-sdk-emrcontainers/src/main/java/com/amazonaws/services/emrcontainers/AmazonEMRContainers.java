@@ -31,8 +31,7 @@ import com.amazonaws.services.emrcontainers.model.*;
  * on Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
  * workloads while Amazon EMR on EKS builds, configures, and manages containers for open-source applications. For more
  * information about Amazon EMR on EKS concepts and tasks, see <a
- * href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/emr-eks.html">What is shared
- * id="EMR-EKS"/&gt;</a>.
+ * href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/emr-eks.html">What is Amazon EMR on EKS</a>.
  * </p>
  * <p>
  * <i>Amazon EMR containers</i> is the API name for Amazon EMR on EKS. The <code>emr-containers</code> prefix is used in
@@ -149,6 +148,8 @@ public interface AmazonEMRContainers {
      *         The specified resource was not found.
      * @throws InternalServerException
      *         This is an internal server exception.
+     * @throws EKSRequestThrottledException
+     *         The request exceeded the Amazon EKS API operation limits.
      * @sample AmazonEMRContainers.CreateVirtualCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CreateVirtualCluster"
      *      target="_top">AWS API Documentation</a>

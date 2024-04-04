@@ -88,6 +88,10 @@ public class ChannelJsonUnmarshaller implements Unmarshaller<Channel, JsonUnmars
                     context.nextToken();
                     channel.setRecordingConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("srt", targetDepth)) {
+                    context.nextToken();
+                    channel.setSrt(SrtJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     channel.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))

@@ -805,7 +805,17 @@ public enum InstanceType {
     R7izMetal32xl("r7iz.metal-32xl"),
     C7gdMetal("c7gd.metal"),
     M7gdMetal("m7gd.metal"),
-    R7gdMetal("r7gd.metal");
+    R7gdMetal("r7gd.metal"),
+    G6Xlarge("g6.xlarge"),
+    G62xlarge("g6.2xlarge"),
+    G64xlarge("g6.4xlarge"),
+    G68xlarge("g6.8xlarge"),
+    G612xlarge("g6.12xlarge"),
+    G616xlarge("g6.16xlarge"),
+    G624xlarge("g6.24xlarge"),
+    G648xlarge("g6.48xlarge"),
+    Gr64xlarge("gr6.4xlarge"),
+    Gr68xlarge("gr6.8xlarge");
 
     private String value;
 

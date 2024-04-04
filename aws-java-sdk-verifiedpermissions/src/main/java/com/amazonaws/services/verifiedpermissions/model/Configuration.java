@@ -26,7 +26,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
  * </p>
  * <p>
- * You must specify a <code>userPoolArn</code>, and optionally, a <code>ClientId</code>.
+ * Specifies a <code>userPoolArn</code>, a <code>groupConfiguration</code>, and a <code>ClientId</code>.
  * </p>
  * </note>
  * <p>
@@ -50,7 +50,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Example:
-     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      * </p>
      */
     private CognitoUserPoolConfiguration cognitoUserPoolConfiguration;
@@ -64,7 +64,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Example:
-     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      * </p>
      * 
      * @param cognitoUserPoolConfiguration
@@ -74,7 +74,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      *        (ARN)</a> of a Amazon Cognito user pool and one or more application client IDs.</p>
      *        <p>
      *        Example:
-     *        <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     *        <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      */
 
     public void setCognitoUserPoolConfiguration(CognitoUserPoolConfiguration cognitoUserPoolConfiguration) {
@@ -90,7 +90,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Example:
-     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      * </p>
      * 
      * @return Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a
@@ -99,7 +99,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      *         (ARN)</a> of a Amazon Cognito user pool and one or more application client IDs.</p>
      *         <p>
      *         Example:
-     *         <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     *         <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      */
 
     public CognitoUserPoolConfiguration getCognitoUserPoolConfiguration() {
@@ -115,7 +115,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Example:
-     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     * <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      * </p>
      * 
      * @param cognitoUserPoolConfiguration
@@ -125,7 +125,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      *        (ARN)</a> of a Amazon Cognito user pool and one or more application client IDs.</p>
      *        <p>
      *        Example:
-     *        <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}}</code>
+     *        <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

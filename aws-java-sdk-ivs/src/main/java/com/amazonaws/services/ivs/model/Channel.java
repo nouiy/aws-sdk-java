@@ -95,6 +95,12 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String recordingConfigurationArn;
     /**
      * <p>
+     * Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     * </p>
+     */
+    private Srt srt;
+    /**
+     * <p>
      * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
      * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      * Resources</a> for more information, including restrictions that apply to tags and
@@ -624,6 +630,46 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     * </p>
+     * 
+     * @param srt
+     *        Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     */
+
+    public void setSrt(Srt srt) {
+        this.srt = srt;
+    }
+
+    /**
+     * <p>
+     * Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     * </p>
+     * 
+     * @return Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     */
+
+    public Srt getSrt() {
+        return this.srt;
+    }
+
+    /**
+     * <p>
+     * Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     * </p>
+     * 
+     * @param srt
+     *        Specifies the endpoint and optional passphrase for streaming with the SRT protocol.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withSrt(Srt srt) {
+        setSrt(srt);
+        return this;
+    }
+
+    /**
+     * <p>
      * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
      * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      * Resources</a> for more information, including restrictions that apply to tags and
@@ -831,6 +877,8 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             sb.append("Preset: ").append(getPreset()).append(",");
         if (getRecordingConfigurationArn() != null)
             sb.append("RecordingConfigurationArn: ").append(getRecordingConfigurationArn()).append(",");
+        if (getSrt() != null)
+            sb.append("Srt: ").append(getSrt()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getType() != null)
@@ -889,6 +937,10 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRecordingConfigurationArn() != null && other.getRecordingConfigurationArn().equals(this.getRecordingConfigurationArn()) == false)
             return false;
+        if (other.getSrt() == null ^ this.getSrt() == null)
+            return false;
+        if (other.getSrt() != null && other.getSrt().equals(this.getSrt()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -915,6 +967,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
         hashCode = prime * hashCode + ((getPreset() == null) ? 0 : getPreset().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
+        hashCode = prime * hashCode + ((getSrt() == null) ? 0 : getSrt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;

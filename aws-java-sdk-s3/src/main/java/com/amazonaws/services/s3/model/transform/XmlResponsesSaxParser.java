@@ -2740,6 +2740,12 @@ public class XmlResponsesSaxParser {
                     currentError.setMessage(getText());
                 }
             }
+
+            else if (in("Error")) {
+                if (name.equals("Code") && getText().equals("SlowDown")) {
+                    throw new MultiObjectDeleteSlowdownException();
+                }
+            }
         }
     }
 

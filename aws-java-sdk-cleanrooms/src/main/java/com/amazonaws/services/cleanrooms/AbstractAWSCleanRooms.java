@@ -38,6 +38,11 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
     }
 
     @Override
+    public BatchGetSchemaAnalysisRuleResult batchGetSchemaAnalysisRule(BatchGetSchemaAnalysisRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAnalysisTemplateResult createAnalysisTemplate(CreateAnalysisTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

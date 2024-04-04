@@ -295,6 +295,73 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Retrieves multiple analysis rule schemas.
+     * </p>
+     * 
+     * @param batchGetSchemaAnalysisRuleRequest
+     * @return Result of the BatchGetSchemaAnalysisRule operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.BatchGetSchemaAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/BatchGetSchemaAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetSchemaAnalysisRuleResult batchGetSchemaAnalysisRule(BatchGetSchemaAnalysisRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetSchemaAnalysisRule(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetSchemaAnalysisRuleResult executeBatchGetSchemaAnalysisRule(BatchGetSchemaAnalysisRuleRequest batchGetSchemaAnalysisRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetSchemaAnalysisRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetSchemaAnalysisRuleRequest> request = null;
+        Response<BatchGetSchemaAnalysisRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetSchemaAnalysisRuleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetSchemaAnalysisRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetSchemaAnalysisRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetSchemaAnalysisRuleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetSchemaAnalysisRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new analysis template.
      * </p>
      * 

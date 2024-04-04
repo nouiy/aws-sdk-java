@@ -65,6 +65,10 @@ public class IsAuthorizedWithTokenResultJsonUnmarshaller implements Unmarshaller
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("principal", targetDepth)) {
+                    context.nextToken();
+                    isAuthorizedWithTokenResult.setPrincipal(EntityIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

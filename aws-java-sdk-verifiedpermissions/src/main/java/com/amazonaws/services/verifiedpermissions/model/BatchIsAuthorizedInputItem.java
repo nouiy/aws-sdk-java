@@ -36,14 +36,13 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
     private EntityIdentifier principal;
     /**
      * <p>
-     * Specifies the requested action to be authorized. For example, is the principal authorized to perform this action
-     * on the resource?
+     * Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      * </p>
      */
     private ActionIdentifier action;
     /**
      * <p>
-     * Specifies the resource for which the authorization decision is to be made.
+     * Specifies the resource that you want an authorization decision for. For example, <code>PhotoFlash::Photo</code>.
      * </p>
      */
     private EntityIdentifier resource;
@@ -96,13 +95,11 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the requested action to be authorized. For example, is the principal authorized to perform this action
-     * on the resource?
+     * Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      * </p>
      * 
      * @param action
-     *        Specifies the requested action to be authorized. For example, is the principal authorized to perform this
-     *        action on the resource?
+     *        Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      */
 
     public void setAction(ActionIdentifier action) {
@@ -111,12 +108,10 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the requested action to be authorized. For example, is the principal authorized to perform this action
-     * on the resource?
+     * Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      * </p>
      * 
-     * @return Specifies the requested action to be authorized. For example, is the principal authorized to perform this
-     *         action on the resource?
+     * @return Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      */
 
     public ActionIdentifier getAction() {
@@ -125,13 +120,11 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the requested action to be authorized. For example, is the principal authorized to perform this action
-     * on the resource?
+     * Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      * </p>
      * 
      * @param action
-     *        Specifies the requested action to be authorized. For example, is the principal authorized to perform this
-     *        action on the resource?
+     *        Specifies the requested action to be authorized. For example, <code>PhotoFlash::ReadPhoto</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,11 +135,12 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the resource for which the authorization decision is to be made.
+     * Specifies the resource that you want an authorization decision for. For example, <code>PhotoFlash::Photo</code>.
      * </p>
      * 
      * @param resource
-     *        Specifies the resource for which the authorization decision is to be made.
+     *        Specifies the resource that you want an authorization decision for. For example,
+     *        <code>PhotoFlash::Photo</code>.
      */
 
     public void setResource(EntityIdentifier resource) {
@@ -155,10 +149,11 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the resource for which the authorization decision is to be made.
+     * Specifies the resource that you want an authorization decision for. For example, <code>PhotoFlash::Photo</code>.
      * </p>
      * 
-     * @return Specifies the resource for which the authorization decision is to be made.
+     * @return Specifies the resource that you want an authorization decision for. For example,
+     *         <code>PhotoFlash::Photo</code>.
      */
 
     public EntityIdentifier getResource() {
@@ -167,11 +162,12 @@ public class BatchIsAuthorizedInputItem implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies the resource for which the authorization decision is to be made.
+     * Specifies the resource that you want an authorization decision for. For example, <code>PhotoFlash::Photo</code>.
      * </p>
      * 
      * @param resource
-     *        Specifies the resource for which the authorization decision is to be made.
+     *        Specifies the resource that you want an authorization decision for. For example,
+     *        <code>PhotoFlash::Photo</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

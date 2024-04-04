@@ -34,6 +34,8 @@ public class CognitoUserPoolConfigurationItemMarshaller {
             .marshallLocationName("clientIds").build();
     private static final MarshallingInfo<String> ISSUER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("issuer").build();
+    private static final MarshallingInfo<StructuredPojo> GROUPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("groupConfiguration").build();
 
     private static final CognitoUserPoolConfigurationItemMarshaller instance = new CognitoUserPoolConfigurationItemMarshaller();
 
@@ -54,6 +56,7 @@ public class CognitoUserPoolConfigurationItemMarshaller {
             protocolMarshaller.marshall(cognitoUserPoolConfigurationItem.getUserPoolArn(), USERPOOLARN_BINDING);
             protocolMarshaller.marshall(cognitoUserPoolConfigurationItem.getClientIds(), CLIENTIDS_BINDING);
             protocolMarshaller.marshall(cognitoUserPoolConfigurationItem.getIssuer(), ISSUER_BINDING);
+            protocolMarshaller.marshall(cognitoUserPoolConfigurationItem.getGroupConfiguration(), GROUPCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

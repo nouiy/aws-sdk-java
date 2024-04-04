@@ -52,8 +52,8 @@ public class BatchIsAuthorizedOutputItem implements Serializable, Cloneable, Str
     private java.util.List<DeterminingPolicyItem> determiningPolicies;
     /**
      * <p>
-     * Errors that occurred while making an authorization decision, for example, a policy references an Entity or entity
-     * Attribute that does not exist in the slice.
+     * Errors that occurred while making an authorization decision. For example, a policy might reference an entity or
+     * attribute that doesn't exist in the request.
      * </p>
      */
     private java.util.List<EvaluationErrorItem> errors;
@@ -257,12 +257,12 @@ public class BatchIsAuthorizedOutputItem implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Errors that occurred while making an authorization decision, for example, a policy references an Entity or entity
-     * Attribute that does not exist in the slice.
+     * Errors that occurred while making an authorization decision. For example, a policy might reference an entity or
+     * attribute that doesn't exist in the request.
      * </p>
      * 
-     * @return Errors that occurred while making an authorization decision, for example, a policy references an Entity
-     *         or entity Attribute that does not exist in the slice.
+     * @return Errors that occurred while making an authorization decision. For example, a policy might reference an
+     *         entity or attribute that doesn't exist in the request.
      */
 
     public java.util.List<EvaluationErrorItem> getErrors() {
@@ -271,13 +271,13 @@ public class BatchIsAuthorizedOutputItem implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Errors that occurred while making an authorization decision, for example, a policy references an Entity or entity
-     * Attribute that does not exist in the slice.
+     * Errors that occurred while making an authorization decision. For example, a policy might reference an entity or
+     * attribute that doesn't exist in the request.
      * </p>
      * 
      * @param errors
-     *        Errors that occurred while making an authorization decision, for example, a policy references an Entity or
-     *        entity Attribute that does not exist in the slice.
+     *        Errors that occurred while making an authorization decision. For example, a policy might reference an
+     *        entity or attribute that doesn't exist in the request.
      */
 
     public void setErrors(java.util.Collection<EvaluationErrorItem> errors) {
@@ -291,8 +291,8 @@ public class BatchIsAuthorizedOutputItem implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Errors that occurred while making an authorization decision, for example, a policy references an Entity or entity
-     * Attribute that does not exist in the slice.
+     * Errors that occurred while making an authorization decision. For example, a policy might reference an entity or
+     * attribute that doesn't exist in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -301,8 +301,8 @@ public class BatchIsAuthorizedOutputItem implements Serializable, Cloneable, Str
      * </p>
      * 
      * @param errors
-     *        Errors that occurred while making an authorization decision, for example, a policy references an Entity or
-     *        entity Attribute that does not exist in the slice.
+     *        Errors that occurred while making an authorization decision. For example, a policy might reference an
+     *        entity or attribute that doesn't exist in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,13 +318,13 @@ public class BatchIsAuthorizedOutputItem implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Errors that occurred while making an authorization decision, for example, a policy references an Entity or entity
-     * Attribute that does not exist in the slice.
+     * Errors that occurred while making an authorization decision. For example, a policy might reference an entity or
+     * attribute that doesn't exist in the request.
      * </p>
      * 
      * @param errors
-     *        Errors that occurred while making an authorization decision, for example, a policy references an Entity or
-     *        entity Attribute that does not exist in the slice.
+     *        Errors that occurred while making an authorization decision. For example, a policy might reference an
+     *        entity or attribute that doesn't exist in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

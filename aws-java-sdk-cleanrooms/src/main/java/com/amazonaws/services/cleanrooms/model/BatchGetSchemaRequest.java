@@ -33,7 +33,7 @@ public class BatchGetSchemaRequest extends com.amazonaws.AmazonWebServiceRequest
     private String collaborationIdentifier;
     /**
      * <p>
-     * The names for the schema objects to retrieve.&gt;
+     * The names for the schema objects to retrieve.
      * </p>
      */
     private java.util.List<String> names;
@@ -80,10 +80,10 @@ public class BatchGetSchemaRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The names for the schema objects to retrieve.&gt;
+     * The names for the schema objects to retrieve.
      * </p>
      * 
-     * @return The names for the schema objects to retrieve.&gt;
+     * @return The names for the schema objects to retrieve.
      */
 
     public java.util.List<String> getNames() {
@@ -92,11 +92,11 @@ public class BatchGetSchemaRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The names for the schema objects to retrieve.&gt;
+     * The names for the schema objects to retrieve.
      * </p>
      * 
      * @param names
-     *        The names for the schema objects to retrieve.&gt;
+     *        The names for the schema objects to retrieve.
      */
 
     public void setNames(java.util.Collection<String> names) {
@@ -110,7 +110,7 @@ public class BatchGetSchemaRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The names for the schema objects to retrieve.&gt;
+     * The names for the schema objects to retrieve.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class BatchGetSchemaRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param names
-     *        The names for the schema objects to retrieve.&gt;
+     *        The names for the schema objects to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class BatchGetSchemaRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The names for the schema objects to retrieve.&gt;
+     * The names for the schema objects to retrieve.
      * </p>
      * 
      * @param names
-     *        The names for the schema objects to retrieve.&gt;
+     *        The names for the schema objects to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

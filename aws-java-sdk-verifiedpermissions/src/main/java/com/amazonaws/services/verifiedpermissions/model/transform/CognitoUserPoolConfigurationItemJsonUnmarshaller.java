@@ -62,6 +62,10 @@ public class CognitoUserPoolConfigurationItemJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     cognitoUserPoolConfigurationItem.setIssuer(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("groupConfiguration", targetDepth)) {
+                    context.nextToken();
+                    cognitoUserPoolConfigurationItem.setGroupConfiguration(CognitoGroupConfigurationItemJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

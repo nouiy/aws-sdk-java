@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -43962,6 +43962,75 @@
       }, {
         "name" : "X12_999",
         "value" : "X12_999"
+      }, {
+        "name" : "X12_270_X279",
+        "value" : "X12_270_X279"
+      }, {
+        "name" : "X12_271_X279",
+        "value" : "X12_271_X279"
+      }, {
+        "name" : "X12_275_X210",
+        "value" : "X12_275_X210"
+      }, {
+        "name" : "X12_275_X211",
+        "value" : "X12_275_X211"
+      }, {
+        "name" : "X12_276_X212",
+        "value" : "X12_276_X212"
+      }, {
+        "name" : "X12_277_X212",
+        "value" : "X12_277_X212"
+      }, {
+        "name" : "X12_277_X214",
+        "value" : "X12_277_X214"
+      }, {
+        "name" : "X12_277_X364",
+        "value" : "X12_277_X364"
+      }, {
+        "name" : "X12_278_X217",
+        "value" : "X12_278_X217"
+      }, {
+        "name" : "X12_820_X218",
+        "value" : "X12_820_X218"
+      }, {
+        "name" : "X12_820_X306",
+        "value" : "X12_820_X306"
+      }, {
+        "name" : "X12_824_X186",
+        "value" : "X12_824_X186"
+      }, {
+        "name" : "X12_834_X220",
+        "value" : "X12_834_X220"
+      }, {
+        "name" : "X12_834_X307",
+        "value" : "X12_834_X307"
+      }, {
+        "name" : "X12_834_X318",
+        "value" : "X12_834_X318"
+      }, {
+        "name" : "X12_835_X221",
+        "value" : "X12_835_X221"
+      }, {
+        "name" : "X12_837_X222",
+        "value" : "X12_837_X222"
+      }, {
+        "name" : "X12_837_X223",
+        "value" : "X12_837_X223"
+      }, {
+        "name" : "X12_837_X224",
+        "value" : "X12_837_X224"
+      }, {
+        "name" : "X12_837_X291",
+        "value" : "X12_837_X291"
+      }, {
+        "name" : "X12_837_X292",
+        "value" : "X12_837_X292"
+      }, {
+        "name" : "X12_837_X298",
+        "value" : "X12_837_X298"
+      }, {
+        "name" : "X12_999_X231",
+        "value" : "X12_999_X231"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.b2bi.enum.X12TransactionSet",
@@ -44015,6 +44084,9 @@
       }, {
         "name" : "VERSION_5010",
         "value" : "VERSION_5010"
+      }, {
+        "name" : "VERSION_5010_HIPAA",
+        "value" : "VERSION_5010_HIPAA"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.b2bi.enum.X12Version",

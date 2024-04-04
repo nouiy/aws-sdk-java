@@ -46,6 +46,12 @@ public class IsAuthorizedWithTokenResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private java.util.List<EvaluationErrorItem> errors;
+    /**
+     * <p>
+     * The identifier of the principal in the ID or access token.
+     * </p>
+     */
+    private EntityIdentifier principal;
 
     /**
      * <p>
@@ -287,6 +293,46 @@ public class IsAuthorizedWithTokenResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The identifier of the principal in the ID or access token.
+     * </p>
+     * 
+     * @param principal
+     *        The identifier of the principal in the ID or access token.
+     */
+
+    public void setPrincipal(EntityIdentifier principal) {
+        this.principal = principal;
+    }
+
+    /**
+     * <p>
+     * The identifier of the principal in the ID or access token.
+     * </p>
+     * 
+     * @return The identifier of the principal in the ID or access token.
+     */
+
+    public EntityIdentifier getPrincipal() {
+        return this.principal;
+    }
+
+    /**
+     * <p>
+     * The identifier of the principal in the ID or access token.
+     * </p>
+     * 
+     * @param principal
+     *        The identifier of the principal in the ID or access token.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IsAuthorizedWithTokenResult withPrincipal(EntityIdentifier principal) {
+        setPrincipal(principal);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -303,7 +349,9 @@ public class IsAuthorizedWithTokenResult extends com.amazonaws.AmazonWebServiceR
         if (getDeterminingPolicies() != null)
             sb.append("DeterminingPolicies: ").append(getDeterminingPolicies()).append(",");
         if (getErrors() != null)
-            sb.append("Errors: ").append("***Sensitive Data Redacted***");
+            sb.append("Errors: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPrincipal() != null)
+            sb.append("Principal: ").append(getPrincipal());
         sb.append("}");
         return sb.toString();
     }
@@ -330,6 +378,10 @@ public class IsAuthorizedWithTokenResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
             return false;
+        if (other.getPrincipal() == null ^ this.getPrincipal() == null)
+            return false;
+        if (other.getPrincipal() != null && other.getPrincipal().equals(this.getPrincipal()) == false)
+            return false;
         return true;
     }
 
@@ -341,6 +393,7 @@ public class IsAuthorizedWithTokenResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getDecision() == null) ? 0 : getDecision().hashCode());
         hashCode = prime * hashCode + ((getDeterminingPolicies() == null) ? 0 : getDeterminingPolicies().hashCode());
         hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
+        hashCode = prime * hashCode + ((getPrincipal() == null) ? 0 : getPrincipal().hashCode());
         return hashCode;
     }
 

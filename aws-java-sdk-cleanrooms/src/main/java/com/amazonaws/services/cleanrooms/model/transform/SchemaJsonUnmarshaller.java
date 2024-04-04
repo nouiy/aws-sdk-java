@@ -102,6 +102,12 @@ public class SchemaJsonUnmarshaller implements Unmarshaller<Schema, JsonUnmarsha
                     context.nextToken();
                     schema.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("schemaStatusDetails", targetDepth)) {
+                    context.nextToken();
+                    schema.setSchemaStatusDetails(new ListUnmarshaller<SchemaStatusDetail>(SchemaStatusDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

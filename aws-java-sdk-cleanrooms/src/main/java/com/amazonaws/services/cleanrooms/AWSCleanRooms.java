@@ -103,6 +103,29 @@ public interface AWSCleanRooms {
 
     /**
      * <p>
+     * Retrieves multiple analysis rule schemas.
+     * </p>
+     * 
+     * @param batchGetSchemaAnalysisRuleRequest
+     * @return Result of the BatchGetSchemaAnalysisRule operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.BatchGetSchemaAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/BatchGetSchemaAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetSchemaAnalysisRuleResult batchGetSchemaAnalysisRule(BatchGetSchemaAnalysisRuleRequest batchGetSchemaAnalysisRuleRequest);
+
+    /**
+     * <p>
      * Creates a new analysis template.
      * </p>
      * 

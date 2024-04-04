@@ -113,6 +113,39 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
 
     /**
      * <p>
+     * Retrieves multiple analysis rule schemas.
+     * </p>
+     * 
+     * @param batchGetSchemaAnalysisRuleRequest
+     * @return A Java Future containing the result of the BatchGetSchemaAnalysisRule operation returned by the service.
+     * @sample AWSCleanRoomsAsync.BatchGetSchemaAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/BatchGetSchemaAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetSchemaAnalysisRuleResult> batchGetSchemaAnalysisRuleAsync(
+            BatchGetSchemaAnalysisRuleRequest batchGetSchemaAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Retrieves multiple analysis rule schemas.
+     * </p>
+     * 
+     * @param batchGetSchemaAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetSchemaAnalysisRule operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.BatchGetSchemaAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/BatchGetSchemaAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetSchemaAnalysisRuleResult> batchGetSchemaAnalysisRuleAsync(
+            BatchGetSchemaAnalysisRuleRequest batchGetSchemaAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetSchemaAnalysisRuleRequest, BatchGetSchemaAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new analysis template.
      * </p>
      * 

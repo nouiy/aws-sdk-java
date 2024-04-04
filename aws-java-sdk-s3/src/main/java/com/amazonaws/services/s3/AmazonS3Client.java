@@ -240,6 +240,7 @@ import com.amazonaws.services.s3.model.ListPartsRequest;
 import com.amazonaws.services.s3.model.ListVersionsRequest;
 import com.amazonaws.services.s3.model.MultiFactorAuthentication;
 import com.amazonaws.services.s3.model.MultiObjectDeleteException;
+import com.amazonaws.services.s3.model.MultiObjectDeleteSlowdownException;
 import com.amazonaws.services.s3.model.MultipartUploadListing;
 import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.ObjectMetadata;
@@ -2359,10 +2360,22 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                 new Unmarshallers.DeleteObjectsResultUnmarshaller(),
                 new S3RequesterChargedHeaderHandler<DeleteObjectsResponse>());
 
+        DeleteObjectsResponse response = null;
+        try {
+            response = invoke(request, responseHandler, deleteObjectsRequest.getBucketName(), null);
+        } catch (SdkClientException e) {
 
+            /*
+             * If there was a SlowDown error, the returned S3 response will not contain the progress made. We'll throw
+             * an {@code MultiObjectDeleteSlowdownException} in this case.
+             */
+            if (e.getCause() instanceof MultiObjectDeleteSlowdownException) {
+                MultiObjectDeleteSlowdownException ex = (MultiObjectDeleteSlowdownException) e.getCause();
+                handleSlowDownException(ex, responseHandler.getResponseHeaders());
+            }
 
-
-        DeleteObjectsResponse response = invoke(request, responseHandler, deleteObjectsRequest.getBucketName(), null);
+            throw e;
+        }
 
         /*
          * If the result was only partially successful, throw an exception
@@ -2382,10 +2395,21 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
             throw ex;
         }
+
         DeleteObjectsResult result = new DeleteObjectsResult(response.getDeletedObjects(), response.isRequesterCharged());
 
         return result;
     }
+
+    private void handleSlowDownException(MultiObjectDeleteSlowdownException e, Map<String, String> headers) {
+        e.setRequestId(headers.get(Headers.REQUEST_ID));
+        e.setExtendedRequestId(headers.get(Headers.EXTENDED_REQUEST_ID));
+        e.setCloudFrontId(headers.get(Headers.CLOUD_FRONT_ID));
+        e.setProxyHost(clientConfiguration.getProxyHost());
+
+        throw e;
+    }
+
 
     @Override
     public void deleteVersion(String bucketName, String key, String versionId)

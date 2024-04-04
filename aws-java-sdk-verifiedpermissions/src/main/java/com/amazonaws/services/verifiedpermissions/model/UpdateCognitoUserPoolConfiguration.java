@@ -42,6 +42,12 @@ public class UpdateCognitoUserPoolConfiguration implements Serializable, Cloneab
      * </p>
      */
     private java.util.List<String> clientIds;
+    /**
+     * <p>
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
+     * </p>
+     */
+    private UpdateCognitoGroupConfiguration groupConfiguration;
 
     /**
      * <p>
@@ -160,6 +166,46 @@ public class UpdateCognitoUserPoolConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
+     * </p>
+     * 
+     * @param groupConfiguration
+     *        The configuration of the user groups from an Amazon Cognito user pool identity source.
+     */
+
+    public void setGroupConfiguration(UpdateCognitoGroupConfiguration groupConfiguration) {
+        this.groupConfiguration = groupConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
+     * </p>
+     * 
+     * @return The configuration of the user groups from an Amazon Cognito user pool identity source.
+     */
+
+    public UpdateCognitoGroupConfiguration getGroupConfiguration() {
+        return this.groupConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
+     * </p>
+     * 
+     * @param groupConfiguration
+     *        The configuration of the user groups from an Amazon Cognito user pool identity source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateCognitoUserPoolConfiguration withGroupConfiguration(UpdateCognitoGroupConfiguration groupConfiguration) {
+        setGroupConfiguration(groupConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -174,7 +220,9 @@ public class UpdateCognitoUserPoolConfiguration implements Serializable, Cloneab
         if (getUserPoolArn() != null)
             sb.append("UserPoolArn: ").append(getUserPoolArn()).append(",");
         if (getClientIds() != null)
-            sb.append("ClientIds: ").append("***Sensitive Data Redacted***");
+            sb.append("ClientIds: ").append("***Sensitive Data Redacted***").append(",");
+        if (getGroupConfiguration() != null)
+            sb.append("GroupConfiguration: ").append(getGroupConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -197,6 +245,10 @@ public class UpdateCognitoUserPoolConfiguration implements Serializable, Cloneab
             return false;
         if (other.getClientIds() != null && other.getClientIds().equals(this.getClientIds()) == false)
             return false;
+        if (other.getGroupConfiguration() == null ^ this.getGroupConfiguration() == null)
+            return false;
+        if (other.getGroupConfiguration() != null && other.getGroupConfiguration().equals(this.getGroupConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -207,6 +259,7 @@ public class UpdateCognitoUserPoolConfiguration implements Serializable, Cloneab
 
         hashCode = prime * hashCode + ((getUserPoolArn() == null) ? 0 : getUserPoolArn().hashCode());
         hashCode = prime * hashCode + ((getClientIds() == null) ? 0 : getClientIds().hashCode());
+        hashCode = prime * hashCode + ((getGroupConfiguration() == null) ? 0 : getGroupConfiguration().hashCode());
         return hashCode;
     }
 
