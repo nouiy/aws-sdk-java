@@ -184,6 +184,12 @@ public class CreateAccountSubscriptionRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private String contactNumber;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     * </p>
+     */
+    private String iAMIdentityCenterInstanceArn;
 
     /**
      * <p>
@@ -1446,6 +1452,46 @@ public class CreateAccountSubscriptionRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     * </p>
+     * 
+     * @param iAMIdentityCenterInstanceArn
+     *        The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     */
+
+    public void setIAMIdentityCenterInstanceArn(String iAMIdentityCenterInstanceArn) {
+        this.iAMIdentityCenterInstanceArn = iAMIdentityCenterInstanceArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     */
+
+    public String getIAMIdentityCenterInstanceArn() {
+        return this.iAMIdentityCenterInstanceArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     * </p>
+     * 
+     * @param iAMIdentityCenterInstanceArn
+     *        The Amazon Resource Name (ARN) for the IAM Identity Center instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAccountSubscriptionRequest withIAMIdentityCenterInstanceArn(String iAMIdentityCenterInstanceArn) {
+        setIAMIdentityCenterInstanceArn(iAMIdentityCenterInstanceArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1486,7 +1532,9 @@ public class CreateAccountSubscriptionRequest extends com.amazonaws.AmazonWebSer
         if (getEmailAddress() != null)
             sb.append("EmailAddress: ").append(getEmailAddress()).append(",");
         if (getContactNumber() != null)
-            sb.append("ContactNumber: ").append(getContactNumber());
+            sb.append("ContactNumber: ").append(getContactNumber()).append(",");
+        if (getIAMIdentityCenterInstanceArn() != null)
+            sb.append("IAMIdentityCenterInstanceArn: ").append(getIAMIdentityCenterInstanceArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1561,6 +1609,10 @@ public class CreateAccountSubscriptionRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getContactNumber() != null && other.getContactNumber().equals(this.getContactNumber()) == false)
             return false;
+        if (other.getIAMIdentityCenterInstanceArn() == null ^ this.getIAMIdentityCenterInstanceArn() == null)
+            return false;
+        if (other.getIAMIdentityCenterInstanceArn() != null && other.getIAMIdentityCenterInstanceArn().equals(this.getIAMIdentityCenterInstanceArn()) == false)
+            return false;
         return true;
     }
 
@@ -1584,6 +1636,7 @@ public class CreateAccountSubscriptionRequest extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getLastName() == null) ? 0 : getLastName().hashCode());
         hashCode = prime * hashCode + ((getEmailAddress() == null) ? 0 : getEmailAddress().hashCode());
         hashCode = prime * hashCode + ((getContactNumber() == null) ? 0 : getContactNumber().hashCode());
+        hashCode = prime * hashCode + ((getIAMIdentityCenterInstanceArn() == null) ? 0 : getIAMIdentityCenterInstanceArn().hashCode());
         return hashCode;
     }
 

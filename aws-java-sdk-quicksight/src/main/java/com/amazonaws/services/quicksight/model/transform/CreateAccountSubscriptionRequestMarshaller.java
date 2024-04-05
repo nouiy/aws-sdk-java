@@ -58,6 +58,8 @@ public class CreateAccountSubscriptionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmailAddress").build();
     private static final MarshallingInfo<String> CONTACTNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContactNumber").build();
+    private static final MarshallingInfo<String> IAMIDENTITYCENTERINSTANCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IAMIdentityCenterInstanceArn").build();
 
     private static final CreateAccountSubscriptionRequestMarshaller instance = new CreateAccountSubscriptionRequestMarshaller();
 
@@ -90,6 +92,7 @@ public class CreateAccountSubscriptionRequestMarshaller {
             protocolMarshaller.marshall(createAccountSubscriptionRequest.getLastName(), LASTNAME_BINDING);
             protocolMarshaller.marshall(createAccountSubscriptionRequest.getEmailAddress(), EMAILADDRESS_BINDING);
             protocolMarshaller.marshall(createAccountSubscriptionRequest.getContactNumber(), CONTACTNUMBER_BINDING);
+            protocolMarshaller.marshall(createAccountSubscriptionRequest.getIAMIdentityCenterInstanceArn(), IAMIDENTITYCENTERINSTANCEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

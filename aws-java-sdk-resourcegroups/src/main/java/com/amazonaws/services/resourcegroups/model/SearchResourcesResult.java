@@ -39,8 +39,8 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
     private String nextToken;
     /**
      * <p>
-     * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures.
+     * A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and <code>Message</code>
+     * .
      * </p>
      * <p>
      * Possible values for <code>ErrorCode</code>:
@@ -54,6 +54,11 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * <li>
      * <p>
      * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
      * </p>
      * </li>
      * </ul>
@@ -187,8 +192,8 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures.
+     * A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and <code>Message</code>
+     * .
      * </p>
      * <p>
      * Possible values for <code>ErrorCode</code>:
@@ -204,10 +209,15 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
+     * </p>
+     * </li>
      * </ul>
      * 
-     * @return A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *         and <code>Message</code> structures.</p>
+     * @return A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and
+     *         <code>Message</code>.</p>
      *         <p>
      *         Possible values for <code>ErrorCode</code>:
      *         </p>
@@ -222,6 +232,11 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      *         <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<QueryError> getQueryErrors() {
@@ -230,8 +245,8 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures.
+     * A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and <code>Message</code>
+     * .
      * </p>
      * <p>
      * Possible values for <code>ErrorCode</code>:
@@ -247,11 +262,16 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param queryErrors
-     *        A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *        and <code>Message</code> structures.</p>
+     *        A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and
+     *        <code>Message</code>.</p>
      *        <p>
      *        Possible values for <code>ErrorCode</code>:
      *        </p>
@@ -264,6 +284,11 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      *        <li>
      *        <p>
      *        <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
      *        </p>
      *        </li>
      */
@@ -279,8 +304,8 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures.
+     * A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and <code>Message</code>
+     * .
      * </p>
      * <p>
      * Possible values for <code>ErrorCode</code>:
@@ -296,6 +321,11 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -304,8 +334,8 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param queryErrors
-     *        A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *        and <code>Message</code> structures.</p>
+     *        A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and
+     *        <code>Message</code>.</p>
      *        <p>
      *        Possible values for <code>ErrorCode</code>:
      *        </p>
@@ -318,6 +348,11 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      *        <li>
      *        <p>
      *        <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -335,8 +370,8 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures.
+     * A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and <code>Message</code>
+     * .
      * </p>
      * <p>
      * Possible values for <code>ErrorCode</code>:
@@ -352,11 +387,16 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param queryErrors
-     *        A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *        and <code>Message</code> structures.</p>
+     *        A list of <code>QueryError</code> objects. Each error contains an <code>ErrorCode</code> and
+     *        <code>Message</code>.</p>
      *        <p>
      *        Possible values for <code>ErrorCode</code>:
      *        </p>
@@ -369,6 +409,11 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      *        <li>
      *        <p>
      *        <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_UNASSUMABLE_ROLE </code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

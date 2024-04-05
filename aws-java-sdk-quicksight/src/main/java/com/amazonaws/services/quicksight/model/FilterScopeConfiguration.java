@@ -39,7 +39,9 @@ public class FilterScopeConfiguration implements Serializable, Cloneable, Struct
     private SelectedSheetsFilterScopeConfiguration selectedSheets;
     /**
      * <p>
-     * The configuration for applying a filter to all sheets.
+     * The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the value for a
+     * <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in an Analysis,
+     * Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      * </p>
      */
     private AllSheetsFilterScopeConfiguration allSheets;
@@ -86,11 +88,15 @@ public class FilterScopeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The configuration for applying a filter to all sheets.
+     * The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the value for a
+     * <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in an Analysis,
+     * Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      * </p>
      * 
      * @param allSheets
-     *        The configuration for applying a filter to all sheets.
+     *        The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the value
+     *        for a <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in an
+     *        Analysis, Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      */
 
     public void setAllSheets(AllSheetsFilterScopeConfiguration allSheets) {
@@ -99,10 +105,14 @@ public class FilterScopeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The configuration for applying a filter to all sheets.
+     * The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the value for a
+     * <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in an Analysis,
+     * Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      * </p>
      * 
-     * @return The configuration for applying a filter to all sheets.
+     * @return The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the
+     *         value for a <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in
+     *         an Analysis, Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      */
 
     public AllSheetsFilterScopeConfiguration getAllSheets() {
@@ -111,11 +121,15 @@ public class FilterScopeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The configuration for applying a filter to all sheets.
+     * The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the value for a
+     * <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in an Analysis,
+     * Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      * </p>
      * 
      * @param allSheets
-     *        The configuration for applying a filter to all sheets.
+     *        The configuration that applies a filter to all sheets. When you choose <code>AllSheets</code> as the value
+     *        for a <code>FilterScopeConfiguration</code>, this filter is applied to all visuals of all sheets in an
+     *        Analysis, Dashboard, or Template. The <code>AllSheetsFilterScopeConfiguration</code> is chosen.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

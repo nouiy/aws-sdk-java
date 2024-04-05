@@ -405,6 +405,190 @@ public class AmazonVerifiedPermissionsClient extends AmazonWebServiceClient impl
 
     /**
      * <p>
+     * Makes a series of decisions about multiple authorization requests for one token. The principal in this request
+     * comes from an external identity source in the form of an identity or access token, formatted as a <a
+     * href="https://wikipedia.org/wiki/JSON_Web_Token">JSON web token (JWT)</a>. The information in the parameters can
+     * also define additional context that Verified Permissions can include in the evaluations.
+     * </p>
+     * <p>
+     * The request is evaluated against all policies in the specified policy store that match the entities that you
+     * provide in the entities declaration and in the token. The result of the decisions is a series of
+     * <code>Allow</code> or <code>Deny</code> responses, along with the IDs of the policies that produced each
+     * decision.
+     * </p>
+     * <p>
+     * The <code>entities</code> of a <code>BatchIsAuthorizedWithToken</code> API request can contain up to 100
+     * resources and up to 99 user groups. The <code>requests</code> of a <code>BatchIsAuthorizedWithToken</code> API
+     * request can contain up to 30 requests.
+     * </p>
+     * <note>
+     * <p>
+     * The <code>BatchIsAuthorizedWithToken</code> operation doesn't have its own IAM permission. To authorize this
+     * operation for Amazon Web Services principals, include the permission
+     * <code>verifiedpermissions:IsAuthorizedWithToken</code> in their IAM policies.
+     * </p>
+     * </note>
+     * 
+     * @param batchIsAuthorizedWithTokenRequest
+     * @return Result of the BatchIsAuthorizedWithToken operation returned by the service.
+     * @throws ValidationException
+     *         The request failed because one or more input parameters don't satisfy their constraint requirements. The
+     *         output is provided as a list of fields and a reason for each field that isn't valid.</p>
+     *         <p>
+     *         The possible reasons include the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>UnrecognizedEntityType</b>
+     *         </p>
+     *         <p>
+     *         The policy includes an entity type that isn't found in the schema.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>UnrecognizedActionId</b>
+     *         </p>
+     *         <p>
+     *         The policy includes an action id that isn't found in the schema.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>InvalidActionApplication</b>
+     *         </p>
+     *         <p>
+     *         The policy includes an action that, according to the schema, doesn't support the specified principal and
+     *         resource.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>UnexpectedType</b>
+     *         </p>
+     *         <p>
+     *         The policy included an operand that isn't a valid type for the specified operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>IncompatibleTypes</b>
+     *         </p>
+     *         <p>
+     *         The types of elements included in a <code>set</code>, or the types of expressions used in an
+     *         <code>if...then...else</code> clause aren't compatible in this context.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>MissingAttribute</b>
+     *         </p>
+     *         <p>
+     *         The policy attempts to access a record or entity attribute that isn't specified in the schema. Test for
+     *         the existence of the attribute first before attempting to access its value. For more information, see the
+     *         <a href="https://docs.cedarpolicy.com/policies/syntax-operators.html#has-presence-of-attribute-test">has
+     *         (presence of attribute test) operator</a> in the <i>Cedar Policy Language Guide</i>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>UnsafeOptionalAttributeAccess</b>
+     *         </p>
+     *         <p>
+     *         The policy attempts to access a record or entity attribute that is optional and isn't guaranteed to be
+     *         present. Test for the existence of the attribute first before attempting to access its value. For more
+     *         information, see the <a
+     *         href="https://docs.cedarpolicy.com/policies/syntax-operators.html#has-presence-of-attribute-test">has
+     *         (presence of attribute test) operator</a> in the <i>Cedar Policy Language Guide</i>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>ImpossiblePolicy</b>
+     *         </p>
+     *         <p>
+     *         Cedar has determined that a policy condition always evaluates to false. If the policy is always false, it
+     *         can never apply to any query, and so it can never affect an authorization decision.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>WrongNumberArguments</b>
+     *         </p>
+     *         <p>
+     *         The policy references an extension type with the wrong number of arguments.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>FunctionArgumentValidationError</b>
+     *         </p>
+     *         <p>
+     *         Cedar couldn't parse the argument passed to an extension type. For example, a string that is to be parsed
+     *         as an IPv4 address can contain only digits and the period character.
+     *         </p>
+     *         </li>
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The request failed because it references a resource that doesn't exist.
+     * @throws ThrottlingException
+     *         The request failed because it exceeded a throttling quota.
+     * @throws InternalServerException
+     *         The request failed because of an internal error. Try your request again later
+     * @sample AmazonVerifiedPermissions.BatchIsAuthorizedWithToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/BatchIsAuthorizedWithToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchIsAuthorizedWithTokenResult batchIsAuthorizedWithToken(BatchIsAuthorizedWithTokenRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchIsAuthorizedWithToken(request);
+    }
+
+    @SdkInternalApi
+    final BatchIsAuthorizedWithTokenResult executeBatchIsAuthorizedWithToken(BatchIsAuthorizedWithTokenRequest batchIsAuthorizedWithTokenRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchIsAuthorizedWithTokenRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchIsAuthorizedWithTokenRequest> request = null;
+        Response<BatchIsAuthorizedWithTokenResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchIsAuthorizedWithTokenRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchIsAuthorizedWithTokenRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "VerifiedPermissions");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchIsAuthorizedWithToken");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchIsAuthorizedWithTokenResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchIsAuthorizedWithTokenResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a reference to an Amazon Cognito user pool as an external identity provider (IdP).
      * </p>
      * <p>
@@ -2793,17 +2977,6 @@ public class AmazonVerifiedPermissionsClient extends AmazonWebServiceClient impl
      * against all matching policies in the specified policy store. The result of the decision is either
      * <code>Allow</code> or <code>Deny</code>, along with a list of the policies that resulted in the decision.
      * </p>
-     * <important>
-     * <p>
-     * If you specify the <code>identityToken</code> parameter, then this operation derives the principal from that
-     * token. You must not also include that principal in the <code>entities</code> parameter or the operation fails and
-     * reports a conflict between the two entity sources.
-     * </p>
-     * <p>
-     * If you provide only an <code>accessToken</code>, then you can include the entity as part of the
-     * <code>entities</code> parameter to provide additional attributes.
-     * </p>
-     * </important>
      * <p>
      * At this time, Verified Permissions accepts tokens from only Amazon Cognito.
      * </p>

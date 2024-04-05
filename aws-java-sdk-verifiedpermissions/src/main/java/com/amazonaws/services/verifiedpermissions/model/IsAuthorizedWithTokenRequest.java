@@ -81,9 +81,10 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
      * evaluating the policies.
      * </p>
-     * <note>
+     * <important>
      * <p>
-     * You can include only resource and action entities in this parameter; you can't include principals.
+     * You can't include principals in this parameter, only resource and action entities. This parameter can't include
+     * any entities of a type that matches the user or group entity types that you defined in your identity source.
      * </p>
      * <ul>
      * <li>
@@ -98,7 +99,7 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
-     * </note>
+     * </important>
      */
     private EntitiesDefinition entities;
 
@@ -431,9 +432,10 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
      * evaluating the policies.
      * </p>
-     * <note>
+     * <important>
      * <p>
-     * You can include only resource and action entities in this parameter; you can't include principals.
+     * You can't include principals in this parameter, only resource and action entities. This parameter can't include
+     * any entities of a type that matches the user or group entity types that you defined in your identity source.
      * </p>
      * <ul>
      * <li>
@@ -448,13 +450,15 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
-     * </note>
+     * </important>
      * 
      * @param entities
      *        Specifies the list of resources and their associated attributes that Verified Permissions can examine when
-     *        evaluating the policies. </p> <note>
+     *        evaluating the policies. </p> <important>
      *        <p>
-     *        You can include only resource and action entities in this parameter; you can't include principals.
+     *        You can't include principals in this parameter, only resource and action entities. This parameter can't
+     *        include any entities of a type that matches the user or group entity types that you defined in your
+     *        identity source.
      *        </p>
      *        <ul>
      *        <li>
@@ -480,9 +484,10 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
      * evaluating the policies.
      * </p>
-     * <note>
+     * <important>
      * <p>
-     * You can include only resource and action entities in this parameter; you can't include principals.
+     * You can't include principals in this parameter, only resource and action entities. This parameter can't include
+     * any entities of a type that matches the user or group entity types that you defined in your identity source.
      * </p>
      * <ul>
      * <li>
@@ -497,12 +502,14 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
-     * </note>
+     * </important>
      * 
      * @return Specifies the list of resources and their associated attributes that Verified Permissions can examine
-     *         when evaluating the policies. </p> <note>
+     *         when evaluating the policies. </p> <important>
      *         <p>
-     *         You can include only resource and action entities in this parameter; you can't include principals.
+     *         You can't include principals in this parameter, only resource and action entities. This parameter can't
+     *         include any entities of a type that matches the user or group entity types that you defined in your
+     *         identity source.
      *         </p>
      *         <ul>
      *         <li>
@@ -528,9 +535,10 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
      * evaluating the policies.
      * </p>
-     * <note>
+     * <important>
      * <p>
-     * You can include only resource and action entities in this parameter; you can't include principals.
+     * You can't include principals in this parameter, only resource and action entities. This parameter can't include
+     * any entities of a type that matches the user or group entity types that you defined in your identity source.
      * </p>
      * <ul>
      * <li>
@@ -545,13 +553,15 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </li>
      * </ul>
-     * </note>
+     * </important>
      * 
      * @param entities
      *        Specifies the list of resources and their associated attributes that Verified Permissions can examine when
-     *        evaluating the policies. </p> <note>
+     *        evaluating the policies. </p> <important>
      *        <p>
-     *        You can include only resource and action entities in this parameter; you can't include principals.
+     *        You can't include principals in this parameter, only resource and action entities. This parameter can't
+     *        include any entities of a type that matches the user or group entity types that you defined in your
+     *        identity source.
      *        </p>
      *        <ul>
      *        <li>

@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration for applying a filter to all sheets. You can apply this filter to all visuals on every sheet.
+ * An empty object that represents that the <code>AllSheets</code> option is the chosen value for the
+ * <code>FilterScopeConfiguration</code> parameter. This structure applies the filter to all visuals on all sheets of an
+ * Analysis, Dashboard, or Template.
  * </p>
  * <p>
  * This is a union type structure. For this structure to be valid, only one of the attributes can be defined.

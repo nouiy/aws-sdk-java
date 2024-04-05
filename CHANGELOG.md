@@ -1,3 +1,16 @@
+# __1.12.696__ __2024-04-05__
+## __AWS Resource Groups__
+  - ### Features
+    - Added a new QueryErrorCode RESOURCE_TYPE_NOT_SUPPORTED that is returned by the ListGroupResources operation if the group query contains unsupported resource types.
+
+## __Amazon QuickSight__
+  - ### Features
+    - Adding IAMIdentityCenterInstanceArn parameter to CreateAccountSubscription
+
+## __Amazon Verified Permissions__
+  - ### Features
+    - Adding BatchIsAuthorizedWithToken API which supports multiple authorization requests against a PolicyStore given a bearer token.
+
 # __1.12.695__ __2024-04-04__
 ## __AWS B2B Data Interchange__
   - ### Features

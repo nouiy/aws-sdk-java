@@ -184,6 +184,81 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
 
     /**
      * <p>
+     * Makes a series of decisions about multiple authorization requests for one token. The principal in this request
+     * comes from an external identity source in the form of an identity or access token, formatted as a <a
+     * href="https://wikipedia.org/wiki/JSON_Web_Token">JSON web token (JWT)</a>. The information in the parameters can
+     * also define additional context that Verified Permissions can include in the evaluations.
+     * </p>
+     * <p>
+     * The request is evaluated against all policies in the specified policy store that match the entities that you
+     * provide in the entities declaration and in the token. The result of the decisions is a series of
+     * <code>Allow</code> or <code>Deny</code> responses, along with the IDs of the policies that produced each
+     * decision.
+     * </p>
+     * <p>
+     * The <code>entities</code> of a <code>BatchIsAuthorizedWithToken</code> API request can contain up to 100
+     * resources and up to 99 user groups. The <code>requests</code> of a <code>BatchIsAuthorizedWithToken</code> API
+     * request can contain up to 30 requests.
+     * </p>
+     * <note>
+     * <p>
+     * The <code>BatchIsAuthorizedWithToken</code> operation doesn't have its own IAM permission. To authorize this
+     * operation for Amazon Web Services principals, include the permission
+     * <code>verifiedpermissions:IsAuthorizedWithToken</code> in their IAM policies.
+     * </p>
+     * </note>
+     * 
+     * @param batchIsAuthorizedWithTokenRequest
+     * @return A Java Future containing the result of the BatchIsAuthorizedWithToken operation returned by the service.
+     * @sample AmazonVerifiedPermissionsAsync.BatchIsAuthorizedWithToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/BatchIsAuthorizedWithToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchIsAuthorizedWithTokenResult> batchIsAuthorizedWithTokenAsync(
+            BatchIsAuthorizedWithTokenRequest batchIsAuthorizedWithTokenRequest);
+
+    /**
+     * <p>
+     * Makes a series of decisions about multiple authorization requests for one token. The principal in this request
+     * comes from an external identity source in the form of an identity or access token, formatted as a <a
+     * href="https://wikipedia.org/wiki/JSON_Web_Token">JSON web token (JWT)</a>. The information in the parameters can
+     * also define additional context that Verified Permissions can include in the evaluations.
+     * </p>
+     * <p>
+     * The request is evaluated against all policies in the specified policy store that match the entities that you
+     * provide in the entities declaration and in the token. The result of the decisions is a series of
+     * <code>Allow</code> or <code>Deny</code> responses, along with the IDs of the policies that produced each
+     * decision.
+     * </p>
+     * <p>
+     * The <code>entities</code> of a <code>BatchIsAuthorizedWithToken</code> API request can contain up to 100
+     * resources and up to 99 user groups. The <code>requests</code> of a <code>BatchIsAuthorizedWithToken</code> API
+     * request can contain up to 30 requests.
+     * </p>
+     * <note>
+     * <p>
+     * The <code>BatchIsAuthorizedWithToken</code> operation doesn't have its own IAM permission. To authorize this
+     * operation for Amazon Web Services principals, include the permission
+     * <code>verifiedpermissions:IsAuthorizedWithToken</code> in their IAM policies.
+     * </p>
+     * </note>
+     * 
+     * @param batchIsAuthorizedWithTokenRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchIsAuthorizedWithToken operation returned by the service.
+     * @sample AmazonVerifiedPermissionsAsyncHandler.BatchIsAuthorizedWithToken
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/BatchIsAuthorizedWithToken"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchIsAuthorizedWithTokenResult> batchIsAuthorizedWithTokenAsync(
+            BatchIsAuthorizedWithTokenRequest batchIsAuthorizedWithTokenRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchIsAuthorizedWithTokenRequest, BatchIsAuthorizedWithTokenResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a reference to an Amazon Cognito user pool as an external identity provider (IdP).
      * </p>
      * <p>
@@ -843,17 +918,6 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * against all matching policies in the specified policy store. The result of the decision is either
      * <code>Allow</code> or <code>Deny</code>, along with a list of the policies that resulted in the decision.
      * </p>
-     * <important>
-     * <p>
-     * If you specify the <code>identityToken</code> parameter, then this operation derives the principal from that
-     * token. You must not also include that principal in the <code>entities</code> parameter or the operation fails and
-     * reports a conflict between the two entity sources.
-     * </p>
-     * <p>
-     * If you provide only an <code>accessToken</code>, then you can include the entity as part of the
-     * <code>entities</code> parameter to provide additional attributes.
-     * </p>
-     * </important>
      * <p>
      * At this time, Verified Permissions accepts tokens from only Amazon Cognito.
      * </p>
@@ -885,17 +949,6 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * against all matching policies in the specified policy store. The result of the decision is either
      * <code>Allow</code> or <code>Deny</code>, along with a list of the policies that resulted in the decision.
      * </p>
-     * <important>
-     * <p>
-     * If you specify the <code>identityToken</code> parameter, then this operation derives the principal from that
-     * token. You must not also include that principal in the <code>entities</code> parameter or the operation fails and
-     * reports a conflict between the two entity sources.
-     * </p>
-     * <p>
-     * If you provide only an <code>accessToken</code>, then you can include the entity as part of the
-     * <code>entities</code> parameter to provide additional attributes.
-     * </p>
-     * </important>
      * <p>
      * At this time, Verified Permissions accepts tokens from only Amazon Cognito.
      * </p>

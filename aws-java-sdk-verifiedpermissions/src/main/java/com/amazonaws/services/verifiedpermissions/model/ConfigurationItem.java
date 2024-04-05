@@ -38,8 +38,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a source of
      * authenticated identities as entities. It specifies the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a>
-     * of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups, and one or more
-     * application client IDs.
+     * of a Amazon Cognito user pool and one or more application client IDs.
      * </p>
      * <p>
      * Example:
@@ -53,8 +52,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a source of
      * authenticated identities as entities. It specifies the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a>
-     * of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups, and one or more
-     * application client IDs.
+     * of a Amazon Cognito user pool and one or more application client IDs.
      * </p>
      * <p>
      * Example:
@@ -65,8 +63,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      *        Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a source
      *        of authenticated identities as entities. It specifies the <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name
-     *        (ARN)</a> of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups,
-     *        and one or more application client IDs.</p>
+     *        (ARN)</a> of a Amazon Cognito user pool and one or more application client IDs.</p>
      *        <p>
      *        Example:
      *        <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
@@ -81,8 +78,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a source of
      * authenticated identities as entities. It specifies the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a>
-     * of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups, and one or more
-     * application client IDs.
+     * of a Amazon Cognito user pool and one or more application client IDs.
      * </p>
      * <p>
      * Example:
@@ -92,8 +88,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * @return Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a
      *         source of authenticated identities as entities. It specifies the <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name
-     *         (ARN)</a> of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups,
-     *         and one or more application client IDs.</p>
+     *         (ARN)</a> of a Amazon Cognito user pool and one or more application client IDs.</p>
      *         <p>
      *         Example:
      *         <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>
@@ -108,8 +103,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      * Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a source of
      * authenticated identities as entities. It specifies the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a>
-     * of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups, and one or more
-     * application client IDs.
+     * of a Amazon Cognito user pool and one or more application client IDs.
      * </p>
      * <p>
      * Example:
@@ -120,8 +114,7 @@ public class ConfigurationItem implements Serializable, Cloneable, StructuredPoj
      *        Contains configuration details of a Amazon Cognito user pool that Verified Permissions can use as a source
      *        of authenticated identities as entities. It specifies the <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name
-     *        (ARN)</a> of a Amazon Cognito user pool, the policy store entity that you want to assign to user groups,
-     *        and one or more application client IDs.</p>
+     *        (ARN)</a> of a Amazon Cognito user pool and one or more application client IDs.</p>
      *        <p>
      *        Example:
      *        <code>"configuration":{"cognitoUserPoolConfiguration":{"userPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","clientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}}</code>

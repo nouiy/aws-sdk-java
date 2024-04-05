@@ -31,7 +31,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * Example:
- * <code>"CognitoUserPoolConfiguration":{"UserPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","ClientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"],"groupConfiguration": {"groupEntityType": "MyCorp::Group"}}</code>
+ * <code>"CognitoUserPoolConfiguration":{"UserPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","ClientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/CognitoUserPoolConfigurationItem"
@@ -71,7 +71,7 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
     private String issuer;
     /**
      * <p>
-     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
      * </p>
      */
     private CognitoGroupConfigurationItem groupConfiguration;
@@ -293,11 +293,11 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
      * </p>
      * 
      * @param groupConfiguration
-     *        The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     *        The configuration of the user groups from an Amazon Cognito user pool identity source.
      */
 
     public void setGroupConfiguration(CognitoGroupConfigurationItem groupConfiguration) {
@@ -306,10 +306,10 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
      * </p>
      * 
-     * @return The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * @return The configuration of the user groups from an Amazon Cognito user pool identity source.
      */
 
     public CognitoGroupConfigurationItem getGroupConfiguration() {
@@ -318,11 +318,11 @@ public class CognitoUserPoolConfigurationItem implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     * The configuration of the user groups from an Amazon Cognito user pool identity source.
      * </p>
      * 
      * @param groupConfiguration
-     *        The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
+     *        The configuration of the user groups from an Amazon Cognito user pool identity source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

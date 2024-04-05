@@ -41,6 +41,19 @@ public class AbstractAmazonVerifiedPermissionsAsync extends AbstractAmazonVerifi
     }
 
     @Override
+    public java.util.concurrent.Future<BatchIsAuthorizedWithTokenResult> batchIsAuthorizedWithTokenAsync(BatchIsAuthorizedWithTokenRequest request) {
+
+        return batchIsAuthorizedWithTokenAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchIsAuthorizedWithTokenResult> batchIsAuthorizedWithTokenAsync(BatchIsAuthorizedWithTokenRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchIsAuthorizedWithTokenRequest, BatchIsAuthorizedWithTokenResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIdentitySourceResult> createIdentitySourceAsync(CreateIdentitySourceRequest request) {
 
         return createIdentitySourceAsync(request, null);
