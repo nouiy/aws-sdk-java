@@ -69,6 +69,26 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
      * use the font color data from your input captions, if present.
      */
     private String fontColor;
+    /**
+     * Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     */
+    private String fontFileBold;
+    /**
+     * Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     * URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     */
+    private String fontFileBoldItalic;
+    /**
+     * Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     */
+    private String fontFileItalic;
+    /**
+     * Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     */
+    private String fontFileRegular;
     /** Specify the opacity of the burned-in captions. 255 is opaque; 0 is transparent. */
     private Integer fontOpacity;
     /** Specify the Font resolution in DPI (dots per inch). */
@@ -121,12 +141,13 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
      */
     private Integer shadowYOffset;
     /**
-     * Set Style passthrough to ENABLED to use the available style, color, and position information from your input
-     * captions. MediaConvert uses default settings for any missing style and position information in your input
-     * captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from
-     * your input captions and use default settings: white text with black outlining, bottom-center positioning, and
-     * automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override
-     * any of the individual style and position settings.
+     * To use the available style, color, and position information from your input captions: Set Style passthrough to
+     * Enabled. Note that MediaConvert uses default settings for any missing style or position information in your input
+     * captions To ignore the style and position information from your input captions and use default settings: Leave
+     * blank or keep the default value, Disabled. Default settings include white text with black outlining, bottom-center
+     * positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to
+     * manually override any of the individual style and position settings. You can also override any fonts by manually
+     * specifying custom font files.
      */
     private String stylePassthrough;
     /**
@@ -572,6 +593,166 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
 
     public BurninDestinationSettings withFontColor(BurninSubtitleFontColor fontColor) {
         this.fontColor = fontColor.toString();
+        return this;
+    }
+
+    /**
+     * Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     * 
+     * @param fontFileBold
+     *        Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     *        URL. When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     */
+
+    public void setFontFileBold(String fontFileBold) {
+        this.fontFileBold = fontFileBold;
+    }
+
+    /**
+     * Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     * 
+     * @return Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     *         URL. When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     */
+
+    public String getFontFileBold() {
+        return this.fontFileBold;
+    }
+
+    /**
+     * Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     * 
+     * @param fontFileBold
+     *        Specify a bold TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     *        URL. When you do, you must also separately specify a regular, an italic, and a bold italic font file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BurninDestinationSettings withFontFileBold(String fontFileBold) {
+        setFontFileBold(fontFileBold);
+        return this;
+    }
+
+    /**
+     * Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     * URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     * 
+     * @param fontFileBoldItalic
+     *        Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *        HTTPS URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     */
+
+    public void setFontFileBoldItalic(String fontFileBoldItalic) {
+        this.fontFileBoldItalic = fontFileBoldItalic;
+    }
+
+    /**
+     * Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     * URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     * 
+     * @return Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP,
+     *         or HTTPS URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     */
+
+    public String getFontFileBoldItalic() {
+        return this.fontFileBoldItalic;
+    }
+
+    /**
+     * Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS
+     * URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     * 
+     * @param fontFileBoldItalic
+     *        Specify a bold italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *        HTTPS URL. When you do, you must also separately specify a regular, a bold, and an italic font file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BurninDestinationSettings withFontFileBoldItalic(String fontFileBoldItalic) {
+        setFontFileBoldItalic(fontFileBoldItalic);
+        return this;
+    }
+
+    /**
+     * Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     * 
+     * @param fontFileItalic
+     *        Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *        HTTPS URL. When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     */
+
+    public void setFontFileItalic(String fontFileItalic) {
+        this.fontFileItalic = fontFileItalic;
+    }
+
+    /**
+     * Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     * 
+     * @return Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *         HTTPS URL. When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     */
+
+    public String getFontFileItalic() {
+        return this.fontFileItalic;
+    }
+
+    /**
+     * Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     * 
+     * @param fontFileItalic
+     *        Specify an italic TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *        HTTPS URL. When you do, you must also separately specify a regular, a bold, and a bold italic font file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BurninDestinationSettings withFontFileItalic(String fontFileItalic) {
+        setFontFileItalic(fontFileItalic);
+        return this;
+    }
+
+    /**
+     * Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     * 
+     * @param fontFileRegular
+     *        Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *        HTTPS URL. When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     */
+
+    public void setFontFileRegular(String fontFileRegular) {
+        this.fontFileRegular = fontFileRegular;
+    }
+
+    /**
+     * Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     * 
+     * @return Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *         HTTPS URL. When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     */
+
+    public String getFontFileRegular() {
+        return this.fontFileRegular;
+    }
+
+    /**
+     * Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or HTTPS URL.
+     * When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     * 
+     * @param fontFileRegular
+     *        Specify a regular TrueType font file to use when rendering your output captions. Enter an S3, HTTP, or
+     *        HTTPS URL. When you do, you must also separately specify a bold, an italic, and a bold italic font file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BurninDestinationSettings withFontFileRegular(String fontFileRegular) {
+        setFontFileRegular(fontFileRegular);
         return this;
     }
 
@@ -1090,20 +1271,22 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Set Style passthrough to ENABLED to use the available style, color, and position information from your input
-     * captions. MediaConvert uses default settings for any missing style and position information in your input
-     * captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from
-     * your input captions and use default settings: white text with black outlining, bottom-center positioning, and
-     * automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override
-     * any of the individual style and position settings.
+     * To use the available style, color, and position information from your input captions: Set Style passthrough to
+     * Enabled. Note that MediaConvert uses default settings for any missing style or position information in your input
+     * captions To ignore the style and position information from your input captions and use default settings: Leave
+     * blank or keep the default value, Disabled. Default settings include white text with black outlining, bottom-center
+     * positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to
+     * manually override any of the individual style and position settings. You can also override any fonts by manually
+     * specifying custom font files.
      * 
      * @param stylePassthrough
-     *        Set Style passthrough to ENABLED to use the available style, color, and position information from your
-     *        input captions. MediaConvert uses default settings for any missing style and position information in your
-     *        input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
-     *        information from your input captions and use default settings: white text with black outlining,
-     *        bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you
-     *        can also choose to manually override any of the individual style and position settings.
+     *        To use the available style, color, and position information from your input captions: Set Style
+     *        passthrough to Enabled. Note that MediaConvert uses default settings for any missing style or position
+     *        information in your input captions To ignore the style and position information from your input captions
+     *        and use default settings: Leave blank or keep the default value, Disabled. Default settings include white
+     *        text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style
+     *        passthrough to enabled or not, you can also choose to manually override any of the individual style and
+     *        position settings. You can also override any fonts by manually specifying custom font files.
      * @see BurnInSubtitleStylePassthrough
      */
 
@@ -1112,19 +1295,21 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Set Style passthrough to ENABLED to use the available style, color, and position information from your input
-     * captions. MediaConvert uses default settings for any missing style and position information in your input
-     * captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from
-     * your input captions and use default settings: white text with black outlining, bottom-center positioning, and
-     * automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override
-     * any of the individual style and position settings.
+     * To use the available style, color, and position information from your input captions: Set Style passthrough to
+     * Enabled. Note that MediaConvert uses default settings for any missing style or position information in your input
+     * captions To ignore the style and position information from your input captions and use default settings: Leave
+     * blank or keep the default value, Disabled. Default settings include white text with black outlining, bottom-center
+     * positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to
+     * manually override any of the individual style and position settings. You can also override any fonts by manually
+     * specifying custom font files.
      * 
-     * @return Set Style passthrough to ENABLED to use the available style, color, and position information from your
-     *         input captions. MediaConvert uses default settings for any missing style and position information in your
-     *         input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
-     *         information from your input captions and use default settings: white text with black outlining,
-     *         bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you
-     *         can also choose to manually override any of the individual style and position settings.
+     * @return To use the available style, color, and position information from your input captions: Set Style
+     *         passthrough to Enabled. Note that MediaConvert uses default settings for any missing style or position
+     *         information in your input captions To ignore the style and position information from your input captions
+     *         and use default settings: Leave blank or keep the default value, Disabled. Default settings include white
+     *         text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style
+     *         passthrough to enabled or not, you can also choose to manually override any of the individual style and
+     *         position settings. You can also override any fonts by manually specifying custom font files.
      * @see BurnInSubtitleStylePassthrough
      */
 
@@ -1133,20 +1318,22 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Set Style passthrough to ENABLED to use the available style, color, and position information from your input
-     * captions. MediaConvert uses default settings for any missing style and position information in your input
-     * captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from
-     * your input captions and use default settings: white text with black outlining, bottom-center positioning, and
-     * automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override
-     * any of the individual style and position settings.
+     * To use the available style, color, and position information from your input captions: Set Style passthrough to
+     * Enabled. Note that MediaConvert uses default settings for any missing style or position information in your input
+     * captions To ignore the style and position information from your input captions and use default settings: Leave
+     * blank or keep the default value, Disabled. Default settings include white text with black outlining, bottom-center
+     * positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to
+     * manually override any of the individual style and position settings. You can also override any fonts by manually
+     * specifying custom font files.
      * 
      * @param stylePassthrough
-     *        Set Style passthrough to ENABLED to use the available style, color, and position information from your
-     *        input captions. MediaConvert uses default settings for any missing style and position information in your
-     *        input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
-     *        information from your input captions and use default settings: white text with black outlining,
-     *        bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you
-     *        can also choose to manually override any of the individual style and position settings.
+     *        To use the available style, color, and position information from your input captions: Set Style
+     *        passthrough to Enabled. Note that MediaConvert uses default settings for any missing style or position
+     *        information in your input captions To ignore the style and position information from your input captions
+     *        and use default settings: Leave blank or keep the default value, Disabled. Default settings include white
+     *        text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style
+     *        passthrough to enabled or not, you can also choose to manually override any of the individual style and
+     *        position settings. You can also override any fonts by manually specifying custom font files.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BurnInSubtitleStylePassthrough
      */
@@ -1157,20 +1344,22 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
     }
 
     /**
-     * Set Style passthrough to ENABLED to use the available style, color, and position information from your input
-     * captions. MediaConvert uses default settings for any missing style and position information in your input
-     * captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from
-     * your input captions and use default settings: white text with black outlining, bottom-center positioning, and
-     * automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override
-     * any of the individual style and position settings.
+     * To use the available style, color, and position information from your input captions: Set Style passthrough to
+     * Enabled. Note that MediaConvert uses default settings for any missing style or position information in your input
+     * captions To ignore the style and position information from your input captions and use default settings: Leave
+     * blank or keep the default value, Disabled. Default settings include white text with black outlining, bottom-center
+     * positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to
+     * manually override any of the individual style and position settings. You can also override any fonts by manually
+     * specifying custom font files.
      * 
      * @param stylePassthrough
-     *        Set Style passthrough to ENABLED to use the available style, color, and position information from your
-     *        input captions. MediaConvert uses default settings for any missing style and position information in your
-     *        input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position
-     *        information from your input captions and use default settings: white text with black outlining,
-     *        bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you
-     *        can also choose to manually override any of the individual style and position settings.
+     *        To use the available style, color, and position information from your input captions: Set Style
+     *        passthrough to Enabled. Note that MediaConvert uses default settings for any missing style or position
+     *        information in your input captions To ignore the style and position information from your input captions
+     *        and use default settings: Leave blank or keep the default value, Disabled. Default settings include white
+     *        text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style
+     *        passthrough to enabled or not, you can also choose to manually override any of the individual style and
+     *        position settings. You can also override any fonts by manually specifying custom font files.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BurnInSubtitleStylePassthrough
      */
@@ -1363,6 +1552,14 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
             sb.append("FallbackFont: ").append(getFallbackFont()).append(",");
         if (getFontColor() != null)
             sb.append("FontColor: ").append(getFontColor()).append(",");
+        if (getFontFileBold() != null)
+            sb.append("FontFileBold: ").append(getFontFileBold()).append(",");
+        if (getFontFileBoldItalic() != null)
+            sb.append("FontFileBoldItalic: ").append(getFontFileBoldItalic()).append(",");
+        if (getFontFileItalic() != null)
+            sb.append("FontFileItalic: ").append(getFontFileItalic()).append(",");
+        if (getFontFileRegular() != null)
+            sb.append("FontFileRegular: ").append(getFontFileRegular()).append(",");
         if (getFontOpacity() != null)
             sb.append("FontOpacity: ").append(getFontOpacity()).append(",");
         if (getFontResolution() != null)
@@ -1430,6 +1627,22 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
         if (other.getFontColor() == null ^ this.getFontColor() == null)
             return false;
         if (other.getFontColor() != null && other.getFontColor().equals(this.getFontColor()) == false)
+            return false;
+        if (other.getFontFileBold() == null ^ this.getFontFileBold() == null)
+            return false;
+        if (other.getFontFileBold() != null && other.getFontFileBold().equals(this.getFontFileBold()) == false)
+            return false;
+        if (other.getFontFileBoldItalic() == null ^ this.getFontFileBoldItalic() == null)
+            return false;
+        if (other.getFontFileBoldItalic() != null && other.getFontFileBoldItalic().equals(this.getFontFileBoldItalic()) == false)
+            return false;
+        if (other.getFontFileItalic() == null ^ this.getFontFileItalic() == null)
+            return false;
+        if (other.getFontFileItalic() != null && other.getFontFileItalic().equals(this.getFontFileItalic()) == false)
+            return false;
+        if (other.getFontFileRegular() == null ^ this.getFontFileRegular() == null)
+            return false;
+        if (other.getFontFileRegular() != null && other.getFontFileRegular().equals(this.getFontFileRegular()) == false)
             return false;
         if (other.getFontOpacity() == null ^ this.getFontOpacity() == null)
             return false;
@@ -1505,6 +1718,10 @@ public class BurninDestinationSettings implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getBackgroundOpacity() == null) ? 0 : getBackgroundOpacity().hashCode());
         hashCode = prime * hashCode + ((getFallbackFont() == null) ? 0 : getFallbackFont().hashCode());
         hashCode = prime * hashCode + ((getFontColor() == null) ? 0 : getFontColor().hashCode());
+        hashCode = prime * hashCode + ((getFontFileBold() == null) ? 0 : getFontFileBold().hashCode());
+        hashCode = prime * hashCode + ((getFontFileBoldItalic() == null) ? 0 : getFontFileBoldItalic().hashCode());
+        hashCode = prime * hashCode + ((getFontFileItalic() == null) ? 0 : getFontFileItalic().hashCode());
+        hashCode = prime * hashCode + ((getFontFileRegular() == null) ? 0 : getFontFileRegular().hashCode());
         hashCode = prime * hashCode + ((getFontOpacity() == null) ? 0 : getFontOpacity().hashCode());
         hashCode = prime * hashCode + ((getFontResolution() == null) ? 0 : getFontResolution().hashCode());
         hashCode = prime * hashCode + ((getFontScript() == null) ? 0 : getFontScript().hashCode());

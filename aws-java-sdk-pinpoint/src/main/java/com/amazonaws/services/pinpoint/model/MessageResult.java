@@ -68,11 +68,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * TIMEOUT - The message couldn't be sent within the timeout period.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * UNKNOWN_FAILURE - An unknown error occurred.
      * </p>
      * </li>
@@ -145,11 +140,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * TIMEOUT - The message couldn't be sent within the timeout period.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * UNKNOWN_FAILURE - An unknown error occurred.
      * </p>
      * </li>
@@ -189,11 +179,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        TIMEOUT - The message couldn't be sent within the timeout period.
      *        </p>
      *        </li>
      *        <li>
@@ -248,11 +233,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * TIMEOUT - The message couldn't be sent within the timeout period.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * UNKNOWN_FAILURE - An unknown error occurred.
      * </p>
      * </li>
@@ -291,11 +271,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         TIMEOUT - The message couldn't be sent within the timeout period.
      *         </p>
      *         </li>
      *         <li>
@@ -350,11 +325,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * TIMEOUT - The message couldn't be sent within the timeout period.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * UNKNOWN_FAILURE - An unknown error occurred.
      * </p>
      * </li>
@@ -394,11 +364,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        TIMEOUT - The message couldn't be sent within the timeout period.
      *        </p>
      *        </li>
      *        <li>
@@ -455,11 +420,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * TIMEOUT - The message couldn't be sent within the timeout period.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * UNKNOWN_FAILURE - An unknown error occurred.
      * </p>
      * </li>
@@ -499,11 +459,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        TIMEOUT - The message couldn't be sent within the timeout period.
      *        </p>
      *        </li>
      *        <li>
@@ -558,11 +513,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * TIMEOUT - The message couldn't be sent within the timeout period.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * UNKNOWN_FAILURE - An unknown error occurred.
      * </p>
      * </li>
@@ -602,11 +552,6 @@ public class MessageResult implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        TIMEOUT - The message couldn't be sent within the timeout period.
      *        </p>
      *        </li>
      *        <li>

@@ -160,6 +160,10 @@ public class M2tsSettingsJsonUnmarshaller implements Unmarshaller<M2tsSettings, 
                     context.nextToken();
                     m2tsSettings.setPmtPid(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("preventBufferUnderflow", targetDepth)) {
+                    context.nextToken();
+                    m2tsSettings.setPreventBufferUnderflow(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("privateMetadataPid", targetDepth)) {
                     context.nextToken();
                     m2tsSettings.setPrivateMetadataPid(context.getUnmarshaller(Integer.class).unmarshall(context));

@@ -82,6 +82,8 @@ public class M2tsSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pmtInterval").build();
     private static final MarshallingInfo<Integer> PMTPID_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("pmtPid").build();
+    private static final MarshallingInfo<String> PREVENTBUFFERUNDERFLOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preventBufferUnderflow").build();
     private static final MarshallingInfo<Integer> PRIVATEMETADATAPID_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("privateMetadataPid").build();
     private static final MarshallingInfo<Integer> PROGRAMNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -154,6 +156,7 @@ public class M2tsSettingsMarshaller {
             protocolMarshaller.marshall(m2tsSettings.getPcrPid(), PCRPID_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getPmtInterval(), PMTINTERVAL_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getPmtPid(), PMTPID_BINDING);
+            protocolMarshaller.marshall(m2tsSettings.getPreventBufferUnderflow(), PREVENTBUFFERUNDERFLOW_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getPrivateMetadataPid(), PRIVATEMETADATAPID_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getProgramNumber(), PROGRAMNUMBER_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getPtsOffset(), PTSOFFSET_BINDING);

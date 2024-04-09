@@ -152,6 +152,14 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
     private Integer pmtInterval;
     /** Specify the packet identifier (PID) for the program map table (PMT) itself. Default is 480. */
     private Integer pmtPid;
+    /**
+     * Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport stream
+     * output. Use if you are seeing decoder buffer underflows in your output and are unable to increase your transport
+     * stream's bitrate. For most workflows: We recommend that you keep the default value, Disabled. To prevent decoder
+     * buffer underflows in your output, when possible: Choose Enabled. Note that if MediaConvert prevents a decoder
+     * buffer underflow in your output, output video quality is reduced and your job will take longer to complete.
+     */
+    private String preventBufferUnderflow;
     /** Specify the packet identifier (PID) of the private metadata stream. Default is 503. */
     private Integer privateMetadataPid;
     /**
@@ -1637,6 +1645,93 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport stream
+     * output. Use if you are seeing decoder buffer underflows in your output and are unable to increase your transport
+     * stream's bitrate. For most workflows: We recommend that you keep the default value, Disabled. To prevent decoder
+     * buffer underflows in your output, when possible: Choose Enabled. Note that if MediaConvert prevents a decoder
+     * buffer underflow in your output, output video quality is reduced and your job will take longer to complete.
+     * 
+     * @param preventBufferUnderflow
+     *        Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport
+     *        stream output. Use if you are seeing decoder buffer underflows in your output and are unable to increase
+     *        your transport stream's bitrate. For most workflows: We recommend that you keep the default value,
+     *        Disabled. To prevent decoder buffer underflows in your output, when possible: Choose Enabled. Note that if
+     *        MediaConvert prevents a decoder buffer underflow in your output, output video quality is reduced and your
+     *        job will take longer to complete.
+     * @see M2tsPreventBufferUnderflow
+     */
+
+    public void setPreventBufferUnderflow(String preventBufferUnderflow) {
+        this.preventBufferUnderflow = preventBufferUnderflow;
+    }
+
+    /**
+     * Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport stream
+     * output. Use if you are seeing decoder buffer underflows in your output and are unable to increase your transport
+     * stream's bitrate. For most workflows: We recommend that you keep the default value, Disabled. To prevent decoder
+     * buffer underflows in your output, when possible: Choose Enabled. Note that if MediaConvert prevents a decoder
+     * buffer underflow in your output, output video quality is reduced and your job will take longer to complete.
+     * 
+     * @return Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your
+     *         transport stream output. Use if you are seeing decoder buffer underflows in your output and are unable to
+     *         increase your transport stream's bitrate. For most workflows: We recommend that you keep the default
+     *         value, Disabled. To prevent decoder buffer underflows in your output, when possible: Choose Enabled. Note
+     *         that if MediaConvert prevents a decoder buffer underflow in your output, output video quality is reduced
+     *         and your job will take longer to complete.
+     * @see M2tsPreventBufferUnderflow
+     */
+
+    public String getPreventBufferUnderflow() {
+        return this.preventBufferUnderflow;
+    }
+
+    /**
+     * Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport stream
+     * output. Use if you are seeing decoder buffer underflows in your output and are unable to increase your transport
+     * stream's bitrate. For most workflows: We recommend that you keep the default value, Disabled. To prevent decoder
+     * buffer underflows in your output, when possible: Choose Enabled. Note that if MediaConvert prevents a decoder
+     * buffer underflow in your output, output video quality is reduced and your job will take longer to complete.
+     * 
+     * @param preventBufferUnderflow
+     *        Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport
+     *        stream output. Use if you are seeing decoder buffer underflows in your output and are unable to increase
+     *        your transport stream's bitrate. For most workflows: We recommend that you keep the default value,
+     *        Disabled. To prevent decoder buffer underflows in your output, when possible: Choose Enabled. Note that if
+     *        MediaConvert prevents a decoder buffer underflow in your output, output video quality is reduced and your
+     *        job will take longer to complete.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M2tsPreventBufferUnderflow
+     */
+
+    public M2tsSettings withPreventBufferUnderflow(String preventBufferUnderflow) {
+        setPreventBufferUnderflow(preventBufferUnderflow);
+        return this;
+    }
+
+    /**
+     * Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport stream
+     * output. Use if you are seeing decoder buffer underflows in your output and are unable to increase your transport
+     * stream's bitrate. For most workflows: We recommend that you keep the default value, Disabled. To prevent decoder
+     * buffer underflows in your output, when possible: Choose Enabled. Note that if MediaConvert prevents a decoder
+     * buffer underflow in your output, output video quality is reduced and your job will take longer to complete.
+     * 
+     * @param preventBufferUnderflow
+     *        Specify whether MediaConvert automatically attempts to prevent decoder buffer underflows in your transport
+     *        stream output. Use if you are seeing decoder buffer underflows in your output and are unable to increase
+     *        your transport stream's bitrate. For most workflows: We recommend that you keep the default value,
+     *        Disabled. To prevent decoder buffer underflows in your output, when possible: Choose Enabled. Note that if
+     *        MediaConvert prevents a decoder buffer underflow in your output, output video quality is reduced and your
+     *        job will take longer to complete.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M2tsPreventBufferUnderflow
+     */
+
+    public M2tsSettings withPreventBufferUnderflow(M2tsPreventBufferUnderflow preventBufferUnderflow) {
+        this.preventBufferUnderflow = preventBufferUnderflow.toString();
+        return this;
+    }
+
+    /**
      * Specify the packet identifier (PID) of the private metadata stream. Default is 503.
      * 
      * @param privateMetadataPid
@@ -2453,6 +2548,8 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("PmtInterval: ").append(getPmtInterval()).append(",");
         if (getPmtPid() != null)
             sb.append("PmtPid: ").append(getPmtPid()).append(",");
+        if (getPreventBufferUnderflow() != null)
+            sb.append("PreventBufferUnderflow: ").append(getPreventBufferUnderflow()).append(",");
         if (getPrivateMetadataPid() != null)
             sb.append("PrivateMetadataPid: ").append(getPrivateMetadataPid()).append(",");
         if (getProgramNumber() != null)
@@ -2603,6 +2700,10 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPmtPid() != null && other.getPmtPid().equals(this.getPmtPid()) == false)
             return false;
+        if (other.getPreventBufferUnderflow() == null ^ this.getPreventBufferUnderflow() == null)
+            return false;
+        if (other.getPreventBufferUnderflow() != null && other.getPreventBufferUnderflow().equals(this.getPreventBufferUnderflow()) == false)
+            return false;
         if (other.getPrivateMetadataPid() == null ^ this.getPrivateMetadataPid() == null)
             return false;
         if (other.getPrivateMetadataPid() != null && other.getPrivateMetadataPid().equals(this.getPrivateMetadataPid()) == false)
@@ -2694,6 +2795,7 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPcrPid() == null) ? 0 : getPcrPid().hashCode());
         hashCode = prime * hashCode + ((getPmtInterval() == null) ? 0 : getPmtInterval().hashCode());
         hashCode = prime * hashCode + ((getPmtPid() == null) ? 0 : getPmtPid().hashCode());
+        hashCode = prime * hashCode + ((getPreventBufferUnderflow() == null) ? 0 : getPreventBufferUnderflow().hashCode());
         hashCode = prime * hashCode + ((getPrivateMetadataPid() == null) ? 0 : getPrivateMetadataPid().hashCode());
         hashCode = prime * hashCode + ((getProgramNumber() == null) ? 0 : getProgramNumber().hashCode());
         hashCode = prime * hashCode + ((getPtsOffset() == null) ? 0 : getPtsOffset().hashCode());

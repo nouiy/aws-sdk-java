@@ -36,7 +36,8 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     private AvailBlanking availBlanking;
     /**
      * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
-     * include up to 8 different 3D LUTs.
+     * include up to 8 different 3D LUTs. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      */
     private java.util.List<ColorConversion3DLUTSetting> colorConversion3DLUTSettings;
     /** Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings. */
@@ -183,10 +184,12 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
-     * include up to 8 different 3D LUTs.
+     * include up to 8 different 3D LUTs. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      * 
      * @return Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
-     *         You can include up to 8 different 3D LUTs.
+     *         You can include up to 8 different 3D LUTs. For more information, see:
+     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      */
 
     public java.util.List<ColorConversion3DLUTSetting> getColorConversion3DLUTSettings() {
@@ -195,11 +198,13 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
-     * include up to 8 different 3D LUTs.
+     * include up to 8 different 3D LUTs. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      * 
      * @param colorConversion3DLUTSettings
      *        Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
-     *        You can include up to 8 different 3D LUTs.
+     *        You can include up to 8 different 3D LUTs. For more information, see:
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      */
 
     public void setColorConversion3DLUTSettings(java.util.Collection<ColorConversion3DLUTSetting> colorConversion3DLUTSettings) {
@@ -213,7 +218,8 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
-     * include up to 8 different 3D LUTs.
+     * include up to 8 different 3D LUTs. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setColorConversion3DLUTSettings(java.util.Collection)} or
@@ -222,7 +228,8 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
      * 
      * @param colorConversion3DLUTSettings
      *        Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
-     *        You can include up to 8 different 3D LUTs.
+     *        You can include up to 8 different 3D LUTs. For more information, see:
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,11 +245,13 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
-     * include up to 8 different 3D LUTs.
+     * include up to 8 different 3D LUTs. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      * 
      * @param colorConversion3DLUTSettings
      *        Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
-     *        You can include up to 8 different 3D LUTs.
+     *        You can include up to 8 different 3D LUTs. For more information, see:
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

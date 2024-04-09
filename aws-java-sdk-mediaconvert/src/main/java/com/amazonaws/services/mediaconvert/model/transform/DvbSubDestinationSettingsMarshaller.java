@@ -45,6 +45,14 @@ public class DvbSubDestinationSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fallbackFont").build();
     private static final MarshallingInfo<String> FONTCOLOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("fontColor").build();
+    private static final MarshallingInfo<String> FONTFILEBOLD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontFileBold").build();
+    private static final MarshallingInfo<String> FONTFILEBOLDITALIC_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontFileBoldItalic").build();
+    private static final MarshallingInfo<String> FONTFILEITALIC_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontFileItalic").build();
+    private static final MarshallingInfo<String> FONTFILEREGULAR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontFileRegular").build();
     private static final MarshallingInfo<Integer> FONTOPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fontOpacity").build();
     private static final MarshallingInfo<Integer> FONTRESOLUTION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -107,6 +115,10 @@ public class DvbSubDestinationSettingsMarshaller {
             protocolMarshaller.marshall(dvbSubDestinationSettings.getDdsYCoordinate(), DDSYCOORDINATE_BINDING);
             protocolMarshaller.marshall(dvbSubDestinationSettings.getFallbackFont(), FALLBACKFONT_BINDING);
             protocolMarshaller.marshall(dvbSubDestinationSettings.getFontColor(), FONTCOLOR_BINDING);
+            protocolMarshaller.marshall(dvbSubDestinationSettings.getFontFileBold(), FONTFILEBOLD_BINDING);
+            protocolMarshaller.marshall(dvbSubDestinationSettings.getFontFileBoldItalic(), FONTFILEBOLDITALIC_BINDING);
+            protocolMarshaller.marshall(dvbSubDestinationSettings.getFontFileItalic(), FONTFILEITALIC_BINDING);
+            protocolMarshaller.marshall(dvbSubDestinationSettings.getFontFileRegular(), FONTFILEREGULAR_BINDING);
             protocolMarshaller.marshall(dvbSubDestinationSettings.getFontOpacity(), FONTOPACITY_BINDING);
             protocolMarshaller.marshall(dvbSubDestinationSettings.getFontResolution(), FONTRESOLUTION_BINDING);
             protocolMarshaller.marshall(dvbSubDestinationSettings.getFontScript(), FONTSCRIPT_BINDING);

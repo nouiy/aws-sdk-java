@@ -274,6 +274,10 @@ public class RestoreDBInstanceFromDBSnapshotRequestMarshaller implements
             request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(restoreDBInstanceFromDBSnapshotRequest.getDedicatedLogVolume()));
         }
 
+        if (restoreDBInstanceFromDBSnapshotRequest.getCACertificateIdentifier() != null) {
+            request.addParameter("CACertificateIdentifier", StringUtils.fromString(restoreDBInstanceFromDBSnapshotRequest.getCACertificateIdentifier()));
+        }
+
         return request;
     }
 

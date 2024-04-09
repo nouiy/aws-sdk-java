@@ -84,6 +84,22 @@ public class DvbSubDestinationSettingsJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     dvbSubDestinationSettings.setFontColor(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("fontFileBold", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setFontFileBold(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fontFileBoldItalic", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setFontFileBoldItalic(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fontFileItalic", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setFontFileItalic(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fontFileRegular", targetDepth)) {
+                    context.nextToken();
+                    dvbSubDestinationSettings.setFontFileRegular(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("fontOpacity", targetDepth)) {
                     context.nextToken();
                     dvbSubDestinationSettings.setFontOpacity(context.getUnmarshaller(Integer.class).unmarshall(context));

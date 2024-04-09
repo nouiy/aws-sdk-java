@@ -312,7 +312,6 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
      * Send an request with an empty body to the regional API endpoint to get your account API endpoint.
      * 
      * @param describeEndpointsRequest
-     *        DescribeEndpointsRequest
      * @return A Java Future containing the result of the DescribeEndpoints operation returned by the service.
      * @sample AWSMediaConvertAsync.DescribeEndpoints
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DescribeEndpoints" target="_top">AWS
@@ -325,7 +324,6 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
      * Send an request with an empty body to the regional API endpoint to get your account API endpoint.
      * 
      * @param describeEndpointsRequest
-     *        DescribeEndpointsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or

@@ -643,7 +643,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
-     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora Serverless v2
+     * DB clusters use the <code>provisioned</code> engine mode.
      * </p>
      * <p>
      * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
@@ -5180,7 +5181,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
-     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora Serverless v2
+     * DB clusters use the <code>provisioned</code> engine mode.
      * </p>
      * <p>
      * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
@@ -5208,7 +5210,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @param engineMode
      *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *        <p>
-     *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+     *        Serverless v2 DB clusters use the <code>provisioned</code> engine mode.
      *        </p>
      *        <p>
      *        For information about limitations and requirements for Serverless DB clusters, see the following sections
@@ -5243,7 +5246,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
-     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora Serverless v2
+     * DB clusters use the <code>provisioned</code> engine mode.
      * </p>
      * <p>
      * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
@@ -5270,7 +5274,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *         <p>
-     *         The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     *         The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+     *         Serverless v2 DB clusters use the <code>provisioned</code> engine mode.
      *         </p>
      *         <p>
      *         For information about limitations and requirements for Serverless DB clusters, see the following sections
@@ -5305,7 +5310,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
-     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora Serverless v2
+     * DB clusters use the <code>provisioned</code> engine mode.
      * </p>
      * <p>
      * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
@@ -5333,7 +5339,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @param engineMode
      *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *        <p>
-     *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
+     *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+     *        Serverless v2 DB clusters use the <code>provisioned</code> engine mode.
      *        </p>
      *        <p>
      *        For information about limitations and requirements for Serverless DB clusters, see the following sections

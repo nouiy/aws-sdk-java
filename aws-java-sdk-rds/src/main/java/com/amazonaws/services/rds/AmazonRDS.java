@@ -996,6 +996,8 @@ public interface AmazonRDS {
      *         <code>DUAL</code>.
      * @throws TenantDatabaseQuotaExceededException
      *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
+     * @throws CertificateNotFoundException
+     *         <code>CertificateIdentifier</code> doesn't refer to an existing certificate.
      * @sample AmazonRDS.CreateDBInstanceReadReplica
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstanceReadReplica"
      *      target="_top">AWS API Documentation</a>
@@ -4650,6 +4652,8 @@ public interface AmazonRDS {
      *         <code>DUAL</code>.
      * @throws DBClusterSnapshotNotFoundException
      *         <code>DBClusterSnapshotIdentifier</code> doesn't refer to an existing DB cluster snapshot.
+     * @throws CertificateNotFoundException
+     *         <code>CertificateIdentifier</code> doesn't refer to an existing certificate.
      * @throws TenantDatabaseQuotaExceededException
      *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.RestoreDBInstanceFromDBSnapshot
@@ -4715,6 +4719,8 @@ public interface AmazonRDS {
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws CertificateNotFoundException
+     *         <code>CertificateIdentifier</code> doesn't refer to an existing certificate.
      * @sample AmazonRDS.RestoreDBInstanceFromS3
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromS3" target="_top">AWS
      *      API Documentation</a>
@@ -4797,6 +4803,8 @@ public interface AmazonRDS {
      *         <code>DUAL</code>.
      * @throws TenantDatabaseQuotaExceededException
      *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
+     * @throws CertificateNotFoundException
+     *         <code>CertificateIdentifier</code> doesn't refer to an existing certificate.
      * @sample AmazonRDS.RestoreDBInstanceToPointInTime
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceToPointInTime"
      *      target="_top">AWS API Documentation</a>

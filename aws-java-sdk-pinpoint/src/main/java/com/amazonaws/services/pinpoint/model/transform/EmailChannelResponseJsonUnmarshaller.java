@@ -104,6 +104,10 @@ public class EmailChannelResponseJsonUnmarshaller implements Unmarshaller<EmailC
                     context.nextToken();
                     emailChannelResponse.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OrchestrationSendingRoleArn", targetDepth)) {
+                    context.nextToken();
+                    emailChannelResponse.setOrchestrationSendingRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Version", targetDepth)) {
                     context.nextToken();
                     emailChannelResponse.setVersion(context.getUnmarshaller(Integer.class).unmarshall(context));

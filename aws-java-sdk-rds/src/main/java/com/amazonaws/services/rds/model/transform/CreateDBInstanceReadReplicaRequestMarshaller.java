@@ -287,6 +287,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("UpgradeStorageConfig", StringUtils.fromBoolean(createDBInstanceReadReplicaRequest.getUpgradeStorageConfig()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getCACertificateIdentifier() != null) {
+            request.addParameter("CACertificateIdentifier", StringUtils.fromString(createDBInstanceReadReplicaRequest.getCACertificateIdentifier()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

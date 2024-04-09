@@ -72,6 +72,22 @@ public class BurninDestinationSettingsJsonUnmarshaller implements Unmarshaller<B
                     context.nextToken();
                     burninDestinationSettings.setFontColor(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("fontFileBold", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setFontFileBold(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fontFileBoldItalic", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setFontFileBoldItalic(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fontFileItalic", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setFontFileItalic(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fontFileRegular", targetDepth)) {
+                    context.nextToken();
+                    burninDestinationSettings.setFontFileRegular(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("fontOpacity", targetDepth)) {
                     context.nextToken();
                     burninDestinationSettings.setFontOpacity(context.getUnmarshaller(Integer.class).unmarshall(context));

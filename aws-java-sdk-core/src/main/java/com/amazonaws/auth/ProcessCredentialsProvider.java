@@ -61,24 +61,30 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
      * @see #builder()
      */
     private ProcessCredentialsProvider(Builder builder) {
-        List<String> cmd = new ArrayList<String>();
-
-        if (Platform.isWindows()) {
-            cmd.add("cmd.exe");
-            cmd.add("/C");
-        } else {
-            cmd.add("sh");
-            cmd.add("-c");
-        }
-
-        String builderCommand = ValidationUtils.assertNotNull(builder.command, "command");
-
-        cmd.add(builderCommand);
-
-        this.command = Collections.unmodifiableList(cmd);
+        this.command = executableCommand(builder);
         this.processOutputLimit = ValidationUtils.assertNotNull(builder.processOutputLimit, "processOutputLimit");
         this.expirationBufferValue = ValidationUtils.assertNotNull(builder.expirationBufferValue, "expirationBufferValue");
         this.expirationBufferUnit = ValidationUtils.assertNotNull(builder.expirationBufferUnit, "expirationBufferUnit");
+    }
+
+    private List<String> executableCommand(Builder builder) {
+        if (builder.commandAsListOfStrings != null) {
+            return Collections.unmodifiableList(builder.commandAsListOfStrings);
+        } else {
+            List<String> cmd = new ArrayList<String>();
+
+            if (Platform.isWindows()) {
+                cmd.add("cmd.exe");
+                cmd.add("/C");
+            } else {
+                cmd.add("sh");
+                cmd.add("-c");
+            }
+
+            String builderCommand = ValidationUtils.assertNotNull(builder.command, "command");
+            cmd.add(builderCommand);
+            return Collections.unmodifiableList(cmd);
+        }
     }
 
     /**
@@ -232,6 +238,7 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
      */
     public static class Builder {
         private String command;
+        private List<String> commandAsListOfStrings;
         private int expirationBufferValue = 15;
         private TimeUnit expirationBufferUnit = TimeUnit.SECONDS;
         private long processOutputLimit = 64000;
@@ -243,16 +250,44 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
 
         /**
          * Configure the command that should be executed to retrieve credentials.
+         * See {@link ProcessBuilder} for details on how this command is used.
+         *
+         * @deprecated The recommended approach is to specify the command as a list of Strings, using
+         * {@link #setCommand(List)} instead, which makes it easier to programmatically add parameters to commands
+         * without needing to escape those parameters to protect against command injection.
          */
+        @Deprecated
         private void setCommand(String command) {
             this.command = command;
         }
 
         /**
-         * @see #setCommand(String)
+         * Configure the command that should be executed to retrieve credentials and return this Builder.
+         * See {@link ProcessBuilder} for details on how this command is used.
+         *
+         * @deprecated The recommended approach is to specify the command as a list of Strings, using
+         * {@link #withCommand(List)} instead, which makes it easier to programmatically add parameters to commands
+         * without needing to escape those parameters to protect against command injection.
          */
+        @Deprecated
         public Builder withCommand(String command) {
             setCommand(command);
+            return this;
+        }
+
+        /**
+         * Configure the command that should be executed to retrieve credentials, as a list of strings.
+         * See {@link ProcessBuilder} for details on how this command is used.
+         */
+        private void setCommand(List<String> commandAsListOfStrings) {
+            this.commandAsListOfStrings = commandAsListOfStrings;
+        }
+
+        /**
+         * @see #setCommand(List)
+         */
+        public Builder withCommand(List<String> commands) {
+            setCommand(commands);
             return this;
         }
 

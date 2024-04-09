@@ -288,6 +288,10 @@ public class RestoreDBInstanceToPointInTimeRequestMarshaller implements
             request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(restoreDBInstanceToPointInTimeRequest.getDedicatedLogVolume()));
         }
 
+        if (restoreDBInstanceToPointInTimeRequest.getCACertificateIdentifier() != null) {
+            request.addParameter("CACertificateIdentifier", StringUtils.fromString(restoreDBInstanceToPointInTimeRequest.getCACertificateIdentifier()));
+        }
+
         return request;
     }
 
