@@ -283,6 +283,12 @@ public class Snapshot implements Serializable, Cloneable {
      * </p>
      */
     private String masterPasswordSecretKmsKeyId;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot.
+     * </p>
+     */
+    private String snapshotArn;
 
     /**
      * <p>
@@ -2121,6 +2127,46 @@ public class Snapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot.
+     * </p>
+     * 
+     * @param snapshotArn
+     *        The Amazon Resource Name (ARN) of the snapshot.
+     */
+
+    public void setSnapshotArn(String snapshotArn) {
+        this.snapshotArn = snapshotArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the snapshot.
+     */
+
+    public String getSnapshotArn() {
+        return this.snapshotArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot.
+     * </p>
+     * 
+     * @param snapshotArn
+     *        The Amazon Resource Name (ARN) of the snapshot.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Snapshot withSnapshotArn(String snapshotArn) {
+        setSnapshotArn(snapshotArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2203,7 +2249,9 @@ public class Snapshot implements Serializable, Cloneable {
         if (getMasterPasswordSecretArn() != null)
             sb.append("MasterPasswordSecretArn: ").append(getMasterPasswordSecretArn()).append(",");
         if (getMasterPasswordSecretKmsKeyId() != null)
-            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId());
+            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId()).append(",");
+        if (getSnapshotArn() != null)
+            sb.append("SnapshotArn: ").append(getSnapshotArn());
         sb.append("}");
         return sb.toString();
     }
@@ -2365,6 +2413,10 @@ public class Snapshot implements Serializable, Cloneable {
             return false;
         if (other.getMasterPasswordSecretKmsKeyId() != null && other.getMasterPasswordSecretKmsKeyId().equals(this.getMasterPasswordSecretKmsKeyId()) == false)
             return false;
+        if (other.getSnapshotArn() == null ^ this.getSnapshotArn() == null)
+            return false;
+        if (other.getSnapshotArn() != null && other.getSnapshotArn().equals(this.getSnapshotArn()) == false)
+            return false;
         return true;
     }
 
@@ -2409,6 +2461,7 @@ public class Snapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSnapshotRetentionStartTime() == null) ? 0 : getSnapshotRetentionStartTime().hashCode());
         hashCode = prime * hashCode + ((getMasterPasswordSecretArn() == null) ? 0 : getMasterPasswordSecretArn().hashCode());
         hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getSnapshotArn() == null) ? 0 : getSnapshotArn().hashCode());
         return hashCode;
     }
 

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum CertificateUsageType {
 
     SIGNING("SIGNING"),
-    ENCRYPTION("ENCRYPTION");
+    ENCRYPTION("ENCRYPTION"),
+    TLS("TLS");
 
     private String value;
 

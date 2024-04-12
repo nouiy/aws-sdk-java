@@ -52,6 +52,22 @@ public class GetKeyRotationStatusResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     getKeyRotationStatusResult.setKeyRotationEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("KeyId", targetDepth)) {
+                    context.nextToken();
+                    getKeyRotationStatusResult.setKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("RotationPeriodInDays", targetDepth)) {
+                    context.nextToken();
+                    getKeyRotationStatusResult.setRotationPeriodInDays(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("NextRotationDate", targetDepth)) {
+                    context.nextToken();
+                    getKeyRotationStatusResult.setNextRotationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("OnDemandRotationStartDate", targetDepth)) {
+                    context.nextToken();
+                    getKeyRotationStatusResult.setOnDemandRotationStartDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

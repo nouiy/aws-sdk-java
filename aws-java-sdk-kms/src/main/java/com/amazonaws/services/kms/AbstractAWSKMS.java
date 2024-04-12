@@ -213,6 +213,11 @@ public class AbstractAWSKMS implements AWSKMS {
     }
 
     @Override
+    public ListKeyRotationsResult listKeyRotations(ListKeyRotationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListKeysResult listKeys(ListKeysRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -259,6 +264,11 @@ public class AbstractAWSKMS implements AWSKMS {
 
     @Override
     public RevokeGrantResult revokeGrant(RevokeGrantRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RotateKeyOnDemandResult rotateKeyOnDemand(RotateKeyOnDemandRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

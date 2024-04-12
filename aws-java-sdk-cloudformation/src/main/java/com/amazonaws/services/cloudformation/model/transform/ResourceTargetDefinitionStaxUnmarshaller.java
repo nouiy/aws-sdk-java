@@ -57,6 +57,26 @@ public class ResourceTargetDefinitionStaxUnmarshaller implements Unmarshaller<Re
                     resourceTargetDefinition.setRequiresRecreation(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Path", targetDepth)) {
+                    resourceTargetDefinition.setPath(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("BeforeValue", targetDepth)) {
+                    resourceTargetDefinition.setBeforeValue(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AfterValue", targetDepth)) {
+                    resourceTargetDefinition.setAfterValue(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AttributeChangeType", targetDepth)) {
+                    resourceTargetDefinition.setAttributeChangeType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return resourceTargetDefinition;

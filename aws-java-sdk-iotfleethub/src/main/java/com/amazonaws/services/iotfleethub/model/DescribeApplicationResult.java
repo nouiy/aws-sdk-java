@@ -73,7 +73,7 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
     private Long applicationLastUpdateDate;
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      */
     private String roleArn;
@@ -85,7 +85,8 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
     private String ssoClientId;
     /**
      * <p>
-     * A message indicating why the <code>DescribeApplication</code> API failed.
+     * A message that explains any failures included in the <code>applicationState</code> response field. This message
+     * explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code> actions.
      * </p>
      */
     private String errorMessage;
@@ -437,11 +438,11 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     *        The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      */
 
     public void setRoleArn(String roleArn) {
@@ -450,10 +451,10 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * 
-     * @return The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * @return The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      */
 
     public String getRoleArn() {
@@ -462,11 +463,11 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     *        The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -520,11 +521,14 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A message indicating why the <code>DescribeApplication</code> API failed.
+     * A message that explains any failures included in the <code>applicationState</code> response field. This message
+     * explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code> actions.
      * </p>
      * 
      * @param errorMessage
-     *        A message indicating why the <code>DescribeApplication</code> API failed.
+     *        A message that explains any failures included in the <code>applicationState</code> response field. This
+     *        message explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code>
+     *        actions.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -533,10 +537,13 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A message indicating why the <code>DescribeApplication</code> API failed.
+     * A message that explains any failures included in the <code>applicationState</code> response field. This message
+     * explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code> actions.
      * </p>
      * 
-     * @return A message indicating why the <code>DescribeApplication</code> API failed.
+     * @return A message that explains any failures included in the <code>applicationState</code> response field. This
+     *         message explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code>
+     *         actions.
      */
 
     public String getErrorMessage() {
@@ -545,11 +552,14 @@ public class DescribeApplicationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A message indicating why the <code>DescribeApplication</code> API failed.
+     * A message that explains any failures included in the <code>applicationState</code> response field. This message
+     * explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code> actions.
      * </p>
      * 
      * @param errorMessage
-     *        A message indicating why the <code>DescribeApplication</code> API failed.
+     *        A message that explains any failures included in the <code>applicationState</code> response field. This
+     *        message explains failures in the <code>CreateApplication</code> and <code>DeleteApplication</code>
+     *        actions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

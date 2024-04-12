@@ -52,6 +52,10 @@ public class DescribeChangeSetRequestMarshaller implements Marshaller<Request<De
             request.addParameter("NextToken", StringUtils.fromString(describeChangeSetRequest.getNextToken()));
         }
 
+        if (describeChangeSetRequest.getIncludePropertyValues() != null) {
+            request.addParameter("IncludePropertyValues", StringUtils.fromBoolean(describeChangeSetRequest.getIncludePropertyValues()));
+        }
+
         return request;
     }
 

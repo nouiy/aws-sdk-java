@@ -23,7 +23,8 @@ public enum ShipmentCarrier {
     DHL("DHL"),
     DBS("DBS"),
     FEDEX("FEDEX"),
-    UPS("UPS");
+    UPS("UPS"),
+    EXPEDITORS("EXPEDITORS");
 
     private String value;
 

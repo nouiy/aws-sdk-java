@@ -41,6 +41,8 @@ public class PutPlaybackConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConfigurationAliases").build();
     private static final MarshallingInfo<StructuredPojo> DASHCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DashConfiguration").build();
+    private static final MarshallingInfo<String> INSERTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InsertionMode").build();
     private static final MarshallingInfo<StructuredPojo> LIVEPREROLLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LivePreRollConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> MANIFESTPROCESSINGRULES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -80,6 +82,7 @@ public class PutPlaybackConfigurationRequestMarshaller {
             protocolMarshaller.marshall(putPlaybackConfigurationRequest.getCdnConfiguration(), CDNCONFIGURATION_BINDING);
             protocolMarshaller.marshall(putPlaybackConfigurationRequest.getConfigurationAliases(), CONFIGURATIONALIASES_BINDING);
             protocolMarshaller.marshall(putPlaybackConfigurationRequest.getDashConfiguration(), DASHCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(putPlaybackConfigurationRequest.getInsertionMode(), INSERTIONMODE_BINDING);
             protocolMarshaller.marshall(putPlaybackConfigurationRequest.getLivePreRollConfiguration(), LIVEPREROLLCONFIGURATION_BINDING);
             protocolMarshaller.marshall(putPlaybackConfigurationRequest.getManifestProcessingRules(), MANIFESTPROCESSINGRULES_BINDING);
             protocolMarshaller.marshall(putPlaybackConfigurationRequest.getName(), NAME_BINDING);

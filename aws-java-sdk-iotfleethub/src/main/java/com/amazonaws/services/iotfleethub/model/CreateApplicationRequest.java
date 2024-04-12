@@ -46,7 +46,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String clientToken;
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * <note>
      * <p>
@@ -190,7 +190,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * <note>
      * <p>
@@ -199,7 +199,8 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @param roleArn
-     *        The ARN of the role that the web application assumes when it interacts with AWS IoT Core.</p> <note>
+     *        The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT
+     *        Core.</p> <note>
      *        <p>
      *        The name of the role must be in the form <code>AWSIotFleetHub_<i>random_string</i> </code>.
      *        </p>
@@ -211,7 +212,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * <note>
      * <p>
@@ -219,7 +220,8 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * </note>
      * 
-     * @return The ARN of the role that the web application assumes when it interacts with AWS IoT Core.</p> <note>
+     * @return The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT
+     *         Core.</p> <note>
      *         <p>
      *         The name of the role must be in the form <code>AWSIotFleetHub_<i>random_string</i> </code>.
      *         </p>
@@ -231,7 +233,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARN of the role that the web application assumes when it interacts with AWS IoT Core.
+     * The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT Core.
      * </p>
      * <note>
      * <p>
@@ -240,7 +242,8 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @param roleArn
-     *        The ARN of the role that the web application assumes when it interacts with AWS IoT Core.</p> <note>
+     *        The ARN of the role that the web application assumes when it interacts with Amazon Web Services IoT
+     *        Core.</p> <note>
      *        <p>
      *        The name of the role must be in the form <code>AWSIotFleetHub_<i>random_string</i> </code>.
      *        </p>

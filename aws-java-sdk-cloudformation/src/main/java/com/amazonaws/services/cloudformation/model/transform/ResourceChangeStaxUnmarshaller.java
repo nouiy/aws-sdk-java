@@ -104,6 +104,16 @@ public class ResourceChangeStaxUnmarshaller implements Unmarshaller<ResourceChan
                     resourceChange.setModuleInfo(ModuleInfoStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("BeforeContext", targetDepth)) {
+                    resourceChange.setBeforeContext(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AfterContext", targetDepth)) {
+                    resourceChange.setAfterContext(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return resourceChange;

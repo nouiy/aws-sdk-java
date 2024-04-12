@@ -28,8 +28,15 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Resource</code> This change is for a resource.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String type;
     /**
@@ -48,11 +55,24 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Resource</code> This change is for a resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     *        The type of entity that CloudFormation changes.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Resource</code> This change is for a resource.
+     *        </p>
+     *        </li>
      * @see ChangeType
      */
 
@@ -62,10 +82,23 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Resource</code> This change is for a resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * @return The type of entity that CloudFormation changes.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Resource</code> This change is for a resource.
+     *         </p>
+     *         </li>
      * @see ChangeType
      */
 
@@ -75,11 +108,24 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Resource</code> This change is for a resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     *        The type of entity that CloudFormation changes.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Resource</code> This change is for a resource.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeType
      */
@@ -91,11 +137,24 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Resource</code> This change is for a resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     *        The type of entity that CloudFormation changes.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Resource</code> This change is for a resource.
+     *        </p>
+     *        </li>
      * @see ChangeType
      */
 
@@ -105,11 +164,24 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Resource</code> This change is for a resource.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     *        The type of entity that CloudFormation changes.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Resource</code> This change is for a resource.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeType
      */

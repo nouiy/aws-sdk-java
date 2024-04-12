@@ -29,6 +29,8 @@ public class EnableKeyRotationRequestMarshaller {
 
     private static final MarshallingInfo<String> KEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("KeyId").build();
+    private static final MarshallingInfo<Integer> ROTATIONPERIODINDAYS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RotationPeriodInDays").build();
 
     private static final EnableKeyRotationRequestMarshaller instance = new EnableKeyRotationRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class EnableKeyRotationRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(enableKeyRotationRequest.getKeyId(), KEYID_BINDING);
+            protocolMarshaller.marshall(enableKeyRotationRequest.getRotationPeriodInDays(), ROTATIONPERIODINDAYS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

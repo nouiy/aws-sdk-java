@@ -30,9 +30,14 @@ public class ResourceEvaluationFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     * <code>Proactive</code>.
+     * Filters all resource evaluations results based on an evaluation mode.
      * </p>
+     * <important>
+     * <p>
+     * Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     * otherwise.
+     * </p>
+     * </important>
      */
     private String evaluationMode;
     /**
@@ -50,13 +55,21 @@ public class ResourceEvaluationFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     * <code>Proactive</code>.
+     * Filters all resource evaluations results based on an evaluation mode.
      * </p>
+     * <important>
+     * <p>
+     * Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     * otherwise.
+     * </p>
+     * </important>
      * 
      * @param evaluationMode
-     *        Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     *        <code>Proactive</code>.
+     *        Filters all resource evaluations results based on an evaluation mode.</p> <important>
+     *        <p>
+     *        Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     *        otherwise.
+     *        </p>
      * @see EvaluationMode
      */
 
@@ -66,12 +79,20 @@ public class ResourceEvaluationFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     * <code>Proactive</code>.
+     * Filters all resource evaluations results based on an evaluation mode.
      * </p>
+     * <important>
+     * <p>
+     * Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     * otherwise.
+     * </p>
+     * </important>
      * 
-     * @return Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     *         <code>Proactive</code>.
+     * @return Filters all resource evaluations results based on an evaluation mode.</p> <important>
+     *         <p>
+     *         Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     *         otherwise.
+     *         </p>
      * @see EvaluationMode
      */
 
@@ -81,13 +102,21 @@ public class ResourceEvaluationFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     * <code>Proactive</code>.
+     * Filters all resource evaluations results based on an evaluation mode.
      * </p>
+     * <important>
+     * <p>
+     * Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     * otherwise.
+     * </p>
+     * </important>
      * 
      * @param evaluationMode
-     *        Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     *        <code>Proactive</code>.
+     *        Filters all resource evaluations results based on an evaluation mode.</p> <important>
+     *        <p>
+     *        Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     *        otherwise.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EvaluationMode
      */
@@ -99,13 +128,21 @@ public class ResourceEvaluationFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     * <code>Proactive</code>.
+     * Filters all resource evaluations results based on an evaluation mode.
      * </p>
+     * <important>
+     * <p>
+     * Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     * otherwise.
+     * </p>
+     * </important>
      * 
      * @param evaluationMode
-     *        Filters all resource evaluations results based on an evaluation mode. the valid value for this API is
-     *        <code>Proactive</code>.
+     *        Filters all resource evaluations results based on an evaluation mode.</p> <important>
+     *        <p>
+     *        Currently, <code>DECTECTIVE</code> is not supported as a valid value. Ignore other documentation stating
+     *        otherwise.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EvaluationMode
      */

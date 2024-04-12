@@ -135,6 +135,18 @@ public class ResourceChange implements Serializable, Cloneable {
      * </p>
      */
     private ModuleInfo moduleInfo;
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource before the change is executed.
+     * </p>
+     */
+    private String beforeContext;
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource after the change is executed.
+     * </p>
+     */
+    private String afterContext;
 
     /**
      * <p>
@@ -1201,6 +1213,86 @@ public class ResourceChange implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * An encoded JSON string containing the context of the resource before the change is executed.
+     * </p>
+     * 
+     * @param beforeContext
+     *        An encoded JSON string containing the context of the resource before the change is executed.
+     */
+
+    public void setBeforeContext(String beforeContext) {
+        this.beforeContext = beforeContext;
+    }
+
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource before the change is executed.
+     * </p>
+     * 
+     * @return An encoded JSON string containing the context of the resource before the change is executed.
+     */
+
+    public String getBeforeContext() {
+        return this.beforeContext;
+    }
+
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource before the change is executed.
+     * </p>
+     * 
+     * @param beforeContext
+     *        An encoded JSON string containing the context of the resource before the change is executed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceChange withBeforeContext(String beforeContext) {
+        setBeforeContext(beforeContext);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource after the change is executed.
+     * </p>
+     * 
+     * @param afterContext
+     *        An encoded JSON string containing the context of the resource after the change is executed.
+     */
+
+    public void setAfterContext(String afterContext) {
+        this.afterContext = afterContext;
+    }
+
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource after the change is executed.
+     * </p>
+     * 
+     * @return An encoded JSON string containing the context of the resource after the change is executed.
+     */
+
+    public String getAfterContext() {
+        return this.afterContext;
+    }
+
+    /**
+     * <p>
+     * An encoded JSON string containing the context of the resource after the change is executed.
+     * </p>
+     * 
+     * @param afterContext
+     *        An encoded JSON string containing the context of the resource after the change is executed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceChange withAfterContext(String afterContext) {
+        setAfterContext(afterContext);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1231,7 +1323,11 @@ public class ResourceChange implements Serializable, Cloneable {
         if (getChangeSetId() != null)
             sb.append("ChangeSetId: ").append(getChangeSetId()).append(",");
         if (getModuleInfo() != null)
-            sb.append("ModuleInfo: ").append(getModuleInfo());
+            sb.append("ModuleInfo: ").append(getModuleInfo()).append(",");
+        if (getBeforeContext() != null)
+            sb.append("BeforeContext: ").append(getBeforeContext()).append(",");
+        if (getAfterContext() != null)
+            sb.append("AfterContext: ").append(getAfterContext());
         sb.append("}");
         return sb.toString();
     }
@@ -1286,6 +1382,14 @@ public class ResourceChange implements Serializable, Cloneable {
             return false;
         if (other.getModuleInfo() != null && other.getModuleInfo().equals(this.getModuleInfo()) == false)
             return false;
+        if (other.getBeforeContext() == null ^ this.getBeforeContext() == null)
+            return false;
+        if (other.getBeforeContext() != null && other.getBeforeContext().equals(this.getBeforeContext()) == false)
+            return false;
+        if (other.getAfterContext() == null ^ this.getAfterContext() == null)
+            return false;
+        if (other.getAfterContext() != null && other.getAfterContext().equals(this.getAfterContext()) == false)
+            return false;
         return true;
     }
 
@@ -1304,6 +1408,8 @@ public class ResourceChange implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDetails() == null) ? 0 : getDetails().hashCode());
         hashCode = prime * hashCode + ((getChangeSetId() == null) ? 0 : getChangeSetId().hashCode());
         hashCode = prime * hashCode + ((getModuleInfo() == null) ? 0 : getModuleInfo().hashCode());
+        hashCode = prime * hashCode + ((getBeforeContext() == null) ? 0 : getBeforeContext().hashCode());
+        hashCode = prime * hashCode + ((getAfterContext() == null) ? 0 : getAfterContext().hashCode());
         return hashCode;
     }
 

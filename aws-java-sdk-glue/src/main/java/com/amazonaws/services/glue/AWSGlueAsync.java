@@ -4574,7 +4574,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Retrieves table metadata from the Data Catalog that contains unfiltered metadata.
+     * Allows a third-party analytical engine to retrieve unfiltered table metadata from the Data Catalog.
      * </p>
      * <p>
      * For IAM authorization, the public IAM action associated with this API is <code>glue:GetTable</code>.
@@ -4591,7 +4591,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Retrieves table metadata from the Data Catalog that contains unfiltered metadata.
+     * Allows a third-party analytical engine to retrieve unfiltered table metadata from the Data Catalog.
      * </p>
      * <p>
      * For IAM authorization, the public IAM action associated with this API is <code>glue:GetTable</code>.

@@ -89,6 +89,12 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private IdentityProviderConfiguration identityProviderConfiguration;
+    /**
+     * <p>
+     * The error cause for the current data store operation.
+     * </p>
+     */
+    private ErrorCause errorCause;
 
     /**
      * <p>
@@ -535,6 +541,46 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The error cause for the current data store operation.
+     * </p>
+     * 
+     * @param errorCause
+     *        The error cause for the current data store operation.
+     */
+
+    public void setErrorCause(ErrorCause errorCause) {
+        this.errorCause = errorCause;
+    }
+
+    /**
+     * <p>
+     * The error cause for the current data store operation.
+     * </p>
+     * 
+     * @return The error cause for the current data store operation.
+     */
+
+    public ErrorCause getErrorCause() {
+        return this.errorCause;
+    }
+
+    /**
+     * <p>
+     * The error cause for the current data store operation.
+     * </p>
+     * 
+     * @param errorCause
+     *        The error cause for the current data store operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DatastoreProperties withErrorCause(ErrorCause errorCause) {
+        setErrorCause(errorCause);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -565,7 +611,9 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
         if (getPreloadDataConfig() != null)
             sb.append("PreloadDataConfig: ").append(getPreloadDataConfig()).append(",");
         if (getIdentityProviderConfiguration() != null)
-            sb.append("IdentityProviderConfiguration: ").append(getIdentityProviderConfiguration());
+            sb.append("IdentityProviderConfiguration: ").append(getIdentityProviderConfiguration()).append(",");
+        if (getErrorCause() != null)
+            sb.append("ErrorCause: ").append(getErrorCause());
         sb.append("}");
         return sb.toString();
     }
@@ -621,6 +669,10 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
         if (other.getIdentityProviderConfiguration() != null
                 && other.getIdentityProviderConfiguration().equals(this.getIdentityProviderConfiguration()) == false)
             return false;
+        if (other.getErrorCause() == null ^ this.getErrorCause() == null)
+            return false;
+        if (other.getErrorCause() != null && other.getErrorCause().equals(this.getErrorCause()) == false)
+            return false;
         return true;
     }
 
@@ -639,6 +691,7 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getSseConfiguration() == null) ? 0 : getSseConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPreloadDataConfig() == null) ? 0 : getPreloadDataConfig().hashCode());
         hashCode = prime * hashCode + ((getIdentityProviderConfiguration() == null) ? 0 : getIdentityProviderConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getErrorCause() == null) ? 0 : getErrorCause().hashCode());
         return hashCode;
     }
 

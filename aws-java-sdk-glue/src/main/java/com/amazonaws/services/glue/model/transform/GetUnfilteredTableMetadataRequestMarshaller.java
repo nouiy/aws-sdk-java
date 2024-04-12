@@ -40,6 +40,10 @@ public class GetUnfilteredTableMetadataRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuditContext").build();
     private static final MarshallingInfo<List> SUPPORTEDPERMISSIONTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedPermissionTypes").build();
+    private static final MarshallingInfo<String> PARENTRESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParentResourceArn").build();
+    private static final MarshallingInfo<String> ROOTRESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RootResourceArn").build();
     private static final MarshallingInfo<StructuredPojo> SUPPORTEDDIALECT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedDialect").build();
     private static final MarshallingInfo<List> PERMISSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -69,6 +73,8 @@ public class GetUnfilteredTableMetadataRequestMarshaller {
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getAuditContext(), AUDITCONTEXT_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getSupportedPermissionTypes(), SUPPORTEDPERMISSIONTYPES_BINDING);
+            protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getParentResourceArn(), PARENTRESOURCEARN_BINDING);
+            protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getRootResourceArn(), ROOTRESOURCEARN_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getSupportedDialect(), SUPPORTEDDIALECT_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getPermissions(), PERMISSIONS_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getQuerySessionContext(), QUERYSESSIONCONTEXT_BINDING);

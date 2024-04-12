@@ -1497,6 +1497,39 @@ public class AWSKMSAsyncClient extends AWSKMSClient implements AWSKMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListKeyRotationsResult> listKeyRotationsAsync(ListKeyRotationsRequest request) {
+
+        return listKeyRotationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKeyRotationsResult> listKeyRotationsAsync(final ListKeyRotationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListKeyRotationsRequest, ListKeyRotationsResult> asyncHandler) {
+        final ListKeyRotationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListKeyRotationsResult>() {
+            @Override
+            public ListKeyRotationsResult call() throws Exception {
+                ListKeyRotationsResult result = null;
+
+                try {
+                    result = executeListKeyRotations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListKeysResult> listKeysAsync(ListKeysRequest request) {
 
         return listKeysAsync(request, null);
@@ -1790,6 +1823,39 @@ public class AWSKMSAsyncClient extends AWSKMSClient implements AWSKMSAsync {
 
                 try {
                     result = executeRevokeGrant(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RotateKeyOnDemandResult> rotateKeyOnDemandAsync(RotateKeyOnDemandRequest request) {
+
+        return rotateKeyOnDemandAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RotateKeyOnDemandResult> rotateKeyOnDemandAsync(final RotateKeyOnDemandRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RotateKeyOnDemandRequest, RotateKeyOnDemandResult> asyncHandler) {
+        final RotateKeyOnDemandRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RotateKeyOnDemandResult>() {
+            @Override
+            public RotateKeyOnDemandResult call() throws Exception {
+                RotateKeyOnDemandResult result = null;
+
+                try {
+                    result = executeRotateKeyOnDemand(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

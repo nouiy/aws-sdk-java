@@ -23,7 +23,8 @@ public enum DatastoreStatus {
     CREATING("CREATING"),
     ACTIVE("ACTIVE"),
     DELETING("DELETING"),
-    DELETED("DELETED");
+    DELETED("DELETED"),
+    CREATE_FAILED("CREATE_FAILED");
 
     private String value;
 

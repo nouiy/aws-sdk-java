@@ -79,6 +79,10 @@ public class GetPlaybackConfigurationResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getPlaybackConfigurationResult.setHlsConfiguration(HlsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("InsertionMode", targetDepth)) {
+                    context.nextToken();
+                    getPlaybackConfigurationResult.setInsertionMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("LivePreRollConfiguration", targetDepth)) {
                     context.nextToken();
                     getPlaybackConfigurationResult.setLivePreRollConfiguration(LivePreRollConfigurationJsonUnmarshaller.getInstance().unmarshall(context));

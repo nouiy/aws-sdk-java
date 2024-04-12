@@ -152,6 +152,16 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
      * <p>
      * The time when configuration changes for the resource were delivered.
      * </p>
+     * <note>
+     * <p>
+     * This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using daily
+     * recording, this field will be populated. However, if you are using continuous recording, this field will be
+     * omitted since the delivery time is instantaneous as the CI is available right away. For more information on daily
+     * recording and continuous recording, see <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     * >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     * </p>
+     * </note>
      */
     private java.util.Date configurationItemDeliveryTime;
 
@@ -1078,9 +1088,27 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
      * <p>
      * The time when configuration changes for the resource were delivered.
      * </p>
+     * <note>
+     * <p>
+     * This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using daily
+     * recording, this field will be populated. However, if you are using continuous recording, this field will be
+     * omitted since the delivery time is instantaneous as the CI is available right away. For more information on daily
+     * recording and continuous recording, see <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     * >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param configurationItemDeliveryTime
-     *        The time when configuration changes for the resource were delivered.
+     *        The time when configuration changes for the resource were delivered.</p> <note>
+     *        <p>
+     *        This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using
+     *        daily recording, this field will be populated. However, if you are using continuous recording, this field
+     *        will be omitted since the delivery time is instantaneous as the CI is available right away. For more
+     *        information on daily recording and continuous recording, see <a href=
+     *        "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     *        >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     *        </p>
      */
 
     public void setConfigurationItemDeliveryTime(java.util.Date configurationItemDeliveryTime) {
@@ -1091,8 +1119,26 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
      * <p>
      * The time when configuration changes for the resource were delivered.
      * </p>
+     * <note>
+     * <p>
+     * This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using daily
+     * recording, this field will be populated. However, if you are using continuous recording, this field will be
+     * omitted since the delivery time is instantaneous as the CI is available right away. For more information on daily
+     * recording and continuous recording, see <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     * >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     * </p>
+     * </note>
      * 
-     * @return The time when configuration changes for the resource were delivered.
+     * @return The time when configuration changes for the resource were delivered.</p> <note>
+     *         <p>
+     *         This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using
+     *         daily recording, this field will be populated. However, if you are using continuous recording, this field
+     *         will be omitted since the delivery time is instantaneous as the CI is available right away. For more
+     *         information on daily recording and continuous recording, see <a href=
+     *         "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     *         >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     *         </p>
      */
 
     public java.util.Date getConfigurationItemDeliveryTime() {
@@ -1103,9 +1149,27 @@ public class BaseConfigurationItem implements Serializable, Cloneable, Structure
      * <p>
      * The time when configuration changes for the resource were delivered.
      * </p>
+     * <note>
+     * <p>
+     * This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using daily
+     * recording, this field will be populated. However, if you are using continuous recording, this field will be
+     * omitted since the delivery time is instantaneous as the CI is available right away. For more information on daily
+     * recording and continuous recording, see <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     * >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param configurationItemDeliveryTime
-     *        The time when configuration changes for the resource were delivered.
+     *        The time when configuration changes for the resource were delivered.</p> <note>
+     *        <p>
+     *        This field is optional and is not guaranteed to be present in a configuration item (CI). If you are using
+     *        daily recording, this field will be populated. However, if you are using continuous recording, this field
+     *        will be omitted since the delivery time is instantaneous as the CI is available right away. For more
+     *        information on daily recording and continuous recording, see <a href=
+     *        "https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html#select-resources-recording-frequency"
+     *        >Recording Frequency</a> in the <i>Config Developer Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -34097,6 +34097,9 @@
       }, {
         "name" : "UPS",
         "value" : "UPS"
+      }, {
+        "name" : "EXPEDITORS",
+        "value" : "EXPEDITORS"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.outposts.enum.ShipmentCarrier",
