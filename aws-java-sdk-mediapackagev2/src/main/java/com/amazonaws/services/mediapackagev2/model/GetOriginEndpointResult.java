@@ -108,6 +108,12 @@ public class GetOriginEndpointResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     */
+    private java.util.List<GetDashManifestConfiguration> dashManifests;
 
     /**
      * <p>
@@ -793,6 +799,76 @@ public class GetOriginEndpointResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @return A DASH manifest configuration.
+     */
+
+    public java.util.List<GetDashManifestConfiguration> getDashManifests() {
+        return dashManifests;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     */
+
+    public void setDashManifests(java.util.Collection<GetDashManifestConfiguration> dashManifests) {
+        if (dashManifests == null) {
+            this.dashManifests = null;
+            return;
+        }
+
+        this.dashManifests = new java.util.ArrayList<GetDashManifestConfiguration>(dashManifests);
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDashManifests(java.util.Collection)} or {@link #withDashManifests(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetOriginEndpointResult withDashManifests(GetDashManifestConfiguration... dashManifests) {
+        if (this.dashManifests == null) {
+            setDashManifests(new java.util.ArrayList<GetDashManifestConfiguration>(dashManifests.length));
+        }
+        for (GetDashManifestConfiguration ele : dashManifests) {
+            this.dashManifests.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetOriginEndpointResult withDashManifests(java.util.Collection<GetDashManifestConfiguration> dashManifests) {
+        setDashManifests(dashManifests);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -831,7 +907,9 @@ public class GetOriginEndpointResult extends com.amazonaws.AmazonWebServiceResul
         if (getETag() != null)
             sb.append("ETag: ").append(getETag()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDashManifests() != null)
+            sb.append("DashManifests: ").append(getDashManifests());
         sb.append("}");
         return sb.toString();
     }
@@ -902,6 +980,10 @@ public class GetOriginEndpointResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDashManifests() == null ^ this.getDashManifests() == null)
+            return false;
+        if (other.getDashManifests() != null && other.getDashManifests().equals(this.getDashManifests()) == false)
+            return false;
         return true;
     }
 
@@ -924,6 +1006,7 @@ public class GetOriginEndpointResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getETag() == null) ? 0 : getETag().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());
         return hashCode;
     }
 

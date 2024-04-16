@@ -82,12 +82,14 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * <ul>
      * <li>
      * <p>
-     * <code>agentResourceRoleArn</code> – The ARN of the role with permissions to create an agent.
+     * <code>agentResourceRoleArn</code> – The Amazon Resource Name (ARN) of the role with permissions to invoke API
+     * operations on an agent.
      * </p>
      * </li>
      * <li>
      * <p>
-     * (Optional) <code>customerEncryptionKeyArn</code> – The ARN of a KMS key to encrypt the creation of the agent.
+     * (Optional) <code>customerEncryptionKeyArn</code> – The Amazon Resource Name (ARN) of a KMS key to encrypt the
+     * creation of the agent.
      * </p>
      * </li>
      * <li>
@@ -135,12 +137,14 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * <ul>
      * <li>
      * <p>
-     * <code>agentResourceRoleArn</code> – The ARN of the role with permissions to create an agent.
+     * <code>agentResourceRoleArn</code> – The Amazon Resource Name (ARN) of the role with permissions to invoke API
+     * operations on an agent.
      * </p>
      * </li>
      * <li>
      * <p>
-     * (Optional) <code>customerEncryptionKeyArn</code> – The ARN of a KMS key to encrypt the creation of the agent.
+     * (Optional) <code>customerEncryptionKeyArn</code> – The Amazon Resource Name (ARN) of a KMS key to encrypt the
+     * creation of the agent.
      * </p>
      * </li>
      * <li>
@@ -327,7 +331,8 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * </li>
      * <li>
      * <p>
-     * Provide the ARN with permissions to create a knowledge base in the <code>roleArn</code> field.
+     * Provide the Amazon Resource Name (ARN) with permissions to create a knowledge base in the <code>roleArn</code>
+     * field.
      * </p>
      * </li>
      * <li>
@@ -405,7 +410,8 @@ public interface AWSBedrockAgentAsync extends AWSBedrockAgent {
      * </li>
      * <li>
      * <p>
-     * Provide the ARN with permissions to create a knowledge base in the <code>roleArn</code> field.
+     * Provide the Amazon Resource Name (ARN) with permissions to create a knowledge base in the <code>roleArn</code>
+     * field.
      * </p>
      * </li>
      * <li>

@@ -64,6 +64,13 @@ public class GetIdMappingJobResultJsonUnmarshaller implements Unmarshaller<GetId
                     context.nextToken();
                     getIdMappingJobResult.setMetrics(IdMappingJobMetricsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("outputSourceConfig", targetDepth)) {
+                    context.nextToken();
+                    getIdMappingJobResult.setOutputSourceConfig(new ListUnmarshaller<IdMappingJobOutputSource>(IdMappingJobOutputSourceJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("startTime", targetDepth)) {
                     context.nextToken();
                     getIdMappingJobResult.setStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

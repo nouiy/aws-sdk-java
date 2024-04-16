@@ -1,3 +1,40 @@
+# __1.12.702__ __2024-04-16__
+## __AWS Elemental MediaPackage v2__
+  - ### Features
+    - Dash v2 is a MediaPackage V2 feature to support egressing on DASH manifest format.
+
+## __AWS EntityResolution__
+  - ### Features
+    - Cross Account Resource Support .
+
+## __AWS IoT Wireless__
+  - ### Features
+    - Add PublicGateways in the GetWirelessStatistics call response, indicating the LoRaWAN public network accessed by the device.
+
+## __AWS Lake Formation__
+  - ### Features
+    - This release adds Lake Formation managed RAM support for the 4 APIs - "DescribeLakeFormationIdentityCenterConfiguration", "CreateLakeFormationIdentityCenterConfiguration", "DescribeLakeFormationIdentityCenterConfiguration", and "DeleteLakeFormationIdentityCenterConfiguration"
+
+## __AWS Outposts__
+  - ### Features
+    - This release adds new APIs to allow customers to configure their Outpost capacity at order-time.
+
+## __AWS Well-Architected Tool__
+  - ### Features
+    - AWS Well-Architected now has a Connector for Jira to allow customers to efficiently track workload risks and improvement efforts and create closed-loop mechanisms.
+
+## __AWSMainframeModernization__
+  - ### Features
+    - Adding new ListBatchJobRestartPoints API and support for restart batch job.
+
+## __Agents for Amazon Bedrock__
+  - ### Features
+    - For Create Agent API, the agentResourceRoleArn parameter is no longer required.
+
+## __EMR Serverless__
+  - ### Features
+    - This release adds support for shuffle optimized disks that allow larger disk sizes and higher IOPS to efficiently run shuffle heavy workloads.
+
 # __1.12.701__ __2024-04-12__
 ## __AWS CloudFormation__
   - ### Features

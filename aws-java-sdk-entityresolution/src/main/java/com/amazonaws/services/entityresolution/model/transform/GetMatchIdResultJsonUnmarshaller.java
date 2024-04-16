@@ -52,6 +52,10 @@ public class GetMatchIdResultJsonUnmarshaller implements Unmarshaller<GetMatchId
                     context.nextToken();
                     getMatchIdResult.setMatchId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("matchRule", targetDepth)) {
+                    context.nextToken();
+                    getMatchIdResult.setMatchRule(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

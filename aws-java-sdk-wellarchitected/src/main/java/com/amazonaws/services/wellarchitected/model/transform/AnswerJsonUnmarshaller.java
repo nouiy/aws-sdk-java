@@ -110,6 +110,10 @@ public class AnswerJsonUnmarshaller implements Unmarshaller<Answer, JsonUnmarsha
                     context.nextToken();
                     answer.setReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JiraConfiguration", targetDepth)) {
+                    context.nextToken();
+                    answer.setJiraConfiguration(JiraConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

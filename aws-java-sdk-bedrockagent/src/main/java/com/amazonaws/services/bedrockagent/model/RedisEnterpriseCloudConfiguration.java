@@ -32,7 +32,8 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Redis
+     * Enterprise Cloud database.
      * </p>
      */
     private String credentialsSecretArn;
@@ -57,12 +58,13 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Redis
+     * Enterprise Cloud database.
      * </p>
      * 
      * @param credentialsSecretArn
-     *        The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud
-     *        database.
+     *        The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *        Redis Enterprise Cloud database.
      */
 
     public void setCredentialsSecretArn(String credentialsSecretArn) {
@@ -71,11 +73,12 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Redis
+     * Enterprise Cloud database.
      * </p>
      * 
-     * @return The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud
-     *         database.
+     * @return The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *         Redis Enterprise Cloud database.
      */
 
     public String getCredentialsSecretArn() {
@@ -84,12 +87,13 @@ public class RedisEnterpriseCloudConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Redis
+     * Enterprise Cloud database.
      * </p>
      * 
      * @param credentialsSecretArn
-     *        The ARN of the secret that you created in Secrets Manager that is linked to your Redis Enterprise Cloud
-     *        database.
+     *        The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *        Redis Enterprise Cloud database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

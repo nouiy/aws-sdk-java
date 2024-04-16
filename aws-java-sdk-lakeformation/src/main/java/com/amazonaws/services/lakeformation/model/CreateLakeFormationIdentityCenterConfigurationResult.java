@@ -27,18 +27,18 @@ public class CreateLakeFormationIdentityCenterConfigurationResult extends com.am
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      */
     private String applicationArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the integrated application.
+     *        The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      */
 
     public void setApplicationArn(String applicationArn) {
@@ -47,10 +47,10 @@ public class CreateLakeFormationIdentityCenterConfigurationResult extends com.am
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the integrated application.
+     * @return The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      */
 
     public String getApplicationArn() {
@@ -59,11 +59,11 @@ public class CreateLakeFormationIdentityCenterConfigurationResult extends com.am
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the integrated application.
+     *        The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

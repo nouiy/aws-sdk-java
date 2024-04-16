@@ -85,6 +85,12 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.List<String> reviewTemplateArns;
+    /**
+     * <p>
+     * Jira configuration settings when creating a workload.
+     * </p>
+     */
+    private WorkloadJiraConfigurationInput jiraConfiguration;
 
     /**
      * @param workloadName
@@ -913,6 +919,46 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Jira configuration settings when creating a workload.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Jira configuration settings when creating a workload.
+     */
+
+    public void setJiraConfiguration(WorkloadJiraConfigurationInput jiraConfiguration) {
+        this.jiraConfiguration = jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Jira configuration settings when creating a workload.
+     * </p>
+     * 
+     * @return Jira configuration settings when creating a workload.
+     */
+
+    public WorkloadJiraConfigurationInput getJiraConfiguration() {
+        return this.jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Jira configuration settings when creating a workload.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Jira configuration settings when creating a workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkloadRequest withJiraConfiguration(WorkloadJiraConfigurationInput jiraConfiguration) {
+        setJiraConfiguration(jiraConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -961,7 +1007,9 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getProfileArns() != null)
             sb.append("ProfileArns: ").append(getProfileArns()).append(",");
         if (getReviewTemplateArns() != null)
-            sb.append("ReviewTemplateArns: ").append(getReviewTemplateArns());
+            sb.append("ReviewTemplateArns: ").append(getReviewTemplateArns()).append(",");
+        if (getJiraConfiguration() != null)
+            sb.append("JiraConfiguration: ").append(getJiraConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1052,6 +1100,10 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getReviewTemplateArns() != null && other.getReviewTemplateArns().equals(this.getReviewTemplateArns()) == false)
             return false;
+        if (other.getJiraConfiguration() == null ^ this.getJiraConfiguration() == null)
+            return false;
+        if (other.getJiraConfiguration() != null && other.getJiraConfiguration().equals(this.getJiraConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1079,6 +1131,7 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getApplications() == null) ? 0 : getApplications().hashCode());
         hashCode = prime * hashCode + ((getProfileArns() == null) ? 0 : getProfileArns().hashCode());
         hashCode = prime * hashCode + ((getReviewTemplateArns() == null) ? 0 : getReviewTemplateArns().hashCode());
+        hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         return hashCode;
     }
 

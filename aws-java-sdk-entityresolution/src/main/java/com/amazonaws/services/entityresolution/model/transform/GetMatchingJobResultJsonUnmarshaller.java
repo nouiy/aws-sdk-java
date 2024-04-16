@@ -64,6 +64,12 @@ public class GetMatchingJobResultJsonUnmarshaller implements Unmarshaller<GetMat
                     context.nextToken();
                     getMatchingJobResult.setMetrics(JobMetricsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("outputSourceConfig", targetDepth)) {
+                    context.nextToken();
+                    getMatchingJobResult.setOutputSourceConfig(new ListUnmarshaller<JobOutputSource>(JobOutputSourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("startTime", targetDepth)) {
                     context.nextToken();
                     getMatchingJobResult.setStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

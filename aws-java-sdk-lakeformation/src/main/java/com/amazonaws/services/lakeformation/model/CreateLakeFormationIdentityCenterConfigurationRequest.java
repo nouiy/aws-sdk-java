@@ -49,6 +49,20 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
      * </p>
      */
     private ExternalFilteringConfiguration externalFiltering;
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs that
+     * are allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     */
+    private java.util.List<DataLakePrincipal> shareRecipients;
 
     /**
      * <p>
@@ -201,6 +215,136 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
     }
 
     /**
+     * <p>
+     * A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs that
+     * are allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * 
+     * @return A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit
+     *         ARNs that are allowed to access data managed by Lake Formation. </p>
+     *         <p>
+     *         If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *         principals you want to have access to the resources.
+     *         </p>
+     *         <p>
+     *         If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     */
+
+    public java.util.List<DataLakePrincipal> getShareRecipients() {
+        return shareRecipients;
+    }
+
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs that
+     * are allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * 
+     * @param shareRecipients
+     *        A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs
+     *        that are allowed to access data managed by Lake Formation. </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *        principals you want to have access to the resources.
+     *        </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     */
+
+    public void setShareRecipients(java.util.Collection<DataLakePrincipal> shareRecipients) {
+        if (shareRecipients == null) {
+            this.shareRecipients = null;
+            return;
+        }
+
+        this.shareRecipients = new java.util.ArrayList<DataLakePrincipal>(shareRecipients);
+    }
+
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs that
+     * are allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setShareRecipients(java.util.Collection)} or {@link #withShareRecipients(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param shareRecipients
+     *        A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs
+     *        that are allowed to access data managed by Lake Formation. </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *        principals you want to have access to the resources.
+     *        </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLakeFormationIdentityCenterConfigurationRequest withShareRecipients(DataLakePrincipal... shareRecipients) {
+        if (this.shareRecipients == null) {
+            setShareRecipients(new java.util.ArrayList<DataLakePrincipal>(shareRecipients.length));
+        }
+        for (DataLakePrincipal ele : shareRecipients) {
+            this.shareRecipients.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs that
+     * are allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * 
+     * @param shareRecipients
+     *        A list of Amazon Web Services account IDs and/or Amazon Web Services organization/organizational unit ARNs
+     *        that are allowed to access data managed by Lake Formation. </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *        principals you want to have access to the resources.
+     *        </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLakeFormationIdentityCenterConfigurationRequest withShareRecipients(java.util.Collection<DataLakePrincipal> shareRecipients) {
+        setShareRecipients(shareRecipients);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -217,7 +361,9 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
         if (getInstanceArn() != null)
             sb.append("InstanceArn: ").append(getInstanceArn()).append(",");
         if (getExternalFiltering() != null)
-            sb.append("ExternalFiltering: ").append(getExternalFiltering());
+            sb.append("ExternalFiltering: ").append(getExternalFiltering()).append(",");
+        if (getShareRecipients() != null)
+            sb.append("ShareRecipients: ").append(getShareRecipients());
         sb.append("}");
         return sb.toString();
     }
@@ -244,6 +390,10 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
             return false;
         if (other.getExternalFiltering() != null && other.getExternalFiltering().equals(this.getExternalFiltering()) == false)
             return false;
+        if (other.getShareRecipients() == null ^ this.getShareRecipients() == null)
+            return false;
+        if (other.getShareRecipients() != null && other.getShareRecipients().equals(this.getShareRecipients()) == false)
+            return false;
         return true;
     }
 
@@ -255,6 +405,7 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
         hashCode = prime * hashCode + ((getCatalogId() == null) ? 0 : getCatalogId().hashCode());
         hashCode = prime * hashCode + ((getInstanceArn() == null) ? 0 : getInstanceArn().hashCode());
         hashCode = prime * hashCode + ((getExternalFiltering() == null) ? 0 : getExternalFiltering().hashCode());
+        hashCode = prime * hashCode + ((getShareRecipients() == null) ? 0 : getShareRecipients().hashCode());
         return hashCode;
     }
 

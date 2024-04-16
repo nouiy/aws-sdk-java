@@ -52,7 +52,8 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     private String name;
     /**
      * <p>
-     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the
+     * knowledge base.
      * </p>
      */
     private String roleArn;
@@ -232,12 +233,13 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the
+     * knowledge base.
      * </p>
      * 
      * @param roleArn
-     *        Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge
-     *        base.
+     *        Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations
+     *        on the knowledge base.
      */
 
     public void setRoleArn(String roleArn) {
@@ -246,11 +248,12 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the
+     * knowledge base.
      * </p>
      * 
-     * @return Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge
-     *         base.
+     * @return Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API
+     *         operations on the knowledge base.
      */
 
     public String getRoleArn() {
@@ -259,12 +262,13 @@ public class UpdateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge base.
+     * Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the
+     * knowledge base.
      * </p>
      * 
      * @param roleArn
-     *        Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to modify the knowledge
-     *        base.
+     *        Specifies a different Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations
+     *        on the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

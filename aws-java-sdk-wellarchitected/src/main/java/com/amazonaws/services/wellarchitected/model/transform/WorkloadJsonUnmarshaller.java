@@ -173,6 +173,10 @@ public class WorkloadJsonUnmarshaller implements Unmarshaller<Workload, JsonUnma
                     workload.setPrioritizedRiskCounts(new MapUnmarshaller<String, Integer>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(Integer.class)).unmarshall(context));
                 }
+                if (context.testExpression("JiraConfiguration", targetDepth)) {
+                    context.nextToken();
+                    workload.setJiraConfiguration(WorkloadJiraConfigurationOutputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

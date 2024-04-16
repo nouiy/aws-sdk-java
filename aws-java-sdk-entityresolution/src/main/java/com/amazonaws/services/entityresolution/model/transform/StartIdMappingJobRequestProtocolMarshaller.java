@@ -33,7 +33,7 @@ import com.amazonaws.annotation.SdkInternalApi;
 public class StartIdMappingJobRequestProtocolMarshaller implements Marshaller<Request<StartIdMappingJobRequest>, StartIdMappingJobRequest> {
 
     private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
-            .requestUri("/idmappingworkflows/{workflowName}/jobs").httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false).hasPayloadMembers(false)
+            .requestUri("/idmappingworkflows/{workflowName}/jobs").httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false).hasPayloadMembers(true)
             .serviceName("AWSEntityResolution").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;

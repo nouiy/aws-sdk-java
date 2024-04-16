@@ -46,6 +46,12 @@ public class GetIdMappingJobResult extends com.amazonaws.AmazonWebServiceResult<
     private IdMappingJobMetrics metrics;
     /**
      * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     */
+    private java.util.List<IdMappingJobOutputSource> outputSourceConfig;
+    /**
+     * <p>
      * The time at which the job was started.
      * </p>
      */
@@ -211,6 +217,76 @@ public class GetIdMappingJobResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * 
+     * @return A list of <code>OutputSource</code> objects.
+     */
+
+    public java.util.List<IdMappingJobOutputSource> getOutputSourceConfig() {
+        return outputSourceConfig;
+    }
+
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * 
+     * @param outputSourceConfig
+     *        A list of <code>OutputSource</code> objects.
+     */
+
+    public void setOutputSourceConfig(java.util.Collection<IdMappingJobOutputSource> outputSourceConfig) {
+        if (outputSourceConfig == null) {
+            this.outputSourceConfig = null;
+            return;
+        }
+
+        this.outputSourceConfig = new java.util.ArrayList<IdMappingJobOutputSource>(outputSourceConfig);
+    }
+
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOutputSourceConfig(java.util.Collection)} or {@link #withOutputSourceConfig(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param outputSourceConfig
+     *        A list of <code>OutputSource</code> objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetIdMappingJobResult withOutputSourceConfig(IdMappingJobOutputSource... outputSourceConfig) {
+        if (this.outputSourceConfig == null) {
+            setOutputSourceConfig(new java.util.ArrayList<IdMappingJobOutputSource>(outputSourceConfig.length));
+        }
+        for (IdMappingJobOutputSource ele : outputSourceConfig) {
+            this.outputSourceConfig.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * 
+     * @param outputSourceConfig
+     *        A list of <code>OutputSource</code> objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetIdMappingJobResult withOutputSourceConfig(java.util.Collection<IdMappingJobOutputSource> outputSourceConfig) {
+        setOutputSourceConfig(outputSourceConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * The time at which the job was started.
      * </p>
      * 
@@ -328,6 +404,8 @@ public class GetIdMappingJobResult extends com.amazonaws.AmazonWebServiceResult<
             sb.append("JobId: ").append(getJobId()).append(",");
         if (getMetrics() != null)
             sb.append("Metrics: ").append(getMetrics()).append(",");
+        if (getOutputSourceConfig() != null)
+            sb.append("OutputSourceConfig: ").append(getOutputSourceConfig()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getStatus() != null)
@@ -362,6 +440,10 @@ public class GetIdMappingJobResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
             return false;
+        if (other.getOutputSourceConfig() == null ^ this.getOutputSourceConfig() == null)
+            return false;
+        if (other.getOutputSourceConfig() != null && other.getOutputSourceConfig().equals(this.getOutputSourceConfig()) == false)
+            return false;
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
         if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
@@ -382,6 +464,7 @@ public class GetIdMappingJobResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getErrorDetails() == null) ? 0 : getErrorDetails().hashCode());
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
         hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
+        hashCode = prime * hashCode + ((getOutputSourceConfig() == null) ? 0 : getOutputSourceConfig().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;

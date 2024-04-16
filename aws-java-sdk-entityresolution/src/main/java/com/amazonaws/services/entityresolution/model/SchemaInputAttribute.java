@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object containing <code>FieldName</code>, <code>Type</code>, <code>GroupName</code>, and <code>MatchKey</code>.
+ * An object containing <code>FieldName</code>, <code>Type</code>, <code>GroupName</code>, <code>MatchKey</code>, and
+ * <code>SubType</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/SchemaInputAttribute"
@@ -36,19 +37,23 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
     private String fieldName;
     /**
      * <p>
-     * Instruct Entity Resolution to combine several columns into a unified column with the identical attribute type.
-     * For example, when working with columns such as first_name, middle_name, and last_name, assigning them a common
-     * <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single value.
+     * A string that instructs Entity Resolution to combine several columns into a unified column with the identical
+     * attribute type.
+     * </p>
+     * <p>
+     * For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     * <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     * concatenate them into a single value.
      * </p>
      */
     private String groupName;
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
-     * consider a scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning the <code>MatchKey</code> <i>Address</i> to both attributes, Entity
-     * Resolution will match records across these fields to create a consolidated matching group. If no
-     * <code>MatchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
+     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
+     * scenario where the source table contains various addresses, such as <code>business_address</code> and
+     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
+     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
+     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
      * included in the output table.
      * </p>
      */
@@ -108,16 +113,22 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Instruct Entity Resolution to combine several columns into a unified column with the identical attribute type.
-     * For example, when working with columns such as first_name, middle_name, and last_name, assigning them a common
-     * <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single value.
+     * A string that instructs Entity Resolution to combine several columns into a unified column with the identical
+     * attribute type.
+     * </p>
+     * <p>
+     * For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     * <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     * concatenate them into a single value.
      * </p>
      * 
      * @param groupName
-     *        Instruct Entity Resolution to combine several columns into a unified column with the identical attribute
-     *        type. For example, when working with columns such as first_name, middle_name, and last_name, assigning
-     *        them a common <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single
-     *        value.
+     *        A string that instructs Entity Resolution to combine several columns into a unified column with the
+     *        identical attribute type. </p>
+     *        <p>
+     *        For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     *        <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     *        concatenate them into a single value.
      */
 
     public void setGroupName(String groupName) {
@@ -126,15 +137,21 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Instruct Entity Resolution to combine several columns into a unified column with the identical attribute type.
-     * For example, when working with columns such as first_name, middle_name, and last_name, assigning them a common
-     * <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single value.
+     * A string that instructs Entity Resolution to combine several columns into a unified column with the identical
+     * attribute type.
+     * </p>
+     * <p>
+     * For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     * <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     * concatenate them into a single value.
      * </p>
      * 
-     * @return Instruct Entity Resolution to combine several columns into a unified column with the identical attribute
-     *         type. For example, when working with columns such as first_name, middle_name, and last_name, assigning
-     *         them a common <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single
-     *         value.
+     * @return A string that instructs Entity Resolution to combine several columns into a unified column with the
+     *         identical attribute type. </p>
+     *         <p>
+     *         For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     *         <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     *         concatenate them into a single value.
      */
 
     public String getGroupName() {
@@ -143,16 +160,22 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Instruct Entity Resolution to combine several columns into a unified column with the identical attribute type.
-     * For example, when working with columns such as first_name, middle_name, and last_name, assigning them a common
-     * <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single value.
+     * A string that instructs Entity Resolution to combine several columns into a unified column with the identical
+     * attribute type.
+     * </p>
+     * <p>
+     * For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     * <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     * concatenate them into a single value.
      * </p>
      * 
      * @param groupName
-     *        Instruct Entity Resolution to combine several columns into a unified column with the identical attribute
-     *        type. For example, when working with columns such as first_name, middle_name, and last_name, assigning
-     *        them a common <code>GroupName</code> will prompt Entity Resolution to concatenate them into a single
-     *        value.
+     *        A string that instructs Entity Resolution to combine several columns into a unified column with the
+     *        identical attribute type. </p>
+     *        <p>
+     *        For example, when working with columns such as <code>first_name</code>, <code>middle_name</code>, and
+     *        <code>last_name</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to
+     *        concatenate them into a single value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,21 +186,21 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
-     * consider a scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning the <code>MatchKey</code> <i>Address</i> to both attributes, Entity
-     * Resolution will match records across these fields to create a consolidated matching group. If no
-     * <code>MatchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
+     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
+     * scenario where the source table contains various addresses, such as <code>business_address</code> and
+     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
+     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
+     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
      * included in the output table.
      * </p>
      * 
      * @param matchKey
-     *        A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
+     *        A key that allows grouping of multiple input attributes into a unified matching group. For example,
      *        consider a scenario where the source table contains various addresses, such as
-     *        <code>business_address</code> and <code>shipping_address</code>. By assigning the <code>MatchKey</code>
-     *        <i>Address</i> to both attributes, Entity Resolution will match records across these fields to create a
-     *        consolidated matching group. If no <code>MatchKey</code> is specified for a column, it won't be utilized
-     *        for matching purposes but will still be included in the output table.
+     *        <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code>
+     *        called <code>address</code> to both attributes, Entity Resolution will match records across these fields
+     *        to create a consolidated matching group. If no <code>matchKey</code> is specified for a column, it won't
+     *        be utilized for matching purposes but will still be included in the output table.
      */
 
     public void setMatchKey(String matchKey) {
@@ -186,20 +209,20 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
-     * consider a scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning the <code>MatchKey</code> <i>Address</i> to both attributes, Entity
-     * Resolution will match records across these fields to create a consolidated matching group. If no
-     * <code>MatchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
+     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
+     * scenario where the source table contains various addresses, such as <code>business_address</code> and
+     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
+     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
+     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
      * included in the output table.
      * </p>
      * 
-     * @return A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
+     * @return A key that allows grouping of multiple input attributes into a unified matching group. For example,
      *         consider a scenario where the source table contains various addresses, such as
-     *         <code>business_address</code> and <code>shipping_address</code>. By assigning the <code>MatchKey</code>
-     *         <i>Address</i> to both attributes, Entity Resolution will match records across these fields to create a
-     *         consolidated matching group. If no <code>MatchKey</code> is specified for a column, it won't be utilized
-     *         for matching purposes but will still be included in the output table.
+     *         <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code>
+     *         called <code>address</code> to both attributes, Entity Resolution will match records across these fields
+     *         to create a consolidated matching group. If no <code>matchKey</code> is specified for a column, it won't
+     *         be utilized for matching purposes but will still be included in the output table.
      */
 
     public String getMatchKey() {
@@ -208,21 +231,21 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
-     * consider a scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning the <code>MatchKey</code> <i>Address</i> to both attributes, Entity
-     * Resolution will match records across these fields to create a consolidated matching group. If no
-     * <code>MatchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
+     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
+     * scenario where the source table contains various addresses, such as <code>business_address</code> and
+     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
+     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
+     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
      * included in the output table.
      * </p>
      * 
      * @param matchKey
-     *        A key that allows grouping of multiple input attributes into a unified matching group. For example, let's
+     *        A key that allows grouping of multiple input attributes into a unified matching group. For example,
      *        consider a scenario where the source table contains various addresses, such as
-     *        <code>business_address</code> and <code>shipping_address</code>. By assigning the <code>MatchKey</code>
-     *        <i>Address</i> to both attributes, Entity Resolution will match records across these fields to create a
-     *        consolidated matching group. If no <code>MatchKey</code> is specified for a column, it won't be utilized
-     *        for matching purposes but will still be included in the output table.
+     *        <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code>
+     *        called <code>address</code> to both attributes, Entity Resolution will match records across these fields
+     *        to create a consolidated matching group. If no <code>matchKey</code> is specified for a column, it won't
+     *        be utilized for matching purposes but will still be included in the output table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -74,6 +74,13 @@ public class LoRaWANDeviceMetadataJsonUnmarshaller implements Unmarshaller<LoRaW
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("PublicGateways", targetDepth)) {
+                    context.nextToken();
+                    loRaWANDeviceMetadata.setPublicGateways(new ListUnmarshaller<LoRaWANPublicGatewayMetadata>(LoRaWANPublicGatewayMetadataJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

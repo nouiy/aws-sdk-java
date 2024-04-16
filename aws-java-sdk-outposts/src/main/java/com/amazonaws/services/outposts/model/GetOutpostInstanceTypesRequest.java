@@ -27,7 +27,7 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID or the Amazon Resource Name (ARN) of the Outpost.
+     * The ID or ARN of the Outpost.
      * </p>
      */
     private String outpostId;
@@ -38,11 +38,11 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID or the Amazon Resource Name (ARN) of the Outpost.
+     * The ID or ARN of the Outpost.
      * </p>
      * 
      * @param outpostId
-     *        The ID or the Amazon Resource Name (ARN) of the Outpost.
+     *        The ID or ARN of the Outpost.
      */
 
     public void setOutpostId(String outpostId) {
@@ -51,10 +51,10 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID or the Amazon Resource Name (ARN) of the Outpost.
+     * The ID or ARN of the Outpost.
      * </p>
      * 
-     * @return The ID or the Amazon Resource Name (ARN) of the Outpost.
+     * @return The ID or ARN of the Outpost.
      */
 
     public String getOutpostId() {
@@ -63,11 +63,11 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID or the Amazon Resource Name (ARN) of the Outpost.
+     * The ID or ARN of the Outpost.
      * </p>
      * 
      * @param outpostId
-     *        The ID or the Amazon Resource Name (ARN) of the Outpost.
+     *        The ID or ARN of the Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

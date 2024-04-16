@@ -30,18 +30,18 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      * </p>
      */
     private String embeddingModelArn;
 
     /**
      * <p>
-     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      * </p>
      * 
      * @param embeddingModelArn
-     *        The ARN of the model used to create vector embeddings for the knowledge base.
+     *        The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      */
 
     public void setEmbeddingModelArn(String embeddingModelArn) {
@@ -50,10 +50,10 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      * </p>
      * 
-     * @return The ARN of the model used to create vector embeddings for the knowledge base.
+     * @return The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      */
 
     public String getEmbeddingModelArn() {
@@ -62,11 +62,11 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The ARN of the model used to create vector embeddings for the knowledge base.
+     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      * </p>
      * 
      * @param embeddingModelArn
-     *        The ARN of the model used to create vector embeddings for the knowledge base.
+     *        The Amazon Resource Name (ARN) of the model used to create vector embeddings for the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metric query object.
+ * The summary metric query object.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/SummaryMetricQuery" target="_top">AWS API
@@ -30,7 +30,7 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The id of the query.
+     * The id of the summary metric query.
      * </p>
      */
     private String queryId;
@@ -42,36 +42,36 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
     private String metricName;
     /**
      * <p>
-     * The dimensions of the metric.
+     * The dimensions of the summary metric.
      * </p>
      */
     private java.util.List<Dimension> dimensions;
     /**
      * <p>
-     * The aggregation period of the metric.
+     * The aggregation period of the summary metric.
      * </p>
      */
     private String aggregationPeriod;
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      */
     private java.util.Date startTimestamp;
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      */
     private java.util.Date endTimestamp;
 
     /**
      * <p>
-     * The id of the query.
+     * The id of the summary metric query.
      * </p>
      * 
      * @param queryId
-     *        The id of the query.
+     *        The id of the summary metric query.
      */
 
     public void setQueryId(String queryId) {
@@ -80,10 +80,10 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The id of the query.
+     * The id of the summary metric query.
      * </p>
      * 
-     * @return The id of the query.
+     * @return The id of the summary metric query.
      */
 
     public String getQueryId() {
@@ -92,11 +92,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The id of the query.
+     * The id of the summary metric query.
      * </p>
      * 
      * @param queryId
-     *        The id of the query.
+     *        The id of the summary metric query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,10 +166,10 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The dimensions of the metric.
+     * The dimensions of the summary metric.
      * </p>
      * 
-     * @return The dimensions of the metric.
+     * @return The dimensions of the summary metric.
      */
 
     public java.util.List<Dimension> getDimensions() {
@@ -178,11 +178,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The dimensions of the metric.
+     * The dimensions of the summary metric.
      * </p>
      * 
      * @param dimensions
-     *        The dimensions of the metric.
+     *        The dimensions of the summary metric.
      */
 
     public void setDimensions(java.util.Collection<Dimension> dimensions) {
@@ -196,7 +196,7 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The dimensions of the metric.
+     * The dimensions of the summary metric.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -205,7 +205,7 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param dimensions
-     *        The dimensions of the metric.
+     *        The dimensions of the summary metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +221,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The dimensions of the metric.
+     * The dimensions of the summary metric.
      * </p>
      * 
      * @param dimensions
-     *        The dimensions of the metric.
+     *        The dimensions of the summary metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,11 +236,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The aggregation period of the metric.
+     * The aggregation period of the summary metric.
      * </p>
      * 
      * @param aggregationPeriod
-     *        The aggregation period of the metric.
+     *        The aggregation period of the summary metric.
      * @see AggregationPeriod
      */
 
@@ -250,10 +250,10 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The aggregation period of the metric.
+     * The aggregation period of the summary metric.
      * </p>
      * 
-     * @return The aggregation period of the metric.
+     * @return The aggregation period of the summary metric.
      * @see AggregationPeriod
      */
 
@@ -263,11 +263,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The aggregation period of the metric.
+     * The aggregation period of the summary metric.
      * </p>
      * 
      * @param aggregationPeriod
-     *        The aggregation period of the metric.
+     *        The aggregation period of the summary metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AggregationPeriod
      */
@@ -279,11 +279,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The aggregation period of the metric.
+     * The aggregation period of the summary metric.
      * </p>
      * 
      * @param aggregationPeriod
-     *        The aggregation period of the metric.
+     *        The aggregation period of the summary metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AggregationPeriod
      */
@@ -295,11 +295,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      * 
      * @param startTimestamp
-     *        The start timestamp for summary metric query.
+     *        The start timestamp for the summary metric query.
      */
 
     public void setStartTimestamp(java.util.Date startTimestamp) {
@@ -308,10 +308,10 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      * 
-     * @return The start timestamp for summary metric query.
+     * @return The start timestamp for the summary metric query.
      */
 
     public java.util.Date getStartTimestamp() {
@@ -320,11 +320,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      * 
      * @param startTimestamp
-     *        The start timestamp for summary metric query.
+     *        The start timestamp for the summary metric query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,11 +335,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      * 
      * @param endTimestamp
-     *        The end timestamp for summary metric query.
+     *        The end timestamp for the summary metric query.
      */
 
     public void setEndTimestamp(java.util.Date endTimestamp) {
@@ -348,10 +348,10 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      * 
-     * @return The end timestamp for summary metric query.
+     * @return The end timestamp for the summary metric query.
      */
 
     public java.util.Date getEndTimestamp() {
@@ -360,11 +360,11 @@ public class SummaryMetricQuery implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      * 
      * @param endTimestamp
-     *        The end timestamp for summary metric query.
+     *        The end timestamp for the summary metric query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

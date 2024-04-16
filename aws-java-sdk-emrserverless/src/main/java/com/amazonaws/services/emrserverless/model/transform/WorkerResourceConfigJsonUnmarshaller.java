@@ -60,6 +60,10 @@ public class WorkerResourceConfigJsonUnmarshaller implements Unmarshaller<Worker
                     context.nextToken();
                     workerResourceConfig.setDisk(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("diskType", targetDepth)) {
+                    context.nextToken();
+                    workerResourceConfig.setDiskType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

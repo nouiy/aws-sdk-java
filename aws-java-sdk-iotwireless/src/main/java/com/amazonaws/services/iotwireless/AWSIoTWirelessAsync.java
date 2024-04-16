@@ -559,6 +559,27 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      * <p>
      * Provisions a wireless gateway.
      * </p>
+     * <note>
+     * <p>
+     * When provisioning a wireless gateway, you might run into duplication errors for the following reasons.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify a <code>GatewayEui</code> value that already exists.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you used a <code>ClientRequestToken</code> with the same parameters within the last 10 minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To avoid this error, make sure that you use unique identifiers and parameters for each request within the
+     * specified time period.
+     * </p>
+     * </note>
      * 
      * @param createWirelessGatewayRequest
      * @return A Java Future containing the result of the CreateWirelessGateway operation returned by the service.
@@ -572,6 +593,27 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      * <p>
      * Provisions a wireless gateway.
      * </p>
+     * <note>
+     * <p>
+     * When provisioning a wireless gateway, you might run into duplication errors for the following reasons.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify a <code>GatewayEui</code> value that already exists.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you used a <code>ClientRequestToken</code> with the same parameters within the last 10 minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To avoid this error, make sure that you use unique identifiers and parameters for each request within the
+     * specified time period.
+     * </p>
+     * </note>
      * 
      * @param createWirelessGatewayRequest
      * @param asyncHandler
@@ -945,6 +987,27 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      * <p>
      * Deletes a wireless gateway.
      * </p>
+     * <note>
+     * <p>
+     * When deleting a wireless gateway, you might run into duplication errors for the following reasons.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify a <code>GatewayEui</code> value that already exists.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you used a <code>ClientRequestToken</code> with the same parameters within the last 10 minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To avoid this error, make sure that you use unique identifiers and parameters for each request within the
+     * specified time period.
+     * </p>
+     * </note>
      * 
      * @param deleteWirelessGatewayRequest
      * @return A Java Future containing the result of the DeleteWirelessGateway operation returned by the service.
@@ -958,6 +1021,27 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      * <p>
      * Deletes a wireless gateway.
      * </p>
+     * <note>
+     * <p>
+     * When deleting a wireless gateway, you might run into duplication errors for the following reasons.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify a <code>GatewayEui</code> value that already exists.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you used a <code>ClientRequestToken</code> with the same parameters within the last 10 minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To avoid this error, make sure that you use unique identifiers and parameters for each request within the
+     * specified time period.
+     * </p>
+     * </note>
      * 
      * @param deleteWirelessGatewayRequest
      * @param asyncHandler
@@ -1495,7 +1579,7 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
-     * Get the metric configuration status for this account.
+     * Get the metric configuration status for this AWS account.
      * </p>
      * 
      * @param getMetricConfigurationRequest
@@ -1508,7 +1592,7 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
-     * Get the metric configuration status for this account.
+     * Get the metric configuration status for this AWS account.
      * </p>
      * 
      * @param getMetricConfigurationRequest
@@ -1526,7 +1610,7 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
-     * Get metrics.
+     * Get the summary metrics for this AWS account.
      * </p>
      * 
      * @param getMetricsRequest
@@ -1539,7 +1623,7 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
-     * Get metrics.
+     * Get the summary metrics for this AWS account.
      * </p>
      * 
      * @param getMetricsRequest
@@ -3492,7 +3576,7 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
-     * Update the metric configuration.
+     * Update the summary metric configuration.
      * </p>
      * 
      * @param updateMetricConfigurationRequest
@@ -3506,7 +3590,7 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
-     * Update the metric configuration.
+     * Update the summary metric configuration.
      * </p>
      * 
      * @param updateMetricConfigurationRequest

@@ -25,18 +25,18 @@ public class GetMetricConfigurationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account's configuration status for summary metric aggregation.
+     * The configuration status of the AWS account for summary metric aggregation.
      * </p>
      */
     private SummaryMetricConfiguration summaryMetric;
 
     /**
      * <p>
-     * The account's configuration status for summary metric aggregation.
+     * The configuration status of the AWS account for summary metric aggregation.
      * </p>
      * 
      * @param summaryMetric
-     *        The account's configuration status for summary metric aggregation.
+     *        The configuration status of the AWS account for summary metric aggregation.
      */
 
     public void setSummaryMetric(SummaryMetricConfiguration summaryMetric) {
@@ -45,10 +45,10 @@ public class GetMetricConfigurationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account's configuration status for summary metric aggregation.
+     * The configuration status of the AWS account for summary metric aggregation.
      * </p>
      * 
-     * @return The account's configuration status for summary metric aggregation.
+     * @return The configuration status of the AWS account for summary metric aggregation.
      */
 
     public SummaryMetricConfiguration getSummaryMetric() {
@@ -57,11 +57,11 @@ public class GetMetricConfigurationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The account's configuration status for summary metric aggregation.
+     * The configuration status of the AWS account for summary metric aggregation.
      * </p>
      * 
      * @param summaryMetric
-     *        The account's configuration status for summary metric aggregation.
+     *        The configuration status of the AWS account for summary metric aggregation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

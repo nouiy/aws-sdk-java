@@ -36,6 +36,12 @@ public class BatchJobIdentifier implements Serializable, Cloneable, StructuredPo
     private FileBatchJobIdentifier fileBatchJobIdentifier;
     /**
      * <p>
+     * Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     * </p>
+     */
+    private RestartBatchJobIdentifier restartBatchJobIdentifier;
+    /**
+     * <p>
      * Specifies an Amazon S3 location that identifies the batch jobs that you want to run. Use this identifier to run
      * ad hoc batch jobs.
      * </p>
@@ -85,6 +91,46 @@ public class BatchJobIdentifier implements Serializable, Cloneable, StructuredPo
 
     public BatchJobIdentifier withFileBatchJobIdentifier(FileBatchJobIdentifier fileBatchJobIdentifier) {
         setFileBatchJobIdentifier(fileBatchJobIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     * </p>
+     * 
+     * @param restartBatchJobIdentifier
+     *        Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     */
+
+    public void setRestartBatchJobIdentifier(RestartBatchJobIdentifier restartBatchJobIdentifier) {
+        this.restartBatchJobIdentifier = restartBatchJobIdentifier;
+    }
+
+    /**
+     * <p>
+     * Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     * </p>
+     * 
+     * @return Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     */
+
+    public RestartBatchJobIdentifier getRestartBatchJobIdentifier() {
+        return this.restartBatchJobIdentifier;
+    }
+
+    /**
+     * <p>
+     * Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     * </p>
+     * 
+     * @param restartBatchJobIdentifier
+     *        Specifies the required information for restart, including execution ID and jobsteprestartmarker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchJobIdentifier withRestartBatchJobIdentifier(RestartBatchJobIdentifier restartBatchJobIdentifier) {
+        setRestartBatchJobIdentifier(restartBatchJobIdentifier);
         return this;
     }
 
@@ -188,6 +234,8 @@ public class BatchJobIdentifier implements Serializable, Cloneable, StructuredPo
         sb.append("{");
         if (getFileBatchJobIdentifier() != null)
             sb.append("FileBatchJobIdentifier: ").append(getFileBatchJobIdentifier()).append(",");
+        if (getRestartBatchJobIdentifier() != null)
+            sb.append("RestartBatchJobIdentifier: ").append(getRestartBatchJobIdentifier()).append(",");
         if (getS3BatchJobIdentifier() != null)
             sb.append("S3BatchJobIdentifier: ").append(getS3BatchJobIdentifier()).append(",");
         if (getScriptBatchJobIdentifier() != null)
@@ -210,6 +258,10 @@ public class BatchJobIdentifier implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getFileBatchJobIdentifier() != null && other.getFileBatchJobIdentifier().equals(this.getFileBatchJobIdentifier()) == false)
             return false;
+        if (other.getRestartBatchJobIdentifier() == null ^ this.getRestartBatchJobIdentifier() == null)
+            return false;
+        if (other.getRestartBatchJobIdentifier() != null && other.getRestartBatchJobIdentifier().equals(this.getRestartBatchJobIdentifier()) == false)
+            return false;
         if (other.getS3BatchJobIdentifier() == null ^ this.getS3BatchJobIdentifier() == null)
             return false;
         if (other.getS3BatchJobIdentifier() != null && other.getS3BatchJobIdentifier().equals(this.getS3BatchJobIdentifier()) == false)
@@ -227,6 +279,7 @@ public class BatchJobIdentifier implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFileBatchJobIdentifier() == null) ? 0 : getFileBatchJobIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getRestartBatchJobIdentifier() == null) ? 0 : getRestartBatchJobIdentifier().hashCode());
         hashCode = prime * hashCode + ((getS3BatchJobIdentifier() == null) ? 0 : getS3BatchJobIdentifier().hashCode());
         hashCode = prime * hashCode + ((getScriptBatchJobIdentifier() == null) ? 0 : getScriptBatchJobIdentifier().hashCode());
         return hashCode;

@@ -38,7 +38,8 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
     private String connectionString;
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Pinecone
+     * API key.
      * </p>
      */
     private String credentialsSecretArn;
@@ -97,11 +98,13 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Pinecone
+     * API key.
      * </p>
      * 
      * @param credentialsSecretArn
-     *        The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     *        The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *        Pinecone API key.
      */
 
     public void setCredentialsSecretArn(String credentialsSecretArn) {
@@ -110,10 +113,12 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Pinecone
+     * API key.
      * </p>
      * 
-     * @return The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * @return The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *         Pinecone API key.
      */
 
     public String getCredentialsSecretArn() {
@@ -122,11 +127,13 @@ public class PineconeConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Pinecone
+     * API key.
      * </p>
      * 
      * @param credentialsSecretArn
-     *        The ARN of the secret that you created in Secrets Manager that is linked to your Pinecone API key.
+     *        The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *        Pinecone API key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

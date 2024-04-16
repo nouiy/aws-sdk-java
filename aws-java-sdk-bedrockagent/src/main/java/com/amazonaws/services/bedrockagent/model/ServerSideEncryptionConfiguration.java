@@ -30,18 +30,18 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt the resource.
+     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      * </p>
      */
     private String kmsKeyArn;
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt the resource.
+     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The ARN of the KMS key used to encrypt the resource.
+     *        The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -50,10 +50,10 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt the resource.
+     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      * </p>
      * 
-     * @return The ARN of the KMS key used to encrypt the resource.
+     * @return The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      */
 
     public String getKmsKeyArn() {
@@ -62,11 +62,11 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt the resource.
+     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The ARN of the KMS key used to encrypt the resource.
+     *        The Amazon Resource Name (ARN) of the KMS key used to encrypt the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

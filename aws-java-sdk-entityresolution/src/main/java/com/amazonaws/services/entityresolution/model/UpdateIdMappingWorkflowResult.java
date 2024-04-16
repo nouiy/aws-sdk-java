@@ -51,15 +51,15 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
     private java.util.List<IdMappingWorkflowOutputSource> outputSourceConfig;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access resources on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon Web
+     * Services resources on your behalf.
      * </p>
      */
     private String workflowArn;
@@ -308,13 +308,13 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on
-     *        your behalf.
+     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web
+     *        Services resources on your behalf.
      */
 
     public void setRoleArn(String roleArn) {
@@ -323,12 +323,12 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources
-     *         on your behalf.
+     * @return The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web
+     *         Services resources on your behalf.
      */
 
     public String getRoleArn() {
@@ -337,13 +337,13 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on
-     *        your behalf.
+     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web
+     *        Services resources on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -354,13 +354,13 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access resources on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon Web
+     * Services resources on your behalf.
      * </p>
      * 
      * @param workflowArn
-     *        The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access
-     *        resources on your behalf.
+     *        The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon
+     *        Web Services resources on your behalf.
      */
 
     public void setWorkflowArn(String workflowArn) {
@@ -369,12 +369,12 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access resources on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon Web
+     * Services resources on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access
-     *         resources on your behalf.
+     * @return The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon
+     *         Web Services resources on your behalf.
      */
 
     public String getWorkflowArn() {
@@ -383,13 +383,13 @@ public class UpdateIdMappingWorkflowResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access resources on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon Web
+     * Services resources on your behalf.
      * </p>
      * 
      * @param workflowArn
-     *        The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access
-     *        resources on your behalf.
+     *        The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon
+     *        Web Services resources on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -165,7 +165,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -233,12 +234,14 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * <ul>
      * <li>
      * <p>
-     * <code>agentResourceRoleArn</code> – The ARN of the role with permissions to create an agent.
+     * <code>agentResourceRoleArn</code> – The Amazon Resource Name (ARN) of the role with permissions to invoke API
+     * operations on an agent.
      * </p>
      * </li>
      * <li>
      * <p>
-     * (Optional) <code>customerEncryptionKeyArn</code> – The ARN of a KMS key to encrypt the creation of the agent.
+     * (Optional) <code>customerEncryptionKeyArn</code> – The Amazon Resource Name (ARN) of a KMS key to encrypt the
+     * creation of the agent.
      * </p>
      * </li>
      * <li>
@@ -354,7 +357,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -424,7 +428,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -498,7 +503,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -573,7 +579,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * </li>
      * <li>
      * <p>
-     * Provide the ARN with permissions to create a knowledge base in the <code>roleArn</code> field.
+     * Provide the Amazon Resource Name (ARN) with permissions to create a knowledge base in the <code>roleArn</code>
+     * field.
      * </p>
      * </li>
      * <li>
@@ -699,7 +706,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.DeleteAgent
@@ -766,7 +774,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.DeleteAgentActionGroup
@@ -834,7 +843,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.DeleteAgentAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/DeleteAgentAlias" target="_top">AWS
      *      API Documentation</a>
@@ -899,7 +909,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.DeleteAgentVersion
@@ -966,7 +977,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.DeleteDataSource
@@ -1036,7 +1048,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.DeleteKnowledgeBase
@@ -1103,7 +1116,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.DisassociateAgentKnowledgeBase
@@ -1172,7 +1186,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgent" target="_top">AWS API
      *      Documentation</a>
@@ -1237,7 +1252,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetAgentActionGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentActionGroup"
      *      target="_top">AWS API Documentation</a>
@@ -1302,7 +1318,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetAgentAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentAlias" target="_top">AWS
      *      API Documentation</a>
@@ -1367,7 +1384,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetAgentKnowledgeBase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentKnowledgeBase"
      *      target="_top">AWS API Documentation</a>
@@ -1433,7 +1451,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetAgentVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetAgentVersion" target="_top">AWS
      *      API Documentation</a>
@@ -1498,7 +1517,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetDataSource" target="_top">AWS
      *      API Documentation</a>
@@ -1563,7 +1583,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetIngestionJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetIngestionJob" target="_top">AWS
      *      API Documentation</a>
@@ -1628,7 +1649,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.GetKnowledgeBase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/GetKnowledgeBase" target="_top">AWS
      *      API Documentation</a>
@@ -1693,7 +1715,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListAgentActionGroups
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentActionGroups"
      *      target="_top">AWS API Documentation</a>
@@ -1759,7 +1782,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListAgentAliases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentAliases" target="_top">AWS
      *      API Documentation</a>
@@ -1824,7 +1848,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListAgentKnowledgeBases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentKnowledgeBases"
      *      target="_top">AWS API Documentation</a>
@@ -1891,7 +1916,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListAgentVersions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListAgentVersions"
      *      target="_top">AWS API Documentation</a>
@@ -2019,7 +2045,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListDataSources
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListDataSources" target="_top">AWS
      *      API Documentation</a>
@@ -2084,7 +2111,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListIngestionJobs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListIngestionJobs"
      *      target="_top">AWS API Documentation</a>
@@ -2212,7 +2240,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -2277,7 +2306,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -2346,7 +2376,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -2417,7 +2448,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ServiceQuotaExceededException
      *         The number of requests exceeds the service quota. Resubmit your request later.
      * @sample AWSBedrockAgent.TagResource
@@ -2484,7 +2516,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @sample AWSBedrockAgent.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -2549,7 +2582,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -2618,7 +2652,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -2688,7 +2723,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @throws ServiceQuotaExceededException
@@ -2757,7 +2793,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.UpdateAgentKnowledgeBase
@@ -2832,7 +2869,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.UpdateDataSource
@@ -2926,7 +2964,8 @@ public class AWSBedrockAgentClient extends AmazonWebServiceClient implements AWS
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ConflictException
      *         There was a conflict performing an operation.
      * @sample AWSBedrockAgent.UpdateKnowledgeBase

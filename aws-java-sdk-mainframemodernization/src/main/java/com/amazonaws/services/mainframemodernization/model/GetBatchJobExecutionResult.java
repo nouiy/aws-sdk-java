@@ -61,6 +61,12 @@ public class GetBatchJobExecutionResult extends com.amazonaws.AmazonWebServiceRe
     private String jobName;
     /**
      * <p>
+     * The restart steps information for the most recent restart operation.
+     * </p>
+     */
+    private JobStepRestartMarker jobStepRestartMarker;
+    /**
+     * <p>
      * The type of job.
      * </p>
      */
@@ -335,6 +341,46 @@ public class GetBatchJobExecutionResult extends com.amazonaws.AmazonWebServiceRe
 
     public GetBatchJobExecutionResult withJobName(String jobName) {
         setJobName(jobName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The restart steps information for the most recent restart operation.
+     * </p>
+     * 
+     * @param jobStepRestartMarker
+     *        The restart steps information for the most recent restart operation.
+     */
+
+    public void setJobStepRestartMarker(JobStepRestartMarker jobStepRestartMarker) {
+        this.jobStepRestartMarker = jobStepRestartMarker;
+    }
+
+    /**
+     * <p>
+     * The restart steps information for the most recent restart operation.
+     * </p>
+     * 
+     * @return The restart steps information for the most recent restart operation.
+     */
+
+    public JobStepRestartMarker getJobStepRestartMarker() {
+        return this.jobStepRestartMarker;
+    }
+
+    /**
+     * <p>
+     * The restart steps information for the most recent restart operation.
+     * </p>
+     * 
+     * @param jobStepRestartMarker
+     *        The restart steps information for the most recent restart operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetBatchJobExecutionResult withJobStepRestartMarker(JobStepRestartMarker jobStepRestartMarker) {
+        setJobStepRestartMarker(jobStepRestartMarker);
         return this;
     }
 
@@ -652,6 +698,8 @@ public class GetBatchJobExecutionResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("JobId: ").append(getJobId()).append(",");
         if (getJobName() != null)
             sb.append("JobName: ").append(getJobName()).append(",");
+        if (getJobStepRestartMarker() != null)
+            sb.append("JobStepRestartMarker: ").append(getJobStepRestartMarker()).append(",");
         if (getJobType() != null)
             sb.append("JobType: ").append(getJobType()).append(",");
         if (getJobUser() != null)
@@ -702,6 +750,10 @@ public class GetBatchJobExecutionResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
             return false;
+        if (other.getJobStepRestartMarker() == null ^ this.getJobStepRestartMarker() == null)
+            return false;
+        if (other.getJobStepRestartMarker() != null && other.getJobStepRestartMarker().equals(this.getJobStepRestartMarker()) == false)
+            return false;
         if (other.getJobType() == null ^ this.getJobType() == null)
             return false;
         if (other.getJobType() != null && other.getJobType().equals(this.getJobType()) == false)
@@ -740,6 +792,7 @@ public class GetBatchJobExecutionResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getExecutionId() == null) ? 0 : getExecutionId().hashCode());
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
+        hashCode = prime * hashCode + ((getJobStepRestartMarker() == null) ? 0 : getJobStepRestartMarker().hashCode());
         hashCode = prime * hashCode + ((getJobType() == null) ? 0 : getJobType().hashCode());
         hashCode = prime * hashCode + ((getJobUser() == null) ? 0 : getJobUser().hashCode());
         hashCode = prime * hashCode + ((getReturnCode() == null) ? 0 : getReturnCode().hashCode());

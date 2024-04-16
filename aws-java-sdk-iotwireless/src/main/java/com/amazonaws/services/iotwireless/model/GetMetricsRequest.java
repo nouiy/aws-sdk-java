@@ -27,17 +27,17 @@ public class GetMetricsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The list of queries to retrieve summary metrics.
+     * The list of queries to retrieve the summary metrics.
      * </p>
      */
     private java.util.List<SummaryMetricQuery> summaryMetricQueries;
 
     /**
      * <p>
-     * The list of queries to retrieve summary metrics.
+     * The list of queries to retrieve the summary metrics.
      * </p>
      * 
-     * @return The list of queries to retrieve summary metrics.
+     * @return The list of queries to retrieve the summary metrics.
      */
 
     public java.util.List<SummaryMetricQuery> getSummaryMetricQueries() {
@@ -46,11 +46,11 @@ public class GetMetricsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The list of queries to retrieve summary metrics.
+     * The list of queries to retrieve the summary metrics.
      * </p>
      * 
      * @param summaryMetricQueries
-     *        The list of queries to retrieve summary metrics.
+     *        The list of queries to retrieve the summary metrics.
      */
 
     public void setSummaryMetricQueries(java.util.Collection<SummaryMetricQuery> summaryMetricQueries) {
@@ -64,7 +64,7 @@ public class GetMetricsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The list of queries to retrieve summary metrics.
+     * The list of queries to retrieve the summary metrics.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -73,7 +73,7 @@ public class GetMetricsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param summaryMetricQueries
-     *        The list of queries to retrieve summary metrics.
+     *        The list of queries to retrieve the summary metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class GetMetricsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The list of queries to retrieve summary metrics.
+     * The list of queries to retrieve the summary metrics.
      * </p>
      * 
      * @param summaryMetricQueries
-     *        The list of queries to retrieve summary metrics.
+     *        The list of queries to retrieve the summary metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

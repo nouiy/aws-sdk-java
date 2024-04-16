@@ -29,6 +29,12 @@ public class GetMatchIdResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      */
     private String matchId;
+    /**
+     * <p>
+     * The rule the record matched on.
+     * </p>
+     */
+    private String matchRule;
 
     /**
      * <p>
@@ -71,6 +77,46 @@ public class GetMatchIdResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * The rule the record matched on.
+     * </p>
+     * 
+     * @param matchRule
+     *        The rule the record matched on.
+     */
+
+    public void setMatchRule(String matchRule) {
+        this.matchRule = matchRule;
+    }
+
+    /**
+     * <p>
+     * The rule the record matched on.
+     * </p>
+     * 
+     * @return The rule the record matched on.
+     */
+
+    public String getMatchRule() {
+        return this.matchRule;
+    }
+
+    /**
+     * <p>
+     * The rule the record matched on.
+     * </p>
+     * 
+     * @param matchRule
+     *        The rule the record matched on.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMatchIdResult withMatchRule(String matchRule) {
+        setMatchRule(matchRule);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -83,7 +129,9 @@ public class GetMatchIdResult extends com.amazonaws.AmazonWebServiceResult<com.a
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getMatchId() != null)
-            sb.append("MatchId: ").append(getMatchId());
+            sb.append("MatchId: ").append(getMatchId()).append(",");
+        if (getMatchRule() != null)
+            sb.append("MatchRule: ").append(getMatchRule());
         sb.append("}");
         return sb.toString();
     }
@@ -102,6 +150,10 @@ public class GetMatchIdResult extends com.amazonaws.AmazonWebServiceResult<com.a
             return false;
         if (other.getMatchId() != null && other.getMatchId().equals(this.getMatchId()) == false)
             return false;
+        if (other.getMatchRule() == null ^ this.getMatchRule() == null)
+            return false;
+        if (other.getMatchRule() != null && other.getMatchRule().equals(this.getMatchRule()) == false)
+            return false;
         return true;
     }
 
@@ -111,6 +163,7 @@ public class GetMatchIdResult extends com.amazonaws.AmazonWebServiceResult<com.a
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMatchId() == null) ? 0 : getMatchId().hashCode());
+        hashCode = prime * hashCode + ((getMatchRule() == null) ? 0 : getMatchRule().hashCode());
         return hashCode;
     }
 

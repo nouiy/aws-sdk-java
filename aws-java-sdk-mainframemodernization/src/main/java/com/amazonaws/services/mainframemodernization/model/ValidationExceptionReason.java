@@ -22,6 +22,8 @@ public enum ValidationExceptionReason {
 
     UnknownOperation("unknownOperation"),
     CannotParse("cannotParse"),
+    FeatureNotAvailable("featureNotAvailable"),
+    UnsupportedEngineVersion("unsupportedEngineVersion"),
     FieldValidationFailed("fieldValidationFailed"),
     Other("other");
 

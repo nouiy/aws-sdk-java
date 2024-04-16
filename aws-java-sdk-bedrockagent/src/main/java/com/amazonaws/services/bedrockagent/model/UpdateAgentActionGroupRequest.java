@@ -27,7 +27,8 @@ public class UpdateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      */
     private ActionGroupExecutor actionGroupExecutor;
@@ -95,11 +96,13 @@ public class UpdateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      * 
      * @param actionGroupExecutor
-     *        The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     *        The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
+     *        upon invoking the action.
      */
 
     public void setActionGroupExecutor(ActionGroupExecutor actionGroupExecutor) {
@@ -108,11 +111,12 @@ public class UpdateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      * 
-     * @return The ARN of the Lambda function containing the business logic that is carried out upon invoking the
-     *         action.
+     * @return The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
+     *         upon invoking the action.
      */
 
     public ActionGroupExecutor getActionGroupExecutor() {
@@ -121,11 +125,13 @@ public class UpdateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      * 
      * @param actionGroupExecutor
-     *        The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     *        The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
+     *        upon invoking the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

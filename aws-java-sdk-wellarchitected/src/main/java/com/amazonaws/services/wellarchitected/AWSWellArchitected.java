@@ -890,6 +890,27 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * Global settings for all workloads.
+     * </p>
+     * 
+     * @param getGlobalSettingsRequest
+     * @return Result of the GetGlobalSettings operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetGlobalSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetGlobalSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetGlobalSettingsResult getGlobalSettings(GetGlobalSettingsRequest getGlobalSettingsRequest);
+
+    /**
+     * <p>
      * Get an existing lens.
      * </p>
      * 
@@ -1271,7 +1292,7 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
-     * List lens review improvements.
+     * List the improvements of a particular lens review.
      * </p>
      * 
      * @param listLensReviewImprovementsRequest
@@ -1712,7 +1733,7 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
-     * Updates whether the Amazon Web Services account is opted into organization sharing and discovery integration
+     * Update whether the Amazon Web Services account is opted into organization sharing and discovery integration
      * features.
      * </p>
      * 
@@ -1733,6 +1754,31 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateGlobalSettingsResult updateGlobalSettings(UpdateGlobalSettingsRequest updateGlobalSettingsRequest);
+
+    /**
+     * <p>
+     * Update integration features.
+     * </p>
+     * 
+     * @param updateIntegrationRequest
+     * @return Result of the UpdateIntegration operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateIntegrationResult updateIntegration(UpdateIntegrationRequest updateIntegrationRequest);
 
     /**
      * <p>
@@ -1963,6 +2009,8 @@ public interface AWSWellArchitected {
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
      *         Request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
      * @sample AWSWellArchitected.UpgradeLensReview
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeLensReview"
      *      target="_top">AWS API Documentation</a>
@@ -1988,6 +2036,8 @@ public interface AWSWellArchitected {
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
      *         Request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
      * @sample AWSWellArchitected.UpgradeProfileVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeProfileVersion"
      *      target="_top">AWS API Documentation</a>

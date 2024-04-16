@@ -128,6 +128,11 @@ public class AbstractAWSMainframeModernization implements AWSMainframeModernizat
     }
 
     @Override
+    public ListBatchJobRestartPointsResult listBatchJobRestartPoints(ListBatchJobRestartPointsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListDataSetImportHistoryResult listDataSetImportHistory(ListDataSetImportHistoryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

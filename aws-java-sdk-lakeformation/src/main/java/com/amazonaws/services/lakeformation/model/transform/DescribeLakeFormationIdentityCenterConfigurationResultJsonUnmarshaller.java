@@ -66,6 +66,17 @@ public class DescribeLakeFormationIdentityCenterConfigurationResultJsonUnmarshal
                     describeLakeFormationIdentityCenterConfigurationResult.setExternalFiltering(ExternalFilteringConfigurationJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("ShareRecipients", targetDepth)) {
+                    context.nextToken();
+                    describeLakeFormationIdentityCenterConfigurationResult.setShareRecipients(new ListUnmarshaller<DataLakePrincipal>(
+                            DataLakePrincipalJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ResourceShare", targetDepth)) {
+                    context.nextToken();
+                    describeLakeFormationIdentityCenterConfigurationResult.setResourceShare(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

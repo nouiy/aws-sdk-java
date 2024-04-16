@@ -28,6 +28,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     }
 
     @Override
+    public java.util.concurrent.Future<AddPolicyStatementResult> addPolicyStatementAsync(AddPolicyStatementRequest request) {
+
+        return addPolicyStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AddPolicyStatementResult> addPolicyStatementAsync(AddPolicyStatementRequest request,
+            com.amazonaws.handlers.AsyncHandler<AddPolicyStatementRequest, AddPolicyStatementResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest request) {
 
         return createIdMappingWorkflowAsync(request, null);
@@ -36,6 +49,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     @Override
     public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateIdMappingWorkflowRequest, CreateIdMappingWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdNamespaceResult> createIdNamespaceAsync(CreateIdNamespaceRequest request) {
+
+        return createIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdNamespaceResult> createIdNamespaceAsync(CreateIdNamespaceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIdNamespaceRequest, CreateIdNamespaceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -80,6 +106,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceResult> deleteIdNamespaceAsync(DeleteIdNamespaceRequest request) {
+
+        return deleteIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceResult> deleteIdNamespaceAsync(DeleteIdNamespaceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdNamespaceRequest, DeleteIdNamespaceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteMatchingWorkflowResult> deleteMatchingWorkflowAsync(DeleteMatchingWorkflowRequest request) {
 
         return deleteMatchingWorkflowAsync(request, null);
@@ -88,6 +127,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     @Override
     public java.util.concurrent.Future<DeleteMatchingWorkflowResult> deleteMatchingWorkflowAsync(DeleteMatchingWorkflowRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteMatchingWorkflowRequest, DeleteMatchingWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePolicyStatementResult> deletePolicyStatementAsync(DeletePolicyStatementRequest request) {
+
+        return deletePolicyStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePolicyStatementResult> deletePolicyStatementAsync(DeletePolicyStatementRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePolicyStatementRequest, DeletePolicyStatementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -132,6 +184,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     }
 
     @Override
+    public java.util.concurrent.Future<GetIdNamespaceResult> getIdNamespaceAsync(GetIdNamespaceRequest request) {
+
+        return getIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdNamespaceResult> getIdNamespaceAsync(GetIdNamespaceRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIdNamespaceRequest, GetIdNamespaceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMatchIdResult> getMatchIdAsync(GetMatchIdRequest request) {
 
         return getMatchIdAsync(request, null);
@@ -171,6 +236,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     }
 
     @Override
+    public java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest request) {
+
+        return getPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPolicyRequest, GetPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSchemaMappingResult> getSchemaMappingAsync(GetSchemaMappingRequest request) {
 
         return getSchemaMappingAsync(request, null);
@@ -205,6 +283,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     @Override
     public java.util.concurrent.Future<ListIdMappingWorkflowsResult> listIdMappingWorkflowsAsync(ListIdMappingWorkflowsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListIdMappingWorkflowsRequest, ListIdMappingWorkflowsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespacesResult> listIdNamespacesAsync(ListIdNamespacesRequest request) {
+
+        return listIdNamespacesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespacesResult> listIdNamespacesAsync(ListIdNamespacesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIdNamespacesRequest, ListIdNamespacesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -275,6 +366,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     }
 
     @Override
+    public java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest request) {
+
+        return putPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutPolicyRequest, PutPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartIdMappingJobResult> startIdMappingJobAsync(StartIdMappingJobRequest request) {
 
         return startIdMappingJobAsync(request, null);
@@ -335,6 +439,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     @Override
     public java.util.concurrent.Future<UpdateIdMappingWorkflowResult> updateIdMappingWorkflowAsync(UpdateIdMappingWorkflowRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateIdMappingWorkflowRequest, UpdateIdMappingWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdNamespaceResult> updateIdNamespaceAsync(UpdateIdNamespaceRequest request) {
+
+        return updateIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdNamespaceResult> updateIdNamespaceAsync(UpdateIdNamespaceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdNamespaceRequest, UpdateIdNamespaceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

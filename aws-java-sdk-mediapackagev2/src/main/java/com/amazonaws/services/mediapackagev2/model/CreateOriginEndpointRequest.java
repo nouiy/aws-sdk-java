@@ -95,6 +95,12 @@ public class CreateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<CreateLowLatencyHlsManifestConfiguration> lowLatencyHlsManifests;
     /**
      * <p>
+     * A DASH manifest configuration.
+     * </p>
+     */
+    private java.util.List<CreateDashManifestConfiguration> dashManifests;
+    /**
+     * <p>
      * A comma-separated list of tag key:value pairs that you define. For example:
      * </p>
      * <p>
@@ -639,6 +645,76 @@ public class CreateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @return A DASH manifest configuration.
+     */
+
+    public java.util.List<CreateDashManifestConfiguration> getDashManifests() {
+        return dashManifests;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     */
+
+    public void setDashManifests(java.util.Collection<CreateDashManifestConfiguration> dashManifests) {
+        if (dashManifests == null) {
+            this.dashManifests = null;
+            return;
+        }
+
+        this.dashManifests = new java.util.ArrayList<CreateDashManifestConfiguration>(dashManifests);
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDashManifests(java.util.Collection)} or {@link #withDashManifests(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOriginEndpointRequest withDashManifests(CreateDashManifestConfiguration... dashManifests) {
+        if (this.dashManifests == null) {
+            setDashManifests(new java.util.ArrayList<CreateDashManifestConfiguration>(dashManifests.length));
+        }
+        for (CreateDashManifestConfiguration ele : dashManifests) {
+            this.dashManifests.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOriginEndpointRequest withDashManifests(java.util.Collection<CreateDashManifestConfiguration> dashManifests) {
+        setDashManifests(dashManifests);
+        return this;
+    }
+
+    /**
+     * <p>
      * A comma-separated list of tag key:value pairs that you define. For example:
      * </p>
      * <p>
@@ -770,6 +846,8 @@ public class CreateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
             sb.append("HlsManifests: ").append(getHlsManifests()).append(",");
         if (getLowLatencyHlsManifests() != null)
             sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests()).append(",");
+        if (getDashManifests() != null)
+            sb.append("DashManifests: ").append(getDashManifests()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -826,6 +904,10 @@ public class CreateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getLowLatencyHlsManifests() != null && other.getLowLatencyHlsManifests().equals(this.getLowLatencyHlsManifests()) == false)
             return false;
+        if (other.getDashManifests() == null ^ this.getDashManifests() == null)
+            return false;
+        if (other.getDashManifests() != null && other.getDashManifests().equals(this.getDashManifests()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -848,6 +930,7 @@ public class CreateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getStartoverWindowSeconds() == null) ? 0 : getStartoverWindowSeconds().hashCode());
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
+        hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

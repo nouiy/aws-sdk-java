@@ -45,9 +45,13 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * Each resource must have a unique client request token. If you try to create a new resource with the same token as
-     * a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * Each resource must have a unique client request token. The client token is used to implement idempotency. It
+     * ensures that the request completes no more than one time. If you retry a request with the same token and the same
+     * parameters, the request will complete successfully. However, if you try to create a new resource using the same
+     * token but different parameters, an HTTP 409 conflict occurs. If you omit this value, AWS SDKs will automatically
+     * generate a unique client request. For more information about idempotency, see <a
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in Amazon
+     * EC2 API requests</a>.
      * </p>
      */
     private String clientRequestToken;
@@ -210,15 +214,24 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Each resource must have a unique client request token. If you try to create a new resource with the same token as
-     * a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * Each resource must have a unique client request token. The client token is used to implement idempotency. It
+     * ensures that the request completes no more than one time. If you retry a request with the same token and the same
+     * parameters, the request will complete successfully. However, if you try to create a new resource using the same
+     * token but different parameters, an HTTP 409 conflict occurs. If you omit this value, AWS SDKs will automatically
+     * generate a unique client request. For more information about idempotency, see <a
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in Amazon
+     * EC2 API requests</a>.
      * </p>
      * 
      * @param clientRequestToken
-     *        Each resource must have a unique client request token. If you try to create a new resource with the same
-     *        token as a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will
-     *        automatically generate a unique client request.
+     *        Each resource must have a unique client request token. The client token is used to implement idempotency.
+     *        It ensures that the request completes no more than one time. If you retry a request with the same token
+     *        and the same parameters, the request will complete successfully. However, if you try to create a new
+     *        resource using the same token but different parameters, an HTTP 409 conflict occurs. If you omit this
+     *        value, AWS SDKs will automatically generate a unique client request. For more information about
+     *        idempotency, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in
+     *        Amazon EC2 API requests</a>.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -227,14 +240,23 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Each resource must have a unique client request token. If you try to create a new resource with the same token as
-     * a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * Each resource must have a unique client request token. The client token is used to implement idempotency. It
+     * ensures that the request completes no more than one time. If you retry a request with the same token and the same
+     * parameters, the request will complete successfully. However, if you try to create a new resource using the same
+     * token but different parameters, an HTTP 409 conflict occurs. If you omit this value, AWS SDKs will automatically
+     * generate a unique client request. For more information about idempotency, see <a
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in Amazon
+     * EC2 API requests</a>.
      * </p>
      * 
-     * @return Each resource must have a unique client request token. If you try to create a new resource with the same
-     *         token as a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will
-     *         automatically generate a unique client request.
+     * @return Each resource must have a unique client request token. The client token is used to implement idempotency.
+     *         It ensures that the request completes no more than one time. If you retry a request with the same token
+     *         and the same parameters, the request will complete successfully. However, if you try to create a new
+     *         resource using the same token but different parameters, an HTTP 409 conflict occurs. If you omit this
+     *         value, AWS SDKs will automatically generate a unique client request. For more information about
+     *         idempotency, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in
+     *         Amazon EC2 API requests</a>.
      */
 
     public String getClientRequestToken() {
@@ -243,15 +265,24 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Each resource must have a unique client request token. If you try to create a new resource with the same token as
-     * a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * Each resource must have a unique client request token. The client token is used to implement idempotency. It
+     * ensures that the request completes no more than one time. If you retry a request with the same token and the same
+     * parameters, the request will complete successfully. However, if you try to create a new resource using the same
+     * token but different parameters, an HTTP 409 conflict occurs. If you omit this value, AWS SDKs will automatically
+     * generate a unique client request. For more information about idempotency, see <a
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in Amazon
+     * EC2 API requests</a>.
      * </p>
      * 
      * @param clientRequestToken
-     *        Each resource must have a unique client request token. If you try to create a new resource with the same
-     *        token as a resource that already exists, an exception occurs. If you omit this value, AWS SDKs will
-     *        automatically generate a unique client request.
+     *        Each resource must have a unique client request token. The client token is used to implement idempotency.
+     *        It ensures that the request completes no more than one time. If you retry a request with the same token
+     *        and the same parameters, the request will complete successfully. However, if you try to create a new
+     *        resource using the same token but different parameters, an HTTP 409 conflict occurs. If you omit this
+     *        value, AWS SDKs will automatically generate a unique client request. For more information about
+     *        idempotency, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency in
+     *        Amazon EC2 API requests</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

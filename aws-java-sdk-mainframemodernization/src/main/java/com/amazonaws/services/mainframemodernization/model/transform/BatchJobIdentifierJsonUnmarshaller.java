@@ -52,6 +52,10 @@ public class BatchJobIdentifierJsonUnmarshaller implements Unmarshaller<BatchJob
                     context.nextToken();
                     batchJobIdentifier.setFileBatchJobIdentifier(FileBatchJobIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("restartBatchJobIdentifier", targetDepth)) {
+                    context.nextToken();
+                    batchJobIdentifier.setRestartBatchJobIdentifier(RestartBatchJobIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("s3BatchJobIdentifier", targetDepth)) {
                     context.nextToken();
                     batchJobIdentifier.setS3BatchJobIdentifier(S3BatchJobIdentifierJsonUnmarshaller.getInstance().unmarshall(context));

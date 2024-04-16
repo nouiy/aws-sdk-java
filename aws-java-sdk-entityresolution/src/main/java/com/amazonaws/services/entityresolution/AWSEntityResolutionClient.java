@@ -95,6 +95,12 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.entityresolution.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.entityresolution.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.entityresolution.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -104,14 +110,8 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.entityresolution.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.entityresolution.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.entityresolution.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.entityresolution.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ExceedsLimitException").withExceptionUnmarshaller(
                                     com.amazonaws.services.entityresolution.model.transform.ExceedsLimitExceptionUnmarshaller.getInstance()))
@@ -161,6 +161,78 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/entityresolution/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/entityresolution/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Adds a policy statement object. To retrieve a list of existing policy statements, use the <code>GetPolicy</code>
+     * API.
+     * </p>
+     * 
+     * @param addPolicyStatementRequest
+     * @return Result of the AddPolicyStatement operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.AddPolicyStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/AddPolicyStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AddPolicyStatementResult addPolicyStatement(AddPolicyStatementRequest request) {
+        request = beforeClientExecution(request);
+        return executeAddPolicyStatement(request);
+    }
+
+    @SdkInternalApi
+    final AddPolicyStatementResult executeAddPolicyStatement(AddPolicyStatementRequest addPolicyStatementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(addPolicyStatementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AddPolicyStatementRequest> request = null;
+        Response<AddPolicyStatementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AddPolicyStatementRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(addPolicyStatementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AddPolicyStatement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AddPolicyStatementResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AddPolicyStatementResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -229,6 +301,80 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<CreateIdMappingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateIdMappingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an ID namespace object which will help customers provide metadata explaining their dataset and how to use
+     * it. Each ID namespace must have a unique name. To modify an existing ID namespace, use the
+     * <code>UpdateIdNamespace</code> API.
+     * </p>
+     * 
+     * @param createIdNamespaceRequest
+     * @return Result of the CreateIdNamespace operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ExceedsLimitException
+     *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
+     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.CreateIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateIdNamespaceResult createIdNamespace(CreateIdNamespaceRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIdNamespace(request);
+    }
+
+    @SdkInternalApi
+    final CreateIdNamespaceResult executeCreateIdNamespace(CreateIdNamespaceRequest createIdNamespaceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIdNamespaceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIdNamespaceRequest> request = null;
+        Response<CreateIdNamespaceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIdNamespaceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createIdNamespaceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIdNamespace");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateIdNamespaceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateIdNamespaceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -403,6 +549,10 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
      *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
      *         <code>HTTP Status Code: 400</code>
@@ -458,6 +608,71 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Deletes the <code>IdNamespace</code> with a given name.
+     * </p>
+     * 
+     * @param deleteIdNamespaceRequest
+     * @return Result of the DeleteIdNamespace operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.DeleteIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIdNamespaceResult deleteIdNamespace(DeleteIdNamespaceRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIdNamespace(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIdNamespaceResult executeDeleteIdNamespace(DeleteIdNamespaceRequest deleteIdNamespaceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIdNamespaceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIdNamespaceRequest> request = null;
+        Response<DeleteIdNamespaceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIdNamespaceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteIdNamespaceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIdNamespace");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteIdNamespaceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteIdNamespaceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the <code>MatchingWorkflow</code> with a given name. This operation will succeed even if a workflow with
      * the given name does not exist.
      * </p>
@@ -471,6 +686,10 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
      *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
      *         <code>HTTP Status Code: 400</code>
@@ -513,6 +732,78 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<DeleteMatchingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteMatchingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the policy statement.
+     * </p>
+     * 
+     * @param deletePolicyStatementRequest
+     * @return Result of the DeletePolicyStatement operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.DeletePolicyStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeletePolicyStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeletePolicyStatementResult deletePolicyStatement(DeletePolicyStatementRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePolicyStatement(request);
+    }
+
+    @SdkInternalApi
+    final DeletePolicyStatementResult executeDeletePolicyStatement(DeletePolicyStatementRequest deletePolicyStatementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePolicyStatementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePolicyStatementRequest> request = null;
+        Response<DeletePolicyStatementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePolicyStatementRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deletePolicyStatementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePolicyStatement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePolicyStatementResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeletePolicyStatementResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -730,6 +1021,73 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Returns the <code>IdNamespace</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdNamespaceRequest
+     * @return Result of the GetIdNamespace operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.GetIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetIdNamespaceResult getIdNamespace(GetIdNamespaceRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIdNamespace(request);
+    }
+
+    @SdkInternalApi
+    final GetIdNamespaceResult executeGetIdNamespace(GetIdNamespaceRequest getIdNamespaceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIdNamespaceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIdNamespaceRequest> request = null;
+        Response<GetIdNamespaceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIdNamespaceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getIdNamespaceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIdNamespace");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetIdNamespaceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetIdNamespaceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the corresponding Match ID of a customer record if the record has been processed.
      * </p>
      * 
@@ -931,6 +1289,73 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Returns the resource-based policy.
+     * </p>
+     * 
+     * @param getPolicyRequest
+     * @return Result of the GetPolicy operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.GetPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetPolicyResult getPolicy(GetPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetPolicyResult executeGetPolicy(GetPolicyRequest getPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPolicyRequest> request = null;
+        Response<GetPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPolicyResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the SchemaMapping of a given name.
      * </p>
      * 
@@ -1120,6 +1545,71 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<ListIdMappingWorkflowsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListIdMappingWorkflowsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of all ID namespaces.
+     * </p>
+     * 
+     * @param listIdNamespacesRequest
+     * @return Result of the ListIdNamespaces operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListIdNamespaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdNamespaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIdNamespacesResult listIdNamespaces(ListIdNamespacesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdNamespaces(request);
+    }
+
+    @SdkInternalApi
+    final ListIdNamespacesResult executeListIdNamespaces(ListIdNamespacesRequest listIdNamespacesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdNamespacesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdNamespacesRequest> request = null;
+        Response<ListIdNamespacesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdNamespacesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIdNamespacesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdNamespaces");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdNamespacesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListIdNamespacesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1448,6 +1938,77 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the resource-based policy.
+     * </p>
+     * 
+     * @param putPolicyRequest
+     * @return Result of the PutPolicy operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.PutPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/PutPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PutPolicyResult putPolicy(PutPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutPolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutPolicyResult executePutPolicy(PutPolicyRequest putPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutPolicyRequest> request = null;
+        Response<PutPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutPolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutPolicyResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1800,6 +2361,73 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<UpdateIdMappingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateIdMappingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing ID namespace.
+     * </p>
+     * 
+     * @param updateIdNamespaceRequest
+     * @return Result of the UpdateIdNamespace operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.UpdateIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateIdNamespaceResult updateIdNamespace(UpdateIdNamespaceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateIdNamespace(request);
+    }
+
+    @SdkInternalApi
+    final UpdateIdNamespaceResult executeUpdateIdNamespace(UpdateIdNamespaceRequest updateIdNamespaceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateIdNamespaceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateIdNamespaceRequest> request = null;
+        Response<UpdateIdNamespaceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateIdNamespaceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateIdNamespaceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateIdNamespace");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateIdNamespaceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateIdNamespaceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

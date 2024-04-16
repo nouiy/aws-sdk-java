@@ -30,7 +30,7 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the alias of the agent.
+     * The Amazon Resource Name (ARN) of the alias of the agent.
      * </p>
      */
     private String agentAliasArn;
@@ -128,11 +128,11 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the alias of the agent.
+     * The Amazon Resource Name (ARN) of the alias of the agent.
      * </p>
      * 
      * @param agentAliasArn
-     *        The ARN of the alias of the agent.
+     *        The Amazon Resource Name (ARN) of the alias of the agent.
      */
 
     public void setAgentAliasArn(String agentAliasArn) {
@@ -141,10 +141,10 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the alias of the agent.
+     * The Amazon Resource Name (ARN) of the alias of the agent.
      * </p>
      * 
-     * @return The ARN of the alias of the agent.
+     * @return The Amazon Resource Name (ARN) of the alias of the agent.
      */
 
     public String getAgentAliasArn() {
@@ -153,11 +153,11 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the alias of the agent.
+     * The Amazon Resource Name (ARN) of the alias of the agent.
      * </p>
      * 
      * @param agentAliasArn
-     *        The ARN of the alias of the agent.
+     *        The Amazon Resource Name (ARN) of the alias of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

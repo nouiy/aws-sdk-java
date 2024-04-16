@@ -57,8 +57,8 @@ public class GetIdMappingWorkflowResult extends com.amazonaws.AmazonWebServiceRe
     private java.util.List<IdMappingWorkflowOutputSource> outputSourceConfig;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      */
     private String roleArn;
@@ -365,13 +365,13 @@ public class GetIdMappingWorkflowResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on
-     *        your behalf.
+     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web
+     *        Services resources on your behalf.
      */
 
     public void setRoleArn(String roleArn) {
@@ -380,12 +380,12 @@ public class GetIdMappingWorkflowResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources
-     *         on your behalf.
+     * @return The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web
+     *         Services resources on your behalf.
      */
 
     public String getRoleArn() {
@@ -394,13 +394,13 @@ public class GetIdMappingWorkflowResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on your
-     * behalf.
+     * The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services
+     * resources on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access resources on
-     *        your behalf.
+     *        The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web
+     *        Services resources on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

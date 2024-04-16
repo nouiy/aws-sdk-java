@@ -148,6 +148,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public GetGlobalSettingsResult getGlobalSettings(GetGlobalSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLensResult getLens(GetLensRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -319,6 +324,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public UpdateGlobalSettingsResult updateGlobalSettings(UpdateGlobalSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateIntegrationResult updateIntegration(UpdateIntegrationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

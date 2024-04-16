@@ -48,6 +48,8 @@ public class OriginEndpointListConfigurationMarshaller {
             .marshallLocationName("HlsManifests").build();
     private static final MarshallingInfo<List> LOWLATENCYHLSMANIFESTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LowLatencyHlsManifests").build();
+    private static final MarshallingInfo<List> DASHMANIFESTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("DashManifests").build();
 
     private static final OriginEndpointListConfigurationMarshaller instance = new OriginEndpointListConfigurationMarshaller();
 
@@ -75,6 +77,7 @@ public class OriginEndpointListConfigurationMarshaller {
             protocolMarshaller.marshall(originEndpointListConfiguration.getModifiedAt(), MODIFIEDAT_BINDING);
             protocolMarshaller.marshall(originEndpointListConfiguration.getHlsManifests(), HLSMANIFESTS_BINDING);
             protocolMarshaller.marshall(originEndpointListConfiguration.getLowLatencyHlsManifests(), LOWLATENCYHLSMANIFESTS_BINDING);
+            protocolMarshaller.marshall(originEndpointListConfiguration.getDashManifests(), DASHMANIFESTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

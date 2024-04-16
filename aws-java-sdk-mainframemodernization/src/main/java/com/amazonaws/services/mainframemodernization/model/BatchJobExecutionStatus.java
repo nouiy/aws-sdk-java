@@ -28,6 +28,7 @@ public enum BatchJobExecutionStatus {
     Cancelled("Cancelled"),
     Succeeded("Succeeded"),
     Failed("Failed"),
+    Purged("Purged"),
     SucceededWithWarning("Succeeded With Warning");
 
     private String value;

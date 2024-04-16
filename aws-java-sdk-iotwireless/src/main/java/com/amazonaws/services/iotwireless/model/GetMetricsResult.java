@@ -25,17 +25,17 @@ public class GetMetricsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The list of retrieved metrics.
+     * The list of summary metrics that were retrieved.
      * </p>
      */
     private java.util.List<SummaryMetricQueryResult> summaryMetricQueryResults;
 
     /**
      * <p>
-     * The list of retrieved metrics.
+     * The list of summary metrics that were retrieved.
      * </p>
      * 
-     * @return The list of retrieved metrics.
+     * @return The list of summary metrics that were retrieved.
      */
 
     public java.util.List<SummaryMetricQueryResult> getSummaryMetricQueryResults() {
@@ -44,11 +44,11 @@ public class GetMetricsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The list of retrieved metrics.
+     * The list of summary metrics that were retrieved.
      * </p>
      * 
      * @param summaryMetricQueryResults
-     *        The list of retrieved metrics.
+     *        The list of summary metrics that were retrieved.
      */
 
     public void setSummaryMetricQueryResults(java.util.Collection<SummaryMetricQueryResult> summaryMetricQueryResults) {
@@ -62,7 +62,7 @@ public class GetMetricsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The list of retrieved metrics.
+     * The list of summary metrics that were retrieved.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -71,7 +71,7 @@ public class GetMetricsResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param summaryMetricQueryResults
-     *        The list of retrieved metrics.
+     *        The list of summary metrics that were retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class GetMetricsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The list of retrieved metrics.
+     * The list of summary metrics that were retrieved.
      * </p>
      * 
      * @param summaryMetricQueryResults
-     *        The list of retrieved metrics.
+     *        The list of summary metrics that were retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

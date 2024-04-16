@@ -41,6 +41,8 @@ public class LensReviewMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LensStatus").build();
     private static final MarshallingInfo<List> PILLARREVIEWSUMMARIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PillarReviewSummaries").build();
+    private static final MarshallingInfo<StructuredPojo> JIRACONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JiraConfiguration").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> NOTES_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -76,6 +78,7 @@ public class LensReviewMarshaller {
             protocolMarshaller.marshall(lensReview.getLensName(), LENSNAME_BINDING);
             protocolMarshaller.marshall(lensReview.getLensStatus(), LENSSTATUS_BINDING);
             protocolMarshaller.marshall(lensReview.getPillarReviewSummaries(), PILLARREVIEWSUMMARIES_BINDING);
+            protocolMarshaller.marshall(lensReview.getJiraConfiguration(), JIRACONFIGURATION_BINDING);
             protocolMarshaller.marshall(lensReview.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(lensReview.getNotes(), NOTES_BINDING);
             protocolMarshaller.marshall(lensReview.getRiskCounts(), RISKCOUNTS_BINDING);

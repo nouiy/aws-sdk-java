@@ -30,7 +30,7 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the agent.
+     * The Amazon Resource Name (ARN) of the agent.
      * </p>
      */
     private String agentArn;
@@ -48,8 +48,7 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
     private String agentName;
     /**
      * <p>
-     * The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      */
     private String agentResourceRoleArn;
@@ -120,7 +119,7 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createdAt;
     /**
      * <p>
-     * The ARN of the KMS key that encrypts the agent.
+     * The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      * </p>
      */
     private String customerEncryptionKeyArn;
@@ -187,11 +186,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the agent.
+     * The Amazon Resource Name (ARN) of the agent.
      * </p>
      * 
      * @param agentArn
-     *        The ARN of the agent.
+     *        The Amazon Resource Name (ARN) of the agent.
      */
 
     public void setAgentArn(String agentArn) {
@@ -200,10 +199,10 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the agent.
+     * The Amazon Resource Name (ARN) of the agent.
      * </p>
      * 
-     * @return The ARN of the agent.
+     * @return The Amazon Resource Name (ARN) of the agent.
      */
 
     public String getAgentArn() {
@@ -212,11 +211,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the agent.
+     * The Amazon Resource Name (ARN) of the agent.
      * </p>
      * 
      * @param agentArn
-     *        The ARN of the agent.
+     *        The Amazon Resource Name (ARN) of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -307,13 +306,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      * 
      * @param agentResourceRoleArn
-     *        The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     *        <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      */
 
     public void setAgentResourceRoleArn(String agentResourceRoleArn) {
@@ -322,12 +319,10 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      * 
-     * @return The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     *         <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * @return The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      */
 
     public String getAgentResourceRoleArn() {
@@ -336,13 +331,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      * 
      * @param agentResourceRoleArn
-     *        The ARN of the IAM role with permissions to call API operations on the agent. The ARN must begin with
-     *        <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -848,11 +841,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the KMS key that encrypts the agent.
+     * The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      * </p>
      * 
      * @param customerEncryptionKeyArn
-     *        The ARN of the KMS key that encrypts the agent.
+     *        The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      */
 
     public void setCustomerEncryptionKeyArn(String customerEncryptionKeyArn) {
@@ -861,10 +854,10 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the KMS key that encrypts the agent.
+     * The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      * </p>
      * 
-     * @return The ARN of the KMS key that encrypts the agent.
+     * @return The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      */
 
     public String getCustomerEncryptionKeyArn() {
@@ -873,11 +866,11 @@ public class Agent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the KMS key that encrypts the agent.
+     * The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      * </p>
      * 
      * @param customerEncryptionKeyArn
-     *        The ARN of the KMS key that encrypts the agent.
+     *        The Amazon Resource Name (ARN) of the KMS key that encrypts the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

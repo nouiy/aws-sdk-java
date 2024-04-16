@@ -102,6 +102,13 @@ public class CreateOriginEndpointResultJsonUnmarshaller implements Unmarshaller<
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DashManifests", targetDepth)) {
+                    context.nextToken();
+                    createOriginEndpointResult.setDashManifests(new ListUnmarshaller<GetDashManifestConfiguration>(GetDashManifestConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("ETag", targetDepth)) {
                     context.nextToken();
                     createOriginEndpointResult.setETag(context.getUnmarshaller(String.class).unmarshall(context));

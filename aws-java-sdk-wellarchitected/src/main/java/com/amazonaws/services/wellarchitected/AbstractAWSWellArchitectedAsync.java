@@ -340,6 +340,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(GetGlobalSettingsRequest request) {
+
+        return getGlobalSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(GetGlobalSettingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetGlobalSettingsRequest, GetGlobalSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest request) {
 
         return getLensAsync(request, null);
@@ -790,6 +803,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<UpdateGlobalSettingsResult> updateGlobalSettingsAsync(UpdateGlobalSettingsRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateGlobalSettingsRequest, UpdateGlobalSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIntegrationResult> updateIntegrationAsync(UpdateIntegrationRequest request) {
+
+        return updateIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIntegrationResult> updateIntegrationAsync(UpdateIntegrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateIntegrationRequest, UpdateIntegrationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

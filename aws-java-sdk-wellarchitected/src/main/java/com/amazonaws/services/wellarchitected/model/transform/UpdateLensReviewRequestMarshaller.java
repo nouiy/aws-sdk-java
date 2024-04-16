@@ -37,6 +37,8 @@ public class UpdateLensReviewRequestMarshaller {
             .marshallLocationName("LensNotes").build();
     private static final MarshallingInfo<Map> PILLARNOTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("PillarNotes").build();
+    private static final MarshallingInfo<StructuredPojo> JIRACONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JiraConfiguration").build();
 
     private static final UpdateLensReviewRequestMarshaller instance = new UpdateLensReviewRequestMarshaller();
 
@@ -58,6 +60,7 @@ public class UpdateLensReviewRequestMarshaller {
             protocolMarshaller.marshall(updateLensReviewRequest.getLensAlias(), LENSALIAS_BINDING);
             protocolMarshaller.marshall(updateLensReviewRequest.getLensNotes(), LENSNOTES_BINDING);
             protocolMarshaller.marshall(updateLensReviewRequest.getPillarNotes(), PILLARNOTES_BINDING);
+            protocolMarshaller.marshall(updateLensReviewRequest.getJiraConfiguration(), JIRACONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

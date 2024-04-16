@@ -873,6 +873,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(GetGlobalSettingsRequest request) {
+
+        return getGlobalSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(final GetGlobalSettingsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetGlobalSettingsRequest, GetGlobalSettingsResult> asyncHandler) {
+        final GetGlobalSettingsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetGlobalSettingsResult>() {
+            @Override
+            public GetGlobalSettingsResult call() throws Exception {
+                GetGlobalSettingsResult result = null;
+
+                try {
+                    result = executeGetGlobalSettings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest request) {
 
         return getLensAsync(request, null);
@@ -2012,6 +2045,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeUpdateGlobalSettings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIntegrationResult> updateIntegrationAsync(UpdateIntegrationRequest request) {
+
+        return updateIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIntegrationResult> updateIntegrationAsync(final UpdateIntegrationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIntegrationRequest, UpdateIntegrationResult> asyncHandler) {
+        final UpdateIntegrationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIntegrationResult>() {
+            @Override
+            public UpdateIntegrationResult call() throws Exception {
+                UpdateIntegrationResult result = null;
+
+                try {
+                    result = executeUpdateIntegration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

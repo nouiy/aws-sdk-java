@@ -741,6 +741,39 @@ public class AWSMainframeModernizationAsyncClient extends AWSMainframeModernizat
     }
 
     @Override
+    public java.util.concurrent.Future<ListBatchJobRestartPointsResult> listBatchJobRestartPointsAsync(ListBatchJobRestartPointsRequest request) {
+
+        return listBatchJobRestartPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBatchJobRestartPointsResult> listBatchJobRestartPointsAsync(final ListBatchJobRestartPointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBatchJobRestartPointsRequest, ListBatchJobRestartPointsResult> asyncHandler) {
+        final ListBatchJobRestartPointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBatchJobRestartPointsResult>() {
+            @Override
+            public ListBatchJobRestartPointsResult call() throws Exception {
+                ListBatchJobRestartPointsResult result = null;
+
+                try {
+                    result = executeListBatchJobRestartPoints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDataSetImportHistoryResult> listDataSetImportHistoryAsync(ListDataSetImportHistoryRequest request) {
 
         return listDataSetImportHistoryAsync(request, null);

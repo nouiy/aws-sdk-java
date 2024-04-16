@@ -1247,6 +1247,37 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
+     * Global settings for all workloads.
+     * </p>
+     * 
+     * @param getGlobalSettingsRequest
+     * @return A Java Future containing the result of the GetGlobalSettings operation returned by the service.
+     * @sample AWSWellArchitectedAsync.GetGlobalSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetGlobalSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(GetGlobalSettingsRequest getGlobalSettingsRequest);
+
+    /**
+     * <p>
+     * Global settings for all workloads.
+     * </p>
+     * 
+     * @param getGlobalSettingsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetGlobalSettings operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.GetGlobalSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetGlobalSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(GetGlobalSettingsRequest getGlobalSettingsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetGlobalSettingsRequest, GetGlobalSettingsResult> asyncHandler);
+
+    /**
+     * <p>
      * Get an existing lens.
      * </p>
      * 
@@ -1778,7 +1809,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List lens review improvements.
+     * List the improvements of a particular lens review.
      * </p>
      * 
      * @param listLensReviewImprovementsRequest
@@ -1793,7 +1824,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List lens review improvements.
+     * List the improvements of a particular lens review.
      * </p>
      * 
      * @param listLensReviewImprovementsRequest
@@ -2439,7 +2470,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Updates whether the Amazon Web Services account is opted into organization sharing and discovery integration
+     * Update whether the Amazon Web Services account is opted into organization sharing and discovery integration
      * features.
      * </p>
      * 
@@ -2453,7 +2484,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Updates whether the Amazon Web Services account is opted into organization sharing and discovery integration
+     * Update whether the Amazon Web Services account is opted into organization sharing and discovery integration
      * features.
      * </p>
      * 
@@ -2469,6 +2500,37 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<UpdateGlobalSettingsResult> updateGlobalSettingsAsync(UpdateGlobalSettingsRequest updateGlobalSettingsRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateGlobalSettingsRequest, UpdateGlobalSettingsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update integration features.
+     * </p>
+     * 
+     * @param updateIntegrationRequest
+     * @return A Java Future containing the result of the UpdateIntegration operation returned by the service.
+     * @sample AWSWellArchitectedAsync.UpdateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIntegrationResult> updateIntegrationAsync(UpdateIntegrationRequest updateIntegrationRequest);
+
+    /**
+     * <p>
+     * Update integration features.
+     * </p>
+     * 
+     * @param updateIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateIntegration operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.UpdateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIntegrationResult> updateIntegrationAsync(UpdateIntegrationRequest updateIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateIntegrationRequest, UpdateIntegrationResult> asyncHandler);
 
     /**
      * <p>

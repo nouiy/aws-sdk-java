@@ -1497,6 +1497,76 @@ public class AWSMainframeModernizationClient extends AmazonWebServiceClient impl
 
     /**
      * <p>
+     * Lists all the job steps for JCL files to restart a batch job. This is only applicable for Micro Focus engine with
+     * versions 8.0.6 and above.
+     * </p>
+     * 
+     * @param listBatchJobRestartPointsRequest
+     * @return Result of the ListBatchJobRestartPoints operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The number of requests made exceeds the limit.
+     * @throws AccessDeniedException
+     *         The account or role doesn't have the right permissions to make the request.
+     * @throws ConflictException
+     *         The parameters provided in the request conflict with existing resources.
+     * @throws ValidationException
+     *         One or more parameters provided in the request is not valid.
+     * @throws InternalServerException
+     *         An unexpected error occurred during the processing of the request.
+     * @sample AWSMainframeModernization.ListBatchJobRestartPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/m2-2021-04-28/ListBatchJobRestartPoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListBatchJobRestartPointsResult listBatchJobRestartPoints(ListBatchJobRestartPointsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListBatchJobRestartPoints(request);
+    }
+
+    @SdkInternalApi
+    final ListBatchJobRestartPointsResult executeListBatchJobRestartPoints(ListBatchJobRestartPointsRequest listBatchJobRestartPointsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listBatchJobRestartPointsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListBatchJobRestartPointsRequest> request = null;
+        Response<ListBatchJobRestartPointsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListBatchJobRestartPointsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listBatchJobRestartPointsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "m2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBatchJobRestartPoints");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListBatchJobRestartPointsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListBatchJobRestartPointsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the data set imports for the specified application.
      * </p>
      * 

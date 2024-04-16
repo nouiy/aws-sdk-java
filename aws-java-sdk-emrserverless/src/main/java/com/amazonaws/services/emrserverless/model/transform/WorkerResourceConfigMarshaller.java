@@ -33,6 +33,8 @@ public class WorkerResourceConfigMarshaller {
             .marshallLocationName("memory").build();
     private static final MarshallingInfo<String> DISK_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("disk").build();
+    private static final MarshallingInfo<String> DISKTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("diskType").build();
 
     private static final WorkerResourceConfigMarshaller instance = new WorkerResourceConfigMarshaller();
 
@@ -53,6 +55,7 @@ public class WorkerResourceConfigMarshaller {
             protocolMarshaller.marshall(workerResourceConfig.getCpu(), CPU_BINDING);
             protocolMarshaller.marshall(workerResourceConfig.getMemory(), MEMORY_BINDING);
             protocolMarshaller.marshall(workerResourceConfig.getDisk(), DISK_BINDING);
+            protocolMarshaller.marshall(workerResourceConfig.getDiskType(), DISKTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

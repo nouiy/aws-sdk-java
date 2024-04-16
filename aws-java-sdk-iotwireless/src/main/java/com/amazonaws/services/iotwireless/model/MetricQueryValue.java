@@ -30,48 +30,48 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The minimum of the values of the all data points collected during the period.
+     * The minimum of the values of all data points collected during the aggregation period.
      * </p>
      */
     private Double min;
     /**
      * <p>
-     * The maximum of the values of the all data points collected during the period.
+     * The maximum of the values of all the data points collected during the aggregation period.
      * </p>
      */
     private Double max;
     /**
      * <p>
-     * The sum of the values of the all data points collected during the period.
+     * The sum of the values of all data points collected during the aggregation period.
      * </p>
      */
     private Double sum;
     /**
      * <p>
-     * The average of the values of the all data points collected during the period.
+     * The average of the values of all data points collected during the aggregation period.
      * </p>
      */
     private Double avg;
     /**
      * <p>
-     * The standard deviation of the values of the all data points collected during the period.
+     * The standard deviation of the values of all data points collected during the aggregation period.
      * </p>
      */
     private Double std;
     /**
      * <p>
-     * The 90th percentile of the values of the all data points collected during the period.
+     * The 90th percentile of the values of all data points collected during the aggregation period.
      * </p>
      */
     private Double p90;
 
     /**
      * <p>
-     * The minimum of the values of the all data points collected during the period.
+     * The minimum of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param min
-     *        The minimum of the values of the all data points collected during the period.
+     *        The minimum of the values of all data points collected during the aggregation period.
      */
 
     public void setMin(Double min) {
@@ -80,10 +80,10 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The minimum of the values of the all data points collected during the period.
+     * The minimum of the values of all data points collected during the aggregation period.
      * </p>
      * 
-     * @return The minimum of the values of the all data points collected during the period.
+     * @return The minimum of the values of all data points collected during the aggregation period.
      */
 
     public Double getMin() {
@@ -92,11 +92,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The minimum of the values of the all data points collected during the period.
+     * The minimum of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param min
-     *        The minimum of the values of the all data points collected during the period.
+     *        The minimum of the values of all data points collected during the aggregation period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +107,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The maximum of the values of the all data points collected during the period.
+     * The maximum of the values of all the data points collected during the aggregation period.
      * </p>
      * 
      * @param max
-     *        The maximum of the values of the all data points collected during the period.
+     *        The maximum of the values of all the data points collected during the aggregation period.
      */
 
     public void setMax(Double max) {
@@ -120,10 +120,10 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The maximum of the values of the all data points collected during the period.
+     * The maximum of the values of all the data points collected during the aggregation period.
      * </p>
      * 
-     * @return The maximum of the values of the all data points collected during the period.
+     * @return The maximum of the values of all the data points collected during the aggregation period.
      */
 
     public Double getMax() {
@@ -132,11 +132,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The maximum of the values of the all data points collected during the period.
+     * The maximum of the values of all the data points collected during the aggregation period.
      * </p>
      * 
      * @param max
-     *        The maximum of the values of the all data points collected during the period.
+     *        The maximum of the values of all the data points collected during the aggregation period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +147,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sum of the values of the all data points collected during the period.
+     * The sum of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param sum
-     *        The sum of the values of the all data points collected during the period.
+     *        The sum of the values of all data points collected during the aggregation period.
      */
 
     public void setSum(Double sum) {
@@ -160,10 +160,10 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sum of the values of the all data points collected during the period.
+     * The sum of the values of all data points collected during the aggregation period.
      * </p>
      * 
-     * @return The sum of the values of the all data points collected during the period.
+     * @return The sum of the values of all data points collected during the aggregation period.
      */
 
     public Double getSum() {
@@ -172,11 +172,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sum of the values of the all data points collected during the period.
+     * The sum of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param sum
-     *        The sum of the values of the all data points collected during the period.
+     *        The sum of the values of all data points collected during the aggregation period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,11 +187,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The average of the values of the all data points collected during the period.
+     * The average of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param avg
-     *        The average of the values of the all data points collected during the period.
+     *        The average of the values of all data points collected during the aggregation period.
      */
 
     public void setAvg(Double avg) {
@@ -200,10 +200,10 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The average of the values of the all data points collected during the period.
+     * The average of the values of all data points collected during the aggregation period.
      * </p>
      * 
-     * @return The average of the values of the all data points collected during the period.
+     * @return The average of the values of all data points collected during the aggregation period.
      */
 
     public Double getAvg() {
@@ -212,11 +212,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The average of the values of the all data points collected during the period.
+     * The average of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param avg
-     *        The average of the values of the all data points collected during the period.
+     *        The average of the values of all data points collected during the aggregation period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +227,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The standard deviation of the values of the all data points collected during the period.
+     * The standard deviation of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param std
-     *        The standard deviation of the values of the all data points collected during the period.
+     *        The standard deviation of the values of all data points collected during the aggregation period.
      */
 
     public void setStd(Double std) {
@@ -240,10 +240,10 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The standard deviation of the values of the all data points collected during the period.
+     * The standard deviation of the values of all data points collected during the aggregation period.
      * </p>
      * 
-     * @return The standard deviation of the values of the all data points collected during the period.
+     * @return The standard deviation of the values of all data points collected during the aggregation period.
      */
 
     public Double getStd() {
@@ -252,11 +252,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The standard deviation of the values of the all data points collected during the period.
+     * The standard deviation of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param std
-     *        The standard deviation of the values of the all data points collected during the period.
+     *        The standard deviation of the values of all data points collected during the aggregation period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,11 +267,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The 90th percentile of the values of the all data points collected during the period.
+     * The 90th percentile of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param p90
-     *        The 90th percentile of the values of the all data points collected during the period.
+     *        The 90th percentile of the values of all data points collected during the aggregation period.
      */
 
     public void setP90(Double p90) {
@@ -280,10 +280,10 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The 90th percentile of the values of the all data points collected during the period.
+     * The 90th percentile of the values of all data points collected during the aggregation period.
      * </p>
      * 
-     * @return The 90th percentile of the values of the all data points collected during the period.
+     * @return The 90th percentile of the values of all data points collected during the aggregation period.
      */
 
     public Double getP90() {
@@ -292,11 +292,11 @@ public class MetricQueryValue implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The 90th percentile of the values of the all data points collected during the period.
+     * The 90th percentile of the values of all data points collected during the aggregation period.
      * </p>
      * 
      * @param p90
-     *        The 90th percentile of the values of the all data points collected during the period.
+     *        The 90th percentile of the values of all data points collected during the aggregation period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

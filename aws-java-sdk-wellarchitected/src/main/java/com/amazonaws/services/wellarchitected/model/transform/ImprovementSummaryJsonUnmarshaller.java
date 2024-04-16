@@ -74,6 +74,10 @@ public class ImprovementSummaryJsonUnmarshaller implements Unmarshaller<Improvem
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("JiraConfiguration", targetDepth)) {
+                    context.nextToken();
+                    improvementSummary.setJiraConfiguration(JiraConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

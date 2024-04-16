@@ -530,6 +530,32 @@ public interface AWSMainframeModernization {
 
     /**
      * <p>
+     * Lists all the job steps for JCL files to restart a batch job. This is only applicable for Micro Focus engine with
+     * versions 8.0.6 and above.
+     * </p>
+     * 
+     * @param listBatchJobRestartPointsRequest
+     * @return Result of the ListBatchJobRestartPoints operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The number of requests made exceeds the limit.
+     * @throws AccessDeniedException
+     *         The account or role doesn't have the right permissions to make the request.
+     * @throws ConflictException
+     *         The parameters provided in the request conflict with existing resources.
+     * @throws ValidationException
+     *         One or more parameters provided in the request is not valid.
+     * @throws InternalServerException
+     *         An unexpected error occurred during the processing of the request.
+     * @sample AWSMainframeModernization.ListBatchJobRestartPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/m2-2021-04-28/ListBatchJobRestartPoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListBatchJobRestartPointsResult listBatchJobRestartPoints(ListBatchJobRestartPointsRequest listBatchJobRestartPointsRequest);
+
+    /**
+     * <p>
      * Lists the data set imports for the specified application.
      * </p>
      * 

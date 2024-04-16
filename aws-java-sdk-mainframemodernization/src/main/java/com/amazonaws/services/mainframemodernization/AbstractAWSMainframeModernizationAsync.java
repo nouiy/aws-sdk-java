@@ -290,6 +290,19 @@ public class AbstractAWSMainframeModernizationAsync extends AbstractAWSMainframe
     }
 
     @Override
+    public java.util.concurrent.Future<ListBatchJobRestartPointsResult> listBatchJobRestartPointsAsync(ListBatchJobRestartPointsRequest request) {
+
+        return listBatchJobRestartPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBatchJobRestartPointsResult> listBatchJobRestartPointsAsync(ListBatchJobRestartPointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListBatchJobRestartPointsRequest, ListBatchJobRestartPointsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDataSetImportHistoryResult> listDataSetImportHistoryAsync(ListDataSetImportHistoryRequest request) {
 
         return listDataSetImportHistoryAsync(request, null);

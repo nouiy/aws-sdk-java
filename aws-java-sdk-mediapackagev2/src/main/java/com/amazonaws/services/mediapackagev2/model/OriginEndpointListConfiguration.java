@@ -92,6 +92,12 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
      * </p>
      */
     private java.util.List<ListLowLatencyHlsManifestConfiguration> lowLatencyHlsManifests;
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     */
+    private java.util.List<ListDashManifestConfiguration> dashManifests;
 
     /**
      * <p>
@@ -602,6 +608,76 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @return A DASH manifest configuration.
+     */
+
+    public java.util.List<ListDashManifestConfiguration> getDashManifests() {
+        return dashManifests;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     */
+
+    public void setDashManifests(java.util.Collection<ListDashManifestConfiguration> dashManifests) {
+        if (dashManifests == null) {
+            this.dashManifests = null;
+            return;
+        }
+
+        this.dashManifests = new java.util.ArrayList<ListDashManifestConfiguration>(dashManifests);
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDashManifests(java.util.Collection)} or {@link #withDashManifests(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OriginEndpointListConfiguration withDashManifests(ListDashManifestConfiguration... dashManifests) {
+        if (this.dashManifests == null) {
+            setDashManifests(new java.util.ArrayList<ListDashManifestConfiguration>(dashManifests.length));
+        }
+        for (ListDashManifestConfiguration ele : dashManifests) {
+            this.dashManifests.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OriginEndpointListConfiguration withDashManifests(java.util.Collection<ListDashManifestConfiguration> dashManifests) {
+        setDashManifests(dashManifests);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -632,7 +708,9 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
         if (getHlsManifests() != null)
             sb.append("HlsManifests: ").append(getHlsManifests()).append(",");
         if (getLowLatencyHlsManifests() != null)
-            sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests());
+            sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests()).append(",");
+        if (getDashManifests() != null)
+            sb.append("DashManifests: ").append(getDashManifests());
         sb.append("}");
         return sb.toString();
     }
@@ -687,6 +765,10 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
             return false;
         if (other.getLowLatencyHlsManifests() != null && other.getLowLatencyHlsManifests().equals(this.getLowLatencyHlsManifests()) == false)
             return false;
+        if (other.getDashManifests() == null ^ this.getDashManifests() == null)
+            return false;
+        if (other.getDashManifests() != null && other.getDashManifests().equals(this.getDashManifests()) == false)
+            return false;
         return true;
     }
 
@@ -705,6 +787,7 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getModifiedAt() == null) ? 0 : getModifiedAt().hashCode());
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
+        hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());
         return hashCode;
     }
 

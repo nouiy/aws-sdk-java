@@ -48,7 +48,7 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> failureReasons;
     /**
      * <p>
-     * The ARN of the knowledge base.
+     * The Amazon Resource Name (ARN) of the knowledge base.
      * </p>
      */
     private String knowledgeBaseArn;
@@ -72,8 +72,7 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      */
     private String roleArn;
@@ -275,11 +274,11 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the knowledge base.
+     * The Amazon Resource Name (ARN) of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseArn
-     *        The ARN of the knowledge base.
+     *        The Amazon Resource Name (ARN) of the knowledge base.
      */
 
     public void setKnowledgeBaseArn(String knowledgeBaseArn) {
@@ -288,10 +287,10 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the knowledge base.
+     * The Amazon Resource Name (ARN) of the knowledge base.
      * </p>
      * 
-     * @return The ARN of the knowledge base.
+     * @return The Amazon Resource Name (ARN) of the knowledge base.
      */
 
     public String getKnowledgeBaseArn() {
@@ -300,11 +299,11 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the knowledge base.
+     * The Amazon Resource Name (ARN) of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseArn
-     *        The ARN of the knowledge base.
+     *        The Amazon Resource Name (ARN) of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -435,13 +434,12 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must
-     *        begin with <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge
+     *        base.
      */
 
     public void setRoleArn(String roleArn) {
@@ -450,12 +448,11 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      * 
-     * @return The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must
-     *         begin with <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * @return The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge
+     *         base.
      */
 
     public String getRoleArn() {
@@ -464,13 +461,12 @@ public class KnowledgeBase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role with permissions to invoke API operations on the knowledge base. The ARN must
-     *        begin with <code>AmazonBedrockExecutionRoleForKnowledgeBase_</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge
+     *        base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

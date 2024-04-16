@@ -50,6 +50,39 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Adds a policy statement object. To retrieve a list of existing policy statements, use the <code>GetPolicy</code>
+     * API.
+     * </p>
+     * 
+     * @param addPolicyStatementRequest
+     * @return A Java Future containing the result of the AddPolicyStatement operation returned by the service.
+     * @sample AWSEntityResolutionAsync.AddPolicyStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/AddPolicyStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AddPolicyStatementResult> addPolicyStatementAsync(AddPolicyStatementRequest addPolicyStatementRequest);
+
+    /**
+     * <p>
+     * Adds a policy statement object. To retrieve a list of existing policy statements, use the <code>GetPolicy</code>
+     * API.
+     * </p>
+     * 
+     * @param addPolicyStatementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AddPolicyStatement operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.AddPolicyStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/AddPolicyStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AddPolicyStatementResult> addPolicyStatementAsync(AddPolicyStatementRequest addPolicyStatementRequest,
+            com.amazonaws.handlers.AsyncHandler<AddPolicyStatementRequest, AddPolicyStatementResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
      * the <code>UpdateIdMappingWorkflow</code> API.
@@ -82,6 +115,41 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest createIdMappingWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<CreateIdMappingWorkflowRequest, CreateIdMappingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an ID namespace object which will help customers provide metadata explaining their dataset and how to use
+     * it. Each ID namespace must have a unique name. To modify an existing ID namespace, use the
+     * <code>UpdateIdNamespace</code> API.
+     * </p>
+     * 
+     * @param createIdNamespaceRequest
+     * @return A Java Future containing the result of the CreateIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsync.CreateIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIdNamespaceResult> createIdNamespaceAsync(CreateIdNamespaceRequest createIdNamespaceRequest);
+
+    /**
+     * <p>
+     * Creates an ID namespace object which will help customers provide metadata explaining their dataset and how to use
+     * it. Each ID namespace must have a unique name. To modify an existing ID namespace, use the
+     * <code>UpdateIdNamespace</code> API.
+     * </p>
+     * 
+     * @param createIdNamespaceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.CreateIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIdNamespaceResult> createIdNamespaceAsync(CreateIdNamespaceRequest createIdNamespaceRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIdNamespaceRequest, CreateIdNamespaceResult> asyncHandler);
 
     /**
      * <p>
@@ -188,6 +256,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Deletes the <code>IdNamespace</code> with a given name.
+     * </p>
+     * 
+     * @param deleteIdNamespaceRequest
+     * @return A Java Future containing the result of the DeleteIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsync.DeleteIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdNamespaceResult> deleteIdNamespaceAsync(DeleteIdNamespaceRequest deleteIdNamespaceRequest);
+
+    /**
+     * <p>
+     * Deletes the <code>IdNamespace</code> with a given name.
+     * </p>
+     * 
+     * @param deleteIdNamespaceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.DeleteIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdNamespaceResult> deleteIdNamespaceAsync(DeleteIdNamespaceRequest deleteIdNamespaceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdNamespaceRequest, DeleteIdNamespaceResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the <code>MatchingWorkflow</code> with a given name. This operation will succeed even if a workflow with
      * the given name does not exist.
      * </p>
@@ -218,6 +317,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<DeleteMatchingWorkflowResult> deleteMatchingWorkflowAsync(DeleteMatchingWorkflowRequest deleteMatchingWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteMatchingWorkflowRequest, DeleteMatchingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the policy statement.
+     * </p>
+     * 
+     * @param deletePolicyStatementRequest
+     * @return A Java Future containing the result of the DeletePolicyStatement operation returned by the service.
+     * @sample AWSEntityResolutionAsync.DeletePolicyStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeletePolicyStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePolicyStatementResult> deletePolicyStatementAsync(DeletePolicyStatementRequest deletePolicyStatementRequest);
+
+    /**
+     * <p>
+     * Deletes the policy statement.
+     * </p>
+     * 
+     * @param deletePolicyStatementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePolicyStatement operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.DeletePolicyStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeletePolicyStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePolicyStatementResult> deletePolicyStatementAsync(DeletePolicyStatementRequest deletePolicyStatementRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePolicyStatementRequest, DeletePolicyStatementResult> asyncHandler);
 
     /**
      * <p>
@@ -318,6 +448,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Returns the <code>IdNamespace</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdNamespaceRequest
+     * @return A Java Future containing the result of the GetIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsync.GetIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdNamespaceResult> getIdNamespaceAsync(GetIdNamespaceRequest getIdNamespaceRequest);
+
+    /**
+     * <p>
+     * Returns the <code>IdNamespace</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdNamespaceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.GetIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdNamespaceResult> getIdNamespaceAsync(GetIdNamespaceRequest getIdNamespaceRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIdNamespaceRequest, GetIdNamespaceResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the corresponding Match ID of a customer record if the record has been processed.
      * </p>
      * 
@@ -408,6 +569,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<GetMatchingWorkflowResult> getMatchingWorkflowAsync(GetMatchingWorkflowRequest getMatchingWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<GetMatchingWorkflowRequest, GetMatchingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the resource-based policy.
+     * </p>
+     * 
+     * @param getPolicyRequest
+     * @return A Java Future containing the result of the GetPolicy operation returned by the service.
+     * @sample AWSEntityResolutionAsync.GetPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest getPolicyRequest);
+
+    /**
+     * <p>
+     * Returns the resource-based policy.
+     * </p>
+     * 
+     * @param getPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPolicy operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.GetPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest getPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPolicyRequest, GetPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -503,6 +695,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<ListIdMappingWorkflowsResult> listIdMappingWorkflowsAsync(ListIdMappingWorkflowsRequest listIdMappingWorkflowsRequest,
             com.amazonaws.handlers.AsyncHandler<ListIdMappingWorkflowsRequest, ListIdMappingWorkflowsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of all ID namespaces.
+     * </p>
+     * 
+     * @param listIdNamespacesRequest
+     * @return A Java Future containing the result of the ListIdNamespaces operation returned by the service.
+     * @sample AWSEntityResolutionAsync.ListIdNamespaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdNamespaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdNamespacesResult> listIdNamespacesAsync(ListIdNamespacesRequest listIdNamespacesRequest);
+
+    /**
+     * <p>
+     * Returns a list of all ID namespaces.
+     * </p>
+     * 
+     * @param listIdNamespacesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdNamespaces operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.ListIdNamespaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdNamespaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdNamespacesResult> listIdNamespacesAsync(ListIdNamespacesRequest listIdNamespacesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdNamespacesRequest, ListIdNamespacesResult> asyncHandler);
 
     /**
      * <p>
@@ -662,6 +885,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the resource-based policy.
+     * </p>
+     * 
+     * @param putPolicyRequest
+     * @return A Java Future containing the result of the PutPolicy operation returned by the service.
+     * @sample AWSEntityResolutionAsync.PutPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/PutPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest putPolicyRequest);
+
+    /**
+     * <p>
+     * Updates the resource-based policy.
+     * </p>
+     * 
+     * @param putPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutPolicy operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.PutPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/PutPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest putPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutPolicyRequest, PutPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -841,6 +1095,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<UpdateIdMappingWorkflowResult> updateIdMappingWorkflowAsync(UpdateIdMappingWorkflowRequest updateIdMappingWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIdMappingWorkflowRequest, UpdateIdMappingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing ID namespace.
+     * </p>
+     * 
+     * @param updateIdNamespaceRequest
+     * @return A Java Future containing the result of the UpdateIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsync.UpdateIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdNamespaceResult> updateIdNamespaceAsync(UpdateIdNamespaceRequest updateIdNamespaceRequest);
+
+    /**
+     * <p>
+     * Updates an existing ID namespace.
+     * </p>
+     * 
+     * @param updateIdNamespaceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateIdNamespace operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.UpdateIdNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdNamespace"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdNamespaceResult> updateIdNamespaceAsync(UpdateIdNamespaceRequest updateIdNamespaceRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdNamespaceRequest, UpdateIdNamespaceResult> asyncHandler);
 
     /**
      * <p>

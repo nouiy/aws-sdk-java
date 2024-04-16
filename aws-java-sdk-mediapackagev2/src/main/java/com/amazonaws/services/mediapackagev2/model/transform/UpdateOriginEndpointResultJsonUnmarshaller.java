@@ -111,6 +111,13 @@ public class UpdateOriginEndpointResultJsonUnmarshaller implements Unmarshaller<
                     updateOriginEndpointResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("DashManifests", targetDepth)) {
+                    context.nextToken();
+                    updateOriginEndpointResult.setDashManifests(new ListUnmarshaller<GetDashManifestConfiguration>(GetDashManifestConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

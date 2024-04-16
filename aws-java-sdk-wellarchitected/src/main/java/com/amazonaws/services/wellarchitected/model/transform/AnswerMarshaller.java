@@ -56,6 +56,8 @@ public class AnswerMarshaller {
             .marshallLocationName("Notes").build();
     private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Reason").build();
+    private static final MarshallingInfo<StructuredPojo> JIRACONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JiraConfiguration").build();
 
     private static final AnswerMarshaller instance = new AnswerMarshaller();
 
@@ -87,6 +89,7 @@ public class AnswerMarshaller {
             protocolMarshaller.marshall(answer.getRisk(), RISK_BINDING);
             protocolMarshaller.marshall(answer.getNotes(), NOTES_BINDING);
             protocolMarshaller.marshall(answer.getReason(), REASON_BINDING);
+            protocolMarshaller.marshall(answer.getJiraConfiguration(), JIRACONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

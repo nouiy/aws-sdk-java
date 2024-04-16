@@ -56,6 +56,10 @@ public class IdMappingWorkflowInputSourceJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     idMappingWorkflowInputSource.setSchemaName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("type", targetDepth)) {
+                    context.nextToken();
+                    idMappingWorkflowInputSource.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

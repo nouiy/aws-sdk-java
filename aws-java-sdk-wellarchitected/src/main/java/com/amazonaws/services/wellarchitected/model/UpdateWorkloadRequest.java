@@ -77,6 +77,12 @@ public class UpdateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.List<String> applications;
+    /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     */
+    private WorkloadJiraConfigurationInput jiraConfiguration;
 
     /**
      * @param workloadId
@@ -769,6 +775,46 @@ public class UpdateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Configuration of the Jira integration.
+     */
+
+    public void setJiraConfiguration(WorkloadJiraConfigurationInput jiraConfiguration) {
+        this.jiraConfiguration = jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     * 
+     * @return Configuration of the Jira integration.
+     */
+
+    public WorkloadJiraConfigurationInput getJiraConfiguration() {
+        return this.jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Configuration of the Jira integration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateWorkloadRequest withJiraConfiguration(WorkloadJiraConfigurationInput jiraConfiguration) {
+        setJiraConfiguration(jiraConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -813,7 +859,9 @@ public class UpdateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getDiscoveryConfig() != null)
             sb.append("DiscoveryConfig: ").append(getDiscoveryConfig()).append(",");
         if (getApplications() != null)
-            sb.append("Applications: ").append(getApplications());
+            sb.append("Applications: ").append(getApplications()).append(",");
+        if (getJiraConfiguration() != null)
+            sb.append("JiraConfiguration: ").append(getJiraConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -897,6 +945,10 @@ public class UpdateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getApplications() != null && other.getApplications().equals(this.getApplications()) == false)
             return false;
+        if (other.getJiraConfiguration() == null ^ this.getJiraConfiguration() == null)
+            return false;
+        if (other.getJiraConfiguration() != null && other.getJiraConfiguration().equals(this.getJiraConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -922,6 +974,7 @@ public class UpdateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getImprovementStatus() == null) ? 0 : getImprovementStatus().hashCode());
         hashCode = prime * hashCode + ((getDiscoveryConfig() == null) ? 0 : getDiscoveryConfig().hashCode());
         hashCode = prime * hashCode + ((getApplications() == null) ? 0 : getApplications().hashCode());
+        hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         return hashCode;
     }
 

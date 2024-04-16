@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.entityresolution.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -27,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StartIdMappingJobRequestMarshaller {
 
+    private static final MarshallingInfo<List> OUTPUTSOURCECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputSourceConfig").build();
     private static final MarshallingInfo<String> WORKFLOWNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("workflowName").build();
 
@@ -46,6 +49,7 @@ public class StartIdMappingJobRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(startIdMappingJobRequest.getOutputSourceConfig(), OUTPUTSOURCECONFIG_BINDING);
             protocolMarshaller.marshall(startIdMappingJobRequest.getWorkflowName(), WORKFLOWNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

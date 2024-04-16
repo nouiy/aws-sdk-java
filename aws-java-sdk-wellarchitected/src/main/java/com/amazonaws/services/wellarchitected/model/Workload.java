@@ -109,6 +109,12 @@ public class Workload implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<WorkloadProfile> profiles;
 
     private java.util.Map<String, Integer> prioritizedRiskCounts;
+    /**
+     * <p>
+     * Jira configuration for a specific workload.
+     * </p>
+     */
+    private WorkloadJiraConfigurationOutput jiraConfiguration;
 
     /**
      * @param workloadId
@@ -1243,6 +1249,46 @@ public class Workload implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Jira configuration for a specific workload.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Jira configuration for a specific workload.
+     */
+
+    public void setJiraConfiguration(WorkloadJiraConfigurationOutput jiraConfiguration) {
+        this.jiraConfiguration = jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Jira configuration for a specific workload.
+     * </p>
+     * 
+     * @return Jira configuration for a specific workload.
+     */
+
+    public WorkloadJiraConfigurationOutput getJiraConfiguration() {
+        return this.jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Jira configuration for a specific workload.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Jira configuration for a specific workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workload withJiraConfiguration(WorkloadJiraConfigurationOutput jiraConfiguration) {
+        setJiraConfiguration(jiraConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1307,7 +1353,9 @@ public class Workload implements Serializable, Cloneable, StructuredPojo {
         if (getProfiles() != null)
             sb.append("Profiles: ").append(getProfiles()).append(",");
         if (getPrioritizedRiskCounts() != null)
-            sb.append("PrioritizedRiskCounts: ").append(getPrioritizedRiskCounts());
+            sb.append("PrioritizedRiskCounts: ").append(getPrioritizedRiskCounts()).append(",");
+        if (getJiraConfiguration() != null)
+            sb.append("JiraConfiguration: ").append(getJiraConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1431,6 +1479,10 @@ public class Workload implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPrioritizedRiskCounts() != null && other.getPrioritizedRiskCounts().equals(this.getPrioritizedRiskCounts()) == false)
             return false;
+        if (other.getJiraConfiguration() == null ^ this.getJiraConfiguration() == null)
+            return false;
+        if (other.getJiraConfiguration() != null && other.getJiraConfiguration().equals(this.getJiraConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1466,6 +1518,7 @@ public class Workload implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getApplications() == null) ? 0 : getApplications().hashCode());
         hashCode = prime * hashCode + ((getProfiles() == null) ? 0 : getProfiles().hashCode());
         hashCode = prime * hashCode + ((getPrioritizedRiskCounts() == null) ? 0 : getPrioritizedRiskCounts().hashCode());
+        hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         return hashCode;
     }
 

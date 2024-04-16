@@ -52,6 +52,13 @@ public class StartIdMappingJobResultJsonUnmarshaller implements Unmarshaller<Sta
                     context.nextToken();
                     startIdMappingJobResult.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("outputSourceConfig", targetDepth)) {
+                    context.nextToken();
+                    startIdMappingJobResult.setOutputSourceConfig(new ListUnmarshaller<IdMappingJobOutputSource>(IdMappingJobOutputSourceJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

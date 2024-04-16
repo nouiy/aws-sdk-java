@@ -29,6 +29,8 @@ public class BatchJobIdentifierMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> FILEBATCHJOBIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fileBatchJobIdentifier").build();
+    private static final MarshallingInfo<StructuredPojo> RESTARTBATCHJOBIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("restartBatchJobIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> S3BATCHJOBIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3BatchJobIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> SCRIPTBATCHJOBIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -51,6 +53,7 @@ public class BatchJobIdentifierMarshaller {
 
         try {
             protocolMarshaller.marshall(batchJobIdentifier.getFileBatchJobIdentifier(), FILEBATCHJOBIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(batchJobIdentifier.getRestartBatchJobIdentifier(), RESTARTBATCHJOBIDENTIFIER_BINDING);
             protocolMarshaller.marshall(batchJobIdentifier.getS3BatchJobIdentifier(), S3BATCHJOBIDENTIFIER_BINDING);
             protocolMarshaller.marshall(batchJobIdentifier.getScriptBatchJobIdentifier(), SCRIPTBATCHJOBIDENTIFIER_BINDING);
         } catch (Exception e) {

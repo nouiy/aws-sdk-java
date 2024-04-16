@@ -101,6 +101,12 @@ public class CreateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
     private java.util.List<GetLowLatencyHlsManifestConfiguration> lowLatencyHlsManifests;
     /**
      * <p>
+     * A DASH manifest configuration.
+     * </p>
+     */
+    private java.util.List<GetDashManifestConfiguration> dashManifests;
+    /**
+     * <p>
      * The current Entity Tag (ETag) associated with this resource. The entity tag can be used to safely make concurrent
      * updates to the resource.
      * </p>
@@ -698,6 +704,76 @@ public class CreateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @return A DASH manifest configuration.
+     */
+
+    public java.util.List<GetDashManifestConfiguration> getDashManifests() {
+        return dashManifests;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     */
+
+    public void setDashManifests(java.util.Collection<GetDashManifestConfiguration> dashManifests) {
+        if (dashManifests == null) {
+            this.dashManifests = null;
+            return;
+        }
+
+        this.dashManifests = new java.util.ArrayList<GetDashManifestConfiguration>(dashManifests);
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDashManifests(java.util.Collection)} or {@link #withDashManifests(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOriginEndpointResult withDashManifests(GetDashManifestConfiguration... dashManifests) {
+        if (this.dashManifests == null) {
+            setDashManifests(new java.util.ArrayList<GetDashManifestConfiguration>(dashManifests.length));
+        }
+        for (GetDashManifestConfiguration ele : dashManifests) {
+            this.dashManifests.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A DASH manifest configuration.
+     * </p>
+     * 
+     * @param dashManifests
+     *        A DASH manifest configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOriginEndpointResult withDashManifests(java.util.Collection<GetDashManifestConfiguration> dashManifests) {
+        setDashManifests(dashManifests);
+        return this;
+    }
+
+    /**
+     * <p>
      * The current Entity Tag (ETag) associated with this resource. The entity tag can be used to safely make concurrent
      * updates to the resource.
      * </p>
@@ -846,6 +922,8 @@ public class CreateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("HlsManifests: ").append(getHlsManifests()).append(",");
         if (getLowLatencyHlsManifests() != null)
             sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests()).append(",");
+        if (getDashManifests() != null)
+            sb.append("DashManifests: ").append(getDashManifests()).append(",");
         if (getETag() != null)
             sb.append("ETag: ").append(getETag()).append(",");
         if (getTags() != null)
@@ -912,6 +990,10 @@ public class CreateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getLowLatencyHlsManifests() != null && other.getLowLatencyHlsManifests().equals(this.getLowLatencyHlsManifests()) == false)
             return false;
+        if (other.getDashManifests() == null ^ this.getDashManifests() == null)
+            return false;
+        if (other.getDashManifests() != null && other.getDashManifests().equals(this.getDashManifests()) == false)
+            return false;
         if (other.getETag() == null ^ this.getETag() == null)
             return false;
         if (other.getETag() != null && other.getETag().equals(this.getETag()) == false)
@@ -940,6 +1022,7 @@ public class CreateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getStartoverWindowSeconds() == null) ? 0 : getStartoverWindowSeconds().hashCode());
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
+        hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());
         hashCode = prime * hashCode + ((getETag() == null) ? 0 : getETag().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

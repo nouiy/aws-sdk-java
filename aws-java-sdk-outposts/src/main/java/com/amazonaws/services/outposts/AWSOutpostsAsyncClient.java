@@ -78,6 +78,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
     }
 
     @Override
+    public java.util.concurrent.Future<CancelCapacityTaskResult> cancelCapacityTaskAsync(CancelCapacityTaskRequest request) {
+
+        return cancelCapacityTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelCapacityTaskResult> cancelCapacityTaskAsync(final CancelCapacityTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelCapacityTaskRequest, CancelCapacityTaskResult> asyncHandler) {
+        final CancelCapacityTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelCapacityTaskResult>() {
+            @Override
+            public CancelCapacityTaskResult call() throws Exception {
+                CancelCapacityTaskResult result = null;
+
+                try {
+                    result = executeCancelCapacityTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelOrderResult> cancelOrderAsync(CancelOrderRequest request) {
 
         return cancelOrderAsync(request, null);
@@ -276,6 +309,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
     }
 
     @Override
+    public java.util.concurrent.Future<GetCapacityTaskResult> getCapacityTaskAsync(GetCapacityTaskRequest request) {
+
+        return getCapacityTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCapacityTaskResult> getCapacityTaskAsync(final GetCapacityTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCapacityTaskRequest, GetCapacityTaskResult> asyncHandler) {
+        final GetCapacityTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCapacityTaskResult>() {
+            @Override
+            public GetCapacityTaskResult call() throws Exception {
+                GetCapacityTaskResult result = null;
+
+                try {
+                    result = executeGetCapacityTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetCatalogItemResult> getCatalogItemAsync(GetCatalogItemRequest request) {
 
         return getCatalogItemAsync(request, null);
@@ -441,6 +507,41 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
     }
 
     @Override
+    public java.util.concurrent.Future<GetOutpostSupportedInstanceTypesResult> getOutpostSupportedInstanceTypesAsync(
+            GetOutpostSupportedInstanceTypesRequest request) {
+
+        return getOutpostSupportedInstanceTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOutpostSupportedInstanceTypesResult> getOutpostSupportedInstanceTypesAsync(
+            final GetOutpostSupportedInstanceTypesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetOutpostSupportedInstanceTypesRequest, GetOutpostSupportedInstanceTypesResult> asyncHandler) {
+        final GetOutpostSupportedInstanceTypesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetOutpostSupportedInstanceTypesResult>() {
+            @Override
+            public GetOutpostSupportedInstanceTypesResult call() throws Exception {
+                GetOutpostSupportedInstanceTypesResult result = null;
+
+                try {
+                    result = executeGetOutpostSupportedInstanceTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSiteResult> getSiteAsync(GetSiteRequest request) {
 
         return getSiteAsync(request, null);
@@ -524,6 +625,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
 
                 try {
                     result = executeListAssets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCapacityTasksResult> listCapacityTasksAsync(ListCapacityTasksRequest request) {
+
+        return listCapacityTasksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCapacityTasksResult> listCapacityTasksAsync(final ListCapacityTasksRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCapacityTasksRequest, ListCapacityTasksResult> asyncHandler) {
+        final ListCapacityTasksRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCapacityTasksResult>() {
+            @Override
+            public ListCapacityTasksResult call() throws Exception {
+                ListCapacityTasksResult result = null;
+
+                try {
+                    result = executeListCapacityTasks(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -689,6 +823,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCapacityTaskResult> startCapacityTaskAsync(StartCapacityTaskRequest request) {
+
+        return startCapacityTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCapacityTaskResult> startCapacityTaskAsync(final StartCapacityTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartCapacityTaskRequest, StartCapacityTaskResult> asyncHandler) {
+        final StartCapacityTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartCapacityTaskResult>() {
+            @Override
+            public StartCapacityTaskResult call() throws Exception {
+                StartCapacityTaskResult result = null;
+
+                try {
+                    result = executeStartCapacityTask(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -31,18 +31,21 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      */
     private String lambda;
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      * 
      * @param lambda
-     *        The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     *        The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
+     *        upon invoking the action.
      */
 
     public void setLambda(String lambda) {
@@ -51,11 +54,12 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      * 
-     * @return The ARN of the Lambda function containing the business logic that is carried out upon invoking the
-     *         action.
+     * @return The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
+     *         upon invoking the action.
      */
 
     public String getLambda() {
@@ -64,11 +68,13 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
+     * invoking the action.
      * </p>
      * 
      * @param lambda
-     *        The ARN of the Lambda function containing the business logic that is carried out upon invoking the action.
+     *        The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
+     *        upon invoking the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

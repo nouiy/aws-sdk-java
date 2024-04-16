@@ -74,6 +74,10 @@ public class LensReviewJsonUnmarshaller implements Unmarshaller<LensReview, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("JiraConfiguration", targetDepth)) {
+                    context.nextToken();
+                    lensReview.setJiraConfiguration(JiraSelectedQuestionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("UpdatedAt", targetDepth)) {
                     context.nextToken();
                     lensReview.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -41,7 +41,7 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
     private String instanceArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      */
     private String applicationArn;
@@ -51,6 +51,26 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
      * </p>
      */
     private ExternalFilteringConfiguration externalFiltering;
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs that are
+     * allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources as the <code>ShareRecipients</code>.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     */
+    private java.util.List<DataLakePrincipal> shareRecipients;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the RAM share.
+     * </p>
+     */
+    private String resourceShare;
 
     /**
      * <p>
@@ -146,11 +166,11 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the integrated application.
+     *        The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      */
 
     public void setApplicationArn(String applicationArn) {
@@ -159,10 +179,10 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the integrated application.
+     * @return The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      */
 
     public String getApplicationArn() {
@@ -171,11 +191,11 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the integrated application.
+     * The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the integrated application.
+     *        The Amazon Resource Name (ARN) of the Lake Formation application integrated with IAM Identity Center.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,6 +245,176 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
     }
 
     /**
+     * <p>
+     * A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs that are
+     * allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources as the <code>ShareRecipients</code>.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * 
+     * @return A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs
+     *         that are allowed to access data managed by Lake Formation. </p>
+     *         <p>
+     *         If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *         principals you want to have access to the resources as the <code>ShareRecipients</code>.
+     *         </p>
+     *         <p>
+     *         If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     */
+
+    public java.util.List<DataLakePrincipal> getShareRecipients() {
+        return shareRecipients;
+    }
+
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs that are
+     * allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources as the <code>ShareRecipients</code>.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * 
+     * @param shareRecipients
+     *        A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs
+     *        that are allowed to access data managed by Lake Formation. </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *        principals you want to have access to the resources as the <code>ShareRecipients</code>.
+     *        </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     */
+
+    public void setShareRecipients(java.util.Collection<DataLakePrincipal> shareRecipients) {
+        if (shareRecipients == null) {
+            this.shareRecipients = null;
+            return;
+        }
+
+        this.shareRecipients = new java.util.ArrayList<DataLakePrincipal>(shareRecipients);
+    }
+
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs that are
+     * allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources as the <code>ShareRecipients</code>.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setShareRecipients(java.util.Collection)} or {@link #withShareRecipients(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param shareRecipients
+     *        A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs
+     *        that are allowed to access data managed by Lake Formation. </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *        principals you want to have access to the resources as the <code>ShareRecipients</code>.
+     *        </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLakeFormationIdentityCenterConfigurationResult withShareRecipients(DataLakePrincipal... shareRecipients) {
+        if (this.shareRecipients == null) {
+            setShareRecipients(new java.util.ArrayList<DataLakePrincipal>(shareRecipients.length));
+        }
+        for (DataLakePrincipal ele : shareRecipients) {
+            this.shareRecipients.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs that are
+     * allowed to access data managed by Lake Formation.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the principals
+     * you want to have access to the resources as the <code>ShareRecipients</code>.
+     * </p>
+     * <p>
+     * If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * </p>
+     * 
+     * @param shareRecipients
+     *        A list of Amazon Web Services account IDs or Amazon Web Services organization/organizational unit ARNs
+     *        that are allowed to access data managed by Lake Formation. </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> list includes valid values, a resource share is created with the
+     *        principals you want to have access to the resources as the <code>ShareRecipients</code>.
+     *        </p>
+     *        <p>
+     *        If the <code>ShareRecipients</code> value is null or the list is empty, no resource share is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLakeFormationIdentityCenterConfigurationResult withShareRecipients(java.util.Collection<DataLakePrincipal> shareRecipients) {
+        setShareRecipients(shareRecipients);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the RAM share.
+     * </p>
+     * 
+     * @param resourceShare
+     *        The Amazon Resource Name (ARN) of the RAM share.
+     */
+
+    public void setResourceShare(String resourceShare) {
+        this.resourceShare = resourceShare;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the RAM share.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the RAM share.
+     */
+
+    public String getResourceShare() {
+        return this.resourceShare;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the RAM share.
+     * </p>
+     * 
+     * @param resourceShare
+     *        The Amazon Resource Name (ARN) of the RAM share.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLakeFormationIdentityCenterConfigurationResult withResourceShare(String resourceShare) {
+        setResourceShare(resourceShare);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -243,7 +433,11 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
         if (getApplicationArn() != null)
             sb.append("ApplicationArn: ").append(getApplicationArn()).append(",");
         if (getExternalFiltering() != null)
-            sb.append("ExternalFiltering: ").append(getExternalFiltering());
+            sb.append("ExternalFiltering: ").append(getExternalFiltering()).append(",");
+        if (getShareRecipients() != null)
+            sb.append("ShareRecipients: ").append(getShareRecipients()).append(",");
+        if (getResourceShare() != null)
+            sb.append("ResourceShare: ").append(getResourceShare());
         sb.append("}");
         return sb.toString();
     }
@@ -274,6 +468,14 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
             return false;
         if (other.getExternalFiltering() != null && other.getExternalFiltering().equals(this.getExternalFiltering()) == false)
             return false;
+        if (other.getShareRecipients() == null ^ this.getShareRecipients() == null)
+            return false;
+        if (other.getShareRecipients() != null && other.getShareRecipients().equals(this.getShareRecipients()) == false)
+            return false;
+        if (other.getResourceShare() == null ^ this.getResourceShare() == null)
+            return false;
+        if (other.getResourceShare() != null && other.getResourceShare().equals(this.getResourceShare()) == false)
+            return false;
         return true;
     }
 
@@ -286,6 +488,8 @@ public class DescribeLakeFormationIdentityCenterConfigurationResult extends com.
         hashCode = prime * hashCode + ((getInstanceArn() == null) ? 0 : getInstanceArn().hashCode());
         hashCode = prime * hashCode + ((getApplicationArn() == null) ? 0 : getApplicationArn().hashCode());
         hashCode = prime * hashCode + ((getExternalFiltering() == null) ? 0 : getExternalFiltering().hashCode());
+        hashCode = prime * hashCode + ((getShareRecipients() == null) ? 0 : getShareRecipients().hashCode());
+        hashCode = prime * hashCode + ((getResourceShare() == null) ? 0 : getResourceShare().hashCode());
         return hashCode;
     }
 

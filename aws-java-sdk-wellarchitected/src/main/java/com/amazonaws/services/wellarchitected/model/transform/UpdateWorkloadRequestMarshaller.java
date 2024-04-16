@@ -62,6 +62,8 @@ public class UpdateWorkloadRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiscoveryConfig").build();
     private static final MarshallingInfo<List> APPLICATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Applications").build();
+    private static final MarshallingInfo<StructuredPojo> JIRACONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JiraConfiguration").build();
 
     private static final UpdateWorkloadRequestMarshaller instance = new UpdateWorkloadRequestMarshaller();
 
@@ -96,6 +98,7 @@ public class UpdateWorkloadRequestMarshaller {
             protocolMarshaller.marshall(updateWorkloadRequest.getImprovementStatus(), IMPROVEMENTSTATUS_BINDING);
             protocolMarshaller.marshall(updateWorkloadRequest.getDiscoveryConfig(), DISCOVERYCONFIG_BINDING);
             protocolMarshaller.marshall(updateWorkloadRequest.getApplications(), APPLICATIONS_BINDING);
+            protocolMarshaller.marshall(updateWorkloadRequest.getJiraConfiguration(), JIRACONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

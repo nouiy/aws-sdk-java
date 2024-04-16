@@ -31,6 +31,8 @@ public class IdMappingWorkflowInputSourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inputSourceARN").build();
     private static final MarshallingInfo<String> SCHEMANAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaName").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
 
     private static final IdMappingWorkflowInputSourceMarshaller instance = new IdMappingWorkflowInputSourceMarshaller();
 
@@ -50,6 +52,7 @@ public class IdMappingWorkflowInputSourceMarshaller {
         try {
             protocolMarshaller.marshall(idMappingWorkflowInputSource.getInputSourceARN(), INPUTSOURCEARN_BINDING);
             protocolMarshaller.marshall(idMappingWorkflowInputSource.getSchemaName(), SCHEMANAME_BINDING);
+            protocolMarshaller.marshall(idMappingWorkflowInputSource.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

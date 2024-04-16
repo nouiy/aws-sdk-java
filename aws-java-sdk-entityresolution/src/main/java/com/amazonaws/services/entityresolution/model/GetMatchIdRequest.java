@@ -27,6 +27,14 @@ public class GetMatchIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
+     * Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     * <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     * 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     * </p>
+     */
+    private Boolean applyNormalization;
+    /**
+     * <p>
      * The record to fetch the Match ID for.
      * </p>
      */
@@ -37,6 +45,74 @@ public class GetMatchIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private String workflowName;
+
+    /**
+     * <p>
+     * Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     * <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     * 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     * </p>
+     * 
+     * @param applyNormalization
+     *        Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     *        <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     *        1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     */
+
+    public void setApplyNormalization(Boolean applyNormalization) {
+        this.applyNormalization = applyNormalization;
+    }
+
+    /**
+     * <p>
+     * Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     * <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     * 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     * </p>
+     * 
+     * @return Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     *         <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format
+     *         of 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     */
+
+    public Boolean getApplyNormalization() {
+        return this.applyNormalization;
+    }
+
+    /**
+     * <p>
+     * Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     * <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     * 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     * </p>
+     * 
+     * @param applyNormalization
+     *        Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     *        <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     *        1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMatchIdRequest withApplyNormalization(Boolean applyNormalization) {
+        setApplyNormalization(applyNormalization);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     * <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of
+     * 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     * </p>
+     * 
+     * @return Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an
+     *         <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format
+     *         of 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.
+     */
+
+    public Boolean isApplyNormalization() {
+        return this.applyNormalization;
+    }
 
     /**
      * <p>
@@ -158,6 +234,8 @@ public class GetMatchIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getApplyNormalization() != null)
+            sb.append("ApplyNormalization: ").append(getApplyNormalization()).append(",");
         if (getRecord() != null)
             sb.append("Record: ").append("***Sensitive Data Redacted***").append(",");
         if (getWorkflowName() != null)
@@ -176,6 +254,10 @@ public class GetMatchIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (obj instanceof GetMatchIdRequest == false)
             return false;
         GetMatchIdRequest other = (GetMatchIdRequest) obj;
+        if (other.getApplyNormalization() == null ^ this.getApplyNormalization() == null)
+            return false;
+        if (other.getApplyNormalization() != null && other.getApplyNormalization().equals(this.getApplyNormalization()) == false)
+            return false;
         if (other.getRecord() == null ^ this.getRecord() == null)
             return false;
         if (other.getRecord() != null && other.getRecord().equals(this.getRecord()) == false)
@@ -192,6 +274,7 @@ public class GetMatchIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getApplyNormalization() == null) ? 0 : getApplyNormalization().hashCode());
         hashCode = prime * hashCode + ((getRecord() == null) ? 0 : getRecord().hashCode());
         hashCode = prime * hashCode + ((getWorkflowName() == null) ? 0 : getWorkflowName().hashCode());
         return hashCode;

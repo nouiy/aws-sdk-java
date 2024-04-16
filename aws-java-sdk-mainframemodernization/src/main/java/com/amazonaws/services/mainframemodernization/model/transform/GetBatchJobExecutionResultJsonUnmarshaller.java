@@ -72,6 +72,10 @@ public class GetBatchJobExecutionResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     getBatchJobExecutionResult.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("jobStepRestartMarker", targetDepth)) {
+                    context.nextToken();
+                    getBatchJobExecutionResult.setJobStepRestartMarker(JobStepRestartMarkerJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("jobType", targetDepth)) {
                     context.nextToken();
                     getBatchJobExecutionResult.setJobType(context.getUnmarshaller(String.class).unmarshall(context));

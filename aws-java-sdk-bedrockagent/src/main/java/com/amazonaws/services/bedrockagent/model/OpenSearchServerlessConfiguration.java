@@ -32,7 +32,7 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the OpenSearch Service vector store.
+     * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      * </p>
      */
     private String collectionArn;
@@ -51,11 +51,11 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the OpenSearch Service vector store.
+     * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      * </p>
      * 
      * @param collectionArn
-     *        The ARN of the OpenSearch Service vector store.
+     *        The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      */
 
     public void setCollectionArn(String collectionArn) {
@@ -64,10 +64,10 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the OpenSearch Service vector store.
+     * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      * </p>
      * 
-     * @return The ARN of the OpenSearch Service vector store.
+     * @return The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      */
 
     public String getCollectionArn() {
@@ -76,11 +76,11 @@ public class OpenSearchServerlessConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the OpenSearch Service vector store.
+     * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      * </p>
      * 
      * @param collectionArn
-     *        The ARN of the OpenSearch Service vector store.
+     *        The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

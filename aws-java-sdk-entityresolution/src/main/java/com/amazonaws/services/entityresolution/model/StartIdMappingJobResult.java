@@ -29,6 +29,12 @@ public class StartIdMappingJobResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private String jobId;
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     */
+    private java.util.List<IdMappingJobOutputSource> outputSourceConfig;
 
     /**
      * <p>
@@ -71,6 +77,76 @@ public class StartIdMappingJobResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * 
+     * @return A list of <code>OutputSource</code> objects.
+     */
+
+    public java.util.List<IdMappingJobOutputSource> getOutputSourceConfig() {
+        return outputSourceConfig;
+    }
+
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * 
+     * @param outputSourceConfig
+     *        A list of <code>OutputSource</code> objects.
+     */
+
+    public void setOutputSourceConfig(java.util.Collection<IdMappingJobOutputSource> outputSourceConfig) {
+        if (outputSourceConfig == null) {
+            this.outputSourceConfig = null;
+            return;
+        }
+
+        this.outputSourceConfig = new java.util.ArrayList<IdMappingJobOutputSource>(outputSourceConfig);
+    }
+
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOutputSourceConfig(java.util.Collection)} or {@link #withOutputSourceConfig(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param outputSourceConfig
+     *        A list of <code>OutputSource</code> objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartIdMappingJobResult withOutputSourceConfig(IdMappingJobOutputSource... outputSourceConfig) {
+        if (this.outputSourceConfig == null) {
+            setOutputSourceConfig(new java.util.ArrayList<IdMappingJobOutputSource>(outputSourceConfig.length));
+        }
+        for (IdMappingJobOutputSource ele : outputSourceConfig) {
+            this.outputSourceConfig.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <code>OutputSource</code> objects.
+     * </p>
+     * 
+     * @param outputSourceConfig
+     *        A list of <code>OutputSource</code> objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartIdMappingJobResult withOutputSourceConfig(java.util.Collection<IdMappingJobOutputSource> outputSourceConfig) {
+        setOutputSourceConfig(outputSourceConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -83,7 +159,9 @@ public class StartIdMappingJobResult extends com.amazonaws.AmazonWebServiceResul
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getJobId() != null)
-            sb.append("JobId: ").append(getJobId());
+            sb.append("JobId: ").append(getJobId()).append(",");
+        if (getOutputSourceConfig() != null)
+            sb.append("OutputSourceConfig: ").append(getOutputSourceConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -102,6 +180,10 @@ public class StartIdMappingJobResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getJobId() != null && other.getJobId().equals(this.getJobId()) == false)
             return false;
+        if (other.getOutputSourceConfig() == null ^ this.getOutputSourceConfig() == null)
+            return false;
+        if (other.getOutputSourceConfig() != null && other.getOutputSourceConfig().equals(this.getOutputSourceConfig()) == false)
+            return false;
         return true;
     }
 
@@ -111,6 +193,7 @@ public class StartIdMappingJobResult extends com.amazonaws.AmazonWebServiceResul
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
+        hashCode = prime * hashCode + ((getOutputSourceConfig() == null) ? 0 : getOutputSourceConfig().hashCode());
         return hashCode;
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object containing <code>InputSourceARN</code> and <code>SchemaName</code>.
+ * An object containing <code>InputSourceARN</code>, <code>SchemaName</code>, and <code>Type</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/IdMappingWorkflowInputSource"
@@ -30,7 +30,7 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An Gluetable ARN for the input source table.
+     * An Glue table ARN for the input source table.
      * </p>
      */
     private String inputSourceARN;
@@ -40,14 +40,28 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      * </p>
      */
     private String schemaName;
+    /**
+     * <p>
+     * The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.
+     * </p>
+     * <p>
+     * The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID
+     * mapping workflow.
+     * </p>
+     * <p>
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
+     * will resolve to.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
-     * An Gluetable ARN for the input source table.
+     * An Glue table ARN for the input source table.
      * </p>
      * 
      * @param inputSourceARN
-     *        An Gluetable ARN for the input source table.
+     *        An Glue table ARN for the input source table.
      */
 
     public void setInputSourceARN(String inputSourceARN) {
@@ -56,10 +70,10 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An Gluetable ARN for the input source table.
+     * An Glue table ARN for the input source table.
      * </p>
      * 
-     * @return An Gluetable ARN for the input source table.
+     * @return An Glue table ARN for the input source table.
      */
 
     public String getInputSourceARN() {
@@ -68,11 +82,11 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An Gluetable ARN for the input source table.
+     * An Glue table ARN for the input source table.
      * </p>
      * 
      * @param inputSourceARN
-     *        An Gluetable ARN for the input source table.
+     *        An Glue table ARN for the input source table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -122,6 +136,125 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.
+     * </p>
+     * <p>
+     * The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID
+     * mapping workflow.
+     * </p>
+     * <p>
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
+     * will resolve to.
+     * </p>
+     * 
+     * @param type
+     *        The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p>
+     *        <p>
+     *        The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in
+     *        an ID mapping workflow.
+     *        </p>
+     *        <p>
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
+     *        <code>sourceIds</code> will resolve to.
+     * @see IdNamespaceType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.
+     * </p>
+     * <p>
+     * The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID
+     * mapping workflow.
+     * </p>
+     * <p>
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
+     * will resolve to.
+     * </p>
+     * 
+     * @return The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p>
+     *         <p>
+     *         The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in
+     *         an ID mapping workflow.
+     *         </p>
+     *         <p>
+     *         The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
+     *         <code>sourceIds</code> will resolve to.
+     * @see IdNamespaceType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.
+     * </p>
+     * <p>
+     * The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID
+     * mapping workflow.
+     * </p>
+     * <p>
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
+     * will resolve to.
+     * </p>
+     * 
+     * @param type
+     *        The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p>
+     *        <p>
+     *        The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in
+     *        an ID mapping workflow.
+     *        </p>
+     *        <p>
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
+     *        <code>sourceIds</code> will resolve to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IdNamespaceType
+     */
+
+    public IdMappingWorkflowInputSource withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.
+     * </p>
+     * <p>
+     * The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID
+     * mapping workflow.
+     * </p>
+     * <p>
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
+     * will resolve to.
+     * </p>
+     * 
+     * @param type
+     *        The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p>
+     *        <p>
+     *        The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in
+     *        an ID mapping workflow.
+     *        </p>
+     *        <p>
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
+     *        <code>sourceIds</code> will resolve to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IdNamespaceType
+     */
+
+    public IdMappingWorkflowInputSource withType(IdNamespaceType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +269,9 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
         if (getInputSourceARN() != null)
             sb.append("InputSourceARN: ").append(getInputSourceARN()).append(",");
         if (getSchemaName() != null)
-            sb.append("SchemaName: ").append(getSchemaName());
+            sb.append("SchemaName: ").append(getSchemaName()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +294,10 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
             return false;
         if (other.getSchemaName() != null && other.getSchemaName().equals(this.getSchemaName()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +308,7 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
         hashCode = prime * hashCode + ((getInputSourceARN() == null) ? 0 : getInputSourceARN().hashCode());
         hashCode = prime * hashCode + ((getSchemaName() == null) ? 0 : getSchemaName().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

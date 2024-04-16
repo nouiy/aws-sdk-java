@@ -28,6 +28,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public CancelCapacityTaskResult cancelCapacityTask(CancelCapacityTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelOrderResult cancelOrder(CancelOrderRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -58,6 +63,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public GetCapacityTaskResult getCapacityTask(GetCapacityTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetCatalogItemResult getCatalogItem(GetCatalogItemRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -83,6 +93,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public GetOutpostSupportedInstanceTypesResult getOutpostSupportedInstanceTypes(GetOutpostSupportedInstanceTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetSiteResult getSite(GetSiteRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +109,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
 
     @Override
     public ListAssetsResult listAssets(ListAssetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCapacityTasksResult listCapacityTasks(ListCapacityTasksRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -119,6 +139,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartCapacityTaskResult startCapacityTask(StartCapacityTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

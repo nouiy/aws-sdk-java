@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.lakeformation.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class UpdateLakeFormationIdentityCenterConfigurationRequestMarshaller {
 
     private static final MarshallingInfo<String> CATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CatalogId").build();
+    private static final MarshallingInfo<List> SHARERECIPIENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShareRecipients").build();
     private static final MarshallingInfo<String> APPLICATIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationStatus").build();
     private static final MarshallingInfo<StructuredPojo> EXTERNALFILTERING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -52,6 +55,7 @@ public class UpdateLakeFormationIdentityCenterConfigurationRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateLakeFormationIdentityCenterConfigurationRequest.getCatalogId(), CATALOGID_BINDING);
+            protocolMarshaller.marshall(updateLakeFormationIdentityCenterConfigurationRequest.getShareRecipients(), SHARERECIPIENTS_BINDING);
             protocolMarshaller.marshall(updateLakeFormationIdentityCenterConfigurationRequest.getApplicationStatus(), APPLICATIONSTATUS_BINDING);
             protocolMarshaller.marshall(updateLakeFormationIdentityCenterConfigurationRequest.getExternalFiltering(), EXTERNALFILTERING_BINDING);
         } catch (Exception e) {

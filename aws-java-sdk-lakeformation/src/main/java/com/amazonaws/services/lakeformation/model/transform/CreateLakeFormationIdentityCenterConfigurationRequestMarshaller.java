@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.lakeformation.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class CreateLakeFormationIdentityCenterConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceArn").build();
     private static final MarshallingInfo<StructuredPojo> EXTERNALFILTERING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExternalFiltering").build();
+    private static final MarshallingInfo<List> SHARERECIPIENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShareRecipients").build();
 
     private static final CreateLakeFormationIdentityCenterConfigurationRequestMarshaller instance = new CreateLakeFormationIdentityCenterConfigurationRequestMarshaller();
 
@@ -54,6 +57,7 @@ public class CreateLakeFormationIdentityCenterConfigurationRequestMarshaller {
             protocolMarshaller.marshall(createLakeFormationIdentityCenterConfigurationRequest.getCatalogId(), CATALOGID_BINDING);
             protocolMarshaller.marshall(createLakeFormationIdentityCenterConfigurationRequest.getInstanceArn(), INSTANCEARN_BINDING);
             protocolMarshaller.marshall(createLakeFormationIdentityCenterConfigurationRequest.getExternalFiltering(), EXTERNALFILTERING_BINDING);
+            protocolMarshaller.marshall(createLakeFormationIdentityCenterConfigurationRequest.getShareRecipients(), SHARERECIPIENTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

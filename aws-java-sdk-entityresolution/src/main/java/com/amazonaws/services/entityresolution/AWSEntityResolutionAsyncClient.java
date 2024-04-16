@@ -92,6 +92,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<AddPolicyStatementResult> addPolicyStatementAsync(AddPolicyStatementRequest request) {
+
+        return addPolicyStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AddPolicyStatementResult> addPolicyStatementAsync(final AddPolicyStatementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AddPolicyStatementRequest, AddPolicyStatementResult> asyncHandler) {
+        final AddPolicyStatementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AddPolicyStatementResult>() {
+            @Override
+            public AddPolicyStatementResult call() throws Exception {
+                AddPolicyStatementResult result = null;
+
+                try {
+                    result = executeAddPolicyStatement(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest request) {
 
         return createIdMappingWorkflowAsync(request, null);
@@ -109,6 +142,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeCreateIdMappingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdNamespaceResult> createIdNamespaceAsync(CreateIdNamespaceRequest request) {
+
+        return createIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdNamespaceResult> createIdNamespaceAsync(final CreateIdNamespaceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateIdNamespaceRequest, CreateIdNamespaceResult> asyncHandler) {
+        final CreateIdNamespaceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateIdNamespaceResult>() {
+            @Override
+            public CreateIdNamespaceResult call() throws Exception {
+                CreateIdNamespaceResult result = null;
+
+                try {
+                    result = executeCreateIdNamespace(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -224,6 +290,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceResult> deleteIdNamespaceAsync(DeleteIdNamespaceRequest request) {
+
+        return deleteIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceResult> deleteIdNamespaceAsync(final DeleteIdNamespaceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteIdNamespaceRequest, DeleteIdNamespaceResult> asyncHandler) {
+        final DeleteIdNamespaceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteIdNamespaceResult>() {
+            @Override
+            public DeleteIdNamespaceResult call() throws Exception {
+                DeleteIdNamespaceResult result = null;
+
+                try {
+                    result = executeDeleteIdNamespace(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteMatchingWorkflowResult> deleteMatchingWorkflowAsync(DeleteMatchingWorkflowRequest request) {
 
         return deleteMatchingWorkflowAsync(request, null);
@@ -241,6 +340,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeDeleteMatchingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePolicyStatementResult> deletePolicyStatementAsync(DeletePolicyStatementRequest request) {
+
+        return deletePolicyStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePolicyStatementResult> deletePolicyStatementAsync(final DeletePolicyStatementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePolicyStatementRequest, DeletePolicyStatementResult> asyncHandler) {
+        final DeletePolicyStatementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePolicyStatementResult>() {
+            @Override
+            public DeletePolicyStatementResult call() throws Exception {
+                DeletePolicyStatementResult result = null;
+
+                try {
+                    result = executeDeletePolicyStatement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -356,6 +488,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetIdNamespaceResult> getIdNamespaceAsync(GetIdNamespaceRequest request) {
+
+        return getIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdNamespaceResult> getIdNamespaceAsync(final GetIdNamespaceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetIdNamespaceRequest, GetIdNamespaceResult> asyncHandler) {
+        final GetIdNamespaceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetIdNamespaceResult>() {
+            @Override
+            public GetIdNamespaceResult call() throws Exception {
+                GetIdNamespaceResult result = null;
+
+                try {
+                    result = executeGetIdNamespace(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMatchIdResult> getMatchIdAsync(GetMatchIdRequest request) {
 
         return getMatchIdAsync(request, null);
@@ -455,6 +620,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest request) {
+
+        return getPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(final GetPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPolicyRequest, GetPolicyResult> asyncHandler) {
+        final GetPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPolicyResult>() {
+            @Override
+            public GetPolicyResult call() throws Exception {
+                GetPolicyResult result = null;
+
+                try {
+                    result = executeGetPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSchemaMappingResult> getSchemaMappingAsync(GetSchemaMappingRequest request) {
 
         return getSchemaMappingAsync(request, null);
@@ -538,6 +736,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeListIdMappingWorkflows(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespacesResult> listIdNamespacesAsync(ListIdNamespacesRequest request) {
+
+        return listIdNamespacesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespacesResult> listIdNamespacesAsync(final ListIdNamespacesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdNamespacesRequest, ListIdNamespacesResult> asyncHandler) {
+        final ListIdNamespacesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdNamespacesResult>() {
+            @Override
+            public ListIdNamespacesResult call() throws Exception {
+                ListIdNamespacesResult result = null;
+
+                try {
+                    result = executeListIdNamespaces(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -719,6 +950,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest request) {
+
+        return putPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(final PutPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutPolicyRequest, PutPolicyResult> asyncHandler) {
+        final PutPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutPolicyResult>() {
+            @Override
+            public PutPolicyResult call() throws Exception {
+                PutPolicyResult result = null;
+
+                try {
+                    result = executePutPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartIdMappingJobResult> startIdMappingJobAsync(StartIdMappingJobRequest request) {
 
         return startIdMappingJobAsync(request, null);
@@ -868,6 +1132,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeUpdateIdMappingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdNamespaceResult> updateIdNamespaceAsync(UpdateIdNamespaceRequest request) {
+
+        return updateIdNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdNamespaceResult> updateIdNamespaceAsync(final UpdateIdNamespaceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIdNamespaceRequest, UpdateIdNamespaceResult> asyncHandler) {
+        final UpdateIdNamespaceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIdNamespaceResult>() {
+            @Override
+            public UpdateIdNamespaceResult call() throws Exception {
+                UpdateIdNamespaceResult result = null;
+
+                try {
+                    result = executeUpdateIdNamespace(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

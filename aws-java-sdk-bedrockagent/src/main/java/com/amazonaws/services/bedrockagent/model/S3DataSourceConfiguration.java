@@ -30,7 +30,7 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
      * </p>
      */
     private String bucketArn;
@@ -45,11 +45,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
      * </p>
      * 
      * @param bucketArn
-     *        The ARN of the bucket that contains the data source.
+     *        The Amazon Resource Name (ARN) of the bucket that contains the data source.
      */
 
     public void setBucketArn(String bucketArn) {
@@ -58,10 +58,10 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
      * </p>
      * 
-     * @return The ARN of the bucket that contains the data source.
+     * @return The Amazon Resource Name (ARN) of the bucket that contains the data source.
      */
 
     public String getBucketArn() {
@@ -70,11 +70,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the bucket that contains the data source.
+     * The Amazon Resource Name (ARN) of the bucket that contains the data source.
      * </p>
      * 
      * @param bucketArn
-     *        The ARN of the bucket that contains the data source.
+     *        The Amazon Resource Name (ARN) of the bucket that contains the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

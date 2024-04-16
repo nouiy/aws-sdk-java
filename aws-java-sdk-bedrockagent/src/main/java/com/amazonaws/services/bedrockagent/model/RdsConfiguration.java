@@ -32,7 +32,8 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Amazon
+     * RDS database.
      * </p>
      */
     private String credentialsSecretArn;
@@ -50,7 +51,7 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
     private RdsFieldMapping fieldMapping;
     /**
      * <p>
-     * The ARN of the vector store.
+     * The Amazon Resource Name (ARN) of the vector store.
      * </p>
      */
     private String resourceArn;
@@ -63,11 +64,13 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Amazon
+     * RDS database.
      * </p>
      * 
      * @param credentialsSecretArn
-     *        The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     *        The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *        Amazon RDS database.
      */
 
     public void setCredentialsSecretArn(String credentialsSecretArn) {
@@ -76,10 +79,12 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Amazon
+     * RDS database.
      * </p>
      * 
-     * @return The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * @return The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *         Amazon RDS database.
      */
 
     public String getCredentialsSecretArn() {
@@ -88,11 +93,13 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     * The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your Amazon
+     * RDS database.
      * </p>
      * 
      * @param credentialsSecretArn
-     *        The ARN of the secret that you created in Secrets Manager that is linked to your Amazon RDS database.
+     *        The Amazon Resource Name (ARN) of the secret that you created in Secrets Manager that is linked to your
+     *        Amazon RDS database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,11 +190,11 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the vector store.
+     * The Amazon Resource Name (ARN) of the vector store.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the vector store.
+     *        The Amazon Resource Name (ARN) of the vector store.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -196,10 +203,10 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the vector store.
+     * The Amazon Resource Name (ARN) of the vector store.
      * </p>
      * 
-     * @return The ARN of the vector store.
+     * @return The Amazon Resource Name (ARN) of the vector store.
      */
 
     public String getResourceArn() {
@@ -208,11 +215,11 @@ public class RdsConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the vector store.
+     * The Amazon Resource Name (ARN) of the vector store.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the vector store.
+     *        The Amazon Resource Name (ARN) of the vector store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

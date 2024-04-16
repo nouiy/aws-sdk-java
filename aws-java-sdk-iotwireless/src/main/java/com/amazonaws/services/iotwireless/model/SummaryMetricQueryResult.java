@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The result of metrics aggregation operation.
+ * The result of the summary metrics aggregation operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/SummaryMetricQueryResult"
@@ -30,25 +30,25 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The id of the query.
+     * The ID of the summary metric results query operation.
      * </p>
      */
     private String queryId;
     /**
      * <p>
-     * The status of the metric query.
+     * The status of the summary metric query result.
      * </p>
      */
     private String queryStatus;
     /**
      * <p>
-     * The error message for the summary metric query.
+     * The error message for the summary metric query result.
      * </p>
      */
     private String error;
     /**
      * <p>
-     * The name of the metric.
+     * The name of the summary metric query result.
      * </p>
      */
     private String metricName;
@@ -66,13 +66,13 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
     private String aggregationPeriod;
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      */
     private java.util.Date startTimestamp;
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      */
     private java.util.Date endTimestamp;
@@ -84,7 +84,7 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
     private java.util.List<java.util.Date> timestamps;
     /**
      * <p>
-     * The list of aggregated metrics.
+     * The list of aggregated summary metric query results.
      * </p>
      */
     private java.util.List<MetricQueryValue> values;
@@ -97,11 +97,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The id of the query.
+     * The ID of the summary metric results query operation.
      * </p>
      * 
      * @param queryId
-     *        The id of the query.
+     *        The ID of the summary metric results query operation.
      */
 
     public void setQueryId(String queryId) {
@@ -110,10 +110,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The id of the query.
+     * The ID of the summary metric results query operation.
      * </p>
      * 
-     * @return The id of the query.
+     * @return The ID of the summary metric results query operation.
      */
 
     public String getQueryId() {
@@ -122,11 +122,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The id of the query.
+     * The ID of the summary metric results query operation.
      * </p>
      * 
      * @param queryId
-     *        The id of the query.
+     *        The ID of the summary metric results query operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,11 +137,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status of the metric query.
+     * The status of the summary metric query result.
      * </p>
      * 
      * @param queryStatus
-     *        The status of the metric query.
+     *        The status of the summary metric query result.
      * @see MetricQueryStatus
      */
 
@@ -151,10 +151,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status of the metric query.
+     * The status of the summary metric query result.
      * </p>
      * 
-     * @return The status of the metric query.
+     * @return The status of the summary metric query result.
      * @see MetricQueryStatus
      */
 
@@ -164,11 +164,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status of the metric query.
+     * The status of the summary metric query result.
      * </p>
      * 
      * @param queryStatus
-     *        The status of the metric query.
+     *        The status of the summary metric query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricQueryStatus
      */
@@ -180,11 +180,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status of the metric query.
+     * The status of the summary metric query result.
      * </p>
      * 
      * @param queryStatus
-     *        The status of the metric query.
+     *        The status of the summary metric query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricQueryStatus
      */
@@ -196,11 +196,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The error message for the summary metric query.
+     * The error message for the summary metric query result.
      * </p>
      * 
      * @param error
-     *        The error message for the summary metric query.
+     *        The error message for the summary metric query result.
      */
 
     public void setError(String error) {
@@ -209,10 +209,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The error message for the summary metric query.
+     * The error message for the summary metric query result.
      * </p>
      * 
-     * @return The error message for the summary metric query.
+     * @return The error message for the summary metric query result.
      */
 
     public String getError() {
@@ -221,11 +221,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The error message for the summary metric query.
+     * The error message for the summary metric query result.
      * </p>
      * 
      * @param error
-     *        The error message for the summary metric query.
+     *        The error message for the summary metric query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,11 +236,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the summary metric query result.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric.
+     *        The name of the summary metric query result.
      * @see MetricName
      */
 
@@ -250,10 +250,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the summary metric query result.
      * </p>
      * 
-     * @return The name of the metric.
+     * @return The name of the summary metric query result.
      * @see MetricName
      */
 
@@ -263,11 +263,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the summary metric query result.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric.
+     *        The name of the summary metric query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricName
      */
@@ -279,11 +279,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the metric.
+     * The name of the summary metric query result.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric.
+     *        The name of the summary metric query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricName
      */
@@ -424,11 +424,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      * 
      * @param startTimestamp
-     *        The start timestamp for summary metric query.
+     *        The start timestamp for the summary metric query.
      */
 
     public void setStartTimestamp(java.util.Date startTimestamp) {
@@ -437,10 +437,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      * 
-     * @return The start timestamp for summary metric query.
+     * @return The start timestamp for the summary metric query.
      */
 
     public java.util.Date getStartTimestamp() {
@@ -449,11 +449,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The start timestamp for summary metric query.
+     * The start timestamp for the summary metric query.
      * </p>
      * 
      * @param startTimestamp
-     *        The start timestamp for summary metric query.
+     *        The start timestamp for the summary metric query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -464,11 +464,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      * 
      * @param endTimestamp
-     *        The end timestamp for summary metric query.
+     *        The end timestamp for the summary metric query.
      */
 
     public void setEndTimestamp(java.util.Date endTimestamp) {
@@ -477,10 +477,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      * 
-     * @return The end timestamp for summary metric query.
+     * @return The end timestamp for the summary metric query.
      */
 
     public java.util.Date getEndTimestamp() {
@@ -489,11 +489,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The end timestamp for summary metric query.
+     * The end timestamp for the summary metric query.
      * </p>
      * 
      * @param endTimestamp
-     *        The end timestamp for summary metric query.
+     *        The end timestamp for the summary metric query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -574,10 +574,10 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The list of aggregated metrics.
+     * The list of aggregated summary metric query results.
      * </p>
      * 
-     * @return The list of aggregated metrics.
+     * @return The list of aggregated summary metric query results.
      */
 
     public java.util.List<MetricQueryValue> getValues() {
@@ -586,11 +586,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The list of aggregated metrics.
+     * The list of aggregated summary metric query results.
      * </p>
      * 
      * @param values
-     *        The list of aggregated metrics.
+     *        The list of aggregated summary metric query results.
      */
 
     public void setValues(java.util.Collection<MetricQueryValue> values) {
@@ -604,7 +604,7 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The list of aggregated metrics.
+     * The list of aggregated summary metric query results.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -613,7 +613,7 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param values
-     *        The list of aggregated metrics.
+     *        The list of aggregated summary metric query results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -629,11 +629,11 @@ public class SummaryMetricQueryResult implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The list of aggregated metrics.
+     * The list of aggregated summary metric query results.
      * </p>
      * 
      * @param values
-     *        The list of aggregated metrics.
+     *        The list of aggregated summary metric query results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

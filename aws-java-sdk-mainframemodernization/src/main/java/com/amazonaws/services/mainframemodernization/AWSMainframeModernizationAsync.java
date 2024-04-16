@@ -677,6 +677,41 @@ public interface AWSMainframeModernizationAsync extends AWSMainframeModernizatio
 
     /**
      * <p>
+     * Lists all the job steps for JCL files to restart a batch job. This is only applicable for Micro Focus engine with
+     * versions 8.0.6 and above.
+     * </p>
+     * 
+     * @param listBatchJobRestartPointsRequest
+     * @return A Java Future containing the result of the ListBatchJobRestartPoints operation returned by the service.
+     * @sample AWSMainframeModernizationAsync.ListBatchJobRestartPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/m2-2021-04-28/ListBatchJobRestartPoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBatchJobRestartPointsResult> listBatchJobRestartPointsAsync(
+            ListBatchJobRestartPointsRequest listBatchJobRestartPointsRequest);
+
+    /**
+     * <p>
+     * Lists all the job steps for JCL files to restart a batch job. This is only applicable for Micro Focus engine with
+     * versions 8.0.6 and above.
+     * </p>
+     * 
+     * @param listBatchJobRestartPointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBatchJobRestartPoints operation returned by the service.
+     * @sample AWSMainframeModernizationAsyncHandler.ListBatchJobRestartPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/m2-2021-04-28/ListBatchJobRestartPoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBatchJobRestartPointsResult> listBatchJobRestartPointsAsync(
+            ListBatchJobRestartPointsRequest listBatchJobRestartPointsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBatchJobRestartPointsRequest, ListBatchJobRestartPointsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the data set imports for the specified application.
      * </p>
      * 

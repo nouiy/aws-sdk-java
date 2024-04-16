@@ -51,6 +51,12 @@ public class LensReview implements Serializable, Cloneable, StructuredPojo {
     private String lensStatus;
 
     private java.util.List<PillarReviewSummary> pillarReviewSummaries;
+    /**
+     * <p>
+     * Jira configuration status of the Lens review.
+     * </p>
+     */
+    private JiraSelectedQuestionConfiguration jiraConfiguration;
 
     private java.util.Date updatedAt;
 
@@ -308,6 +314,46 @@ public class LensReview implements Serializable, Cloneable, StructuredPojo {
 
     public LensReview withPillarReviewSummaries(java.util.Collection<PillarReviewSummary> pillarReviewSummaries) {
         setPillarReviewSummaries(pillarReviewSummaries);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Jira configuration status of the Lens review.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Jira configuration status of the Lens review.
+     */
+
+    public void setJiraConfiguration(JiraSelectedQuestionConfiguration jiraConfiguration) {
+        this.jiraConfiguration = jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Jira configuration status of the Lens review.
+     * </p>
+     * 
+     * @return Jira configuration status of the Lens review.
+     */
+
+    public JiraSelectedQuestionConfiguration getJiraConfiguration() {
+        return this.jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Jira configuration status of the Lens review.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Jira configuration status of the Lens review.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LensReview withJiraConfiguration(JiraSelectedQuestionConfiguration jiraConfiguration) {
+        setJiraConfiguration(jiraConfiguration);
         return this;
     }
 
@@ -591,6 +637,8 @@ public class LensReview implements Serializable, Cloneable, StructuredPojo {
             sb.append("LensStatus: ").append(getLensStatus()).append(",");
         if (getPillarReviewSummaries() != null)
             sb.append("PillarReviewSummaries: ").append(getPillarReviewSummaries()).append(",");
+        if (getJiraConfiguration() != null)
+            sb.append("JiraConfiguration: ").append(getJiraConfiguration()).append(",");
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getNotes() != null)
@@ -641,6 +689,10 @@ public class LensReview implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPillarReviewSummaries() != null && other.getPillarReviewSummaries().equals(this.getPillarReviewSummaries()) == false)
             return false;
+        if (other.getJiraConfiguration() == null ^ this.getJiraConfiguration() == null)
+            return false;
+        if (other.getJiraConfiguration() != null && other.getJiraConfiguration().equals(this.getJiraConfiguration()) == false)
+            return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
@@ -679,6 +731,7 @@ public class LensReview implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLensName() == null) ? 0 : getLensName().hashCode());
         hashCode = prime * hashCode + ((getLensStatus() == null) ? 0 : getLensStatus().hashCode());
         hashCode = prime * hashCode + ((getPillarReviewSummaries() == null) ? 0 : getPillarReviewSummaries().hashCode());
+        hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getNotes() == null) ? 0 : getNotes().hashCode());
         hashCode = prime * hashCode + ((getRiskCounts() == null) ? 0 : getRiskCounts().hashCode());

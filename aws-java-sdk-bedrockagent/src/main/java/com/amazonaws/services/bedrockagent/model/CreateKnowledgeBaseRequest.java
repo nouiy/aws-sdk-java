@@ -55,7 +55,7 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
     private String name;
     /**
      * <p>
-     * The ARN of the IAM role with permissions to create the knowledge base.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      */
     private String roleArn;
@@ -258,11 +258,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to create the knowledge base.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role with permissions to create the knowledge base.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge
+     *        base.
      */
 
     public void setRoleArn(String roleArn) {
@@ -271,10 +272,11 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to create the knowledge base.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      * 
-     * @return The ARN of the IAM role with permissions to create the knowledge base.
+     * @return The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge
+     *         base.
      */
 
     public String getRoleArn() {
@@ -283,11 +285,12 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to create the knowledge base.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge base.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role with permissions to create the knowledge base.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the knowledge
+     *        base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

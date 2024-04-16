@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration of summary metric.
+ * The configuration of summary metrics.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/SummaryMetricConfiguration"
@@ -30,18 +30,18 @@ public class SummaryMetricConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The configuration of summary metric.
+     * The status of the configuration of summary metrics.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The configuration of summary metric.
+     * The status of the configuration of summary metrics.
      * </p>
      * 
      * @param status
-     *        The configuration of summary metric.
+     *        The status of the configuration of summary metrics.
      * @see SummaryMetricConfigurationStatus
      */
 
@@ -51,10 +51,10 @@ public class SummaryMetricConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The configuration of summary metric.
+     * The status of the configuration of summary metrics.
      * </p>
      * 
-     * @return The configuration of summary metric.
+     * @return The status of the configuration of summary metrics.
      * @see SummaryMetricConfigurationStatus
      */
 
@@ -64,11 +64,11 @@ public class SummaryMetricConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The configuration of summary metric.
+     * The status of the configuration of summary metrics.
      * </p>
      * 
      * @param status
-     *        The configuration of summary metric.
+     *        The status of the configuration of summary metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SummaryMetricConfigurationStatus
      */
@@ -80,11 +80,11 @@ public class SummaryMetricConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The configuration of summary metric.
+     * The status of the configuration of summary metrics.
      * </p>
      * 
      * @param status
-     *        The configuration of summary metric.
+     *        The status of the configuration of summary metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SummaryMetricConfigurationStatus
      */

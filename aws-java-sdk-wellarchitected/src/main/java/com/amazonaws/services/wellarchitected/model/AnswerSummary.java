@@ -59,6 +59,12 @@ public class AnswerSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String questionType;
+    /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     */
+    private JiraConfiguration jiraConfiguration;
 
     /**
      * @param questionId
@@ -505,6 +511,46 @@ public class AnswerSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Configuration of the Jira integration.
+     */
+
+    public void setJiraConfiguration(JiraConfiguration jiraConfiguration) {
+        this.jiraConfiguration = jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     * 
+     * @return Configuration of the Jira integration.
+     */
+
+    public JiraConfiguration getJiraConfiguration() {
+        return this.jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of the Jira integration.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        Configuration of the Jira integration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnswerSummary withJiraConfiguration(JiraConfiguration jiraConfiguration) {
+        setJiraConfiguration(jiraConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -535,7 +581,9 @@ public class AnswerSummary implements Serializable, Cloneable, StructuredPojo {
         if (getReason() != null)
             sb.append("Reason: ").append(getReason()).append(",");
         if (getQuestionType() != null)
-            sb.append("QuestionType: ").append(getQuestionType());
+            sb.append("QuestionType: ").append(getQuestionType()).append(",");
+        if (getJiraConfiguration() != null)
+            sb.append("JiraConfiguration: ").append(getJiraConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -590,6 +638,10 @@ public class AnswerSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getQuestionType() != null && other.getQuestionType().equals(this.getQuestionType()) == false)
             return false;
+        if (other.getJiraConfiguration() == null ^ this.getJiraConfiguration() == null)
+            return false;
+        if (other.getJiraConfiguration() != null && other.getJiraConfiguration().equals(this.getJiraConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -608,6 +660,7 @@ public class AnswerSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRisk() == null) ? 0 : getRisk().hashCode());
         hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
         hashCode = prime * hashCode + ((getQuestionType() == null) ? 0 : getQuestionType().hashCode());
+        hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         return hashCode;
     }
 

@@ -2005,6 +2005,69 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Global settings for all workloads.
+     * </p>
+     * 
+     * @param getGlobalSettingsRequest
+     * @return Result of the GetGlobalSettings operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetGlobalSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetGlobalSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetGlobalSettingsResult getGlobalSettings(GetGlobalSettingsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetGlobalSettings(request);
+    }
+
+    @SdkInternalApi
+    final GetGlobalSettingsResult executeGetGlobalSettings(GetGlobalSettingsRequest getGlobalSettingsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getGlobalSettingsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetGlobalSettingsRequest> request = null;
+        Response<GetGlobalSettingsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetGlobalSettingsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getGlobalSettingsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetGlobalSettings");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetGlobalSettingsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetGlobalSettingsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get an existing lens.
      * </p>
      * 
@@ -3022,7 +3085,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * List lens review improvements.
+     * List the improvements of a particular lens review.
      * </p>
      * 
      * @param listLensReviewImprovementsRequest
@@ -4267,7 +4330,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Updates whether the Amazon Web Services account is opted into organization sharing and discovery integration
+     * Update whether the Amazon Web Services account is opted into organization sharing and discovery integration
      * features.
      * </p>
      * 
@@ -4321,6 +4384,73 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateGlobalSettingsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateGlobalSettingsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update integration features.
+     * </p>
+     * 
+     * @param updateIntegrationRequest
+     * @return Result of the UpdateIntegration operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateIntegrationResult updateIntegration(UpdateIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateIntegration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateIntegrationResult executeUpdateIntegration(UpdateIntegrationRequest updateIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateIntegrationRequest> request = null;
+        Response<UpdateIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateIntegrationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateIntegrationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateIntegrationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4901,6 +5031,8 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
      *         Request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
      * @sample AWSWellArchitected.UpgradeLensReview
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeLensReview"
      *      target="_top">AWS API Documentation</a>
@@ -4968,6 +5100,8 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      *         User does not have sufficient access to perform this action.
      * @throws ThrottlingException
      *         Request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
      * @sample AWSWellArchitected.UpgradeProfileVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeProfileVersion"
      *      target="_top">AWS API Documentation</a>

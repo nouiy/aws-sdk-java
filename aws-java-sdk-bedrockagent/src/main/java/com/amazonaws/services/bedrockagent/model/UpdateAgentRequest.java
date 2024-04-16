@@ -39,14 +39,13 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String agentName;
     /**
      * <p>
-     * The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      */
     private String agentResourceRoleArn;
     /**
      * <p>
-     * The ARN of the KMS key with which to encrypt the agent.
+     * The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      * </p>
      */
     private String customerEncryptionKeyArn;
@@ -168,13 +167,11 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      * 
      * @param agentResourceRoleArn
-     *        The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     *        <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      */
 
     public void setAgentResourceRoleArn(String agentResourceRoleArn) {
@@ -183,12 +180,10 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      * 
-     * @return The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     *         <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * @return The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      */
 
     public String getAgentResourceRoleArn() {
@@ -197,13 +192,11 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     * <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     * The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * </p>
      * 
      * @param agentResourceRoleArn
-     *        The ARN of the IAM role with permissions to update the agent. The ARN must begin with
-     *        <code>AmazonBedrockExecutionRoleForAgents_</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,11 +207,11 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the KMS key with which to encrypt the agent.
+     * The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      * </p>
      * 
      * @param customerEncryptionKeyArn
-     *        The ARN of the KMS key with which to encrypt the agent.
+     *        The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      */
 
     public void setCustomerEncryptionKeyArn(String customerEncryptionKeyArn) {
@@ -227,10 +220,10 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the KMS key with which to encrypt the agent.
+     * The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      * </p>
      * 
-     * @return The ARN of the KMS key with which to encrypt the agent.
+     * @return The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      */
 
     public String getCustomerEncryptionKeyArn() {
@@ -239,11 +232,11 @@ public class UpdateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the KMS key with which to encrypt the agent.
+     * The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      * </p>
      * 
      * @param customerEncryptionKeyArn
-     *        The ARN of the KMS key with which to encrypt the agent.
+     *        The Amazon Resource Name (ARN) of the KMS key with which to encrypt the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -70,6 +70,8 @@ public class CreateWorkloadRequestMarshaller {
             .marshallLocationName("ProfileArns").build();
     private static final MarshallingInfo<List> REVIEWTEMPLATEARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReviewTemplateArns").build();
+    private static final MarshallingInfo<StructuredPojo> JIRACONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JiraConfiguration").build();
 
     private static final CreateWorkloadRequestMarshaller instance = new CreateWorkloadRequestMarshaller();
 
@@ -106,6 +108,7 @@ public class CreateWorkloadRequestMarshaller {
             protocolMarshaller.marshall(createWorkloadRequest.getApplications(), APPLICATIONS_BINDING);
             protocolMarshaller.marshall(createWorkloadRequest.getProfileArns(), PROFILEARNS_BINDING);
             protocolMarshaller.marshall(createWorkloadRequest.getReviewTemplateArns(), REVIEWTEMPLATEARNS_BINDING);
+            protocolMarshaller.marshall(createWorkloadRequest.getJiraConfiguration(), JIRACONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

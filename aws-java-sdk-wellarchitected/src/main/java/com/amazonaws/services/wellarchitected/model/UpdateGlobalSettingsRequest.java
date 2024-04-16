@@ -37,6 +37,12 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private String discoveryIntegrationStatus;
+    /**
+     * <p>
+     * The status of Jira integration settings.
+     * </p>
+     */
+    private AccountJiraConfigurationInput jiraConfiguration;
 
     /**
      * <p>
@@ -157,6 +163,46 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The status of Jira integration settings.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        The status of Jira integration settings.
+     */
+
+    public void setJiraConfiguration(AccountJiraConfigurationInput jiraConfiguration) {
+        this.jiraConfiguration = jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * The status of Jira integration settings.
+     * </p>
+     * 
+     * @return The status of Jira integration settings.
+     */
+
+    public AccountJiraConfigurationInput getJiraConfiguration() {
+        return this.jiraConfiguration;
+    }
+
+    /**
+     * <p>
+     * The status of Jira integration settings.
+     * </p>
+     * 
+     * @param jiraConfiguration
+     *        The status of Jira integration settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateGlobalSettingsRequest withJiraConfiguration(AccountJiraConfigurationInput jiraConfiguration) {
+        setJiraConfiguration(jiraConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -171,7 +217,9 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
         if (getOrganizationSharingStatus() != null)
             sb.append("OrganizationSharingStatus: ").append(getOrganizationSharingStatus()).append(",");
         if (getDiscoveryIntegrationStatus() != null)
-            sb.append("DiscoveryIntegrationStatus: ").append(getDiscoveryIntegrationStatus());
+            sb.append("DiscoveryIntegrationStatus: ").append(getDiscoveryIntegrationStatus()).append(",");
+        if (getJiraConfiguration() != null)
+            sb.append("JiraConfiguration: ").append(getJiraConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -194,6 +242,10 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getDiscoveryIntegrationStatus() != null && other.getDiscoveryIntegrationStatus().equals(this.getDiscoveryIntegrationStatus()) == false)
             return false;
+        if (other.getJiraConfiguration() == null ^ this.getJiraConfiguration() == null)
+            return false;
+        if (other.getJiraConfiguration() != null && other.getJiraConfiguration().equals(this.getJiraConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -204,6 +256,7 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
 
         hashCode = prime * hashCode + ((getOrganizationSharingStatus() == null) ? 0 : getOrganizationSharingStatus().hashCode());
         hashCode = prime * hashCode + ((getDiscoveryIntegrationStatus() == null) ? 0 : getDiscoveryIntegrationStatus().hashCode());
+        hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         return hashCode;
     }
 

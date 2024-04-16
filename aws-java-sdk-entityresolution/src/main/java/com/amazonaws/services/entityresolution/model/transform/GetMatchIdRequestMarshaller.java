@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetMatchIdRequestMarshaller {
 
+    private static final MarshallingInfo<Boolean> APPLYNORMALIZATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applyNormalization").build();
     private static final MarshallingInfo<Map> RECORD_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("record").build();
     private static final MarshallingInfo<String> WORKFLOWNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
@@ -50,6 +52,7 @@ public class GetMatchIdRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(getMatchIdRequest.getApplyNormalization(), APPLYNORMALIZATION_BINDING);
             protocolMarshaller.marshall(getMatchIdRequest.getRecord(), RECORD_BINDING);
             protocolMarshaller.marshall(getMatchIdRequest.getWorkflowName(), WORKFLOWNAME_BINDING);
         } catch (Exception e) {
