@@ -25,27 +25,27 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * An array of summary information for one or more Amazon Q experiences.
+     * An array of summary information for one or more Amazon Q Business experiences.
      * </p>
      */
     private java.util.List<WebExperience> webExperiences;
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of messages.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of messages.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,12 +54,12 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *         the next set of messages.
+     * @return If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *         to list the next set of messages.
      */
 
     public String getNextToken() {
@@ -68,13 +68,13 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of messages.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,10 +85,10 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of summary information for one or more Amazon Q experiences.
+     * An array of summary information for one or more Amazon Q Business experiences.
      * </p>
      * 
-     * @return An array of summary information for one or more Amazon Q experiences.
+     * @return An array of summary information for one or more Amazon Q Business experiences.
      */
 
     public java.util.List<WebExperience> getWebExperiences() {
@@ -97,11 +97,11 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of summary information for one or more Amazon Q experiences.
+     * An array of summary information for one or more Amazon Q Business experiences.
      * </p>
      * 
      * @param webExperiences
-     *        An array of summary information for one or more Amazon Q experiences.
+     *        An array of summary information for one or more Amazon Q Business experiences.
      */
 
     public void setWebExperiences(java.util.Collection<WebExperience> webExperiences) {
@@ -115,7 +115,7 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of summary information for one or more Amazon Q experiences.
+     * An array of summary information for one or more Amazon Q Business experiences.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -124,7 +124,7 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param webExperiences
-     *        An array of summary information for one or more Amazon Q experiences.
+     *        An array of summary information for one or more Amazon Q Business experiences.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,11 +140,11 @@ public class ListWebExperiencesResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of summary information for one or more Amazon Q experiences.
+     * An array of summary information for one or more Amazon Q Business experiences.
      * </p>
      * 
      * @param webExperiences
-     *        An array of summary information for one or more Amazon Q experiences.
+     *        An array of summary information for one or more Amazon Q Business experiences.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

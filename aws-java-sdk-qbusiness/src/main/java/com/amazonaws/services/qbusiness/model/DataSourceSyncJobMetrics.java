@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Maps a batch delete document request to a specific Amazon Q data source connector sync job.
+ * Maps a batch delete document request to a specific Amazon Q Business data source connector sync job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/DataSourceSyncJobMetrics" target="_top">AWS

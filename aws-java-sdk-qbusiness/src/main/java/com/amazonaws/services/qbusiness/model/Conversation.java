@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A conversation in an Amazon Q application.
+ * A conversation in an Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/Conversation" target="_top">AWS API
@@ -30,7 +30,7 @@ public class Conversation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      */
     private String conversationId;
@@ -49,11 +49,11 @@ public class Conversation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business conversation.
      */
 
     public void setConversationId(String conversationId) {
@@ -62,10 +62,10 @@ public class Conversation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
-     * @return The identifier of the Amazon Q conversation.
+     * @return The identifier of the Amazon Q Business conversation.
      */
 
     public String getConversationId() {
@@ -74,11 +74,11 @@ public class Conversation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

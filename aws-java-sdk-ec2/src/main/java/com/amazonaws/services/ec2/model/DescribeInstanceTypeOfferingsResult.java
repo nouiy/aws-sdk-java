@@ -26,7 +26,7 @@ public class DescribeInstanceTypeOfferingsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The instance types offered.
+     * The instance types offered in the location.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceTypeOffering> instanceTypeOfferings;
@@ -40,10 +40,10 @@ public class DescribeInstanceTypeOfferingsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The instance types offered.
+     * The instance types offered in the location.
      * </p>
      * 
-     * @return The instance types offered.
+     * @return The instance types offered in the location.
      */
 
     public java.util.List<InstanceTypeOffering> getInstanceTypeOfferings() {
@@ -55,11 +55,11 @@ public class DescribeInstanceTypeOfferingsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The instance types offered.
+     * The instance types offered in the location.
      * </p>
      * 
      * @param instanceTypeOfferings
-     *        The instance types offered.
+     *        The instance types offered in the location.
      */
 
     public void setInstanceTypeOfferings(java.util.Collection<InstanceTypeOffering> instanceTypeOfferings) {
@@ -73,7 +73,7 @@ public class DescribeInstanceTypeOfferingsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The instance types offered.
+     * The instance types offered in the location.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class DescribeInstanceTypeOfferingsResult extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param instanceTypeOfferings
-     *        The instance types offered.
+     *        The instance types offered in the location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class DescribeInstanceTypeOfferingsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The instance types offered.
+     * The instance types offered in the location.
      * </p>
      * 
      * @param instanceTypeOfferings
-     *        The instance types offered.
+     *        The instance types offered in the location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

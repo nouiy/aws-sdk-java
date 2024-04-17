@@ -31,8 +31,8 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
     private java.util.List<Index> indices;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of indexes.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of indexes.
      * </p>
      */
     private String nextToken;
@@ -109,13 +109,13 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of indexes.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of indexes.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to
-     *        retrieve the next set of indexes.
+     *        If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent
+     *        request to retrieve the next set of indexes.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of indexes.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of indexes.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to
-     *         retrieve the next set of indexes.
+     * @return If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent
+     *         request to retrieve the next set of indexes.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of indexes.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of indexes.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to
-     *        retrieve the next set of indexes.
+     *        If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent
+     *        request to retrieve the next set of indexes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

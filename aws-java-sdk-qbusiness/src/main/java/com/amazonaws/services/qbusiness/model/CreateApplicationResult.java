@@ -25,24 +25,24 @@ public class CreateApplicationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      */
     private String applicationArn;
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q application.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application.
      */
 
     public void setApplicationArn(String applicationArn) {
@@ -51,10 +51,10 @@ public class CreateApplicationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q application.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q Business application.
      */
 
     public String getApplicationArn() {
@@ -63,11 +63,11 @@ public class CreateApplicationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q application.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class CreateApplicationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -91,10 +91,10 @@ public class CreateApplicationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application.
+     * @return The identifier of the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -103,11 +103,11 @@ public class CreateApplicationResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

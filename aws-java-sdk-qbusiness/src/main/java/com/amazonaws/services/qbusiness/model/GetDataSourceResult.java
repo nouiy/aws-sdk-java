@@ -25,7 +25,7 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
@@ -90,7 +90,7 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
     private String status;
     /**
      * <p>
-     * The schedule for Amazon Q to update the index.
+     * The schedule for Amazon Q Business to update the index.
      * </p>
      */
     private String syncSchedule;
@@ -115,11 +115,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -128,10 +128,10 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application.
+     * @return The identifier of the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -140,11 +140,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -585,11 +585,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The schedule for Amazon Q to update the index.
+     * The schedule for Amazon Q Business to update the index.
      * </p>
      * 
      * @param syncSchedule
-     *        The schedule for Amazon Q to update the index.
+     *        The schedule for Amazon Q Business to update the index.
      */
 
     public void setSyncSchedule(String syncSchedule) {
@@ -598,10 +598,10 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The schedule for Amazon Q to update the index.
+     * The schedule for Amazon Q Business to update the index.
      * </p>
      * 
-     * @return The schedule for Amazon Q to update the index.
+     * @return The schedule for Amazon Q Business to update the index.
      */
 
     public String getSyncSchedule() {
@@ -610,11 +610,11 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The schedule for Amazon Q to update the index.
+     * The schedule for Amazon Q Business to update the index.
      * </p>
      * 
      * @param syncSchedule
-     *        The schedule for Amazon Q to update the index.
+     *        The schedule for Amazon Q Business to update the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

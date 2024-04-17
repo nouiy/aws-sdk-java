@@ -36,7 +36,7 @@ public class GroupStatusDetail implements Serializable, Cloneable, StructuredPoj
     private ErrorDetail errorDetail;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      */
     private java.util.Date lastUpdatedAt;
@@ -89,11 +89,11 @@ public class GroupStatusDetail implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param lastUpdatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public void setLastUpdatedAt(java.util.Date lastUpdatedAt) {
@@ -102,10 +102,10 @@ public class GroupStatusDetail implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was last updated.
+     * @return The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public java.util.Date getLastUpdatedAt() {
@@ -114,11 +114,11 @@ public class GroupStatusDetail implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param lastUpdatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

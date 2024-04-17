@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of users or sub groups that belong to a group. This is for generating Amazon Q chat results only from document
- * a user has access to.
+ * A list of users or sub groups that belong to a group. This is for generating Amazon Q Business chat results only from
+ * document a user has access to.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/GroupMembers" target="_top">AWS API

@@ -31,8 +31,8 @@ public class ListMessagesResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.util.List<Message> messages;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      */
     private String nextToken;
@@ -109,13 +109,13 @@ public class ListMessagesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of messages.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of messages.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListMessagesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *         the next set of messages.
+     * @return If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *         to list the next set of messages.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListMessagesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of messages.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

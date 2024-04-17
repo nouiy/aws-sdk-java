@@ -36,6 +36,10 @@ public class ChatSyncRequestMarshaller {
             .marshallLocationName("attachments").build();
     private static final MarshallingInfo<StructuredPojo> ATTRIBUTEFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attributeFilter").build();
+    private static final MarshallingInfo<String> CHATMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("chatMode").build();
+    private static final MarshallingInfo<StructuredPojo> CHATMODECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("chatModeConfiguration").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
@@ -69,6 +73,8 @@ public class ChatSyncRequestMarshaller {
             protocolMarshaller.marshall(chatSyncRequest.getApplicationId(), APPLICATIONID_BINDING);
             protocolMarshaller.marshall(chatSyncRequest.getAttachments(), ATTACHMENTS_BINDING);
             protocolMarshaller.marshall(chatSyncRequest.getAttributeFilter(), ATTRIBUTEFILTER_BINDING);
+            protocolMarshaller.marshall(chatSyncRequest.getChatMode(), CHATMODE_BINDING);
+            protocolMarshaller.marshall(chatSyncRequest.getChatModeConfiguration(), CHATMODECONFIGURATION_BINDING);
             protocolMarshaller.marshall(chatSyncRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(chatSyncRequest.getConversationId(), CONVERSATIONID_BINDING);
             protocolMarshaller.marshall(chatSyncRequest.getParentMessageId(), PARENTMESSAGEID_BINDING);

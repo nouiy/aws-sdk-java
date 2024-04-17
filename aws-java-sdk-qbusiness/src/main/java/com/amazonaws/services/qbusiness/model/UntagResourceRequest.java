@@ -27,25 +27,26 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag from.
      * </p>
      */
     private String resourceARN;
     /**
      * <p>
-     * A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on the
-     * resource, it is ignored.
+     * A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not exist
+     * on the resource, it is ignored.
      * </p>
      */
     private java.util.List<String> tagKeys;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag from.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag
+     *        from.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -54,10 +55,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag from.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag
+     *         from.
      */
 
     public String getResourceARN() {
@@ -66,11 +68,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag from.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) of the Amazon Q application, or data source to remove the tag from.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application, or data source to remove the tag
+     *        from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,12 +84,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on the
-     * resource, it is ignored.
+     * A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not exist
+     * on the resource, it is ignored.
      * </p>
      * 
-     * @return A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on
-     *         the resource, it is ignored.
+     * @return A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not
+     *         exist on the resource, it is ignored.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -95,13 +98,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on the
-     * resource, it is ignored.
+     * A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not exist
+     * on the resource, it is ignored.
      * </p>
      * 
      * @param tagKeys
-     *        A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on
-     *        the resource, it is ignored.
+     *        A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not
+     *        exist on the resource, it is ignored.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -115,8 +118,8 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on the
-     * resource, it is ignored.
+     * A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not exist
+     * on the resource, it is ignored.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -125,8 +128,8 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on
-     *        the resource, it is ignored.
+     *        A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not
+     *        exist on the resource, it is ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,13 +145,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on the
-     * resource, it is ignored.
+     * A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not exist
+     * on the resource, it is ignored.
      * </p>
      * 
      * @param tagKeys
-     *        A list of tag keys to remove from the Amazon Q application or data source. If a tag key does not exist on
-     *        the resource, it is ignored.
+     *        A list of tag keys to remove from the Amazon Q Business application or data source. If a tag key does not
+     *        exist on the resource, it is ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

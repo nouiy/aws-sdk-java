@@ -39,9 +39,9 @@ public class GetChatControlsConfigurationRequest extends com.amazonaws.AmazonWeb
     private Integer maxResults;
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      */
     private String nextToken;
@@ -128,15 +128,15 @@ public class GetChatControlsConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q chat controls configured.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business chat controls configured.
      */
 
     public void setNextToken(String nextToken) {
@@ -145,14 +145,14 @@ public class GetChatControlsConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         Amazon Q chat controls configured.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of Amazon Q Business chat controls configured.
      */
 
     public String getNextToken() {
@@ -161,15 +161,15 @@ public class GetChatControlsConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q chat controls configured.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business chat controls configured.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

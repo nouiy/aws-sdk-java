@@ -29,6 +29,10 @@ public class DeleteFleetsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the EC2 Fleets.
      * </p>
+     * <p>
+     * Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     * <code>maintain</code> or <code>request</code> fleet IDs.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> fleetIds;
     /**
@@ -51,8 +55,15 @@ public class DeleteFleetsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the EC2 Fleets.
      * </p>
+     * <p>
+     * Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     * <code>maintain</code> or <code>request</code> fleet IDs.
+     * </p>
      * 
-     * @return The IDs of the EC2 Fleets.
+     * @return The IDs of the EC2 Fleets.</p>
+     *         <p>
+     *         Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     *         <code>maintain</code> or <code>request</code> fleet IDs.
      */
 
     public java.util.List<String> getFleetIds() {
@@ -66,9 +77,16 @@ public class DeleteFleetsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the EC2 Fleets.
      * </p>
+     * <p>
+     * Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     * <code>maintain</code> or <code>request</code> fleet IDs.
+     * </p>
      * 
      * @param fleetIds
-     *        The IDs of the EC2 Fleets.
+     *        The IDs of the EC2 Fleets.</p>
+     *        <p>
+     *        Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     *        <code>maintain</code> or <code>request</code> fleet IDs.
      */
 
     public void setFleetIds(java.util.Collection<String> fleetIds) {
@@ -85,13 +103,20 @@ public class DeleteFleetsRequest extends AmazonWebServiceRequest implements Seri
      * The IDs of the EC2 Fleets.
      * </p>
      * <p>
+     * Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     * <code>maintain</code> or <code>request</code> fleet IDs.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFleetIds(java.util.Collection)} or {@link #withFleetIds(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param fleetIds
-     *        The IDs of the EC2 Fleets.
+     *        The IDs of the EC2 Fleets.</p>
+     *        <p>
+     *        Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     *        <code>maintain</code> or <code>request</code> fleet IDs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,9 +134,16 @@ public class DeleteFleetsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the EC2 Fleets.
      * </p>
+     * <p>
+     * Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     * <code>maintain</code> or <code>request</code> fleet IDs.
+     * </p>
      * 
      * @param fleetIds
-     *        The IDs of the EC2 Fleets.
+     *        The IDs of the EC2 Fleets.</p>
+     *        <p>
+     *        Constraints: In a single request, you can specify up to 25 <code>instant</code> fleet IDs and up to 100
+     *        <code>maintain</code> or <code>request</code> fleet IDs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

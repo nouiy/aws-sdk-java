@@ -52,6 +52,11 @@ public class GetChatControlsConfigurationResultJsonUnmarshaller implements Unmar
                     context.nextToken();
                     getChatControlsConfigurationResult.setBlockedPhrases(BlockedPhrasesConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("creatorModeConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getChatControlsConfigurationResult.setCreatorModeConfiguration(AppliedCreatorModeConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("nextToken", targetDepth)) {
                     context.nextToken();
                     getChatControlsConfigurationResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));

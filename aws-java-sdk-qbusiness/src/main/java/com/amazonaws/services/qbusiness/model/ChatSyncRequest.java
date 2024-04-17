@@ -27,7 +27,7 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     * The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      * </p>
      */
     private String applicationId;
@@ -39,10 +39,49 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private java.util.List<AttachmentInput> attachments;
     /**
      * <p>
-     * Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     * Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata fields.
      * </p>
      */
     private AttributeFilter attributeFilter;
+    /**
+     * <p>
+     * The chat modes available in an Amazon Q Business web experience.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode is
+     * enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     * application.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the LLM
+     * knowledge, without consulting connected data sources, for a chat request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin
+     * controls and guardrails</a>, <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     * >Conversation settings</a>.
+     * </p>
+     */
+    private String chatMode;
+    /**
+     * <p>
+     * The chat mode configuration for an Amazon Q Business application.
+     * </p>
+     */
+    private ChatModeConfiguration chatModeConfiguration;
     /**
      * <p>
      * A token that you provide to identify a chat request.
@@ -51,7 +90,7 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String clientToken;
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      */
     private String conversationId;
@@ -82,11 +121,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     * The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      */
 
     public void setApplicationId(String applicationId) {
@@ -95,10 +134,10 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     * The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     * @return The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      */
 
     public String getApplicationId() {
@@ -107,11 +146,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     * The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business application linked to the Amazon Q Business conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +231,12 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     * Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata fields.
      * </p>
      * 
      * @param attributeFilter
-     *        Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     *        Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata
+     *        fields.
      */
 
     public void setAttributeFilter(AttributeFilter attributeFilter) {
@@ -205,10 +245,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     * Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata fields.
      * </p>
      * 
-     * @return Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     * @return Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata
+     *         fields.
      */
 
     public AttributeFilter getAttributeFilter() {
@@ -217,16 +258,332 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     * Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata fields.
      * </p>
      * 
      * @param attributeFilter
-     *        Enables filtering of Amazon Q web experience responses based on document attributes or metadata fields.
+     *        Enables filtering of Amazon Q Business web experience responses based on document attributes or metadata
+     *        fields.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ChatSyncRequest withAttributeFilter(AttributeFilter attributeFilter) {
         setAttributeFilter(attributeFilter);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The chat modes available in an Amazon Q Business web experience.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode is
+     * enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     * application.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the LLM
+     * knowledge, without consulting connected data sources, for a chat request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin
+     * controls and guardrails</a>, <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     * >Conversation settings</a>.
+     * </p>
+     * 
+     * @param chatMode
+     *        The chat modes available in an Amazon Q Business web experience.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode
+     *        is enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     *        application.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the
+     *        LLM knowledge, without consulting connected data sources, for a chat request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin controls and
+     *        guardrails</a>, <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a href=
+     *        "https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     *        >Conversation settings</a>.
+     * @see ChatMode
+     */
+
+    public void setChatMode(String chatMode) {
+        this.chatMode = chatMode;
+    }
+
+    /**
+     * <p>
+     * The chat modes available in an Amazon Q Business web experience.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode is
+     * enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     * application.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the LLM
+     * knowledge, without consulting connected data sources, for a chat request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin
+     * controls and guardrails</a>, <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     * >Conversation settings</a>.
+     * </p>
+     * 
+     * @return The chat modes available in an Amazon Q Business web experience.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode
+     *         is enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q
+     *         Business application.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the
+     *         LLM knowledge, without consulting connected data sources, for a chat request.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin controls and
+     *         guardrails</a>, <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a href=
+     *         "https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     *         >Conversation settings</a>.
+     * @see ChatMode
+     */
+
+    public String getChatMode() {
+        return this.chatMode;
+    }
+
+    /**
+     * <p>
+     * The chat modes available in an Amazon Q Business web experience.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode is
+     * enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     * application.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the LLM
+     * knowledge, without consulting connected data sources, for a chat request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin
+     * controls and guardrails</a>, <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     * >Conversation settings</a>.
+     * </p>
+     * 
+     * @param chatMode
+     *        The chat modes available in an Amazon Q Business web experience.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode
+     *        is enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     *        application.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the
+     *        LLM knowledge, without consulting connected data sources, for a chat request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin controls and
+     *        guardrails</a>, <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a href=
+     *        "https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     *        >Conversation settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ChatMode
+     */
+
+    public ChatSyncRequest withChatMode(String chatMode) {
+        setChatMode(chatMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The chat modes available in an Amazon Q Business web experience.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode is
+     * enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     * application.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the LLM
+     * knowledge, without consulting connected data sources, for a chat request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin
+     * controls and guardrails</a>, <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     * >Conversation settings</a>.
+     * </p>
+     * 
+     * @param chatMode
+     *        The chat modes available in an Amazon Q Business web experience.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RETRIEVAL_MODE</code> - The default chat mode for an Amazon Q Business application. When this mode
+     *        is enabled, Amazon Q Business generates responses only from data sources connected to an Amazon Q Business
+     *        application.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATOR_MODE</code> - By selecting this mode, users can choose to generate responses only from the
+     *        LLM knowledge, without consulting connected data sources, for a chat request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PLUGIN_MODE</code> - By selecting this mode, users can choose to use plugins in chat.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/guardrails.html">Admin controls and
+     *        guardrails</a>, <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/plugins.html">Plugins</a>, and <a href=
+     *        "https://docs.aws.amazon.com/amazonq/latest/business-use-dg/using-web-experience.html#chat-source-scope"
+     *        >Conversation settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ChatMode
+     */
+
+    public ChatSyncRequest withChatMode(ChatMode chatMode) {
+        this.chatMode = chatMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The chat mode configuration for an Amazon Q Business application.
+     * </p>
+     * 
+     * @param chatModeConfiguration
+     *        The chat mode configuration for an Amazon Q Business application.
+     */
+
+    public void setChatModeConfiguration(ChatModeConfiguration chatModeConfiguration) {
+        this.chatModeConfiguration = chatModeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The chat mode configuration for an Amazon Q Business application.
+     * </p>
+     * 
+     * @return The chat mode configuration for an Amazon Q Business application.
+     */
+
+    public ChatModeConfiguration getChatModeConfiguration() {
+        return this.chatModeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The chat mode configuration for an Amazon Q Business application.
+     * </p>
+     * 
+     * @param chatModeConfiguration
+     *        The chat mode configuration for an Amazon Q Business application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChatSyncRequest withChatModeConfiguration(ChatModeConfiguration chatModeConfiguration) {
+        setChatModeConfiguration(chatModeConfiguration);
         return this;
     }
 
@@ -272,11 +629,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business conversation.
      */
 
     public void setConversationId(String conversationId) {
@@ -285,10 +642,10 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
-     * @return The identifier of the Amazon Q conversation.
+     * @return The identifier of the Amazon Q Business conversation.
      */
 
     public String getConversationId() {
@@ -297,11 +654,11 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -518,6 +875,10 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
             sb.append("Attachments: ").append(getAttachments()).append(",");
         if (getAttributeFilter() != null)
             sb.append("AttributeFilter: ").append(getAttributeFilter()).append(",");
+        if (getChatMode() != null)
+            sb.append("ChatMode: ").append(getChatMode()).append(",");
+        if (getChatModeConfiguration() != null)
+            sb.append("ChatModeConfiguration: ").append(getChatModeConfiguration()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getConversationId() != null)
@@ -556,6 +917,14 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getAttributeFilter() != null && other.getAttributeFilter().equals(this.getAttributeFilter()) == false)
             return false;
+        if (other.getChatMode() == null ^ this.getChatMode() == null)
+            return false;
+        if (other.getChatMode() != null && other.getChatMode().equals(this.getChatMode()) == false)
+            return false;
+        if (other.getChatModeConfiguration() == null ^ this.getChatModeConfiguration() == null)
+            return false;
+        if (other.getChatModeConfiguration() != null && other.getChatModeConfiguration().equals(this.getChatModeConfiguration()) == false)
+            return false;
         if (other.getClientToken() == null ^ this.getClientToken() == null)
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
@@ -591,6 +960,8 @@ public class ChatSyncRequest extends com.amazonaws.AmazonWebServiceRequest imple
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
         hashCode = prime * hashCode + ((getAttachments() == null) ? 0 : getAttachments().hashCode());
         hashCode = prime * hashCode + ((getAttributeFilter() == null) ? 0 : getAttributeFilter().hashCode());
+        hashCode = prime * hashCode + ((getChatMode() == null) ? 0 : getChatMode().hashCode());
+        hashCode = prime * hashCode + ((getChatModeConfiguration() == null) ? 0 : getChatModeConfiguration().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getConversationId() == null) ? 0 : getConversationId().hashCode());
         hashCode = prime * hashCode + ((getParentMessageId() == null) ? 0 : getParentMessageId().hashCode());

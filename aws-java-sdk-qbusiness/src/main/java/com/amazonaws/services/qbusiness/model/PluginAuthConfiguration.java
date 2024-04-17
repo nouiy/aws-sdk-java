@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Authentication configuration information for an Amazon Q plugin.
+ * Authentication configuration information for an Amazon Q Business plugin.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/PluginAuthConfiguration" target="_top">AWS

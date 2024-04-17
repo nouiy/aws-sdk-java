@@ -30,7 +30,7 @@ public class RuleConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     * A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      * </p>
      */
     private ContentBlockerRule contentBlockerRule;
@@ -39,11 +39,11 @@ public class RuleConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     * A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      * </p>
      * 
      * @param contentBlockerRule
-     *        A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     *        A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      */
 
     public void setContentBlockerRule(ContentBlockerRule contentBlockerRule) {
@@ -52,10 +52,10 @@ public class RuleConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     * A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      * </p>
      * 
-     * @return A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     * @return A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      */
 
     public ContentBlockerRule getContentBlockerRule() {
@@ -64,11 +64,11 @@ public class RuleConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     * A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      * </p>
      * 
      * @param contentBlockerRule
-     *        A rule for configuring how Amazon Q responds when it encounters a a blocked topic.
+     *        A rule for configuring how Amazon Q Business responds when it encounters a a blocked topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A document in an Amazon Q application.
+ * A document in an Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/Document" target="_top">AWS API
@@ -36,7 +36,7 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
     private AccessConfiguration accessConfiguration;
     /**
      * <p>
-     * Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     * Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * </p>
      */
     private java.util.List<DocumentAttribute> attributes;
@@ -117,10 +117,10 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     * Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * </p>
      * 
-     * @return Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     * @return Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      */
 
     public java.util.List<DocumentAttribute> getAttributes() {
@@ -129,11 +129,11 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     * Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * </p>
      * 
      * @param attributes
-     *        Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     *        Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      */
 
     public void setAttributes(java.util.Collection<DocumentAttribute> attributes) {
@@ -147,7 +147,7 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     * Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -156,7 +156,7 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param attributes
-     *        Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     *        Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,11 +172,11 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     * Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * </p>
      * 
      * @param attributes
-     *        Custom attributes to apply to the document for refining Amazon Q web experience responses.
+     *        Custom attributes to apply to the document for refining Amazon Q Business web experience responses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

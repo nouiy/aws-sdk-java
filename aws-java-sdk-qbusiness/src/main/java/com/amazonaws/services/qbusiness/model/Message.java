@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A message in an Amazon Q web experience.
+ * A message in an Amazon Q Business web experience.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/Message" target="_top">AWS API
@@ -31,37 +31,37 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
     private ActionReview actionReview;
     /**
      * <p>
-     * A file directly uploaded into an Amazon Q web experience chat.
+     * A file directly uploaded into an Amazon Q Business web experience chat.
      * </p>
      */
     private java.util.List<AttachmentOutput> attachments;
     /**
      * <p>
-     * The content of the Amazon Q web experience message.
+     * The content of the Amazon Q Business web experience message.
      * </p>
      */
     private String body;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience message.
+     * The identifier of the Amazon Q Business web experience message.
      * </p>
      */
     private String messageId;
     /**
      * <p>
-     * The source documents used to generate Amazon Q web experience message.
+     * The source documents used to generate Amazon Q Business web experience message.
      * </p>
      */
     private java.util.List<SourceAttribution> sourceAttribution;
     /**
      * <p>
-     * The timestamp of the first Amazon Q web experience message.
+     * The timestamp of the first Amazon Q Business web experience message.
      * </p>
      */
     private java.util.Date time;
     /**
      * <p>
-     * The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     * The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * </p>
      */
     private String type;
@@ -94,10 +94,10 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A file directly uploaded into an Amazon Q web experience chat.
+     * A file directly uploaded into an Amazon Q Business web experience chat.
      * </p>
      * 
-     * @return A file directly uploaded into an Amazon Q web experience chat.
+     * @return A file directly uploaded into an Amazon Q Business web experience chat.
      */
 
     public java.util.List<AttachmentOutput> getAttachments() {
@@ -106,11 +106,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A file directly uploaded into an Amazon Q web experience chat.
+     * A file directly uploaded into an Amazon Q Business web experience chat.
      * </p>
      * 
      * @param attachments
-     *        A file directly uploaded into an Amazon Q web experience chat.
+     *        A file directly uploaded into an Amazon Q Business web experience chat.
      */
 
     public void setAttachments(java.util.Collection<AttachmentOutput> attachments) {
@@ -124,7 +124,7 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A file directly uploaded into an Amazon Q web experience chat.
+     * A file directly uploaded into an Amazon Q Business web experience chat.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -133,7 +133,7 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param attachments
-     *        A file directly uploaded into an Amazon Q web experience chat.
+     *        A file directly uploaded into an Amazon Q Business web experience chat.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -149,11 +149,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A file directly uploaded into an Amazon Q web experience chat.
+     * A file directly uploaded into an Amazon Q Business web experience chat.
      * </p>
      * 
      * @param attachments
-     *        A file directly uploaded into an Amazon Q web experience chat.
+     *        A file directly uploaded into an Amazon Q Business web experience chat.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,11 +164,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The content of the Amazon Q web experience message.
+     * The content of the Amazon Q Business web experience message.
      * </p>
      * 
      * @param body
-     *        The content of the Amazon Q web experience message.
+     *        The content of the Amazon Q Business web experience message.
      */
 
     public void setBody(String body) {
@@ -177,10 +177,10 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The content of the Amazon Q web experience message.
+     * The content of the Amazon Q Business web experience message.
      * </p>
      * 
-     * @return The content of the Amazon Q web experience message.
+     * @return The content of the Amazon Q Business web experience message.
      */
 
     public String getBody() {
@@ -189,11 +189,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The content of the Amazon Q web experience message.
+     * The content of the Amazon Q Business web experience message.
      * </p>
      * 
      * @param body
-     *        The content of the Amazon Q web experience message.
+     *        The content of the Amazon Q Business web experience message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -204,11 +204,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience message.
+     * The identifier of the Amazon Q Business web experience message.
      * </p>
      * 
      * @param messageId
-     *        The identifier of the Amazon Q web experience message.
+     *        The identifier of the Amazon Q Business web experience message.
      */
 
     public void setMessageId(String messageId) {
@@ -217,10 +217,10 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience message.
+     * The identifier of the Amazon Q Business web experience message.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience message.
+     * @return The identifier of the Amazon Q Business web experience message.
      */
 
     public String getMessageId() {
@@ -229,11 +229,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience message.
+     * The identifier of the Amazon Q Business web experience message.
      * </p>
      * 
      * @param messageId
-     *        The identifier of the Amazon Q web experience message.
+     *        The identifier of the Amazon Q Business web experience message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -244,10 +244,10 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source documents used to generate Amazon Q web experience message.
+     * The source documents used to generate Amazon Q Business web experience message.
      * </p>
      * 
-     * @return The source documents used to generate Amazon Q web experience message.
+     * @return The source documents used to generate Amazon Q Business web experience message.
      */
 
     public java.util.List<SourceAttribution> getSourceAttribution() {
@@ -256,11 +256,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source documents used to generate Amazon Q web experience message.
+     * The source documents used to generate Amazon Q Business web experience message.
      * </p>
      * 
      * @param sourceAttribution
-     *        The source documents used to generate Amazon Q web experience message.
+     *        The source documents used to generate Amazon Q Business web experience message.
      */
 
     public void setSourceAttribution(java.util.Collection<SourceAttribution> sourceAttribution) {
@@ -274,7 +274,7 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source documents used to generate Amazon Q web experience message.
+     * The source documents used to generate Amazon Q Business web experience message.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -283,7 +283,7 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param sourceAttribution
-     *        The source documents used to generate Amazon Q web experience message.
+     *        The source documents used to generate Amazon Q Business web experience message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -299,11 +299,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source documents used to generate Amazon Q web experience message.
+     * The source documents used to generate Amazon Q Business web experience message.
      * </p>
      * 
      * @param sourceAttribution
-     *        The source documents used to generate Amazon Q web experience message.
+     *        The source documents used to generate Amazon Q Business web experience message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -314,11 +314,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp of the first Amazon Q web experience message.
+     * The timestamp of the first Amazon Q Business web experience message.
      * </p>
      * 
      * @param time
-     *        The timestamp of the first Amazon Q web experience message.
+     *        The timestamp of the first Amazon Q Business web experience message.
      */
 
     public void setTime(java.util.Date time) {
@@ -327,10 +327,10 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp of the first Amazon Q web experience message.
+     * The timestamp of the first Amazon Q Business web experience message.
      * </p>
      * 
-     * @return The timestamp of the first Amazon Q web experience message.
+     * @return The timestamp of the first Amazon Q Business web experience message.
      */
 
     public java.util.Date getTime() {
@@ -339,11 +339,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp of the first Amazon Q web experience message.
+     * The timestamp of the first Amazon Q Business web experience message.
      * </p>
      * 
      * @param time
-     *        The timestamp of the first Amazon Q web experience message.
+     *        The timestamp of the first Amazon Q Business web experience message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -354,11 +354,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     * The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * </p>
      * 
      * @param type
-     *        The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     *        The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * @see MessageType
      */
 
@@ -368,10 +368,10 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     * The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * </p>
      * 
-     * @return The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     * @return The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * @see MessageType
      */
 
@@ -381,11 +381,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     * The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * </p>
      * 
      * @param type
-     *        The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     *        The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MessageType
      */
@@ -397,11 +397,11 @@ public class Message implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     * The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * </p>
      * 
      * @param type
-     *        The type of Amazon Q message, whether <code>HUMAN</code> or <code>AI</code> generated.
+     *        The type of Amazon Q Business message, whether <code>HUMAN</code> or <code>AI</code> generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MessageType
      */

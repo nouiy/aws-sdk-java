@@ -31,23 +31,29 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
     private BlockedPhrasesConfiguration blockedPhrases;
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     */
+    private AppliedCreatorModeConfiguration creatorModeConfiguration;
+    /**
+     * <p>
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The response scope configured for a Amazon Q application. This determines whether your application uses its
-     * retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses the
-     * large language models (LLM) knowledge to respons to end user questions in chat.
+     * The response scope configured for a Amazon Q Business application. This determines whether your application uses
+     * its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses
+     * the large language models (LLM) knowledge to respons to end user questions in chat.
      * </p>
      */
     private String responseScope;
     /**
      * <p>
-     * The topic specific controls configured for a Amazon Q application.
+     * The topic specific controls configured for a Amazon Q Business application.
      * </p>
      */
     private java.util.List<TopicConfiguration> topicConfigurations;
@@ -94,15 +100,55 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     * 
+     * @param creatorModeConfiguration
+     *        The configuration details for <code>CREATOR_MODE</code>.
+     */
+
+    public void setCreatorModeConfiguration(AppliedCreatorModeConfiguration creatorModeConfiguration) {
+        this.creatorModeConfiguration = creatorModeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     * 
+     * @return The configuration details for <code>CREATOR_MODE</code>.
+     */
+
+    public AppliedCreatorModeConfiguration getCreatorModeConfiguration() {
+        return this.creatorModeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     * 
+     * @param creatorModeConfiguration
+     *        The configuration details for <code>CREATOR_MODE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetChatControlsConfigurationResult withCreatorModeConfiguration(AppliedCreatorModeConfiguration creatorModeConfiguration) {
+        setCreatorModeConfiguration(creatorModeConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q chat controls configured.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business chat controls configured.
      */
 
     public void setNextToken(String nextToken) {
@@ -111,14 +157,14 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         Amazon Q chat controls configured.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of Amazon Q Business chat controls configured.
      */
 
     public String getNextToken() {
@@ -127,15 +173,15 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q chat
-     * controls configured.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business chat controls configured.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q chat controls configured.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business chat controls configured.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,15 +192,16 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The response scope configured for a Amazon Q application. This determines whether your application uses its
-     * retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses the
-     * large language models (LLM) knowledge to respons to end user questions in chat.
+     * The response scope configured for a Amazon Q Business application. This determines whether your application uses
+     * its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses
+     * the large language models (LLM) knowledge to respons to end user questions in chat.
      * </p>
      * 
      * @param responseScope
-     *        The response scope configured for a Amazon Q application. This determines whether your application uses
-     *        its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or
-     *        also uses the large language models (LLM) knowledge to respons to end user questions in chat.
+     *        The response scope configured for a Amazon Q Business application. This determines whether your
+     *        application uses its retrieval augmented generation (RAG) system to generate answers only from your
+     *        enterprise data, or also uses the large language models (LLM) knowledge to respons to end user questions
+     *        in chat.
      * @see ResponseScope
      */
 
@@ -164,14 +211,15 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The response scope configured for a Amazon Q application. This determines whether your application uses its
-     * retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses the
-     * large language models (LLM) knowledge to respons to end user questions in chat.
+     * The response scope configured for a Amazon Q Business application. This determines whether your application uses
+     * its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses
+     * the large language models (LLM) knowledge to respons to end user questions in chat.
      * </p>
      * 
-     * @return The response scope configured for a Amazon Q application. This determines whether your application uses
-     *         its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or
-     *         also uses the large language models (LLM) knowledge to respons to end user questions in chat.
+     * @return The response scope configured for a Amazon Q Business application. This determines whether your
+     *         application uses its retrieval augmented generation (RAG) system to generate answers only from your
+     *         enterprise data, or also uses the large language models (LLM) knowledge to respons to end user questions
+     *         in chat.
      * @see ResponseScope
      */
 
@@ -181,15 +229,16 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The response scope configured for a Amazon Q application. This determines whether your application uses its
-     * retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses the
-     * large language models (LLM) knowledge to respons to end user questions in chat.
+     * The response scope configured for a Amazon Q Business application. This determines whether your application uses
+     * its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses
+     * the large language models (LLM) knowledge to respons to end user questions in chat.
      * </p>
      * 
      * @param responseScope
-     *        The response scope configured for a Amazon Q application. This determines whether your application uses
-     *        its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or
-     *        also uses the large language models (LLM) knowledge to respons to end user questions in chat.
+     *        The response scope configured for a Amazon Q Business application. This determines whether your
+     *        application uses its retrieval augmented generation (RAG) system to generate answers only from your
+     *        enterprise data, or also uses the large language models (LLM) knowledge to respons to end user questions
+     *        in chat.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResponseScope
      */
@@ -201,15 +250,16 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The response scope configured for a Amazon Q application. This determines whether your application uses its
-     * retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses the
-     * large language models (LLM) knowledge to respons to end user questions in chat.
+     * The response scope configured for a Amazon Q Business application. This determines whether your application uses
+     * its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or also uses
+     * the large language models (LLM) knowledge to respons to end user questions in chat.
      * </p>
      * 
      * @param responseScope
-     *        The response scope configured for a Amazon Q application. This determines whether your application uses
-     *        its retrieval augmented generation (RAG) system to generate answers only from your enterprise data, or
-     *        also uses the large language models (LLM) knowledge to respons to end user questions in chat.
+     *        The response scope configured for a Amazon Q Business application. This determines whether your
+     *        application uses its retrieval augmented generation (RAG) system to generate answers only from your
+     *        enterprise data, or also uses the large language models (LLM) knowledge to respons to end user questions
+     *        in chat.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResponseScope
      */
@@ -221,10 +271,10 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The topic specific controls configured for a Amazon Q application.
+     * The topic specific controls configured for a Amazon Q Business application.
      * </p>
      * 
-     * @return The topic specific controls configured for a Amazon Q application.
+     * @return The topic specific controls configured for a Amazon Q Business application.
      */
 
     public java.util.List<TopicConfiguration> getTopicConfigurations() {
@@ -233,11 +283,11 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The topic specific controls configured for a Amazon Q application.
+     * The topic specific controls configured for a Amazon Q Business application.
      * </p>
      * 
      * @param topicConfigurations
-     *        The topic specific controls configured for a Amazon Q application.
+     *        The topic specific controls configured for a Amazon Q Business application.
      */
 
     public void setTopicConfigurations(java.util.Collection<TopicConfiguration> topicConfigurations) {
@@ -251,7 +301,7 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The topic specific controls configured for a Amazon Q application.
+     * The topic specific controls configured for a Amazon Q Business application.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -260,7 +310,7 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param topicConfigurations
-     *        The topic specific controls configured for a Amazon Q application.
+     *        The topic specific controls configured for a Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,11 +326,11 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The topic specific controls configured for a Amazon Q application.
+     * The topic specific controls configured for a Amazon Q Business application.
      * </p>
      * 
      * @param topicConfigurations
-     *        The topic specific controls configured for a Amazon Q application.
+     *        The topic specific controls configured for a Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,6 +353,8 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
         sb.append("{");
         if (getBlockedPhrases() != null)
             sb.append("BlockedPhrases: ").append(getBlockedPhrases()).append(",");
+        if (getCreatorModeConfiguration() != null)
+            sb.append("CreatorModeConfiguration: ").append(getCreatorModeConfiguration()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getResponseScope() != null)
@@ -327,6 +379,10 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
             return false;
         if (other.getBlockedPhrases() != null && other.getBlockedPhrases().equals(this.getBlockedPhrases()) == false)
             return false;
+        if (other.getCreatorModeConfiguration() == null ^ this.getCreatorModeConfiguration() == null)
+            return false;
+        if (other.getCreatorModeConfiguration() != null && other.getCreatorModeConfiguration().equals(this.getCreatorModeConfiguration()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -348,6 +404,7 @@ public class GetChatControlsConfigurationResult extends com.amazonaws.AmazonWebS
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBlockedPhrases() == null) ? 0 : getBlockedPhrases().hashCode());
+        hashCode = prime * hashCode + ((getCreatorModeConfiguration() == null) ? 0 : getCreatorModeConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getResponseScope() == null) ? 0 : getResponseScope().hashCode());
         hashCode = prime * hashCode + ((getTopicConfigurations() == null) ? 0 : getTopicConfigurations().hashCode());

@@ -25,14 +25,14 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a requested
-     * plugin action.
+     * A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully complete
+     * a requested plugin action.
      * </p>
      */
     private ActionReview actionReview;
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      */
     private String conversationId;
@@ -56,26 +56,26 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private String systemMessage;
     /**
      * <p>
-     * The identifier of an Amazon Q AI generated message within the conversation.
+     * The identifier of an Amazon Q Business AI generated message within the conversation.
      * </p>
      */
     private String systemMessageId;
     /**
      * <p>
-     * The identifier of an Amazon Q end user text input message within the conversation.
+     * The identifier of an Amazon Q Business end user text input message within the conversation.
      * </p>
      */
     private String userMessageId;
 
     /**
      * <p>
-     * A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a requested
-     * plugin action.
+     * A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully complete
+     * a requested plugin action.
      * </p>
      * 
      * @param actionReview
-     *        A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a
-     *        requested plugin action.
+     *        A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully
+     *        complete a requested plugin action.
      */
 
     public void setActionReview(ActionReview actionReview) {
@@ -84,12 +84,12 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a requested
-     * plugin action.
+     * A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully complete
+     * a requested plugin action.
      * </p>
      * 
-     * @return A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a
-     *         requested plugin action.
+     * @return A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully
+     *         complete a requested plugin action.
      */
 
     public ActionReview getActionReview() {
@@ -98,13 +98,13 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a requested
-     * plugin action.
+     * A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully complete
+     * a requested plugin action.
      * </p>
      * 
      * @param actionReview
-     *        A request from Amazon Q to the end user for information Amazon Q needs to successfully complete a
-     *        requested plugin action.
+     *        A request from Amazon Q Business to the end user for information Amazon Q Business needs to successfully
+     *        complete a requested plugin action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,11 +115,11 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business conversation.
      */
 
     public void setConversationId(String conversationId) {
@@ -128,10 +128,10 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
-     * @return The identifier of the Amazon Q conversation.
+     * @return The identifier of the Amazon Q Business conversation.
      */
 
     public String getConversationId() {
@@ -140,11 +140,11 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q conversation.
+     * The identifier of the Amazon Q Business conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q conversation.
+     *        The identifier of the Amazon Q Business conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,11 +335,11 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of an Amazon Q AI generated message within the conversation.
+     * The identifier of an Amazon Q Business AI generated message within the conversation.
      * </p>
      * 
      * @param systemMessageId
-     *        The identifier of an Amazon Q AI generated message within the conversation.
+     *        The identifier of an Amazon Q Business AI generated message within the conversation.
      */
 
     public void setSystemMessageId(String systemMessageId) {
@@ -348,10 +348,10 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of an Amazon Q AI generated message within the conversation.
+     * The identifier of an Amazon Q Business AI generated message within the conversation.
      * </p>
      * 
-     * @return The identifier of an Amazon Q AI generated message within the conversation.
+     * @return The identifier of an Amazon Q Business AI generated message within the conversation.
      */
 
     public String getSystemMessageId() {
@@ -360,11 +360,11 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of an Amazon Q AI generated message within the conversation.
+     * The identifier of an Amazon Q Business AI generated message within the conversation.
      * </p>
      * 
      * @param systemMessageId
-     *        The identifier of an Amazon Q AI generated message within the conversation.
+     *        The identifier of an Amazon Q Business AI generated message within the conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -375,11 +375,11 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of an Amazon Q end user text input message within the conversation.
+     * The identifier of an Amazon Q Business end user text input message within the conversation.
      * </p>
      * 
      * @param userMessageId
-     *        The identifier of an Amazon Q end user text input message within the conversation.
+     *        The identifier of an Amazon Q Business end user text input message within the conversation.
      */
 
     public void setUserMessageId(String userMessageId) {
@@ -388,10 +388,10 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of an Amazon Q end user text input message within the conversation.
+     * The identifier of an Amazon Q Business end user text input message within the conversation.
      * </p>
      * 
-     * @return The identifier of an Amazon Q end user text input message within the conversation.
+     * @return The identifier of an Amazon Q Business end user text input message within the conversation.
      */
 
     public String getUserMessageId() {
@@ -400,11 +400,11 @@ public class ChatSyncResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of an Amazon Q end user text input message within the conversation.
+     * The identifier of an Amazon Q Business end user text input message within the conversation.
      * </p>
      * 
      * @param userMessageId
-     *        The identifier of an Amazon Q end user text input message within the conversation.
+     *        The identifier of an Amazon Q Business end user text input message within the conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

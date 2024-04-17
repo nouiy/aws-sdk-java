@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You have exceeded the set limits for your Amazon Q service.
+ * You have exceeded the set limits for your Amazon Q Business service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

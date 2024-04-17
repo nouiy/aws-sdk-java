@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The input failed to meet the constraints specified by Amazon Q in a specified field.
+ * The input failed to meet the constraints specified by Amazon Q Business in a specified field.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/ValidationExceptionField" target="_top">AWS

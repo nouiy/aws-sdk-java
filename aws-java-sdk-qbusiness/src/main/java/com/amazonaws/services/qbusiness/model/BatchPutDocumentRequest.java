@@ -27,7 +27,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
@@ -45,7 +45,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     private java.util.List<Document> documents;
     /**
      * <p>
-     * The identifier of the Amazon Q index to add the documents to.
+     * The identifier of the Amazon Q Business index to add the documents to.
      * </p>
      */
     private String indexId;
@@ -58,11 +58,11 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -71,10 +71,10 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application.
+     * @return The identifier of the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -83,11 +83,11 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,11 +208,11 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q index to add the documents to.
+     * The identifier of the Amazon Q Business index to add the documents to.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index to add the documents to.
+     *        The identifier of the Amazon Q Business index to add the documents to.
      */
 
     public void setIndexId(String indexId) {
@@ -221,10 +221,10 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q index to add the documents to.
+     * The identifier of the Amazon Q Business index to add the documents to.
      * </p>
      * 
-     * @return The identifier of the Amazon Q index to add the documents to.
+     * @return The identifier of the Amazon Q Business index to add the documents to.
      */
 
     public String getIndexId() {
@@ -233,11 +233,11 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q index to add the documents to.
+     * The identifier of the Amazon Q Business index to add the documents to.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index to add the documents to.
+     *        The identifier of the Amazon Q Business index to add the documents to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

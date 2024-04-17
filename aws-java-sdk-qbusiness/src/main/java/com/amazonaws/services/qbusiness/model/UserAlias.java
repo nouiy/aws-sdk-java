@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Aliases attached to a user id within an Amazon Q application.
+ * Aliases attached to a user id within an Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/UserAlias" target="_top">AWS API

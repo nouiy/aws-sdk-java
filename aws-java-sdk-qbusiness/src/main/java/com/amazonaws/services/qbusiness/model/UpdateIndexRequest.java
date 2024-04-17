@@ -27,26 +27,26 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity to fit
-     * your usage needs.
+     * The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     * capacity to fit your usage needs.
      * </p>
      */
     private IndexCapacityConfiguration capacityConfiguration;
     /**
      * <p>
-     * The description of the Amazon Q index.
+     * The description of the Amazon Q Business index.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      */
     private String displayName;
@@ -62,18 +62,18 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<DocumentAttributeConfiguration> documentAttributeConfigurations;
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the index.
+     *        The identifier of the Amazon Q Business application connected to the index.
      */
 
     public void setApplicationId(String applicationId) {
@@ -82,10 +82,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application connected to the index.
+     * @return The identifier of the Amazon Q Business application connected to the index.
      */
 
     public String getApplicationId() {
@@ -94,11 +94,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the index.
+     *        The identifier of the Amazon Q Business application connected to the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,13 +109,13 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity to fit
-     * your usage needs.
+     * The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     * capacity to fit your usage needs.
      * </p>
      * 
      * @param capacityConfiguration
-     *        The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity
-     *        to fit your usage needs.
+     *        The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     *        capacity to fit your usage needs.
      */
 
     public void setCapacityConfiguration(IndexCapacityConfiguration capacityConfiguration) {
@@ -124,12 +124,12 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity to fit
-     * your usage needs.
+     * The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     * capacity to fit your usage needs.
      * </p>
      * 
-     * @return The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity
-     *         to fit your usage needs.
+     * @return The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     *         capacity to fit your usage needs.
      */
 
     public IndexCapacityConfiguration getCapacityConfiguration() {
@@ -138,13 +138,13 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity to fit
-     * your usage needs.
+     * The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     * capacity to fit your usage needs.
      * </p>
      * 
      * @param capacityConfiguration
-     *        The storage capacity units you want to provision for your Amazon Q index. You can add and remove capacity
-     *        to fit your usage needs.
+     *        The storage capacity units you want to provision for your Amazon Q Business index. You can add and remove
+     *        capacity to fit your usage needs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -155,11 +155,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The description of the Amazon Q index.
+     * The description of the Amazon Q Business index.
      * </p>
      * 
      * @param description
-     *        The description of the Amazon Q index.
+     *        The description of the Amazon Q Business index.
      */
 
     public void setDescription(String description) {
@@ -168,10 +168,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The description of the Amazon Q index.
+     * The description of the Amazon Q Business index.
      * </p>
      * 
-     * @return The description of the Amazon Q index.
+     * @return The description of the Amazon Q Business index.
      */
 
     public String getDescription() {
@@ -180,11 +180,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The description of the Amazon Q index.
+     * The description of the Amazon Q Business index.
      * </p>
      * 
      * @param description
-     *        The description of the Amazon Q index.
+     *        The description of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,11 +195,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q index.
+     *        The name of the Amazon Q Business index.
      */
 
     public void setDisplayName(String displayName) {
@@ -208,10 +208,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      * 
-     * @return The name of the Amazon Q index.
+     * @return The name of the Amazon Q Business index.
      */
 
     public String getDisplayName() {
@@ -220,11 +220,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q index.
+     *        The name of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -337,11 +337,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index.
+     *        The identifier of the Amazon Q Business index.
      */
 
     public void setIndexId(String indexId) {
@@ -350,10 +350,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q index.
+     * @return The identifier of the Amazon Q Business index.
      */
 
     public String getIndexId() {
@@ -362,11 +362,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index.
+     *        The identifier of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -159,7 +159,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * >CreateSecurityGroup</a>.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> securityGroupIds;
@@ -168,7 +169,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * [Default VPC] The names of the security groups.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * Default: Amazon EC2 uses the default security group.
@@ -180,7 +182,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * The ID of the subnet to launch the instance into.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any subnets as part of the network interface.
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
      * </p>
      */
     private String subnetId;
@@ -259,8 +262,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private String instanceInitiatedShutdownBehavior;
     /**
      * <p>
-     * The network interfaces to associate with the instance. If you specify a network interface, you must specify any
-     * security groups and subnets as part of the network interface.
+     * The network interfaces to associate with the instance.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceNetworkInterfaceSpecification> networkInterfaces;
@@ -280,31 +282,23 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private String privateIpAddress;
     /**
      * <p>
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration,
-     * we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      * </p>
      * </note>
      */
     private com.amazonaws.internal.SdkInternalList<ElasticGpuSpecification> elasticGpuSpecification;
     /**
      * <p>
-     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
-     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
-     * </p>
-     * <p>
-     * You cannot specify accelerators from different generations in the same request.
+     * An elastic inference accelerator to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
-     * will help current customers migrate their workloads to options that offer better price and performance. After
-     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
-     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
-     * 30-day period are considered current customers and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     * href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      * </p>
      * </note>
      */
@@ -1438,15 +1432,16 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * >CreateSecurityGroup</a>.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @return The IDs of the security groups. You can create a security group using <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
      *         >CreateSecurityGroup</a>.</p>
      *         <p>
-     *         If you specify a network interface, you must specify any security groups as part of the network
-     *         interface.
+     *         If you specify a network interface, you must specify any security groups as part of the network interface
+     *         instead of using this parameter.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -1463,7 +1458,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * >CreateSecurityGroup</a>.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @param securityGroupIds
@@ -1471,7 +1467,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
      *        >CreateSecurityGroup</a>.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any security groups as part of the network interface.
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -1490,7 +1487,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * >CreateSecurityGroup</a>.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1503,7 +1501,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
      *        >CreateSecurityGroup</a>.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any security groups as part of the network interface.
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1524,7 +1523,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * >CreateSecurityGroup</a>.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @param securityGroupIds
@@ -1532,7 +1532,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
      *        >CreateSecurityGroup</a>.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any security groups as part of the network interface.
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1546,7 +1547,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * [Default VPC] The names of the security groups.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * Default: Amazon EC2 uses the default security group.
@@ -1554,8 +1556,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @return [Default VPC] The names of the security groups.</p>
      *         <p>
-     *         If you specify a network interface, you must specify any security groups as part of the network
-     *         interface.
+     *         If you specify a network interface, you must specify any security groups as part of the network interface
+     *         instead of using this parameter.
      *         </p>
      *         <p>
      *         Default: Amazon EC2 uses the default security group.
@@ -1573,7 +1575,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * [Default VPC] The names of the security groups.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * Default: Amazon EC2 uses the default security group.
@@ -1582,7 +1585,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * @param securityGroups
      *        [Default VPC] The names of the security groups.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any security groups as part of the network interface.
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      *        </p>
      *        <p>
      *        Default: Amazon EC2 uses the default security group.
@@ -1602,7 +1606,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * [Default VPC] The names of the security groups.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * Default: Amazon EC2 uses the default security group.
@@ -1616,7 +1621,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * @param securityGroups
      *        [Default VPC] The names of the security groups.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any security groups as part of the network interface.
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      *        </p>
      *        <p>
      *        Default: Amazon EC2 uses the default security group.
@@ -1638,7 +1644,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * [Default VPC] The names of the security groups.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any security groups as part of the network interface.
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * Default: Amazon EC2 uses the default security group.
@@ -1647,7 +1654,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * @param securityGroups
      *        [Default VPC] The names of the security groups.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any security groups as part of the network interface.
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      *        </p>
      *        <p>
      *        Default: Amazon EC2 uses the default security group.
@@ -1664,13 +1672,15 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * The ID of the subnet to launch the instance into.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any subnets as part of the network interface.
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
      * </p>
      * 
      * @param subnetId
      *        The ID of the subnet to launch the instance into.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any subnets as part of the network interface.
+     *        If you specify a network interface, you must specify any subnets as part of the network interface instead
+     *        of using this parameter.
      */
 
     public void setSubnetId(String subnetId) {
@@ -1682,12 +1692,14 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * The ID of the subnet to launch the instance into.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any subnets as part of the network interface.
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
      * </p>
      * 
      * @return The ID of the subnet to launch the instance into.</p>
      *         <p>
-     *         If you specify a network interface, you must specify any subnets as part of the network interface.
+     *         If you specify a network interface, you must specify any subnets as part of the network interface instead
+     *         of using this parameter.
      */
 
     public String getSubnetId() {
@@ -1699,13 +1711,15 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * The ID of the subnet to launch the instance into.
      * </p>
      * <p>
-     * If you specify a network interface, you must specify any subnets as part of the network interface.
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
      * </p>
      * 
      * @param subnetId
      *        The ID of the subnet to launch the instance into.</p>
      *        <p>
-     *        If you specify a network interface, you must specify any subnets as part of the network interface.
+     *        If you specify a network interface, you must specify any subnets as part of the network interface instead
+     *        of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2272,12 +2286,10 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The network interfaces to associate with the instance. If you specify a network interface, you must specify any
-     * security groups and subnets as part of the network interface.
+     * The network interfaces to associate with the instance.
      * </p>
      * 
-     * @return The network interfaces to associate with the instance. If you specify a network interface, you must
-     *         specify any security groups and subnets as part of the network interface.
+     * @return The network interfaces to associate with the instance.
      */
 
     public java.util.List<InstanceNetworkInterfaceSpecification> getNetworkInterfaces() {
@@ -2289,13 +2301,11 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The network interfaces to associate with the instance. If you specify a network interface, you must specify any
-     * security groups and subnets as part of the network interface.
+     * The network interfaces to associate with the instance.
      * </p>
      * 
      * @param networkInterfaces
-     *        The network interfaces to associate with the instance. If you specify a network interface, you must
-     *        specify any security groups and subnets as part of the network interface.
+     *        The network interfaces to associate with the instance.
      */
 
     public void setNetworkInterfaces(java.util.Collection<InstanceNetworkInterfaceSpecification> networkInterfaces) {
@@ -2309,8 +2319,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The network interfaces to associate with the instance. If you specify a network interface, you must specify any
-     * security groups and subnets as part of the network interface.
+     * The network interfaces to associate with the instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2319,8 +2328,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param networkInterfaces
-     *        The network interfaces to associate with the instance. If you specify a network interface, you must
-     *        specify any security groups and subnets as part of the network interface.
+     *        The network interfaces to associate with the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2336,13 +2344,11 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The network interfaces to associate with the instance. If you specify a network interface, you must specify any
-     * security groups and subnets as part of the network interface.
+     * The network interfaces to associate with the instance.
      * </p>
      * 
      * @param networkInterfaces
-     *        The network interfaces to associate with the instance. If you specify a network interface, you must
-     *        specify any security groups and subnets as part of the network interface.
+     *        The network interfaces to associate with the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2438,19 +2444,17 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration,
-     * we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      * </p>
      * </note>
      * 
-     * @return Deprecated.</p> <note>
+     * @return An elastic GPU to associate with the instance.</p> <note>
      *         <p>
-     *         Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics
-     *         acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     *         Amazon Elastic Graphics reached end of life on January 8, 2024.
      *         </p>
      */
 
@@ -2463,20 +2467,18 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration,
-     * we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      * </p>
      * </note>
      * 
      * @param elasticGpuSpecification
-     *        Deprecated.</p> <note>
+     *        An elastic GPU to associate with the instance.</p> <note>
      *        <p>
-     *        Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics
-     *        acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     *        Amazon Elastic Graphics reached end of life on January 8, 2024.
      *        </p>
      */
 
@@ -2491,12 +2493,11 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration,
-     * we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      * </p>
      * </note>
      * <p>
@@ -2506,10 +2507,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param elasticGpuSpecification
-     *        Deprecated.</p> <note>
+     *        An elastic GPU to associate with the instance.</p> <note>
      *        <p>
-     *        Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics
-     *        acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     *        Amazon Elastic Graphics reached end of life on January 8, 2024.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2526,20 +2526,18 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration,
-     * we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      * </p>
      * </note>
      * 
      * @param elasticGpuSpecification
-     *        Deprecated.</p> <note>
+     *        An elastic GPU to associate with the instance.</p> <note>
      *        <p>
-     *        Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics
-     *        acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     *        Amazon Elastic Graphics reached end of life on January 8, 2024.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2551,36 +2549,19 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
-     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
-     * </p>
-     * <p>
-     * You cannot specify accelerators from different generations in the same request.
+     * An elastic inference accelerator to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
-     * will help current customers migrate their workloads to options that offer better price and performance. After
-     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
-     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
-     * 30-day period are considered current customers and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     * href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      * </p>
      * </note>
      * 
-     * @return An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
-     *         resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
-     *         workloads.</p>
+     * @return An elastic inference accelerator to associate with the instance.</p> <note>
      *         <p>
-     *         You cannot specify accelerators from different generations in the same request.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
-     *         (EI), and will help current customers migrate their workloads to options that offer better price and
-     *         performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
-     *         accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI
-     *         at least once during the past 30-day period are considered current customers and will be able to continue
-     *         using the service.
+     *         Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     *         href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      *         </p>
      */
 
@@ -2593,37 +2574,20 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
-     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
-     * </p>
-     * <p>
-     * You cannot specify accelerators from different generations in the same request.
+     * An elastic inference accelerator to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
-     * will help current customers migrate their workloads to options that offer better price and performance. After
-     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
-     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
-     * 30-day period are considered current customers and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     * href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      * </p>
      * </note>
      * 
      * @param elasticInferenceAccelerators
-     *        An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
-     *        resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
-     *        workloads.</p>
+     *        An elastic inference accelerator to associate with the instance.</p> <note>
      *        <p>
-     *        You cannot specify accelerators from different generations in the same request.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
-     *        (EI), and will help current customers migrate their workloads to options that offer better price and
-     *        performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
-     *        accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at
-     *        least once during the past 30-day period are considered current customers and will be able to continue
-     *        using the service.
+     *        Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     *        href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      *        </p>
      */
 
@@ -2638,19 +2602,12 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
-     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
-     * </p>
-     * <p>
-     * You cannot specify accelerators from different generations in the same request.
+     * An elastic inference accelerator to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
-     * will help current customers migrate their workloads to options that offer better price and performance. After
-     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
-     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
-     * 30-day period are considered current customers and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     * href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      * </p>
      * </note>
      * <p>
@@ -2660,20 +2617,10 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param elasticInferenceAccelerators
-     *        An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
-     *        resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
-     *        workloads.</p>
+     *        An elastic inference accelerator to associate with the instance.</p> <note>
      *        <p>
-     *        You cannot specify accelerators from different generations in the same request.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
-     *        (EI), and will help current customers migrate their workloads to options that offer better price and
-     *        performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
-     *        accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at
-     *        least once during the past 30-day period are considered current customers and will be able to continue
-     *        using the service.
+     *        Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     *        href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2690,37 +2637,20 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
-     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
-     * </p>
-     * <p>
-     * You cannot specify accelerators from different generations in the same request.
+     * An elastic inference accelerator to associate with the instance.
      * </p>
      * <note>
      * <p>
-     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
-     * will help current customers migrate their workloads to options that offer better price and performance. After
-     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
-     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
-     * 30-day period are considered current customers and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     * href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      * </p>
      * </note>
      * 
      * @param elasticInferenceAccelerators
-     *        An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
-     *        resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
-     *        workloads.</p>
+     *        An elastic inference accelerator to associate with the instance.</p> <note>
      *        <p>
-     *        You cannot specify accelerators from different generations in the same request.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
-     *        (EI), and will help current customers migrate their workloads to options that offer better price and
-     *        performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
-     *        accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at
-     *        least once during the past 30-day period are considered current customers and will be able to continue
-     *        using the service.
+     *        Amazon Elastic Inference (EI) is no longer available to new customers. For more information, see <a
+     *        href="http://aws.amazon.com/machine-learning/elastic-inference/faqs/">Amazon Elastic Inference FAQs</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

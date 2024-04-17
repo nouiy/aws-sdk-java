@@ -27,7 +27,7 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      */
     private String applicationId;
@@ -39,19 +39,20 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
     private Integer maxResults;
     /**
      * <p>
-     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of Amazon Q indices.
+     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q Business
+     * indices.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the index.
+     *        The identifier of the Amazon Q Business application connected to the index.
      */
 
     public void setApplicationId(String applicationId) {
@@ -60,10 +61,10 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application connected to the index.
+     * @return The identifier of the Amazon Q Business application connected to the index.
      */
 
     public String getApplicationId() {
@@ -72,11 +73,11 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the index.
+     *        The identifier of the Amazon Q Business application connected to the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,14 +128,15 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of Amazon Q indices.
+     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q Business
+     * indices.
      * </p>
      * 
      * @param nextToken
-     *        If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a
-     *        pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     *        indices.
+     *        If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business
+     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     *        Amazon Q Business indices.
      */
 
     public void setNextToken(String nextToken) {
@@ -143,13 +145,14 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of Amazon Q indices.
+     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q Business
+     * indices.
      * </p>
      * 
-     * @return If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a
-     *         pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     *         indices.
+     * @return If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business
+     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     *         Amazon Q Business indices.
      */
 
     public String getNextToken() {
@@ -158,14 +161,15 @@ public class ListIndicesRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of Amazon Q indices.
+     * If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q Business
+     * indices.
      * </p>
      * 
      * @param nextToken
-     *        If the maxResults response was incomplete because there is more data to retrieve, Amazon Q returns a
-     *        pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     *        indices.
+     *        If the maxResults response was incomplete because there is more data to retrieve, Amazon Q Business
+     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     *        Amazon Q Business indices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

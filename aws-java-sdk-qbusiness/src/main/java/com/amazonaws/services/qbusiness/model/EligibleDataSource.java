@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The identifier of the data source Amazon Q will generate responses from.
+ * The identifier of the data source Amazon Q Business will generate responses from.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/EligibleDataSource" target="_top">AWS API

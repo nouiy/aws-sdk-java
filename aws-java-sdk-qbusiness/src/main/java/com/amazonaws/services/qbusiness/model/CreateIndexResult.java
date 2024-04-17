@@ -25,24 +25,24 @@ public class CreateIndexResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q index.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business index.
      * </p>
      */
     private String indexArn;
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q index.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business index.
      * </p>
      * 
      * @param indexArn
-     *        The Amazon Resource Name (ARN) of an Amazon Q index.
+     *        The Amazon Resource Name (ARN) of an Amazon Q Business index.
      */
 
     public void setIndexArn(String indexArn) {
@@ -51,10 +51,10 @@ public class CreateIndexResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q index.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business index.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an Amazon Q index.
+     * @return The Amazon Resource Name (ARN) of an Amazon Q Business index.
      */
 
     public String getIndexArn() {
@@ -63,11 +63,11 @@ public class CreateIndexResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q index.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business index.
      * </p>
      * 
      * @param indexArn
-     *        The Amazon Resource Name (ARN) of an Amazon Q index.
+     *        The Amazon Resource Name (ARN) of an Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class CreateIndexResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier for the Amazon Q index.
+     *        The identifier for the Amazon Q Business index.
      */
 
     public void setIndexId(String indexId) {
@@ -91,10 +91,10 @@ public class CreateIndexResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      * 
-     * @return The identifier for the Amazon Q index.
+     * @return The identifier for the Amazon Q Business index.
      */
 
     public String getIndexId() {
@@ -103,11 +103,11 @@ public class CreateIndexResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier for the Amazon Q index.
+     *        The identifier for the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,24 +25,24 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q applications.
+     * An array of summary information on the configuration of one or more Amazon Q Business applications.
      * </p>
      */
     private java.util.List<Application> applications;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of applications.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of applications.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q applications.
+     * An array of summary information on the configuration of one or more Amazon Q Business applications.
      * </p>
      * 
-     * @return An array of summary information on the configuration of one or more Amazon Q applications.
+     * @return An array of summary information on the configuration of one or more Amazon Q Business applications.
      */
 
     public java.util.List<Application> getApplications() {
@@ -51,11 +51,11 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q applications.
+     * An array of summary information on the configuration of one or more Amazon Q Business applications.
      * </p>
      * 
      * @param applications
-     *        An array of summary information on the configuration of one or more Amazon Q applications.
+     *        An array of summary information on the configuration of one or more Amazon Q Business applications.
      */
 
     public void setApplications(java.util.Collection<Application> applications) {
@@ -69,7 +69,7 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q applications.
+     * An array of summary information on the configuration of one or more Amazon Q Business applications.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param applications
-     *        An array of summary information on the configuration of one or more Amazon Q applications.
+     *        An array of summary information on the configuration of one or more Amazon Q Business applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q applications.
+     * An array of summary information on the configuration of one or more Amazon Q Business applications.
      * </p>
      * 
      * @param applications
-     *        An array of summary information on the configuration of one or more Amazon Q applications.
+     *        An array of summary information on the configuration of one or more Amazon Q Business applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,13 +109,13 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of applications.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of applications.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request
-     *        to retrieve the next set of applications.
+     *        If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     *        request to retrieve the next set of applications.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of applications.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of applications.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request
-     *         to retrieve the next set of applications.
+     * @return If the response is truncated, Amazon Q Business returns this token. You can use this token in a
+     *         subsequent request to retrieve the next set of applications.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of applications.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of applications.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request
-     *        to retrieve the next set of applications.
+     *        If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     *        request to retrieve the next set of applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

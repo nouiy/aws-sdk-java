@@ -27,7 +27,7 @@ public class StartDataSourceSyncJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of Amazon Q application the data source is connected to.
+     * The identifier of Amazon Q Business application the data source is connected to.
      * </p>
      */
     private String applicationId;
@@ -46,11 +46,11 @@ public class StartDataSourceSyncJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of Amazon Q application the data source is connected to.
+     * The identifier of Amazon Q Business application the data source is connected to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of Amazon Q application the data source is connected to.
+     *        The identifier of Amazon Q Business application the data source is connected to.
      */
 
     public void setApplicationId(String applicationId) {
@@ -59,10 +59,10 @@ public class StartDataSourceSyncJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of Amazon Q application the data source is connected to.
+     * The identifier of Amazon Q Business application the data source is connected to.
      * </p>
      * 
-     * @return The identifier of Amazon Q application the data source is connected to.
+     * @return The identifier of Amazon Q Business application the data source is connected to.
      */
 
     public String getApplicationId() {
@@ -71,11 +71,11 @@ public class StartDataSourceSyncJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of Amazon Q application the data source is connected to.
+     * The identifier of Amazon Q Business application the data source is connected to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of Amazon Q application the data source is connected to.
+     *        The identifier of Amazon Q Business application the data source is connected to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

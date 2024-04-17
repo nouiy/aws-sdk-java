@@ -25,31 +25,31 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the index.
+     * The identifier of the Amazon Q Business application associated with the index.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The storage capacity units chosen for your Amazon Q index.
+     * The storage capacity units chosen for your Amazon Q Business index.
      * </p>
      */
     private IndexCapacityConfiguration capacityConfiguration;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was created.
+     * The Unix timestamp when the Amazon Q Business index was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The description for the Amazon Q index.
+     * The description for the Amazon Q Business index.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      */
     private String displayName;
@@ -71,13 +71,13 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private ErrorDetail error;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q index.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business index.
      * </p>
      */
     private String indexArn;
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      */
     private String indexId;
@@ -97,18 +97,18 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private String status;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was last updated.
+     * The Unix timestamp when the Amazon Q Business index was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the index.
+     * The identifier of the Amazon Q Business application associated with the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application associated with the index.
+     *        The identifier of the Amazon Q Business application associated with the index.
      */
 
     public void setApplicationId(String applicationId) {
@@ -117,10 +117,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the index.
+     * The identifier of the Amazon Q Business application associated with the index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application associated with the index.
+     * @return The identifier of the Amazon Q Business application associated with the index.
      */
 
     public String getApplicationId() {
@@ -129,11 +129,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the index.
+     * The identifier of the Amazon Q Business application associated with the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application associated with the index.
+     *        The identifier of the Amazon Q Business application associated with the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,11 +144,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The storage capacity units chosen for your Amazon Q index.
+     * The storage capacity units chosen for your Amazon Q Business index.
      * </p>
      * 
      * @param capacityConfiguration
-     *        The storage capacity units chosen for your Amazon Q index.
+     *        The storage capacity units chosen for your Amazon Q Business index.
      */
 
     public void setCapacityConfiguration(IndexCapacityConfiguration capacityConfiguration) {
@@ -157,10 +157,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The storage capacity units chosen for your Amazon Q index.
+     * The storage capacity units chosen for your Amazon Q Business index.
      * </p>
      * 
-     * @return The storage capacity units chosen for your Amazon Q index.
+     * @return The storage capacity units chosen for your Amazon Q Business index.
      */
 
     public IndexCapacityConfiguration getCapacityConfiguration() {
@@ -169,11 +169,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The storage capacity units chosen for your Amazon Q index.
+     * The storage capacity units chosen for your Amazon Q Business index.
      * </p>
      * 
      * @param capacityConfiguration
-     *        The storage capacity units chosen for your Amazon Q index.
+     *        The storage capacity units chosen for your Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,11 +184,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was created.
+     * The Unix timestamp when the Amazon Q Business index was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q index was created.
+     *        The Unix timestamp when the Amazon Q Business index was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -197,10 +197,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was created.
+     * The Unix timestamp when the Amazon Q Business index was created.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q index was created.
+     * @return The Unix timestamp when the Amazon Q Business index was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -209,11 +209,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was created.
+     * The Unix timestamp when the Amazon Q Business index was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q index was created.
+     *        The Unix timestamp when the Amazon Q Business index was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,11 +224,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The description for the Amazon Q index.
+     * The description for the Amazon Q Business index.
      * </p>
      * 
      * @param description
-     *        The description for the Amazon Q index.
+     *        The description for the Amazon Q Business index.
      */
 
     public void setDescription(String description) {
@@ -237,10 +237,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The description for the Amazon Q index.
+     * The description for the Amazon Q Business index.
      * </p>
      * 
-     * @return The description for the Amazon Q index.
+     * @return The description for the Amazon Q Business index.
      */
 
     public String getDescription() {
@@ -249,11 +249,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The description for the Amazon Q index.
+     * The description for the Amazon Q Business index.
      * </p>
      * 
      * @param description
-     *        The description for the Amazon Q index.
+     *        The description for the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,11 +264,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q index.
+     *        The name of the Amazon Q Business index.
      */
 
     public void setDisplayName(String displayName) {
@@ -277,10 +277,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      * 
-     * @return The name of the Amazon Q index.
+     * @return The name of the Amazon Q Business index.
      */
 
     public String getDisplayName() {
@@ -289,11 +289,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The name of the Amazon Q index.
+     * The name of the Amazon Q Business index.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q index.
+     *        The name of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -448,11 +448,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q index.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business index.
      * </p>
      * 
      * @param indexArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q index.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business index.
      */
 
     public void setIndexArn(String indexArn) {
@@ -461,10 +461,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q index.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business index.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q index.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q Business index.
      */
 
     public String getIndexArn() {
@@ -473,11 +473,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q index.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business index.
      * </p>
      * 
      * @param indexArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q index.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -488,11 +488,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index.
+     *        The identifier of the Amazon Q Business index.
      */
 
     public void setIndexId(String indexId) {
@@ -501,10 +501,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q index.
+     * @return The identifier of the Amazon Q Business index.
      */
 
     public String getIndexId() {
@@ -513,11 +513,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index.
+     *        The identifier of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -643,11 +643,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was last updated.
+     * The Unix timestamp when the Amazon Q Business index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q index was last updated.
+     *        The Unix timestamp when the Amazon Q Business index was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -656,10 +656,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was last updated.
+     * The Unix timestamp when the Amazon Q Business index was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q index was last updated.
+     * @return The Unix timestamp when the Amazon Q Business index was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -668,11 +668,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q index was last updated.
+     * The Unix timestamp when the Amazon Q Business index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q index was last updated.
+     *        The Unix timestamp when the Amazon Q Business index was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

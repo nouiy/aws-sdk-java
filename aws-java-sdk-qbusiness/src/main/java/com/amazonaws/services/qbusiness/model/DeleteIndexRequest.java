@@ -27,24 +27,24 @@ public class DeleteIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the Amazon Q index is linked to.
+     * The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the Amazon Q index is linked to.
+     * The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application the Amazon Q index is linked to.
+     *        The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      */
 
     public void setApplicationId(String applicationId) {
@@ -53,10 +53,10 @@ public class DeleteIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the Amazon Q index is linked to.
+     * The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application the Amazon Q index is linked to.
+     * @return The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      */
 
     public String getApplicationId() {
@@ -65,11 +65,11 @@ public class DeleteIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the Amazon Q index is linked to.
+     * The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application the Amazon Q index is linked to.
+     *        The identifier of the Amazon Q Business application the Amazon Q Business index is linked to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class DeleteIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index.
+     *        The identifier of the Amazon Q Business index.
      */
 
     public void setIndexId(String indexId) {
@@ -93,10 +93,10 @@ public class DeleteIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q index.
+     * @return The identifier of the Amazon Q Business index.
      */
 
     public String getIndexId() {
@@ -105,11 +105,11 @@ public class DeleteIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q index.
+     * The identifier of the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index.
+     *        The identifier of the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

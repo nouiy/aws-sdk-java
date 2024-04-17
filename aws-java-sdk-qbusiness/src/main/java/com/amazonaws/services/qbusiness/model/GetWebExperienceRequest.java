@@ -27,24 +27,24 @@ public class GetWebExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      */
     private String webExperienceId;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the web experience.
+     *        The identifier of the Amazon Q Business application linked to the web experience.
      */
 
     public void setApplicationId(String applicationId) {
@@ -53,10 +53,10 @@ public class GetWebExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application linked to the web experience.
+     * @return The identifier of the Amazon Q Business application linked to the web experience.
      */
 
     public String getApplicationId() {
@@ -65,11 +65,11 @@ public class GetWebExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the web experience.
+     *        The identifier of the Amazon Q Business application linked to the web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class GetWebExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      */
 
     public void setWebExperienceId(String webExperienceId) {
@@ -93,10 +93,10 @@ public class GetWebExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience.
+     * @return The identifier of the Amazon Q Business web experience.
      */
 
     public String getWebExperienceId() {
@@ -105,11 +105,11 @@ public class GetWebExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

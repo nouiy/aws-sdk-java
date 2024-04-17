@@ -67,8 +67,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateBlockDeviceMappingRequest> blockDeviceMappings;
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify any security groups and
-     * subnets as part of the network interface.
+     * The network interfaces for the instance.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateInstanceNetworkInterfaceSpecificationRequest> networkInterfaces;
@@ -247,15 +246,21 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators;
     /**
      * <p>
-     * One or more security group IDs. You can create a security group using <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     * >CreateSecurityGroup</a>.
+     * The IDs of the security groups.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> securityGroupIds;
     /**
      * <p>
-     * One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     * The names of the security groups. For a nondefault VPC, you must use security group IDs instead.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> securityGroups;
@@ -666,12 +671,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify any security groups and
-     * subnets as part of the network interface.
+     * The network interfaces for the instance.
      * </p>
      * 
-     * @return One or more network interfaces. If you specify a network interface, you must specify any security groups
-     *         and subnets as part of the network interface.
+     * @return The network interfaces for the instance.
      */
 
     public java.util.List<LaunchTemplateInstanceNetworkInterfaceSpecificationRequest> getNetworkInterfaces() {
@@ -683,13 +686,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify any security groups and
-     * subnets as part of the network interface.
+     * The network interfaces for the instance.
      * </p>
      * 
      * @param networkInterfaces
-     *        One or more network interfaces. If you specify a network interface, you must specify any security groups
-     *        and subnets as part of the network interface.
+     *        The network interfaces for the instance.
      */
 
     public void setNetworkInterfaces(java.util.Collection<LaunchTemplateInstanceNetworkInterfaceSpecificationRequest> networkInterfaces) {
@@ -703,8 +704,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify any security groups and
-     * subnets as part of the network interface.
+     * The network interfaces for the instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -713,8 +713,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @param networkInterfaces
-     *        One or more network interfaces. If you specify a network interface, you must specify any security groups
-     *        and subnets as part of the network interface.
+     *        The network interfaces for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -731,13 +730,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify any security groups and
-     * subnets as part of the network interface.
+     * The network interfaces for the instance.
      * </p>
      * 
      * @param networkInterfaces
-     *        One or more network interfaces. If you specify a network interface, you must specify any security groups
-     *        and subnets as part of the network interface.
+     *        The network interfaces for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2033,14 +2030,17 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group IDs. You can create a security group using <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     * >CreateSecurityGroup</a>.
+     * The IDs of the security groups.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
-     * @return One or more security group IDs. You can create a security group using <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     *         >CreateSecurityGroup</a>.
+     * @return The IDs of the security groups.</p>
+     *         <p>
+     *         If you specify a network interface, you must specify any security groups as part of the network interface
+     *         instead of using this parameter.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -2052,15 +2052,18 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group IDs. You can create a security group using <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     * >CreateSecurityGroup</a>.
+     * The IDs of the security groups.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @param securityGroupIds
-     *        One or more security group IDs. You can create a security group using <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     *        >CreateSecurityGroup</a>.
+     *        The IDs of the security groups.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -2074,9 +2077,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group IDs. You can create a security group using <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     * >CreateSecurityGroup</a>.
+     * The IDs of the security groups.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2085,9 +2090,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @param securityGroupIds
-     *        One or more security group IDs. You can create a security group using <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     *        >CreateSecurityGroup</a>.
+     *        The IDs of the security groups.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2103,15 +2109,18 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group IDs. You can create a security group using <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     * >CreateSecurityGroup</a>.
+     * The IDs of the security groups.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @param securityGroupIds
-     *        One or more security group IDs. You can create a security group using <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSecurityGroup.html"
-     *        >CreateSecurityGroup</a>.
+     *        The IDs of the security groups.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2122,10 +2131,17 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     * The names of the security groups. For a nondefault VPC, you must use security group IDs instead.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
-     * @return One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     * @return The names of the security groups. For a nondefault VPC, you must use security group IDs instead.</p>
+     *         <p>
+     *         If you specify a network interface, you must specify any security groups as part of the network interface
+     *         instead of using this parameter.
      */
 
     public java.util.List<String> getSecurityGroups() {
@@ -2137,11 +2153,18 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     * The names of the security groups. For a nondefault VPC, you must use security group IDs instead.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @param securityGroups
-     *        One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     *        The names of the security groups. For a nondefault VPC, you must use security group IDs instead.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      */
 
     public void setSecurityGroups(java.util.Collection<String> securityGroups) {
@@ -2155,7 +2178,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     * The names of the security groups. For a nondefault VPC, you must use security group IDs instead.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2164,7 +2191,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @param securityGroups
-     *        One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     *        The names of the security groups. For a nondefault VPC, you must use security group IDs instead.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2180,11 +2210,18 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     * The names of the security groups. For a nondefault VPC, you must use security group IDs instead.
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
      * </p>
      * 
      * @param securityGroups
-     *        One or more security group names. For a nondefault VPC, you must use security group IDs instead.
+     *        The names of the security groups. For a nondefault VPC, you must use security group IDs instead.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,18 +27,19 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags for.
      * </p>
      */
     private String resourceARN;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags for.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags
+     *        for.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -47,10 +48,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags for.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags
+     *         for.
      */
 
     public String getResourceARN() {
@@ -59,11 +61,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags for.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) of the Amazon Q application or data source to get a list of tags for.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to get a list of tags
+     *        for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

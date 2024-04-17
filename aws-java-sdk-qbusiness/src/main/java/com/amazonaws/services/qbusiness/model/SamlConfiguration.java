@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the SAML 2.0 compliant identity provider (IdP) configuration information Amazon Q needs to deploy a Amazon Q
- * web experience.
+ * Provides the SAML 2.0 compliant identity provider (IdP) configuration information Amazon Q Business needs to deploy a
+ * Amazon Q Business web experience.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/SamlConfiguration" target="_top">AWS API
@@ -37,8 +37,9 @@ public class SamlConfiguration implements Serializable, Cloneable, StructuredPoj
     private String metadataXML;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q web
-     * experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
+     * Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon Q
+     * Business.
      * </p>
      */
     private String roleArn;
@@ -97,13 +98,15 @@ public class SamlConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q web
-     * experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
+     * Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon Q
+     * Business.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
-     *        web experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     *        Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon
+     *        Q Business.
      */
 
     public void setRoleArn(String roleArn) {
@@ -112,12 +115,14 @@ public class SamlConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q web
-     * experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
+     * Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon Q
+     * Business.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
-     *         web experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     *         Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon
+     *         Q Business.
      */
 
     public String getRoleArn() {
@@ -126,13 +131,15 @@ public class SamlConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q web
-     * experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     * The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
+     * Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon Q
+     * Business.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of an IAM role assumed by users when they authenticate into their Amazon Q
-     *        web experience, containing the relevant Amazon Q permissions for conversing with Amazon Q.
+     *        Business web experience, containing the relevant Amazon Q Business permissions for conversing with Amazon
+     *        Q Business.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

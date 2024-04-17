@@ -33,7 +33,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String applicationId;
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q user mapping.
+     * A token that you provide to identify the request to create your Amazon Q Business user mapping.
      * </p>
      */
     private String clientToken;
@@ -92,11 +92,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q user mapping.
+     * A token that you provide to identify the request to create your Amazon Q Business user mapping.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q user mapping.
+     *        A token that you provide to identify the request to create your Amazon Q Business user mapping.
      */
 
     public void setClientToken(String clientToken) {
@@ -105,10 +105,10 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q user mapping.
+     * A token that you provide to identify the request to create your Amazon Q Business user mapping.
      * </p>
      * 
-     * @return A token that you provide to identify the request to create your Amazon Q user mapping.
+     * @return A token that you provide to identify the request to create your Amazon Q Business user mapping.
      */
 
     public String getClientToken() {
@@ -117,11 +117,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q user mapping.
+     * A token that you provide to identify the request to create your Amazon Q Business user mapping.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q user mapping.
+     *        A token that you provide to identify the request to create your Amazon Q Business user mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

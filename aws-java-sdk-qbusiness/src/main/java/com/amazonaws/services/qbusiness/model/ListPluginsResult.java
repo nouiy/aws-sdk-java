@@ -25,8 +25,9 @@ public class ListPluginsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of plugins.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * plugins.
      * </p>
      */
     private String nextToken;
@@ -39,14 +40,15 @@ public class ListPluginsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of plugins.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * plugins.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        plugins.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of plugins.
      */
 
     public void setNextToken(String nextToken) {
@@ -55,13 +57,14 @@ public class ListPluginsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of plugins.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * plugins.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         plugins.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of plugins.
      */
 
     public String getNextToken() {
@@ -70,14 +73,15 @@ public class ListPluginsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of plugins.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * plugins.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        plugins.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of plugins.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

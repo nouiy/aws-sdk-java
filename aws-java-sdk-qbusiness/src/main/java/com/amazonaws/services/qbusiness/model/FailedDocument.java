@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of documents that could not be removed from an Amazon Q index. Each entry contains an error message that
- * indicates why the document couldn't be removed from the index.
+ * A list of documents that could not be removed from an Amazon Q Business index. Each entry contains an error message
+ * that indicates why the document couldn't be removed from the index.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/FailedDocument" target="_top">AWS API
@@ -31,7 +31,7 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source connector that contains the failed document.
+     * The identifier of the Amazon Q Business data source connector that contains the failed document.
      * </p>
      */
     private String dataSourceId;
@@ -43,18 +43,18 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
     private ErrorDetail error;
     /**
      * <p>
-     * The identifier of the document that couldn't be removed from the Amazon Q index.
+     * The identifier of the document that couldn't be removed from the Amazon Q Business index.
      * </p>
      */
     private String id;
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source connector that contains the failed document.
+     * The identifier of the Amazon Q Business data source connector that contains the failed document.
      * </p>
      * 
      * @param dataSourceId
-     *        The identifier of the Amazon Q data source connector that contains the failed document.
+     *        The identifier of the Amazon Q Business data source connector that contains the failed document.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -63,10 +63,10 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source connector that contains the failed document.
+     * The identifier of the Amazon Q Business data source connector that contains the failed document.
      * </p>
      * 
-     * @return The identifier of the Amazon Q data source connector that contains the failed document.
+     * @return The identifier of the Amazon Q Business data source connector that contains the failed document.
      */
 
     public String getDataSourceId() {
@@ -75,11 +75,11 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source connector that contains the failed document.
+     * The identifier of the Amazon Q Business data source connector that contains the failed document.
      * </p>
      * 
      * @param dataSourceId
-     *        The identifier of the Amazon Q data source connector that contains the failed document.
+     *        The identifier of the Amazon Q Business data source connector that contains the failed document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +130,11 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the document that couldn't be removed from the Amazon Q index.
+     * The identifier of the document that couldn't be removed from the Amazon Q Business index.
      * </p>
      * 
      * @param id
-     *        The identifier of the document that couldn't be removed from the Amazon Q index.
+     *        The identifier of the document that couldn't be removed from the Amazon Q Business index.
      */
 
     public void setId(String id) {
@@ -143,10 +143,10 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the document that couldn't be removed from the Amazon Q index.
+     * The identifier of the document that couldn't be removed from the Amazon Q Business index.
      * </p>
      * 
-     * @return The identifier of the document that couldn't be removed from the Amazon Q index.
+     * @return The identifier of the document that couldn't be removed from the Amazon Q Business index.
      */
 
     public String getId() {
@@ -155,11 +155,11 @@ public class FailedDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the document that couldn't be removed from the Amazon Q index.
+     * The identifier of the document that couldn't be removed from the Amazon Q Business index.
      * </p>
      * 
      * @param id
-     *        The identifier of the document that couldn't be removed from the Amazon Q index.
+     *        The identifier of the document that couldn't be removed from the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

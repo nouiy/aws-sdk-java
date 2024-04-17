@@ -30,8 +30,8 @@ public class BasicAuthConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      */
     private String roleArn;
@@ -45,13 +45,13 @@ public class BasicAuthConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     *        Manager secret.
+     *        The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in
+     *        a Secrets Manager secret.
      */
 
     public void setRoleArn(String roleArn) {
@@ -60,12 +60,12 @@ public class BasicAuthConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
-     * @return The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a
-     *         Secrets Manager secret.
+     * @return The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in
+     *         a Secrets Manager secret.
      */
 
     public String getRoleArn() {
@@ -74,13 +74,13 @@ public class BasicAuthConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     *        Manager secret.
+     *        The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in
+     *        a Secrets Manager secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

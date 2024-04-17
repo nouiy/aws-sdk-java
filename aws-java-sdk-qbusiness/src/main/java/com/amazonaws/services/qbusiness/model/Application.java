@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information for an Amazon Q application.
+ * Summary information for an Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/Application" target="_top">AWS API
@@ -30,42 +30,43 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was created.
+     * The Unix timestamp when the Amazon Q Business application was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The status of the Amazon Q application. The application is ready to use when the status is <code>ACTIVE</code>.
+     * The status of the Amazon Q Business application. The application is ready to use when the status is
+     * <code>ACTIVE</code>.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier for the Amazon Q application.
+     *        The identifier for the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -74,10 +75,10 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier for the Amazon Q application.
+     * @return The identifier for the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -86,11 +87,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier for the Amazon Q application.
+     *        The identifier for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +102,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was created.
+     * The Unix timestamp when the Amazon Q Business application was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q application was created.
+     *        The Unix timestamp when the Amazon Q Business application was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -114,10 +115,10 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was created.
+     * The Unix timestamp when the Amazon Q Business application was created.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was created.
+     * @return The Unix timestamp when the Amazon Q Business application was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -126,11 +127,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was created.
+     * The Unix timestamp when the Amazon Q Business application was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q application was created.
+     *        The Unix timestamp when the Amazon Q Business application was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +142,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q application.
+     *        The name of the Amazon Q Business application.
      */
 
     public void setDisplayName(String displayName) {
@@ -154,10 +155,10 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      * 
-     * @return The name of the Amazon Q application.
+     * @return The name of the Amazon Q Business application.
      */
 
     public String getDisplayName() {
@@ -166,11 +167,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q application.
+     *        The name of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,11 +182,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q application. The application is ready to use when the status is <code>ACTIVE</code>.
+     * The status of the Amazon Q Business application. The application is ready to use when the status is
+     * <code>ACTIVE</code>.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q application. The application is ready to use when the status is
+     *        The status of the Amazon Q Business application. The application is ready to use when the status is
      *        <code>ACTIVE</code>.
      * @see ApplicationStatus
      */
@@ -196,10 +198,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q application. The application is ready to use when the status is <code>ACTIVE</code>.
+     * The status of the Amazon Q Business application. The application is ready to use when the status is
+     * <code>ACTIVE</code>.
      * </p>
      * 
-     * @return The status of the Amazon Q application. The application is ready to use when the status is
+     * @return The status of the Amazon Q Business application. The application is ready to use when the status is
      *         <code>ACTIVE</code>.
      * @see ApplicationStatus
      */
@@ -210,11 +213,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q application. The application is ready to use when the status is <code>ACTIVE</code>.
+     * The status of the Amazon Q Business application. The application is ready to use when the status is
+     * <code>ACTIVE</code>.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q application. The application is ready to use when the status is
+     *        The status of the Amazon Q Business application. The application is ready to use when the status is
      *        <code>ACTIVE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationStatus
@@ -227,11 +231,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q application. The application is ready to use when the status is <code>ACTIVE</code>.
+     * The status of the Amazon Q Business application. The application is ready to use when the status is
+     * <code>ACTIVE</code>.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q application. The application is ready to use when the status is
+     *        The status of the Amazon Q Business application. The application is ready to use when the status is
      *        <code>ACTIVE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationStatus
@@ -244,11 +249,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -257,10 +262,10 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was last updated.
+     * @return The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -269,11 +274,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

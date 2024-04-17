@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Rules for retrieving content from data sources connected to a Amazon Q application for a specific topic control
- * configuration.
+ * Rules for retrieving content from data sources connected to a Amazon Q Business application for a specific topic
+ * control configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/ContentRetrievalRule" target="_top">AWS API
@@ -31,17 +31,17 @@ public class ContentRetrievalRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies data sources in a Amazon Q application to use for content generation.
+     * Specifies data sources in a Amazon Q Business application to use for content generation.
      * </p>
      */
     private java.util.List<EligibleDataSource> eligibleDataSources;
 
     /**
      * <p>
-     * Specifies data sources in a Amazon Q application to use for content generation.
+     * Specifies data sources in a Amazon Q Business application to use for content generation.
      * </p>
      * 
-     * @return Specifies data sources in a Amazon Q application to use for content generation.
+     * @return Specifies data sources in a Amazon Q Business application to use for content generation.
      */
 
     public java.util.List<EligibleDataSource> getEligibleDataSources() {
@@ -50,11 +50,11 @@ public class ContentRetrievalRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies data sources in a Amazon Q application to use for content generation.
+     * Specifies data sources in a Amazon Q Business application to use for content generation.
      * </p>
      * 
      * @param eligibleDataSources
-     *        Specifies data sources in a Amazon Q application to use for content generation.
+     *        Specifies data sources in a Amazon Q Business application to use for content generation.
      */
 
     public void setEligibleDataSources(java.util.Collection<EligibleDataSource> eligibleDataSources) {
@@ -68,7 +68,7 @@ public class ContentRetrievalRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies data sources in a Amazon Q application to use for content generation.
+     * Specifies data sources in a Amazon Q Business application to use for content generation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ContentRetrievalRule implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param eligibleDataSources
-     *        Specifies data sources in a Amazon Q application to use for content generation.
+     *        Specifies data sources in a Amazon Q Business application to use for content generation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ContentRetrievalRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies data sources in a Amazon Q application to use for content generation.
+     * Specifies data sources in a Amazon Q Business application to use for content generation.
      * </p>
      * 
      * @param eligibleDataSources
-     *        Specifies data sources in a Amazon Q application to use for content generation.
+     *        Specifies data sources in a Amazon Q Business application to use for content generation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

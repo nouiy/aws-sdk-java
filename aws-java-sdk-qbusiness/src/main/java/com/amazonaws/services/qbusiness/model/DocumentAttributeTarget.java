@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The target document attribute or metadata field you want to alter when ingesting documents into Amazon Q.
+ * The target document attribute or metadata field you want to alter when ingesting documents into Amazon Q Business.
  * </p>
  * <p>
  * For example, you can delete all customer identification numbers associated with the documents, stored in the document
@@ -28,11 +28,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * identifiable information from each document's metadata.
  * </p>
  * <p>
- * Amazon Q can't create a target field if it has not already been created as an index field. After you create your
- * index field, you can create a document metadata field using <a
+ * Amazon Q Business can't create a target field if it has not already been created as an index field. After you create
+ * your index field, you can create a document metadata field using <a
  * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeTarget.html">
- * <code>DocumentAttributeTarget</code> </a>. Amazon Q will then map your newly created document attribute to your index
- * field.
+ * <code>DocumentAttributeTarget</code> </a>. Amazon Q Business will then map your newly created document attribute to
+ * your index field.
  * </p>
  * <p>
  * You can also use this with <a

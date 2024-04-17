@@ -25,24 +25,24 @@ public class CreateWebExperienceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      * </p>
      */
     private String webExperienceArn;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      */
     private String webExperienceId;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceArn
-     *        The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     *        The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      */
 
     public void setWebExperienceArn(String webExperienceArn) {
@@ -51,10 +51,10 @@ public class CreateWebExperienceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     * @return The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      */
 
     public String getWebExperienceArn() {
@@ -63,11 +63,11 @@ public class CreateWebExperienceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     * The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceArn
-     *        The Amazon Resource Name (ARN) of an Amazon Q web experience.
+     *        The Amazon Resource Name (ARN) of an Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class CreateWebExperienceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      */
 
     public void setWebExperienceId(String webExperienceId) {
@@ -91,10 +91,10 @@ public class CreateWebExperienceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience.
+     * @return The identifier of the Amazon Q Business web experience.
      */
 
     public String getWebExperienceId() {
@@ -103,11 +103,11 @@ public class CreateWebExperienceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

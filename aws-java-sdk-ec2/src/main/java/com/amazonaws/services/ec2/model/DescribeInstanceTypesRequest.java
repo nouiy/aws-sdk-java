@@ -28,9 +28,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The instance types. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance types.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> instanceTypes;
@@ -342,14 +340,10 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The instance types. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance types.
      * </p>
      * 
-     * @return The instance types. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon EC2 User Guide</i>.
+     * @return The instance types.
      * @see InstanceType
      */
 
@@ -362,15 +356,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The instance types. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance types.
      * </p>
      * 
      * @param instanceTypes
-     *        The instance types. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance types.
      * @see InstanceType
      */
 
@@ -385,9 +375,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The instance types. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance types.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -396,9 +384,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </p>
      * 
      * @param instanceTypes
-     *        The instance types. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -415,15 +401,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The instance types. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance types.
      * </p>
      * 
      * @param instanceTypes
-     *        The instance types. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -435,15 +417,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The instance types. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance types.
      * </p>
      * 
      * @param instanceTypes
-     *        The instance types. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */

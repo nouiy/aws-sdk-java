@@ -27,7 +27,7 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
@@ -39,24 +39,24 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
     private String dataSourceSyncId;
     /**
      * <p>
-     * Documents deleted from the Amazon Q index.
+     * Documents deleted from the Amazon Q Business index.
      * </p>
      */
     private java.util.List<DeleteDocument> documents;
     /**
      * <p>
-     * The identifier of the Amazon Q index that contains the documents to delete.
+     * The identifier of the Amazon Q Business index that contains the documents to delete.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -65,10 +65,10 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application.
+     * @return The identifier of the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -77,11 +77,11 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,10 +132,10 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Documents deleted from the Amazon Q index.
+     * Documents deleted from the Amazon Q Business index.
      * </p>
      * 
-     * @return Documents deleted from the Amazon Q index.
+     * @return Documents deleted from the Amazon Q Business index.
      */
 
     public java.util.List<DeleteDocument> getDocuments() {
@@ -144,11 +144,11 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Documents deleted from the Amazon Q index.
+     * Documents deleted from the Amazon Q Business index.
      * </p>
      * 
      * @param documents
-     *        Documents deleted from the Amazon Q index.
+     *        Documents deleted from the Amazon Q Business index.
      */
 
     public void setDocuments(java.util.Collection<DeleteDocument> documents) {
@@ -162,7 +162,7 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Documents deleted from the Amazon Q index.
+     * Documents deleted from the Amazon Q Business index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -171,7 +171,7 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param documents
-     *        Documents deleted from the Amazon Q index.
+     *        Documents deleted from the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,11 +187,11 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Documents deleted from the Amazon Q index.
+     * Documents deleted from the Amazon Q Business index.
      * </p>
      * 
      * @param documents
-     *        Documents deleted from the Amazon Q index.
+     *        Documents deleted from the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,11 +202,11 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q index that contains the documents to delete.
+     * The identifier of the Amazon Q Business index that contains the documents to delete.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index that contains the documents to delete.
+     *        The identifier of the Amazon Q Business index that contains the documents to delete.
      */
 
     public void setIndexId(String indexId) {
@@ -215,10 +215,10 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q index that contains the documents to delete.
+     * The identifier of the Amazon Q Business index that contains the documents to delete.
      * </p>
      * 
-     * @return The identifier of the Amazon Q index that contains the documents to delete.
+     * @return The identifier of the Amazon Q Business index that contains the documents to delete.
      */
 
     public String getIndexId() {
@@ -227,11 +227,11 @@ public class BatchDeleteDocumentRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q index that contains the documents to delete.
+     * The identifier of the Amazon Q Business index that contains the documents to delete.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index that contains the documents to delete.
+     *        The identifier of the Amazon Q Business index that contains the documents to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

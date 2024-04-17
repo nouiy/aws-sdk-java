@@ -27,7 +27,7 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application used with the data source connector.
+     * The identifier of the Amazon Q Business application used with the data source connector.
      * </p>
      */
     private String applicationId;
@@ -46,11 +46,11 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application used with the data source connector.
+     * The identifier of the Amazon Q Business application used with the data source connector.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application used with the data source connector.
+     *        The identifier of the Amazon Q Business application used with the data source connector.
      */
 
     public void setApplicationId(String applicationId) {
@@ -59,10 +59,10 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application used with the data source connector.
+     * The identifier of the Amazon Q Business application used with the data source connector.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application used with the data source connector.
+     * @return The identifier of the Amazon Q Business application used with the data source connector.
      */
 
     public String getApplicationId() {
@@ -71,11 +71,11 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application used with the data source connector.
+     * The identifier of the Amazon Q Business application used with the data source connector.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application used with the data source connector.
+     *        The identifier of the Amazon Q Business application used with the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,9 +25,7 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance type.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceTypeInfo> instanceTypes;
@@ -41,14 +39,10 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance type.
      * </p>
      * 
-     * @return The instance type. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon EC2 User Guide</i>.
+     * @return The instance type.
      */
 
     public java.util.List<InstanceTypeInfo> getInstanceTypes() {
@@ -60,15 +54,11 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance type.
      * </p>
      * 
      * @param instanceTypes
-     *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance type.
      */
 
     public void setInstanceTypes(java.util.Collection<InstanceTypeInfo> instanceTypes) {
@@ -82,9 +72,7 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance type.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -93,9 +81,7 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param instanceTypes
-     *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,15 +97,11 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * The instance type.
      * </p>
      * 
      * @param instanceTypes
-     *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        The instance type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

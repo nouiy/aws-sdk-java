@@ -31,8 +31,8 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.List<DataSource> dataSources;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of data source connectors.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of data source connectors.
      * </p>
      */
     private String nextToken;
@@ -109,13 +109,13 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of data source connectors.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of data source connectors.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request
-     *        to retrieve the next set of data source connectors.
+     *        If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     *        request to retrieve the next set of data source connectors.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of data source connectors.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of data source connectors.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request
-     *         to retrieve the next set of data source connectors.
+     * @return If the response is truncated, Amazon Q Business returns this token. You can use this token in a
+     *         subsequent request to retrieve the next set of data source connectors.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListDataSourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request to
-     * retrieve the next set of data source connectors.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     * request to retrieve the next set of data source connectors.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token. You can use this token in a subsequent request
-     *        to retrieve the next set of data source connectors.
+     *        If the response is truncated, Amazon Q Business returns this token. You can use this token in a subsequent
+     *        request to retrieve the next set of data source connectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,13 +27,13 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application retriever.
+     * A token that you provide to identify the request to create your Amazon Q Business application retriever.
      * </p>
      */
     private String clientToken;
@@ -47,8 +47,8 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
     private String displayName;
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      */
     private String roleArn;
@@ -69,11 +69,11 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of your Amazon Q application.
+     *        The identifier of your Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -82,10 +82,10 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of your Amazon Q application.
+     * @return The identifier of your Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -94,11 +94,11 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of your Amazon Q application.
+     *        The identifier of your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,11 +109,11 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application retriever.
+     * A token that you provide to identify the request to create your Amazon Q Business application retriever.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q application retriever.
+     *        A token that you provide to identify the request to create your Amazon Q Business application retriever.
      */
 
     public void setClientToken(String clientToken) {
@@ -122,10 +122,10 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application retriever.
+     * A token that you provide to identify the request to create your Amazon Q Business application retriever.
      * </p>
      * 
-     * @return A token that you provide to identify the request to create your Amazon Q application retriever.
+     * @return A token that you provide to identify the request to create your Amazon Q Business application retriever.
      */
 
     public String getClientToken() {
@@ -134,11 +134,11 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application retriever.
+     * A token that you provide to identify the request to create your Amazon Q Business application retriever.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q application retriever.
+     *        A token that you provide to identify the request to create your Amazon Q Business application retriever.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,13 +215,13 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     *        Manager secret.
+     *        The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in
+     *        a Secrets Manager secret.
      */
 
     public void setRoleArn(String roleArn) {
@@ -230,12 +230,12 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
-     * @return The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a
-     *         Secrets Manager secret.
+     * @return The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in
+     *         a Secrets Manager secret.
      */
 
     public String getRoleArn() {
@@ -244,13 +244,13 @@ public class CreateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of an IAM role used by Amazon Q to access the basic authentication credentials stored in a Secrets
-     *        Manager secret.
+     *        The ARN of an IAM role used by Amazon Q Business to access the basic authentication credentials stored in
+     *        a Secrets Manager secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

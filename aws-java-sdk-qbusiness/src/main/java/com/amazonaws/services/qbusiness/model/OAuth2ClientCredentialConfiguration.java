@@ -30,8 +30,8 @@ public class OAuth2ClientCredentialConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      */
     private String roleArn;
@@ -44,13 +44,13 @@ public class OAuth2ClientCredentialConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a
-     *        Secrets Manager secret.
+     *        The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials stored
+     *        in a Secrets Manager secret.
      */
 
     public void setRoleArn(String roleArn) {
@@ -59,12 +59,12 @@ public class OAuth2ClientCredentialConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
-     * @return The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a
-     *         Secrets Manager secret.
+     * @return The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials
+     *         stored in a Secrets Manager secret.
      */
 
     public String getRoleArn() {
@@ -73,13 +73,13 @@ public class OAuth2ClientCredentialConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a Secrets
-     * Manager secret.
+     * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials stored in a
+     * Secrets Manager secret.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of an IAM role used by Amazon Q to access the OAuth 2.0 authentication credentials stored in a
-     *        Secrets Manager secret.
+     *        The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication credentials stored
+     *        in a Secrets Manager secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

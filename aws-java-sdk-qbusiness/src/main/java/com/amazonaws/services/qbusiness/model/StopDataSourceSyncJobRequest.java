@@ -27,7 +27,7 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the Amazon Q application that the data source is connected to.
+     * The identifier of the Amazon Q Business application that the data source is connected to.
      * </p>
      */
     private String applicationId;
@@ -39,18 +39,18 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
     private String dataSourceId;
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application that the data source is connected to.
+     * The identifier of the Amazon Q Business application that the data source is connected to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application that the data source is connected to.
+     *        The identifier of the Amazon Q Business application that the data source is connected to.
      */
 
     public void setApplicationId(String applicationId) {
@@ -59,10 +59,10 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the Amazon Q application that the data source is connected to.
+     * The identifier of the Amazon Q Business application that the data source is connected to.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application that the data source is connected to.
+     * @return The identifier of the Amazon Q Business application that the data source is connected to.
      */
 
     public String getApplicationId() {
@@ -71,11 +71,11 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the Amazon Q application that the data source is connected to.
+     * The identifier of the Amazon Q Business application that the data source is connected to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application that the data source is connected to.
+     *        The identifier of the Amazon Q Business application that the data source is connected to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index used with the Amazon Q data source connector.
+     *        The identifier of the index used with the Amazon Q Business data source connector.
      */
 
     public void setIndexId(String indexId) {
@@ -139,10 +139,10 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      * 
-     * @return The identifier of the index used with the Amazon Q data source connector.
+     * @return The identifier of the index used with the Amazon Q Business data source connector.
      */
 
     public String getIndexId() {
@@ -151,11 +151,11 @@ public class StopDataSourceSyncJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index used with the Amazon Q data source connector.
+     *        The identifier of the index used with the Amazon Q Business data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,32 +27,32 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the listed web experiences.
+     * The identifier of the Amazon Q Business application linked to the listed web experiences.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The maximum number of Amazon Q Web Experiences to return.
+     * The maximum number of Amazon Q Business Web Experiences to return.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * conversations.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business conversations.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the listed web experiences.
+     * The identifier of the Amazon Q Business application linked to the listed web experiences.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the listed web experiences.
+     *        The identifier of the Amazon Q Business application linked to the listed web experiences.
      */
 
     public void setApplicationId(String applicationId) {
@@ -61,10 +61,10 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the listed web experiences.
+     * The identifier of the Amazon Q Business application linked to the listed web experiences.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application linked to the listed web experiences.
+     * @return The identifier of the Amazon Q Business application linked to the listed web experiences.
      */
 
     public String getApplicationId() {
@@ -73,11 +73,11 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the listed web experiences.
+     * The identifier of the Amazon Q Business application linked to the listed web experiences.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the listed web experiences.
+     *        The identifier of the Amazon Q Business application linked to the listed web experiences.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,11 +88,11 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of Amazon Q Web Experiences to return.
+     * The maximum number of Amazon Q Business Web Experiences to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of Amazon Q Web Experiences to return.
+     *        The maximum number of Amazon Q Business Web Experiences to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -101,10 +101,10 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of Amazon Q Web Experiences to return.
+     * The maximum number of Amazon Q Business Web Experiences to return.
      * </p>
      * 
-     * @return The maximum number of Amazon Q Web Experiences to return.
+     * @return The maximum number of Amazon Q Business Web Experiences to return.
      */
 
     public Integer getMaxResults() {
@@ -113,11 +113,11 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of Amazon Q Web Experiences to return.
+     * The maximum number of Amazon Q Business Web Experiences to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of Amazon Q Web Experiences to return.
+     *        The maximum number of Amazon Q Business Web Experiences to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,15 +128,15 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * conversations.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business conversations.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q conversations.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business conversations.
      */
 
     public void setNextToken(String nextToken) {
@@ -145,14 +145,14 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * conversations.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business conversations.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         Amazon Q conversations.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of Amazon Q Business conversations.
      */
 
     public String getNextToken() {
@@ -161,15 +161,15 @@ public class ListWebExperiencesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * conversations.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business conversations.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q conversations.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business conversations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

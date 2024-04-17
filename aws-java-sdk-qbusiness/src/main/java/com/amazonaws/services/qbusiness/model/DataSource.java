@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A data source in an Amazon Q application.
+ * A data source in an Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/DataSource" target="_top">AWS API
@@ -30,48 +30,48 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was created.
+     * The Unix timestamp when the Amazon Q Business data source was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The identifier of the Amazon Q data source.
+     * The identifier of the Amazon Q Business data source.
      * </p>
      */
     private String dataSourceId;
     /**
      * <p>
-     * The name of the Amazon Q data source.
+     * The name of the Amazon Q Business data source.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The status of the Amazon Q data source.
+     * The status of the Amazon Q Business data source.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The type of the Amazon Q data source.
+     * The type of the Amazon Q Business data source.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was last updated.
+     * The Unix timestamp when the Amazon Q Business data source was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was created.
+     * The Unix timestamp when the Amazon Q Business data source was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q data source was created.
+     *        The Unix timestamp when the Amazon Q Business data source was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -80,10 +80,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was created.
+     * The Unix timestamp when the Amazon Q Business data source was created.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q data source was created.
+     * @return The Unix timestamp when the Amazon Q Business data source was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -92,11 +92,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was created.
+     * The Unix timestamp when the Amazon Q Business data source was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q data source was created.
+     *        The Unix timestamp when the Amazon Q Business data source was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +107,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source.
+     * The identifier of the Amazon Q Business data source.
      * </p>
      * 
      * @param dataSourceId
-     *        The identifier of the Amazon Q data source.
+     *        The identifier of the Amazon Q Business data source.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -120,10 +120,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source.
+     * The identifier of the Amazon Q Business data source.
      * </p>
      * 
-     * @return The identifier of the Amazon Q data source.
+     * @return The identifier of the Amazon Q Business data source.
      */
 
     public String getDataSourceId() {
@@ -132,11 +132,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q data source.
+     * The identifier of the Amazon Q Business data source.
      * </p>
      * 
      * @param dataSourceId
-     *        The identifier of the Amazon Q data source.
+     *        The identifier of the Amazon Q Business data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +147,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Amazon Q data source.
+     * The name of the Amazon Q Business data source.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q data source.
+     *        The name of the Amazon Q Business data source.
      */
 
     public void setDisplayName(String displayName) {
@@ -160,10 +160,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Amazon Q data source.
+     * The name of the Amazon Q Business data source.
      * </p>
      * 
-     * @return The name of the Amazon Q data source.
+     * @return The name of the Amazon Q Business data source.
      */
 
     public String getDisplayName() {
@@ -172,11 +172,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the Amazon Q data source.
+     * The name of the Amazon Q Business data source.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q data source.
+     *        The name of the Amazon Q Business data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,11 +187,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q data source.
+     * The status of the Amazon Q Business data source.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q data source.
+     *        The status of the Amazon Q Business data source.
      * @see DataSourceStatus
      */
 
@@ -201,10 +201,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q data source.
+     * The status of the Amazon Q Business data source.
      * </p>
      * 
-     * @return The status of the Amazon Q data source.
+     * @return The status of the Amazon Q Business data source.
      * @see DataSourceStatus
      */
 
@@ -214,11 +214,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q data source.
+     * The status of the Amazon Q Business data source.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q data source.
+     *        The status of the Amazon Q Business data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -230,11 +230,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon Q data source.
+     * The status of the Amazon Q Business data source.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q data source.
+     *        The status of the Amazon Q Business data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceStatus
      */
@@ -246,11 +246,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the Amazon Q data source.
+     * The type of the Amazon Q Business data source.
      * </p>
      * 
      * @param type
-     *        The type of the Amazon Q data source.
+     *        The type of the Amazon Q Business data source.
      */
 
     public void setType(String type) {
@@ -259,10 +259,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the Amazon Q data source.
+     * The type of the Amazon Q Business data source.
      * </p>
      * 
-     * @return The type of the Amazon Q data source.
+     * @return The type of the Amazon Q Business data source.
      */
 
     public String getType() {
@@ -271,11 +271,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the Amazon Q data source.
+     * The type of the Amazon Q Business data source.
      * </p>
      * 
      * @param type
-     *        The type of the Amazon Q data source.
+     *        The type of the Amazon Q Business data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -286,11 +286,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was last updated.
+     * The Unix timestamp when the Amazon Q Business data source was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q data source was last updated.
+     *        The Unix timestamp when the Amazon Q Business data source was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -299,10 +299,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was last updated.
+     * The Unix timestamp when the Amazon Q Business data source was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q data source was last updated.
+     * @return The Unix timestamp when the Amazon Q Business data source was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -311,11 +311,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q data source was last updated.
+     * The Unix timestamp when the Amazon Q Business data source was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q data source was last updated.
+     *        The Unix timestamp when the Amazon Q Business data source was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform the
- * requested plugin action.
+ * Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q Business to
+ * perform the requested plugin action.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/ActionReviewPayloadFieldAllowedValue"

@@ -30,7 +30,7 @@ public class BlockedPhrasesConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A list of phrases blocked from a Amazon Q web experience chat.
+     * A list of phrases blocked from a Amazon Q Business web experience chat.
      * </p>
      */
     private java.util.List<String> blockedPhrases;
@@ -44,10 +44,10 @@ public class BlockedPhrasesConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A list of phrases blocked from a Amazon Q web experience chat.
+     * A list of phrases blocked from a Amazon Q Business web experience chat.
      * </p>
      * 
-     * @return A list of phrases blocked from a Amazon Q web experience chat.
+     * @return A list of phrases blocked from a Amazon Q Business web experience chat.
      */
 
     public java.util.List<String> getBlockedPhrases() {
@@ -56,11 +56,11 @@ public class BlockedPhrasesConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A list of phrases blocked from a Amazon Q web experience chat.
+     * A list of phrases blocked from a Amazon Q Business web experience chat.
      * </p>
      * 
      * @param blockedPhrases
-     *        A list of phrases blocked from a Amazon Q web experience chat.
+     *        A list of phrases blocked from a Amazon Q Business web experience chat.
      */
 
     public void setBlockedPhrases(java.util.Collection<String> blockedPhrases) {
@@ -74,7 +74,7 @@ public class BlockedPhrasesConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A list of phrases blocked from a Amazon Q web experience chat.
+     * A list of phrases blocked from a Amazon Q Business web experience chat.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class BlockedPhrasesConfiguration implements Serializable, Cloneable, Str
      * </p>
      * 
      * @param blockedPhrases
-     *        A list of phrases blocked from a Amazon Q web experience chat.
+     *        A list of phrases blocked from a Amazon Q Business web experience chat.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class BlockedPhrasesConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A list of phrases blocked from a Amazon Q web experience chat.
+     * A list of phrases blocked from a Amazon Q Business web experience chat.
      * </p>
      * 
      * @param blockedPhrases
-     *        A list of phrases blocked from a Amazon Q web experience chat.
+     *        A list of phrases blocked from a Amazon Q Business web experience chat.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

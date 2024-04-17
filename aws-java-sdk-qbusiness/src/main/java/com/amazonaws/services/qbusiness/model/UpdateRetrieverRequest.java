@@ -27,7 +27,7 @@ public class UpdateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      */
     private String applicationId;
@@ -54,11 +54,11 @@ public class UpdateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of your Amazon Q application.
+     *        The identifier of your Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -67,10 +67,10 @@ public class UpdateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of your Amazon Q application.
+     * @return The identifier of your Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -79,11 +79,11 @@ public class UpdateRetrieverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of your Amazon Q application.
+     * The identifier of your Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of your Amazon Q application.
+     *        The identifier of your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

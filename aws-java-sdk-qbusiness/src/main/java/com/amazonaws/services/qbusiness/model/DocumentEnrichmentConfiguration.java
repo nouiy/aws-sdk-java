@@ -37,7 +37,7 @@ public class DocumentEnrichmentConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * Configuration information to alter document attributes or metadata fields and content when ingesting documents
-     * into Amazon Q.
+     * into Amazon Q Business.
      * </p>
      */
     private java.util.List<InlineDocumentEnrichmentConfiguration> inlineConfigurations;
@@ -49,11 +49,11 @@ public class DocumentEnrichmentConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * Configuration information to alter document attributes or metadata fields and content when ingesting documents
-     * into Amazon Q.
+     * into Amazon Q Business.
      * </p>
      * 
      * @return Configuration information to alter document attributes or metadata fields and content when ingesting
-     *         documents into Amazon Q.
+     *         documents into Amazon Q Business.
      */
 
     public java.util.List<InlineDocumentEnrichmentConfiguration> getInlineConfigurations() {
@@ -63,12 +63,12 @@ public class DocumentEnrichmentConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * Configuration information to alter document attributes or metadata fields and content when ingesting documents
-     * into Amazon Q.
+     * into Amazon Q Business.
      * </p>
      * 
      * @param inlineConfigurations
      *        Configuration information to alter document attributes or metadata fields and content when ingesting
-     *        documents into Amazon Q.
+     *        documents into Amazon Q Business.
      */
 
     public void setInlineConfigurations(java.util.Collection<InlineDocumentEnrichmentConfiguration> inlineConfigurations) {
@@ -83,7 +83,7 @@ public class DocumentEnrichmentConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * Configuration information to alter document attributes or metadata fields and content when ingesting documents
-     * into Amazon Q.
+     * into Amazon Q Business.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -93,7 +93,7 @@ public class DocumentEnrichmentConfiguration implements Serializable, Cloneable,
      * 
      * @param inlineConfigurations
      *        Configuration information to alter document attributes or metadata fields and content when ingesting
-     *        documents into Amazon Q.
+     *        documents into Amazon Q Business.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,12 +110,12 @@ public class DocumentEnrichmentConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * Configuration information to alter document attributes or metadata fields and content when ingesting documents
-     * into Amazon Q.
+     * into Amazon Q Business.
      * </p>
      * 
      * @param inlineConfigurations
      *        Configuration information to alter document attributes or metadata fields and content when ingesting
-     *        documents into Amazon Q.
+     *        documents into Amazon Q Business.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

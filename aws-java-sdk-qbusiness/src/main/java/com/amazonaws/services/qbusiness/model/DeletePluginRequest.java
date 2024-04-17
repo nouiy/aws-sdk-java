@@ -27,7 +27,7 @@ public class DeletePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier the application attached to the Amazon Q plugin.
+     * The identifier the application attached to the Amazon Q Business plugin.
      * </p>
      */
     private String applicationId;
@@ -40,11 +40,11 @@ public class DeletePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier the application attached to the Amazon Q plugin.
+     * The identifier the application attached to the Amazon Q Business plugin.
      * </p>
      * 
      * @param applicationId
-     *        The identifier the application attached to the Amazon Q plugin.
+     *        The identifier the application attached to the Amazon Q Business plugin.
      */
 
     public void setApplicationId(String applicationId) {
@@ -53,10 +53,10 @@ public class DeletePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier the application attached to the Amazon Q plugin.
+     * The identifier the application attached to the Amazon Q Business plugin.
      * </p>
      * 
-     * @return The identifier the application attached to the Amazon Q plugin.
+     * @return The identifier the application attached to the Amazon Q Business plugin.
      */
 
     public String getApplicationId() {
@@ -65,11 +65,11 @@ public class DeletePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier the application attached to the Amazon Q plugin.
+     * The identifier the application attached to the Amazon Q Business plugin.
      * </p>
      * 
      * @param applicationId
-     *        The identifier the application attached to the Amazon Q plugin.
+     *        The identifier the application attached to the Amazon Q Business plugin.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

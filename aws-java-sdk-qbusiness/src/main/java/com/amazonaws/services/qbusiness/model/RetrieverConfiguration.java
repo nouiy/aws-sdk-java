@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information on how the retriever used for your Amazon Q application is configured.
+ * Provides information on how the retriever used for your Amazon Q Business application is configured.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/RetrieverConfiguration" target="_top">AWS
@@ -30,27 +30,28 @@ public class RetrieverConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
+     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business application is
      * configured.
      * </p>
      */
     private KendraIndexConfiguration kendraIndexConfiguration;
     /**
      * <p>
-     * Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is configured.
+     * Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business application
+     * is configured.
      * </p>
      */
     private NativeIndexConfiguration nativeIndexConfiguration;
 
     /**
      * <p>
-     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
+     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business application is
      * configured.
      * </p>
      * 
      * @param kendraIndexConfiguration
-     *        Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
-     *        configured.
+     *        Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business
+     *        application is configured.
      */
 
     public void setKendraIndexConfiguration(KendraIndexConfiguration kendraIndexConfiguration) {
@@ -59,12 +60,12 @@ public class RetrieverConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
+     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business application is
      * configured.
      * </p>
      * 
-     * @return Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
-     *         configured.
+     * @return Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business
+     *         application is configured.
      */
 
     public KendraIndexConfiguration getKendraIndexConfiguration() {
@@ -73,13 +74,13 @@ public class RetrieverConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
+     * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business application is
      * configured.
      * </p>
      * 
      * @param kendraIndexConfiguration
-     *        Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q application is
-     *        configured.
+     *        Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q Business
+     *        application is configured.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,12 +91,13 @@ public class RetrieverConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is configured.
+     * Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business application
+     * is configured.
      * </p>
      * 
      * @param nativeIndexConfiguration
-     *        Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is
-     *        configured.
+     *        Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business
+     *        application is configured.
      */
 
     public void setNativeIndexConfiguration(NativeIndexConfiguration nativeIndexConfiguration) {
@@ -104,11 +106,12 @@ public class RetrieverConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is configured.
+     * Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business application
+     * is configured.
      * </p>
      * 
-     * @return Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is
-     *         configured.
+     * @return Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business
+     *         application is configured.
      */
 
     public NativeIndexConfiguration getNativeIndexConfiguration() {
@@ -117,12 +120,13 @@ public class RetrieverConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is configured.
+     * Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business application
+     * is configured.
      * </p>
      * 
      * @param nativeIndexConfiguration
-     *        Provides information on how a Amazon Q index used as a retriever for your Amazon Q application is
-     *        configured.
+     *        Provides information on how a Amazon Q Business index used as a retriever for your Amazon Q Business
+     *        application is configured.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

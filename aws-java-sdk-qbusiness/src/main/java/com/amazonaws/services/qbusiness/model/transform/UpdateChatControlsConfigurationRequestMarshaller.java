@@ -37,6 +37,8 @@ public class UpdateChatControlsConfigurationRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> CREATORMODECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creatorModeConfiguration").build();
     private static final MarshallingInfo<String> RESPONSESCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("responseScope").build();
     private static final MarshallingInfo<List> TOPICCONFIGURATIONSTOCREATEORUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -64,6 +66,7 @@ public class UpdateChatControlsConfigurationRequestMarshaller {
             protocolMarshaller.marshall(updateChatControlsConfigurationRequest.getBlockedPhrasesConfigurationUpdate(),
                     BLOCKEDPHRASESCONFIGURATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateChatControlsConfigurationRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(updateChatControlsConfigurationRequest.getCreatorModeConfiguration(), CREATORMODECONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateChatControlsConfigurationRequest.getResponseScope(), RESPONSESCOPE_BINDING);
             protocolMarshaller.marshall(updateChatControlsConfigurationRequest.getTopicConfigurationsToCreateOrUpdate(),
                     TOPICCONFIGURATIONSTOCREATEORUPDATE_BINDING);

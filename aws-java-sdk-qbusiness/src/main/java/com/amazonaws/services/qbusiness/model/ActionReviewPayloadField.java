@@ -30,8 +30,8 @@ public class ActionReviewPayloadField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform the
-     * requested plugin action.
+     * Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q Business
+     * to perform the requested plugin action.
      * </p>
      */
     private java.util.List<ActionReviewPayloadFieldAllowedValue> allowedValues;
@@ -62,12 +62,12 @@ public class ActionReviewPayloadField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform the
-     * requested plugin action.
+     * Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q Business
+     * to perform the requested plugin action.
      * </p>
      * 
-     * @return Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to
-     *         perform the requested plugin action.
+     * @return Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q
+     *         Business to perform the requested plugin action.
      */
 
     public java.util.List<ActionReviewPayloadFieldAllowedValue> getAllowedValues() {
@@ -76,13 +76,13 @@ public class ActionReviewPayloadField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform the
-     * requested plugin action.
+     * Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q Business
+     * to perform the requested plugin action.
      * </p>
      * 
      * @param allowedValues
-     *        Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform
-     *        the requested plugin action.
+     *        Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q
+     *        Business to perform the requested plugin action.
      */
 
     public void setAllowedValues(java.util.Collection<ActionReviewPayloadFieldAllowedValue> allowedValues) {
@@ -96,8 +96,8 @@ public class ActionReviewPayloadField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform the
-     * requested plugin action.
+     * Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q Business
+     * to perform the requested plugin action.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -106,8 +106,8 @@ public class ActionReviewPayloadField implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param allowedValues
-     *        Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform
-     *        the requested plugin action.
+     *        Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q
+     *        Business to perform the requested plugin action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,13 +123,13 @@ public class ActionReviewPayloadField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform the
-     * requested plugin action.
+     * Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q Business
+     * to perform the requested plugin action.
      * </p>
      * 
      * @param allowedValues
-     *        Information about the field values that an end user can use to provide to Amazon Q for Amazon Q to perform
-     *        the requested plugin action.
+     *        Information about the field values that an end user can use to provide to Amazon Q Business for Amazon Q
+     *        Business to perform the requested plugin action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

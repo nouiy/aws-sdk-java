@@ -39,10 +39,16 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
     private BlockedPhrasesConfigurationUpdate blockedPhrasesConfigurationUpdate;
     /**
      * <p>
-     * A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     * A token that you provide to identify the request to update a Amazon Q Business application chat configuration.
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     */
+    private CreatorModeConfiguration creatorModeConfiguration;
     /**
      * <p>
      * The response scope configured for your application. This determines whether your application uses its retrieval
@@ -146,11 +152,12 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     * A token that you provide to identify the request to update a Amazon Q Business application chat configuration.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     *        A token that you provide to identify the request to update a Amazon Q Business application chat
+     *        configuration.
      */
 
     public void setClientToken(String clientToken) {
@@ -159,10 +166,11 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     * A token that you provide to identify the request to update a Amazon Q Business application chat configuration.
      * </p>
      * 
-     * @return A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     * @return A token that you provide to identify the request to update a Amazon Q Business application chat
+     *         configuration.
      */
 
     public String getClientToken() {
@@ -171,16 +179,57 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     * A token that you provide to identify the request to update a Amazon Q Business application chat configuration.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to update a Amazon Q application chat configuration.
+     *        A token that you provide to identify the request to update a Amazon Q Business application chat
+     *        configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateChatControlsConfigurationRequest withClientToken(String clientToken) {
         setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     * 
+     * @param creatorModeConfiguration
+     *        The configuration details for <code>CREATOR_MODE</code>.
+     */
+
+    public void setCreatorModeConfiguration(CreatorModeConfiguration creatorModeConfiguration) {
+        this.creatorModeConfiguration = creatorModeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     * 
+     * @return The configuration details for <code>CREATOR_MODE</code>.
+     */
+
+    public CreatorModeConfiguration getCreatorModeConfiguration() {
+        return this.creatorModeConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration details for <code>CREATOR_MODE</code>.
+     * </p>
+     * 
+     * @param creatorModeConfiguration
+     *        The configuration details for <code>CREATOR_MODE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChatControlsConfigurationRequest withCreatorModeConfiguration(CreatorModeConfiguration creatorModeConfiguration) {
+        setCreatorModeConfiguration(creatorModeConfiguration);
         return this;
     }
 
@@ -419,6 +468,8 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
             sb.append("BlockedPhrasesConfigurationUpdate: ").append(getBlockedPhrasesConfigurationUpdate()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getCreatorModeConfiguration() != null)
+            sb.append("CreatorModeConfiguration: ").append(getCreatorModeConfiguration()).append(",");
         if (getResponseScope() != null)
             sb.append("ResponseScope: ").append(getResponseScope()).append(",");
         if (getTopicConfigurationsToCreateOrUpdate() != null)
@@ -452,6 +503,10 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getCreatorModeConfiguration() == null ^ this.getCreatorModeConfiguration() == null)
+            return false;
+        if (other.getCreatorModeConfiguration() != null && other.getCreatorModeConfiguration().equals(this.getCreatorModeConfiguration()) == false)
+            return false;
         if (other.getResponseScope() == null ^ this.getResponseScope() == null)
             return false;
         if (other.getResponseScope() != null && other.getResponseScope().equals(this.getResponseScope()) == false)
@@ -476,6 +531,7 @@ public class UpdateChatControlsConfigurationRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
         hashCode = prime * hashCode + ((getBlockedPhrasesConfigurationUpdate() == null) ? 0 : getBlockedPhrasesConfigurationUpdate().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getCreatorModeConfiguration() == null) ? 0 : getCreatorModeConfiguration().hashCode());
         hashCode = prime * hashCode + ((getResponseScope() == null) ? 0 : getResponseScope().hashCode());
         hashCode = prime * hashCode + ((getTopicConfigurationsToCreateOrUpdate() == null) ? 0 : getTopicConfigurationsToCreateOrUpdate().hashCode());
         hashCode = prime * hashCode + ((getTopicConfigurationsToDelete() == null) ? 0 : getTopicConfigurationsToDelete().hashCode());

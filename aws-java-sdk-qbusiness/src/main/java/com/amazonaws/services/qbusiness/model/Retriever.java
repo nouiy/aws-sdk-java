@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information for the retriever used for your Amazon Q application.
+ * Summary information for the retriever used for your Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/Retriever" target="_top">AWS API
@@ -30,7 +30,7 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      */
     private String applicationId;
@@ -42,7 +42,7 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
     private String displayName;
     /**
      * <p>
-     * The identifier of the retriever used by your Amazon Q application.
+     * The identifier of the retriever used by your Amazon Q Business application.
      * </p>
      */
     private String retrieverId;
@@ -61,11 +61,11 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the retriever.
+     *        The identifier of the Amazon Q Business application using the retriever.
      */
 
     public void setApplicationId(String applicationId) {
@@ -74,10 +74,10 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application using the retriever.
+     * @return The identifier of the Amazon Q Business application using the retriever.
      */
 
     public String getApplicationId() {
@@ -86,11 +86,11 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the retriever.
+     *        The identifier of the Amazon Q Business application using the retriever.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the retriever used by your Amazon Q application.
+     * The identifier of the retriever used by your Amazon Q Business application.
      * </p>
      * 
      * @param retrieverId
-     *        The identifier of the retriever used by your Amazon Q application.
+     *        The identifier of the retriever used by your Amazon Q Business application.
      */
 
     public void setRetrieverId(String retrieverId) {
@@ -154,10 +154,10 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the retriever used by your Amazon Q application.
+     * The identifier of the retriever used by your Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the retriever used by your Amazon Q application.
+     * @return The identifier of the retriever used by your Amazon Q Business application.
      */
 
     public String getRetrieverId() {
@@ -166,11 +166,11 @@ public class Retriever implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the retriever used by your Amazon Q application.
+     * The identifier of the retriever used by your Amazon Q Business application.
      * </p>
      * 
      * @param retrieverId
-     *        The identifier of the retriever used by your Amazon Q application.
+     *        The identifier of the retriever used by your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

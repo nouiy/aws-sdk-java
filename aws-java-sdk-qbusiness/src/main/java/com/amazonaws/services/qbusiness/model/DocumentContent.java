@@ -32,8 +32,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded. Your
      * code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Q
-     * APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode the contents before
-     * sending.
+     * Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you must base64 encode the
+     * contents before sending.
      * </p>
      */
     private java.nio.ByteBuffer blob;
@@ -48,8 +48,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded. Your
      * code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Q
-     * APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode the contents before
-     * sending.
+     * Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you must base64 encode the
+     * contents before sending.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -65,8 +65,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * @param blob
      *        The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded.
      *        Your code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to
-     *        call Amazon Q APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode
-     *        the contents before sending.
+     *        call Amazon Q Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you
+     *        must base64 encode the contents before sending.
      */
 
     public void setBlob(java.nio.ByteBuffer blob) {
@@ -77,8 +77,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded. Your
      * code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Q
-     * APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode the contents before
-     * sending.
+     * Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you must base64 encode the
+     * contents before sending.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -90,8 +90,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * 
      * @return The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded.
      *         Your code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to
-     *         call Amazon Q APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode
-     *         the contents before sending.
+     *         call Amazon Q Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you
+     *         must base64 encode the contents before sending.
      */
 
     public java.nio.ByteBuffer getBlob() {
@@ -102,8 +102,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded. Your
      * code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Q
-     * APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode the contents before
-     * sending.
+     * Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you must base64 encode the
+     * contents before sending.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -119,8 +119,8 @@ public class DocumentContent implements Serializable, Cloneable, StructuredPojo 
      * @param blob
      *        The contents of the document. Documents passed to the <code>blob</code> parameter must be base64 encoded.
      *        Your code might not need to encode the document file bytes if you're using an Amazon Web Services SDK to
-     *        call Amazon Q APIs. If you are calling the Amazon Q endpoint directly using REST, you must base64 encode
-     *        the contents before sending.
+     *        call Amazon Q Business APIs. If you are calling the Amazon Q Business endpoint directly using REST, you
+     *        must base64 encode the contents before sending.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

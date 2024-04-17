@@ -31,7 +31,8 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data source.
+     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application or data
+     * source.
      * </p>
      */
     private String key;
@@ -44,12 +45,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data source.
+     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application or data
+     * source.
      * </p>
      * 
      * @param key
-     *        The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data
-     *        source.
+     *        The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application
+     *        or data source.
      */
 
     public void setKey(String key) {
@@ -58,11 +60,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data source.
+     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application or data
+     * source.
      * </p>
      * 
-     * @return The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data
-     *         source.
+     * @return The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application
+     *         or data source.
      */
 
     public String getKey() {
@@ -71,12 +74,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data source.
+     * The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application or data
+     * source.
      * </p>
      * 
      * @param key
-     *        The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q application or data
-     *        source.
+     *        The key for the tag. Keys are not case sensitive and must be unique for the Amazon Q Business application
+     *        or data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,13 +25,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The authentication configuration information for your Amazon Q web experience.
+     * The authentication configuration information for your Amazon Q Business web experience.
      * </p>
      */
     private WebExperienceAuthConfiguration authenticationConfiguration;
@@ -43,7 +43,7 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.Date createdAt;
     /**
      * <p>
-     * The endpoint of your Amazon Q web experience.
+     * The endpoint of your Amazon Q Business web experience.
      * </p>
      */
     private String defaultEndpoint;
@@ -56,13 +56,19 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
     private ErrorDetail error;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
      * Determines whether sample prompts are enabled in the web experience for an end user.
      * </p>
      */
     private String samplePromptsControlMode;
     /**
      * <p>
-     * The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     * The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      * <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused the data
      * source connector to fail.
      * </p>
@@ -70,13 +76,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
     private String status;
     /**
      * <p>
-     * The subtitle for your Amazon Q web experience.
+     * The subtitle for your Amazon Q Business web experience.
      * </p>
      */
     private String subtitle;
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      */
     private String title;
@@ -88,31 +94,31 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.Date updatedAt;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and required
-     * resources.
+     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web experience and
+     * required resources.
      * </p>
      */
     private String webExperienceArn;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      */
     private String webExperienceId;
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      */
     private String welcomeMessage;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the web experience.
+     *        The identifier of the Amazon Q Business application linked to the web experience.
      */
 
     public void setApplicationId(String applicationId) {
@@ -121,10 +127,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application linked to the web experience.
+     * @return The identifier of the Amazon Q Business application linked to the web experience.
      */
 
     public String getApplicationId() {
@@ -133,11 +139,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the web experience.
+     * The identifier of the Amazon Q Business application linked to the web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the web experience.
+     *        The identifier of the Amazon Q Business application linked to the web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,11 +154,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The authentication configuration information for your Amazon Q web experience.
+     * The authentication configuration information for your Amazon Q Business web experience.
      * </p>
      * 
      * @param authenticationConfiguration
-     *        The authentication configuration information for your Amazon Q web experience.
+     *        The authentication configuration information for your Amazon Q Business web experience.
      */
 
     public void setAuthenticationConfiguration(WebExperienceAuthConfiguration authenticationConfiguration) {
@@ -161,10 +167,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The authentication configuration information for your Amazon Q web experience.
+     * The authentication configuration information for your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The authentication configuration information for your Amazon Q web experience.
+     * @return The authentication configuration information for your Amazon Q Business web experience.
      */
 
     public WebExperienceAuthConfiguration getAuthenticationConfiguration() {
@@ -173,11 +179,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The authentication configuration information for your Amazon Q web experience.
+     * The authentication configuration information for your Amazon Q Business web experience.
      * </p>
      * 
      * @param authenticationConfiguration
-     *        The authentication configuration information for your Amazon Q web experience.
+     *        The authentication configuration information for your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,11 +234,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The endpoint of your Amazon Q web experience.
+     * The endpoint of your Amazon Q Business web experience.
      * </p>
      * 
      * @param defaultEndpoint
-     *        The endpoint of your Amazon Q web experience.
+     *        The endpoint of your Amazon Q Business web experience.
      */
 
     public void setDefaultEndpoint(String defaultEndpoint) {
@@ -241,10 +247,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The endpoint of your Amazon Q web experience.
+     * The endpoint of your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The endpoint of your Amazon Q web experience.
+     * @return The endpoint of your Amazon Q Business web experience.
      */
 
     public String getDefaultEndpoint() {
@@ -253,11 +259,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The endpoint of your Amazon Q web experience.
+     * The endpoint of your Amazon Q Business web experience.
      * </p>
      * 
      * @param defaultEndpoint
-     *        The endpoint of your Amazon Q web experience.
+     *        The endpoint of your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -309,6 +315,46 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     public GetWebExperienceResult withError(ErrorDetail error) {
         setError(error);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetWebExperienceResult withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
         return this;
     }
 
@@ -373,13 +419,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     * The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      * <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused the data
      * source connector to fail.
      * </p>
      * 
      * @param status
-     *        The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     *        The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      *        <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused
      *        the data source connector to fail.
      * @see WebExperienceStatus
@@ -391,12 +437,12 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     * The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      * <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused the data
      * source connector to fail.
      * </p>
      * 
-     * @return The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     * @return The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      *         <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused
      *         the data source connector to fail.
      * @see WebExperienceStatus
@@ -408,13 +454,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     * The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      * <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused the data
      * source connector to fail.
      * </p>
      * 
      * @param status
-     *        The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     *        The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      *        <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused
      *        the data source connector to fail.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -428,13 +474,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     * The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      * <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused the data
      * source connector to fail.
      * </p>
      * 
      * @param status
-     *        The current status of the Amazon Q web experience. When the <code>Status</code> field value is
+     *        The current status of the Amazon Q Business web experience. When the <code>Status</code> field value is
      *        <code>FAILED</code>, the <code>ErrorMessage</code> field contains a description of the error that caused
      *        the data source connector to fail.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -448,11 +494,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The subtitle for your Amazon Q web experience.
+     * The subtitle for your Amazon Q Business web experience.
      * </p>
      * 
      * @param subtitle
-     *        The subtitle for your Amazon Q web experience.
+     *        The subtitle for your Amazon Q Business web experience.
      */
 
     public void setSubtitle(String subtitle) {
@@ -461,10 +507,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The subtitle for your Amazon Q web experience.
+     * The subtitle for your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The subtitle for your Amazon Q web experience.
+     * @return The subtitle for your Amazon Q Business web experience.
      */
 
     public String getSubtitle() {
@@ -473,11 +519,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The subtitle for your Amazon Q web experience.
+     * The subtitle for your Amazon Q Business web experience.
      * </p>
      * 
      * @param subtitle
-     *        The subtitle for your Amazon Q web experience.
+     *        The subtitle for your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -488,11 +534,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      * 
      * @param title
-     *        The title for your Amazon Q web experience.
+     *        The title for your Amazon Q Business web experience.
      */
 
     public void setTitle(String title) {
@@ -501,10 +547,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The title for your Amazon Q web experience.
+     * @return The title for your Amazon Q Business web experience.
      */
 
     public String getTitle() {
@@ -513,11 +559,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      * 
      * @param title
-     *        The title for your Amazon Q web experience.
+     *        The title for your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -568,13 +614,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and required
-     * resources.
+     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web experience and
+     * required resources.
      * </p>
      * 
      * @param webExperienceArn
-     *        The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and
-     *        required resources.
+     *        The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web
+     *        experience and required resources.
      */
 
     public void setWebExperienceArn(String webExperienceArn) {
@@ -583,12 +629,12 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and required
-     * resources.
+     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web experience and
+     * required resources.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and
-     *         required resources.
+     * @return The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web
+     *         experience and required resources.
      */
 
     public String getWebExperienceArn() {
@@ -597,13 +643,13 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and required
-     * resources.
+     * The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web experience and
+     * required resources.
      * </p>
      * 
      * @param webExperienceArn
-     *        The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q web experience and
-     *        required resources.
+     *        The Amazon Resource Name (ARN) of the role with the permission to access the Amazon Q Business web
+     *        experience and required resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -614,11 +660,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      */
 
     public void setWebExperienceId(String webExperienceId) {
@@ -627,10 +673,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience.
+     * @return The identifier of the Amazon Q Business web experience.
      */
 
     public String getWebExperienceId() {
@@ -639,11 +685,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -654,11 +700,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      * 
      * @param welcomeMessage
-     *        The customized welcome message for end users of an Amazon Q web experience.
+     *        The customized welcome message for end users of an Amazon Q Business web experience.
      */
 
     public void setWelcomeMessage(String welcomeMessage) {
@@ -667,10 +713,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      * 
-     * @return The customized welcome message for end users of an Amazon Q web experience.
+     * @return The customized welcome message for end users of an Amazon Q Business web experience.
      */
 
     public String getWelcomeMessage() {
@@ -679,11 +725,11 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      * 
      * @param welcomeMessage
-     *        The customized welcome message for end users of an Amazon Q web experience.
+     *        The customized welcome message for end users of an Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -714,6 +760,8 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
             sb.append("DefaultEndpoint: ").append(getDefaultEndpoint()).append(",");
         if (getError() != null)
             sb.append("Error: ").append(getError()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getSamplePromptsControlMode() != null)
             sb.append("SamplePromptsControlMode: ").append(getSamplePromptsControlMode()).append(",");
         if (getStatus() != null)
@@ -764,6 +812,10 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getError() != null && other.getError().equals(this.getError()) == false)
             return false;
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
+            return false;
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
         if (other.getSamplePromptsControlMode() == null ^ this.getSamplePromptsControlMode() == null)
             return false;
         if (other.getSamplePromptsControlMode() != null && other.getSamplePromptsControlMode().equals(this.getSamplePromptsControlMode()) == false)
@@ -809,6 +861,7 @@ public class GetWebExperienceResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDefaultEndpoint() == null) ? 0 : getDefaultEndpoint().hashCode());
         hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSamplePromptsControlMode() == null) ? 0 : getSamplePromptsControlMode().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getSubtitle() == null) ? 0 : getSubtitle().hashCode());

@@ -25,24 +25,24 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q web experiences.
+     * An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * </p>
      */
     private java.util.List<Conversation> conversations;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q web experiences.
+     * An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * </p>
      * 
-     * @return An array of summary information on the configuration of one or more Amazon Q web experiences.
+     * @return An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      */
 
     public java.util.List<Conversation> getConversations() {
@@ -51,11 +51,11 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q web experiences.
+     * An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * </p>
      * 
      * @param conversations
-     *        An array of summary information on the configuration of one or more Amazon Q web experiences.
+     *        An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      */
 
     public void setConversations(java.util.Collection<Conversation> conversations) {
@@ -69,7 +69,7 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q web experiences.
+     * An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param conversations
-     *        An array of summary information on the configuration of one or more Amazon Q web experiences.
+     *        An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * An array of summary information on the configuration of one or more Amazon Q web experiences.
+     * An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * </p>
      * 
      * @param conversations
-     *        An array of summary information on the configuration of one or more Amazon Q web experiences.
+     *        An array of summary information on the configuration of one or more Amazon Q Business web experiences.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,13 +109,13 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of messages.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of messages.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *         the next set of messages.
+     * @return If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *         to list the next set of messages.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListConversationsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of messages.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of messages.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

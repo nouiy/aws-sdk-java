@@ -33,6 +33,10 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * <p>
      * The security groups.
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<GroupIdentifier> securityGroups;
     /**
@@ -98,14 +102,13 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
     private SpotFleetMonitoring monitoring;
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security
-     * group IDs using the network interface.
+     * The network interfaces.
      * </p>
      * <note>
      * <p>
-     * <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To specify an
-     * EFA, you must use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
-     * LaunchTemplateConfig</a>.
+     * <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
+     * >LaunchTemplateConfig</a> instead.
      * </p>
      * </note>
      */
@@ -142,6 +145,10 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * <p>
      * The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using commas;
      * for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+     * </p>
+     * <p>
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
      * </p>
      */
     private String subnetId;
@@ -185,8 +192,15 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * <p>
      * The security groups.
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
+     * </p>
      * 
-     * @return The security groups.
+     * @return The security groups.</p>
+     *         <p>
+     *         If you specify a network interface, you must specify any security groups as part of the network interface
+     *         instead of using this parameter.
      */
 
     public java.util.List<GroupIdentifier> getSecurityGroups() {
@@ -200,9 +214,16 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * <p>
      * The security groups.
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
+     * </p>
      * 
      * @param securityGroups
-     *        The security groups.
+     *        The security groups.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      */
 
     public void setSecurityGroups(java.util.Collection<GroupIdentifier> securityGroups) {
@@ -219,13 +240,20 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * The security groups.
      * </p>
      * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSecurityGroups(java.util.Collection)} or {@link #withSecurityGroups(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param securityGroups
-     *        The security groups.
+     *        The security groups.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,9 +271,16 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * <p>
      * The security groups.
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any security groups as part of the network interface instead
+     * of using this parameter.
+     * </p>
      * 
      * @param securityGroups
-     *        The security groups.
+     *        The security groups.</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any security groups as part of the network interface
+     *        instead of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -751,24 +786,21 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security
-     * group IDs using the network interface.
+     * The network interfaces.
      * </p>
      * <note>
      * <p>
-     * <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To specify an
-     * EFA, you must use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
-     * LaunchTemplateConfig</a>.
+     * <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
+     * >LaunchTemplateConfig</a> instead.
      * </p>
      * </note>
      * 
-     * @return One or more network interfaces. If you specify a network interface, you must specify subnet IDs and
-     *         security group IDs using the network interface.</p> <note>
+     * @return The network interfaces.</p> <note>
      *         <p>
-     *         <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To
-     *         specify an EFA, you must use <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
-     *         >LaunchTemplateConfig</a>.
+     *         <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
+     *         LaunchTemplateConfig</a> instead.
      *         </p>
      */
 
@@ -781,25 +813,22 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security
-     * group IDs using the network interface.
+     * The network interfaces.
      * </p>
      * <note>
      * <p>
-     * <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To specify an
-     * EFA, you must use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
-     * LaunchTemplateConfig</a>.
+     * <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
+     * >LaunchTemplateConfig</a> instead.
      * </p>
      * </note>
      * 
      * @param networkInterfaces
-     *        One or more network interfaces. If you specify a network interface, you must specify subnet IDs and
-     *        security group IDs using the network interface.</p> <note>
+     *        The network interfaces.</p> <note>
      *        <p>
-     *        <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To
-     *        specify an EFA, you must use <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
-     *        >LaunchTemplateConfig</a>.
+     *        <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
+     *        LaunchTemplateConfig</a> instead.
      *        </p>
      */
 
@@ -814,14 +843,13 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security
-     * group IDs using the network interface.
+     * The network interfaces.
      * </p>
      * <note>
      * <p>
-     * <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To specify an
-     * EFA, you must use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
-     * LaunchTemplateConfig</a>.
+     * <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
+     * >LaunchTemplateConfig</a> instead.
      * </p>
      * </note>
      * <p>
@@ -831,13 +859,11 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * </p>
      * 
      * @param networkInterfaces
-     *        One or more network interfaces. If you specify a network interface, you must specify subnet IDs and
-     *        security group IDs using the network interface.</p> <note>
+     *        The network interfaces.</p> <note>
      *        <p>
-     *        <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To
-     *        specify an EFA, you must use <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
-     *        >LaunchTemplateConfig</a>.
+     *        <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
+     *        LaunchTemplateConfig</a> instead.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -854,25 +880,22 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security
-     * group IDs using the network interface.
+     * The network interfaces.
      * </p>
      * <note>
      * <p>
-     * <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To specify an
-     * EFA, you must use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
-     * LaunchTemplateConfig</a>.
+     * <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
+     * >LaunchTemplateConfig</a> instead.
      * </p>
      * </note>
      * 
      * @param networkInterfaces
-     *        One or more network interfaces. If you specify a network interface, you must specify subnet IDs and
-     *        security group IDs using the network interface.</p> <note>
+     *        The network interfaces.</p> <note>
      *        <p>
-     *        <code>SpotFleetLaunchSpecification</code> currently does not support Elastic Fabric Adapter (EFA). To
-     *        specify an EFA, you must use <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html"
-     *        >LaunchTemplateConfig</a>.
+     *        <code>SpotFleetLaunchSpecification</code> does not support Elastic Fabric Adapter (EFA). You must use <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html">
+     *        LaunchTemplateConfig</a> instead.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1061,10 +1084,17 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using commas;
      * for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
+     * </p>
      * 
      * @param subnetId
      *        The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using
-     *        commas; for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+     *        commas; for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any subnets as part of the network interface instead
+     *        of using this parameter.
      */
 
     public void setSubnetId(String subnetId) {
@@ -1076,9 +1106,16 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using commas;
      * for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
+     * </p>
      * 
      * @return The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using
-     *         commas; for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+     *         commas; for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".</p>
+     *         <p>
+     *         If you specify a network interface, you must specify any subnets as part of the network interface instead
+     *         of using this parameter.
      */
 
     public String getSubnetId() {
@@ -1090,10 +1127,17 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using commas;
      * for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
      * </p>
+     * <p>
+     * If you specify a network interface, you must specify any subnets as part of the network interface instead of
+     * using this parameter.
+     * </p>
      * 
      * @param subnetId
      *        The IDs of the subnets in which to launch the instances. To specify multiple subnets, separate them using
-     *        commas; for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+     *        commas; for example, "subnet-1234abcdeexample1, subnet-0987cdef6example2".</p>
+     *        <p>
+     *        If you specify a network interface, you must specify any subnets as part of the network interface instead
+     *        of using this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

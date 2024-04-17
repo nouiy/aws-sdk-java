@@ -30,8 +30,8 @@ public class DataSourceVpcConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q to
-     * connect to the data source.
+     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q
+     * Business to connect to the data source.
      * </p>
      */
     private java.util.List<String> securityGroupIds;
@@ -45,12 +45,12 @@ public class DataSourceVpcConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q to
-     * connect to the data source.
+     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q
+     * Business to connect to the data source.
      * </p>
      * 
      * @return A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon
-     *         Q to connect to the data source.
+     *         Q Business to connect to the data source.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -59,13 +59,13 @@ public class DataSourceVpcConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q to
-     * connect to the data source.
+     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q
+     * Business to connect to the data source.
      * </p>
      * 
      * @param securityGroupIds
      *        A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon
-     *        Q to connect to the data source.
+     *        Q Business to connect to the data source.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -79,8 +79,8 @@ public class DataSourceVpcConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q to
-     * connect to the data source.
+     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q
+     * Business to connect to the data source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -90,7 +90,7 @@ public class DataSourceVpcConfiguration implements Serializable, Cloneable, Stru
      * 
      * @param securityGroupIds
      *        A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon
-     *        Q to connect to the data source.
+     *        Q Business to connect to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,13 +106,13 @@ public class DataSourceVpcConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q to
-     * connect to the data source.
+     * A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon Q
+     * Business to connect to the data source.
      * </p>
      * 
      * @param securityGroupIds
      *        A list of identifiers of security groups within your Amazon VPC. The security groups should enable Amazon
-     *        Q to connect to the data source.
+     *        Q Business to connect to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

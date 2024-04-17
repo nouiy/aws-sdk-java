@@ -3501,6 +3501,16 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * the Spot Fleet request enters the <code>cancelled_running</code> state and the instances continue to run until
      * they are interrupted or you terminate them manually.
      * </p>
+     * <p class="title">
+     * <b>Restrictions</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can delete up to 100 fleets in a single request. If you exceed the specified number, no fleets are deleted.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param cancelSpotFleetRequestsRequest
      *        Contains the parameters for CancelSpotFleetRequests.
@@ -9809,7 +9819,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * them manually.
      * </p>
      * <p>
-     * For <code>instant</code> fleets, EC2 Fleet must terminate the instances when the fleet is deleted. A deleted
+     * For <code>instant</code> fleets, EC2 Fleet must terminate the instances when the fleet is deleted. Up to 1000
+     * instances can be terminated in a single request to delete <code>instant</code> fleets. A deleted
      * <code>instant</code> fleet with running instances is not supported.
      * </p>
      * <p class="title">
@@ -9818,14 +9829,23 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <ul>
      * <li>
      * <p>
-     * You can delete up to 25 <code>instant</code> fleets in a single request. If you exceed this number, no
-     * <code>instant</code> fleets are deleted and an error is returned. There is no restriction on the number of fleets
-     * of type <code>maintain</code> or <code>request</code> that can be deleted in a single request.
+     * You can delete up to 25 fleets of type <code>instant</code> in a single request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Up to 1000 instances can be terminated in a single request to delete <code>instant</code> fleets.
+     * You can delete up to 100 fleets of type <code>maintain</code> or <code>request</code> in a single request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can delete up to 125 fleets in a single request, provided you do not exceed the quota for each fleet type, as
+     * specified above.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you exceed the specified number of fleets to delete, no fleets are deleted.
      * </p>
      * </li>
      * </ul>
@@ -17564,8 +17584,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Returns a list of all instance types offered. The results can be filtered by location (Region or Availability
-     * Zone). If no location is specified, the instance types offered in the current Region are returned.
+     * Lists the instance types that are offered for the specified location. If no location is specified, the default is
+     * to list the instance types that are offered in the current Region.
      * </p>
      * 
      * @param describeInstanceTypeOfferingsRequest
@@ -17621,8 +17641,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes the details of the instance types that are offered in a location. The results can be filtered by the
-     * attributes of the instance types.
+     * Describes the specified instance types. By default, all instance types for the current Region are described.
+     * Alternatively, you can filter the results.
      * </p>
      * 
      * @param describeInstanceTypesRequest
@@ -27643,6 +27663,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * The returned content is Base64-encoded.
      * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/troubleshoot-unreachable-instance.html#instance-console-console-output"
+     * >Instance console output</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
      * 
      * @param getConsoleScreenshotRequest
      * @return Result of the GetConsoleScreenshot operation returned by the service.
@@ -32067,8 +32092,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <note>
      * <p>
-     * To remove a parameter's account-level default setting, specify <code>no-preference</code>. At instance launch,
-     * the value will come from the AMI, or from the launch parameter if specified. For more information, see <a href=
+     * To remove a parameter's account-level default setting, specify <code>no-preference</code>. If an account-level
+     * setting is cleared with <code>no-preference</code>, then the instance launch considers the other instance
+     * metadata settings. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
      * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>

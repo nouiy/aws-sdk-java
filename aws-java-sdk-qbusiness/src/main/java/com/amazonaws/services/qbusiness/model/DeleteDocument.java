@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A document deleted from an Amazon Q data source connector.
+ * A document deleted from an Amazon Q Business data source connector.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/DeleteDocument" target="_top">AWS API

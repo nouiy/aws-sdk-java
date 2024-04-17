@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The condition used for the target document attribute or metadata field when ingesting documents into Amazon Q. You
- * use this with <a href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeTarget.html">
+ * The condition used for the target document attribute or metadata field when ingesting documents into Amazon Q
+ * Business. You use this with <a
+ * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeTarget.html">
  * <code>DocumentAttributeTarget</code> </a> to apply the condition.
  * </p>
  * <p>
@@ -30,9 +31,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * document.
  * </p>
  * <p>
- * Amazon Q can't create a target field if it has not already been created as an index field. After you create your
- * index field, you can create a document metadata field using <code>DocumentAttributeTarget</code>. Amazon Q then will
- * map your newly created metadata field to your index field.
+ * Amazon Q Business can't create a target field if it has not already been created as an index field. After you create
+ * your index field, you can create a document metadata field using <code>DocumentAttributeTarget</code>. Amazon Q
+ * Business then will map your newly created metadata field to your index field.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/DocumentAttributeCondition"
@@ -50,7 +51,8 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      * associated with the documents.
      * </p>
      * <p>
-     * Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the condition.
+     * Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
+     * condition.
      * </p>
      */
     private String key;
@@ -79,7 +81,8 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      * associated with the documents.
      * </p>
      * <p>
-     * Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the condition.
+     * Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
+     * condition.
      * </p>
      * 
      * @param key
@@ -89,7 +92,8 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      *        URIs associated with the documents.
      *        </p>
      *        <p>
-     *        Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the condition.
+     *        Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
+     *        condition.
      */
 
     public void setKey(String key) {
@@ -105,7 +109,8 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      * associated with the documents.
      * </p>
      * <p>
-     * Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the condition.
+     * Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
+     * condition.
      * </p>
      * 
      * @return The identifier of the document attribute used for the condition.</p>
@@ -114,7 +119,7 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      *         URIs associated with the documents.
      *         </p>
      *         <p>
-     *         Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the
+     *         Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
      *         condition.
      */
 
@@ -131,7 +136,8 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      * associated with the documents.
      * </p>
      * <p>
-     * Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the condition.
+     * Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
+     * condition.
      * </p>
      * 
      * @param key
@@ -141,7 +147,8 @@ public class DocumentAttributeCondition implements Serializable, Cloneable, Stru
      *        URIs associated with the documents.
      *        </p>
      *        <p>
-     *        Amazon Q currently doesn't support <code>_document_body</code> as an attribute key used for the condition.
+     *        Amazon Q Business currently doesn't support <code>_document_body</code> as an attribute key used for the
+     *        condition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

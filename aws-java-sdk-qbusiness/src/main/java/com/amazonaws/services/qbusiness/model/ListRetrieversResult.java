@@ -25,8 +25,8 @@ public class ListRetrieversResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of retrievers.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of retrievers.
      * </p>
      */
     private String nextToken;
@@ -39,13 +39,13 @@ public class ListRetrieversResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of retrievers.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of retrievers.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of retrievers.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of retrievers.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,12 +54,12 @@ public class ListRetrieversResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of retrievers.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of retrievers.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *         the next set of retrievers.
+     * @return If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *         to list the next set of retrievers.
      */
 
     public String getNextToken() {
@@ -68,13 +68,13 @@ public class ListRetrieversResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token, which you can use in a later request to list the next
-     * set of retrievers.
+     * If the response is truncated, Amazon Q Business returns this token, which you can use in a later request to list
+     * the next set of retrievers.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token, which you can use in a later request to list
-     *        the next set of retrievers.
+     *        If the response is truncated, Amazon Q Business returns this token, which you can use in a later request
+     *        to list the next set of retrievers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

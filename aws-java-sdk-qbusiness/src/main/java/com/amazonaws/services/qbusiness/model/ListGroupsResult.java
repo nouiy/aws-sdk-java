@@ -31,8 +31,8 @@ public class ListGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private java.util.List<GroupSummary> items;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of groups that are mapped to users.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users.
      * </p>
      */
     private String nextToken;
@@ -109,13 +109,13 @@ public class ListGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of groups that are mapped to users.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to
-     *        retrieve the next set of groups that are mapped to users.
+     *        If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent
+     *        request to retrieve the next set of groups that are mapped to users.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of groups that are mapped to users.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to
-     *         retrieve the next set of groups that are mapped to users.
+     * @return If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent
+     *         request to retrieve the next set of groups that are mapped to users.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to retrieve
-     * the next set of groups that are mapped to users.
+     * If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token that you can use in the subsequent request to
-     *        retrieve the next set of groups that are mapped to users.
+     *        If the response is truncated, Amazon Q Business returns this token that you can use in the subsequent
+     *        request to retrieve the next set of groups that are mapped to users.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

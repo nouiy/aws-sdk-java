@@ -27,7 +27,7 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      */
     private String applicationId;
@@ -39,7 +39,7 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
     private Integer maxResults;
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of retrievers.
      * </p>
      */
@@ -47,11 +47,11 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the retriever.
+     *        The identifier of the Amazon Q Business application using the retriever.
      */
 
     public void setApplicationId(String applicationId) {
@@ -60,10 +60,10 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application using the retriever.
+     * @return The identifier of the Amazon Q Business application using the retriever.
      */
 
     public String getApplicationId() {
@@ -72,11 +72,11 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the retriever.
+     *        The identifier of the Amazon Q Business application using the retriever.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,13 +127,13 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of retrievers.
      * </p>
      * 
      * @param nextToken
-     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
-     *        pagination token to retrieve the next set of retrievers.
+     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next
+     *        token as a pagination token to retrieve the next set of retrievers.
      */
 
     public void setNextToken(String nextToken) {
@@ -142,12 +142,12 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of retrievers.
      * </p>
      * 
-     * @return If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
-     *         pagination token to retrieve the next set of retrievers.
+     * @return If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next
+     *         token as a pagination token to retrieve the next set of retrievers.
      */
 
     public String getNextToken() {
@@ -156,13 +156,13 @@ public class ListRetrieversRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of retrievers.
      * </p>
      * 
      * @param nextToken
-     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
-     *        pagination token to retrieve the next set of retrievers.
+     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next
+     *        token as a pagination token to retrieve the next set of retrievers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

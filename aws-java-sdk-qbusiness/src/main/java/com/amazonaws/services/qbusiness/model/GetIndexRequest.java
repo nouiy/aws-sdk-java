@@ -27,24 +27,24 @@ public class GetIndexRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The identifier of the Amazon Q index you want information on.
+     * The identifier of the Amazon Q Business index you want information on.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the index.
+     *        The identifier of the Amazon Q Business application connected to the index.
      */
 
     public void setApplicationId(String applicationId) {
@@ -53,10 +53,10 @@ public class GetIndexRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application connected to the index.
+     * @return The identifier of the Amazon Q Business application connected to the index.
      */
 
     public String getApplicationId() {
@@ -65,11 +65,11 @@ public class GetIndexRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the index.
+     * The identifier of the Amazon Q Business application connected to the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the index.
+     *        The identifier of the Amazon Q Business application connected to the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class GetIndexRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q index you want information on.
+     * The identifier of the Amazon Q Business index you want information on.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index you want information on.
+     *        The identifier of the Amazon Q Business index you want information on.
      */
 
     public void setIndexId(String indexId) {
@@ -93,10 +93,10 @@ public class GetIndexRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q index you want information on.
+     * The identifier of the Amazon Q Business index you want information on.
      * </p>
      * 
-     * @return The identifier of the Amazon Q index you want information on.
+     * @return The identifier of the Amazon Q Business index you want information on.
      */
 
     public String getIndexId() {
@@ -105,11 +105,11 @@ public class GetIndexRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The identifier of the Amazon Q index you want information on.
+     * The identifier of the Amazon Q Business index you want information on.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the Amazon Q index you want information on.
+     *        The identifier of the Amazon Q Business index you want information on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

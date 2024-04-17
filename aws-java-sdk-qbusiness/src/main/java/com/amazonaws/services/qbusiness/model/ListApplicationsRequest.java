@@ -27,26 +27,26 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of Amazon Q applications to return.
+     * The maximum number of Amazon Q Business applications to return.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * applications.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business applications.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The maximum number of Amazon Q applications to return.
+     * The maximum number of Amazon Q Business applications to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of Amazon Q applications to return.
+     *        The maximum number of Amazon Q Business applications to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -55,10 +55,10 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of Amazon Q applications to return.
+     * The maximum number of Amazon Q Business applications to return.
      * </p>
      * 
-     * @return The maximum number of Amazon Q applications to return.
+     * @return The maximum number of Amazon Q Business applications to return.
      */
 
     public Integer getMaxResults() {
@@ -67,11 +67,11 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of Amazon Q applications to return.
+     * The maximum number of Amazon Q Business applications to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of Amazon Q applications to return.
+     *        The maximum number of Amazon Q Business applications to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,15 +82,15 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * applications.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business applications.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q applications.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business applications.
      */
 
     public void setNextToken(String nextToken) {
@@ -99,14 +99,14 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * applications.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business applications.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         Amazon Q applications.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of Amazon Q Business applications.
      */
 
     public String getNextToken() {
@@ -115,15 +115,15 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q
-     * applications.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business applications.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q applications.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

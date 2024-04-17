@@ -27,7 +27,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
@@ -39,31 +39,31 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private AttachmentsConfiguration attachmentsConfiguration;
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access Amazon
-     * CloudWatch logs and metrics.
+     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission to
+     * access Amazon CloudWatch logs and metrics.
      * </p>
      */
     private String roleArn;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -72,10 +72,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application.
+     * @return The identifier of the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -84,11 +84,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,11 +139,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q application.
+     *        A description for the Amazon Q Business application.
      */
 
     public void setDescription(String description) {
@@ -152,10 +152,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
-     * @return A description for the Amazon Q application.
+     * @return A description for the Amazon Q Business application.
      */
 
     public String getDescription() {
@@ -164,11 +164,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q application.
+     *        A description for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,11 +179,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        A name for the Amazon Q application.
+     *        A name for the Amazon Q Business application.
      */
 
     public void setDisplayName(String displayName) {
@@ -192,10 +192,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      * 
-     * @return A name for the Amazon Q application.
+     * @return A name for the Amazon Q Business application.
      */
 
     public String getDisplayName() {
@@ -204,11 +204,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        A name for the Amazon Q application.
+     *        A name for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -219,13 +219,13 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access Amazon
-     * CloudWatch logs and metrics.
+     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission to
+     * access Amazon CloudWatch logs and metrics.
      * </p>
      * 
      * @param roleArn
-     *        An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access
-     *        Amazon CloudWatch logs and metrics.
+     *        An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission
+     *        to access Amazon CloudWatch logs and metrics.
      */
 
     public void setRoleArn(String roleArn) {
@@ -234,12 +234,12 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access Amazon
-     * CloudWatch logs and metrics.
+     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission to
+     * access Amazon CloudWatch logs and metrics.
      * </p>
      * 
-     * @return An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access
-     *         Amazon CloudWatch logs and metrics.
+     * @return An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission
+     *         to access Amazon CloudWatch logs and metrics.
      */
 
     public String getRoleArn() {
@@ -248,13 +248,13 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access Amazon
-     * CloudWatch logs and metrics.
+     * An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission to
+     * access Amazon CloudWatch logs and metrics.
      * </p>
      * 
      * @param roleArn
-     *        An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q permission to access
-     *        Amazon CloudWatch logs and metrics.
+     *        An Amazon Web Services Identity and Access Management (IAM) role that gives Amazon Q Business permission
+     *        to access Amazon CloudWatch logs and metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

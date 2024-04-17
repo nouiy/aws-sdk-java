@@ -27,16 +27,22 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * A token you provide to identify a request to create an Amazon Q web experience.
+     * A token you provide to identify a request to create an Amazon Q Business web experience.
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     */
+    private String roleArn;
     /**
      * <p>
      * Determines whether sample prompts are enabled in the web experience for an end user.
@@ -45,38 +51,38 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
     private String samplePromptsControlMode;
     /**
      * <p>
-     * A subtitle to personalize your Amazon Q web experience.
+     * A subtitle to personalize your Amazon Q Business web experience.
      * </p>
      */
     private String subtitle;
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags to help
-     * control access to the web experience. Tag keys and values can consist of Unicode letters, digits, white space,
-     * and any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also use
+     * tags to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
+     * white space, and any of the following symbols: _ . : / = + - @.
      * </p>
      */
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      */
     private String title;
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      */
     private String welcomeMessage;
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      */
 
     public void setApplicationId(String applicationId) {
@@ -85,10 +91,10 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience.
+     * @return The identifier of the Amazon Q Business web experience.
      */
 
     public String getApplicationId() {
@@ -97,11 +103,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,11 +118,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token you provide to identify a request to create an Amazon Q web experience.
+     * A token you provide to identify a request to create an Amazon Q Business web experience.
      * </p>
      * 
      * @param clientToken
-     *        A token you provide to identify a request to create an Amazon Q web experience.
+     *        A token you provide to identify a request to create an Amazon Q Business web experience.
      */
 
     public void setClientToken(String clientToken) {
@@ -125,10 +131,10 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token you provide to identify a request to create an Amazon Q web experience.
+     * A token you provide to identify a request to create an Amazon Q Business web experience.
      * </p>
      * 
-     * @return A token you provide to identify a request to create an Amazon Q web experience.
+     * @return A token you provide to identify a request to create an Amazon Q Business web experience.
      */
 
     public String getClientToken() {
@@ -137,16 +143,56 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token you provide to identify a request to create an Amazon Q web experience.
+     * A token you provide to identify a request to create an Amazon Q Business web experience.
      * </p>
      * 
      * @param clientToken
-     *        A token you provide to identify a request to create an Amazon Q web experience.
+     *        A token you provide to identify a request to create an Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateWebExperienceRequest withClientToken(String clientToken) {
         setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWebExperienceRequest withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
         return this;
     }
 
@@ -211,11 +257,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A subtitle to personalize your Amazon Q web experience.
+     * A subtitle to personalize your Amazon Q Business web experience.
      * </p>
      * 
      * @param subtitle
-     *        A subtitle to personalize your Amazon Q web experience.
+     *        A subtitle to personalize your Amazon Q Business web experience.
      */
 
     public void setSubtitle(String subtitle) {
@@ -224,10 +270,10 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A subtitle to personalize your Amazon Q web experience.
+     * A subtitle to personalize your Amazon Q Business web experience.
      * </p>
      * 
-     * @return A subtitle to personalize your Amazon Q web experience.
+     * @return A subtitle to personalize your Amazon Q Business web experience.
      */
 
     public String getSubtitle() {
@@ -236,11 +282,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A subtitle to personalize your Amazon Q web experience.
+     * A subtitle to personalize your Amazon Q Business web experience.
      * </p>
      * 
      * @param subtitle
-     *        A subtitle to personalize your Amazon Q web experience.
+     *        A subtitle to personalize your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,14 +297,14 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags to help
-     * control access to the web experience. Tag keys and values can consist of Unicode letters, digits, white space,
-     * and any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also use
+     * tags to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
+     * white space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * 
-     * @return A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags
-     *         to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
-     *         white space, and any of the following symbols: _ . : / = + - @.
+     * @return A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also
+     *         use tags to help control access to the web experience. Tag keys and values can consist of Unicode
+     *         letters, digits, white space, and any of the following symbols: _ . : / = + - @.
      */
 
     public java.util.List<Tag> getTags() {
@@ -267,15 +313,15 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags to help
-     * control access to the web experience. Tag keys and values can consist of Unicode letters, digits, white space,
-     * and any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also use
+     * tags to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
+     * white space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags
-     *        to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
-     *        white space, and any of the following symbols: _ . : / = + - @.
+     *        A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also
+     *        use tags to help control access to the web experience. Tag keys and values can consist of Unicode letters,
+     *        digits, white space, and any of the following symbols: _ . : / = + - @.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -289,9 +335,9 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags to help
-     * control access to the web experience. Tag keys and values can consist of Unicode letters, digits, white space,
-     * and any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also use
+     * tags to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
+     * white space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -300,9 +346,9 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags
-     *        to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
-     *        white space, and any of the following symbols: _ . : / = + - @.
+     *        A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also
+     *        use tags to help control access to the web experience. Tag keys and values can consist of Unicode letters,
+     *        digits, white space, and any of the following symbols: _ . : / = + - @.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,15 +364,15 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags to help
-     * control access to the web experience. Tag keys and values can consist of Unicode letters, digits, white space,
-     * and any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also use
+     * tags to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
+     * white space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs that identify or categorize your Amazon Q web experience. You can also use tags
-     *        to help control access to the web experience. Tag keys and values can consist of Unicode letters, digits,
-     *        white space, and any of the following symbols: _ . : / = + - @.
+     *        A list of key-value pairs that identify or categorize your Amazon Q Business web experience. You can also
+     *        use tags to help control access to the web experience. Tag keys and values can consist of Unicode letters,
+     *        digits, white space, and any of the following symbols: _ . : / = + - @.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -337,11 +383,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      * 
      * @param title
-     *        The title for your Amazon Q web experience.
+     *        The title for your Amazon Q Business web experience.
      */
 
     public void setTitle(String title) {
@@ -350,10 +396,10 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The title for your Amazon Q web experience.
+     * @return The title for your Amazon Q Business web experience.
      */
 
     public String getTitle() {
@@ -362,11 +408,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The title for your Amazon Q web experience.
+     * The title for your Amazon Q Business web experience.
      * </p>
      * 
      * @param title
-     *        The title for your Amazon Q web experience.
+     *        The title for your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,11 +423,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      * 
      * @param welcomeMessage
-     *        The customized welcome message for end users of an Amazon Q web experience.
+     *        The customized welcome message for end users of an Amazon Q Business web experience.
      */
 
     public void setWelcomeMessage(String welcomeMessage) {
@@ -390,10 +436,10 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      * 
-     * @return The customized welcome message for end users of an Amazon Q web experience.
+     * @return The customized welcome message for end users of an Amazon Q Business web experience.
      */
 
     public String getWelcomeMessage() {
@@ -402,11 +448,11 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The customized welcome message for end users of an Amazon Q web experience.
+     * The customized welcome message for end users of an Amazon Q Business web experience.
      * </p>
      * 
      * @param welcomeMessage
-     *        The customized welcome message for end users of an Amazon Q web experience.
+     *        The customized welcome message for end users of an Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -431,6 +477,8 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
             sb.append("ApplicationId: ").append(getApplicationId()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getSamplePromptsControlMode() != null)
             sb.append("SamplePromptsControlMode: ").append(getSamplePromptsControlMode()).append(",");
         if (getSubtitle() != null)
@@ -463,6 +511,10 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
+            return false;
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
         if (other.getSamplePromptsControlMode() == null ^ this.getSamplePromptsControlMode() == null)
             return false;
         if (other.getSamplePromptsControlMode() != null && other.getSamplePromptsControlMode().equals(this.getSamplePromptsControlMode()) == false)
@@ -493,6 +545,7 @@ public class CreateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSamplePromptsControlMode() == null) ? 0 : getSamplePromptsControlMode().hashCode());
         hashCode = prime * hashCode + ((getSubtitle() == null) ? 0 : getSubtitle().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

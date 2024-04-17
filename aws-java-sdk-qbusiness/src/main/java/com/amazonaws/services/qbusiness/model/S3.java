@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information required for Amazon Q to find a specific file in an Amazon S3 bucket.
+ * Information required for Amazon Q Business to find a specific file in an Amazon S3 bucket.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/S3" target="_top">AWS API Documentation</a>

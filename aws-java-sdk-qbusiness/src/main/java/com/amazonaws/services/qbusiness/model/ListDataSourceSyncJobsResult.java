@@ -31,8 +31,8 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
     private java.util.List<DataSourceSyncJob> history;
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent request to
-     * retrieve the next set of jobs.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in any subsequent
+     * request to retrieve the next set of jobs.
      * </p>
      */
     private String nextToken;
@@ -109,13 +109,13 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent request to
-     * retrieve the next set of jobs.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in any subsequent
+     * request to retrieve the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent
-     *        request to retrieve the next set of jobs.
+     *        If the response is truncated, Amazon Q Business returns this token. You can use this token in any
+     *        subsequent request to retrieve the next set of jobs.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent request to
-     * retrieve the next set of jobs.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in any subsequent
+     * request to retrieve the next set of jobs.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent
-     *         request to retrieve the next set of jobs.
+     * @return If the response is truncated, Amazon Q Business returns this token. You can use this token in any
+     *         subsequent request to retrieve the next set of jobs.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent request to
-     * retrieve the next set of jobs.
+     * If the response is truncated, Amazon Q Business returns this token. You can use this token in any subsequent
+     * request to retrieve the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Q returns this token. You can use this token in any subsequent
-     *        request to retrieve the next set of jobs.
+     *        If the response is truncated, Amazon Q Business returns this token. You can use this token in any
+     *        subsequent request to retrieve the next set of jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

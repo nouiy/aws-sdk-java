@@ -51,9 +51,9 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private Integer maxResults;
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of groups that are mapped to
-     * users.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users.
      * </p>
      */
     private String nextToken;
@@ -227,15 +227,15 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of groups that are mapped to
-     * users.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users.
      * </p>
      * 
      * @param nextToken
-     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a
-     *        pagination token in the response. You can use this pagination token to retrieve the next set of groups
-     *        that are mapped to users.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business
+     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     *        groups that are mapped to users.
      */
 
     public void setNextToken(String nextToken) {
@@ -244,14 +244,14 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of groups that are mapped to
-     * users.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users.
      * </p>
      * 
-     * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a
-     *         pagination token in the response. You can use this pagination token to retrieve the next set of groups
-     *         that are mapped to users.
+     * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business
+     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     *         groups that are mapped to users.
      */
 
     public String getNextToken() {
@@ -260,15 +260,15 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a pagination
-     * token in the response. You can use this pagination token to retrieve the next set of groups that are mapped to
-     * users.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users.
      * </p>
      * 
      * @param nextToken
-     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Q returns a
-     *        pagination token in the response. You can use this pagination token to retrieve the next set of groups
-     *        that are mapped to users.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Q Business
+     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     *        groups that are mapped to users.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

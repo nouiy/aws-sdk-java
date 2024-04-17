@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Guardrail rules for an Amazon Q application. Amazon Q supports only one rule at a time.
+ * Guardrail rules for an Amazon Q Business application. Amazon Q Business supports only one rule at a time.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/Rule" target="_top">AWS API

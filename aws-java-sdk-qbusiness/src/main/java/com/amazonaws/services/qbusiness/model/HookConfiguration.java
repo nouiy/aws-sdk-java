@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides the configuration information for invoking a Lambda function in Lambda to alter document metadata and
- * content when ingesting documents into Amazon Q.
+ * content when ingesting documents into Amazon Q Business.
  * </p>
  * <p>
  * You can configure your Lambda function using <a
@@ -28,8 +28,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * >PreExtractionHookConfiguration</a> if you want to apply advanced alterations on the original or raw documents.
  * </p>
  * <p>
- * If you want to apply advanced alterations on the Amazon Q structured documents, you must configure your Lambda
- * function using <a
+ * If you want to apply advanced alterations on the Amazon Q Business structured documents, you must configure your
+ * Lambda function using <a
  * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentEnrichmentConfiguration.html"
  * >PostExtractionHookConfiguration</a>.
  * </p>
@@ -53,8 +53,8 @@ public class HookConfiguration implements Serializable, Cloneable, StructuredPoj
      * The condition used for when a Lambda function should be invoked.
      * </p>
      * <p>
-     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q should invoke a
-     * function that inserts the current date-time.
+     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business should
+     * invoke a function that inserts the current date-time.
      * </p>
      */
     private DocumentAttributeCondition invocationCondition;
@@ -90,15 +90,15 @@ public class HookConfiguration implements Serializable, Cloneable, StructuredPoj
      * The condition used for when a Lambda function should be invoked.
      * </p>
      * <p>
-     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q should invoke a
-     * function that inserts the current date-time.
+     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business should
+     * invoke a function that inserts the current date-time.
      * </p>
      * 
      * @param invocationCondition
      *        The condition used for when a Lambda function should be invoked.</p>
      *        <p>
-     *        For example, you can specify a condition that if there are empty date-time values, then Amazon Q should
-     *        invoke a function that inserts the current date-time.
+     *        For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business
+     *        should invoke a function that inserts the current date-time.
      */
 
     public void setInvocationCondition(DocumentAttributeCondition invocationCondition) {
@@ -110,14 +110,14 @@ public class HookConfiguration implements Serializable, Cloneable, StructuredPoj
      * The condition used for when a Lambda function should be invoked.
      * </p>
      * <p>
-     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q should invoke a
-     * function that inserts the current date-time.
+     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business should
+     * invoke a function that inserts the current date-time.
      * </p>
      * 
      * @return The condition used for when a Lambda function should be invoked.</p>
      *         <p>
-     *         For example, you can specify a condition that if there are empty date-time values, then Amazon Q should
-     *         invoke a function that inserts the current date-time.
+     *         For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business
+     *         should invoke a function that inserts the current date-time.
      */
 
     public DocumentAttributeCondition getInvocationCondition() {
@@ -129,15 +129,15 @@ public class HookConfiguration implements Serializable, Cloneable, StructuredPoj
      * The condition used for when a Lambda function should be invoked.
      * </p>
      * <p>
-     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q should invoke a
-     * function that inserts the current date-time.
+     * For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business should
+     * invoke a function that inserts the current date-time.
      * </p>
      * 
      * @param invocationCondition
      *        The condition used for when a Lambda function should be invoked.</p>
      *        <p>
-     *        For example, you can specify a condition that if there are empty date-time values, then Amazon Q should
-     *        invoke a function that inserts the current date-time.
+     *        For example, you can specify a condition that if there are empty date-time values, then Amazon Q Business
+     *        should invoke a function that inserts the current date-time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

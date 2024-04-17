@@ -41,6 +41,8 @@ public class CreateApplicationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("displayName").build();
     private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryptionConfiguration").build();
+    private static final MarshallingInfo<String> IDENTITYCENTERINSTANCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("identityCenterInstanceArn").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -67,6 +69,7 @@ public class CreateApplicationRequestMarshaller {
             protocolMarshaller.marshall(createApplicationRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createApplicationRequest.getDisplayName(), DISPLAYNAME_BINDING);
             protocolMarshaller.marshall(createApplicationRequest.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createApplicationRequest.getIdentityCenterInstanceArn(), IDENTITYCENTERINSTANCEARN_BINDING);
             protocolMarshaller.marshall(createApplicationRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createApplicationRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

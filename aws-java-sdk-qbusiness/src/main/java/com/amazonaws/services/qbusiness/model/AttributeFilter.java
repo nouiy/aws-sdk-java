@@ -37,46 +37,62 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains all the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      */
     private DocumentAttribute containsAll;
     /**
      * <p>
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      */
     private DocumentAttribute containsAny;
     /**
      * <p>
-     * Performs an equals operation on two document attributes or metadata fields.
+     * Performs an equals operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      */
     private DocumentAttribute equalsTo;
     /**
      * <p>
-     * Performs a greater than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a greater than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      */
     private DocumentAttribute greaterThan;
     /**
      * <p>
-     * Performs a greater or equals than operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a greater or equals than operation on two document attributes or metadata fields. Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      */
     private DocumentAttribute greaterThanOrEquals;
     /**
      * <p>
-     * Performs a less than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a less than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      */
     private DocumentAttribute lessThan;
     /**
      * <p>
-     * Performs a less than or equals operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      */
     private DocumentAttribute lessThanOrEquals;
@@ -166,11 +182,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains all the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      * 
      * @param containsAll
      *        Returns <code>true</code> when a document contains all the specified document attributes or metadata
-     *        fields.
+     *        fields. Supported for the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>stringListValue</code>.
      */
 
     public void setContainsAll(DocumentAttribute containsAll) {
@@ -180,10 +201,15 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains all the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      * 
      * @return Returns <code>true</code> when a document contains all the specified document attributes or metadata
-     *         fields.
+     *         fields. Supported for the following <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *         attribute value types</a>: <code>stringListValue</code>.
      */
 
     public DocumentAttribute getContainsAll() {
@@ -193,11 +219,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains all the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>stringListValue</code>.
      * </p>
      * 
      * @param containsAll
      *        Returns <code>true</code> when a document contains all the specified document attributes or metadata
-     *        fields.
+     *        fields. Supported for the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>stringListValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,11 +240,18 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      * 
      * @param containsAny
      *        Returns <code>true</code> when a document contains any of the specified document attributes or metadata
-     *        fields.
+     *        fields. Supported for the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
+     *        and <code>stringValue</code>.
      */
 
     public void setContainsAny(DocumentAttribute containsAny) {
@@ -223,10 +261,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      * 
      * @return Returns <code>true</code> when a document contains any of the specified document attributes or metadata
-     *         fields.
+     *         fields. Supported for the following <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *         attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
+     *         and <code>stringValue</code>.
      */
 
     public DocumentAttribute getContainsAny() {
@@ -236,11 +281,18 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Returns <code>true</code> when a document contains any of the specified document attributes or metadata fields.
+     * Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      * 
      * @param containsAny
      *        Returns <code>true</code> when a document contains any of the specified document attributes or metadata
-     *        fields.
+     *        fields. Supported for the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
+     *        and <code>stringValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,11 +303,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs an equals operation on two document attributes or metadata fields.
+     * Performs an equals operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      * 
      * @param equalsTo
-     *        Performs an equals operation on two document attributes or metadata fields.
+     *        Performs an equals operation on two document attributes or metadata fields. Supported for the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
+     *        and <code>stringValue</code>.
      */
 
     public void setEqualsTo(DocumentAttribute equalsTo) {
@@ -264,10 +322,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs an equals operation on two document attributes or metadata fields.
+     * Performs an equals operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      * 
-     * @return Performs an equals operation on two document attributes or metadata fields.
+     * @return Performs an equals operation on two document attributes or metadata fields. Supported for the following
+     *         <a href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">
+     *         document attribute value types</a>: <code>dateValue</code>, <code>longValue</code>,
+     *         <code>stringListValue</code> and <code>stringValue</code>.
      */
 
     public DocumentAttribute getEqualsTo() {
@@ -276,11 +340,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs an equals operation on two document attributes or metadata fields.
+     * Performs an equals operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code> and
+     * <code>stringValue</code>.
      * </p>
      * 
      * @param equalsTo
-     *        Performs an equals operation on two document attributes or metadata fields.
+     *        Performs an equals operation on two document attributes or metadata fields. Supported for the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code>, <code>longValue</code>, <code>stringListValue</code>
+     *        and <code>stringValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,13 +361,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a greater than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a greater than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param greaterThan
-     *        Performs a greater than operation on two document attributes or metadata fields. Use with a document
-     *        attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a greater than operation on two document attributes or metadata fields. Supported for the
+     *        following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public void setGreaterThan(DocumentAttribute greaterThan) {
@@ -306,12 +379,15 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a greater than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a greater than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
-     * @return Performs a greater than operation on two document attributes or metadata fields. Use with a document
-     *         attribute of type <code>Date</code> or <code>Long</code>.
+     * @return Performs a greater than operation on two document attributes or metadata fields. Supported for the
+     *         following <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *         attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public DocumentAttribute getGreaterThan() {
@@ -320,13 +396,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a greater than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a greater than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param greaterThan
-     *        Performs a greater than operation on two document attributes or metadata fields. Use with a document
-     *        attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a greater than operation on two document attributes or metadata fields. Supported for the
+     *        following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -337,13 +416,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a greater or equals than operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a greater or equals than operation on two document attributes or metadata fields. Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param greaterThanOrEquals
-     *        Performs a greater or equals than operation on two document attributes or metadata fields. Use with a
-     *        document attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a greater or equals than operation on two document attributes or metadata fields. Supported for
+     *        the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public void setGreaterThanOrEquals(DocumentAttribute greaterThanOrEquals) {
@@ -352,12 +435,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a greater or equals than operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a greater or equals than operation on two document attributes or metadata fields. Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
-     * @return Performs a greater or equals than operation on two document attributes or metadata fields. Use with a
-     *         document attribute of type <code>Date</code> or <code>Long</code>.
+     * @return Performs a greater or equals than operation on two document attributes or metadata fields. Supported for
+     *         the following <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *         attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public DocumentAttribute getGreaterThanOrEquals() {
@@ -366,13 +453,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a greater or equals than operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a greater or equals than operation on two document attributes or metadata fields. Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param greaterThanOrEquals
-     *        Performs a greater or equals than operation on two document attributes or metadata fields. Use with a
-     *        document attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a greater or equals than operation on two document attributes or metadata fields. Supported for
+     *        the following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -383,13 +474,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a less than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a less than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param lessThan
-     *        Performs a less than operation on two document attributes or metadata fields. Use with a document
-     *        attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a less than operation on two document attributes or metadata fields. Supported for the following
+     *        <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public void setLessThan(DocumentAttribute lessThan) {
@@ -398,12 +492,14 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a less than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a less than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
-     * @return Performs a less than operation on two document attributes or metadata fields. Use with a document
-     *         attribute of type <code>Date</code> or <code>Long</code>.
+     * @return Performs a less than operation on two document attributes or metadata fields. Supported for the following
+     *         <a href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">
+     *         document attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public DocumentAttribute getLessThan() {
@@ -412,13 +508,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a less than operation on two document attributes or metadata fields. Use with a document attribute of
-     * type <code>Date</code> or <code>Long</code>.
+     * Performs a less than operation on two document attributes or metadata fields. Supported for the following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param lessThan
-     *        Performs a less than operation on two document attributes or metadata fields. Use with a document
-     *        attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a less than operation on two document attributes or metadata fields. Supported for the following
+     *        <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value types</a>: <code>dateValue</code> and <code>longValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -429,13 +528,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a less than or equals operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param lessThanOrEquals
-     *        Performs a less than or equals operation on two document attributes or metadata fields. Use with a
-     *        document attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     *        following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public void setLessThanOrEquals(DocumentAttribute lessThanOrEquals) {
@@ -444,12 +547,16 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a less than or equals operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
-     * @return Performs a less than or equals operation on two document attributes or metadata fields. Use with a
-     *         document attribute of type <code>Date</code> or <code>Long</code>.
+     * @return Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     *         following <a
+     *         href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *         attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      */
 
     public DocumentAttribute getLessThanOrEquals() {
@@ -458,13 +565,17 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Performs a less than or equals operation on two document attributes or metadata fields. Use with a document
-     * attribute of type <code>Date</code> or <code>Long</code>.
+     * Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     * following <a
+     * href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     * attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      * </p>
      * 
      * @param lessThanOrEquals
-     *        Performs a less than or equals operation on two document attributes or metadata fields. Use with a
-     *        document attribute of type <code>Date</code> or <code>Long</code>.
+     *        Performs a less than or equals operation on two document attributes or metadata fields.Supported for the
+     *        following <a
+     *        href="https://docs.aws.amazon.com/amazonq/latest/api-reference/API_DocumentAttributeValue.html">document
+     *        attribute value type</a>: <code>dateValue</code> and <code>longValue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

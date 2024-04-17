@@ -30,18 +30,18 @@ public class IndexCapacityConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of storage units configured for an Amazon Q index.
+     * The number of storage units configured for an Amazon Q Business index.
      * </p>
      */
     private Integer units;
 
     /**
      * <p>
-     * The number of storage units configured for an Amazon Q index.
+     * The number of storage units configured for an Amazon Q Business index.
      * </p>
      * 
      * @param units
-     *        The number of storage units configured for an Amazon Q index.
+     *        The number of storage units configured for an Amazon Q Business index.
      */
 
     public void setUnits(Integer units) {
@@ -50,10 +50,10 @@ public class IndexCapacityConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of storage units configured for an Amazon Q index.
+     * The number of storage units configured for an Amazon Q Business index.
      * </p>
      * 
-     * @return The number of storage units configured for an Amazon Q index.
+     * @return The number of storage units configured for an Amazon Q Business index.
      */
 
     public Integer getUnits() {
@@ -62,11 +62,11 @@ public class IndexCapacityConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The number of storage units configured for an Amazon Q index.
+     * The number of storage units configured for an Amazon Q Business index.
      * </p>
      * 
      * @param units
-     *        The number of storage units configured for an Amazon Q index.
+     *        The number of storage units configured for an Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

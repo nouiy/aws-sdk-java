@@ -27,7 +27,7 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the data source.
+     * The identifier of the Amazon Q Business application connected to the data source.
      * </p>
      */
     private String applicationId;
@@ -45,7 +45,7 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
     private java.util.Date endTime;
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      */
     private String indexId;
@@ -57,8 +57,9 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
     private Integer maxResults;
     /**
      * <p>
-     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q returns
-     * a pagination token in the response. You can use this pagination token to retrieve the next set of responses.
+     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * responses.
      * </p>
      */
     private String nextToken;
@@ -77,11 +78,11 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the data source.
+     * The identifier of the Amazon Q Business application connected to the data source.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the data source.
+     *        The identifier of the Amazon Q Business application connected to the data source.
      */
 
     public void setApplicationId(String applicationId) {
@@ -90,10 +91,10 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the data source.
+     * The identifier of the Amazon Q Business application connected to the data source.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application connected to the data source.
+     * @return The identifier of the Amazon Q Business application connected to the data source.
      */
 
     public String getApplicationId() {
@@ -102,11 +103,11 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the Amazon Q application connected to the data source.
+     * The identifier of the Amazon Q Business application connected to the data source.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application connected to the data source.
+     *        The identifier of the Amazon Q Business application connected to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -197,11 +198,11 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index used with the Amazon Q data source connector.
+     *        The identifier of the index used with the Amazon Q Business data source connector.
      */
 
     public void setIndexId(String indexId) {
@@ -210,10 +211,10 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      * 
-     * @return The identifier of the index used with the Amazon Q data source connector.
+     * @return The identifier of the index used with the Amazon Q Business data source connector.
      */
 
     public String getIndexId() {
@@ -222,11 +223,11 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the index used with the Amazon Q data source connector.
+     * The identifier of the index used with the Amazon Q Business data source connector.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index used with the Amazon Q data source connector.
+     *        The identifier of the index used with the Amazon Q Business data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,14 +278,15 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q returns
-     * a pagination token in the response. You can use this pagination token to retrieve the next set of responses.
+     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * responses.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        responses.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of responses.
      */
 
     public void setNextToken(String nextToken) {
@@ -293,13 +295,14 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q returns
-     * a pagination token in the response. You can use this pagination token to retrieve the next set of responses.
+     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * responses.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         responses.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of responses.
      */
 
     public String getNextToken() {
@@ -308,14 +311,15 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q returns
-     * a pagination token in the response. You can use this pagination token to retrieve the next set of responses.
+     * If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of
+     * responses.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incpmplete because there is more data to retriever, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        responses.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of responses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,13 +27,13 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q application attached to the web experience.
+     * The identifier of the Amazon Q Business application attached to the web experience.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The authentication configuration of the Amazon Q web experience.
+     * The authentication configuration of the Amazon Q Business web experience.
      * </p>
      */
     private WebExperienceAuthConfiguration authenticationConfiguration;
@@ -45,36 +45,36 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
     private String samplePromptsControlMode;
     /**
      * <p>
-     * The subtitle of the Amazon Q web experience.
+     * The subtitle of the Amazon Q Business web experience.
      * </p>
      */
     private String subtitle;
     /**
      * <p>
-     * The title of the Amazon Q web experience.
+     * The title of the Amazon Q Business web experience.
      * </p>
      */
     private String title;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      */
     private String webExperienceId;
     /**
      * <p>
-     * A customized welcome message for an end user in an Amazon Q web experience.
+     * A customized welcome message for an end user in an Amazon Q Business web experience.
      * </p>
      */
     private String welcomeMessage;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application attached to the web experience.
+     * The identifier of the Amazon Q Business application attached to the web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application attached to the web experience.
+     *        The identifier of the Amazon Q Business application attached to the web experience.
      */
 
     public void setApplicationId(String applicationId) {
@@ -83,10 +83,10 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q application attached to the web experience.
+     * The identifier of the Amazon Q Business application attached to the web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application attached to the web experience.
+     * @return The identifier of the Amazon Q Business application attached to the web experience.
      */
 
     public String getApplicationId() {
@@ -95,11 +95,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q application attached to the web experience.
+     * The identifier of the Amazon Q Business application attached to the web experience.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application attached to the web experience.
+     *        The identifier of the Amazon Q Business application attached to the web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,11 +110,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The authentication configuration of the Amazon Q web experience.
+     * The authentication configuration of the Amazon Q Business web experience.
      * </p>
      * 
      * @param authenticationConfiguration
-     *        The authentication configuration of the Amazon Q web experience.
+     *        The authentication configuration of the Amazon Q Business web experience.
      */
 
     public void setAuthenticationConfiguration(WebExperienceAuthConfiguration authenticationConfiguration) {
@@ -123,10 +123,10 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The authentication configuration of the Amazon Q web experience.
+     * The authentication configuration of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The authentication configuration of the Amazon Q web experience.
+     * @return The authentication configuration of the Amazon Q Business web experience.
      */
 
     public WebExperienceAuthConfiguration getAuthenticationConfiguration() {
@@ -135,11 +135,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The authentication configuration of the Amazon Q web experience.
+     * The authentication configuration of the Amazon Q Business web experience.
      * </p>
      * 
      * @param authenticationConfiguration
-     *        The authentication configuration of the Amazon Q web experience.
+     *        The authentication configuration of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,11 +209,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The subtitle of the Amazon Q web experience.
+     * The subtitle of the Amazon Q Business web experience.
      * </p>
      * 
      * @param subtitle
-     *        The subtitle of the Amazon Q web experience.
+     *        The subtitle of the Amazon Q Business web experience.
      */
 
     public void setSubtitle(String subtitle) {
@@ -222,10 +222,10 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The subtitle of the Amazon Q web experience.
+     * The subtitle of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The subtitle of the Amazon Q web experience.
+     * @return The subtitle of the Amazon Q Business web experience.
      */
 
     public String getSubtitle() {
@@ -234,11 +234,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The subtitle of the Amazon Q web experience.
+     * The subtitle of the Amazon Q Business web experience.
      * </p>
      * 
      * @param subtitle
-     *        The subtitle of the Amazon Q web experience.
+     *        The subtitle of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -249,11 +249,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The title of the Amazon Q web experience.
+     * The title of the Amazon Q Business web experience.
      * </p>
      * 
      * @param title
-     *        The title of the Amazon Q web experience.
+     *        The title of the Amazon Q Business web experience.
      */
 
     public void setTitle(String title) {
@@ -262,10 +262,10 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The title of the Amazon Q web experience.
+     * The title of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The title of the Amazon Q web experience.
+     * @return The title of the Amazon Q Business web experience.
      */
 
     public String getTitle() {
@@ -274,11 +274,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The title of the Amazon Q web experience.
+     * The title of the Amazon Q Business web experience.
      * </p>
      * 
      * @param title
-     *        The title of the Amazon Q web experience.
+     *        The title of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -289,11 +289,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      */
 
     public void setWebExperienceId(String webExperienceId) {
@@ -302,10 +302,10 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience.
+     * @return The identifier of the Amazon Q Business web experience.
      */
 
     public String getWebExperienceId() {
@@ -314,11 +314,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience.
+     * The identifier of the Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of the Amazon Q web experience.
+     *        The identifier of the Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -329,11 +329,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A customized welcome message for an end user in an Amazon Q web experience.
+     * A customized welcome message for an end user in an Amazon Q Business web experience.
      * </p>
      * 
      * @param welcomeMessage
-     *        A customized welcome message for an end user in an Amazon Q web experience.
+     *        A customized welcome message for an end user in an Amazon Q Business web experience.
      */
 
     public void setWelcomeMessage(String welcomeMessage) {
@@ -342,10 +342,10 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A customized welcome message for an end user in an Amazon Q web experience.
+     * A customized welcome message for an end user in an Amazon Q Business web experience.
      * </p>
      * 
-     * @return A customized welcome message for an end user in an Amazon Q web experience.
+     * @return A customized welcome message for an end user in an Amazon Q Business web experience.
      */
 
     public String getWelcomeMessage() {
@@ -354,11 +354,11 @@ public class UpdateWebExperienceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A customized welcome message for an end user in an Amazon Q web experience.
+     * A customized welcome message for an end user in an Amazon Q Business web experience.
      * </p>
      * 
      * @param welcomeMessage
-     *        A customized welcome message for an end user in an Amazon Q web experience.
+     *        A customized welcome message for an end user in an Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,26 +31,26 @@ import com.amazonaws.services.qbusiness.model.*;
  * </p>
  * </note>
  * <p>
- * This is the <i>Amazon Q (for business use)</i> API Reference. Amazon Q is a fully managed, generative-AI powered
- * enterprise chat assistant that you can deploy within your organization. Amazon Q enhances employee productivity by
- * supporting key tasks such as question-answering, knowledge discovery, writing email messages, summarizing text,
- * drafting document outlines, and brainstorming ideas. Users ask questions of Amazon Q and get answers that are
- * presented in a conversational manner. For an introduction to the service, see the <a
- * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html"> <i>Amazon Q (for business use)
- * Developer Guide</i> </a>.
+ * This is the <i>Amazon Q Business</i> API Reference. Amazon Q Business is a fully managed, generative-AI powered
+ * enterprise chat assistant that you can deploy within your organization. Amazon Q Business enhances employee
+ * productivity by supporting key tasks such as question-answering, knowledge discovery, writing email messages,
+ * summarizing text, drafting document outlines, and brainstorming ideas. Users ask questions of Amazon Q Business and
+ * get answers that are presented in a conversational manner. For an introduction to the service, see the <a
+ * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html"> <i>Amazon Q Business User Guide</i>
+ * </a>.
  * </p>
  * <p>
- * For an overview of the Amazon Q APIs, see <a
- * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q API
- * operations</a>.
+ * For an overview of the Amazon Q Business APIs, see <a
+ * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q
+ * Business API operations</a>.
  * </p>
  * <p>
  * For information about the IAM access control permissions you need to use this API, see <a
- * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q</a> in the
- * <i>Amazon Q (for business use) Developer Guide</i>.
+ * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q Business</a>
+ * in the <i>Amazon Q Business User Guide</i>.
  * </p>
  * <p>
- * You can use the following AWS SDKs to access Amazon Q APIs:
+ * You can use the following AWS SDKs to access Amazon Q Business APIs:
  * </p>
  * <ul>
  * <li>
@@ -90,19 +90,19 @@ import com.amazonaws.services.qbusiness.model.*;
  * </li>
  * </ul>
  * <p>
- * The following resources provide additional information about using the Amazon Q API:
+ * The following resources provide additional information about using the Amazon Q Business API:
  * </p>
  * <ul>
  * <li>
  * <p>
- * <i> <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for Amazon Q</a>
- * </i>
+ * <i> <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for Amazon Q
+ * Business</a> </i>
  * </p>
  * </li>
  * <li>
  * <p>
- * <i> <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q CLI
- * Reference</a> </i>
+ * <i> <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q
+ * Business CLI Reference</a> </i>
  * </p>
  * </li>
  * <li>
@@ -119,7 +119,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
     /**
      * <p>
      * Asynchronously deletes one or more documents added using the <code>BatchPutDocument</code> API from an Amazon Q
-     * index.
+     * Business index.
      * </p>
      * <p>
      * You can see the progress of the deletion, and any error messages related to the process, by using CloudWatch.
@@ -136,7 +136,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
     /**
      * <p>
      * Asynchronously deletes one or more documents added using the <code>BatchPutDocument</code> API from an Amazon Q
-     * index.
+     * Business index.
      * </p>
      * <p>
      * You can see the progress of the deletion, and any error messages related to the process, by using CloudWatch.
@@ -157,7 +157,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Adds one or more documents to an Amazon Q index.
+     * Adds one or more documents to an Amazon Q Business index.
      * </p>
      * <p>
      * You use this API to:
@@ -166,17 +166,17 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
      * <li>
      * <p>
      * ingest your structured and unstructured documents and documents stored in an Amazon S3 bucket into an Amazon Q
-     * index.
+     * Business index.
      * </p>
      * </li>
      * <li>
      * <p>
-     * add custom attributes to documents in an Amazon Q index.
+     * add custom attributes to documents in an Amazon Q Business index.
      * </p>
      * </li>
      * <li>
      * <p>
-     * attach an access control list to the documents added to an Amazon Q index.
+     * attach an access control list to the documents added to an Amazon Q Business index.
      * </p>
      * </li>
      * </ul>
@@ -194,7 +194,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Adds one or more documents to an Amazon Q index.
+     * Adds one or more documents to an Amazon Q Business index.
      * </p>
      * <p>
      * You use this API to:
@@ -203,17 +203,17 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
      * <li>
      * <p>
      * ingest your structured and unstructured documents and documents stored in an Amazon S3 bucket into an Amazon Q
-     * index.
+     * Business index.
      * </p>
      * </li>
      * <li>
      * <p>
-     * add custom attributes to documents in an Amazon Q index.
+     * add custom attributes to documents in an Amazon Q Business index.
      * </p>
      * </li>
      * <li>
      * <p>
-     * attach an access control list to the documents added to an Amazon Q index.
+     * attach an access control list to the documents added to an Amazon Q Business index.
      * </p>
      * </li>
      * </ul>
@@ -236,7 +236,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Starts or continues a non-streaming Amazon Q conversation.
+     * Starts or continues a non-streaming Amazon Q Business conversation.
      * </p>
      * 
      * @param chatSyncRequest
@@ -249,7 +249,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Starts or continues a non-streaming Amazon Q conversation.
+     * Starts or continues a non-streaming Amazon Q Business conversation.
      * </p>
      * 
      * @param chatSyncRequest
@@ -267,7 +267,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q application.
+     * Creates an Amazon Q Business application.
      * </p>
      * 
      * @param createApplicationRequest
@@ -280,7 +280,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q application.
+     * Creates an Amazon Q Business application.
      * </p>
      * 
      * @param createApplicationRequest
@@ -298,7 +298,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q index.
+     * Creates an Amazon Q Business index.
      * </p>
      * <p>
      * To determine if index creation has completed, check the <code>Status</code> field returned from a call to
@@ -323,7 +323,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q index.
+     * Creates an Amazon Q Business index.
      * </p>
      * <p>
      * To determine if index creation has completed, check the <code>Status</code> field returned from a call to
@@ -353,7 +353,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q plugin.
+     * Creates an Amazon Q Business plugin.
      * </p>
      * 
      * @param createPluginRequest
@@ -366,7 +366,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q plugin.
+     * Creates an Amazon Q Business plugin.
      * </p>
      * 
      * @param createPluginRequest
@@ -384,7 +384,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Adds a retriever to your Amazon Q application.
+     * Adds a retriever to your Amazon Q Business application.
      * </p>
      * 
      * @param createRetrieverRequest
@@ -397,7 +397,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Adds a retriever to your Amazon Q application.
+     * Adds a retriever to your Amazon Q Business application.
      * </p>
      * 
      * @param createRetrieverRequest
@@ -446,7 +446,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q web experience.
+     * Creates an Amazon Q Business web experience.
      * </p>
      * 
      * @param createWebExperienceRequest
@@ -459,7 +459,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q web experience.
+     * Creates an Amazon Q Business web experience.
      * </p>
      * 
      * @param createWebExperienceRequest
@@ -477,7 +477,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q application.
+     * Deletes an Amazon Q Business application.
      * </p>
      * 
      * @param deleteApplicationRequest
@@ -490,7 +490,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q application.
+     * Deletes an Amazon Q Business application.
      * </p>
      * 
      * @param deleteApplicationRequest
@@ -508,7 +508,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes chat controls configured for an existing Amazon Q application.
+     * Deletes chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param deleteChatControlsConfigurationRequest
@@ -523,7 +523,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes chat controls configured for an existing Amazon Q application.
+     * Deletes chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param deleteChatControlsConfigurationRequest
@@ -543,7 +543,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q web experience conversation.
+     * Deletes an Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param deleteConversationRequest
@@ -556,7 +556,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q web experience conversation.
+     * Deletes an Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param deleteConversationRequest
@@ -574,8 +574,9 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q data source connector. While the data source is being deleted, the <code>Status</code> field
-     * returned by a call to the <code>DescribeDataSource</code> API is set to <code>DELETING</code>.
+     * Deletes an Amazon Q Business data source connector. While the data source is being deleted, the
+     * <code>Status</code> field returned by a call to the <code>DescribeDataSource</code> API is set to
+     * <code>DELETING</code>.
      * </p>
      * 
      * @param deleteDataSourceRequest
@@ -588,8 +589,9 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q data source connector. While the data source is being deleted, the <code>Status</code> field
-     * returned by a call to the <code>DescribeDataSource</code> API is set to <code>DELETING</code>.
+     * Deletes an Amazon Q Business data source connector. While the data source is being deleted, the
+     * <code>Status</code> field returned by a call to the <code>DescribeDataSource</code> API is set to
+     * <code>DELETING</code>.
      * </p>
      * 
      * @param deleteDataSourceRequest
@@ -654,7 +656,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q index.
+     * Deletes an Amazon Q Business index.
      * </p>
      * 
      * @param deleteIndexRequest
@@ -667,7 +669,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q index.
+     * Deletes an Amazon Q Business index.
      * </p>
      * 
      * @param deleteIndexRequest
@@ -685,7 +687,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q plugin.
+     * Deletes an Amazon Q Business plugin.
      * </p>
      * 
      * @param deletePluginRequest
@@ -698,7 +700,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q plugin.
+     * Deletes an Amazon Q Business plugin.
      * </p>
      * 
      * @param deletePluginRequest
@@ -716,7 +718,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes the retriever used by an Amazon Q application.
+     * Deletes the retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param deleteRetrieverRequest
@@ -729,7 +731,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes the retriever used by an Amazon Q application.
+     * Deletes the retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param deleteRetrieverRequest
@@ -778,7 +780,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q web experience.
+     * Deletes an Amazon Q Business web experience.
      * </p>
      * 
      * @param deleteWebExperienceRequest
@@ -791,7 +793,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q web experience.
+     * Deletes an Amazon Q Business web experience.
      * </p>
      * 
      * @param deleteWebExperienceRequest
@@ -809,7 +811,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q application.
+     * Gets information about an existing Amazon Q Business application.
      * </p>
      * 
      * @param getApplicationRequest
@@ -822,7 +824,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q application.
+     * Gets information about an existing Amazon Q Business application.
      * </p>
      * 
      * @param getApplicationRequest
@@ -840,7 +842,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an chat controls configured for an existing Amazon Q application.
+     * Gets information about an chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param getChatControlsConfigurationRequest
@@ -855,7 +857,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an chat controls configured for an existing Amazon Q application.
+     * Gets information about an chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param getChatControlsConfigurationRequest
@@ -875,7 +877,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q data source connector.
+     * Gets information about an existing Amazon Q Business data source connector.
      * </p>
      * 
      * @param getDataSourceRequest
@@ -888,7 +890,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q data source connector.
+     * Gets information about an existing Amazon Q Business data source connector.
      * </p>
      * 
      * @param getDataSourceRequest
@@ -937,7 +939,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q index.
+     * Gets information about an existing Amazon Q Business index.
      * </p>
      * 
      * @param getIndexRequest
@@ -950,7 +952,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q index.
+     * Gets information about an existing Amazon Q Business index.
      * </p>
      * 
      * @param getIndexRequest
@@ -968,7 +970,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q plugin.
+     * Gets information about an existing Amazon Q Business plugin.
      * </p>
      * 
      * @param getPluginRequest
@@ -981,7 +983,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q plugin.
+     * Gets information about an existing Amazon Q Business plugin.
      * </p>
      * 
      * @param getPluginRequest
@@ -999,7 +1001,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing retriever used by an Amazon Q application.
+     * Gets information about an existing retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param getRetrieverRequest
@@ -1012,7 +1014,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing retriever used by an Amazon Q application.
+     * Gets information about an existing retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param getRetrieverRequest
@@ -1061,7 +1063,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q web experience.
+     * Gets information about an existing Amazon Q Business web experience.
      * </p>
      * 
      * @param getWebExperienceRequest
@@ -1074,7 +1076,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q web experience.
+     * Gets information about an existing Amazon Q Business web experience.
      * </p>
      * 
      * @param getWebExperienceRequest
@@ -1092,7 +1094,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists Amazon Q applications.
+     * Lists Amazon Q Business applications.
      * </p>
      * 
      * @param listApplicationsRequest
@@ -1105,7 +1107,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists Amazon Q applications.
+     * Lists Amazon Q Business applications.
      * </p>
      * 
      * @param listApplicationsRequest
@@ -1123,7 +1125,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists one or more Amazon Q conversations.
+     * Lists one or more Amazon Q Business conversations.
      * </p>
      * 
      * @param listConversationsRequest
@@ -1136,7 +1138,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists one or more Amazon Q conversations.
+     * Lists one or more Amazon Q Business conversations.
      * </p>
      * 
      * @param listConversationsRequest
@@ -1154,7 +1156,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Get information about an Amazon Q data source connector synchronization.
+     * Get information about an Amazon Q Business data source connector synchronization.
      * </p>
      * 
      * @param listDataSourceSyncJobsRequest
@@ -1167,7 +1169,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Get information about an Amazon Q data source connector synchronization.
+     * Get information about an Amazon Q Business data source connector synchronization.
      * </p>
      * 
      * @param listDataSourceSyncJobsRequest
@@ -1185,7 +1187,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists the Amazon Q data source connectors that you have created.
+     * Lists the Amazon Q Business data source connectors that you have created.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -1198,7 +1200,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists the Amazon Q data source connectors that you have created.
+     * Lists the Amazon Q Business data source connectors that you have created.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -1278,7 +1280,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists the Amazon Q indices you have created.
+     * Lists the Amazon Q Business indices you have created.
      * </p>
      * 
      * @param listIndicesRequest
@@ -1291,7 +1293,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists the Amazon Q indices you have created.
+     * Lists the Amazon Q Business indices you have created.
      * </p>
      * 
      * @param listIndicesRequest
@@ -1309,7 +1311,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets a list of messages associated with an Amazon Q web experience.
+     * Gets a list of messages associated with an Amazon Q Business web experience.
      * </p>
      * 
      * @param listMessagesRequest
@@ -1322,7 +1324,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets a list of messages associated with an Amazon Q web experience.
+     * Gets a list of messages associated with an Amazon Q Business web experience.
      * </p>
      * 
      * @param listMessagesRequest
@@ -1340,7 +1342,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists configured Amazon Q plugins.
+     * Lists configured Amazon Q Business plugins.
      * </p>
      * 
      * @param listPluginsRequest
@@ -1353,7 +1355,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists configured Amazon Q plugins.
+     * Lists configured Amazon Q Business plugins.
      * </p>
      * 
      * @param listPluginsRequest
@@ -1371,7 +1373,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists the retriever used by an Amazon Q application.
+     * Lists the retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param listRetrieversRequest
@@ -1384,7 +1386,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists the retriever used by an Amazon Q application.
+     * Lists the retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param listRetrieversRequest
@@ -1402,8 +1404,8 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets a list of tags associated with a specified resource. Amazon Q applications and data sources can have tags
-     * associated with them.
+     * Gets a list of tags associated with a specified resource. Amazon Q Business applications and data sources can
+     * have tags associated with them.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1416,8 +1418,8 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Gets a list of tags associated with a specified resource. Amazon Q applications and data sources can have tags
-     * associated with them.
+     * Gets a list of tags associated with a specified resource. Amazon Q Business applications and data sources can
+     * have tags associated with them.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1435,7 +1437,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists one or more Amazon Q Web Experiences.
+     * Lists one or more Amazon Q Business Web Experiences.
      * </p>
      * 
      * @param listWebExperiencesRequest
@@ -1448,7 +1450,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Lists one or more Amazon Q Web Experiences.
+     * Lists one or more Amazon Q Business Web Experiences.
      * </p>
      * 
      * @param listWebExperiencesRequest
@@ -1466,7 +1468,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Enables your end user to to provide feedback on their Amazon Q generated chat responses.
+     * Enables your end user to provide feedback on their Amazon Q Business generated chat responses.
      * </p>
      * 
      * @param putFeedbackRequest
@@ -1479,7 +1481,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Enables your end user to to provide feedback on their Amazon Q generated chat responses.
+     * Enables your end user to provide feedback on their Amazon Q Business generated chat responses.
      * </p>
      * 
      * @param putFeedbackRequest
@@ -1503,7 +1505,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
      * You can also map sub groups to groups. For example, the group "Company Intellectual Property Teams" includes sub
      * groups "Research" and "Engineering". These sub groups include their own list of users or people who work in these
      * teams. Only users who work in research and engineering, and therefore belong in the intellectual property group,
-     * can see top-secret company documents in their Amazon Q chat results.
+     * can see top-secret company documents in their Amazon Q Business chat results.
      * </p>
      * 
      * @param putGroupRequest
@@ -1522,7 +1524,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
      * You can also map sub groups to groups. For example, the group "Company Intellectual Property Teams" includes sub
      * groups "Research" and "Engineering". These sub groups include their own list of users or people who work in these
      * teams. Only users who work in research and engineering, and therefore belong in the intellectual property group,
-     * can see top-secret company documents in their Amazon Q chat results.
+     * can see top-secret company documents in their Amazon Q Business chat results.
      * </p>
      * 
      * @param putGroupRequest
@@ -1541,7 +1543,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
     /**
      * <p>
      * Starts a data source connector synchronization job. If a synchronization job is already in progress, Amazon Q
-     * returns a <code>ConflictException</code>.
+     * Business returns a <code>ConflictException</code>.
      * </p>
      * 
      * @param startDataSourceSyncJobRequest
@@ -1555,7 +1557,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
     /**
      * <p>
      * Starts a data source connector synchronization job. If a synchronization job is already in progress, Amazon Q
-     * returns a <code>ConflictException</code>.
+     * Business returns a <code>ConflictException</code>.
      * </p>
      * 
      * @param startDataSourceSyncJobRequest
@@ -1573,7 +1575,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Stops an Amazon Q data source connector synchronization job already in progress.
+     * Stops an Amazon Q Business data source connector synchronization job already in progress.
      * </p>
      * 
      * @param stopDataSourceSyncJobRequest
@@ -1586,7 +1588,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Stops an Amazon Q data source connector synchronization job already in progress.
+     * Stops an Amazon Q Business data source connector synchronization job already in progress.
      * </p>
      * 
      * @param stopDataSourceSyncJobRequest
@@ -1604,8 +1606,8 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Adds the specified tag to the specified Amazon Q application or data source resource. If the tag already exists,
-     * the existing value is replaced with the new value.
+     * Adds the specified tag to the specified Amazon Q Business application or data source resource. If the tag already
+     * exists, the existing value is replaced with the new value.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1618,8 +1620,8 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Adds the specified tag to the specified Amazon Q application or data source resource. If the tag already exists,
-     * the existing value is replaced with the new value.
+     * Adds the specified tag to the specified Amazon Q Business application or data source resource. If the tag already
+     * exists, the existing value is replaced with the new value.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1637,7 +1639,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Removes a tag from an Amazon Q application or a data source.
+     * Removes a tag from an Amazon Q Business application or a data source.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1650,7 +1652,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Removes a tag from an Amazon Q application or a data source.
+     * Removes a tag from an Amazon Q Business application or a data source.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1668,7 +1670,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an existing Amazon Q application.
+     * Updates an existing Amazon Q Business application.
      * </p>
      * 
      * @param updateApplicationRequest
@@ -1681,7 +1683,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an existing Amazon Q application.
+     * Updates an existing Amazon Q Business application.
      * </p>
      * 
      * @param updateApplicationRequest
@@ -1699,7 +1701,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an set of chat controls configured for an existing Amazon Q application.
+     * Updates an set of chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param updateChatControlsConfigurationRequest
@@ -1714,7 +1716,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an set of chat controls configured for an existing Amazon Q application.
+     * Updates an set of chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param updateChatControlsConfigurationRequest
@@ -1734,7 +1736,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an existing Amazon Q data source connector.
+     * Updates an existing Amazon Q Business data source connector.
      * </p>
      * 
      * @param updateDataSourceRequest
@@ -1747,7 +1749,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an existing Amazon Q data source connector.
+     * Updates an existing Amazon Q Business data source connector.
      * </p>
      * 
      * @param updateDataSourceRequest
@@ -1765,7 +1767,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q index.
+     * Updates an Amazon Q Business index.
      * </p>
      * 
      * @param updateIndexRequest
@@ -1778,7 +1780,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q index.
+     * Updates an Amazon Q Business index.
      * </p>
      * 
      * @param updateIndexRequest
@@ -1796,7 +1798,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q plugin.
+     * Updates an Amazon Q Business plugin.
      * </p>
      * 
      * @param updatePluginRequest
@@ -1809,7 +1811,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q plugin.
+     * Updates an Amazon Q Business plugin.
      * </p>
      * 
      * @param updatePluginRequest
@@ -1827,7 +1829,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates the retriever used for your Amazon Q application.
+     * Updates the retriever used for your Amazon Q Business application.
      * </p>
      * 
      * @param updateRetrieverRequest
@@ -1840,7 +1842,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates the retriever used for your Amazon Q application.
+     * Updates the retriever used for your Amazon Q Business application.
      * </p>
      * 
      * @param updateRetrieverRequest
@@ -1889,7 +1891,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q web experience.
+     * Updates an Amazon Q Business web experience.
      * </p>
      * 
      * @param updateWebExperienceRequest
@@ -1902,7 +1904,7 @@ public interface AWSQBusinessAsync extends AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q web experience.
+     * Updates an Amazon Q Business web experience.
      * </p>
      * 
      * @param updateWebExperienceRequest

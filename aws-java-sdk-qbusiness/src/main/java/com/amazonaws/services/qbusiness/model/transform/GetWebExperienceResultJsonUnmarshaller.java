@@ -68,6 +68,10 @@ public class GetWebExperienceResultJsonUnmarshaller implements Unmarshaller<GetW
                     context.nextToken();
                     getWebExperienceResult.setError(ErrorDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("roleArn", targetDepth)) {
+                    context.nextToken();
+                    getWebExperienceResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("samplePromptsControlMode", targetDepth)) {
                     context.nextToken();
                     getWebExperienceResult.setSamplePromptsControlMode(context.getUnmarshaller(String.class).unmarshall(context));

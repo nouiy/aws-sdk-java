@@ -32,6 +32,9 @@ public class CancelSpotFleetRequestsRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IDs of the Spot Fleet requests.
      * </p>
+     * <p>
+     * Constraint: You can specify up to 100 IDs in a single request.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> spotFleetRequestIds;
     /**
@@ -50,8 +53,13 @@ public class CancelSpotFleetRequestsRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IDs of the Spot Fleet requests.
      * </p>
+     * <p>
+     * Constraint: You can specify up to 100 IDs in a single request.
+     * </p>
      * 
-     * @return The IDs of the Spot Fleet requests.
+     * @return The IDs of the Spot Fleet requests.</p>
+     *         <p>
+     *         Constraint: You can specify up to 100 IDs in a single request.
      */
 
     public java.util.List<String> getSpotFleetRequestIds() {
@@ -65,9 +73,14 @@ public class CancelSpotFleetRequestsRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IDs of the Spot Fleet requests.
      * </p>
+     * <p>
+     * Constraint: You can specify up to 100 IDs in a single request.
+     * </p>
      * 
      * @param spotFleetRequestIds
-     *        The IDs of the Spot Fleet requests.
+     *        The IDs of the Spot Fleet requests.</p>
+     *        <p>
+     *        Constraint: You can specify up to 100 IDs in a single request.
      */
 
     public void setSpotFleetRequestIds(java.util.Collection<String> spotFleetRequestIds) {
@@ -84,13 +97,18 @@ public class CancelSpotFleetRequestsRequest extends AmazonWebServiceRequest impl
      * The IDs of the Spot Fleet requests.
      * </p>
      * <p>
+     * Constraint: You can specify up to 100 IDs in a single request.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSpotFleetRequestIds(java.util.Collection)} or {@link #withSpotFleetRequestIds(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param spotFleetRequestIds
-     *        The IDs of the Spot Fleet requests.
+     *        The IDs of the Spot Fleet requests.</p>
+     *        <p>
+     *        Constraint: You can specify up to 100 IDs in a single request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,9 +126,14 @@ public class CancelSpotFleetRequestsRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IDs of the Spot Fleet requests.
      * </p>
+     * <p>
+     * Constraint: You can specify up to 100 IDs in a single request.
+     * </p>
      * 
      * @param spotFleetRequestIds
-     *        The IDs of the Spot Fleet requests.
+     *        The IDs of the Spot Fleet requests.</p>
+     *        <p>
+     *        Constraint: You can specify up to 100 IDs in a single request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

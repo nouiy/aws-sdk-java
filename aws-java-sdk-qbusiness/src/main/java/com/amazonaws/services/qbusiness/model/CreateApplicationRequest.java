@@ -33,28 +33,36 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private AttachmentsConfiguration attachmentsConfiguration;
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application.
+     * A token that you provide to identify the request to create your Amazon Q Business application.
      * </p>
      */
     private String clientToken;
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support asymmetric
+     * keys.
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or connecting
+     * to—your Amazon Q Business application.
+     * </p>
+     */
+    private String identityCenterInstanceArn;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon CloudWatch logs and metrics.
@@ -63,9 +71,9 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String roleArn;
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to help
-     * control access to the application. Tag keys and values can consist of Unicode letters, digits, white space, and
-     * any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use tags
+     * to help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
+     * space, and any of the following symbols: _ . : / = + - @.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -112,11 +120,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application.
+     * A token that you provide to identify the request to create your Amazon Q Business application.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q application.
+     *        A token that you provide to identify the request to create your Amazon Q Business application.
      */
 
     public void setClientToken(String clientToken) {
@@ -125,10 +133,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application.
+     * A token that you provide to identify the request to create your Amazon Q Business application.
      * </p>
      * 
-     * @return A token that you provide to identify the request to create your Amazon Q application.
+     * @return A token that you provide to identify the request to create your Amazon Q Business application.
      */
 
     public String getClientToken() {
@@ -137,11 +145,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q application.
+     * A token that you provide to identify the request to create your Amazon Q Business application.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q application.
+     *        A token that you provide to identify the request to create your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,11 +160,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q application.
+     *        A description for the Amazon Q Business application.
      */
 
     public void setDescription(String description) {
@@ -165,10 +173,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
-     * @return A description for the Amazon Q application.
+     * @return A description for the Amazon Q Business application.
      */
 
     public String getDescription() {
@@ -177,11 +185,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q application.
+     *        A description for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +200,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        A name for the Amazon Q application.
+     *        A name for the Amazon Q Business application.
      */
 
     public void setDisplayName(String displayName) {
@@ -205,10 +213,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      * 
-     * @return A name for the Amazon Q application.
+     * @return A name for the Amazon Q Business application.
      */
 
     public String getDisplayName() {
@@ -217,11 +225,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A name for the Amazon Q application.
+     * A name for the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        A name for the Amazon Q application.
+     *        A name for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,11 +240,13 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support asymmetric
+     * keys.
      * </p>
      * 
      * @param encryptionConfiguration
-     *        The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
+     *        The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support
+     *        asymmetric keys.
      */
 
     public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
@@ -245,11 +255,12 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support asymmetric
+     * keys.
      * </p>
      * 
-     * @return The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric
-     *         keys.
+     * @return The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support
+     *         asymmetric keys.
      */
 
     public EncryptionConfiguration getEncryptionConfiguration() {
@@ -258,16 +269,64 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support asymmetric
+     * keys.
      * </p>
      * 
      * @param encryptionConfiguration
-     *        The identifier of the KMS key that is used to encrypt your data. Amazon Q doesn't support asymmetric keys.
+     *        The identifier of the KMS key that is used to encrypt your data. Amazon Q Business doesn't support
+     *        asymmetric keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateApplicationRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or connecting
+     * to—your Amazon Q Business application.
+     * </p>
+     * 
+     * @param identityCenterInstanceArn
+     *        The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or
+     *        connecting to—your Amazon Q Business application.
+     */
+
+    public void setIdentityCenterInstanceArn(String identityCenterInstanceArn) {
+        this.identityCenterInstanceArn = identityCenterInstanceArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or connecting
+     * to—your Amazon Q Business application.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or
+     *         connecting to—your Amazon Q Business application.
+     */
+
+    public String getIdentityCenterInstanceArn() {
+        return this.identityCenterInstanceArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or connecting
+     * to—your Amazon Q Business application.
+     * </p>
+     * 
+     * @param identityCenterInstanceArn
+     *        The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating for—or
+     *        connecting to—your Amazon Q Business application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateApplicationRequest withIdentityCenterInstanceArn(String identityCenterInstanceArn) {
+        setIdentityCenterInstanceArn(identityCenterInstanceArn);
         return this;
     }
 
@@ -316,14 +375,14 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to help
-     * control access to the application. Tag keys and values can consist of Unicode letters, digits, white space, and
-     * any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use tags
+     * to help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
+     * space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * 
-     * @return A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to
-     *         help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
-     *         space, and any of the following symbols: _ . : / = + - @.
+     * @return A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also
+     *         use tags to help control access to the application. Tag keys and values can consist of Unicode letters,
+     *         digits, white space, and any of the following symbols: _ . : / = + - @.
      */
 
     public java.util.List<Tag> getTags() {
@@ -332,15 +391,15 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to help
-     * control access to the application. Tag keys and values can consist of Unicode letters, digits, white space, and
-     * any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use tags
+     * to help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
+     * space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to
-     *        help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
-     *        space, and any of the following symbols: _ . : / = + - @.
+     *        A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use
+     *        tags to help control access to the application. Tag keys and values can consist of Unicode letters,
+     *        digits, white space, and any of the following symbols: _ . : / = + - @.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -354,9 +413,9 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to help
-     * control access to the application. Tag keys and values can consist of Unicode letters, digits, white space, and
-     * any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use tags
+     * to help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
+     * space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -365,9 +424,9 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to
-     *        help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
-     *        space, and any of the following symbols: _ . : / = + - @.
+     *        A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use
+     *        tags to help control access to the application. Tag keys and values can consist of Unicode letters,
+     *        digits, white space, and any of the following symbols: _ . : / = + - @.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -383,15 +442,15 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to help
-     * control access to the application. Tag keys and values can consist of Unicode letters, digits, white space, and
-     * any of the following symbols: _ . : / = + - @.
+     * A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use tags
+     * to help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
+     * space, and any of the following symbols: _ . : / = + - @.
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs that identify or categorize your Amazon Q application. You can also use tags to
-     *        help control access to the application. Tag keys and values can consist of Unicode letters, digits, white
-     *        space, and any of the following symbols: _ . : / = + - @.
+     *        A list of key-value pairs that identify or categorize your Amazon Q Business application. You can also use
+     *        tags to help control access to the application. Tag keys and values can consist of Unicode letters,
+     *        digits, white space, and any of the following symbols: _ . : / = + - @.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -422,6 +481,8 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             sb.append("DisplayName: ").append(getDisplayName()).append(",");
         if (getEncryptionConfiguration() != null)
             sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
+        if (getIdentityCenterInstanceArn() != null)
+            sb.append("IdentityCenterInstanceArn: ").append(getIdentityCenterInstanceArn()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getTags() != null)
@@ -460,6 +521,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
             return false;
+        if (other.getIdentityCenterInstanceArn() == null ^ this.getIdentityCenterInstanceArn() == null)
+            return false;
+        if (other.getIdentityCenterInstanceArn() != null && other.getIdentityCenterInstanceArn().equals(this.getIdentityCenterInstanceArn()) == false)
+            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
@@ -481,6 +546,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDisplayName() == null) ? 0 : getDisplayName().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getIdentityCenterInstanceArn() == null) ? 0 : getIdentityCenterInstanceArn().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The documents used to generate an Amazon Q web experience response.
+ * The documents used to generate an Amazon Q Business web experience response.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/SourceAttribution" target="_top">AWS API
@@ -30,7 +30,7 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number attached to a citation in an Amazon Q generated response.
+     * The number attached to a citation in an Amazon Q Business generated response.
      * </p>
      */
     private Integer citationNumber;
@@ -48,30 +48,30 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
     private java.util.List<TextSegment> textMessageSegments;
     /**
      * <p>
-     * The title of the document which is the source for the Amazon Q generated response.
+     * The title of the document which is the source for the Amazon Q Business generated response.
      * </p>
      */
     private String title;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
     /**
      * <p>
-     * The URL of the document which is the source for the Amazon Q generated response.
+     * The URL of the document which is the source for the Amazon Q Business generated response.
      * </p>
      */
     private String url;
 
     /**
      * <p>
-     * The number attached to a citation in an Amazon Q generated response.
+     * The number attached to a citation in an Amazon Q Business generated response.
      * </p>
      * 
      * @param citationNumber
-     *        The number attached to a citation in an Amazon Q generated response.
+     *        The number attached to a citation in an Amazon Q Business generated response.
      */
 
     public void setCitationNumber(Integer citationNumber) {
@@ -80,10 +80,10 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number attached to a citation in an Amazon Q generated response.
+     * The number attached to a citation in an Amazon Q Business generated response.
      * </p>
      * 
-     * @return The number attached to a citation in an Amazon Q generated response.
+     * @return The number attached to a citation in an Amazon Q Business generated response.
      */
 
     public Integer getCitationNumber() {
@@ -92,11 +92,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number attached to a citation in an Amazon Q generated response.
+     * The number attached to a citation in an Amazon Q Business generated response.
      * </p>
      * 
      * @param citationNumber
-     *        The number attached to a citation in an Amazon Q generated response.
+     *        The number attached to a citation in an Amazon Q Business generated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -217,11 +217,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The title of the document which is the source for the Amazon Q generated response.
+     * The title of the document which is the source for the Amazon Q Business generated response.
      * </p>
      * 
      * @param title
-     *        The title of the document which is the source for the Amazon Q generated response.
+     *        The title of the document which is the source for the Amazon Q Business generated response.
      */
 
     public void setTitle(String title) {
@@ -230,10 +230,10 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The title of the document which is the source for the Amazon Q generated response.
+     * The title of the document which is the source for the Amazon Q Business generated response.
      * </p>
      * 
-     * @return The title of the document which is the source for the Amazon Q generated response.
+     * @return The title of the document which is the source for the Amazon Q Business generated response.
      */
 
     public String getTitle() {
@@ -242,11 +242,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The title of the document which is the source for the Amazon Q generated response.
+     * The title of the document which is the source for the Amazon Q Business generated response.
      * </p>
      * 
      * @param title
-     *        The title of the document which is the source for the Amazon Q generated response.
+     *        The title of the document which is the source for the Amazon Q Business generated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -257,11 +257,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -270,10 +270,10 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was last updated.
+     * @return The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -282,11 +282,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -297,11 +297,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the document which is the source for the Amazon Q generated response.
+     * The URL of the document which is the source for the Amazon Q Business generated response.
      * </p>
      * 
      * @param url
-     *        The URL of the document which is the source for the Amazon Q generated response.
+     *        The URL of the document which is the source for the Amazon Q Business generated response.
      */
 
     public void setUrl(String url) {
@@ -310,10 +310,10 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the document which is the source for the Amazon Q generated response.
+     * The URL of the document which is the source for the Amazon Q Business generated response.
      * </p>
      * 
-     * @return The URL of the document which is the source for the Amazon Q generated response.
+     * @return The URL of the document which is the source for the Amazon Q Business generated response.
      */
 
     public String getUrl() {
@@ -322,11 +322,11 @@ public class SourceAttribution implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the document which is the source for the Amazon Q generated response.
+     * The URL of the document which is the source for the Amazon Q Business generated response.
      * </p>
      * 
      * @param url
-     *        The URL of the document which is the source for the Amazon Q generated response.
+     *        The URL of the document which is the source for the Amazon Q Business generated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

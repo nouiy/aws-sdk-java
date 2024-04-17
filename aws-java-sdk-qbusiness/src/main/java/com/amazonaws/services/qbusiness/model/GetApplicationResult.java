@@ -25,13 +25,13 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      */
     private String applicationArn;
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
@@ -43,26 +43,26 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     private AppliedAttachmentsConfiguration attachmentsConfiguration;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't support
-     * asymmetric keys.
+     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business doesn't
+     * support asymmetric keys.
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
@@ -75,30 +75,37 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     private ErrorDetail error;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     * application.
+     * </p>
+     */
+    private String identityCenterApplicationArn;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the IAM with permissions to access your CloudWatch logs and metrics.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The status of the Amazon Q application.
+     * The status of the Amazon Q Business application.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q application.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application.
      */
 
     public void setApplicationArn(String applicationArn) {
@@ -107,10 +114,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q application.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q Business application.
      */
 
     public String getApplicationArn() {
@@ -119,11 +126,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q application.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -134,11 +141,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -147,10 +154,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application.
+     * @return The identifier of the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -159,11 +166,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The identifier of the Amazon Q application.
+     * The identifier of the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application.
+     *        The identifier of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,11 +221,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -227,10 +234,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was last updated.
+     * @return The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public java.util.Date getCreatedAt() {
@@ -239,11 +246,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,11 +261,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q application.
+     *        A description for the Amazon Q Business application.
      */
 
     public void setDescription(String description) {
@@ -267,10 +274,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
-     * @return A description for the Amazon Q application.
+     * @return A description for the Amazon Q Business application.
      */
 
     public String getDescription() {
@@ -279,11 +286,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A description for the Amazon Q application.
+     * A description for the Amazon Q Business application.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q application.
+     *        A description for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -294,11 +301,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q application.
+     *        The name of the Amazon Q Business application.
      */
 
     public void setDisplayName(String displayName) {
@@ -307,10 +314,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      * 
-     * @return The name of the Amazon Q application.
+     * @return The name of the Amazon Q Business application.
      */
 
     public String getDisplayName() {
@@ -319,11 +326,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The name of the Amazon Q application.
+     * The name of the Amazon Q Business application.
      * </p>
      * 
      * @param displayName
-     *        The name of the Amazon Q application.
+     *        The name of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,13 +341,13 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't support
-     * asymmetric keys.
+     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business doesn't
+     * support asymmetric keys.
      * </p>
      * 
      * @param encryptionConfiguration
-     *        The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't
-     *        support asymmetric keys.
+     *        The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business
+     *        doesn't support asymmetric keys.
      */
 
     public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
@@ -349,12 +356,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't support
-     * asymmetric keys.
+     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business doesn't
+     * support asymmetric keys.
      * </p>
      * 
-     * @return The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't
-     *         support asymmetric keys.
+     * @return The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business
+     *         doesn't support asymmetric keys.
      */
 
     public EncryptionConfiguration getEncryptionConfiguration() {
@@ -363,13 +370,13 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't support
-     * asymmetric keys.
+     * The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business doesn't
+     * support asymmetric keys.
      * </p>
      * 
      * @param encryptionConfiguration
-     *        The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q doesn't
-     *        support asymmetric keys.
+     *        The identifier of the Amazon Web Services KMS key that is used to encrypt your data. Amazon Q Business
+     *        doesn't support asymmetric keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -426,6 +433,52 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     * application.
+     * </p>
+     * 
+     * @param identityCenterApplicationArn
+     *        The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     *        application.
+     */
+
+    public void setIdentityCenterApplicationArn(String identityCenterApplicationArn) {
+        this.identityCenterApplicationArn = identityCenterApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     * application.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     *         application.
+     */
+
+    public String getIdentityCenterApplicationArn() {
+        return this.identityCenterApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     * application.
+     * </p>
+     * 
+     * @param identityCenterApplicationArn
+     *        The Amazon Resource Name (ARN) of the AWS IAM Identity Center instance attached to your Amazon Q Business
+     *        application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetApplicationResult withIdentityCenterApplicationArn(String identityCenterApplicationArn) {
+        setIdentityCenterApplicationArn(identityCenterApplicationArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the IAM with permissions to access your CloudWatch logs and metrics.
      * </p>
      * 
@@ -466,11 +519,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The status of the Amazon Q application.
+     * The status of the Amazon Q Business application.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q application.
+     *        The status of the Amazon Q Business application.
      * @see ApplicationStatus
      */
 
@@ -480,10 +533,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The status of the Amazon Q application.
+     * The status of the Amazon Q Business application.
      * </p>
      * 
-     * @return The status of the Amazon Q application.
+     * @return The status of the Amazon Q Business application.
      * @see ApplicationStatus
      */
 
@@ -493,11 +546,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The status of the Amazon Q application.
+     * The status of the Amazon Q Business application.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q application.
+     *        The status of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationStatus
      */
@@ -509,11 +562,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The status of the Amazon Q application.
+     * The status of the Amazon Q Business application.
      * </p>
      * 
      * @param status
-     *        The status of the Amazon Q application.
+     *        The status of the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationStatus
      */
@@ -525,11 +578,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -538,10 +591,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was last updated.
+     * @return The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -550,11 +603,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -591,6 +644,8 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
             sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
         if (getError() != null)
             sb.append("Error: ").append(getError()).append(",");
+        if (getIdentityCenterApplicationArn() != null)
+            sb.append("IdentityCenterApplicationArn: ").append(getIdentityCenterApplicationArn()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getStatus() != null)
@@ -643,6 +698,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getError() != null && other.getError().equals(this.getError()) == false)
             return false;
+        if (other.getIdentityCenterApplicationArn() == null ^ this.getIdentityCenterApplicationArn() == null)
+            return false;
+        if (other.getIdentityCenterApplicationArn() != null && other.getIdentityCenterApplicationArn().equals(this.getIdentityCenterApplicationArn()) == false)
+            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
@@ -671,6 +730,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getDisplayName() == null) ? 0 : getDisplayName().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
+        hashCode = prime * hashCode + ((getIdentityCenterApplicationArn() == null) ? 0 : getIdentityCenterApplicationArn().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());

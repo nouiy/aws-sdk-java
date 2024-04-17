@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the identifier of the KMS key used to encrypt data indexed by Amazon Q. Amazon Q doesn't support asymmetric
- * keys.
+ * Provides the identifier of the KMS key used to encrypt data indexed by Amazon Q Business. Amazon Q Business doesn't
+ * support asymmetric keys.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/EncryptionConfiguration" target="_top">AWS
@@ -31,18 +31,18 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      * </p>
      */
     private String kmsKeyId;
 
     /**
      * <p>
-     * The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     *        The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -51,10 +51,10 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      * </p>
      * 
-     * @return The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     * @return The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      */
 
     public String getKmsKeyId() {
@@ -63,11 +63,11 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     * The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the KMS key. Amazon Q doesn't support asymmetric keys.
+     *        The identifier of the KMS key. Amazon Q Business doesn't support asymmetric keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

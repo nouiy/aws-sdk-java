@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides user and group information used for filtering documents to use for generating Amazon Q conversation
+ * Provides user and group information used for filtering documents to use for generating Amazon Q Business conversation
  * responses.
  * </p>
  * 

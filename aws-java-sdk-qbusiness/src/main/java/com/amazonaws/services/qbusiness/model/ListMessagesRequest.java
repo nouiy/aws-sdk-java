@@ -27,13 +27,13 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation.
+     * The identifier of the Amazon Q Business web experience conversation.
      * </p>
      */
     private String conversationId;
@@ -45,25 +45,25 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
     private Integer maxResults;
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of messages.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The identifier of the user involved in the Amazon Q web experience conversation.
+     * The identifier of the user involved in the Amazon Q Business web experience conversation.
      * </p>
      */
     private String userId;
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier for the Amazon Q application.
+     *        The identifier for the Amazon Q Business application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -72,10 +72,10 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      * 
-     * @return The identifier for the Amazon Q application.
+     * @return The identifier for the Amazon Q Business application.
      */
 
     public String getApplicationId() {
@@ -84,11 +84,11 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier for the Amazon Q application.
+     * The identifier for the Amazon Q Business application.
      * </p>
      * 
      * @param applicationId
-     *        The identifier for the Amazon Q application.
+     *        The identifier for the Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation.
+     * The identifier of the Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q web experience conversation.
+     *        The identifier of the Amazon Q Business web experience conversation.
      */
 
     public void setConversationId(String conversationId) {
@@ -112,10 +112,10 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation.
+     * The identifier of the Amazon Q Business web experience conversation.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience conversation.
+     * @return The identifier of the Amazon Q Business web experience conversation.
      */
 
     public String getConversationId() {
@@ -124,11 +124,11 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation.
+     * The identifier of the Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q web experience conversation.
+     *        The identifier of the Amazon Q Business web experience conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,13 +179,13 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
-     *        pagination token to retrieve the next set of messages.
+     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next
+     *        token as a pagination token to retrieve the next set of messages.
      */
 
     public void setNextToken(String nextToken) {
@@ -194,12 +194,12 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of messages.
      * </p>
      * 
-     * @return If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
-     *         pagination token to retrieve the next set of messages.
+     * @return If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next
+     *         token as a pagination token to retrieve the next set of messages.
      */
 
     public String getNextToken() {
@@ -208,13 +208,13 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
+     * If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next token as a
      * pagination token to retrieve the next set of messages.
      * </p>
      * 
      * @param nextToken
-     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q returns a next token as a
-     *        pagination token to retrieve the next set of messages.
+     *        If the number of retrievers returned exceeds <code>maxResults</code>, Amazon Q Business returns a next
+     *        token as a pagination token to retrieve the next set of messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,11 +225,11 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier of the user involved in the Amazon Q web experience conversation.
+     * The identifier of the user involved in the Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param userId
-     *        The identifier of the user involved in the Amazon Q web experience conversation.
+     *        The identifier of the user involved in the Amazon Q Business web experience conversation.
      */
 
     public void setUserId(String userId) {
@@ -238,10 +238,10 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier of the user involved in the Amazon Q web experience conversation.
+     * The identifier of the user involved in the Amazon Q Business web experience conversation.
      * </p>
      * 
-     * @return The identifier of the user involved in the Amazon Q web experience conversation.
+     * @return The identifier of the user involved in the Amazon Q Business web experience conversation.
      */
 
     public String getUserId() {
@@ -250,11 +250,11 @@ public class ListMessagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The identifier of the user involved in the Amazon Q web experience conversation.
+     * The identifier of the user involved in the Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param userId
-     *        The identifier of the user involved in the Amazon Q web experience conversation.
+     *        The identifier of the user involved in the Amazon Q Business web experience conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

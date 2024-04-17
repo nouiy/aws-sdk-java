@@ -27,25 +27,25 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      * </p>
      */
     private String resourceARN;
     /**
      * <p>
-     * A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the existing value
-     * is replaced with the new value.
+     * A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists, the
+     * existing value is replaced with the new value.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -54,10 +54,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      */
 
     public String getResourceARN() {
@@ -66,11 +66,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     * The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) of the Amazon Q application or data source to tag.
+     *        The Amazon Resource Name (ARN) of the Amazon Q Business application or data source to tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,12 +81,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the existing value
-     * is replaced with the new value.
+     * A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists, the
+     * existing value is replaced with the new value.
      * </p>
      * 
-     * @return A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the
-     *         existing value is replaced with the new value.
+     * @return A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists,
+     *         the existing value is replaced with the new value.
      */
 
     public java.util.List<Tag> getTags() {
@@ -95,13 +95,13 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the existing value
-     * is replaced with the new value.
+     * A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists, the
+     * existing value is replaced with the new value.
      * </p>
      * 
      * @param tags
-     *        A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the
-     *        existing value is replaced with the new value.
+     *        A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists,
+     *        the existing value is replaced with the new value.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -115,8 +115,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the existing value
-     * is replaced with the new value.
+     * A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists, the
+     * existing value is replaced with the new value.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -125,8 +125,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the
-     *        existing value is replaced with the new value.
+     *        A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists,
+     *        the existing value is replaced with the new value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,13 +142,13 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the existing value
-     * is replaced with the new value.
+     * A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists, the
+     * existing value is replaced with the new value.
      * </p>
      * 
      * @param tags
-     *        A list of tag keys to add to the Amazon Q application or data source. If a tag already exists, the
-     *        existing value is replaced with the new value.
+     *        A list of tag keys to add to the Amazon Q Business application or data source. If a tag already exists,
+     *        the existing value is replaced with the new value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,7 +25,7 @@ public class GetRetrieverResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      */
     private String applicationId;
@@ -82,11 +82,11 @@ public class GetRetrieverResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the retriever.
+     *        The identifier of the Amazon Q Business application using the retriever.
      */
 
     public void setApplicationId(String applicationId) {
@@ -95,10 +95,10 @@ public class GetRetrieverResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application using the retriever.
+     * @return The identifier of the Amazon Q Business application using the retriever.
      */
 
     public String getApplicationId() {
@@ -107,11 +107,11 @@ public class GetRetrieverResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the retriever.
+     * The identifier of the Amazon Q Business application using the retriever.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the retriever.
+     *        The identifier of the Amazon Q Business application using the retriever.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

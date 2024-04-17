@@ -35,7 +35,7 @@ public class CreatePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
     private PluginAuthConfiguration authConfiguration;
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q plugin.
+     * A token that you provide to identify the request to create your Amazon Q Business plugin.
      * </p>
      */
     private String clientToken;
@@ -134,11 +134,11 @@ public class CreatePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q plugin.
+     * A token that you provide to identify the request to create your Amazon Q Business plugin.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q plugin.
+     *        A token that you provide to identify the request to create your Amazon Q Business plugin.
      */
 
     public void setClientToken(String clientToken) {
@@ -147,10 +147,10 @@ public class CreatePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q plugin.
+     * A token that you provide to identify the request to create your Amazon Q Business plugin.
      * </p>
      * 
-     * @return A token that you provide to identify the request to create your Amazon Q plugin.
+     * @return A token that you provide to identify the request to create your Amazon Q Business plugin.
      */
 
     public String getClientToken() {
@@ -159,11 +159,11 @@ public class CreatePluginRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token that you provide to identify the request to create your Amazon Q plugin.
+     * A token that you provide to identify the request to create your Amazon Q Business plugin.
      * </p>
      * 
      * @param clientToken
-     *        A token that you provide to identify the request to create your Amazon Q plugin.
+     *        A token that you provide to identify the request to create your Amazon Q Business plugin.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

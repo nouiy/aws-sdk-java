@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the authorization configuration information needed to deploy a Amazon Q web experience to end users.
+ * Provides the authorization configuration information needed to deploy a Amazon Q Business web experience to end
+ * users.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/WebExperienceAuthConfiguration"

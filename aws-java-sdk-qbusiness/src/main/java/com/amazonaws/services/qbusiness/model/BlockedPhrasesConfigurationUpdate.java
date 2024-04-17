@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Updates a blocked phrases configuration in your Amazon Q application.
+ * Updates a blocked phrases configuration in your Amazon Q Business application.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/BlockedPhrasesConfigurationUpdate"
@@ -30,13 +30,13 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Creates or updates a blocked phrases configuration in your Amazon Q application.
+     * Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      */
     private java.util.List<String> blockedPhrasesToCreateOrUpdate;
     /**
      * <p>
-     * Deletes a blocked phrases configuration in your Amazon Q application.
+     * Deletes a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      */
     private java.util.List<String> blockedPhrasesToDelete;
@@ -49,10 +49,10 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Creates or updates a blocked phrases configuration in your Amazon Q application.
+     * Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * 
-     * @return Creates or updates a blocked phrases configuration in your Amazon Q application.
+     * @return Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      */
 
     public java.util.List<String> getBlockedPhrasesToCreateOrUpdate() {
@@ -61,11 +61,11 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Creates or updates a blocked phrases configuration in your Amazon Q application.
+     * Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * 
      * @param blockedPhrasesToCreateOrUpdate
-     *        Creates or updates a blocked phrases configuration in your Amazon Q application.
+     *        Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      */
 
     public void setBlockedPhrasesToCreateOrUpdate(java.util.Collection<String> blockedPhrasesToCreateOrUpdate) {
@@ -79,7 +79,7 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Creates or updates a blocked phrases configuration in your Amazon Q application.
+     * Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -88,7 +88,7 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
      * </p>
      * 
      * @param blockedPhrasesToCreateOrUpdate
-     *        Creates or updates a blocked phrases configuration in your Amazon Q application.
+     *        Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,11 +104,11 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Creates or updates a blocked phrases configuration in your Amazon Q application.
+     * Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * 
      * @param blockedPhrasesToCreateOrUpdate
-     *        Creates or updates a blocked phrases configuration in your Amazon Q application.
+     *        Creates or updates a blocked phrases configuration in your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,10 +119,10 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Deletes a blocked phrases configuration in your Amazon Q application.
+     * Deletes a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * 
-     * @return Deletes a blocked phrases configuration in your Amazon Q application.
+     * @return Deletes a blocked phrases configuration in your Amazon Q Business application.
      */
 
     public java.util.List<String> getBlockedPhrasesToDelete() {
@@ -131,11 +131,11 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Deletes a blocked phrases configuration in your Amazon Q application.
+     * Deletes a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * 
      * @param blockedPhrasesToDelete
-     *        Deletes a blocked phrases configuration in your Amazon Q application.
+     *        Deletes a blocked phrases configuration in your Amazon Q Business application.
      */
 
     public void setBlockedPhrasesToDelete(java.util.Collection<String> blockedPhrasesToDelete) {
@@ -149,7 +149,7 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Deletes a blocked phrases configuration in your Amazon Q application.
+     * Deletes a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -158,7 +158,7 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
      * </p>
      * 
      * @param blockedPhrasesToDelete
-     *        Deletes a blocked phrases configuration in your Amazon Q application.
+     *        Deletes a blocked phrases configuration in your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,11 +174,11 @@ public class BlockedPhrasesConfigurationUpdate implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Deletes a blocked phrases configuration in your Amazon Q application.
+     * Deletes a blocked phrases configuration in your Amazon Q Business application.
      * </p>
      * 
      * @param blockedPhrasesToDelete
-     *        Deletes a blocked phrases configuration in your Amazon Q application.
+     *        Deletes a blocked phrases configuration in your Amazon Q Business application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

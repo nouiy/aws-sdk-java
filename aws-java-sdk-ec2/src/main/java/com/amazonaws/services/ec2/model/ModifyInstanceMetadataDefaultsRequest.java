@@ -46,13 +46,11 @@ public class ModifyInstanceMetadataDefaultsRequest extends AmazonWebServiceReque
     private String httpTokens;
     /**
      * <p>
-     * The maximum number of hops that the metadata token can travel.
+     * The maximum number of hops that the metadata token can travel. To indicate no preference, specify <code>-1</code>
+     * .
      * </p>
      * <p>
-     * Minimum: <code>1</code>
-     * </p>
-     * <p>
-     * Maximum: <code>64</code>
+     * Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no preference
      * </p>
      */
     private Integer httpPutResponseHopLimit;
@@ -224,22 +222,19 @@ public class ModifyInstanceMetadataDefaultsRequest extends AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of hops that the metadata token can travel.
+     * The maximum number of hops that the metadata token can travel. To indicate no preference, specify <code>-1</code>
+     * .
      * </p>
      * <p>
-     * Minimum: <code>1</code>
-     * </p>
-     * <p>
-     * Maximum: <code>64</code>
+     * Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no preference
      * </p>
      * 
      * @param httpPutResponseHopLimit
-     *        The maximum number of hops that the metadata token can travel.</p>
+     *        The maximum number of hops that the metadata token can travel. To indicate no preference, specify
+     *        <code>-1</code>.</p>
      *        <p>
-     *        Minimum: <code>1</code>
-     *        </p>
-     *        <p>
-     *        Maximum: <code>64</code>
+     *        Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no
+     *        preference
      */
 
     public void setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
@@ -248,21 +243,18 @@ public class ModifyInstanceMetadataDefaultsRequest extends AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of hops that the metadata token can travel.
+     * The maximum number of hops that the metadata token can travel. To indicate no preference, specify <code>-1</code>
+     * .
      * </p>
      * <p>
-     * Minimum: <code>1</code>
-     * </p>
-     * <p>
-     * Maximum: <code>64</code>
+     * Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no preference
      * </p>
      * 
-     * @return The maximum number of hops that the metadata token can travel.</p>
+     * @return The maximum number of hops that the metadata token can travel. To indicate no preference, specify
+     *         <code>-1</code>.</p>
      *         <p>
-     *         Minimum: <code>1</code>
-     *         </p>
-     *         <p>
-     *         Maximum: <code>64</code>
+     *         Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no
+     *         preference
      */
 
     public Integer getHttpPutResponseHopLimit() {
@@ -271,22 +263,19 @@ public class ModifyInstanceMetadataDefaultsRequest extends AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of hops that the metadata token can travel.
+     * The maximum number of hops that the metadata token can travel. To indicate no preference, specify <code>-1</code>
+     * .
      * </p>
      * <p>
-     * Minimum: <code>1</code>
-     * </p>
-     * <p>
-     * Maximum: <code>64</code>
+     * Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no preference
      * </p>
      * 
      * @param httpPutResponseHopLimit
-     *        The maximum number of hops that the metadata token can travel.</p>
+     *        The maximum number of hops that the metadata token can travel. To indicate no preference, specify
+     *        <code>-1</code>.</p>
      *        <p>
-     *        Minimum: <code>1</code>
-     *        </p>
-     *        <p>
-     *        Maximum: <code>64</code>
+     *        Possible values: Integers from <code>1</code> to <code>64</code>, and <code>-1</code> to indicate no
+     *        preference
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

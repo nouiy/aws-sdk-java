@@ -25,21 +25,21 @@ public class BatchPutDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of documents that were not added to the Amazon Q index because the document failed a validation check.
-     * Each document contains an error message that indicates why the document couldn't be added to the index.
+     * A list of documents that were not added to the Amazon Q Business index because the document failed a validation
+     * check. Each document contains an error message that indicates why the document couldn't be added to the index.
      * </p>
      */
     private java.util.List<FailedDocument> failedDocuments;
 
     /**
      * <p>
-     * A list of documents that were not added to the Amazon Q index because the document failed a validation check.
-     * Each document contains an error message that indicates why the document couldn't be added to the index.
+     * A list of documents that were not added to the Amazon Q Business index because the document failed a validation
+     * check. Each document contains an error message that indicates why the document couldn't be added to the index.
      * </p>
      * 
-     * @return A list of documents that were not added to the Amazon Q index because the document failed a validation
-     *         check. Each document contains an error message that indicates why the document couldn't be added to the
-     *         index.
+     * @return A list of documents that were not added to the Amazon Q Business index because the document failed a
+     *         validation check. Each document contains an error message that indicates why the document couldn't be
+     *         added to the index.
      */
 
     public java.util.List<FailedDocument> getFailedDocuments() {
@@ -48,14 +48,14 @@ public class BatchPutDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of documents that were not added to the Amazon Q index because the document failed a validation check.
-     * Each document contains an error message that indicates why the document couldn't be added to the index.
+     * A list of documents that were not added to the Amazon Q Business index because the document failed a validation
+     * check. Each document contains an error message that indicates why the document couldn't be added to the index.
      * </p>
      * 
      * @param failedDocuments
-     *        A list of documents that were not added to the Amazon Q index because the document failed a validation
-     *        check. Each document contains an error message that indicates why the document couldn't be added to the
-     *        index.
+     *        A list of documents that were not added to the Amazon Q Business index because the document failed a
+     *        validation check. Each document contains an error message that indicates why the document couldn't be
+     *        added to the index.
      */
 
     public void setFailedDocuments(java.util.Collection<FailedDocument> failedDocuments) {
@@ -69,8 +69,8 @@ public class BatchPutDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of documents that were not added to the Amazon Q index because the document failed a validation check.
-     * Each document contains an error message that indicates why the document couldn't be added to the index.
+     * A list of documents that were not added to the Amazon Q Business index because the document failed a validation
+     * check. Each document contains an error message that indicates why the document couldn't be added to the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,9 +79,9 @@ public class BatchPutDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param failedDocuments
-     *        A list of documents that were not added to the Amazon Q index because the document failed a validation
-     *        check. Each document contains an error message that indicates why the document couldn't be added to the
-     *        index.
+     *        A list of documents that were not added to the Amazon Q Business index because the document failed a
+     *        validation check. Each document contains an error message that indicates why the document couldn't be
+     *        added to the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,14 +97,14 @@ public class BatchPutDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of documents that were not added to the Amazon Q index because the document failed a validation check.
-     * Each document contains an error message that indicates why the document couldn't be added to the index.
+     * A list of documents that were not added to the Amazon Q Business index because the document failed a validation
+     * check. Each document contains an error message that indicates why the document couldn't be added to the index.
      * </p>
      * 
      * @param failedDocuments
-     *        A list of documents that were not added to the Amazon Q index because the document failed a validation
-     *        check. Each document contains an error message that indicates why the document couldn't be added to the
-     *        index.
+     *        A list of documents that were not added to the Amazon Q Business index because the document failed a
+     *        validation check. Each document contains an error message that indicates why the document couldn't be
+     *        added to the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

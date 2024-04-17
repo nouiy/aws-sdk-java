@@ -32,26 +32,26 @@ import com.amazonaws.services.qbusiness.model.*;
  * </p>
  * </note>
  * <p>
- * This is the <i>Amazon Q (for business use)</i> API Reference. Amazon Q is a fully managed, generative-AI powered
- * enterprise chat assistant that you can deploy within your organization. Amazon Q enhances employee productivity by
- * supporting key tasks such as question-answering, knowledge discovery, writing email messages, summarizing text,
- * drafting document outlines, and brainstorming ideas. Users ask questions of Amazon Q and get answers that are
- * presented in a conversational manner. For an introduction to the service, see the <a
- * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html"> <i>Amazon Q (for business use)
- * Developer Guide</i> </a>.
+ * This is the <i>Amazon Q Business</i> API Reference. Amazon Q Business is a fully managed, generative-AI powered
+ * enterprise chat assistant that you can deploy within your organization. Amazon Q Business enhances employee
+ * productivity by supporting key tasks such as question-answering, knowledge discovery, writing email messages,
+ * summarizing text, drafting document outlines, and brainstorming ideas. Users ask questions of Amazon Q Business and
+ * get answers that are presented in a conversational manner. For an introduction to the service, see the <a
+ * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html"> <i>Amazon Q Business User Guide</i>
+ * </a>.
  * </p>
  * <p>
- * For an overview of the Amazon Q APIs, see <a
- * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q API
- * operations</a>.
+ * For an overview of the Amazon Q Business APIs, see <a
+ * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q
+ * Business API operations</a>.
  * </p>
  * <p>
  * For information about the IAM access control permissions you need to use this API, see <a
- * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q</a> in the
- * <i>Amazon Q (for business use) Developer Guide</i>.
+ * href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q Business</a>
+ * in the <i>Amazon Q Business User Guide</i>.
  * </p>
  * <p>
- * You can use the following AWS SDKs to access Amazon Q APIs:
+ * You can use the following AWS SDKs to access Amazon Q Business APIs:
  * </p>
  * <ul>
  * <li>
@@ -91,19 +91,19 @@ import com.amazonaws.services.qbusiness.model.*;
  * </li>
  * </ul>
  * <p>
- * The following resources provide additional information about using the Amazon Q API:
+ * The following resources provide additional information about using the Amazon Q Business API:
  * </p>
  * <ul>
  * <li>
  * <p>
- * <i> <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for Amazon Q</a>
- * </i>
+ * <i> <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for Amazon Q
+ * Business</a> </i>
  * </p>
  * </li>
  * <li>
  * <p>
- * <i> <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q CLI
- * Reference</a> </i>
+ * <i> <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q
+ * Business CLI Reference</a> </i>
  * </p>
  * </li>
  * <li>
@@ -128,7 +128,7 @@ public interface AWSQBusiness {
     /**
      * <p>
      * Asynchronously deletes one or more documents added using the <code>BatchPutDocument</code> API from an Amazon Q
-     * index.
+     * Business index.
      * </p>
      * <p>
      * You can see the progress of the deletion, and any error messages related to the process, by using CloudWatch.
@@ -140,16 +140,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -161,7 +161,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Adds one or more documents to an Amazon Q index.
+     * Adds one or more documents to an Amazon Q Business index.
      * </p>
      * <p>
      * You use this API to:
@@ -170,17 +170,17 @@ public interface AWSQBusiness {
      * <li>
      * <p>
      * ingest your structured and unstructured documents and documents stored in an Amazon S3 bucket into an Amazon Q
-     * index.
+     * Business index.
      * </p>
      * </li>
      * <li>
      * <p>
-     * add custom attributes to documents in an Amazon Q index.
+     * add custom attributes to documents in an Amazon Q Business index.
      * </p>
      * </li>
      * <li>
      * <p>
-     * attach an access control list to the documents added to an Amazon Q index.
+     * attach an access control list to the documents added to an Amazon Q Business index.
      * </p>
      * </li>
      * </ul>
@@ -194,21 +194,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.BatchPutDocument
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/BatchPutDocument" target="_top">AWS API
      *      Documentation</a>
@@ -217,7 +217,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Starts or continues a non-streaming Amazon Q conversation.
+     * Starts or continues a non-streaming Amazon Q Business conversation.
      * </p>
      * 
      * @param chatSyncRequest
@@ -226,8 +226,8 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws LicenseNotFoundException
      *         You don't have permissions to perform the action because your license is inactive. Ask your admin to
      *         activate your license and try again after your licence is active.
@@ -237,8 +237,8 @@ public interface AWSQBusiness {
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -250,7 +250,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q application.
+     * Creates an Amazon Q Business application.
      * </p>
      * 
      * @param createApplicationRequest
@@ -259,21 +259,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.CreateApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/CreateApplication" target="_top">AWS
      *      API Documentation</a>
@@ -282,7 +282,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q index.
+     * Creates an Amazon Q Business index.
      * </p>
      * <p>
      * To determine if index creation has completed, check the <code>Status</code> field returned from a call to
@@ -303,21 +303,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.CreateIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/CreateIndex" target="_top">AWS API
      *      Documentation</a>
@@ -326,7 +326,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q plugin.
+     * Creates an Amazon Q Business plugin.
      * </p>
      * 
      * @param createPluginRequest
@@ -335,21 +335,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.CreatePlugin
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/CreatePlugin" target="_top">AWS API
      *      Documentation</a>
@@ -358,7 +358,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Adds a retriever to your Amazon Q application.
+     * Adds a retriever to your Amazon Q Business application.
      * </p>
      * 
      * @param createRetrieverRequest
@@ -367,21 +367,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.CreateRetriever
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/CreateRetriever" target="_top">AWS API
      *      Documentation</a>
@@ -399,21 +399,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.CreateUser
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/CreateUser" target="_top">AWS API
      *      Documentation</a>
@@ -422,7 +422,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Creates an Amazon Q web experience.
+     * Creates an Amazon Q Business web experience.
      * </p>
      * 
      * @param createWebExperienceRequest
@@ -431,21 +431,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.CreateWebExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/CreateWebExperience" target="_top">AWS
      *      API Documentation</a>
@@ -454,7 +454,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q application.
+     * Deletes an Amazon Q Business application.
      * </p>
      * 
      * @param deleteApplicationRequest
@@ -463,16 +463,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -484,7 +484,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes chat controls configured for an existing Amazon Q application.
+     * Deletes chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param deleteChatControlsConfigurationRequest
@@ -493,13 +493,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -511,7 +511,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q web experience conversation.
+     * Deletes an Amazon Q Business web experience conversation.
      * </p>
      * 
      * @param deleteConversationRequest
@@ -520,16 +520,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws LicenseNotFoundException
      *         You don't have permissions to perform the action because your license is inactive. Ask your admin to
      *         activate your license and try again after your licence is active.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -541,8 +541,9 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q data source connector. While the data source is being deleted, the <code>Status</code> field
-     * returned by a call to the <code>DescribeDataSource</code> API is set to <code>DELETING</code>.
+     * Deletes an Amazon Q Business data source connector. While the data source is being deleted, the
+     * <code>Status</code> field returned by a call to the <code>DescribeDataSource</code> API is set to
+     * <code>DELETING</code>.
      * </p>
      * 
      * @param deleteDataSourceRequest
@@ -551,16 +552,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -589,16 +590,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -610,7 +611,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q index.
+     * Deletes an Amazon Q Business index.
      * </p>
      * 
      * @param deleteIndexRequest
@@ -619,16 +620,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -640,7 +641,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q plugin.
+     * Deletes an Amazon Q Business plugin.
      * </p>
      * 
      * @param deletePluginRequest
@@ -649,16 +650,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -670,7 +671,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes the retriever used by an Amazon Q application.
+     * Deletes the retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param deleteRetrieverRequest
@@ -679,16 +680,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -709,16 +710,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -730,7 +731,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Deletes an Amazon Q web experience.
+     * Deletes an Amazon Q Business web experience.
      * </p>
      * 
      * @param deleteWebExperienceRequest
@@ -739,16 +740,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -760,7 +761,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q application.
+     * Gets information about an existing Amazon Q Business application.
      * </p>
      * 
      * @param getApplicationRequest
@@ -769,13 +770,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -787,7 +788,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an chat controls configured for an existing Amazon Q application.
+     * Gets information about an chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param getChatControlsConfigurationRequest
@@ -796,13 +797,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -814,7 +815,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q data source connector.
+     * Gets information about an existing Amazon Q Business data source connector.
      * </p>
      * 
      * @param getDataSourceRequest
@@ -823,13 +824,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -850,16 +851,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -871,7 +872,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q index.
+     * Gets information about an existing Amazon Q Business index.
      * </p>
      * 
      * @param getIndexRequest
@@ -880,13 +881,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -898,7 +899,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q plugin.
+     * Gets information about an existing Amazon Q Business plugin.
      * </p>
      * 
      * @param getPluginRequest
@@ -907,13 +908,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -925,7 +926,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing retriever used by an Amazon Q application.
+     * Gets information about an existing retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param getRetrieverRequest
@@ -934,13 +935,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -961,16 +962,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -982,7 +983,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets information about an existing Amazon Q web experience.
+     * Gets information about an existing Amazon Q Business web experience.
      * </p>
      * 
      * @param getWebExperienceRequest
@@ -991,13 +992,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1009,19 +1010,19 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists Amazon Q applications.
+     * Lists Amazon Q Business applications.
      * </p>
      * 
      * @param listApplicationsRequest
      * @return Result of the ListApplications operation returned by the service.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1033,7 +1034,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists one or more Amazon Q conversations.
+     * Lists one or more Amazon Q Business conversations.
      * </p>
      * 
      * @param listConversationsRequest
@@ -1042,16 +1043,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws LicenseNotFoundException
      *         You don't have permissions to perform the action because your license is inactive. Ask your admin to
      *         activate your license and try again after your licence is active.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1063,7 +1064,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Get information about an Amazon Q data source connector synchronization.
+     * Get information about an Amazon Q Business data source connector synchronization.
      * </p>
      * 
      * @param listDataSourceSyncJobsRequest
@@ -1072,13 +1073,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1090,7 +1091,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists the Amazon Q data source connectors that you have created.
+     * Lists the Amazon Q Business data source connectors that you have created.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -1099,13 +1100,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1126,13 +1127,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1153,16 +1154,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1174,7 +1175,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists the Amazon Q indices you have created.
+     * Lists the Amazon Q Business indices you have created.
      * </p>
      * 
      * @param listIndicesRequest
@@ -1183,13 +1184,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1201,7 +1202,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets a list of messages associated with an Amazon Q web experience.
+     * Gets a list of messages associated with an Amazon Q Business web experience.
      * </p>
      * 
      * @param listMessagesRequest
@@ -1210,16 +1211,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws LicenseNotFoundException
      *         You don't have permissions to perform the action because your license is inactive. Ask your admin to
      *         activate your license and try again after your licence is active.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1231,7 +1232,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists configured Amazon Q plugins.
+     * Lists configured Amazon Q Business plugins.
      * </p>
      * 
      * @param listPluginsRequest
@@ -1240,13 +1241,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1258,7 +1259,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists the retriever used by an Amazon Q application.
+     * Lists the retriever used by an Amazon Q Business application.
      * </p>
      * 
      * @param listRetrieversRequest
@@ -1267,13 +1268,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1285,8 +1286,8 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Gets a list of tags associated with a specified resource. Amazon Q applications and data sources can have tags
-     * associated with them.
+     * Gets a list of tags associated with a specified resource. Amazon Q Business applications and data sources can
+     * have tags associated with them.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1295,13 +1296,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1313,7 +1314,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Lists one or more Amazon Q Web Experiences.
+     * Lists one or more Amazon Q Business Web Experiences.
      * </p>
      * 
      * @param listWebExperiencesRequest
@@ -1322,13 +1323,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1340,7 +1341,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Enables your end user to to provide feedback on their Amazon Q generated chat responses.
+     * Enables your end user to provide feedback on their Amazon Q Business generated chat responses.
      * </p>
      * 
      * @param putFeedbackRequest
@@ -1349,13 +1350,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1373,7 +1374,7 @@ public interface AWSQBusiness {
      * You can also map sub groups to groups. For example, the group "Company Intellectual Property Teams" includes sub
      * groups "Research" and "Engineering". These sub groups include their own list of users or people who work in these
      * teams. Only users who work in research and engineering, and therefore belong in the intellectual property group,
-     * can see top-secret company documents in their Amazon Q chat results.
+     * can see top-secret company documents in their Amazon Q Business chat results.
      * </p>
      * 
      * @param putGroupRequest
@@ -1382,21 +1383,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.PutGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/PutGroup" target="_top">AWS API
      *      Documentation</a>
@@ -1406,7 +1407,7 @@ public interface AWSQBusiness {
     /**
      * <p>
      * Starts a data source connector synchronization job. If a synchronization job is already in progress, Amazon Q
-     * returns a <code>ConflictException</code>.
+     * Business returns a <code>ConflictException</code>.
      * </p>
      * 
      * @param startDataSourceSyncJobRequest
@@ -1415,21 +1416,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.StartDataSourceSyncJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/StartDataSourceSyncJob"
      *      target="_top">AWS API Documentation</a>
@@ -1438,7 +1439,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Stops an Amazon Q data source connector synchronization job already in progress.
+     * Stops an Amazon Q Business data source connector synchronization job already in progress.
      * </p>
      * 
      * @param stopDataSourceSyncJobRequest
@@ -1447,13 +1448,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1465,8 +1466,8 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Adds the specified tag to the specified Amazon Q application or data source resource. If the tag already exists,
-     * the existing value is replaced with the new value.
+     * Adds the specified tag to the specified Amazon Q Business application or data source resource. If the tag already
+     * exists, the existing value is replaced with the new value.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1475,16 +1476,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1496,7 +1497,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Removes a tag from an Amazon Q application or a data source.
+     * Removes a tag from an Amazon Q Business application or a data source.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1505,13 +1506,13 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1523,7 +1524,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates an existing Amazon Q application.
+     * Updates an existing Amazon Q Business application.
      * </p>
      * 
      * @param updateApplicationRequest
@@ -1532,16 +1533,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1553,7 +1554,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates an set of chat controls configured for an existing Amazon Q application.
+     * Updates an set of chat controls configured for an existing Amazon Q Business application.
      * </p>
      * 
      * @param updateChatControlsConfigurationRequest
@@ -1562,21 +1563,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.UpdateChatControlsConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/UpdateChatControlsConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -1585,7 +1586,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates an existing Amazon Q data source connector.
+     * Updates an existing Amazon Q Business data source connector.
      * </p>
      * 
      * @param updateDataSourceRequest
@@ -1594,16 +1595,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
@@ -1615,7 +1616,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q index.
+     * Updates an Amazon Q Business index.
      * </p>
      * 
      * @param updateIndexRequest
@@ -1624,21 +1625,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.UpdateIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/UpdateIndex" target="_top">AWS API
      *      Documentation</a>
@@ -1647,7 +1648,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q plugin.
+     * Updates an Amazon Q Business plugin.
      * </p>
      * 
      * @param updatePluginRequest
@@ -1656,21 +1657,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.UpdatePlugin
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/UpdatePlugin" target="_top">AWS API
      *      Documentation</a>
@@ -1679,7 +1680,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates the retriever used for your Amazon Q application.
+     * Updates the retriever used for your Amazon Q Business application.
      * </p>
      * 
      * @param updateRetrieverRequest
@@ -1688,21 +1689,21 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.UpdateRetriever
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/UpdateRetriever" target="_top">AWS API
      *      Documentation</a>
@@ -1720,18 +1721,18 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Q service.
+     *         You have exceeded the set limits for your Amazon Q Business service.
      * @sample AWSQBusiness.UpdateUser
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/UpdateUser" target="_top">AWS API
      *      Documentation</a>
@@ -1740,7 +1741,7 @@ public interface AWSQBusiness {
 
     /**
      * <p>
-     * Updates an Amazon Q web experience.
+     * Updates an Amazon Q Business web experience.
      * </p>
      * 
      * @param updateWebExperienceRequest
@@ -1749,16 +1750,16 @@ public interface AWSQBusiness {
      *         The resource you want to use doesn’t exist. Make sure you have provided the correct resource and try
      *         again.
      * @throws InternalServerException
-     *         An issue occurred with the internal server used for your Amazon Q service. Wait some minutes and try
-     *         again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     *         An issue occurred with the internal server used for your Amazon Q Business service. Wait some minutes and
+     *         try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @throws ConflictException
      *         You are trying to perform an action that conflicts with the current status of your resource. Fix any
      *         inconsistences with your resources and try again.
      * @throws ThrottlingException
      *         The request was denied due to throttling. Reduce the number of requests and try again.
      * @throws ValidationException
-     *         The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try
-     *         again.
+     *         The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input
+     *         and try again.
      * @throws AccessDeniedException
      *         You don't have access to perform this action. Make sure you have the required permission policies and
      *         user accounts and try again.

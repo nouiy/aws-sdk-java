@@ -25,20 +25,20 @@ public class BatchDeleteDocumentResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message that
-     * indicates why the document couldn't be removed from the index.
+     * A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an error
+     * message that indicates why the document couldn't be removed from the index.
      * </p>
      */
     private java.util.List<FailedDocument> failedDocuments;
 
     /**
      * <p>
-     * A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message that
-     * indicates why the document couldn't be removed from the index.
+     * A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an error
+     * message that indicates why the document couldn't be removed from the index.
      * </p>
      * 
-     * @return A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error
-     *         message that indicates why the document couldn't be removed from the index.
+     * @return A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an
+     *         error message that indicates why the document couldn't be removed from the index.
      */
 
     public java.util.List<FailedDocument> getFailedDocuments() {
@@ -47,13 +47,13 @@ public class BatchDeleteDocumentResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message that
-     * indicates why the document couldn't be removed from the index.
+     * A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an error
+     * message that indicates why the document couldn't be removed from the index.
      * </p>
      * 
      * @param failedDocuments
-     *        A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message
-     *        that indicates why the document couldn't be removed from the index.
+     *        A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an
+     *        error message that indicates why the document couldn't be removed from the index.
      */
 
     public void setFailedDocuments(java.util.Collection<FailedDocument> failedDocuments) {
@@ -67,8 +67,8 @@ public class BatchDeleteDocumentResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message that
-     * indicates why the document couldn't be removed from the index.
+     * A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an error
+     * message that indicates why the document couldn't be removed from the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,8 +77,8 @@ public class BatchDeleteDocumentResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param failedDocuments
-     *        A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message
-     *        that indicates why the document couldn't be removed from the index.
+     *        A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an
+     *        error message that indicates why the document couldn't be removed from the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,13 +94,13 @@ public class BatchDeleteDocumentResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message that
-     * indicates why the document couldn't be removed from the index.
+     * A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an error
+     * message that indicates why the document couldn't be removed from the index.
      * </p>
      * 
      * @param failedDocuments
-     *        A list of documents that couldn't be removed from the Amazon Q index. Each entry contains an error message
-     *        that indicates why the document couldn't be removed from the index.
+     *        A list of documents that couldn't be removed from the Amazon Q Business index. Each entry contains an
+     *        error message that indicates why the document couldn't be removed from the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

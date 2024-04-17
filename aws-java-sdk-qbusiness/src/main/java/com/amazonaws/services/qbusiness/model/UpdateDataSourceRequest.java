@@ -27,7 +27,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the data source is attached to.
+     * The identifier of the Amazon Q Business application the data source is attached to.
      * </p>
      */
     private String applicationId;
@@ -74,11 +74,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the data source is attached to.
+     * The identifier of the Amazon Q Business application the data source is attached to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application the data source is attached to.
+     *        The identifier of the Amazon Q Business application the data source is attached to.
      */
 
     public void setApplicationId(String applicationId) {
@@ -87,10 +87,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the data source is attached to.
+     * The identifier of the Amazon Q Business application the data source is attached to.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application the data source is attached to.
+     * @return The identifier of the Amazon Q Business application the data source is attached to.
      */
 
     public String getApplicationId() {
@@ -99,11 +99,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the Amazon Q application the data source is attached to.
+     * The identifier of the Amazon Q Business application the data source is attached to.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application the data source is attached to.
+     *        The identifier of the Amazon Q Business application the data source is attached to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

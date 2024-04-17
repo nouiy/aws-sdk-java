@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information for an Amazon Q web experience.
+ * Provides information for an Amazon Q Business web experience.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/WebExperience" target="_top">AWS API
@@ -30,42 +30,43 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web Services.
+     * The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by Amazon Web
+     * Services.
      * </p>
      */
     private String defaultEndpoint;
     /**
      * <p>
-     * The status of your Amazon Q web experience.
+     * The status of your Amazon Q Business web experience.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The Unix timestamp when your Amazon Q web experience was updated.
+     * The Unix timestamp when your Amazon Q Business web experience was updated.
      * </p>
      */
     private java.util.Date updatedAt;
     /**
      * <p>
-     * The identifier of your Amazon Q web experience.
+     * The identifier of your Amazon Q Business web experience.
      * </p>
      */
     private String webExperienceId;
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -74,10 +75,10 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the Amazon Q application was last updated.
+     * @return The Unix timestamp when the Amazon Q Business application was last updated.
      */
 
     public java.util.Date getCreatedAt() {
@@ -86,11 +87,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when the Amazon Q application was last updated.
+     * The Unix timestamp when the Amazon Q Business application was last updated.
      * </p>
      * 
      * @param createdAt
-     *        The Unix timestamp when the Amazon Q application was last updated.
+     *        The Unix timestamp when the Amazon Q Business application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,12 +102,13 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web Services.
+     * The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by Amazon Web
+     * Services.
      * </p>
      * 
      * @param defaultEndpoint
-     *        The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web
-     *        Services.
+     *        The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by
+     *        Amazon Web Services.
      */
 
     public void setDefaultEndpoint(String defaultEndpoint) {
@@ -115,11 +117,12 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web Services.
+     * The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by Amazon Web
+     * Services.
      * </p>
      * 
-     * @return The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web
-     *         Services.
+     * @return The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by
+     *         Amazon Web Services.
      */
 
     public String getDefaultEndpoint() {
@@ -128,12 +131,13 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web Services.
+     * The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by Amazon Web
+     * Services.
      * </p>
      * 
      * @param defaultEndpoint
-     *        The endpoint URLs for your Amazon Q web experience. The URLs are unique and fully hosted by Amazon Web
-     *        Services.
+     *        The endpoint URLs for your Amazon Q Business web experience. The URLs are unique and fully hosted by
+     *        Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,11 +148,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of your Amazon Q web experience.
+     * The status of your Amazon Q Business web experience.
      * </p>
      * 
      * @param status
-     *        The status of your Amazon Q web experience.
+     *        The status of your Amazon Q Business web experience.
      * @see WebExperienceStatus
      */
 
@@ -158,10 +162,10 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of your Amazon Q web experience.
+     * The status of your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The status of your Amazon Q web experience.
+     * @return The status of your Amazon Q Business web experience.
      * @see WebExperienceStatus
      */
 
@@ -171,11 +175,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of your Amazon Q web experience.
+     * The status of your Amazon Q Business web experience.
      * </p>
      * 
      * @param status
-     *        The status of your Amazon Q web experience.
+     *        The status of your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WebExperienceStatus
      */
@@ -187,11 +191,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of your Amazon Q web experience.
+     * The status of your Amazon Q Business web experience.
      * </p>
      * 
      * @param status
-     *        The status of your Amazon Q web experience.
+     *        The status of your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WebExperienceStatus
      */
@@ -203,11 +207,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when your Amazon Q web experience was updated.
+     * The Unix timestamp when your Amazon Q Business web experience was updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when your Amazon Q web experience was updated.
+     *        The Unix timestamp when your Amazon Q Business web experience was updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -216,10 +220,10 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when your Amazon Q web experience was updated.
+     * The Unix timestamp when your Amazon Q Business web experience was updated.
      * </p>
      * 
-     * @return The Unix timestamp when your Amazon Q web experience was updated.
+     * @return The Unix timestamp when your Amazon Q Business web experience was updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -228,11 +232,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix timestamp when your Amazon Q web experience was updated.
+     * The Unix timestamp when your Amazon Q Business web experience was updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when your Amazon Q web experience was updated.
+     *        The Unix timestamp when your Amazon Q Business web experience was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,11 +247,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of your Amazon Q web experience.
+     * The identifier of your Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of your Amazon Q web experience.
+     *        The identifier of your Amazon Q Business web experience.
      */
 
     public void setWebExperienceId(String webExperienceId) {
@@ -256,10 +260,10 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of your Amazon Q web experience.
+     * The identifier of your Amazon Q Business web experience.
      * </p>
      * 
-     * @return The identifier of your Amazon Q web experience.
+     * @return The identifier of your Amazon Q Business web experience.
      */
 
     public String getWebExperienceId() {
@@ -268,11 +272,11 @@ public class WebExperience implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of your Amazon Q web experience.
+     * The identifier of your Amazon Q Business web experience.
      * </p>
      * 
      * @param webExperienceId
-     *        The identifier of your Amazon Q web experience.
+     *        The identifier of your Amazon Q Business web experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

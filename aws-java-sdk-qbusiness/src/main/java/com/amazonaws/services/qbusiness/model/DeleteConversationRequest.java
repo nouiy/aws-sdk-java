@@ -27,13 +27,13 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the conversation.
+     * The identifier of the Amazon Q Business application associated with the conversation.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation being deleted.
+     * The identifier of the Amazon Q Business web experience conversation being deleted.
      * </p>
      */
     private String conversationId;
@@ -46,11 +46,11 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the conversation.
+     * The identifier of the Amazon Q Business application associated with the conversation.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application associated with the conversation.
+     *        The identifier of the Amazon Q Business application associated with the conversation.
      */
 
     public void setApplicationId(String applicationId) {
@@ -59,10 +59,10 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the conversation.
+     * The identifier of the Amazon Q Business application associated with the conversation.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application associated with the conversation.
+     * @return The identifier of the Amazon Q Business application associated with the conversation.
      */
 
     public String getApplicationId() {
@@ -71,11 +71,11 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q application associated with the conversation.
+     * The identifier of the Amazon Q Business application associated with the conversation.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application associated with the conversation.
+     *        The identifier of the Amazon Q Business application associated with the conversation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation being deleted.
+     * The identifier of the Amazon Q Business web experience conversation being deleted.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q web experience conversation being deleted.
+     *        The identifier of the Amazon Q Business web experience conversation being deleted.
      */
 
     public void setConversationId(String conversationId) {
@@ -99,10 +99,10 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation being deleted.
+     * The identifier of the Amazon Q Business web experience conversation being deleted.
      * </p>
      * 
-     * @return The identifier of the Amazon Q web experience conversation being deleted.
+     * @return The identifier of the Amazon Q Business web experience conversation being deleted.
      */
 
     public String getConversationId() {
@@ -111,11 +111,11 @@ public class DeleteConversationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the Amazon Q web experience conversation being deleted.
+     * The identifier of the Amazon Q Business web experience conversation being deleted.
      * </p>
      * 
      * @param conversationId
-     *        The identifier of the Amazon Q web experience conversation being deleted.
+     *        The identifier of the Amazon Q Business web experience conversation being deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration information for an Amazon Q index.
+ * Configuration information for an Amazon Q Business index.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qbusiness-2023-11-27/NativeIndexConfiguration" target="_top">AWS
@@ -30,23 +30,23 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      * </p>
      */
     private java.util.Map<String, DocumentAttributeBoostingConfiguration> boostingOverride;
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      * </p>
      * 
-     * @return Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * @return Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      */
 
     public java.util.Map<String, DocumentAttributeBoostingConfiguration> getBoostingOverride() {
@@ -55,11 +55,11 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      * </p>
      * 
      * @param boostingOverride
-     *        Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     *        Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      */
 
     public void setBoostingOverride(java.util.Map<String, DocumentAttributeBoostingConfiguration> boostingOverride) {
@@ -68,11 +68,11 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     * Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      * </p>
      * 
      * @param boostingOverride
-     *        Overrides the default boosts applied by Amazon Q to supported document attribute data types.
+     *        Overrides the default boosts applied by Amazon Q Business to supported document attribute data types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,11 +111,11 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier for the Amazon Q index.
+     *        The identifier for the Amazon Q Business index.
      */
 
     public void setIndexId(String indexId) {
@@ -124,10 +124,10 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      * 
-     * @return The identifier for the Amazon Q index.
+     * @return The identifier for the Amazon Q Business index.
      */
 
     public String getIndexId() {
@@ -136,11 +136,11 @@ public class NativeIndexConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the Amazon Q index.
+     * The identifier for the Amazon Q Business index.
      * </p>
      * 
      * @param indexId
-     *        The identifier for the Amazon Q index.
+     *        The identifier for the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

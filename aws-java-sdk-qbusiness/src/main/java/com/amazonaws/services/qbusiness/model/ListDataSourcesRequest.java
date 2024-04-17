@@ -27,7 +27,7 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the data source connectors.
+     * The identifier of the Amazon Q Business application linked to the data source connectors.
      * </p>
      */
     private String applicationId;
@@ -45,20 +45,20 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
     private Integer maxResults;
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q data
-     * source connectors.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business data source connectors.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the data source connectors.
+     * The identifier of the Amazon Q Business application linked to the data source connectors.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the data source connectors.
+     *        The identifier of the Amazon Q Business application linked to the data source connectors.
      */
 
     public void setApplicationId(String applicationId) {
@@ -67,10 +67,10 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the data source connectors.
+     * The identifier of the Amazon Q Business application linked to the data source connectors.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application linked to the data source connectors.
+     * @return The identifier of the Amazon Q Business application linked to the data source connectors.
      */
 
     public String getApplicationId() {
@@ -79,11 +79,11 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the Amazon Q application linked to the data source connectors.
+     * The identifier of the Amazon Q Business application linked to the data source connectors.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application linked to the data source connectors.
+     *        The identifier of the Amazon Q Business application linked to the data source connectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,15 +174,15 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q data
-     * source connectors.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business data source connectors.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q data source connectors.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business data source connectors.
      */
 
     public void setNextToken(String nextToken) {
@@ -191,14 +191,14 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q data
-     * source connectors.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business data source connectors.
      * </p>
      * 
      * @return If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *         returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *         Amazon Q data source connectors.
+     *         Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *         next set of Amazon Q Business data source connectors.
      */
 
     public String getNextToken() {
@@ -207,15 +207,15 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q returns a
-     * pagination token in the response. You can use this pagination token to retrieve the next set of Amazon Q data
-     * source connectors.
+     * If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q Business
+     * returns a pagination token in the response. You can use this pagination token to retrieve the next set of Amazon
+     * Q Business data source connectors.
      * </p>
      * 
      * @param nextToken
      *        If the <code>maxResults</code> response was incomplete because there is more data to retrieve, Amazon Q
-     *        returns a pagination token in the response. You can use this pagination token to retrieve the next set of
-     *        Amazon Q data source connectors.
+     *        Business returns a pagination token in the response. You can use this pagination token to retrieve the
+     *        next set of Amazon Q Business data source connectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

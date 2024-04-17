@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The input doesn't meet the constraints set by the Amazon Q service. Provide the correct input and try again.
+ * The input doesn't meet the constraints set by the Amazon Q Business service. Provide the correct input and try again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

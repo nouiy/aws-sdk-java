@@ -27,7 +27,7 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the index.
+     * The identifier of the Amazon Q Business application using the index.
      * </p>
      */
     private String applicationId;
@@ -46,13 +46,13 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String clientToken;
     /**
      * <p>
-     * A description for the Amazon Q index.
+     * A description for the Amazon Q Business index.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * A name for the Amazon Q index.
+     * A name for the Amazon Q Business index.
      * </p>
      */
     private String displayName;
@@ -67,11 +67,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the index.
+     * The identifier of the Amazon Q Business application using the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the index.
+     *        The identifier of the Amazon Q Business application using the index.
      */
 
     public void setApplicationId(String applicationId) {
@@ -80,10 +80,10 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the index.
+     * The identifier of the Amazon Q Business application using the index.
      * </p>
      * 
-     * @return The identifier of the Amazon Q application using the index.
+     * @return The identifier of the Amazon Q Business application using the index.
      */
 
     public String getApplicationId() {
@@ -92,11 +92,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the Amazon Q application using the index.
+     * The identifier of the Amazon Q Business application using the index.
      * </p>
      * 
      * @param applicationId
-     *        The identifier of the Amazon Q application using the index.
+     *        The identifier of the Amazon Q Business application using the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,11 +196,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A description for the Amazon Q index.
+     * A description for the Amazon Q Business index.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q index.
+     *        A description for the Amazon Q Business index.
      */
 
     public void setDescription(String description) {
@@ -209,10 +209,10 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A description for the Amazon Q index.
+     * A description for the Amazon Q Business index.
      * </p>
      * 
-     * @return A description for the Amazon Q index.
+     * @return A description for the Amazon Q Business index.
      */
 
     public String getDescription() {
@@ -221,11 +221,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A description for the Amazon Q index.
+     * A description for the Amazon Q Business index.
      * </p>
      * 
      * @param description
-     *        A description for the Amazon Q index.
+     *        A description for the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,11 +236,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A name for the Amazon Q index.
+     * A name for the Amazon Q Business index.
      * </p>
      * 
      * @param displayName
-     *        A name for the Amazon Q index.
+     *        A name for the Amazon Q Business index.
      */
 
     public void setDisplayName(String displayName) {
@@ -249,10 +249,10 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A name for the Amazon Q index.
+     * A name for the Amazon Q Business index.
      * </p>
      * 
-     * @return A name for the Amazon Q index.
+     * @return A name for the Amazon Q Business index.
      */
 
     public String getDisplayName() {
@@ -261,11 +261,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A name for the Amazon Q index.
+     * A name for the Amazon Q Business index.
      * </p>
      * 
      * @param displayName
-     *        A name for the Amazon Q index.
+     *        A name for the Amazon Q Business index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

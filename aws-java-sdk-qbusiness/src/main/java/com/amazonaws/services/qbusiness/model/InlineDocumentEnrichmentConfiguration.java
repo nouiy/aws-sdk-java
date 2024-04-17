@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides the configuration information for applying basic logic to alter document metadata and content when ingesting
- * documents into Amazon Q.
+ * documents into Amazon Q Business.
  * </p>
  * <p>
  * To apply advanced logic, to go beyond what you can do with basic logic, see <a
