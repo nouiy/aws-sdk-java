@@ -52,6 +52,10 @@ public class LocalIpDetailsJsonUnmarshaller implements Unmarshaller<LocalIpDetai
                     context.nextToken();
                     localIpDetails.setIpAddressV4(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ipAddressV6", targetDepth)) {
+                    context.nextToken();
+                    localIpDetails.setIpAddressV6(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

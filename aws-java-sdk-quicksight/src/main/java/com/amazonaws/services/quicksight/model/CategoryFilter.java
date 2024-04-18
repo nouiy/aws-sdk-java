@@ -51,6 +51,13 @@ public class CategoryFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private CategoryFilterConfiguration configuration;
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     */
+    private DefaultFilterControlConfiguration defaultFilterControlConfiguration;
 
     /**
      * <p>
@@ -173,6 +180,52 @@ public class CategoryFilter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @param defaultFilterControlConfiguration
+     *        The default configurations for the associated controls. This applies only for filters that are scoped to
+     *        multiple sheets.
+     */
+
+    public void setDefaultFilterControlConfiguration(DefaultFilterControlConfiguration defaultFilterControlConfiguration) {
+        this.defaultFilterControlConfiguration = defaultFilterControlConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @return The default configurations for the associated controls. This applies only for filters that are scoped to
+     *         multiple sheets.
+     */
+
+    public DefaultFilterControlConfiguration getDefaultFilterControlConfiguration() {
+        return this.defaultFilterControlConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @param defaultFilterControlConfiguration
+     *        The default configurations for the associated controls. This applies only for filters that are scoped to
+     *        multiple sheets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CategoryFilter withDefaultFilterControlConfiguration(DefaultFilterControlConfiguration defaultFilterControlConfiguration) {
+        setDefaultFilterControlConfiguration(defaultFilterControlConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -189,7 +242,9 @@ public class CategoryFilter implements Serializable, Cloneable, StructuredPojo {
         if (getColumn() != null)
             sb.append("Column: ").append(getColumn()).append(",");
         if (getConfiguration() != null)
-            sb.append("Configuration: ").append(getConfiguration());
+            sb.append("Configuration: ").append(getConfiguration()).append(",");
+        if (getDefaultFilterControlConfiguration() != null)
+            sb.append("DefaultFilterControlConfiguration: ").append(getDefaultFilterControlConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -216,6 +271,11 @@ public class CategoryFilter implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
             return false;
+        if (other.getDefaultFilterControlConfiguration() == null ^ this.getDefaultFilterControlConfiguration() == null)
+            return false;
+        if (other.getDefaultFilterControlConfiguration() != null
+                && other.getDefaultFilterControlConfiguration().equals(this.getDefaultFilterControlConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -227,6 +287,7 @@ public class CategoryFilter implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getFilterId() == null) ? 0 : getFilterId().hashCode());
         hashCode = prime * hashCode + ((getColumn() == null) ? 0 : getColumn().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDefaultFilterControlConfiguration() == null) ? 0 : getDefaultFilterControlConfiguration().hashCode());
         return hashCode;
     }
 

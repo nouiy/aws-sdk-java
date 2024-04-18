@@ -29,6 +29,8 @@ public class LocalIpDetailsMarshaller {
 
     private static final MarshallingInfo<String> IPADDRESSV4_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressV4").build();
+    private static final MarshallingInfo<String> IPADDRESSV6_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressV6").build();
 
     private static final LocalIpDetailsMarshaller instance = new LocalIpDetailsMarshaller();
 
@@ -47,6 +49,7 @@ public class LocalIpDetailsMarshaller {
 
         try {
             protocolMarshaller.marshall(localIpDetails.getIpAddressV4(), IPADDRESSV4_BINDING);
+            protocolMarshaller.marshall(localIpDetails.getIpAddressV6(), IPADDRESSV6_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

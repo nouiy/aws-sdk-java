@@ -132,6 +132,37 @@ public interface AWSIAMRolesAnywhereAsync extends AWSIAMRolesAnywhere {
 
     /**
      * <p>
+     * Delete an entry from the attribute mapping rules enforced by a given profile.
+     * </p>
+     * 
+     * @param deleteAttributeMappingRequest
+     * @return A Java Future containing the result of the DeleteAttributeMapping operation returned by the service.
+     * @sample AWSIAMRolesAnywhereAsync.DeleteAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/DeleteAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAttributeMappingResult> deleteAttributeMappingAsync(DeleteAttributeMappingRequest deleteAttributeMappingRequest);
+
+    /**
+     * <p>
+     * Delete an entry from the attribute mapping rules enforced by a given profile.
+     * </p>
+     * 
+     * @param deleteAttributeMappingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAttributeMapping operation returned by the service.
+     * @sample AWSIAMRolesAnywhereAsyncHandler.DeleteAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/DeleteAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAttributeMappingResult> deleteAttributeMappingAsync(DeleteAttributeMappingRequest deleteAttributeMappingRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAttributeMappingRequest, DeleteAttributeMappingResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a certificate revocation list (CRL).
      * </p>
      * <p>
@@ -844,6 +875,39 @@ public interface AWSIAMRolesAnywhereAsync extends AWSIAMRolesAnywhere {
      */
     java.util.concurrent.Future<ListTrustAnchorsResult> listTrustAnchorsAsync(ListTrustAnchorsRequest listTrustAnchorsRequest,
             com.amazonaws.handlers.AsyncHandler<ListTrustAnchorsRequest, ListTrustAnchorsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Put an entry in the attribute mapping rules that will be enforced by a given profile. A mapping specifies a
+     * certificate field and one or more specifiers that have contextual meanings.
+     * </p>
+     * 
+     * @param putAttributeMappingRequest
+     * @return A Java Future containing the result of the PutAttributeMapping operation returned by the service.
+     * @sample AWSIAMRolesAnywhereAsync.PutAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/PutAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutAttributeMappingResult> putAttributeMappingAsync(PutAttributeMappingRequest putAttributeMappingRequest);
+
+    /**
+     * <p>
+     * Put an entry in the attribute mapping rules that will be enforced by a given profile. A mapping specifies a
+     * certificate field and one or more specifiers that have contextual meanings.
+     * </p>
+     * 
+     * @param putAttributeMappingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutAttributeMapping operation returned by the service.
+     * @sample AWSIAMRolesAnywhereAsyncHandler.PutAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/PutAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutAttributeMappingResult> putAttributeMappingAsync(PutAttributeMappingRequest putAttributeMappingRequest,
+            com.amazonaws.handlers.AsyncHandler<PutAttributeMappingRequest, PutAttributeMappingResult> asyncHandler);
 
     /**
      * <p>

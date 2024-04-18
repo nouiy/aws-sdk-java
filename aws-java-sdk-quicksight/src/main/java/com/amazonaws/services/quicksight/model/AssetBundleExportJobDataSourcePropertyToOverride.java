@@ -36,7 +36,8 @@ public enum AssetBundleExportJobDataSourcePropertyToOverride {
     ClusterId("ClusterId"),
     ManifestFileLocation("ManifestFileLocation"),
     Warehouse("Warehouse"),
-    RoleArn("RoleArn");
+    RoleArn("RoleArn"),
+    ProductType("ProductType");
 
     private String value;
 

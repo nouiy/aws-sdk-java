@@ -35,6 +35,8 @@ public class RemoteIpDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("geoLocation").build();
     private static final MarshallingInfo<String> IPADDRESSV4_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressV4").build();
+    private static final MarshallingInfo<String> IPADDRESSV6_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressV6").build();
     private static final MarshallingInfo<StructuredPojo> ORGANIZATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("organization").build();
 
@@ -58,6 +60,7 @@ public class RemoteIpDetailsMarshaller {
             protocolMarshaller.marshall(remoteIpDetails.getCountry(), COUNTRY_BINDING);
             protocolMarshaller.marshall(remoteIpDetails.getGeoLocation(), GEOLOCATION_BINDING);
             protocolMarshaller.marshall(remoteIpDetails.getIpAddressV4(), IPADDRESSV4_BINDING);
+            protocolMarshaller.marshall(remoteIpDetails.getIpAddressV6(), IPADDRESSV6_BINDING);
             protocolMarshaller.marshall(remoteIpDetails.getOrganization(), ORGANIZATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

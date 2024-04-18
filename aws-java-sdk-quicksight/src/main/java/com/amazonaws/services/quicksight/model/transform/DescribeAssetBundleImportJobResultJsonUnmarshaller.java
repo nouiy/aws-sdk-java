@@ -116,6 +116,13 @@ public class DescribeAssetBundleImportJobResultJsonUnmarshaller implements Unmar
                     describeAssetBundleImportJobResult.setOverrideValidationStrategy(AssetBundleImportJobOverrideValidationStrategyJsonUnmarshaller
                             .getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Warnings", targetDepth)) {
+                    context.nextToken();
+                    describeAssetBundleImportJobResult.setWarnings(new ListUnmarshaller<AssetBundleImportJobWarning>(
+                            AssetBundleImportJobWarningJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -54,7 +54,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
     private ListControlDisplayOptions displayOptions;
     /**
      * <p>
-     * The type of <code>FilterListControl</code>. Choose one of the following options:
+     * The type of the <code>FilterListControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -246,7 +246,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of <code>FilterListControl</code>. Choose one of the following options:
+     * The type of the <code>FilterListControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -262,7 +262,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
      * </ul>
      * 
      * @param type
-     *        The type of <code>FilterListControl</code>. Choose one of the following options:</p>
+     *        The type of the <code>FilterListControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -283,7 +283,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of <code>FilterListControl</code>. Choose one of the following options:
+     * The type of the <code>FilterListControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -298,7 +298,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
      * </li>
      * </ul>
      * 
-     * @return The type of <code>FilterListControl</code>. Choose one of the following options:</p>
+     * @return The type of the <code>FilterListControl</code>. Choose one of the following options:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -319,7 +319,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of <code>FilterListControl</code>. Choose one of the following options:
+     * The type of the <code>FilterListControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -335,7 +335,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
      * </ul>
      * 
      * @param type
-     *        The type of <code>FilterListControl</code>. Choose one of the following options:</p>
+     *        The type of the <code>FilterListControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -358,7 +358,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of <code>FilterListControl</code>. Choose one of the following options:
+     * The type of the <code>FilterListControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -374,7 +374,7 @@ public class FilterListControl implements Serializable, Cloneable, StructuredPoj
      * </ul>
      * 
      * @param type
-     *        The type of <code>FilterListControl</code>. Choose one of the following options:</p>
+     *        The type of the <code>FilterListControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>

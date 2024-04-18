@@ -33,6 +33,8 @@ public class SourceCloudPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("originAvailabilityZone").build();
     private static final MarshallingInfo<String> ORIGINREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("originRegion").build();
+    private static final MarshallingInfo<String> SOURCEOUTPOSTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceOutpostArn").build();
 
     private static final SourceCloudPropertiesMarshaller instance = new SourceCloudPropertiesMarshaller();
 
@@ -53,6 +55,7 @@ public class SourceCloudPropertiesMarshaller {
             protocolMarshaller.marshall(sourceCloudProperties.getOriginAccountID(), ORIGINACCOUNTID_BINDING);
             protocolMarshaller.marshall(sourceCloudProperties.getOriginAvailabilityZone(), ORIGINAVAILABILITYZONE_BINDING);
             protocolMarshaller.marshall(sourceCloudProperties.getOriginRegion(), ORIGINREGION_BINDING);
+            protocolMarshaller.marshall(sourceCloudProperties.getSourceOutpostArn(), SOURCEOUTPOSTARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

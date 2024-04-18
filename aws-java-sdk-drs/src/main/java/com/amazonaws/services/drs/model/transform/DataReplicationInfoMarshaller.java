@@ -42,6 +42,8 @@ public class DataReplicationInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("replicatedDisks").build();
     private static final MarshallingInfo<String> STAGINGAVAILABILITYZONE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stagingAvailabilityZone").build();
+    private static final MarshallingInfo<String> STAGINGOUTPOSTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stagingOutpostArn").build();
 
     private static final DataReplicationInfoMarshaller instance = new DataReplicationInfoMarshaller();
 
@@ -66,6 +68,7 @@ public class DataReplicationInfoMarshaller {
             protocolMarshaller.marshall(dataReplicationInfo.getLagDuration(), LAGDURATION_BINDING);
             protocolMarshaller.marshall(dataReplicationInfo.getReplicatedDisks(), REPLICATEDDISKS_BINDING);
             protocolMarshaller.marshall(dataReplicationInfo.getStagingAvailabilityZone(), STAGINGAVAILABILITYZONE_BINDING);
+            protocolMarshaller.marshall(dataReplicationInfo.getStagingOutpostArn(), STAGINGOUTPOSTARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -60,6 +60,10 @@ public class CategoryFilterJsonUnmarshaller implements Unmarshaller<CategoryFilt
                     context.nextToken();
                     categoryFilter.setConfiguration(CategoryFilterConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DefaultFilterControlConfiguration", targetDepth)) {
+                    context.nextToken();
+                    categoryFilter.setDefaultFilterControlConfiguration(DefaultFilterControlConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

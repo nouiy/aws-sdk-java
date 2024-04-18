@@ -72,6 +72,11 @@ public class TimeEqualityFilterJsonUnmarshaller implements Unmarshaller<TimeEqua
                     context.nextToken();
                     timeEqualityFilter.setRollingDate(RollingDateConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DefaultFilterControlConfiguration", targetDepth)) {
+                    context.nextToken();
+                    timeEqualityFilter
+                            .setDefaultFilterControlConfiguration(DefaultFilterControlConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

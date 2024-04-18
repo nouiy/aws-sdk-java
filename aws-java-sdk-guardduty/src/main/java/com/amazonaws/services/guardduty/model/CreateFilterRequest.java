@@ -285,6 +285,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -345,6 +350,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -370,6 +380,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.namespace
      * </p>
      * </li>
@@ -391,6 +406,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.networkConnectionAction.localIpDetails.ipAddressV6
      * </p>
      * </li>
      * <li>
@@ -1041,6 +1061,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -1101,6 +1126,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -1126,6 +1156,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.namespace
      * </p>
      * </li>
@@ -1147,6 +1182,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.networkConnectionAction.localIpDetails.ipAddressV6
      * </p>
      * </li>
      * <li>
@@ -1535,6 +1575,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.awsApiCallAction.remoteIpDetails.organization.asn
      *        </p>
      *        </li>
@@ -1595,6 +1640,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.networkConnectionAction.remoteIpDetails.organization.asn
      *        </p>
      *        </li>
@@ -1620,6 +1670,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.kubernetesApiCallAction.namespace
      *        </p>
      *        </li>
@@ -1641,6 +1696,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.networkConnectionAction.localIpDetails.ipAddressV6
      *        </p>
      *        </li>
      *        <li>
@@ -2035,6 +2095,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -2095,6 +2160,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -2120,6 +2190,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.namespace
      * </p>
      * </li>
@@ -2141,6 +2216,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.networkConnectionAction.localIpDetails.ipAddressV6
      * </p>
      * </li>
      * <li>
@@ -2528,6 +2608,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
+     *         service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         service.action.awsApiCallAction.remoteIpDetails.organization.asn
      *         </p>
      *         </li>
@@ -2588,6 +2673,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
+     *         service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         service.action.networkConnectionAction.remoteIpDetails.organization.asn
      *         </p>
      *         </li>
@@ -2613,6 +2703,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
+     *         service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         service.action.kubernetesApiCallAction.namespace
      *         </p>
      *         </li>
@@ -2634,6 +2729,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         service.action.networkConnectionAction.localIpDetails.ipAddressV6
      *         </p>
      *         </li>
      *         <li>
@@ -3028,6 +3128,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -3088,6 +3193,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.remoteIpDetails.organization.asn
      * </p>
      * </li>
@@ -3113,6 +3223,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.namespace
      * </p>
      * </li>
@@ -3134,6 +3249,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.networkConnectionAction.localIpDetails.ipAddressV6
      * </p>
      * </li>
      * <li>
@@ -3522,6 +3642,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.awsApiCallAction.remoteIpDetails.organization.asn
      *        </p>
      *        </li>
@@ -3582,6 +3707,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.networkConnectionAction.remoteIpDetails.organization.asn
      *        </p>
      *        </li>
@@ -3607,6 +3737,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.kubernetesApiCallAction.namespace
      *        </p>
      *        </li>
@@ -3628,6 +3763,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.networkConnectionAction.localIpDetails.ipAddressV6
      *        </p>
      *        </li>
      *        <li>

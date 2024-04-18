@@ -1,3 +1,32 @@
+# __1.12.704__ __2024-04-18__
+## __Amazon GuardDuty__
+  - ### Features
+    - Added IPv6Address fields for local and remote IP addresses
+
+## __Amazon QuickSight__
+  - ### Features
+    - This release adds support for the Cross Sheet Filter and Control features, and support for warnings in asset imports for any permitted errors encountered during execution
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Removed deprecated enum values and updated API documentation.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Adds new APIs for managing and sharing WorkSpaces BYOL configuration across accounts.
+
+## __EMR Serverless__
+  - ### Features
+    - This release adds the capability to publish detailed Spark engine metrics to Amazon Managed Service for Prometheus (AMP) for  enhanced monitoring for Spark jobs.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Outpost ARN added to Source Server and Recovery Instance
+
+## __IAM Roles Anywhere__
+  - ### Features
+    - This release introduces the PutAttributeMapping and DeleteAttributeMapping APIs. IAM Roles Anywhere now provides the capability to define a set of mapping rules, allowing customers to specify which data is extracted from their X.509 end-entity certificates.
+
 # __1.12.703__ __2024-04-17__
 ## __Amazon Elastic Compute Cloud__
   - ### Features

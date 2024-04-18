@@ -100,6 +100,10 @@ public class RecoveryInstanceJsonUnmarshaller implements Unmarshaller<RecoveryIn
                     context.nextToken();
                     recoveryInstance.setRecoveryInstanceProperties(RecoveryInstancePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("sourceOutpostArn", targetDepth)) {
+                    context.nextToken();
+                    recoveryInstance.setSourceOutpostArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sourceServerID", targetDepth)) {
                     context.nextToken();
                     recoveryInstance.setSourceServerID(context.getUnmarshaller(String.class).unmarshall(context));

@@ -54,17 +54,17 @@ public class FilterDateTimePickerControl implements Serializable, Cloneable, Str
     private DateTimePickerControlDisplayOptions displayOptions;
     /**
      * <p>
-     * The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following options:
+     * The type of the <code>FilterDropDownControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     * <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DATE_RANGE</code>: The filter condition is a date time range.
+     * <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      * </p>
      * </li>
      * </ul>
@@ -233,33 +233,32 @@ public class FilterDateTimePickerControl implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following options:
+     * The type of the <code>FilterDropDownControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     * <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DATE_RANGE</code>: The filter condition is a date time range.
+     * <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following
-     *        options:</p>
+     *        The type of the <code>FilterDropDownControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     *        <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DATE_RANGE</code>: The filter condition is a date time range.
+     *        <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      *        </p>
      *        </li>
      * @see SheetControlDateTimePickerType
@@ -271,32 +270,31 @@ public class FilterDateTimePickerControl implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following options:
+     * The type of the <code>FilterDropDownControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     * <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DATE_RANGE</code>: The filter condition is a date time range.
+     * <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following
-     *         options:</p>
+     * @return The type of the <code>FilterDropDownControl</code>. Choose one of the following options:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     *         <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DATE_RANGE</code>: The filter condition is a date time range.
+     *         <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      *         </p>
      *         </li>
      * @see SheetControlDateTimePickerType
@@ -308,33 +306,32 @@ public class FilterDateTimePickerControl implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following options:
+     * The type of the <code>FilterDropDownControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     * <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DATE_RANGE</code>: The filter condition is a date time range.
+     * <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following
-     *        options:</p>
+     *        The type of the <code>FilterDropDownControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     *        <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DATE_RANGE</code>: The filter condition is a date time range.
+     *        <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -348,33 +345,32 @@ public class FilterDateTimePickerControl implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following options:
+     * The type of the <code>FilterDropDownControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     * <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DATE_RANGE</code>: The filter condition is a date time range.
+     * <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        The date time picker type of a <code>FilterDateTimePickerControl</code>. Choose one of the following
-     *        options:</p>
+     *        The type of the <code>FilterDropDownControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SINGLE_VALUED</code>: The filter condition is a fixed date.
+     *        <code>MULTI_SELECT</code>: The user can select multiple entries from a dropdown menu.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DATE_RANGE</code>: The filter condition is a date time range.
+     *        <code>SINGLE_SELECT</code>: The user can select a single entry from a dropdown menu.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -284,6 +284,68 @@ public class AWSIAMRolesAnywhereClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Delete an entry from the attribute mapping rules enforced by a given profile.
+     * </p>
+     * 
+     * @param deleteAttributeMappingRequest
+     * @return Result of the DeleteAttributeMapping operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSIAMRolesAnywhere.DeleteAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/DeleteAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAttributeMappingResult deleteAttributeMapping(DeleteAttributeMappingRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAttributeMapping(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAttributeMappingResult executeDeleteAttributeMapping(DeleteAttributeMappingRequest deleteAttributeMappingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAttributeMappingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAttributeMappingRequest> request = null;
+        Response<DeleteAttributeMappingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAttributeMappingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAttributeMappingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RolesAnywhere");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAttributeMapping");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAttributeMappingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteAttributeMappingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a certificate revocation list (CRL).
      * </p>
      * <p>
@@ -1458,6 +1520,68 @@ public class AWSIAMRolesAnywhereClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTrustAnchorsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTrustAnchorsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Put an entry in the attribute mapping rules that will be enforced by a given profile. A mapping specifies a
+     * certificate field and one or more specifiers that have contextual meanings.
+     * </p>
+     * 
+     * @param putAttributeMappingRequest
+     * @return Result of the PutAttributeMapping operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSIAMRolesAnywhere.PutAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/PutAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutAttributeMappingResult putAttributeMapping(PutAttributeMappingRequest request) {
+        request = beforeClientExecution(request);
+        return executePutAttributeMapping(request);
+    }
+
+    @SdkInternalApi
+    final PutAttributeMappingResult executePutAttributeMapping(PutAttributeMappingRequest putAttributeMappingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putAttributeMappingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutAttributeMappingRequest> request = null;
+        Response<PutAttributeMappingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutAttributeMappingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putAttributeMappingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RolesAnywhere");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutAttributeMapping");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutAttributeMappingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutAttributeMappingResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

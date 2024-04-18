@@ -43,6 +43,8 @@ public class NumericEqualityFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParameterName").build();
     private static final MarshallingInfo<String> NULLOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NullOption").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final NumericEqualityFilterMarshaller instance = new NumericEqualityFilterMarshaller();
 
@@ -68,6 +70,7 @@ public class NumericEqualityFilterMarshaller {
             protocolMarshaller.marshall(numericEqualityFilter.getAggregationFunction(), AGGREGATIONFUNCTION_BINDING);
             protocolMarshaller.marshall(numericEqualityFilter.getParameterName(), PARAMETERNAME_BINDING);
             protocolMarshaller.marshall(numericEqualityFilter.getNullOption(), NULLOPTION_BINDING);
+            protocolMarshaller.marshall(numericEqualityFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

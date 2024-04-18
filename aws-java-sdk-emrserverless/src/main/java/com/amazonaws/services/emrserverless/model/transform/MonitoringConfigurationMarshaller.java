@@ -34,6 +34,8 @@ public class MonitoringConfigurationMarshaller {
             .build();
     private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGGINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cloudWatchLoggingConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> PROMETHEUSMONITORINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("prometheusMonitoringConfiguration").build();
 
     private static final MonitoringConfigurationMarshaller instance = new MonitoringConfigurationMarshaller();
 
@@ -55,6 +57,7 @@ public class MonitoringConfigurationMarshaller {
             protocolMarshaller.marshall(monitoringConfiguration.getManagedPersistenceMonitoringConfiguration(),
                     MANAGEDPERSISTENCEMONITORINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(monitoringConfiguration.getCloudWatchLoggingConfiguration(), CLOUDWATCHLOGGINGCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(monitoringConfiguration.getPrometheusMonitoringConfiguration(), PROMETHEUSMONITORINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

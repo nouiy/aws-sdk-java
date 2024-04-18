@@ -38,6 +38,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public AcceptAccountLinkInvitationResult acceptAccountLinkInvitation(AcceptAccountLinkInvitationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateConnectionAliasResult associateConnectionAlias(AssociateConnectionAliasRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -59,6 +64,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public CopyWorkspaceImageResult copyWorkspaceImage(CopyWorkspaceImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateAccountLinkInvitationResult createAccountLinkInvitation(CreateAccountLinkInvitationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +114,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAccountLinkInvitationResult deleteAccountLinkInvitation(DeleteAccountLinkInvitationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -288,12 +303,22 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public GetAccountLinkResult getAccountLink(GetAccountLinkRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportClientBrandingResult importClientBranding(ImportClientBrandingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ImportWorkspaceImageResult importWorkspaceImage(ImportWorkspaceImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAccountLinksResult listAccountLinks(ListAccountLinksRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -364,6 +389,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public RegisterWorkspaceDirectoryResult registerWorkspaceDirectory(RegisterWorkspaceDirectoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RejectAccountLinkInvitationResult rejectAccountLinkInvitation(RejectAccountLinkInvitationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

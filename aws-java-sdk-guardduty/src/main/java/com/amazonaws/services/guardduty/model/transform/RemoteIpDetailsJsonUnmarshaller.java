@@ -64,6 +64,10 @@ public class RemoteIpDetailsJsonUnmarshaller implements Unmarshaller<RemoteIpDet
                     context.nextToken();
                     remoteIpDetails.setIpAddressV4(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ipAddressV6", targetDepth)) {
+                    context.nextToken();
+                    remoteIpDetails.setIpAddressV6(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("organization", targetDepth)) {
                     context.nextToken();
                     remoteIpDetails.setOrganization(OrganizationJsonUnmarshaller.getInstance().unmarshall(context));

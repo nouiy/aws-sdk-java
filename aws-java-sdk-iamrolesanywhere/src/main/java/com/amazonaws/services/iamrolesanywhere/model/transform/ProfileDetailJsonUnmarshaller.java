@@ -48,6 +48,12 @@ public class ProfileDetailJsonUnmarshaller implements Unmarshaller<ProfileDetail
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("attributeMappings", targetDepth)) {
+                    context.nextToken();
+                    profileDetail.setAttributeMappings(new ListUnmarshaller<AttributeMapping>(AttributeMappingJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
                     profileDetail.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));

@@ -42,6 +42,8 @@ public class FilterControlMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Slider").build();
     private static final MarshallingInfo<StructuredPojo> RELATIVEDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelativeDateTime").build();
+    private static final MarshallingInfo<StructuredPojo> CROSSSHEET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossSheet").build();
 
     private static final FilterControlMarshaller instance = new FilterControlMarshaller();
 
@@ -66,6 +68,7 @@ public class FilterControlMarshaller {
             protocolMarshaller.marshall(filterControl.getTextArea(), TEXTAREA_BINDING);
             protocolMarshaller.marshall(filterControl.getSlider(), SLIDER_BINDING);
             protocolMarshaller.marshall(filterControl.getRelativeDateTime(), RELATIVEDATETIME_BINDING);
+            protocolMarshaller.marshall(filterControl.getCrossSheet(), CROSSSHEET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

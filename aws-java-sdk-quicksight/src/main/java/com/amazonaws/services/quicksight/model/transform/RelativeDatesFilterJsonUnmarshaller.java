@@ -88,6 +88,11 @@ public class RelativeDatesFilterJsonUnmarshaller implements Unmarshaller<Relativ
                     context.nextToken();
                     relativeDatesFilter.setExcludePeriodConfiguration(ExcludePeriodConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DefaultFilterControlConfiguration", targetDepth)) {
+                    context.nextToken();
+                    relativeDatesFilter.setDefaultFilterControlConfiguration(DefaultFilterControlConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

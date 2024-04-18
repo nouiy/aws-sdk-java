@@ -279,6 +279,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<AcceptAccountLinkInvitationResult> acceptAccountLinkInvitationAsync(AcceptAccountLinkInvitationRequest request) {
+
+        return acceptAccountLinkInvitationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AcceptAccountLinkInvitationResult> acceptAccountLinkInvitationAsync(final AcceptAccountLinkInvitationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AcceptAccountLinkInvitationRequest, AcceptAccountLinkInvitationResult> asyncHandler) {
+        final AcceptAccountLinkInvitationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AcceptAccountLinkInvitationResult>() {
+            @Override
+            public AcceptAccountLinkInvitationResult call() throws Exception {
+                AcceptAccountLinkInvitationResult result = null;
+
+                try {
+                    result = executeAcceptAccountLinkInvitation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateConnectionAliasResult> associateConnectionAliasAsync(AssociateConnectionAliasRequest request) {
 
         return associateConnectionAliasAsync(request, null);
@@ -429,6 +462,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
 
                 try {
                     result = executeCopyWorkspaceImage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccountLinkInvitationResult> createAccountLinkInvitationAsync(CreateAccountLinkInvitationRequest request) {
+
+        return createAccountLinkInvitationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccountLinkInvitationResult> createAccountLinkInvitationAsync(final CreateAccountLinkInvitationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAccountLinkInvitationRequest, CreateAccountLinkInvitationResult> asyncHandler) {
+        final CreateAccountLinkInvitationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAccountLinkInvitationResult>() {
+            @Override
+            public CreateAccountLinkInvitationResult call() throws Exception {
+                CreateAccountLinkInvitationResult result = null;
+
+                try {
+                    result = executeCreateAccountLinkInvitation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -726,6 +792,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
 
                 try {
                     result = executeCreateWorkspaces(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccountLinkInvitationResult> deleteAccountLinkInvitationAsync(DeleteAccountLinkInvitationRequest request) {
+
+        return deleteAccountLinkInvitationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccountLinkInvitationResult> deleteAccountLinkInvitationAsync(final DeleteAccountLinkInvitationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAccountLinkInvitationRequest, DeleteAccountLinkInvitationResult> asyncHandler) {
+        final DeleteAccountLinkInvitationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAccountLinkInvitationResult>() {
+            @Override
+            public DeleteAccountLinkInvitationResult call() throws Exception {
+                DeleteAccountLinkInvitationResult result = null;
+
+                try {
+                    result = executeDeleteAccountLinkInvitation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1911,6 +2010,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetAccountLinkResult> getAccountLinkAsync(GetAccountLinkRequest request) {
+
+        return getAccountLinkAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccountLinkResult> getAccountLinkAsync(final GetAccountLinkRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccountLinkRequest, GetAccountLinkResult> asyncHandler) {
+        final GetAccountLinkRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccountLinkResult>() {
+            @Override
+            public GetAccountLinkResult call() throws Exception {
+                GetAccountLinkResult result = null;
+
+                try {
+                    result = executeGetAccountLink(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(ImportClientBrandingRequest request) {
 
         return importClientBrandingAsync(request, null);
@@ -1961,6 +2093,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
 
                 try {
                     result = executeImportWorkspaceImage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccountLinksResult> listAccountLinksAsync(ListAccountLinksRequest request) {
+
+        return listAccountLinksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccountLinksResult> listAccountLinksAsync(final ListAccountLinksRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAccountLinksRequest, ListAccountLinksResult> asyncHandler) {
+        final ListAccountLinksRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAccountLinksResult>() {
+            @Override
+            public ListAccountLinksResult call() throws Exception {
+                ListAccountLinksResult result = null;
+
+                try {
+                    result = executeListAccountLinks(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2431,6 +2596,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
 
                 try {
                     result = executeRegisterWorkspaceDirectory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RejectAccountLinkInvitationResult> rejectAccountLinkInvitationAsync(RejectAccountLinkInvitationRequest request) {
+
+        return rejectAccountLinkInvitationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RejectAccountLinkInvitationResult> rejectAccountLinkInvitationAsync(final RejectAccountLinkInvitationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RejectAccountLinkInvitationRequest, RejectAccountLinkInvitationResult> asyncHandler) {
+        final RejectAccountLinkInvitationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RejectAccountLinkInvitationResult>() {
+            @Override
+            public RejectAccountLinkInvitationResult call() throws Exception {
+                RejectAccountLinkInvitationResult result = null;
+
+                try {
+                    result = executeRejectAccountLinkInvitation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

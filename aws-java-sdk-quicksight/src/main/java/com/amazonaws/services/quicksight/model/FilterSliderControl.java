@@ -54,7 +54,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
     private SliderControlDisplayOptions displayOptions;
     /**
      * <p>
-     * The type of <code>FilterSliderControl</code>. Choose one of the following options:
+     * The type of the <code>FilterSliderControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -72,13 +72,13 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
     private String type;
     /**
      * <p>
-     * The smaller value that is displayed at the left of the slider.
+     * The larger value that is displayed at the right of the slider.
      * </p>
      */
     private Double maximumValue;
     /**
      * <p>
-     * The larger value that is displayed at the right of the slider.
+     * The smaller value that is displayed at the left of the slider.
      * </p>
      */
     private Double minimumValue;
@@ -251,7 +251,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of <code>FilterSliderControl</code>. Choose one of the following options:
+     * The type of the <code>FilterSliderControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -267,7 +267,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param type
-     *        The type of <code>FilterSliderControl</code>. Choose one of the following options:</p>
+     *        The type of the <code>FilterSliderControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -288,7 +288,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of <code>FilterSliderControl</code>. Choose one of the following options:
+     * The type of the <code>FilterSliderControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -303,7 +303,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
      * </li>
      * </ul>
      * 
-     * @return The type of <code>FilterSliderControl</code>. Choose one of the following options:</p>
+     * @return The type of the <code>FilterSliderControl</code>. Choose one of the following options:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -324,7 +324,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of <code>FilterSliderControl</code>. Choose one of the following options:
+     * The type of the <code>FilterSliderControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -340,7 +340,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param type
-     *        The type of <code>FilterSliderControl</code>. Choose one of the following options:</p>
+     *        The type of the <code>FilterSliderControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -363,7 +363,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of <code>FilterSliderControl</code>. Choose one of the following options:
+     * The type of the <code>FilterSliderControl</code>. Choose one of the following options:
      * </p>
      * <ul>
      * <li>
@@ -379,7 +379,7 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param type
-     *        The type of <code>FilterSliderControl</code>. Choose one of the following options:</p>
+     *        The type of the <code>FilterSliderControl</code>. Choose one of the following options:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -402,55 +402,15 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The smaller value that is displayed at the left of the slider.
+     * The larger value that is displayed at the right of the slider.
      * </p>
      * 
      * @param maximumValue
-     *        The smaller value that is displayed at the left of the slider.
+     *        The larger value that is displayed at the right of the slider.
      */
 
     public void setMaximumValue(Double maximumValue) {
         this.maximumValue = maximumValue;
-    }
-
-    /**
-     * <p>
-     * The smaller value that is displayed at the left of the slider.
-     * </p>
-     * 
-     * @return The smaller value that is displayed at the left of the slider.
-     */
-
-    public Double getMaximumValue() {
-        return this.maximumValue;
-    }
-
-    /**
-     * <p>
-     * The smaller value that is displayed at the left of the slider.
-     * </p>
-     * 
-     * @param maximumValue
-     *        The smaller value that is displayed at the left of the slider.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public FilterSliderControl withMaximumValue(Double maximumValue) {
-        setMaximumValue(maximumValue);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The larger value that is displayed at the right of the slider.
-     * </p>
-     * 
-     * @param minimumValue
-     *        The larger value that is displayed at the right of the slider.
-     */
-
-    public void setMinimumValue(Double minimumValue) {
-        this.minimumValue = minimumValue;
     }
 
     /**
@@ -461,8 +421,8 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
      * @return The larger value that is displayed at the right of the slider.
      */
 
-    public Double getMinimumValue() {
-        return this.minimumValue;
+    public Double getMaximumValue() {
+        return this.maximumValue;
     }
 
     /**
@@ -470,8 +430,48 @@ public class FilterSliderControl implements Serializable, Cloneable, StructuredP
      * The larger value that is displayed at the right of the slider.
      * </p>
      * 
-     * @param minimumValue
+     * @param maximumValue
      *        The larger value that is displayed at the right of the slider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FilterSliderControl withMaximumValue(Double maximumValue) {
+        setMaximumValue(maximumValue);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The smaller value that is displayed at the left of the slider.
+     * </p>
+     * 
+     * @param minimumValue
+     *        The smaller value that is displayed at the left of the slider.
+     */
+
+    public void setMinimumValue(Double minimumValue) {
+        this.minimumValue = minimumValue;
+    }
+
+    /**
+     * <p>
+     * The smaller value that is displayed at the left of the slider.
+     * </p>
+     * 
+     * @return The smaller value that is displayed at the left of the slider.
+     */
+
+    public Double getMinimumValue() {
+        return this.minimumValue;
+    }
+
+    /**
+     * <p>
+     * The smaller value that is displayed at the left of the slider.
+     * </p>
+     * 
+     * @param minimumValue
+     *        The smaller value that is displayed at the left of the slider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

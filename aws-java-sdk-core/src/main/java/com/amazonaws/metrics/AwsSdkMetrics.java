@@ -749,6 +749,14 @@ public enum AwsSdkMetrics {
      * Sets the region to be used for the default AWS SDK metric collector;
      * or null if the default is to be used.
      */
+    public static void setRegion(Region region) {
+        AwsSdkMetrics.region = region;
+    }
+
+    /**
+     * Sets the region to be used for the default AWS SDK metric collector;
+     * or null if the default is to be used.
+     */
     public static void setRegion(String region) {
         AwsSdkMetrics.region = RegionUtils.getRegion(region);
     }

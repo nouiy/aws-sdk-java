@@ -54,13 +54,13 @@ public class ParameterSliderControl implements Serializable, Cloneable, Structur
     private SliderControlDisplayOptions displayOptions;
     /**
      * <p>
-     * The smaller value that is displayed at the left of the slider.
+     * The larger value that is displayed at the right of the slider.
      * </p>
      */
     private Double maximumValue;
     /**
      * <p>
-     * The larger value that is displayed at the right of the slider.
+     * The smaller value that is displayed at the left of the slider.
      * </p>
      */
     private Double minimumValue;
@@ -233,55 +233,15 @@ public class ParameterSliderControl implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The smaller value that is displayed at the left of the slider.
+     * The larger value that is displayed at the right of the slider.
      * </p>
      * 
      * @param maximumValue
-     *        The smaller value that is displayed at the left of the slider.
+     *        The larger value that is displayed at the right of the slider.
      */
 
     public void setMaximumValue(Double maximumValue) {
         this.maximumValue = maximumValue;
-    }
-
-    /**
-     * <p>
-     * The smaller value that is displayed at the left of the slider.
-     * </p>
-     * 
-     * @return The smaller value that is displayed at the left of the slider.
-     */
-
-    public Double getMaximumValue() {
-        return this.maximumValue;
-    }
-
-    /**
-     * <p>
-     * The smaller value that is displayed at the left of the slider.
-     * </p>
-     * 
-     * @param maximumValue
-     *        The smaller value that is displayed at the left of the slider.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ParameterSliderControl withMaximumValue(Double maximumValue) {
-        setMaximumValue(maximumValue);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The larger value that is displayed at the right of the slider.
-     * </p>
-     * 
-     * @param minimumValue
-     *        The larger value that is displayed at the right of the slider.
-     */
-
-    public void setMinimumValue(Double minimumValue) {
-        this.minimumValue = minimumValue;
     }
 
     /**
@@ -292,8 +252,8 @@ public class ParameterSliderControl implements Serializable, Cloneable, Structur
      * @return The larger value that is displayed at the right of the slider.
      */
 
-    public Double getMinimumValue() {
-        return this.minimumValue;
+    public Double getMaximumValue() {
+        return this.maximumValue;
     }
 
     /**
@@ -301,8 +261,48 @@ public class ParameterSliderControl implements Serializable, Cloneable, Structur
      * The larger value that is displayed at the right of the slider.
      * </p>
      * 
-     * @param minimumValue
+     * @param maximumValue
      *        The larger value that is displayed at the right of the slider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ParameterSliderControl withMaximumValue(Double maximumValue) {
+        setMaximumValue(maximumValue);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The smaller value that is displayed at the left of the slider.
+     * </p>
+     * 
+     * @param minimumValue
+     *        The smaller value that is displayed at the left of the slider.
+     */
+
+    public void setMinimumValue(Double minimumValue) {
+        this.minimumValue = minimumValue;
+    }
+
+    /**
+     * <p>
+     * The smaller value that is displayed at the left of the slider.
+     * </p>
+     * 
+     * @return The smaller value that is displayed at the left of the slider.
+     */
+
+    public Double getMinimumValue() {
+        return this.minimumValue;
+    }
+
+    /**
+     * <p>
+     * The smaller value that is displayed at the left of the slider.
+     * </p>
+     * 
+     * @param minimumValue
+     *        The smaller value that is displayed at the left of the slider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

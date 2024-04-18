@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ProfileDetailMarshaller {
 
+    private static final MarshallingInfo<List> ATTRIBUTEMAPPINGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attributeMappings").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> CREATEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -69,6 +71,7 @@ public class ProfileDetailMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(profileDetail.getAttributeMappings(), ATTRIBUTEMAPPINGS_BINDING);
             protocolMarshaller.marshall(profileDetail.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(profileDetail.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(profileDetail.getDurationSeconds(), DURATIONSECONDS_BINDING);

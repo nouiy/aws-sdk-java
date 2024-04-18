@@ -64,6 +64,13 @@ public class TopBottomFilter implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String parameterName;
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     */
+    private DefaultFilterControlConfiguration defaultFilterControlConfiguration;
 
     /**
      * <p>
@@ -355,6 +362,52 @@ public class TopBottomFilter implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @param defaultFilterControlConfiguration
+     *        The default configurations for the associated controls. This applies only for filters that are scoped to
+     *        multiple sheets.
+     */
+
+    public void setDefaultFilterControlConfiguration(DefaultFilterControlConfiguration defaultFilterControlConfiguration) {
+        this.defaultFilterControlConfiguration = defaultFilterControlConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @return The default configurations for the associated controls. This applies only for filters that are scoped to
+     *         multiple sheets.
+     */
+
+    public DefaultFilterControlConfiguration getDefaultFilterControlConfiguration() {
+        return this.defaultFilterControlConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @param defaultFilterControlConfiguration
+     *        The default configurations for the associated controls. This applies only for filters that are scoped to
+     *        multiple sheets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TopBottomFilter withDefaultFilterControlConfiguration(DefaultFilterControlConfiguration defaultFilterControlConfiguration) {
+        setDefaultFilterControlConfiguration(defaultFilterControlConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -377,7 +430,9 @@ public class TopBottomFilter implements Serializable, Cloneable, StructuredPojo 
         if (getTimeGranularity() != null)
             sb.append("TimeGranularity: ").append(getTimeGranularity()).append(",");
         if (getParameterName() != null)
-            sb.append("ParameterName: ").append(getParameterName());
+            sb.append("ParameterName: ").append(getParameterName()).append(",");
+        if (getDefaultFilterControlConfiguration() != null)
+            sb.append("DefaultFilterControlConfiguration: ").append(getDefaultFilterControlConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -417,6 +472,11 @@ public class TopBottomFilter implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getParameterName() != null && other.getParameterName().equals(this.getParameterName()) == false)
             return false;
+        if (other.getDefaultFilterControlConfiguration() == null ^ this.getDefaultFilterControlConfiguration() == null)
+            return false;
+        if (other.getDefaultFilterControlConfiguration() != null
+                && other.getDefaultFilterControlConfiguration().equals(this.getDefaultFilterControlConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -431,6 +491,7 @@ public class TopBottomFilter implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAggregationSortConfigurations() == null) ? 0 : getAggregationSortConfigurations().hashCode());
         hashCode = prime * hashCode + ((getTimeGranularity() == null) ? 0 : getTimeGranularity().hashCode());
         hashCode = prime * hashCode + ((getParameterName() == null) ? 0 : getParameterName().hashCode());
+        hashCode = prime * hashCode + ((getDefaultFilterControlConfiguration() == null) ? 0 : getDefaultFilterControlConfiguration().hashCode());
         return hashCode;
     }
 

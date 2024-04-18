@@ -45,6 +45,8 @@ public class TimeRangeFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExcludePeriodConfiguration").build();
     private static final MarshallingInfo<String> TIMEGRANULARITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeGranularity").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final TimeRangeFilterMarshaller instance = new TimeRangeFilterMarshaller();
 
@@ -71,6 +73,7 @@ public class TimeRangeFilterMarshaller {
             protocolMarshaller.marshall(timeRangeFilter.getNullOption(), NULLOPTION_BINDING);
             protocolMarshaller.marshall(timeRangeFilter.getExcludePeriodConfiguration(), EXCLUDEPERIODCONFIGURATION_BINDING);
             protocolMarshaller.marshall(timeRangeFilter.getTimeGranularity(), TIMEGRANULARITY_BINDING);
+            protocolMarshaller.marshall(timeRangeFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

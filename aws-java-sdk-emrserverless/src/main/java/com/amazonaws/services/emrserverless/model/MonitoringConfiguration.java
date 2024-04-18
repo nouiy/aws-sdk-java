@@ -47,6 +47,13 @@ public class MonitoringConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private CloudWatchLoggingConfiguration cloudWatchLoggingConfiguration;
+    /**
+     * <p>
+     * The monitoring configuration object you can configure to send metrics to Amazon Managed Service for Prometheus
+     * for a job run.
+     * </p>
+     */
+    private PrometheusMonitoringConfiguration prometheusMonitoringConfiguration;
 
     /**
      * <p>
@@ -176,6 +183,52 @@ public class MonitoringConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The monitoring configuration object you can configure to send metrics to Amazon Managed Service for Prometheus
+     * for a job run.
+     * </p>
+     * 
+     * @param prometheusMonitoringConfiguration
+     *        The monitoring configuration object you can configure to send metrics to Amazon Managed Service for
+     *        Prometheus for a job run.
+     */
+
+    public void setPrometheusMonitoringConfiguration(PrometheusMonitoringConfiguration prometheusMonitoringConfiguration) {
+        this.prometheusMonitoringConfiguration = prometheusMonitoringConfiguration;
+    }
+
+    /**
+     * <p>
+     * The monitoring configuration object you can configure to send metrics to Amazon Managed Service for Prometheus
+     * for a job run.
+     * </p>
+     * 
+     * @return The monitoring configuration object you can configure to send metrics to Amazon Managed Service for
+     *         Prometheus for a job run.
+     */
+
+    public PrometheusMonitoringConfiguration getPrometheusMonitoringConfiguration() {
+        return this.prometheusMonitoringConfiguration;
+    }
+
+    /**
+     * <p>
+     * The monitoring configuration object you can configure to send metrics to Amazon Managed Service for Prometheus
+     * for a job run.
+     * </p>
+     * 
+     * @param prometheusMonitoringConfiguration
+     *        The monitoring configuration object you can configure to send metrics to Amazon Managed Service for
+     *        Prometheus for a job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MonitoringConfiguration withPrometheusMonitoringConfiguration(PrometheusMonitoringConfiguration prometheusMonitoringConfiguration) {
+        setPrometheusMonitoringConfiguration(prometheusMonitoringConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -192,7 +245,9 @@ public class MonitoringConfiguration implements Serializable, Cloneable, Structu
         if (getManagedPersistenceMonitoringConfiguration() != null)
             sb.append("ManagedPersistenceMonitoringConfiguration: ").append(getManagedPersistenceMonitoringConfiguration()).append(",");
         if (getCloudWatchLoggingConfiguration() != null)
-            sb.append("CloudWatchLoggingConfiguration: ").append(getCloudWatchLoggingConfiguration());
+            sb.append("CloudWatchLoggingConfiguration: ").append(getCloudWatchLoggingConfiguration()).append(",");
+        if (getPrometheusMonitoringConfiguration() != null)
+            sb.append("PrometheusMonitoringConfiguration: ").append(getPrometheusMonitoringConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -221,6 +276,11 @@ public class MonitoringConfiguration implements Serializable, Cloneable, Structu
         if (other.getCloudWatchLoggingConfiguration() != null
                 && other.getCloudWatchLoggingConfiguration().equals(this.getCloudWatchLoggingConfiguration()) == false)
             return false;
+        if (other.getPrometheusMonitoringConfiguration() == null ^ this.getPrometheusMonitoringConfiguration() == null)
+            return false;
+        if (other.getPrometheusMonitoringConfiguration() != null
+                && other.getPrometheusMonitoringConfiguration().equals(this.getPrometheusMonitoringConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -233,6 +293,7 @@ public class MonitoringConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode
                 + ((getManagedPersistenceMonitoringConfiguration() == null) ? 0 : getManagedPersistenceMonitoringConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCloudWatchLoggingConfiguration() == null) ? 0 : getCloudWatchLoggingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getPrometheusMonitoringConfiguration() == null) ? 0 : getPrometheusMonitoringConfiguration().hashCode());
         return hashCode;
     }
 

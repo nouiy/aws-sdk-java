@@ -70,6 +70,12 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String stagingAvailabilityZone;
+    /**
+     * <p>
+     * The ARN of the staging Outpost
+     * </p>
+     */
+    private String stagingOutpostArn;
 
     /**
      * <p>
@@ -401,6 +407,46 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ARN of the staging Outpost
+     * </p>
+     * 
+     * @param stagingOutpostArn
+     *        The ARN of the staging Outpost
+     */
+
+    public void setStagingOutpostArn(String stagingOutpostArn) {
+        this.stagingOutpostArn = stagingOutpostArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the staging Outpost
+     * </p>
+     * 
+     * @return The ARN of the staging Outpost
+     */
+
+    public String getStagingOutpostArn() {
+        return this.stagingOutpostArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the staging Outpost
+     * </p>
+     * 
+     * @param stagingOutpostArn
+     *        The ARN of the staging Outpost
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataReplicationInfo withStagingOutpostArn(String stagingOutpostArn) {
+        setStagingOutpostArn(stagingOutpostArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -425,7 +471,9 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
         if (getReplicatedDisks() != null)
             sb.append("ReplicatedDisks: ").append(getReplicatedDisks()).append(",");
         if (getStagingAvailabilityZone() != null)
-            sb.append("StagingAvailabilityZone: ").append(getStagingAvailabilityZone());
+            sb.append("StagingAvailabilityZone: ").append(getStagingAvailabilityZone()).append(",");
+        if (getStagingOutpostArn() != null)
+            sb.append("StagingOutpostArn: ").append(getStagingOutpostArn());
         sb.append("}");
         return sb.toString();
     }
@@ -468,6 +516,10 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getStagingAvailabilityZone() != null && other.getStagingAvailabilityZone().equals(this.getStagingAvailabilityZone()) == false)
             return false;
+        if (other.getStagingOutpostArn() == null ^ this.getStagingOutpostArn() == null)
+            return false;
+        if (other.getStagingOutpostArn() != null && other.getStagingOutpostArn().equals(this.getStagingOutpostArn()) == false)
+            return false;
         return true;
     }
 
@@ -483,6 +535,7 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getLagDuration() == null) ? 0 : getLagDuration().hashCode());
         hashCode = prime * hashCode + ((getReplicatedDisks() == null) ? 0 : getReplicatedDisks().hashCode());
         hashCode = prime * hashCode + ((getStagingAvailabilityZone() == null) ? 0 : getStagingAvailabilityZone().hashCode());
+        hashCode = prime * hashCode + ((getStagingOutpostArn() == null) ? 0 : getStagingOutpostArn().hashCode());
         return hashCode;
     }
 

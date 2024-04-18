@@ -55,6 +55,49 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Accepts the account link invitation.
+     * </p>
+     * <important>
+     * <p>
+     * There's currently no unlinking capability after you accept the account linking invitation.
+     * </p>
+     * </important>
+     * 
+     * @param acceptAccountLinkInvitationRequest
+     * @return A Java Future containing the result of the AcceptAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsync.AcceptAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AcceptAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptAccountLinkInvitationResult> acceptAccountLinkInvitationAsync(
+            AcceptAccountLinkInvitationRequest acceptAccountLinkInvitationRequest);
+
+    /**
+     * <p>
+     * Accepts the account link invitation.
+     * </p>
+     * <important>
+     * <p>
+     * There's currently no unlinking capability after you accept the account linking invitation.
+     * </p>
+     * </important>
+     * 
+     * @param acceptAccountLinkInvitationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AcceptAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.AcceptAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AcceptAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptAccountLinkInvitationResult> acceptAccountLinkInvitationAsync(
+            AcceptAccountLinkInvitationRequest acceptAccountLinkInvitationRequest,
+            com.amazonaws.handlers.AsyncHandler<AcceptAccountLinkInvitationRequest, AcceptAccountLinkInvitationResult> asyncHandler);
+
+    /**
+     * <p>
      * Associates the specified connection alias with the specified directory to enable cross-Region redirection. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
@@ -279,6 +322,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<CopyWorkspaceImageResult> copyWorkspaceImageAsync(CopyWorkspaceImageRequest copyWorkspaceImageRequest,
             com.amazonaws.handlers.AsyncHandler<CopyWorkspaceImageRequest, CopyWorkspaceImageResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates the account link invitation.
+     * </p>
+     * 
+     * @param createAccountLinkInvitationRequest
+     * @return A Java Future containing the result of the CreateAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsync.CreateAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccountLinkInvitationResult> createAccountLinkInvitationAsync(
+            CreateAccountLinkInvitationRequest createAccountLinkInvitationRequest);
+
+    /**
+     * <p>
+     * Creates the account link invitation.
+     * </p>
+     * 
+     * @param createAccountLinkInvitationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.CreateAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccountLinkInvitationResult> createAccountLinkInvitationAsync(
+            CreateAccountLinkInvitationRequest createAccountLinkInvitationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAccountLinkInvitationRequest, CreateAccountLinkInvitationResult> asyncHandler);
 
     /**
      * <p>
@@ -704,6 +780,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<CreateWorkspacesResult> createWorkspacesAsync(CreateWorkspacesRequest createWorkspacesRequest,
             com.amazonaws.handlers.AsyncHandler<CreateWorkspacesRequest, CreateWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the account link invitation.
+     * </p>
+     * 
+     * @param deleteAccountLinkInvitationRequest
+     * @return A Java Future containing the result of the DeleteAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsync.DeleteAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccountLinkInvitationResult> deleteAccountLinkInvitationAsync(
+            DeleteAccountLinkInvitationRequest deleteAccountLinkInvitationRequest);
+
+    /**
+     * <p>
+     * Deletes the account link invitation.
+     * </p>
+     * 
+     * @param deleteAccountLinkInvitationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.DeleteAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccountLinkInvitationResult> deleteAccountLinkInvitationAsync(
+            DeleteAccountLinkInvitationRequest deleteAccountLinkInvitationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccountLinkInvitationRequest, DeleteAccountLinkInvitationResult> asyncHandler);
 
     /**
      * <p>
@@ -1983,6 +2092,37 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Retrieves account link information.
+     * </p>
+     * 
+     * @param getAccountLinkRequest
+     * @return A Java Future containing the result of the GetAccountLink operation returned by the service.
+     * @sample AmazonWorkspacesAsync.GetAccountLink
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/GetAccountLink" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccountLinkResult> getAccountLinkAsync(GetAccountLinkRequest getAccountLinkRequest);
+
+    /**
+     * <p>
+     * Retrieves account link information.
+     * </p>
+     * 
+     * @param getAccountLinkRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccountLink operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.GetAccountLink
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/GetAccountLink" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccountLinkResult> getAccountLinkAsync(GetAccountLinkRequest getAccountLinkRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccountLinkRequest, GetAccountLinkResult> asyncHandler);
+
+    /**
+     * <p>
      * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can
      * tailor your login portal company logo, the support email address, support link, link to reset password, and a
      * custom message for users trying to sign in.
@@ -2114,6 +2254,37 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<ImportWorkspaceImageResult> importWorkspaceImageAsync(ImportWorkspaceImageRequest importWorkspaceImageRequest,
             com.amazonaws.handlers.AsyncHandler<ImportWorkspaceImageRequest, ImportWorkspaceImageResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all account links.
+     * </p>
+     * 
+     * @param listAccountLinksRequest
+     * @return A Java Future containing the result of the ListAccountLinks operation returned by the service.
+     * @sample AmazonWorkspacesAsync.ListAccountLinks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ListAccountLinks" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccountLinksResult> listAccountLinksAsync(ListAccountLinksRequest listAccountLinksRequest);
+
+    /**
+     * <p>
+     * Lists all account links.
+     * </p>
+     * 
+     * @param listAccountLinksRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAccountLinks operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.ListAccountLinks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ListAccountLinks" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccountLinksResult> listAccountLinksAsync(ListAccountLinksRequest listAccountLinksRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAccountLinksRequest, ListAccountLinksResult> asyncHandler);
 
     /**
      * <p>
@@ -2706,6 +2877,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
     java.util.concurrent.Future<RegisterWorkspaceDirectoryResult> registerWorkspaceDirectoryAsync(
             RegisterWorkspaceDirectoryRequest registerWorkspaceDirectoryRequest,
             com.amazonaws.handlers.AsyncHandler<RegisterWorkspaceDirectoryRequest, RegisterWorkspaceDirectoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Rejects the account link invitation.
+     * </p>
+     * 
+     * @param rejectAccountLinkInvitationRequest
+     * @return A Java Future containing the result of the RejectAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsync.RejectAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RejectAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RejectAccountLinkInvitationResult> rejectAccountLinkInvitationAsync(
+            RejectAccountLinkInvitationRequest rejectAccountLinkInvitationRequest);
+
+    /**
+     * <p>
+     * Rejects the account link invitation.
+     * </p>
+     * 
+     * @param rejectAccountLinkInvitationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RejectAccountLinkInvitation operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.RejectAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RejectAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RejectAccountLinkInvitationResult> rejectAccountLinkInvitationAsync(
+            RejectAccountLinkInvitationRequest rejectAccountLinkInvitationRequest,
+            com.amazonaws.handlers.AsyncHandler<RejectAccountLinkInvitationRequest, RejectAccountLinkInvitationResult> asyncHandler);
 
     /**
      * <p>

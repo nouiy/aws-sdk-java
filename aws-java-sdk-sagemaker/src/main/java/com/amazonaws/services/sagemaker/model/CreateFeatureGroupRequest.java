@@ -36,7 +36,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -62,7 +62,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -206,7 +206,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -225,7 +225,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Must start and end with an alphanumeric character.
+     *        Must start with an alphanumeric character.
      *        </p>
      *        </li>
      *        <li>
@@ -250,7 +250,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -268,7 +268,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *         <ul>
      *         <li>
      *         <p>
-     *         Must start and end with an alphanumeric character.
+     *         Must start with an alphanumeric character.
      *         </p>
      *         </li>
      *         <li>
@@ -293,7 +293,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -312,7 +312,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Must start and end with an alphanumeric character.
+     *        Must start with an alphanumeric character.
      *        </p>
      *        </li>
      *        <li>
@@ -343,7 +343,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -367,7 +367,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Must start and end with an alphanumeric character.
+     *        Must start with an alphanumeric character.
      *        </p>
      *        </li>
      *        <li>
@@ -396,7 +396,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -419,7 +419,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *         <ul>
      *         <li>
      *         <p>
-     *         Must start and end with an alphanumeric character.
+     *         Must start with an alphanumeric character.
      *         </p>
      *         </li>
      *         <li>
@@ -448,7 +448,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -472,7 +472,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Must start and end with an alphanumeric character.
+     *        Must start with an alphanumeric character.
      *        </p>
      *        </li>
      *        <li>

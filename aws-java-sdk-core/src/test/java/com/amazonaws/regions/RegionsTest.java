@@ -68,6 +68,16 @@ public class RegionsTest {
     }
 
     @Test
+    public void fromName_whenRegionNameInvalid_recommendsRegionUtils() {
+        try {
+            Regions.fromName("northpole");
+            Assert.fail();
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue(e.getMessage().contains("RegionUtils"));
+        }
+    }
+
+    @Test
     public void fromName_whenRegionNameIsValid_returnsCorrectValue() {
         Assert.assertEquals(Regions.EU_CENTRAL_1, Regions.fromName("eu-central-1"));
     }

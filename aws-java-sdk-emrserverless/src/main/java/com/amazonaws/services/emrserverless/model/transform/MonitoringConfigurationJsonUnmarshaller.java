@@ -61,6 +61,11 @@ public class MonitoringConfigurationJsonUnmarshaller implements Unmarshaller<Mon
                     context.nextToken();
                     monitoringConfiguration.setCloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("prometheusMonitoringConfiguration", targetDepth)) {
+                    context.nextToken();
+                    monitoringConfiguration.setPrometheusMonitoringConfiguration(PrometheusMonitoringConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

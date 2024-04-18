@@ -102,6 +102,9 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
                             new JsonErrorShapeMetadata().withErrorCode("OperationNotSupportedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.OperationNotSupportedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ComputeNotCompatibleException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.ComputeNotCompatibleExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -122,6 +125,9 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.ResourceUnavailableExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceAlreadyExistsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.ResourceAlreadyExistsExceptionUnmarshaller.getInstance()))
@@ -152,6 +158,9 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidResourceStateException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.InvalidResourceStateExceptionUnmarshaller.getInstance()))
@@ -355,6 +364,79 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/workspaces/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/workspaces/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Accepts the account link invitation.
+     * </p>
+     * <important>
+     * <p>
+     * There's currently no unlinking capability after you accept the account linking invitation.
+     * </p>
+     * </important>
+     * 
+     * @param acceptAccountLinkInvitationRequest
+     * @return Result of the AcceptAccountLinkInvitation operation returned by the service.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.AcceptAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AcceptAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AcceptAccountLinkInvitationResult acceptAccountLinkInvitation(AcceptAccountLinkInvitationRequest request) {
+        request = beforeClientExecution(request);
+        return executeAcceptAccountLinkInvitation(request);
+    }
+
+    @SdkInternalApi
+    final AcceptAccountLinkInvitationResult executeAcceptAccountLinkInvitation(AcceptAccountLinkInvitationRequest acceptAccountLinkInvitationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(acceptAccountLinkInvitationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AcceptAccountLinkInvitationRequest> request = null;
+        Response<AcceptAccountLinkInvitationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AcceptAccountLinkInvitationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(acceptAccountLinkInvitationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AcceptAccountLinkInvitation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AcceptAccountLinkInvitationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AcceptAccountLinkInvitationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -728,6 +810,72 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<CopyWorkspaceImageResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CopyWorkspaceImageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates the account link invitation.
+     * </p>
+     * 
+     * @param createAccountLinkInvitationRequest
+     * @return Result of the CreateAccountLinkInvitation operation returned by the service.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.CreateAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateAccountLinkInvitationResult createAccountLinkInvitation(CreateAccountLinkInvitationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAccountLinkInvitation(request);
+    }
+
+    @SdkInternalApi
+    final CreateAccountLinkInvitationResult executeCreateAccountLinkInvitation(CreateAccountLinkInvitationRequest createAccountLinkInvitationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAccountLinkInvitationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAccountLinkInvitationRequest> request = null;
+        Response<CreateAccountLinkInvitationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAccountLinkInvitationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createAccountLinkInvitationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAccountLinkInvitation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateAccountLinkInvitationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateAccountLinkInvitationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1395,6 +1543,74 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateWorkspacesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateWorkspacesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the account link invitation.
+     * </p>
+     * 
+     * @param deleteAccountLinkInvitationRequest
+     * @return Result of the DeleteAccountLinkInvitation operation returned by the service.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.DeleteAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAccountLinkInvitationResult deleteAccountLinkInvitation(DeleteAccountLinkInvitationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAccountLinkInvitation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAccountLinkInvitationResult executeDeleteAccountLinkInvitation(DeleteAccountLinkInvitationRequest deleteAccountLinkInvitationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAccountLinkInvitationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAccountLinkInvitationRequest> request = null;
+        Response<DeleteAccountLinkInvitationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAccountLinkInvitationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteAccountLinkInvitationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAccountLinkInvitation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAccountLinkInvitationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteAccountLinkInvitationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3570,6 +3786,70 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Retrieves account link information.
+     * </p>
+     * 
+     * @param getAccountLinkRequest
+     * @return Result of the GetAccountLink operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.GetAccountLink
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/GetAccountLink" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetAccountLinkResult getAccountLink(GetAccountLinkRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAccountLink(request);
+    }
+
+    @SdkInternalApi
+    final GetAccountLinkResult executeGetAccountLink(GetAccountLinkRequest getAccountLinkRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAccountLinkRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAccountLinkRequest> request = null;
+        Response<GetAccountLinkResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAccountLinkRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAccountLinkRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAccountLink");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAccountLinkResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAccountLinkResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can
      * tailor your login portal company logo, the support email address, support link, link to reset password, and a
      * custom message for users trying to sign in.
@@ -3724,6 +4004,68 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<ImportWorkspaceImageResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportWorkspaceImageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all account links.
+     * </p>
+     * 
+     * @param listAccountLinksRequest
+     * @return Result of the ListAccountLinks operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.ListAccountLinks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ListAccountLinks" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListAccountLinksResult listAccountLinks(ListAccountLinksRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAccountLinks(request);
+    }
+
+    @SdkInternalApi
+    final ListAccountLinksResult executeListAccountLinks(ListAccountLinksRequest listAccountLinksRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAccountLinksRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAccountLinksRequest> request = null;
+        Response<ListAccountLinksResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAccountLinksRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listAccountLinksRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAccountLinks");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAccountLinksResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAccountLinksResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4697,6 +5039,74 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<RegisterWorkspaceDirectoryResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new RegisterWorkspaceDirectoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Rejects the account link invitation.
+     * </p>
+     * 
+     * @param rejectAccountLinkInvitationRequest
+     * @return Result of the RejectAccountLinkInvitation operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.RejectAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RejectAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RejectAccountLinkInvitationResult rejectAccountLinkInvitation(RejectAccountLinkInvitationRequest request) {
+        request = beforeClientExecution(request);
+        return executeRejectAccountLinkInvitation(request);
+    }
+
+    @SdkInternalApi
+    final RejectAccountLinkInvitationResult executeRejectAccountLinkInvitation(RejectAccountLinkInvitationRequest rejectAccountLinkInvitationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(rejectAccountLinkInvitationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RejectAccountLinkInvitationRequest> request = null;
+        Response<RejectAccountLinkInvitationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RejectAccountLinkInvitationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(rejectAccountLinkInvitationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RejectAccountLinkInvitation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RejectAccountLinkInvitationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new RejectAccountLinkInvitationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

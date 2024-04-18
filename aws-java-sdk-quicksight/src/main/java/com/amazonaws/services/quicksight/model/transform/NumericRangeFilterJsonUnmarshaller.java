@@ -84,6 +84,11 @@ public class NumericRangeFilterJsonUnmarshaller implements Unmarshaller<NumericR
                     context.nextToken();
                     numericRangeFilter.setNullOption(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DefaultFilterControlConfiguration", targetDepth)) {
+                    context.nextToken();
+                    numericRangeFilter
+                            .setDefaultFilterControlConfiguration(DefaultFilterControlConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

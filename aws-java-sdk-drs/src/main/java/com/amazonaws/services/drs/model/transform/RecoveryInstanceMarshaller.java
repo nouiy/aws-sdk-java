@@ -55,6 +55,8 @@ public class RecoveryInstanceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recoveryInstanceID").build();
     private static final MarshallingInfo<StructuredPojo> RECOVERYINSTANCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recoveryInstanceProperties").build();
+    private static final MarshallingInfo<String> SOURCEOUTPOSTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceOutpostArn").build();
     private static final MarshallingInfo<String> SOURCESERVERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceServerID").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -89,6 +91,7 @@ public class RecoveryInstanceMarshaller {
             protocolMarshaller.marshall(recoveryInstance.getPointInTimeSnapshotDateTime(), POINTINTIMESNAPSHOTDATETIME_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getRecoveryInstanceID(), RECOVERYINSTANCEID_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getRecoveryInstanceProperties(), RECOVERYINSTANCEPROPERTIES_BINDING);
+            protocolMarshaller.marshall(recoveryInstance.getSourceOutpostArn(), SOURCEOUTPOSTARN_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getSourceServerID(), SOURCESERVERID_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getTags(), TAGS_BINDING);
         } catch (Exception e) {

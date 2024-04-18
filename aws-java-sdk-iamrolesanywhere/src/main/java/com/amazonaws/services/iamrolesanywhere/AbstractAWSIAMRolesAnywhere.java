@@ -38,6 +38,11 @@ public class AbstractAWSIAMRolesAnywhere implements AWSIAMRolesAnywhere {
     }
 
     @Override
+    public DeleteAttributeMappingResult deleteAttributeMapping(DeleteAttributeMappingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteCrlResult deleteCrl(DeleteCrlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +134,11 @@ public class AbstractAWSIAMRolesAnywhere implements AWSIAMRolesAnywhere {
 
     @Override
     public ListTrustAnchorsResult listTrustAnchors(ListTrustAnchorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutAttributeMappingResult putAttributeMapping(PutAttributeMappingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

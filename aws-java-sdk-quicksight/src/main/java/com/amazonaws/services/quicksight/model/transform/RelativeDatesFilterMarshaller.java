@@ -47,6 +47,8 @@ public class RelativeDatesFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NullOption").build();
     private static final MarshallingInfo<StructuredPojo> EXCLUDEPERIODCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExcludePeriodConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final RelativeDatesFilterMarshaller instance = new RelativeDatesFilterMarshaller();
 
@@ -74,6 +76,7 @@ public class RelativeDatesFilterMarshaller {
             protocolMarshaller.marshall(relativeDatesFilter.getParameterName(), PARAMETERNAME_BINDING);
             protocolMarshaller.marshall(relativeDatesFilter.getNullOption(), NULLOPTION_BINDING);
             protocolMarshaller.marshall(relativeDatesFilter.getExcludePeriodConfiguration(), EXCLUDEPERIODCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(relativeDatesFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

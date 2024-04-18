@@ -54,6 +54,19 @@ public class AbstractAWSIAMRolesAnywhereAsync extends AbstractAWSIAMRolesAnywher
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAttributeMappingResult> deleteAttributeMappingAsync(DeleteAttributeMappingRequest request) {
+
+        return deleteAttributeMappingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAttributeMappingResult> deleteAttributeMappingAsync(DeleteAttributeMappingRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAttributeMappingRequest, DeleteAttributeMappingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteCrlResult> deleteCrlAsync(DeleteCrlRequest request) {
 
         return deleteCrlAsync(request, null);
@@ -296,6 +309,19 @@ public class AbstractAWSIAMRolesAnywhereAsync extends AbstractAWSIAMRolesAnywher
     @Override
     public java.util.concurrent.Future<ListTrustAnchorsResult> listTrustAnchorsAsync(ListTrustAnchorsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTrustAnchorsRequest, ListTrustAnchorsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAttributeMappingResult> putAttributeMappingAsync(PutAttributeMappingRequest request) {
+
+        return putAttributeMappingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAttributeMappingResult> putAttributeMappingAsync(PutAttributeMappingRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutAttributeMappingRequest, PutAttributeMappingResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

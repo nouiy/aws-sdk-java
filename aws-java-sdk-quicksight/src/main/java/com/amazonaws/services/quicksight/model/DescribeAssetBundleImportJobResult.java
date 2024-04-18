@@ -150,6 +150,12 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
      * </p>
      */
     private AssetBundleImportJobOverrideValidationStrategy overrideValidationStrategy;
+    /**
+     * <p>
+     * An array of warning records that describe all permitted errors that are encountered during the import job.
+     * </p>
+     */
+    private java.util.List<AssetBundleImportJobWarning> warnings;
 
     /**
      * <p>
@@ -1130,6 +1136,77 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * An array of warning records that describe all permitted errors that are encountered during the import job.
+     * </p>
+     * 
+     * @return An array of warning records that describe all permitted errors that are encountered during the import
+     *         job.
+     */
+
+    public java.util.List<AssetBundleImportJobWarning> getWarnings() {
+        return warnings;
+    }
+
+    /**
+     * <p>
+     * An array of warning records that describe all permitted errors that are encountered during the import job.
+     * </p>
+     * 
+     * @param warnings
+     *        An array of warning records that describe all permitted errors that are encountered during the import job.
+     */
+
+    public void setWarnings(java.util.Collection<AssetBundleImportJobWarning> warnings) {
+        if (warnings == null) {
+            this.warnings = null;
+            return;
+        }
+
+        this.warnings = new java.util.ArrayList<AssetBundleImportJobWarning>(warnings);
+    }
+
+    /**
+     * <p>
+     * An array of warning records that describe all permitted errors that are encountered during the import job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setWarnings(java.util.Collection)} or {@link #withWarnings(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param warnings
+     *        An array of warning records that describe all permitted errors that are encountered during the import job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAssetBundleImportJobResult withWarnings(AssetBundleImportJobWarning... warnings) {
+        if (this.warnings == null) {
+            setWarnings(new java.util.ArrayList<AssetBundleImportJobWarning>(warnings.length));
+        }
+        for (AssetBundleImportJobWarning ele : warnings) {
+            this.warnings.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of warning records that describe all permitted errors that are encountered during the import job.
+     * </p>
+     * 
+     * @param warnings
+     *        An array of warning records that describe all permitted errors that are encountered during the import job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAssetBundleImportJobResult withWarnings(java.util.Collection<AssetBundleImportJobWarning> warnings) {
+        setWarnings(warnings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1170,7 +1247,9 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
         if (getOverrideTags() != null)
             sb.append("OverrideTags: ").append(getOverrideTags()).append(",");
         if (getOverrideValidationStrategy() != null)
-            sb.append("OverrideValidationStrategy: ").append(getOverrideValidationStrategy());
+            sb.append("OverrideValidationStrategy: ").append(getOverrideValidationStrategy()).append(",");
+        if (getWarnings() != null)
+            sb.append("Warnings: ").append(getWarnings());
         sb.append("}");
         return sb.toString();
     }
@@ -1245,6 +1324,10 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
             return false;
         if (other.getOverrideValidationStrategy() != null && other.getOverrideValidationStrategy().equals(this.getOverrideValidationStrategy()) == false)
             return false;
+        if (other.getWarnings() == null ^ this.getWarnings() == null)
+            return false;
+        if (other.getWarnings() != null && other.getWarnings().equals(this.getWarnings()) == false)
+            return false;
         return true;
     }
 
@@ -1268,6 +1351,7 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getOverridePermissions() == null) ? 0 : getOverridePermissions().hashCode());
         hashCode = prime * hashCode + ((getOverrideTags() == null) ? 0 : getOverrideTags().hashCode());
         hashCode = prime * hashCode + ((getOverrideValidationStrategy() == null) ? 0 : getOverrideValidationStrategy().hashCode());
+        hashCode = prime * hashCode + ((getWarnings() == null) ? 0 : getWarnings().hashCode());
         return hashCode;
     }
 

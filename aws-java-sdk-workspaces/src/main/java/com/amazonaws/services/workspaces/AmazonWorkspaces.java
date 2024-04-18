@@ -116,6 +116,35 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Accepts the account link invitation.
+     * </p>
+     * <important>
+     * <p>
+     * There's currently no unlinking capability after you accept the account linking invitation.
+     * </p>
+     * </important>
+     * 
+     * @param acceptAccountLinkInvitationRequest
+     * @return Result of the AcceptAccountLinkInvitation operation returned by the service.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.AcceptAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/AcceptAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AcceptAccountLinkInvitationResult acceptAccountLinkInvitation(AcceptAccountLinkInvitationRequest acceptAccountLinkInvitationRequest);
+
+    /**
+     * <p>
      * Associates the specified connection alias with the specified directory to enable cross-Region redirection. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
@@ -280,6 +309,28 @@ public interface AmazonWorkspaces {
      *      API Documentation</a>
      */
     CopyWorkspaceImageResult copyWorkspaceImage(CopyWorkspaceImageRequest copyWorkspaceImageRequest);
+
+    /**
+     * <p>
+     * Creates the account link invitation.
+     * </p>
+     * 
+     * @param createAccountLinkInvitationRequest
+     * @return Result of the CreateAccountLinkInvitation operation returned by the service.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.CreateAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateAccountLinkInvitationResult createAccountLinkInvitation(CreateAccountLinkInvitationRequest createAccountLinkInvitationRequest);
 
     /**
      * <p>
@@ -561,6 +612,30 @@ public interface AmazonWorkspaces {
      *      API Documentation</a>
      */
     CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest createWorkspacesRequest);
+
+    /**
+     * <p>
+     * Deletes the account link invitation.
+     * </p>
+     * 
+     * @param deleteAccountLinkInvitationRequest
+     * @return Result of the DeleteAccountLinkInvitation operation returned by the service.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.DeleteAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteAccountLinkInvitationResult deleteAccountLinkInvitation(DeleteAccountLinkInvitationRequest deleteAccountLinkInvitationRequest);
 
     /**
      * <p>
@@ -1301,6 +1376,28 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Retrieves account link information.
+     * </p>
+     * 
+     * @param getAccountLinkRequest
+     * @return Result of the GetAccountLink operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.GetAccountLink
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/GetAccountLink" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetAccountLinkResult getAccountLink(GetAccountLinkRequest getAccountLinkRequest);
+
+    /**
+     * <p>
      * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can
      * tailor your login portal company logo, the support email address, support link, link to reset password, and a
      * custom message for users trying to sign in.
@@ -1380,6 +1477,26 @@ public interface AmazonWorkspaces {
      *      target="_top">AWS API Documentation</a>
      */
     ImportWorkspaceImageResult importWorkspaceImage(ImportWorkspaceImageRequest importWorkspaceImageRequest);
+
+    /**
+     * <p>
+     * Lists all account links.
+     * </p>
+     * 
+     * @param listAccountLinksRequest
+     * @return Result of the ListAccountLinks operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.ListAccountLinks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ListAccountLinks" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListAccountLinksResult listAccountLinks(ListAccountLinksRequest listAccountLinksRequest);
 
     /**
      * <p>
@@ -1747,6 +1864,30 @@ public interface AmazonWorkspaces {
      *      target="_top">AWS API Documentation</a>
      */
     RegisterWorkspaceDirectoryResult registerWorkspaceDirectory(RegisterWorkspaceDirectoryRequest registerWorkspaceDirectoryRequest);
+
+    /**
+     * <p>
+     * Rejects the account link invitation.
+     * </p>
+     * 
+     * @param rejectAccountLinkInvitationRequest
+     * @return Result of the RejectAccountLinkInvitation operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws ValidationException
+     *         You either haven't provided a <code>TargetAccountId</code> or are using the same value for
+     *         <code>TargetAccountId</code> and <code>SourceAccountId</code>.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The <code>TargetAccountId</code> is already linked or invited.
+     * @throws InternalServerException
+     *         Unexpected server error occured.
+     * @sample AmazonWorkspaces.RejectAccountLinkInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RejectAccountLinkInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RejectAccountLinkInvitationResult rejectAccountLinkInvitation(RejectAccountLinkInvitationRequest rejectAccountLinkInvitationRequest);
 
     /**
      * <p>

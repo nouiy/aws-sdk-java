@@ -40,6 +40,8 @@ public class TopBottomFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeGranularity").build();
     private static final MarshallingInfo<String> PARAMETERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParameterName").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final TopBottomFilterMarshaller instance = new TopBottomFilterMarshaller();
 
@@ -63,6 +65,7 @@ public class TopBottomFilterMarshaller {
             protocolMarshaller.marshall(topBottomFilter.getAggregationSortConfigurations(), AGGREGATIONSORTCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(topBottomFilter.getTimeGranularity(), TIMEGRANULARITY_BINDING);
             protocolMarshaller.marshall(topBottomFilter.getParameterName(), PARAMETERNAME_BINDING);
+            protocolMarshaller.marshall(topBottomFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

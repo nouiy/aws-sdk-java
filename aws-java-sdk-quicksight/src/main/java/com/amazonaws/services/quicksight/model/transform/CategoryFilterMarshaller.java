@@ -33,6 +33,8 @@ public class CategoryFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Column").build();
     private static final MarshallingInfo<StructuredPojo> CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Configuration").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final CategoryFilterMarshaller instance = new CategoryFilterMarshaller();
 
@@ -53,6 +55,7 @@ public class CategoryFilterMarshaller {
             protocolMarshaller.marshall(categoryFilter.getFilterId(), FILTERID_BINDING);
             protocolMarshaller.marshall(categoryFilter.getColumn(), COLUMN_BINDING);
             protocolMarshaller.marshall(categoryFilter.getConfiguration(), CONFIGURATION_BINDING);
+            protocolMarshaller.marshall(categoryFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

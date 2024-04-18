@@ -30,6 +30,12 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * A mapping applied to the authenticating end-entity certificate.
+     * </p>
+     */
+    private java.util.List<AttributeMapping> attributeMappings;
+    /**
+     * <p>
      * The ISO-8601 timestamp when the profile was created.
      * </p>
      */
@@ -104,6 +110,76 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date updatedAt;
+
+    /**
+     * <p>
+     * A mapping applied to the authenticating end-entity certificate.
+     * </p>
+     * 
+     * @return A mapping applied to the authenticating end-entity certificate.
+     */
+
+    public java.util.List<AttributeMapping> getAttributeMappings() {
+        return attributeMappings;
+    }
+
+    /**
+     * <p>
+     * A mapping applied to the authenticating end-entity certificate.
+     * </p>
+     * 
+     * @param attributeMappings
+     *        A mapping applied to the authenticating end-entity certificate.
+     */
+
+    public void setAttributeMappings(java.util.Collection<AttributeMapping> attributeMappings) {
+        if (attributeMappings == null) {
+            this.attributeMappings = null;
+            return;
+        }
+
+        this.attributeMappings = new java.util.ArrayList<AttributeMapping>(attributeMappings);
+    }
+
+    /**
+     * <p>
+     * A mapping applied to the authenticating end-entity certificate.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAttributeMappings(java.util.Collection)} or {@link #withAttributeMappings(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param attributeMappings
+     *        A mapping applied to the authenticating end-entity certificate.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProfileDetail withAttributeMappings(AttributeMapping... attributeMappings) {
+        if (this.attributeMappings == null) {
+            setAttributeMappings(new java.util.ArrayList<AttributeMapping>(attributeMappings.length));
+        }
+        for (AttributeMapping ele : attributeMappings) {
+            this.attributeMappings.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A mapping applied to the authenticating end-entity certificate.
+     * </p>
+     * 
+     * @param attributeMappings
+     *        A mapping applied to the authenticating end-entity certificate.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProfileDetail withAttributeMappings(java.util.Collection<AttributeMapping> attributeMappings) {
+        setAttributeMappings(attributeMappings);
+        return this;
+    }
 
     /**
      * <p>
@@ -705,6 +781,8 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAttributeMappings() != null)
+            sb.append("AttributeMappings: ").append(getAttributeMappings()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getCreatedBy() != null)
@@ -743,6 +821,10 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof ProfileDetail == false)
             return false;
         ProfileDetail other = (ProfileDetail) obj;
+        if (other.getAttributeMappings() == null ^ this.getAttributeMappings() == null)
+            return false;
+        if (other.getAttributeMappings() != null && other.getAttributeMappings().equals(this.getAttributeMappings()) == false)
+            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
@@ -799,6 +881,7 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAttributeMappings() == null) ? 0 : getAttributeMappings().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getDurationSeconds() == null) ? 0 : getDurationSeconds().hashCode());

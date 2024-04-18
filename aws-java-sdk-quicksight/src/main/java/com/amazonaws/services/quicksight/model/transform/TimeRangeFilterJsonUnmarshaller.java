@@ -84,6 +84,10 @@ public class TimeRangeFilterJsonUnmarshaller implements Unmarshaller<TimeRangeFi
                     context.nextToken();
                     timeRangeFilter.setTimeGranularity(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DefaultFilterControlConfiguration", targetDepth)) {
+                    context.nextToken();
+                    timeRangeFilter.setDefaultFilterControlConfiguration(DefaultFilterControlConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

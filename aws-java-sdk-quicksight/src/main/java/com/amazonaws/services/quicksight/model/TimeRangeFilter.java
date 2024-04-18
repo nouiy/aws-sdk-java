@@ -99,6 +99,13 @@ public class TimeRangeFilter implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String timeGranularity;
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     */
+    private DefaultFilterControlConfiguration defaultFilterControlConfiguration;
 
     /**
      * <p>
@@ -659,6 +666,52 @@ public class TimeRangeFilter implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @param defaultFilterControlConfiguration
+     *        The default configurations for the associated controls. This applies only for filters that are scoped to
+     *        multiple sheets.
+     */
+
+    public void setDefaultFilterControlConfiguration(DefaultFilterControlConfiguration defaultFilterControlConfiguration) {
+        this.defaultFilterControlConfiguration = defaultFilterControlConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @return The default configurations for the associated controls. This applies only for filters that are scoped to
+     *         multiple sheets.
+     */
+
+    public DefaultFilterControlConfiguration getDefaultFilterControlConfiguration() {
+        return this.defaultFilterControlConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default configurations for the associated controls. This applies only for filters that are scoped to multiple
+     * sheets.
+     * </p>
+     * 
+     * @param defaultFilterControlConfiguration
+     *        The default configurations for the associated controls. This applies only for filters that are scoped to
+     *        multiple sheets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TimeRangeFilter withDefaultFilterControlConfiguration(DefaultFilterControlConfiguration defaultFilterControlConfiguration) {
+        setDefaultFilterControlConfiguration(defaultFilterControlConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -687,7 +740,9 @@ public class TimeRangeFilter implements Serializable, Cloneable, StructuredPojo 
         if (getExcludePeriodConfiguration() != null)
             sb.append("ExcludePeriodConfiguration: ").append(getExcludePeriodConfiguration()).append(",");
         if (getTimeGranularity() != null)
-            sb.append("TimeGranularity: ").append(getTimeGranularity());
+            sb.append("TimeGranularity: ").append(getTimeGranularity()).append(",");
+        if (getDefaultFilterControlConfiguration() != null)
+            sb.append("DefaultFilterControlConfiguration: ").append(getDefaultFilterControlConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -738,6 +793,11 @@ public class TimeRangeFilter implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getTimeGranularity() != null && other.getTimeGranularity().equals(this.getTimeGranularity()) == false)
             return false;
+        if (other.getDefaultFilterControlConfiguration() == null ^ this.getDefaultFilterControlConfiguration() == null)
+            return false;
+        if (other.getDefaultFilterControlConfiguration() != null
+                && other.getDefaultFilterControlConfiguration().equals(this.getDefaultFilterControlConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -755,6 +815,7 @@ public class TimeRangeFilter implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getNullOption() == null) ? 0 : getNullOption().hashCode());
         hashCode = prime * hashCode + ((getExcludePeriodConfiguration() == null) ? 0 : getExcludePeriodConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTimeGranularity() == null) ? 0 : getTimeGranularity().hashCode());
+        hashCode = prime * hashCode + ((getDefaultFilterControlConfiguration() == null) ? 0 : getDefaultFilterControlConfiguration().hashCode());
         return hashCode;
     }
 

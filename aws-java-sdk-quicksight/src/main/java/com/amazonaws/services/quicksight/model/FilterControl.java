@@ -73,6 +73,12 @@ public class FilterControl implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private FilterRelativeDateTimeControl relativeDateTime;
+    /**
+     * <p>
+     * A control from a filter that is scoped across more than one sheet. This represents your filter control on a sheet
+     * </p>
+     */
+    private FilterCrossSheetControl crossSheet;
 
     /**
      * <p>
@@ -358,6 +364,49 @@ public class FilterControl implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A control from a filter that is scoped across more than one sheet. This represents your filter control on a sheet
+     * </p>
+     * 
+     * @param crossSheet
+     *        A control from a filter that is scoped across more than one sheet. This represents your filter control on
+     *        a sheet
+     */
+
+    public void setCrossSheet(FilterCrossSheetControl crossSheet) {
+        this.crossSheet = crossSheet;
+    }
+
+    /**
+     * <p>
+     * A control from a filter that is scoped across more than one sheet. This represents your filter control on a sheet
+     * </p>
+     * 
+     * @return A control from a filter that is scoped across more than one sheet. This represents your filter control on
+     *         a sheet
+     */
+
+    public FilterCrossSheetControl getCrossSheet() {
+        return this.crossSheet;
+    }
+
+    /**
+     * <p>
+     * A control from a filter that is scoped across more than one sheet. This represents your filter control on a sheet
+     * </p>
+     * 
+     * @param crossSheet
+     *        A control from a filter that is scoped across more than one sheet. This represents your filter control on
+     *        a sheet
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FilterControl withCrossSheet(FilterCrossSheetControl crossSheet) {
+        setCrossSheet(crossSheet);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -382,7 +431,9 @@ public class FilterControl implements Serializable, Cloneable, StructuredPojo {
         if (getSlider() != null)
             sb.append("Slider: ").append(getSlider()).append(",");
         if (getRelativeDateTime() != null)
-            sb.append("RelativeDateTime: ").append(getRelativeDateTime());
+            sb.append("RelativeDateTime: ").append(getRelativeDateTime()).append(",");
+        if (getCrossSheet() != null)
+            sb.append("CrossSheet: ").append(getCrossSheet());
         sb.append("}");
         return sb.toString();
     }
@@ -425,6 +476,10 @@ public class FilterControl implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRelativeDateTime() != null && other.getRelativeDateTime().equals(this.getRelativeDateTime()) == false)
             return false;
+        if (other.getCrossSheet() == null ^ this.getCrossSheet() == null)
+            return false;
+        if (other.getCrossSheet() != null && other.getCrossSheet().equals(this.getCrossSheet()) == false)
+            return false;
         return true;
     }
 
@@ -440,6 +495,7 @@ public class FilterControl implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTextArea() == null) ? 0 : getTextArea().hashCode());
         hashCode = prime * hashCode + ((getSlider() == null) ? 0 : getSlider().hashCode());
         hashCode = prime * hashCode + ((getRelativeDateTime() == null) ? 0 : getRelativeDateTime().hashCode());
+        hashCode = prime * hashCode + ((getCrossSheet() == null) ? 0 : getCrossSheet().hashCode());
         return hashCode;
     }
 

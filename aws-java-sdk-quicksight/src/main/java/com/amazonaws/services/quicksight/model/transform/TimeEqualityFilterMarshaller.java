@@ -39,6 +39,8 @@ public class TimeEqualityFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeGranularity").build();
     private static final MarshallingInfo<StructuredPojo> ROLLINGDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RollingDate").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final TimeEqualityFilterMarshaller instance = new TimeEqualityFilterMarshaller();
 
@@ -62,6 +64,7 @@ public class TimeEqualityFilterMarshaller {
             protocolMarshaller.marshall(timeEqualityFilter.getParameterName(), PARAMETERNAME_BINDING);
             protocolMarshaller.marshall(timeEqualityFilter.getTimeGranularity(), TIMEGRANULARITY_BINDING);
             protocolMarshaller.marshall(timeEqualityFilter.getRollingDate(), ROLLINGDATE_BINDING);
+            protocolMarshaller.marshall(timeEqualityFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

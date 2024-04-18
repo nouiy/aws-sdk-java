@@ -103,6 +103,25 @@ public interface AWSIAMRolesAnywhere {
 
     /**
      * <p>
+     * Delete an entry from the attribute mapping rules enforced by a given profile.
+     * </p>
+     * 
+     * @param deleteAttributeMappingRequest
+     * @return Result of the DeleteAttributeMapping operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSIAMRolesAnywhere.DeleteAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/DeleteAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteAttributeMappingResult deleteAttributeMapping(DeleteAttributeMappingRequest deleteAttributeMappingRequest);
+
+    /**
+     * <p>
      * Deletes a certificate revocation list (CRL).
      * </p>
      * <p>
@@ -488,6 +507,26 @@ public interface AWSIAMRolesAnywhere {
      *      API Documentation</a>
      */
     ListTrustAnchorsResult listTrustAnchors(ListTrustAnchorsRequest listTrustAnchorsRequest);
+
+    /**
+     * <p>
+     * Put an entry in the attribute mapping rules that will be enforced by a given profile. A mapping specifies a
+     * certificate field and one or more specifiers that have contextual meanings.
+     * </p>
+     * 
+     * @param putAttributeMappingRequest
+     * @return Result of the PutAttributeMapping operation returned by the service.
+     * @throws ValidationException
+     *         Validation exception error.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSIAMRolesAnywhere.PutAttributeMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rolesanywhere-2018-05-10/PutAttributeMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutAttributeMappingResult putAttributeMapping(PutAttributeMappingRequest putAttributeMappingRequest);
 
     /**
      * <p>

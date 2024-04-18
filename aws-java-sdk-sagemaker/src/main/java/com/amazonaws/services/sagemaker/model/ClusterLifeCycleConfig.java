@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The LifeCycle configuration for a SageMaker HyperPod cluster.
+ * The lifecycle configuration for a SageMaker HyperPod cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ClusterLifeCycleConfig" target="_top">AWS
@@ -30,25 +30,53 @@ public class ClusterLifeCycleConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     * An Amazon S3 bucket path where your lifecycle scripts are stored.
      * </p>
+     * <important>
+     * <p>
+     * Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     * >IAM role for SageMaker HyperPod</a> has the managed <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     * <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets with the
+     * specific prefix <code>sagemaker-</code>.
+     * </p>
+     * </important>
      */
     private String sourceS3Uri;
     /**
      * <p>
-     * The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during cluster
-     * creation.
+     * The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This entrypoint
+     * script runs during cluster creation.
      * </p>
      */
     private String onCreate;
 
     /**
      * <p>
-     * An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     * An Amazon S3 bucket path where your lifecycle scripts are stored.
      * </p>
+     * <important>
+     * <p>
+     * Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     * >IAM role for SageMaker HyperPod</a> has the managed <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     * <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets with the
+     * specific prefix <code>sagemaker-</code>.
+     * </p>
+     * </important>
      * 
      * @param sourceS3Uri
-     *        An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     *        An Amazon S3 bucket path where your lifecycle scripts are stored.</p> <important>
+     *        <p>
+     *        Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     *        >IAM role for SageMaker HyperPod</a> has the managed <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     *        <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets
+     *        with the specific prefix <code>sagemaker-</code>.
+     *        </p>
      */
 
     public void setSourceS3Uri(String sourceS3Uri) {
@@ -57,10 +85,28 @@ public class ClusterLifeCycleConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     * An Amazon S3 bucket path where your lifecycle scripts are stored.
      * </p>
+     * <important>
+     * <p>
+     * Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     * >IAM role for SageMaker HyperPod</a> has the managed <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     * <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets with the
+     * specific prefix <code>sagemaker-</code>.
+     * </p>
+     * </important>
      * 
-     * @return An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     * @return An Amazon S3 bucket path where your lifecycle scripts are stored.</p> <important>
+     *         <p>
+     *         Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     *         >IAM role for SageMaker HyperPod</a> has the managed <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     *         <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets
+     *         with the specific prefix <code>sagemaker-</code>.
+     *         </p>
      */
 
     public String getSourceS3Uri() {
@@ -69,11 +115,29 @@ public class ClusterLifeCycleConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     * An Amazon S3 bucket path where your lifecycle scripts are stored.
      * </p>
+     * <important>
+     * <p>
+     * Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     * >IAM role for SageMaker HyperPod</a> has the managed <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     * <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets with the
+     * specific prefix <code>sagemaker-</code>.
+     * </p>
+     * </important>
      * 
      * @param sourceS3Uri
-     *        An Amazon S3 bucket path where your LifeCycle scripts are stored.
+     *        An Amazon S3 bucket path where your lifecycle scripts are stored.</p> <important>
+     *        <p>
+     *        Make sure that the S3 bucket path starts with <code>s3://sagemaker-</code>. The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-prerequisites.html#sagemaker-hyperpod-prerequisites-iam-role-for-hyperpod"
+     *        >IAM role for SageMaker HyperPod</a> has the managed <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam-awsmanpol-cluster.html">
+     *        <code>AmazonSageMakerClusterInstanceRolePolicy</code> </a> attached, which allows access to S3 buckets
+     *        with the specific prefix <code>sagemaker-</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,13 +148,13 @@ public class ClusterLifeCycleConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during cluster
-     * creation.
+     * The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This entrypoint
+     * script runs during cluster creation.
      * </p>
      * 
      * @param onCreate
-     *        The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during
-     *        cluster creation.
+     *        The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This
+     *        entrypoint script runs during cluster creation.
      */
 
     public void setOnCreate(String onCreate) {
@@ -99,12 +163,12 @@ public class ClusterLifeCycleConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during cluster
-     * creation.
+     * The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This entrypoint
+     * script runs during cluster creation.
      * </p>
      * 
-     * @return The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during
-     *         cluster creation.
+     * @return The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This
+     *         entrypoint script runs during cluster creation.
      */
 
     public String getOnCreate() {
@@ -113,13 +177,13 @@ public class ClusterLifeCycleConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during cluster
-     * creation.
+     * The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This entrypoint
+     * script runs during cluster creation.
      * </p>
      * 
      * @param onCreate
-     *        The directory of the LifeCycle script under <code>SourceS3Uri</code>. This LifeCycle script runs during
-     *        cluster creation.
+     *        The file name of the entrypoint script of lifecycle scripts under <code>SourceS3Uri</code>. This
+     *        entrypoint script runs during cluster creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

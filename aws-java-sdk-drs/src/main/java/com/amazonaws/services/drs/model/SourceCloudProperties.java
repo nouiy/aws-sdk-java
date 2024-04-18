@@ -46,6 +46,12 @@ public class SourceCloudProperties implements Serializable, Cloneable, Structure
      * </p>
      */
     private String originRegion;
+    /**
+     * <p>
+     * The ARN of the source Outpost
+     * </p>
+     */
+    private String sourceOutpostArn;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class SourceCloudProperties implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The ARN of the source Outpost
+     * </p>
+     * 
+     * @param sourceOutpostArn
+     *        The ARN of the source Outpost
+     */
+
+    public void setSourceOutpostArn(String sourceOutpostArn) {
+        this.sourceOutpostArn = sourceOutpostArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the source Outpost
+     * </p>
+     * 
+     * @return The ARN of the source Outpost
+     */
+
+    public String getSourceOutpostArn() {
+        return this.sourceOutpostArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the source Outpost
+     * </p>
+     * 
+     * @param sourceOutpostArn
+     *        The ARN of the source Outpost
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SourceCloudProperties withSourceOutpostArn(String sourceOutpostArn) {
+        setSourceOutpostArn(sourceOutpostArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class SourceCloudProperties implements Serializable, Cloneable, Structure
         if (getOriginAvailabilityZone() != null)
             sb.append("OriginAvailabilityZone: ").append(getOriginAvailabilityZone()).append(",");
         if (getOriginRegion() != null)
-            sb.append("OriginRegion: ").append(getOriginRegion());
+            sb.append("OriginRegion: ").append(getOriginRegion()).append(",");
+        if (getSourceOutpostArn() != null)
+            sb.append("SourceOutpostArn: ").append(getSourceOutpostArn());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class SourceCloudProperties implements Serializable, Cloneable, Structure
             return false;
         if (other.getOriginRegion() != null && other.getOriginRegion().equals(this.getOriginRegion()) == false)
             return false;
+        if (other.getSourceOutpostArn() == null ^ this.getSourceOutpostArn() == null)
+            return false;
+        if (other.getSourceOutpostArn() != null && other.getSourceOutpostArn().equals(this.getSourceOutpostArn()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class SourceCloudProperties implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getOriginAccountID() == null) ? 0 : getOriginAccountID().hashCode());
         hashCode = prime * hashCode + ((getOriginAvailabilityZone() == null) ? 0 : getOriginAvailabilityZone().hashCode());
         hashCode = prime * hashCode + ((getOriginRegion() == null) ? 0 : getOriginRegion().hashCode());
+        hashCode = prime * hashCode + ((getSourceOutpostArn() == null) ? 0 : getSourceOutpostArn().hashCode());
         return hashCode;
     }
 

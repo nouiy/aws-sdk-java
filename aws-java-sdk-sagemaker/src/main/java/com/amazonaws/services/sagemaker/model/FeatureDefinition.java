@@ -40,7 +40,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -100,7 +100,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -119,7 +119,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        Must start and end with an alphanumeric character.
+     *        Must start with an alphanumeric character.
      *        </p>
      *        </li>
      *        <li>
@@ -144,7 +144,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -162,7 +162,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      *         <ul>
      *         <li>
      *         <p>
-     *         Must start and end with an alphanumeric character.
+     *         Must start with an alphanumeric character.
      *         </p>
      *         </li>
      *         <li>
@@ -187,7 +187,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * Must start and end with an alphanumeric character.
+     * Must start with an alphanumeric character.
      * </p>
      * </li>
      * <li>
@@ -206,7 +206,7 @@ public class FeatureDefinition implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        Must start and end with an alphanumeric character.
+     *        Must start with an alphanumeric character.
      *        </p>
      *        </li>
      *        <li>

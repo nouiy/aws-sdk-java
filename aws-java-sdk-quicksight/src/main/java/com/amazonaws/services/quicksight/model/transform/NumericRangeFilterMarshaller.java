@@ -45,6 +45,8 @@ public class NumericRangeFilterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AggregationFunction").build();
     private static final MarshallingInfo<String> NULLOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NullOption").build();
+    private static final MarshallingInfo<StructuredPojo> DEFAULTFILTERCONTROLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultFilterControlConfiguration").build();
 
     private static final NumericRangeFilterMarshaller instance = new NumericRangeFilterMarshaller();
 
@@ -71,6 +73,7 @@ public class NumericRangeFilterMarshaller {
             protocolMarshaller.marshall(numericRangeFilter.getSelectAllOptions(), SELECTALLOPTIONS_BINDING);
             protocolMarshaller.marshall(numericRangeFilter.getAggregationFunction(), AGGREGATIONFUNCTION_BINDING);
             protocolMarshaller.marshall(numericRangeFilter.getNullOption(), NULLOPTION_BINDING);
+            protocolMarshaller.marshall(numericRangeFilter.getDefaultFilterControlConfiguration(), DEFAULTFILTERCONTROLCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

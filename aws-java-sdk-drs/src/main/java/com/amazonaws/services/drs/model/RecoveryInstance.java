@@ -108,6 +108,12 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
     private RecoveryInstanceProperties recoveryInstanceProperties;
     /**
      * <p>
+     * The ARN of the source Outpost
+     * </p>
+     */
+    private String sourceOutpostArn;
+    /**
+     * <p>
      * The Source Server ID that this Recovery Instance is associated with.
      * </p>
      */
@@ -691,6 +697,46 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * The ARN of the source Outpost
+     * </p>
+     * 
+     * @param sourceOutpostArn
+     *        The ARN of the source Outpost
+     */
+
+    public void setSourceOutpostArn(String sourceOutpostArn) {
+        this.sourceOutpostArn = sourceOutpostArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the source Outpost
+     * </p>
+     * 
+     * @return The ARN of the source Outpost
+     */
+
+    public String getSourceOutpostArn() {
+        return this.sourceOutpostArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the source Outpost
+     * </p>
+     * 
+     * @param sourceOutpostArn
+     *        The ARN of the source Outpost
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecoveryInstance withSourceOutpostArn(String sourceOutpostArn) {
+        setSourceOutpostArn(sourceOutpostArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Source Server ID that this Recovery Instance is associated with.
      * </p>
      * 
@@ -835,6 +881,8 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
             sb.append("RecoveryInstanceID: ").append(getRecoveryInstanceID()).append(",");
         if (getRecoveryInstanceProperties() != null)
             sb.append("RecoveryInstanceProperties: ").append(getRecoveryInstanceProperties()).append(",");
+        if (getSourceOutpostArn() != null)
+            sb.append("SourceOutpostArn: ").append(getSourceOutpostArn()).append(",");
         if (getSourceServerID() != null)
             sb.append("SourceServerID: ").append(getSourceServerID()).append(",");
         if (getTags() != null)
@@ -905,6 +953,10 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getRecoveryInstanceProperties() != null && other.getRecoveryInstanceProperties().equals(this.getRecoveryInstanceProperties()) == false)
             return false;
+        if (other.getSourceOutpostArn() == null ^ this.getSourceOutpostArn() == null)
+            return false;
+        if (other.getSourceOutpostArn() != null && other.getSourceOutpostArn().equals(this.getSourceOutpostArn()) == false)
+            return false;
         if (other.getSourceServerID() == null ^ this.getSourceServerID() == null)
             return false;
         if (other.getSourceServerID() != null && other.getSourceServerID().equals(this.getSourceServerID()) == false)
@@ -934,6 +986,7 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getPointInTimeSnapshotDateTime() == null) ? 0 : getPointInTimeSnapshotDateTime().hashCode());
         hashCode = prime * hashCode + ((getRecoveryInstanceID() == null) ? 0 : getRecoveryInstanceID().hashCode());
         hashCode = prime * hashCode + ((getRecoveryInstanceProperties() == null) ? 0 : getRecoveryInstanceProperties().hashCode());
+        hashCode = prime * hashCode + ((getSourceOutpostArn() == null) ? 0 : getSourceOutpostArn().hashCode());
         hashCode = prime * hashCode + ((getSourceServerID() == null) ? 0 : getSourceServerID().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

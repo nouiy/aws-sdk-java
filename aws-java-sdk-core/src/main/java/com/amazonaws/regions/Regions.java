@@ -97,14 +97,19 @@ public enum Regions {
      * @param regionName
      *            The name of the region. Ex.: eu-west-1
      * @return Region enum representing the given region name.
+     * @deprecated This method requires the SDK version to be updated to support new regions. Use
+     * {@link RegionUtils#getRegion(String)}, which does not have this limitation.
      */
+    @Deprecated
     public static Regions fromName(String regionName) {
         for (Regions region : Regions.values()) {
             if (region.getName().equals(regionName)) {
                 return region;
             }
         }
-        throw new IllegalArgumentException("Cannot create enum from " + regionName + " value!");
+        throw new IllegalArgumentException("Cannot create enum from " + regionName + " value. "
+                                           + "Use com.amazonaws.regions.RegionUtils.getRegion to access regions that "
+                                           + "aren't known to this SDK version.");
     }
 
     /**

@@ -158,6 +158,39 @@ public class AWSIAMRolesAnywhereAsyncClient extends AWSIAMRolesAnywhereClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAttributeMappingResult> deleteAttributeMappingAsync(DeleteAttributeMappingRequest request) {
+
+        return deleteAttributeMappingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAttributeMappingResult> deleteAttributeMappingAsync(final DeleteAttributeMappingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAttributeMappingRequest, DeleteAttributeMappingResult> asyncHandler) {
+        final DeleteAttributeMappingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAttributeMappingResult>() {
+            @Override
+            public DeleteAttributeMappingResult call() throws Exception {
+                DeleteAttributeMappingResult result = null;
+
+                try {
+                    result = executeDeleteAttributeMapping(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteCrlResult> deleteCrlAsync(DeleteCrlRequest request) {
 
         return deleteCrlAsync(request, null);
@@ -769,6 +802,39 @@ public class AWSIAMRolesAnywhereAsyncClient extends AWSIAMRolesAnywhereClient im
 
                 try {
                     result = executeListTrustAnchors(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAttributeMappingResult> putAttributeMappingAsync(PutAttributeMappingRequest request) {
+
+        return putAttributeMappingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAttributeMappingResult> putAttributeMappingAsync(final PutAttributeMappingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutAttributeMappingRequest, PutAttributeMappingResult> asyncHandler) {
+        final PutAttributeMappingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutAttributeMappingResult>() {
+            @Override
+            public PutAttributeMappingResult call() throws Exception {
+                PutAttributeMappingResult result = null;
+
+                try {
+                    result = executePutAttributeMapping(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
