@@ -72,7 +72,7 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ImpactedLocation> impactedLocations;
     /**
      * <p>
-     * Health event list member.
+     * The status of a health event.
      * </p>
      */
     private String status;
@@ -410,11 +410,11 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Health event list member.
+     * The status of a health event.
      * </p>
      * 
      * @param status
-     *        Health event list member.
+     *        The status of a health event.
      * @see HealthEventStatus
      */
 
@@ -424,10 +424,10 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Health event list member.
+     * The status of a health event.
      * </p>
      * 
-     * @return Health event list member.
+     * @return The status of a health event.
      * @see HealthEventStatus
      */
 
@@ -437,11 +437,11 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Health event list member.
+     * The status of a health event.
      * </p>
      * 
      * @param status
-     *        Health event list member.
+     *        The status of a health event.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HealthEventStatus
      */
@@ -453,11 +453,11 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Health event list member.
+     * The status of a health event.
      * </p>
      * 
      * @param status
-     *        Health event list member.
+     *        The status of a health event.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HealthEventStatus
      */

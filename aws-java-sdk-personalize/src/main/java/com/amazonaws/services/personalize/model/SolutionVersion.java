@@ -93,21 +93,10 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
     private Double trainingHours;
     /**
      * <p>
-     * The scope of training to be performed when creating the solution version. The <code>FULL</code> option trains the
-     * solution version based on the entirety of the input solution's training data, while the <code>UPDATE</code>
-     * option processes only the data that has changed in comparison to the input solution. Choose <code>UPDATE</code>
-     * when you want to incrementally update your solution version instead of creating an entirely new one.
+     * The scope of training to be performed when creating the solution version. A <code>FULL</code> training considers
+     * all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has changed since the
+     * latest training. Only solution versions created with the User-Personalization recipe can use <code>UPDATE</code>.
      * </p>
-     * <important>
-     * <p>
-     * The <code>UPDATE</code> option can only be used when you already have an active solution version created from the
-     * input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html"
-     * >User-Personalization</a> recipe or the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html">HRNN-Coldstart</a>
-     * recipe.
-     * </p>
-     * </important>
      */
     private String trainingMode;
     /**
@@ -175,6 +164,12 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private java.util.Date lastUpdatedDateTime;
+    /**
+     * <p>
+     * Whether the solution version was created automatically or manually.
+     * </p>
+     */
+    private String trainingType;
 
     /**
      * <p>
@@ -620,36 +615,16 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The scope of training to be performed when creating the solution version. The <code>FULL</code> option trains the
-     * solution version based on the entirety of the input solution's training data, while the <code>UPDATE</code>
-     * option processes only the data that has changed in comparison to the input solution. Choose <code>UPDATE</code>
-     * when you want to incrementally update your solution version instead of creating an entirely new one.
+     * The scope of training to be performed when creating the solution version. A <code>FULL</code> training considers
+     * all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has changed since the
+     * latest training. Only solution versions created with the User-Personalization recipe can use <code>UPDATE</code>.
      * </p>
-     * <important>
-     * <p>
-     * The <code>UPDATE</code> option can only be used when you already have an active solution version created from the
-     * input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html"
-     * >User-Personalization</a> recipe or the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html">HRNN-Coldstart</a>
-     * recipe.
-     * </p>
-     * </important>
      * 
      * @param trainingMode
-     *        The scope of training to be performed when creating the solution version. The <code>FULL</code> option
-     *        trains the solution version based on the entirety of the input solution's training data, while the
-     *        <code>UPDATE</code> option processes only the data that has changed in comparison to the input solution.
-     *        Choose <code>UPDATE</code> when you want to incrementally update your solution version instead of creating
-     *        an entirely new one.</p> <important>
-     *        <p>
-     *        The <code>UPDATE</code> option can only be used when you already have an active solution version created
-     *        from the input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html">
-     *        User-Personalization</a> recipe or the <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html"
-     *        >HRNN-Coldstart</a> recipe.
-     *        </p>
+     *        The scope of training to be performed when creating the solution version. A <code>FULL</code> training
+     *        considers all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has
+     *        changed since the latest training. Only solution versions created with the User-Personalization recipe can
+     *        use <code>UPDATE</code>.
      * @see TrainingMode
      */
 
@@ -659,36 +634,15 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The scope of training to be performed when creating the solution version. The <code>FULL</code> option trains the
-     * solution version based on the entirety of the input solution's training data, while the <code>UPDATE</code>
-     * option processes only the data that has changed in comparison to the input solution. Choose <code>UPDATE</code>
-     * when you want to incrementally update your solution version instead of creating an entirely new one.
+     * The scope of training to be performed when creating the solution version. A <code>FULL</code> training considers
+     * all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has changed since the
+     * latest training. Only solution versions created with the User-Personalization recipe can use <code>UPDATE</code>.
      * </p>
-     * <important>
-     * <p>
-     * The <code>UPDATE</code> option can only be used when you already have an active solution version created from the
-     * input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html"
-     * >User-Personalization</a> recipe or the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html">HRNN-Coldstart</a>
-     * recipe.
-     * </p>
-     * </important>
      * 
-     * @return The scope of training to be performed when creating the solution version. The <code>FULL</code> option
-     *         trains the solution version based on the entirety of the input solution's training data, while the
-     *         <code>UPDATE</code> option processes only the data that has changed in comparison to the input solution.
-     *         Choose <code>UPDATE</code> when you want to incrementally update your solution version instead of
-     *         creating an entirely new one.</p> <important>
-     *         <p>
-     *         The <code>UPDATE</code> option can only be used when you already have an active solution version created
-     *         from the input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     *         href
-     *         ="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html">
-     *         User-Personalization</a> recipe or the <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html"
-     *         >HRNN-Coldstart</a> recipe.
-     *         </p>
+     * @return The scope of training to be performed when creating the solution version. A <code>FULL</code> training
+     *         considers all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has
+     *         changed since the latest training. Only solution versions created with the User-Personalization recipe
+     *         can use <code>UPDATE</code>.
      * @see TrainingMode
      */
 
@@ -698,36 +652,16 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The scope of training to be performed when creating the solution version. The <code>FULL</code> option trains the
-     * solution version based on the entirety of the input solution's training data, while the <code>UPDATE</code>
-     * option processes only the data that has changed in comparison to the input solution. Choose <code>UPDATE</code>
-     * when you want to incrementally update your solution version instead of creating an entirely new one.
+     * The scope of training to be performed when creating the solution version. A <code>FULL</code> training considers
+     * all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has changed since the
+     * latest training. Only solution versions created with the User-Personalization recipe can use <code>UPDATE</code>.
      * </p>
-     * <important>
-     * <p>
-     * The <code>UPDATE</code> option can only be used when you already have an active solution version created from the
-     * input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html"
-     * >User-Personalization</a> recipe or the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html">HRNN-Coldstart</a>
-     * recipe.
-     * </p>
-     * </important>
      * 
      * @param trainingMode
-     *        The scope of training to be performed when creating the solution version. The <code>FULL</code> option
-     *        trains the solution version based on the entirety of the input solution's training data, while the
-     *        <code>UPDATE</code> option processes only the data that has changed in comparison to the input solution.
-     *        Choose <code>UPDATE</code> when you want to incrementally update your solution version instead of creating
-     *        an entirely new one.</p> <important>
-     *        <p>
-     *        The <code>UPDATE</code> option can only be used when you already have an active solution version created
-     *        from the input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html">
-     *        User-Personalization</a> recipe or the <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html"
-     *        >HRNN-Coldstart</a> recipe.
-     *        </p>
+     *        The scope of training to be performed when creating the solution version. A <code>FULL</code> training
+     *        considers all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has
+     *        changed since the latest training. Only solution versions created with the User-Personalization recipe can
+     *        use <code>UPDATE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrainingMode
      */
@@ -739,36 +673,16 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The scope of training to be performed when creating the solution version. The <code>FULL</code> option trains the
-     * solution version based on the entirety of the input solution's training data, while the <code>UPDATE</code>
-     * option processes only the data that has changed in comparison to the input solution. Choose <code>UPDATE</code>
-     * when you want to incrementally update your solution version instead of creating an entirely new one.
+     * The scope of training to be performed when creating the solution version. A <code>FULL</code> training considers
+     * all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has changed since the
+     * latest training. Only solution versions created with the User-Personalization recipe can use <code>UPDATE</code>.
      * </p>
-     * <important>
-     * <p>
-     * The <code>UPDATE</code> option can only be used when you already have an active solution version created from the
-     * input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html"
-     * >User-Personalization</a> recipe or the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html">HRNN-Coldstart</a>
-     * recipe.
-     * </p>
-     * </important>
      * 
      * @param trainingMode
-     *        The scope of training to be performed when creating the solution version. The <code>FULL</code> option
-     *        trains the solution version based on the entirety of the input solution's training data, while the
-     *        <code>UPDATE</code> option processes only the data that has changed in comparison to the input solution.
-     *        Choose <code>UPDATE</code> when you want to incrementally update your solution version instead of creating
-     *        an entirely new one.</p> <important>
-     *        <p>
-     *        The <code>UPDATE</code> option can only be used when you already have an active solution version created
-     *        from the input solution using the <code>FULL</code> option and the input solution was trained with the <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-new-item-USER_PERSONALIZATION.html">
-     *        User-Personalization</a> recipe or the <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-coldstart.html"
-     *        >HRNN-Coldstart</a> recipe.
-     *        </p>
+     *        The scope of training to be performed when creating the solution version. A <code>FULL</code> training
+     *        considers all of the data in your dataset group. An <code>UPDATE</code> processes only the data that has
+     *        changed since the latest training. Only solution versions created with the User-Personalization recipe can
+     *        use <code>UPDATE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrainingMode
      */
@@ -1189,6 +1103,65 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Whether the solution version was created automatically or manually.
+     * </p>
+     * 
+     * @param trainingType
+     *        Whether the solution version was created automatically or manually.
+     * @see TrainingType
+     */
+
+    public void setTrainingType(String trainingType) {
+        this.trainingType = trainingType;
+    }
+
+    /**
+     * <p>
+     * Whether the solution version was created automatically or manually.
+     * </p>
+     * 
+     * @return Whether the solution version was created automatically or manually.
+     * @see TrainingType
+     */
+
+    public String getTrainingType() {
+        return this.trainingType;
+    }
+
+    /**
+     * <p>
+     * Whether the solution version was created automatically or manually.
+     * </p>
+     * 
+     * @param trainingType
+     *        Whether the solution version was created automatically or manually.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrainingType
+     */
+
+    public SolutionVersion withTrainingType(String trainingType) {
+        setTrainingType(trainingType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the solution version was created automatically or manually.
+     * </p>
+     * 
+     * @param trainingType
+     *        Whether the solution version was created automatically or manually.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrainingType
+     */
+
+    public SolutionVersion withTrainingType(TrainingType trainingType) {
+        this.trainingType = trainingType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1231,7 +1204,9 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
         if (getCreationDateTime() != null)
             sb.append("CreationDateTime: ").append(getCreationDateTime()).append(",");
         if (getLastUpdatedDateTime() != null)
-            sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime());
+            sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime()).append(",");
+        if (getTrainingType() != null)
+            sb.append("TrainingType: ").append(getTrainingType());
         sb.append("}");
         return sb.toString();
     }
@@ -1310,6 +1285,10 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getLastUpdatedDateTime() != null && other.getLastUpdatedDateTime().equals(this.getLastUpdatedDateTime()) == false)
             return false;
+        if (other.getTrainingType() == null ^ this.getTrainingType() == null)
+            return false;
+        if (other.getTrainingType() != null && other.getTrainingType().equals(this.getTrainingType()) == false)
+            return false;
         return true;
     }
 
@@ -1334,6 +1313,7 @@ public class SolutionVersion implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDateTime() == null) ? 0 : getLastUpdatedDateTime().hashCode());
+        hashCode = prime * hashCode + ((getTrainingType() == null) ? 0 : getTrainingType().hashCode());
         return hashCode;
     }
 

@@ -65,6 +65,28 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     private Boolean performAutoML;
     /**
      * <p>
+     * Whether the solution uses automatic training to create new solution versions (trained models). The default is
+     * <code>True</code> and the solution automatically creates new solution versions every 7 days. You can change the
+     * training frequency by specifying a <code>schedulingExpression</code> in the <code>AutoTrainingConfig</code> as
+     * part of solution configuration. For more information about automatic training, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring automatic
+     * training</a>.
+     * </p>
+     * <p>
+     * Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     * solution version within the hour, the solution skips the first automatic training.
+     * </p>
+     * <p>
+     * After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
+     * API operation. To get its status, use the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>.
+     * </p>
+     */
+    private Boolean performAutoTraining;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
      * <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their ARNs,
      * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
@@ -411,6 +433,186 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
+     * Whether the solution uses automatic training to create new solution versions (trained models). The default is
+     * <code>True</code> and the solution automatically creates new solution versions every 7 days. You can change the
+     * training frequency by specifying a <code>schedulingExpression</code> in the <code>AutoTrainingConfig</code> as
+     * part of solution configuration. For more information about automatic training, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring automatic
+     * training</a>.
+     * </p>
+     * <p>
+     * Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     * solution version within the hour, the solution skips the first automatic training.
+     * </p>
+     * <p>
+     * After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
+     * API operation. To get its status, use the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>.
+     * </p>
+     * 
+     * @param performAutoTraining
+     *        Whether the solution uses automatic training to create new solution versions (trained models). The default
+     *        is <code>True</code> and the solution automatically creates new solution versions every 7 days. You can
+     *        change the training frequency by specifying a <code>schedulingExpression</code> in the
+     *        <code>AutoTrainingConfig</code> as part of solution configuration. For more information about automatic
+     *        training, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring
+     *        automatic training</a>.</p>
+     *        <p>
+     *        Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     *        solution version within the hour, the solution skips the first automatic training.
+     *        </p>
+     *        <p>
+     *        After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html"
+     *        >ListSolutionVersions</a> API operation. To get its status, use the <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     *        >DescribeSolutionVersion</a>.
+     */
+
+    public void setPerformAutoTraining(Boolean performAutoTraining) {
+        this.performAutoTraining = performAutoTraining;
+    }
+
+    /**
+     * <p>
+     * Whether the solution uses automatic training to create new solution versions (trained models). The default is
+     * <code>True</code> and the solution automatically creates new solution versions every 7 days. You can change the
+     * training frequency by specifying a <code>schedulingExpression</code> in the <code>AutoTrainingConfig</code> as
+     * part of solution configuration. For more information about automatic training, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring automatic
+     * training</a>.
+     * </p>
+     * <p>
+     * Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     * solution version within the hour, the solution skips the first automatic training.
+     * </p>
+     * <p>
+     * After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
+     * API operation. To get its status, use the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>.
+     * </p>
+     * 
+     * @return Whether the solution uses automatic training to create new solution versions (trained models). The
+     *         default is <code>True</code> and the solution automatically creates new solution versions every 7 days.
+     *         You can change the training frequency by specifying a <code>schedulingExpression</code> in the
+     *         <code>AutoTrainingConfig</code> as part of solution configuration. For more information about automatic
+     *         training, see <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring
+     *         automatic training</a>.</p>
+     *         <p>
+     *         Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create
+     *         a solution version within the hour, the solution skips the first automatic training.
+     *         </p>
+     *         <p>
+     *         After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html"
+     *         >ListSolutionVersions</a> API operation. To get its status, use the <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     *         >DescribeSolutionVersion</a>.
+     */
+
+    public Boolean getPerformAutoTraining() {
+        return this.performAutoTraining;
+    }
+
+    /**
+     * <p>
+     * Whether the solution uses automatic training to create new solution versions (trained models). The default is
+     * <code>True</code> and the solution automatically creates new solution versions every 7 days. You can change the
+     * training frequency by specifying a <code>schedulingExpression</code> in the <code>AutoTrainingConfig</code> as
+     * part of solution configuration. For more information about automatic training, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring automatic
+     * training</a>.
+     * </p>
+     * <p>
+     * Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     * solution version within the hour, the solution skips the first automatic training.
+     * </p>
+     * <p>
+     * After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
+     * API operation. To get its status, use the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>.
+     * </p>
+     * 
+     * @param performAutoTraining
+     *        Whether the solution uses automatic training to create new solution versions (trained models). The default
+     *        is <code>True</code> and the solution automatically creates new solution versions every 7 days. You can
+     *        change the training frequency by specifying a <code>schedulingExpression</code> in the
+     *        <code>AutoTrainingConfig</code> as part of solution configuration. For more information about automatic
+     *        training, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring
+     *        automatic training</a>.</p>
+     *        <p>
+     *        Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     *        solution version within the hour, the solution skips the first automatic training.
+     *        </p>
+     *        <p>
+     *        After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html"
+     *        >ListSolutionVersions</a> API operation. To get its status, use the <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     *        >DescribeSolutionVersion</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSolutionRequest withPerformAutoTraining(Boolean performAutoTraining) {
+        setPerformAutoTraining(performAutoTraining);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the solution uses automatic training to create new solution versions (trained models). The default is
+     * <code>True</code> and the solution automatically creates new solution versions every 7 days. You can change the
+     * training frequency by specifying a <code>schedulingExpression</code> in the <code>AutoTrainingConfig</code> as
+     * part of solution configuration. For more information about automatic training, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring automatic
+     * training</a>.
+     * </p>
+     * <p>
+     * Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create a
+     * solution version within the hour, the solution skips the first automatic training.
+     * </p>
+     * <p>
+     * After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
+     * API operation. To get its status, use the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>.
+     * </p>
+     * 
+     * @return Whether the solution uses automatic training to create new solution versions (trained models). The
+     *         default is <code>True</code> and the solution automatically creates new solution versions every 7 days.
+     *         You can change the training frequency by specifying a <code>schedulingExpression</code> in the
+     *         <code>AutoTrainingConfig</code> as part of solution configuration. For more information about automatic
+     *         training, see <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring
+     *         automatic training</a>.</p>
+     *         <p>
+     *         Automatic solution version creation starts one hour after the solution is ACTIVE. If you manually create
+     *         a solution version within the hour, the solution skips the first automatic training.
+     *         </p>
+     *         <p>
+     *         After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html"
+     *         >ListSolutionVersions</a> API operation. To get its status, use the <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     *         >DescribeSolutionVersion</a>.
+     */
+
+    public Boolean isPerformAutoTraining() {
+        return this.performAutoTraining;
+    }
+
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
      * <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their ARNs,
      * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
@@ -744,6 +946,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
             sb.append("PerformHPO: ").append(getPerformHPO()).append(",");
         if (getPerformAutoML() != null)
             sb.append("PerformAutoML: ").append(getPerformAutoML()).append(",");
+        if (getPerformAutoTraining() != null)
+            sb.append("PerformAutoTraining: ").append(getPerformAutoTraining()).append(",");
         if (getRecipeArn() != null)
             sb.append("RecipeArn: ").append(getRecipeArn()).append(",");
         if (getDatasetGroupArn() != null)
@@ -780,6 +984,10 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getPerformAutoML() != null && other.getPerformAutoML().equals(this.getPerformAutoML()) == false)
             return false;
+        if (other.getPerformAutoTraining() == null ^ this.getPerformAutoTraining() == null)
+            return false;
+        if (other.getPerformAutoTraining() != null && other.getPerformAutoTraining().equals(this.getPerformAutoTraining()) == false)
+            return false;
         if (other.getRecipeArn() == null ^ this.getRecipeArn() == null)
             return false;
         if (other.getRecipeArn() != null && other.getRecipeArn().equals(this.getRecipeArn()) == false)
@@ -811,6 +1019,7 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPerformHPO() == null) ? 0 : getPerformHPO().hashCode());
         hashCode = prime * hashCode + ((getPerformAutoML() == null) ? 0 : getPerformAutoML().hashCode());
+        hashCode = prime * hashCode + ((getPerformAutoTraining() == null) ? 0 : getPerformAutoTraining().hashCode());
         hashCode = prime * hashCode + ((getRecipeArn() == null) ? 0 : getRecipeArn().hashCode());
         hashCode = prime * hashCode + ((getDatasetGroupArn() == null) ? 0 : getDatasetGroupArn().hashCode());
         hashCode = prime * hashCode + ((getEventType() == null) ? 0 : getEventType().hashCode());

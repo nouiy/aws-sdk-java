@@ -56,6 +56,14 @@ public class SolutionVersionSummaryJsonUnmarshaller implements Unmarshaller<Solu
                     context.nextToken();
                     solutionVersionSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("trainingMode", targetDepth)) {
+                    context.nextToken();
+                    solutionVersionSummary.setTrainingMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("trainingType", targetDepth)) {
+                    context.nextToken();
+                    solutionVersionSummary.setTrainingType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("creationDateTime", targetDepth)) {
                     context.nextToken();
                     solutionVersionSummary.setCreationDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

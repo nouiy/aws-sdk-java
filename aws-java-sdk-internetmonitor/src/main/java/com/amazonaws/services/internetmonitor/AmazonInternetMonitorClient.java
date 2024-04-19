@@ -332,7 +332,7 @@ public class AmazonInternetMonitorClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Gets information the Amazon CloudWatch Internet Monitor has created and stored about a health event for a
+     * Gets information that Amazon CloudWatch Internet Monitor has created and stored about a health event for a
      * specified monitor. This information includes the impacted locations, and all the information related to the
      * event, by location.
      * </p>
@@ -393,6 +393,76 @@ public class AmazonInternetMonitorClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<GetHealthEventResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetHealthEventResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets information that Amazon CloudWatch Internet Monitor has generated about an internet event. Internet Monitor
+     * displays information about recent global health events, called internet events, on a global outages map that is
+     * available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * The information returned here includes the impacted location, when the event started and (if the event is over)
+     * ended, the type of event (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>), and the status (
+     * <code>ACTIVE</code> or <code>RESOLVED</code>).
+     * </p>
+     * 
+     * @param getInternetEventRequest
+     * @return Result of the GetInternetEvent operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.GetInternetEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetInternetEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetInternetEventResult getInternetEvent(GetInternetEventRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInternetEvent(request);
+    }
+
+    @SdkInternalApi
+    final GetInternetEventResult executeGetInternetEvent(GetInternetEventRequest getInternetEventRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInternetEventRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInternetEventRequest> request = null;
+        Response<GetInternetEventResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInternetEventRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getInternetEventRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "InternetMonitor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInternetEvent");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetInternetEventResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetInternetEventResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -637,7 +707,7 @@ public class AmazonInternetMonitorClient extends AmazonWebServiceClient implemen
     /**
      * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
-     * events including the event start and end time and the status.
+     * events including the event start and end times, and the status.
      * </p>
      * <note>
      * <p>
@@ -694,6 +764,80 @@ public class AmazonInternetMonitorClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<ListHealthEventsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListHealthEventsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists internet events that cause performance or availability issues for client locations. Amazon CloudWatch
+     * Internet Monitor displays information about recent global health events, called internet events, on a global
+     * outages map that is available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * You can constrain the list of internet events returned by providing a start time and end time to define a total
+     * time frame for events you want to list. Both start time and end time specify the time when an event started. End
+     * time is optional. If you don't include it, the default end time is the current time.
+     * </p>
+     * <p>
+     * You can also limit the events returned to a specific status (<code>ACTIVE</code> or <code>RESOLVED</code>) or
+     * type (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>).
+     * </p>
+     * 
+     * @param listInternetEventsRequest
+     * @return Result of the ListInternetEvents operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.ListInternetEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/ListInternetEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListInternetEventsResult listInternetEvents(ListInternetEventsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListInternetEvents(request);
+    }
+
+    @SdkInternalApi
+    final ListInternetEventsResult executeListInternetEvents(ListInternetEventsRequest listInternetEventsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listInternetEventsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListInternetEventsRequest> request = null;
+        Response<ListInternetEventsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListInternetEventsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listInternetEventsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "InternetMonitor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListInternetEvents");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListInternetEventsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListInternetEventsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

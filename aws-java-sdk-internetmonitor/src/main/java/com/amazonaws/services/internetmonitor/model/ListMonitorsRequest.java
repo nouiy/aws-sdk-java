@@ -50,7 +50,11 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String monitorStatus;
     /**
      * <p>
-     * TBD
+     * A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list of
+     * monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     * cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      */
     private Boolean includeLinkedAccounts;
@@ -204,11 +208,19 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * TBD
+     * A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list of
+     * monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     * cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
      * @param includeLinkedAccounts
-     *        TBD
+     *        A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list
+     *        of monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     *        cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *        Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      */
 
     public void setIncludeLinkedAccounts(Boolean includeLinkedAccounts) {
@@ -217,10 +229,19 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * TBD
+     * A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list of
+     * monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     * cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
-     * @return TBD
+     * @return A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list
+     *         of monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You
+     *         configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *         Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      */
 
     public Boolean getIncludeLinkedAccounts() {
@@ -229,11 +250,19 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * TBD
+     * A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list of
+     * monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     * cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
      * @param includeLinkedAccounts
-     *        TBD
+     *        A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list
+     *        of monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     *        cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *        Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -244,10 +273,19 @@ public class ListMonitorsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * TBD
+     * A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list of
+     * monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You configure
+     * cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
-     * @return TBD
+     * @return A boolean option that you can set to <code>TRUE</code> to include monitors for linked accounts in a list
+     *         of monitors, when you've set up cross-account sharing in Amazon CloudWatch Internet Monitor. You
+     *         configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *         Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      */
 
     public Boolean isIncludeLinkedAccounts() {

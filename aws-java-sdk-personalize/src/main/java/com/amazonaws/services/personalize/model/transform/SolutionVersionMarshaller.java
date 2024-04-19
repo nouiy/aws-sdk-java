@@ -59,6 +59,8 @@ public class SolutionVersionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedDateTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> TRAININGTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingType").build();
 
     private static final SolutionVersionMarshaller instance = new SolutionVersionMarshaller();
 
@@ -92,6 +94,7 @@ public class SolutionVersionMarshaller {
             protocolMarshaller.marshall(solutionVersion.getFailureReason(), FAILUREREASON_BINDING);
             protocolMarshaller.marshall(solutionVersion.getCreationDateTime(), CREATIONDATETIME_BINDING);
             protocolMarshaller.marshall(solutionVersion.getLastUpdatedDateTime(), LASTUPDATEDDATETIME_BINDING);
+            protocolMarshaller.marshall(solutionVersion.getTrainingType(), TRAININGTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

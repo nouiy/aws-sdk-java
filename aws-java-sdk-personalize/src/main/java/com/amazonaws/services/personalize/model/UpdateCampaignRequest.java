@@ -33,7 +33,19 @@ public class UpdateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
     private String campaignArn;
     /**
      * <p>
-     * The ARN of a new solution version to deploy.
+     * The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your solution,
+     * specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must use this format if
+     * you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>.
+     * </p>
+     * <p>
+     * To deploy a model that isn't the latest solution version of your solution, specify the ARN of the solution
+     * version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
      * </p>
      */
     private String solutionVersionArn;
@@ -95,11 +107,34 @@ public class UpdateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of a new solution version to deploy.
+     * The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your solution,
+     * specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must use this format if
+     * you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>.
+     * </p>
+     * <p>
+     * To deploy a model that isn't the latest solution version of your solution, specify the ARN of the solution
+     * version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
      * </p>
      * 
      * @param solutionVersionArn
-     *        The ARN of a new solution version to deploy.
+     *        The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your
+     *        solution, specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must use
+     *        this format if you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>. </p>
+     *        <p>
+     *        To deploy a model that isn't the latest solution version of your solution, specify the ARN of the solution
+     *        version.
+     *        </p>
+     *        <p>
+     *        For more information about automatic campaign updates, see <a href=
+     *        "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *        >Enabling automatic campaign updates</a>.
      */
 
     public void setSolutionVersionArn(String solutionVersionArn) {
@@ -108,10 +143,33 @@ public class UpdateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of a new solution version to deploy.
+     * The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your solution,
+     * specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must use this format if
+     * you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>.
+     * </p>
+     * <p>
+     * To deploy a model that isn't the latest solution version of your solution, specify the ARN of the solution
+     * version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
      * </p>
      * 
-     * @return The ARN of a new solution version to deploy.
+     * @return The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your
+     *         solution, specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must
+     *         use this format if you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>. </p>
+     *         <p>
+     *         To deploy a model that isn't the latest solution version of your solution, specify the ARN of the
+     *         solution version.
+     *         </p>
+     *         <p>
+     *         For more information about automatic campaign updates, see <a href=
+     *         "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *         >Enabling automatic campaign updates</a>.
      */
 
     public String getSolutionVersionArn() {
@@ -120,11 +178,34 @@ public class UpdateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of a new solution version to deploy.
+     * The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your solution,
+     * specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must use this format if
+     * you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>.
+     * </p>
+     * <p>
+     * To deploy a model that isn't the latest solution version of your solution, specify the ARN of the solution
+     * version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
      * </p>
      * 
      * @param solutionVersionArn
-     *        The ARN of a new solution version to deploy.
+     *        The Amazon Resource Name (ARN) of a new model to deploy. To specify the latest solution version of your
+     *        solution, specify the ARN of your <i>solution</i> in <code>SolutionArn/$LATEST</code> format. You must use
+     *        this format if you set <code>syncWithLatestSolutionVersion</code> to <code>True</code> in the <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/API_CampaignConfig.html">CampaignConfig</a>. </p>
+     *        <p>
+     *        To deploy a model that isn't the latest solution version of your solution, specify the ARN of the solution
+     *        version.
+     *        </p>
+     *        <p>
+     *        For more information about automatic campaign updates, see <a href=
+     *        "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *        >Enabling automatic campaign updates</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

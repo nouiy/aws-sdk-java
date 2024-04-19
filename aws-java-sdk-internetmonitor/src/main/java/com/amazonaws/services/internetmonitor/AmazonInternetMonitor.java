@@ -128,7 +128,7 @@ public interface AmazonInternetMonitor {
 
     /**
      * <p>
-     * Gets information the Amazon CloudWatch Internet Monitor has created and stored about a health event for a
+     * Gets information that Amazon CloudWatch Internet Monitor has created and stored about a health event for a
      * specified monitor. This information includes the impacted locations, and all the information related to the
      * event, by location.
      * </p>
@@ -156,6 +156,34 @@ public interface AmazonInternetMonitor {
      *      API Documentation</a>
      */
     GetHealthEventResult getHealthEvent(GetHealthEventRequest getHealthEventRequest);
+
+    /**
+     * <p>
+     * Gets information that Amazon CloudWatch Internet Monitor has generated about an internet event. Internet Monitor
+     * displays information about recent global health events, called internet events, on a global outages map that is
+     * available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * The information returned here includes the impacted location, when the event started and (if the event is over)
+     * ended, the type of event (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>), and the status (
+     * <code>ACTIVE</code> or <code>RESOLVED</code>).
+     * </p>
+     * 
+     * @param getInternetEventRequest
+     * @return Result of the GetInternetEvent operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.GetInternetEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetInternetEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetInternetEventResult getInternetEvent(GetInternetEventRequest getInternetEventRequest);
 
     /**
      * <p>
@@ -265,7 +293,7 @@ public interface AmazonInternetMonitor {
     /**
      * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
-     * events including the event start and end time and the status.
+     * events including the event start and end times, and the status.
      * </p>
      * <note>
      * <p>
@@ -289,6 +317,38 @@ public interface AmazonInternetMonitor {
      *      target="_top">AWS API Documentation</a>
      */
     ListHealthEventsResult listHealthEvents(ListHealthEventsRequest listHealthEventsRequest);
+
+    /**
+     * <p>
+     * Lists internet events that cause performance or availability issues for client locations. Amazon CloudWatch
+     * Internet Monitor displays information about recent global health events, called internet events, on a global
+     * outages map that is available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * You can constrain the list of internet events returned by providing a start time and end time to define a total
+     * time frame for events you want to list. Both start time and end time specify the time when an event started. End
+     * time is optional. If you don't include it, the default end time is the current time.
+     * </p>
+     * <p>
+     * You can also limit the events returned to a specific status (<code>ACTIVE</code> or <code>RESOLVED</code>) or
+     * type (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>).
+     * </p>
+     * 
+     * @param listInternetEventsRequest
+     * @return Result of the ListInternetEvents operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.ListInternetEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/ListInternetEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListInternetEventsResult listInternetEvents(ListInternetEventsRequest listInternetEventsRequest);
 
     /**
      * <p>

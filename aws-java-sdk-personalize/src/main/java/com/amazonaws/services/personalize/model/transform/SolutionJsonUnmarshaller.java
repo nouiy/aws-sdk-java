@@ -64,6 +64,10 @@ public class SolutionJsonUnmarshaller implements Unmarshaller<Solution, JsonUnma
                     context.nextToken();
                     solution.setPerformAutoML(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("performAutoTraining", targetDepth)) {
+                    context.nextToken();
+                    solution.setPerformAutoTraining(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("recipeArn", targetDepth)) {
                     context.nextToken();
                     solution.setRecipeArn(context.getUnmarshaller(String.class).unmarshall(context));

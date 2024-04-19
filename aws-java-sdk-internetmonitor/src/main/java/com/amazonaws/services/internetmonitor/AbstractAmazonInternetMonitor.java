@@ -43,6 +43,11 @@ public class AbstractAmazonInternetMonitor implements AmazonInternetMonitor {
     }
 
     @Override
+    public GetInternetEventResult getInternetEvent(GetInternetEventRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMonitorResult getMonitor(GetMonitorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -59,6 +64,11 @@ public class AbstractAmazonInternetMonitor implements AmazonInternetMonitor {
 
     @Override
     public ListHealthEventsResult listHealthEvents(ListHealthEventsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListInternetEventsResult listInternetEvents(ListInternetEventsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

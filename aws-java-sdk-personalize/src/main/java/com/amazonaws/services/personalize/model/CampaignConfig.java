@@ -53,6 +53,20 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean enableMetadataWithRecommendations;
+    /**
+     * <p>
+     * Whether the campaign automatically updates to use the latest solution version (trained model) of a solution. If
+     * you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     * <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The default is
+     * <code>False</code> and you must manually update the campaign to deploy the latest solution version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
+     * </p>
+     */
+    private Boolean syncWithLatestSolutionVersion;
 
     /**
      * <p>
@@ -267,6 +281,122 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Whether the campaign automatically updates to use the latest solution version (trained model) of a solution. If
+     * you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     * <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The default is
+     * <code>False</code> and you must manually update the campaign to deploy the latest solution version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
+     * </p>
+     * 
+     * @param syncWithLatestSolutionVersion
+     *        Whether the campaign automatically updates to use the latest solution version (trained model) of a
+     *        solution. If you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     *        <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The
+     *        default is <code>False</code> and you must manually update the campaign to deploy the latest solution
+     *        version. </p>
+     *        <p>
+     *        For more information about automatic campaign updates, see <a href=
+     *        "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *        >Enabling automatic campaign updates</a>.
+     */
+
+    public void setSyncWithLatestSolutionVersion(Boolean syncWithLatestSolutionVersion) {
+        this.syncWithLatestSolutionVersion = syncWithLatestSolutionVersion;
+    }
+
+    /**
+     * <p>
+     * Whether the campaign automatically updates to use the latest solution version (trained model) of a solution. If
+     * you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     * <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The default is
+     * <code>False</code> and you must manually update the campaign to deploy the latest solution version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
+     * </p>
+     * 
+     * @return Whether the campaign automatically updates to use the latest solution version (trained model) of a
+     *         solution. If you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     *         <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The
+     *         default is <code>False</code> and you must manually update the campaign to deploy the latest solution
+     *         version. </p>
+     *         <p>
+     *         For more information about automatic campaign updates, see <a href=
+     *         "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *         >Enabling automatic campaign updates</a>.
+     */
+
+    public Boolean getSyncWithLatestSolutionVersion() {
+        return this.syncWithLatestSolutionVersion;
+    }
+
+    /**
+     * <p>
+     * Whether the campaign automatically updates to use the latest solution version (trained model) of a solution. If
+     * you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     * <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The default is
+     * <code>False</code> and you must manually update the campaign to deploy the latest solution version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
+     * </p>
+     * 
+     * @param syncWithLatestSolutionVersion
+     *        Whether the campaign automatically updates to use the latest solution version (trained model) of a
+     *        solution. If you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     *        <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The
+     *        default is <code>False</code> and you must manually update the campaign to deploy the latest solution
+     *        version. </p>
+     *        <p>
+     *        For more information about automatic campaign updates, see <a href=
+     *        "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *        >Enabling automatic campaign updates</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CampaignConfig withSyncWithLatestSolutionVersion(Boolean syncWithLatestSolutionVersion) {
+        setSyncWithLatestSolutionVersion(syncWithLatestSolutionVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the campaign automatically updates to use the latest solution version (trained model) of a solution. If
+     * you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     * <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The default is
+     * <code>False</code> and you must manually update the campaign to deploy the latest solution version.
+     * </p>
+     * <p>
+     * For more information about automatic campaign updates, see <a href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     * >Enabling automatic campaign updates</a>.
+     * </p>
+     * 
+     * @return Whether the campaign automatically updates to use the latest solution version (trained model) of a
+     *         solution. If you specify <code>True</code>, you must specify the ARN of your <i>solution</i> for the
+     *         <code>SolutionVersionArn</code> parameter. It must be in <code>SolutionArn/$LATEST</code> format. The
+     *         default is <code>False</code> and you must manually update the campaign to deploy the latest solution
+     *         version. </p>
+     *         <p>
+     *         For more information about automatic campaign updates, see <a href=
+     *         "https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-automatic-latest-sv-update"
+     *         >Enabling automatic campaign updates</a>.
+     */
+
+    public Boolean isSyncWithLatestSolutionVersion() {
+        return this.syncWithLatestSolutionVersion;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -281,7 +411,9 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
         if (getItemExplorationConfig() != null)
             sb.append("ItemExplorationConfig: ").append(getItemExplorationConfig()).append(",");
         if (getEnableMetadataWithRecommendations() != null)
-            sb.append("EnableMetadataWithRecommendations: ").append(getEnableMetadataWithRecommendations());
+            sb.append("EnableMetadataWithRecommendations: ").append(getEnableMetadataWithRecommendations()).append(",");
+        if (getSyncWithLatestSolutionVersion() != null)
+            sb.append("SyncWithLatestSolutionVersion: ").append(getSyncWithLatestSolutionVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -305,6 +437,11 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
         if (other.getEnableMetadataWithRecommendations() != null
                 && other.getEnableMetadataWithRecommendations().equals(this.getEnableMetadataWithRecommendations()) == false)
             return false;
+        if (other.getSyncWithLatestSolutionVersion() == null ^ this.getSyncWithLatestSolutionVersion() == null)
+            return false;
+        if (other.getSyncWithLatestSolutionVersion() != null
+                && other.getSyncWithLatestSolutionVersion().equals(this.getSyncWithLatestSolutionVersion()) == false)
+            return false;
         return true;
     }
 
@@ -315,6 +452,7 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getItemExplorationConfig() == null) ? 0 : getItemExplorationConfig().hashCode());
         hashCode = prime * hashCode + ((getEnableMetadataWithRecommendations() == null) ? 0 : getEnableMetadataWithRecommendations().hashCode());
+        hashCode = prime * hashCode + ((getSyncWithLatestSolutionVersion() == null) ? 0 : getSyncWithLatestSolutionVersion().hashCode());
         return hashCode;
     }
 

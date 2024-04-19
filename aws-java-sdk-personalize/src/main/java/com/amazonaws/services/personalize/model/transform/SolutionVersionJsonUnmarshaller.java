@@ -112,6 +112,10 @@ public class SolutionVersionJsonUnmarshaller implements Unmarshaller<SolutionVer
                     context.nextToken();
                     solutionVersion.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("trainingType", targetDepth)) {
+                    context.nextToken();
+                    solutionVersion.setTrainingType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

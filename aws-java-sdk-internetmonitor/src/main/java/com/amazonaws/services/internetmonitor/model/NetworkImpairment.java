@@ -42,7 +42,7 @@ public class NetworkImpairment implements Serializable, Cloneable, StructuredPoj
     private java.util.List<Network> asPath;
     /**
      * <p>
-     * Type of network impairment.
+     * The type of network impairment.
      * </p>
      */
     private String networkEventType;
@@ -189,11 +189,11 @@ public class NetworkImpairment implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Type of network impairment.
+     * The type of network impairment.
      * </p>
      * 
      * @param networkEventType
-     *        Type of network impairment.
+     *        The type of network impairment.
      * @see TriangulationEventType
      */
 
@@ -203,10 +203,10 @@ public class NetworkImpairment implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Type of network impairment.
+     * The type of network impairment.
      * </p>
      * 
-     * @return Type of network impairment.
+     * @return The type of network impairment.
      * @see TriangulationEventType
      */
 
@@ -216,11 +216,11 @@ public class NetworkImpairment implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Type of network impairment.
+     * The type of network impairment.
      * </p>
      * 
      * @param networkEventType
-     *        Type of network impairment.
+     *        The type of network impairment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TriangulationEventType
      */
@@ -232,11 +232,11 @@ public class NetworkImpairment implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Type of network impairment.
+     * The type of network impairment.
      * </p>
      * 
      * @param networkEventType
-     *        Type of network impairment.
+     *        The type of network impairment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TriangulationEventType
      */

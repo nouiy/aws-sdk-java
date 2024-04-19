@@ -150,7 +150,7 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
 
     /**
      * <p>
-     * Gets information the Amazon CloudWatch Internet Monitor has created and stored about a health event for a
+     * Gets information that Amazon CloudWatch Internet Monitor has created and stored about a health event for a
      * specified monitor. This information includes the impacted locations, and all the information related to the
      * event, by location.
      * </p>
@@ -173,7 +173,7 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
 
     /**
      * <p>
-     * Gets information the Amazon CloudWatch Internet Monitor has created and stored about a health event for a
+     * Gets information that Amazon CloudWatch Internet Monitor has created and stored about a health event for a
      * specified monitor. This information includes the impacted locations, and all the information related to the
      * event, by location.
      * </p>
@@ -198,6 +198,51 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
      */
     java.util.concurrent.Future<GetHealthEventResult> getHealthEventAsync(GetHealthEventRequest getHealthEventRequest,
             com.amazonaws.handlers.AsyncHandler<GetHealthEventRequest, GetHealthEventResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets information that Amazon CloudWatch Internet Monitor has generated about an internet event. Internet Monitor
+     * displays information about recent global health events, called internet events, on a global outages map that is
+     * available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * The information returned here includes the impacted location, when the event started and (if the event is over)
+     * ended, the type of event (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>), and the status (
+     * <code>ACTIVE</code> or <code>RESOLVED</code>).
+     * </p>
+     * 
+     * @param getInternetEventRequest
+     * @return A Java Future containing the result of the GetInternetEvent operation returned by the service.
+     * @sample AmazonInternetMonitorAsync.GetInternetEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetInternetEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetInternetEventResult> getInternetEventAsync(GetInternetEventRequest getInternetEventRequest);
+
+    /**
+     * <p>
+     * Gets information that Amazon CloudWatch Internet Monitor has generated about an internet event. Internet Monitor
+     * displays information about recent global health events, called internet events, on a global outages map that is
+     * available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * The information returned here includes the impacted location, when the event started and (if the event is over)
+     * ended, the type of event (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>), and the status (
+     * <code>ACTIVE</code> or <code>RESOLVED</code>).
+     * </p>
+     * 
+     * @param getInternetEventRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetInternetEvent operation returned by the service.
+     * @sample AmazonInternetMonitorAsyncHandler.GetInternetEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetInternetEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetInternetEventResult> getInternetEventAsync(GetInternetEventRequest getInternetEventRequest,
+            com.amazonaws.handlers.AsyncHandler<GetInternetEventRequest, GetInternetEventResult> asyncHandler);
 
     /**
      * <p>
@@ -371,7 +416,7 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
     /**
      * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
-     * events including the event start and end time and the status.
+     * events including the event start and end times, and the status.
      * </p>
      * <note>
      * <p>
@@ -391,7 +436,7 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
     /**
      * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
-     * events including the event start and end time and the status.
+     * events including the event start and end times, and the status.
      * </p>
      * <note>
      * <p>
@@ -412,6 +457,59 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
      */
     java.util.concurrent.Future<ListHealthEventsResult> listHealthEventsAsync(ListHealthEventsRequest listHealthEventsRequest,
             com.amazonaws.handlers.AsyncHandler<ListHealthEventsRequest, ListHealthEventsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists internet events that cause performance or availability issues for client locations. Amazon CloudWatch
+     * Internet Monitor displays information about recent global health events, called internet events, on a global
+     * outages map that is available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * You can constrain the list of internet events returned by providing a start time and end time to define a total
+     * time frame for events you want to list. Both start time and end time specify the time when an event started. End
+     * time is optional. If you don't include it, the default end time is the current time.
+     * </p>
+     * <p>
+     * You can also limit the events returned to a specific status (<code>ACTIVE</code> or <code>RESOLVED</code>) or
+     * type (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>).
+     * </p>
+     * 
+     * @param listInternetEventsRequest
+     * @return A Java Future containing the result of the ListInternetEvents operation returned by the service.
+     * @sample AmazonInternetMonitorAsync.ListInternetEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/ListInternetEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListInternetEventsResult> listInternetEventsAsync(ListInternetEventsRequest listInternetEventsRequest);
+
+    /**
+     * <p>
+     * Lists internet events that cause performance or availability issues for client locations. Amazon CloudWatch
+     * Internet Monitor displays information about recent global health events, called internet events, on a global
+     * outages map that is available to all Amazon Web Services customers.
+     * </p>
+     * <p>
+     * You can constrain the list of internet events returned by providing a start time and end time to define a total
+     * time frame for events you want to list. Both start time and end time specify the time when an event started. End
+     * time is optional. If you don't include it, the default end time is the current time.
+     * </p>
+     * <p>
+     * You can also limit the events returned to a specific status (<code>ACTIVE</code> or <code>RESOLVED</code>) or
+     * type (<code>PERFORMANCE</code> or <code>AVAILABILITY</code>).
+     * </p>
+     * 
+     * @param listInternetEventsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListInternetEvents operation returned by the service.
+     * @sample AmazonInternetMonitorAsyncHandler.ListInternetEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/ListInternetEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListInternetEventsResult> listInternetEventsAsync(ListInternetEventsRequest listInternetEventsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListInternetEventsRequest, ListInternetEventsResult> asyncHandler);
 
     /**
      * <p>

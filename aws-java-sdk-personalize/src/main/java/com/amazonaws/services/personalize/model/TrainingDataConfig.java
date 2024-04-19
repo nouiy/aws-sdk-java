@@ -31,9 +31,11 @@ public class TrainingDataConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of columns.
-     * Exclude columns to control what data Amazon Personalize uses to generate recommendations. For example, you might
-     * have a column that you want to use only to filter recommendations. You can exclude this column from training and
-     * Amazon Personalize considers it only when filtering.
+     * Exclude columns to control what data Amazon Personalize uses to generate recommendations.
+     * </p>
+     * <p>
+     * For example, you might have a column that you want to use only to filter recommendations. You can exclude this
+     * column from training and Amazon Personalize considers it only when filtering.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> excludedDatasetColumns;
@@ -41,14 +43,17 @@ public class TrainingDataConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of columns.
-     * Exclude columns to control what data Amazon Personalize uses to generate recommendations. For example, you might
-     * have a column that you want to use only to filter recommendations. You can exclude this column from training and
-     * Amazon Personalize considers it only when filtering.
+     * Exclude columns to control what data Amazon Personalize uses to generate recommendations.
+     * </p>
+     * <p>
+     * For example, you might have a column that you want to use only to filter recommendations. You can exclude this
+     * column from training and Amazon Personalize considers it only when filtering.
      * </p>
      * 
      * @return Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of
-     *         columns. Exclude columns to control what data Amazon Personalize uses to generate recommendations. For
-     *         example, you might have a column that you want to use only to filter recommendations. You can exclude
+     *         columns. Exclude columns to control what data Amazon Personalize uses to generate recommendations.</p>
+     *         <p>
+     *         For example, you might have a column that you want to use only to filter recommendations. You can exclude
      *         this column from training and Amazon Personalize considers it only when filtering.
      */
 
@@ -59,16 +64,19 @@ public class TrainingDataConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of columns.
-     * Exclude columns to control what data Amazon Personalize uses to generate recommendations. For example, you might
-     * have a column that you want to use only to filter recommendations. You can exclude this column from training and
-     * Amazon Personalize considers it only when filtering.
+     * Exclude columns to control what data Amazon Personalize uses to generate recommendations.
+     * </p>
+     * <p>
+     * For example, you might have a column that you want to use only to filter recommendations. You can exclude this
+     * column from training and Amazon Personalize considers it only when filtering.
      * </p>
      * 
      * @param excludedDatasetColumns
      *        Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of
-     *        columns. Exclude columns to control what data Amazon Personalize uses to generate recommendations. For
-     *        example, you might have a column that you want to use only to filter recommendations. You can exclude this
-     *        column from training and Amazon Personalize considers it only when filtering.
+     *        columns. Exclude columns to control what data Amazon Personalize uses to generate recommendations.</p>
+     *        <p>
+     *        For example, you might have a column that you want to use only to filter recommendations. You can exclude
+     *        this column from training and Amazon Personalize considers it only when filtering.
      */
 
     public void setExcludedDatasetColumns(java.util.Map<String, java.util.List<String>> excludedDatasetColumns) {
@@ -78,16 +86,19 @@ public class TrainingDataConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of columns.
-     * Exclude columns to control what data Amazon Personalize uses to generate recommendations. For example, you might
-     * have a column that you want to use only to filter recommendations. You can exclude this column from training and
-     * Amazon Personalize considers it only when filtering.
+     * Exclude columns to control what data Amazon Personalize uses to generate recommendations.
+     * </p>
+     * <p>
+     * For example, you might have a column that you want to use only to filter recommendations. You can exclude this
+     * column from training and Amazon Personalize considers it only when filtering.
      * </p>
      * 
      * @param excludedDatasetColumns
      *        Specifies the columns to exclude from training. Each key is a dataset type, and each value is a list of
-     *        columns. Exclude columns to control what data Amazon Personalize uses to generate recommendations. For
-     *        example, you might have a column that you want to use only to filter recommendations. You can exclude this
-     *        column from training and Amazon Personalize considers it only when filtering.
+     *        columns. Exclude columns to control what data Amazon Personalize uses to generate recommendations.</p>
+     *        <p>
+     *        For example, you might have a column that you want to use only to filter recommendations. You can exclude
+     *        this column from training and Amazon Personalize considers it only when filtering.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

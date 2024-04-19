@@ -199,6 +199,39 @@ public class AmazonInternetMonitorAsyncClient extends AmazonInternetMonitorClien
     }
 
     @Override
+    public java.util.concurrent.Future<GetInternetEventResult> getInternetEventAsync(GetInternetEventRequest request) {
+
+        return getInternetEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInternetEventResult> getInternetEventAsync(final GetInternetEventRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetInternetEventRequest, GetInternetEventResult> asyncHandler) {
+        final GetInternetEventRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetInternetEventResult>() {
+            @Override
+            public GetInternetEventResult call() throws Exception {
+                GetInternetEventResult result = null;
+
+                try {
+                    result = executeGetInternetEvent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMonitorResult> getMonitorAsync(GetMonitorRequest request) {
 
         return getMonitorAsync(request, null);
@@ -315,6 +348,39 @@ public class AmazonInternetMonitorAsyncClient extends AmazonInternetMonitorClien
 
                 try {
                     result = executeListHealthEvents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInternetEventsResult> listInternetEventsAsync(ListInternetEventsRequest request) {
+
+        return listInternetEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInternetEventsResult> listInternetEventsAsync(final ListInternetEventsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListInternetEventsRequest, ListInternetEventsResult> asyncHandler) {
+        final ListInternetEventsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListInternetEventsResult>() {
+            @Override
+            public ListInternetEventsResult call() throws Exception {
+                ListInternetEventsResult result = null;
+
+                try {
+                    result = executeListInternetEvents(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

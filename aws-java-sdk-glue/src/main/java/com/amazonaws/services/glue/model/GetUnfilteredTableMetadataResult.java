@@ -81,6 +81,14 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private java.util.List<String> permissions;
+    /**
+     * <p>
+     * The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     * <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other predicates
+     * applied by the user querying the table.
+     * </p>
+     */
+    private String rowFilter;
 
     /**
      * <p>
@@ -631,6 +639,58 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     * <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other predicates
+     * applied by the user querying the table.
+     * </p>
+     * 
+     * @param rowFilter
+     *        The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     *        <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other
+     *        predicates applied by the user querying the table.
+     */
+
+    public void setRowFilter(String rowFilter) {
+        this.rowFilter = rowFilter;
+    }
+
+    /**
+     * <p>
+     * The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     * <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other predicates
+     * applied by the user querying the table.
+     * </p>
+     * 
+     * @return The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     *         <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other
+     *         predicates applied by the user querying the table.
+     */
+
+    public String getRowFilter() {
+        return this.rowFilter;
+    }
+
+    /**
+     * <p>
+     * The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     * <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other predicates
+     * applied by the user querying the table.
+     * </p>
+     * 
+     * @param rowFilter
+     *        The filter that applies to the table. For example when applying the filter in SQL, it would go in the
+     *        <code>WHERE</code> clause and can be evaluated by using an <code>AND</code> operator with any other
+     *        predicates applied by the user querying the table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetUnfilteredTableMetadataResult withRowFilter(String rowFilter) {
+        setRowFilter(rowFilter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -659,7 +719,9 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
         if (getIsProtected() != null)
             sb.append("IsProtected: ").append(getIsProtected()).append(",");
         if (getPermissions() != null)
-            sb.append("Permissions: ").append(getPermissions());
+            sb.append("Permissions: ").append(getPermissions()).append(",");
+        if (getRowFilter() != null)
+            sb.append("RowFilter: ").append(getRowFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -711,6 +773,10 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getPermissions() != null && other.getPermissions().equals(this.getPermissions()) == false)
             return false;
+        if (other.getRowFilter() == null ^ this.getRowFilter() == null)
+            return false;
+        if (other.getRowFilter() != null && other.getRowFilter().equals(this.getRowFilter()) == false)
+            return false;
         return true;
     }
 
@@ -728,6 +794,7 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getIsProtected() == null) ? 0 : getIsProtected().hashCode());
         hashCode = prime * hashCode + ((getPermissions() == null) ? 0 : getPermissions().hashCode());
+        hashCode = prime * hashCode + ((getRowFilter() == null) ? 0 : getRowFilter().hashCode());
         return hashCode;
     }
 

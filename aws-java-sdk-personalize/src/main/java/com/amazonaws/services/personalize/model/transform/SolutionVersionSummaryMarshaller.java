@@ -31,6 +31,10 @@ public class SolutionVersionSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("solutionVersionArn").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> TRAININGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingMode").build();
+    private static final MarshallingInfo<String> TRAININGTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingType").build();
     private static final MarshallingInfo<java.util.Date> CREATIONDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -56,6 +60,8 @@ public class SolutionVersionSummaryMarshaller {
         try {
             protocolMarshaller.marshall(solutionVersionSummary.getSolutionVersionArn(), SOLUTIONVERSIONARN_BINDING);
             protocolMarshaller.marshall(solutionVersionSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(solutionVersionSummary.getTrainingMode(), TRAININGMODE_BINDING);
+            protocolMarshaller.marshall(solutionVersionSummary.getTrainingType(), TRAININGTYPE_BINDING);
             protocolMarshaller.marshall(solutionVersionSummary.getCreationDateTime(), CREATIONDATETIME_BINDING);
             protocolMarshaller.marshall(solutionVersionSummary.getLastUpdatedDateTime(), LASTUPDATEDDATETIME_BINDING);
             protocolMarshaller.marshall(solutionVersionSummary.getFailureReason(), FAILUREREASON_BINDING);

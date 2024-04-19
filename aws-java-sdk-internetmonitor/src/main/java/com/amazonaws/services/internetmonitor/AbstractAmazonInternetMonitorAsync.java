@@ -67,6 +67,19 @@ public class AbstractAmazonInternetMonitorAsync extends AbstractAmazonInternetMo
     }
 
     @Override
+    public java.util.concurrent.Future<GetInternetEventResult> getInternetEventAsync(GetInternetEventRequest request) {
+
+        return getInternetEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInternetEventResult> getInternetEventAsync(GetInternetEventRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetInternetEventRequest, GetInternetEventResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMonitorResult> getMonitorAsync(GetMonitorRequest request) {
 
         return getMonitorAsync(request, null);
@@ -114,6 +127,19 @@ public class AbstractAmazonInternetMonitorAsync extends AbstractAmazonInternetMo
     @Override
     public java.util.concurrent.Future<ListHealthEventsResult> listHealthEventsAsync(ListHealthEventsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListHealthEventsRequest, ListHealthEventsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInternetEventsResult> listInternetEventsAsync(ListInternetEventsRequest request) {
+
+        return listInternetEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInternetEventsResult> listInternetEventsAsync(ListInternetEventsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListInternetEventsRequest, ListInternetEventsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

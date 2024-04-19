@@ -78,6 +78,10 @@ public class SolutionConfigJsonUnmarshaller implements Unmarshaller<SolutionConf
                     context.nextToken();
                     solutionConfig.setTrainingDataConfig(TrainingDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("autoTrainingConfig", targetDepth)) {
+                    context.nextToken();
+                    solutionConfig.setAutoTrainingConfig(AutoTrainingConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

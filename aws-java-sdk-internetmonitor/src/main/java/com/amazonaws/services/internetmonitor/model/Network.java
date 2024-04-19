@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An internet service provider (ISP) or network in Amazon CloudWatch Internet Monitor.
+ * An internet service provider (ISP) or network (ASN) in Amazon CloudWatch Internet Monitor.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/Network" target="_top">AWS API
@@ -30,7 +30,7 @@ public class Network implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internet provider name or network name.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      */
     private String aSName;
@@ -43,11 +43,11 @@ public class Network implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internet provider name or network name.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      * 
      * @param aSName
-     *        The internet provider name or network name.
+     *        The name of the internet service provider (ISP) or network (ASN).
      */
 
     public void setASName(String aSName) {
@@ -56,10 +56,10 @@ public class Network implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internet provider name or network name.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      * 
-     * @return The internet provider name or network name.
+     * @return The name of the internet service provider (ISP) or network (ASN).
      */
 
     public String getASName() {
@@ -68,11 +68,11 @@ public class Network implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internet provider name or network name.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      * 
      * @param aSName
-     *        The internet provider name or network name.
+     *        The name of the internet service provider (ISP) or network (ASN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

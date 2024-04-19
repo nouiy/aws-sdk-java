@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum TrainingMode {
 
     FULL("FULL"),
-    UPDATE("UPDATE");
+    UPDATE("UPDATE"),
+    AUTOTRAIN("AUTOTRAIN");
 
     private String value;
 

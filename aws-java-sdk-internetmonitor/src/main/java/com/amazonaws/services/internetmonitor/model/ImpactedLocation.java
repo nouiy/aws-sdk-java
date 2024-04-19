@@ -34,7 +34,7 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the network at an impacted location.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      */
     private String aSName;
@@ -136,11 +136,11 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the network at an impacted location.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      * 
      * @param aSName
-     *        The name of the network at an impacted location.
+     *        The name of the internet service provider (ISP) or network (ASN).
      */
 
     public void setASName(String aSName) {
@@ -149,10 +149,10 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the network at an impacted location.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      * 
-     * @return The name of the network at an impacted location.
+     * @return The name of the internet service provider (ISP) or network (ASN).
      */
 
     public String getASName() {
@@ -161,11 +161,11 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the network at an impacted location.
+     * The name of the internet service provider (ISP) or network (ASN).
      * </p>
      * 
      * @param aSName
-     *        The name of the network at an impacted location.
+     *        The name of the internet service provider (ISP) or network (ASN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

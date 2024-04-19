@@ -35,6 +35,8 @@ public class SolutionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performHPO").build();
     private static final MarshallingInfo<Boolean> PERFORMAUTOML_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performAutoML").build();
+    private static final MarshallingInfo<Boolean> PERFORMAUTOTRAINING_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("performAutoTraining").build();
     private static final MarshallingInfo<String> RECIPEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("recipeArn").build();
     private static final MarshallingInfo<String> DATASETGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -74,6 +76,7 @@ public class SolutionMarshaller {
             protocolMarshaller.marshall(solution.getSolutionArn(), SOLUTIONARN_BINDING);
             protocolMarshaller.marshall(solution.getPerformHPO(), PERFORMHPO_BINDING);
             protocolMarshaller.marshall(solution.getPerformAutoML(), PERFORMAUTOML_BINDING);
+            protocolMarshaller.marshall(solution.getPerformAutoTraining(), PERFORMAUTOTRAINING_BINDING);
             protocolMarshaller.marshall(solution.getRecipeArn(), RECIPEARN_BINDING);
             protocolMarshaller.marshall(solution.getDatasetGroupArn(), DATASETGROUPARN_BINDING);
             protocolMarshaller.marshall(solution.getEventType(), EVENTTYPE_BINDING);

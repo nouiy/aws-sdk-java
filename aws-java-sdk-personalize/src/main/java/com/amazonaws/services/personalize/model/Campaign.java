@@ -43,7 +43,7 @@ public class Campaign implements Serializable, Cloneable, StructuredPojo {
     private String campaignArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a specific version of the solution.
+     * The Amazon Resource Name (ARN) of the solution version the campaign uses.
      * </p>
      */
     private String solutionVersionArn;
@@ -186,11 +186,11 @@ public class Campaign implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a specific version of the solution.
+     * The Amazon Resource Name (ARN) of the solution version the campaign uses.
      * </p>
      * 
      * @param solutionVersionArn
-     *        The Amazon Resource Name (ARN) of a specific version of the solution.
+     *        The Amazon Resource Name (ARN) of the solution version the campaign uses.
      */
 
     public void setSolutionVersionArn(String solutionVersionArn) {
@@ -199,10 +199,10 @@ public class Campaign implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a specific version of the solution.
+     * The Amazon Resource Name (ARN) of the solution version the campaign uses.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a specific version of the solution.
+     * @return The Amazon Resource Name (ARN) of the solution version the campaign uses.
      */
 
     public String getSolutionVersionArn() {
@@ -211,11 +211,11 @@ public class Campaign implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a specific version of the solution.
+     * The Amazon Resource Name (ARN) of the solution version the campaign uses.
      * </p>
      * 
      * @param solutionVersionArn
-     *        The Amazon Resource Name (ARN) of a specific version of the solution.
+     *        The Amazon Resource Name (ARN) of the solution version the campaign uses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

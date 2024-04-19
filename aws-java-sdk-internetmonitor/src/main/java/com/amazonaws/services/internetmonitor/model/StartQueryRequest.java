@@ -93,7 +93,11 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private java.util.List<FilterParameter> filterParameters;
     /**
      * <p>
-     * TBD
+     * The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      */
     private String linkedAccountId;
@@ -633,11 +637,19 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * TBD
+     * The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
      * @param linkedAccountId
-     *        TBD
+     *        The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet
+     *        Monitor. You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *        Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      */
 
     public void setLinkedAccountId(String linkedAccountId) {
@@ -646,10 +658,18 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * TBD
+     * The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
-     * @return TBD
+     * @return The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet
+     *         Monitor. You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *         Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      */
 
     public String getLinkedAccountId() {
@@ -658,11 +678,19 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * TBD
+     * The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet Monitor
+     * cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * </p>
      * 
      * @param linkedAccountId
-     *        TBD
+     *        The account ID for an account that you've set up cross-account sharing for in Amazon CloudWatch Internet
+     *        Monitor. You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html">Internet
+     *        Monitor cross-account observability</a> in the Amazon CloudWatch Internet Monitor User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

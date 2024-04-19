@@ -121,6 +121,13 @@ public interface AmazonPersonalize {
     CreateBatchSegmentJobResult createBatchSegmentJob(CreateBatchSegmentJobRequest createBatchSegmentJobRequest);
 
     /**
+     * <important>
+     * <p>
+     * You incur campaign costs while it is active. To avoid unnecessary costs, make sure to delete the campaign when
+     * you are finished. For information about campaign costs, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * </important>
      * <p>
      * Creates a campaign that deploys a solution version. When a client calls the <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
@@ -871,25 +878,51 @@ public interface AmazonPersonalize {
     CreateSchemaResult createSchema(CreateSchemaRequest createSchemaRequest);
 
     /**
+     * <important>
      * <p>
-     * Creates the configuration for training a model. A trained model is known as a solution version. After the
-     * configuration is created, you train the model (create a solution version) by calling the <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolutionVersion.html">CreateSolutionVersion</a>
-     * operation. Every time you call <code>CreateSolutionVersion</code>, a new version of the solution is created.
+     * After you create a solution, you can’t change its configuration. By default, all new solutions use automatic
+     * training. With automatic training, you incur training costs while your solution is active. You can't stop
+     * automatic training for a solution. To avoid unnecessary costs, make sure to delete the solution when you are
+     * finished. For information about training costs, see <a href="https://aws.amazon.com/personalize/pricing/">Amazon
+     * Personalize pricing</a>.
+     * </p>
+     * </important>
+     * <p>
+     * Creates the configuration for training a model (creating a solution version). This configuration includes the
+     * recipe to use for model training and optional training configuration, such as columns to use in training and
+     * feature transformation parameters. For more information about configuring a solution, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/customizing-solution-config.html">Creating and
+     * configuring a solution</a>.
      * </p>
      * <p>
-     * After creating a solution version, you check its accuracy by calling <a
+     * By default, new solutions use automatic training to create solution versions every 7 days. You can change the
+     * training frequency. Automatic solution version creation starts one hour after the solution is ACTIVE. If you
+     * manually create a solution version within the hour, the solution skips the first automatic training. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/solution-config-auto-training.html">Configuring automatic
+     * training</a>.
+     * </p>
+     * <p>
+     * To turn off automatic training, set <code>performAutoTraining</code> to false. If you turn off automatic
+     * training, you must manually create a solution version by calling the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolutionVersion.html">CreateSolutionVersion</a>
+     * operation.
+     * </p>
+     * <p>
+     * After training starts, you can get the solution version's Amazon Resource Name (ARN) with the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
+     * API operation. To get its status, use the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>.
+     * </p>
+     * <p>
+     * After training completes you can evaluate model accuracy by calling <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_GetSolutionMetrics.html">GetSolutionMetrics</a>. When
-     * you are satisfied with the version, you deploy it using <a
+     * you are satisfied with the solution version, you deploy it using <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>. The campaign
      * provides recommendations to a client through the <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
      * API.
-     * </p>
-     * <p>
-     * To train a model, Amazon Personalize requires training data and a recipe. The training data comes from the
-     * dataset group that you provide in the request. A recipe specifies the training algorithm and a feature
-     * transformation. You can specify one of the predefined recipes provided by Amazon Personalize.
      * </p>
      * <note>
      * <p>
@@ -917,8 +950,8 @@ public interface AmazonPersonalize {
      * </ul>
      * <p>
      * To get the status of the solution, call <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolution.html">DescribeSolution</a>. Wait
-     * until the status shows as ACTIVE before calling <code>CreateSolutionVersion</code>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolution.html">DescribeSolution</a>. If you
+     * use manual training, the status must be ACTIVE before you call <code>CreateSolutionVersion</code>.
      * </p>
      * <p class="title">
      * <b>Related APIs</b>
@@ -1984,9 +2017,9 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
-     * Returns a list of solutions that use the given dataset group. When a dataset group is not specified, all the
-     * solutions associated with the account are listed. The response provides the properties for each solution,
-     * including the Amazon Resource Name (ARN). For more information on solutions, see <a
+     * Returns a list of solutions in a given dataset group. When a dataset group is not specified, all the solutions
+     * associated with the account are listed. The response provides the properties for each solution, including the
+     * Amazon Resource Name (ARN). For more information on solutions, see <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>.
      * </p>
      * 
@@ -2128,8 +2161,9 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
-     * Remove <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> that are
-     * attached to a resource.
+     * Removes the specified tags that are attached to a resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/tags-remove.html">Removing tags from Amazon Personalize
+     * resources</a>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -2151,8 +2185,25 @@ public interface AmazonPersonalize {
     /**
      * <p>
      * Updates a campaign to deploy a retrained solution version with an existing campaign, change your campaign's
-     * <code>minProvisionedTPS</code>, or modify your campaign's configuration, such as the exploration configuration.
+     * <code>minProvisionedTPS</code>, or modify your campaign's configuration. For example, you can set
+     * <code>enableMetadataWithRecommendations</code> to true for an existing campaign.
      * </p>
+     * <p>
+     * To update a campaign to start automatically using the latest solution version, specify the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For the <code>SolutionVersionArn</code> parameter, specify the Amazon Resource Name (ARN) of your solution in
+     * <code>SolutionArn/$LATEST</code> format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * In the <code>campaignConfig</code>, set <code>syncWithLatestSolutionVersion</code> to <code>true</code>.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * To update a campaign, the campaign status must be ACTIVE or CREATE FAILED. Check the campaign status using the <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeCampaign.html">DescribeCampaign</a>

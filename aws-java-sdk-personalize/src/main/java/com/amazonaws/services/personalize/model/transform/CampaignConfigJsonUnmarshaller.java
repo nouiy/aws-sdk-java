@@ -57,6 +57,10 @@ public class CampaignConfigJsonUnmarshaller implements Unmarshaller<CampaignConf
                     context.nextToken();
                     campaignConfig.setEnableMetadataWithRecommendations(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("syncWithLatestSolutionVersion", targetDepth)) {
+                    context.nextToken();
+                    campaignConfig.setSyncWithLatestSolutionVersion(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
