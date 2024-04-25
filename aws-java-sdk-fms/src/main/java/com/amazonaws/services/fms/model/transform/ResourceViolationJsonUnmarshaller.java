@@ -125,10 +125,6 @@ public class ResourceViolationJsonUnmarshaller implements Unmarshaller<ResourceV
                     resourceViolation.setDnsRuleGroupLimitExceededViolation(DnsRuleGroupLimitExceededViolationJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
-                if (context.testExpression("PossibleRemediationActions", targetDepth)) {
-                    context.nextToken();
-                    resourceViolation.setPossibleRemediationActions(PossibleRemediationActionsJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("FirewallSubnetIsOutOfScopeViolation", targetDepth)) {
                     context.nextToken();
                     resourceViolation.setFirewallSubnetIsOutOfScopeViolation(FirewallSubnetIsOutOfScopeViolationJsonUnmarshaller.getInstance().unmarshall(
@@ -159,6 +155,14 @@ public class ResourceViolationJsonUnmarshaller implements Unmarshaller<ResourceV
                     context.nextToken();
                     resourceViolation.setFirewallSubnetMissingVPCEndpointViolation(FirewallSubnetMissingVPCEndpointViolationJsonUnmarshaller.getInstance()
                             .unmarshall(context));
+                }
+                if (context.testExpression("InvalidNetworkAclEntriesViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setInvalidNetworkAclEntriesViolation(InvalidNetworkAclEntriesViolationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("PossibleRemediationActions", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setPossibleRemediationActions(PossibleRemediationActionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -27,8 +27,10 @@ class ContainerCredentialsFetcher extends BaseCredentialsFetcher {
     /** Used to load the endpoint where the credentials are stored. */
     private final CredentialsEndpointProvider credentialsEndpointProvider;
 
+    private static final String PROVIDER_NAME = "ContainerCredentialsProvider";
+
     ContainerCredentialsFetcher(CredentialsEndpointProvider credentialsEndpointProvider) {
-        super(SdkClock.STANDARD, false);
+        super(SdkClock.STANDARD, false, PROVIDER_NAME);
         this.credentialsEndpointProvider = credentialsEndpointProvider;
     }
 

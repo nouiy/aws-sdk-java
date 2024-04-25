@@ -29,17 +29,18 @@ import java.net.URI;
  */
 @SdkInternalApi
 final class InstanceMetadataServiceCredentialsFetcher extends BaseCredentialsFetcher implements CredentialsEndpointRetryPolicy {
+    private static final String PROVIDER_NAME = "InstanceProfileCredentialsProvider";
 
     private final EC2ResourceFetcher resourceFetcher;
 
     InstanceMetadataServiceCredentialsFetcher() {
-        super(SdkClock.STANDARD, true);
+        super(SdkClock.STANDARD, true, PROVIDER_NAME);
         this.resourceFetcher = InstanceMetadataServiceResourceFetcher.getInstance();
     }
 
     @SdkTestInternalApi
     InstanceMetadataServiceCredentialsFetcher(SdkClock clock, EC2ResourceFetcher resourceFetcher) {
-        super(clock, true);
+        super(clock, true, PROVIDER_NAME);
         this.resourceFetcher = resourceFetcher;
     }
 

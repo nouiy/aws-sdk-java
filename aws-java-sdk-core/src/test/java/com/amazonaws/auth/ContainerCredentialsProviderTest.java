@@ -98,6 +98,19 @@ public class ContainerCredentialsProviderTest {
         Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
         Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
         Assert.assertEquals(TOKEN, credentials.getSessionToken());
+        Assert.assertEquals("ContainerCredentialsProvider", credentials.getProviderName());
+        Assert.assertEquals(new DateTime(EXPIRATION_DATE).toDate(), containerCredentialsProvider.getCredentialsExpiration());
+    }
+
+    @Test
+    public void testGetBasicCredentials() {
+        stubFor200Response(getSuccessfulBodyNoToken());
+
+        BasicAWSCredentials credentials = (BasicAWSCredentials) containerCredentialsProvider.getCredentials();
+
+        Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
+        Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
+        Assert.assertEquals("ContainerCredentialsProvider", credentials.getProviderName());
         Assert.assertEquals(new DateTime(EXPIRATION_DATE).toDate(), containerCredentialsProvider.getCredentialsExpiration());
     }
 
@@ -174,6 +187,12 @@ public class ContainerCredentialsProviderTest {
                "\"SecretAccessKey\":\"SECRET_ACCESS_KEY\"," +
                "\"Token\":\"TOKEN_TOKEN_TOKEN\"," +
                "\"Expiration\":\"3000-05-03T04:55:54Z\"}";
+    }
+
+    private String getSuccessfulBodyNoToken() {
+        return "{\"AccessKeyId\":\"ACCESS_KEY_ID\"," +
+                "\"SecretAccessKey\":\"SECRET_ACCESS_KEY\"," +
+                "\"Expiration\":\"3000-05-03T04:55:54Z\"}";
     }
 
     private void stubForErrorResponse(int statusCode) {

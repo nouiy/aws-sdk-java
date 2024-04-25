@@ -1567,9 +1567,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer promotionTier;
     /**
      * <p>
-     * The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     * The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     * >Microsoft SQL Server</a>.
+     * >RDS for SQL Server</a>.
      * </p>
      */
     private String timezone;
@@ -12128,15 +12129,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     * The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     * >Microsoft SQL Server</a>.
+     * >RDS for SQL Server</a>.
      * </p>
      * 
      * @param timezone
-     *        The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     *        The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     *        >Microsoft SQL Server</a>.
+     *        >RDS for SQL Server</a>.
      */
 
     public void setTimezone(String timezone) {
@@ -12145,14 +12148,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     * The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     * >Microsoft SQL Server</a>.
+     * >RDS for SQL Server</a>.
      * </p>
      * 
-     * @return The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     * @return The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     *         >Microsoft SQL Server</a>.
+     *         >RDS for SQL Server</a>.
      */
 
     public String getTimezone() {
@@ -12161,15 +12166,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     * The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     * >Microsoft SQL Server</a>.
+     * >RDS for SQL Server</a>.
      * </p>
      * 
      * @param timezone
-     *        The time zone of the DB instance. The time zone parameter is currently supported only by <a href=
+     *        The time zone of the DB instance. The time zone parameter is currently supported only by <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone">RDS for Db2</a> and <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone"
-     *        >Microsoft SQL Server</a>.
+     *        >RDS for SQL Server</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

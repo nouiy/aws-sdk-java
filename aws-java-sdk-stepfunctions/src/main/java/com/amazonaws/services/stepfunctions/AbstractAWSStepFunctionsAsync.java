@@ -497,4 +497,17 @@ public class AbstractAWSStepFunctionsAsync extends AbstractAWSStepFunctions impl
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<ValidateStateMachineDefinitionResult> validateStateMachineDefinitionAsync(ValidateStateMachineDefinitionRequest request) {
+
+        return validateStateMachineDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ValidateStateMachineDefinitionResult> validateStateMachineDefinitionAsync(ValidateStateMachineDefinitionRequest request,
+            com.amazonaws.handlers.AsyncHandler<ValidateStateMachineDefinitionRequest, ValidateStateMachineDefinitionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

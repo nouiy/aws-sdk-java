@@ -2431,6 +2431,8 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      *         before a new execution can be started.
      * @throws InvalidArnException
      *         The provided Amazon Resource Name (ARN) is not valid.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @sample AWSStepFunctions.RedriveExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/RedriveExecution" target="_top">AWS API
      *      Documentation</a>
@@ -3592,6 +3594,96 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
             HttpResponseHandler<AmazonWebServiceResponse<UpdateStateMachineAliasResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateStateMachineAliasResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Validates the syntax of a state machine definition.
+     * </p>
+     * <p>
+     * You can validate that a state machine definition is correct without creating a state machine resource. Step
+     * Functions will implicitly perform the same syntax check when you invoke <code>CreateStateMachine</code> and
+     * <code>UpdateStateMachine</code>. State machine definitions are specified using a JSON-based, structured language.
+     * For more information on Amazon States Language see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
+     * Language</a> (ASL).
+     * </p>
+     * <p>
+     * Suggested uses for <code>ValidateStateMachineDefinition</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Integrate automated checks into your code review or Continuous Integration (CI) process to validate state machine
+     * definitions before starting deployments.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Run the validation from a Git pre-commit hook to check your state machine definitions before committing them to
+     * your source repository.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Errors found in the state machine definition will be returned in the response as a list of <b>diagnostic
+     * elements</b>, rather than raise an exception.
+     * </p>
+     * </note>
+     * 
+     * @param validateStateMachineDefinitionRequest
+     * @return Result of the ValidateStateMachineDefinition operation returned by the service.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @sample AWSStepFunctions.ValidateStateMachineDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ValidateStateMachineDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ValidateStateMachineDefinitionResult validateStateMachineDefinition(ValidateStateMachineDefinitionRequest request) {
+        request = beforeClientExecution(request);
+        return executeValidateStateMachineDefinition(request);
+    }
+
+    @SdkInternalApi
+    final ValidateStateMachineDefinitionResult executeValidateStateMachineDefinition(ValidateStateMachineDefinitionRequest validateStateMachineDefinitionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(validateStateMachineDefinitionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ValidateStateMachineDefinitionRequest> request = null;
+        Response<ValidateStateMachineDefinitionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ValidateStateMachineDefinitionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(validateStateMachineDefinitionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SFN");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ValidateStateMachineDefinition");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ValidateStateMachineDefinitionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ValidateStateMachineDefinitionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

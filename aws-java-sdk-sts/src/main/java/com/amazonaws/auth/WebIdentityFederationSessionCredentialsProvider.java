@@ -30,6 +30,8 @@ import com.amazonaws.services.securitytoken.model.Credentials;
  */
 public class WebIdentityFederationSessionCredentialsProvider implements AWSSessionCredentialsProvider {
 
+    private static final String PROVIDER_NAME = "StsGetFederationTokenCredentialsProvider";
+
     /** Default duration for started sessions */
     public static final int DEFAULT_DURATION_SECONDS = 3600;
     
@@ -87,7 +89,7 @@ public class WebIdentityFederationSessionCredentialsProvider implements AWSSessi
      *            Configuration to apply to STS client created
      */
     public WebIdentityFederationSessionCredentialsProvider(String wifToken, String wifProvider, String roleArn, ClientConfiguration clientConfiguration) {
-        this(wifToken, wifProvider, roleArn, new AWSSecurityTokenServiceClient(new AnonymousAWSCredentials(), clientConfiguration));
+        this(wifToken, wifProvider, roleArn, new AWSSecurityTokenServiceClient(new AnonymousAWSCredentials(PROVIDER_NAME), clientConfiguration));
     }
 
     /**
@@ -255,7 +257,8 @@ public class WebIdentityFederationSessionCredentialsProvider implements AWSSessi
         sessionCredentials = new BasicSessionCredentials(
                 stsCredentials.getAccessKeyId(),
                 stsCredentials.getSecretAccessKey(),
-                stsCredentials.getSessionToken());
+                stsCredentials.getSessionToken(),
+                PROVIDER_NAME);
         sessionCredentialsExpiration = stsCredentials.getExpiration();
     }
 

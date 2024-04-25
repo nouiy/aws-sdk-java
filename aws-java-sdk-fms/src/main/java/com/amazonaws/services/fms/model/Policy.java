@@ -79,14 +79,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     * <code>AWS::CloudFront::Distribution</code>.
+     * Network ACL - <code>AWS::EC2::Subnet</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      * </p>
      * </li>
      * <li>
@@ -97,7 +102,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      * </p>
      * </li>
      * </ul>
@@ -455,14 +460,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     * <code>AWS::CloudFront::Distribution</code>.
+     * Network ACL - <code>AWS::EC2::Subnet</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      * </p>
      * </li>
      * <li>
@@ -473,7 +483,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      * </p>
      * </li>
      * </ul>
@@ -502,14 +512,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     *        Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     *        <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     *        <code>AWS::CloudFront::Distribution</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     *        <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     *        <code>AWS::CloudFront::Distribution</code>.
+     *        Network ACL - <code>AWS::EC2::Subnet</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -520,7 +535,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     *        DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      *        </p>
      *        </li>
      */
@@ -554,14 +569,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     * <code>AWS::CloudFront::Distribution</code>.
+     * Network ACL - <code>AWS::EC2::Subnet</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      * </p>
      * </li>
      * <li>
@@ -572,7 +592,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      * </p>
      * </li>
      * </ul>
@@ -600,14 +620,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     *         Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     *         <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     *         <code>AWS::CloudFront::Distribution</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     *         <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     *         <code>AWS::CloudFront::Distribution</code>.
+     *         Network ACL - <code>AWS::EC2::Subnet</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -618,7 +643,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     *         DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      *         </p>
      *         </li>
      */
@@ -652,14 +677,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     * <code>AWS::CloudFront::Distribution</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     * <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     * <code>AWS::CloudFront::Distribution</code>.
+     * Network ACL - <code>AWS::EC2::Subnet</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      * </p>
      * </li>
      * <li>
@@ -670,7 +700,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     * DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      * </p>
      * </li>
      * </ul>
@@ -699,14 +729,19 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
+     *        Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
+     *        <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
+     *        <code>AWS::CloudFront::Distribution</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Shield Advanced - <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code>,
-     *        <code>AWS::ElasticLoadBalancing::LoadBalancer</code>, <code>AWS::EC2::EIP</code>, and
-     *        <code>AWS::CloudFront::Distribution</code>.
+     *        Network ACL - <code>AWS::EC2::Subnet</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -717,7 +752,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Security group usage audit - <code>AWS::EC2::SecurityGroup</code>.
+     *        DNS Firewall, Network Firewall, and third-party firewall - <code>AWS::EC2::VPC</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

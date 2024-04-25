@@ -50,14 +50,7 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of resource protected by or in scope of the policy. This is in the format shown in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
-     * Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     * <code>AWS::EC2::VPC</code>.
+     * Web Services Resource Types Reference</a>.
      * </p>
      */
     private String resourceType;
@@ -234,27 +227,13 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of resource protected by or in scope of the policy. This is in the format shown in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
-     * Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     * <code>AWS::EC2::VPC</code>.
+     * Web Services Resource Types Reference</a>.
      * </p>
      * 
      * @param resourceType
      *        The type of resource protected by or in scope of the policy. This is in the format shown in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >Amazon Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     *        <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For
-     *        a security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     *        <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     *        <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     *        <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     *        <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     *        <code>AWS::EC2::VPC</code>.
+     *        >Amazon Web Services Resource Types Reference</a>.
      */
 
     public void setResourceType(String resourceType) {
@@ -265,26 +244,12 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of resource protected by or in scope of the policy. This is in the format shown in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
-     * Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     * <code>AWS::EC2::VPC</code>.
+     * Web Services Resource Types Reference</a>.
      * </p>
      * 
      * @return The type of resource protected by or in scope of the policy. This is in the format shown in the <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *         >Amazon Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     *         <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>.
-     *         For a security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     *         <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     *         <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     *         <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     *         <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     *         <code>AWS::EC2::VPC</code>.
+     *         >Amazon Web Services Resource Types Reference</a>.
      */
 
     public String getResourceType() {
@@ -295,27 +260,13 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of resource protected by or in scope of the policy. This is in the format shown in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
-     * Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     * <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For a
-     * security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     * <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     * <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     * <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     * <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     * <code>AWS::EC2::VPC</code>.
+     * Web Services Resource Types Reference</a>.
      * </p>
      * 
      * @param resourceType
      *        The type of resource protected by or in scope of the policy. This is in the format shown in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >Amazon Web Services Resource Types Reference</a>. For WAF and Shield Advanced, examples include
-     *        <code>AWS::ElasticLoadBalancingV2::LoadBalancer</code> and <code>AWS::CloudFront::Distribution</code>. For
-     *        a security group common policy, valid values are <code>AWS::EC2::NetworkInterface</code> and
-     *        <code>AWS::EC2::Instance</code>. For a security group content audit policy, valid values are
-     *        <code>AWS::EC2::SecurityGroup</code>, <code>AWS::EC2::NetworkInterface</code>, and
-     *        <code>AWS::EC2::Instance</code>. For a security group usage audit policy, the value is
-     *        <code>AWS::EC2::SecurityGroup</code>. For an Network Firewall policy or DNS Firewall policy, the value is
-     *        <code>AWS::EC2::VPC</code>.
+     *        >Amazon Web Services Resource Types Reference</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

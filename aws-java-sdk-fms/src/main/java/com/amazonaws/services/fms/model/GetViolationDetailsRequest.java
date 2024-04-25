@@ -53,6 +53,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
+     * Network ACL
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Third-party firewall
      * </p>
      * </li>
@@ -110,6 +115,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
+     * Network ACL
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Third-party firewall
      * </p>
      * </li>
@@ -137,6 +147,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <li>
      *        <p>
      *        Security group content audit
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network ACL
      *        </p>
      *        </li>
      *        <li>
@@ -178,6 +193,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
+     * Network ACL
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Third-party firewall
      * </p>
      * </li>
@@ -204,6 +224,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      *         <li>
      *         <p>
      *         Security group content audit
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Network ACL
      *         </p>
      *         </li>
      *         <li>
@@ -245,6 +270,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
+     * Network ACL
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Third-party firewall
      * </p>
      * </li>
@@ -272,6 +302,11 @@ public class GetViolationDetailsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <li>
      *        <p>
      *        Security group content audit
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network ACL
      *        </p>
      *        </li>
      *        <li>

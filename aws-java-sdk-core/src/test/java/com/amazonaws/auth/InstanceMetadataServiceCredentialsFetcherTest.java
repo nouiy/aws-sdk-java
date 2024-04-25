@@ -16,6 +16,7 @@ package com.amazonaws.auth;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.times;
@@ -82,8 +83,10 @@ public class InstanceMetadataServiceCredentialsFetcherTest {
         when(ec2ResourceFetcher.readResource(credentailUri, credentialsFetcher)).thenReturn(successResponse);
 
         AWSCredentials credentials = credentialsFetcher.getCredentials();
+        assertTrue(credentials instanceof BasicSessionCredentials);
         assertEquals("ACCESS_KEY_ID", credentials.getAWSAccessKeyId());
         assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
+        assertEquals("InstanceProfileCredentialsProvider", ((BasicSessionCredentials) credentials).getProviderName());
     }
 
     @Test

@@ -30,6 +30,8 @@ import java.io.IOException;
 public class PropertiesFileCredentialsProvider implements
         AWSCredentialsProvider {
 
+    private static final String PROVIDER_NAME = "ProfileCredentialsProvider";
+
     private final String credentialsFilePath;
 
     /**
@@ -54,7 +56,7 @@ public class PropertiesFileCredentialsProvider implements
 
     public AWSCredentials getCredentials() {
         try {
-            return new PropertiesCredentials(new File(this.credentialsFilePath));
+            return new PropertiesCredentials(new File(this.credentialsFilePath), PROVIDER_NAME);
         } catch (IOException e) {
             throw new SdkClientException(
                     "Unable to load AWS credentials from the "

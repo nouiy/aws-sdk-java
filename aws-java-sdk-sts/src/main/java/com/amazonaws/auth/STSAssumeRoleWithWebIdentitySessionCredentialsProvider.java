@@ -39,6 +39,8 @@ import java.util.concurrent.Callable;
 
 public class STSAssumeRoleWithWebIdentitySessionCredentialsProvider implements AWSSessionCredentialsProvider, Closeable {
 
+    private static final String PROVIDER_NAME = "StsAssumeRoleWithWebIdentityCredentialsProvider";
+
     /**
      * The client for starting STS sessions.
      */
@@ -119,9 +121,10 @@ public class STSAssumeRoleWithWebIdentitySessionCredentialsProvider implements A
         ClientConfiguration clientConfiguration = new ClientConfiguration();
         clientConfiguration.setRetryPolicy(retryPolicy);
 
+        AnonymousAWSCredentials credentials = new AnonymousAWSCredentials(PROVIDER_NAME);
         return AWSSecurityTokenServiceClientBuilder.standard()
                                                    .withClientConfiguration(clientConfiguration)
-                                                   .withCredentials(new AWSStaticCredentialsProvider(new AnonymousAWSCredentials()))
+                                                   .withCredentials(new AWSStaticCredentialsProvider(credentials))
                                                    .build();
     }
 
@@ -147,7 +150,7 @@ public class STSAssumeRoleWithWebIdentitySessionCredentialsProvider implements A
                 .withRoleSessionName(roleSessionName);
 
         AssumeRoleWithWebIdentityResult assumeRoleResult = securityTokenService.assumeRoleWithWebIdentity(assumeRoleRequest);
-        return new SessionCredentialsHolder(assumeRoleResult.getCredentials());
+        return new SessionCredentialsHolder(assumeRoleResult.getCredentials(), PROVIDER_NAME);
     }
 
     private String getWebIdentityToken() {

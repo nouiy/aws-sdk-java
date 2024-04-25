@@ -89,9 +89,6 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
                             new JsonErrorShapeMetadata().withErrorCode("InvalidOperationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.fms.model.transform.InvalidOperationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalErrorException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fms.model.transform.InternalErrorExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.fms.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -100,6 +97,9 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.fms.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalErrorException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fms.model.transform.InternalErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidInputException").withExceptionUnmarshaller(
                                     com.amazonaws.services.fms.model.transform.InvalidInputExceptionUnmarshaller.getInstance()))
@@ -995,7 +995,7 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
     /**
      * <p>
-     * Returns information about the specified account's administrative scope. The admistrative scope defines the
+     * Returns information about the specified account's administrative scope. The administrative scope defines the
      * resources that an Firewall Manager administrator can manage.
      * </p>
      * 
@@ -1136,34 +1136,9 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
      * Returns detailed compliance information about the specified member account. Details include resources that are in
      * and out of compliance with the specified policy.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Resources are considered noncompliant for WAF and Shield Advanced policies if the specified policy has not been
-     * applied to them.
+     * The reasons for resources being considered compliant depend on the Firewall Manager policy type.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Resources are considered noncompliant for security group policies if they are in scope of the policy, they
-     * violate one or more of the policy rules, and remediation is disabled or not possible.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Resources are considered noncompliant for Network Firewall policies if a firewall is missing in the VPC, if the
-     * firewall endpoint isn't set up in an expected Availability Zone and subnet, if a subnet created by the Firewall
-     * Manager doesn't have the expected route table, and for modifications to a firewall policy that violate the
-     * Firewall Manager policy's rules.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Resources are considered noncompliant for DNS Firewall policies if a DNS Firewall rule group is missing from the
-     * rule group associations for the VPC.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param getComplianceDetailRequest
      * @return Result of the GetComplianceDetail operation returned by the service.
@@ -2740,6 +2715,11 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
      * <ul>
      * <li>
      * <p>
+     * <b>WAF policy</b> - This policy applies WAF web ACL protections to specified accounts and resources.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>Shield Advanced policy</b> - This policy applies Shield Advanced protection to specified accounts and
      * resources.
      * </p>
@@ -2749,6 +2729,13 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
      * <b>Security Groups policy</b> - This type of policy gives you control over security groups that are in use
      * throughout your organization in Organizations and lets you enforce a baseline set of rules across your
      * organization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Network ACL policy</b> - This type of policy gives you control over the network ACLs that are in use
+     * throughout your organization in Organizations and lets you enforce a baseline set of first and last network ACL
+     * rules across your organization.
      * </p>
      * </li>
      * <li>

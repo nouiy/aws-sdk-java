@@ -34,6 +34,8 @@ import java.util.concurrent.Callable;
 @ThreadSafe
 public class STSSessionCredentialsProvider implements AWSSessionCredentialsProvider, Closeable {
 
+    private static final String PROVIDER_NAME = "STSSessionCredentialsProvider";
+
     /**
      * Default duration for started sessions
      */
@@ -178,7 +180,7 @@ public class STSSessionCredentialsProvider implements AWSSessionCredentialsProvi
     private SessionCredentialsHolder newSession() {
         GetSessionTokenResult sessionTokenResult = securityTokenService.getSessionToken(
                 new GetSessionTokenRequest().withDurationSeconds(DEFAULT_DURATION_SECONDS));
-        return new SessionCredentialsHolder(sessionTokenResult.getCredentials());
+        return new SessionCredentialsHolder(sessionTokenResult.getCredentials(), PROVIDER_NAME);
     }
 
     /**

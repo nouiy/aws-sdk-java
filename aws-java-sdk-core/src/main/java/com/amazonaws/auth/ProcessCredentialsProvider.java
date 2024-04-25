@@ -47,6 +47,9 @@ import org.joda.time.DateTime;
  * </ul>
  */
 public final class ProcessCredentialsProvider implements AWSCredentialsProvider {
+
+    private static final String PROVIDER_NAME = "ProcessCredentialsProvider";
+
     private final List<String> command;
     private final int expirationBufferValue;
     private final TimeUnit expirationBufferUnit;
@@ -170,9 +173,9 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
         ValidationUtils.assertStringNotEmpty(secretAccessKey, "SecretAccessKey");
 
         if (sessionToken != null) {
-            return new BasicSessionCredentials(accessKeyId, secretAccessKey, sessionToken);
+            return new BasicSessionCredentials(accessKeyId, secretAccessKey, sessionToken, null, PROVIDER_NAME);
         } else {
-            return new BasicAWSCredentials(accessKeyId, secretAccessKey);
+            return new BasicAWSCredentials(accessKeyId, secretAccessKey, null, PROVIDER_NAME);
         }
     }
 

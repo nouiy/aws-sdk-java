@@ -47,7 +47,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
     private Boolean defaultAdmin;
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -209,7 +209,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -236,7 +236,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param status
-     *        The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     *        The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -268,7 +268,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -294,7 +294,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
      * </li>
      * </ul>
      * 
-     * @return The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     * @return The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -326,7 +326,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -353,7 +353,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param status
-     *        The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     *        The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -387,7 +387,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -414,7 +414,7 @@ public class AdminAccountSummary implements Serializable, Cloneable, StructuredP
      * </ul>
      * 
      * @param status
-     *        The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     *        The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *        <ul>
      *        <li>
      *        <p>

@@ -67,6 +67,8 @@ abstract class BaseCredentialsFetcher {
      */
     private final boolean allowExpiredCredentials;
 
+    private final String providerName;
+
     /** The current instance profile credentials */
     private volatile AWSCredentials credentials;
 
@@ -80,8 +82,13 @@ abstract class BaseCredentialsFetcher {
     protected volatile Date lastInstanceProfileCheck;
 
     protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials) {
+        this(clock, allowExpiredCredentials, null);
+    }
+
+    protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials, String providerName) {
         this.clock = clock;
         this.allowExpiredCredentials = allowExpiredCredentials;
+        this.providerName = providerName;
     }
 
     public AWSCredentials getCredentials() {
@@ -157,10 +164,15 @@ abstract class BaseCredentialsFetcher {
 
             if (null != token) {
                 credentials = new BasicSessionCredentials(accessKey.asText(),
-                                                          secretKey.asText(), token.asText());
+                                                          secretKey.asText(),
+                                                          token.asText(),
+                                                          null,
+                                                          providerName);
             } else {
                 credentials = new BasicAWSCredentials(accessKey.asText(),
-                                                      secretKey.asText());
+                                                      secretKey.asText(),
+                                                      null,
+                                                      providerName);
             }
 
             JsonNode expirationJsonNode = node.get("Expiration");

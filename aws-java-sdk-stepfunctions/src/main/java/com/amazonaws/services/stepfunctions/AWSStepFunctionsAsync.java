@@ -2937,4 +2937,101 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
     java.util.concurrent.Future<UpdateStateMachineAliasResult> updateStateMachineAliasAsync(UpdateStateMachineAliasRequest updateStateMachineAliasRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateStateMachineAliasRequest, UpdateStateMachineAliasResult> asyncHandler);
 
+    /**
+     * <p>
+     * Validates the syntax of a state machine definition.
+     * </p>
+     * <p>
+     * You can validate that a state machine definition is correct without creating a state machine resource. Step
+     * Functions will implicitly perform the same syntax check when you invoke <code>CreateStateMachine</code> and
+     * <code>UpdateStateMachine</code>. State machine definitions are specified using a JSON-based, structured language.
+     * For more information on Amazon States Language see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
+     * Language</a> (ASL).
+     * </p>
+     * <p>
+     * Suggested uses for <code>ValidateStateMachineDefinition</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Integrate automated checks into your code review or Continuous Integration (CI) process to validate state machine
+     * definitions before starting deployments.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Run the validation from a Git pre-commit hook to check your state machine definitions before committing them to
+     * your source repository.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Errors found in the state machine definition will be returned in the response as a list of <b>diagnostic
+     * elements</b>, rather than raise an exception.
+     * </p>
+     * </note>
+     * 
+     * @param validateStateMachineDefinitionRequest
+     * @return A Java Future containing the result of the ValidateStateMachineDefinition operation returned by the
+     *         service.
+     * @sample AWSStepFunctionsAsync.ValidateStateMachineDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ValidateStateMachineDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ValidateStateMachineDefinitionResult> validateStateMachineDefinitionAsync(
+            ValidateStateMachineDefinitionRequest validateStateMachineDefinitionRequest);
+
+    /**
+     * <p>
+     * Validates the syntax of a state machine definition.
+     * </p>
+     * <p>
+     * You can validate that a state machine definition is correct without creating a state machine resource. Step
+     * Functions will implicitly perform the same syntax check when you invoke <code>CreateStateMachine</code> and
+     * <code>UpdateStateMachine</code>. State machine definitions are specified using a JSON-based, structured language.
+     * For more information on Amazon States Language see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
+     * Language</a> (ASL).
+     * </p>
+     * <p>
+     * Suggested uses for <code>ValidateStateMachineDefinition</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Integrate automated checks into your code review or Continuous Integration (CI) process to validate state machine
+     * definitions before starting deployments.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Run the validation from a Git pre-commit hook to check your state machine definitions before committing them to
+     * your source repository.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Errors found in the state machine definition will be returned in the response as a list of <b>diagnostic
+     * elements</b>, rather than raise an exception.
+     * </p>
+     * </note>
+     * 
+     * @param validateStateMachineDefinitionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ValidateStateMachineDefinition operation returned by the
+     *         service.
+     * @sample AWSStepFunctionsAsyncHandler.ValidateStateMachineDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ValidateStateMachineDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ValidateStateMachineDefinitionResult> validateStateMachineDefinitionAsync(
+            ValidateStateMachineDefinitionRequest validateStateMachineDefinitionRequest,
+            com.amazonaws.handlers.AsyncHandler<ValidateStateMachineDefinitionRequest, ValidateStateMachineDefinitionResult> asyncHandler);
+
 }

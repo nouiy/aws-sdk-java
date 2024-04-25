@@ -218,6 +218,11 @@ public class AbstractAWSStepFunctions implements AWSStepFunctions {
     }
 
     @Override
+    public ValidateStateMachineDefinitionResult validateStateMachineDefinition(ValidateStateMachineDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

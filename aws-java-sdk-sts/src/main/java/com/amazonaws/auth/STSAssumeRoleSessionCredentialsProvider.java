@@ -42,6 +42,9 @@ import java.util.concurrent.ExecutorService;
  */
 @ThreadSafe
 public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCredentialsProvider, Closeable {
+
+    private static final String PROVIDER_NAME = "STSAssumeRoleCredentialsProvider";
+
     /**
      * Default duration for started sessions.
      */
@@ -355,7 +358,7 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
         }
 
         AssumeRoleResult assumeRoleResult = securityTokenService.assumeRole(assumeRoleRequest);
-        return new SessionCredentialsHolder(assumeRoleResult.getCredentials());
+        return new SessionCredentialsHolder(assumeRoleResult.getCredentials(), PROVIDER_NAME);
     }
 
     /**

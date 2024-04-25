@@ -1442,6 +1442,10 @@
         "documentation" : "<p/>",
         "httpStatusCode" : 402
       }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p/>",
+        "httpStatusCode" : 409
+      }, {
         "exceptionName" : "PendingVerificationException",
         "documentation" : "<p/>",
         "httpStatusCode" : 403

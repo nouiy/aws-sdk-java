@@ -30,7 +30,7 @@ public class BatchError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel ARN.
+     * ARN of an IVS resource; e.g., channel.
      * </p>
      */
     private String arn;
@@ -49,11 +49,11 @@ public class BatchError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel ARN.
+     * ARN of an IVS resource; e.g., channel.
      * </p>
      * 
      * @param arn
-     *        Channel ARN.
+     *        ARN of an IVS resource; e.g., channel.
      */
 
     public void setArn(String arn) {
@@ -62,10 +62,10 @@ public class BatchError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel ARN.
+     * ARN of an IVS resource; e.g., channel.
      * </p>
      * 
-     * @return Channel ARN.
+     * @return ARN of an IVS resource; e.g., channel.
      */
 
     public String getArn() {
@@ -74,11 +74,11 @@ public class BatchError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel ARN.
+     * ARN of an IVS resource; e.g., channel.
      * </p>
      * 
      * @param arn
-     *        Channel ARN.
+     *        ARN of an IVS resource; e.g., channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

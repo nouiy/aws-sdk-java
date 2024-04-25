@@ -20,6 +20,8 @@ import com.amazonaws.Request;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.annotation.SdkProtectedApi;
 
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.ProviderNameAware;
 import com.amazonaws.retry.RetryMode;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -50,6 +52,7 @@ public class RuntimeHttpUtils {
     private static final String AWS_EXECUTION_ENV_NAME = "AWS_EXECUTION_ENV";
 
     private static final String RETRY_MODE_PREFIX = "cfg/retry-mode/";
+    private static final String PROVIDER_NAME_PREFIX = "cfg/auth-source#";
 
     private static final String TRACE_ID_ENVIRONMENT_VARIABLE = "_X_AMZN_TRACE_ID";
     private static final String TRACE_ID_SYSTEM_PROPERTY = "com.amazonaws.xray.traceHeader";
@@ -116,11 +119,17 @@ public class RuntimeHttpUtils {
     }
 
     public static String getUserAgent(final ClientConfiguration config, final String userAgentMarker) {
+        return getUserAgent(config, userAgentMarker, null);
+    }
+
+    public static String getUserAgent(final ClientConfiguration config, final String userAgentMarker,
+                                      AWSCredentials credentials) {
 
         String userDefinedPrefix = "";
         String userDefinedSuffix = "";
         String retryModeName = "";
         String awsExecutionEnvironment = getEnvironmentVariable(AWS_EXECUTION_ENV_NAME);
+        String providerName = getProviderName(credentials);
 
         if (config != null) {
             userDefinedPrefix = config.getUserAgentPrefix();
@@ -139,6 +148,10 @@ public class RuntimeHttpUtils {
             userAgent.append(SPACE).append(RETRY_MODE_PREFIX).append(retryModeName.trim());
         }
 
+        if (StringUtils.hasValue(providerName)) {
+            userAgent.append(SPACE).append(PROVIDER_NAME_PREFIX).append(providerName);
+        }
+
         if(StringUtils.hasValue(userDefinedSuffix)) {
             userAgent.append(COMMA).append(userDefinedSuffix.trim());
         }
@@ -152,6 +165,14 @@ public class RuntimeHttpUtils {
         }
 
         return userAgent.toString();
+    }
+
+    private static String getProviderName(AWSCredentials credentials) {
+        if (credentials instanceof ProviderNameAware) {
+            ProviderNameAware providerNameAwareCredentials = (ProviderNameAware) credentials;
+            return CredentialsProviderNameMapping.mapFrom(providerNameAwareCredentials.getProviderName());
+        }
+        return null;
     }
 
     private static String getEnvironmentVariable(String environmentVariableName) {

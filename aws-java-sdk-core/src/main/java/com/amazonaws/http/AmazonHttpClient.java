@@ -1581,11 +1581,12 @@ public class AmazonHttpClient {
          */
         private void setUserAgent(Request<?> request) {
             RequestClientOptions opts = requestConfig.getRequestClientOptions();
+            AWSCredentials credentials = request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS);
             if (opts != null) {
                 request.addHeader(HEADER_USER_AGENT, RuntimeHttpUtils
-                        .getUserAgent(config, opts.getClientMarker(Marker.USER_AGENT)));
+                        .getUserAgent(config, opts.getClientMarker(Marker.USER_AGENT), credentials));
             } else {
-                request.addHeader(HEADER_USER_AGENT, RuntimeHttpUtils.getUserAgent(config, null));
+                request.addHeader(HEADER_USER_AGENT, RuntimeHttpUtils.getUserAgent(config, null, credentials));
             }
         }
 

@@ -405,8 +405,8 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     * <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a time
-     * zone specified.
+     * <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were created
+     * with a time zone specified.
      * </p>
      */
     private String timezone;
@@ -3533,14 +3533,14 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     * <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a time
-     * zone specified.
+     * <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were created
+     * with a time zone specified.
      * </p>
      * 
      * @param timezone
      *        The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     *        <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a
-     *        time zone specified.
+     *        <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were
+     *        created with a time zone specified.
      */
 
     public void setTimezone(String timezone) {
@@ -3550,13 +3550,13 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     * <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a time
-     * zone specified.
+     * <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were created
+     * with a time zone specified.
      * </p>
      * 
      * @return The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     *         <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a
-     *         time zone specified.
+     *         <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were
+     *         created with a time zone specified.
      */
 
     public String getTimezone() {
@@ -3566,14 +3566,14 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     * <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a time
-     * zone specified.
+     * <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were created
+     * with a time zone specified.
      * </p>
      * 
      * @param timezone
      *        The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty.
-     *        <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a
-     *        time zone specified.
+     *        <code>Timezone</code> content appears only for RDS for Db2 and RDS for SQL Server DB instances that were
+     *        created with a time zone specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

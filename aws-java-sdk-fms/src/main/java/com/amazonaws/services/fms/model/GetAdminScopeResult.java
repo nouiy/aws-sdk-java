@@ -31,7 +31,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
     private AdminScope adminScope;
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -101,7 +101,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -128,7 +128,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
      * </ul>
      * 
      * @param status
-     *        The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     *        The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -160,7 +160,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -186,7 +186,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
      * </li>
      * </ul>
      * 
-     * @return The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     * @return The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -218,7 +218,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -245,7 +245,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
      * </ul>
      * 
      * @param status
-     *        The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     *        The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -279,7 +279,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The current status of the request to onboard a member account as an Firewall Manager administator.
+     * The current status of the request to onboard a member account as an Firewall Manager administrator.
      * </p>
      * <ul>
      * <li>
@@ -306,7 +306,7 @@ public class GetAdminScopeResult extends com.amazonaws.AmazonWebServiceResult<co
      * </ul>
      * 
      * @param status
-     *        The current status of the request to onboard a member account as an Firewall Manager administator.</p>
+     *        The current status of the request to onboard a member account as an Firewall Manager administrator.</p>
      *        <ul>
      *        <li>
      *        <p>

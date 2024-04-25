@@ -57,9 +57,10 @@ public class ProcessCredentialsProviderTest {
                                           .build()
                                           .getCredentials();
 
-        Assert.assertFalse(credentials instanceof AWSSessionCredentials);
+        Assert.assertFalse(credentials instanceof BasicSessionCredentials);
         Assert.assertEquals("accessKeyId", credentials.getAWSAccessKeyId());
         Assert.assertEquals("secretAccessKey", credentials.getAWSSecretKey());
+        Assert.assertEquals("ProcessCredentialsProvider", ((BasicAWSCredentials) credentials).getProviderName());
     }
 
     @Test

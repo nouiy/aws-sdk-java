@@ -117,7 +117,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * window, unless you enable <code>ApplyImmediately</code>.
      * </p>
      * <p>
-     * This parameter doesn't apply to RDS Custom DB instances.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * <p>
      * Constraints:
@@ -1149,6 +1149,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection for the
+     * DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster can be deleted
+     * even when deletion protection is enabled for the DB cluster.
+     * </p>
      */
     private Boolean deletionProtection;
     /**
@@ -2005,7 +2010,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * window, unless you enable <code>ApplyImmediately</code>.
      * </p>
      * <p>
-     * This parameter doesn't apply to RDS Custom DB instances.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * <p>
      * Constraints:
@@ -2032,7 +2037,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        maintenance window, unless you enable <code>ApplyImmediately</code>.
      *        </p>
      *        <p>
-     *        This parameter doesn't apply to RDS Custom DB instances.
+     *        This setting doesn't apply to RDS Custom DB instances.
      *        </p>
      *        <p>
      *        Constraints:
@@ -2065,7 +2070,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * window, unless you enable <code>ApplyImmediately</code>.
      * </p>
      * <p>
-     * This parameter doesn't apply to RDS Custom DB instances.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * <p>
      * Constraints:
@@ -2091,7 +2096,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         maintenance window, unless you enable <code>ApplyImmediately</code>.
      *         </p>
      *         <p>
-     *         This parameter doesn't apply to RDS Custom DB instances.
+     *         This setting doesn't apply to RDS Custom DB instances.
      *         </p>
      *         <p>
      *         Constraints:
@@ -2124,7 +2129,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * window, unless you enable <code>ApplyImmediately</code>.
      * </p>
      * <p>
-     * This parameter doesn't apply to RDS Custom DB instances.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * <p>
      * Constraints:
@@ -2151,7 +2156,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        maintenance window, unless you enable <code>ApplyImmediately</code>.
      *        </p>
      *        <p>
-     *        This parameter doesn't apply to RDS Custom DB instances.
+     *        This setting doesn't apply to RDS Custom DB instances.
      *        </p>
      *        <p>
      *        Constraints:
@@ -8866,12 +8871,21 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection for the
+     * DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster can be deleted
+     * even when deletion protection is enabled for the DB cluster.
+     * </p>
      * 
      * @param deletionProtection
      *        Specifies whether the DB instance has deletion protection enabled. The database can't be deleted when
      *        deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
      *        <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *        Instance</a>.
+     *        Instance</a>.</p>
+     *        <p>
+     *        This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection
+     *        for the DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster
+     *        can be deleted even when deletion protection is enabled for the DB cluster.
      */
 
     public void setDeletionProtection(Boolean deletionProtection) {
@@ -8885,11 +8899,20 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection for the
+     * DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster can be deleted
+     * even when deletion protection is enabled for the DB cluster.
+     * </p>
      * 
      * @return Specifies whether the DB instance has deletion protection enabled. The database can't be deleted when
      *         deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
      *         <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *         Instance</a>.
+     *         Instance</a>.</p>
+     *         <p>
+     *         This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection
+     *         for the DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster
+     *         can be deleted even when deletion protection is enabled for the DB cluster.
      */
 
     public Boolean getDeletionProtection() {
@@ -8903,12 +8926,21 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection for the
+     * DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster can be deleted
+     * even when deletion protection is enabled for the DB cluster.
+     * </p>
      * 
      * @param deletionProtection
      *        Specifies whether the DB instance has deletion protection enabled. The database can't be deleted when
      *        deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
      *        <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *        Instance</a>.
+     *        Instance</a>.</p>
+     *        <p>
+     *        This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection
+     *        for the DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster
+     *        can be deleted even when deletion protection is enabled for the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8924,11 +8956,20 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection for the
+     * DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster can be deleted
+     * even when deletion protection is enabled for the DB cluster.
+     * </p>
      * 
      * @return Specifies whether the DB instance has deletion protection enabled. The database can't be deleted when
      *         deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
      *         <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *         Instance</a>.
+     *         Instance</a>.</p>
+     *         <p>
+     *         This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion protection
+     *         for the DB cluster. For more information, see <code>ModifyDBCluster</code>. DB instances in a DB cluster
+     *         can be deleted even when deletion protection is enabled for the DB cluster.
      */
 
     public Boolean isDeletionProtection() {

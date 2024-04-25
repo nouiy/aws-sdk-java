@@ -33,6 +33,8 @@ import com.amazonaws.SdkClientException;
  */
 public class ClasspathPropertiesFileCredentialsProvider implements AWSCredentialsProvider {
 
+    private static final String PROVIDER_NAME = "ClasspathPropertiesFileCredentialsProvider";
+
     /** The name of the properties file to check for credentials */
     private static String DEFAULT_PROPERTIES_FILE = "AwsCredentials.properties";
 
@@ -82,7 +84,7 @@ public class ClasspathPropertiesFileCredentialsProvider implements AWSCredential
         }
 
         try {
-            return new PropertiesCredentials(inputStream);
+            return new PropertiesCredentials(inputStream, PROVIDER_NAME);
         } catch (IOException e) {
             throw new SdkClientException("Unable to load AWS credentials from the " + credentialsFilePath + " file on the classpath", e);
         }

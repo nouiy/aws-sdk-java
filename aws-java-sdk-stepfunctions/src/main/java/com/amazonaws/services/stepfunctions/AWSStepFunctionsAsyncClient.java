@@ -1468,6 +1468,40 @@ public class AWSStepFunctionsAsyncClient extends AWSStepFunctionsClient implemen
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<ValidateStateMachineDefinitionResult> validateStateMachineDefinitionAsync(ValidateStateMachineDefinitionRequest request) {
+
+        return validateStateMachineDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ValidateStateMachineDefinitionResult> validateStateMachineDefinitionAsync(
+            final ValidateStateMachineDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ValidateStateMachineDefinitionRequest, ValidateStateMachineDefinitionResult> asyncHandler) {
+        final ValidateStateMachineDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ValidateStateMachineDefinitionResult>() {
+            @Override
+            public ValidateStateMachineDefinitionResult call() throws Exception {
+                ValidateStateMachineDefinitionResult result = null;
+
+                try {
+                    result = executeValidateStateMachineDefinition(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

@@ -797,6 +797,7 @@ public interface AmazonIVSRealTime {
      * @throws ValidationException
      * @throws AccessDeniedException
      * @throws ServiceQuotaExceededException
+     * @throws ConflictException
      * @throws PendingVerificationException
      * @sample AmazonIVSRealTime.UpdateStage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/UpdateStage" target="_top">AWS API

@@ -18,11 +18,13 @@ package com.amazonaws.auth;
  * Basic implementation of the AWSCredentials interface that allows callers to
  * pass in the AWS access key and secret access in the constructor.
  */
-public class BasicAWSCredentials implements AWSCredentials, AccountIdAware {
+public class BasicAWSCredentials implements AWSCredentials,
+        AccountIdAware, ProviderNameAware {
 
     private final String accessKey;
     private final String secretKey;
     private final String accountId;
+    private final String providerName;
 
     /**
      * Constructs a new BasicAWSCredentials object, with the specified AWS
@@ -34,7 +36,7 @@ public class BasicAWSCredentials implements AWSCredentials, AccountIdAware {
      *            The AWS secret access key.
      */
     public BasicAWSCredentials(String accessKey, String secretKey) {
-        this(accessKey, secretKey, null);
+        this(accessKey, secretKey, null, null);
     }
 
     /**
@@ -49,6 +51,23 @@ public class BasicAWSCredentials implements AWSCredentials, AccountIdAware {
      *            The AWS account id associated with the credentials.
      */
     public BasicAWSCredentials(String accessKey, String secretKey, String accountId) {
+        this(accessKey, secretKey, accountId, null);
+    }
+
+    /**
+     * Constructs a new BasicAWSCredentials object, with the specified AWS
+     * access key and AWS secret key.
+     *
+     * @param accessKey
+     *            The AWS access key.
+     * @param secretKey
+     *            The AWS secret access key.
+     * @param accountId
+     *            The AWS account id associated with the credentials.
+     * @param providerName
+     *            The name of the source that resolved these credentials.
+     */
+    public BasicAWSCredentials(String accessKey, String secretKey, String accountId, String providerName) {
         if (accessKey == null) {
             throw new IllegalArgumentException("Access key cannot be null.");
         }
@@ -59,6 +78,7 @@ public class BasicAWSCredentials implements AWSCredentials, AccountIdAware {
         this.accessKey = accessKey;
         this.secretKey = secretKey;
         this.accountId = accountId;
+        this.providerName = providerName;
     }
 
     /* (non-Javadoc)
@@ -80,5 +100,12 @@ public class BasicAWSCredentials implements AWSCredentials, AccountIdAware {
      */
     public String getAccountId() {
         return accountId;
+    }
+
+    /* (non-Javadoc)
+     * @see com.amazonaws.auth.ProviderNameAware#getProviderName()
+     */
+    public String getProviderName() {
+        return providerName;
     }
 }

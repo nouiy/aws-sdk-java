@@ -58,10 +58,11 @@ public class EnvironmentVariableCredentialsProviderTest {
         helper.set(ALTERNATE_SECRET_KEY_ENV_VAR, ALT_SECRET_ACCESS_KEY);
 
         AWSCredentials credentials = new EnvironmentVariableCredentialsProvider().getCredentials();
-        assertFalse(credentials instanceof AWSSessionCredentials);
+        assertTrue(credentials instanceof BasicAWSCredentials);
         Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
         Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
-
+        Assert.assertEquals("EnvironmentVariableCredentialsProvider",
+                ((BasicAWSCredentials) credentials).getProviderName());
     }
 
     @Test

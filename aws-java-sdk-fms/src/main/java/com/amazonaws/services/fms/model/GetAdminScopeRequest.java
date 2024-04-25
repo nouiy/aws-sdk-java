@@ -27,18 +27,18 @@ public class GetAdminScopeRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The administator account that you want to get the details for.
+     * The administrator account that you want to get the details for.
      * </p>
      */
     private String adminAccount;
 
     /**
      * <p>
-     * The administator account that you want to get the details for.
+     * The administrator account that you want to get the details for.
      * </p>
      * 
      * @param adminAccount
-     *        The administator account that you want to get the details for.
+     *        The administrator account that you want to get the details for.
      */
 
     public void setAdminAccount(String adminAccount) {
@@ -47,10 +47,10 @@ public class GetAdminScopeRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The administator account that you want to get the details for.
+     * The administrator account that you want to get the details for.
      * </p>
      * 
-     * @return The administator account that you want to get the details for.
+     * @return The administrator account that you want to get the details for.
      */
 
     public String getAdminAccount() {
@@ -59,11 +59,11 @@ public class GetAdminScopeRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The administator account that you want to get the details for.
+     * The administrator account that you want to get the details for.
      * </p>
      * 
      * @param adminAccount
-     *        The administator account that you want to get the details for.
+     *        The administrator account that you want to get the details for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

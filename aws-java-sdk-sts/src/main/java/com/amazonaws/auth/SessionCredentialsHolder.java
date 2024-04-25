@@ -31,9 +31,15 @@ final class SessionCredentialsHolder {
     private final Date sessionCredentialsExpiration;
 
     SessionCredentialsHolder(Credentials credentials) {
+        this(credentials, null);
+    }
+
+    SessionCredentialsHolder(Credentials credentials, String providerName) {
         this.sessionCredentials = new BasicSessionCredentials(credentials.getAccessKeyId(),
-                                                              credentials.getSecretAccessKey(),
-                                                              credentials.getSessionToken());
+                credentials.getSecretAccessKey(),
+                credentials.getSessionToken(),
+                null,
+                providerName);
         this.sessionCredentialsExpiration = credentials.getExpiration();
     }
 

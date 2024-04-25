@@ -46,6 +46,14 @@ public class RemediationActionMarshaller {
     private static final MarshallingInfo<StructuredPojo> FMSPOLICYUPDATEFIREWALLCREATIONCONFIGACTION_BINDING = MarshallingInfo
             .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FMSPolicyUpdateFirewallCreationConfigAction")
             .build();
+    private static final MarshallingInfo<StructuredPojo> CREATENETWORKACLACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateNetworkAclAction").build();
+    private static final MarshallingInfo<StructuredPojo> REPLACENETWORKACLASSOCIATIONACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplaceNetworkAclAssociationAction").build();
+    private static final MarshallingInfo<StructuredPojo> CREATENETWORKACLENTRIESACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateNetworkAclEntriesAction").build();
+    private static final MarshallingInfo<StructuredPojo> DELETENETWORKACLENTRIESACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteNetworkAclEntriesAction").build();
 
     private static final RemediationActionMarshaller instance = new RemediationActionMarshaller();
 
@@ -73,6 +81,10 @@ public class RemediationActionMarshaller {
             protocolMarshaller.marshall(remediationAction.getEC2CreateRouteTableAction(), EC2CREATEROUTETABLEACTION_BINDING);
             protocolMarshaller
                     .marshall(remediationAction.getFMSPolicyUpdateFirewallCreationConfigAction(), FMSPOLICYUPDATEFIREWALLCREATIONCONFIGACTION_BINDING);
+            protocolMarshaller.marshall(remediationAction.getCreateNetworkAclAction(), CREATENETWORKACLACTION_BINDING);
+            protocolMarshaller.marshall(remediationAction.getReplaceNetworkAclAssociationAction(), REPLACENETWORKACLASSOCIATIONACTION_BINDING);
+            protocolMarshaller.marshall(remediationAction.getCreateNetworkAclEntriesAction(), CREATENETWORKACLENTRIESACTION_BINDING);
+            protocolMarshaller.marshall(remediationAction.getDeleteNetworkAclEntriesAction(), DELETENETWORKACLENTRIESACTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

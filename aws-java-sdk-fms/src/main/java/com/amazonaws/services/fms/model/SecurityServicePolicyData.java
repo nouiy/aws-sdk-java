@@ -169,7 +169,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * created by this policy become non-compliant.
      * </p>
      * <p>
-     * Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica security
+     * Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica security
      * groups. System tags begin with the <code>aws:</code> prefix.
      * </p>
      * </li>
@@ -396,7 +396,8 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
     private String managedServiceData;
     /**
      * <p>
-     * Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     * Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment model, or
+     * a third-party firewall policy.
      * </p>
      */
     private PolicyOption policyOption;
@@ -616,7 +617,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * created by this policy become non-compliant.
      * </p>
      * <p>
-     * Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica security
+     * Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica security
      * groups. System tags begin with the <code>aws:</code> prefix.
      * </p>
      * </li>
@@ -971,7 +972,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      *        identifies and reports when the security groups created by this policy become non-compliant.
      *        </p>
      *        <p>
-     *        Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica
+     *        Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica
      *        security groups. System tags begin with the <code>aws:</code> prefix.
      *        </p>
      *        </li>
@@ -1336,7 +1337,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * created by this policy become non-compliant.
      * </p>
      * <p>
-     * Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica security
+     * Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica security
      * groups. System tags begin with the <code>aws:</code> prefix.
      * </p>
      * </li>
@@ -1690,7 +1691,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      *         Manager identifies and reports when the security groups created by this policy become non-compliant.
      *         </p>
      *         <p>
-     *         Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica
+     *         Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica
      *         security groups. System tags begin with the <code>aws:</code> prefix.
      *         </p>
      *         </li>
@@ -2058,7 +2059,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      * created by this policy become non-compliant.
      * </p>
      * <p>
-     * Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica security
+     * Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica security
      * groups. System tags begin with the <code>aws:</code> prefix.
      * </p>
      * </li>
@@ -2413,7 +2414,7 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
      *        identifies and reports when the security groups created by this policy become non-compliant.
      *        </p>
      *        <p>
-     *        Firewall Manager won't distrubute system tags added by Amazon Web Services services into the replica
+     *        Firewall Manager won't distribute system tags added by Amazon Web Services services into the replica
      *        security groups. System tags begin with the <code>aws:</code> prefix.
      *        </p>
      *        </li>
@@ -2650,11 +2651,13 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     * Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment model, or
+     * a third-party firewall policy.
      * </p>
      * 
      * @param policyOption
-     *        Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     *        Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment
+     *        model, or a third-party firewall policy.
      */
 
     public void setPolicyOption(PolicyOption policyOption) {
@@ -2663,10 +2666,12 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     * Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment model, or
+     * a third-party firewall policy.
      * </p>
      * 
-     * @return Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     * @return Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment
+     *         model, or a third-party firewall policy.
      */
 
     public PolicyOption getPolicyOption() {
@@ -2675,11 +2680,13 @@ public class SecurityServicePolicyData implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     * Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment model, or
+     * a third-party firewall policy.
      * </p>
      * 
      * @param policyOption
-     *        Contains the Network Firewall firewall policy options to configure a centralized deployment model.
+     *        Contains the settings to configure a network ACL policy, a Network Firewall firewall policy deployment
+     *        model, or a third-party firewall policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
