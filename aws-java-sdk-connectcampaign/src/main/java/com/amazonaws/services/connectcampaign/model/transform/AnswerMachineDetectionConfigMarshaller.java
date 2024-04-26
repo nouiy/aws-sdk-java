@@ -29,6 +29,8 @@ public class AnswerMachineDetectionConfigMarshaller {
 
     private static final MarshallingInfo<Boolean> ENABLEANSWERMACHINEDETECTION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableAnswerMachineDetection").build();
+    private static final MarshallingInfo<Boolean> AWAITANSWERMACHINEPROMPT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("awaitAnswerMachinePrompt").build();
 
     private static final AnswerMachineDetectionConfigMarshaller instance = new AnswerMachineDetectionConfigMarshaller();
 
@@ -47,6 +49,7 @@ public class AnswerMachineDetectionConfigMarshaller {
 
         try {
             protocolMarshaller.marshall(answerMachineDetectionConfig.getEnableAnswerMachineDetection(), ENABLEANSWERMACHINEDETECTION_BINDING);
+            protocolMarshaller.marshall(answerMachineDetectionConfig.getAwaitAnswerMachinePrompt(), AWAITANSWERMACHINEPROMPT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

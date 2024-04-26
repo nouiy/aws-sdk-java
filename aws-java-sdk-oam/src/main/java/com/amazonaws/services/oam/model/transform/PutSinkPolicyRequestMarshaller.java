@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PutSinkPolicyRequestMarshaller {
 
-    private static final MarshallingInfo<String> SINKIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SinkIdentifier").build();
     private static final MarshallingInfo<String> POLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Policy").build();
+    private static final MarshallingInfo<String> SINKIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SinkIdentifier").build();
 
     private static final PutSinkPolicyRequestMarshaller instance = new PutSinkPolicyRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class PutSinkPolicyRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(putSinkPolicyRequest.getSinkIdentifier(), SINKIDENTIFIER_BINDING);
             protocolMarshaller.marshall(putSinkPolicyRequest.getPolicy(), POLICY_BINDING);
+            protocolMarshaller.marshall(putSinkPolicyRequest.getSinkIdentifier(), SINKIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

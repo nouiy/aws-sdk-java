@@ -30,6 +30,8 @@ public class UpdateLinkRequestMarshaller {
 
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Identifier").build();
+    private static final MarshallingInfo<StructuredPojo> LINKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LinkConfiguration").build();
     private static final MarshallingInfo<List> RESOURCETYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ResourceTypes").build();
 
@@ -50,6 +52,7 @@ public class UpdateLinkRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateLinkRequest.getIdentifier(), IDENTIFIER_BINDING);
+            protocolMarshaller.marshall(updateLinkRequest.getLinkConfiguration(), LINKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateLinkRequest.getResourceTypes(), RESOURCETYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

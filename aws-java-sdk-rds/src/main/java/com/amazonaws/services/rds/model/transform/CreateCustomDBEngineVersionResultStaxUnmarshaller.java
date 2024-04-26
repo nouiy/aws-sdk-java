@@ -230,6 +230,11 @@ public class CreateCustomDBEngineVersionResultStaxUnmarshaller implements Unmars
                     continue;
                 }
 
+                if (context.testExpression("SupportsLimitlessDatabase", targetDepth)) {
+                    createCustomDBEngineVersionResult.setSupportsLimitlessDatabase(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SupportsCertificateRotationWithoutRestart", targetDepth)) {
                     createCustomDBEngineVersionResult.setSupportsCertificateRotationWithoutRestart(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

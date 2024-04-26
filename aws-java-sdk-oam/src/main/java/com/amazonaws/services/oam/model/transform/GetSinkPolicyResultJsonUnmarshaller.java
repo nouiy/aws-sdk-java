@@ -48,6 +48,10 @@ public class GetSinkPolicyResultJsonUnmarshaller implements Unmarshaller<GetSink
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Policy", targetDepth)) {
+                    context.nextToken();
+                    getSinkPolicyResult.setPolicy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("SinkArn", targetDepth)) {
                     context.nextToken();
                     getSinkPolicyResult.setSinkArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,10 +59,6 @@ public class GetSinkPolicyResultJsonUnmarshaller implements Unmarshaller<GetSink
                 if (context.testExpression("SinkId", targetDepth)) {
                     context.nextToken();
                     getSinkPolicyResult.setSinkId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Policy", targetDepth)) {
-                    context.nextToken();
-                    getSinkPolicyResult.setPolicy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -52,6 +52,10 @@ public class AnswerMachineDetectionConfigJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     answerMachineDetectionConfig.setEnableAnswerMachineDetection(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("awaitAnswerMachinePrompt", targetDepth)) {
+                    context.nextToken();
+                    answerMachineDetectionConfig.setAwaitAnswerMachinePrompt(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

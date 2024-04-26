@@ -25,6 +25,12 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
+     * The policy that you specified.
+     * </p>
+     */
+    private String policy;
+    /**
+     * <p>
      * The ARN of the sink.
      * </p>
      */
@@ -35,12 +41,46 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String sinkId;
+
     /**
      * <p>
      * The policy that you specified.
      * </p>
+     * 
+     * @param policy
+     *        The policy that you specified.
      */
-    private String policy;
+
+    public void setPolicy(String policy) {
+        this.policy = policy;
+    }
+
+    /**
+     * <p>
+     * The policy that you specified.
+     * </p>
+     * 
+     * @return The policy that you specified.
+     */
+
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    /**
+     * <p>
+     * The policy that you specified.
+     * </p>
+     * 
+     * @param policy
+     *        The policy that you specified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutSinkPolicyResult withPolicy(String policy) {
+        setPolicy(policy);
+        return this;
+    }
 
     /**
      * <p>
@@ -123,46 +163,6 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p>
-     * The policy that you specified.
-     * </p>
-     * 
-     * @param policy
-     *        The policy that you specified.
-     */
-
-    public void setPolicy(String policy) {
-        this.policy = policy;
-    }
-
-    /**
-     * <p>
-     * The policy that you specified.
-     * </p>
-     * 
-     * @return The policy that you specified.
-     */
-
-    public String getPolicy() {
-        return this.policy;
-    }
-
-    /**
-     * <p>
-     * The policy that you specified.
-     * </p>
-     * 
-     * @param policy
-     *        The policy that you specified.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PutSinkPolicyResult withPolicy(String policy) {
-        setPolicy(policy);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -174,12 +174,12 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getPolicy() != null)
+            sb.append("Policy: ").append(getPolicy()).append(",");
         if (getSinkArn() != null)
             sb.append("SinkArn: ").append(getSinkArn()).append(",");
         if (getSinkId() != null)
-            sb.append("SinkId: ").append(getSinkId()).append(",");
-        if (getPolicy() != null)
-            sb.append("Policy: ").append(getPolicy());
+            sb.append("SinkId: ").append(getSinkId());
         sb.append("}");
         return sb.toString();
     }
@@ -194,6 +194,10 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
         if (obj instanceof PutSinkPolicyResult == false)
             return false;
         PutSinkPolicyResult other = (PutSinkPolicyResult) obj;
+        if (other.getPolicy() == null ^ this.getPolicy() == null)
+            return false;
+        if (other.getPolicy() != null && other.getPolicy().equals(this.getPolicy()) == false)
+            return false;
         if (other.getSinkArn() == null ^ this.getSinkArn() == null)
             return false;
         if (other.getSinkArn() != null && other.getSinkArn().equals(this.getSinkArn()) == false)
@@ -201,10 +205,6 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
         if (other.getSinkId() == null ^ this.getSinkId() == null)
             return false;
         if (other.getSinkId() != null && other.getSinkId().equals(this.getSinkId()) == false)
-            return false;
-        if (other.getPolicy() == null ^ this.getPolicy() == null)
-            return false;
-        if (other.getPolicy() != null && other.getPolicy().equals(this.getPolicy()) == false)
             return false;
         return true;
     }
@@ -214,9 +214,9 @@ public class PutSinkPolicyResult extends com.amazonaws.AmazonWebServiceResult<co
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getPolicy() == null) ? 0 : getPolicy().hashCode());
         hashCode = prime * hashCode + ((getSinkArn() == null) ? 0 : getSinkArn().hashCode());
         hashCode = prime * hashCode + ((getSinkId() == null) ? 0 : getSinkId().hashCode());
-        hashCode = prime * hashCode + ((getPolicy() == null) ? 0 : getPolicy().hashCode());
         return hashCode;
     }
 

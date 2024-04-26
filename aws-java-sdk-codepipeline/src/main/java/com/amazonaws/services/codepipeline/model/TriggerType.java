@@ -26,7 +26,9 @@ public enum TriggerType {
     Webhook("Webhook"),
     CloudWatchEvent("CloudWatchEvent"),
     PutActionRevision("PutActionRevision"),
-    WebhookV2("WebhookV2");
+    WebhookV2("WebhookV2"),
+    ManualRollback("ManualRollback"),
+    AutomatedRollback("AutomatedRollback");
 
     private String value;
 

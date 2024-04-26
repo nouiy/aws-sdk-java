@@ -230,6 +230,11 @@ public class DBEngineVersionStaxUnmarshaller implements Unmarshaller<DBEngineVer
                     continue;
                 }
 
+                if (context.testExpression("SupportsLimitlessDatabase", targetDepth)) {
+                    dBEngineVersion.setSupportsLimitlessDatabase(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SupportsCertificateRotationWithoutRestart", targetDepth)) {
                     dBEngineVersion.setSupportsCertificateRotationWithoutRestart(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

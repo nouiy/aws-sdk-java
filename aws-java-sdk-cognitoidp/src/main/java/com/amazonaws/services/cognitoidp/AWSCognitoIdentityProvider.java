@@ -4730,6 +4730,8 @@ public interface AWSCognitoIdentityProvider {
      *         This exception is thrown when the user has made too many requests for a given operation.
      * @throws InternalErrorException
      *         This exception is thrown when Amazon Cognito encounters an internal error.
+     * @throws LimitExceededException
+     *         This exception is thrown when a user exceeds the limit for a requested Amazon Web Services resource.
      * @throws InvalidSmsRoleAccessPolicyException
      *         This exception is returned when the role provided for SMS configuration doesn't have permission to
      *         publish using Amazon SNS.

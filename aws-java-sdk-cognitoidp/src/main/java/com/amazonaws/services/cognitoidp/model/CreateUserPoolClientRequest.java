@@ -264,7 +264,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<String> logoutURLs;
     /**
      * <p>
-     * The default redirect URI. Must be in the <code>CallbackURLs</code> list.
+     * The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     * authentication requests. Must be in the <code>CallbackURLs</code> list.
      * </p>
      * <p>
      * A redirect URI must:
@@ -287,7 +288,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     * >Default redirect URI</a>.
      * </p>
      * <p>
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
@@ -2443,7 +2446,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The default redirect URI. Must be in the <code>CallbackURLs</code> list.
+     * The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     * authentication requests. Must be in the <code>CallbackURLs</code> list.
      * </p>
      * <p>
      * A redirect URI must:
@@ -2466,7 +2470,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     * >Default redirect URI</a>.
      * </p>
      * <p>
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
@@ -2476,7 +2482,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param defaultRedirectURI
-     *        The default redirect URI. Must be in the <code>CallbackURLs</code> list.</p>
+     *        The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     *        authentication requests. Must be in the <code>CallbackURLs</code> list.</p>
      *        <p>
      *        A redirect URI must:
      *        </p>
@@ -2498,7 +2505,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        </ul>
      *        <p>
-     *        See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     *        >Default redirect URI</a>.
      *        </p>
      *        <p>
      *        Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
@@ -2513,7 +2522,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The default redirect URI. Must be in the <code>CallbackURLs</code> list.
+     * The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     * authentication requests. Must be in the <code>CallbackURLs</code> list.
      * </p>
      * <p>
      * A redirect URI must:
@@ -2536,7 +2546,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     * >Default redirect URI</a>.
      * </p>
      * <p>
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
@@ -2545,7 +2557,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * App callback URLs such as myapp://example are also supported.
      * </p>
      * 
-     * @return The default redirect URI. Must be in the <code>CallbackURLs</code> list.</p>
+     * @return The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     *         authentication requests. Must be in the <code>CallbackURLs</code> list.</p>
      *         <p>
      *         A redirect URI must:
      *         </p>
@@ -2567,7 +2580,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      *         </li>
      *         </ul>
      *         <p>
-     *         See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     *         >Default redirect URI</a>.
      *         </p>
      *         <p>
      *         Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
@@ -2582,7 +2597,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The default redirect URI. Must be in the <code>CallbackURLs</code> list.
+     * The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     * authentication requests. Must be in the <code>CallbackURLs</code> list.
      * </p>
      * <p>
      * A redirect URI must:
@@ -2605,7 +2621,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     * >Default redirect URI</a>.
      * </p>
      * <p>
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
@@ -2615,7 +2633,8 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param defaultRedirectURI
-     *        The default redirect URI. Must be in the <code>CallbackURLs</code> list.</p>
+     *        The default redirect URI. In app clients with one assigned IdP, replaces <code>redirect_uri</code> in
+     *        authentication requests. Must be in the <code>CallbackURLs</code> list.</p>
      *        <p>
      *        A redirect URI must:
      *        </p>
@@ -2637,7 +2656,9 @@ public class CreateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        </ul>
      *        <p>
-     *        See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about"
+     *        >Default redirect URI</a>.
      *        </p>
      *        <p>
      *        Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.

@@ -34,6 +34,8 @@ public class StageDeclarationMarshaller {
             .marshallLocationName("blockers").build();
     private static final MarshallingInfo<List> ACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("actions").build();
+    private static final MarshallingInfo<StructuredPojo> ONFAILURE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("onFailure").build();
 
     private static final StageDeclarationMarshaller instance = new StageDeclarationMarshaller();
 
@@ -54,6 +56,7 @@ public class StageDeclarationMarshaller {
             protocolMarshaller.marshall(stageDeclaration.getName(), NAME_BINDING);
             protocolMarshaller.marshall(stageDeclaration.getBlockers(), BLOCKERS_BINDING);
             protocolMarshaller.marshall(stageDeclaration.getActions(), ACTIONS_BINDING);
+            protocolMarshaller.marshall(stageDeclaration.getOnFailure(), ONFAILURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

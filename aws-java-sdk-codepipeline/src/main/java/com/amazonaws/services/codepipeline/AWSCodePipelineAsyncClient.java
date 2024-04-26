@@ -1570,6 +1570,39 @@ public class AWSCodePipelineAsyncClient extends AWSCodePipelineClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<RollbackStageResult> rollbackStageAsync(RollbackStageRequest request) {
+
+        return rollbackStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RollbackStageResult> rollbackStageAsync(final RollbackStageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RollbackStageRequest, RollbackStageResult> asyncHandler) {
+        final RollbackStageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RollbackStageResult>() {
+            @Override
+            public RollbackStageResult call() throws Exception {
+                RollbackStageResult result = null;
+
+                try {
+                    result = executeRollbackStage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartPipelineExecutionResult> startPipelineExecutionAsync(StartPipelineExecutionRequest request) {
 
         return startPipelineExecutionAsync(request, null);

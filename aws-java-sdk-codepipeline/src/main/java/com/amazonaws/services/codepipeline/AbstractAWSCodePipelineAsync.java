@@ -459,6 +459,19 @@ public class AbstractAWSCodePipelineAsync extends AbstractAWSCodePipeline implem
     }
 
     @Override
+    public java.util.concurrent.Future<RollbackStageResult> rollbackStageAsync(RollbackStageRequest request) {
+
+        return rollbackStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RollbackStageResult> rollbackStageAsync(RollbackStageRequest request,
+            com.amazonaws.handlers.AsyncHandler<RollbackStageRequest, RollbackStageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartPipelineExecutionResult> startPipelineExecutionAsync(StartPipelineExecutionRequest request) {
 
         return startPipelineExecutionAsync(request, null);

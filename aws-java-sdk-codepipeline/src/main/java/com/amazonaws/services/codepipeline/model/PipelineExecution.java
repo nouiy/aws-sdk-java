@@ -123,6 +123,18 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String executionMode;
+    /**
+     * <p>
+     * The type of the pipeline execution.
+     * </p>
+     */
+    private String executionType;
+    /**
+     * <p>
+     * The metadata about the execution pertaining to stage rollback.
+     * </p>
+     */
+    private PipelineRollbackMetadata rollbackMetadata;
 
     /**
      * <p>
@@ -1048,6 +1060,119 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The type of the pipeline execution.
+     * </p>
+     * 
+     * @param executionType
+     *        The type of the pipeline execution.
+     * @see ExecutionType
+     */
+
+    public void setExecutionType(String executionType) {
+        this.executionType = executionType;
+    }
+
+    /**
+     * <p>
+     * The type of the pipeline execution.
+     * </p>
+     * 
+     * @return The type of the pipeline execution.
+     * @see ExecutionType
+     */
+
+    public String getExecutionType() {
+        return this.executionType;
+    }
+
+    /**
+     * <p>
+     * The type of the pipeline execution.
+     * </p>
+     * 
+     * @param executionType
+     *        The type of the pipeline execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionType
+     */
+
+    public PipelineExecution withExecutionType(String executionType) {
+        setExecutionType(executionType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the pipeline execution.
+     * </p>
+     * 
+     * @param executionType
+     *        The type of the pipeline execution.
+     * @see ExecutionType
+     */
+
+    public void setExecutionType(ExecutionType executionType) {
+        withExecutionType(executionType);
+    }
+
+    /**
+     * <p>
+     * The type of the pipeline execution.
+     * </p>
+     * 
+     * @param executionType
+     *        The type of the pipeline execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionType
+     */
+
+    public PipelineExecution withExecutionType(ExecutionType executionType) {
+        this.executionType = executionType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The metadata about the execution pertaining to stage rollback.
+     * </p>
+     * 
+     * @param rollbackMetadata
+     *        The metadata about the execution pertaining to stage rollback.
+     */
+
+    public void setRollbackMetadata(PipelineRollbackMetadata rollbackMetadata) {
+        this.rollbackMetadata = rollbackMetadata;
+    }
+
+    /**
+     * <p>
+     * The metadata about the execution pertaining to stage rollback.
+     * </p>
+     * 
+     * @return The metadata about the execution pertaining to stage rollback.
+     */
+
+    public PipelineRollbackMetadata getRollbackMetadata() {
+        return this.rollbackMetadata;
+    }
+
+    /**
+     * <p>
+     * The metadata about the execution pertaining to stage rollback.
+     * </p>
+     * 
+     * @param rollbackMetadata
+     *        The metadata about the execution pertaining to stage rollback.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecution withRollbackMetadata(PipelineRollbackMetadata rollbackMetadata) {
+        setRollbackMetadata(rollbackMetadata);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1076,7 +1201,11 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
         if (getTrigger() != null)
             sb.append("Trigger: ").append(getTrigger()).append(",");
         if (getExecutionMode() != null)
-            sb.append("ExecutionMode: ").append(getExecutionMode());
+            sb.append("ExecutionMode: ").append(getExecutionMode()).append(",");
+        if (getExecutionType() != null)
+            sb.append("ExecutionType: ").append(getExecutionType()).append(",");
+        if (getRollbackMetadata() != null)
+            sb.append("RollbackMetadata: ").append(getRollbackMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -1127,6 +1256,14 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getExecutionMode() != null && other.getExecutionMode().equals(this.getExecutionMode()) == false)
             return false;
+        if (other.getExecutionType() == null ^ this.getExecutionType() == null)
+            return false;
+        if (other.getExecutionType() != null && other.getExecutionType().equals(this.getExecutionType()) == false)
+            return false;
+        if (other.getRollbackMetadata() == null ^ this.getRollbackMetadata() == null)
+            return false;
+        if (other.getRollbackMetadata() != null && other.getRollbackMetadata().equals(this.getRollbackMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -1144,6 +1281,8 @@ public class PipelineExecution implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getVariables() == null) ? 0 : getVariables().hashCode());
         hashCode = prime * hashCode + ((getTrigger() == null) ? 0 : getTrigger().hashCode());
         hashCode = prime * hashCode + ((getExecutionMode() == null) ? 0 : getExecutionMode().hashCode());
+        hashCode = prime * hashCode + ((getExecutionType() == null) ? 0 : getExecutionType().hashCode());
+        hashCode = prime * hashCode + ((getRollbackMetadata() == null) ? 0 : getRollbackMetadata().hashCode());
         return hashCode;
     }
 

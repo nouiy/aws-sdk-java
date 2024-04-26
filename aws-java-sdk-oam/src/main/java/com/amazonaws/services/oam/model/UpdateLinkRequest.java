@@ -33,6 +33,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String identifier;
     /**
      * <p>
+     * Use this structure to filter which metric namespaces and which log groups are to be shared from the source
+     * account to the monitoring account.
+     * </p>
+     */
+    private LinkConfiguration linkConfiguration;
+    /**
+     * <p>
      * An array of strings that define which types of data that the source account will send to the monitoring account.
      * </p>
      * <p>
@@ -78,6 +85,52 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public UpdateLinkRequest withIdentifier(String identifier) {
         setIdentifier(identifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this structure to filter which metric namespaces and which log groups are to be shared from the source
+     * account to the monitoring account.
+     * </p>
+     * 
+     * @param linkConfiguration
+     *        Use this structure to filter which metric namespaces and which log groups are to be shared from the source
+     *        account to the monitoring account.
+     */
+
+    public void setLinkConfiguration(LinkConfiguration linkConfiguration) {
+        this.linkConfiguration = linkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Use this structure to filter which metric namespaces and which log groups are to be shared from the source
+     * account to the monitoring account.
+     * </p>
+     * 
+     * @return Use this structure to filter which metric namespaces and which log groups are to be shared from the
+     *         source account to the monitoring account.
+     */
+
+    public LinkConfiguration getLinkConfiguration() {
+        return this.linkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Use this structure to filter which metric namespaces and which log groups are to be shared from the source
+     * account to the monitoring account.
+     * </p>
+     * 
+     * @param linkConfiguration
+     *        Use this structure to filter which metric namespaces and which log groups are to be shared from the source
+     *        account to the monitoring account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateLinkRequest withLinkConfiguration(LinkConfiguration linkConfiguration) {
+        setLinkConfiguration(linkConfiguration);
         return this;
     }
 
@@ -223,6 +276,8 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
         sb.append("{");
         if (getIdentifier() != null)
             sb.append("Identifier: ").append(getIdentifier()).append(",");
+        if (getLinkConfiguration() != null)
+            sb.append("LinkConfiguration: ").append(getLinkConfiguration()).append(",");
         if (getResourceTypes() != null)
             sb.append("ResourceTypes: ").append(getResourceTypes());
         sb.append("}");
@@ -243,6 +298,10 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
             return false;
+        if (other.getLinkConfiguration() == null ^ this.getLinkConfiguration() == null)
+            return false;
+        if (other.getLinkConfiguration() != null && other.getLinkConfiguration().equals(this.getLinkConfiguration()) == false)
+            return false;
         if (other.getResourceTypes() == null ^ this.getResourceTypes() == null)
             return false;
         if (other.getResourceTypes() != null && other.getResourceTypes().equals(this.getResourceTypes()) == false)
@@ -256,6 +315,7 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getLinkConfiguration() == null) ? 0 : getLinkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getResourceTypes() == null) ? 0 : getResourceTypes().hashCode());
         return hashCode;
     }

@@ -54,15 +54,15 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     private String clientSecret;
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was modified.
+     * The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      */
     private java.util.Date lastModifiedDate;
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      */
     private java.util.Date creationDate;
@@ -634,13 +634,14 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was modified.
+     * The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
      * @param lastModifiedDate
-     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *        format, when the item was modified.
+     *        The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time
+     *        format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *        <code>Date</code> object.
      */
 
     public void setLastModifiedDate(java.util.Date lastModifiedDate) {
@@ -649,12 +650,13 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was modified.
+     * The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
-     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *         format, when the item was modified.
+     * @return The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time
+     *         format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *         <code>Date</code> object.
      */
 
     public java.util.Date getLastModifiedDate() {
@@ -663,13 +665,14 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was modified.
+     * The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
      * @param lastModifiedDate
-     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *        format, when the item was modified.
+     *        The date and time when the item was modified. Amazon Cognito returns this timestamp in UNIX epoch time
+     *        format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *        <code>Date</code> object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -680,13 +683,14 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
      * @param creationDate
-     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *        format, when the item was created.
+     *        The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time
+     *        format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *        <code>Date</code> object.
      */
 
     public void setCreationDate(java.util.Date creationDate) {
@@ -695,12 +699,13 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
-     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *         format, when the item was created.
+     * @return The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time
+     *         format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *         <code>Date</code> object.
      */
 
     public java.util.Date getCreationDate() {
@@ -709,13 +714,14 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
      * @param creationDate
-     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *        format, when the item was created.
+     *        The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time
+     *        format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *        <code>Date</code> object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

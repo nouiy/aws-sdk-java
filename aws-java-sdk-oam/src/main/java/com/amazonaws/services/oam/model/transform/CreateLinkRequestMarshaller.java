@@ -31,6 +31,8 @@ public class CreateLinkRequestMarshaller {
 
     private static final MarshallingInfo<String> LABELTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LabelTemplate").build();
+    private static final MarshallingInfo<StructuredPojo> LINKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LinkConfiguration").build();
     private static final MarshallingInfo<List> RESOURCETYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ResourceTypes").build();
     private static final MarshallingInfo<String> SINKIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -55,6 +57,7 @@ public class CreateLinkRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createLinkRequest.getLabelTemplate(), LABELTEMPLATE_BINDING);
+            protocolMarshaller.marshall(createLinkRequest.getLinkConfiguration(), LINKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createLinkRequest.getResourceTypes(), RESOURCETYPES_BINDING);
             protocolMarshaller.marshall(createLinkRequest.getSinkIdentifier(), SINKIDENTIFIER_BINDING);
             protocolMarshaller.marshall(createLinkRequest.getTags(), TAGS_BINDING);

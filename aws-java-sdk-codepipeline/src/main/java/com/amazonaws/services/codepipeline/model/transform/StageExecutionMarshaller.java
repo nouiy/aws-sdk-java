@@ -31,6 +31,8 @@ public class StageExecutionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipelineExecutionId").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
 
     private static final StageExecutionMarshaller instance = new StageExecutionMarshaller();
 
@@ -50,6 +52,7 @@ public class StageExecutionMarshaller {
         try {
             protocolMarshaller.marshall(stageExecution.getPipelineExecutionId(), PIPELINEEXECUTIONID_BINDING);
             protocolMarshaller.marshall(stageExecution.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(stageExecution.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

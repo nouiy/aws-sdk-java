@@ -27,12 +27,6 @@ public class PutSinkPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the sink to attach this policy to.
-     * </p>
-     */
-    private String sinkIdentifier;
-    /**
-     * <p>
      * The JSON policy to use. If you are updating an existing policy, the entire existing policy is replaced by what
      * you specify here.
      * </p>
@@ -44,46 +38,12 @@ public class PutSinkPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String policy;
-
     /**
      * <p>
      * The ARN of the sink to attach this policy to.
      * </p>
-     * 
-     * @param sinkIdentifier
-     *        The ARN of the sink to attach this policy to.
      */
-
-    public void setSinkIdentifier(String sinkIdentifier) {
-        this.sinkIdentifier = sinkIdentifier;
-    }
-
-    /**
-     * <p>
-     * The ARN of the sink to attach this policy to.
-     * </p>
-     * 
-     * @return The ARN of the sink to attach this policy to.
-     */
-
-    public String getSinkIdentifier() {
-        return this.sinkIdentifier;
-    }
-
-    /**
-     * <p>
-     * The ARN of the sink to attach this policy to.
-     * </p>
-     * 
-     * @param sinkIdentifier
-     *        The ARN of the sink to attach this policy to.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PutSinkPolicyRequest withSinkIdentifier(String sinkIdentifier) {
-        setSinkIdentifier(sinkIdentifier);
-        return this;
-    }
+    private String sinkIdentifier;
 
     /**
      * <p>
@@ -165,6 +125,46 @@ public class PutSinkPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The ARN of the sink to attach this policy to.
+     * </p>
+     * 
+     * @param sinkIdentifier
+     *        The ARN of the sink to attach this policy to.
+     */
+
+    public void setSinkIdentifier(String sinkIdentifier) {
+        this.sinkIdentifier = sinkIdentifier;
+    }
+
+    /**
+     * <p>
+     * The ARN of the sink to attach this policy to.
+     * </p>
+     * 
+     * @return The ARN of the sink to attach this policy to.
+     */
+
+    public String getSinkIdentifier() {
+        return this.sinkIdentifier;
+    }
+
+    /**
+     * <p>
+     * The ARN of the sink to attach this policy to.
+     * </p>
+     * 
+     * @param sinkIdentifier
+     *        The ARN of the sink to attach this policy to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutSinkPolicyRequest withSinkIdentifier(String sinkIdentifier) {
+        setSinkIdentifier(sinkIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -176,10 +176,10 @@ public class PutSinkPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSinkIdentifier() != null)
-            sb.append("SinkIdentifier: ").append(getSinkIdentifier()).append(",");
         if (getPolicy() != null)
-            sb.append("Policy: ").append(getPolicy());
+            sb.append("Policy: ").append(getPolicy()).append(",");
+        if (getSinkIdentifier() != null)
+            sb.append("SinkIdentifier: ").append(getSinkIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -194,13 +194,13 @@ public class PutSinkPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof PutSinkPolicyRequest == false)
             return false;
         PutSinkPolicyRequest other = (PutSinkPolicyRequest) obj;
-        if (other.getSinkIdentifier() == null ^ this.getSinkIdentifier() == null)
-            return false;
-        if (other.getSinkIdentifier() != null && other.getSinkIdentifier().equals(this.getSinkIdentifier()) == false)
-            return false;
         if (other.getPolicy() == null ^ this.getPolicy() == null)
             return false;
         if (other.getPolicy() != null && other.getPolicy().equals(this.getPolicy()) == false)
+            return false;
+        if (other.getSinkIdentifier() == null ^ this.getSinkIdentifier() == null)
+            return false;
+        if (other.getSinkIdentifier() != null && other.getSinkIdentifier().equals(this.getSinkIdentifier()) == false)
             return false;
         return true;
     }
@@ -210,8 +210,8 @@ public class PutSinkPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSinkIdentifier() == null) ? 0 : getSinkIdentifier().hashCode());
         hashCode = prime * hashCode + ((getPolicy() == null) ? 0 : getPolicy().hashCode());
+        hashCode = prime * hashCode + ((getSinkIdentifier() == null) ? 0 : getSinkIdentifier().hashCode());
         return hashCode;
     }
 

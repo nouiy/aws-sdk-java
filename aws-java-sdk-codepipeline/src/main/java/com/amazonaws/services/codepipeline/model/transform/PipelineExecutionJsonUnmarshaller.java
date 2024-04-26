@@ -88,6 +88,14 @@ public class PipelineExecutionJsonUnmarshaller implements Unmarshaller<PipelineE
                     context.nextToken();
                     pipelineExecution.setExecutionMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("executionType", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecution.setExecutionType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("rollbackMetadata", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecution.setRollbackMetadata(PipelineRollbackMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

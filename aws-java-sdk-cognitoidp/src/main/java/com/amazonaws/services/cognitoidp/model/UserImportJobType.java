@@ -54,8 +54,8 @@ public class UserImportJobType implements Serializable, Cloneable, StructuredPoj
     private String preSignedUrl;
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      */
     private java.util.Date creationDate;
@@ -314,13 +314,14 @@ public class UserImportJobType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
      * @param creationDate
-     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *        format, when the item was created.
+     *        The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time
+     *        format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *        <code>Date</code> object.
      */
 
     public void setCreationDate(java.util.Date creationDate) {
@@ -329,12 +330,13 @@ public class UserImportJobType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
-     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *         format, when the item was created.
+     * @return The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time
+     *         format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *         <code>Date</code> object.
      */
 
     public java.util.Date getCreationDate() {
@@ -343,13 +345,14 @@ public class UserImportJobType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
-     * the item was created.
+     * The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time format.
+     * Your SDK might render the output in a human-readable format like ISO 8601 or a Java <code>Date</code> object.
      * </p>
      * 
      * @param creationDate
-     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
-     *        format, when the item was created.
+     *        The date and time when the item was created. Amazon Cognito returns this timestamp in UNIX epoch time
+     *        format. Your SDK might render the output in a human-readable format like ISO 8601 or a Java
+     *        <code>Date</code> object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -50,6 +50,13 @@ public class CreateLinkResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String labelTemplate;
     /**
      * <p>
+     * This structure includes filters that specify which metric namespaces and which log groups are shared from the
+     * source account to the monitoring account.
+     * </p>
+     */
+    private LinkConfiguration linkConfiguration;
+    /**
+     * <p>
      * The resource types supported by this link.
      * </p>
      */
@@ -230,6 +237,52 @@ public class CreateLinkResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     public CreateLinkResult withLabelTemplate(String labelTemplate) {
         setLabelTemplate(labelTemplate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This structure includes filters that specify which metric namespaces and which log groups are shared from the
+     * source account to the monitoring account.
+     * </p>
+     * 
+     * @param linkConfiguration
+     *        This structure includes filters that specify which metric namespaces and which log groups are shared from
+     *        the source account to the monitoring account.
+     */
+
+    public void setLinkConfiguration(LinkConfiguration linkConfiguration) {
+        this.linkConfiguration = linkConfiguration;
+    }
+
+    /**
+     * <p>
+     * This structure includes filters that specify which metric namespaces and which log groups are shared from the
+     * source account to the monitoring account.
+     * </p>
+     * 
+     * @return This structure includes filters that specify which metric namespaces and which log groups are shared from
+     *         the source account to the monitoring account.
+     */
+
+    public LinkConfiguration getLinkConfiguration() {
+        return this.linkConfiguration;
+    }
+
+    /**
+     * <p>
+     * This structure includes filters that specify which metric namespaces and which log groups are shared from the
+     * source account to the monitoring account.
+     * </p>
+     * 
+     * @param linkConfiguration
+     *        This structure includes filters that specify which metric namespaces and which log groups are shared from
+     *        the source account to the monitoring account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLinkResult withLinkConfiguration(LinkConfiguration linkConfiguration) {
+        setLinkConfiguration(linkConfiguration);
         return this;
     }
 
@@ -431,6 +484,8 @@ public class CreateLinkResult extends com.amazonaws.AmazonWebServiceResult<com.a
             sb.append("Label: ").append(getLabel()).append(",");
         if (getLabelTemplate() != null)
             sb.append("LabelTemplate: ").append(getLabelTemplate()).append(",");
+        if (getLinkConfiguration() != null)
+            sb.append("LinkConfiguration: ").append(getLinkConfiguration()).append(",");
         if (getResourceTypes() != null)
             sb.append("ResourceTypes: ").append(getResourceTypes()).append(",");
         if (getSinkArn() != null)
@@ -467,6 +522,10 @@ public class CreateLinkResult extends com.amazonaws.AmazonWebServiceResult<com.a
             return false;
         if (other.getLabelTemplate() != null && other.getLabelTemplate().equals(this.getLabelTemplate()) == false)
             return false;
+        if (other.getLinkConfiguration() == null ^ this.getLinkConfiguration() == null)
+            return false;
+        if (other.getLinkConfiguration() != null && other.getLinkConfiguration().equals(this.getLinkConfiguration()) == false)
+            return false;
         if (other.getResourceTypes() == null ^ this.getResourceTypes() == null)
             return false;
         if (other.getResourceTypes() != null && other.getResourceTypes().equals(this.getResourceTypes()) == false)
@@ -491,6 +550,7 @@ public class CreateLinkResult extends com.amazonaws.AmazonWebServiceResult<com.a
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         hashCode = prime * hashCode + ((getLabelTemplate() == null) ? 0 : getLabelTemplate().hashCode());
+        hashCode = prime * hashCode + ((getLinkConfiguration() == null) ? 0 : getLinkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getResourceTypes() == null) ? 0 : getResourceTypes().hashCode());
         hashCode = prime * hashCode + ((getSinkArn() == null) ? 0 : getSinkArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

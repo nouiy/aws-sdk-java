@@ -383,6 +383,9 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("PipelineNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.PipelineNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("PipelineExecutionOutdatedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codepipeline.model.transform.PipelineExecutionOutdatedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("StageNotRetryableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.StageNotRetryableExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -401,6 +404,9 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidBlockerDeclarationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.InvalidBlockerDeclarationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnableToRollbackStageException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codepipeline.model.transform.UnableToRollbackStageExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidNonceException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.InvalidNonceExceptionUnmarshaller.getInstance()))
@@ -2777,6 +2783,79 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<RetryStageExecutionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RetryStageExecutionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Rolls back a stage execution.
+     * </p>
+     * 
+     * @param rollbackStageRequest
+     * @return Result of the RollbackStage operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws ConflictException
+     *         Your request cannot be handled because the pipeline is busy handling ongoing activities. Try again later.
+     * @throws PipelineNotFoundException
+     *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws PipelineExecutionNotFoundException
+     *         The pipeline execution was specified in an invalid format or cannot be found, or an execution ID does not
+     *         belong to the specified pipeline.
+     * @throws PipelineExecutionOutdatedException
+     *         The specified pipeline execution is outdated and cannot be used as a target pipeline execution for
+     *         rollback.
+     * @throws StageNotFoundException
+     *         The stage was specified in an invalid format or cannot be found.
+     * @throws UnableToRollbackStageException
+     *         Unable to roll back the stage. The cause might be if the pipeline version has changed since the target
+     *         pipeline execution was deployed, the stage is currently running, or an incorrect target pipeline
+     *         execution ID was provided.
+     * @sample AWSCodePipeline.RollbackStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RollbackStage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public RollbackStageResult rollbackStage(RollbackStageRequest request) {
+        request = beforeClientExecution(request);
+        return executeRollbackStage(request);
+    }
+
+    @SdkInternalApi
+    final RollbackStageResult executeRollbackStage(RollbackStageRequest rollbackStageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(rollbackStageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RollbackStageRequest> request = null;
+        Response<RollbackStageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RollbackStageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(rollbackStageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CodePipeline");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RollbackStage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RollbackStageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RollbackStageResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

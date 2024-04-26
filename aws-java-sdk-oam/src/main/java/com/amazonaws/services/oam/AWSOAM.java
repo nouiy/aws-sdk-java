@@ -55,7 +55,10 @@ public interface AWSOAM {
 
     /**
      * <p>
-     * Creates a link between a source account and a sink that you have created in a monitoring account.
+     * Creates a link between a source account and a sink that you have created in a monitoring account. After the link
+     * is created, data is sent from the source account to the monitoring account. When you create a link, you can
+     * optionally specify filters that specify which metric namespaces and which log groups are shared from the source
+     * account to the monitoring account.
      * </p>
      * <p>
      * Before you create a link, you must create a sink in the monitoring account and create a sink policy in that
@@ -104,7 +107,7 @@ public interface AWSOAM {
      * href="https://docs.aws.amazon.com/OAM/latest/APIReference/API_PutSinkPolicy.html">PutSinkPolicy</a>.
      * </p>
      * <p>
-     * Each account can contain one sink. If you delete a sink, you can then create a new one in that account.
+     * Each account can contain one sink per Region. If you delete a sink, you can then create a new one in that Region.
      * </p>
      * 
      * @param createSinkRequest
@@ -455,6 +458,10 @@ public interface AWSOAM {
      * <p>
      * Use this operation to change what types of data are shared from a source account to its linked monitoring account
      * sink. You can't change the sink or change the monitoring account with this operation.
+     * </p>
+     * <p>
+     * When you update a link, you can optionally specify filters that specify which metric namespaces and which log
+     * groups are shared from the source account to the monitoring account.
      * </p>
      * <p>
      * To update the list of tags associated with the sink, use <a

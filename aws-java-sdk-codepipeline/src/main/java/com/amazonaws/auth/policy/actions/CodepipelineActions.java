@@ -91,6 +91,8 @@ public enum CodepipelineActions implements Action {
     RegisterWebhookWithThirdParty("codepipeline:RegisterWebhookWithThirdParty"),
     /** Action for the RetryStageExecution operation. */
     RetryStageExecution("codepipeline:RetryStageExecution"),
+    /** Action for the RollbackStage operation. */
+    RollbackStage("codepipeline:RollbackStage"),
     /** Action for the StartPipelineExecution operation. */
     StartPipelineExecution("codepipeline:StartPipelineExecution"),
     /** Action for the StopPipelineExecution operation. */

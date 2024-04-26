@@ -1086,6 +1086,37 @@ public interface AWSCodePipeline {
 
     /**
      * <p>
+     * Rolls back a stage execution.
+     * </p>
+     * 
+     * @param rollbackStageRequest
+     * @return Result of the RollbackStage operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws ConflictException
+     *         Your request cannot be handled because the pipeline is busy handling ongoing activities. Try again later.
+     * @throws PipelineNotFoundException
+     *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws PipelineExecutionNotFoundException
+     *         The pipeline execution was specified in an invalid format or cannot be found, or an execution ID does not
+     *         belong to the specified pipeline.
+     * @throws PipelineExecutionOutdatedException
+     *         The specified pipeline execution is outdated and cannot be used as a target pipeline execution for
+     *         rollback.
+     * @throws StageNotFoundException
+     *         The stage was specified in an invalid format or cannot be found.
+     * @throws UnableToRollbackStageException
+     *         Unable to roll back the stage. The cause might be if the pipeline version has changed since the target
+     *         pipeline execution was deployed, the stage is currently running, or an incorrect target pipeline
+     *         execution ID was provided.
+     * @sample AWSCodePipeline.RollbackStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RollbackStage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    RollbackStageResult rollbackStage(RollbackStageRequest rollbackStageRequest);
+
+    /**
+     * <p>
      * Starts the specified pipeline. Specifically, it begins processing the latest commit to the source location
      * specified as part of the pipeline.
      * </p>

@@ -95,6 +95,11 @@ public class UpgradeTargetStaxUnmarshaller implements Unmarshaller<UpgradeTarget
                     continue;
                 }
 
+                if (context.testExpression("SupportsLimitlessDatabase", targetDepth)) {
+                    upgradeTarget.setSupportsLimitlessDatabase(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SupportsLocalWriteForwarding", targetDepth)) {
                     upgradeTarget.setSupportsLocalWriteForwarding(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

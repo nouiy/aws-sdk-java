@@ -231,6 +231,12 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
     private String customDBEngineVersionManifest;
     /**
      * <p>
+     * Indicates whether the DB engine version supports Aurora Limitless Database.
+     * </p>
+     */
+    private Boolean supportsLimitlessDatabase;
+    /**
+     * <p>
      * Indicates whether the engine version supports rotating the server certificate without rebooting the DB instance.
      * </p>
      */
@@ -1975,6 +1981,58 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * Indicates whether the DB engine version supports Aurora Limitless Database.
+     * </p>
+     * 
+     * @param supportsLimitlessDatabase
+     *        Indicates whether the DB engine version supports Aurora Limitless Database.
+     */
+
+    public void setSupportsLimitlessDatabase(Boolean supportsLimitlessDatabase) {
+        this.supportsLimitlessDatabase = supportsLimitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora Limitless Database.
+     * </p>
+     * 
+     * @return Indicates whether the DB engine version supports Aurora Limitless Database.
+     */
+
+    public Boolean getSupportsLimitlessDatabase() {
+        return this.supportsLimitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora Limitless Database.
+     * </p>
+     * 
+     * @param supportsLimitlessDatabase
+     *        Indicates whether the DB engine version supports Aurora Limitless Database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyCustomDBEngineVersionResult withSupportsLimitlessDatabase(Boolean supportsLimitlessDatabase) {
+        setSupportsLimitlessDatabase(supportsLimitlessDatabase);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora Limitless Database.
+     * </p>
+     * 
+     * @return Indicates whether the DB engine version supports Aurora Limitless Database.
+     */
+
+    public Boolean isSupportsLimitlessDatabase() {
+        return this.supportsLimitlessDatabase;
+    }
+
+    /**
+     * <p>
      * Indicates whether the engine version supports rotating the server certificate without rebooting the DB instance.
      * </p>
      * 
@@ -2360,6 +2418,8 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
             sb.append("SupportsBabelfish: ").append(getSupportsBabelfish()).append(",");
         if (getCustomDBEngineVersionManifest() != null)
             sb.append("CustomDBEngineVersionManifest: ").append(getCustomDBEngineVersionManifest()).append(",");
+        if (getSupportsLimitlessDatabase() != null)
+            sb.append("SupportsLimitlessDatabase: ").append(getSupportsLimitlessDatabase()).append(",");
         if (getSupportsCertificateRotationWithoutRestart() != null)
             sb.append("SupportsCertificateRotationWithoutRestart: ").append(getSupportsCertificateRotationWithoutRestart()).append(",");
         if (getSupportedCACertificateIdentifiers() != null)
@@ -2502,6 +2562,10 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
         if (other.getCustomDBEngineVersionManifest() != null
                 && other.getCustomDBEngineVersionManifest().equals(this.getCustomDBEngineVersionManifest()) == false)
             return false;
+        if (other.getSupportsLimitlessDatabase() == null ^ this.getSupportsLimitlessDatabase() == null)
+            return false;
+        if (other.getSupportsLimitlessDatabase() != null && other.getSupportsLimitlessDatabase().equals(this.getSupportsLimitlessDatabase()) == false)
+            return false;
         if (other.getSupportsCertificateRotationWithoutRestart() == null ^ this.getSupportsCertificateRotationWithoutRestart() == null)
             return false;
         if (other.getSupportsCertificateRotationWithoutRestart() != null
@@ -2557,6 +2621,7 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
         hashCode = prime * hashCode + ((getSupportsBabelfish() == null) ? 0 : getSupportsBabelfish().hashCode());
         hashCode = prime * hashCode + ((getCustomDBEngineVersionManifest() == null) ? 0 : getCustomDBEngineVersionManifest().hashCode());
+        hashCode = prime * hashCode + ((getSupportsLimitlessDatabase() == null) ? 0 : getSupportsLimitlessDatabase().hashCode());
         hashCode = prime * hashCode
                 + ((getSupportsCertificateRotationWithoutRestart() == null) ? 0 : getSupportsCertificateRotationWithoutRestart().hashCode());
         hashCode = prime * hashCode + ((getSupportedCACertificateIdentifiers() == null) ? 0 : getSupportedCACertificateIdentifiers().hashCode());

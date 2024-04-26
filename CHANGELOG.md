@@ -1,3 +1,32 @@
+# __1.12.710__ __2024-04-26__
+## __AWS CodePipeline__
+  - ### Features
+    - Add ability to manually and automatically roll back a pipeline stage to a previously successful execution.
+
+## __AWS Marketplace Entitlement Service__
+  - ### Features
+    - Releasing minor endpoint updates.
+
+## __AWS Support__
+  - ### Features
+    - Releasing minor endpoint updates.
+
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - Add LimitExceededException to SignUp errors
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - SupportsLimitlessDatabase field added to describe-db-engine-versions to indicate whether the DB engine version supports Aurora Limitless Database.
+
+## __AmazonConnectCampaignService__
+  - ### Features
+    - This release adds support for specifying if Answering Machine should wait for prompt sound.
+
+## __CloudWatch Observability Access Manager__
+  - ### Features
+    - This release introduces support for Source Accounts to define which Metrics and Logs to share with the Monitoring Account
+
 # __1.12.709__ __2024-04-25__
 ## __AWS AppSync__
   - ### Features

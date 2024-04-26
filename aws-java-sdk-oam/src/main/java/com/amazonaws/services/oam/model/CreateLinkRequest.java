@@ -54,6 +54,13 @@ public class CreateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String labelTemplate;
     /**
      * <p>
+     * Use this structure to optionally create filters that specify that only some metric namespaces or log groups are
+     * to be shared from the source account to the monitoring account.
+     * </p>
+     */
+    private LinkConfiguration linkConfiguration;
+    /**
+     * <p>
      * An array of strings that define which types of data that the source account shares with the monitoring account.
      * </p>
      */
@@ -246,6 +253,52 @@ public class CreateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public CreateLinkRequest withLabelTemplate(String labelTemplate) {
         setLabelTemplate(labelTemplate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this structure to optionally create filters that specify that only some metric namespaces or log groups are
+     * to be shared from the source account to the monitoring account.
+     * </p>
+     * 
+     * @param linkConfiguration
+     *        Use this structure to optionally create filters that specify that only some metric namespaces or log
+     *        groups are to be shared from the source account to the monitoring account.
+     */
+
+    public void setLinkConfiguration(LinkConfiguration linkConfiguration) {
+        this.linkConfiguration = linkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Use this structure to optionally create filters that specify that only some metric namespaces or log groups are
+     * to be shared from the source account to the monitoring account.
+     * </p>
+     * 
+     * @return Use this structure to optionally create filters that specify that only some metric namespaces or log
+     *         groups are to be shared from the source account to the monitoring account.
+     */
+
+    public LinkConfiguration getLinkConfiguration() {
+        return this.linkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Use this structure to optionally create filters that specify that only some metric namespaces or log groups are
+     * to be shared from the source account to the monitoring account.
+     * </p>
+     * 
+     * @param linkConfiguration
+     *        Use this structure to optionally create filters that specify that only some metric namespaces or log
+     *        groups are to be shared from the source account to the monitoring account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLinkRequest withLinkConfiguration(LinkConfiguration linkConfiguration) {
+        setLinkConfiguration(linkConfiguration);
         return this;
     }
 
@@ -558,6 +611,8 @@ public class CreateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
         sb.append("{");
         if (getLabelTemplate() != null)
             sb.append("LabelTemplate: ").append(getLabelTemplate()).append(",");
+        if (getLinkConfiguration() != null)
+            sb.append("LinkConfiguration: ").append(getLinkConfiguration()).append(",");
         if (getResourceTypes() != null)
             sb.append("ResourceTypes: ").append(getResourceTypes()).append(",");
         if (getSinkIdentifier() != null)
@@ -582,6 +637,10 @@ public class CreateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getLabelTemplate() != null && other.getLabelTemplate().equals(this.getLabelTemplate()) == false)
             return false;
+        if (other.getLinkConfiguration() == null ^ this.getLinkConfiguration() == null)
+            return false;
+        if (other.getLinkConfiguration() != null && other.getLinkConfiguration().equals(this.getLinkConfiguration()) == false)
+            return false;
         if (other.getResourceTypes() == null ^ this.getResourceTypes() == null)
             return false;
         if (other.getResourceTypes() != null && other.getResourceTypes().equals(this.getResourceTypes()) == false)
@@ -603,6 +662,7 @@ public class CreateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getLabelTemplate() == null) ? 0 : getLabelTemplate().hashCode());
+        hashCode = prime * hashCode + ((getLinkConfiguration() == null) ? 0 : getLinkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getResourceTypes() == null) ? 0 : getResourceTypes().hashCode());
         hashCode = prime * hashCode + ((getSinkIdentifier() == null) ? 0 : getSinkIdentifier().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

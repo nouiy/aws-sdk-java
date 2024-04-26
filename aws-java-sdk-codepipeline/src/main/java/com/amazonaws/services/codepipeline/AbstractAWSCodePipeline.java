@@ -203,6 +203,11 @@ public class AbstractAWSCodePipeline implements AWSCodePipeline {
     }
 
     @Override
+    public RollbackStageResult rollbackStage(RollbackStageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartPipelineExecutionResult startPipelineExecution(StartPipelineExecutionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

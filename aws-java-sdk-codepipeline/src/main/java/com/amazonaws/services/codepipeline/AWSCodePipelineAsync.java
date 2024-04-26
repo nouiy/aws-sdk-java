@@ -1495,6 +1495,37 @@ public interface AWSCodePipelineAsync extends AWSCodePipeline {
 
     /**
      * <p>
+     * Rolls back a stage execution.
+     * </p>
+     * 
+     * @param rollbackStageRequest
+     * @return A Java Future containing the result of the RollbackStage operation returned by the service.
+     * @sample AWSCodePipelineAsync.RollbackStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RollbackStage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RollbackStageResult> rollbackStageAsync(RollbackStageRequest rollbackStageRequest);
+
+    /**
+     * <p>
+     * Rolls back a stage execution.
+     * </p>
+     * 
+     * @param rollbackStageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RollbackStage operation returned by the service.
+     * @sample AWSCodePipelineAsyncHandler.RollbackStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RollbackStage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RollbackStageResult> rollbackStageAsync(RollbackStageRequest rollbackStageRequest,
+            com.amazonaws.handlers.AsyncHandler<RollbackStageRequest, RollbackStageResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts the specified pipeline. Specifically, it begins processing the latest commit to the source location
      * specified as part of the pipeline.
      * </p>

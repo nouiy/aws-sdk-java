@@ -64,6 +64,10 @@ public class GetLinkResultJsonUnmarshaller implements Unmarshaller<GetLinkResult
                     context.nextToken();
                     getLinkResult.setLabelTemplate(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LinkConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getLinkResult.setLinkConfiguration(LinkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("ResourceTypes", targetDepth)) {
                     context.nextToken();
                     getLinkResult.setResourceTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
