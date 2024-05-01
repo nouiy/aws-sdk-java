@@ -37,7 +37,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String clientToken;
     /**
      * <p>
-     * The deletion policy for the requested data source
+     * The data deletion policy assigned to the data source.
      * </p>
      */
     private String dataDeletionPolicy;
@@ -144,11 +144,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The deletion policy for the requested data source
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The deletion policy for the requested data source
+     *        The data deletion policy assigned to the data source.
      * @see DataDeletionPolicy
      */
 
@@ -158,10 +158,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The deletion policy for the requested data source
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
-     * @return The deletion policy for the requested data source
+     * @return The data deletion policy assigned to the data source.
      * @see DataDeletionPolicy
      */
 
@@ -171,11 +171,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The deletion policy for the requested data source
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The deletion policy for the requested data source
+     *        The data deletion policy assigned to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -187,11 +187,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The deletion policy for the requested data source
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The deletion policy for the requested data source
+     *        The data deletion policy assigned to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */

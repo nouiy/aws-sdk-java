@@ -23,7 +23,8 @@ public enum KnowledgeBaseStorageType {
     OPENSEARCH_SERVERLESS("OPENSEARCH_SERVERLESS"),
     PINECONE("PINECONE"),
     REDIS_ENTERPRISE_CLOUD("REDIS_ENTERPRISE_CLOUD"),
-    RDS("RDS");
+    RDS("RDS"),
+    MONGO_DB_ATLAS("MONGO_DB_ATLAS");
 
     private String value;
 

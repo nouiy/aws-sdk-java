@@ -32,9 +32,9 @@ public class ListContactsRequestMarshaller {
     private static final MarshallingInfo<StructuredPojo> FILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Filter").build();
     private static final MarshallingInfo<Integer> PAGESIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("PageSize").build();
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NextToken").build();
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PageSize").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
 
     private static final ListContactsRequestMarshaller instance = new ListContactsRequestMarshaller();
 

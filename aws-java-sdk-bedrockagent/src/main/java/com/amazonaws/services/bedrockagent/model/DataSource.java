@@ -36,7 +36,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createdAt;
     /**
      * <p>
-     * The deletion policy for the data source.
+     * The data deletion policy for a data source.
      * </p>
      */
     private String dataDeletionPolicy;
@@ -60,7 +60,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The details of the failure reasons related to the data source.
+     * The detailed reasons on the failure to delete a data source.
      * </p>
      */
     private java.util.List<String> failureReasons;
@@ -155,11 +155,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The deletion policy for the data source.
+     * The data deletion policy for a data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The deletion policy for the data source.
+     *        The data deletion policy for a data source.
      * @see DataDeletionPolicy
      */
 
@@ -169,10 +169,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The deletion policy for the data source.
+     * The data deletion policy for a data source.
      * </p>
      * 
-     * @return The deletion policy for the data source.
+     * @return The data deletion policy for a data source.
      * @see DataDeletionPolicy
      */
 
@@ -182,11 +182,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The deletion policy for the data source.
+     * The data deletion policy for a data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The deletion policy for the data source.
+     *        The data deletion policy for a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -198,11 +198,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The deletion policy for the data source.
+     * The data deletion policy for a data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The deletion policy for the data source.
+     *        The data deletion policy for a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -334,10 +334,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the failure reasons related to the data source.
+     * The detailed reasons on the failure to delete a data source.
      * </p>
      * 
-     * @return The details of the failure reasons related to the data source.
+     * @return The detailed reasons on the failure to delete a data source.
      */
 
     public java.util.List<String> getFailureReasons() {
@@ -346,11 +346,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the failure reasons related to the data source.
+     * The detailed reasons on the failure to delete a data source.
      * </p>
      * 
      * @param failureReasons
-     *        The details of the failure reasons related to the data source.
+     *        The detailed reasons on the failure to delete a data source.
      */
 
     public void setFailureReasons(java.util.Collection<String> failureReasons) {
@@ -364,7 +364,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the failure reasons related to the data source.
+     * The detailed reasons on the failure to delete a data source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -373,7 +373,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param failureReasons
-     *        The details of the failure reasons related to the data source.
+     *        The detailed reasons on the failure to delete a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -389,11 +389,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the failure reasons related to the data source.
+     * The detailed reasons on the failure to delete a data source.
      * </p>
      * 
      * @param failureReasons
-     *        The details of the failure reasons related to the data source.
+     *        The detailed reasons on the failure to delete a data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

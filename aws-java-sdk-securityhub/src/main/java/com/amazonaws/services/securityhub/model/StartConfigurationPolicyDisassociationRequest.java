@@ -34,7 +34,8 @@ public class StartConfigurationPolicyDisassociationRequest extends com.amazonaws
     private Target target;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     * The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     * configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed configuration.
      * </p>
      */
     private String configurationPolicyIdentifier;
@@ -87,11 +88,14 @@ public class StartConfigurationPolicyDisassociationRequest extends com.amazonaws
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     * The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     * configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed configuration.
      * </p>
      * 
      * @param configurationPolicyIdentifier
-     *        The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     *        The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     *        configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed
+     *        configuration.
      */
 
     public void setConfigurationPolicyIdentifier(String configurationPolicyIdentifier) {
@@ -100,10 +104,13 @@ public class StartConfigurationPolicyDisassociationRequest extends com.amazonaws
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     * The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     * configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed configuration.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     * @return The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     *         configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed
+     *         configuration.
      */
 
     public String getConfigurationPolicyIdentifier() {
@@ -112,11 +119,14 @@ public class StartConfigurationPolicyDisassociationRequest extends com.amazonaws
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     * The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     * configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed configuration.
      * </p>
      * 
      * @param configurationPolicyIdentifier
-     *        The Amazon Resource Name (ARN) or universally unique identifier (UUID) of the configuration policy.
+     *        The Amazon Resource Name (ARN) of a configuration policy, the universally unique identifier (UUID) of a
+     *        configuration policy, or a value of <code>SELF_MANAGED_SECURITY_HUB</code> for a self-managed
+     *        configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

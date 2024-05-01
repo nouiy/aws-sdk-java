@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StorageConfigurationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> MONGODBATLASCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mongoDbAtlasConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> OPENSEARCHSERVERLESSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("opensearchServerlessConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> PINECONECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -54,6 +56,7 @@ public class StorageConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(storageConfiguration.getMongoDbAtlasConfiguration(), MONGODBATLASCONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getOpensearchServerlessConfiguration(), OPENSEARCHSERVERLESSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getPineconeConfiguration(), PINECONECONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getRdsConfiguration(), RDSCONFIGURATION_BINDING);

@@ -13,7 +13,7 @@
 package com.amazonaws.services.personalizeruntime.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +37,8 @@ public class PredictedItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promotionName").build();
     private static final MarshallingInfo<Map> METADATA_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("metadata").build();
+    private static final MarshallingInfo<List> REASON_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("reason").build();
 
     private static final PredictedItemMarshaller instance = new PredictedItemMarshaller();
 
@@ -58,6 +60,7 @@ public class PredictedItemMarshaller {
             protocolMarshaller.marshall(predictedItem.getScore(), SCORE_BINDING);
             protocolMarshaller.marshall(predictedItem.getPromotionName(), PROMOTIONNAME_BINDING);
             protocolMarshaller.marshall(predictedItem.getMetadata(), METADATA_BINDING);
+            protocolMarshaller.marshall(predictedItem.getReason(), REASON_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -36,7 +36,7 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
     private String bucketArn;
     /**
      * <p>
-     * The account ID for the owner of the S3 bucket.
+     * The bucket account owner ID for the S3 bucket.
      * </p>
      */
     private String bucketOwnerAccountId;
@@ -91,11 +91,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The account ID for the owner of the S3 bucket.
+     * The bucket account owner ID for the S3 bucket.
      * </p>
      * 
      * @param bucketOwnerAccountId
-     *        The account ID for the owner of the S3 bucket.
+     *        The bucket account owner ID for the S3 bucket.
      */
 
     public void setBucketOwnerAccountId(String bucketOwnerAccountId) {
@@ -104,10 +104,10 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The account ID for the owner of the S3 bucket.
+     * The bucket account owner ID for the S3 bucket.
      * </p>
      * 
-     * @return The account ID for the owner of the S3 bucket.
+     * @return The bucket account owner ID for the S3 bucket.
      */
 
     public String getBucketOwnerAccountId() {
@@ -116,11 +116,11 @@ public class S3DataSourceConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The account ID for the owner of the S3 bucket.
+     * The bucket account owner ID for the S3 bucket.
      * </p>
      * 
      * @param bucketOwnerAccountId
-     *        The account ID for the owner of the S3 bucket.
+     *        The bucket account owner ID for the S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

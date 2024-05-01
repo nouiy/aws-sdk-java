@@ -48,6 +48,10 @@ public class StorageConfigurationJsonUnmarshaller implements Unmarshaller<Storag
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("mongoDbAtlasConfiguration", targetDepth)) {
+                    context.nextToken();
+                    storageConfiguration.setMongoDbAtlasConfiguration(MongoDbAtlasConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("opensearchServerlessConfiguration", targetDepth)) {
                     context.nextToken();
                     storageConfiguration.setOpensearchServerlessConfiguration(OpenSearchServerlessConfigurationJsonUnmarshaller.getInstance().unmarshall(

@@ -26,6 +26,11 @@ import javax.annotation.Generated;
 public class Volume implements Serializable, Cloneable {
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Information about the volume attachments.
      * </p>
@@ -108,6 +113,11 @@ public class Volume implements Serializable, Cloneable {
      */
     private String volumeType;
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the volume was created using fast snapshot restore.
      * </p>
@@ -126,6 +136,11 @@ public class Volume implements Serializable, Cloneable {
      */
     private Integer throughput;
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Reserved for future use.
      * </p>
@@ -133,11 +148,21 @@ public class Volume implements Serializable, Cloneable {
     private String sseType;
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Information about the volume attachments.
      * </p>
      * 
-     * @return Information about the volume attachments.
+     * @return <p>
+     *         This parameter is not returned by CreateVolume.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Information about the volume attachments.
      */
 
     public java.util.List<VolumeAttachment> getAttachments() {
@@ -148,11 +173,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Information about the volume attachments.
      * </p>
      * 
      * @param attachments
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Information about the volume attachments.
      */
 
@@ -166,6 +201,11 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Information about the volume attachments.
      * </p>
@@ -176,6 +216,11 @@ public class Volume implements Serializable, Cloneable {
      * </p>
      * 
      * @param attachments
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Information about the volume attachments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -191,11 +236,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Information about the volume attachments.
      * </p>
      * 
      * @param attachments
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Information about the volume attachments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -821,11 +876,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the volume was created using fast snapshot restore.
      * </p>
      * 
      * @param fastRestored
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Indicates whether the volume was created using fast snapshot restore.
      */
 
@@ -834,11 +899,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the volume was created using fast snapshot restore.
      * </p>
      * 
-     * @return Indicates whether the volume was created using fast snapshot restore.
+     * @return <p>
+     *         This parameter is not returned by CreateVolume.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Indicates whether the volume was created using fast snapshot restore.
      */
 
     public Boolean getFastRestored() {
@@ -846,11 +921,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the volume was created using fast snapshot restore.
      * </p>
      * 
      * @param fastRestored
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Indicates whether the volume was created using fast snapshot restore.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -861,11 +946,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the volume was created using fast snapshot restore.
      * </p>
      * 
-     * @return Indicates whether the volume was created using fast snapshot restore.
+     * @return <p>
+     *         This parameter is not returned by CreateVolume.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Indicates whether the volume was created using fast snapshot restore.
      */
 
     public Boolean isFastRestored() {
@@ -965,11 +1060,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Reserved for future use.
      * </p>
      * 
      * @param sseType
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Reserved for future use.
      * @see SSEType
      */
@@ -979,11 +1084,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Reserved for future use.
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return <p>
+     *         This parameter is not returned by CreateVolume.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Reserved for future use.
      * @see SSEType
      */
 
@@ -992,11 +1107,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Reserved for future use.
      * </p>
      * 
      * @param sseType
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Reserved for future use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SSEType
@@ -1008,11 +1133,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Reserved for future use.
      * </p>
      * 
      * @param sseType
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Reserved for future use.
      * @see SSEType
      */
@@ -1022,11 +1157,21 @@ public class Volume implements Serializable, Cloneable {
     }
 
     /**
+     * <note>
+     * <p>
+     * This parameter is not returned by CreateVolume.
+     * </p>
+     * </note>
      * <p>
      * Reserved for future use.
      * </p>
      * 
      * @param sseType
+     *        <p>
+     *        This parameter is not returned by CreateVolume.
+     *        </p>
+     *        </note>
+     *        <p>
      *        Reserved for future use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SSEType

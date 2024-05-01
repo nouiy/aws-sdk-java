@@ -30,6 +30,12 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     * </p>
+     */
+    private MongoDbAtlasConfiguration mongoDbAtlasConfiguration;
+    /**
+     * <p>
      * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
      * </p>
      */
@@ -60,6 +66,46 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
      * </p>
      */
     private String type;
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     * </p>
+     * 
+     * @param mongoDbAtlasConfiguration
+     *        Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     */
+
+    public void setMongoDbAtlasConfiguration(MongoDbAtlasConfiguration mongoDbAtlasConfiguration) {
+        this.mongoDbAtlasConfiguration = mongoDbAtlasConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     * </p>
+     * 
+     * @return Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     */
+
+    public MongoDbAtlasConfiguration getMongoDbAtlasConfiguration() {
+        return this.mongoDbAtlasConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     * </p>
+     * 
+     * @param mongoDbAtlasConfiguration
+     *        Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withMongoDbAtlasConfiguration(MongoDbAtlasConfiguration mongoDbAtlasConfiguration) {
+        setMongoDbAtlasConfiguration(mongoDbAtlasConfiguration);
+        return this;
+    }
 
     /**
      * <p>
@@ -307,6 +353,8 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getMongoDbAtlasConfiguration() != null)
+            sb.append("MongoDbAtlasConfiguration: ").append(getMongoDbAtlasConfiguration()).append(",");
         if (getOpensearchServerlessConfiguration() != null)
             sb.append("OpensearchServerlessConfiguration: ").append(getOpensearchServerlessConfiguration()).append(",");
         if (getPineconeConfiguration() != null)
@@ -331,6 +379,10 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         if (obj instanceof StorageConfiguration == false)
             return false;
         StorageConfiguration other = (StorageConfiguration) obj;
+        if (other.getMongoDbAtlasConfiguration() == null ^ this.getMongoDbAtlasConfiguration() == null)
+            return false;
+        if (other.getMongoDbAtlasConfiguration() != null && other.getMongoDbAtlasConfiguration().equals(this.getMongoDbAtlasConfiguration()) == false)
+            return false;
         if (other.getOpensearchServerlessConfiguration() == null ^ this.getOpensearchServerlessConfiguration() == null)
             return false;
         if (other.getOpensearchServerlessConfiguration() != null
@@ -361,6 +413,7 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getMongoDbAtlasConfiguration() == null) ? 0 : getMongoDbAtlasConfiguration().hashCode());
         hashCode = prime * hashCode + ((getOpensearchServerlessConfiguration() == null) ? 0 : getOpensearchServerlessConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPineconeConfiguration() == null) ? 0 : getPineconeConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRdsConfiguration() == null) ? 0 : getRdsConfiguration().hashCode());

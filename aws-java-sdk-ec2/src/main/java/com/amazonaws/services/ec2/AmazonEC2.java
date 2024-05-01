@@ -4169,8 +4169,9 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Deletes the specified transit gateway route table. You must disassociate the route table from any transit gateway
-     * route tables before you can delete it.
+     * Deletes the specified transit gateway route table. If there are any route tables associated with the transit
+     * gateway route table, you must first run <a>DisassociateRouteTable</a> before you can delete the transit gateway
+     * route table. This removes any route tables associated with the transit gateway route table.
      * </p>
      * 
      * @param deleteTransitGatewayRouteTableRequest

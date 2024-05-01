@@ -27,7 +27,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy assigned to the data source.
      * </p>
      */
     private String dataDeletionPolicy;
@@ -76,11 +76,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy of the updated data source.
+     *        The data deletion policy assigned to the data source.
      * @see DataDeletionPolicy
      */
 
@@ -90,10 +90,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
-     * @return The data deletion policy of the updated data source.
+     * @return The data deletion policy assigned to the data source.
      * @see DataDeletionPolicy
      */
 
@@ -103,11 +103,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy of the updated data source.
+     *        The data deletion policy assigned to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
@@ -119,11 +119,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The data deletion policy of the updated data source.
+     * The data deletion policy assigned to the data source.
      * </p>
      * 
      * @param dataDeletionPolicy
-     *        The data deletion policy of the updated data source.
+     *        The data deletion policy assigned to the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataDeletionPolicy
      */
