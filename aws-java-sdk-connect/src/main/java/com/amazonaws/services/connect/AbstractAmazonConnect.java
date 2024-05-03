@@ -113,6 +113,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public BatchGetAttachedFileMetadataResult batchGetAttachedFileMetadata(BatchGetAttachedFileMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetFlowAssociationResult batchGetFlowAssociation(BatchGetFlowAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -124,6 +129,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ClaimPhoneNumberResult claimPhoneNumber(ClaimPhoneNumberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CompleteAttachedFileUploadResult completeAttachedFileUpload(CompleteAttachedFileUploadRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -249,6 +259,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DeactivateEvaluationFormResult deactivateEvaluationForm(DeactivateEvaluationFormRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAttachedFileResult deleteAttachedFile(DeleteAttachedFileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -549,6 +564,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DismissUserContactResult dismissUserContact(DismissUserContactRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAttachedFileResult getAttachedFile(GetAttachedFileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -924,6 +944,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public SendChatIntegrationEventResult sendChatIntegrationEvent(SendChatIntegrationEventRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartAttachedFileUploadResult startAttachedFileUpload(StartAttachedFileUploadRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

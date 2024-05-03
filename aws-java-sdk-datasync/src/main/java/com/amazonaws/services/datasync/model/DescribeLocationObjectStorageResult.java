@@ -71,7 +71,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
     private java.util.Date creationTime;
     /**
      * <p>
-     * The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     * The certificate chain for DataSync to authenticate with your object storage system if the system uses a private
+     * or self-signed certificate authority (CA).
      * </p>
      */
     private java.nio.ByteBuffer serverCertificate;
@@ -407,7 +408,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     * The certificate chain for DataSync to authenticate with your object storage system if the system uses a private
+     * or self-signed certificate authority (CA).
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -421,7 +423,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param serverCertificate
-     *        The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     *        The certificate chain for DataSync to authenticate with your object storage system if the system uses a
+     *        private or self-signed certificate authority (CA).
      */
 
     public void setServerCertificate(java.nio.ByteBuffer serverCertificate) {
@@ -430,7 +433,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     * The certificate chain for DataSync to authenticate with your object storage system if the system uses a private
+     * or self-signed certificate authority (CA).
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -440,7 +444,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
      * {@code position}.
      * </p>
      * 
-     * @return The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     * @return The certificate chain for DataSync to authenticate with your object storage system if the system uses a
+     *         private or self-signed certificate authority (CA).
      */
 
     public java.nio.ByteBuffer getServerCertificate() {
@@ -449,7 +454,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     * The certificate chain for DataSync to authenticate with your object storage system if the system uses a private
+     * or self-signed certificate authority (CA).
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -463,7 +469,8 @@ public class DescribeLocationObjectStorageResult extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param serverCertificate
-     *        The self-signed certificate that DataSync uses to securely authenticate with your object storage system.
+     *        The certificate chain for DataSync to authenticate with your object storage system if the system uses a
+     *        private or self-signed certificate authority (CA).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

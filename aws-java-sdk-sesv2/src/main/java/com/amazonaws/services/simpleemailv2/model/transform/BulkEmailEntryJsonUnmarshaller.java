@@ -62,6 +62,12 @@ public class BulkEmailEntryJsonUnmarshaller implements Unmarshaller<BulkEmailEnt
                     context.nextToken();
                     bulkEmailEntry.setReplacementEmailContent(ReplacementEmailContentJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ReplacementHeaders", targetDepth)) {
+                    context.nextToken();
+                    bulkEmailEntry.setReplacementHeaders(new ListUnmarshaller<MessageHeader>(MessageHeaderJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

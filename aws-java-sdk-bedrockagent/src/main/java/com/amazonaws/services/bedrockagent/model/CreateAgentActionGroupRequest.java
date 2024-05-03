@@ -28,7 +28,7 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
-     * invoking the action.
+     * invoking the action or the custom control method for handling the information elicited from the user.
      * </p>
      */
     private ActionGroupExecutor actionGroupExecutor;
@@ -108,12 +108,12 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
-     * invoking the action.
+     * invoking the action or the custom control method for handling the information elicited from the user.
      * </p>
      * 
      * @param actionGroupExecutor
      *        The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
-     *        upon invoking the action.
+     *        upon invoking the action or the custom control method for handling the information elicited from the user.
      */
 
     public void setActionGroupExecutor(ActionGroupExecutor actionGroupExecutor) {
@@ -123,11 +123,12 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
-     * invoking the action.
+     * invoking the action or the custom control method for handling the information elicited from the user.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
-     *         upon invoking the action.
+     *         upon invoking the action or the custom control method for handling the information elicited from the
+     *         user.
      */
 
     public ActionGroupExecutor getActionGroupExecutor() {
@@ -137,12 +138,12 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
-     * invoking the action.
+     * invoking the action or the custom control method for handling the information elicited from the user.
      * </p>
      * 
      * @param actionGroupExecutor
      *        The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out
-     *        upon invoking the action.
+     *        upon invoking the action or the custom control method for handling the information elicited from the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

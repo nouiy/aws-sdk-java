@@ -255,6 +255,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetAttachedFileMetadataResult> batchGetAttachedFileMetadataAsync(BatchGetAttachedFileMetadataRequest request) {
+
+        return batchGetAttachedFileMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAttachedFileMetadataResult> batchGetAttachedFileMetadataAsync(BatchGetAttachedFileMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAttachedFileMetadataRequest, BatchGetAttachedFileMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetFlowAssociationResult> batchGetFlowAssociationAsync(BatchGetFlowAssociationRequest request) {
 
         return batchGetFlowAssociationAsync(request, null);
@@ -289,6 +302,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest request,
             com.amazonaws.handlers.AsyncHandler<ClaimPhoneNumberRequest, ClaimPhoneNumberResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CompleteAttachedFileUploadResult> completeAttachedFileUploadAsync(CompleteAttachedFileUploadRequest request) {
+
+        return completeAttachedFileUploadAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CompleteAttachedFileUploadResult> completeAttachedFileUploadAsync(CompleteAttachedFileUploadRequest request,
+            com.amazonaws.handlers.AsyncHandler<CompleteAttachedFileUploadRequest, CompleteAttachedFileUploadResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -616,6 +642,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DeactivateEvaluationFormResult> deactivateEvaluationFormAsync(DeactivateEvaluationFormRequest request,
             com.amazonaws.handlers.AsyncHandler<DeactivateEvaluationFormRequest, DeactivateEvaluationFormResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAttachedFileResult> deleteAttachedFileAsync(DeleteAttachedFileRequest request) {
+
+        return deleteAttachedFileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAttachedFileResult> deleteAttachedFileAsync(DeleteAttachedFileRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAttachedFileRequest, DeleteAttachedFileResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1406,6 +1445,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest request,
             com.amazonaws.handlers.AsyncHandler<DismissUserContactRequest, DismissUserContactResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAttachedFileResult> getAttachedFileAsync(GetAttachedFileRequest request) {
+
+        return getAttachedFileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAttachedFileResult> getAttachedFileAsync(GetAttachedFileRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAttachedFileRequest, GetAttachedFileResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2387,6 +2439,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<SendChatIntegrationEventResult> sendChatIntegrationEventAsync(SendChatIntegrationEventRequest request,
             com.amazonaws.handlers.AsyncHandler<SendChatIntegrationEventRequest, SendChatIntegrationEventResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAttachedFileUploadResult> startAttachedFileUploadAsync(StartAttachedFileUploadRequest request) {
+
+        return startAttachedFileUploadAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAttachedFileUploadResult> startAttachedFileUploadAsync(StartAttachedFileUploadRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartAttachedFileUploadRequest, StartAttachedFileUploadResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

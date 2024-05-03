@@ -29,6 +29,8 @@ public class AgentAliasRoutingConfigurationListItemMarshaller {
 
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
+    private static final MarshallingInfo<String> PROVISIONEDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("provisionedThroughput").build();
 
     private static final AgentAliasRoutingConfigurationListItemMarshaller instance = new AgentAliasRoutingConfigurationListItemMarshaller();
 
@@ -47,6 +49,7 @@ public class AgentAliasRoutingConfigurationListItemMarshaller {
 
         try {
             protocolMarshaller.marshall(agentAliasRoutingConfigurationListItem.getAgentVersion(), AGENTVERSION_BINDING);
+            protocolMarshaller.marshall(agentAliasRoutingConfigurationListItem.getProvisionedThroughput(), PROVISIONEDTHROUGHPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

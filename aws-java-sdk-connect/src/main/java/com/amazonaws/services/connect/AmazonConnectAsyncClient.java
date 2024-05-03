@@ -660,6 +660,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetAttachedFileMetadataResult> batchGetAttachedFileMetadataAsync(BatchGetAttachedFileMetadataRequest request) {
+
+        return batchGetAttachedFileMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAttachedFileMetadataResult> batchGetAttachedFileMetadataAsync(final BatchGetAttachedFileMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetAttachedFileMetadataRequest, BatchGetAttachedFileMetadataResult> asyncHandler) {
+        final BatchGetAttachedFileMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetAttachedFileMetadataResult>() {
+            @Override
+            public BatchGetAttachedFileMetadataResult call() throws Exception {
+                BatchGetAttachedFileMetadataResult result = null;
+
+                try {
+                    result = executeBatchGetAttachedFileMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetFlowAssociationResult> batchGetFlowAssociationAsync(BatchGetFlowAssociationRequest request) {
 
         return batchGetFlowAssociationAsync(request, null);
@@ -743,6 +776,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeClaimPhoneNumber(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CompleteAttachedFileUploadResult> completeAttachedFileUploadAsync(CompleteAttachedFileUploadRequest request) {
+
+        return completeAttachedFileUploadAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CompleteAttachedFileUploadResult> completeAttachedFileUploadAsync(final CompleteAttachedFileUploadRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CompleteAttachedFileUploadRequest, CompleteAttachedFileUploadResult> asyncHandler) {
+        final CompleteAttachedFileUploadRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CompleteAttachedFileUploadResult>() {
+            @Override
+            public CompleteAttachedFileUploadResult call() throws Exception {
+                CompleteAttachedFileUploadResult result = null;
+
+                try {
+                    result = executeCompleteAttachedFileUpload(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1571,6 +1637,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDeactivateEvaluationForm(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAttachedFileResult> deleteAttachedFileAsync(DeleteAttachedFileRequest request) {
+
+        return deleteAttachedFileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAttachedFileResult> deleteAttachedFileAsync(final DeleteAttachedFileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAttachedFileRequest, DeleteAttachedFileResult> asyncHandler) {
+        final DeleteAttachedFileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAttachedFileResult>() {
+            @Override
+            public DeleteAttachedFileResult call() throws Exception {
+                DeleteAttachedFileResult result = null;
+
+                try {
+                    result = executeDeleteAttachedFile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3566,6 +3665,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDismissUserContact(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAttachedFileResult> getAttachedFileAsync(GetAttachedFileRequest request) {
+
+        return getAttachedFileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAttachedFileResult> getAttachedFileAsync(final GetAttachedFileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAttachedFileRequest, GetAttachedFileResult> asyncHandler) {
+        final GetAttachedFileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAttachedFileResult>() {
+            @Override
+            public GetAttachedFileResult call() throws Exception {
+                GetAttachedFileResult result = null;
+
+                try {
+                    result = executeGetAttachedFile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -6050,6 +6182,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeSendChatIntegrationEvent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAttachedFileUploadResult> startAttachedFileUploadAsync(StartAttachedFileUploadRequest request) {
+
+        return startAttachedFileUploadAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAttachedFileUploadResult> startAttachedFileUploadAsync(final StartAttachedFileUploadRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartAttachedFileUploadRequest, StartAttachedFileUploadResult> asyncHandler) {
+        final StartAttachedFileUploadRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartAttachedFileUploadResult>() {
+            @Override
+            public StartAttachedFileUploadResult call() throws Exception {
+                StartAttachedFileUploadResult result = null;
+
+                try {
+                    result = executeStartAttachedFileUpload(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

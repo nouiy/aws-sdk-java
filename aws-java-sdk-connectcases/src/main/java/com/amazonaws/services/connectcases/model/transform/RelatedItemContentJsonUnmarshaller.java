@@ -56,6 +56,10 @@ public class RelatedItemContentJsonUnmarshaller implements Unmarshaller<RelatedI
                     context.nextToken();
                     relatedItemContent.setContact(ContactContentJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("file", targetDepth)) {
+                    context.nextToken();
+                    relatedItemContent.setFile(FileContentJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

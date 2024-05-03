@@ -25,13 +25,13 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created.
+     * Timestamp at which the resource was created.
      * </p>
      */
     private java.util.Date createdTime;
     /**
      * <p>
-     * Indicates whether the resource has been deleted.
+     * Denotes whether or not the resource has been deleted.
      * </p>
      */
     private Boolean deleted;
@@ -43,7 +43,7 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String description;
     /**
      * <p>
-     * The timestamp for when the resource was created or last modified.
+     * Timestamp at which the resource was created or last modified.
      * </p>
      */
     private java.util.Date lastModifiedTime;
@@ -93,11 +93,11 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created.
+     * Timestamp at which the resource was created.
      * </p>
      * 
      * @param createdTime
-     *        The timestamp for when the resource was created.
+     *        Timestamp at which the resource was created.
      */
 
     public void setCreatedTime(java.util.Date createdTime) {
@@ -106,10 +106,10 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created.
+     * Timestamp at which the resource was created.
      * </p>
      * 
-     * @return The timestamp for when the resource was created.
+     * @return Timestamp at which the resource was created.
      */
 
     public java.util.Date getCreatedTime() {
@@ -118,11 +118,11 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created.
+     * Timestamp at which the resource was created.
      * </p>
      * 
      * @param createdTime
-     *        The timestamp for when the resource was created.
+     *        Timestamp at which the resource was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Indicates whether the resource has been deleted.
+     * Denotes whether or not the resource has been deleted.
      * </p>
      * 
      * @param deleted
-     *        Indicates whether the resource has been deleted.
+     *        Denotes whether or not the resource has been deleted.
      */
 
     public void setDeleted(Boolean deleted) {
@@ -146,10 +146,10 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Indicates whether the resource has been deleted.
+     * Denotes whether or not the resource has been deleted.
      * </p>
      * 
-     * @return Indicates whether the resource has been deleted.
+     * @return Denotes whether or not the resource has been deleted.
      */
 
     public Boolean getDeleted() {
@@ -158,11 +158,11 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Indicates whether the resource has been deleted.
+     * Denotes whether or not the resource has been deleted.
      * </p>
      * 
      * @param deleted
-     *        Indicates whether the resource has been deleted.
+     *        Denotes whether or not the resource has been deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,10 +173,10 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Indicates whether the resource has been deleted.
+     * Denotes whether or not the resource has been deleted.
      * </p>
      * 
-     * @return Indicates whether the resource has been deleted.
+     * @return Denotes whether or not the resource has been deleted.
      */
 
     public Boolean isDeleted() {
@@ -225,11 +225,11 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created or last modified.
+     * Timestamp at which the resource was created or last modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The timestamp for when the resource was created or last modified.
+     *        Timestamp at which the resource was created or last modified.
      */
 
     public void setLastModifiedTime(java.util.Date lastModifiedTime) {
@@ -238,10 +238,10 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created or last modified.
+     * Timestamp at which the resource was created or last modified.
      * </p>
      * 
-     * @return The timestamp for when the resource was created or last modified.
+     * @return Timestamp at which the resource was created or last modified.
      */
 
     public java.util.Date getLastModifiedTime() {
@@ -250,11 +250,11 @@ public class GetTemplateResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the resource was created or last modified.
+     * Timestamp at which the resource was created or last modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The timestamp for when the resource was created or last modified.
+     *        Timestamp at which the resource was created or last modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

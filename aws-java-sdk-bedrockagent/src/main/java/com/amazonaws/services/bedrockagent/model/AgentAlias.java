@@ -115,6 +115,12 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
+     * Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * </p>
+     */
+    private java.util.List<String> failureReasons;
+    /**
+     * <p>
      * Contains details about the routing configuration of the alias.
      * </p>
      */
@@ -777,6 +783,76 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * 
+     * @return Information on the failure of Provisioned Throughput assigned to an agent alias.
+     */
+
+    public java.util.List<String> getFailureReasons() {
+        return failureReasons;
+    }
+
+    /**
+     * <p>
+     * Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * 
+     * @param failureReasons
+     *        Information on the failure of Provisioned Throughput assigned to an agent alias.
+     */
+
+    public void setFailureReasons(java.util.Collection<String> failureReasons) {
+        if (failureReasons == null) {
+            this.failureReasons = null;
+            return;
+        }
+
+        this.failureReasons = new java.util.ArrayList<String>(failureReasons);
+    }
+
+    /**
+     * <p>
+     * Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFailureReasons(java.util.Collection)} or {@link #withFailureReasons(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param failureReasons
+     *        Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withFailureReasons(String... failureReasons) {
+        if (this.failureReasons == null) {
+            setFailureReasons(new java.util.ArrayList<String>(failureReasons.length));
+        }
+        for (String ele : failureReasons) {
+            this.failureReasons.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * 
+     * @param failureReasons
+     *        Information on the failure of Provisioned Throughput assigned to an agent alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAlias withFailureReasons(java.util.Collection<String> failureReasons) {
+        setFailureReasons(failureReasons);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains details about the routing configuration of the alias.
      * </p>
      * 
@@ -915,6 +991,8 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getFailureReasons() != null)
+            sb.append("FailureReasons: ").append(getFailureReasons()).append(",");
         if (getRoutingConfiguration() != null)
             sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
         if (getUpdatedAt() != null)
@@ -969,6 +1047,10 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getFailureReasons() == null ^ this.getFailureReasons() == null)
+            return false;
+        if (other.getFailureReasons() != null && other.getFailureReasons().equals(this.getFailureReasons()) == false)
+            return false;
         if (other.getRoutingConfiguration() == null ^ this.getRoutingConfiguration() == null)
             return false;
         if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
@@ -994,6 +1076,7 @@ public class AgentAlias implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getFailureReasons() == null) ? 0 : getFailureReasons().hashCode());
         hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;

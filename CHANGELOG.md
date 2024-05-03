@@ -1,3 +1,36 @@
+# __1.12.715__ __2024-05-03__
+## __AWS DataSync__
+  - ### Features
+    - Updated guidance on using private or self-signed certificate authorities (CAs) with AWS DataSync object storage locations.
+
+## __AWS SDK for Java__
+  - ### Features
+    - Update Jackson to 2.12.7.2. This fixes the last of the known compatibility issues with Java 17.
+
+## __Agents for Amazon Bedrock__
+  - ### Features
+    - This release adds support for using Provisioned Throughput with Bedrock Agents.
+
+## __Amazon Connect Cases__
+  - ### Features
+    - This feature supports the release of Files related items
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds 5 new APIs for managing attachments: StartAttachedFileUpload, CompleteAttachedFileUpload, GetAttachedFile, BatchGetAttachedFileMetadata, DeleteAttachedFile. These APIs can be used to programmatically upload and download attachments to Connect resources, like cases.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Inference now supports m6i, c6i, r6i, m7i, c7i, r7i and g5 instance types for Batch Transform Jobs
+
+## __Amazon Simple Email Service__
+  - ### Features
+    - Adds support for specifying replacement headers per BulkEmailEntry in SendBulkEmail in SESv2.
+
+## __Inspector2__
+  - ### Features
+    - This release adds CSV format to GetCisScanReport for Inspector v2
+
 # __1.12.714__ __2024-05-02__
 ## __Amazon DynamoDB__
   - ### Features

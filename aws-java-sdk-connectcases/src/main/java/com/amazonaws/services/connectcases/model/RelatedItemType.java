@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum RelatedItemType {
 
     Contact("Contact"),
-    Comment("Comment");
+    Comment("Comment"),
+    File("File");
 
     private String value;
 

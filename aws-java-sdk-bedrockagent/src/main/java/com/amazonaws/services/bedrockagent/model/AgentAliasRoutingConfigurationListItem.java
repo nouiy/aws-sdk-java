@@ -34,6 +34,12 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
      * </p>
      */
     private String agentVersion;
+    /**
+     * <p>
+     * Information on the Provisioned Throughput assigned to an agent alias.
+     * </p>
+     */
+    private String provisionedThroughput;
 
     /**
      * <p>
@@ -76,6 +82,46 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * Information on the Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * 
+     * @param provisionedThroughput
+     *        Information on the Provisioned Throughput assigned to an agent alias.
+     */
+
+    public void setProvisionedThroughput(String provisionedThroughput) {
+        this.provisionedThroughput = provisionedThroughput;
+    }
+
+    /**
+     * <p>
+     * Information on the Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * 
+     * @return Information on the Provisioned Throughput assigned to an agent alias.
+     */
+
+    public String getProvisionedThroughput() {
+        return this.provisionedThroughput;
+    }
+
+    /**
+     * <p>
+     * Information on the Provisioned Throughput assigned to an agent alias.
+     * </p>
+     * 
+     * @param provisionedThroughput
+     *        Information on the Provisioned Throughput assigned to an agent alias.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentAliasRoutingConfigurationListItem withProvisionedThroughput(String provisionedThroughput) {
+        setProvisionedThroughput(provisionedThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +134,9 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getAgentVersion() != null)
-            sb.append("AgentVersion: ").append(getAgentVersion());
+            sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
+        if (getProvisionedThroughput() != null)
+            sb.append("ProvisionedThroughput: ").append(getProvisionedThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,10 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
             return false;
         if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
             return false;
+        if (other.getProvisionedThroughput() == null ^ this.getProvisionedThroughput() == null)
+            return false;
+        if (other.getProvisionedThroughput() != null && other.getProvisionedThroughput().equals(this.getProvisionedThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +168,7 @@ public class AgentAliasRoutingConfigurationListItem implements Serializable, Clo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
+        hashCode = prime * hashCode + ((getProvisionedThroughput() == null) ? 0 : getProvisionedThroughput().hashCode());
         return hashCode;
     }
 

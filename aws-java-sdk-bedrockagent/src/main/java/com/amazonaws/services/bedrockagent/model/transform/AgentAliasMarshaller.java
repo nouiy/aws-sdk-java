@@ -46,6 +46,8 @@ public class AgentAliasMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<List> FAILUREREASONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReasons").build();
     private static final MarshallingInfo<List> ROUTINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("routingConfiguration").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -76,6 +78,7 @@ public class AgentAliasMarshaller {
             protocolMarshaller.marshall(agentAlias.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(agentAlias.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(agentAlias.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentAlias.getFailureReasons(), FAILUREREASONS_BINDING);
             protocolMarshaller.marshall(agentAlias.getRoutingConfiguration(), ROUTINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentAlias.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {

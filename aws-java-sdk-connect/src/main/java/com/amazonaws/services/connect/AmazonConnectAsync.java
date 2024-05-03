@@ -713,6 +713,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Allows you to retrieve metadata about multiple attached files on an associated resource. Each attached file
+     * provided in the input list must be associated with the input AssociatedResourceArn.
+     * </p>
+     * 
+     * @param batchGetAttachedFileMetadataRequest
+     * @return A Java Future containing the result of the BatchGetAttachedFileMetadata operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.BatchGetAttachedFileMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetAttachedFileMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAttachedFileMetadataResult> batchGetAttachedFileMetadataAsync(
+            BatchGetAttachedFileMetadataRequest batchGetAttachedFileMetadataRequest);
+
+    /**
+     * <p>
+     * Allows you to retrieve metadata about multiple attached files on an associated resource. Each attached file
+     * provided in the input list must be associated with the input AssociatedResourceArn.
+     * </p>
+     * 
+     * @param batchGetAttachedFileMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetAttachedFileMetadata operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.BatchGetAttachedFileMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetAttachedFileMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAttachedFileMetadataResult> batchGetAttachedFileMetadataAsync(
+            BatchGetAttachedFileMetadataRequest batchGetAttachedFileMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAttachedFileMetadataRequest, BatchGetAttachedFileMetadataResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieve the flow associations for the given resources.
      * </p>
      * 
@@ -897,6 +934,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest claimPhoneNumberRequest,
             com.amazonaws.handlers.AsyncHandler<ClaimPhoneNumberRequest, ClaimPhoneNumberResult> asyncHandler);
+
+    /**
+     * <p>
+     * Allows you to confirm that the attached file has been uploaded using the pre-signed URL provided in the
+     * StartAttachedFileUpload API.
+     * </p>
+     * 
+     * @param completeAttachedFileUploadRequest
+     *        Request to CompleteAttachedFileUpload API
+     * @return A Java Future containing the result of the CompleteAttachedFileUpload operation returned by the service.
+     * @sample AmazonConnectAsync.CompleteAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CompleteAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CompleteAttachedFileUploadResult> completeAttachedFileUploadAsync(
+            CompleteAttachedFileUploadRequest completeAttachedFileUploadRequest);
+
+    /**
+     * <p>
+     * Allows you to confirm that the attached file has been uploaded using the pre-signed URL provided in the
+     * StartAttachedFileUpload API.
+     * </p>
+     * 
+     * @param completeAttachedFileUploadRequest
+     *        Request to CompleteAttachedFileUpload API
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CompleteAttachedFileUpload operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CompleteAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CompleteAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CompleteAttachedFileUploadResult> completeAttachedFileUploadAsync(
+            CompleteAttachedFileUploadRequest completeAttachedFileUploadRequest,
+            com.amazonaws.handlers.AsyncHandler<CompleteAttachedFileUploadRequest, CompleteAttachedFileUploadResult> asyncHandler);
 
     /**
      * <p>
@@ -1918,6 +1992,49 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DeactivateEvaluationFormResult> deactivateEvaluationFormAsync(DeactivateEvaluationFormRequest deactivateEvaluationFormRequest,
             com.amazonaws.handlers.AsyncHandler<DeactivateEvaluationFormRequest, DeactivateEvaluationFormResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an attached file along with the underlying S3 Object.
+     * </p>
+     * <important>
+     * <p>
+     * The attached file is <b>permanently deleted</b> if S3 bucket versioning is not enabled.
+     * </p>
+     * </important>
+     * 
+     * @param deleteAttachedFileRequest
+     *        Request to DeleteAttachedFile API
+     * @return A Java Future containing the result of the DeleteAttachedFile operation returned by the service.
+     * @sample AmazonConnectAsync.DeleteAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAttachedFileResult> deleteAttachedFileAsync(DeleteAttachedFileRequest deleteAttachedFileRequest);
+
+    /**
+     * <p>
+     * Deletes an attached file along with the underlying S3 Object.
+     * </p>
+     * <important>
+     * <p>
+     * The attached file is <b>permanently deleted</b> if S3 bucket versioning is not enabled.
+     * </p>
+     * </important>
+     * 
+     * @param deleteAttachedFileRequest
+     *        Request to DeleteAttachedFile API
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAttachedFile operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeleteAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAttachedFileResult> deleteAttachedFileAsync(DeleteAttachedFileRequest deleteAttachedFileRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAttachedFileRequest, DeleteAttachedFileResult> asyncHandler);
 
     /**
      * <p>
@@ -4226,6 +4343,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest dismissUserContactRequest,
             com.amazonaws.handlers.AsyncHandler<DismissUserContactRequest, DismissUserContactResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a pre-signed URL for download of an approved attached file. This API also returns metadata about the
+     * attached file. It will only return a downloadURL if the status of the attached file is <code>APPROVED</code>.
+     * </p>
+     * 
+     * @param getAttachedFileRequest
+     *        Request to GetAttachedFile API.
+     * @return A Java Future containing the result of the GetAttachedFile operation returned by the service.
+     * @sample AmazonConnectAsync.GetAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAttachedFileResult> getAttachedFileAsync(GetAttachedFileRequest getAttachedFileRequest);
+
+    /**
+     * <p>
+     * Provides a pre-signed URL for download of an approved attached file. This API also returns metadata about the
+     * attached file. It will only return a downloadURL if the status of the attached file is <code>APPROVED</code>.
+     * </p>
+     * 
+     * @param getAttachedFileRequest
+     *        Request to GetAttachedFile API.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAttachedFile operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.GetAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAttachedFileResult> getAttachedFileAsync(GetAttachedFileRequest getAttachedFileRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAttachedFileRequest, GetAttachedFileResult> asyncHandler);
 
     /**
      * <p>
@@ -7133,6 +7285,51 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<SendChatIntegrationEventResult> sendChatIntegrationEventAsync(SendChatIntegrationEventRequest sendChatIntegrationEventRequest,
             com.amazonaws.handlers.AsyncHandler<SendChatIntegrationEventRequest, SendChatIntegrationEventResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a pre-signed Amazon S3 URL in response for uploading your content.
+     * </p>
+     * <important>
+     * <p>
+     * You may only use this API to upload attachments to a <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * Case</a>.
+     * </p>
+     * </important>
+     * 
+     * @param startAttachedFileUploadRequest
+     * @return A Java Future containing the result of the StartAttachedFileUpload operation returned by the service.
+     * @sample AmazonConnectAsync.StartAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAttachedFileUploadResult> startAttachedFileUploadAsync(StartAttachedFileUploadRequest startAttachedFileUploadRequest);
+
+    /**
+     * <p>
+     * Provides a pre-signed Amazon S3 URL in response for uploading your content.
+     * </p>
+     * <important>
+     * <p>
+     * You may only use this API to upload attachments to a <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * Case</a>.
+     * </p>
+     * </important>
+     * 
+     * @param startAttachedFileUploadRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartAttachedFileUpload operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.StartAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAttachedFileUploadResult> startAttachedFileUploadAsync(StartAttachedFileUploadRequest startAttachedFileUploadRequest,
+            com.amazonaws.handlers.AsyncHandler<StartAttachedFileUploadRequest, StartAttachedFileUploadResult> asyncHandler);
 
     /**
      * <p>

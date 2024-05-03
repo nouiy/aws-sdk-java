@@ -86,6 +86,12 @@ public class AgentAliasJsonUnmarshaller implements Unmarshaller<AgentAlias, Json
                     context.nextToken();
                     agentAlias.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("failureReasons", targetDepth)) {
+                    context.nextToken();
+                    agentAlias.setFailureReasons(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("routingConfiguration", targetDepth)) {
                     context.nextToken();
                     agentAlias.setRoutingConfiguration(new ListUnmarshaller<AgentAliasRoutingConfigurationListItem>(

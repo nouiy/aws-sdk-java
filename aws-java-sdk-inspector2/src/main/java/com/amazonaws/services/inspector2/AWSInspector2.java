@@ -541,6 +541,8 @@ public interface AWSInspector2 {
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
      *         The limit on the number of requests per second was exceeded.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
      * @throws InternalServerException
      *         The request has failed due to an internal failure of the Amazon Inspector service.
      * @sample AWSInspector2.GetCisScanReport

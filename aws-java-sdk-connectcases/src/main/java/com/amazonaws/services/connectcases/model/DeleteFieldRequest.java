@@ -33,7 +33,7 @@ public class DeleteFieldRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String domainId;
     /**
      * <p>
-     * The unique identifier of a field.
+     * Unique identifier of the field.
      * </p>
      */
     private String fieldId;
@@ -80,11 +80,11 @@ public class DeleteFieldRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier of a field.
+     * Unique identifier of the field.
      * </p>
      * 
      * @param fieldId
-     *        The unique identifier of a field.
+     *        Unique identifier of the field.
      */
 
     public void setFieldId(String fieldId) {
@@ -93,10 +93,10 @@ public class DeleteFieldRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier of a field.
+     * Unique identifier of the field.
      * </p>
      * 
-     * @return The unique identifier of a field.
+     * @return Unique identifier of the field.
      */
 
     public String getFieldId() {
@@ -105,11 +105,11 @@ public class DeleteFieldRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier of a field.
+     * Unique identifier of the field.
      * </p>
      * 
      * @param fieldId
-     *        The unique identifier of a field.
+     *        Unique identifier of the field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

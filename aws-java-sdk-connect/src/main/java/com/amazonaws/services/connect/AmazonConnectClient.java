@@ -1432,6 +1432,74 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Allows you to retrieve metadata about multiple attached files on an associated resource. Each attached file
+     * provided in the input list must be associated with the input AssociatedResourceArn.
+     * </p>
+     * 
+     * @param batchGetAttachedFileMetadataRequest
+     * @return Result of the BatchGetAttachedFileMetadata operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.BatchGetAttachedFileMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetAttachedFileMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetAttachedFileMetadataResult batchGetAttachedFileMetadata(BatchGetAttachedFileMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetAttachedFileMetadata(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetAttachedFileMetadataResult executeBatchGetAttachedFileMetadata(BatchGetAttachedFileMetadataRequest batchGetAttachedFileMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetAttachedFileMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetAttachedFileMetadataRequest> request = null;
+        Response<BatchGetAttachedFileMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetAttachedFileMetadataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetAttachedFileMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetAttachedFileMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetAttachedFileMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetAttachedFileMetadataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieve the flow associations for the given resources.
      * </p>
      * 
@@ -1670,6 +1738,75 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ClaimPhoneNumberResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ClaimPhoneNumberResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Allows you to confirm that the attached file has been uploaded using the pre-signed URL provided in the
+     * StartAttachedFileUpload API.
+     * </p>
+     * 
+     * @param completeAttachedFileUploadRequest
+     *        Request to CompleteAttachedFileUpload API
+     * @return Result of the CompleteAttachedFileUpload operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.CompleteAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CompleteAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CompleteAttachedFileUploadResult completeAttachedFileUpload(CompleteAttachedFileUploadRequest request) {
+        request = beforeClientExecution(request);
+        return executeCompleteAttachedFileUpload(request);
+    }
+
+    @SdkInternalApi
+    final CompleteAttachedFileUploadResult executeCompleteAttachedFileUpload(CompleteAttachedFileUploadRequest completeAttachedFileUploadRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(completeAttachedFileUploadRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CompleteAttachedFileUploadRequest> request = null;
+        Response<CompleteAttachedFileUploadResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CompleteAttachedFileUploadRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(completeAttachedFileUploadRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CompleteAttachedFileUpload");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CompleteAttachedFileUploadResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CompleteAttachedFileUploadResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3516,6 +3653,77 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<DeactivateEvaluationFormResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeactivateEvaluationFormResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an attached file along with the underlying S3 Object.
+     * </p>
+     * <important>
+     * <p>
+     * The attached file is <b>permanently deleted</b> if S3 bucket versioning is not enabled.
+     * </p>
+     * </important>
+     * 
+     * @param deleteAttachedFileRequest
+     *        Request to DeleteAttachedFile API
+     * @return Result of the DeleteAttachedFile operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.DeleteAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteAttachedFileResult deleteAttachedFile(DeleteAttachedFileRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAttachedFile(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAttachedFileResult executeDeleteAttachedFile(DeleteAttachedFileRequest deleteAttachedFileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAttachedFileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAttachedFileRequest> request = null;
+        Response<DeleteAttachedFileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAttachedFileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAttachedFileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAttachedFile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAttachedFileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteAttachedFileResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -7689,6 +7897,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<DismissUserContactResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DismissUserContactResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides a pre-signed URL for download of an approved attached file. This API also returns metadata about the
+     * attached file. It will only return a downloadURL if the status of the attached file is <code>APPROVED</code>.
+     * </p>
+     * 
+     * @param getAttachedFileRequest
+     *        Request to GetAttachedFile API.
+     * @return Result of the GetAttachedFile operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.GetAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetAttachedFileResult getAttachedFile(GetAttachedFileRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAttachedFile(request);
+    }
+
+    @SdkInternalApi
+    final GetAttachedFileResult executeGetAttachedFile(GetAttachedFileRequest getAttachedFileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAttachedFileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAttachedFileRequest> request = null;
+        Response<GetAttachedFileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAttachedFileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAttachedFileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAttachedFile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAttachedFileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAttachedFileResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -12901,6 +13176,82 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<SendChatIntegrationEventResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new SendChatIntegrationEventResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides a pre-signed Amazon S3 URL in response for uploading your content.
+     * </p>
+     * <important>
+     * <p>
+     * You may only use this API to upload attachments to a <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * Case</a>.
+     * </p>
+     * </important>
+     * 
+     * @param startAttachedFileUploadRequest
+     * @return Result of the StartAttachedFileUpload operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @sample AmazonConnect.StartAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartAttachedFileUploadResult startAttachedFileUpload(StartAttachedFileUploadRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartAttachedFileUpload(request);
+    }
+
+    @SdkInternalApi
+    final StartAttachedFileUploadResult executeStartAttachedFileUpload(StartAttachedFileUploadRequest startAttachedFileUploadRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startAttachedFileUploadRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartAttachedFileUploadRequest> request = null;
+        Response<StartAttachedFileUploadResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartAttachedFileUploadRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startAttachedFileUploadRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartAttachedFileUpload");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartAttachedFileUploadResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartAttachedFileUploadResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

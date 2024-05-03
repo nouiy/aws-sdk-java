@@ -31,6 +31,8 @@ public class RelatedItemContentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("comment").build();
     private static final MarshallingInfo<StructuredPojo> CONTACT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("contact").build();
+    private static final MarshallingInfo<StructuredPojo> FILE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("file").build();
 
     private static final RelatedItemContentMarshaller instance = new RelatedItemContentMarshaller();
 
@@ -50,6 +52,7 @@ public class RelatedItemContentMarshaller {
         try {
             protocolMarshaller.marshall(relatedItemContent.getComment(), COMMENT_BINDING);
             protocolMarshaller.marshall(relatedItemContent.getContact(), CONTACT_BINDING);
+            protocolMarshaller.marshall(relatedItemContent.getFile(), FILE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -548,7 +548,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     * >Average greeting time agent </a>
+     * >Average agent greeting time</a>
      * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
@@ -674,7 +674,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     * >Average interruptions agent </a>
+     * >Average agent interruptions</a>
      * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -692,7 +692,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     * >Average interruption time agent</a>
+     * >Average agent interruption time</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -778,7 +778,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     * >Average talk time agent</a>
+     * >Average agent talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -796,7 +796,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     * >Average talk time customer</a>
+     * >Average customer talk time</a>
      * </p>
      * </dd>
      * <dt>CASES_CREATED</dt>
@@ -888,7 +888,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     * >Contacts handled by Connected to agent</a>
+     * >Contacts handled (connected to agent timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -1002,7 +1002,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     * >Contacts queued by Enqueue</a>
+     * >Contacts queued (enqueue timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -1196,7 +1196,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     * >Talk time agent percent</a>
+     * >Agent talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -1214,7 +1214,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     * >Talk time customer percent</a>
+     * >Customer talk time percent</a>
      * </p>
      * </dd>
      * <dt>REOPENED_CASE_ACTIONS</dt>
@@ -3327,7 +3327,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     * >Average greeting time agent </a>
+     * >Average agent greeting time</a>
      * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
@@ -3453,7 +3453,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     * >Average interruptions agent </a>
+     * >Average agent interruptions</a>
      * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -3471,7 +3471,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     * >Average interruption time agent</a>
+     * >Average agent interruption time</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -3557,7 +3557,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     * >Average talk time agent</a>
+     * >Average agent talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -3575,7 +3575,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     * >Average talk time customer</a>
+     * >Average customer talk time</a>
      * </p>
      * </dd>
      * <dt>CASES_CREATED</dt>
@@ -3667,7 +3667,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     * >Contacts handled by Connected to agent</a>
+     * >Contacts handled (connected to agent timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -3781,7 +3781,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     * >Contacts queued by Enqueue</a>
+     * >Contacts queued (enqueue timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -3975,7 +3975,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     * >Talk time agent percent</a>
+     * >Agent talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -3993,7 +3993,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     * >Talk time customer percent</a>
+     * >Customer talk time percent</a>
      * </p>
      * </dd>
      * <dt>REOPENED_CASE_ACTIONS</dt>
@@ -4631,7 +4631,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     *         >Average greeting time agent </a>
+     *         >Average agent greeting time</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_HANDLE_TIME</dt>
@@ -4758,7 +4758,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     *         >Average interruptions agent </a>
+     *         >Average agent interruptions</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -4776,7 +4776,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     *         >Average interruption time agent</a>
+     *         >Average agent interruption time</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_NON_TALK_TIME</dt>
@@ -4863,7 +4863,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     *         >Average talk time agent</a>
+     *         >Average agent talk time</a>
      *         </p>
      *         </dd>
      *         <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -4881,7 +4881,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     *         >Average talk time customer</a>
+     *         >Average customer talk time</a>
      *         </p>
      *         </dd>
      *         <dt>CASES_CREATED</dt>
@@ -4975,7 +4975,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     *         >Contacts handled by Connected to agent</a>
+     *         >Contacts handled (connected to agent timestamp)</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -5090,7 +5090,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     *         >Contacts queued by Enqueue</a>
+     *         >Contacts queued (enqueue timestamp)</a>
      *         </p>
      *         </dd>
      *         <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -5284,7 +5284,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     *         >Talk time agent percent</a>
+     *         >Agent talk time percent</a>
      *         </p>
      *         </dd>
      *         <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -5302,7 +5302,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         UI name: <a href=
      *         "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     *         >Talk time customer percent</a>
+     *         >Customer talk time percent</a>
      *         </p>
      *         </dd>
      *         <dt>REOPENED_CASE_ACTIONS</dt>
@@ -5947,7 +5947,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     * >Average greeting time agent </a>
+     * >Average agent greeting time</a>
      * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
@@ -6073,7 +6073,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     * >Average interruptions agent </a>
+     * >Average agent interruptions</a>
      * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -6091,7 +6091,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     * >Average interruption time agent</a>
+     * >Average agent interruption time</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -6177,7 +6177,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     * >Average talk time agent</a>
+     * >Average agent talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -6195,7 +6195,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     * >Average talk time customer</a>
+     * >Average customer talk time</a>
      * </p>
      * </dd>
      * <dt>CASES_CREATED</dt>
@@ -6287,7 +6287,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     * >Contacts handled by Connected to agent</a>
+     * >Contacts handled (connected to agent timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -6401,7 +6401,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     * >Contacts queued by Enqueue</a>
+     * >Contacts queued (enqueue timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -6595,7 +6595,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     * >Talk time agent percent</a>
+     * >Agent talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -6613,7 +6613,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     * >Talk time customer percent</a>
+     * >Customer talk time percent</a>
      * </p>
      * </dd>
      * <dt>REOPENED_CASE_ACTIONS</dt>
@@ -7252,7 +7252,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     *        >Average greeting time agent </a>
+     *        >Average agent greeting time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_HANDLE_TIME</dt>
@@ -7379,7 +7379,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     *        >Average interruptions agent </a>
+     *        >Average agent interruptions</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -7397,7 +7397,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     *        >Average interruption time agent</a>
+     *        >Average agent interruption time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_NON_TALK_TIME</dt>
@@ -7484,7 +7484,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     *        >Average talk time agent</a>
+     *        >Average agent talk time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -7502,7 +7502,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     *        >Average talk time customer</a>
+     *        >Average customer talk time</a>
      *        </p>
      *        </dd>
      *        <dt>CASES_CREATED</dt>
@@ -7596,7 +7596,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     *        >Contacts handled by Connected to agent</a>
+     *        >Contacts handled (connected to agent timestamp)</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -7711,7 +7711,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     *        >Contacts queued by Enqueue</a>
+     *        >Contacts queued (enqueue timestamp)</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -7905,7 +7905,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     *        >Talk time agent percent</a>
+     *        >Agent talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -7923,7 +7923,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     *        >Talk time customer percent</a>
+     *        >Customer talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>REOPENED_CASE_ACTIONS</dt>
@@ -8573,7 +8573,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     * >Average greeting time agent </a>
+     * >Average agent greeting time</a>
      * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
@@ -8699,7 +8699,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     * >Average interruptions agent </a>
+     * >Average agent interruptions</a>
      * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -8717,7 +8717,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     * >Average interruption time agent</a>
+     * >Average agent interruption time</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -8803,7 +8803,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     * >Average talk time agent</a>
+     * >Average agent talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -8821,7 +8821,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     * >Average talk time customer</a>
+     * >Average customer talk time</a>
      * </p>
      * </dd>
      * <dt>CASES_CREATED</dt>
@@ -8913,7 +8913,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     * >Contacts handled by Connected to agent</a>
+     * >Contacts handled (connected to agent timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -9027,7 +9027,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     * >Contacts queued by Enqueue</a>
+     * >Contacts queued (enqueue timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -9221,7 +9221,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     * >Talk time agent percent</a>
+     * >Agent talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -9239,7 +9239,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     * >Talk time customer percent</a>
+     * >Customer talk time percent</a>
      * </p>
      * </dd>
      * <dt>REOPENED_CASE_ACTIONS</dt>
@@ -9883,7 +9883,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     *        >Average greeting time agent </a>
+     *        >Average agent greeting time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_HANDLE_TIME</dt>
@@ -10010,7 +10010,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     *        >Average interruptions agent </a>
+     *        >Average agent interruptions</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -10028,7 +10028,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     *        >Average interruption time agent</a>
+     *        >Average agent interruption time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_NON_TALK_TIME</dt>
@@ -10115,7 +10115,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     *        >Average talk time agent</a>
+     *        >Average agent talk time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -10133,7 +10133,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     *        >Average talk time customer</a>
+     *        >Average customer talk time</a>
      *        </p>
      *        </dd>
      *        <dt>CASES_CREATED</dt>
@@ -10227,7 +10227,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     *        >Contacts handled by Connected to agent</a>
+     *        >Contacts handled (connected to agent timestamp)</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -10342,7 +10342,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     *        >Contacts queued by Enqueue</a>
+     *        >Contacts queued (enqueue timestamp)</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -10536,7 +10536,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     *        >Talk time agent percent</a>
+     *        >Agent talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -10554,7 +10554,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     *        >Talk time customer percent</a>
+     *        >Customer talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>REOPENED_CASE_ACTIONS</dt>
@@ -11206,7 +11206,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     * >Average greeting time agent </a>
+     * >Average agent greeting time</a>
      * </p>
      * </dd>
      * <dt>AVG_HANDLE_TIME</dt>
@@ -11332,7 +11332,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     * >Average interruptions agent </a>
+     * >Average agent interruptions</a>
      * </p>
      * </dd>
      * <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -11350,7 +11350,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     * >Average interruption time agent</a>
+     * >Average agent interruption time</a>
      * </p>
      * </dd>
      * <dt>AVG_NON_TALK_TIME</dt>
@@ -11436,7 +11436,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     * >Average talk time agent</a>
+     * >Average agent talk time</a>
      * </p>
      * </dd>
      * <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -11454,7 +11454,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     * >Average talk time customer</a>
+     * >Average customer talk time</a>
      * </p>
      * </dd>
      * <dt>CASES_CREATED</dt>
@@ -11546,7 +11546,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     * >Contacts handled by Connected to agent</a>
+     * >Contacts handled (connected to agent timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -11660,7 +11660,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     * >Contacts queued by Enqueue</a>
+     * >Contacts queued (enqueue timestamp)</a>
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -11854,7 +11854,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     * >Talk time agent percent</a>
+     * >Agent talk time percent</a>
      * </p>
      * </dd>
      * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -11872,7 +11872,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * UI name: <a href=
      * "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     * >Talk time customer percent</a>
+     * >Customer talk time percent</a>
      * </p>
      * </dd>
      * <dt>REOPENED_CASE_ACTIONS</dt>
@@ -12511,7 +12511,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-greeting-time-agent-historical"
-     *        >Average greeting time agent </a>
+     *        >Average agent greeting time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_HANDLE_TIME</dt>
@@ -12638,7 +12638,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-agent-historical"
-     *        >Average interruptions agent </a>
+     *        >Average agent interruptions</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_INTERRUPTION_TIME_AGENT</dt>
@@ -12656,7 +12656,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-interruptions-time-agent-historical"
-     *        >Average interruption time agent</a>
+     *        >Average agent interruption time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_NON_TALK_TIME</dt>
@@ -12743,7 +12743,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-agent-historical"
-     *        >Average talk time agent</a>
+     *        >Average agent talk time</a>
      *        </p>
      *        </dd>
      *        <dt>AVG_TALK_TIME_CUSTOMER</dt>
@@ -12761,7 +12761,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical"
-     *        >Average talk time customer</a>
+     *        >Average customer talk time</a>
      *        </p>
      *        </dd>
      *        <dt>CASES_CREATED</dt>
@@ -12855,7 +12855,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-handled-by-connected-to-agent-historical"
-     *        >Contacts handled by Connected to agent</a>
+     *        >Contacts handled (connected to agent timestamp)</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
@@ -12970,7 +12970,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical"
-     *        >Contacts queued by Enqueue</a>
+     *        >Contacts queued (enqueue timestamp)</a>
      *        </p>
      *        </dd>
      *        <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -13164,7 +13164,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttagent-historical"
-     *        >Talk time agent percent</a>
+     *        >Agent talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
@@ -13182,7 +13182,7 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        UI name: <a href=
      *        "https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#ttcustomer-historical"
-     *        >Talk time customer percent</a>
+     *        >Customer talk time percent</a>
      *        </p>
      *        </dd>
      *        <dt>REOPENED_CASE_ACTIONS</dt>

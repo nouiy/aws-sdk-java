@@ -52,7 +52,7 @@ dependencies.
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-bom</artifactId>
-      <version>1.12.714</version>
+      <version>1.12.715</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -141,25 +141,8 @@ For more information see the [AWS SDK for Java 2.x Developer Guide][sdk-v2-dev-g
 
 ## Maintenance and Support for Java Versions
 
-The AWS Java SDK version 1 (v1) supports Java versions from 7 to 16. The Java 17 version introduces strong encapsulation of internal Java elements, which is not backwards-compatible with the Java SDK v1. 
-This may cause issues for certain use-cases of the SDK. If you plan to use Java 17+, we recommend that you migrate to
-[AWS SDK for Java 2.x][aws-sdk-for-java-2x] that fully supports Java 8, Java 11, and Java 17 Long-Term Support(LTS) releases.
-
-If you are experiencing issues with Java 17+ and unable to migrate to AWS SDK for Java v2 at this time, below are the workarounds that you might find helpful.
-Please keep in mind that these workarounds may not work in the future 
-versions of Java. See [JEP 403: Strongly Encapsulate JDK Internals][jep-403]
-and [Breaking Encapsulation][jep-break-encapsulation]
-for more details.
-
-**Error: com.amazonaws.AmazonServiceException: Unable to unmarshall
-exception response with the unmarshallers provided caused by java.lang.
-reflect.InaccessibleObjectException**
-
-- use JVM option `--add-opens java.base/java.lang=ALL-UNNAMED` at JVM startup
-
-**WARNING: Illegal reflective access by com.amazonaws.util.XpathUtils**
-
-- use JVM option `--add-opens=java.xml/com.sun.org.apache.xpath.internal=ALL-UNNAMED` at JVM startup
+The AWS Java SDK version 1 (v1) supports Java versions from 7 to 17, but may not be updated to support future Java versions. To ensure long-term compatibility with the latest JDK versions, we recommend that you migrate to
+[AWS SDK for Java 2.x][aws-sdk-for-java-2x]. 
 
 [aws-iam-credentials]: https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html
 [aws]: https://aws.amazon.com/
@@ -185,7 +168,5 @@ reflect.InaccessibleObjectException**
 [sdk-v2-dev-guide]: https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/welcome.html
 [maintenance-policy]: https://docs.aws.amazon.com/credref/latest/refdocs/maint-policy.html
 [version-matrix]: https://docs.aws.amazon.com/credref/latest/refdocs/version-support-matrix.html
-[jep-break-encapsulation]: https://openjdk.org/jeps/261#Breaking-encapsulation
-[jep-403]: https://openjdk.org/jeps/403
 [aws-sdk-for-java-2x]: https://github.com/aws/aws-sdk-java-v2
 [deprecation-announcement-post]: https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-java-v1-x-on-december-31-2025

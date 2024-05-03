@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetCisScanReportRequestMarshaller {
 
+    private static final MarshallingInfo<String> REPORTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("reportFormat").build();
     private static final MarshallingInfo<String> SCANARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("scanArn").build();
     private static final MarshallingInfo<List> TARGETACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -49,6 +51,7 @@ public class GetCisScanReportRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(getCisScanReportRequest.getReportFormat(), REPORTFORMAT_BINDING);
             protocolMarshaller.marshall(getCisScanReportRequest.getScanArn(), SCANARN_BINDING);
             protocolMarshaller.marshall(getCisScanReportRequest.getTargetAccounts(), TARGETACCOUNTS_BINDING);
         } catch (Exception e) {

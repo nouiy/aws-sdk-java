@@ -27,6 +27,13 @@ public class GetCisScanReportRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is specified, the
+     * report format defaults to <code>PDF</code>.
+     * </p>
+     */
+    private String reportFormat;
+    /**
+     * <p>
      * The scan ARN.
      * </p>
      */
@@ -37,6 +44,73 @@ public class GetCisScanReportRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private java.util.List<String> targetAccounts;
+
+    /**
+     * <p>
+     * The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is specified, the
+     * report format defaults to <code>PDF</code>.
+     * </p>
+     * 
+     * @param reportFormat
+     *        The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is
+     *        specified, the report format defaults to <code>PDF</code>.
+     * @see CisReportFormat
+     */
+
+    public void setReportFormat(String reportFormat) {
+        this.reportFormat = reportFormat;
+    }
+
+    /**
+     * <p>
+     * The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is specified, the
+     * report format defaults to <code>PDF</code>.
+     * </p>
+     * 
+     * @return The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is
+     *         specified, the report format defaults to <code>PDF</code>.
+     * @see CisReportFormat
+     */
+
+    public String getReportFormat() {
+        return this.reportFormat;
+    }
+
+    /**
+     * <p>
+     * The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is specified, the
+     * report format defaults to <code>PDF</code>.
+     * </p>
+     * 
+     * @param reportFormat
+     *        The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is
+     *        specified, the report format defaults to <code>PDF</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CisReportFormat
+     */
+
+    public GetCisScanReportRequest withReportFormat(String reportFormat) {
+        setReportFormat(reportFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is specified, the
+     * report format defaults to <code>PDF</code>.
+     * </p>
+     * 
+     * @param reportFormat
+     *        The format of the report. Valid values are <code>PDF</code> and <code>CSV</code>. If no value is
+     *        specified, the report format defaults to <code>PDF</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CisReportFormat
+     */
+
+    public GetCisScanReportRequest withReportFormat(CisReportFormat reportFormat) {
+        this.reportFormat = reportFormat.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -160,6 +234,8 @@ public class GetCisScanReportRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getReportFormat() != null)
+            sb.append("ReportFormat: ").append(getReportFormat()).append(",");
         if (getScanArn() != null)
             sb.append("ScanArn: ").append(getScanArn()).append(",");
         if (getTargetAccounts() != null)
@@ -178,6 +254,10 @@ public class GetCisScanReportRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof GetCisScanReportRequest == false)
             return false;
         GetCisScanReportRequest other = (GetCisScanReportRequest) obj;
+        if (other.getReportFormat() == null ^ this.getReportFormat() == null)
+            return false;
+        if (other.getReportFormat() != null && other.getReportFormat().equals(this.getReportFormat()) == false)
+            return false;
         if (other.getScanArn() == null ^ this.getScanArn() == null)
             return false;
         if (other.getScanArn() != null && other.getScanArn().equals(this.getScanArn()) == false)
@@ -194,6 +274,7 @@ public class GetCisScanReportRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getReportFormat() == null) ? 0 : getReportFormat().hashCode());
         hashCode = prime * hashCode + ((getScanArn() == null) ? 0 : getScanArn().hashCode());
         hashCode = prime * hashCode + ((getTargetAccounts() == null) ? 0 : getTargetAccounts().hashCode());
         return hashCode;

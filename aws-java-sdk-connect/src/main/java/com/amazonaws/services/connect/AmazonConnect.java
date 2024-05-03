@@ -531,6 +531,30 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Allows you to retrieve metadata about multiple attached files on an associated resource. Each attached file
+     * provided in the input list must be associated with the input AssociatedResourceArn.
+     * </p>
+     * 
+     * @param batchGetAttachedFileMetadataRequest
+     * @return Result of the BatchGetAttachedFileMetadata operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.BatchGetAttachedFileMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetAttachedFileMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetAttachedFileMetadataResult batchGetAttachedFileMetadata(BatchGetAttachedFileMetadataRequest batchGetAttachedFileMetadataRequest);
+
+    /**
+     * <p>
      * Retrieve the flow associations for the given resources.
      * </p>
      * 
@@ -650,6 +674,31 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     ClaimPhoneNumberResult claimPhoneNumber(ClaimPhoneNumberRequest claimPhoneNumberRequest);
+
+    /**
+     * <p>
+     * Allows you to confirm that the attached file has been uploaded using the pre-signed URL provided in the
+     * StartAttachedFileUpload API.
+     * </p>
+     * 
+     * @param completeAttachedFileUploadRequest
+     *        Request to CompleteAttachedFileUpload API
+     * @return Result of the CompleteAttachedFileUpload operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.CompleteAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CompleteAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CompleteAttachedFileUploadResult completeAttachedFileUpload(CompleteAttachedFileUploadRequest completeAttachedFileUploadRequest);
 
     /**
      * <p>
@@ -1430,6 +1479,35 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DeactivateEvaluationFormResult deactivateEvaluationForm(DeactivateEvaluationFormRequest deactivateEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Deletes an attached file along with the underlying S3 Object.
+     * </p>
+     * <important>
+     * <p>
+     * The attached file is <b>permanently deleted</b> if S3 bucket versioning is not enabled.
+     * </p>
+     * </important>
+     * 
+     * @param deleteAttachedFileRequest
+     *        Request to DeleteAttachedFile API
+     * @return Result of the DeleteAttachedFile operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.DeleteAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteAttachedFileResult deleteAttachedFile(DeleteAttachedFileRequest deleteAttachedFileRequest);
 
     /**
      * <p>
@@ -3024,6 +3102,31 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     DismissUserContactResult dismissUserContact(DismissUserContactRequest dismissUserContactRequest);
+
+    /**
+     * <p>
+     * Provides a pre-signed URL for download of an approved attached file. This API also returns metadata about the
+     * attached file. It will only return a downloadURL if the status of the attached file is <code>APPROVED</code>.
+     * </p>
+     * 
+     * @param getAttachedFileRequest
+     *        Request to GetAttachedFile API.
+     * @return Result of the GetAttachedFile operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.GetAttachedFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetAttachedFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetAttachedFileResult getAttachedFile(GetAttachedFileRequest getAttachedFileRequest);
 
     /**
      * <p>
@@ -5039,6 +5142,38 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     SendChatIntegrationEventResult sendChatIntegrationEvent(SendChatIntegrationEventRequest sendChatIntegrationEventRequest);
+
+    /**
+     * <p>
+     * Provides a pre-signed Amazon S3 URL in response for uploading your content.
+     * </p>
+     * <important>
+     * <p>
+     * You may only use this API to upload attachments to a <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-cases_CreateCase.html">Connect
+     * Case</a>.
+     * </p>
+     * </important>
+     * 
+     * @param startAttachedFileUploadRequest
+     * @return Result of the StartAttachedFileUpload operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @sample AmazonConnect.StartAttachedFileUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartAttachedFileUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartAttachedFileUploadResult startAttachedFileUpload(StartAttachedFileUploadRequest startAttachedFileUploadRequest);
 
     /**
      * <p>
