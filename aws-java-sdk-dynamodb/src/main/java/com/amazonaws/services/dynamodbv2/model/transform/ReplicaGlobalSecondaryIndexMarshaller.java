@@ -31,6 +31,8 @@ public class ReplicaGlobalSecondaryIndexMarshaller {
             .marshallLocationName("IndexName").build();
     private static final MarshallingInfo<StructuredPojo> PROVISIONEDTHROUGHPUTOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProvisionedThroughputOverride").build();
+    private static final MarshallingInfo<StructuredPojo> ONDEMANDTHROUGHPUTOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnDemandThroughputOverride").build();
 
     private static final ReplicaGlobalSecondaryIndexMarshaller instance = new ReplicaGlobalSecondaryIndexMarshaller();
 
@@ -50,6 +52,7 @@ public class ReplicaGlobalSecondaryIndexMarshaller {
         try {
             protocolMarshaller.marshall(replicaGlobalSecondaryIndex.getIndexName(), INDEXNAME_BINDING);
             protocolMarshaller.marshall(replicaGlobalSecondaryIndex.getProvisionedThroughputOverride(), PROVISIONEDTHROUGHPUTOVERRIDE_BINDING);
+            protocolMarshaller.marshall(replicaGlobalSecondaryIndex.getOnDemandThroughputOverride(), ONDEMANDTHROUGHPUTOVERRIDE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

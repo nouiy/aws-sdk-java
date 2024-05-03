@@ -2536,6 +2536,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public GetInstanceTpmEkPubResult getInstanceTpmEkPub(GetInstanceTpmEkPubRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetInstanceTypesFromInstanceRequirementsResult getInstanceTypesFromInstanceRequirements(GetInstanceTypesFromInstanceRequirementsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

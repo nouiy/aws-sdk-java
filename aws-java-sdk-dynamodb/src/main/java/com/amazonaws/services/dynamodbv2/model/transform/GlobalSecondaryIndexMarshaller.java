@@ -36,6 +36,8 @@ public class GlobalSecondaryIndexMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Projection").build();
     private static final MarshallingInfo<StructuredPojo> PROVISIONEDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProvisionedThroughput").build();
+    private static final MarshallingInfo<StructuredPojo> ONDEMANDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnDemandThroughput").build();
 
     private static final GlobalSecondaryIndexMarshaller instance = new GlobalSecondaryIndexMarshaller();
 
@@ -57,6 +59,7 @@ public class GlobalSecondaryIndexMarshaller {
             protocolMarshaller.marshall(globalSecondaryIndex.getKeySchema(), KEYSCHEMA_BINDING);
             protocolMarshaller.marshall(globalSecondaryIndex.getProjection(), PROJECTION_BINDING);
             protocolMarshaller.marshall(globalSecondaryIndex.getProvisionedThroughput(), PROVISIONEDTHROUGHPUT_BINDING);
+            protocolMarshaller.marshall(globalSecondaryIndex.getOnDemandThroughput(), ONDEMANDTHROUGHPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

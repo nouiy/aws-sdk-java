@@ -151,6 +151,13 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private Boolean deletionProtectionEnabled;
+    /**
+     * <p>
+     * Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     */
+    private OnDemandThroughput onDemandThroughput;
 
     /**
      * Default constructor for UpdateTableRequest object. Callers should use the setter or fluent setter (with...)
@@ -1187,6 +1194,55 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     * 
+     * @param onDemandThroughput
+     *        Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If
+     *        you use this parameter, you must specify <code>MaxReadRequestUnits</code>,
+     *        <code>MaxWriteRequestUnits</code>, or both.
+     */
+
+    public void setOnDemandThroughput(OnDemandThroughput onDemandThroughput) {
+        this.onDemandThroughput = onDemandThroughput;
+    }
+
+    /**
+     * <p>
+     * Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     * 
+     * @return Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If
+     *         you use this parameter, you must specify <code>MaxReadRequestUnits</code>,
+     *         <code>MaxWriteRequestUnits</code>, or both.
+     */
+
+    public OnDemandThroughput getOnDemandThroughput() {
+        return this.onDemandThroughput;
+    }
+
+    /**
+     * <p>
+     * Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     * 
+     * @param onDemandThroughput
+     *        Updates the maximum number of read and write units for the specified table in on-demand capacity mode. If
+     *        you use this parameter, you must specify <code>MaxReadRequestUnits</code>,
+     *        <code>MaxWriteRequestUnits</code>, or both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTableRequest withOnDemandThroughput(OnDemandThroughput onDemandThroughput) {
+        setOnDemandThroughput(onDemandThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1217,7 +1273,9 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTableClass() != null)
             sb.append("TableClass: ").append(getTableClass()).append(",");
         if (getDeletionProtectionEnabled() != null)
-            sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled());
+            sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled()).append(",");
+        if (getOnDemandThroughput() != null)
+            sb.append("OnDemandThroughput: ").append(getOnDemandThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -1272,6 +1330,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getDeletionProtectionEnabled() != null && other.getDeletionProtectionEnabled().equals(this.getDeletionProtectionEnabled()) == false)
             return false;
+        if (other.getOnDemandThroughput() == null ^ this.getOnDemandThroughput() == null)
+            return false;
+        if (other.getOnDemandThroughput() != null && other.getOnDemandThroughput().equals(this.getOnDemandThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -1290,6 +1352,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getReplicaUpdates() == null) ? 0 : getReplicaUpdates().hashCode());
         hashCode = prime * hashCode + ((getTableClass() == null) ? 0 : getTableClass().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtectionEnabled() == null) ? 0 : getDeletionProtectionEnabled().hashCode());
+        hashCode = prime * hashCode + ((getOnDemandThroughput() == null) ? 0 : getOnDemandThroughput().hashCode());
         return hashCode;
     }
 

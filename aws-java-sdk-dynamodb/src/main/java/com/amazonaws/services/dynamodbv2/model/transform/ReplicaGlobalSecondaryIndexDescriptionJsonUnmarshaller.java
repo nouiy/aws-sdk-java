@@ -57,6 +57,11 @@ public class ReplicaGlobalSecondaryIndexDescriptionJsonUnmarshaller implements U
                     replicaGlobalSecondaryIndexDescription.setProvisionedThroughputOverride(ProvisionedThroughputOverrideJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("OnDemandThroughputOverride", targetDepth)) {
+                    context.nextToken();
+                    replicaGlobalSecondaryIndexDescription.setOnDemandThroughputOverride(OnDemandThroughputOverrideJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

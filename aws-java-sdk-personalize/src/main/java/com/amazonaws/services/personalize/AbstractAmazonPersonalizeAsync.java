@@ -67,6 +67,19 @@ public class AbstractAmazonPersonalizeAsync extends AbstractAmazonPersonalize im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDataDeletionJobResult> createDataDeletionJobAsync(CreateDataDeletionJobRequest request) {
+
+        return createDataDeletionJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataDeletionJobResult> createDataDeletionJobAsync(CreateDataDeletionJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateDataDeletionJobRequest, CreateDataDeletionJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request) {
 
         return createDatasetAsync(request, null);
@@ -379,6 +392,19 @@ public class AbstractAmazonPersonalizeAsync extends AbstractAmazonPersonalize im
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDataDeletionJobResult> describeDataDeletionJobAsync(DescribeDataDeletionJobRequest request) {
+
+        return describeDataDeletionJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataDeletionJobResult> describeDataDeletionJobAsync(DescribeDataDeletionJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeDataDeletionJobRequest, DescribeDataDeletionJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request) {
 
         return describeDatasetAsync(request, null);
@@ -595,6 +621,19 @@ public class AbstractAmazonPersonalizeAsync extends AbstractAmazonPersonalize im
     @Override
     public java.util.concurrent.Future<ListCampaignsResult> listCampaignsAsync(ListCampaignsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListCampaignsRequest, ListCampaignsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataDeletionJobsResult> listDataDeletionJobsAsync(ListDataDeletionJobsRequest request) {
+
+        return listDataDeletionJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataDeletionJobsResult> listDataDeletionJobsAsync(ListDataDeletionJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDataDeletionJobsRequest, ListDataDeletionJobsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -46,6 +46,8 @@ public class GlobalSecondaryIndexDescriptionMarshaller {
             .marshallLocationName("ItemCount").build();
     private static final MarshallingInfo<String> INDEXARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("IndexArn").build();
+    private static final MarshallingInfo<StructuredPojo> ONDEMANDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnDemandThroughput").build();
 
     private static final GlobalSecondaryIndexDescriptionMarshaller instance = new GlobalSecondaryIndexDescriptionMarshaller();
 
@@ -72,6 +74,7 @@ public class GlobalSecondaryIndexDescriptionMarshaller {
             protocolMarshaller.marshall(globalSecondaryIndexDescription.getIndexSizeBytes(), INDEXSIZEBYTES_BINDING);
             protocolMarshaller.marshall(globalSecondaryIndexDescription.getItemCount(), ITEMCOUNT_BINDING);
             protocolMarshaller.marshall(globalSecondaryIndexDescription.getIndexArn(), INDEXARN_BINDING);
+            protocolMarshaller.marshall(globalSecondaryIndexDescription.getOnDemandThroughput(), ONDEMANDTHROUGHPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

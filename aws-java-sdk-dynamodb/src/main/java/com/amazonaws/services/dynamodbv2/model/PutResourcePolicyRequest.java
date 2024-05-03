@@ -43,10 +43,22 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * An Amazon Web Services resource-based policy document in JSON format.
      * </p>
+     * <ul>
+     * <li>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. For a full list of all considerations that you should keep
-     * in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data for a
+     * global table is denied, adding or deleting a replica will fail with an error.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For a full list of all considerations that apply while attaching a resource-based policy, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
@@ -55,12 +67,17 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A string value that you can use to conditionally update your policy. You can provide the revision ID of your
-     * existing policy to make mutating requests against that policy. When you provide an expected revision ID, if the
-     * revision ID of the existing policy on the resource doesn't match or if there's no policy attached to the
-     * resource, your request will be rejected with a <code>PolicyNotFoundException</code>.
+     * existing policy to make mutating requests against that policy.
      * </p>
+     * <note>
      * <p>
-     * To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
+     * When you provide an expected revision ID, if the revision ID of the existing policy on the resource doesn't match
+     * or if there's no policy attached to the resource, your request will be rejected with a
+     * <code>PolicyNotFoundException</code>.
+     * </p>
+     * </note>
+     * <p>
+     * To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
      * revision ID.
      * </p>
      */
@@ -162,20 +179,44 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * An Amazon Web Services resource-based policy document in JSON format.
      * </p>
+     * <ul>
+     * <li>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. For a full list of all considerations that you should keep
-     * in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data for a
+     * global table is denied, adding or deleting a replica will fail with an error.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For a full list of all considerations that apply while attaching a resource-based policy, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
      * 
      * @param policy
      *        An Amazon Web Services resource-based policy document in JSON format.</p>
+     *        <ul>
+     *        <li>
      *        <p>
      *        The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     *        calculating the size of a policy against this limit. For a full list of all considerations that you should
-     *        keep in mind while attaching a resource-based policy, see <a
+     *        calculating the size of a policy against this limit.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data
+     *        for a global table is denied, adding or deleting a replica will fail with an error.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For a full list of all considerations that apply while attaching a resource-based policy, see <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *        >Resource-based policy considerations</a>.
      */
@@ -188,19 +229,43 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * An Amazon Web Services resource-based policy document in JSON format.
      * </p>
+     * <ul>
+     * <li>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. For a full list of all considerations that you should keep
-     * in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data for a
+     * global table is denied, adding or deleting a replica will fail with an error.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For a full list of all considerations that apply while attaching a resource-based policy, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
      * 
      * @return An Amazon Web Services resource-based policy document in JSON format.</p>
+     *         <ul>
+     *         <li>
      *         <p>
      *         The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces
-     *         when calculating the size of a policy against this limit. For a full list of all considerations that you
-     *         should keep in mind while attaching a resource-based policy, see <a
+     *         when calculating the size of a policy against this limit.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data
+     *         for a global table is denied, adding or deleting a replica will fail with an error.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For a full list of all considerations that apply while attaching a resource-based policy, see <a
      *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *         >Resource-based policy considerations</a>.
      */
@@ -213,20 +278,44 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * An Amazon Web Services resource-based policy document in JSON format.
      * </p>
+     * <ul>
+     * <li>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. For a full list of all considerations that you should keep
-     * in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data for a
+     * global table is denied, adding or deleting a replica will fail with an error.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For a full list of all considerations that apply while attaching a resource-based policy, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
      * 
      * @param policy
      *        An Amazon Web Services resource-based policy document in JSON format.</p>
+     *        <ul>
+     *        <li>
      *        <p>
      *        The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     *        calculating the size of a policy against this limit. For a full list of all considerations that you should
-     *        keep in mind while attaching a resource-based policy, see <a
+     *        calculating the size of a policy against this limit.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to replicate data
+     *        for a global table is denied, adding or deleting a replica will fail with an error.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For a full list of all considerations that apply while attaching a resource-based policy, see <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *        >Resource-based policy considerations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -240,23 +329,32 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A string value that you can use to conditionally update your policy. You can provide the revision ID of your
-     * existing policy to make mutating requests against that policy. When you provide an expected revision ID, if the
-     * revision ID of the existing policy on the resource doesn't match or if there's no policy attached to the
-     * resource, your request will be rejected with a <code>PolicyNotFoundException</code>.
+     * existing policy to make mutating requests against that policy.
      * </p>
+     * <note>
      * <p>
-     * To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
+     * When you provide an expected revision ID, if the revision ID of the existing policy on the resource doesn't match
+     * or if there's no policy attached to the resource, your request will be rejected with a
+     * <code>PolicyNotFoundException</code>.
+     * </p>
+     * </note>
+     * <p>
+     * To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
      * revision ID.
      * </p>
      * 
      * @param expectedRevisionId
      *        A string value that you can use to conditionally update your policy. You can provide the revision ID of
-     *        your existing policy to make mutating requests against that policy. When you provide an expected revision
-     *        ID, if the revision ID of the existing policy on the resource doesn't match or if there's no policy
-     *        attached to the resource, your request will be rejected with a <code>PolicyNotFoundException</code>.</p>
+     *        your existing policy to make mutating requests against that policy.</p> <note>
      *        <p>
-     *        To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for
-     *        the revision ID.
+     *        When you provide an expected revision ID, if the revision ID of the existing policy on the resource
+     *        doesn't match or if there's no policy attached to the resource, your request will be rejected with a
+     *        <code>PolicyNotFoundException</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code>
+     *        for the revision ID.
      */
 
     public void setExpectedRevisionId(String expectedRevisionId) {
@@ -266,22 +364,31 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A string value that you can use to conditionally update your policy. You can provide the revision ID of your
-     * existing policy to make mutating requests against that policy. When you provide an expected revision ID, if the
-     * revision ID of the existing policy on the resource doesn't match or if there's no policy attached to the
-     * resource, your request will be rejected with a <code>PolicyNotFoundException</code>.
+     * existing policy to make mutating requests against that policy.
      * </p>
+     * <note>
      * <p>
-     * To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
+     * When you provide an expected revision ID, if the revision ID of the existing policy on the resource doesn't match
+     * or if there's no policy attached to the resource, your request will be rejected with a
+     * <code>PolicyNotFoundException</code>.
+     * </p>
+     * </note>
+     * <p>
+     * To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
      * revision ID.
      * </p>
      * 
      * @return A string value that you can use to conditionally update your policy. You can provide the revision ID of
-     *         your existing policy to make mutating requests against that policy. When you provide an expected revision
-     *         ID, if the revision ID of the existing policy on the resource doesn't match or if there's no policy
-     *         attached to the resource, your request will be rejected with a <code>PolicyNotFoundException</code>.</p>
+     *         your existing policy to make mutating requests against that policy.</p> <note>
      *         <p>
-     *         To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for
-     *         the revision ID.
+     *         When you provide an expected revision ID, if the revision ID of the existing policy on the resource
+     *         doesn't match or if there's no policy attached to the resource, your request will be rejected with a
+     *         <code>PolicyNotFoundException</code>.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code>
+     *         for the revision ID.
      */
 
     public String getExpectedRevisionId() {
@@ -291,23 +398,32 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A string value that you can use to conditionally update your policy. You can provide the revision ID of your
-     * existing policy to make mutating requests against that policy. When you provide an expected revision ID, if the
-     * revision ID of the existing policy on the resource doesn't match or if there's no policy attached to the
-     * resource, your request will be rejected with a <code>PolicyNotFoundException</code>.
+     * existing policy to make mutating requests against that policy.
      * </p>
+     * <note>
      * <p>
-     * To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
+     * When you provide an expected revision ID, if the revision ID of the existing policy on the resource doesn't match
+     * or if there's no policy attached to the resource, your request will be rejected with a
+     * <code>PolicyNotFoundException</code>.
+     * </p>
+     * </note>
+     * <p>
+     * To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for the
      * revision ID.
      * </p>
      * 
      * @param expectedRevisionId
      *        A string value that you can use to conditionally update your policy. You can provide the revision ID of
-     *        your existing policy to make mutating requests against that policy. When you provide an expected revision
-     *        ID, if the revision ID of the existing policy on the resource doesn't match or if there's no policy
-     *        attached to the resource, your request will be rejected with a <code>PolicyNotFoundException</code>.</p>
+     *        your existing policy to make mutating requests against that policy.</p> <note>
      *        <p>
-     *        To conditionally put a policy when no policy exists for the resource, specify <code>NO_POLICY</code> for
-     *        the revision ID.
+     *        When you provide an expected revision ID, if the revision ID of the existing policy on the resource
+     *        doesn't match or if there's no policy attached to the resource, your request will be rejected with a
+     *        <code>PolicyNotFoundException</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        To conditionally attach a policy when no policy exists for the resource, specify <code>NO_POLICY</code>
+     *        for the revision ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

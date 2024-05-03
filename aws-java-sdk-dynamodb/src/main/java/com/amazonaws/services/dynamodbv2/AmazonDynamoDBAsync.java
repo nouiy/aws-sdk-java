@@ -2320,10 +2320,10 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <p>
      * After a <code>GetResourcePolicy</code> request returns a policy created using the <code>PutResourcePolicy</code>
-     * request, you can assume the policy will start getting applied in the authorization of requests to the resource.
-     * Because this process is eventually consistent, it will take some time to apply the policy to all requests to a
-     * resource. Policies that you attach while creating a table using the <code>CreateTable</code> request will always
-     * be applied to all requests for that table.
+     * request, the policy will be applied in the authorization of requests to the resource. Because this process is
+     * eventually consistent, it will take some time to apply the policy to all requests to a resource. Policies that
+     * you attach while creating a table using the <code>CreateTable</code> request will always be applied to all
+     * requests for that table.
      * </p>
      * 
      * @param getResourcePolicyRequest
@@ -2373,10 +2373,10 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <p>
      * After a <code>GetResourcePolicy</code> request returns a policy created using the <code>PutResourcePolicy</code>
-     * request, you can assume the policy will start getting applied in the authorization of requests to the resource.
-     * Because this process is eventually consistent, it will take some time to apply the policy to all requests to a
-     * resource. Policies that you attach while creating a table using the <code>CreateTable</code> request will always
-     * be applied to all requests for that table.
+     * request, the policy will be applied in the authorization of requests to the resource. Because this process is
+     * eventually consistent, it will take some time to apply the policy to all requests to a resource. Policies that
+     * you attach while creating a table using the <code>CreateTable</code> request will always be applied to all
+     * requests for that table.
      * </p>
      * 
      * @param getResourcePolicyRequest
@@ -2903,9 +2903,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <p>
      * <code>PutResourcePolicy</code> is an idempotent operation; running it multiple times on the same resource using
-     * the same policy document will return the same revision ID. If you specify an <code>ExpectedRevisionId</code>
-     * which doesn't match the current policy's <code>RevisionId</code>, the <code>PolicyNotFoundException</code> will
-     * be returned.
+     * the same policy document will return the same revision ID. If you specify an <code>ExpectedRevisionId</code> that
+     * doesn't match the current policy's <code>RevisionId</code>, the <code>PolicyNotFoundException</code> will be
+     * returned.
      * </p>
      * <note>
      * <p>
@@ -2935,9 +2935,9 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </p>
      * <p>
      * <code>PutResourcePolicy</code> is an idempotent operation; running it multiple times on the same resource using
-     * the same policy document will return the same revision ID. If you specify an <code>ExpectedRevisionId</code>
-     * which doesn't match the current policy's <code>RevisionId</code>, the <code>PolicyNotFoundException</code> will
-     * be returned.
+     * the same policy document will return the same revision ID. If you specify an <code>ExpectedRevisionId</code> that
+     * doesn't match the current policy's <code>RevisionId</code>, the <code>PolicyNotFoundException</code> will be
+     * returned.
      * </p>
      * <note>
      * <p>

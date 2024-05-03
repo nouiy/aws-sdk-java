@@ -54,7 +54,8 @@ public class ListScheduledActionsResultJsonUnmarshaller implements Unmarshaller<
                 }
                 if (context.testExpression("scheduledActions", targetDepth)) {
                     context.nextToken();
-                    listScheduledActionsResult.setScheduledActions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+                    listScheduledActionsResult.setScheduledActions(new ListUnmarshaller<ScheduledActionAssociation>(ScheduledActionAssociationJsonUnmarshaller
+                            .getInstance())
 
                     .unmarshall(context));
                 }

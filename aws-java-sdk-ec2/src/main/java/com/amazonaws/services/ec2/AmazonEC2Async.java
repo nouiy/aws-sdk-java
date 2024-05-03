@@ -21108,6 +21108,39 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Gets the public endorsement key associated with the Nitro Trusted Platform Module (NitroTPM) for the specified
+     * instance.
+     * </p>
+     * 
+     * @param getInstanceTpmEkPubRequest
+     * @return A Java Future containing the result of the GetInstanceTpmEkPub operation returned by the service.
+     * @sample AmazonEC2Async.GetInstanceTpmEkPub
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceTpmEkPub" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetInstanceTpmEkPubResult> getInstanceTpmEkPubAsync(GetInstanceTpmEkPubRequest getInstanceTpmEkPubRequest);
+
+    /**
+     * <p>
+     * Gets the public endorsement key associated with the Nitro Trusted Platform Module (NitroTPM) for the specified
+     * instance.
+     * </p>
+     * 
+     * @param getInstanceTpmEkPubRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetInstanceTpmEkPub operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetInstanceTpmEkPub
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceTpmEkPub" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetInstanceTpmEkPubResult> getInstanceTpmEkPubAsync(GetInstanceTpmEkPubRequest getInstanceTpmEkPubRequest,
+            com.amazonaws.handlers.AsyncHandler<GetInstanceTpmEkPubRequest, GetInstanceTpmEkPubResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
      * instance types without launching instances. Note that the response does not consider capacity.
      * </p>

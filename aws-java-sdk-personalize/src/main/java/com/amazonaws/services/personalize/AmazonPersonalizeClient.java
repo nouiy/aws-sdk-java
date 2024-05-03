@@ -480,6 +480,139 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Creates a batch job that deletes all references to specific users from an Amazon Personalize dataset group in
+     * batches. You specify the users to delete in a CSV file of userIds in an Amazon S3 bucket. After a job completes,
+     * Amazon Personalize no longer trains on the users’ data and no longer considers the users when generating user
+     * segments. For more information about creating a data deletion job, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/delete-records.html">Deleting users</a>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Your input file must be a CSV file with a single USER_ID column that lists the users IDs. For more information
+     * about preparing the CSV file, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/prepare-deletion-input-file.html">Preparing your data
+     * deletion file and uploading it to Amazon S3</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To give Amazon Personalize permission to access your input CSV file of userIds, you must specify an IAM service
+     * role that has permission to read from the data source. This role needs <code>GetObject</code> and
+     * <code>ListBucket</code> permissions for the bucket and its content. These permissions are the same as importing
+     * data. For information on granting access to your Amazon S3 bucket, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/granting-personalize-s3-access.html">Giving Amazon
+     * Personalize Access to Amazon S3 Resources</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * After you create a job, it can take up to a day to delete all references to the users from datasets and models.
+     * Until the job completes, Amazon Personalize continues to use the data when training. And if you use a User
+     * Segmentation recipe, the users might appear in user segments.
+     * </p>
+     * <p>
+     * <b>Status</b>
+     * </p>
+     * <p>
+     * A data deletion job can have one of the following statuses:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * PENDING &gt; IN_PROGRESS &gt; COMPLETED -or- FAILED
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To get the status of the data deletion job, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataDeletionJob.html"
+     * >DescribeDataDeletionJob</a> API operation and specify the Amazon Resource Name (ARN) of the job. If the status
+     * is FAILED, the response includes a <code>failureReason</code> key, which describes why the job failed.
+     * </p>
+     * <p class="title">
+     * <b>Related APIs</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListDataDeletionJobs.html">ListDataDeletionJobs</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataDeletionJob.html">
+     * DescribeDataDeletionJob</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createDataDeletionJobRequest
+     * @return Result of the CreateDataDeletionJob operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws LimitExceededException
+     *         The limit on the number of requests per second has been exceeded.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
+     * @sample AmazonPersonalize.CreateDataDeletionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDataDeletionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateDataDeletionJobResult createDataDeletionJob(CreateDataDeletionJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateDataDeletionJob(request);
+    }
+
+    @SdkInternalApi
+    final CreateDataDeletionJobResult executeCreateDataDeletionJob(CreateDataDeletionJobRequest createDataDeletionJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createDataDeletionJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateDataDeletionJobRequest> request = null;
+        Response<CreateDataDeletionJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateDataDeletionJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createDataDeletionJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateDataDeletionJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateDataDeletionJobResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateDataDeletionJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an empty dataset and adds it to the specified dataset group. Use <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html"
      * >CreateDatasetImportJob</a> to import your training data to a dataset.
@@ -2682,6 +2815,69 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Describes the data deletion job created by <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataDeletionJob.html"
+     * >CreateDataDeletionJob</a>, including the job status.
+     * </p>
+     * 
+     * @param describeDataDeletionJobRequest
+     * @return Result of the DescribeDataDeletionJob operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @sample AmazonPersonalize.DescribeDataDeletionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeDataDeletionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeDataDeletionJobResult describeDataDeletionJob(DescribeDataDeletionJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDataDeletionJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDataDeletionJobResult executeDescribeDataDeletionJob(DescribeDataDeletionJobRequest describeDataDeletionJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDataDeletionJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDataDeletionJobRequest> request = null;
+        Response<DescribeDataDeletionJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDataDeletionJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeDataDeletionJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDataDeletionJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeDataDeletionJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeDataDeletionJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the given dataset. For more information on datasets, see <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
@@ -3759,6 +3955,69 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<ListCampaignsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListCampaignsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of data deletion jobs for a dataset group ordered by creation time, with the most recent first.
+     * When a dataset group is not specified, all the data deletion jobs associated with the account are listed. The
+     * response provides the properties for each job, including the Amazon Resource Name (ARN). For more information on
+     * data deletion jobs, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/delete-records.html">Deleting
+     * users</a>.
+     * </p>
+     * 
+     * @param listDataDeletionJobsRequest
+     * @return Result of the ListDataDeletionJobs operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws InvalidNextTokenException
+     *         The token is not valid.
+     * @sample AmazonPersonalize.ListDataDeletionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListDataDeletionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListDataDeletionJobsResult listDataDeletionJobs(ListDataDeletionJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListDataDeletionJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListDataDeletionJobsResult executeListDataDeletionJobs(ListDataDeletionJobsRequest listDataDeletionJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listDataDeletionJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListDataDeletionJobsRequest> request = null;
+        Response<ListDataDeletionJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListDataDeletionJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listDataDeletionJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDataDeletionJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListDataDeletionJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDataDeletionJobsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

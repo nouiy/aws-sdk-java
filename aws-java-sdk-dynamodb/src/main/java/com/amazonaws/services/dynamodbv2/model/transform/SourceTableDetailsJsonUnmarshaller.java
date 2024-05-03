@@ -78,6 +78,10 @@ public class SourceTableDetailsJsonUnmarshaller implements Unmarshaller<SourceTa
                     context.nextToken();
                     sourceTableDetails.setProvisionedThroughput(ProvisionedThroughputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OnDemandThroughput", targetDepth)) {
+                    context.nextToken();
+                    sourceTableDetails.setOnDemandThroughput(OnDemandThroughputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("ItemCount", targetDepth)) {
                     context.nextToken();
                     sourceTableDetails.setItemCount(context.getUnmarshaller(Long.class).unmarshall(context));

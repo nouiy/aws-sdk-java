@@ -31,7 +31,7 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
     private String policy;
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      */
@@ -82,13 +82,13 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * 
      * @param revisionId
-     *        A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make
-     *        sure to always use string comparison logic.
+     *        A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure
+     *        to always use string comparison logic.
      */
 
     public void setRevisionId(String revisionId) {
@@ -97,11 +97,11 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * 
-     * @return A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make
+     * @return A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make
      *         sure to always use string comparison logic.
      */
 
@@ -111,13 +111,13 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * 
      * @param revisionId
-     *        A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make
-     *        sure to always use string comparison logic.
+     *        A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure
+     *        to always use string comparison logic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

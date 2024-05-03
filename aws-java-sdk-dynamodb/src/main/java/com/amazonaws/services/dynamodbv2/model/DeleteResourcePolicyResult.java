@@ -25,7 +25,7 @@ public class DeleteResourcePolicyResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * <p>
@@ -36,7 +36,7 @@ public class DeleteResourcePolicyResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * <p>
@@ -44,8 +44,8 @@ public class DeleteResourcePolicyResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param revisionId
-     *        A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make
-     *        sure to always use string comparison logic.</p>
+     *        A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure
+     *        to always use string comparison logic.</p>
      *        <p>
      *        This value will be empty if you make a request against a resource without a policy.
      */
@@ -56,14 +56,14 @@ public class DeleteResourcePolicyResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * <p>
      * This value will be empty if you make a request against a resource without a policy.
      * </p>
      * 
-     * @return A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make
+     * @return A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make
      *         sure to always use string comparison logic.</p>
      *         <p>
      *         This value will be empty if you make a request against a resource without a policy.
@@ -75,7 +75,7 @@ public class DeleteResourcePolicyResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make sure to
+     * A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure to
      * always use string comparison logic.
      * </p>
      * <p>
@@ -83,8 +83,8 @@ public class DeleteResourcePolicyResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param revisionId
-     *        A unique string that represents the revision ID of the policy. If you are comparing revision IDs, make
-     *        sure to always use string comparison logic.</p>
+     *        A unique string that represents the revision ID of the policy. If you're comparing revision IDs, make sure
+     *        to always use string comparison logic.</p>
      *        <p>
      *        This value will be empty if you make a request against a resource without a policy.
      * @return Returns a reference to this object so that method calls can be chained together.

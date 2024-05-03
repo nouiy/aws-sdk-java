@@ -72,6 +72,10 @@ public class ReplicaDescriptionJsonUnmarshaller implements Unmarshaller<ReplicaD
                     context.nextToken();
                     replicaDescription.setProvisionedThroughputOverride(ProvisionedThroughputOverrideJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OnDemandThroughputOverride", targetDepth)) {
+                    context.nextToken();
+                    replicaDescription.setOnDemandThroughputOverride(OnDemandThroughputOverrideJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("GlobalSecondaryIndexes", targetDepth)) {
                     context.nextToken();
                     replicaDescription.setGlobalSecondaryIndexes(new ListUnmarshaller<ReplicaGlobalSecondaryIndexDescription>(

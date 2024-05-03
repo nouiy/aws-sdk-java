@@ -87,6 +87,10 @@ public class GlobalSecondaryIndexDescriptionJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     globalSecondaryIndexDescription.setIndexArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OnDemandThroughput", targetDepth)) {
+                    context.nextToken();
+                    globalSecondaryIndexDescription.setOnDemandThroughput(OnDemandThroughputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

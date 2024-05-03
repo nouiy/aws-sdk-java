@@ -61,6 +61,11 @@ public class CreateReplicationGroupMemberActionJsonUnmarshaller implements Unmar
                     createReplicationGroupMemberAction.setProvisionedThroughputOverride(ProvisionedThroughputOverrideJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("OnDemandThroughputOverride", targetDepth)) {
+                    context.nextToken();
+                    createReplicationGroupMemberAction.setOnDemandThroughputOverride(OnDemandThroughputOverrideJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("GlobalSecondaryIndexes", targetDepth)) {
                     context.nextToken();
                     createReplicationGroupMemberAction.setGlobalSecondaryIndexes(new ListUnmarshaller<ReplicaGlobalSecondaryIndex>(

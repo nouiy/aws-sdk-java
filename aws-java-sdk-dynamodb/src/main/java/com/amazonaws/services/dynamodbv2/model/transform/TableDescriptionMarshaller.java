@@ -74,6 +74,8 @@ public class TableDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableClassSummary").build();
     private static final MarshallingInfo<Boolean> DELETIONPROTECTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeletionProtectionEnabled").build();
+    private static final MarshallingInfo<StructuredPojo> ONDEMANDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnDemandThroughput").build();
 
     private static final TableDescriptionMarshaller instance = new TableDescriptionMarshaller();
 
@@ -114,6 +116,7 @@ public class TableDescriptionMarshaller {
             protocolMarshaller.marshall(tableDescription.getArchivalSummary(), ARCHIVALSUMMARY_BINDING);
             protocolMarshaller.marshall(tableDescription.getTableClassSummary(), TABLECLASSSUMMARY_BINDING);
             protocolMarshaller.marshall(tableDescription.getDeletionProtectionEnabled(), DELETIONPROTECTIONENABLED_BINDING);
+            protocolMarshaller.marshall(tableDescription.getOnDemandThroughput(), ONDEMANDTHROUGHPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

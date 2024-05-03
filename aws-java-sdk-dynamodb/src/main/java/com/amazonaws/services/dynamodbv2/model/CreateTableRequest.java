@@ -345,18 +345,25 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
      * </p>
      * <p>
-     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      * consistent</i>.
      * </p>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
-     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit. For a full list of all considerations that apply for
+     * resource-based policies, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
      */
     private String resourcePolicy;
+    /**
+     * <p>
+     * Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     */
+    private OnDemandThroughput onDemandThroughput;
 
     /**
      * Default constructor for CreateTableRequest object. Callers should use the setter or fluent setter (with...)
@@ -3033,13 +3040,13 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
      * </p>
      * <p>
-     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      * consistent</i>.
      * </p>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
-     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit. For a full list of all considerations that apply for
+     * resource-based policies, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
@@ -3048,15 +3055,15 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        An Amazon Web Services resource-based policy document in JSON format that will be attached to the
      *        table.</p>
      *        <p>
-     *        When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     *        When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      *        consistent</i>.
      *        </p>
      *        <p>
      *        The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     *        calculating the size of a policy against this limit. You can’t request an increase for this limit. For a
-     *        full list of all considerations that you should keep in mind while attaching a resource-based policy, see
-     *        <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">
-     *        Resource-based policy considerations</a>.
+     *        calculating the size of a policy against this limit. For a full list of all considerations that apply for
+     *        resource-based policies, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
+     *        >Resource-based policy considerations</a>.
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -3068,13 +3075,13 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
      * </p>
      * <p>
-     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      * consistent</i>.
      * </p>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
-     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit. For a full list of all considerations that apply for
+     * resource-based policies, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
@@ -3082,14 +3089,13 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @return An Amazon Web Services resource-based policy document in JSON format that will be attached to the
      *         table.</p>
      *         <p>
-     *         When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     *         When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      *         consistent</i>.
      *         </p>
      *         <p>
      *         The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces
-     *         when calculating the size of a policy against this limit. You can’t request an increase for this limit.
-     *         For a full list of all considerations that you should keep in mind while attaching a resource-based
-     *         policy, see <a
+     *         when calculating the size of a policy against this limit. For a full list of all considerations that
+     *         apply for resource-based policies, see <a
      *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *         >Resource-based policy considerations</a>.
      */
@@ -3103,13 +3109,13 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * An Amazon Web Services resource-based policy document in JSON format that will be attached to the table.
      * </p>
      * <p>
-     * When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     * When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      * consistent</i>.
      * </p>
      * <p>
      * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     * calculating the size of a policy against this limit. You can’t request an increase for this limit. For a full
-     * list of all considerations that you should keep in mind while attaching a resource-based policy, see <a
+     * calculating the size of a policy against this limit. For a full list of all considerations that apply for
+     * resource-based policies, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
@@ -3118,20 +3124,69 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        An Amazon Web Services resource-based policy document in JSON format that will be attached to the
      *        table.</p>
      *        <p>
-     *        When you attach a resource-based policy while creating a table, the policy creation is <i>strongly
+     *        When you attach a resource-based policy while creating a table, the policy application is <i>strongly
      *        consistent</i>.
      *        </p>
      *        <p>
      *        The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts whitespaces when
-     *        calculating the size of a policy against this limit. You can’t request an increase for this limit. For a
-     *        full list of all considerations that you should keep in mind while attaching a resource-based policy, see
-     *        <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">
-     *        Resource-based policy considerations</a>.
+     *        calculating the size of a policy against this limit. For a full list of all considerations that apply for
+     *        resource-based policies, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
+     *        >Resource-based policy considerations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateTableRequest withResourcePolicy(String resourcePolicy) {
         setResourcePolicy(resourcePolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     * 
+     * @param onDemandThroughput
+     *        Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If you
+     *        use this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>,
+     *        or both.
+     */
+
+    public void setOnDemandThroughput(OnDemandThroughput onDemandThroughput) {
+        this.onDemandThroughput = onDemandThroughput;
+    }
+
+    /**
+     * <p>
+     * Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     * 
+     * @return Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If
+     *         you use this parameter, you must specify <code>MaxReadRequestUnits</code>,
+     *         <code>MaxWriteRequestUnits</code>, or both.
+     */
+
+    public OnDemandThroughput getOnDemandThroughput() {
+        return this.onDemandThroughput;
+    }
+
+    /**
+     * <p>
+     * Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If you use
+     * this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>, or both.
+     * </p>
+     * 
+     * @param onDemandThroughput
+     *        Sets the maximum number of read and write units for the specified table in on-demand capacity mode. If you
+     *        use this parameter, you must specify <code>MaxReadRequestUnits</code>, <code>MaxWriteRequestUnits</code>,
+     *        or both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTableRequest withOnDemandThroughput(OnDemandThroughput onDemandThroughput) {
+        setOnDemandThroughput(onDemandThroughput);
         return this;
     }
 
@@ -3172,7 +3227,9 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getDeletionProtectionEnabled() != null)
             sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled()).append(",");
         if (getResourcePolicy() != null)
-            sb.append("ResourcePolicy: ").append(getResourcePolicy());
+            sb.append("ResourcePolicy: ").append(getResourcePolicy()).append(",");
+        if (getOnDemandThroughput() != null)
+            sb.append("OnDemandThroughput: ").append(getOnDemandThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -3239,6 +3296,10 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getResourcePolicy() != null && other.getResourcePolicy().equals(this.getResourcePolicy()) == false)
             return false;
+        if (other.getOnDemandThroughput() == null ^ this.getOnDemandThroughput() == null)
+            return false;
+        if (other.getOnDemandThroughput() != null && other.getOnDemandThroughput().equals(this.getOnDemandThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -3260,6 +3321,7 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTableClass() == null) ? 0 : getTableClass().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtectionEnabled() == null) ? 0 : getDeletionProtectionEnabled().hashCode());
         hashCode = prime * hashCode + ((getResourcePolicy() == null) ? 0 : getResourcePolicy().hashCode());
+        hashCode = prime * hashCode + ((getOnDemandThroughput() == null) ? 0 : getOnDemandThroughput().hashCode());
         return hashCode;
     }
 

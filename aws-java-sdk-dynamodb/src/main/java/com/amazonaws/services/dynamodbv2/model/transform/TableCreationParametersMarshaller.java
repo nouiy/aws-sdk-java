@@ -38,6 +38,8 @@ public class TableCreationParametersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BillingMode").build();
     private static final MarshallingInfo<StructuredPojo> PROVISIONEDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProvisionedThroughput").build();
+    private static final MarshallingInfo<StructuredPojo> ONDEMANDTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnDemandThroughput").build();
     private static final MarshallingInfo<StructuredPojo> SSESPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SSESpecification").build();
     private static final MarshallingInfo<List> GLOBALSECONDARYINDEXES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -64,6 +66,7 @@ public class TableCreationParametersMarshaller {
             protocolMarshaller.marshall(tableCreationParameters.getKeySchema(), KEYSCHEMA_BINDING);
             protocolMarshaller.marshall(tableCreationParameters.getBillingMode(), BILLINGMODE_BINDING);
             protocolMarshaller.marshall(tableCreationParameters.getProvisionedThroughput(), PROVISIONEDTHROUGHPUT_BINDING);
+            protocolMarshaller.marshall(tableCreationParameters.getOnDemandThroughput(), ONDEMANDTHROUGHPUT_BINDING);
             protocolMarshaller.marshall(tableCreationParameters.getSSESpecification(), SSESPECIFICATION_BINDING);
             protocolMarshaller.marshall(tableCreationParameters.getGlobalSecondaryIndexes(), GLOBALSECONDARYINDEXES_BINDING);
         } catch (Exception e) {

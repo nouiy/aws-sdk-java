@@ -79,6 +79,8 @@ public class GlobalSecondaryIndexInfo implements Serializable, Cloneable, Struct
      */
     private ProvisionedThroughput provisionedThroughput;
 
+    private OnDemandThroughput onDemandThroughput;
+
     /**
      * <p>
      * The name of the global secondary index.
@@ -473,6 +475,32 @@ public class GlobalSecondaryIndexInfo implements Serializable, Cloneable, Struct
     }
 
     /**
+     * @param onDemandThroughput
+     */
+
+    public void setOnDemandThroughput(OnDemandThroughput onDemandThroughput) {
+        this.onDemandThroughput = onDemandThroughput;
+    }
+
+    /**
+     * @return
+     */
+
+    public OnDemandThroughput getOnDemandThroughput() {
+        return this.onDemandThroughput;
+    }
+
+    /**
+     * @param onDemandThroughput
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GlobalSecondaryIndexInfo withOnDemandThroughput(OnDemandThroughput onDemandThroughput) {
+        setOnDemandThroughput(onDemandThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -491,7 +519,9 @@ public class GlobalSecondaryIndexInfo implements Serializable, Cloneable, Struct
         if (getProjection() != null)
             sb.append("Projection: ").append(getProjection()).append(",");
         if (getProvisionedThroughput() != null)
-            sb.append("ProvisionedThroughput: ").append(getProvisionedThroughput());
+            sb.append("ProvisionedThroughput: ").append(getProvisionedThroughput()).append(",");
+        if (getOnDemandThroughput() != null)
+            sb.append("OnDemandThroughput: ").append(getOnDemandThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -522,6 +552,10 @@ public class GlobalSecondaryIndexInfo implements Serializable, Cloneable, Struct
             return false;
         if (other.getProvisionedThroughput() != null && other.getProvisionedThroughput().equals(this.getProvisionedThroughput()) == false)
             return false;
+        if (other.getOnDemandThroughput() == null ^ this.getOnDemandThroughput() == null)
+            return false;
+        if (other.getOnDemandThroughput() != null && other.getOnDemandThroughput().equals(this.getOnDemandThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -534,6 +568,7 @@ public class GlobalSecondaryIndexInfo implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getKeySchema() == null) ? 0 : getKeySchema().hashCode());
         hashCode = prime * hashCode + ((getProjection() == null) ? 0 : getProjection().hashCode());
         hashCode = prime * hashCode + ((getProvisionedThroughput() == null) ? 0 : getProvisionedThroughput().hashCode());
+        hashCode = prime * hashCode + ((getOnDemandThroughput() == null) ? 0 : getOnDemandThroughput().hashCode());
         return hashCode;
     }
 

@@ -32,10 +32,10 @@ public class ListScheduledActionsResult extends com.amazonaws.AmazonWebServiceRe
     private String nextToken;
     /**
      * <p>
-     * All of the returned scheduled action objects.
+     * All of the returned scheduled action association objects.
      * </p>
      */
-    private java.util.List<String> scheduledActions;
+    private java.util.List<ScheduledActionAssociation> scheduledActions;
 
     /**
      * <p>
@@ -85,37 +85,37 @@ public class ListScheduledActionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * All of the returned scheduled action objects.
+     * All of the returned scheduled action association objects.
      * </p>
      * 
-     * @return All of the returned scheduled action objects.
+     * @return All of the returned scheduled action association objects.
      */
 
-    public java.util.List<String> getScheduledActions() {
+    public java.util.List<ScheduledActionAssociation> getScheduledActions() {
         return scheduledActions;
     }
 
     /**
      * <p>
-     * All of the returned scheduled action objects.
+     * All of the returned scheduled action association objects.
      * </p>
      * 
      * @param scheduledActions
-     *        All of the returned scheduled action objects.
+     *        All of the returned scheduled action association objects.
      */
 
-    public void setScheduledActions(java.util.Collection<String> scheduledActions) {
+    public void setScheduledActions(java.util.Collection<ScheduledActionAssociation> scheduledActions) {
         if (scheduledActions == null) {
             this.scheduledActions = null;
             return;
         }
 
-        this.scheduledActions = new java.util.ArrayList<String>(scheduledActions);
+        this.scheduledActions = new java.util.ArrayList<ScheduledActionAssociation>(scheduledActions);
     }
 
     /**
      * <p>
-     * All of the returned scheduled action objects.
+     * All of the returned scheduled action association objects.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -124,15 +124,15 @@ public class ListScheduledActionsResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param scheduledActions
-     *        All of the returned scheduled action objects.
+     *        All of the returned scheduled action association objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListScheduledActionsResult withScheduledActions(String... scheduledActions) {
+    public ListScheduledActionsResult withScheduledActions(ScheduledActionAssociation... scheduledActions) {
         if (this.scheduledActions == null) {
-            setScheduledActions(new java.util.ArrayList<String>(scheduledActions.length));
+            setScheduledActions(new java.util.ArrayList<ScheduledActionAssociation>(scheduledActions.length));
         }
-        for (String ele : scheduledActions) {
+        for (ScheduledActionAssociation ele : scheduledActions) {
             this.scheduledActions.add(ele);
         }
         return this;
@@ -140,15 +140,15 @@ public class ListScheduledActionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * All of the returned scheduled action objects.
+     * All of the returned scheduled action association objects.
      * </p>
      * 
      * @param scheduledActions
-     *        All of the returned scheduled action objects.
+     *        All of the returned scheduled action association objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListScheduledActionsResult withScheduledActions(java.util.Collection<String> scheduledActions) {
+    public ListScheduledActionsResult withScheduledActions(java.util.Collection<ScheduledActionAssociation> scheduledActions) {
         setScheduledActions(scheduledActions);
         return this;
     }

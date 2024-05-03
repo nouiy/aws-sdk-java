@@ -376,6 +376,167 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
 
     /**
      * <p>
+     * Creates a batch job that deletes all references to specific users from an Amazon Personalize dataset group in
+     * batches. You specify the users to delete in a CSV file of userIds in an Amazon S3 bucket. After a job completes,
+     * Amazon Personalize no longer trains on the users’ data and no longer considers the users when generating user
+     * segments. For more information about creating a data deletion job, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/delete-records.html">Deleting users</a>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Your input file must be a CSV file with a single USER_ID column that lists the users IDs. For more information
+     * about preparing the CSV file, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/prepare-deletion-input-file.html">Preparing your data
+     * deletion file and uploading it to Amazon S3</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To give Amazon Personalize permission to access your input CSV file of userIds, you must specify an IAM service
+     * role that has permission to read from the data source. This role needs <code>GetObject</code> and
+     * <code>ListBucket</code> permissions for the bucket and its content. These permissions are the same as importing
+     * data. For information on granting access to your Amazon S3 bucket, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/granting-personalize-s3-access.html">Giving Amazon
+     * Personalize Access to Amazon S3 Resources</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * After you create a job, it can take up to a day to delete all references to the users from datasets and models.
+     * Until the job completes, Amazon Personalize continues to use the data when training. And if you use a User
+     * Segmentation recipe, the users might appear in user segments.
+     * </p>
+     * <p>
+     * <b>Status</b>
+     * </p>
+     * <p>
+     * A data deletion job can have one of the following statuses:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * PENDING &gt; IN_PROGRESS &gt; COMPLETED -or- FAILED
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To get the status of the data deletion job, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataDeletionJob.html"
+     * >DescribeDataDeletionJob</a> API operation and specify the Amazon Resource Name (ARN) of the job. If the status
+     * is FAILED, the response includes a <code>failureReason</code> key, which describes why the job failed.
+     * </p>
+     * <p class="title">
+     * <b>Related APIs</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListDataDeletionJobs.html">ListDataDeletionJobs</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataDeletionJob.html">
+     * DescribeDataDeletionJob</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createDataDeletionJobRequest
+     * @return A Java Future containing the result of the CreateDataDeletionJob operation returned by the service.
+     * @sample AmazonPersonalizeAsync.CreateDataDeletionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDataDeletionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataDeletionJobResult> createDataDeletionJobAsync(CreateDataDeletionJobRequest createDataDeletionJobRequest);
+
+    /**
+     * <p>
+     * Creates a batch job that deletes all references to specific users from an Amazon Personalize dataset group in
+     * batches. You specify the users to delete in a CSV file of userIds in an Amazon S3 bucket. After a job completes,
+     * Amazon Personalize no longer trains on the users’ data and no longer considers the users when generating user
+     * segments. For more information about creating a data deletion job, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/delete-records.html">Deleting users</a>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Your input file must be a CSV file with a single USER_ID column that lists the users IDs. For more information
+     * about preparing the CSV file, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/prepare-deletion-input-file.html">Preparing your data
+     * deletion file and uploading it to Amazon S3</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To give Amazon Personalize permission to access your input CSV file of userIds, you must specify an IAM service
+     * role that has permission to read from the data source. This role needs <code>GetObject</code> and
+     * <code>ListBucket</code> permissions for the bucket and its content. These permissions are the same as importing
+     * data. For information on granting access to your Amazon S3 bucket, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/granting-personalize-s3-access.html">Giving Amazon
+     * Personalize Access to Amazon S3 Resources</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * After you create a job, it can take up to a day to delete all references to the users from datasets and models.
+     * Until the job completes, Amazon Personalize continues to use the data when training. And if you use a User
+     * Segmentation recipe, the users might appear in user segments.
+     * </p>
+     * <p>
+     * <b>Status</b>
+     * </p>
+     * <p>
+     * A data deletion job can have one of the following statuses:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * PENDING &gt; IN_PROGRESS &gt; COMPLETED -or- FAILED
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To get the status of the data deletion job, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataDeletionJob.html"
+     * >DescribeDataDeletionJob</a> API operation and specify the Amazon Resource Name (ARN) of the job. If the status
+     * is FAILED, the response includes a <code>failureReason</code> key, which describes why the job failed.
+     * </p>
+     * <p class="title">
+     * <b>Related APIs</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListDataDeletionJobs.html">ListDataDeletionJobs</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataDeletionJob.html">
+     * DescribeDataDeletionJob</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createDataDeletionJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDataDeletionJob operation returned by the service.
+     * @sample AmazonPersonalizeAsyncHandler.CreateDataDeletionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDataDeletionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataDeletionJobResult> createDataDeletionJobAsync(CreateDataDeletionJobRequest createDataDeletionJobRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDataDeletionJobRequest, CreateDataDeletionJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an empty dataset and adds it to the specified dataset group. Use <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html"
      * >CreateDatasetImportJob</a> to import your training data to a dataset.
@@ -2517,6 +2678,41 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
 
     /**
      * <p>
+     * Describes the data deletion job created by <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataDeletionJob.html"
+     * >CreateDataDeletionJob</a>, including the job status.
+     * </p>
+     * 
+     * @param describeDataDeletionJobRequest
+     * @return A Java Future containing the result of the DescribeDataDeletionJob operation returned by the service.
+     * @sample AmazonPersonalizeAsync.DescribeDataDeletionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeDataDeletionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDataDeletionJobResult> describeDataDeletionJobAsync(DescribeDataDeletionJobRequest describeDataDeletionJobRequest);
+
+    /**
+     * <p>
+     * Describes the data deletion job created by <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataDeletionJob.html"
+     * >CreateDataDeletionJob</a>, including the job status.
+     * </p>
+     * 
+     * @param describeDataDeletionJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDataDeletionJob operation returned by the service.
+     * @sample AmazonPersonalizeAsyncHandler.DescribeDataDeletionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeDataDeletionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDataDeletionJobResult> describeDataDeletionJobAsync(DescribeDataDeletionJobRequest describeDataDeletionJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDataDeletionJobRequest, DescribeDataDeletionJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the given dataset. For more information on datasets, see <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
@@ -3193,6 +3389,45 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      */
     java.util.concurrent.Future<ListCampaignsResult> listCampaignsAsync(ListCampaignsRequest listCampaignsRequest,
             com.amazonaws.handlers.AsyncHandler<ListCampaignsRequest, ListCampaignsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of data deletion jobs for a dataset group ordered by creation time, with the most recent first.
+     * When a dataset group is not specified, all the data deletion jobs associated with the account are listed. The
+     * response provides the properties for each job, including the Amazon Resource Name (ARN). For more information on
+     * data deletion jobs, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/delete-records.html">Deleting
+     * users</a>.
+     * </p>
+     * 
+     * @param listDataDeletionJobsRequest
+     * @return A Java Future containing the result of the ListDataDeletionJobs operation returned by the service.
+     * @sample AmazonPersonalizeAsync.ListDataDeletionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListDataDeletionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataDeletionJobsResult> listDataDeletionJobsAsync(ListDataDeletionJobsRequest listDataDeletionJobsRequest);
+
+    /**
+     * <p>
+     * Returns a list of data deletion jobs for a dataset group ordered by creation time, with the most recent first.
+     * When a dataset group is not specified, all the data deletion jobs associated with the account are listed. The
+     * response provides the properties for each job, including the Amazon Resource Name (ARN). For more information on
+     * data deletion jobs, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/delete-records.html">Deleting
+     * users</a>.
+     * </p>
+     * 
+     * @param listDataDeletionJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDataDeletionJobs operation returned by the service.
+     * @sample AmazonPersonalizeAsyncHandler.ListDataDeletionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListDataDeletionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataDeletionJobsResult> listDataDeletionJobsAsync(ListDataDeletionJobsRequest listDataDeletionJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDataDeletionJobsRequest, ListDataDeletionJobsResult> asyncHandler);
 
     /**
      * <p>

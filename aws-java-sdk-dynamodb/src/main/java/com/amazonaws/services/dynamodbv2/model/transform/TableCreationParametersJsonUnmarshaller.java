@@ -73,6 +73,10 @@ public class TableCreationParametersJsonUnmarshaller implements Unmarshaller<Tab
                     context.nextToken();
                     tableCreationParameters.setProvisionedThroughput(ProvisionedThroughputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OnDemandThroughput", targetDepth)) {
+                    context.nextToken();
+                    tableCreationParameters.setOnDemandThroughput(OnDemandThroughputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("SSESpecification", targetDepth)) {
                     context.nextToken();
                     tableCreationParameters.setSSESpecification(SSESpecificationJsonUnmarshaller.getInstance().unmarshall(context));

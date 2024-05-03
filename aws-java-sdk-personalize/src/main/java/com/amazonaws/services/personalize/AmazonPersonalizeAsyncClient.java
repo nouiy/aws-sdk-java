@@ -176,6 +176,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDataDeletionJobResult> createDataDeletionJobAsync(CreateDataDeletionJobRequest request) {
+
+        return createDataDeletionJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataDeletionJobResult> createDataDeletionJobAsync(final CreateDataDeletionJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDataDeletionJobRequest, CreateDataDeletionJobResult> asyncHandler) {
+        final CreateDataDeletionJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDataDeletionJobResult>() {
+            @Override
+            public CreateDataDeletionJobResult call() throws Exception {
+                CreateDataDeletionJobResult result = null;
+
+                try {
+                    result = executeCreateDataDeletionJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request) {
 
         return createDatasetAsync(request, null);
@@ -968,6 +1001,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDataDeletionJobResult> describeDataDeletionJobAsync(DescribeDataDeletionJobRequest request) {
+
+        return describeDataDeletionJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataDeletionJobResult> describeDataDeletionJobAsync(final DescribeDataDeletionJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDataDeletionJobRequest, DescribeDataDeletionJobResult> asyncHandler) {
+        final DescribeDataDeletionJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDataDeletionJobResult>() {
+            @Override
+            public DescribeDataDeletionJobResult call() throws Exception {
+                DescribeDataDeletionJobResult result = null;
+
+                try {
+                    result = executeDescribeDataDeletionJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request) {
 
         return describeDatasetAsync(request, null);
@@ -1514,6 +1580,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
 
                 try {
                     result = executeListCampaigns(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataDeletionJobsResult> listDataDeletionJobsAsync(ListDataDeletionJobsRequest request) {
+
+        return listDataDeletionJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataDeletionJobsResult> listDataDeletionJobsAsync(final ListDataDeletionJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDataDeletionJobsRequest, ListDataDeletionJobsResult> asyncHandler) {
+        final ListDataDeletionJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDataDeletionJobsResult>() {
+            @Override
+            public ListDataDeletionJobsResult call() throws Exception {
+                ListDataDeletionJobsResult result = null;
+
+                try {
+                    result = executeListDataDeletionJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

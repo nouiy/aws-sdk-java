@@ -43,6 +43,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
     }
 
     @Override
+    public CreateDataDeletionJobResult createDataDeletionJob(CreateDataDeletionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateDatasetResult createDataset(CreateDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -163,6 +168,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
     }
 
     @Override
+    public DescribeDataDeletionJobResult describeDataDeletionJob(DescribeDataDeletionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDatasetResult describeDataset(DescribeDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -244,6 +254,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
 
     @Override
     public ListCampaignsResult listCampaigns(ListCampaignsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDataDeletionJobsResult listDataDeletionJobs(ListDataDeletionJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -28404,6 +28404,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Gets the public endorsement key associated with the Nitro Trusted Platform Module (NitroTPM) for the specified
+     * instance.
+     * </p>
+     * 
+     * @param getInstanceTpmEkPubRequest
+     * @return Result of the GetInstanceTpmEkPub operation returned by the service.
+     * @sample AmazonEC2.GetInstanceTpmEkPub
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceTpmEkPub" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetInstanceTpmEkPubResult getInstanceTpmEkPub(GetInstanceTpmEkPubRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInstanceTpmEkPub(request);
+    }
+
+    @SdkInternalApi
+    final GetInstanceTpmEkPubResult executeGetInstanceTpmEkPub(GetInstanceTpmEkPubRequest getInstanceTpmEkPubRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInstanceTpmEkPubRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInstanceTpmEkPubRequest> request = null;
+        Response<GetInstanceTpmEkPubResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInstanceTpmEkPubRequestMarshaller().marshall(super.beforeMarshalling(getInstanceTpmEkPubRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInstanceTpmEkPub");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetInstanceTpmEkPubResult> responseHandler = new StaxResponseHandler<GetInstanceTpmEkPubResult>(
+                    new GetInstanceTpmEkPubResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
      * instance types without launching instances. Note that the response does not consider capacity.
      * </p>

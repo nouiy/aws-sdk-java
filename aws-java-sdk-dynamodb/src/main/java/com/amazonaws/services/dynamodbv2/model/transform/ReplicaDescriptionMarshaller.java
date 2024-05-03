@@ -40,6 +40,8 @@ public class ReplicaDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KMSMasterKeyId").build();
     private static final MarshallingInfo<StructuredPojo> PROVISIONEDTHROUGHPUTOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProvisionedThroughputOverride").build();
+    private static final MarshallingInfo<StructuredPojo> ONDEMANDTHROUGHPUTOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnDemandThroughputOverride").build();
     private static final MarshallingInfo<List> GLOBALSECONDARYINDEXES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GlobalSecondaryIndexes").build();
     private static final MarshallingInfo<java.util.Date> REPLICAINACCESSIBLEDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -69,6 +71,7 @@ public class ReplicaDescriptionMarshaller {
             protocolMarshaller.marshall(replicaDescription.getReplicaStatusPercentProgress(), REPLICASTATUSPERCENTPROGRESS_BINDING);
             protocolMarshaller.marshall(replicaDescription.getKMSMasterKeyId(), KMSMASTERKEYID_BINDING);
             protocolMarshaller.marshall(replicaDescription.getProvisionedThroughputOverride(), PROVISIONEDTHROUGHPUTOVERRIDE_BINDING);
+            protocolMarshaller.marshall(replicaDescription.getOnDemandThroughputOverride(), ONDEMANDTHROUGHPUTOVERRIDE_BINDING);
             protocolMarshaller.marshall(replicaDescription.getGlobalSecondaryIndexes(), GLOBALSECONDARYINDEXES_BINDING);
             protocolMarshaller.marshall(replicaDescription.getReplicaInaccessibleDateTime(), REPLICAINACCESSIBLEDATETIME_BINDING);
             protocolMarshaller.marshall(replicaDescription.getReplicaTableClassSummary(), REPLICATABLECLASSSUMMARY_BINDING);

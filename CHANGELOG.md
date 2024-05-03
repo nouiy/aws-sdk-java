@@ -1,3 +1,20 @@
+# __1.12.714__ __2024-05-02__
+## __Amazon DynamoDB__
+  - ### Features
+    - This release adds support to specify an optional, maximum OnDemandThroughput for DynamoDB tables and global secondary indexes in the CreateTable or UpdateTable APIs. You can also override the OnDemandThroughput settings by calling the ImportTable, RestoreFromPointInTime, or RestoreFromBackup APIs.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release includes a new API for retrieving the public endorsement key of the EC2 instance's Nitro Trusted Platform Module (NitroTPM).
+
+## __Amazon Personalize__
+  - ### Features
+    - This releases ability to delete users and their data, including their metadata and interactions data, from a dataset group.
+
+## __Redshift Serverless__
+  - ### Features
+    - Update Redshift Serverless List Scheduled Actions Output Response to include Namespace Name.
+
 # __1.12.713__ __2024-05-01__
 ## __AWS SecurityHub__
   - ### Features

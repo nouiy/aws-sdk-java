@@ -9162,6 +9162,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Gets the public endorsement key associated with the Nitro Trusted Platform Module (NitroTPM) for the specified
+     * instance.
+     * </p>
+     * 
+     * @param getInstanceTpmEkPubRequest
+     * @return Result of the GetInstanceTpmEkPub operation returned by the service.
+     * @sample AmazonEC2.GetInstanceTpmEkPub
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceTpmEkPub" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetInstanceTpmEkPubResult getInstanceTpmEkPub(GetInstanceTpmEkPubRequest getInstanceTpmEkPubRequest);
+
+    /**
+     * <p>
      * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
      * instance types without launching instances. Note that the response does not consider capacity.
      * </p>
