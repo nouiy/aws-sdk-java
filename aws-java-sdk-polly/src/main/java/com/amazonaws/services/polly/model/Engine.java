@@ -22,7 +22,8 @@ public enum Engine {
 
     Standard("standard"),
     Neural("neural"),
-    LongForm("long-form");
+    LongForm("long-form"),
+    Generative("generative");
 
     private String value;
 

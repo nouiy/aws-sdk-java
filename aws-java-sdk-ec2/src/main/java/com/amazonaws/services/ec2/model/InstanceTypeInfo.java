@@ -206,6 +206,12 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
      * </p>
      */
     private NeuronInfo neuronInfo;
+    /**
+     * <p>
+     * Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * </p>
+     */
+    private String phcSupport;
 
     /**
      * <p>
@@ -1839,6 +1845,65 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * </p>
+     * 
+     * @param phcSupport
+     *        Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * @see PhcSupport
+     */
+
+    public void setPhcSupport(String phcSupport) {
+        this.phcSupport = phcSupport;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * </p>
+     * 
+     * @return Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * @see PhcSupport
+     */
+
+    public String getPhcSupport() {
+        return this.phcSupport;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * </p>
+     * 
+     * @param phcSupport
+     *        Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PhcSupport
+     */
+
+    public InstanceTypeInfo withPhcSupport(String phcSupport) {
+        setPhcSupport(phcSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * </p>
+     * 
+     * @param phcSupport
+     *        Indicates whether a local Precision Time Protocol (PTP) hardware clock (PHC) is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PhcSupport
+     */
+
+    public InstanceTypeInfo withPhcSupport(PhcSupport phcSupport) {
+        this.phcSupport = phcSupport.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1907,7 +1972,9 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
         if (getMediaAcceleratorInfo() != null)
             sb.append("MediaAcceleratorInfo: ").append(getMediaAcceleratorInfo()).append(",");
         if (getNeuronInfo() != null)
-            sb.append("NeuronInfo: ").append(getNeuronInfo());
+            sb.append("NeuronInfo: ").append(getNeuronInfo()).append(",");
+        if (getPhcSupport() != null)
+            sb.append("PhcSupport: ").append(getPhcSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -2039,6 +2106,10 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
             return false;
         if (other.getNeuronInfo() != null && other.getNeuronInfo().equals(this.getNeuronInfo()) == false)
             return false;
+        if (other.getPhcSupport() == null ^ this.getPhcSupport() == null)
+            return false;
+        if (other.getPhcSupport() != null && other.getPhcSupport().equals(this.getPhcSupport()) == false)
+            return false;
         return true;
     }
 
@@ -2076,6 +2147,7 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getNitroTpmInfo() == null) ? 0 : getNitroTpmInfo().hashCode());
         hashCode = prime * hashCode + ((getMediaAcceleratorInfo() == null) ? 0 : getMediaAcceleratorInfo().hashCode());
         hashCode = prime * hashCode + ((getNeuronInfo() == null) ? 0 : getNeuronInfo().hashCode());
+        hashCode = prime * hashCode + ((getPhcSupport() == null) ? 0 : getPhcSupport().hashCode());
         return hashCode;
     }
 

@@ -73,7 +73,7 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
     /**
      * <p>
      * The number of messages to be moved from the source queue. This number is obtained at the time of starting the
-     * message movement task.
+     * message movement task and is only included after the message movement task is selected to start.
      * </p>
      */
     private Long approximateNumberOfMessagesToMove;
@@ -369,12 +369,12 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
     /**
      * <p>
      * The number of messages to be moved from the source queue. This number is obtained at the time of starting the
-     * message movement task.
+     * message movement task and is only included after the message movement task is selected to start.
      * </p>
      * 
      * @param approximateNumberOfMessagesToMove
      *        The number of messages to be moved from the source queue. This number is obtained at the time of starting
-     *        the message movement task.
+     *        the message movement task and is only included after the message movement task is selected to start.
      */
 
     public void setApproximateNumberOfMessagesToMove(Long approximateNumberOfMessagesToMove) {
@@ -384,11 +384,11 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
     /**
      * <p>
      * The number of messages to be moved from the source queue. This number is obtained at the time of starting the
-     * message movement task.
+     * message movement task and is only included after the message movement task is selected to start.
      * </p>
      * 
      * @return The number of messages to be moved from the source queue. This number is obtained at the time of starting
-     *         the message movement task.
+     *         the message movement task and is only included after the message movement task is selected to start.
      */
 
     public Long getApproximateNumberOfMessagesToMove() {
@@ -398,12 +398,12 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
     /**
      * <p>
      * The number of messages to be moved from the source queue. This number is obtained at the time of starting the
-     * message movement task.
+     * message movement task and is only included after the message movement task is selected to start.
      * </p>
      * 
      * @param approximateNumberOfMessagesToMove
      *        The number of messages to be moved from the source queue. This number is obtained at the time of starting
-     *        the message movement task.
+     *        the message movement task and is only included after the message movement task is selected to start.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -211,7 +211,7 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
+     * The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
      * punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1311,7 +1311,7 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
+     * The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
      * punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1351,8 +1351,8 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        </ul>
      *        <p>
-     *        The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
-     *        punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
+     *        The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters
+     *        and punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      *        </p>
      *        <p>
      *        For best practices of using <code>MessageGroupId</code>, see <a href=
@@ -1396,7 +1396,7 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
+     * The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
      * punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1435,8 +1435,8 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </li>
      *         </ul>
      *         <p>
-     *         The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
-     *         punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
+     *         The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric
+     *         characters and punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      *         </p>
      *         <p>
      *         For best practices of using <code>MessageGroupId</code>, see <a href=
@@ -1480,7 +1480,7 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
+     * The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
      * punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1520,8 +1520,8 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        </ul>
      *        <p>
-     *        The length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters and
-     *        punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
+     *        The maximum length of <code>MessageGroupId</code> is 128 characters. Valid values: alphanumeric characters
+     *        and punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      *        </p>
      *        <p>
      *        For best practices of using <code>MessageGroupId</code>, see <a href=

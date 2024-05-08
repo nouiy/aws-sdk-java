@@ -1,3 +1,28 @@
+# __1.12.718__ __2024-05-08__
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - Add EXTERNAL_PROVIDER enum value to UserStatusType.
+
+## __Amazon EC2 Container Registry__
+  - ### Features
+    - This release adds pull through cache rules support for GitLab container registry in Amazon ECR.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adding Precision Hardware Clock (PHC) to public API DescribeInstanceTypes
+
+## __Amazon Polly__
+  - ### Features
+    - Add new engine - generative - that builds the most expressive conversational voices.
+
+## __Amazon Simple Queue Service__
+  - ### Features
+    - This release adds MessageSystemAttributeNames to ReceiveMessageRequest to replace AttributeNames.
+
+## __Firewall Management Service__
+  - ### Features
+    - The policy scope resource tag is always a string value, either a non-empty string or an empty string.
+
 # __1.12.717__ __2024-05-07__
 ## __AWS B2B Data Interchange__
   - ### Features

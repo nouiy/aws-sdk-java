@@ -68,6 +68,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      * <code>&lt;custom&gt;.azurecr.io</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
+     * </p>
+     * </li>
      * </ul>
      */
     private String upstreamRegistryUrl;
@@ -169,6 +174,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      * <code>&lt;custom&gt;.azurecr.io</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param upstreamRegistryUrl
@@ -204,6 +214,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      *        <p>
      *        Microsoft Azure Container Registry (<code>azure-container-registry</code>) -
      *        <code>&lt;custom&gt;.azurecr.io</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
      *        </p>
      *        </li>
      */
@@ -249,6 +264,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      * <code>&lt;custom&gt;.azurecr.io</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The registry URL of the upstream public registry to use as the source for the pull through cache rule.
@@ -283,6 +303,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      *         <p>
      *         Microsoft Azure Container Registry (<code>azure-container-registry</code>) -
      *         <code>&lt;custom&gt;.azurecr.io</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
      *         </p>
      *         </li>
      */
@@ -328,6 +353,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      * <code>&lt;custom&gt;.azurecr.io</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param upstreamRegistryUrl
@@ -363,6 +393,11 @@ public class CreatePullThroughCacheRuleRequest extends com.amazonaws.AmazonWebSe
      *        <p>
      *        Microsoft Azure Container Registry (<code>azure-container-registry</code>) -
      *        <code>&lt;custom&gt;.azurecr.io</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GitLab Container Registry (<code>gitlab-container-registry</code>) - <code>registry.gitlab.com</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

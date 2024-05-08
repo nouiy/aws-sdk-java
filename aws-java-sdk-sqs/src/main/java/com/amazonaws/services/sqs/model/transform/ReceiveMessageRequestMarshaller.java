@@ -32,6 +32,8 @@ public class ReceiveMessageRequestMarshaller {
             .marshallLocationName("QueueUrl").build();
     private static final MarshallingInfo<List> ATTRIBUTENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttributeNames").build();
+    private static final MarshallingInfo<List> MESSAGESYSTEMATTRIBUTENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageSystemAttributeNames").build();
     private static final MarshallingInfo<List> MESSAGEATTRIBUTENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageAttributeNames").build();
     private static final MarshallingInfo<Integer> MAXNUMBEROFMESSAGES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -61,6 +63,7 @@ public class ReceiveMessageRequestMarshaller {
         try {
             protocolMarshaller.marshall(receiveMessageRequest.getQueueUrl(), QUEUEURL_BINDING);
             protocolMarshaller.marshall(receiveMessageRequest.getAttributeNames(), ATTRIBUTENAMES_BINDING);
+            protocolMarshaller.marshall(receiveMessageRequest.getMessageSystemAttributeNames(), MESSAGESYSTEMATTRIBUTENAMES_BINDING);
             protocolMarshaller.marshall(receiveMessageRequest.getMessageAttributeNames(), MESSAGEATTRIBUTENAMES_BINDING);
             protocolMarshaller.marshall(receiveMessageRequest.getMaxNumberOfMessages(), MAXNUMBEROFMESSAGES_BINDING);
             protocolMarshaller.marshall(receiveMessageRequest.getVisibilityTimeout(), VISIBILITYTIMEOUT_BINDING);

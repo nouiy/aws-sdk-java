@@ -232,7 +232,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> resourceSetIds;
     /**
      * <p>
-     * The definition of the Network Firewall firewall policy.
+     * Your description of the Firewall Manager policy.
      * </p>
      */
     private String policyDescription;
@@ -1733,11 +1733,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The definition of the Network Firewall firewall policy.
+     * Your description of the Firewall Manager policy.
      * </p>
      * 
      * @param policyDescription
-     *        The definition of the Network Firewall firewall policy.
+     *        Your description of the Firewall Manager policy.
      */
 
     public void setPolicyDescription(String policyDescription) {
@@ -1746,10 +1746,10 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The definition of the Network Firewall firewall policy.
+     * Your description of the Firewall Manager policy.
      * </p>
      * 
-     * @return The definition of the Network Firewall firewall policy.
+     * @return Your description of the Firewall Manager policy.
      */
 
     public String getPolicyDescription() {
@@ -1758,11 +1758,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The definition of the Network Firewall firewall policy.
+     * Your description of the Firewall Manager policy.
      * </p>
      * 
      * @param policyDescription
-     *        The definition of the Network Firewall firewall policy.
+     *        Your description of the Firewall Manager policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

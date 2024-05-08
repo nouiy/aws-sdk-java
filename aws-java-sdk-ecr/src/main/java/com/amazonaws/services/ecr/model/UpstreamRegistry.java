@@ -25,7 +25,8 @@ public enum UpstreamRegistry {
     K8s("k8s"),
     DockerHub("docker-hub"),
     GithubContainerRegistry("github-container-registry"),
-    AzureContainerRegistry("azure-container-registry");
+    AzureContainerRegistry("azure-container-registry"),
+    GitlabContainerRegistry("gitlab-container-registry");
 
     private String value;
 

@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.718-SNAPSHOT</version>
+    <version>1.12.718</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -2380,7 +2380,7 @@
                       <!-- Note: excludePackageNames is inherited from Parent POM -->
                       <configuration>
                           <minmemory>128m</minmemory>
-                          <maxmemory>8g</maxmemory>
+                          <maxmemory>10g</maxmemory>
                           <includeDependencySources>true</includeDependencySources>
                           <show>public</show>
                           <defaultexcludes>yes</defaultexcludes>

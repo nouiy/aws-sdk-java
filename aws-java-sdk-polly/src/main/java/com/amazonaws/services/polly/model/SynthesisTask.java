@@ -30,9 +30,9 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon Polly to
-     * use when processing input text for speech synthesis. Using a voice that is not supported for the engine selected
-     * will result in an error.
+     * Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     * <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a voice
+     * that is not supported for the engine selected will result in an error.
      * </p>
      */
     private String engine;
@@ -99,7 +99,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for standard
      * voices is "22050". The default value for neural voices is "24000". The default value for long-form voices is
-     * "24000".
+     * "24000". The default value for generative voices is "24000".
      * </p>
      * <p>
      * Valid values for pcm are "8000" and "16000" The default value is "16000".
@@ -141,15 +141,15 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon Polly to
-     * use when processing input text for speech synthesis. Using a voice that is not supported for the engine selected
-     * will result in an error.
+     * Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     * <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a voice
+     * that is not supported for the engine selected will result in an error.
      * </p>
      * 
      * @param engine
-     *        Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon
-     *        Polly to use when processing input text for speech synthesis. Using a voice that is not supported for the
-     *        engine selected will result in an error.
+     *        Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     *        <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a
+     *        voice that is not supported for the engine selected will result in an error.
      * @see Engine
      */
 
@@ -159,14 +159,14 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon Polly to
-     * use when processing input text for speech synthesis. Using a voice that is not supported for the engine selected
-     * will result in an error.
+     * Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     * <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a voice
+     * that is not supported for the engine selected will result in an error.
      * </p>
      * 
-     * @return Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon
-     *         Polly to use when processing input text for speech synthesis. Using a voice that is not supported for the
-     *         engine selected will result in an error.
+     * @return Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     *         <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a
+     *         voice that is not supported for the engine selected will result in an error.
      * @see Engine
      */
 
@@ -176,15 +176,15 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon Polly to
-     * use when processing input text for speech synthesis. Using a voice that is not supported for the engine selected
-     * will result in an error.
+     * Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     * <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a voice
+     * that is not supported for the engine selected will result in an error.
      * </p>
      * 
      * @param engine
-     *        Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon
-     *        Polly to use when processing input text for speech synthesis. Using a voice that is not supported for the
-     *        engine selected will result in an error.
+     *        Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     *        <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a
+     *        voice that is not supported for the engine selected will result in an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Engine
      */
@@ -196,15 +196,15 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon Polly to
-     * use when processing input text for speech synthesis. Using a voice that is not supported for the engine selected
-     * will result in an error.
+     * Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     * <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a voice
+     * that is not supported for the engine selected will result in an error.
      * </p>
      * 
      * @param engine
-     *        Specifies the engine (<code>standard</code>, <code>neural</code> or <code>long-form</code>) for Amazon
-     *        Polly to use when processing input text for speech synthesis. Using a voice that is not supported for the
-     *        engine selected will result in an error.
+     *        Specifies the engine (<code>standard</code>, <code>neural</code>, <code>long-form</code> or
+     *        <code>generative</code>) for Amazon Polly to use when processing input text for speech synthesis. Using a
+     *        voice that is not supported for the engine selected will result in an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Engine
      */
@@ -668,7 +668,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for standard
      * voices is "22050". The default value for neural voices is "24000". The default value for long-form voices is
-     * "24000".
+     * "24000". The default value for generative voices is "24000".
      * </p>
      * <p>
      * Valid values for pcm are "8000" and "16000" The default value is "16000".
@@ -679,7 +679,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for
      *        standard voices is "22050". The default value for neural voices is "24000". The default value for
-     *        long-form voices is "24000".
+     *        long-form voices is "24000". The default value for generative voices is "24000".
      *        </p>
      *        <p>
      *        Valid values for pcm are "8000" and "16000" The default value is "16000".
@@ -696,7 +696,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for standard
      * voices is "22050". The default value for neural voices is "24000". The default value for long-form voices is
-     * "24000".
+     * "24000". The default value for generative voices is "24000".
      * </p>
      * <p>
      * Valid values for pcm are "8000" and "16000" The default value is "16000".
@@ -706,7 +706,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for
      *         standard voices is "22050". The default value for neural voices is "24000". The default value for
-     *         long-form voices is "24000".
+     *         long-form voices is "24000". The default value for generative voices is "24000".
      *         </p>
      *         <p>
      *         Valid values for pcm are "8000" and "16000" The default value is "16000".
@@ -723,7 +723,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for standard
      * voices is "22050". The default value for neural voices is "24000". The default value for long-form voices is
-     * "24000".
+     * "24000". The default value for generative voices is "24000".
      * </p>
      * <p>
      * Valid values for pcm are "8000" and "16000" The default value is "16000".
@@ -734,7 +734,7 @@ public class SynthesisTask implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". The default value for
      *        standard voices is "22050". The default value for neural voices is "24000". The default value for
-     *        long-form voices is "24000".
+     *        long-form voices is "24000". The default value for generative voices is "24000".
      *        </p>
      *        <p>
      *        Valid values for pcm are "8000" and "16000" The default value is "16000".

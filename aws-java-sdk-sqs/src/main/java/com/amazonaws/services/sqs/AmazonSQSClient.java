@@ -602,11 +602,6 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
      * </li>
      * <li>
      * <p>
-     * Currently, only standard queues are supported.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Only one active message movement task is supported per queue at any given time.
      * </p>
      * </li>
@@ -1782,11 +1777,6 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
      * </li>
      * <li>
      * <p>
-     * Currently, only standard queues are supported.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Only one active message movement task is supported per queue at any given time.
      * </p>
      * </li>
@@ -2785,11 +2775,11 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
 
     /**
      * <p>
-     * Sets the value of one or more queue attributes. When you change a queue's attributes, the change can take up to
-     * 60 seconds for most of the attributes to propagate throughout the Amazon SQS system. Changes made to the
-     * <code>MessageRetentionPeriod</code> attribute can take up to 15 minutes and will impact existing messages in the
-     * queue potentially causing them to be expired and deleted if the <code>MessageRetentionPeriod</code> is reduced
-     * below the age of existing messages.
+     * Sets the value of one or more queue attributes, like a policy. When you change a queue's attributes, the change
+     * can take up to 60 seconds for most of the attributes to propagate throughout the Amazon SQS system. Changes made
+     * to the <code>MessageRetentionPeriod</code> attribute can take up to 15 minutes and will impact existing messages
+     * in the queue potentially causing them to be expired and deleted if the <code>MessageRetentionPeriod</code> is
+     * reduced below the age of existing messages.
      * </p>
      * <note>
      * <ul>
@@ -2928,11 +2918,6 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
      * In dead-letter queues redrive context, the <code>StartMessageMoveTask</code> the source queue is the DLQ, while
      * the destination queue can be the original source queue (from which the messages were driven to the
      * dead-letter-queue), or a custom destination queue.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Currently, only standard queues support redrive. FIFO queues don't support redrive.
      * </p>
      * </li>
      * <li>

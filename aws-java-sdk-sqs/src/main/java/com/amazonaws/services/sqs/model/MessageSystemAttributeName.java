@@ -20,6 +20,7 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum MessageSystemAttributeName {
 
+    All("All"),
     SenderId("SenderId"),
     SentTimestamp("SentTimestamp"),
     ApproximateReceiveCount("ApproximateReceiveCount"),

@@ -51,8 +51,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      */
     private Boolean forceRemediateForFirstEntries;
@@ -79,8 +79,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      */
     private Boolean forceRemediateForLastEntries;
@@ -227,8 +227,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @param forceRemediateForFirstEntries
@@ -237,9 +237,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try
-     *        to remediate. For more information about the remediation behavior, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *        control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *        to remediate. For more information about the remediation behavior, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *        >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      */
 
     public void setForceRemediateForFirstEntries(Boolean forceRemediateForFirstEntries) {
@@ -254,8 +254,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @return Applies only when remediation is enabled for the policy as a whole. Firewall Manager uses this setting
@@ -263,9 +263,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not
-     *         try to remediate. For more information about the remediation behavior, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *         control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *         try to remediate. For more information about the remediation behavior, see <a href=
+     *         "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *         >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      */
 
     public Boolean getForceRemediateForFirstEntries() {
@@ -280,8 +280,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @param forceRemediateForFirstEntries
@@ -290,9 +290,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try
-     *        to remediate. For more information about the remediation behavior, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *        control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *        to remediate. For more information about the remediation behavior, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *        >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -309,8 +309,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @return Applies only when remediation is enabled for the policy as a whole. Firewall Manager uses this setting
@@ -318,9 +318,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not
-     *         try to remediate. For more information about the remediation behavior, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *         control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *         try to remediate. For more information about the remediation behavior, see <a href=
+     *         "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *         >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      */
 
     public Boolean isForceRemediateForFirstEntries() {
@@ -469,8 +469,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @param forceRemediateForLastEntries
@@ -479,9 +479,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try
-     *        to remediate. For more information about the remediation behavior, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *        control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *        to remediate. For more information about the remediation behavior, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *        >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      */
 
     public void setForceRemediateForLastEntries(Boolean forceRemediateForLastEntries) {
@@ -496,8 +496,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @return Applies only when remediation is enabled for the policy as a whole. Firewall Manager uses this setting
@@ -505,9 +505,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not
-     *         try to remediate. For more information about the remediation behavior, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *         control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *         try to remediate. For more information about the remediation behavior, see <a href=
+     *         "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *         >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      */
 
     public Boolean getForceRemediateForLastEntries() {
@@ -522,8 +522,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @param forceRemediateForLastEntries
@@ -532,9 +532,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try
-     *        to remediate. For more information about the remediation behavior, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *        control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *        to remediate. For more information about the remediation behavior, see <a href=
+     *        "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *        >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -551,8 +551,8 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      * <p>
      * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not try to
      * remediate. For more information about the remediation behavior, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access control
-     * list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     * >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @return Applies only when remediation is enabled for the policy as a whole. Firewall Manager uses this setting
@@ -560,9 +560,9 @@ public class NetworkAclEntrySet implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and does not
-     *         try to remediate. For more information about the remediation behavior, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html">Network access
-     *         control list (ACL) policies</a> in the <i>Firewall Manager Developer Guide</i>.
+     *         try to remediate. For more information about the remediation behavior, see <a href=
+     *         "https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation"
+     *         >Remediation for managed network ACLs</a> in the <i>Firewall Manager Developer Guide</i>.
      */
 
     public Boolean isForceRemediateForLastEntries() {
