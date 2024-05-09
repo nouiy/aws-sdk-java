@@ -27,6 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ExternalSourcesGenerationConfigurationMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> GUARDRAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardrailConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> INFERENCECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceConfig").build();
     private static final MarshallingInfo<StructuredPojo> PROMPTTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptTemplate").build();
 
@@ -46,6 +50,8 @@ public class ExternalSourcesGenerationConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(externalSourcesGenerationConfiguration.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(externalSourcesGenerationConfiguration.getInferenceConfig(), INFERENCECONFIG_BINDING);
             protocolMarshaller.marshall(externalSourcesGenerationConfiguration.getPromptTemplate(), PROMPTTEMPLATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

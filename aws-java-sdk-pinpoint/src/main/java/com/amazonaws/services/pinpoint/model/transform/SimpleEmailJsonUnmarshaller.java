@@ -60,6 +60,12 @@ public class SimpleEmailJsonUnmarshaller implements Unmarshaller<SimpleEmail, Js
                     context.nextToken();
                     simpleEmail.setTextPart(SimpleEmailPartJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Headers", targetDepth)) {
+                    context.nextToken();
+                    simpleEmail.setHeaders(new ListUnmarshaller<MessageHeader>(MessageHeaderJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

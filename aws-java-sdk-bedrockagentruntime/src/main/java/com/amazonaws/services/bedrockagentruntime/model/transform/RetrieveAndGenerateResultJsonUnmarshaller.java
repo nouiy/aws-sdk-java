@@ -54,6 +54,10 @@ public class RetrieveAndGenerateResultJsonUnmarshaller implements Unmarshaller<R
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("guardrailAction", targetDepth)) {
+                    context.nextToken();
+                    retrieveAndGenerateResult.setGuardrailAction(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("output", targetDepth)) {
                     context.nextToken();
                     retrieveAndGenerateResult.setOutput(RetrieveAndGenerateOutputJsonUnmarshaller.getInstance().unmarshall(context));

@@ -232,6 +232,27 @@ public interface AWSSsmSap {
 
     /**
      * <p>
+     * Returns a list of operations events.
+     * </p>
+     * <p>
+     * Available parameters include <code>OperationID</code>, as well as optional parameters <code>MaxResults</code>,
+     * <code>NextToken</code>, and <code>Filters</code>.
+     * </p>
+     * 
+     * @param listOperationEventsRequest
+     * @return Result of the ListOperationEvents operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.ListOperationEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperationEvents" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListOperationEventsResult listOperationEvents(ListOperationEventsRequest listOperationEventsRequest);
+
+    /**
+     * <p>
      * Lists the operations performed by AWS Systems Manager for SAP.
      * </p>
      * 
@@ -319,6 +340,30 @@ public interface AWSSsmSap {
 
     /**
      * <p>
+     * Request is an operation which starts an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required.
+     * </p>
+     * 
+     * @param startApplicationRequest
+     * @return Result of the StartApplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.StartApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StartApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartApplicationResult startApplication(StartApplicationRequest startApplicationRequest);
+
+    /**
+     * <p>
      * Refreshes a registered application.
      * </p>
      * 
@@ -339,6 +384,31 @@ public interface AWSSsmSap {
      *      target="_top">AWS API Documentation</a>
      */
     StartApplicationRefreshResult startApplicationRefresh(StartApplicationRefreshRequest startApplicationRefreshRequest);
+
+    /**
+     * <p>
+     * Request is an operation to stop an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required. Parameters <code>StopConnectedEntity</code> and
+     * <code>IncludeEc2InstanceShutdown</code> are optional.
+     * </p>
+     * 
+     * @param stopApplicationRequest
+     * @return Result of the StopApplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.StopApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StopApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StopApplicationResult stopApplication(StopApplicationRequest stopApplicationRequest);
 
     /**
      * <p>

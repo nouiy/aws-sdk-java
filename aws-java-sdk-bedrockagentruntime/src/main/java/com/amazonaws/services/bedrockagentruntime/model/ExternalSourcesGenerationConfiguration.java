@@ -31,10 +31,109 @@ public class ExternalSourcesGenerationConfiguration implements Serializable, Clo
 
     /**
      * <p>
+     * The configuration details for the guardrail.
+     * </p>
+     */
+    private GuardrailConfiguration guardrailConfiguration;
+    /**
+     * <p>
+     * Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an external
+     * source.
+     * </p>
+     */
+    private InferenceConfig inferenceConfig;
+    /**
+     * <p>
      * Contain the textPromptTemplate string for the external source wrapper object.
      * </p>
      */
     private PromptTemplate promptTemplate;
+
+    /**
+     * <p>
+     * The configuration details for the guardrail.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The configuration details for the guardrail.
+     */
+
+    public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        this.guardrailConfiguration = guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration details for the guardrail.
+     * </p>
+     * 
+     * @return The configuration details for the guardrail.
+     */
+
+    public GuardrailConfiguration getGuardrailConfiguration() {
+        return this.guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration details for the guardrail.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The configuration details for the guardrail.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExternalSourcesGenerationConfiguration withGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        setGuardrailConfiguration(guardrailConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an external
+     * source.
+     * </p>
+     * 
+     * @param inferenceConfig
+     *        Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an
+     *        external source.
+     */
+
+    public void setInferenceConfig(InferenceConfig inferenceConfig) {
+        this.inferenceConfig = inferenceConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an external
+     * source.
+     * </p>
+     * 
+     * @return Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an
+     *         external source.
+     */
+
+    public InferenceConfig getInferenceConfig() {
+        return this.inferenceConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an external
+     * source.
+     * </p>
+     * 
+     * @param inferenceConfig
+     *        Configuration settings for inference when using RetrieveAndGenerate to generate responses while using an
+     *        external source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExternalSourcesGenerationConfiguration withInferenceConfig(InferenceConfig inferenceConfig) {
+        setInferenceConfig(inferenceConfig);
+        return this;
+    }
 
     /**
      * <p>
@@ -88,6 +187,10 @@ public class ExternalSourcesGenerationConfiguration implements Serializable, Clo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getGuardrailConfiguration() != null)
+            sb.append("GuardrailConfiguration: ").append(getGuardrailConfiguration()).append(",");
+        if (getInferenceConfig() != null)
+            sb.append("InferenceConfig: ").append(getInferenceConfig()).append(",");
         if (getPromptTemplate() != null)
             sb.append("PromptTemplate: ").append(getPromptTemplate());
         sb.append("}");
@@ -104,6 +207,14 @@ public class ExternalSourcesGenerationConfiguration implements Serializable, Clo
         if (obj instanceof ExternalSourcesGenerationConfiguration == false)
             return false;
         ExternalSourcesGenerationConfiguration other = (ExternalSourcesGenerationConfiguration) obj;
+        if (other.getGuardrailConfiguration() == null ^ this.getGuardrailConfiguration() == null)
+            return false;
+        if (other.getGuardrailConfiguration() != null && other.getGuardrailConfiguration().equals(this.getGuardrailConfiguration()) == false)
+            return false;
+        if (other.getInferenceConfig() == null ^ this.getInferenceConfig() == null)
+            return false;
+        if (other.getInferenceConfig() != null && other.getInferenceConfig().equals(this.getInferenceConfig()) == false)
+            return false;
         if (other.getPromptTemplate() == null ^ this.getPromptTemplate() == null)
             return false;
         if (other.getPromptTemplate() != null && other.getPromptTemplate().equals(this.getPromptTemplate()) == false)
@@ -116,6 +227,8 @@ public class ExternalSourcesGenerationConfiguration implements Serializable, Clo
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getInferenceConfig() == null) ? 0 : getInferenceConfig().hashCode());
         hashCode = prime * hashCode + ((getPromptTemplate() == null) ? 0 : getPromptTemplate().hashCode());
         return hashCode;
     }

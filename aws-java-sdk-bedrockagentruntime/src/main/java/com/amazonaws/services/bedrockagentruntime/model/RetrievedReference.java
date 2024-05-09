@@ -35,8 +35,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * <a href=
- * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_Retrieve.html#API_agent-runtime_Retrieve_ResponseSyntax"
- * >Retrieve response</a> – in the <code>retrievedReferences</code> field
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html#API_agent-runtime_InvokeAgent_ResponseSyntax"
+ * >InvokeAgent response</a> – in the <code>retrievedReferences</code> field
  * </p>
  * </li>
  * </ul>

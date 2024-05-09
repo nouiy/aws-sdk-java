@@ -157,6 +157,19 @@ public class AbstractAWSSsmSapAsync extends AbstractAWSSsmSap implements AWSSsmS
     }
 
     @Override
+    public java.util.concurrent.Future<ListOperationEventsResult> listOperationEventsAsync(ListOperationEventsRequest request) {
+
+        return listOperationEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOperationEventsResult> listOperationEventsAsync(ListOperationEventsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListOperationEventsRequest, ListOperationEventsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListOperationsResult> listOperationsAsync(ListOperationsRequest request) {
 
         return listOperationsAsync(request, null);
@@ -209,6 +222,19 @@ public class AbstractAWSSsmSapAsync extends AbstractAWSSsmSap implements AWSSsmS
     }
 
     @Override
+    public java.util.concurrent.Future<StartApplicationResult> startApplicationAsync(StartApplicationRequest request) {
+
+        return startApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartApplicationResult> startApplicationAsync(StartApplicationRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartApplicationRequest, StartApplicationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartApplicationRefreshResult> startApplicationRefreshAsync(StartApplicationRefreshRequest request) {
 
         return startApplicationRefreshAsync(request, null);
@@ -217,6 +243,19 @@ public class AbstractAWSSsmSapAsync extends AbstractAWSSsmSap implements AWSSsmS
     @Override
     public java.util.concurrent.Future<StartApplicationRefreshResult> startApplicationRefreshAsync(StartApplicationRefreshRequest request,
             com.amazonaws.handlers.AsyncHandler<StartApplicationRefreshRequest, StartApplicationRefreshResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopApplicationResult> stopApplicationAsync(StopApplicationRequest request) {
+
+        return stopApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopApplicationResult> stopApplicationAsync(StopApplicationRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopApplicationRequest, StopApplicationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

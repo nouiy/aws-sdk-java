@@ -32,6 +32,12 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
     private java.util.List<Citation> citations;
     /**
      * <p>
+     * Specifies if there is a guardrail intervention in the response.
+     * </p>
+     */
+    private String guardrailAction;
+    /**
+     * <p>
      * Contains the response generated from querying the knowledge base.
      * </p>
      */
@@ -118,6 +124,65 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
 
     public RetrieveAndGenerateResult withCitations(java.util.Collection<Citation> citations) {
         setCitations(citations);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies if there is a guardrail intervention in the response.
+     * </p>
+     * 
+     * @param guardrailAction
+     *        Specifies if there is a guardrail intervention in the response.
+     * @see GuadrailAction
+     */
+
+    public void setGuardrailAction(String guardrailAction) {
+        this.guardrailAction = guardrailAction;
+    }
+
+    /**
+     * <p>
+     * Specifies if there is a guardrail intervention in the response.
+     * </p>
+     * 
+     * @return Specifies if there is a guardrail intervention in the response.
+     * @see GuadrailAction
+     */
+
+    public String getGuardrailAction() {
+        return this.guardrailAction;
+    }
+
+    /**
+     * <p>
+     * Specifies if there is a guardrail intervention in the response.
+     * </p>
+     * 
+     * @param guardrailAction
+     *        Specifies if there is a guardrail intervention in the response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GuadrailAction
+     */
+
+    public RetrieveAndGenerateResult withGuardrailAction(String guardrailAction) {
+        setGuardrailAction(guardrailAction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies if there is a guardrail intervention in the response.
+     * </p>
+     * 
+     * @param guardrailAction
+     *        Specifies if there is a guardrail intervention in the response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GuadrailAction
+     */
+
+    public RetrieveAndGenerateResult withGuardrailAction(GuadrailAction guardrailAction) {
+        this.guardrailAction = guardrailAction.toString();
         return this;
     }
 
@@ -218,6 +283,8 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
         sb.append("{");
         if (getCitations() != null)
             sb.append("Citations: ").append(getCitations()).append(",");
+        if (getGuardrailAction() != null)
+            sb.append("GuardrailAction: ").append(getGuardrailAction()).append(",");
         if (getOutput() != null)
             sb.append("Output: ").append("***Sensitive Data Redacted***").append(",");
         if (getSessionId() != null)
@@ -240,6 +307,10 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getCitations() != null && other.getCitations().equals(this.getCitations()) == false)
             return false;
+        if (other.getGuardrailAction() == null ^ this.getGuardrailAction() == null)
+            return false;
+        if (other.getGuardrailAction() != null && other.getGuardrailAction().equals(this.getGuardrailAction()) == false)
+            return false;
         if (other.getOutput() == null ^ this.getOutput() == null)
             return false;
         if (other.getOutput() != null && other.getOutput().equals(this.getOutput()) == false)
@@ -257,6 +328,7 @@ public class RetrieveAndGenerateResult extends com.amazonaws.AmazonWebServiceRes
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCitations() == null) ? 0 : getCitations().hashCode());
+        hashCode = prime * hashCode + ((getGuardrailAction() == null) ? 0 : getGuardrailAction().hashCode());
         hashCode = prime * hashCode + ((getOutput() == null) ? 0 : getOutput().hashCode());
         hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         return hashCode;

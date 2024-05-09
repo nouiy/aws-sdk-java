@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.verifiedpermissions.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,12 +38,16 @@ public class PolicyItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("principal").build();
     private static final MarshallingInfo<StructuredPojo> RESOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resource").build();
+    private static final MarshallingInfo<List> ACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("actions").build();
     private static final MarshallingInfo<StructuredPojo> DEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("definition").build();
     private static final MarshallingInfo<java.util.Date> CREATEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdDate").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedDate").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> EFFECT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("effect").build();
 
     private static final PolicyItemMarshaller instance = new PolicyItemMarshaller();
 
@@ -65,9 +70,11 @@ public class PolicyItemMarshaller {
             protocolMarshaller.marshall(policyItem.getPolicyType(), POLICYTYPE_BINDING);
             protocolMarshaller.marshall(policyItem.getPrincipal(), PRINCIPAL_BINDING);
             protocolMarshaller.marshall(policyItem.getResource(), RESOURCE_BINDING);
+            protocolMarshaller.marshall(policyItem.getActions(), ACTIONS_BINDING);
             protocolMarshaller.marshall(policyItem.getDefinition(), DEFINITION_BINDING);
             protocolMarshaller.marshall(policyItem.getCreatedDate(), CREATEDDATE_BINDING);
             protocolMarshaller.marshall(policyItem.getLastUpdatedDate(), LASTUPDATEDDATE_BINDING);
+            protocolMarshaller.marshall(policyItem.getEffect(), EFFECT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -146,16 +146,15 @@ public class FirewallRule implements Serializable, Cloneable, StructuredPojo {
     private String modificationTime;
     /**
      * <p>
-     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME, ot
-     * ALIAS.
+     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or DNAME.
      * </p>
      * <p>
      * <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The individual
-     * domains in the redirection chain must be added to the allow domain list.
+     * domains in the redirection chain must be added to the domain list.
      * </p>
      * <p>
      * <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't need to
-     * add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     * add the subsequent domains in the domain in the redirection list to the domain list.
      * </p>
      */
     private String firewallDomainRedirectionAction;
@@ -1124,28 +1123,27 @@ public class FirewallRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME, ot
-     * ALIAS.
+     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or DNAME.
      * </p>
      * <p>
      * <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The individual
-     * domains in the redirection chain must be added to the allow domain list.
+     * domains in the redirection chain must be added to the domain list.
      * </p>
      * <p>
      * <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't need to
-     * add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     * add the subsequent domains in the domain in the redirection list to the domain list.
      * </p>
      * 
      * @param firewallDomainRedirectionAction
-     *        How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME,
-     *        ot ALIAS. </p>
+     *        How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or
+     *        DNAME. </p>
      *        <p>
      *        <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The
-     *        individual domains in the redirection chain must be added to the allow domain list.
+     *        individual domains in the redirection chain must be added to the domain list.
      *        </p>
      *        <p>
      *        <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't
-     *        need to add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     *        need to add the subsequent domains in the domain in the redirection list to the domain list.
      * @see FirewallDomainRedirectionAction
      */
 
@@ -1155,27 +1153,26 @@ public class FirewallRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME, ot
-     * ALIAS.
+     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or DNAME.
      * </p>
      * <p>
      * <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The individual
-     * domains in the redirection chain must be added to the allow domain list.
+     * domains in the redirection chain must be added to the domain list.
      * </p>
      * <p>
      * <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't need to
-     * add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     * add the subsequent domains in the domain in the redirection list to the domain list.
      * </p>
      * 
-     * @return How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME,
-     *         ot ALIAS. </p>
+     * @return How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or
+     *         DNAME. </p>
      *         <p>
      *         <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The
-     *         individual domains in the redirection chain must be added to the allow domain list.
+     *         individual domains in the redirection chain must be added to the domain list.
      *         </p>
      *         <p>
      *         <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't
-     *         need to add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     *         need to add the subsequent domains in the domain in the redirection list to the domain list.
      * @see FirewallDomainRedirectionAction
      */
 
@@ -1185,28 +1182,27 @@ public class FirewallRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME, ot
-     * ALIAS.
+     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or DNAME.
      * </p>
      * <p>
      * <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The individual
-     * domains in the redirection chain must be added to the allow domain list.
+     * domains in the redirection chain must be added to the domain list.
      * </p>
      * <p>
      * <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't need to
-     * add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     * add the subsequent domains in the domain in the redirection list to the domain list.
      * </p>
      * 
      * @param firewallDomainRedirectionAction
-     *        How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME,
-     *        ot ALIAS. </p>
+     *        How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or
+     *        DNAME. </p>
      *        <p>
      *        <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The
-     *        individual domains in the redirection chain must be added to the allow domain list.
+     *        individual domains in the redirection chain must be added to the domain list.
      *        </p>
      *        <p>
      *        <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't
-     *        need to add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     *        need to add the subsequent domains in the domain in the redirection list to the domain list.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FirewallDomainRedirectionAction
      */
@@ -1218,28 +1214,27 @@ public class FirewallRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME, ot
-     * ALIAS.
+     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or DNAME.
      * </p>
      * <p>
      * <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The individual
-     * domains in the redirection chain must be added to the allow domain list.
+     * domains in the redirection chain must be added to the domain list.
      * </p>
      * <p>
      * <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't need to
-     * add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     * add the subsequent domains in the domain in the redirection list to the domain list.
      * </p>
      * 
      * @param firewallDomainRedirectionAction
-     *        How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME, DNAME,
-     *        ot ALIAS. </p>
+     *        How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as CNAME or
+     *        DNAME. </p>
      *        <p>
      *        <code>Inspect_Redirection_Domain </code>(Default) inspects all domains in the redirection chain. The
-     *        individual domains in the redirection chain must be added to the allow domain list.
+     *        individual domains in the redirection chain must be added to the domain list.
      *        </p>
      *        <p>
      *        <code>Trust_Redirection_Domain </code> inspects only the first domain in the redirection chain. You don't
-     *        need to add the subsequent domains in the domain in the redirection list to the domain alloww list.
+     *        need to add the subsequent domains in the domain in the redirection list to the domain list.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FirewallDomainRedirectionAction
      */

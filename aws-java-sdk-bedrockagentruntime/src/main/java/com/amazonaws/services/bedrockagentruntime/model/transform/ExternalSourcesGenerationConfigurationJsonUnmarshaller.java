@@ -48,6 +48,14 @@ public class ExternalSourcesGenerationConfigurationJsonUnmarshaller implements U
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("guardrailConfiguration", targetDepth)) {
+                    context.nextToken();
+                    externalSourcesGenerationConfiguration.setGuardrailConfiguration(GuardrailConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("inferenceConfig", targetDepth)) {
+                    context.nextToken();
+                    externalSourcesGenerationConfiguration.setInferenceConfig(InferenceConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("promptTemplate", targetDepth)) {
                     context.nextToken();
                     externalSourcesGenerationConfiguration.setPromptTemplate(PromptTemplateJsonUnmarshaller.getInstance().unmarshall(context));

@@ -78,6 +78,11 @@ public class AbstractAWSSsmSap implements AWSSsmSap {
     }
 
     @Override
+    public ListOperationEventsResult listOperationEvents(ListOperationEventsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListOperationsResult listOperations(ListOperationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -98,7 +103,17 @@ public class AbstractAWSSsmSap implements AWSSsmSap {
     }
 
     @Override
+    public StartApplicationResult startApplication(StartApplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartApplicationRefreshResult startApplicationRefresh(StartApplicationRefreshRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopApplicationResult stopApplication(StopApplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

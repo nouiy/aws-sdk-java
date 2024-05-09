@@ -56,6 +56,12 @@ public class CampaignEmailMessageJsonUnmarshaller implements Unmarshaller<Campai
                     context.nextToken();
                     campaignEmailMessage.setFromAddress(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Headers", targetDepth)) {
+                    context.nextToken();
+                    campaignEmailMessage.setHeaders(new ListUnmarshaller<MessageHeader>(MessageHeaderJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("HtmlBody", targetDepth)) {
                     context.nextToken();
                     campaignEmailMessage.setHtmlBody(context.getUnmarshaller(String.class).unmarshall(context));

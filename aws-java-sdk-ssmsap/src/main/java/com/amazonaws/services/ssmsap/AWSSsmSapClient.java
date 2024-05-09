@@ -756,6 +756,69 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
 
     /**
      * <p>
+     * Returns a list of operations events.
+     * </p>
+     * <p>
+     * Available parameters include <code>OperationID</code>, as well as optional parameters <code>MaxResults</code>,
+     * <code>NextToken</code>, and <code>Filters</code>.
+     * </p>
+     * 
+     * @param listOperationEventsRequest
+     * @return Result of the ListOperationEvents operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.ListOperationEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperationEvents" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListOperationEventsResult listOperationEvents(ListOperationEventsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListOperationEvents(request);
+    }
+
+    @SdkInternalApi
+    final ListOperationEventsResult executeListOperationEvents(ListOperationEventsRequest listOperationEventsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listOperationEventsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListOperationEventsRequest> request = null;
+        Response<ListOperationEventsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListOperationEventsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listOperationEventsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListOperationEvents");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListOperationEventsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListOperationEventsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the operations performed by AWS Systems Manager for SAP.
      * </p>
      * 
@@ -1012,6 +1075,72 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
 
     /**
      * <p>
+     * Request is an operation which starts an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required.
+     * </p>
+     * 
+     * @param startApplicationRequest
+     * @return Result of the StartApplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.StartApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StartApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartApplicationResult startApplication(StartApplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartApplication(request);
+    }
+
+    @SdkInternalApi
+    final StartApplicationResult executeStartApplication(StartApplicationRequest startApplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startApplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartApplicationRequest> request = null;
+        Response<StartApplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartApplicationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startApplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartApplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartApplicationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartApplicationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Refreshes a registered application.
      * </p>
      * 
@@ -1067,6 +1196,73 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
             HttpResponseHandler<AmazonWebServiceResponse<StartApplicationRefreshResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new StartApplicationRefreshResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Request is an operation to stop an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required. Parameters <code>StopConnectedEntity</code> and
+     * <code>IncludeEc2InstanceShutdown</code> are optional.
+     * </p>
+     * 
+     * @param stopApplicationRequest
+     * @return Result of the StopApplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.StopApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StopApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StopApplicationResult stopApplication(StopApplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopApplication(request);
+    }
+
+    @SdkInternalApi
+    final StopApplicationResult executeStopApplication(StopApplicationRequest stopApplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopApplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopApplicationRequest> request = null;
+        Response<StopApplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopApplicationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopApplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopApplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopApplicationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopApplicationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of user groups and entities from an Amazon Cognito user pool identity source.
+ * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity source.
  * </p>
  * <p>
  * This data type is part of an <a href=

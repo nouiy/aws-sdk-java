@@ -64,6 +64,12 @@ public class EmailTemplateRequestJsonUnmarshaller implements Unmarshaller<EmailT
                     context.nextToken();
                     emailTemplateRequest.setSubject(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Headers", targetDepth)) {
+                    context.nextToken();
+                    emailTemplateRequest.setHeaders(new ListUnmarshaller<MessageHeader>(MessageHeaderJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     emailTemplateRequest.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

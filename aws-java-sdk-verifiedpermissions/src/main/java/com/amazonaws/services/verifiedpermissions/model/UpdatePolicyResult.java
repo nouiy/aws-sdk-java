@@ -57,6 +57,14 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
     private EntityIdentifier resource;
     /**
      * <p>
+     * The action that a policy permits or forbids. For example,
+     * <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     * .
+     * </p>
+     */
+    private java.util.List<ActionIdentifier> actions;
+    /**
+     * <p>
      * The date and time that the policy was originally created.
      * </p>
      */
@@ -67,6 +75,13 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private java.util.Date lastUpdatedDate;
+    /**
+     * <p>
+     * The effect of the decision that a policy returns to an authorization request. For example,
+     * <code>"effect": "Permit"</code>.
+     * </p>
+     */
+    private String effect;
 
     /**
      * <p>
@@ -301,6 +316,92 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
+     * The action that a policy permits or forbids. For example,
+     * <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     * .
+     * </p>
+     * 
+     * @return The action that a policy permits or forbids. For example,
+     *         <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     *         .
+     */
+
+    public java.util.List<ActionIdentifier> getActions() {
+        return actions;
+    }
+
+    /**
+     * <p>
+     * The action that a policy permits or forbids. For example,
+     * <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     * .
+     * </p>
+     * 
+     * @param actions
+     *        The action that a policy permits or forbids. For example,
+     *        <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     *        .
+     */
+
+    public void setActions(java.util.Collection<ActionIdentifier> actions) {
+        if (actions == null) {
+            this.actions = null;
+            return;
+        }
+
+        this.actions = new java.util.ArrayList<ActionIdentifier>(actions);
+    }
+
+    /**
+     * <p>
+     * The action that a policy permits or forbids. For example,
+     * <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     * .
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setActions(java.util.Collection)} or {@link #withActions(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param actions
+     *        The action that a policy permits or forbids. For example,
+     *        <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     *        .
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePolicyResult withActions(ActionIdentifier... actions) {
+        if (this.actions == null) {
+            setActions(new java.util.ArrayList<ActionIdentifier>(actions.length));
+        }
+        for (ActionIdentifier ele : actions) {
+            this.actions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The action that a policy permits or forbids. For example,
+     * <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     * .
+     * </p>
+     * 
+     * @param actions
+     *        The action that a policy permits or forbids. For example,
+     *        <code>{"actions": [{"actionId": "ViewPhoto", "actionType": "PhotoFlash::Action"}, {"entityID": "SharePhoto", "entityType": "PhotoFlash::Action"}]}</code>
+     *        .
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePolicyResult withActions(java.util.Collection<ActionIdentifier> actions) {
+        setActions(actions);
+        return this;
+    }
+
+    /**
+     * <p>
      * The date and time that the policy was originally created.
      * </p>
      * 
@@ -380,6 +481,73 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The effect of the decision that a policy returns to an authorization request. For example,
+     * <code>"effect": "Permit"</code>.
+     * </p>
+     * 
+     * @param effect
+     *        The effect of the decision that a policy returns to an authorization request. For example,
+     *        <code>"effect": "Permit"</code>.
+     * @see PolicyEffect
+     */
+
+    public void setEffect(String effect) {
+        this.effect = effect;
+    }
+
+    /**
+     * <p>
+     * The effect of the decision that a policy returns to an authorization request. For example,
+     * <code>"effect": "Permit"</code>.
+     * </p>
+     * 
+     * @return The effect of the decision that a policy returns to an authorization request. For example,
+     *         <code>"effect": "Permit"</code>.
+     * @see PolicyEffect
+     */
+
+    public String getEffect() {
+        return this.effect;
+    }
+
+    /**
+     * <p>
+     * The effect of the decision that a policy returns to an authorization request. For example,
+     * <code>"effect": "Permit"</code>.
+     * </p>
+     * 
+     * @param effect
+     *        The effect of the decision that a policy returns to an authorization request. For example,
+     *        <code>"effect": "Permit"</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PolicyEffect
+     */
+
+    public UpdatePolicyResult withEffect(String effect) {
+        setEffect(effect);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The effect of the decision that a policy returns to an authorization request. For example,
+     * <code>"effect": "Permit"</code>.
+     * </p>
+     * 
+     * @param effect
+     *        The effect of the decision that a policy returns to an authorization request. For example,
+     *        <code>"effect": "Permit"</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PolicyEffect
+     */
+
+    public UpdatePolicyResult withEffect(PolicyEffect effect) {
+        this.effect = effect.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -401,10 +569,14 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("Principal: ").append(getPrincipal()).append(",");
         if (getResource() != null)
             sb.append("Resource: ").append(getResource()).append(",");
+        if (getActions() != null)
+            sb.append("Actions: ").append(getActions()).append(",");
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)
-            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate());
+            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate()).append(",");
+        if (getEffect() != null)
+            sb.append("Effect: ").append(getEffect());
         sb.append("}");
         return sb.toString();
     }
@@ -439,6 +611,10 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getResource() != null && other.getResource().equals(this.getResource()) == false)
             return false;
+        if (other.getActions() == null ^ this.getActions() == null)
+            return false;
+        if (other.getActions() != null && other.getActions().equals(this.getActions()) == false)
+            return false;
         if (other.getCreatedDate() == null ^ this.getCreatedDate() == null)
             return false;
         if (other.getCreatedDate() != null && other.getCreatedDate().equals(this.getCreatedDate()) == false)
@@ -446,6 +622,10 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
         if (other.getLastUpdatedDate() == null ^ this.getLastUpdatedDate() == null)
             return false;
         if (other.getLastUpdatedDate() != null && other.getLastUpdatedDate().equals(this.getLastUpdatedDate()) == false)
+            return false;
+        if (other.getEffect() == null ^ this.getEffect() == null)
+            return false;
+        if (other.getEffect() != null && other.getEffect().equals(this.getEffect()) == false)
             return false;
         return true;
     }
@@ -460,8 +640,10 @@ public class UpdatePolicyResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getPolicyType() == null) ? 0 : getPolicyType().hashCode());
         hashCode = prime * hashCode + ((getPrincipal() == null) ? 0 : getPrincipal().hashCode());
         hashCode = prime * hashCode + ((getResource() == null) ? 0 : getResource().hashCode());
+        hashCode = prime * hashCode + ((getActions() == null) ? 0 : getActions().hashCode());
         hashCode = prime * hashCode + ((getCreatedDate() == null) ? 0 : getCreatedDate().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDate() == null) ? 0 : getLastUpdatedDate().hashCode());
+        hashCode = prime * hashCode + ((getEffect() == null) ? 0 : getEffect().hashCode());
         return hashCode;
     }
 

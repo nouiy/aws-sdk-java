@@ -50,7 +50,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can specify
-     * a maximum of 200 identity sources per response.
+     * a maximum of 50 identity sources per response.
      * </p>
      */
     private Integer maxResults;
@@ -168,7 +168,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can specify
-     * a maximum of 200 identity sources per response.
+     * a maximum of 50 identity sources per response.
      * </p>
      * 
      * @param maxResults
@@ -180,7 +180,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        operation to ensure that you receive all of the results.</p>
      *        <p>
      *        If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can
-     *        specify a maximum of 200 identity sources per response.
+     *        specify a maximum of 50 identity sources per response.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -198,7 +198,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can specify
-     * a maximum of 200 identity sources per response.
+     * a maximum of 50 identity sources per response.
      * </p>
      * 
      * @return Specifies the total number of results that you want included in each response. If additional items exist
@@ -209,7 +209,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *         operation to ensure that you receive all of the results.</p>
      *         <p>
      *         If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can
-     *         specify a maximum of 200 identity sources per response.
+     *         specify a maximum of 50 identity sources per response.
      */
 
     public Integer getMaxResults() {
@@ -227,7 +227,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can specify
-     * a maximum of 200 identity sources per response.
+     * a maximum of 50 identity sources per response.
      * </p>
      * 
      * @param maxResults
@@ -239,7 +239,7 @@ public class ListIdentitySourcesRequest extends com.amazonaws.AmazonWebServiceRe
      *        operation to ensure that you receive all of the results.</p>
      *        <p>
      *        If you do not specify this parameter, the operation defaults to 10 identity sources per response. You can
-     *        specify a maximum of 200 identity sources per response.
+     *        specify a maximum of 50 identity sources per response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

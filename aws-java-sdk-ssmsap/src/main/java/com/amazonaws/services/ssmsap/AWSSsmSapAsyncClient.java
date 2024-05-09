@@ -405,6 +405,39 @@ public class AWSSsmSapAsyncClient extends AWSSsmSapClient implements AWSSsmSapAs
     }
 
     @Override
+    public java.util.concurrent.Future<ListOperationEventsResult> listOperationEventsAsync(ListOperationEventsRequest request) {
+
+        return listOperationEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOperationEventsResult> listOperationEventsAsync(final ListOperationEventsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListOperationEventsRequest, ListOperationEventsResult> asyncHandler) {
+        final ListOperationEventsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOperationEventsResult>() {
+            @Override
+            public ListOperationEventsResult call() throws Exception {
+                ListOperationEventsResult result = null;
+
+                try {
+                    result = executeListOperationEvents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListOperationsResult> listOperationsAsync(ListOperationsRequest request) {
 
         return listOperationsAsync(request, null);
@@ -537,6 +570,39 @@ public class AWSSsmSapAsyncClient extends AWSSsmSapClient implements AWSSsmSapAs
     }
 
     @Override
+    public java.util.concurrent.Future<StartApplicationResult> startApplicationAsync(StartApplicationRequest request) {
+
+        return startApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartApplicationResult> startApplicationAsync(final StartApplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartApplicationRequest, StartApplicationResult> asyncHandler) {
+        final StartApplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartApplicationResult>() {
+            @Override
+            public StartApplicationResult call() throws Exception {
+                StartApplicationResult result = null;
+
+                try {
+                    result = executeStartApplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartApplicationRefreshResult> startApplicationRefreshAsync(StartApplicationRefreshRequest request) {
 
         return startApplicationRefreshAsync(request, null);
@@ -554,6 +620,39 @@ public class AWSSsmSapAsyncClient extends AWSSsmSapClient implements AWSSsmSapAs
 
                 try {
                     result = executeStartApplicationRefresh(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopApplicationResult> stopApplicationAsync(StopApplicationRequest request) {
+
+        return stopApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopApplicationResult> stopApplicationAsync(final StopApplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopApplicationRequest, StopApplicationResult> asyncHandler) {
+        final StopApplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopApplicationResult>() {
+            @Override
+            public StopApplicationResult call() throws Exception {
+                StopApplicationResult result = null;
+
+                try {
+                    result = executeStopApplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

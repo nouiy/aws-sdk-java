@@ -68,6 +68,12 @@ public class GetPolicyResultJsonUnmarshaller implements Unmarshaller<GetPolicyRe
                     context.nextToken();
                     getPolicyResult.setResource(EntityIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("actions", targetDepth)) {
+                    context.nextToken();
+                    getPolicyResult.setActions(new ListUnmarshaller<ActionIdentifier>(ActionIdentifierJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("definition", targetDepth)) {
                     context.nextToken();
                     getPolicyResult.setDefinition(PolicyDefinitionDetailJsonUnmarshaller.getInstance().unmarshall(context));
@@ -79,6 +85,10 @@ public class GetPolicyResultJsonUnmarshaller implements Unmarshaller<GetPolicyRe
                 if (context.testExpression("lastUpdatedDate", targetDepth)) {
                     context.nextToken();
                     getPolicyResult.setLastUpdatedDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("effect", targetDepth)) {
+                    context.nextToken();
+                    getPolicyResult.setEffect(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

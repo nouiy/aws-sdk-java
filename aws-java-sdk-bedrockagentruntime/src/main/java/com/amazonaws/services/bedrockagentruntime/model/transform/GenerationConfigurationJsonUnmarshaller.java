@@ -48,6 +48,14 @@ public class GenerationConfigurationJsonUnmarshaller implements Unmarshaller<Gen
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("guardrailConfiguration", targetDepth)) {
+                    context.nextToken();
+                    generationConfiguration.setGuardrailConfiguration(GuardrailConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("inferenceConfig", targetDepth)) {
+                    context.nextToken();
+                    generationConfiguration.setInferenceConfig(InferenceConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("promptTemplate", targetDepth)) {
                     context.nextToken();
                     generationConfiguration.setPromptTemplate(PromptTemplateJsonUnmarshaller.getInstance().unmarshall(context));

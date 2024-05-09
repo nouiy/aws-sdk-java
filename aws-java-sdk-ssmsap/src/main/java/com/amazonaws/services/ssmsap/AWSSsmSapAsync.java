@@ -349,6 +349,45 @@ public interface AWSSsmSapAsync extends AWSSsmSap {
 
     /**
      * <p>
+     * Returns a list of operations events.
+     * </p>
+     * <p>
+     * Available parameters include <code>OperationID</code>, as well as optional parameters <code>MaxResults</code>,
+     * <code>NextToken</code>, and <code>Filters</code>.
+     * </p>
+     * 
+     * @param listOperationEventsRequest
+     * @return A Java Future containing the result of the ListOperationEvents operation returned by the service.
+     * @sample AWSSsmSapAsync.ListOperationEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperationEvents" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListOperationEventsResult> listOperationEventsAsync(ListOperationEventsRequest listOperationEventsRequest);
+
+    /**
+     * <p>
+     * Returns a list of operations events.
+     * </p>
+     * <p>
+     * Available parameters include <code>OperationID</code>, as well as optional parameters <code>MaxResults</code>,
+     * <code>NextToken</code>, and <code>Filters</code>.
+     * </p>
+     * 
+     * @param listOperationEventsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListOperationEvents operation returned by the service.
+     * @sample AWSSsmSapAsyncHandler.ListOperationEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperationEvents" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListOperationEventsResult> listOperationEventsAsync(ListOperationEventsRequest listOperationEventsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListOperationEventsRequest, ListOperationEventsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the operations performed by AWS Systems Manager for SAP.
      * </p>
      * 
@@ -495,6 +534,43 @@ public interface AWSSsmSapAsync extends AWSSsmSap {
 
     /**
      * <p>
+     * Request is an operation which starts an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required.
+     * </p>
+     * 
+     * @param startApplicationRequest
+     * @return A Java Future containing the result of the StartApplication operation returned by the service.
+     * @sample AWSSsmSapAsync.StartApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StartApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartApplicationResult> startApplicationAsync(StartApplicationRequest startApplicationRequest);
+
+    /**
+     * <p>
+     * Request is an operation which starts an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required.
+     * </p>
+     * 
+     * @param startApplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartApplication operation returned by the service.
+     * @sample AWSSsmSapAsyncHandler.StartApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StartApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartApplicationResult> startApplicationAsync(StartApplicationRequest startApplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartApplicationRequest, StartApplicationResult> asyncHandler);
+
+    /**
+     * <p>
      * Refreshes a registered application.
      * </p>
      * 
@@ -523,6 +599,45 @@ public interface AWSSsmSapAsync extends AWSSsmSap {
      */
     java.util.concurrent.Future<StartApplicationRefreshResult> startApplicationRefreshAsync(StartApplicationRefreshRequest startApplicationRefreshRequest,
             com.amazonaws.handlers.AsyncHandler<StartApplicationRefreshRequest, StartApplicationRefreshResult> asyncHandler);
+
+    /**
+     * <p>
+     * Request is an operation to stop an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required. Parameters <code>StopConnectedEntity</code> and
+     * <code>IncludeEc2InstanceShutdown</code> are optional.
+     * </p>
+     * 
+     * @param stopApplicationRequest
+     * @return A Java Future containing the result of the StopApplication operation returned by the service.
+     * @sample AWSSsmSapAsync.StopApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StopApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopApplicationResult> stopApplicationAsync(StopApplicationRequest stopApplicationRequest);
+
+    /**
+     * <p>
+     * Request is an operation to stop an application.
+     * </p>
+     * <p>
+     * Parameter <code>ApplicationId</code> is required. Parameters <code>StopConnectedEntity</code> and
+     * <code>IncludeEc2InstanceShutdown</code> are optional.
+     * </p>
+     * 
+     * @param stopApplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopApplication operation returned by the service.
+     * @sample AWSSsmSapAsyncHandler.StopApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StopApplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopApplicationResult> stopApplicationAsync(StopApplicationRequest stopApplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<StopApplicationRequest, StopApplicationResult> asyncHandler);
 
     /**
      * <p>

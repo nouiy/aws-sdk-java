@@ -26,7 +26,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
  * </p>
  * <p>
- * You must specify a <code>userPoolArn</code>, and optionally, a <code>ClientId</code>.
+ * Specifies a <code>userPoolArn</code>, a <code>groupConfiguration</code>, and a <code>ClientId</code>.
  * </p>
  * </note>
  * <p>
