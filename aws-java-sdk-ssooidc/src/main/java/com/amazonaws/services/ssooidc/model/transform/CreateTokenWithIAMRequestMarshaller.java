@@ -48,6 +48,8 @@ public class CreateTokenWithIAMRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("subjectTokenType").build();
     private static final MarshallingInfo<String> REQUESTEDTOKENTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("requestedTokenType").build();
+    private static final MarshallingInfo<String> CODEVERIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("codeVerifier").build();
 
     private static final CreateTokenWithIAMRequestMarshaller instance = new CreateTokenWithIAMRequestMarshaller();
 
@@ -75,6 +77,7 @@ public class CreateTokenWithIAMRequestMarshaller {
             protocolMarshaller.marshall(createTokenWithIAMRequest.getSubjectToken(), SUBJECTTOKEN_BINDING);
             protocolMarshaller.marshall(createTokenWithIAMRequest.getSubjectTokenType(), SUBJECTTOKENTYPE_BINDING);
             protocolMarshaller.marshall(createTokenWithIAMRequest.getRequestedTokenType(), REQUESTEDTOKENTYPE_BINDING);
+            protocolMarshaller.marshall(createTokenWithIAMRequest.getCodeVerifier(), CODEVERIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

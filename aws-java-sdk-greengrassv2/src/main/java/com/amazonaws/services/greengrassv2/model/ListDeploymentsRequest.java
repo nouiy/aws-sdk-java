@@ -64,6 +64,9 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The maximum number of results to be returned per paginated request.
      * </p>
+     * <p>
+     * Default: <code>50</code>
+     * </p>
      */
     private Integer maxResults;
     /**
@@ -347,9 +350,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The maximum number of results to be returned per paginated request.
      * </p>
+     * <p>
+     * Default: <code>50</code>
+     * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to be returned per paginated request.
+     *        The maximum number of results to be returned per paginated request.</p>
+     *        <p>
+     *        Default: <code>50</code>
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -360,8 +368,13 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The maximum number of results to be returned per paginated request.
      * </p>
+     * <p>
+     * Default: <code>50</code>
+     * </p>
      * 
-     * @return The maximum number of results to be returned per paginated request.
+     * @return The maximum number of results to be returned per paginated request.</p>
+     *         <p>
+     *         Default: <code>50</code>
      */
 
     public Integer getMaxResults() {
@@ -372,9 +385,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The maximum number of results to be returned per paginated request.
      * </p>
+     * <p>
+     * Default: <code>50</code>
+     * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to be returned per paginated request.
+     *        The maximum number of results to be returned per paginated request.</p>
+     *        <p>
+     *        Default: <code>50</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

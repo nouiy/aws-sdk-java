@@ -25,7 +25,7 @@ public class CreateTokenWithIAMResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A bearer token to access AWS accounts and applications assigned to a user.
+     * A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      * </p>
      */
     private String accessToken;
@@ -82,11 +82,11 @@ public class CreateTokenWithIAMResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A bearer token to access AWS accounts and applications assigned to a user.
+     * A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      * </p>
      * 
      * @param accessToken
-     *        A bearer token to access AWS accounts and applications assigned to a user.
+     *        A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      */
 
     public void setAccessToken(String accessToken) {
@@ -95,10 +95,10 @@ public class CreateTokenWithIAMResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A bearer token to access AWS accounts and applications assigned to a user.
+     * A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      * </p>
      * 
-     * @return A bearer token to access AWS accounts and applications assigned to a user.
+     * @return A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      */
 
     public String getAccessToken() {
@@ -107,11 +107,11 @@ public class CreateTokenWithIAMResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A bearer token to access AWS accounts and applications assigned to a user.
+     * A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      * </p>
      * 
      * @param accessToken
-     *        A bearer token to access AWS accounts and applications assigned to a user.
+     *        A bearer token to access Amazon Web Services accounts and applications assigned to a user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

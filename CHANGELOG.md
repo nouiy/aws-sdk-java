@@ -1,3 +1,20 @@
+# __1.12.720__ __2024-05-10__
+## __AWS Application Discovery Service__
+  - ### Features
+    - add v2 smoke tests and smithy smokeTests trait for SDK testing
+
+## __AWS IoT Greengrass V2__
+  - ### Features
+    - Mark ComponentVersion in ComponentDeploymentSpecification as required.
+
+## __AWS SSO OIDC__
+  - ### Features
+    - Updated request parameters for PKCE support.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Introduced support for G6 instance types on Sagemaker Notebook Instances and on SageMaker Studio for JupyterLab and CodeEditor applications.
+
 # __1.12.719__ __2024-05-09__
 ## __AWS Systems Manager for SAP__
   - ### Features

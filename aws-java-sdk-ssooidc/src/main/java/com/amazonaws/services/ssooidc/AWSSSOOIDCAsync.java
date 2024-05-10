@@ -122,8 +122,8 @@ public interface AWSSSOOIDCAsync extends AWSSSOOIDC {
     /**
      * <p>
      * Creates and returns access and refresh tokens for clients and applications that are authenticated using IAM
-     * entities. The access token can be used to fetch short-term credentials for the assigned AWS accounts or to access
-     * application APIs using <code>bearer</code> authentication.
+     * entities. The access token can be used to fetch short-term credentials for the assigned Amazon Web Services
+     * accounts or to access application APIs using <code>bearer</code> authentication.
      * </p>
      * 
      * @param createTokenWithIAMRequest
@@ -137,8 +137,8 @@ public interface AWSSSOOIDCAsync extends AWSSSOOIDC {
     /**
      * <p>
      * Creates and returns access and refresh tokens for clients and applications that are authenticated using IAM
-     * entities. The access token can be used to fetch short-term credentials for the assigned AWS accounts or to access
-     * application APIs using <code>bearer</code> authentication.
+     * entities. The access token can be used to fetch short-term credentials for the assigned Amazon Web Services
+     * accounts or to access application APIs using <code>bearer</code> authentication.
      * </p>
      * 
      * @param createTokenWithIAMRequest

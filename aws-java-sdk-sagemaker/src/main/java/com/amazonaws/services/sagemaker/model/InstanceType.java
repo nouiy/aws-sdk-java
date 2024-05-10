@@ -176,7 +176,15 @@ public enum InstanceType {
     MlR6id12xlarge("ml.r6id.12xlarge"),
     MlR6id16xlarge("ml.r6id.16xlarge"),
     MlR6id24xlarge("ml.r6id.24xlarge"),
-    MlR6id32xlarge("ml.r6id.32xlarge");
+    MlR6id32xlarge("ml.r6id.32xlarge"),
+    MlG6Xlarge("ml.g6.xlarge"),
+    MlG62xlarge("ml.g6.2xlarge"),
+    MlG64xlarge("ml.g6.4xlarge"),
+    MlG68xlarge("ml.g6.8xlarge"),
+    MlG612xlarge("ml.g6.12xlarge"),
+    MlG616xlarge("ml.g6.16xlarge"),
+    MlG624xlarge("ml.g6.24xlarge"),
+    MlG648xlarge("ml.g6.48xlarge");
 
     private String value;
 

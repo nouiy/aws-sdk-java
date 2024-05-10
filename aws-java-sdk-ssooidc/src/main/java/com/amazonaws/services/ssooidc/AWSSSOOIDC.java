@@ -138,8 +138,8 @@ public interface AWSSSOOIDC {
     /**
      * <p>
      * Creates and returns access and refresh tokens for clients and applications that are authenticated using IAM
-     * entities. The access token can be used to fetch short-term credentials for the assigned AWS accounts or to access
-     * application APIs using <code>bearer</code> authentication.
+     * entities. The access token can be used to fetch short-term credentials for the assigned Amazon Web Services
+     * accounts or to access application APIs using <code>bearer</code> authentication.
      * </p>
      * 
      * @param createTokenWithIAMRequest
@@ -197,6 +197,10 @@ public interface AWSSSOOIDC {
      *         Indicates that the client information sent in the request during registration is invalid.
      * @throws InternalServerException
      *         Indicates that an error from the service occurred while trying to process a request.
+     * @throws InvalidRedirectUriException
+     *         Indicates that one or more redirect URI in the request is not supported for this operation.
+     * @throws UnsupportedGrantTypeException
+     *         Indicates that the grant type in the request is not supported by the service.
      * @sample AWSSSOOIDC.RegisterClient
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient" target="_top">AWS API
      *      Documentation</a>

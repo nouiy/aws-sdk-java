@@ -496,55 +496,9 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * Greengrass V1 to IoT Greengrass V2.
      * </p>
      * <p>
-     * This function only accepts Lambda functions that use the following runtimes:
+     * This function accepts Lambda functions in all supported versions of Python, Node.js, and Java runtimes. IoT
+     * Greengrass doesn't apply any additional restrictions on deprecated Lambda runtime versions.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Python 2.7 – <code>python2.7</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python 3.7 – <code>python3.7</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python 3.8 – <code>python3.8</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Python 3.9 – <code>python3.9</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Java 8 – <code>java8</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Java 11 – <code>java11</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Node.js 10 – <code>nodejs10.x</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Node.js 12 – <code>nodejs12.x</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Node.js 14 – <code>nodejs14.x</code>
-     * </p>
-     * </li>
-     * </ul>
      * <p>
      * To create a component from a Lambda function, specify <code>lambdaFunction</code> when you call this operation.
      * </p>
