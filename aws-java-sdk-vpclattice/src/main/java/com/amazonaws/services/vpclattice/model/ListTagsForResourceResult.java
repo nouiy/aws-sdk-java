@@ -25,17 +25,17 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The tags.
+     * Information about the tags.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The tags.
+     * Information about the tags.
      * </p>
      * 
-     * @return The tags.
+     * @return Information about the tags.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -44,11 +44,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The tags.
+     * Information about the tags.
      * </p>
      * 
      * @param tags
-     *        The tags.
+     *        Information about the tags.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -57,11 +57,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The tags.
+     * Information about the tags.
      * </p>
      * 
      * @param tags
-     *        The tags.
+     *        Information about the tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

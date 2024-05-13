@@ -35,10 +35,8 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
     private String clientToken;
     /**
      * <p>
-     * The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one or more
-     * actions, and one or more conditions. The default rule is the rule that's used if no other rules match. Each rule
-     * must include exactly one of the following types of actions: <code>forward </code>or <code>fixed-response</code>,
-     * and it must be the last action to be performed.
+     * The action for the default rule. Each listener has a default rule. The default rule is used if no other rules
+     * match.
      * </p>
      */
     private RuleAction defaultAction;
@@ -51,14 +49,14 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
     private String name;
     /**
      * <p>
-     * The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the default is
-     * <code>80</code>. For HTTPS, the default is <code>443</code>.
+     * The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the default
+     * is 443.
      * </p>
      */
     private Integer port;
     /**
      * <p>
-     * The listener protocol HTTP or HTTPS.
+     * The listener protocol.
      * </p>
      */
     private String protocol;
@@ -129,17 +127,13 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one or more
-     * actions, and one or more conditions. The default rule is the rule that's used if no other rules match. Each rule
-     * must include exactly one of the following types of actions: <code>forward </code>or <code>fixed-response</code>,
-     * and it must be the last action to be performed.
+     * The action for the default rule. Each listener has a default rule. The default rule is used if no other rules
+     * match.
      * </p>
      * 
      * @param defaultAction
-     *        The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one
-     *        or more actions, and one or more conditions. The default rule is the rule that's used if no other rules
-     *        match. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     *        <code>fixed-response</code>, and it must be the last action to be performed.
+     *        The action for the default rule. Each listener has a default rule. The default rule is used if no other
+     *        rules match.
      */
 
     public void setDefaultAction(RuleAction defaultAction) {
@@ -148,16 +142,12 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one or more
-     * actions, and one or more conditions. The default rule is the rule that's used if no other rules match. Each rule
-     * must include exactly one of the following types of actions: <code>forward </code>or <code>fixed-response</code>,
-     * and it must be the last action to be performed.
+     * The action for the default rule. Each listener has a default rule. The default rule is used if no other rules
+     * match.
      * </p>
      * 
-     * @return The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one
-     *         or more actions, and one or more conditions. The default rule is the rule that's used if no other rules
-     *         match. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     *         <code>fixed-response</code>, and it must be the last action to be performed.
+     * @return The action for the default rule. Each listener has a default rule. The default rule is used if no other
+     *         rules match.
      */
 
     public RuleAction getDefaultAction() {
@@ -166,17 +156,13 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one or more
-     * actions, and one or more conditions. The default rule is the rule that's used if no other rules match. Each rule
-     * must include exactly one of the following types of actions: <code>forward </code>or <code>fixed-response</code>,
-     * and it must be the last action to be performed.
+     * The action for the default rule. Each listener has a default rule. The default rule is used if no other rules
+     * match.
      * </p>
      * 
      * @param defaultAction
-     *        The action for the default rule. Each listener has a default rule. Each rule consists of a priority, one
-     *        or more actions, and one or more conditions. The default rule is the rule that's used if no other rules
-     *        match. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     *        <code>fixed-response</code>, and it must be the last action to be performed.
+     *        The action for the default rule. Each listener has a default rule. The default rule is used if no other
+     *        rules match.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,13 +222,13 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the default is
-     * <code>80</code>. For HTTPS, the default is <code>443</code>.
+     * The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the default
+     * is 443.
      * </p>
      * 
      * @param port
-     *        The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the
-     *        default is <code>80</code>. For HTTPS, the default is <code>443</code>.
+     *        The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the
+     *        default is 443.
      */
 
     public void setPort(Integer port) {
@@ -251,12 +237,12 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the default is
-     * <code>80</code>. For HTTPS, the default is <code>443</code>.
+     * The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the default
+     * is 443.
      * </p>
      * 
-     * @return The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the
-     *         default is <code>80</code>. For HTTPS, the default is <code>443</code>.
+     * @return The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the
+     *         default is 443.
      */
 
     public Integer getPort() {
@@ -265,13 +251,13 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the default is
-     * <code>80</code>. For HTTPS, the default is <code>443</code>.
+     * The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the default
+     * is 443.
      * </p>
      * 
      * @param port
-     *        The listener port. You can specify a value from <code>1</code> to <code>65535</code>. For HTTP, the
-     *        default is <code>80</code>. For HTTPS, the default is <code>443</code>.
+     *        The listener port. You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the
+     *        default is 443.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -282,11 +268,11 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener protocol HTTP or HTTPS.
+     * The listener protocol.
      * </p>
      * 
      * @param protocol
-     *        The listener protocol HTTP or HTTPS.
+     *        The listener protocol.
      * @see ListenerProtocol
      */
 
@@ -296,10 +282,10 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener protocol HTTP or HTTPS.
+     * The listener protocol.
      * </p>
      * 
-     * @return The listener protocol HTTP or HTTPS.
+     * @return The listener protocol.
      * @see ListenerProtocol
      */
 
@@ -309,11 +295,11 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener protocol HTTP or HTTPS.
+     * The listener protocol.
      * </p>
      * 
      * @param protocol
-     *        The listener protocol HTTP or HTTPS.
+     *        The listener protocol.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ListenerProtocol
      */
@@ -325,11 +311,11 @@ public class CreateListenerRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The listener protocol HTTP or HTTPS.
+     * The listener protocol.
      * </p>
      * 
      * @param protocol
-     *        The listener protocol HTTP or HTTPS.
+     *        The listener protocol.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ListenerProtocol
      */

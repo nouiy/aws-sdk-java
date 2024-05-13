@@ -30,34 +30,33 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>.
+     * The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      * </p>
      */
     private Integer port;
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      * 
      * @param id
-     *        The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance
-     *        ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *        <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *        is the ARN of the Application Load Balancer.
+     *        The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *        target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *        <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target group type is <code>ALB</code>,
+     *        this is the ARN of an Application Load Balancer.
      */
 
     public void setId(String id) {
@@ -66,16 +65,16 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      * 
-     * @return The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an
-     *         instance ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *         <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *         is the ARN of the Application Load Balancer.
+     * @return The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *         target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *         <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target group type is <code>ALB</code>,
+     *         this is the ARN of an Application Load Balancer.
      */
 
     public String getId() {
@@ -84,17 +83,17 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      * 
      * @param id
-     *        The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance
-     *        ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *        <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *        is the ARN of the Application Load Balancer.
+     *        The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *        target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *        <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target group type is <code>ALB</code>,
+     *        this is the ARN of an Application Load Balancer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,13 +104,11 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>.
+     * The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      * </p>
      * 
      * @param port
-     *        The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the
-     *        default is <code>443</code>.
+     *        The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      */
 
     public void setPort(Integer port) {
@@ -120,12 +117,10 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>.
+     * The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      * </p>
      * 
-     * @return The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the
-     *         default is <code>443</code>.
+     * @return The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      */
 
     public Integer getPort() {
@@ -134,13 +129,11 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>.
+     * The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      * </p>
      * 
      * @param port
-     *        The port on which the target is listening. For HTTP, the default is <code>80</code>. For HTTPS, the
-     *        default is <code>443</code>.
+     *        The port on which the target is listening. For HTTP, the default is 80. For HTTPS, the default is 443.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -50,6 +50,14 @@ public interface AmazonVPCLattice {
      * Updates the listener rules in a batch. You can use this operation to change the priority of listener rules. This
      * can be useful when bulk updating or swapping rule priority.
      * </p>
+     * <p>
+     * <b>Required permissions:</b> <code>vpc-lattice:UpdateRule</code>
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/security_iam_service-with-iam.html">How Amazon VPC
+     * Lattice works with IAM</a> in the <i>Amazon VPC Lattice User Guide</i>.
+     * </p>
      * 
      * @param batchUpdateRuleRequest
      * @return Result of the BatchUpdateRule operation returned by the service.
@@ -75,7 +83,7 @@ public interface AmazonVPCLattice {
     /**
      * <p>
      * Enables access logs to be sent to Amazon CloudWatch, Amazon S3, and Amazon Kinesis Data Firehose. The service
-     * network owner can use the access logs to audit the services in the network. The service network owner will only
+     * network owner can use the access logs to audit the services in the network. The service network owner can only
      * see access logs from clients and services that are associated with their service network. Access log entries
      * represent traffic originated from VPCs associated with that network. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/monitoring-access-logs.html">Access logs</a> in the
@@ -235,7 +243,9 @@ public interface AmazonVPCLattice {
 
     /**
      * <p>
-     * Associates a service with a service network.
+     * Associates a service with a service network. For more information, see <a href=
+     * "https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-service-associations"
+     * >Manage service associations</a> in the <i>Amazon VPC Lattice User Guide</i>.
      * </p>
      * <p>
      * You can't use this operation if the service and service network are already associated or if there is a
@@ -293,9 +303,9 @@ public interface AmazonVPCLattice {
      * account.
      * </p>
      * <p>
-     * Once a security group is added to the VPC association it cannot be removed. You can add or update the security
-     * groups being used for the VPC association once a security group is attached. To remove all security groups you
-     * must reassociate the VPC.
+     * If you add a security group to the service network and VPC association, the association must continue to always
+     * have at least one security group. You can add or edit security groups at any time. However, to remove all
+     * security groups, you must first delete the association and recreate it without security groups.
      * </p>
      * 
      * @param createServiceNetworkVpcAssociationRequest
@@ -380,10 +390,9 @@ public interface AmazonVPCLattice {
 
     /**
      * <p>
-     * Deletes the specified auth policy. If an auth is set to <code>Amazon Web Services_IAM</code> and the auth policy
-     * is deleted, all requests will be denied by default. If you are trying to remove the auth policy completely, you
-     * must set the auth_type to <code>NONE</code>. If auth is enabled on the resource, but no auth policy is set, all
-     * requests will be denied.
+     * Deletes the specified auth policy. If an auth is set to <code>AWS_IAM</code> and the auth policy is deleted, all
+     * requests are denied. If you are trying to remove the auth policy completely, you must set the auth type to
+     * <code>NONE</code>. If auth is enabled on the resource, but no auth policy is set, all requests are denied.
      * </p>
      * 
      * @param deleteAuthPolicyRequest
@@ -548,8 +557,8 @@ public interface AmazonVPCLattice {
 
     /**
      * <p>
-     * Deletes the association between a specified service and the specific service network. This request will fail if
-     * an association is still in progress.
+     * Deletes the association between a specified service and the specific service network. This operation fails if an
+     * association is still in progress.
      * </p>
      * 
      * @param deleteServiceNetworkServiceAssociationRequest
@@ -725,8 +734,8 @@ public interface AmazonVPCLattice {
 
     /**
      * <p>
-     * Retrieves information about the resource policy. The resource policy is an IAM policy created by AWS RAM on
-     * behalf of the resource owner when they share a resource.
+     * Retrieves information about the resource policy. The resource policy is an IAM policy created on behalf of the
+     * resource owner when they share a resource.
      * </p>
      * 
      * @param getResourcePolicyRequest
@@ -964,8 +973,8 @@ public interface AmazonVPCLattice {
      * <p>
      * Every association in Amazon VPC Lattice is given a unique Amazon Resource Name (ARN), such as when a service
      * network is associated with a VPC or when a service is associated with a service network. If the association is
-     * for a resource that is shared with another account, the association will include the local account ID as the
-     * prefix in the ARN for each account the resource is shared with.
+     * for a resource that is shared with another account, the association includes the local account ID as the prefix
+     * in the ARN for each account the resource is shared with.
      * </p>
      * 
      * @param listServiceNetworkServiceAssociationsRequest
@@ -1119,7 +1128,11 @@ public interface AmazonVPCLattice {
 
     /**
      * <p>
-     * Creates or updates the auth policy.
+     * Creates or updates the auth policy. The policy string in JSON must not contain newlines or blank lines.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html">Auth
+     * policies</a> in the <i>Amazon VPC Lattice User Guide</i>.
      * </p>
      * 
      * @param putAuthPolicyRequest
@@ -1371,7 +1384,10 @@ public interface AmazonVPCLattice {
 
     /**
      * <p>
-     * Updates the service network and VPC association. Once you add a security group, it cannot be removed.
+     * Updates the service network and VPC association. If you add a security group to the service network and VPC
+     * association, the association must continue to always have at least one security group. You can add or edit
+     * security groups at any time. However, to remove all security groups, you must first delete the association and
+     * recreate it without security groups.
      * </p>
      * 
      * @param updateServiceNetworkVpcAssociationRequest

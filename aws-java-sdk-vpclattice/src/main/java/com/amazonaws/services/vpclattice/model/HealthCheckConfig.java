@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The health check configuration of a target group. Health check configurations aren't used for <code>LAMBDA</code> and
- * <code>ALB</code> target groups.
+ * Describes the health check configuration of a target group. Health check configurations aren't used for target groups
+ * of type <code>LAMBDA</code> or <code>ALB</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/vpc-lattice-2022-11-30/HealthCheckConfig" target="_top">AWS API
@@ -58,8 +58,7 @@ public class HealthCheckConfig implements Serializable, Cloneable, StructuredPoj
     private Integer healthyThresholdCount;
     /**
      * <p>
-     * The codes to use when checking for a successful response from a target. These are called <i>Success codes</i> in
-     * the console.
+     * The codes to use when checking for a successful response from a target.
      * </p>
      */
     private Matcher matcher;
@@ -293,13 +292,11 @@ public class HealthCheckConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The codes to use when checking for a successful response from a target. These are called <i>Success codes</i> in
-     * the console.
+     * The codes to use when checking for a successful response from a target.
      * </p>
      * 
      * @param matcher
-     *        The codes to use when checking for a successful response from a target. These are called <i>Success
-     *        codes</i> in the console.
+     *        The codes to use when checking for a successful response from a target.
      */
 
     public void setMatcher(Matcher matcher) {
@@ -308,12 +305,10 @@ public class HealthCheckConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The codes to use when checking for a successful response from a target. These are called <i>Success codes</i> in
-     * the console.
+     * The codes to use when checking for a successful response from a target.
      * </p>
      * 
-     * @return The codes to use when checking for a successful response from a target. These are called <i>Success
-     *         codes</i> in the console.
+     * @return The codes to use when checking for a successful response from a target.
      */
 
     public Matcher getMatcher() {
@@ -322,13 +317,11 @@ public class HealthCheckConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The codes to use when checking for a successful response from a target. These are called <i>Success codes</i> in
-     * the console.
+     * The codes to use when checking for a successful response from a target.
      * </p>
      * 
      * @param matcher
-     *        The codes to use when checking for a successful response from a target. These are called <i>Success
-     *        codes</i> in the console.
+     *        The codes to use when checking for a successful response from a target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

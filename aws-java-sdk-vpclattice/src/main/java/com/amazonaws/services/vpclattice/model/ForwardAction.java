@@ -37,7 +37,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The default value is 1. This means that if only one target group is provided, there is no need to set the weight;
-     * 100% of traffic will go to that target group.
+     * 100% of the traffic goes to that target group.
      * </p>
      */
     private java.util.List<WeightedTargetGroup> targetGroups;
@@ -51,7 +51,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The default value is 1. This means that if only one target group is provided, there is no need to set the weight;
-     * 100% of traffic will go to that target group.
+     * 100% of the traffic goes to that target group.
      * </p>
      * 
      * @return The target groups. Traffic matching the rule is forwarded to the specified target groups. With forward
@@ -60,7 +60,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      *         if two target groups have the same weight, each target group receives half of the traffic.</p>
      *         <p>
      *         The default value is 1. This means that if only one target group is provided, there is no need to set the
-     *         weight; 100% of traffic will go to that target group.
+     *         weight; 100% of the traffic goes to that target group.
      */
 
     public java.util.List<WeightedTargetGroup> getTargetGroups() {
@@ -76,7 +76,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The default value is 1. This means that if only one target group is provided, there is no need to set the weight;
-     * 100% of traffic will go to that target group.
+     * 100% of the traffic goes to that target group.
      * </p>
      * 
      * @param targetGroups
@@ -86,7 +86,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      *        two target groups have the same weight, each target group receives half of the traffic.</p>
      *        <p>
      *        The default value is 1. This means that if only one target group is provided, there is no need to set the
-     *        weight; 100% of traffic will go to that target group.
+     *        weight; 100% of the traffic goes to that target group.
      */
 
     public void setTargetGroups(java.util.Collection<WeightedTargetGroup> targetGroups) {
@@ -107,7 +107,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The default value is 1. This means that if only one target group is provided, there is no need to set the weight;
-     * 100% of traffic will go to that target group.
+     * 100% of the traffic goes to that target group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      *        two target groups have the same weight, each target group receives half of the traffic.</p>
      *        <p>
      *        The default value is 1. This means that if only one target group is provided, there is no need to set the
-     *        weight; 100% of traffic will go to that target group.
+     *        weight; 100% of the traffic goes to that target group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,7 +145,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The default value is 1. This means that if only one target group is provided, there is no need to set the weight;
-     * 100% of traffic will go to that target group.
+     * 100% of the traffic goes to that target group.
      * </p>
      * 
      * @param targetGroups
@@ -155,7 +155,7 @@ public class ForwardAction implements Serializable, Cloneable, StructuredPojo {
      *        two target groups have the same weight, each target group receives half of the traffic.</p>
      *        <p>
      *        The default value is 1. This means that if only one target group is provided, there is no need to set the
-     *        weight; 100% of traffic will go to that target group.
+     *        weight; 100% of the traffic goes to that target group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

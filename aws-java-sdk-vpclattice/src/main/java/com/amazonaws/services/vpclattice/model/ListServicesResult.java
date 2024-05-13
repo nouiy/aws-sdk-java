@@ -25,7 +25,7 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The services.
+     * Information about the services.
      * </p>
      */
     private java.util.List<ServiceSummary> items;
@@ -38,10 +38,10 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The services.
+     * Information about the services.
      * </p>
      * 
-     * @return The services.
+     * @return Information about the services.
      */
 
     public java.util.List<ServiceSummary> getItems() {
@@ -50,11 +50,11 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The services.
+     * Information about the services.
      * </p>
      * 
      * @param items
-     *        The services.
+     *        Information about the services.
      */
 
     public void setItems(java.util.Collection<ServiceSummary> items) {
@@ -68,7 +68,7 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The services.
+     * Information about the services.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param items
-     *        The services.
+     *        Information about the services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The services.
+     * Information about the services.
      * </p>
      * 
      * @param items
-     *        The services.
+     *        Information about the services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,7 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Additional details about why the validation failed.
+     * Additional information about why the validation failed.
      * </p>
      */
     private String message;
@@ -43,11 +43,11 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Additional details about why the validation failed.
+     * Additional information about why the validation failed.
      * </p>
      * 
      * @param message
-     *        Additional details about why the validation failed.
+     *        Additional information about why the validation failed.
      */
 
     public void setMessage(String message) {
@@ -56,10 +56,10 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Additional details about why the validation failed.
+     * Additional information about why the validation failed.
      * </p>
      * 
-     * @return Additional details about why the validation failed.
+     * @return Additional information about why the validation failed.
      */
 
     public String getMessage() {
@@ -68,11 +68,11 @@ public class ValidationExceptionField implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Additional details about why the validation failed.
+     * Additional information about why the validation failed.
      * </p>
      * 
      * @param message
-     *        Additional details about why the validation failed.
+     *        Additional information about why the validation failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

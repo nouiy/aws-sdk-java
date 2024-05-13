@@ -36,11 +36,11 @@ public class WeightedTargetGroup implements Serializable, Cloneable, StructuredP
     private String targetGroupIdentifier;
     /**
      * <p>
-     * Only required if you specify multiple target groups for a forward action. The "weight" determines how requests
-     * are distributed to the target group. For example, if you specify two target groups, each with a weight of 10,
-     * each target group receives half the requests. If you specify two target groups, one with a weight of 10 and the
-     * other with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other
-     * target group. If there's only one target group specified, then the default value is 100.
+     * Only required if you specify multiple target groups for a forward action. The weight determines how requests are
+     * distributed to the target group. For example, if you specify two target groups, each with a weight of 10, each
+     * target group receives half the requests. If you specify two target groups, one with a weight of 10 and the other
+     * with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other target
+     * group. If there's only one target group specified, then the default value is 100.
      * </p>
      */
     private Integer weight;
@@ -87,15 +87,15 @@ public class WeightedTargetGroup implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Only required if you specify multiple target groups for a forward action. The "weight" determines how requests
-     * are distributed to the target group. For example, if you specify two target groups, each with a weight of 10,
-     * each target group receives half the requests. If you specify two target groups, one with a weight of 10 and the
-     * other with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other
-     * target group. If there's only one target group specified, then the default value is 100.
+     * Only required if you specify multiple target groups for a forward action. The weight determines how requests are
+     * distributed to the target group. For example, if you specify two target groups, each with a weight of 10, each
+     * target group receives half the requests. If you specify two target groups, one with a weight of 10 and the other
+     * with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other target
+     * group. If there's only one target group specified, then the default value is 100.
      * </p>
      * 
      * @param weight
-     *        Only required if you specify multiple target groups for a forward action. The "weight" determines how
+     *        Only required if you specify multiple target groups for a forward action. The weight determines how
      *        requests are distributed to the target group. For example, if you specify two target groups, each with a
      *        weight of 10, each target group receives half the requests. If you specify two target groups, one with a
      *        weight of 10 and the other with a weight of 20, the target group with a weight of 20 receives twice as
@@ -109,14 +109,14 @@ public class WeightedTargetGroup implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Only required if you specify multiple target groups for a forward action. The "weight" determines how requests
-     * are distributed to the target group. For example, if you specify two target groups, each with a weight of 10,
-     * each target group receives half the requests. If you specify two target groups, one with a weight of 10 and the
-     * other with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other
-     * target group. If there's only one target group specified, then the default value is 100.
+     * Only required if you specify multiple target groups for a forward action. The weight determines how requests are
+     * distributed to the target group. For example, if you specify two target groups, each with a weight of 10, each
+     * target group receives half the requests. If you specify two target groups, one with a weight of 10 and the other
+     * with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other target
+     * group. If there's only one target group specified, then the default value is 100.
      * </p>
      * 
-     * @return Only required if you specify multiple target groups for a forward action. The "weight" determines how
+     * @return Only required if you specify multiple target groups for a forward action. The weight determines how
      *         requests are distributed to the target group. For example, if you specify two target groups, each with a
      *         weight of 10, each target group receives half the requests. If you specify two target groups, one with a
      *         weight of 10 and the other with a weight of 20, the target group with a weight of 20 receives twice as
@@ -130,15 +130,15 @@ public class WeightedTargetGroup implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Only required if you specify multiple target groups for a forward action. The "weight" determines how requests
-     * are distributed to the target group. For example, if you specify two target groups, each with a weight of 10,
-     * each target group receives half the requests. If you specify two target groups, one with a weight of 10 and the
-     * other with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other
-     * target group. If there's only one target group specified, then the default value is 100.
+     * Only required if you specify multiple target groups for a forward action. The weight determines how requests are
+     * distributed to the target group. For example, if you specify two target groups, each with a weight of 10, each
+     * target group receives half the requests. If you specify two target groups, one with a weight of 10 and the other
+     * with a weight of 20, the target group with a weight of 20 receives twice as many requests as the other target
+     * group. If there's only one target group specified, then the default value is 100.
      * </p>
      * 
      * @param weight
-     *        Only required if you specify multiple target groups for a forward action. The "weight" determines how
+     *        Only required if you specify multiple target groups for a forward action. The weight determines how
      *        requests are distributed to the target group. For example, if you specify two target groups, each with a
      *        weight of 10, each target group receives half the requests. If you specify two target groups, one with a
      *        weight of 10 and the other with a weight of 20, the target group with a weight of 20 receives twice as

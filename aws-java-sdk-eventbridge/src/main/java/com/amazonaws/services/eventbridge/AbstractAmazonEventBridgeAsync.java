@@ -755,4 +755,17 @@ public class AbstractAmazonEventBridgeAsync extends AbstractAmazonEventBridge im
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateEventBusResult> updateEventBusAsync(UpdateEventBusRequest request) {
+
+        return updateEventBusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventBusResult> updateEventBusAsync(UpdateEventBusRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventBusRequest, UpdateEventBusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

@@ -38,8 +38,8 @@ public class DeleteServiceNetworkServiceAssociationResult extends com.amazonaws.
     private String id;
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
-     * retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
+     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      */
     private String status;
@@ -126,13 +126,13 @@ public class DeleteServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
-     * retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
+     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
-     *        The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However,
-     *        if you retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *        The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry
+     *        it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @see ServiceNetworkServiceAssociationStatus
      */
 
@@ -142,12 +142,12 @@ public class DeleteServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
-     * retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
+     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
-     * @return The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However,
-     *         if you retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * @return The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
+     *         retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @see ServiceNetworkServiceAssociationStatus
      */
 
@@ -157,13 +157,13 @@ public class DeleteServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
-     * retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
+     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
-     *        The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However,
-     *        if you retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *        The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry
+     *        it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkServiceAssociationStatus
      */
@@ -175,13 +175,13 @@ public class DeleteServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
-     * retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
+     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
-     *        The operation's status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However,
-     *        if you retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *        The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry
+     *        it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkServiceAssociationStatus
      */

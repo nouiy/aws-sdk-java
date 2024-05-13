@@ -56,9 +56,29 @@ public class DescribeEventBusResultJsonUnmarshaller implements Unmarshaller<Desc
                     context.nextToken();
                     describeEventBusResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    describeEventBusResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KmsKeyIdentifier", targetDepth)) {
+                    context.nextToken();
+                    describeEventBusResult.setKmsKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DeadLetterConfig", targetDepth)) {
+                    context.nextToken();
+                    describeEventBusResult.setDeadLetterConfig(DeadLetterConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Policy", targetDepth)) {
                     context.nextToken();
                     describeEventBusResult.setPolicy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreationTime", targetDepth)) {
+                    context.nextToken();
+                    describeEventBusResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    describeEventBusResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

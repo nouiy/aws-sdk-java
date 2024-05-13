@@ -42,10 +42,10 @@ public class TargetFailure implements Serializable, Cloneable, StructuredPojo {
     private String failureMessage;
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      */
     private String id;
@@ -138,17 +138,17 @@ public class TargetFailure implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      * 
      * @param id
-     *        The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance
-     *        ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *        <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *        is the ARN of the Application Load Balancer.
+     *        The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *        target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *        <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target group type is <code>ALB</code>,
+     *        this is the ARN of an Application Load Balancer.
      */
 
     public void setId(String id) {
@@ -157,16 +157,16 @@ public class TargetFailure implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      * 
-     * @return The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an
-     *         instance ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *         <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *         is the ARN of the Application Load Balancer.
+     * @return The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *         target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *         <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target group type is <code>ALB</code>,
+     *         this is the ARN of an Application Load Balancer.
      */
 
     public String getId() {
@@ -175,17 +175,17 @@ public class TargetFailure implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
-     * Balancer.
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target group type is <code>ALB</code>, this is the ARN of an Application
+     * Load Balancer.
      * </p>
      * 
      * @param id
-     *        The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance
-     *        ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *        <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *        is the ARN of the Application Load Balancer.
+     *        The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *        target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *        <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target group type is <code>ALB</code>,
+     *        this is the ARN of an Application Load Balancer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

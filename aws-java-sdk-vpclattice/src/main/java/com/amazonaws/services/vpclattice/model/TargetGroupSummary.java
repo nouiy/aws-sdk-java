@@ -21,6 +21,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Summary information about a target group.
  * </p>
+ * <p>
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/target-groups.html">Target
+ * groups</a> in the <i>Amazon VPC Lattice User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/vpc-lattice-2022-11-30/TargetGroupSummary" target="_top">AWS API
  *      Documentation</a>
@@ -48,14 +52,15 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
     private String id;
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. The possible values are <code>IPV4</code> and <code>IPV6</code>
+     * . This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * </p>
      */
     private String ipAddressType;
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      */
     private String lambdaEventStructureVersion;
@@ -85,7 +90,7 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
     private String protocol;
     /**
      * <p>
-     * The list of Amazon Resource Names (ARNs) of the service.
+     * The Amazon Resource Names (ARNs) of the service.
      * </p>
      */
     private java.util.List<String> serviceArns;
@@ -230,14 +235,13 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. The possible values are <code>IPV4</code> and <code>IPV6</code>
+     * . This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * </p>
      * 
      * @param ipAddressType
-     *        The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *        <code>ipv4</code>.
+     *        The type of IP address used for the target group. The possible values are <code>IPV4</code> and
+     *        <code>IPV6</code>. This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * @see IpAddressType
      */
 
@@ -247,13 +251,12 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. The possible values are <code>IPV4</code> and <code>IPV6</code>
+     * . This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * </p>
      * 
-     * @return The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *         <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *         <code>ipv4</code>.
+     * @return The type of IP address used for the target group. The possible values are <code>IPV4</code> and
+     *         <code>IPV6</code>. This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * @see IpAddressType
      */
 
@@ -263,14 +266,13 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. The possible values are <code>IPV4</code> and <code>IPV6</code>
+     * . This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * </p>
      * 
      * @param ipAddressType
-     *        The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *        <code>ipv4</code>.
+     *        The type of IP address used for the target group. The possible values are <code>IPV4</code> and
+     *        <code>IPV6</code>. This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -282,14 +284,13 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. The possible values are <code>IPV4</code> and <code>IPV6</code>
+     * . This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * </p>
      * 
      * @param ipAddressType
-     *        The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *        <code>ipv4</code>.
+     *        The type of IP address used for the target group. The possible values are <code>IPV4</code> and
+     *        <code>IPV6</code>. This is an optional parameter. If not specified, the default is <code>IPV4</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -301,11 +302,13 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
      * @param lambdaEventStructureVersion
-     *        Lambda event structure version
+     *        The version of the event structure that your Lambda function receives. Supported only if the target group
+     *        type is <code>LAMBDA</code>.
      * @see LambdaEventStructureVersion
      */
 
@@ -315,10 +318,12 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
-     * @return Lambda event structure version
+     * @return The version of the event structure that your Lambda function receives. Supported only if the target group
+     *         type is <code>LAMBDA</code>.
      * @see LambdaEventStructureVersion
      */
 
@@ -328,11 +333,13 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
      * @param lambdaEventStructureVersion
-     *        Lambda event structure version
+     *        The version of the event structure that your Lambda function receives. Supported only if the target group
+     *        type is <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LambdaEventStructureVersion
      */
@@ -344,11 +351,13 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
      * @param lambdaEventStructureVersion
-     *        Lambda event structure version
+     *        The version of the event structure that your Lambda function receives. Supported only if the target group
+     *        type is <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LambdaEventStructureVersion
      */
@@ -539,10 +548,10 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The list of Amazon Resource Names (ARNs) of the service.
+     * The Amazon Resource Names (ARNs) of the service.
      * </p>
      * 
-     * @return The list of Amazon Resource Names (ARNs) of the service.
+     * @return The Amazon Resource Names (ARNs) of the service.
      */
 
     public java.util.List<String> getServiceArns() {
@@ -551,11 +560,11 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The list of Amazon Resource Names (ARNs) of the service.
+     * The Amazon Resource Names (ARNs) of the service.
      * </p>
      * 
      * @param serviceArns
-     *        The list of Amazon Resource Names (ARNs) of the service.
+     *        The Amazon Resource Names (ARNs) of the service.
      */
 
     public void setServiceArns(java.util.Collection<String> serviceArns) {
@@ -569,7 +578,7 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The list of Amazon Resource Names (ARNs) of the service.
+     * The Amazon Resource Names (ARNs) of the service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -578,7 +587,7 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param serviceArns
-     *        The list of Amazon Resource Names (ARNs) of the service.
+     *        The Amazon Resource Names (ARNs) of the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -594,11 +603,11 @@ public class TargetGroupSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The list of Amazon Resource Names (ARNs) of the service.
+     * The Amazon Resource Names (ARNs) of the service.
      * </p>
      * 
      * @param serviceArns
-     *        The list of Amazon Resource Names (ARNs) of the service.
+     *        The Amazon Resource Names (ARNs) of the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

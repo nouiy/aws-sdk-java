@@ -50,7 +50,7 @@ public class CreateServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
     private java.util.List<String> securityGroupIds;
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      */
     private String status;
@@ -247,11 +247,11 @@ public class CreateServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
      * @param status
-     *        The operation's status.
+     *        The association status.
      * @see ServiceNetworkVpcAssociationStatus
      */
 
@@ -261,10 +261,10 @@ public class CreateServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
-     * @return The operation's status.
+     * @return The association status.
      * @see ServiceNetworkVpcAssociationStatus
      */
 
@@ -274,11 +274,11 @@ public class CreateServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
      * @param status
-     *        The operation's status.
+     *        The association status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkVpcAssociationStatus
      */
@@ -290,11 +290,11 @@ public class CreateServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
      * @param status
-     *        The operation's status.
+     *        The association status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkVpcAssociationStatus
      */

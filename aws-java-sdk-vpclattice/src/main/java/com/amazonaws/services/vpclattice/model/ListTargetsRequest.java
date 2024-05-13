@@ -45,7 +45,7 @@ public class ListTargetsRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String targetGroupIdentifier;
     /**
      * <p>
-     * The targets to list.
+     * The targets.
      * </p>
      */
     private java.util.List<Target> targets;
@@ -172,10 +172,10 @@ public class ListTargetsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The targets to list.
+     * The targets.
      * </p>
      * 
-     * @return The targets to list.
+     * @return The targets.
      */
 
     public java.util.List<Target> getTargets() {
@@ -184,11 +184,11 @@ public class ListTargetsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The targets to list.
+     * The targets.
      * </p>
      * 
      * @param targets
-     *        The targets to list.
+     *        The targets.
      */
 
     public void setTargets(java.util.Collection<Target> targets) {
@@ -202,7 +202,7 @@ public class ListTargetsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The targets to list.
+     * The targets.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -211,7 +211,7 @@ public class ListTargetsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param targets
-     *        The targets to list.
+     *        The targets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +227,11 @@ public class ListTargetsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The targets to list.
+     * The targets.
      * </p>
      * 
      * @param targets
-     *        The targets to list.
+     *        The targets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

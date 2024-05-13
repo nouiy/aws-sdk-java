@@ -19,7 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A <code>DeadLetterConfig</code> object that contains information about a dead-letter queue configuration.
+ * Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ).
+ * </p>
+ * <p>
+ * For more information, see <a href="eventbridge/latest/userguide/eb-rule-dlq.html">Event retry policy and using
+ * dead-letter queues</a> in the <i>EventBridge User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeadLetterConfig" target="_top">AWS API

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a header match type. Only one can be provided.
+ * Describes a header match type.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/vpc-lattice-2022-11-30/HeaderMatchType" target="_top">AWS API
@@ -30,30 +30,30 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a contains type match.
+     * A contains type match.
      * </p>
      */
     private String contains;
     /**
      * <p>
-     * Specifies an exact type match.
+     * An exact type match.
      * </p>
      */
     private String exact;
     /**
      * <p>
-     * Specifies a prefix type match. Matches the value with the prefix.
+     * A prefix type match. Matches the value with the prefix.
      * </p>
      */
     private String prefix;
 
     /**
      * <p>
-     * Specifies a contains type match.
+     * A contains type match.
      * </p>
      * 
      * @param contains
-     *        Specifies a contains type match.
+     *        A contains type match.
      */
 
     public void setContains(String contains) {
@@ -62,10 +62,10 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a contains type match.
+     * A contains type match.
      * </p>
      * 
-     * @return Specifies a contains type match.
+     * @return A contains type match.
      */
 
     public String getContains() {
@@ -74,11 +74,11 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a contains type match.
+     * A contains type match.
      * </p>
      * 
      * @param contains
-     *        Specifies a contains type match.
+     *        A contains type match.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies an exact type match.
+     * An exact type match.
      * </p>
      * 
      * @param exact
-     *        Specifies an exact type match.
+     *        An exact type match.
      */
 
     public void setExact(String exact) {
@@ -102,10 +102,10 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies an exact type match.
+     * An exact type match.
      * </p>
      * 
-     * @return Specifies an exact type match.
+     * @return An exact type match.
      */
 
     public String getExact() {
@@ -114,11 +114,11 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies an exact type match.
+     * An exact type match.
      * </p>
      * 
      * @param exact
-     *        Specifies an exact type match.
+     *        An exact type match.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a prefix type match. Matches the value with the prefix.
+     * A prefix type match. Matches the value with the prefix.
      * </p>
      * 
      * @param prefix
-     *        Specifies a prefix type match. Matches the value with the prefix.
+     *        A prefix type match. Matches the value with the prefix.
      */
 
     public void setPrefix(String prefix) {
@@ -142,10 +142,10 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a prefix type match. Matches the value with the prefix.
+     * A prefix type match. Matches the value with the prefix.
      * </p>
      * 
-     * @return Specifies a prefix type match. Matches the value with the prefix.
+     * @return A prefix type match. Matches the value with the prefix.
      */
 
     public String getPrefix() {
@@ -154,11 +154,11 @@ public class HeaderMatchType implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies a prefix type match. Matches the value with the prefix.
+     * A prefix type match. Matches the value with the prefix.
      * </p>
      * 
      * @param prefix
-     *        Specifies a prefix type match. Matches the value with the prefix.
+     *        A prefix type match. Matches the value with the prefix.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

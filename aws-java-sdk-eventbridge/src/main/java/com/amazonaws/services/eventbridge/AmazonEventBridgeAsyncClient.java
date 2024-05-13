@@ -1950,6 +1950,39 @@ public class AmazonEventBridgeAsyncClient extends AmazonEventBridgeClient implem
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateEventBusResult> updateEventBusAsync(UpdateEventBusRequest request) {
+
+        return updateEventBusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventBusResult> updateEventBusAsync(final UpdateEventBusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEventBusRequest, UpdateEventBusResult> asyncHandler) {
+        final UpdateEventBusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEventBusResult>() {
+            @Override
+            public UpdateEventBusResult call() throws Exception {
+                UpdateEventBusResult result = null;
+
+                try {
+                    result = executeUpdateEventBus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

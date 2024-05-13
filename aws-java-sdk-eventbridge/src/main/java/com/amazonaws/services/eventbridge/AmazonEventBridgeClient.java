@@ -391,6 +391,40 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * not specify a pattern to filter events sent to the archive, all events are sent to the archive except replayed
      * events. Replayed events are not sent to an archive.
      * </p>
+     * <note>
+     * <p>
+     * Archives and schema discovery are not supported for event buses encrypted using a customer managed key.
+     * EventBridge returns an error if:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You call
+     * <code> <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html">CreateArchive</a> </code>
+     * on an event bus set to use a customer managed key for encryption.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You call
+     * <code> <a href="https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer">CreateDiscoverer</a> </code>
+     * on an event bus set to use a customer managed key for encryption.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You call
+     * <code> <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html">UpdatedEventBus</a> </code>
+     * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To enable archives or schema discovery on an event bus, choose to use an Amazon Web Services owned key. For more
+     * information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html">Data
+     * encryption in EventBridge</a> in the <i>Amazon EventBridge User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param createArchiveRequest
      * @return Result of the CreateArchive operation returned by the service.
@@ -1093,8 +1127,8 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * <p>
      * Delete an existing global endpoint. For more information about global endpoints, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
-     * Regional-fault tolerant with global endpoints and event replication</a> in the <i>Amazon EventBridge User
-     * Guide</i>.
+     * Regional-fault tolerant with global endpoints and event replication</a> in the <i> <i>Amazon EventBridge User
+     * Guide</i> </i>.
      * </p>
      * 
      * @param deleteEndpointRequest
@@ -1551,8 +1585,8 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * <p>
      * Get the information about an existing global endpoint. For more information about global endpoints, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
-     * Regional-fault tolerant with global endpoints and event replication</a> in the <i>Amazon EventBridge User
-     * Guide</i>.
+     * Regional-fault tolerant with global endpoints and event replication</a> in the <i> <i>Amazon EventBridge User
+     * Guide</i> </i>.
      * </p>
      * 
      * @param describeEndpointRequest
@@ -2255,8 +2289,8 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * <p>
      * List the global endpoints associated with this account. For more information about global endpoints, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
-     * Regional-fault tolerant with global endpoints and event replication</a> in the <i>Amazon EventBridge User
-     * Guide</i>.
+     * Regional-fault tolerant with global endpoints and event replication</a> in the <i> <i>Amazon EventBridge User
+     * Guide</i> </i>.
      * </p>
      * 
      * @param listEndpointsRequest
@@ -2875,7 +2909,7 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * The maximum size for a PutEvents event entry is 256 KB. Entry size is calculated including the event and any
      * necessary characters and keys of the JSON representation of the event. To learn more, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-putevent-size.html">Calculating PutEvents event
-     * entry size</a> in the <i>Amazon EventBridge User Guide</i>
+     * entry size</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>
      * </p>
      * <p>
      * PutEvents accepts the data in JSON format. For the JSON number (integer) data type, the constraints are: a
@@ -3240,7 +3274,7 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * <p>
      * For a list of services you can configure as targets for events, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html">EventBridge targets</a> in the
-     * <i>Amazon EventBridge User Guide</i>.
+     * <i> <i>Amazon EventBridge User Guide</i> </i>.
      * </p>
      * <p>
      * Creating rules with built-in targets is supported only in the Amazon Web Services Management Console. The
@@ -3294,7 +3328,7 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html"
-     * >Authentication and Access Control</a> in the <i>Amazon EventBridge User Guide</i>.
+     * >Authentication and Access Control</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      * </p>
      * <p>
      * If another Amazon Web Services account is in the same region and has granted you permission (using
@@ -4072,8 +4106,8 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
      * <p>
      * Update an existing endpoint. For more information about global endpoints, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
-     * Regional-fault tolerant with global endpoints and event replication</a> in the <i>Amazon EventBridge User
-     * Guide</i>.
+     * Regional-fault tolerant with global endpoints and event replication</a> in the <i> <i>Amazon EventBridge User
+     * Guide</i> </i>.
      * </p>
      * 
      * @param updateEndpointRequest
@@ -4122,6 +4156,69 @@ public class AmazonEventBridgeClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateEndpointResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateEndpointResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the specified event bus.
+     * </p>
+     * 
+     * @param updateEventBusRequest
+     * @return Result of the UpdateEventBus operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         An entity that you specified does not exist.
+     * @throws InternalException
+     *         This exception occurs due to unexpected causes.
+     * @throws ConcurrentModificationException
+     *         There is concurrent modification on a rule, target, archive, or replay.
+     * @throws OperationDisabledException
+     *         The operation you are attempting is not available in this region.
+     * @sample AmazonEventBridge.UpdateEventBus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/UpdateEventBus" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateEventBusResult updateEventBus(UpdateEventBusRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEventBus(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEventBusResult executeUpdateEventBus(UpdateEventBusRequest updateEventBusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEventBusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEventBusRequest> request = null;
+        Response<UpdateEventBusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEventBusRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateEventBusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EventBridge");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEventBus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEventBusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateEventBusResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -56,7 +56,7 @@ public class CreateServiceNetworkServiceAssociationResult extends com.amazonaws.
     private String id;
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      */
     private String status;
@@ -263,11 +263,11 @@ public class CreateServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
      * @param status
-     *        The operation's status.
+     *        The association status.
      * @see ServiceNetworkServiceAssociationStatus
      */
 
@@ -277,10 +277,10 @@ public class CreateServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
-     * @return The operation's status.
+     * @return The association status.
      * @see ServiceNetworkServiceAssociationStatus
      */
 
@@ -290,11 +290,11 @@ public class CreateServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
      * @param status
-     *        The operation's status.
+     *        The association status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkServiceAssociationStatus
      */
@@ -306,11 +306,11 @@ public class CreateServiceNetworkServiceAssociationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The operation's status.
+     * The association status.
      * </p>
      * 
      * @param status
-     *        The operation's status.
+     *        The association status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkServiceAssociationStatus
      */

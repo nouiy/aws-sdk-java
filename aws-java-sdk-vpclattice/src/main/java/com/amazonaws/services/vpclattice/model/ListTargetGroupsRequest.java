@@ -45,7 +45,7 @@ public class ListTargetGroupsRequest extends com.amazonaws.AmazonWebServiceReque
     private String targetGroupType;
     /**
      * <p>
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or Amazon Resource Name (ARN) of the VPC.
      * </p>
      */
     private String vpcIdentifier;
@@ -191,11 +191,11 @@ public class ListTargetGroupsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or Amazon Resource Name (ARN) of the VPC.
      * </p>
      * 
      * @param vpcIdentifier
-     *        The ID or Amazon Resource Name (ARN) of the service.
+     *        The ID or Amazon Resource Name (ARN) of the VPC.
      */
 
     public void setVpcIdentifier(String vpcIdentifier) {
@@ -204,10 +204,10 @@ public class ListTargetGroupsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or Amazon Resource Name (ARN) of the VPC.
      * </p>
      * 
-     * @return The ID or Amazon Resource Name (ARN) of the service.
+     * @return The ID or Amazon Resource Name (ARN) of the VPC.
      */
 
     public String getVpcIdentifier() {
@@ -216,11 +216,11 @@ public class ListTargetGroupsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or Amazon Resource Name (ARN) of the VPC.
      * </p>
      * 
      * @param vpcIdentifier
-     *        The ID or Amazon Resource Name (ARN) of the service.
+     *        The ID or Amazon Resource Name (ARN) of the VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

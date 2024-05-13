@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the action for a rule. Each rule must include exactly one of the following types of actions:
- * <code>forward </code>or <code>fixed-response</code>, and it must be the last action to be performed.
+ * Describes the action for a rule.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/vpc-lattice-2022-11-30/RuleAction" target="_top">AWS API
@@ -31,7 +30,7 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the rule action that returns a custom HTTP response.
+     * The fixed response action. The rule returns a custom HTTP response.
      * </p>
      */
     private FixedResponseAction fixedResponse;
@@ -44,11 +43,11 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the rule action that returns a custom HTTP response.
+     * The fixed response action. The rule returns a custom HTTP response.
      * </p>
      * 
      * @param fixedResponse
-     *        Describes the rule action that returns a custom HTTP response.
+     *        The fixed response action. The rule returns a custom HTTP response.
      */
 
     public void setFixedResponse(FixedResponseAction fixedResponse) {
@@ -57,10 +56,10 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the rule action that returns a custom HTTP response.
+     * The fixed response action. The rule returns a custom HTTP response.
      * </p>
      * 
-     * @return Describes the rule action that returns a custom HTTP response.
+     * @return The fixed response action. The rule returns a custom HTTP response.
      */
 
     public FixedResponseAction getFixedResponse() {
@@ -69,11 +68,11 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the rule action that returns a custom HTTP response.
+     * The fixed response action. The rule returns a custom HTTP response.
      * </p>
      * 
      * @param fixedResponse
-     *        Describes the rule action that returns a custom HTTP response.
+     *        The fixed response action. The rule returns a custom HTTP response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

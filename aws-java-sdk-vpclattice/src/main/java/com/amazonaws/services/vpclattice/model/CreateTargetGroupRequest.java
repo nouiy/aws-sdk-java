@@ -35,7 +35,7 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     private String clientToken;
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      */
     private TargetGroupConfig config;
@@ -113,12 +113,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      * 
      * @param config
-     *        The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't
-     *        apply.
+     *        The target group configuration.
      */
 
     public void setConfig(TargetGroupConfig config) {
@@ -127,11 +126,10 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      * 
-     * @return The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter
-     *         doesn't apply.
+     * @return The target group configuration.
      */
 
     public TargetGroupConfig getConfig() {
@@ -140,12 +138,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      * 
      * @param config
-     *        The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't
-     *        apply.
+     *        The target group configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

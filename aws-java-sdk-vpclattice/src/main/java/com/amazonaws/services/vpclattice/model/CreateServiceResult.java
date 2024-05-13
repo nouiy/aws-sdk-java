@@ -67,7 +67,7 @@ public class CreateServiceResult extends com.amazonaws.AmazonWebServiceResult<co
     private String name;
     /**
      * <p>
-     * The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     * The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * </p>
      */
     private String status;
@@ -373,11 +373,11 @@ public class CreateServiceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     * The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * </p>
      * 
      * @param status
-     *        The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     *        The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * @see ServiceStatus
      */
 
@@ -387,11 +387,10 @@ public class CreateServiceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     * The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * </p>
      * 
-     * @return The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the
-     *         service.
+     * @return The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * @see ServiceStatus
      */
 
@@ -401,11 +400,11 @@ public class CreateServiceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     * The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * </p>
      * 
      * @param status
-     *        The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     *        The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceStatus
      */
@@ -417,11 +416,11 @@ public class CreateServiceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     * The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * </p>
      * 
      * @param status
-     *        The status. If the status is <code>CREATE_FAILED</code>, you will have to delete and recreate the service.
+     *        The status. If the status is <code>CREATE_FAILED</code>, you must delete and recreate the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceStatus
      */

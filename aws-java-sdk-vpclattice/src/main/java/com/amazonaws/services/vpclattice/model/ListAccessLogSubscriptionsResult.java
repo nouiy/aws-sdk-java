@@ -25,7 +25,7 @@ public class ListAccessLogSubscriptionsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The access log subscriptions.
+     * Information about the access log subscriptions.
      * </p>
      */
     private java.util.List<AccessLogSubscriptionSummary> items;
@@ -38,10 +38,10 @@ public class ListAccessLogSubscriptionsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The access log subscriptions.
+     * Information about the access log subscriptions.
      * </p>
      * 
-     * @return The access log subscriptions.
+     * @return Information about the access log subscriptions.
      */
 
     public java.util.List<AccessLogSubscriptionSummary> getItems() {
@@ -50,11 +50,11 @@ public class ListAccessLogSubscriptionsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The access log subscriptions.
+     * Information about the access log subscriptions.
      * </p>
      * 
      * @param items
-     *        The access log subscriptions.
+     *        Information about the access log subscriptions.
      */
 
     public void setItems(java.util.Collection<AccessLogSubscriptionSummary> items) {
@@ -68,7 +68,7 @@ public class ListAccessLogSubscriptionsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The access log subscriptions.
+     * Information about the access log subscriptions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListAccessLogSubscriptionsResult extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param items
-     *        The access log subscriptions.
+     *        Information about the access log subscriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListAccessLogSubscriptionsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The access log subscriptions.
+     * Information about the access log subscriptions.
      * </p>
      * 
      * @param items
-     *        The access log subscriptions.
+     *        Information about the access log subscriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the configuration of a target group. Lambda functions don't support target group configuration.
+ * Describes the configuration of a target group.
+ * </p>
+ * <p>
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc-lattice/latest/ug/target-groups.html">Target
+ * groups</a> in the <i>Amazon VPC Lattice User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/vpc-lattice-2022-11-30/TargetGroupConfig" target="_top">AWS API
@@ -30,56 +34,62 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The health check configuration.
+     * The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or <code>ALB</code>
+     * .
      * </p>
      */
     private HealthCheckConfig healthCheck;
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. Supported only if the target group type is <code>IP</code>. The
+     * default is <code>IPV4</code>.
      * </p>
      */
     private String ipAddressType;
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>. The default is <code>V1</code>.
      * </p>
      */
     private String lambdaEventStructureVersion;
     /**
      * <p>
-     * The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>
+     * The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      */
     private Integer port;
     /**
      * <p>
-     * The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     * The protocol to use for routing traffic to the targets. The default is the protocol of the target group. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      */
     private String protocol;
     /**
      * <p>
-     * The protocol version. Default value is <code>HTTP1</code>.
+     * The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      */
     private String protocolVersion;
     /**
      * <p>
-     * The ID of the VPC.
+     * The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      * </p>
      */
     private String vpcIdentifier;
 
     /**
      * <p>
-     * The health check configuration.
+     * The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or <code>ALB</code>
+     * .
      * </p>
      * 
      * @param healthCheck
-     *        The health check configuration.
+     *        The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or
+     *        <code>ALB</code>.
      */
 
     public void setHealthCheck(HealthCheckConfig healthCheck) {
@@ -88,10 +98,12 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The health check configuration.
+     * The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or <code>ALB</code>
+     * .
      * </p>
      * 
-     * @return The health check configuration.
+     * @return The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or
+     *         <code>ALB</code>.
      */
 
     public HealthCheckConfig getHealthCheck() {
@@ -100,11 +112,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The health check configuration.
+     * The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or <code>ALB</code>
+     * .
      * </p>
      * 
      * @param healthCheck
-     *        The health check configuration.
+     *        The health check configuration. Not supported if the target group type is <code>LAMBDA</code> or
+     *        <code>ALB</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,14 +129,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. Supported only if the target group type is <code>IP</code>. The
+     * default is <code>IPV4</code>.
      * </p>
      * 
      * @param ipAddressType
-     *        The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *        <code>ipv4</code>.
+     *        The type of IP address used for the target group. Supported only if the target group type is
+     *        <code>IP</code>. The default is <code>IPV4</code>.
      * @see IpAddressType
      */
 
@@ -132,13 +145,12 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. Supported only if the target group type is <code>IP</code>. The
+     * default is <code>IPV4</code>.
      * </p>
      * 
-     * @return The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *         <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *         <code>ipv4</code>.
+     * @return The type of IP address used for the target group. Supported only if the target group type is
+     *         <code>IP</code>. The default is <code>IPV4</code>.
      * @see IpAddressType
      */
 
@@ -148,14 +160,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. Supported only if the target group type is <code>IP</code>. The
+     * default is <code>IPV4</code>.
      * </p>
      * 
      * @param ipAddressType
-     *        The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *        <code>ipv4</code>.
+     *        The type of IP address used for the target group. Supported only if the target group type is
+     *        <code>IP</code>. The default is <code>IPV4</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -167,14 +178,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of IP address used for the target group. The possible values are <code>ipv4</code> and <code>ipv6</code>
-     * . This is an optional parameter. If not specified, the IP address type defaults to <code>ipv4</code>.
+     * The type of IP address used for the target group. Supported only if the target group type is <code>IP</code>. The
+     * default is <code>IPV4</code>.
      * </p>
      * 
      * @param ipAddressType
-     *        The type of IP address used for the target group. The possible values are <code>ipv4</code> and
-     *        <code>ipv6</code>. This is an optional parameter. If not specified, the IP address type defaults to
-     *        <code>ipv4</code>.
+     *        The type of IP address used for the target group. Supported only if the target group type is
+     *        <code>IP</code>. The default is <code>IPV4</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -186,11 +196,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>. The default is <code>V1</code>.
      * </p>
      * 
      * @param lambdaEventStructureVersion
-     *        Lambda event structure version
+     *        The version of the event structure that your Lambda function receives. Supported only if the target group
+     *        type is <code>LAMBDA</code>. The default is <code>V1</code>.
      * @see LambdaEventStructureVersion
      */
 
@@ -200,10 +212,12 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>. The default is <code>V1</code>.
      * </p>
      * 
-     * @return Lambda event structure version
+     * @return The version of the event structure that your Lambda function receives. Supported only if the target group
+     *         type is <code>LAMBDA</code>. The default is <code>V1</code>.
      * @see LambdaEventStructureVersion
      */
 
@@ -213,11 +227,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>. The default is <code>V1</code>.
      * </p>
      * 
      * @param lambdaEventStructureVersion
-     *        Lambda event structure version
+     *        The version of the event structure that your Lambda function receives. Supported only if the target group
+     *        type is <code>LAMBDA</code>. The default is <code>V1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LambdaEventStructureVersion
      */
@@ -229,11 +245,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lambda event structure version
+     * The version of the event structure that your Lambda function receives. Supported only if the target group type is
+     * <code>LAMBDA</code>. The default is <code>V1</code>.
      * </p>
      * 
      * @param lambdaEventStructureVersion
-     *        Lambda event structure version
+     *        The version of the event structure that your Lambda function receives. Supported only if the target group
+     *        type is <code>LAMBDA</code>. The default is <code>V1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LambdaEventStructureVersion
      */
@@ -245,13 +263,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>
+     * The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param port
-     *        The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the
-     *        default is <code>443</code>
+     *        The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443.
+     *        Not supported if the target group type is <code>LAMBDA</code>.
      */
 
     public void setPort(Integer port) {
@@ -260,12 +278,12 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>
+     * The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
-     * @return The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the
-     *         default is <code>443</code>
+     * @return The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443.
+     *         Not supported if the target group type is <code>LAMBDA</code>.
      */
 
     public Integer getPort() {
@@ -274,13 +292,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the default is
-     * <code>443</code>
+     * The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param port
-     *        The port on which the targets are listening. For HTTP, the default is <code>80</code>. For HTTPS, the
-     *        default is <code>443</code>
+     *        The port on which the targets are listening. For HTTP, the default is 80. For HTTPS, the default is 443.
+     *        Not supported if the target group type is <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +309,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     * The protocol to use for routing traffic to the targets. The default is the protocol of the target group. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param protocol
-     *        The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     *        The protocol to use for routing traffic to the targets. The default is the protocol of the target group.
+     *        Not supported if the target group type is <code>LAMBDA</code>.
      * @see TargetGroupProtocol
      */
 
@@ -305,10 +325,12 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     * The protocol to use for routing traffic to the targets. The default is the protocol of the target group. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
-     * @return The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     * @return The protocol to use for routing traffic to the targets. The default is the protocol of the target group.
+     *         Not supported if the target group type is <code>LAMBDA</code>.
      * @see TargetGroupProtocol
      */
 
@@ -318,11 +340,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     * The protocol to use for routing traffic to the targets. The default is the protocol of the target group. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param protocol
-     *        The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     *        The protocol to use for routing traffic to the targets. The default is the protocol of the target group.
+     *        Not supported if the target group type is <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetGroupProtocol
      */
@@ -334,11 +358,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     * The protocol to use for routing traffic to the targets. The default is the protocol of the target group. Not
+     * supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param protocol
-     *        The protocol to use for routing traffic to the targets. Default is the protocol of a target group.
+     *        The protocol to use for routing traffic to the targets. The default is the protocol of the target group.
+     *        Not supported if the target group type is <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetGroupProtocol
      */
@@ -350,11 +376,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol version. Default value is <code>HTTP1</code>.
+     * The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
      * @param protocolVersion
-     *        The protocol version. Default value is <code>HTTP1</code>.
+     *        The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     *        <code>LAMBDA</code>.
      * @see TargetGroupProtocolVersion
      */
 
@@ -364,10 +392,12 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol version. Default value is <code>HTTP1</code>.
+     * The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
-     * @return The protocol version. Default value is <code>HTTP1</code>.
+     * @return The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     *         <code>LAMBDA</code>.
      * @see TargetGroupProtocolVersion
      */
 
@@ -377,11 +407,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol version. Default value is <code>HTTP1</code>.
+     * The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
      * @param protocolVersion
-     *        The protocol version. Default value is <code>HTTP1</code>.
+     *        The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     *        <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetGroupProtocolVersion
      */
@@ -393,11 +425,13 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The protocol version. Default value is <code>HTTP1</code>.
+     * The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     * <code>LAMBDA</code>.
      * </p>
      * 
      * @param protocolVersion
-     *        The protocol version. Default value is <code>HTTP1</code>.
+     *        The protocol version. The default is <code>HTTP1</code>. Not supported if the target group type is
+     *        <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetGroupProtocolVersion
      */
@@ -409,11 +443,11 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the VPC.
+     * The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param vpcIdentifier
-     *        The ID of the VPC.
+     *        The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      */
 
     public void setVpcIdentifier(String vpcIdentifier) {
@@ -422,10 +456,10 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the VPC.
+     * The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
-     * @return The ID of the VPC.
+     * @return The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      */
 
     public String getVpcIdentifier() {
@@ -434,11 +468,11 @@ public class TargetGroupConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the VPC.
+     * The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      * </p>
      * 
      * @param vpcIdentifier
-     *        The ID of the VPC.
+     *        The ID of the VPC. Not supported if the target group type is <code>LAMBDA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

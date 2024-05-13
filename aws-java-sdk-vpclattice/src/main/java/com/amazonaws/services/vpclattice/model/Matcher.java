@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The codes to use when checking for a successful response from a target for health checks.
+ * Describes the codes to use when checking for a successful response from a target for health checks.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/vpc-lattice-2022-11-30/Matcher" target="_top">AWS API

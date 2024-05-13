@@ -22,7 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A global endpoint used to improve your application's availability by making it regional-fault tolerant. For more
  * information about global endpoints, see <a
  * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
- * Regional-fault tolerant with global endpoints and event replication</a> in the <i>Amazon EventBridge User Guide</i>.
+ * Regional-fault tolerant with global endpoints and event replication</a> in the <i> <i>Amazon EventBridge User
+ * Guide</i> </i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/Endpoint" target="_top">AWS API

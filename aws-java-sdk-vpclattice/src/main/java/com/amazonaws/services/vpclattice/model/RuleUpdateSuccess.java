@@ -30,7 +30,7 @@ public class RuleUpdateSuccess implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The action for the default rule.
+     * The action for the rule.
      * </p>
      */
     private RuleAction action;
@@ -73,11 +73,11 @@ public class RuleUpdateSuccess implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The action for the default rule.
+     * The action for the rule.
      * </p>
      * 
      * @param action
-     *        The action for the default rule.
+     *        The action for the rule.
      */
 
     public void setAction(RuleAction action) {
@@ -86,10 +86,10 @@ public class RuleUpdateSuccess implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The action for the default rule.
+     * The action for the rule.
      * </p>
      * 
-     * @return The action for the default rule.
+     * @return The action for the rule.
      */
 
     public RuleAction getAction() {
@@ -98,11 +98,11 @@ public class RuleUpdateSuccess implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The action for the default rule.
+     * The action for the rule.
      * </p>
      * 
      * @param action
-     *        The action for the default rule.
+     *        The action for the rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

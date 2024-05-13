@@ -29,7 +29,7 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The event pattern. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
-     * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     * Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      * </p>
      */
     private String eventPattern;
@@ -83,13 +83,13 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The event pattern. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
-     * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     * Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      * </p>
      * 
      * @param eventPattern
      *        The event pattern. For more information, see <a
      *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events
-     *        and Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     *        and Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      */
 
     public void setEventPattern(String eventPattern) {
@@ -100,12 +100,12 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The event pattern. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
-     * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     * Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      * </p>
      * 
      * @return The event pattern. For more information, see <a
      *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html"
-     *         >Events and Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     *         >Events and Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      */
 
     public String getEventPattern() {
@@ -116,13 +116,13 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The event pattern. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
-     * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     * Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      * </p>
      * 
      * @param eventPattern
      *        The event pattern. For more information, see <a
      *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events
-     *        and Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
+     *        and Event Patterns</a> in the <i> <i>Amazon EventBridge User Guide</i> </i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

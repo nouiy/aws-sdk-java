@@ -31,7 +31,7 @@ public class HeaderMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the match is case sensitive. Defaults to false.
+     * Indicates whether the match is case sensitive.
      * </p>
      */
     private Boolean caseSensitive;
@@ -50,11 +50,11 @@ public class HeaderMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the match is case sensitive. Defaults to false.
+     * Indicates whether the match is case sensitive.
      * </p>
      * 
      * @param caseSensitive
-     *        Indicates whether the match is case sensitive. Defaults to false.
+     *        Indicates whether the match is case sensitive.
      */
 
     public void setCaseSensitive(Boolean caseSensitive) {
@@ -63,10 +63,10 @@ public class HeaderMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the match is case sensitive. Defaults to false.
+     * Indicates whether the match is case sensitive.
      * </p>
      * 
-     * @return Indicates whether the match is case sensitive. Defaults to false.
+     * @return Indicates whether the match is case sensitive.
      */
 
     public Boolean getCaseSensitive() {
@@ -75,11 +75,11 @@ public class HeaderMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the match is case sensitive. Defaults to false.
+     * Indicates whether the match is case sensitive.
      * </p>
      * 
      * @param caseSensitive
-     *        Indicates whether the match is case sensitive. Defaults to false.
+     *        Indicates whether the match is case sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,10 +90,10 @@ public class HeaderMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the match is case sensitive. Defaults to false.
+     * Indicates whether the match is case sensitive.
      * </p>
      * 
-     * @return Indicates whether the match is case sensitive. Defaults to false.
+     * @return Indicates whether the match is case sensitive.
      */
 
     public Boolean isCaseSensitive() {

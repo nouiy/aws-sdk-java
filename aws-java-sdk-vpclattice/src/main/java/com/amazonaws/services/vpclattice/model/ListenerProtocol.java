@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ListenerProtocol {
 
     HTTP("HTTP"),
-    HTTPS("HTTPS");
+    HTTPS("HTTPS"),
+    TLS_PASSTHROUGH("TLS_PASSTHROUGH");
 
     private String value;
 

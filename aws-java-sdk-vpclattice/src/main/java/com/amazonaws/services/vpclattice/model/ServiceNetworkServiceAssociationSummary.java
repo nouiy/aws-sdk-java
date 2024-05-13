@@ -54,7 +54,7 @@ public class ServiceNetworkServiceAssociationSummary implements Serializable, Cl
     private String customDomainName;
     /**
      * <p>
-     * DNS information about the service.
+     * The DNS information.
      * </p>
      */
     private DnsEntry dnsEntry;
@@ -269,11 +269,11 @@ public class ServiceNetworkServiceAssociationSummary implements Serializable, Cl
 
     /**
      * <p>
-     * DNS information about the service.
+     * The DNS information.
      * </p>
      * 
      * @param dnsEntry
-     *        DNS information about the service.
+     *        The DNS information.
      */
 
     public void setDnsEntry(DnsEntry dnsEntry) {
@@ -282,10 +282,10 @@ public class ServiceNetworkServiceAssociationSummary implements Serializable, Cl
 
     /**
      * <p>
-     * DNS information about the service.
+     * The DNS information.
      * </p>
      * 
-     * @return DNS information about the service.
+     * @return The DNS information.
      */
 
     public DnsEntry getDnsEntry() {
@@ -294,11 +294,11 @@ public class ServiceNetworkServiceAssociationSummary implements Serializable, Cl
 
     /**
      * <p>
-     * DNS information about the service.
+     * The DNS information.
      * </p>
      * 
      * @param dnsEntry
-     *        DNS information about the service.
+     *        The DNS information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

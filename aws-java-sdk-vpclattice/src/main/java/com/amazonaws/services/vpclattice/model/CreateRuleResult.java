@@ -25,8 +25,7 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The rule action. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     * <code>fixed-response</code>, and it must be the last action to be performed.
+     * The rule action.
      * </p>
      */
     private RuleAction action;
@@ -64,13 +63,11 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The rule action. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     * <code>fixed-response</code>, and it must be the last action to be performed.
+     * The rule action.
      * </p>
      * 
      * @param action
-     *        The rule action. Each rule must include exactly one of the following types of actions:
-     *        <code>forward </code>or <code>fixed-response</code>, and it must be the last action to be performed.
+     *        The rule action.
      */
 
     public void setAction(RuleAction action) {
@@ -79,12 +76,10 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The rule action. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     * <code>fixed-response</code>, and it must be the last action to be performed.
+     * The rule action.
      * </p>
      * 
-     * @return The rule action. Each rule must include exactly one of the following types of actions:
-     *         <code>forward </code>or <code>fixed-response</code>, and it must be the last action to be performed.
+     * @return The rule action.
      */
 
     public RuleAction getAction() {
@@ -93,13 +88,11 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The rule action. Each rule must include exactly one of the following types of actions: <code>forward </code>or
-     * <code>fixed-response</code>, and it must be the last action to be performed.
+     * The rule action.
      * </p>
      * 
      * @param action
-     *        The rule action. Each rule must include exactly one of the following types of actions:
-     *        <code>forward </code>or <code>fixed-response</code>, and it must be the last action to be performed.
+     *        The rule action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

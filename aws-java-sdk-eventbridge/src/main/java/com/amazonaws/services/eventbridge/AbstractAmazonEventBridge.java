@@ -308,6 +308,11 @@ public class AbstractAmazonEventBridge implements AmazonEventBridge {
     }
 
     @Override
+    public UpdateEventBusResult updateEventBus(UpdateEventBusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

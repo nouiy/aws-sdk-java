@@ -52,6 +52,18 @@ public class CreateEventBusResultJsonUnmarshaller implements Unmarshaller<Create
                     context.nextToken();
                     createEventBusResult.setEventBusArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    createEventBusResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KmsKeyIdentifier", targetDepth)) {
+                    context.nextToken();
+                    createEventBusResult.setKmsKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DeadLetterConfig", targetDepth)) {
+                    context.nextToken();
+                    createEventBusResult.setDeadLetterConfig(DeadLetterConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -30,9 +30,9 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target type is <code>ALB</code>, this is the ARN of an Application Load
      * Balancer.
      * </p>
      */
@@ -56,33 +56,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target while
-     * current connections are being drained. Default draining time is 5 minutes.
+     * <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while current
+     * connections are being drained. The default draining time is 5 minutes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unavailable</code>: Health checks are unavailable for the target group.
+     * <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Healthy</code>: The target is healthy.
+     * <code>HEALTHY</code>: The target is healthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unhealthy</code>: The target is unhealthy.
+     * <code>UNHEALTHY</code>: The target is unhealthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Initial</code>: Initial health checks on the target are being performed.
+     * <code>INITIAL</code>: Initial health checks on the target are being performed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unused</code>: Target group is not used in a service.
+     * <code>UNUSED</code>: Target group is not used in a service.
      * </p>
      * </li>
      * </ul>
@@ -91,17 +91,17 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target type is <code>ALB</code>, this is the ARN of an Application Load
      * Balancer.
      * </p>
      * 
      * @param id
-     *        The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance
-     *        ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *        <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *        is the ARN of the Application Load Balancer.
+     *        The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *        target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *        <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target type is <code>ALB</code>, this is
+     *        the ARN of an Application Load Balancer.
      */
 
     public void setId(String id) {
@@ -110,16 +110,16 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target type is <code>ALB</code>, this is the ARN of an Application Load
      * Balancer.
      * </p>
      * 
-     * @return The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an
-     *         instance ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *         <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *         is the ARN of the Application Load Balancer.
+     * @return The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *         target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *         <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target type is <code>ALB</code>, this
+     *         is the ARN of an Application Load Balancer.
      */
 
     public String getId() {
@@ -128,17 +128,17 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance ID. If
-     * the target type is <code>IP</code> , this is an IP address. If the target type is <code>LAMBDA</code>, this is
-     * the ARN of the Lambda function. If the target type is <code>ALB</code>, this is the ARN of the Application Load
+     * The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the target
+     * group type is <code>IP</code>, this is an IP address. If the target group type is <code>LAMBDA</code>, this is
+     * the ARN of a Lambda function. If the target type is <code>ALB</code>, this is the ARN of an Application Load
      * Balancer.
      * </p>
      * 
      * @param id
-     *        The ID of the target. If the target type of the target group is <code>INSTANCE</code>, this is an instance
-     *        ID. If the target type is <code>IP</code> , this is an IP address. If the target type is
-     *        <code>LAMBDA</code>, this is the ARN of the Lambda function. If the target type is <code>ALB</code>, this
-     *        is the ARN of the Application Load Balancer.
+     *        The ID of the target. If the target group type is <code>INSTANCE</code>, this is an instance ID. If the
+     *        target group type is <code>IP</code>, this is an IP address. If the target group type is
+     *        <code>LAMBDA</code>, this is the ARN of a Lambda function. If the target type is <code>ALB</code>, this is
+     *        the ARN of an Application Load Balancer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -234,33 +234,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target while
-     * current connections are being drained. Default draining time is 5 minutes.
+     * <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while current
+     * connections are being drained. The default draining time is 5 minutes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unavailable</code>: Health checks are unavailable for the target group.
+     * <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Healthy</code>: The target is healthy.
+     * <code>HEALTHY</code>: The target is healthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unhealthy</code>: The target is unhealthy.
+     * <code>UNHEALTHY</code>: The target is unhealthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Initial</code>: Initial health checks on the target are being performed.
+     * <code>INITIAL</code>: Initial health checks on the target are being performed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unused</code>: Target group is not used in a service.
+     * <code>UNUSED</code>: Target group is not used in a service.
      * </p>
      * </li>
      * </ul>
@@ -270,33 +270,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target
-     *        while current connections are being drained. Default draining time is 5 minutes.
+     *        <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while
+     *        current connections are being drained. The default draining time is 5 minutes.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unavailable</code>: Health checks are unavailable for the target group.
+     *        <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Healthy</code>: The target is healthy.
+     *        <code>HEALTHY</code>: The target is healthy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unhealthy</code>: The target is unhealthy.
+     *        <code>UNHEALTHY</code>: The target is unhealthy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Initial</code>: Initial health checks on the target are being performed.
+     *        <code>INITIAL</code>: Initial health checks on the target are being performed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unused</code>: Target group is not used in a service.
+     *        <code>UNUSED</code>: Target group is not used in a service.
      *        </p>
      *        </li>
      * @see TargetStatus
@@ -313,33 +313,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target while
-     * current connections are being drained. Default draining time is 5 minutes.
+     * <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while current
+     * connections are being drained. The default draining time is 5 minutes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unavailable</code>: Health checks are unavailable for the target group.
+     * <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Healthy</code>: The target is healthy.
+     * <code>HEALTHY</code>: The target is healthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unhealthy</code>: The target is unhealthy.
+     * <code>UNHEALTHY</code>: The target is unhealthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Initial</code>: Initial health checks on the target are being performed.
+     * <code>INITIAL</code>: Initial health checks on the target are being performed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unused</code>: Target group is not used in a service.
+     * <code>UNUSED</code>: Target group is not used in a service.
      * </p>
      * </li>
      * </ul>
@@ -348,33 +348,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target
-     *         while current connections are being drained. Default draining time is 5 minutes.
+     *         <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while
+     *         current connections are being drained. The default draining time is 5 minutes.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Unavailable</code>: Health checks are unavailable for the target group.
+     *         <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Healthy</code>: The target is healthy.
+     *         <code>HEALTHY</code>: The target is healthy.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Unhealthy</code>: The target is unhealthy.
+     *         <code>UNHEALTHY</code>: The target is unhealthy.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Initial</code>: Initial health checks on the target are being performed.
+     *         <code>INITIAL</code>: Initial health checks on the target are being performed.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Unused</code>: Target group is not used in a service.
+     *         <code>UNUSED</code>: Target group is not used in a service.
      *         </p>
      *         </li>
      * @see TargetStatus
@@ -391,33 +391,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target while
-     * current connections are being drained. Default draining time is 5 minutes.
+     * <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while current
+     * connections are being drained. The default draining time is 5 minutes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unavailable</code>: Health checks are unavailable for the target group.
+     * <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Healthy</code>: The target is healthy.
+     * <code>HEALTHY</code>: The target is healthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unhealthy</code>: The target is unhealthy.
+     * <code>UNHEALTHY</code>: The target is unhealthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Initial</code>: Initial health checks on the target are being performed.
+     * <code>INITIAL</code>: Initial health checks on the target are being performed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unused</code>: Target group is not used in a service.
+     * <code>UNUSED</code>: Target group is not used in a service.
      * </p>
      * </li>
      * </ul>
@@ -427,33 +427,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target
-     *        while current connections are being drained. Default draining time is 5 minutes.
+     *        <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while
+     *        current connections are being drained. The default draining time is 5 minutes.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unavailable</code>: Health checks are unavailable for the target group.
+     *        <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Healthy</code>: The target is healthy.
+     *        <code>HEALTHY</code>: The target is healthy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unhealthy</code>: The target is unhealthy.
+     *        <code>UNHEALTHY</code>: The target is unhealthy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Initial</code>: Initial health checks on the target are being performed.
+     *        <code>INITIAL</code>: Initial health checks on the target are being performed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unused</code>: Target group is not used in a service.
+     *        <code>UNUSED</code>: Target group is not used in a service.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -472,33 +472,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target while
-     * current connections are being drained. Default draining time is 5 minutes.
+     * <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while current
+     * connections are being drained. The default draining time is 5 minutes.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unavailable</code>: Health checks are unavailable for the target group.
+     * <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Healthy</code>: The target is healthy.
+     * <code>HEALTHY</code>: The target is healthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unhealthy</code>: The target is unhealthy.
+     * <code>UNHEALTHY</code>: The target is unhealthy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Initial</code>: Initial health checks on the target are being performed.
+     * <code>INITIAL</code>: Initial health checks on the target are being performed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Unused</code>: Target group is not used in a service.
+     * <code>UNUSED</code>: Target group is not used in a service.
      * </p>
      * </li>
      * </ul>
@@ -508,33 +508,33 @@ public class TargetSummary implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>Draining</code>: The target is being deregistered. No new connections will be sent to this target
-     *        while current connections are being drained. Default draining time is 5 minutes.
+     *        <code>DRAINING</code>: The target is being deregistered. No new connections are sent to this target while
+     *        current connections are being drained. The default draining time is 5 minutes.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unavailable</code>: Health checks are unavailable for the target group.
+     *        <code>UNAVAILABLE</code>: Health checks are unavailable for the target group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Healthy</code>: The target is healthy.
+     *        <code>HEALTHY</code>: The target is healthy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unhealthy</code>: The target is unhealthy.
+     *        <code>UNHEALTHY</code>: The target is unhealthy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Initial</code>: Initial health checks on the target are being performed.
+     *        <code>INITIAL</code>: Initial health checks on the target are being performed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Unused</code>: Target group is not used in a service.
+     *        <code>UNUSED</code>: Target group is not used in a service.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

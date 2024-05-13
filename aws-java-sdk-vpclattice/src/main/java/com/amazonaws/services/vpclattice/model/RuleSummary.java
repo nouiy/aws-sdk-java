@@ -48,8 +48,7 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * Indicates whether this is the default rule. Listener rules are created when you create a listener. Each listener
-     * has a default rule for checking connection requests.
+     * Indicates whether this is the default listener rule.
      * </p>
      */
     private Boolean isDefault;
@@ -194,13 +193,11 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether this is the default rule. Listener rules are created when you create a listener. Each listener
-     * has a default rule for checking connection requests.
+     * Indicates whether this is the default listener rule.
      * </p>
      * 
      * @param isDefault
-     *        Indicates whether this is the default rule. Listener rules are created when you create a listener. Each
-     *        listener has a default rule for checking connection requests.
+     *        Indicates whether this is the default listener rule.
      */
 
     public void setIsDefault(Boolean isDefault) {
@@ -209,12 +206,10 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether this is the default rule. Listener rules are created when you create a listener. Each listener
-     * has a default rule for checking connection requests.
+     * Indicates whether this is the default listener rule.
      * </p>
      * 
-     * @return Indicates whether this is the default rule. Listener rules are created when you create a listener. Each
-     *         listener has a default rule for checking connection requests.
+     * @return Indicates whether this is the default listener rule.
      */
 
     public Boolean getIsDefault() {
@@ -223,13 +218,11 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether this is the default rule. Listener rules are created when you create a listener. Each listener
-     * has a default rule for checking connection requests.
+     * Indicates whether this is the default listener rule.
      * </p>
      * 
      * @param isDefault
-     *        Indicates whether this is the default rule. Listener rules are created when you create a listener. Each
-     *        listener has a default rule for checking connection requests.
+     *        Indicates whether this is the default listener rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,12 +233,10 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether this is the default rule. Listener rules are created when you create a listener. Each listener
-     * has a default rule for checking connection requests.
+     * Indicates whether this is the default listener rule.
      * </p>
      * 
-     * @return Indicates whether this is the default rule. Listener rules are created when you create a listener. Each
-     *         listener has a default rule for checking connection requests.
+     * @return Indicates whether this is the default listener rule.
      */
 
     public Boolean isDefault() {

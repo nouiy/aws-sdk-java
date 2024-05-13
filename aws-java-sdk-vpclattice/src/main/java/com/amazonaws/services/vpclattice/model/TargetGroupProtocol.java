@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum TargetGroupProtocol {
 
     HTTP("HTTP"),
-    HTTPS("HTTPS");
+    HTTPS("HTTPS"),
+    TCP("TCP");
 
     private String value;
 

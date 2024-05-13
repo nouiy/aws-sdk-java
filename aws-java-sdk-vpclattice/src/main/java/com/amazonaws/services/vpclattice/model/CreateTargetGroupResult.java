@@ -31,7 +31,7 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
     private String arn;
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      */
     private TargetGroupConfig config;
@@ -49,8 +49,8 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
     private String name;
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you
-     * retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry it
+     * while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      */
     private String status;
@@ -103,12 +103,11 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      * 
      * @param config
-     *        The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't
-     *        apply.
+     *        The target group configuration.
      */
 
     public void setConfig(TargetGroupConfig config) {
@@ -117,11 +116,10 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      * 
-     * @return The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter
-     *         doesn't apply.
+     * @return The target group configuration.
      */
 
     public TargetGroupConfig getConfig() {
@@ -130,12 +128,11 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't apply.
+     * The target group configuration.
      * </p>
      * 
      * @param config
-     *        The target group configuration. If <code>type</code> is set to <code>LAMBDA</code>, this parameter doesn't
-     *        apply.
+     *        The target group configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,13 +223,13 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you
-     * retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry it
+     * while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
-     *        The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However,
-     *        if you retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     *        The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry
+     *        it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * @see TargetGroupStatus
      */
 
@@ -242,12 +239,12 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you
-     * retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry it
+     * while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
-     * @return The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However,
-     *         if you retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     * @return The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you
+     *         retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * @see TargetGroupStatus
      */
 
@@ -257,13 +254,13 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you
-     * retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry it
+     * while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
-     *        The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However,
-     *        if you retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     *        The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry
+     *        it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetGroupStatus
      */
@@ -275,13 +272,13 @@ public class CreateTargetGroupResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you
-     * retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     * The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry it
+     * while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
-     *        The operation's status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However,
-     *        if you retry it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
+     *        The status. You can retry the operation if the status is <code>CREATE_FAILED</code>. However, if you retry
+     *        it while the status is <code>CREATE_IN_PROGRESS</code>, there is no change in the status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetGroupStatus
      */

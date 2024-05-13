@@ -39,7 +39,7 @@ public class DeleteServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
-     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      */
     private String status;
@@ -127,12 +127,12 @@ public class DeleteServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
-     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
      *        The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry
-     *        it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *        it while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @see ServiceNetworkVpcAssociationStatus
      */
 
@@ -143,11 +143,11 @@ public class DeleteServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
-     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @return The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you
-     *         retry it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *         retry it while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @see ServiceNetworkVpcAssociationStatus
      */
 
@@ -158,12 +158,12 @@ public class DeleteServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
-     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
      *        The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry
-     *        it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *        it while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkVpcAssociationStatus
      */
@@ -176,12 +176,12 @@ public class DeleteServiceNetworkVpcAssociationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry it
-     * when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     * while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * </p>
      * 
      * @param status
      *        The status. You can retry the operation if the status is <code>DELETE_FAILED</code>. However, if you retry
-     *        it when the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
+     *        it while the status is <code>DELETE_IN_PROGRESS</code>, there is no change in the status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceNetworkVpcAssociationStatus
      */
