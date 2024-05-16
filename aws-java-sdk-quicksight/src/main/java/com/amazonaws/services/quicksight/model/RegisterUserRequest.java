@@ -59,6 +59,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can author
+     * dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for Q&amp;A, and
+     * generate executive summaries from dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative settings.
+     * Admin Pro users are billed at Author Pro pricing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RESTRICTED_READER</code>: This role isn't currently available for use.
      * </p>
      * </li>
@@ -318,6 +338,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can author
+     * dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for Q&amp;A, and
+     * generate executive summaries from dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative settings.
+     * Admin Pro users are billed at Author Pro pricing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RESTRICTED_READER</code>: This role isn't currently available for use.
      * </p>
      * </li>
@@ -344,6 +384,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
+     *        access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *        summaries from dashboards.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can
+     *        author dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for
+     *        Q&amp;A, and generate executive summaries from dashboards.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative
+     *        settings. Admin Pro users are billed at Author Pro pricing.
      *        </p>
      *        </li>
      *        <li>
@@ -385,6 +445,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can author
+     * dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for Q&amp;A, and
+     * generate executive summaries from dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative settings.
+     * Admin Pro users are billed at Author Pro pricing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RESTRICTED_READER</code>: This role isn't currently available for use.
      * </p>
      * </li>
@@ -410,6 +490,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
+     *         access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *         summaries from dashboards.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can
+     *         author dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for
+     *         Q&amp;A, and generate executive summaries from dashboards.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative
+     *         settings. Admin Pro users are billed at Author Pro pricing.
      *         </p>
      *         </li>
      *         <li>
@@ -451,6 +551,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can author
+     * dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for Q&amp;A, and
+     * generate executive summaries from dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative settings.
+     * Admin Pro users are billed at Author Pro pricing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RESTRICTED_READER</code>: This role isn't currently available for use.
      * </p>
      * </li>
@@ -477,6 +597,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
+     *        access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *        summaries from dashboards.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can
+     *        author dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for
+     *        Q&amp;A, and generate executive summaries from dashboards.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative
+     *        settings. Admin Pro users are billed at Author Pro pricing.
      *        </p>
      *        </li>
      *        <li>
@@ -520,6 +660,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can author
+     * dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for Q&amp;A, and
+     * generate executive summaries from dashboards.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative settings.
+     * Admin Pro users are billed at Author Pro pricing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RESTRICTED_READER</code>: This role isn't currently available for use.
      * </p>
      * </li>
@@ -546,6 +706,26 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>ADMIN</code>: A user who is an author, who can also manage Amazon QuickSight settings.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
+     *        access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *        summaries from dashboards.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AUTHOR_PRO</code>: Author Pro adds Generative BI capabilities to the Author role. Author Pros can
+     *        author dashboards with natural language with Amazon Q, build stories with Amazon Q, create Topics for
+     *        Q&amp;A, and generate executive summaries from dashboards.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ADMIN_PRO</code>: Admin Pros are Author Pros who can also manage Amazon QuickSight administrative
+     *        settings. Admin Pro users are billed at Author Pro pricing.
      *        </p>
      *        </li>
      *        <li>

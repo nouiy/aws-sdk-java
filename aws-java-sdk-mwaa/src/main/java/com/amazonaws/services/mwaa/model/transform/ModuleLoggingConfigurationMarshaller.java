@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ModuleLoggingConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> CLOUDWATCHLOGGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLogGroupArn").build();
     private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Enabled").build();
     private static final MarshallingInfo<String> LOGLEVEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("LogLevel").build();
+    private static final MarshallingInfo<String> CLOUDWATCHLOGGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLogGroupArn").build();
 
     private static final ModuleLoggingConfigurationMarshaller instance = new ModuleLoggingConfigurationMarshaller();
 
@@ -50,9 +50,9 @@ public class ModuleLoggingConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(moduleLoggingConfiguration.getCloudWatchLogGroupArn(), CLOUDWATCHLOGGROUPARN_BINDING);
             protocolMarshaller.marshall(moduleLoggingConfiguration.getEnabled(), ENABLED_BINDING);
             protocolMarshaller.marshall(moduleLoggingConfiguration.getLogLevel(), LOGLEVEL_BINDING);
+            protocolMarshaller.marshall(moduleLoggingConfiguration.getCloudWatchLogGroupArn(), CLOUDWATCHLOGGROUPARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

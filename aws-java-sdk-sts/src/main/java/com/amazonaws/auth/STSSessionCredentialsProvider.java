@@ -30,6 +30,16 @@ import java.util.concurrent.Callable;
  *
  * This credentials provider uses a background thread to refresh credentials. This background thread can be shut down via the
  * {@link #close()} method when the credentials provider is no longer used.
+ *
+ * <p>
+ * <b>Migrating to the AWS SDK for Java v2</b>
+ * <p>
+ * The v2 equivalent of this class is
+ * <a href="https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sts/auth/StsGetSessionTokenCredentialsProvider.html">StsGetSessionTokenCredentialsProvider</a>
+ *
+ * <p>
+ * See <a href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration-client-credentials.html">Migration Guide</a>
+ * for more information.
  */
 @ThreadSafe
 public class STSSessionCredentialsProvider implements AWSSessionCredentialsProvider, Closeable {

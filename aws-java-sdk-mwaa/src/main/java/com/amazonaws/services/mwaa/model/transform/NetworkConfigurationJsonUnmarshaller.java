@@ -48,15 +48,15 @@ public class NetworkConfigurationJsonUnmarshaller implements Unmarshaller<Networ
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("SecurityGroupIds", targetDepth)) {
-                    context.nextToken();
-                    networkConfiguration.setSecurityGroupIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("SubnetIds", targetDepth)) {
                     context.nextToken();
                     networkConfiguration.setSubnetIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("SecurityGroupIds", targetDepth)) {
+                    context.nextToken();
+                    networkConfiguration.setSecurityGroupIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

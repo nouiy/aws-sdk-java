@@ -2539,6 +2539,30 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
+     * Describes all customer managed key registrations in a Amazon QuickSight account.
+     * </p>
+     * 
+     * @param describeKeyRegistrationRequest
+     * @return Result of the DescribeKeyRegistration operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.DescribeKeyRegistration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeKeyRegistration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeKeyRegistrationResult describeKeyRegistration(DescribeKeyRegistrationRequest describeKeyRegistrationRequest);
+
+    /**
+     * <p>
      * Describes the current namespace.
      * </p>
      * 
@@ -5389,6 +5413,30 @@ public interface AmazonQuickSight {
      *      API Documentation</a>
      */
     UpdateIpRestrictionResult updateIpRestriction(UpdateIpRestrictionRequest updateIpRestrictionRequest);
+
+    /**
+     * <p>
+     * Updates a customer managed key in a Amazon QuickSight account.
+     * </p>
+     * 
+     * @param updateKeyRegistrationRequest
+     * @return Result of the UpdateKeyRegistration operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.UpdateKeyRegistration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateKeyRegistration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateKeyRegistrationResult updateKeyRegistration(UpdateKeyRegistrationRequest updateKeyRegistrationRequest);
 
     /**
      * <p>

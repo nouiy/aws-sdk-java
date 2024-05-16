@@ -1011,6 +1011,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeKeyRegistrationResult> describeKeyRegistrationAsync(DescribeKeyRegistrationRequest request) {
+
+        return describeKeyRegistrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeKeyRegistrationResult> describeKeyRegistrationAsync(DescribeKeyRegistrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeKeyRegistrationRequest, DescribeKeyRegistrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeNamespaceResult> describeNamespaceAsync(DescribeNamespaceRequest request) {
 
         return describeNamespaceAsync(request, null);
@@ -2082,6 +2095,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateIpRestrictionRequest, UpdateIpRestrictionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKeyRegistrationResult> updateKeyRegistrationAsync(UpdateKeyRegistrationRequest request) {
+
+        return updateKeyRegistrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKeyRegistrationResult> updateKeyRegistrationAsync(UpdateKeyRegistrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateKeyRegistrationRequest, UpdateKeyRegistrationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

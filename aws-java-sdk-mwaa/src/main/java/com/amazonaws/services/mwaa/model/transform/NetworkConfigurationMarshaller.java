@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class NetworkConfigurationMarshaller {
 
-    private static final MarshallingInfo<List> SECURITYGROUPIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroupIds").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SubnetIds").build();
+    private static final MarshallingInfo<List> SECURITYGROUPIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroupIds").build();
 
     private static final NetworkConfigurationMarshaller instance = new NetworkConfigurationMarshaller();
 
@@ -49,8 +49,8 @@ public class NetworkConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(networkConfiguration.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
             protocolMarshaller.marshall(networkConfiguration.getSubnetIds(), SUBNETIDS_BINDING);
+            protocolMarshaller.marshall(networkConfiguration.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

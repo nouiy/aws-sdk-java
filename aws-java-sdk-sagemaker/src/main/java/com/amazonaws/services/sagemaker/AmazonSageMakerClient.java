@@ -3889,7 +3889,7 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Creates a space used for real time collaboration in a domain.
+     * Creates a private space or a space used for real time collaboration in a domain.
      * </p>
      * 
      * @param createSpaceRequest

@@ -403,6 +403,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DescribeKeyRegistrationResult describeKeyRegistration(DescribeKeyRegistrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeNamespaceResult describeNamespace(DescribeNamespaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -809,6 +814,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public UpdateIpRestrictionResult updateIpRestriction(UpdateIpRestrictionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateKeyRegistrationResult updateKeyRegistration(UpdateKeyRegistrationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

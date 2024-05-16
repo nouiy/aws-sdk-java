@@ -39,7 +39,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      */
     private String metricFilterKey;
@@ -76,7 +76,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * 
      * @param metricFilterKey
@@ -86,7 +86,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      *        same values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     *        >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     *        >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      */
 
     public void setMetricFilterKey(String metricFilterKey) {
@@ -102,7 +102,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * 
      * @return The key to use for filtering data. </p>
@@ -111,7 +111,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      *         same values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record.
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     *         >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     *         >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      */
 
     public String getMetricFilterKey() {
@@ -127,7 +127,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * 
      * @param metricFilterKey
@@ -137,7 +137,7 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      *        same values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
-     *        >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     *        >ContactTraceRecord</a> in the <i>Amazon Connect Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

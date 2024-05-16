@@ -21,6 +21,16 @@ import com.amazonaws.util.EC2MetadataUtils;
 
 /**
  * Enumeration of region names
+ *
+ * <p>
+ * <b>Migrating to the AWS SDK for Java v2</b>
+ * <p>
+ * The v2 equivalent of this class is
+ * <a href="https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/regions/Region.html">Region</a>
+ *
+ * <p>
+ * See <a href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration.html">Migration Guide</a>
+ * for more information.
  */
 public enum Regions {
 

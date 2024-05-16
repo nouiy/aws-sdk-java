@@ -2932,6 +2932,37 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Describes all customer managed key registrations in a Amazon QuickSight account.
+     * </p>
+     * 
+     * @param describeKeyRegistrationRequest
+     * @return A Java Future containing the result of the DescribeKeyRegistration operation returned by the service.
+     * @sample AmazonQuickSightAsync.DescribeKeyRegistration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeKeyRegistration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeKeyRegistrationResult> describeKeyRegistrationAsync(DescribeKeyRegistrationRequest describeKeyRegistrationRequest);
+
+    /**
+     * <p>
+     * Describes all customer managed key registrations in a Amazon QuickSight account.
+     * </p>
+     * 
+     * @param describeKeyRegistrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeKeyRegistration operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeKeyRegistration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeKeyRegistration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeKeyRegistrationResult> describeKeyRegistrationAsync(DescribeKeyRegistrationRequest describeKeyRegistrationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeKeyRegistrationRequest, DescribeKeyRegistrationResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the current namespace.
      * </p>
      * 
@@ -6291,6 +6322,37 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest updateIpRestrictionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIpRestrictionRequest, UpdateIpRestrictionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a customer managed key in a Amazon QuickSight account.
+     * </p>
+     * 
+     * @param updateKeyRegistrationRequest
+     * @return A Java Future containing the result of the UpdateKeyRegistration operation returned by the service.
+     * @sample AmazonQuickSightAsync.UpdateKeyRegistration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateKeyRegistration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKeyRegistrationResult> updateKeyRegistrationAsync(UpdateKeyRegistrationRequest updateKeyRegistrationRequest);
+
+    /**
+     * <p>
+     * Updates a customer managed key in a Amazon QuickSight account.
+     * </p>
+     * 
+     * @param updateKeyRegistrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateKeyRegistration operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.UpdateKeyRegistration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateKeyRegistration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKeyRegistrationResult> updateKeyRegistrationAsync(UpdateKeyRegistrationRequest updateKeyRegistrationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateKeyRegistrationRequest, UpdateKeyRegistrationResult> asyncHandler);
 
     /**
      * <p>

@@ -27,7 +27,7 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This field is reserved for internal use.
+     * The ARN or name of the secret with the resource-based policy you want to validate.
      * </p>
      */
     private String secretId;
@@ -43,11 +43,11 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This field is reserved for internal use.
+     * The ARN or name of the secret with the resource-based policy you want to validate.
      * </p>
      * 
      * @param secretId
-     *        This field is reserved for internal use.
+     *        The ARN or name of the secret with the resource-based policy you want to validate.
      */
 
     public void setSecretId(String secretId) {
@@ -56,10 +56,10 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This field is reserved for internal use.
+     * The ARN or name of the secret with the resource-based policy you want to validate.
      * </p>
      * 
-     * @return This field is reserved for internal use.
+     * @return The ARN or name of the secret with the resource-based policy you want to validate.
      */
 
     public String getSecretId() {
@@ -68,11 +68,11 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This field is reserved for internal use.
+     * The ARN or name of the secret with the resource-based policy you want to validate.
      * </p>
      * 
      * @param secretId
-     *        This field is reserved for internal use.
+     *        The ARN or name of the secret with the resource-based policy you want to validate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

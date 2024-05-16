@@ -92,6 +92,10 @@ public class WorkteamJsonUnmarshaller implements Unmarshaller<Workteam, JsonUnma
                     context.nextToken();
                     workteam.setNotificationConfiguration(NotificationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("WorkerAccessConfiguration", targetDepth)) {
+                    context.nextToken();
+                    workteam.setWorkerAccessConfiguration(WorkerAccessConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

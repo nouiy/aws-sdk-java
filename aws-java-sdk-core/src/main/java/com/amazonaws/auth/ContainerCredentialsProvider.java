@@ -32,6 +32,16 @@ import java.util.*;
  * By default, the URI path is retrieved from the environment variable
  * "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI" in the container's environment.
  * </p>
+ *
+ * <p>
+ * <b>Migrating to the AWS SDK for Java v2</b>
+ * <p>
+ * The v2 equivalent of this class is
+ * <a href="https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/auth/credentials/ContainerCredentialsProvider.html">ContainerCredentialsProvider</a>
+ *
+ * <p>
+ * See <a href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration-client-credentials.html">Migration Guide</a>
+ * for more information.
  */
 public class ContainerCredentialsProvider implements AWSCredentialsProvider {
 

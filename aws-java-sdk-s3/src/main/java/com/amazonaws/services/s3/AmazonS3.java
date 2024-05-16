@@ -236,6 +236,16 @@ import com.amazonaws.services.s3.waiters.AmazonS3Waiters;
  * Extend {@link AbstractAmazonS3} if you are implementing AmazonS3 interface.
  * AbstractAmazonS3 provides a default implementation for all the methods in
  * this interface.
+ *
+ * <p>
+ * <b>Migrating to the AWS SDK for Java v2</b>
+ * <p>
+ * The v2 equivalent of this class is
+ * <a href="https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/s3/S3Client.html">S3Client</a>
+ *
+ * <p>
+ * See <a href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration.html">Migration Guide</a>
+ * for more information.
  */
 public interface AmazonS3 extends S3DirectSpi {
 

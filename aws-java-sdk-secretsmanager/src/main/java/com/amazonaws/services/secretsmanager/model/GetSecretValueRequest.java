@@ -27,7 +27,7 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN or name of the secret to retrieve.
+     * The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an ARN.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
@@ -64,7 +64,7 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN or name of the secret to retrieve.
+     * The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an ARN.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
@@ -73,7 +73,8 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param secretId
-     *        The ARN or name of the secret to retrieve.</p>
+     *        The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an
+     *        ARN.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
      *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
@@ -86,7 +87,7 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN or name of the secret to retrieve.
+     * The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an ARN.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
@@ -94,7 +95,8 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * a secret from a partial ARN</a>.
      * </p>
      * 
-     * @return The ARN or name of the secret to retrieve.</p>
+     * @return The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an
+     *         ARN.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
      *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
@@ -107,7 +109,7 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN or name of the secret to retrieve.
+     * The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an ARN.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
@@ -116,7 +118,8 @@ public class GetSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param secretId
-     *        The ARN or name of the secret to retrieve.</p>
+     *        The ARN or name of the secret to retrieve. To retrieve a secret from another account, you must use an
+     *        ARN.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
      *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"

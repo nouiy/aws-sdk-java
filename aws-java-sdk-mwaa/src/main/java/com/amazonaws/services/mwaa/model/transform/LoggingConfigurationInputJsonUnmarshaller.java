@@ -56,10 +56,6 @@ public class LoggingConfigurationInputJsonUnmarshaller implements Unmarshaller<L
                     context.nextToken();
                     loggingConfigurationInput.setSchedulerLogs(ModuleLoggingConfigurationInputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("TaskLogs", targetDepth)) {
-                    context.nextToken();
-                    loggingConfigurationInput.setTaskLogs(ModuleLoggingConfigurationInputJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("WebserverLogs", targetDepth)) {
                     context.nextToken();
                     loggingConfigurationInput.setWebserverLogs(ModuleLoggingConfigurationInputJsonUnmarshaller.getInstance().unmarshall(context));
@@ -67,6 +63,10 @@ public class LoggingConfigurationInputJsonUnmarshaller implements Unmarshaller<L
                 if (context.testExpression("WorkerLogs", targetDepth)) {
                     context.nextToken();
                     loggingConfigurationInput.setWorkerLogs(ModuleLoggingConfigurationInputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("TaskLogs", targetDepth)) {
+                    context.nextToken();
+                    loggingConfigurationInput.setTaskLogs(ModuleLoggingConfigurationInputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

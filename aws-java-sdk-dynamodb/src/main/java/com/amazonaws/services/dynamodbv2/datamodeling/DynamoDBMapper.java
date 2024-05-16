@@ -190,6 +190,12 @@ import static com.amazonaws.services.dynamodbv2.datamodeling.TransactionWriteReq
  * <p>
  * This class is thread-safe and can be shared between threads.
  *
+ * <p>
+ * <b>Migrating to the AWS SDK for Java v2</b>
+ * <p>
+ * The v2 equivalent of this class is
+ * <a href="https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/enhanced/dynamodb/DynamoDbEnhancedClient.html">DynamoDbEnhancedClient</a>
+ *
  * @see DynamoDBTable
  * @see DynamoDBHashKey
  * @see DynamoDBRangeKey

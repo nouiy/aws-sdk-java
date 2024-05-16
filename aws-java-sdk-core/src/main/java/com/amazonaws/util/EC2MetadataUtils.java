@@ -61,7 +61,9 @@ import org.apache.commons.logging.LogFactory;
  * <p>
  * The v2 equivalent of this class is
  * <a href="https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/imds/Ec2MetadataClient.html">Ec2MetadataClient</a>
- *
+ * <p>
+ * See <a href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration-imds.html">Migration Guide</a>
+ * for more information.
  * @see <a
  *      href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AESDG-chapter-instancedata.html">Amazon
  *      EC2 User Guide: Instance Metadata</a>

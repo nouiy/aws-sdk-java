@@ -38,6 +38,8 @@ public class CreateWorkteamRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<StructuredPojo> NOTIFICATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NotificationConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> WORKERACCESSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkerAccessConfiguration").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -62,6 +64,7 @@ public class CreateWorkteamRequestMarshaller {
             protocolMarshaller.marshall(createWorkteamRequest.getMemberDefinitions(), MEMBERDEFINITIONS_BINDING);
             protocolMarshaller.marshall(createWorkteamRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createWorkteamRequest.getNotificationConfiguration(), NOTIFICATIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createWorkteamRequest.getWorkerAccessConfiguration(), WORKERACCESSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createWorkteamRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

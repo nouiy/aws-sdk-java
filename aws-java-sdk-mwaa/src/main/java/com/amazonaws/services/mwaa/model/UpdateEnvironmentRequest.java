@@ -27,13 +27,19 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     * environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     * configuration options</a>.
+     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      */
-    private java.util.Map<String, String> airflowConfigurationOptions;
+    private String name;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. For more
+     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
+     * Execution role</a>.
+     * </p>
+     */
+    private String executionRoleArn;
     /**
      * <p>
      * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
@@ -47,10 +53,19 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      * </p>
      */
     private String airflowVersion;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
+     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
+     * Amazon MWAA</a>.
+     * </p>
+     */
+    private String sourceBucketArn;
     /**
      * <p>
      * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
@@ -59,72 +74,6 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private String dagS3Path;
-    /**
-     * <p>
-     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>
-     * . For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     * class</a>.
-     * </p>
-     */
-    private String environmentClass;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
-     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     * Execution role</a>.
-     * </p>
-     */
-    private String executionRoleArn;
-    /**
-     * <p>
-     * The Apache Airflow log types to send to CloudWatch Logs.
-     * </p>
-     */
-    private LoggingConfigurationInput loggingConfiguration;
-    /**
-     * <p>
-     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
-     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
-     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
-     * </p>
-     */
-    private Integer maxWorkers;
-    /**
-     * <p>
-     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
-     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
-     * <code>MinWorkers</code> field. For example, <code>2</code>.
-     * </p>
-     */
-    private Integer minWorkers;
-    /**
-     * <p>
-     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
-     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
-     * for your environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     * MWAA</a>.
-     * </p>
-     */
-    private UpdateNetworkConfigurationInput networkConfiguration;
-    /**
-     * <p>
-     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>plugins.zip</code> file is updated. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     * works</a>.
-     * </p>
-     */
-    private String pluginsS3ObjectVersion;
     /**
      * <p>
      * The relative path to the <code>plugins.zip</code> file on your Amazon S3 bucket. For example,
@@ -136,13 +85,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String pluginsS3Path;
     /**
      * <p>
-     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>plugins.zip</code> file is updated. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      * works</a>.
      * </p>
      */
-    private String requirementsS3ObjectVersion;
+    private String pluginsS3ObjectVersion;
     /**
      * <p>
      * The relative path to the <code>requirements.txt</code> file on your Amazon S3 bucket. For example,
@@ -154,19 +103,26 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String requirementsS3Path;
     /**
      * <p>
-     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     * works</a>.
      * </p>
      */
-    private Integer schedulers;
+    private String requirementsS3ObjectVersion;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
-     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
-     * Amazon MWAA</a>.
+     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     * <code>s3://mwaa-environment/startup.sh</code>.
+     * </p>
+     * <p>
+     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
+     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
+     * variables. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
      * </p>
      */
-    private String sourceBucketArn;
+    private String startupScriptS3Path;
     /**
      * <p>
      * The version of the startup shell script in your Amazon S3 bucket. You must specify the <a
@@ -188,17 +144,53 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String startupScriptS3ObjectVersion;
     /**
      * <p>
-     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     * <code>s3://mwaa-environment/startup.sh</code>.
-     * </p>
-     * <p>
-     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
-     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
-     * variables. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
+     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     * environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     * configuration options</a>.
      * </p>
      */
-    private String startupScriptS3Path;
+    private java.util.Map<String, String> airflowConfigurationOptions;
+    /**
+     * <p>
+     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
+     * class</a>.
+     * </p>
+     */
+    private String environmentClass;
+    /**
+     * <p>
+     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
+     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
+     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * </p>
+     */
+    private Integer maxWorkers;
+    /**
+     * <p>
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     */
+    private UpdateNetworkConfigurationInput networkConfiguration;
+    /**
+     * <p>
+     * The Apache Airflow log types to send to CloudWatch Logs.
+     * </p>
+     */
+    private LoggingConfigurationInput loggingConfiguration;
+    /**
+     * <p>
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * </p>
+     */
+    private String weeklyMaintenanceWindowStart;
     /**
      * <p>
      * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
@@ -209,315 +201,85 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String webserverAccessMode;
     /**
      * <p>
-     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
+     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
+     * <code>MinWorkers</code> field. For example, <code>2</code>.
      * </p>
      */
-    private String weeklyMaintenanceWindowStart;
+    private Integer minWorkers;
+    /**
+     * <p>
+     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * </p>
+     */
+    private Integer schedulers;
+    /**
+     * <p>
+     * The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. As the
+     * transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the additional web servers,
+     * and scales down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     */
+    private Integer minWebservers;
+    /**
+     * <p>
+     * The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. For example, in
+     * scenarios where your workload requires network calls to the Apache Airflow REST API with a high
+     * transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the number set in
+     * <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web servers, and scales
+     * down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     */
+    private Integer maxWebservers;
 
     /**
      * <p>
-     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     * environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     * configuration options</a>.
+     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      * 
-     * @return A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     *         environment. For more information, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     *         configuration options</a>.
+     * @param name
+     *        The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      */
 
-    public java.util.Map<String, String> getAirflowConfigurationOptions() {
-        return airflowConfigurationOptions;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     * environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     * configuration options</a>.
+     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      * 
-     * @param airflowConfigurationOptions
-     *        A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     *        environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     *        configuration options</a>.
+     * @return The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      */
 
-    public void setAirflowConfigurationOptions(java.util.Map<String, String> airflowConfigurationOptions) {
-        this.airflowConfigurationOptions = airflowConfigurationOptions;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     * environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     * configuration options</a>.
+     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      * 
-     * @param airflowConfigurationOptions
-     *        A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
-     *        environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
-     *        configuration options</a>.
+     * @param name
+     *        The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withAirflowConfigurationOptions(java.util.Map<String, String> airflowConfigurationOptions) {
-        setAirflowConfigurationOptions(airflowConfigurationOptions);
-        return this;
-    }
-
-    /**
-     * Add a single AirflowConfigurationOptions entry
-     *
-     * @see UpdateEnvironmentRequest#withAirflowConfigurationOptions
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest addAirflowConfigurationOptionsEntry(String key, String value) {
-        if (null == this.airflowConfigurationOptions) {
-            this.airflowConfigurationOptions = new java.util.HashMap<String, String>();
-        }
-        if (this.airflowConfigurationOptions.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.airflowConfigurationOptions.put(key, value);
-        return this;
-    }
-
-    /**
-     * Removes all the entries added into AirflowConfigurationOptions.
-     *
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest clearAirflowConfigurationOptionsEntries() {
-        this.airflowConfigurationOptions = null;
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
-     * Airflow supported by Amazon MWAA.
-     * </p>
-     * <p>
-     * Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in your
-     * workflows are compatible with the new Apache Airflow version. For more information about updating your resources,
-     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
-     * MWAA environment</a>.
-     * </p>
-     * <p>
-     * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
-     * </p>
-     * 
-     * @param airflowVersion
-     *        The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of
-     *        Apache Airflow supported by Amazon MWAA.</p>
-     *        <p>
-     *        Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in
-     *        your workflows are compatible with the new Apache Airflow version. For more information about updating
-     *        your resources, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
-     *        MWAA environment</a>.
-     *        </p>
-     *        <p>
-     *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
-     */
-
-    public void setAirflowVersion(String airflowVersion) {
-        this.airflowVersion = airflowVersion;
-    }
-
-    /**
-     * <p>
-     * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
-     * Airflow supported by Amazon MWAA.
-     * </p>
-     * <p>
-     * Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in your
-     * workflows are compatible with the new Apache Airflow version. For more information about updating your resources,
-     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
-     * MWAA environment</a>.
-     * </p>
-     * <p>
-     * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
-     * </p>
-     * 
-     * @return The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of
-     *         Apache Airflow supported by Amazon MWAA.</p>
-     *         <p>
-     *         Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used
-     *         in your workflows are compatible with the new Apache Airflow version. For more information about updating
-     *         your resources, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
-     *         MWAA environment</a>.
-     *         </p>
-     *         <p>
-     *         Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *         <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
-     */
-
-    public String getAirflowVersion() {
-        return this.airflowVersion;
-    }
-
-    /**
-     * <p>
-     * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
-     * Airflow supported by Amazon MWAA.
-     * </p>
-     * <p>
-     * Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in your
-     * workflows are compatible with the new Apache Airflow version. For more information about updating your resources,
-     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
-     * MWAA environment</a>.
-     * </p>
-     * <p>
-     * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
-     * </p>
-     * 
-     * @param airflowVersion
-     *        The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of
-     *        Apache Airflow supported by Amazon MWAA.</p>
-     *        <p>
-     *        Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in
-     *        your workflows are compatible with the new Apache Airflow version. For more information about updating
-     *        your resources, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
-     *        MWAA environment</a>.
-     *        </p>
-     *        <p>
-     *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest withAirflowVersion(String airflowVersion) {
-        setAirflowVersion(airflowVersion);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding
-     * or updating DAGs</a>.
-     * </p>
-     * 
-     * @param dagS3Path
-     *        The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating
-     *        DAGs</a>.
-     */
-
-    public void setDagS3Path(String dagS3Path) {
-        this.dagS3Path = dagS3Path;
-    }
-
-    /**
-     * <p>
-     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding
-     * or updating DAGs</a>.
-     * </p>
-     * 
-     * @return The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating
-     *         DAGs</a>.
-     */
-
-    public String getDagS3Path() {
-        return this.dagS3Path;
-    }
-
-    /**
-     * <p>
-     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
-     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding
-     * or updating DAGs</a>.
-     * </p>
-     * 
-     * @param dagS3Path
-     *        The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating
-     *        DAGs</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest withDagS3Path(String dagS3Path) {
-        setDagS3Path(dagS3Path);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>
-     * . For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     * class</a>.
-     * </p>
-     * 
-     * @param environmentClass
-     *        The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>,
-     *        <code>mw1.large</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     *        class</a>.
-     */
-
-    public void setEnvironmentClass(String environmentClass) {
-        this.environmentClass = environmentClass;
-    }
-
-    /**
-     * <p>
-     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>
-     * . For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     * class</a>.
-     * </p>
-     * 
-     * @return The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>,
-     *         <code>mw1.large</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     *         class</a>.
-     */
-
-    public String getEnvironmentClass() {
-        return this.environmentClass;
-    }
-
-    /**
-     * <p>
-     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>
-     * . For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     * class</a>.
-     * </p>
-     * 
-     * @param environmentClass
-     *        The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>,
-     *        <code>mw1.large</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
-     *        class</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest withEnvironmentClass(String environmentClass) {
-        setEnvironmentClass(environmentClass);
+    public UpdateEnvironmentRequest withName(String name) {
+        setName(name);
         return this;
     }
 
@@ -584,316 +346,220 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow log types to send to CloudWatch Logs.
+     * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
+     * Airflow supported by Amazon MWAA.
+     * </p>
+     * <p>
+     * Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in your
+     * workflows are compatible with the new Apache Airflow version. For more information about updating your resources,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
+     * MWAA environment</a>.
+     * </p>
+     * <p>
+     * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      * </p>
      * 
-     * @param loggingConfiguration
-     *        The Apache Airflow log types to send to CloudWatch Logs.
+     * @param airflowVersion
+     *        The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of
+     *        Apache Airflow supported by Amazon MWAA.</p>
+     *        <p>
+     *        Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in
+     *        your workflows are compatible with the new Apache Airflow version. For more information about updating
+     *        your resources, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
+     *        MWAA environment</a>.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
+     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      */
 
-    public void setLoggingConfiguration(LoggingConfigurationInput loggingConfiguration) {
-        this.loggingConfiguration = loggingConfiguration;
+    public void setAirflowVersion(String airflowVersion) {
+        this.airflowVersion = airflowVersion;
     }
 
     /**
      * <p>
-     * The Apache Airflow log types to send to CloudWatch Logs.
+     * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
+     * Airflow supported by Amazon MWAA.
+     * </p>
+     * <p>
+     * Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in your
+     * workflows are compatible with the new Apache Airflow version. For more information about updating your resources,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
+     * MWAA environment</a>.
+     * </p>
+     * <p>
+     * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      * </p>
      * 
-     * @return The Apache Airflow log types to send to CloudWatch Logs.
+     * @return The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of
+     *         Apache Airflow supported by Amazon MWAA.</p>
+     *         <p>
+     *         Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used
+     *         in your workflows are compatible with the new Apache Airflow version. For more information about updating
+     *         your resources, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
+     *         MWAA environment</a>.
+     *         </p>
+     *         <p>
+     *         Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
+     *         <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      */
 
-    public LoggingConfigurationInput getLoggingConfiguration() {
-        return this.loggingConfiguration;
+    public String getAirflowVersion() {
+        return this.airflowVersion;
     }
 
     /**
      * <p>
-     * The Apache Airflow log types to send to CloudWatch Logs.
+     * The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of Apache
+     * Airflow supported by Amazon MWAA.
+     * </p>
+     * <p>
+     * Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in your
+     * workflows are compatible with the new Apache Airflow version. For more information about updating your resources,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
+     * MWAA environment</a>.
+     * </p>
+     * <p>
+     * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      * </p>
      * 
-     * @param loggingConfiguration
-     *        The Apache Airflow log types to send to CloudWatch Logs.
+     * @param airflowVersion
+     *        The Apache Airflow version for your environment. To upgrade your environment, specify a newer version of
+     *        Apache Airflow supported by Amazon MWAA.</p>
+     *        <p>
+     *        Before you upgrade an environment, make sure your requirements, DAGs, plugins, and other resources used in
+     *        your workflows are compatible with the new Apache Airflow version. For more information about updating
+     *        your resources, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/upgrading-environment.html">Upgrading an Amazon
+     *        MWAA environment</a>.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
+     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>, <code>2.8.1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withLoggingConfiguration(LoggingConfigurationInput loggingConfiguration) {
-        setLoggingConfiguration(loggingConfiguration);
+    public UpdateEnvironmentRequest withAirflowVersion(String airflowVersion) {
+        setAirflowVersion(airflowVersion);
         return this;
     }
 
     /**
      * <p>
-     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
-     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
-     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
+     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
+     * Amazon MWAA</a>.
      * </p>
      * 
-     * @param maxWorkers
-     *        The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache
-     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. For example,
-     *        <code>20</code>. When there are no more tasks running, and no more in the queue, MWAA disposes of the
-     *        extra workers leaving the one worker that is included with your environment, or the number you specify in
-     *        <code>MinWorkers</code>.
+     * @param sourceBucketArn
+     *        The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are
+     *        stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket
+     *        for Amazon MWAA</a>.
      */
 
-    public void setMaxWorkers(Integer maxWorkers) {
-        this.maxWorkers = maxWorkers;
+    public void setSourceBucketArn(String sourceBucketArn) {
+        this.sourceBucketArn = sourceBucketArn;
     }
 
     /**
      * <p>
-     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
-     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
-     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
+     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
+     * Amazon MWAA</a>.
      * </p>
      * 
-     * @return The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache
-     *         Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. For example,
-     *         <code>20</code>. When there are no more tasks running, and no more in the queue, MWAA disposes of the
-     *         extra workers leaving the one worker that is included with your environment, or the number you specify in
-     *         <code>MinWorkers</code>.
+     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are
+     *         stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see
+     *         <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3
+     *         bucket for Amazon MWAA</a>.
      */
 
-    public Integer getMaxWorkers() {
-        return this.maxWorkers;
+    public String getSourceBucketArn() {
+        return this.sourceBucketArn;
     }
 
     /**
      * <p>
-     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
-     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
-     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
+     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
+     * Amazon MWAA</a>.
      * </p>
      * 
-     * @param maxWorkers
-     *        The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache
-     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. For example,
-     *        <code>20</code>. When there are no more tasks running, and no more in the queue, MWAA disposes of the
-     *        extra workers leaving the one worker that is included with your environment, or the number you specify in
-     *        <code>MinWorkers</code>.
+     * @param sourceBucketArn
+     *        The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are
+     *        stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket
+     *        for Amazon MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withMaxWorkers(Integer maxWorkers) {
-        setMaxWorkers(maxWorkers);
+    public UpdateEnvironmentRequest withSourceBucketArn(String sourceBucketArn) {
+        setSourceBucketArn(sourceBucketArn);
         return this;
     }
 
     /**
      * <p>
-     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
-     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
-     * <code>MinWorkers</code> field. For example, <code>2</code>.
+     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
+     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding
+     * or updating DAGs</a>.
      * </p>
      * 
-     * @param minWorkers
-     *        The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache
-     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more
-     *        tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you
-     *        specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
+     * @param dagS3Path
+     *        The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating
+     *        DAGs</a>.
      */
 
-    public void setMinWorkers(Integer minWorkers) {
-        this.minWorkers = minWorkers;
+    public void setDagS3Path(String dagS3Path) {
+        this.dagS3Path = dagS3Path;
     }
 
     /**
      * <p>
-     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
-     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
-     * <code>MinWorkers</code> field. For example, <code>2</code>.
+     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
+     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding
+     * or updating DAGs</a>.
      * </p>
      * 
-     * @return The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache
-     *         Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more
-     *         tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you
-     *         specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
+     * @return The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating
+     *         DAGs</a>.
      */
 
-    public Integer getMinWorkers() {
-        return this.minWorkers;
+    public String getDagS3Path() {
+        return this.dagS3Path;
     }
 
     /**
      * <p>
-     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
-     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
-     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
-     * <code>MinWorkers</code> field. For example, <code>2</code>.
+     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
+     * information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding
+     * or updating DAGs</a>.
      * </p>
      * 
-     * @param minWorkers
-     *        The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache
-     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more
-     *        tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you
-     *        specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
+     * @param dagS3Path
+     *        The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating
+     *        DAGs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withMinWorkers(Integer minWorkers) {
-        setMinWorkers(minWorkers);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     * </p>
-     * 
-     * @param name
-     *        The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     * </p>
-     * 
-     * @return The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     * </p>
-     * 
-     * @param name
-     *        The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
-     * for your environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     * MWAA</a>.
-     * </p>
-     * 
-     * @param networkConfiguration
-     *        The VPC networking components used to secure and enable network traffic between the Amazon Web Services
-     *        resources for your environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     *        MWAA</a>.
-     */
-
-    public void setNetworkConfiguration(UpdateNetworkConfigurationInput networkConfiguration) {
-        this.networkConfiguration = networkConfiguration;
-    }
-
-    /**
-     * <p>
-     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
-     * for your environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     * MWAA</a>.
-     * </p>
-     * 
-     * @return The VPC networking components used to secure and enable network traffic between the Amazon Web Services
-     *         resources for your environment. For more information, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     *         MWAA</a>.
-     */
-
-    public UpdateNetworkConfigurationInput getNetworkConfiguration() {
-        return this.networkConfiguration;
-    }
-
-    /**
-     * <p>
-     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
-     * for your environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     * MWAA</a>.
-     * </p>
-     * 
-     * @param networkConfiguration
-     *        The VPC networking components used to secure and enable network traffic between the Amazon Web Services
-     *        resources for your environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
-     *        MWAA</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest withNetworkConfiguration(UpdateNetworkConfigurationInput networkConfiguration) {
-        setNetworkConfiguration(networkConfiguration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>plugins.zip</code> file is updated. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     * works</a>.
-     * </p>
-     * 
-     * @param pluginsS3ObjectVersion
-     *        The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     *        <code>plugins.zip</code> file is updated. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     *        works</a>.
-     */
-
-    public void setPluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
-        this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
-    }
-
-    /**
-     * <p>
-     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>plugins.zip</code> file is updated. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     * works</a>.
-     * </p>
-     * 
-     * @return The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     *         <code>plugins.zip</code> file is updated. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     *         works</a>.
-     */
-
-    public String getPluginsS3ObjectVersion() {
-        return this.pluginsS3ObjectVersion;
-    }
-
-    /**
-     * <p>
-     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>plugins.zip</code> file is updated. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     * works</a>.
-     * </p>
-     * 
-     * @param pluginsS3ObjectVersion
-     *        The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
-     *        <code>plugins.zip</code> file is updated. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
-     *        works</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateEnvironmentRequest withPluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
-        setPluginsS3ObjectVersion(pluginsS3ObjectVersion);
+    public UpdateEnvironmentRequest withDagS3Path(String dagS3Path) {
+        setDagS3Path(dagS3Path);
         return this;
     }
 
@@ -960,59 +626,59 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>plugins.zip</code> file is updated. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      * works</a>.
      * </p>
      * 
-     * @param requirementsS3ObjectVersion
-     *        The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     *        <code>requirements.txt</code> file is updated. For more information, see <a
+     * @param pluginsS3ObjectVersion
+     *        The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     *        <code>plugins.zip</code> file is updated. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      *        works</a>.
      */
 
-    public void setRequirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
-        this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
+    public void setPluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
+        this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
     }
 
     /**
      * <p>
-     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>plugins.zip</code> file is updated. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      * works</a>.
      * </p>
      * 
-     * @return The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     *         <code>requirements.txt</code> file is updated. For more information, see <a
+     * @return The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     *         <code>plugins.zip</code> file is updated. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      *         works</a>.
      */
 
-    public String getRequirementsS3ObjectVersion() {
-        return this.requirementsS3ObjectVersion;
+    public String getPluginsS3ObjectVersion() {
+        return this.pluginsS3ObjectVersion;
     }
 
     /**
      * <p>
-     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>plugins.zip</code> file is updated. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      * works</a>.
      * </p>
      * 
-     * @param requirementsS3ObjectVersion
-     *        The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
-     *        <code>requirements.txt</code> file is updated. For more information, see <a
+     * @param pluginsS3ObjectVersion
+     *        The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a
+     *        <code>plugins.zip</code> file is updated. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
      *        works</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withRequirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
-        setRequirementsS3ObjectVersion(requirementsS3ObjectVersion);
+    public UpdateEnvironmentRequest withPluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
+        setPluginsS3ObjectVersion(pluginsS3ObjectVersion);
         return this;
     }
 
@@ -1076,99 +742,141 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     * works</a>.
      * </p>
      * 
-     * @param schedulers
-     *        The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * @param requirementsS3ObjectVersion
+     *        The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     *        <code>requirements.txt</code> file is updated. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     *        works</a>.
      */
 
-    public void setSchedulers(Integer schedulers) {
-        this.schedulers = schedulers;
+    public void setRequirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
+        this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
     }
 
     /**
      * <p>
-     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     * works</a>.
      * </p>
      * 
-     * @return The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * @return The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     *         <code>requirements.txt</code> file is updated. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     *         works</a>.
      */
 
-    public Integer getSchedulers() {
-        return this.schedulers;
+    public String getRequirementsS3ObjectVersion() {
+        return this.requirementsS3ObjectVersion;
     }
 
     /**
      * <p>
-     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     * <code>requirements.txt</code> file is updated. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     * works</a>.
      * </p>
      * 
-     * @param schedulers
-     *        The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * @param requirementsS3ObjectVersion
+     *        The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a
+     *        <code>requirements.txt</code> file is updated. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning
+     *        works</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withSchedulers(Integer schedulers) {
-        setSchedulers(schedulers);
+    public UpdateEnvironmentRequest withRequirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
+        setRequirementsS3ObjectVersion(requirementsS3ObjectVersion);
         return this;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
-     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
-     * Amazon MWAA</a>.
+     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     * <code>s3://mwaa-environment/startup.sh</code>.
+     * </p>
+     * <p>
+     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
+     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
+     * variables. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
      * </p>
      * 
-     * @param sourceBucketArn
-     *        The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are
-     *        stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket
-     *        for Amazon MWAA</a>.
+     * @param startupScriptS3Path
+     *        The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     *        <code>s3://mwaa-environment/startup.sh</code>.</p>
+     *        <p>
+     *        Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You
+     *        can use this script to install dependencies, modify Apache Airflow configuration options, and set
+     *        environment variables. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup
+     *        script</a>.
      */
 
-    public void setSourceBucketArn(String sourceBucketArn) {
-        this.sourceBucketArn = sourceBucketArn;
+    public void setStartupScriptS3Path(String startupScriptS3Path) {
+        this.startupScriptS3Path = startupScriptS3Path;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
-     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
-     * Amazon MWAA</a>.
+     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     * <code>s3://mwaa-environment/startup.sh</code>.
+     * </p>
+     * <p>
+     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
+     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
+     * variables. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are
-     *         stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see
-     *         <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3
-     *         bucket for Amazon MWAA</a>.
+     * @return The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     *         <code>s3://mwaa-environment/startup.sh</code>.</p>
+     *         <p>
+     *         Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process.
+     *         You can use this script to install dependencies, modify Apache Airflow configuration options, and set
+     *         environment variables. For more information, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup
+     *         script</a>.
      */
 
-    public String getSourceBucketArn() {
-        return this.sourceBucketArn;
+    public String getStartupScriptS3Path() {
+        return this.startupScriptS3Path;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For
-     * example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for
-     * Amazon MWAA</a>.
+     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     * <code>s3://mwaa-environment/startup.sh</code>.
+     * </p>
+     * <p>
+     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
+     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
+     * variables. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
      * </p>
      * 
-     * @param sourceBucketArn
-     *        The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are
-     *        stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket
-     *        for Amazon MWAA</a>.
+     * @param startupScriptS3Path
+     *        The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     *        <code>s3://mwaa-environment/startup.sh</code>.</p>
+     *        <p>
+     *        Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You
+     *        can use this script to install dependencies, modify Apache Airflow configuration options, and set
+     *        environment variables. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup
+     *        script</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withSourceBucketArn(String sourceBucketArn) {
-        setSourceBucketArn(sourceBucketArn);
+    public UpdateEnvironmentRequest withStartupScriptS3Path(String startupScriptS3Path) {
+        setStartupScriptS3Path(startupScriptS3Path);
         return this;
     }
 
@@ -1292,83 +1000,353 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     * <code>s3://mwaa-environment/startup.sh</code>.
-     * </p>
-     * <p>
-     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
-     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
-     * variables. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
+     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     * environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     * configuration options</a>.
      * </p>
      * 
-     * @param startupScriptS3Path
-     *        The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     *        <code>s3://mwaa-environment/startup.sh</code>.</p>
-     *        <p>
-     *        Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You
-     *        can use this script to install dependencies, modify Apache Airflow configuration options, and set
-     *        environment variables. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup
-     *        script</a>.
+     * @return A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     *         environment. For more information, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     *         configuration options</a>.
      */
 
-    public void setStartupScriptS3Path(String startupScriptS3Path) {
-        this.startupScriptS3Path = startupScriptS3Path;
+    public java.util.Map<String, String> getAirflowConfigurationOptions() {
+        return airflowConfigurationOptions;
     }
 
     /**
      * <p>
-     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     * <code>s3://mwaa-environment/startup.sh</code>.
-     * </p>
-     * <p>
-     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
-     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
-     * variables. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
+     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     * environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     * configuration options</a>.
      * </p>
      * 
-     * @return The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     *         <code>s3://mwaa-environment/startup.sh</code>.</p>
-     *         <p>
-     *         Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process.
-     *         You can use this script to install dependencies, modify Apache Airflow configuration options, and set
-     *         environment variables. For more information, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup
-     *         script</a>.
+     * @param airflowConfigurationOptions
+     *        A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     *        environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     *        configuration options</a>.
      */
 
-    public String getStartupScriptS3Path() {
-        return this.startupScriptS3Path;
+    public void setAirflowConfigurationOptions(java.util.Map<String, String> airflowConfigurationOptions) {
+        this.airflowConfigurationOptions = airflowConfigurationOptions;
     }
 
     /**
      * <p>
-     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     * <code>s3://mwaa-environment/startup.sh</code>.
-     * </p>
-     * <p>
-     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can
-     * use this script to install dependencies, modify Apache Airflow configuration options, and set environment
-     * variables. For more information, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>.
+     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     * environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     * configuration options</a>.
      * </p>
      * 
-     * @param startupScriptS3Path
-     *        The relative path to the startup shell script in your Amazon S3 bucket. For example,
-     *        <code>s3://mwaa-environment/startup.sh</code>.</p>
-     *        <p>
-     *        Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You
-     *        can use this script to install dependencies, modify Apache Airflow configuration options, and set
-     *        environment variables. For more information, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup
-     *        script</a>.
+     * @param airflowConfigurationOptions
+     *        A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your
+     *        environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow
+     *        configuration options</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withStartupScriptS3Path(String startupScriptS3Path) {
-        setStartupScriptS3Path(startupScriptS3Path);
+    public UpdateEnvironmentRequest withAirflowConfigurationOptions(java.util.Map<String, String> airflowConfigurationOptions) {
+        setAirflowConfigurationOptions(airflowConfigurationOptions);
+        return this;
+    }
+
+    /**
+     * Add a single AirflowConfigurationOptions entry
+     *
+     * @see UpdateEnvironmentRequest#withAirflowConfigurationOptions
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest addAirflowConfigurationOptionsEntry(String key, String value) {
+        if (null == this.airflowConfigurationOptions) {
+            this.airflowConfigurationOptions = new java.util.HashMap<String, String>();
+        }
+        if (this.airflowConfigurationOptions.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.airflowConfigurationOptions.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into AirflowConfigurationOptions.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest clearAirflowConfigurationOptionsEntries() {
+        this.airflowConfigurationOptions = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
+     * class</a>.
+     * </p>
+     * 
+     * @param environmentClass
+     *        The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>,
+     *        <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see
+     *        <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
+     *        class</a>.
+     */
+
+    public void setEnvironmentClass(String environmentClass) {
+        this.environmentClass = environmentClass;
+    }
+
+    /**
+     * <p>
+     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
+     * class</a>.
+     * </p>
+     * 
+     * @return The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>,
+     *         <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see
+     *         <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA
+     *         environment class</a>.
+     */
+
+    public String getEnvironmentClass() {
+        return this.environmentClass;
+    }
+
+    /**
+     * <p>
+     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
+     * class</a>.
+     * </p>
+     * 
+     * @param environmentClass
+     *        The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>,
+     *        <code>mw1.large</code>, <code>mw1.xlarge</code>, and <code>mw1.2xlarge</code>. For more information, see
+     *        <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment
+     *        class</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withEnvironmentClass(String environmentClass) {
+        setEnvironmentClass(environmentClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
+     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
+     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * </p>
+     * 
+     * @param maxWorkers
+     *        The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache
+     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. For example,
+     *        <code>20</code>. When there are no more tasks running, and no more in the queue, MWAA disposes of the
+     *        extra workers leaving the one worker that is included with your environment, or the number you specify in
+     *        <code>MinWorkers</code>.
+     */
+
+    public void setMaxWorkers(Integer maxWorkers) {
+        this.maxWorkers = maxWorkers;
+    }
+
+    /**
+     * <p>
+     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
+     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
+     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * </p>
+     * 
+     * @return The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache
+     *         Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. For example,
+     *         <code>20</code>. When there are no more tasks running, and no more in the queue, MWAA disposes of the
+     *         extra workers leaving the one worker that is included with your environment, or the number you specify in
+     *         <code>MinWorkers</code>.
+     */
+
+    public Integer getMaxWorkers() {
+        return this.maxWorkers;
+    }
+
+    /**
+     * <p>
+     * The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. For example, <code>20</code>. When
+     * there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one
+     * worker that is included with your environment, or the number you specify in <code>MinWorkers</code>.
+     * </p>
+     * 
+     * @param maxWorkers
+     *        The maximum number of workers that you want to run in your environment. MWAA scales the number of Apache
+     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. For example,
+     *        <code>20</code>. When there are no more tasks running, and no more in the queue, MWAA disposes of the
+     *        extra workers leaving the one worker that is included with your environment, or the number you specify in
+     *        <code>MinWorkers</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withMaxWorkers(Integer maxWorkers) {
+        setMaxWorkers(maxWorkers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        The VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     *        resources for your environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
+     */
+
+    public void setNetworkConfiguration(UpdateNetworkConfigurationInput networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     * 
+     * @return The VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     *         resources for your environment. For more information, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *         MWAA</a>.
+     */
+
+    public UpdateNetworkConfigurationInput getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        The VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     *        resources for your environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withNetworkConfiguration(UpdateNetworkConfigurationInput networkConfiguration) {
+        setNetworkConfiguration(networkConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Apache Airflow log types to send to CloudWatch Logs.
+     * </p>
+     * 
+     * @param loggingConfiguration
+     *        The Apache Airflow log types to send to CloudWatch Logs.
+     */
+
+    public void setLoggingConfiguration(LoggingConfigurationInput loggingConfiguration) {
+        this.loggingConfiguration = loggingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Apache Airflow log types to send to CloudWatch Logs.
+     * </p>
+     * 
+     * @return The Apache Airflow log types to send to CloudWatch Logs.
+     */
+
+    public LoggingConfigurationInput getLoggingConfiguration() {
+        return this.loggingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Apache Airflow log types to send to CloudWatch Logs.
+     * </p>
+     * 
+     * @param loggingConfiguration
+     *        The Apache Airflow log types to send to CloudWatch Logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withLoggingConfiguration(LoggingConfigurationInput loggingConfiguration) {
+        setLoggingConfiguration(loggingConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * </p>
+     * 
+     * @param weeklyMaintenanceWindowStart
+     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     *        maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     *        <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     */
+
+    public void setWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
+        this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
+    }
+
+    /**
+     * <p>
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * </p>
+     * 
+     * @return The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     *         maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     *         <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     */
+
+    public String getWeeklyMaintenanceWindowStart() {
+        return this.weeklyMaintenanceWindowStart;
+    }
+
+    /**
+     * <p>
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * </p>
+     * 
+     * @param weeklyMaintenanceWindowStart
+     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     *        maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     *        <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
+        setWeeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart);
         return this;
     }
 
@@ -1449,53 +1427,269 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
+     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
+     * <code>MinWorkers</code> field. For example, <code>2</code>.
      * </p>
      * 
-     * @param weeklyMaintenanceWindowStart
-     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     *        maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     *        <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * @param minWorkers
+     *        The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache
+     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more
+     *        tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you
+     *        specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
      */
 
-    public void setWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
-        this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
+    public void setMinWorkers(Integer minWorkers) {
+        this.minWorkers = minWorkers;
     }
 
     /**
      * <p>
-     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
+     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
+     * <code>MinWorkers</code> field. For example, <code>2</code>.
      * </p>
      * 
-     * @return The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     *         maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     *         <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * @return The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache
+     *         Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more
+     *         tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you
+     *         specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
      */
 
-    public String getWeeklyMaintenanceWindowStart() {
-        return this.weeklyMaintenanceWindowStart;
+    public Integer getMinWorkers() {
+        return this.minWorkers;
     }
 
     /**
      * <p>
-     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow
+     * workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running,
+     * and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the
+     * <code>MinWorkers</code> field. For example, <code>2</code>.
      * </p>
      * 
-     * @param weeklyMaintenanceWindowStart
-     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
-     *        maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
-     *        <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
+     * @param minWorkers
+     *        The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache
+     *        Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more
+     *        tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you
+     *        specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdateEnvironmentRequest withWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
-        setWeeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart);
+    public UpdateEnvironmentRequest withMinWorkers(Integer minWorkers) {
+        setMinWorkers(minWorkers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * </p>
+     * 
+     * @param schedulers
+     *        The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     */
+
+    public void setSchedulers(Integer schedulers) {
+        this.schedulers = schedulers;
+    }
+
+    /**
+     * <p>
+     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * </p>
+     * 
+     * @return The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     */
+
+    public Integer getSchedulers() {
+        return this.schedulers;
+    }
+
+    /**
+     * <p>
+     * The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * </p>
+     * 
+     * @param schedulers
+     *        The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withSchedulers(Integer schedulers) {
+        setSchedulers(schedulers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. As the
+     * transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the additional web servers,
+     * and scales down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     * 
+     * @param minWebservers
+     *        The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number
+     *        of Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you
+     *        interact with your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. As
+     *        the transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the additional
+     *        web servers, and scales down to the number set in <code>MinxWebserers</code>. </p>
+     *        <p>
+     *        Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     */
+
+    public void setMinWebservers(Integer minWebservers) {
+        this.minWebservers = minWebservers;
+    }
+
+    /**
+     * <p>
+     * The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. As the
+     * transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the additional web servers,
+     * and scales down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     * 
+     * @return The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number
+     *         of Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you
+     *         interact with your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI.
+     *         As the transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the
+     *         additional web servers, and scales down to the number set in <code>MinxWebserers</code>. </p>
+     *         <p>
+     *         Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     */
+
+    public Integer getMinWebservers() {
+        return this.minWebservers;
+    }
+
+    /**
+     * <p>
+     * The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. As the
+     * transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the additional web servers,
+     * and scales down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     * 
+     * @param minWebservers
+     *        The minimum number of web servers that you want to run in your environment. Amazon MWAA scales the number
+     *        of Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you
+     *        interact with your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. As
+     *        the transaction-per-second rate, and the network load, decrease, Amazon MWAA disposes of the additional
+     *        web servers, and scales down to the number set in <code>MinxWebserers</code>. </p>
+     *        <p>
+     *        Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withMinWebservers(Integer minWebservers) {
+        setMinWebservers(minWebservers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. For example, in
+     * scenarios where your workload requires network calls to the Apache Airflow REST API with a high
+     * transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the number set in
+     * <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web servers, and scales
+     * down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     * 
+     * @param maxWebservers
+     *        The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number
+     *        of Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you
+     *        interact with your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI.
+     *        For example, in scenarios where your workload requires network calls to the Apache Airflow REST API with a
+     *        high transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the
+     *        number set in <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web
+     *        servers, and scales down to the number set in <code>MinxWebserers</code>. </p>
+     *        <p>
+     *        Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     */
+
+    public void setMaxWebservers(Integer maxWebservers) {
+        this.maxWebservers = maxWebservers;
+    }
+
+    /**
+     * <p>
+     * The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. For example, in
+     * scenarios where your workload requires network calls to the Apache Airflow REST API with a high
+     * transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the number set in
+     * <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web servers, and scales
+     * down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     * 
+     * @return The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number
+     *         of Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you
+     *         interact with your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI.
+     *         For example, in scenarios where your workload requires network calls to the Apache Airflow REST API with
+     *         a high transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the
+     *         number set in <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web
+     *         servers, and scales down to the number set in <code>MinxWebserers</code>. </p>
+     *         <p>
+     *         Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     */
+
+    public Integer getMaxWebservers() {
+        return this.maxWebservers;
+    }
+
+    /**
+     * <p>
+     * The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number of
+     * Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you interact with
+     * your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI. For example, in
+     * scenarios where your workload requires network calls to the Apache Airflow REST API with a high
+     * transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the number set in
+     * <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web servers, and scales
+     * down to the number set in <code>MinxWebserers</code>.
+     * </p>
+     * <p>
+     * Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * </p>
+     * 
+     * @param maxWebservers
+     *        The maximum number of web servers that you want to run in your environment. Amazon MWAA scales the number
+     *        of Apache Airflow web servers up to the number you specify for <code>MaxWebservers</code> when you
+     *        interact with your Apache Airflow environment using Apache Airflow REST API, or the Apache Airflow CLI.
+     *        For example, in scenarios where your workload requires network calls to the Apache Airflow REST API with a
+     *        high transaction-per-second (TPS) rate, Amazon MWAA will increase the number of web servers up to the
+     *        number set in <code>MaxWebserers</code>. As TPS rates decrease Amazon MWAA disposes of the additional web
+     *        servers, and scales down to the number set in <code>MinxWebserers</code>. </p>
+     *        <p>
+     *        Valid values: Accepts between <code>2</code> and <code>5</code>. Defaults to <code>2</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withMaxWebservers(Integer maxWebservers) {
+        setMaxWebservers(maxWebservers);
         return this;
     }
 
@@ -1511,46 +1705,50 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAirflowConfigurationOptions() != null)
-            sb.append("AirflowConfigurationOptions: ").append("***Sensitive Data Redacted***").append(",");
-        if (getAirflowVersion() != null)
-            sb.append("AirflowVersion: ").append(getAirflowVersion()).append(",");
-        if (getDagS3Path() != null)
-            sb.append("DagS3Path: ").append(getDagS3Path()).append(",");
-        if (getEnvironmentClass() != null)
-            sb.append("EnvironmentClass: ").append(getEnvironmentClass()).append(",");
-        if (getExecutionRoleArn() != null)
-            sb.append("ExecutionRoleArn: ").append(getExecutionRoleArn()).append(",");
-        if (getLoggingConfiguration() != null)
-            sb.append("LoggingConfiguration: ").append(getLoggingConfiguration()).append(",");
-        if (getMaxWorkers() != null)
-            sb.append("MaxWorkers: ").append(getMaxWorkers()).append(",");
-        if (getMinWorkers() != null)
-            sb.append("MinWorkers: ").append(getMinWorkers()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getNetworkConfiguration() != null)
-            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
-        if (getPluginsS3ObjectVersion() != null)
-            sb.append("PluginsS3ObjectVersion: ").append(getPluginsS3ObjectVersion()).append(",");
-        if (getPluginsS3Path() != null)
-            sb.append("PluginsS3Path: ").append(getPluginsS3Path()).append(",");
-        if (getRequirementsS3ObjectVersion() != null)
-            sb.append("RequirementsS3ObjectVersion: ").append(getRequirementsS3ObjectVersion()).append(",");
-        if (getRequirementsS3Path() != null)
-            sb.append("RequirementsS3Path: ").append(getRequirementsS3Path()).append(",");
-        if (getSchedulers() != null)
-            sb.append("Schedulers: ").append(getSchedulers()).append(",");
+        if (getExecutionRoleArn() != null)
+            sb.append("ExecutionRoleArn: ").append(getExecutionRoleArn()).append(",");
+        if (getAirflowVersion() != null)
+            sb.append("AirflowVersion: ").append(getAirflowVersion()).append(",");
         if (getSourceBucketArn() != null)
             sb.append("SourceBucketArn: ").append(getSourceBucketArn()).append(",");
-        if (getStartupScriptS3ObjectVersion() != null)
-            sb.append("StartupScriptS3ObjectVersion: ").append(getStartupScriptS3ObjectVersion()).append(",");
+        if (getDagS3Path() != null)
+            sb.append("DagS3Path: ").append(getDagS3Path()).append(",");
+        if (getPluginsS3Path() != null)
+            sb.append("PluginsS3Path: ").append(getPluginsS3Path()).append(",");
+        if (getPluginsS3ObjectVersion() != null)
+            sb.append("PluginsS3ObjectVersion: ").append(getPluginsS3ObjectVersion()).append(",");
+        if (getRequirementsS3Path() != null)
+            sb.append("RequirementsS3Path: ").append(getRequirementsS3Path()).append(",");
+        if (getRequirementsS3ObjectVersion() != null)
+            sb.append("RequirementsS3ObjectVersion: ").append(getRequirementsS3ObjectVersion()).append(",");
         if (getStartupScriptS3Path() != null)
             sb.append("StartupScriptS3Path: ").append(getStartupScriptS3Path()).append(",");
+        if (getStartupScriptS3ObjectVersion() != null)
+            sb.append("StartupScriptS3ObjectVersion: ").append(getStartupScriptS3ObjectVersion()).append(",");
+        if (getAirflowConfigurationOptions() != null)
+            sb.append("AirflowConfigurationOptions: ").append("***Sensitive Data Redacted***").append(",");
+        if (getEnvironmentClass() != null)
+            sb.append("EnvironmentClass: ").append(getEnvironmentClass()).append(",");
+        if (getMaxWorkers() != null)
+            sb.append("MaxWorkers: ").append(getMaxWorkers()).append(",");
+        if (getNetworkConfiguration() != null)
+            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
+        if (getLoggingConfiguration() != null)
+            sb.append("LoggingConfiguration: ").append(getLoggingConfiguration()).append(",");
+        if (getWeeklyMaintenanceWindowStart() != null)
+            sb.append("WeeklyMaintenanceWindowStart: ").append(getWeeklyMaintenanceWindowStart()).append(",");
         if (getWebserverAccessMode() != null)
             sb.append("WebserverAccessMode: ").append(getWebserverAccessMode()).append(",");
-        if (getWeeklyMaintenanceWindowStart() != null)
-            sb.append("WeeklyMaintenanceWindowStart: ").append(getWeeklyMaintenanceWindowStart());
+        if (getMinWorkers() != null)
+            sb.append("MinWorkers: ").append(getMinWorkers()).append(",");
+        if (getSchedulers() != null)
+            sb.append("Schedulers: ").append(getSchedulers()).append(",");
+        if (getMinWebservers() != null)
+            sb.append("MinWebservers: ").append(getMinWebservers()).append(",");
+        if (getMaxWebservers() != null)
+            sb.append("MaxWebservers: ").append(getMaxWebservers());
         sb.append("}");
         return sb.toString();
     }
@@ -1565,85 +1763,93 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         if (obj instanceof UpdateEnvironmentRequest == false)
             return false;
         UpdateEnvironmentRequest other = (UpdateEnvironmentRequest) obj;
-        if (other.getAirflowConfigurationOptions() == null ^ this.getAirflowConfigurationOptions() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getAirflowConfigurationOptions() != null && other.getAirflowConfigurationOptions().equals(this.getAirflowConfigurationOptions()) == false)
-            return false;
-        if (other.getAirflowVersion() == null ^ this.getAirflowVersion() == null)
-            return false;
-        if (other.getAirflowVersion() != null && other.getAirflowVersion().equals(this.getAirflowVersion()) == false)
-            return false;
-        if (other.getDagS3Path() == null ^ this.getDagS3Path() == null)
-            return false;
-        if (other.getDagS3Path() != null && other.getDagS3Path().equals(this.getDagS3Path()) == false)
-            return false;
-        if (other.getEnvironmentClass() == null ^ this.getEnvironmentClass() == null)
-            return false;
-        if (other.getEnvironmentClass() != null && other.getEnvironmentClass().equals(this.getEnvironmentClass()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getExecutionRoleArn() == null ^ this.getExecutionRoleArn() == null)
             return false;
         if (other.getExecutionRoleArn() != null && other.getExecutionRoleArn().equals(this.getExecutionRoleArn()) == false)
             return false;
-        if (other.getLoggingConfiguration() == null ^ this.getLoggingConfiguration() == null)
+        if (other.getAirflowVersion() == null ^ this.getAirflowVersion() == null)
             return false;
-        if (other.getLoggingConfiguration() != null && other.getLoggingConfiguration().equals(this.getLoggingConfiguration()) == false)
-            return false;
-        if (other.getMaxWorkers() == null ^ this.getMaxWorkers() == null)
-            return false;
-        if (other.getMaxWorkers() != null && other.getMaxWorkers().equals(this.getMaxWorkers()) == false)
-            return false;
-        if (other.getMinWorkers() == null ^ this.getMinWorkers() == null)
-            return false;
-        if (other.getMinWorkers() != null && other.getMinWorkers().equals(this.getMinWorkers()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
-            return false;
-        if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
-            return false;
-        if (other.getPluginsS3ObjectVersion() == null ^ this.getPluginsS3ObjectVersion() == null)
-            return false;
-        if (other.getPluginsS3ObjectVersion() != null && other.getPluginsS3ObjectVersion().equals(this.getPluginsS3ObjectVersion()) == false)
-            return false;
-        if (other.getPluginsS3Path() == null ^ this.getPluginsS3Path() == null)
-            return false;
-        if (other.getPluginsS3Path() != null && other.getPluginsS3Path().equals(this.getPluginsS3Path()) == false)
-            return false;
-        if (other.getRequirementsS3ObjectVersion() == null ^ this.getRequirementsS3ObjectVersion() == null)
-            return false;
-        if (other.getRequirementsS3ObjectVersion() != null && other.getRequirementsS3ObjectVersion().equals(this.getRequirementsS3ObjectVersion()) == false)
-            return false;
-        if (other.getRequirementsS3Path() == null ^ this.getRequirementsS3Path() == null)
-            return false;
-        if (other.getRequirementsS3Path() != null && other.getRequirementsS3Path().equals(this.getRequirementsS3Path()) == false)
-            return false;
-        if (other.getSchedulers() == null ^ this.getSchedulers() == null)
-            return false;
-        if (other.getSchedulers() != null && other.getSchedulers().equals(this.getSchedulers()) == false)
+        if (other.getAirflowVersion() != null && other.getAirflowVersion().equals(this.getAirflowVersion()) == false)
             return false;
         if (other.getSourceBucketArn() == null ^ this.getSourceBucketArn() == null)
             return false;
         if (other.getSourceBucketArn() != null && other.getSourceBucketArn().equals(this.getSourceBucketArn()) == false)
             return false;
-        if (other.getStartupScriptS3ObjectVersion() == null ^ this.getStartupScriptS3ObjectVersion() == null)
+        if (other.getDagS3Path() == null ^ this.getDagS3Path() == null)
             return false;
-        if (other.getStartupScriptS3ObjectVersion() != null && other.getStartupScriptS3ObjectVersion().equals(this.getStartupScriptS3ObjectVersion()) == false)
+        if (other.getDagS3Path() != null && other.getDagS3Path().equals(this.getDagS3Path()) == false)
+            return false;
+        if (other.getPluginsS3Path() == null ^ this.getPluginsS3Path() == null)
+            return false;
+        if (other.getPluginsS3Path() != null && other.getPluginsS3Path().equals(this.getPluginsS3Path()) == false)
+            return false;
+        if (other.getPluginsS3ObjectVersion() == null ^ this.getPluginsS3ObjectVersion() == null)
+            return false;
+        if (other.getPluginsS3ObjectVersion() != null && other.getPluginsS3ObjectVersion().equals(this.getPluginsS3ObjectVersion()) == false)
+            return false;
+        if (other.getRequirementsS3Path() == null ^ this.getRequirementsS3Path() == null)
+            return false;
+        if (other.getRequirementsS3Path() != null && other.getRequirementsS3Path().equals(this.getRequirementsS3Path()) == false)
+            return false;
+        if (other.getRequirementsS3ObjectVersion() == null ^ this.getRequirementsS3ObjectVersion() == null)
+            return false;
+        if (other.getRequirementsS3ObjectVersion() != null && other.getRequirementsS3ObjectVersion().equals(this.getRequirementsS3ObjectVersion()) == false)
             return false;
         if (other.getStartupScriptS3Path() == null ^ this.getStartupScriptS3Path() == null)
             return false;
         if (other.getStartupScriptS3Path() != null && other.getStartupScriptS3Path().equals(this.getStartupScriptS3Path()) == false)
             return false;
-        if (other.getWebserverAccessMode() == null ^ this.getWebserverAccessMode() == null)
+        if (other.getStartupScriptS3ObjectVersion() == null ^ this.getStartupScriptS3ObjectVersion() == null)
             return false;
-        if (other.getWebserverAccessMode() != null && other.getWebserverAccessMode().equals(this.getWebserverAccessMode()) == false)
+        if (other.getStartupScriptS3ObjectVersion() != null && other.getStartupScriptS3ObjectVersion().equals(this.getStartupScriptS3ObjectVersion()) == false)
+            return false;
+        if (other.getAirflowConfigurationOptions() == null ^ this.getAirflowConfigurationOptions() == null)
+            return false;
+        if (other.getAirflowConfigurationOptions() != null && other.getAirflowConfigurationOptions().equals(this.getAirflowConfigurationOptions()) == false)
+            return false;
+        if (other.getEnvironmentClass() == null ^ this.getEnvironmentClass() == null)
+            return false;
+        if (other.getEnvironmentClass() != null && other.getEnvironmentClass().equals(this.getEnvironmentClass()) == false)
+            return false;
+        if (other.getMaxWorkers() == null ^ this.getMaxWorkers() == null)
+            return false;
+        if (other.getMaxWorkers() != null && other.getMaxWorkers().equals(this.getMaxWorkers()) == false)
+            return false;
+        if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
+            return false;
+        if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
+            return false;
+        if (other.getLoggingConfiguration() == null ^ this.getLoggingConfiguration() == null)
+            return false;
+        if (other.getLoggingConfiguration() != null && other.getLoggingConfiguration().equals(this.getLoggingConfiguration()) == false)
             return false;
         if (other.getWeeklyMaintenanceWindowStart() == null ^ this.getWeeklyMaintenanceWindowStart() == null)
             return false;
         if (other.getWeeklyMaintenanceWindowStart() != null && other.getWeeklyMaintenanceWindowStart().equals(this.getWeeklyMaintenanceWindowStart()) == false)
+            return false;
+        if (other.getWebserverAccessMode() == null ^ this.getWebserverAccessMode() == null)
+            return false;
+        if (other.getWebserverAccessMode() != null && other.getWebserverAccessMode().equals(this.getWebserverAccessMode()) == false)
+            return false;
+        if (other.getMinWorkers() == null ^ this.getMinWorkers() == null)
+            return false;
+        if (other.getMinWorkers() != null && other.getMinWorkers().equals(this.getMinWorkers()) == false)
+            return false;
+        if (other.getSchedulers() == null ^ this.getSchedulers() == null)
+            return false;
+        if (other.getSchedulers() != null && other.getSchedulers().equals(this.getSchedulers()) == false)
+            return false;
+        if (other.getMinWebservers() == null ^ this.getMinWebservers() == null)
+            return false;
+        if (other.getMinWebservers() != null && other.getMinWebservers().equals(this.getMinWebservers()) == false)
+            return false;
+        if (other.getMaxWebservers() == null ^ this.getMaxWebservers() == null)
+            return false;
+        if (other.getMaxWebservers() != null && other.getMaxWebservers().equals(this.getMaxWebservers()) == false)
             return false;
         return true;
     }
@@ -1653,26 +1859,28 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAirflowConfigurationOptions() == null) ? 0 : getAirflowConfigurationOptions().hashCode());
-        hashCode = prime * hashCode + ((getAirflowVersion() == null) ? 0 : getAirflowVersion().hashCode());
-        hashCode = prime * hashCode + ((getDagS3Path() == null) ? 0 : getDagS3Path().hashCode());
-        hashCode = prime * hashCode + ((getEnvironmentClass() == null) ? 0 : getEnvironmentClass().hashCode());
-        hashCode = prime * hashCode + ((getExecutionRoleArn() == null) ? 0 : getExecutionRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getLoggingConfiguration() == null) ? 0 : getLoggingConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getMaxWorkers() == null) ? 0 : getMaxWorkers().hashCode());
-        hashCode = prime * hashCode + ((getMinWorkers() == null) ? 0 : getMinWorkers().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getPluginsS3ObjectVersion() == null) ? 0 : getPluginsS3ObjectVersion().hashCode());
-        hashCode = prime * hashCode + ((getPluginsS3Path() == null) ? 0 : getPluginsS3Path().hashCode());
-        hashCode = prime * hashCode + ((getRequirementsS3ObjectVersion() == null) ? 0 : getRequirementsS3ObjectVersion().hashCode());
-        hashCode = prime * hashCode + ((getRequirementsS3Path() == null) ? 0 : getRequirementsS3Path().hashCode());
-        hashCode = prime * hashCode + ((getSchedulers() == null) ? 0 : getSchedulers().hashCode());
+        hashCode = prime * hashCode + ((getExecutionRoleArn() == null) ? 0 : getExecutionRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getAirflowVersion() == null) ? 0 : getAirflowVersion().hashCode());
         hashCode = prime * hashCode + ((getSourceBucketArn() == null) ? 0 : getSourceBucketArn().hashCode());
-        hashCode = prime * hashCode + ((getStartupScriptS3ObjectVersion() == null) ? 0 : getStartupScriptS3ObjectVersion().hashCode());
+        hashCode = prime * hashCode + ((getDagS3Path() == null) ? 0 : getDagS3Path().hashCode());
+        hashCode = prime * hashCode + ((getPluginsS3Path() == null) ? 0 : getPluginsS3Path().hashCode());
+        hashCode = prime * hashCode + ((getPluginsS3ObjectVersion() == null) ? 0 : getPluginsS3ObjectVersion().hashCode());
+        hashCode = prime * hashCode + ((getRequirementsS3Path() == null) ? 0 : getRequirementsS3Path().hashCode());
+        hashCode = prime * hashCode + ((getRequirementsS3ObjectVersion() == null) ? 0 : getRequirementsS3ObjectVersion().hashCode());
         hashCode = prime * hashCode + ((getStartupScriptS3Path() == null) ? 0 : getStartupScriptS3Path().hashCode());
-        hashCode = prime * hashCode + ((getWebserverAccessMode() == null) ? 0 : getWebserverAccessMode().hashCode());
+        hashCode = prime * hashCode + ((getStartupScriptS3ObjectVersion() == null) ? 0 : getStartupScriptS3ObjectVersion().hashCode());
+        hashCode = prime * hashCode + ((getAirflowConfigurationOptions() == null) ? 0 : getAirflowConfigurationOptions().hashCode());
+        hashCode = prime * hashCode + ((getEnvironmentClass() == null) ? 0 : getEnvironmentClass().hashCode());
+        hashCode = prime * hashCode + ((getMaxWorkers() == null) ? 0 : getMaxWorkers().hashCode());
+        hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getLoggingConfiguration() == null) ? 0 : getLoggingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWeeklyMaintenanceWindowStart() == null) ? 0 : getWeeklyMaintenanceWindowStart().hashCode());
+        hashCode = prime * hashCode + ((getWebserverAccessMode() == null) ? 0 : getWebserverAccessMode().hashCode());
+        hashCode = prime * hashCode + ((getMinWorkers() == null) ? 0 : getMinWorkers().hashCode());
+        hashCode = prime * hashCode + ((getSchedulers() == null) ? 0 : getSchedulers().hashCode());
+        hashCode = prime * hashCode + ((getMinWebservers() == null) ? 0 : getMinWebservers().hashCode());
+        hashCode = prime * hashCode + ((getMaxWebservers() == null) ? 0 : getMaxWebservers().hashCode());
         return hashCode;
     }
 

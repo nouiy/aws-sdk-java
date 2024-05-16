@@ -48,6 +48,10 @@ public class LastUpdateJsonUnmarshaller implements Unmarshaller<LastUpdate, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Status", targetDepth)) {
+                    context.nextToken();
+                    lastUpdate.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreatedAt", targetDepth)) {
                     context.nextToken();
                     lastUpdate.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
@@ -59,10 +63,6 @@ public class LastUpdateJsonUnmarshaller implements Unmarshaller<LastUpdate, Json
                 if (context.testExpression("Source", targetDepth)) {
                     context.nextToken();
                     lastUpdate.setSource(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Status", targetDepth)) {
-                    context.nextToken();
-                    lastUpdate.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

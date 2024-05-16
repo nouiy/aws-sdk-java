@@ -48,21 +48,21 @@ public class CreateWebLoginTokenResultJsonUnmarshaller implements Unmarshaller<C
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("AirflowIdentity", targetDepth)) {
+                if (context.testExpression("WebToken", targetDepth)) {
                     context.nextToken();
-                    createWebLoginTokenResult.setAirflowIdentity(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("IamIdentity", targetDepth)) {
-                    context.nextToken();
-                    createWebLoginTokenResult.setIamIdentity(context.getUnmarshaller(String.class).unmarshall(context));
+                    createWebLoginTokenResult.setWebToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("WebServerHostname", targetDepth)) {
                     context.nextToken();
                     createWebLoginTokenResult.setWebServerHostname(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("WebToken", targetDepth)) {
+                if (context.testExpression("IamIdentity", targetDepth)) {
                     context.nextToken();
-                    createWebLoginTokenResult.setWebToken(context.getUnmarshaller(String.class).unmarshall(context));
+                    createWebLoginTokenResult.setIamIdentity(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AirflowIdentity", targetDepth)) {
+                    context.nextToken();
+                    createWebLoginTokenResult.setAirflowIdentity(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

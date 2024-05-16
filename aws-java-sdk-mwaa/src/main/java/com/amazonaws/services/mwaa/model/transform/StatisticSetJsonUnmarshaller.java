@@ -48,14 +48,6 @@ public class StatisticSetJsonUnmarshaller implements Unmarshaller<StatisticSet, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Maximum", targetDepth)) {
-                    context.nextToken();
-                    statisticSet.setMaximum(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
-                if (context.testExpression("Minimum", targetDepth)) {
-                    context.nextToken();
-                    statisticSet.setMinimum(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("SampleCount", targetDepth)) {
                     context.nextToken();
                     statisticSet.setSampleCount(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -63,6 +55,14 @@ public class StatisticSetJsonUnmarshaller implements Unmarshaller<StatisticSet, 
                 if (context.testExpression("Sum", targetDepth)) {
                     context.nextToken();
                     statisticSet.setSum(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("Minimum", targetDepth)) {
+                    context.nextToken();
+                    statisticSet.setMinimum(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("Maximum", targetDepth)) {
+                    context.nextToken();
+                    statisticSet.setMaximum(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

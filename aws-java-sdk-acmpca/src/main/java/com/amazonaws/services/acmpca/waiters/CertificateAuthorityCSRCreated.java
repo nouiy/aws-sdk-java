@@ -52,4 +52,29 @@ class CertificateAuthorityCSRCreated {
             return WaiterState.RETRY;
         }
     }
+
+    static class IsAccessDeniedExceptionMatcher extends WaiterAcceptor<GetCertificateAuthorityCsrResult> {
+        /**
+         * Takes the response exception and determines whether this exception matches the expected exception, by
+         * comparing the respective error codes.
+         * 
+         * @param e
+         *        Response Exception
+         * @return True if it matches, False otherwise
+         */
+        @Override
+        public boolean matches(AmazonServiceException e) {
+            return "AccessDeniedException".equals(e.getErrorCode());
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.FAILURE;
+        }
+    }
 }

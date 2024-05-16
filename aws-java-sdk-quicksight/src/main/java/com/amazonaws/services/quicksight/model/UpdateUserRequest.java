@@ -73,7 +73,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <li>
      * <p>
      * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
-     * to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from dashboards.
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
      * </p>
      * </li>
      * <li>
@@ -380,7 +381,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <li>
      * <p>
      * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
-     * to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from dashboards.
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
      * </p>
      * </li>
      * <li>
@@ -423,8 +425,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
-     *        access to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from
-     *        dashboards.
+     *        access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *        summaries from dashboards.
      *        </p>
      *        </li>
      *        <li>
@@ -474,7 +476,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <li>
      * <p>
      * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
-     * to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from dashboards.
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
      * </p>
      * </li>
      * <li>
@@ -517,8 +520,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <li>
      *         <p>
      *         <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
-     *         access to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from
-     *         dashboards.
+     *         access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *         summaries from dashboards.
      *         </p>
      *         </li>
      *         <li>
@@ -568,7 +571,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <li>
      * <p>
      * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
-     * to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from dashboards.
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
      * </p>
      * </li>
      * <li>
@@ -611,8 +615,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
-     *        access to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from
-     *        dashboards.
+     *        access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *        summaries from dashboards.
      *        </p>
      *        </li>
      *        <li>
@@ -664,7 +668,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <li>
      * <p>
      * <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have access
-     * to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from dashboards.
+     * to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive summaries from
+     * dashboards.
      * </p>
      * </li>
      * <li>
@@ -707,8 +712,8 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>READER_PRO</code>: Reader Pro adds Generative BI capabilities to the Reader role. Reader Pros have
-     *        access to Amazon Q Business, can build stories with Amazon Q, and can generate executive summaries from
-     *        dashboards.
+     *        access to Amazon Q in Amazon QuickSight, can build stories with Amazon Q, and can generate executive
+     *        summaries from dashboards.
      *        </p>
      *        </li>
      *        <li>

@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StatisticSetMarshaller {
 
-    private static final MarshallingInfo<Double> MAXIMUM_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Maximum").build();
-    private static final MarshallingInfo<Double> MINIMUM_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Minimum").build();
     private static final MarshallingInfo<Integer> SAMPLECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SampleCount").build();
     private static final MarshallingInfo<Double> SUM_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Sum").build();
+    private static final MarshallingInfo<Double> MINIMUM_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Minimum").build();
+    private static final MarshallingInfo<Double> MAXIMUM_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Maximum").build();
 
     private static final StatisticSetMarshaller instance = new StatisticSetMarshaller();
 
@@ -52,10 +52,10 @@ public class StatisticSetMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(statisticSet.getMaximum(), MAXIMUM_BINDING);
-            protocolMarshaller.marshall(statisticSet.getMinimum(), MINIMUM_BINDING);
             protocolMarshaller.marshall(statisticSet.getSampleCount(), SAMPLECOUNT_BINDING);
             protocolMarshaller.marshall(statisticSet.getSum(), SUM_BINDING);
+            protocolMarshaller.marshall(statisticSet.getMinimum(), MINIMUM_BINDING);
+            protocolMarshaller.marshall(statisticSet.getMaximum(), MAXIMUM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

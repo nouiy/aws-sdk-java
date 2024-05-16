@@ -48,10 +48,6 @@ public class ModuleLoggingConfigurationJsonUnmarshaller implements Unmarshaller<
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CloudWatchLogGroupArn", targetDepth)) {
-                    context.nextToken();
-                    moduleLoggingConfiguration.setCloudWatchLogGroupArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("Enabled", targetDepth)) {
                     context.nextToken();
                     moduleLoggingConfiguration.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class ModuleLoggingConfigurationJsonUnmarshaller implements Unmarshaller<
                 if (context.testExpression("LogLevel", targetDepth)) {
                     context.nextToken();
                     moduleLoggingConfiguration.setLogLevel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CloudWatchLogGroupArn", targetDepth)) {
+                    context.nextToken();
+                    moduleLoggingConfiguration.setCloudWatchLogGroupArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

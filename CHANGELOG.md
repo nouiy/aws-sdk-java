@@ -1,3 +1,32 @@
+# __1.12.724__ __2024-05-16__
+## __AWS Certificate Manager Private Certificate Authority__
+  - ### Features
+    - This release adds support for waiters to fail on AccessDeniedException when having insufficient permissions
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Documentation updates for AWS Secrets Manager
+
+## __Amazon Connect Service__
+  - ### Features
+    - Adding Contact Flow metrics to the GetMetricDataV2 API
+
+## __Amazon QuickSight__
+  - ### Features
+    - This release adds DescribeKeyRegistration and UpdateKeyRegistration APIs to manage QuickSight Customer Managed Keys (CMK).
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Introduced WorkerAccessConfiguration to SageMaker Workteam. This allows customers to configure resource access for workers in a workteam.
+
+## __AmazonMWAA__
+  - ### Features
+    - Amazon MWAA now supports Airflow web server auto scaling to automatically handle increased demand from REST APIs, Command Line Interface (CLI), or more Airflow User Interface (UI) users. Customers can specify maximum and minimum web server instances during environment creation and update workflow.
+
+## __Managed Streaming for Kafka__
+  - ### Features
+    - AWS MSK support for Broker Removal.
+
 # __1.12.723__ __2024-05-15__
 ## __AWS CodeBuild__
   - ### Features

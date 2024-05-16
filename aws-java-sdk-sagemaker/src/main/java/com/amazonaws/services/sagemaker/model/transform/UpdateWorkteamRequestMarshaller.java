@@ -36,6 +36,8 @@ public class UpdateWorkteamRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<StructuredPojo> NOTIFICATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NotificationConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> WORKERACCESSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkerAccessConfiguration").build();
 
     private static final UpdateWorkteamRequestMarshaller instance = new UpdateWorkteamRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class UpdateWorkteamRequestMarshaller {
             protocolMarshaller.marshall(updateWorkteamRequest.getMemberDefinitions(), MEMBERDEFINITIONS_BINDING);
             protocolMarshaller.marshall(updateWorkteamRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateWorkteamRequest.getNotificationConfiguration(), NOTIFICATIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateWorkteamRequest.getWorkerAccessConfiguration(), WORKERACCESSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

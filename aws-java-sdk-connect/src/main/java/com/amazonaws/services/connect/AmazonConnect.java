@@ -995,7 +995,7 @@ public interface AmazonConnect {
      * <p>
      * Creates a prompt. For more information about prompts, such as supported file types and maximum length, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create prompts</a> in the <i>Amazon
-     * Connect Administrator's Guide</i>.
+     * Connect Administrator Guide</i>.
      * </p>
      * 
      * @param createPromptRequest
@@ -3332,7 +3332,7 @@ public interface AmazonConnect {
      * For a description of the historical metrics that are supported by <code>GetMetricDataV2</code> and
      * <code>GetMetricData</code>, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html">Historical
-     * metrics definitions</a> in the <i>Amazon Connect Administrator's Guide</i>.
+     * metrics definitions</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * 
      * @param getMetricDataV2Request

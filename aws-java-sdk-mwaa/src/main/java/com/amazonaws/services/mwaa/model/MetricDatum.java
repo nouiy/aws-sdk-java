@@ -33,22 +33,10 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <b>Internal only</b>. The dimensions associated with the metric.
-     * </p>
-     */
-    private java.util.List<Dimension> dimensions;
-    /**
-     * <p>
      * <b>Internal only</b>. The name of the metric.
      * </p>
      */
     private String metricName;
-    /**
-     * <p>
-     * <b>Internal only</b>. The statistical values for the metric.
-     * </p>
-     */
-    private StatisticSet statisticValues;
     /**
      * <p>
      * <b>Internal only</b>. The time the metric data was received.
@@ -57,16 +45,108 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date timestamp;
     /**
      * <p>
-     * <b>Internal only</b>. The unit used to store the metric.
+     * <b>Internal only</b>. The dimensions associated with the metric.
      * </p>
      */
-    private String unit;
+    private java.util.List<Dimension> dimensions;
     /**
      * <p>
      * <b>Internal only</b>. The value for the metric.
      * </p>
      */
     private Double value;
+    /**
+     * <p>
+     * <b>Internal only</b>. The unit used to store the metric.
+     * </p>
+     */
+    private String unit;
+    /**
+     * <p>
+     * <b>Internal only</b>. The statistical values for the metric.
+     * </p>
+     */
+    private StatisticSet statisticValues;
+
+    /**
+     * <p>
+     * <b>Internal only</b>. The name of the metric.
+     * </p>
+     * 
+     * @param metricName
+     *        <b>Internal only</b>. The name of the metric.
+     */
+
+    public void setMetricName(String metricName) {
+        this.metricName = metricName;
+    }
+
+    /**
+     * <p>
+     * <b>Internal only</b>. The name of the metric.
+     * </p>
+     * 
+     * @return <b>Internal only</b>. The name of the metric.
+     */
+
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    /**
+     * <p>
+     * <b>Internal only</b>. The name of the metric.
+     * </p>
+     * 
+     * @param metricName
+     *        <b>Internal only</b>. The name of the metric.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MetricDatum withMetricName(String metricName) {
+        setMetricName(metricName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * <b>Internal only</b>. The time the metric data was received.
+     * </p>
+     * 
+     * @param timestamp
+     *        <b>Internal only</b>. The time the metric data was received.
+     */
+
+    public void setTimestamp(java.util.Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    /**
+     * <p>
+     * <b>Internal only</b>. The time the metric data was received.
+     * </p>
+     * 
+     * @return <b>Internal only</b>. The time the metric data was received.
+     */
+
+    public java.util.Date getTimestamp() {
+        return this.timestamp;
+    }
+
+    /**
+     * <p>
+     * <b>Internal only</b>. The time the metric data was received.
+     * </p>
+     * 
+     * @param timestamp
+     *        <b>Internal only</b>. The time the metric data was received.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MetricDatum withTimestamp(java.util.Date timestamp) {
+        setTimestamp(timestamp);
+        return this;
+    }
 
     /**
      * <p>
@@ -140,121 +220,41 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <b>Internal only</b>. The name of the metric.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      * 
-     * @param metricName
-     *        <b>Internal only</b>. The name of the metric.
+     * @param value
+     *        <b>Internal only</b>. The value for the metric.
      */
 
-    public void setMetricName(String metricName) {
-        this.metricName = metricName;
+    public void setValue(Double value) {
+        this.value = value;
     }
 
     /**
      * <p>
-     * <b>Internal only</b>. The name of the metric.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      * 
-     * @return <b>Internal only</b>. The name of the metric.
+     * @return <b>Internal only</b>. The value for the metric.
      */
 
-    public String getMetricName() {
-        return this.metricName;
+    public Double getValue() {
+        return this.value;
     }
 
     /**
      * <p>
-     * <b>Internal only</b>. The name of the metric.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      * 
-     * @param metricName
-     *        <b>Internal only</b>. The name of the metric.
+     * @param value
+     *        <b>Internal only</b>. The value for the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public MetricDatum withMetricName(String metricName) {
-        setMetricName(metricName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * <b>Internal only</b>. The statistical values for the metric.
-     * </p>
-     * 
-     * @param statisticValues
-     *        <b>Internal only</b>. The statistical values for the metric.
-     */
-    @Deprecated
-    public void setStatisticValues(StatisticSet statisticValues) {
-        this.statisticValues = statisticValues;
-    }
-
-    /**
-     * <p>
-     * <b>Internal only</b>. The statistical values for the metric.
-     * </p>
-     * 
-     * @return <b>Internal only</b>. The statistical values for the metric.
-     */
-    @Deprecated
-    public StatisticSet getStatisticValues() {
-        return this.statisticValues;
-    }
-
-    /**
-     * <p>
-     * <b>Internal only</b>. The statistical values for the metric.
-     * </p>
-     * 
-     * @param statisticValues
-     *        <b>Internal only</b>. The statistical values for the metric.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-    @Deprecated
-    public MetricDatum withStatisticValues(StatisticSet statisticValues) {
-        setStatisticValues(statisticValues);
-        return this;
-    }
-
-    /**
-     * <p>
-     * <b>Internal only</b>. The time the metric data was received.
-     * </p>
-     * 
-     * @param timestamp
-     *        <b>Internal only</b>. The time the metric data was received.
-     */
-
-    public void setTimestamp(java.util.Date timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    /**
-     * <p>
-     * <b>Internal only</b>. The time the metric data was received.
-     * </p>
-     * 
-     * @return <b>Internal only</b>. The time the metric data was received.
-     */
-
-    public java.util.Date getTimestamp() {
-        return this.timestamp;
-    }
-
-    /**
-     * <p>
-     * <b>Internal only</b>. The time the metric data was received.
-     * </p>
-     * 
-     * @param timestamp
-     *        <b>Internal only</b>. The time the metric data was received.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MetricDatum withTimestamp(java.util.Date timestamp) {
-        setTimestamp(timestamp);
+    public MetricDatum withValue(Double value) {
+        setValue(value);
         return this;
     }
 
@@ -319,41 +319,41 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <b>Internal only</b>. The value for the metric.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      * 
-     * @param value
-     *        <b>Internal only</b>. The value for the metric.
+     * @param statisticValues
+     *        <b>Internal only</b>. The statistical values for the metric.
      */
-
-    public void setValue(Double value) {
-        this.value = value;
+    @Deprecated
+    public void setStatisticValues(StatisticSet statisticValues) {
+        this.statisticValues = statisticValues;
     }
 
     /**
      * <p>
-     * <b>Internal only</b>. The value for the metric.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      * 
-     * @return <b>Internal only</b>. The value for the metric.
+     * @return <b>Internal only</b>. The statistical values for the metric.
      */
-
-    public Double getValue() {
-        return this.value;
+    @Deprecated
+    public StatisticSet getStatisticValues() {
+        return this.statisticValues;
     }
 
     /**
      * <p>
-     * <b>Internal only</b>. The value for the metric.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      * 
-     * @param value
-     *        <b>Internal only</b>. The value for the metric.
+     * @param statisticValues
+     *        <b>Internal only</b>. The statistical values for the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
-    public MetricDatum withValue(Double value) {
-        setValue(value);
+    @Deprecated
+    public MetricDatum withStatisticValues(StatisticSet statisticValues) {
+        setStatisticValues(statisticValues);
         return this;
     }
 
@@ -369,18 +369,18 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDimensions() != null)
-            sb.append("Dimensions: ").append(getDimensions()).append(",");
         if (getMetricName() != null)
             sb.append("MetricName: ").append(getMetricName()).append(",");
-        if (getStatisticValues() != null)
-            sb.append("StatisticValues: ").append(getStatisticValues()).append(",");
         if (getTimestamp() != null)
             sb.append("Timestamp: ").append(getTimestamp()).append(",");
+        if (getDimensions() != null)
+            sb.append("Dimensions: ").append(getDimensions()).append(",");
+        if (getValue() != null)
+            sb.append("Value: ").append(getValue()).append(",");
         if (getUnit() != null)
             sb.append("Unit: ").append(getUnit()).append(",");
-        if (getValue() != null)
-            sb.append("Value: ").append(getValue());
+        if (getStatisticValues() != null)
+            sb.append("StatisticValues: ").append(getStatisticValues());
         sb.append("}");
         return sb.toString();
     }
@@ -395,29 +395,29 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof MetricDatum == false)
             return false;
         MetricDatum other = (MetricDatum) obj;
-        if (other.getDimensions() == null ^ this.getDimensions() == null)
-            return false;
-        if (other.getDimensions() != null && other.getDimensions().equals(this.getDimensions()) == false)
-            return false;
         if (other.getMetricName() == null ^ this.getMetricName() == null)
             return false;
         if (other.getMetricName() != null && other.getMetricName().equals(this.getMetricName()) == false)
-            return false;
-        if (other.getStatisticValues() == null ^ this.getStatisticValues() == null)
-            return false;
-        if (other.getStatisticValues() != null && other.getStatisticValues().equals(this.getStatisticValues()) == false)
             return false;
         if (other.getTimestamp() == null ^ this.getTimestamp() == null)
             return false;
         if (other.getTimestamp() != null && other.getTimestamp().equals(this.getTimestamp()) == false)
             return false;
-        if (other.getUnit() == null ^ this.getUnit() == null)
+        if (other.getDimensions() == null ^ this.getDimensions() == null)
             return false;
-        if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
+        if (other.getDimensions() != null && other.getDimensions().equals(this.getDimensions()) == false)
             return false;
         if (other.getValue() == null ^ this.getValue() == null)
             return false;
         if (other.getValue() != null && other.getValue().equals(this.getValue()) == false)
+            return false;
+        if (other.getUnit() == null ^ this.getUnit() == null)
+            return false;
+        if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
+            return false;
+        if (other.getStatisticValues() == null ^ this.getStatisticValues() == null)
+            return false;
+        if (other.getStatisticValues() != null && other.getStatisticValues().equals(this.getStatisticValues()) == false)
             return false;
         return true;
     }
@@ -427,12 +427,12 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDimensions() == null) ? 0 : getDimensions().hashCode());
         hashCode = prime * hashCode + ((getMetricName() == null) ? 0 : getMetricName().hashCode());
-        hashCode = prime * hashCode + ((getStatisticValues() == null) ? 0 : getStatisticValues().hashCode());
         hashCode = prime * hashCode + ((getTimestamp() == null) ? 0 : getTimestamp().hashCode());
-        hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
+        hashCode = prime * hashCode + ((getDimensions() == null) ? 0 : getDimensions().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
+        hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
+        hashCode = prime * hashCode + ((getStatisticValues() == null) ? 0 : getStatisticValues().hashCode());
         return hashCode;
     }
 
