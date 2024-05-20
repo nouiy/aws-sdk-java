@@ -353,6 +353,10 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("CACertificateIdentifier", StringUtils.fromString(createDBClusterRequest.getCACertificateIdentifier()));
         }
 
+        if (createDBClusterRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(createDBClusterRequest.getEngineLifecycleSupport()));
+        }
+
         if (createDBClusterRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBClusterRequest.getSourceRegion()));
         }

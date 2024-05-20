@@ -37,6 +37,8 @@ public class AgentVersionSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDRAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardrailConfiguration").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
@@ -61,6 +63,7 @@ public class AgentVersionSummaryMarshaller {
             protocolMarshaller.marshall(agentVersionSummary.getAgentVersion(), AGENTVERSION_BINDING);
             protocolMarshaller.marshall(agentVersionSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(agentVersionSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentVersionSummary.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentVersionSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

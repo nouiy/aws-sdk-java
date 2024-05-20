@@ -29,6 +29,14 @@ public class PipelineBlueprintSummaryMarshaller {
 
     private static final MarshallingInfo<String> BLUEPRINTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BlueprintName").build();
+    private static final MarshallingInfo<String> DISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DisplayName").build();
+    private static final MarshallingInfo<String> DISPLAYDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DisplayDescription").build();
+    private static final MarshallingInfo<String> SERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Service").build();
+    private static final MarshallingInfo<String> USECASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("UseCase").build();
 
     private static final PipelineBlueprintSummaryMarshaller instance = new PipelineBlueprintSummaryMarshaller();
 
@@ -47,6 +55,10 @@ public class PipelineBlueprintSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(pipelineBlueprintSummary.getBlueprintName(), BLUEPRINTNAME_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprintSummary.getDisplayName(), DISPLAYNAME_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprintSummary.getDisplayDescription(), DISPLAYDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprintSummary.getService(), SERVICE_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprintSummary.getUseCase(), USECASE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

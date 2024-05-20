@@ -40,6 +40,12 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> securityGroupIds;
+    /**
+     * <p>
+     * Options for attaching a VPC to a pipeline.
+     * </p>
+     */
+    private VpcAttachmentOptions vpcAttachmentOptions;
 
     /**
      * <p>
@@ -182,6 +188,46 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Options for attaching a VPC to a pipeline.
+     * </p>
+     * 
+     * @param vpcAttachmentOptions
+     *        Options for attaching a VPC to a pipeline.
+     */
+
+    public void setVpcAttachmentOptions(VpcAttachmentOptions vpcAttachmentOptions) {
+        this.vpcAttachmentOptions = vpcAttachmentOptions;
+    }
+
+    /**
+     * <p>
+     * Options for attaching a VPC to a pipeline.
+     * </p>
+     * 
+     * @return Options for attaching a VPC to a pipeline.
+     */
+
+    public VpcAttachmentOptions getVpcAttachmentOptions() {
+        return this.vpcAttachmentOptions;
+    }
+
+    /**
+     * <p>
+     * Options for attaching a VPC to a pipeline.
+     * </p>
+     * 
+     * @param vpcAttachmentOptions
+     *        Options for attaching a VPC to a pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VpcOptions withVpcAttachmentOptions(VpcAttachmentOptions vpcAttachmentOptions) {
+        setVpcAttachmentOptions(vpcAttachmentOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -196,7 +242,9 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
         if (getSubnetIds() != null)
             sb.append("SubnetIds: ").append(getSubnetIds()).append(",");
         if (getSecurityGroupIds() != null)
-            sb.append("SecurityGroupIds: ").append(getSecurityGroupIds());
+            sb.append("SecurityGroupIds: ").append(getSecurityGroupIds()).append(",");
+        if (getVpcAttachmentOptions() != null)
+            sb.append("VpcAttachmentOptions: ").append(getVpcAttachmentOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -219,6 +267,10 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSecurityGroupIds() != null && other.getSecurityGroupIds().equals(this.getSecurityGroupIds()) == false)
             return false;
+        if (other.getVpcAttachmentOptions() == null ^ this.getVpcAttachmentOptions() == null)
+            return false;
+        if (other.getVpcAttachmentOptions() != null && other.getVpcAttachmentOptions().equals(this.getVpcAttachmentOptions()) == false)
+            return false;
         return true;
     }
 
@@ -229,6 +281,7 @@ public class VpcOptions implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
+        hashCode = prime * hashCode + ((getVpcAttachmentOptions() == null) ? 0 : getVpcAttachmentOptions().hashCode());
         return hashCode;
     }
 

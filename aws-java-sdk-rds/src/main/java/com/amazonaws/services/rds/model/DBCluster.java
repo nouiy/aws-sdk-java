@@ -659,6 +659,15 @@ public class DBCluster implements Serializable, Cloneable {
     private Integer storageThroughput;
 
     private CertificateDetails certificateDetails;
+    /**
+     * <p>
+     * The life cycle type for the DB cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateDBCluster.
+     * </p>
+     */
+    private String engineLifecycleSupport;
 
     /**
      * <p>
@@ -5308,6 +5317,61 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The life cycle type for the DB cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateDBCluster.
+     * </p>
+     * 
+     * @param engineLifecycleSupport
+     *        The life cycle type for the DB cluster.</p>
+     *        <p>
+     *        For more information, see CreateDBCluster.
+     */
+
+    public void setEngineLifecycleSupport(String engineLifecycleSupport) {
+        this.engineLifecycleSupport = engineLifecycleSupport;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the DB cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateDBCluster.
+     * </p>
+     * 
+     * @return The life cycle type for the DB cluster.</p>
+     *         <p>
+     *         For more information, see CreateDBCluster.
+     */
+
+    public String getEngineLifecycleSupport() {
+        return this.engineLifecycleSupport;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the DB cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateDBCluster.
+     * </p>
+     * 
+     * @param engineLifecycleSupport
+     *        The life cycle type for the DB cluster.</p>
+     *        <p>
+     *        For more information, see CreateDBCluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withEngineLifecycleSupport(String engineLifecycleSupport) {
+        setEngineLifecycleSupport(engineLifecycleSupport);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5476,7 +5540,9 @@ public class DBCluster implements Serializable, Cloneable {
         if (getStorageThroughput() != null)
             sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
         if (getCertificateDetails() != null)
-            sb.append("CertificateDetails: ").append(getCertificateDetails());
+            sb.append("CertificateDetails: ").append(getCertificateDetails()).append(",");
+        if (getEngineLifecycleSupport() != null)
+            sb.append("EngineLifecycleSupport: ").append(getEngineLifecycleSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -5816,6 +5882,10 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getCertificateDetails() != null && other.getCertificateDetails().equals(this.getCertificateDetails()) == false)
             return false;
+        if (other.getEngineLifecycleSupport() == null ^ this.getEngineLifecycleSupport() == null)
+            return false;
+        if (other.getEngineLifecycleSupport() != null && other.getEngineLifecycleSupport().equals(this.getEngineLifecycleSupport()) == false)
+            return false;
         return true;
     }
 
@@ -5903,6 +5973,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getLimitlessDatabase() == null) ? 0 : getLimitlessDatabase().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getCertificateDetails() == null) ? 0 : getCertificateDetails().hashCode());
+        hashCode = prime * hashCode + ((getEngineLifecycleSupport() == null) ? 0 : getEngineLifecycleSupport().hashCode());
         return hashCode;
     }
 

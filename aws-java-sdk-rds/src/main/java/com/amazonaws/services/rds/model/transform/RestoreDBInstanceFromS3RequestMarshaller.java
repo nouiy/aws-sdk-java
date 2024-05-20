@@ -309,6 +309,10 @@ public class RestoreDBInstanceFromS3RequestMarshaller implements Marshaller<Requ
             request.addParameter("CACertificateIdentifier", StringUtils.fromString(restoreDBInstanceFromS3Request.getCACertificateIdentifier()));
         }
 
+        if (restoreDBInstanceFromS3Request.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(restoreDBInstanceFromS3Request.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

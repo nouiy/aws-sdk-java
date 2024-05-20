@@ -56,6 +56,10 @@ public class CreateGlobalClusterRequestMarshaller implements Marshaller<Request<
             request.addParameter("EngineVersion", StringUtils.fromString(createGlobalClusterRequest.getEngineVersion()));
         }
 
+        if (createGlobalClusterRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(createGlobalClusterRequest.getEngineLifecycleSupport()));
+        }
+
         if (createGlobalClusterRequest.getDeletionProtection() != null) {
             request.addParameter("DeletionProtection", StringUtils.fromBoolean(createGlobalClusterRequest.getDeletionProtection()));
         }

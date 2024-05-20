@@ -29,6 +29,12 @@ public class GetPipelineBlueprintResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private PipelineBlueprint blueprint;
+    /**
+     * <p>
+     * The format of the blueprint.
+     * </p>
+     */
+    private String format;
 
     /**
      * <p>
@@ -71,6 +77,46 @@ public class GetPipelineBlueprintResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The format of the blueprint.
+     * </p>
+     * 
+     * @param format
+     *        The format of the blueprint.
+     */
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    /**
+     * <p>
+     * The format of the blueprint.
+     * </p>
+     * 
+     * @return The format of the blueprint.
+     */
+
+    public String getFormat() {
+        return this.format;
+    }
+
+    /**
+     * <p>
+     * The format of the blueprint.
+     * </p>
+     * 
+     * @param format
+     *        The format of the blueprint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPipelineBlueprintResult withFormat(String format) {
+        setFormat(format);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -83,7 +129,9 @@ public class GetPipelineBlueprintResult extends com.amazonaws.AmazonWebServiceRe
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getBlueprint() != null)
-            sb.append("Blueprint: ").append(getBlueprint());
+            sb.append("Blueprint: ").append(getBlueprint()).append(",");
+        if (getFormat() != null)
+            sb.append("Format: ").append(getFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -102,6 +150,10 @@ public class GetPipelineBlueprintResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getBlueprint() != null && other.getBlueprint().equals(this.getBlueprint()) == false)
             return false;
+        if (other.getFormat() == null ^ this.getFormat() == null)
+            return false;
+        if (other.getFormat() != null && other.getFormat().equals(this.getFormat()) == false)
+            return false;
         return true;
     }
 
@@ -111,6 +163,7 @@ public class GetPipelineBlueprintResult extends com.amazonaws.AmazonWebServiceRe
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBlueprint() == null) ? 0 : getBlueprint().hashCode());
+        hashCode = prime * hashCode + ((getFormat() == null) ? 0 : getFormat().hashCode());
         return hashCode;
     }
 

@@ -33,7 +33,9 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
      * <p>
      * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in Agents
+     * for Amazon Bedrock</a>.
      * </p>
      */
     private String overrideLambda;
@@ -49,13 +51,17 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
      * <p>
      * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in Agents
+     * for Amazon Bedrock</a>.
      * </p>
      * 
      * @param overrideLambda
      *        The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      *        sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     *        <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     *        <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in
+     *        Agents for Amazon Bedrock</a>.
      */
 
     public void setOverrideLambda(String overrideLambda) {
@@ -66,12 +72,16 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
      * <p>
      * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in Agents
+     * for Amazon Bedrock</a>.
      * </p>
      * 
      * @return The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      *         sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     *         <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     *         <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in
+     *         Agents for Amazon Bedrock</a>.
      */
 
     public String getOverrideLambda() {
@@ -82,13 +92,17 @@ public class PromptOverrideConfiguration implements Serializable, Cloneable, Str
      * <p>
      * The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      * sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     * <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in Agents
+     * for Amazon Bedrock</a>.
      * </p>
      * 
      * @param overrideLambda
      *        The ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent
      *        sequence. If you specify this field, at least one of the <code>promptConfigurations</code> must contain a
-     *        <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>.
+     *        <code>parserMode</code> value that is set to <code>OVERRIDDEN</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html">Parser Lambda function in
+     *        Agents for Amazon Bedrock</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

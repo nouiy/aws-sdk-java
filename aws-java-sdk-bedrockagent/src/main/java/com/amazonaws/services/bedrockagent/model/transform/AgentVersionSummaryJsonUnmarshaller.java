@@ -68,6 +68,10 @@ public class AgentVersionSummaryJsonUnmarshaller implements Unmarshaller<AgentVe
                     context.nextToken();
                     agentVersionSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("guardrailConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agentVersionSummary.setGuardrailConfiguration(GuardrailConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
                     agentVersionSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));

@@ -106,10 +106,16 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
     private EncryptionAtRestOptions encryptionAtRestOptions;
     /**
      * <p>
-     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      */
     private java.util.List<ServiceVpcEndpoint> serviceVpcEndpoints;
+    /**
+     * <p>
+     * Destinations to which the pipeline writes data.
+     * </p>
+     */
+    private java.util.List<PipelineDestination> destinations;
     /**
      * <p>
      * A list of tags associated with the given pipeline.
@@ -730,10 +736,10 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      * 
-     * @return A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * @return A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      */
 
     public java.util.List<ServiceVpcEndpoint> getServiceVpcEndpoints() {
@@ -742,11 +748,11 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      * 
      * @param serviceVpcEndpoints
-     *        A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     *        A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      */
 
     public void setServiceVpcEndpoints(java.util.Collection<ServiceVpcEndpoint> serviceVpcEndpoints) {
@@ -760,7 +766,7 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -769,7 +775,7 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param serviceVpcEndpoints
-     *        A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     *        A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -785,16 +791,86 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * </p>
      * 
      * @param serviceVpcEndpoints
-     *        A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     *        A list of VPC endpoints that OpenSearch Ingestion has created to other Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Pipeline withServiceVpcEndpoints(java.util.Collection<ServiceVpcEndpoint> serviceVpcEndpoints) {
         setServiceVpcEndpoints(serviceVpcEndpoints);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Destinations to which the pipeline writes data.
+     * </p>
+     * 
+     * @return Destinations to which the pipeline writes data.
+     */
+
+    public java.util.List<PipelineDestination> getDestinations() {
+        return destinations;
+    }
+
+    /**
+     * <p>
+     * Destinations to which the pipeline writes data.
+     * </p>
+     * 
+     * @param destinations
+     *        Destinations to which the pipeline writes data.
+     */
+
+    public void setDestinations(java.util.Collection<PipelineDestination> destinations) {
+        if (destinations == null) {
+            this.destinations = null;
+            return;
+        }
+
+        this.destinations = new java.util.ArrayList<PipelineDestination>(destinations);
+    }
+
+    /**
+     * <p>
+     * Destinations to which the pipeline writes data.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDestinations(java.util.Collection)} or {@link #withDestinations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param destinations
+     *        Destinations to which the pipeline writes data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withDestinations(PipelineDestination... destinations) {
+        if (this.destinations == null) {
+            setDestinations(new java.util.ArrayList<PipelineDestination>(destinations.length));
+        }
+        for (PipelineDestination ele : destinations) {
+            this.destinations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Destinations to which the pipeline writes data.
+     * </p>
+     * 
+     * @param destinations
+     *        Destinations to which the pipeline writes data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withDestinations(java.util.Collection<PipelineDestination> destinations) {
+        setDestinations(destinations);
         return this;
     }
 
@@ -910,6 +986,8 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
             sb.append("EncryptionAtRestOptions: ").append(getEncryptionAtRestOptions()).append(",");
         if (getServiceVpcEndpoints() != null)
             sb.append("ServiceVpcEndpoints: ").append(getServiceVpcEndpoints()).append(",");
+        if (getDestinations() != null)
+            sb.append("Destinations: ").append(getDestinations()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -986,6 +1064,10 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getServiceVpcEndpoints() != null && other.getServiceVpcEndpoints().equals(this.getServiceVpcEndpoints()) == false)
             return false;
+        if (other.getDestinations() == null ^ this.getDestinations() == null)
+            return false;
+        if (other.getDestinations() != null && other.getDestinations().equals(this.getDestinations()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -1013,6 +1095,7 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBufferOptions() == null) ? 0 : getBufferOptions().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
         hashCode = prime * hashCode + ((getServiceVpcEndpoints() == null) ? 0 : getServiceVpcEndpoints().hashCode());
+        hashCode = prime * hashCode + ((getDestinations() == null) ? 0 : getDestinations().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

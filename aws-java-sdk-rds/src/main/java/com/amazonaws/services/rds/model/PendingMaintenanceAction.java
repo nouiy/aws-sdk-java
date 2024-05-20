@@ -28,9 +28,15 @@ public class PendingMaintenanceAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of pending maintenance action that is available for the resource. Valid actions are
-     * <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     * <code>ca-certificate-rotation</code>.
+     * The type of pending maintenance action that is available for the resource.
+     * </p>
+     * <p>
+     * For more information about maintenance actions, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">Maintaining
+     * a DB instance</a>.
+     * </p>
+     * <p>
+     * Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      * </p>
      */
     private String action;
@@ -77,15 +83,26 @@ public class PendingMaintenanceAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of pending maintenance action that is available for the resource. Valid actions are
-     * <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     * <code>ca-certificate-rotation</code>.
+     * The type of pending maintenance action that is available for the resource.
+     * </p>
+     * <p>
+     * For more information about maintenance actions, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">Maintaining
+     * a DB instance</a>.
+     * </p>
+     * <p>
+     * Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      * </p>
      * 
      * @param action
-     *        The type of pending maintenance action that is available for the resource. Valid actions are
-     *        <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     *        <code>ca-certificate-rotation</code>.
+     *        The type of pending maintenance action that is available for the resource. </p>
+     *        <p>
+     *        For more information about maintenance actions, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html"
+     *        >Maintaining a DB instance</a>.
+     *        </p>
+     *        <p>
+     *        Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      */
 
     public void setAction(String action) {
@@ -94,14 +111,25 @@ public class PendingMaintenanceAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of pending maintenance action that is available for the resource. Valid actions are
-     * <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     * <code>ca-certificate-rotation</code>.
+     * The type of pending maintenance action that is available for the resource.
+     * </p>
+     * <p>
+     * For more information about maintenance actions, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">Maintaining
+     * a DB instance</a>.
+     * </p>
+     * <p>
+     * Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      * </p>
      * 
-     * @return The type of pending maintenance action that is available for the resource. Valid actions are
-     *         <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     *         <code>ca-certificate-rotation</code>.
+     * @return The type of pending maintenance action that is available for the resource. </p>
+     *         <p>
+     *         For more information about maintenance actions, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html"
+     *         >Maintaining a DB instance</a>.
+     *         </p>
+     *         <p>
+     *         Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      */
 
     public String getAction() {
@@ -110,15 +138,26 @@ public class PendingMaintenanceAction implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of pending maintenance action that is available for the resource. Valid actions are
-     * <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     * <code>ca-certificate-rotation</code>.
+     * The type of pending maintenance action that is available for the resource.
+     * </p>
+     * <p>
+     * For more information about maintenance actions, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">Maintaining
+     * a DB instance</a>.
+     * </p>
+     * <p>
+     * Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      * </p>
      * 
      * @param action
-     *        The type of pending maintenance action that is available for the resource. Valid actions are
-     *        <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and
-     *        <code>ca-certificate-rotation</code>.
+     *        The type of pending maintenance action that is available for the resource. </p>
+     *        <p>
+     *        For more information about maintenance actions, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html"
+     *        >Maintaining a DB instance</a>.
+     *        </p>
+     *        <p>
+     *        Valid Values:<code> system-update | db-upgrade | hardware-maintenance | ca-certificate-rotation</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

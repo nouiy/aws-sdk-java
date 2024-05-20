@@ -74,6 +74,12 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
+     * A list of destinations to which the pipeline writes data.
+     * </p>
+     */
+    private java.util.List<PipelineDestination> destinations;
+    /**
+     * <p>
      * A list of tags associated with the given pipeline.
      * </p>
      */
@@ -406,6 +412,76 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * A list of destinations to which the pipeline writes data.
+     * </p>
+     * 
+     * @return A list of destinations to which the pipeline writes data.
+     */
+
+    public java.util.List<PipelineDestination> getDestinations() {
+        return destinations;
+    }
+
+    /**
+     * <p>
+     * A list of destinations to which the pipeline writes data.
+     * </p>
+     * 
+     * @param destinations
+     *        A list of destinations to which the pipeline writes data.
+     */
+
+    public void setDestinations(java.util.Collection<PipelineDestination> destinations) {
+        if (destinations == null) {
+            this.destinations = null;
+            return;
+        }
+
+        this.destinations = new java.util.ArrayList<PipelineDestination>(destinations);
+    }
+
+    /**
+     * <p>
+     * A list of destinations to which the pipeline writes data.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDestinations(java.util.Collection)} or {@link #withDestinations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param destinations
+     *        A list of destinations to which the pipeline writes data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineSummary withDestinations(PipelineDestination... destinations) {
+        if (this.destinations == null) {
+            setDestinations(new java.util.ArrayList<PipelineDestination>(destinations.length));
+        }
+        for (PipelineDestination ele : destinations) {
+            this.destinations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of destinations to which the pipeline writes data.
+     * </p>
+     * 
+     * @param destinations
+     *        A list of destinations to which the pipeline writes data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineSummary withDestinations(java.util.Collection<PipelineDestination> destinations) {
+        setDestinations(destinations);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of tags associated with the given pipeline.
      * </p>
      * 
@@ -502,6 +578,8 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
+        if (getDestinations() != null)
+            sb.append("Destinations: ").append(getDestinations()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -550,6 +628,10 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getLastUpdatedAt() != null && other.getLastUpdatedAt().equals(this.getLastUpdatedAt()) == false)
             return false;
+        if (other.getDestinations() == null ^ this.getDestinations() == null)
+            return false;
+        if (other.getDestinations() != null && other.getDestinations().equals(this.getDestinations()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -570,6 +652,7 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getMaxUnits() == null) ? 0 : getMaxUnits().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getDestinations() == null) ? 0 : getDestinations().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

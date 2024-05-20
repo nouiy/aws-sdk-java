@@ -292,6 +292,10 @@ public class RestoreDBInstanceToPointInTimeRequestMarshaller implements
             request.addParameter("CACertificateIdentifier", StringUtils.fromString(restoreDBInstanceToPointInTimeRequest.getCACertificateIdentifier()));
         }
 
+        if (restoreDBInstanceToPointInTimeRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(restoreDBInstanceToPointInTimeRequest.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

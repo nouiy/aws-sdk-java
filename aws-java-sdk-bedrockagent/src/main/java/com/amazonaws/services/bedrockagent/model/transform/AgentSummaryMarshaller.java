@@ -35,6 +35,8 @@ public class AgentSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentStatus").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDRAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardrailConfiguration").build();
     private static final MarshallingInfo<String> LATESTAGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestAgentVersion").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -60,6 +62,7 @@ public class AgentSummaryMarshaller {
             protocolMarshaller.marshall(agentSummary.getAgentName(), AGENTNAME_BINDING);
             protocolMarshaller.marshall(agentSummary.getAgentStatus(), AGENTSTATUS_BINDING);
             protocolMarshaller.marshall(agentSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentSummary.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
             protocolMarshaller.marshall(agentSummary.getLatestAgentVersion(), LATESTAGENTVERSION_BINDING);
             protocolMarshaller.marshall(agentSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {

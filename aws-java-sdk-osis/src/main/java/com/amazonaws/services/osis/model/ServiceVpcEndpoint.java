@@ -36,7 +36,7 @@ public class ServiceVpcEndpoint implements Serializable, Cloneable, StructuredPo
     private String serviceName;
     /**
      * <p>
-     * The ID of the VPC endpoint that was created.
+     * The unique identifier of the VPC endpoint that was created.
      * </p>
      */
     private String vpcEndpointId;
@@ -102,11 +102,11 @@ public class ServiceVpcEndpoint implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the VPC endpoint that was created.
+     * The unique identifier of the VPC endpoint that was created.
      * </p>
      * 
      * @param vpcEndpointId
-     *        The ID of the VPC endpoint that was created.
+     *        The unique identifier of the VPC endpoint that was created.
      */
 
     public void setVpcEndpointId(String vpcEndpointId) {
@@ -115,10 +115,10 @@ public class ServiceVpcEndpoint implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the VPC endpoint that was created.
+     * The unique identifier of the VPC endpoint that was created.
      * </p>
      * 
-     * @return The ID of the VPC endpoint that was created.
+     * @return The unique identifier of the VPC endpoint that was created.
      */
 
     public String getVpcEndpointId() {
@@ -127,11 +127,11 @@ public class ServiceVpcEndpoint implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the VPC endpoint that was created.
+     * The unique identifier of the VPC endpoint that was created.
      * </p>
      * 
      * @param vpcEndpointId
-     *        The ID of the VPC endpoint that was created.
+     *        The unique identifier of the VPC endpoint that was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

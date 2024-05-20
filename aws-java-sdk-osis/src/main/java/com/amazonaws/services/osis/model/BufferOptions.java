@@ -20,7 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Options that specify the configuration of a persistent buffer. To configure how OpenSearch Ingestion encrypts this
- * data, set the EncryptionAtRestOptions.
+ * data, set the <code>EncryptionAtRestOptions</code>. For more information, see <a href=
+ * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/osis-features-overview.html#persistent-buffering"
+ * >Persistent buffering</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/osis-2022-01-01/BufferOptions" target="_top">AWS API

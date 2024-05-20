@@ -90,6 +90,12 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
     private String foundationModel;
     /**
      * <p>
+     * The guardrails configuration assigned to the agent version.
+     * </p>
+     */
+    private GuardrailConfiguration guardrailConfiguration;
+    /**
+     * <p>
      * The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.
      * </p>
      * <p>
@@ -582,6 +588,46 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The guardrails configuration assigned to the agent version.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The guardrails configuration assigned to the agent version.
+     */
+
+    public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        this.guardrailConfiguration = guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The guardrails configuration assigned to the agent version.
+     * </p>
+     * 
+     * @return The guardrails configuration assigned to the agent version.
+     */
+
+    public GuardrailConfiguration getGuardrailConfiguration() {
+        return this.guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The guardrails configuration assigned to the agent version.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The guardrails configuration assigned to the agent version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentVersion withGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        setGuardrailConfiguration(guardrailConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.
      * </p>
      * <p>
@@ -918,6 +964,8 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
             sb.append("FailureReasons: ").append(getFailureReasons()).append(",");
         if (getFoundationModel() != null)
             sb.append("FoundationModel: ").append(getFoundationModel()).append(",");
+        if (getGuardrailConfiguration() != null)
+            sb.append("GuardrailConfiguration: ").append(getGuardrailConfiguration()).append(",");
         if (getIdleSessionTTLInSeconds() != null)
             sb.append("IdleSessionTTLInSeconds: ").append(getIdleSessionTTLInSeconds()).append(",");
         if (getInstruction() != null)
@@ -984,6 +1032,10 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFoundationModel() != null && other.getFoundationModel().equals(this.getFoundationModel()) == false)
             return false;
+        if (other.getGuardrailConfiguration() == null ^ this.getGuardrailConfiguration() == null)
+            return false;
+        if (other.getGuardrailConfiguration() != null && other.getGuardrailConfiguration().equals(this.getGuardrailConfiguration()) == false)
+            return false;
         if (other.getIdleSessionTTLInSeconds() == null ^ this.getIdleSessionTTLInSeconds() == null)
             return false;
         if (other.getIdleSessionTTLInSeconds() != null && other.getIdleSessionTTLInSeconds().equals(this.getIdleSessionTTLInSeconds()) == false)
@@ -1026,6 +1078,7 @@ public class AgentVersion implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getFailureReasons() == null) ? 0 : getFailureReasons().hashCode());
         hashCode = prime * hashCode + ((getFoundationModel() == null) ? 0 : getFoundationModel().hashCode());
+        hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getIdleSessionTTLInSeconds() == null) ? 0 : getIdleSessionTTLInSeconds().hashCode());
         hashCode = prime * hashCode + ((getInstruction() == null) ? 0 : getInstruction().hashCode());
         hashCode = prime * hashCode + ((getPromptOverrideConfiguration() == null) ? 0 : getPromptOverrideConfiguration().hashCode());

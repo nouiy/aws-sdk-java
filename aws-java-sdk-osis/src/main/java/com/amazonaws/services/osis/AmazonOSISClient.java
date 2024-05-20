@@ -89,6 +89,9 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.osis.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DisabledOperationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.osis.model.transform.DisabledOperationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.osis.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -163,6 +166,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param createPipelineRequest
      * @return Result of the CreatePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws LimitExceededException
      *         You attempted to create more than the allowed number of tags.
      * @throws ValidationException
@@ -233,6 +238,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param deletePipelineRequest
      * @return Result of the DeletePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -299,6 +306,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param getPipelineRequest
      * @return Result of the GetPipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -366,6 +375,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param getPipelineBlueprintRequest
      * @return Result of the GetPipelineBlueprint operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws InternalException
@@ -436,6 +447,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param getPipelineChangeProgressRequest
      * @return Result of the GetPipelineChangeProgress operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -504,6 +517,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param listPipelineBlueprintsRequest
      * @return Result of the ListPipelineBlueprints operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -572,6 +587,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param listPipelinesRequest
      * @return Result of the ListPipelines operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -638,6 +655,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws ResourceNotFoundException
@@ -704,6 +723,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param startPipelineRequest
      * @return Result of the StartPipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws ConflictException
@@ -772,6 +793,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param stopPipelineRequest
      * @return Result of the StopPipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws ConflictException
@@ -840,6 +863,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws LimitExceededException
      *         You attempted to create more than the allowed number of tags.
      * @throws ValidationException
@@ -908,6 +933,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws ResourceNotFoundException
@@ -974,6 +1001,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param updatePipelineRequest
      * @return Result of the UpdatePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -1043,6 +1072,8 @@ public class AmazonOSISClient extends AmazonWebServiceClient implements AmazonOS
      * 
      * @param validatePipelineRequest
      * @return Result of the ValidatePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws InternalException

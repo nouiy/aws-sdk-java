@@ -51,8 +51,7 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private String kmsKeyId;
     /**
      * <p>
-     * Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured for
-     * rotation, Secrets Manager returns null.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
      * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
@@ -383,16 +382,14 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured for
-     * rotation, Secrets Manager returns null.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
      * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
      * @param rotationEnabled
-     *        Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured
-     *        for rotation, Secrets Manager returns null.</p>
+     *        Specifies whether automatic rotation is turned on for this secret.</p>
      *        <p>
      *        To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      */
@@ -403,15 +400,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured for
-     * rotation, Secrets Manager returns null.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
      * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
-     * @return Specifies whether automatic rotation is turned on for this secret. If the secret has never been
-     *         configured for rotation, Secrets Manager returns null.</p>
+     * @return Specifies whether automatic rotation is turned on for this secret.</p>
      *         <p>
      *         To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      */
@@ -422,16 +417,14 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured for
-     * rotation, Secrets Manager returns null.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
      * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
      * @param rotationEnabled
-     *        Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured
-     *        for rotation, Secrets Manager returns null.</p>
+     *        Specifies whether automatic rotation is turned on for this secret.</p>
      *        <p>
      *        To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -444,15 +437,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is turned on for this secret. If the secret has never been configured for
-     * rotation, Secrets Manager returns null.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
      * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
-     * @return Specifies whether automatic rotation is turned on for this secret. If the secret has never been
-     *         configured for rotation, Secrets Manager returns null.</p>
+     * @return Specifies whether automatic rotation is turned on for this secret.</p>
      *         <p>
      *         To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      */

@@ -90,6 +90,10 @@ public class AgentVersionJsonUnmarshaller implements Unmarshaller<AgentVersion, 
                     context.nextToken();
                     agentVersion.setFoundationModel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("guardrailConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agentVersion.setGuardrailConfiguration(GuardrailConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("idleSessionTTLInSeconds", targetDepth)) {
                     context.nextToken();
                     agentVersion.setIdleSessionTTLInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));

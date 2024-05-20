@@ -67,6 +67,15 @@ public class GlobalCluster implements Serializable, Cloneable {
     private String engineVersion;
     /**
      * <p>
+     * The life cycle type for the global cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateGlobalCluster.
+     * </p>
+     */
+    private String engineLifecycleSupport;
+    /**
+     * <p>
      * The default database name within the new global database cluster.
      * </p>
      */
@@ -354,6 +363,61 @@ public class GlobalCluster implements Serializable, Cloneable {
 
     public GlobalCluster withEngineVersion(String engineVersion) {
         setEngineVersion(engineVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the global cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateGlobalCluster.
+     * </p>
+     * 
+     * @param engineLifecycleSupport
+     *        The life cycle type for the global cluster.</p>
+     *        <p>
+     *        For more information, see CreateGlobalCluster.
+     */
+
+    public void setEngineLifecycleSupport(String engineLifecycleSupport) {
+        this.engineLifecycleSupport = engineLifecycleSupport;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the global cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateGlobalCluster.
+     * </p>
+     * 
+     * @return The life cycle type for the global cluster.</p>
+     *         <p>
+     *         For more information, see CreateGlobalCluster.
+     */
+
+    public String getEngineLifecycleSupport() {
+        return this.engineLifecycleSupport;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the global cluster.
+     * </p>
+     * <p>
+     * For more information, see CreateGlobalCluster.
+     * </p>
+     * 
+     * @param engineLifecycleSupport
+     *        The life cycle type for the global cluster.</p>
+     *        <p>
+     *        For more information, see CreateGlobalCluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GlobalCluster withEngineLifecycleSupport(String engineLifecycleSupport) {
+        setEngineLifecycleSupport(engineLifecycleSupport);
         return this;
     }
 
@@ -656,6 +720,8 @@ public class GlobalCluster implements Serializable, Cloneable {
             sb.append("Engine: ").append(getEngine()).append(",");
         if (getEngineVersion() != null)
             sb.append("EngineVersion: ").append(getEngineVersion()).append(",");
+        if (getEngineLifecycleSupport() != null)
+            sb.append("EngineLifecycleSupport: ").append(getEngineLifecycleSupport()).append(",");
         if (getDatabaseName() != null)
             sb.append("DatabaseName: ").append(getDatabaseName()).append(",");
         if (getStorageEncrypted() != null)
@@ -704,6 +770,10 @@ public class GlobalCluster implements Serializable, Cloneable {
             return false;
         if (other.getEngineVersion() != null && other.getEngineVersion().equals(this.getEngineVersion()) == false)
             return false;
+        if (other.getEngineLifecycleSupport() == null ^ this.getEngineLifecycleSupport() == null)
+            return false;
+        if (other.getEngineLifecycleSupport() != null && other.getEngineLifecycleSupport().equals(this.getEngineLifecycleSupport()) == false)
+            return false;
         if (other.getDatabaseName() == null ^ this.getDatabaseName() == null)
             return false;
         if (other.getDatabaseName() != null && other.getDatabaseName().equals(this.getDatabaseName()) == false)
@@ -738,6 +808,7 @@ public class GlobalCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
+        hashCode = prime * hashCode + ((getEngineLifecycleSupport() == null) ? 0 : getEngineLifecycleSupport().hashCode());
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getStorageEncrypted() == null) ? 0 : getStorageEncrypted().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());

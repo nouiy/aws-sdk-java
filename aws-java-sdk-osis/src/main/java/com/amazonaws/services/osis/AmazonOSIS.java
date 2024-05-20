@@ -54,6 +54,8 @@ public interface AmazonOSIS {
      * 
      * @param createPipelineRequest
      * @return Result of the CreatePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws LimitExceededException
      *         You attempted to create more than the allowed number of tags.
      * @throws ValidationException
@@ -82,6 +84,8 @@ public interface AmazonOSIS {
      * 
      * @param deletePipelineRequest
      * @return Result of the DeletePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -106,6 +110,8 @@ public interface AmazonOSIS {
      * 
      * @param getPipelineRequest
      * @return Result of the GetPipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -131,6 +137,8 @@ public interface AmazonOSIS {
      * 
      * @param getPipelineBlueprintRequest
      * @return Result of the GetPipelineBlueprint operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws InternalException
@@ -159,6 +167,8 @@ public interface AmazonOSIS {
      * 
      * @param getPipelineChangeProgressRequest
      * @return Result of the GetPipelineChangeProgress operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -183,6 +193,8 @@ public interface AmazonOSIS {
      * 
      * @param listPipelineBlueprintsRequest
      * @return Result of the ListPipelineBlueprints operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -208,6 +220,8 @@ public interface AmazonOSIS {
      * 
      * @param listPipelinesRequest
      * @return Result of the ListPipelines operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -232,6 +246,8 @@ public interface AmazonOSIS {
      * 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws ResourceNotFoundException
@@ -256,6 +272,8 @@ public interface AmazonOSIS {
      * 
      * @param startPipelineRequest
      * @return Result of the StartPipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws ConflictException
@@ -282,6 +300,8 @@ public interface AmazonOSIS {
      * 
      * @param stopPipelineRequest
      * @return Result of the StopPipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws ConflictException
@@ -308,6 +328,8 @@ public interface AmazonOSIS {
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws LimitExceededException
      *         You attempted to create more than the allowed number of tags.
      * @throws ValidationException
@@ -334,6 +356,8 @@ public interface AmazonOSIS {
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws ResourceNotFoundException
@@ -358,6 +382,8 @@ public interface AmazonOSIS {
      * 
      * @param updatePipelineRequest
      * @return Result of the UpdatePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws ValidationException
      *         An exception for missing or invalid input fields.
      * @throws InternalException
@@ -385,6 +411,8 @@ public interface AmazonOSIS {
      * 
      * @param validatePipelineRequest
      * @return Result of the ValidatePipeline operation returned by the service.
+     * @throws DisabledOperationException
+     *         Exception is thrown when an operation has been disabled.
      * @throws AccessDeniedException
      *         You don't have permissions to access the resource.
      * @throws InternalException

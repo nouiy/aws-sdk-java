@@ -40,6 +40,30 @@ public class PipelineBlueprint implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String pipelineConfigurationBody;
+    /**
+     * <p>
+     * The display name of the blueprint.
+     * </p>
+     */
+    private String displayName;
+    /**
+     * <p>
+     * A description of the blueprint.
+     * </p>
+     */
+    private String displayDescription;
+    /**
+     * <p>
+     * The name of the service that the blueprint is associated with.
+     * </p>
+     */
+    private String service;
+    /**
+     * <p>
+     * The use case that the blueprint relates to.
+     * </p>
+     */
+    private String useCase;
 
     /**
      * <p>
@@ -122,6 +146,166 @@ public class PipelineBlueprint implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The display name of the blueprint.
+     * </p>
+     * 
+     * @param displayName
+     *        The display name of the blueprint.
+     */
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
+    /**
+     * <p>
+     * The display name of the blueprint.
+     * </p>
+     * 
+     * @return The display name of the blueprint.
+     */
+
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    /**
+     * <p>
+     * The display name of the blueprint.
+     * </p>
+     * 
+     * @param displayName
+     *        The display name of the blueprint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineBlueprint withDisplayName(String displayName) {
+        setDisplayName(displayName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A description of the blueprint.
+     * </p>
+     * 
+     * @param displayDescription
+     *        A description of the blueprint.
+     */
+
+    public void setDisplayDescription(String displayDescription) {
+        this.displayDescription = displayDescription;
+    }
+
+    /**
+     * <p>
+     * A description of the blueprint.
+     * </p>
+     * 
+     * @return A description of the blueprint.
+     */
+
+    public String getDisplayDescription() {
+        return this.displayDescription;
+    }
+
+    /**
+     * <p>
+     * A description of the blueprint.
+     * </p>
+     * 
+     * @param displayDescription
+     *        A description of the blueprint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineBlueprint withDisplayDescription(String displayDescription) {
+        setDisplayDescription(displayDescription);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the service that the blueprint is associated with.
+     * </p>
+     * 
+     * @param service
+     *        The name of the service that the blueprint is associated with.
+     */
+
+    public void setService(String service) {
+        this.service = service;
+    }
+
+    /**
+     * <p>
+     * The name of the service that the blueprint is associated with.
+     * </p>
+     * 
+     * @return The name of the service that the blueprint is associated with.
+     */
+
+    public String getService() {
+        return this.service;
+    }
+
+    /**
+     * <p>
+     * The name of the service that the blueprint is associated with.
+     * </p>
+     * 
+     * @param service
+     *        The name of the service that the blueprint is associated with.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineBlueprint withService(String service) {
+        setService(service);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The use case that the blueprint relates to.
+     * </p>
+     * 
+     * @param useCase
+     *        The use case that the blueprint relates to.
+     */
+
+    public void setUseCase(String useCase) {
+        this.useCase = useCase;
+    }
+
+    /**
+     * <p>
+     * The use case that the blueprint relates to.
+     * </p>
+     * 
+     * @return The use case that the blueprint relates to.
+     */
+
+    public String getUseCase() {
+        return this.useCase;
+    }
+
+    /**
+     * <p>
+     * The use case that the blueprint relates to.
+     * </p>
+     * 
+     * @param useCase
+     *        The use case that the blueprint relates to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineBlueprint withUseCase(String useCase) {
+        setUseCase(useCase);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +320,15 @@ public class PipelineBlueprint implements Serializable, Cloneable, StructuredPoj
         if (getBlueprintName() != null)
             sb.append("BlueprintName: ").append(getBlueprintName()).append(",");
         if (getPipelineConfigurationBody() != null)
-            sb.append("PipelineConfigurationBody: ").append(getPipelineConfigurationBody());
+            sb.append("PipelineConfigurationBody: ").append(getPipelineConfigurationBody()).append(",");
+        if (getDisplayName() != null)
+            sb.append("DisplayName: ").append(getDisplayName()).append(",");
+        if (getDisplayDescription() != null)
+            sb.append("DisplayDescription: ").append(getDisplayDescription()).append(",");
+        if (getService() != null)
+            sb.append("Service: ").append(getService()).append(",");
+        if (getUseCase() != null)
+            sb.append("UseCase: ").append(getUseCase());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +351,22 @@ public class PipelineBlueprint implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getPipelineConfigurationBody() != null && other.getPipelineConfigurationBody().equals(this.getPipelineConfigurationBody()) == false)
             return false;
+        if (other.getDisplayName() == null ^ this.getDisplayName() == null)
+            return false;
+        if (other.getDisplayName() != null && other.getDisplayName().equals(this.getDisplayName()) == false)
+            return false;
+        if (other.getDisplayDescription() == null ^ this.getDisplayDescription() == null)
+            return false;
+        if (other.getDisplayDescription() != null && other.getDisplayDescription().equals(this.getDisplayDescription()) == false)
+            return false;
+        if (other.getService() == null ^ this.getService() == null)
+            return false;
+        if (other.getService() != null && other.getService().equals(this.getService()) == false)
+            return false;
+        if (other.getUseCase() == null ^ this.getUseCase() == null)
+            return false;
+        if (other.getUseCase() != null && other.getUseCase().equals(this.getUseCase()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +377,10 @@ public class PipelineBlueprint implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getBlueprintName() == null) ? 0 : getBlueprintName().hashCode());
         hashCode = prime * hashCode + ((getPipelineConfigurationBody() == null) ? 0 : getPipelineConfigurationBody().hashCode());
+        hashCode = prime * hashCode + ((getDisplayName() == null) ? 0 : getDisplayName().hashCode());
+        hashCode = prime * hashCode + ((getDisplayDescription() == null) ? 0 : getDisplayDescription().hashCode());
+        hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
+        hashCode = prime * hashCode + ((getUseCase() == null) ? 0 : getUseCase().hashCode());
         return hashCode;
     }
 

@@ -114,6 +114,12 @@ public class PipelineJsonUnmarshaller implements Unmarshaller<Pipeline, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Destinations", targetDepth)) {
+                    context.nextToken();
+                    pipeline.setDestinations(new ListUnmarshaller<PipelineDestination>(PipelineDestinationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     pipeline.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

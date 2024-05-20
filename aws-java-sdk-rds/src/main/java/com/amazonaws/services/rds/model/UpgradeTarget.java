@@ -49,6 +49,9 @@ public class UpgradeTarget implements Serializable, Cloneable {
      * Indicates whether the target version is applied to any source DB instances that have
      * <code>AutoMinorVersionUpgrade</code> set to true.
      * </p>
+     * <p>
+     * This parameter is dynamic, and is set by RDS.
+     * </p>
      */
     private Boolean autoUpgrade;
     /**
@@ -229,10 +232,15 @@ public class UpgradeTarget implements Serializable, Cloneable {
      * Indicates whether the target version is applied to any source DB instances that have
      * <code>AutoMinorVersionUpgrade</code> set to true.
      * </p>
+     * <p>
+     * This parameter is dynamic, and is set by RDS.
+     * </p>
      * 
      * @param autoUpgrade
      *        Indicates whether the target version is applied to any source DB instances that have
-     *        <code>AutoMinorVersionUpgrade</code> set to true.
+     *        <code>AutoMinorVersionUpgrade</code> set to true.</p>
+     *        <p>
+     *        This parameter is dynamic, and is set by RDS.
      */
 
     public void setAutoUpgrade(Boolean autoUpgrade) {
@@ -244,9 +252,14 @@ public class UpgradeTarget implements Serializable, Cloneable {
      * Indicates whether the target version is applied to any source DB instances that have
      * <code>AutoMinorVersionUpgrade</code> set to true.
      * </p>
+     * <p>
+     * This parameter is dynamic, and is set by RDS.
+     * </p>
      * 
      * @return Indicates whether the target version is applied to any source DB instances that have
-     *         <code>AutoMinorVersionUpgrade</code> set to true.
+     *         <code>AutoMinorVersionUpgrade</code> set to true.</p>
+     *         <p>
+     *         This parameter is dynamic, and is set by RDS.
      */
 
     public Boolean getAutoUpgrade() {
@@ -258,10 +271,15 @@ public class UpgradeTarget implements Serializable, Cloneable {
      * Indicates whether the target version is applied to any source DB instances that have
      * <code>AutoMinorVersionUpgrade</code> set to true.
      * </p>
+     * <p>
+     * This parameter is dynamic, and is set by RDS.
+     * </p>
      * 
      * @param autoUpgrade
      *        Indicates whether the target version is applied to any source DB instances that have
-     *        <code>AutoMinorVersionUpgrade</code> set to true.
+     *        <code>AutoMinorVersionUpgrade</code> set to true.</p>
+     *        <p>
+     *        This parameter is dynamic, and is set by RDS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,9 +293,14 @@ public class UpgradeTarget implements Serializable, Cloneable {
      * Indicates whether the target version is applied to any source DB instances that have
      * <code>AutoMinorVersionUpgrade</code> set to true.
      * </p>
+     * <p>
+     * This parameter is dynamic, and is set by RDS.
+     * </p>
      * 
      * @return Indicates whether the target version is applied to any source DB instances that have
-     *         <code>AutoMinorVersionUpgrade</code> set to true.
+     *         <code>AutoMinorVersionUpgrade</code> set to true.</p>
+     *         <p>
+     *         This parameter is dynamic, and is set by RDS.
      */
 
     public Boolean isAutoUpgrade() {

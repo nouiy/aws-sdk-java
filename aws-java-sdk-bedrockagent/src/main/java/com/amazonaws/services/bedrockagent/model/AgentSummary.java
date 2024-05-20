@@ -54,6 +54,12 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
+     * The details of the guardrails configuration in the agent summary.
+     * </p>
+     */
+    private GuardrailConfiguration guardrailConfiguration;
+    /**
+     * <p>
      * The latest version of the agent.
      * </p>
      */
@@ -246,6 +252,46 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The details of the guardrails configuration in the agent summary.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The details of the guardrails configuration in the agent summary.
+     */
+
+    public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        this.guardrailConfiguration = guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The details of the guardrails configuration in the agent summary.
+     * </p>
+     * 
+     * @return The details of the guardrails configuration in the agent summary.
+     */
+
+    public GuardrailConfiguration getGuardrailConfiguration() {
+        return this.guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The details of the guardrails configuration in the agent summary.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The details of the guardrails configuration in the agent summary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentSummary withGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        setGuardrailConfiguration(guardrailConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The latest version of the agent.
      * </p>
      * 
@@ -344,6 +390,8 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("AgentStatus: ").append(getAgentStatus()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getGuardrailConfiguration() != null)
+            sb.append("GuardrailConfiguration: ").append(getGuardrailConfiguration()).append(",");
         if (getLatestAgentVersion() != null)
             sb.append("LatestAgentVersion: ").append(getLatestAgentVersion()).append(",");
         if (getUpdatedAt() != null)
@@ -378,6 +426,10 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getGuardrailConfiguration() == null ^ this.getGuardrailConfiguration() == null)
+            return false;
+        if (other.getGuardrailConfiguration() != null && other.getGuardrailConfiguration().equals(this.getGuardrailConfiguration()) == false)
+            return false;
         if (other.getLatestAgentVersion() == null ^ this.getLatestAgentVersion() == null)
             return false;
         if (other.getLatestAgentVersion() != null && other.getLatestAgentVersion().equals(this.getLatestAgentVersion()) == false)
@@ -398,6 +450,7 @@ public class AgentSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAgentName() == null) ? 0 : getAgentName().hashCode());
         hashCode = prime * hashCode + ((getAgentStatus() == null) ? 0 : getAgentStatus().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLatestAgentVersion() == null) ? 0 : getLatestAgentVersion().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;

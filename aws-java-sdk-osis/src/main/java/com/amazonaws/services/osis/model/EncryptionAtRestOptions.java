@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Options to control how OpenSearch encrypts all data-at-rest.
+ * Options to control how OpenSearch encrypts buffer data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/osis-2022-01-01/EncryptionAtRestOptions" target="_top">AWS API
@@ -30,21 +30,21 @@ public class EncryptionAtRestOptions implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is encrypted using
-     * an AWS owned key.
+     * The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web Services
+     * owned key.
      * </p>
      */
     private String kmsKeyArn;
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is encrypted using
-     * an AWS owned key.
+     * The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web Services
+     * owned key.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is encrypted
-     *        using an AWS owned key.
+     *        The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web
+     *        Services owned key.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -53,12 +53,12 @@ public class EncryptionAtRestOptions implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is encrypted using
-     * an AWS owned key.
+     * The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web Services
+     * owned key.
      * </p>
      * 
-     * @return The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is
-     *         encrypted using an AWS owned key.
+     * @return The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web
+     *         Services owned key.
      */
 
     public String getKmsKeyArn() {
@@ -67,13 +67,13 @@ public class EncryptionAtRestOptions implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is encrypted using
-     * an AWS owned key.
+     * The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web Services
+     * owned key.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The ARN of the KMS key used to encrypt data-at-rest in OpenSearch Ingestion. By default, data is encrypted
-     *        using an AWS owned key.
+     *        The ARN of the KMS key used to encrypt buffer data. By default, data is encrypted using an Amazon Web
+     *        Services owned key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

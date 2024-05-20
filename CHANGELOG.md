@@ -1,3 +1,28 @@
+# __1.12.726__ __2024-05-20__
+## __AWS Control Tower__
+  - ### Features
+    - Added ListControlOperations API and filtering support for ListEnabledControls API. Updates also includes added metadata for enabled controls and control operations.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - add v2 smoke tests and smithy smokeTests trait for SDK testing
+
+## __Agents for Amazon Bedrock__
+  - ### Features
+    - This release adds support for using Guardrails with Bedrock Agents.
+
+## __Agents for Amazon Bedrock Runtime__
+  - ### Features
+    - This release adds support for using Guardrails with Bedrock Agents.
+
+## __Amazon OpenSearch Ingestion__
+  - ### Features
+    - Add support for creating an OpenSearch Ingestion pipeline that is attached to a provided VPC. Add information about the destinations of an OpenSearch Ingestion pipeline to the GetPipeline and ListPipelines APIs.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for EngineLifecycleSupport on DBInstances, DBClusters, and GlobalClusters.
+
 # __1.12.725__ __2024-05-17__
 ## __AWS CodeBuild__
   - ### Features

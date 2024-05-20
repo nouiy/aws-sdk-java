@@ -251,6 +251,10 @@ public class RestoreDBClusterToPointInTimeRequestMarshaller implements
             }
         }
 
+        if (restoreDBClusterToPointInTimeRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(restoreDBClusterToPointInTimeRequest.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

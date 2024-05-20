@@ -31,7 +31,7 @@ public class CloudWatchLogDestination implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or create a
-     * new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     * new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      * </p>
      */
     private String logGroup;
@@ -39,12 +39,12 @@ public class CloudWatchLogDestination implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or create a
-     * new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     * new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      * </p>
      * 
      * @param logGroup
      *        The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or
-     *        create a new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     *        create a new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      */
 
     public void setLogGroup(String logGroup) {
@@ -54,11 +54,11 @@ public class CloudWatchLogDestination implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or create a
-     * new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     * new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      * </p>
      * 
      * @return The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or
-     *         create a new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     *         create a new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      */
 
     public String getLogGroup() {
@@ -68,12 +68,12 @@ public class CloudWatchLogDestination implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or create a
-     * new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     * new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      * </p>
      * 
      * @param logGroup
      *        The name of the CloudWatch Logs group to send pipeline logs to. You can specify an existing log group or
-     *        create a new one. For example, <code>/aws/OpenSearchService/IngestionService/my-pipeline</code>.
+     *        create a new one. For example, <code>/aws/vendedlogs/OpenSearchService/pipelines</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

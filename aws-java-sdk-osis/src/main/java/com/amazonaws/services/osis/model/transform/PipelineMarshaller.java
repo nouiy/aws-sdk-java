@@ -58,6 +58,8 @@ public class PipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAtRestOptions").build();
     private static final MarshallingInfo<List> SERVICEVPCENDPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceVpcEndpoints").build();
+    private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Destinations").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -92,6 +94,7 @@ public class PipelineMarshaller {
             protocolMarshaller.marshall(pipeline.getBufferOptions(), BUFFEROPTIONS_BINDING);
             protocolMarshaller.marshall(pipeline.getEncryptionAtRestOptions(), ENCRYPTIONATRESTOPTIONS_BINDING);
             protocolMarshaller.marshall(pipeline.getServiceVpcEndpoints(), SERVICEVPCENDPOINTS_BINDING);
+            protocolMarshaller.marshall(pipeline.getDestinations(), DESTINATIONS_BINDING);
             protocolMarshaller.marshall(pipeline.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

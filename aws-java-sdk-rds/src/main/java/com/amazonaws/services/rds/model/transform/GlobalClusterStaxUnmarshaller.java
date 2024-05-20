@@ -75,6 +75,11 @@ public class GlobalClusterStaxUnmarshaller implements Unmarshaller<GlobalCluster
                     continue;
                 }
 
+                if (context.testExpression("EngineLifecycleSupport", targetDepth)) {
+                    globalCluster.setEngineLifecycleSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("DatabaseName", targetDepth)) {
                     globalCluster.setDatabaseName(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

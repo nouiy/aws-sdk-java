@@ -365,6 +365,10 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("MultiTenant", StringUtils.fromBoolean(createDBInstanceRequest.getMultiTenant()));
         }
 
+        if (createDBInstanceRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(createDBInstanceRequest.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

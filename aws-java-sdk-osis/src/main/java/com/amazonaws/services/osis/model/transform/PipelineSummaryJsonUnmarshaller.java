@@ -80,6 +80,12 @@ public class PipelineSummaryJsonUnmarshaller implements Unmarshaller<PipelineSum
                     context.nextToken();
                     pipelineSummary.setLastUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("Destinations", targetDepth)) {
+                    context.nextToken();
+                    pipelineSummary.setDestinations(new ListUnmarshaller<PipelineDestination>(PipelineDestinationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     pipelineSummary.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

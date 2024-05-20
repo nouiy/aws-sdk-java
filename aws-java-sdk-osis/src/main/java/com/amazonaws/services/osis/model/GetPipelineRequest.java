@@ -27,18 +27,18 @@ public class GetPipelineRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the pipeline to get information about.
+     * The name of the pipeline.
      * </p>
      */
     private String pipelineName;
 
     /**
      * <p>
-     * The name of the pipeline to get information about.
+     * The name of the pipeline.
      * </p>
      * 
      * @param pipelineName
-     *        The name of the pipeline to get information about.
+     *        The name of the pipeline.
      */
 
     public void setPipelineName(String pipelineName) {
@@ -47,10 +47,10 @@ public class GetPipelineRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the pipeline to get information about.
+     * The name of the pipeline.
      * </p>
      * 
-     * @return The name of the pipeline to get information about.
+     * @return The name of the pipeline.
      */
 
     public String getPipelineName() {
@@ -59,11 +59,11 @@ public class GetPipelineRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the pipeline to get information about.
+     * The name of the pipeline.
      * </p>
      * 
      * @param pipelineName
-     *        The name of the pipeline to get information about.
+     *        The name of the pipeline.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -39,6 +39,8 @@ public class UpdateAgentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> FOUNDATIONMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("foundationModel").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDRAILCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardrailConfiguration").build();
     private static final MarshallingInfo<Integer> IDLESESSIONTTLINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idleSessionTTLInSeconds").build();
     private static final MarshallingInfo<String> INSTRUCTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -68,6 +70,7 @@ public class UpdateAgentRequestMarshaller {
             protocolMarshaller.marshall(updateAgentRequest.getCustomerEncryptionKeyArn(), CUSTOMERENCRYPTIONKEYARN_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getFoundationModel(), FOUNDATIONMODEL_BINDING);
+            protocolMarshaller.marshall(updateAgentRequest.getGuardrailConfiguration(), GUARDRAILCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getInstruction(), INSTRUCTION_BINDING);
             protocolMarshaller.marshall(updateAgentRequest.getPromptOverrideConfiguration(), PROMPTOVERRIDECONFIGURATION_BINDING);

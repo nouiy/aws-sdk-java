@@ -29,6 +29,8 @@ public class GetPipelineBlueprintRequestMarshaller {
 
     private static final MarshallingInfo<String> BLUEPRINTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("BlueprintName").build();
+    private static final MarshallingInfo<String> FORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("format").build();
 
     private static final GetPipelineBlueprintRequestMarshaller instance = new GetPipelineBlueprintRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class GetPipelineBlueprintRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getPipelineBlueprintRequest.getBlueprintName(), BLUEPRINTNAME_BINDING);
+            protocolMarshaller.marshall(getPipelineBlueprintRequest.getFormat(), FORMAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

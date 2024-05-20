@@ -64,6 +64,10 @@ public class AgentSummaryJsonUnmarshaller implements Unmarshaller<AgentSummary, 
                     context.nextToken();
                     agentSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("guardrailConfiguration", targetDepth)) {
+                    context.nextToken();
+                    agentSummary.setGuardrailConfiguration(GuardrailConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("latestAgentVersion", targetDepth)) {
                     context.nextToken();
                     agentSummary.setLatestAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));

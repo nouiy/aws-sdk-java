@@ -34,7 +34,9 @@ public class PromptConfiguration implements Serializable, Cloneable, StructuredP
      * Defines the prompt template with which to replace the default prompt template. You can use placeholder variables
      * in the base prompt template to customize the prompt. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template placeholder
-     * variables</a>.
+     * variables</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the prompt
+     * templates</a>.
      * </p>
      */
     private String basePromptTemplate;
@@ -107,14 +109,18 @@ public class PromptConfiguration implements Serializable, Cloneable, StructuredP
      * Defines the prompt template with which to replace the default prompt template. You can use placeholder variables
      * in the base prompt template to customize the prompt. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template placeholder
-     * variables</a>.
+     * variables</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the prompt
+     * templates</a>.
      * </p>
      * 
      * @param basePromptTemplate
      *        Defines the prompt template with which to replace the default prompt template. You can use placeholder
      *        variables in the base prompt template to customize the prompt. For more information, see <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template
-     *        placeholder variables</a>.
+     *        placeholder variables</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the
+     *        prompt templates</a>.
      */
 
     public void setBasePromptTemplate(String basePromptTemplate) {
@@ -126,13 +132,17 @@ public class PromptConfiguration implements Serializable, Cloneable, StructuredP
      * Defines the prompt template with which to replace the default prompt template. You can use placeholder variables
      * in the base prompt template to customize the prompt. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template placeholder
-     * variables</a>.
+     * variables</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the prompt
+     * templates</a>.
      * </p>
      * 
      * @return Defines the prompt template with which to replace the default prompt template. You can use placeholder
      *         variables in the base prompt template to customize the prompt. For more information, see <a
      *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template
-     *         placeholder variables</a>.
+     *         placeholder variables</a>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the
+     *         prompt templates</a>.
      */
 
     public String getBasePromptTemplate() {
@@ -144,14 +154,18 @@ public class PromptConfiguration implements Serializable, Cloneable, StructuredP
      * Defines the prompt template with which to replace the default prompt template. You can use placeholder variables
      * in the base prompt template to customize the prompt. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template placeholder
-     * variables</a>.
+     * variables</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the prompt
+     * templates</a>.
      * </p>
      * 
      * @param basePromptTemplate
      *        Defines the prompt template with which to replace the default prompt template. You can use placeholder
      *        variables in the base prompt template to customize the prompt. For more information, see <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html">Prompt template
-     *        placeholder variables</a>.
+     *        placeholder variables</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html">Configure the
+     *        prompt templates</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

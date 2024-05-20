@@ -56,6 +56,22 @@ public class PipelineBlueprintJsonUnmarshaller implements Unmarshaller<PipelineB
                     context.nextToken();
                     pipelineBlueprint.setPipelineConfigurationBody(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DisplayName", targetDepth)) {
+                    context.nextToken();
+                    pipelineBlueprint.setDisplayName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DisplayDescription", targetDepth)) {
+                    context.nextToken();
+                    pipelineBlueprint.setDisplayDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Service", targetDepth)) {
+                    context.nextToken();
+                    pipelineBlueprint.setService(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("UseCase", targetDepth)) {
+                    context.nextToken();
+                    pipelineBlueprint.setUseCase(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

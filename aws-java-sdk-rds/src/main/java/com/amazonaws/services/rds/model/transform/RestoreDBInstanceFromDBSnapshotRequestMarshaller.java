@@ -278,6 +278,10 @@ public class RestoreDBInstanceFromDBSnapshotRequestMarshaller implements
             request.addParameter("CACertificateIdentifier", StringUtils.fromString(restoreDBInstanceFromDBSnapshotRequest.getCACertificateIdentifier()));
         }
 
+        if (restoreDBInstanceFromDBSnapshotRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(restoreDBInstanceFromDBSnapshotRequest.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

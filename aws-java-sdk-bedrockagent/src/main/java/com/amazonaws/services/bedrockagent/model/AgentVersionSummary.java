@@ -60,6 +60,12 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
     private String description;
     /**
      * <p>
+     * The details of the guardrails configuration in the agent version summary.
+     * </p>
+     */
+    private GuardrailConfiguration guardrailConfiguration;
+    /**
+     * <p>
      * The time at which the version was last updated.
      * </p>
      */
@@ -286,6 +292,46 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The details of the guardrails configuration in the agent version summary.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The details of the guardrails configuration in the agent version summary.
+     */
+
+    public void setGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        this.guardrailConfiguration = guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The details of the guardrails configuration in the agent version summary.
+     * </p>
+     * 
+     * @return The details of the guardrails configuration in the agent version summary.
+     */
+
+    public GuardrailConfiguration getGuardrailConfiguration() {
+        return this.guardrailConfiguration;
+    }
+
+    /**
+     * <p>
+     * The details of the guardrails configuration in the agent version summary.
+     * </p>
+     * 
+     * @param guardrailConfiguration
+     *        The details of the guardrails configuration in the agent version summary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentVersionSummary withGuardrailConfiguration(GuardrailConfiguration guardrailConfiguration) {
+        setGuardrailConfiguration(guardrailConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The time at which the version was last updated.
      * </p>
      * 
@@ -346,6 +392,8 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getGuardrailConfiguration() != null)
+            sb.append("GuardrailConfiguration: ").append(getGuardrailConfiguration()).append(",");
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
@@ -382,6 +430,10 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getGuardrailConfiguration() == null ^ this.getGuardrailConfiguration() == null)
+            return false;
+        if (other.getGuardrailConfiguration() != null && other.getGuardrailConfiguration().equals(this.getGuardrailConfiguration()) == false)
+            return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
@@ -399,6 +451,7 @@ public class AgentVersionSummary implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getGuardrailConfiguration() == null) ? 0 : getGuardrailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;
     }

@@ -261,6 +261,10 @@ public class RestoreDBClusterFromSnapshotRequestMarshaller implements
             }
         }
 
+        if (restoreDBClusterFromSnapshotRequest.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(restoreDBClusterFromSnapshotRequest.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

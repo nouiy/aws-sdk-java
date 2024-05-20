@@ -31,6 +31,14 @@ public class PipelineBlueprintMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BlueprintName").build();
     private static final MarshallingInfo<String> PIPELINECONFIGURATIONBODY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineConfigurationBody").build();
+    private static final MarshallingInfo<String> DISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DisplayName").build();
+    private static final MarshallingInfo<String> DISPLAYDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DisplayDescription").build();
+    private static final MarshallingInfo<String> SERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Service").build();
+    private static final MarshallingInfo<String> USECASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("UseCase").build();
 
     private static final PipelineBlueprintMarshaller instance = new PipelineBlueprintMarshaller();
 
@@ -50,6 +58,10 @@ public class PipelineBlueprintMarshaller {
         try {
             protocolMarshaller.marshall(pipelineBlueprint.getBlueprintName(), BLUEPRINTNAME_BINDING);
             protocolMarshaller.marshall(pipelineBlueprint.getPipelineConfigurationBody(), PIPELINECONFIGURATIONBODY_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprint.getDisplayName(), DISPLAYNAME_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprint.getDisplayDescription(), DISPLAYDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprint.getService(), SERVICE_BINDING);
+            protocolMarshaller.marshall(pipelineBlueprint.getUseCase(), USECASE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -244,6 +244,10 @@ public class RestoreDBClusterFromS3RequestMarshaller implements Marshaller<Reque
             request.addParameter("StorageType", StringUtils.fromString(restoreDBClusterFromS3Request.getStorageType()));
         }
 
+        if (restoreDBClusterFromS3Request.getEngineLifecycleSupport() != null) {
+            request.addParameter("EngineLifecycleSupport", StringUtils.fromString(restoreDBClusterFromS3Request.getEngineLifecycleSupport()));
+        }
+
         return request;
     }
 

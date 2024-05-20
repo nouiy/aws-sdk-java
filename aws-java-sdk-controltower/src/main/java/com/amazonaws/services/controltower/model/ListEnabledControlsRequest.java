@@ -27,6 +27,13 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
+     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     * operations to view.
+     * </p>
+     */
+    private EnabledControlFilter filter;
+    /**
+     * <p>
      * How many results to return per API call.
      * </p>
      */
@@ -44,6 +51,52 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String targetIdentifier;
+
+    /**
+     * <p>
+     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     * operations to view.
+     * </p>
+     * 
+     * @param filter
+     *        An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     *        operations to view.
+     */
+
+    public void setFilter(EnabledControlFilter filter) {
+        this.filter = filter;
+    }
+
+    /**
+     * <p>
+     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     * operations to view.
+     * </p>
+     * 
+     * @return An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     *         operations to view.
+     */
+
+    public EnabledControlFilter getFilter() {
+        return this.filter;
+    }
+
+    /**
+     * <p>
+     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     * operations to view.
+     * </p>
+     * 
+     * @param filter
+     *        An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     *        operations to view.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListEnabledControlsRequest withFilter(EnabledControlFilter filter) {
+        setFilter(filter);
+        return this;
+    }
 
     /**
      * <p>
@@ -184,6 +237,8 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getFilter() != null)
+            sb.append("Filter: ").append(getFilter()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
@@ -204,6 +259,10 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
         if (obj instanceof ListEnabledControlsRequest == false)
             return false;
         ListEnabledControlsRequest other = (ListEnabledControlsRequest) obj;
+        if (other.getFilter() == null ^ this.getFilter() == null)
+            return false;
+        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -224,6 +283,7 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getTargetIdentifier() == null) ? 0 : getTargetIdentifier().hashCode());

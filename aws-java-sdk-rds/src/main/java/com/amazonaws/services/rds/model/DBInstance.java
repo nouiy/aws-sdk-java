@@ -726,6 +726,15 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private Boolean multiTenant;
+    /**
+     * <p>
+     * The life cycle type for the DB instance.
+     * </p>
+     * <p>
+     * For more information, see CreateDBInstance.
+     * </p>
+     */
+    private String engineLifecycleSupport;
 
     /**
      * <p>
@@ -6023,6 +6032,61 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The life cycle type for the DB instance.
+     * </p>
+     * <p>
+     * For more information, see CreateDBInstance.
+     * </p>
+     * 
+     * @param engineLifecycleSupport
+     *        The life cycle type for the DB instance.</p>
+     *        <p>
+     *        For more information, see CreateDBInstance.
+     */
+
+    public void setEngineLifecycleSupport(String engineLifecycleSupport) {
+        this.engineLifecycleSupport = engineLifecycleSupport;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the DB instance.
+     * </p>
+     * <p>
+     * For more information, see CreateDBInstance.
+     * </p>
+     * 
+     * @return The life cycle type for the DB instance.</p>
+     *         <p>
+     *         For more information, see CreateDBInstance.
+     */
+
+    public String getEngineLifecycleSupport() {
+        return this.engineLifecycleSupport;
+    }
+
+    /**
+     * <p>
+     * The life cycle type for the DB instance.
+     * </p>
+     * <p>
+     * For more information, see CreateDBInstance.
+     * </p>
+     * 
+     * @param engineLifecycleSupport
+     *        The life cycle type for the DB instance.</p>
+     *        <p>
+     *        For more information, see CreateDBInstance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withEngineLifecycleSupport(String engineLifecycleSupport) {
+        setEngineLifecycleSupport(engineLifecycleSupport);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6203,7 +6267,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getIsStorageConfigUpgradeAvailable() != null)
             sb.append("IsStorageConfigUpgradeAvailable: ").append(getIsStorageConfigUpgradeAvailable()).append(",");
         if (getMultiTenant() != null)
-            sb.append("MultiTenant: ").append(getMultiTenant());
+            sb.append("MultiTenant: ").append(getMultiTenant()).append(",");
+        if (getEngineLifecycleSupport() != null)
+            sb.append("EngineLifecycleSupport: ").append(getEngineLifecycleSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -6569,6 +6635,10 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getMultiTenant() != null && other.getMultiTenant().equals(this.getMultiTenant()) == false)
             return false;
+        if (other.getEngineLifecycleSupport() == null ^ this.getEngineLifecycleSupport() == null)
+            return false;
+        if (other.getEngineLifecycleSupport() != null && other.getEngineLifecycleSupport().equals(this.getEngineLifecycleSupport()) == false)
+            return false;
         return true;
     }
 
@@ -6663,6 +6733,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
         hashCode = prime * hashCode + ((getIsStorageConfigUpgradeAvailable() == null) ? 0 : getIsStorageConfigUpgradeAvailable().hashCode());
         hashCode = prime * hashCode + ((getMultiTenant() == null) ? 0 : getMultiTenant().hashCode());
+        hashCode = prime * hashCode + ((getEngineLifecycleSupport() == null) ? 0 : getEngineLifecycleSupport().hashCode());
         return hashCode;
     }
 
