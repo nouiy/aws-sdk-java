@@ -80,6 +80,32 @@ public class AbstractAmazonSimpleWorkflowAsync extends AbstractAmazonSimpleWorkf
     }
 
     @Override
+    public java.util.concurrent.Future<Void> deleteActivityTypeAsync(DeleteActivityTypeRequest request) {
+
+        return deleteActivityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<Void> deleteActivityTypeAsync(DeleteActivityTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteActivityTypeRequest, Void> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<Void> deleteWorkflowTypeAsync(DeleteWorkflowTypeRequest request) {
+
+        return deleteWorkflowTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<Void> deleteWorkflowTypeAsync(DeleteWorkflowTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteWorkflowTypeRequest, Void> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<Void> deprecateActivityTypeAsync(DeprecateActivityTypeRequest request) {
 
         return deprecateActivityTypeAsync(request, null);

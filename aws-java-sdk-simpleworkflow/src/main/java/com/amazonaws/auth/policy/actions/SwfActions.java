@@ -33,6 +33,10 @@ public enum SwfActions implements Action {
     CountPendingActivityTasks("swf:CountPendingActivityTasks"),
     /** Action for the CountPendingDecisionTasks operation. */
     CountPendingDecisionTasks("swf:CountPendingDecisionTasks"),
+    /** Action for the DeleteActivityType operation. */
+    DeleteActivityType("swf:DeleteActivityType"),
+    /** Action for the DeleteWorkflowType operation. */
+    DeleteWorkflowType("swf:DeleteWorkflowType"),
     /** Action for the DeprecateActivityType operation. */
     DeprecateActivityType("swf:DeprecateActivityType"),
     /** Action for the DeprecateDomain operation. */

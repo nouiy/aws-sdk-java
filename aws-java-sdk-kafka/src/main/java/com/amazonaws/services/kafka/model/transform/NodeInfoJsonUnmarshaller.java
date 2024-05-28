@@ -56,6 +56,10 @@ public class NodeInfoJsonUnmarshaller implements Unmarshaller<NodeInfo, JsonUnma
                     context.nextToken();
                     nodeInfo.setBrokerNodeInfo(BrokerNodeInfoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("controllerNodeInfo", targetDepth)) {
+                    context.nextToken();
+                    nodeInfo.setControllerNodeInfo(ControllerNodeInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("instanceType", targetDepth)) {
                     context.nextToken();
                     nodeInfo.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));

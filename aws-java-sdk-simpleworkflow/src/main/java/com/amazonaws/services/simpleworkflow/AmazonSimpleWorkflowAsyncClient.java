@@ -401,6 +401,72 @@ public class AmazonSimpleWorkflowAsyncClient extends AmazonSimpleWorkflowClient 
     }
 
     @Override
+    public java.util.concurrent.Future<Void> deleteActivityTypeAsync(DeleteActivityTypeRequest request) {
+
+        return deleteActivityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<Void> deleteActivityTypeAsync(final DeleteActivityTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteActivityTypeRequest, Void> asyncHandler) {
+        final DeleteActivityTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<Void>() {
+            @Override
+            public Void call() throws Exception {
+                Void result = null;
+
+                try {
+                    executeDeleteActivityType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<Void> deleteWorkflowTypeAsync(DeleteWorkflowTypeRequest request) {
+
+        return deleteWorkflowTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<Void> deleteWorkflowTypeAsync(final DeleteWorkflowTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteWorkflowTypeRequest, Void> asyncHandler) {
+        final DeleteWorkflowTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<Void>() {
+            @Override
+            public Void call() throws Exception {
+                Void result = null;
+
+                try {
+                    executeDeleteWorkflowType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<Void> deprecateActivityTypeAsync(DeprecateActivityTypeRequest request) {
 
         return deprecateActivityTypeAsync(request, null);

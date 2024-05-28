@@ -355,6 +355,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
+     * <note>
+     * <p>
+     * You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     * </p>
+     * </note>
      */
     private String resourcePolicy;
     /**
@@ -3050,6 +3056,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
+     * <note>
+     * <p>
+     * You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     * </p>
+     * </note>
      * 
      * @param resourcePolicy
      *        An Amazon Web Services resource-based policy document in JSON format that will be attached to the
@@ -3064,6 +3076,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        resource-based policies, see <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *        >Resource-based policy considerations</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for
+     *        authorizing a user to create a table with a resource-based policy.
+     *        </p>
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -3085,6 +3103,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
+     * <note>
+     * <p>
+     * You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     * </p>
+     * </note>
      * 
      * @return An Amazon Web Services resource-based policy document in JSON format that will be attached to the
      *         table.</p>
@@ -3098,6 +3122,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         apply for resource-based policies, see <a
      *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *         >Resource-based policy considerations</a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for
+     *         authorizing a user to create a table with a resource-based policy.
+     *         </p>
      */
 
     public String getResourcePolicy() {
@@ -3119,6 +3149,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html">Resource-based
      * policy considerations</a>.
      * </p>
+     * <note>
+     * <p>
+     * You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     * </p>
+     * </note>
      * 
      * @param resourcePolicy
      *        An Amazon Web Services resource-based policy document in JSON format that will be attached to the
@@ -3133,6 +3169,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        resource-based policies, see <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html"
      *        >Resource-based policy considerations</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You need to specify the <code>CreateTable</code> and <code>PutResourcePolicy</code> IAM actions for
+     *        authorizing a user to create a table with a resource-based policy.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

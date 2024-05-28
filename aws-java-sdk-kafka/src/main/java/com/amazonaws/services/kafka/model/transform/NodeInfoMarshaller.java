@@ -31,6 +31,8 @@ public class NodeInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("addedToClusterTime").build();
     private static final MarshallingInfo<StructuredPojo> BROKERNODEINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("brokerNodeInfo").build();
+    private static final MarshallingInfo<StructuredPojo> CONTROLLERNODEINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("controllerNodeInfo").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
     private static final MarshallingInfo<String> NODEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -58,6 +60,7 @@ public class NodeInfoMarshaller {
         try {
             protocolMarshaller.marshall(nodeInfo.getAddedToClusterTime(), ADDEDTOCLUSTERTIME_BINDING);
             protocolMarshaller.marshall(nodeInfo.getBrokerNodeInfo(), BROKERNODEINFO_BINDING);
+            protocolMarshaller.marshall(nodeInfo.getControllerNodeInfo(), CONTROLLERNODEINFO_BINDING);
             protocolMarshaller.marshall(nodeInfo.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(nodeInfo.getNodeARN(), NODEARN_BINDING);
             protocolMarshaller.marshall(nodeInfo.getNodeType(), NODETYPE_BINDING);

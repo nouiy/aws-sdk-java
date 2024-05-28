@@ -1,3 +1,20 @@
+# __1.12.731__ __2024-05-28__
+## __Amazon DynamoDB__
+  - ### Features
+    - Doc-only update for DynamoDB. Specified the IAM actions needed to authorize a user to create a table with a resource-based policy.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Providing support to accept BgpAsnExtended attribute
+
+## __Amazon Simple Workflow Service__
+  - ### Features
+    - This release adds new APIs for deleting activity type and workflow type resources.
+
+## __Managed Streaming for Kafka__
+  - ### Features
+    - Adds ControllerNodeInfo in ListNodes response to support Raft mode for MSK
+
 # __1.12.730__ __2024-05-24__
 ## __AWS IoT FleetWise__
   - ### Features

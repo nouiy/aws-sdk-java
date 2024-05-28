@@ -30,10 +30,15 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * For devices that support BGP, the customer gateway's BGP ASN.
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
      * </p>
      * <p>
      * Default: 65000
+     * </p>
+     * <p>
+     * Valid values: <code>1</code> to <code>2,147,483,647</code>
      * </p>
      */
     private Integer bgpAsn;
@@ -73,10 +78,24 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
     private String deviceName;
     /**
      * <p>
-     * IPv4 address for the customer gateway device's outside interface. The address must be static.
+     * IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     * <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you can use
+     * an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     * <code>PublicIpv4</code>, you can use a public IPv4 address.
      * </p>
      */
     private String ipAddress;
+    /**
+     * <p>
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
+     * </p>
+     * <p>
+     * Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     * </p>
+     */
+    private Long bgpAsnExtended;
 
     /**
      * Default constructor for CreateCustomerGatewayRequest object. Callers should use the setter or fluent setter
@@ -95,9 +114,14 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
      *        <i>This member has been deprecated.</i> The Internet-routable IP address for the customer gateway's
      *        outside interface. The address must be static.
      * @param bgpAsn
-     *        For devices that support BGP, the customer gateway's BGP ASN.</p>
+     *        For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *        <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *        larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
      *        <p>
      *        Default: 65000
+     *        </p>
+     *        <p>
+     *        Valid values: <code>1</code> to <code>2,147,483,647</code>
      */
     public CreateCustomerGatewayRequest(String type, String publicIp, Integer bgpAsn) {
         setType(type);
@@ -115,9 +139,14 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
      *        <i>This member has been deprecated.</i> The Internet-routable IP address for the customer gateway's
      *        outside interface. The address must be static.
      * @param bgpAsn
-     *        For devices that support BGP, the customer gateway's BGP ASN.</p>
+     *        For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *        <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *        larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
      *        <p>
      *        Default: 65000
+     *        </p>
+     *        <p>
+     *        Valid values: <code>1</code> to <code>2,147,483,647</code>
      */
     public CreateCustomerGatewayRequest(GatewayType type, String publicIp, Integer bgpAsn) {
         setType(type.toString());
@@ -127,16 +156,26 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * For devices that support BGP, the customer gateway's BGP ASN.
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
      * </p>
      * <p>
      * Default: 65000
      * </p>
+     * <p>
+     * Valid values: <code>1</code> to <code>2,147,483,647</code>
+     * </p>
      * 
      * @param bgpAsn
-     *        For devices that support BGP, the customer gateway's BGP ASN.</p>
+     *        For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *        <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *        larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
      *        <p>
      *        Default: 65000
+     *        </p>
+     *        <p>
+     *        Valid values: <code>1</code> to <code>2,147,483,647</code>
      */
 
     public void setBgpAsn(Integer bgpAsn) {
@@ -145,15 +184,25 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * For devices that support BGP, the customer gateway's BGP ASN.
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
      * </p>
      * <p>
      * Default: 65000
      * </p>
+     * <p>
+     * Valid values: <code>1</code> to <code>2,147,483,647</code>
+     * </p>
      * 
-     * @return For devices that support BGP, the customer gateway's BGP ASN.</p>
+     * @return For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *         <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *         larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
      *         <p>
      *         Default: 65000
+     *         </p>
+     *         <p>
+     *         Valid values: <code>1</code> to <code>2,147,483,647</code>
      */
 
     public Integer getBgpAsn() {
@@ -162,16 +211,26 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * For devices that support BGP, the customer gateway's BGP ASN.
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
      * </p>
      * <p>
      * Default: 65000
      * </p>
+     * <p>
+     * Valid values: <code>1</code> to <code>2,147,483,647</code>
+     * </p>
      * 
      * @param bgpAsn
-     *        For devices that support BGP, the customer gateway's BGP ASN.</p>
+     *        For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *        <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *        larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
      *        <p>
      *        Default: 65000
+     *        </p>
+     *        <p>
+     *        Valid values: <code>1</code> to <code>2,147,483,647</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -469,11 +528,17 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * IPv4 address for the customer gateway device's outside interface. The address must be static.
+     * IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     * <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you can use
+     * an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     * <code>PublicIpv4</code>, you can use a public IPv4 address.
      * </p>
      * 
      * @param ipAddress
-     *        IPv4 address for the customer gateway device's outside interface. The address must be static.
+     *        IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     *        <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you
+     *        can use an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     *        <code>PublicIpv4</code>, you can use a public IPv4 address.
      */
 
     public void setIpAddress(String ipAddress) {
@@ -482,10 +547,16 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * IPv4 address for the customer gateway device's outside interface. The address must be static.
+     * IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     * <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you can use
+     * an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     * <code>PublicIpv4</code>, you can use a public IPv4 address.
      * </p>
      * 
-     * @return IPv4 address for the customer gateway device's outside interface. The address must be static.
+     * @return IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     *         <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you
+     *         can use an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     *         <code>PublicIpv4</code>, you can use a public IPv4 address.
      */
 
     public String getIpAddress() {
@@ -494,16 +565,89 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * IPv4 address for the customer gateway device's outside interface. The address must be static.
+     * IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     * <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you can use
+     * an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     * <code>PublicIpv4</code>, you can use a public IPv4 address.
      * </p>
      * 
      * @param ipAddress
-     *        IPv4 address for the customer gateway device's outside interface. The address must be static.
+     *        IPv4 address for the customer gateway device's outside interface. The address must be static. If
+     *        <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you
+     *        can use an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to
+     *        <code>PublicIpv4</code>, you can use a public IPv4 address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateCustomerGatewayRequest withIpAddress(String ipAddress) {
         setIpAddress(ipAddress);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
+     * </p>
+     * <p>
+     * Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     * </p>
+     * 
+     * @param bgpAsnExtended
+     *        For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *        <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *        larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
+     *        <p>
+     *        Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     */
+
+    public void setBgpAsnExtended(Long bgpAsnExtended) {
+        this.bgpAsnExtended = bgpAsnExtended;
+    }
+
+    /**
+     * <p>
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
+     * </p>
+     * <p>
+     * Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     * </p>
+     * 
+     * @return For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *         <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *         larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
+     *         <p>
+     *         Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     */
+
+    public Long getBgpAsnExtended() {
+        return this.bgpAsnExtended;
+    }
+
+    /**
+     * <p>
+     * For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     * <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is larger than
+     * <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.
+     * </p>
+     * <p>
+     * Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     * </p>
+     * 
+     * @param bgpAsnExtended
+     *        For customer gateway devices that support BGP, specify the device's ASN. You must specify either
+     *        <code>BgpAsn</code> or <code>BgpAsnExtended</code> when creating the customer gateway. If the ASN is
+     *        larger than <code>2,147,483,647</code>, you must use <code>BgpAsnExtended</code>.</p>
+     *        <p>
+     *        Valid values: <code>2,147,483,648</code> to <code>4,294,967,295</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCustomerGatewayRequest withBgpAsnExtended(Long bgpAsnExtended) {
+        setBgpAsnExtended(bgpAsnExtended);
         return this;
     }
 
@@ -543,7 +687,9 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
         if (getDeviceName() != null)
             sb.append("DeviceName: ").append(getDeviceName()).append(",");
         if (getIpAddress() != null)
-            sb.append("IpAddress: ").append(getIpAddress());
+            sb.append("IpAddress: ").append(getIpAddress()).append(",");
+        if (getBgpAsnExtended() != null)
+            sb.append("BgpAsnExtended: ").append(getBgpAsnExtended());
         sb.append("}");
         return sb.toString();
     }
@@ -586,6 +732,10 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
             return false;
         if (other.getIpAddress() != null && other.getIpAddress().equals(this.getIpAddress()) == false)
             return false;
+        if (other.getBgpAsnExtended() == null ^ this.getBgpAsnExtended() == null)
+            return false;
+        if (other.getBgpAsnExtended() != null && other.getBgpAsnExtended().equals(this.getBgpAsnExtended()) == false)
+            return false;
         return true;
     }
 
@@ -601,6 +751,7 @@ public class CreateCustomerGatewayRequest extends AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getDeviceName() == null) ? 0 : getDeviceName().hashCode());
         hashCode = prime * hashCode + ((getIpAddress() == null) ? 0 : getIpAddress().hashCode());
+        hashCode = prime * hashCode + ((getBgpAsnExtended() == null) ? 0 : getBgpAsnExtended().hashCode());
         return hashCode;
     }
 

@@ -99,6 +99,10 @@ public class CreateCustomerGatewayRequestMarshaller implements Marshaller<Reques
             request.addParameter("IpAddress", StringUtils.fromString(createCustomerGatewayRequest.getIpAddress()));
         }
 
+        if (createCustomerGatewayRequest.getBgpAsnExtended() != null) {
+            request.addParameter("BgpAsnExtended", StringUtils.fromLong(createCustomerGatewayRequest.getBgpAsnExtended()));
+        }
+
         return request;
     }
 

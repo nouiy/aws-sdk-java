@@ -43,6 +43,12 @@ public class NodeInfo implements Serializable, Cloneable, StructuredPojo {
     private BrokerNodeInfo brokerNodeInfo;
     /**
      * <p>
+     * The ControllerNodeInfo.
+     * </p>
+     */
+    private ControllerNodeInfo controllerNodeInfo;
+    /**
+     * <p>
      * The instance type.
      * </p>
      */
@@ -155,6 +161,52 @@ public class NodeInfo implements Serializable, Cloneable, StructuredPojo {
 
     public NodeInfo withBrokerNodeInfo(BrokerNodeInfo brokerNodeInfo) {
         setBrokerNodeInfo(brokerNodeInfo);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ControllerNodeInfo.
+     * </p>
+     * 
+     * @param controllerNodeInfo
+     *        <p>
+     *        The ControllerNodeInfo.
+     *        </p>
+     */
+
+    public void setControllerNodeInfo(ControllerNodeInfo controllerNodeInfo) {
+        this.controllerNodeInfo = controllerNodeInfo;
+    }
+
+    /**
+     * <p>
+     * The ControllerNodeInfo.
+     * </p>
+     * 
+     * @return <p>
+     *         The ControllerNodeInfo.
+     *         </p>
+     */
+
+    public ControllerNodeInfo getControllerNodeInfo() {
+        return this.controllerNodeInfo;
+    }
+
+    /**
+     * <p>
+     * The ControllerNodeInfo.
+     * </p>
+     * 
+     * @param controllerNodeInfo
+     *        <p>
+     *        The ControllerNodeInfo.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NodeInfo withControllerNodeInfo(ControllerNodeInfo controllerNodeInfo) {
+        setControllerNodeInfo(controllerNodeInfo);
         return this;
     }
 
@@ -379,6 +431,8 @@ public class NodeInfo implements Serializable, Cloneable, StructuredPojo {
             sb.append("AddedToClusterTime: ").append(getAddedToClusterTime()).append(",");
         if (getBrokerNodeInfo() != null)
             sb.append("BrokerNodeInfo: ").append(getBrokerNodeInfo()).append(",");
+        if (getControllerNodeInfo() != null)
+            sb.append("ControllerNodeInfo: ").append(getControllerNodeInfo()).append(",");
         if (getInstanceType() != null)
             sb.append("InstanceType: ").append(getInstanceType()).append(",");
         if (getNodeARN() != null)
@@ -409,6 +463,10 @@ public class NodeInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getBrokerNodeInfo() != null && other.getBrokerNodeInfo().equals(this.getBrokerNodeInfo()) == false)
             return false;
+        if (other.getControllerNodeInfo() == null ^ this.getControllerNodeInfo() == null)
+            return false;
+        if (other.getControllerNodeInfo() != null && other.getControllerNodeInfo().equals(this.getControllerNodeInfo()) == false)
+            return false;
         if (other.getInstanceType() == null ^ this.getInstanceType() == null)
             return false;
         if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
@@ -435,6 +493,7 @@ public class NodeInfo implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getAddedToClusterTime() == null) ? 0 : getAddedToClusterTime().hashCode());
         hashCode = prime * hashCode + ((getBrokerNodeInfo() == null) ? 0 : getBrokerNodeInfo().hashCode());
+        hashCode = prime * hashCode + ((getControllerNodeInfo() == null) ? 0 : getControllerNodeInfo().hashCode());
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         hashCode = prime * hashCode + ((getNodeARN() == null) ? 0 : getNodeARN().hashCode());
         hashCode = prime * hashCode + ((getNodeType() == null) ? 0 : getNodeType().hashCode());

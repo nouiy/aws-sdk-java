@@ -58,6 +58,16 @@ public class AbstractAmazonSimpleWorkflow implements AmazonSimpleWorkflow {
     }
 
     @Override
+    public void deleteActivityType(DeleteActivityTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public void deleteWorkflowType(DeleteWorkflowTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void deprecateActivityType(DeprecateActivityTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
