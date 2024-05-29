@@ -206,7 +206,9 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private VpcConfig vpcConfig;
     /**
      * <p>
-     * The service role associated with the compute fleet.
+     * The service role associated with the compute fleet. For more information, see <a href=
+     * "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     * > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User Guide</i>.
      * </p>
      */
     private String fleetServiceRole;
@@ -1669,11 +1671,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The service role associated with the compute fleet.
+     * The service role associated with the compute fleet. For more information, see <a href=
+     * "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     * > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User Guide</i>.
      * </p>
      * 
      * @param fleetServiceRole
-     *        The service role associated with the compute fleet.
+     *        The service role associated with the compute fleet. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     *        > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User Guide</i>.
      */
 
     public void setFleetServiceRole(String fleetServiceRole) {
@@ -1682,10 +1688,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The service role associated with the compute fleet.
+     * The service role associated with the compute fleet. For more information, see <a href=
+     * "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     * > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User Guide</i>.
      * </p>
      * 
-     * @return The service role associated with the compute fleet.
+     * @return The service role associated with the compute fleet. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     *         > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User
+     *         Guide</i>.
      */
 
     public String getFleetServiceRole() {
@@ -1694,11 +1705,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The service role associated with the compute fleet.
+     * The service role associated with the compute fleet. For more information, see <a href=
+     * "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     * > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User Guide</i>.
      * </p>
      * 
      * @param fleetServiceRole
-     *        The service role associated with the compute fleet.
+     *        The service role associated with the compute fleet. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html"
+     *        > Allow a user to add a permission policy for a fleet service role</a> in the <i>CodeBuild User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

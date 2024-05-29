@@ -177,6 +177,61 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The timestamp when customer endpoint connected to Amazon Connect.
+     * </p>
+     */
+    private java.util.Date connectedToSystemTimestamp;
+    /**
+     * <p>
+     * Latest routing criteria on the contact.
+     * </p>
+     */
+    private RoutingCriteria routingCriteria;
+    /**
+     * <p>
+     * Information about the Customer on the contact.
+     * </p>
+     */
+    private Customer customer;
+
+    private Campaign campaign;
+    /**
+     * <p>
+     * Indicates how an <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a>
+     * call is actually disposed if the contact is connected to Amazon Connect.
+     * </p>
+     */
+    private String answeringMachineDetectionStatus;
+    /**
+     * <p>
+     * Information about customer’s voice activity.
+     * </p>
+     */
+    private CustomerVoiceActivity customerVoiceActivity;
+    /**
+     * <p>
+     * Information about the quality of the participant's media connection.
+     * </p>
+     */
+    private QualityMetrics qualityMetrics;
+    /**
+     * <p>
+     * Information about the call disconnect experience.
+     * </p>
+     */
+    private DisconnectDetails disconnectDetails;
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include only
+     * alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example,
+     * <code>connect:Guide</code> or <code>connect:SMS</code>.
+     * </p>
+     */
+    private java.util.Map<String, SegmentAttributeValue> segmentAttributes;
 
     /**
      * <p>
@@ -1234,6 +1289,433 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The timestamp when customer endpoint connected to Amazon Connect.
+     * </p>
+     * 
+     * @param connectedToSystemTimestamp
+     *        The timestamp when customer endpoint connected to Amazon Connect.
+     */
+
+    public void setConnectedToSystemTimestamp(java.util.Date connectedToSystemTimestamp) {
+        this.connectedToSystemTimestamp = connectedToSystemTimestamp;
+    }
+
+    /**
+     * <p>
+     * The timestamp when customer endpoint connected to Amazon Connect.
+     * </p>
+     * 
+     * @return The timestamp when customer endpoint connected to Amazon Connect.
+     */
+
+    public java.util.Date getConnectedToSystemTimestamp() {
+        return this.connectedToSystemTimestamp;
+    }
+
+    /**
+     * <p>
+     * The timestamp when customer endpoint connected to Amazon Connect.
+     * </p>
+     * 
+     * @param connectedToSystemTimestamp
+     *        The timestamp when customer endpoint connected to Amazon Connect.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withConnectedToSystemTimestamp(java.util.Date connectedToSystemTimestamp) {
+        setConnectedToSystemTimestamp(connectedToSystemTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Latest routing criteria on the contact.
+     * </p>
+     * 
+     * @param routingCriteria
+     *        Latest routing criteria on the contact.
+     */
+
+    public void setRoutingCriteria(RoutingCriteria routingCriteria) {
+        this.routingCriteria = routingCriteria;
+    }
+
+    /**
+     * <p>
+     * Latest routing criteria on the contact.
+     * </p>
+     * 
+     * @return Latest routing criteria on the contact.
+     */
+
+    public RoutingCriteria getRoutingCriteria() {
+        return this.routingCriteria;
+    }
+
+    /**
+     * <p>
+     * Latest routing criteria on the contact.
+     * </p>
+     * 
+     * @param routingCriteria
+     *        Latest routing criteria on the contact.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withRoutingCriteria(RoutingCriteria routingCriteria) {
+        setRoutingCriteria(routingCriteria);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the Customer on the contact.
+     * </p>
+     * 
+     * @param customer
+     *        Information about the Customer on the contact.
+     */
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    /**
+     * <p>
+     * Information about the Customer on the contact.
+     * </p>
+     * 
+     * @return Information about the Customer on the contact.
+     */
+
+    public Customer getCustomer() {
+        return this.customer;
+    }
+
+    /**
+     * <p>
+     * Information about the Customer on the contact.
+     * </p>
+     * 
+     * @param customer
+     *        Information about the Customer on the contact.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withCustomer(Customer customer) {
+        setCustomer(customer);
+        return this;
+    }
+
+    /**
+     * @param campaign
+     */
+
+    public void setCampaign(Campaign campaign) {
+        this.campaign = campaign;
+    }
+
+    /**
+     * @return
+     */
+
+    public Campaign getCampaign() {
+        return this.campaign;
+    }
+
+    /**
+     * @param campaign
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withCampaign(Campaign campaign) {
+        setCampaign(campaign);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates how an <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a>
+     * call is actually disposed if the contact is connected to Amazon Connect.
+     * </p>
+     * 
+     * @param answeringMachineDetectionStatus
+     *        Indicates how an <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound
+     *        campaign</a> call is actually disposed if the contact is connected to Amazon Connect.
+     * @see AnsweringMachineDetectionStatus
+     */
+
+    public void setAnsweringMachineDetectionStatus(String answeringMachineDetectionStatus) {
+        this.answeringMachineDetectionStatus = answeringMachineDetectionStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates how an <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a>
+     * call is actually disposed if the contact is connected to Amazon Connect.
+     * </p>
+     * 
+     * @return Indicates how an <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound
+     *         campaign</a> call is actually disposed if the contact is connected to Amazon Connect.
+     * @see AnsweringMachineDetectionStatus
+     */
+
+    public String getAnsweringMachineDetectionStatus() {
+        return this.answeringMachineDetectionStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates how an <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a>
+     * call is actually disposed if the contact is connected to Amazon Connect.
+     * </p>
+     * 
+     * @param answeringMachineDetectionStatus
+     *        Indicates how an <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound
+     *        campaign</a> call is actually disposed if the contact is connected to Amazon Connect.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnsweringMachineDetectionStatus
+     */
+
+    public Contact withAnsweringMachineDetectionStatus(String answeringMachineDetectionStatus) {
+        setAnsweringMachineDetectionStatus(answeringMachineDetectionStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates how an <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a>
+     * call is actually disposed if the contact is connected to Amazon Connect.
+     * </p>
+     * 
+     * @param answeringMachineDetectionStatus
+     *        Indicates how an <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound
+     *        campaign</a> call is actually disposed if the contact is connected to Amazon Connect.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnsweringMachineDetectionStatus
+     */
+
+    public Contact withAnsweringMachineDetectionStatus(AnsweringMachineDetectionStatus answeringMachineDetectionStatus) {
+        this.answeringMachineDetectionStatus = answeringMachineDetectionStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about customer’s voice activity.
+     * </p>
+     * 
+     * @param customerVoiceActivity
+     *        Information about customer’s voice activity.
+     */
+
+    public void setCustomerVoiceActivity(CustomerVoiceActivity customerVoiceActivity) {
+        this.customerVoiceActivity = customerVoiceActivity;
+    }
+
+    /**
+     * <p>
+     * Information about customer’s voice activity.
+     * </p>
+     * 
+     * @return Information about customer’s voice activity.
+     */
+
+    public CustomerVoiceActivity getCustomerVoiceActivity() {
+        return this.customerVoiceActivity;
+    }
+
+    /**
+     * <p>
+     * Information about customer’s voice activity.
+     * </p>
+     * 
+     * @param customerVoiceActivity
+     *        Information about customer’s voice activity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withCustomerVoiceActivity(CustomerVoiceActivity customerVoiceActivity) {
+        setCustomerVoiceActivity(customerVoiceActivity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the quality of the participant's media connection.
+     * </p>
+     * 
+     * @param qualityMetrics
+     *        Information about the quality of the participant's media connection.
+     */
+
+    public void setQualityMetrics(QualityMetrics qualityMetrics) {
+        this.qualityMetrics = qualityMetrics;
+    }
+
+    /**
+     * <p>
+     * Information about the quality of the participant's media connection.
+     * </p>
+     * 
+     * @return Information about the quality of the participant's media connection.
+     */
+
+    public QualityMetrics getQualityMetrics() {
+        return this.qualityMetrics;
+    }
+
+    /**
+     * <p>
+     * Information about the quality of the participant's media connection.
+     * </p>
+     * 
+     * @param qualityMetrics
+     *        Information about the quality of the participant's media connection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withQualityMetrics(QualityMetrics qualityMetrics) {
+        setQualityMetrics(qualityMetrics);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the call disconnect experience.
+     * </p>
+     * 
+     * @param disconnectDetails
+     *        Information about the call disconnect experience.
+     */
+
+    public void setDisconnectDetails(DisconnectDetails disconnectDetails) {
+        this.disconnectDetails = disconnectDetails;
+    }
+
+    /**
+     * <p>
+     * Information about the call disconnect experience.
+     * </p>
+     * 
+     * @return Information about the call disconnect experience.
+     */
+
+    public DisconnectDetails getDisconnectDetails() {
+        return this.disconnectDetails;
+    }
+
+    /**
+     * <p>
+     * Information about the call disconnect experience.
+     * </p>
+     * 
+     * @param disconnectDetails
+     *        Information about the call disconnect experience.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withDisconnectDetails(DisconnectDetails disconnectDetails) {
+        setDisconnectDetails(disconnectDetails);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include only
+     * alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example,
+     * <code>connect:Guide</code> or <code>connect:SMS</code>.
+     * </p>
+     * 
+     * @return A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     *         attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can
+     *         include only alphanumeric, -, and _ characters. This field can be used to show channel subtype. For
+     *         example, <code>connect:Guide</code> or <code>connect:SMS</code>.
+     */
+
+    public java.util.Map<String, SegmentAttributeValue> getSegmentAttributes() {
+        return segmentAttributes;
+    }
+
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include only
+     * alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example,
+     * <code>connect:Guide</code> or <code>connect:SMS</code>.
+     * </p>
+     * 
+     * @param segmentAttributes
+     *        A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     *        attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include
+     *        only alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example,
+     *        <code>connect:Guide</code> or <code>connect:SMS</code>.
+     */
+
+    public void setSegmentAttributes(java.util.Map<String, SegmentAttributeValue> segmentAttributes) {
+        this.segmentAttributes = segmentAttributes;
+    }
+
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include only
+     * alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example,
+     * <code>connect:Guide</code> or <code>connect:SMS</code>.
+     * </p>
+     * 
+     * @param segmentAttributes
+     *        A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     *        attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include
+     *        only alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example,
+     *        <code>connect:Guide</code> or <code>connect:SMS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withSegmentAttributes(java.util.Map<String, SegmentAttributeValue> segmentAttributes) {
+        setSegmentAttributes(segmentAttributes);
+        return this;
+    }
+
+    /**
+     * Add a single SegmentAttributes entry
+     *
+     * @see Contact#withSegmentAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact addSegmentAttributesEntry(String key, SegmentAttributeValue value) {
+        if (null == this.segmentAttributes) {
+            this.segmentAttributes = new java.util.HashMap<String, SegmentAttributeValue>();
+        }
+        if (this.segmentAttributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.segmentAttributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into SegmentAttributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact clearSegmentAttributesEntries() {
+        this.segmentAttributes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1290,7 +1772,25 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         if (getQueuePriority() != null)
             sb.append("QueuePriority: ").append(getQueuePriority()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getConnectedToSystemTimestamp() != null)
+            sb.append("ConnectedToSystemTimestamp: ").append(getConnectedToSystemTimestamp()).append(",");
+        if (getRoutingCriteria() != null)
+            sb.append("RoutingCriteria: ").append(getRoutingCriteria()).append(",");
+        if (getCustomer() != null)
+            sb.append("Customer: ").append(getCustomer()).append(",");
+        if (getCampaign() != null)
+            sb.append("Campaign: ").append(getCampaign()).append(",");
+        if (getAnsweringMachineDetectionStatus() != null)
+            sb.append("AnsweringMachineDetectionStatus: ").append(getAnsweringMachineDetectionStatus()).append(",");
+        if (getCustomerVoiceActivity() != null)
+            sb.append("CustomerVoiceActivity: ").append(getCustomerVoiceActivity()).append(",");
+        if (getQualityMetrics() != null)
+            sb.append("QualityMetrics: ").append(getQualityMetrics()).append(",");
+        if (getDisconnectDetails() != null)
+            sb.append("DisconnectDetails: ").append(getDisconnectDetails()).append(",");
+        if (getSegmentAttributes() != null)
+            sb.append("SegmentAttributes: ").append(getSegmentAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -1397,6 +1897,43 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getConnectedToSystemTimestamp() == null ^ this.getConnectedToSystemTimestamp() == null)
+            return false;
+        if (other.getConnectedToSystemTimestamp() != null && other.getConnectedToSystemTimestamp().equals(this.getConnectedToSystemTimestamp()) == false)
+            return false;
+        if (other.getRoutingCriteria() == null ^ this.getRoutingCriteria() == null)
+            return false;
+        if (other.getRoutingCriteria() != null && other.getRoutingCriteria().equals(this.getRoutingCriteria()) == false)
+            return false;
+        if (other.getCustomer() == null ^ this.getCustomer() == null)
+            return false;
+        if (other.getCustomer() != null && other.getCustomer().equals(this.getCustomer()) == false)
+            return false;
+        if (other.getCampaign() == null ^ this.getCampaign() == null)
+            return false;
+        if (other.getCampaign() != null && other.getCampaign().equals(this.getCampaign()) == false)
+            return false;
+        if (other.getAnsweringMachineDetectionStatus() == null ^ this.getAnsweringMachineDetectionStatus() == null)
+            return false;
+        if (other.getAnsweringMachineDetectionStatus() != null
+                && other.getAnsweringMachineDetectionStatus().equals(this.getAnsweringMachineDetectionStatus()) == false)
+            return false;
+        if (other.getCustomerVoiceActivity() == null ^ this.getCustomerVoiceActivity() == null)
+            return false;
+        if (other.getCustomerVoiceActivity() != null && other.getCustomerVoiceActivity().equals(this.getCustomerVoiceActivity()) == false)
+            return false;
+        if (other.getQualityMetrics() == null ^ this.getQualityMetrics() == null)
+            return false;
+        if (other.getQualityMetrics() != null && other.getQualityMetrics().equals(this.getQualityMetrics()) == false)
+            return false;
+        if (other.getDisconnectDetails() == null ^ this.getDisconnectDetails() == null)
+            return false;
+        if (other.getDisconnectDetails() != null && other.getDisconnectDetails().equals(this.getDisconnectDetails()) == false)
+            return false;
+        if (other.getSegmentAttributes() == null ^ this.getSegmentAttributes() == null)
+            return false;
+        if (other.getSegmentAttributes() != null && other.getSegmentAttributes().equals(this.getSegmentAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -1428,6 +1965,15 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getQueueTimeAdjustmentSeconds() == null) ? 0 : getQueueTimeAdjustmentSeconds().hashCode());
         hashCode = prime * hashCode + ((getQueuePriority() == null) ? 0 : getQueuePriority().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getConnectedToSystemTimestamp() == null) ? 0 : getConnectedToSystemTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getRoutingCriteria() == null) ? 0 : getRoutingCriteria().hashCode());
+        hashCode = prime * hashCode + ((getCustomer() == null) ? 0 : getCustomer().hashCode());
+        hashCode = prime * hashCode + ((getCampaign() == null) ? 0 : getCampaign().hashCode());
+        hashCode = prime * hashCode + ((getAnsweringMachineDetectionStatus() == null) ? 0 : getAnsweringMachineDetectionStatus().hashCode());
+        hashCode = prime * hashCode + ((getCustomerVoiceActivity() == null) ? 0 : getCustomerVoiceActivity().hashCode());
+        hashCode = prime * hashCode + ((getQualityMetrics() == null) ? 0 : getQualityMetrics().hashCode());
+        hashCode = prime * hashCode + ((getDisconnectDetails() == null) ? 0 : getDisconnectDetails().hashCode());
+        hashCode = prime * hashCode + ((getSegmentAttributes() == null) ? 0 : getSegmentAttributes().hashCode());
         return hashCode;
     }
 

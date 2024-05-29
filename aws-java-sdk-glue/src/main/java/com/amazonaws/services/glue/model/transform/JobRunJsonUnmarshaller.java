@@ -68,6 +68,10 @@ public class JobRunJsonUnmarshaller implements Unmarshaller<JobRun, JsonUnmarsha
                     context.nextToken();
                     jobRun.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobMode", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setJobMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("StartedOn", targetDepth)) {
                     context.nextToken();
                     jobRun.setStartedOn(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -77,6 +77,10 @@ public class WebhookJsonUnmarshaller implements Unmarshaller<Webhook, JsonUnmars
                     context.nextToken();
                     webhook.setBuildType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("manualCreation", targetDepth)) {
+                    context.nextToken();
+                    webhook.setManualCreation(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("lastModifiedSecret", targetDepth)) {
                     context.nextToken();
                     webhook.setLastModifiedSecret(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -48,6 +48,10 @@ public class JobUpdateJsonUnmarshaller implements Unmarshaller<JobUpdate, JsonUn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("JobMode", targetDepth)) {
+                    context.nextToken();
+                    jobUpdate.setJobMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     jobUpdate.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

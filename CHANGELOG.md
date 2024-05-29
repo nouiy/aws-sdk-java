@@ -1,3 +1,24 @@
+# __1.12.732__ __2024-05-29__
+## __AWS CodeBuild__
+  - ### Features
+    - AWS CodeBuild now supports manually creating GitHub webhooks
+
+## __AWS Glue__
+  - ### Features
+    - Add optional field JobMode to CreateJob and UpdateJob APIs.
+
+## __AWS SecurityHub__
+  - ### Features
+    - Add ROOT type for TargetType model
+
+## __Amazon Athena__
+  - ### Features
+    - Throwing validation errors on CreateNotebook with Name containing `/`,`:`,`\`
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release includes changes to DescribeContact API's response by including ConnectedToSystemTimestamp, RoutingCriteria, Customer, Campaign, AnsweringMachineDetectionStatus, CustomerVoiceActivity, QualityMetrics, DisconnectDetails, and SegmentAttributes information from a contact in Amazon Connect.
+
 # __1.12.731__ __2024-05-28__
 ## __Amazon DynamoDB__
   - ### Features

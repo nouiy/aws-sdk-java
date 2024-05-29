@@ -31,6 +31,8 @@ public class JobMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
+    private static final MarshallingInfo<String> JOBMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("JobMode").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> LOGURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -95,6 +97,7 @@ public class JobMarshaller {
 
         try {
             protocolMarshaller.marshall(job.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(job.getJobMode(), JOBMODE_BINDING);
             protocolMarshaller.marshall(job.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(job.getLogUri(), LOGURI_BINDING);
             protocolMarshaller.marshall(job.getRole(), ROLE_BINDING);

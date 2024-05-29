@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class JobUpdateMarshaller {
 
+    private static final MarshallingInfo<String> JOBMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("JobMode").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> LOGURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -88,6 +90,7 @@ public class JobUpdateMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(jobUpdate.getJobMode(), JOBMODE_BINDING);
             protocolMarshaller.marshall(jobUpdate.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(jobUpdate.getLogUri(), LOGURI_BINDING);
             protocolMarshaller.marshall(jobUpdate.getRole(), ROLE_BINDING);

@@ -61,6 +61,19 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String buildType;
+    /**
+     * <p>
+     * If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     * <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     * <code>secret</code> values in the output can be used to manually create a webhook within GitHub.
+     * </p>
+     * <note>
+     * <p>
+     * manualCreation is only available for GitHub webhooks.
+     * </p>
+     * </note>
+     */
+    private Boolean manualCreation;
 
     /**
      * <p>
@@ -348,6 +361,110 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     * <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     * <code>secret</code> values in the output can be used to manually create a webhook within GitHub.
+     * </p>
+     * <note>
+     * <p>
+     * manualCreation is only available for GitHub webhooks.
+     * </p>
+     * </note>
+     * 
+     * @param manualCreation
+     *        If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     *        <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     *        <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
+     *        <note>
+     *        <p>
+     *        manualCreation is only available for GitHub webhooks.
+     *        </p>
+     */
+
+    public void setManualCreation(Boolean manualCreation) {
+        this.manualCreation = manualCreation;
+    }
+
+    /**
+     * <p>
+     * If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     * <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     * <code>secret</code> values in the output can be used to manually create a webhook within GitHub.
+     * </p>
+     * <note>
+     * <p>
+     * manualCreation is only available for GitHub webhooks.
+     * </p>
+     * </note>
+     * 
+     * @return If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     *         <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     *         <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
+     *         <note>
+     *         <p>
+     *         manualCreation is only available for GitHub webhooks.
+     *         </p>
+     */
+
+    public Boolean getManualCreation() {
+        return this.manualCreation;
+    }
+
+    /**
+     * <p>
+     * If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     * <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     * <code>secret</code> values in the output can be used to manually create a webhook within GitHub.
+     * </p>
+     * <note>
+     * <p>
+     * manualCreation is only available for GitHub webhooks.
+     * </p>
+     * </note>
+     * 
+     * @param manualCreation
+     *        If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     *        <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     *        <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
+     *        <note>
+     *        <p>
+     *        manualCreation is only available for GitHub webhooks.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWebhookRequest withManualCreation(Boolean manualCreation) {
+        setManualCreation(manualCreation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     * <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     * <code>secret</code> values in the output can be used to manually create a webhook within GitHub.
+     * </p>
+     * <note>
+     * <p>
+     * manualCreation is only available for GitHub webhooks.
+     * </p>
+     * </note>
+     * 
+     * @return If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns
+     *         <code>payloadUrl</code> and <code>secret</code> values for the webhook. The <code>payloadUrl</code> and
+     *         <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
+     *         <note>
+     *         <p>
+     *         manualCreation is only available for GitHub webhooks.
+     *         </p>
+     */
+
+    public Boolean isManualCreation() {
+        return this.manualCreation;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -366,7 +483,9 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getFilterGroups() != null)
             sb.append("FilterGroups: ").append(getFilterGroups()).append(",");
         if (getBuildType() != null)
-            sb.append("BuildType: ").append(getBuildType());
+            sb.append("BuildType: ").append(getBuildType()).append(",");
+        if (getManualCreation() != null)
+            sb.append("ManualCreation: ").append(getManualCreation());
         sb.append("}");
         return sb.toString();
     }
@@ -397,6 +516,10 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getBuildType() != null && other.getBuildType().equals(this.getBuildType()) == false)
             return false;
+        if (other.getManualCreation() == null ^ this.getManualCreation() == null)
+            return false;
+        if (other.getManualCreation() != null && other.getManualCreation().equals(this.getManualCreation()) == false)
+            return false;
         return true;
     }
 
@@ -409,6 +532,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getBranchFilter() == null) ? 0 : getBranchFilter().hashCode());
         hashCode = prime * hashCode + ((getFilterGroups() == null) ? 0 : getFilterGroups().hashCode());
         hashCode = prime * hashCode + ((getBuildType() == null) ? 0 : getBuildType().hashCode());
+        hashCode = prime * hashCode + ((getManualCreation() == null) ? 0 : getManualCreation().hashCode());
         return hashCode;
     }
 

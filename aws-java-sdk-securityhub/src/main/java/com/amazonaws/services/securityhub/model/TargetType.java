@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum TargetType {
 
     ACCOUNT("ACCOUNT"),
-    ORGANIZATIONAL_UNIT("ORGANIZATIONAL_UNIT");
+    ORGANIZATIONAL_UNIT("ORGANIZATIONAL_UNIT"),
+    ROOT("ROOT");
 
     private String value;
 

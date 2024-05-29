@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.732-SNAPSHOT</version>
+    <version>1.12.732</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-bom</artifactId>
@@ -965,12 +965,6 @@
         <version>${awsjavasdk.version}</version>
     </dependency>
     <dependency>
-        <artifactId>aws-java-sdk-honeycode</artifactId>
-        <groupId>com.amazonaws</groupId>
-        <optional>false</optional>
-        <version>${awsjavasdk.version}</version>
-    </dependency>
-    <dependency>
         <artifactId>aws-java-sdk-codeartifact</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
@@ -1548,12 +1542,6 @@
     </dependency>
     <dependency>
         <artifactId>aws-java-sdk-serverlessapplicationrepository</artifactId>
-        <groupId>com.amazonaws</groupId>
-        <optional>false</optional>
-        <version>${awsjavasdk.version}</version>
-    </dependency>
-    <dependency>
-        <artifactId>aws-java-sdk-alexaforbusiness</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
         <version>${awsjavasdk.version}</version>

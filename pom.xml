@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-pom</artifactId>
-  <version>1.12.732-SNAPSHOT</version>
+  <version>1.12.732</version>
   <packaging>pom</packaging>
   <name>AWS SDK for Java</name>
   <description>The Amazon Web Services SDK for Java provides Java APIs
@@ -191,7 +191,6 @@
     <module>aws-java-sdk-identitystore</module>
     <module>aws-java-sdk-braket</module>
     <module>aws-java-sdk-ivs</module>
-    <module>aws-java-sdk-honeycode</module>
     <module>aws-java-sdk-codeartifact</module>
     <module>aws-java-sdk-macie2</module>
     <module>aws-java-sdk-iotsitewise</module>
@@ -289,7 +288,6 @@
     <module>aws-java-sdk-servicediscovery</module>
     <module>aws-java-sdk-cloud9</module>
     <module>aws-java-sdk-serverlessapplicationrepository</module>
-    <module>aws-java-sdk-alexaforbusiness</module>
     <module>aws-java-sdk-resourcegroups</module>
     <module>aws-java-sdk-comprehend</module>
     <module>aws-java-sdk-translate</module>

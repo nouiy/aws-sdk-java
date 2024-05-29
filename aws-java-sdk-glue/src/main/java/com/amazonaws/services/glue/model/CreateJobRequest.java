@@ -33,6 +33,32 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String name;
     /**
      * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     */
+    private String jobMode;
+    /**
+     * <p>
      * Description of the job being defined.
      * </p>
      */
@@ -341,6 +367,225 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     public CreateJobRequest withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @param jobMode
+     *        A mode that describes how a job was created. Valid values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *        value.
+     * @see JobMode
+     */
+
+    public void setJobMode(String jobMode) {
+        this.jobMode = jobMode;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @return A mode that describes how a job was created. Valid values are:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *         value.
+     * @see JobMode
+     */
+
+    public String getJobMode() {
+        return this.jobMode;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @param jobMode
+     *        A mode that describes how a job was created. Valid values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *        value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobMode
+     */
+
+    public CreateJobRequest withJobMode(String jobMode) {
+        setJobMode(jobMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @param jobMode
+     *        A mode that describes how a job was created. Valid values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *        value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobMode
+     */
+
+    public CreateJobRequest withJobMode(JobMode jobMode) {
+        this.jobMode = jobMode.toString();
         return this;
     }
 
@@ -2341,6 +2586,8 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         sb.append("{");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getJobMode() != null)
+            sb.append("JobMode: ").append(getJobMode()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getLogUri() != null)
@@ -2402,6 +2649,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getJobMode() == null ^ this.getJobMode() == null)
+            return false;
+        if (other.getJobMode() != null && other.getJobMode().equals(this.getJobMode()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
@@ -2500,6 +2751,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getJobMode() == null) ? 0 : getJobMode().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getLogUri() == null) ? 0 : getLogUri().hashCode());
         hashCode = prime * hashCode + ((getRole() == null) ? 0 : getRole().hashCode());

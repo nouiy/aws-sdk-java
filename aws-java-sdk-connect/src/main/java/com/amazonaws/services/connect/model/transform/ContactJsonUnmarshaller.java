@@ -141,6 +141,43 @@ public class ContactJsonUnmarshaller implements Unmarshaller<Contact, JsonUnmars
                     contact.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("ConnectedToSystemTimestamp", targetDepth)) {
+                    context.nextToken();
+                    contact.setConnectedToSystemTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("RoutingCriteria", targetDepth)) {
+                    context.nextToken();
+                    contact.setRoutingCriteria(RoutingCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Customer", targetDepth)) {
+                    context.nextToken();
+                    contact.setCustomer(CustomerJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Campaign", targetDepth)) {
+                    context.nextToken();
+                    contact.setCampaign(CampaignJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AnsweringMachineDetectionStatus", targetDepth)) {
+                    context.nextToken();
+                    contact.setAnsweringMachineDetectionStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CustomerVoiceActivity", targetDepth)) {
+                    context.nextToken();
+                    contact.setCustomerVoiceActivity(CustomerVoiceActivityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("QualityMetrics", targetDepth)) {
+                    context.nextToken();
+                    contact.setQualityMetrics(QualityMetricsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("DisconnectDetails", targetDepth)) {
+                    context.nextToken();
+                    contact.setDisconnectDetails(DisconnectDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SegmentAttributes", targetDepth)) {
+                    context.nextToken();
+                    contact.setSegmentAttributes(new MapUnmarshaller<String, SegmentAttributeValue>(context.getUnmarshaller(String.class),
+                            SegmentAttributeValueJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

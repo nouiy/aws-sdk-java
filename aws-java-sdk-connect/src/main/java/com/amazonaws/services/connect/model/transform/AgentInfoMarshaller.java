@@ -33,6 +33,12 @@ public class AgentInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectedToAgentTimestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<Integer> AGENTPAUSEDURATIONINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AgentPauseDurationInSeconds").build();
+    private static final MarshallingInfo<StructuredPojo> HIERARCHYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HierarchyGroups").build();
+    private static final MarshallingInfo<StructuredPojo> DEVICEINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeviceInfo").build();
+    private static final MarshallingInfo<StructuredPojo> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Capabilities").build();
 
     private static final AgentInfoMarshaller instance = new AgentInfoMarshaller();
 
@@ -53,6 +59,9 @@ public class AgentInfoMarshaller {
             protocolMarshaller.marshall(agentInfo.getId(), ID_BINDING);
             protocolMarshaller.marshall(agentInfo.getConnectedToAgentTimestamp(), CONNECTEDTOAGENTTIMESTAMP_BINDING);
             protocolMarshaller.marshall(agentInfo.getAgentPauseDurationInSeconds(), AGENTPAUSEDURATIONINSECONDS_BINDING);
+            protocolMarshaller.marshall(agentInfo.getHierarchyGroups(), HIERARCHYGROUPS_BINDING);
+            protocolMarshaller.marshall(agentInfo.getDeviceInfo(), DEVICEINFO_BINDING);
+            protocolMarshaller.marshall(agentInfo.getCapabilities(), CAPABILITIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

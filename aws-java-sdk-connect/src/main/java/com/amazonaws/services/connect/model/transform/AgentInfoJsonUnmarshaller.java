@@ -60,6 +60,18 @@ public class AgentInfoJsonUnmarshaller implements Unmarshaller<AgentInfo, JsonUn
                     context.nextToken();
                     agentInfo.setAgentPauseDurationInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("HierarchyGroups", targetDepth)) {
+                    context.nextToken();
+                    agentInfo.setHierarchyGroups(HierarchyGroupsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("DeviceInfo", targetDepth)) {
+                    context.nextToken();
+                    agentInfo.setDeviceInfo(DeviceInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Capabilities", targetDepth)) {
+                    context.nextToken();
+                    agentInfo.setCapabilities(ParticipantCapabilitiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

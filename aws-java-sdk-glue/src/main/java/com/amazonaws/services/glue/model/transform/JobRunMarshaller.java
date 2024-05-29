@@ -39,6 +39,8 @@ public class JobRunMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TriggerName").build();
     private static final MarshallingInfo<String> JOBNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobName").build();
+    private static final MarshallingInfo<String> JOBMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("JobMode").build();
     private static final MarshallingInfo<java.util.Date> STARTEDON_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartedOn").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIEDON_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -101,6 +103,7 @@ public class JobRunMarshaller {
             protocolMarshaller.marshall(jobRun.getPreviousRunId(), PREVIOUSRUNID_BINDING);
             protocolMarshaller.marshall(jobRun.getTriggerName(), TRIGGERNAME_BINDING);
             protocolMarshaller.marshall(jobRun.getJobName(), JOBNAME_BINDING);
+            protocolMarshaller.marshall(jobRun.getJobMode(), JOBMODE_BINDING);
             protocolMarshaller.marshall(jobRun.getStartedOn(), STARTEDON_BINDING);
             protocolMarshaller.marshall(jobRun.getLastModifiedOn(), LASTMODIFIEDON_BINDING);
             protocolMarshaller.marshall(jobRun.getCompletedOn(), COMPLETEDON_BINDING);

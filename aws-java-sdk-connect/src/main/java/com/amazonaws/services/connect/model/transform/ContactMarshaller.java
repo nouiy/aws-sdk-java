@@ -75,6 +75,24 @@ public class ContactMarshaller {
             .marshallLocationName("QueuePriority").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<java.util.Date> CONNECTEDTOSYSTEMTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectedToSystemTimestamp").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> ROUTINGCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingCriteria").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Customer").build();
+    private static final MarshallingInfo<StructuredPojo> CAMPAIGN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Campaign").build();
+    private static final MarshallingInfo<String> ANSWERINGMACHINEDETECTIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnsweringMachineDetectionStatus").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMERVOICEACTIVITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerVoiceActivity").build();
+    private static final MarshallingInfo<StructuredPojo> QUALITYMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QualityMetrics").build();
+    private static final MarshallingInfo<StructuredPojo> DISCONNECTDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DisconnectDetails").build();
+    private static final MarshallingInfo<Map> SEGMENTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentAttributes").build();
 
     private static final ContactMarshaller instance = new ContactMarshaller();
 
@@ -115,6 +133,15 @@ public class ContactMarshaller {
             protocolMarshaller.marshall(contact.getQueueTimeAdjustmentSeconds(), QUEUETIMEADJUSTMENTSECONDS_BINDING);
             protocolMarshaller.marshall(contact.getQueuePriority(), QUEUEPRIORITY_BINDING);
             protocolMarshaller.marshall(contact.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(contact.getConnectedToSystemTimestamp(), CONNECTEDTOSYSTEMTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(contact.getRoutingCriteria(), ROUTINGCRITERIA_BINDING);
+            protocolMarshaller.marshall(contact.getCustomer(), CUSTOMER_BINDING);
+            protocolMarshaller.marshall(contact.getCampaign(), CAMPAIGN_BINDING);
+            protocolMarshaller.marshall(contact.getAnsweringMachineDetectionStatus(), ANSWERINGMACHINEDETECTIONSTATUS_BINDING);
+            protocolMarshaller.marshall(contact.getCustomerVoiceActivity(), CUSTOMERVOICEACTIVITY_BINDING);
+            protocolMarshaller.marshall(contact.getQualityMetrics(), QUALITYMETRICS_BINDING);
+            protocolMarshaller.marshall(contact.getDisconnectDetails(), DISCONNECTDETAILS_BINDING);
+            protocolMarshaller.marshall(contact.getSegmentAttributes(), SEGMENTATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

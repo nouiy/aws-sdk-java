@@ -40,6 +40,8 @@ public class WebhookMarshaller {
             .marshallLocationName("filterGroups").build();
     private static final MarshallingInfo<String> BUILDTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("buildType").build();
+    private static final MarshallingInfo<Boolean> MANUALCREATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("manualCreation").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIEDSECRET_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastModifiedSecret").timestampFormat("unixTimestamp").build();
 
@@ -65,6 +67,7 @@ public class WebhookMarshaller {
             protocolMarshaller.marshall(webhook.getBranchFilter(), BRANCHFILTER_BINDING);
             protocolMarshaller.marshall(webhook.getFilterGroups(), FILTERGROUPS_BINDING);
             protocolMarshaller.marshall(webhook.getBuildType(), BUILDTYPE_BINDING);
+            protocolMarshaller.marshall(webhook.getManualCreation(), MANUALCREATION_BINDING);
             protocolMarshaller.marshall(webhook.getLastModifiedSecret(), LASTMODIFIEDSECRET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

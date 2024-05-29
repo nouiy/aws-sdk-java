@@ -46,6 +46,20 @@ public class AgentInfo implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer agentPauseDurationInSeconds;
+    /**
+     * <p>
+     * The agent hierarchy groups for the agent.
+     * </p>
+     */
+    private HierarchyGroups hierarchyGroups;
+    /**
+     * <p>
+     * Information regarding Agent’s device.
+     * </p>
+     */
+    private DeviceInfo deviceInfo;
+
+    private ParticipantCapabilities capabilities;
 
     /**
      * <p>
@@ -168,6 +182,112 @@ public class AgentInfo implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The agent hierarchy groups for the agent.
+     * </p>
+     * 
+     * @param hierarchyGroups
+     *        The agent hierarchy groups for the agent.
+     */
+
+    public void setHierarchyGroups(HierarchyGroups hierarchyGroups) {
+        this.hierarchyGroups = hierarchyGroups;
+    }
+
+    /**
+     * <p>
+     * The agent hierarchy groups for the agent.
+     * </p>
+     * 
+     * @return The agent hierarchy groups for the agent.
+     */
+
+    public HierarchyGroups getHierarchyGroups() {
+        return this.hierarchyGroups;
+    }
+
+    /**
+     * <p>
+     * The agent hierarchy groups for the agent.
+     * </p>
+     * 
+     * @param hierarchyGroups
+     *        The agent hierarchy groups for the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentInfo withHierarchyGroups(HierarchyGroups hierarchyGroups) {
+        setHierarchyGroups(hierarchyGroups);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information regarding Agent’s device.
+     * </p>
+     * 
+     * @param deviceInfo
+     *        Information regarding Agent’s device.
+     */
+
+    public void setDeviceInfo(DeviceInfo deviceInfo) {
+        this.deviceInfo = deviceInfo;
+    }
+
+    /**
+     * <p>
+     * Information regarding Agent’s device.
+     * </p>
+     * 
+     * @return Information regarding Agent’s device.
+     */
+
+    public DeviceInfo getDeviceInfo() {
+        return this.deviceInfo;
+    }
+
+    /**
+     * <p>
+     * Information regarding Agent’s device.
+     * </p>
+     * 
+     * @param deviceInfo
+     *        Information regarding Agent’s device.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentInfo withDeviceInfo(DeviceInfo deviceInfo) {
+        setDeviceInfo(deviceInfo);
+        return this;
+    }
+
+    /**
+     * @param capabilities
+     */
+
+    public void setCapabilities(ParticipantCapabilities capabilities) {
+        this.capabilities = capabilities;
+    }
+
+    /**
+     * @return
+     */
+
+    public ParticipantCapabilities getCapabilities() {
+        return this.capabilities;
+    }
+
+    /**
+     * @param capabilities
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentInfo withCapabilities(ParticipantCapabilities capabilities) {
+        setCapabilities(capabilities);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +304,13 @@ public class AgentInfo implements Serializable, Cloneable, StructuredPojo {
         if (getConnectedToAgentTimestamp() != null)
             sb.append("ConnectedToAgentTimestamp: ").append(getConnectedToAgentTimestamp()).append(",");
         if (getAgentPauseDurationInSeconds() != null)
-            sb.append("AgentPauseDurationInSeconds: ").append(getAgentPauseDurationInSeconds());
+            sb.append("AgentPauseDurationInSeconds: ").append(getAgentPauseDurationInSeconds()).append(",");
+        if (getHierarchyGroups() != null)
+            sb.append("HierarchyGroups: ").append(getHierarchyGroups()).append(",");
+        if (getDeviceInfo() != null)
+            sb.append("DeviceInfo: ").append(getDeviceInfo()).append(",");
+        if (getCapabilities() != null)
+            sb.append("Capabilities: ").append(getCapabilities());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +337,18 @@ public class AgentInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAgentPauseDurationInSeconds() != null && other.getAgentPauseDurationInSeconds().equals(this.getAgentPauseDurationInSeconds()) == false)
             return false;
+        if (other.getHierarchyGroups() == null ^ this.getHierarchyGroups() == null)
+            return false;
+        if (other.getHierarchyGroups() != null && other.getHierarchyGroups().equals(this.getHierarchyGroups()) == false)
+            return false;
+        if (other.getDeviceInfo() == null ^ this.getDeviceInfo() == null)
+            return false;
+        if (other.getDeviceInfo() != null && other.getDeviceInfo().equals(this.getDeviceInfo()) == false)
+            return false;
+        if (other.getCapabilities() == null ^ this.getCapabilities() == null)
+            return false;
+        if (other.getCapabilities() != null && other.getCapabilities().equals(this.getCapabilities()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +360,9 @@ public class AgentInfo implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getConnectedToAgentTimestamp() == null) ? 0 : getConnectedToAgentTimestamp().hashCode());
         hashCode = prime * hashCode + ((getAgentPauseDurationInSeconds() == null) ? 0 : getAgentPauseDurationInSeconds().hashCode());
+        hashCode = prime * hashCode + ((getHierarchyGroups() == null) ? 0 : getHierarchyGroups().hashCode());
+        hashCode = prime * hashCode + ((getDeviceInfo() == null) ? 0 : getDeviceInfo().hashCode());
+        hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
         return hashCode;
     }
 

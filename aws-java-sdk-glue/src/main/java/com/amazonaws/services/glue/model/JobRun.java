@@ -60,6 +60,32 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     private String jobName;
     /**
      * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     */
+    private String jobMode;
+    /**
+     * <p>
      * The date and time at which this job run was started.
      * </p>
      */
@@ -544,6 +570,225 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     public JobRun withJobName(String jobName) {
         setJobName(jobName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @param jobMode
+     *        A mode that describes how a job was created. Valid values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *        value.
+     * @see JobMode
+     */
+
+    public void setJobMode(String jobMode) {
+        this.jobMode = jobMode;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @return A mode that describes how a job was created. Valid values are:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *         value.
+     * @see JobMode
+     */
+
+    public String getJobMode() {
+        return this.jobMode;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @param jobMode
+     *        A mode that describes how a job was created. Valid values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *        value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobMode
+     */
+
+    public JobRun withJobMode(String jobMode) {
+        setJobMode(jobMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A mode that describes how a job was created. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.
+     * </p>
+     * 
+     * @param jobMode
+     *        A mode that describes how a job was created. Valid values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SCRIPT</code> - The job was created using the Glue Studio script editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VISUAL</code> - The job was created using the Glue Studio visual editor.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default
+     *        value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobMode
+     */
+
+    public JobRun withJobMode(JobMode jobMode) {
+        this.jobMode = jobMode.toString();
         return this;
     }
 
@@ -2570,6 +2815,8 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
             sb.append("TriggerName: ").append(getTriggerName()).append(",");
         if (getJobName() != null)
             sb.append("JobName: ").append(getJobName()).append(",");
+        if (getJobMode() != null)
+            sb.append("JobMode: ").append(getJobMode()).append(",");
         if (getStartedOn() != null)
             sb.append("StartedOn: ").append(getStartedOn()).append(",");
         if (getLastModifiedOn() != null)
@@ -2643,6 +2890,10 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (other.getJobName() == null ^ this.getJobName() == null)
             return false;
         if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
+            return false;
+        if (other.getJobMode() == null ^ this.getJobMode() == null)
+            return false;
+        if (other.getJobMode() != null && other.getJobMode().equals(this.getJobMode()) == false)
             return false;
         if (other.getStartedOn() == null ^ this.getStartedOn() == null)
             return false;
@@ -2737,6 +2988,7 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPreviousRunId() == null) ? 0 : getPreviousRunId().hashCode());
         hashCode = prime * hashCode + ((getTriggerName() == null) ? 0 : getTriggerName().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
+        hashCode = prime * hashCode + ((getJobMode() == null) ? 0 : getJobMode().hashCode());
         hashCode = prime * hashCode + ((getStartedOn() == null) ? 0 : getStartedOn().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedOn() == null) ? 0 : getLastModifiedOn().hashCode());
         hashCode = prime * hashCode + ((getCompletedOn() == null) ? 0 : getCompletedOn().hashCode());

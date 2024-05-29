@@ -39,9 +39,7 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      * are stored and the encryption option, if any, used for query and calculation results. To run the query, you must
      * specify the query results location using one of the ways: either in the workgroup using this setting, or for
      * individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>. If none of them is set, Athena
-     * issues an error that no output location is provided. For more information, see <a
-     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and
-     * output files</a>.
+     * issues an error that no output location is provided.
      * </p>
      */
     private ResultConfiguration resultConfiguration;
@@ -138,9 +136,7 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      * are stored and the encryption option, if any, used for query and calculation results. To run the query, you must
      * specify the query results location using one of the ways: either in the workgroup using this setting, or for
      * individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>. If none of them is set, Athena
-     * issues an error that no output location is provided. For more information, see <a
-     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and
-     * output files</a>.
+     * issues an error that no output location is provided.
      * </p>
      * 
      * @param resultConfiguration
@@ -148,9 +144,7 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      *        results are stored and the encryption option, if any, used for query and calculation results. To run the
      *        query, you must specify the query results location using one of the ways: either in the workgroup using
      *        this setting, or for individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>. If
-     *        none of them is set, Athena issues an error that no output location is provided. For more information, see
-     *        <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent
-     *        queries, and output files</a>.
+     *        none of them is set, Athena issues an error that no output location is provided.
      */
 
     public void setResultConfiguration(ResultConfiguration resultConfiguration) {
@@ -163,18 +157,14 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      * are stored and the encryption option, if any, used for query and calculation results. To run the query, you must
      * specify the query results location using one of the ways: either in the workgroup using this setting, or for
      * individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>. If none of them is set, Athena
-     * issues an error that no output location is provided. For more information, see <a
-     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and
-     * output files</a>.
+     * issues an error that no output location is provided.
      * </p>
      * 
      * @return The configuration for the workgroup, which includes the location in Amazon S3 where query and calculation
      *         results are stored and the encryption option, if any, used for query and calculation results. To run the
      *         query, you must specify the query results location using one of the ways: either in the workgroup using
      *         this setting, or for individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>.
-     *         If none of them is set, Athena issues an error that no output location is provided. For more information,
-     *         see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results,
-     *         recent queries, and output files</a>.
+     *         If none of them is set, Athena issues an error that no output location is provided.
      */
 
     public ResultConfiguration getResultConfiguration() {
@@ -187,9 +177,7 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      * are stored and the encryption option, if any, used for query and calculation results. To run the query, you must
      * specify the query results location using one of the ways: either in the workgroup using this setting, or for
      * individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>. If none of them is set, Athena
-     * issues an error that no output location is provided. For more information, see <a
-     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and
-     * output files</a>.
+     * issues an error that no output location is provided.
      * </p>
      * 
      * @param resultConfiguration
@@ -197,9 +185,7 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      *        results are stored and the encryption option, if any, used for query and calculation results. To run the
      *        query, you must specify the query results location using one of the ways: either in the workgroup using
      *        this setting, or for individual queries (client-side), using <a>ResultConfiguration$OutputLocation</a>. If
-     *        none of them is set, Athena issues an error that no output location is provided. For more information, see
-     *        <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent
-     *        queries, and output files</a>.
+     *        none of them is set, Athena issues an error that no output location is provided.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

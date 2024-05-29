@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.732-SNAPSHOT</version>
+    <version>1.12.732</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -964,12 +964,6 @@
         <version>${awsjavasdk.version}</version>
     </dependency>
     <dependency>
-        <artifactId>aws-java-sdk-honeycode</artifactId>
-        <groupId>com.amazonaws</groupId>
-        <optional>false</optional>
-        <version>${awsjavasdk.version}</version>
-    </dependency>
-    <dependency>
         <artifactId>aws-java-sdk-codeartifact</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
@@ -1547,12 +1541,6 @@
     </dependency>
     <dependency>
         <artifactId>aws-java-sdk-serverlessapplicationrepository</artifactId>
-        <groupId>com.amazonaws</groupId>
-        <optional>false</optional>
-        <version>${awsjavasdk.version}</version>
-    </dependency>
-    <dependency>
-        <artifactId>aws-java-sdk-alexaforbusiness</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
         <version>${awsjavasdk.version}</version>
@@ -3051,10 +3039,6 @@
                                   <packages>com.amazonaws.services.ivs*</packages>
                               </group>
                               <group>
-                                  <title>Amazon Honeycode</title>
-                                  <packages>com.amazonaws.services.honeycode*</packages>
-                              </group>
-                              <group>
                                   <title>CodeArtifact</title>
                                   <packages>com.amazonaws.services.codeartifact*</packages>
                               </group>
@@ -3441,10 +3425,6 @@
                               <group>
                                   <title>AWSServerlessApplicationRepository</title>
                                   <packages>com.amazonaws.services.serverlessapplicationrepository*</packages>
-                              </group>
-                              <group>
-                                  <title>Alexa For Business</title>
-                                  <packages>com.amazonaws.services.alexaforbusiness*</packages>
                               </group>
                               <group>
                                   <title>AWS Resource Groups</title>

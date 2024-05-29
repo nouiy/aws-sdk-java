@@ -36,10 +36,8 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one
      * of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using
      * <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no output location is
-     * provided. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working
-     * with query results, recent queries, and output files</a>. If workgroup settings override client-side settings,
-     * then the query uses the settings specified for the workgroup. See
-     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * provided. If workgroup settings override client-side settings, then the query uses the settings specified for the
+     * workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      */
     private String outputLocation;
@@ -91,10 +89,8 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one
      * of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using
      * <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no output location is
-     * provided. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working
-     * with query results, recent queries, and output files</a>. If workgroup settings override client-side settings,
-     * then the query uses the settings specified for the workgroup. See
-     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * provided. If workgroup settings override client-side settings, then the query uses the settings specified for the
+     * workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      * 
      * @param outputLocation
@@ -102,10 +98,8 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      *        <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location
      *        using one of the ways: either for individual queries using either this setting (client-side), or in the
      *        workgroup, using <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no
-     *        output location is provided. For more information, see <a
-     *        href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent
-     *        queries, and output files</a>. If workgroup settings override client-side settings, then the query uses
-     *        the settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     *        output location is provided. If workgroup settings override client-side settings, then the query uses the
+     *        settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      */
 
     public void setOutputLocation(String outputLocation) {
@@ -118,21 +112,16 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one
      * of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using
      * <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no output location is
-     * provided. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working
-     * with query results, recent queries, and output files</a>. If workgroup settings override client-side settings,
-     * then the query uses the settings specified for the workgroup. See
-     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * provided. If workgroup settings override client-side settings, then the query uses the settings specified for the
+     * workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      * 
      * @return The location in Amazon S3 where your query and calculation results are stored, such as
      *         <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location
      *         using one of the ways: either for individual queries using either this setting (client-side), or in the
      *         workgroup, using <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no
-     *         output location is provided. For more information, see <a
-     *         href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent
-     *         queries, and output files</a>. If workgroup settings override client-side settings, then the query uses
-     *         the settings specified for the workgroup. See
-     *         <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     *         output location is provided. If workgroup settings override client-side settings, then the query uses the
+     *         settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      */
 
     public String getOutputLocation() {
@@ -145,10 +134,8 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one
      * of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using
      * <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no output location is
-     * provided. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working
-     * with query results, recent queries, and output files</a>. If workgroup settings override client-side settings,
-     * then the query uses the settings specified for the workgroup. See
-     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * provided. If workgroup settings override client-side settings, then the query uses the settings specified for the
+     * workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      * 
      * @param outputLocation
@@ -156,10 +143,8 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      *        <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location
      *        using one of the ways: either for individual queries using either this setting (client-side), or in the
      *        workgroup, using <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no
-     *        output location is provided. For more information, see <a
-     *        href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent
-     *        queries, and output files</a>. If workgroup settings override client-side settings, then the query uses
-     *        the settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     *        output location is provided. If workgroup settings override client-side settings, then the query uses the
+     *        settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

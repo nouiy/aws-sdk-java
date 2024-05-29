@@ -52,6 +52,10 @@ public class JobJsonUnmarshaller implements Unmarshaller<Job, JsonUnmarshallerCo
                     context.nextToken();
                     job.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobMode", targetDepth)) {
+                    context.nextToken();
+                    job.setJobMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     job.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
