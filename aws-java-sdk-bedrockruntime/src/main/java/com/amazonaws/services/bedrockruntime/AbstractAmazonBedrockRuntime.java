@@ -28,6 +28,11 @@ public class AbstractAmazonBedrockRuntime implements AmazonBedrockRuntime {
     }
 
     @Override
+    public ConverseResult converse(ConverseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public InvokeModelResult invokeModel(InvokeModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

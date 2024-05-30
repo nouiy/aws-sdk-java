@@ -40,6 +40,8 @@ public class ListJobRunsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("createdAtBefore").timestampFormat("iso8601").build();
     private static final MarshallingInfo<List> STATES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.QUERY_PARAM)
             .marshallLocationName("states").build();
+    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("mode").build();
 
     private static final ListJobRunsRequestMarshaller instance = new ListJobRunsRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class ListJobRunsRequestMarshaller {
             protocolMarshaller.marshall(listJobRunsRequest.getCreatedAtAfter(), CREATEDATAFTER_BINDING);
             protocolMarshaller.marshall(listJobRunsRequest.getCreatedAtBefore(), CREATEDATBEFORE_BINDING);
             protocolMarshaller.marshall(listJobRunsRequest.getStates(), STATES_BINDING);
+            protocolMarshaller.marshall(listJobRunsRequest.getMode(), MODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

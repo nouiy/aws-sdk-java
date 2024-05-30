@@ -334,6 +334,39 @@ public class AWSEMRServerlessAsyncClient extends AWSEMRServerlessClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListJobRunAttemptsResult> listJobRunAttemptsAsync(ListJobRunAttemptsRequest request) {
+
+        return listJobRunAttemptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListJobRunAttemptsResult> listJobRunAttemptsAsync(final ListJobRunAttemptsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListJobRunAttemptsRequest, ListJobRunAttemptsResult> asyncHandler) {
+        final ListJobRunAttemptsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListJobRunAttemptsResult>() {
+            @Override
+            public ListJobRunAttemptsResult call() throws Exception {
+                ListJobRunAttemptsResult result = null;
+
+                try {
+                    result = executeListJobRunAttempts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobRunsResult> listJobRunsAsync(ListJobRunsRequest request) {
 
         return listJobRunsAsync(request, null);

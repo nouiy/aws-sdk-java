@@ -70,17 +70,17 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
     private String featureSpecificationS3Uri;
     /**
      * <p>
-     * Stores the configuration information for the selection of algorithms used to train the model candidates.
+     * Stores the configuration information for the selection of algorithms trained on tabular data.
      * </p>
      * <p>
      * The list of available algorithms to choose from depends on the training mode set in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     * <code>AutoMLJobConfig.Mode</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     * <code>TabularJobConfig.Mode</code> </a>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     * <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      * </p>
      * </li>
      * <li>
@@ -90,18 +90,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * <p>
      * If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     * <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     * <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      * </p>
      * </li>
      * <li>
      * <p>
-     * When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the full
-     * set of algorithms for the given training mode.
+     * When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full set of
+     * algorithms for the given training mode.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see <a
+     * For the list of all algorithms per problem type and training mode, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      * AutoMLAlgorithmConfig</a>.
      * </p>
@@ -362,17 +362,17 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Stores the configuration information for the selection of algorithms used to train the model candidates.
+     * Stores the configuration information for the selection of algorithms trained on tabular data.
      * </p>
      * <p>
      * The list of available algorithms to choose from depends on the training mode set in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     * <code>AutoMLJobConfig.Mode</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     * <code>TabularJobConfig.Mode</code> </a>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     * <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      * </p>
      * </li>
      * <li>
@@ -382,18 +382,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * <p>
      * If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     * <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     * <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      * </p>
      * </li>
      * <li>
      * <p>
-     * When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the full
-     * set of algorithms for the given training mode.
+     * When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full set of
+     * algorithms for the given training mode.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see <a
+     * For the list of all algorithms per problem type and training mode, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      * AutoMLAlgorithmConfig</a>.
      * </p>
@@ -403,17 +403,16 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * >Algorithm support</a> section in Autopilot developer guide.
      * </p>
      * 
-     * @return Stores the configuration information for the selection of algorithms used to train the model
-     *         candidates.</p>
+     * @return Stores the configuration information for the selection of algorithms trained on tabular data.</p>
      *         <p>
      *         The list of available algorithms to choose from depends on the training mode set in <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     *         <code>AutoMLJobConfig.Mode</code> </a>.
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     *         <code>TabularJobConfig.Mode</code> </a>.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     *         <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -423,18 +422,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *         </p>
      *         <p>
      *         If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     *         <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     *         <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the
-     *         full set of algorithms for the given training mode.
+     *         When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full
+     *         set of algorithms for the given training mode.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         For the list of all algorithms per training mode, see <a
+     *         For the list of all algorithms per problem type and training mode, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      *         AutoMLAlgorithmConfig</a>.
      *         </p>
@@ -450,17 +449,17 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Stores the configuration information for the selection of algorithms used to train the model candidates.
+     * Stores the configuration information for the selection of algorithms trained on tabular data.
      * </p>
      * <p>
      * The list of available algorithms to choose from depends on the training mode set in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     * <code>AutoMLJobConfig.Mode</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     * <code>TabularJobConfig.Mode</code> </a>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     * <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      * </p>
      * </li>
      * <li>
@@ -470,18 +469,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * <p>
      * If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     * <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     * <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      * </p>
      * </li>
      * <li>
      * <p>
-     * When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the full
-     * set of algorithms for the given training mode.
+     * When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full set of
+     * algorithms for the given training mode.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see <a
+     * For the list of all algorithms per problem type and training mode, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      * AutoMLAlgorithmConfig</a>.
      * </p>
@@ -492,17 +491,16 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * 
      * @param algorithmsConfig
-     *        Stores the configuration information for the selection of algorithms used to train the model
-     *        candidates.</p>
+     *        Stores the configuration information for the selection of algorithms trained on tabular data.</p>
      *        <p>
      *        The list of available algorithms to choose from depends on the training mode set in <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     *        <code>AutoMLJobConfig.Mode</code> </a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     *        <code>TabularJobConfig.Mode</code> </a>.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     *        <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -512,18 +510,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *        </p>
      *        <p>
      *        If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     *        <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     *        <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the
-     *        full set of algorithms for the given training mode.
+     *        When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full
+     *        set of algorithms for the given training mode.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For the list of all algorithms per training mode, see <a
+     *        For the list of all algorithms per problem type and training mode, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      *        AutoMLAlgorithmConfig</a>.
      *        </p>
@@ -544,17 +542,17 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Stores the configuration information for the selection of algorithms used to train the model candidates.
+     * Stores the configuration information for the selection of algorithms trained on tabular data.
      * </p>
      * <p>
      * The list of available algorithms to choose from depends on the training mode set in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     * <code>AutoMLJobConfig.Mode</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     * <code>TabularJobConfig.Mode</code> </a>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     * <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      * </p>
      * </li>
      * <li>
@@ -564,18 +562,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * <p>
      * If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     * <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     * <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      * </p>
      * </li>
      * <li>
      * <p>
-     * When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the full
-     * set of algorithms for the given training mode.
+     * When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full set of
+     * algorithms for the given training mode.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see <a
+     * For the list of all algorithms per problem type and training mode, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      * AutoMLAlgorithmConfig</a>.
      * </p>
@@ -591,17 +589,16 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * 
      * @param algorithmsConfig
-     *        Stores the configuration information for the selection of algorithms used to train the model
-     *        candidates.</p>
+     *        Stores the configuration information for the selection of algorithms trained on tabular data.</p>
      *        <p>
      *        The list of available algorithms to choose from depends on the training mode set in <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     *        <code>AutoMLJobConfig.Mode</code> </a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     *        <code>TabularJobConfig.Mode</code> </a>.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     *        <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -611,18 +608,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *        </p>
      *        <p>
      *        If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     *        <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     *        <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the
-     *        full set of algorithms for the given training mode.
+     *        When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full
+     *        set of algorithms for the given training mode.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For the list of all algorithms per training mode, see <a
+     *        For the list of all algorithms per problem type and training mode, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      *        AutoMLAlgorithmConfig</a>.
      *        </p>
@@ -645,17 +642,17 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Stores the configuration information for the selection of algorithms used to train the model candidates.
+     * Stores the configuration information for the selection of algorithms trained on tabular data.
      * </p>
      * <p>
      * The list of available algorithms to choose from depends on the training mode set in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     * <code>AutoMLJobConfig.Mode</code> </a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     * <code>TabularJobConfig.Mode</code> </a>.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     * <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      * </p>
      * </li>
      * <li>
@@ -665,18 +662,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * <p>
      * If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     * <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     * <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      * </p>
      * </li>
      * <li>
      * <p>
-     * When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the full
-     * set of algorithms for the given training mode.
+     * When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full set of
+     * algorithms for the given training mode.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see <a
+     * For the list of all algorithms per problem type and training mode, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      * AutoMLAlgorithmConfig</a>.
      * </p>
@@ -687,17 +684,16 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </p>
      * 
      * @param algorithmsConfig
-     *        Stores the configuration information for the selection of algorithms used to train the model
-     *        candidates.</p>
+     *        Stores the configuration information for the selection of algorithms trained on tabular data.</p>
      *        <p>
      *        The list of available algorithms to choose from depends on the training mode set in <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html">
-     *        <code>AutoMLJobConfig.Mode</code> </a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TabularJobConfig.html">
+     *        <code>TabularJobConfig.Mode</code> </a>.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AlgorithmsConfig</code> should not be set in <code>AUTO</code> training mode.
+     *        <code>AlgorithmsConfig</code> should not be set if the training mode is set on <code>AUTO</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -707,18 +703,18 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *        </p>
      *        <p>
      *        If the list of algorithms provided as values for <code>AutoMLAlgorithms</code> is empty,
-     *        <code>AutoMLCandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
+     *        <code>CandidateGenerationConfig</code> uses the full set of algorithms for the given training mode.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        When <code>AlgorithmsConfig</code> is not provided, <code>AutoMLCandidateGenerationConfig</code> uses the
-     *        full set of algorithms for the given training mode.
+     *        When <code>AlgorithmsConfig</code> is not provided, <code>CandidateGenerationConfig</code> uses the full
+     *        set of algorithms for the given training mode.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For the list of all algorithms per training mode, see <a
+     *        For the list of all algorithms per problem type and training mode, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">
      *        AutoMLAlgorithmConfig</a>.
      *        </p>

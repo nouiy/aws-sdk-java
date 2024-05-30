@@ -611,6 +611,67 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Lists all attempt of a job run.
+     * </p>
+     * 
+     * @param listJobRunAttemptsRequest
+     * @return Result of the ListJobRunAttempts operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AWSEMRServerless.ListJobRunAttempts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/ListJobRunAttempts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListJobRunAttemptsResult listJobRunAttempts(ListJobRunAttemptsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListJobRunAttempts(request);
+    }
+
+    @SdkInternalApi
+    final ListJobRunAttemptsResult executeListJobRunAttempts(ListJobRunAttemptsRequest listJobRunAttemptsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listJobRunAttemptsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListJobRunAttemptsRequest> request = null;
+        Response<ListJobRunAttemptsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListJobRunAttemptsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listJobRunAttemptsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListJobRunAttempts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListJobRunAttemptsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListJobRunAttemptsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists job runs based on a set of parameters.
      * </p>
      * 

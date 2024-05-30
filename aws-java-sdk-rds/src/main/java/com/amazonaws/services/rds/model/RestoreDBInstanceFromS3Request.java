@@ -525,8 +525,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String s3Prefix;
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your Amazon S3
-     * bucket.
+     * An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions policy
+     * that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     * > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      */
     private String s3IngestionRoleArn;
@@ -4081,13 +4083,18 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your Amazon S3
-     * bucket.
+     * An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions policy
+     * that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     * > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param s3IngestionRoleArn
-     *        An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your Amazon
-     *        S3 bucket.
+     *        An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions
+     *        policy that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     *        > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      */
 
     public void setS3IngestionRoleArn(String s3IngestionRoleArn) {
@@ -4096,12 +4103,17 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your Amazon S3
-     * bucket.
+     * An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions policy
+     * that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     * > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your
-     *         Amazon S3 bucket.
+     * @return An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions
+     *         policy that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     *         > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      */
 
     public String getS3IngestionRoleArn() {
@@ -4110,13 +4122,18 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your Amazon S3
-     * bucket.
+     * An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions policy
+     * that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     * > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param s3IngestionRoleArn
-     *        An Amazon Web Services Identity and Access Management (IAM) role to allow Amazon RDS to access your Amazon
-     *        S3 bucket.
+     *        An Amazon Web Services Identity and Access Management (IAM) role with a trust policy and a permissions
+     *        policy that allows Amazon RDS to access your Amazon S3 bucket. For information about this role, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html#MySQL.Procedural.Importing.Enabling.IAM"
+     *        > Creating an IAM role manually</a> in the <i>Amazon RDS User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

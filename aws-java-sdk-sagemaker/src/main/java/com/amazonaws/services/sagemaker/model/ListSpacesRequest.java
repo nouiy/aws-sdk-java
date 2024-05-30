@@ -34,7 +34,7 @@ public class ListSpacesRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String nextToken;
     /**
      * <p>
-     * This parameter defines the maximum number of results that can be returned in a single response. The
+     * This parameter defines the maximum number of results that can be return in a single response. The
      * <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available than the
      * value specified, a <code>NextToken</code> is provided in the response. The <code>NextToken</code> indicates that
      * the user should get the next set of results by providing this token as a part of a subsequent call. The default
@@ -115,7 +115,7 @@ public class ListSpacesRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * This parameter defines the maximum number of results that can be returned in a single response. The
+     * This parameter defines the maximum number of results that can be return in a single response. The
      * <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available than the
      * value specified, a <code>NextToken</code> is provided in the response. The <code>NextToken</code> indicates that
      * the user should get the next set of results by providing this token as a part of a subsequent call. The default
@@ -123,7 +123,7 @@ public class ListSpacesRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param maxResults
-     *        This parameter defines the maximum number of results that can be returned in a single response. The
+     *        This parameter defines the maximum number of results that can be return in a single response. The
      *        <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available
      *        than the value specified, a <code>NextToken</code> is provided in the response. The <code>NextToken</code>
      *        indicates that the user should get the next set of results by providing this token as a part of a
@@ -136,14 +136,14 @@ public class ListSpacesRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * This parameter defines the maximum number of results that can be returned in a single response. The
+     * This parameter defines the maximum number of results that can be return in a single response. The
      * <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available than the
      * value specified, a <code>NextToken</code> is provided in the response. The <code>NextToken</code> indicates that
      * the user should get the next set of results by providing this token as a part of a subsequent call. The default
      * value for <code>MaxResults</code> is 10.
      * </p>
      * 
-     * @return This parameter defines the maximum number of results that can be returned in a single response. The
+     * @return This parameter defines the maximum number of results that can be return in a single response. The
      *         <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available
      *         than the value specified, a <code>NextToken</code> is provided in the response. The
      *         <code>NextToken</code> indicates that the user should get the next set of results by providing this token
@@ -156,7 +156,7 @@ public class ListSpacesRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * This parameter defines the maximum number of results that can be returned in a single response. The
+     * This parameter defines the maximum number of results that can be return in a single response. The
      * <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available than the
      * value specified, a <code>NextToken</code> is provided in the response. The <code>NextToken</code> indicates that
      * the user should get the next set of results by providing this token as a part of a subsequent call. The default
@@ -164,7 +164,7 @@ public class ListSpacesRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param maxResults
-     *        This parameter defines the maximum number of results that can be returned in a single response. The
+     *        This parameter defines the maximum number of results that can be return in a single response. The
      *        <code>MaxResults</code> parameter is an upper bound, not a target. If there are more results available
      *        than the value specified, a <code>NextToken</code> is provided in the response. The <code>NextToken</code>
      *        indicates that the user should get the next set of results by providing this token as a part of a

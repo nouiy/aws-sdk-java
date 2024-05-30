@@ -37,6 +37,13 @@ public class GetJobRunRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private String jobRunId;
+    /**
+     * <p>
+     * An optimal parameter that indicates the amount of attempts for the job. If not specified, this value defaults to
+     * the attempt of the latest job.
+     * </p>
+     */
+    private Integer attempt;
 
     /**
      * <p>
@@ -119,6 +126,52 @@ public class GetJobRunRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * An optimal parameter that indicates the amount of attempts for the job. If not specified, this value defaults to
+     * the attempt of the latest job.
+     * </p>
+     * 
+     * @param attempt
+     *        An optimal parameter that indicates the amount of attempts for the job. If not specified, this value
+     *        defaults to the attempt of the latest job.
+     */
+
+    public void setAttempt(Integer attempt) {
+        this.attempt = attempt;
+    }
+
+    /**
+     * <p>
+     * An optimal parameter that indicates the amount of attempts for the job. If not specified, this value defaults to
+     * the attempt of the latest job.
+     * </p>
+     * 
+     * @return An optimal parameter that indicates the amount of attempts for the job. If not specified, this value
+     *         defaults to the attempt of the latest job.
+     */
+
+    public Integer getAttempt() {
+        return this.attempt;
+    }
+
+    /**
+     * <p>
+     * An optimal parameter that indicates the amount of attempts for the job. If not specified, this value defaults to
+     * the attempt of the latest job.
+     * </p>
+     * 
+     * @param attempt
+     *        An optimal parameter that indicates the amount of attempts for the job. If not specified, this value
+     *        defaults to the attempt of the latest job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetJobRunRequest withAttempt(Integer attempt) {
+        setAttempt(attempt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +186,9 @@ public class GetJobRunRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getApplicationId() != null)
             sb.append("ApplicationId: ").append(getApplicationId()).append(",");
         if (getJobRunId() != null)
-            sb.append("JobRunId: ").append(getJobRunId());
+            sb.append("JobRunId: ").append(getJobRunId()).append(",");
+        if (getAttempt() != null)
+            sb.append("Attempt: ").append(getAttempt());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +211,10 @@ public class GetJobRunRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getJobRunId() != null && other.getJobRunId().equals(this.getJobRunId()) == false)
             return false;
+        if (other.getAttempt() == null ^ this.getAttempt() == null)
+            return false;
+        if (other.getAttempt() != null && other.getAttempt().equals(this.getAttempt()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +225,7 @@ public class GetJobRunRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
         hashCode = prime * hashCode + ((getJobRunId() == null) ? 0 : getJobRunId().hashCode());
+        hashCode = prime * hashCode + ((getAttempt() == null) ? 0 : getAttempt().hashCode());
         return hashCode;
     }
 

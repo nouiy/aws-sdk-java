@@ -161,6 +161,14 @@ public class DescribeModelPackageResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     describeModelPackageResult.setSourceUri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SecurityConfig", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setSecurityConfig(ModelPackageSecurityConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ModelCard", targetDepth)) {
+                    context.nextToken();
+                    describeModelPackageResult.setModelCard(ModelPackageModelCardJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

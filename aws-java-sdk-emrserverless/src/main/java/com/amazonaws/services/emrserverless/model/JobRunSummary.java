@@ -48,6 +48,12 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
+     * The mode of the job run.
+     * </p>
+     */
+    private String mode;
+    /**
+     * <p>
      * The ARN of the job run.
      * </p>
      */
@@ -100,6 +106,24 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * The attempt number of the job run execution.
+     * </p>
+     */
+    private Integer attempt;
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     */
+    private java.util.Date attemptCreatedAt;
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     */
+    private java.util.Date attemptUpdatedAt;
 
     /**
      * <p>
@@ -218,6 +242,65 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
 
     public JobRunSummary withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run.
+     * @see JobRunMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @return The mode of the job run.
+     * @see JobRunMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public JobRunSummary withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public JobRunSummary withMode(JobRunMode mode) {
+        this.mode = mode.toString();
         return this;
     }
 
@@ -601,6 +684,126 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The attempt number of the job run execution.
+     * </p>
+     * 
+     * @param attempt
+     *        The attempt number of the job run execution.
+     */
+
+    public void setAttempt(Integer attempt) {
+        this.attempt = attempt;
+    }
+
+    /**
+     * <p>
+     * The attempt number of the job run execution.
+     * </p>
+     * 
+     * @return The attempt number of the job run execution.
+     */
+
+    public Integer getAttempt() {
+        return this.attempt;
+    }
+
+    /**
+     * <p>
+     * The attempt number of the job run execution.
+     * </p>
+     * 
+     * @param attempt
+     *        The attempt number of the job run execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRunSummary withAttempt(Integer attempt) {
+        setAttempt(attempt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     * 
+     * @param attemptCreatedAt
+     *        The date and time of when the job run attempt was created.
+     */
+
+    public void setAttemptCreatedAt(java.util.Date attemptCreatedAt) {
+        this.attemptCreatedAt = attemptCreatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     * 
+     * @return The date and time of when the job run attempt was created.
+     */
+
+    public java.util.Date getAttemptCreatedAt() {
+        return this.attemptCreatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     * 
+     * @param attemptCreatedAt
+     *        The date and time of when the job run attempt was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRunSummary withAttemptCreatedAt(java.util.Date attemptCreatedAt) {
+        setAttemptCreatedAt(attemptCreatedAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     * 
+     * @param attemptUpdatedAt
+     *        The date and time of when the job run attempt was last updated.
+     */
+
+    public void setAttemptUpdatedAt(java.util.Date attemptUpdatedAt) {
+        this.attemptUpdatedAt = attemptUpdatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     * 
+     * @return The date and time of when the job run attempt was last updated.
+     */
+
+    public java.util.Date getAttemptUpdatedAt() {
+        return this.attemptUpdatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     * 
+     * @param attemptUpdatedAt
+     *        The date and time of when the job run attempt was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRunSummary withAttemptUpdatedAt(java.util.Date attemptUpdatedAt) {
+        setAttemptUpdatedAt(attemptUpdatedAt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -618,6 +821,8 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getCreatedBy() != null)
@@ -635,7 +840,13 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
         if (getReleaseLabel() != null)
             sb.append("ReleaseLabel: ").append(getReleaseLabel()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getAttempt() != null)
+            sb.append("Attempt: ").append(getAttempt()).append(",");
+        if (getAttemptCreatedAt() != null)
+            sb.append("AttemptCreatedAt: ").append(getAttemptCreatedAt()).append(",");
+        if (getAttemptUpdatedAt() != null)
+            sb.append("AttemptUpdatedAt: ").append(getAttemptUpdatedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -661,6 +872,10 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
             return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
@@ -698,6 +913,18 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getAttempt() == null ^ this.getAttempt() == null)
+            return false;
+        if (other.getAttempt() != null && other.getAttempt().equals(this.getAttempt()) == false)
+            return false;
+        if (other.getAttemptCreatedAt() == null ^ this.getAttemptCreatedAt() == null)
+            return false;
+        if (other.getAttemptCreatedAt() != null && other.getAttemptCreatedAt().equals(this.getAttemptCreatedAt()) == false)
+            return false;
+        if (other.getAttemptUpdatedAt() == null ^ this.getAttemptUpdatedAt() == null)
+            return false;
+        if (other.getAttemptUpdatedAt() != null && other.getAttemptUpdatedAt().equals(this.getAttemptUpdatedAt()) == false)
+            return false;
         return true;
     }
 
@@ -709,6 +936,7 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
@@ -718,6 +946,9 @@ public class JobRunSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStateDetails() == null) ? 0 : getStateDetails().hashCode());
         hashCode = prime * hashCode + ((getReleaseLabel() == null) ? 0 : getReleaseLabel().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getAttempt() == null) ? 0 : getAttempt().hashCode());
+        hashCode = prime * hashCode + ((getAttemptCreatedAt() == null) ? 0 : getAttemptCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getAttemptUpdatedAt() == null) ? 0 : getAttemptUpdatedAt().hashCode());
         return hashCode;
     }
 

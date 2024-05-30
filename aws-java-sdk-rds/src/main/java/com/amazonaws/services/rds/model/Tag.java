@@ -21,7 +21,9 @@ import javax.annotation.Generated;
  * </p>
  * <p>
  * For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging
- * Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
+ * Amazon RDS Resources</a> in the <i>Amazon RDS User Guide</i> or <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and
+ * Amazon RDS Resources</a> in the <i>Amazon Aurora User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/Tag" target="_top">AWS API Documentation</a>

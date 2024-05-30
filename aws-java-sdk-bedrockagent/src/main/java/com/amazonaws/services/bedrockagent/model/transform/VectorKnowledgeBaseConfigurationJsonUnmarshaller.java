@@ -52,6 +52,11 @@ public class VectorKnowledgeBaseConfigurationJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     vectorKnowledgeBaseConfiguration.setEmbeddingModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("embeddingModelConfiguration", targetDepth)) {
+                    context.nextToken();
+                    vectorKnowledgeBaseConfiguration.setEmbeddingModelConfiguration(EmbeddingModelConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

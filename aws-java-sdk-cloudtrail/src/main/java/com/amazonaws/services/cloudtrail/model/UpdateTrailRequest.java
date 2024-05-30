@@ -72,17 +72,17 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon S3
-     * Bucket Naming Requirements</a>.
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket naming
+     * rules</a>.
      * </p>
      */
     private String s3BucketName;
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>. The maximum length is 200 characters.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      * </p>
      */
     private String s3KeyPrefix;
@@ -449,14 +449,14 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon S3
-     * Bucket Naming Requirements</a>.
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket naming
+     * rules</a>.
      * </p>
      * 
      * @param s3BucketName
      *        Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon
-     *        S3 Bucket Naming Requirements</a>.
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket
+     *        naming rules</a>.
      */
 
     public void setS3BucketName(String s3BucketName) {
@@ -466,13 +466,13 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon S3
-     * Bucket Naming Requirements</a>.
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket naming
+     * rules</a>.
      * </p>
      * 
      * @return Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon
-     *         S3 Bucket Naming Requirements</a>.
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket
+     *         naming rules</a>.
      */
 
     public String getS3BucketName() {
@@ -482,14 +482,14 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon S3
-     * Bucket Naming Requirements</a>.
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket naming
+     * rules</a>.
      * </p>
      * 
      * @param s3BucketName
      *        Specifies the name of the Amazon S3 bucket designated for publishing log files. See <a
-     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon
-     *        S3 Bucket Naming Requirements</a>.
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">Amazon S3 Bucket
+     *        naming rules</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -501,16 +501,16 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>. The maximum length is 200 characters.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      * </p>
      * 
      * @param s3KeyPrefix
      *        Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log
-     *        file delivery. For more information, see <a
-     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding
-     *        Your CloudTrail Log Files</a>. The maximum length is 200 characters.
+     *        file delivery. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     *        >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      */
 
     public void setS3KeyPrefix(String s3KeyPrefix) {
@@ -520,15 +520,15 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>. The maximum length is 200 characters.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      * </p>
      * 
      * @return Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log
-     *         file delivery. For more information, see <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding
-     *         Your CloudTrail Log Files</a>. The maximum length is 200 characters.
+     *         file delivery. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     *         >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      */
 
     public String getS3KeyPrefix() {
@@ -538,16 +538,16 @@ public class UpdateTrailRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>. The maximum length is 200 characters.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      * </p>
      * 
      * @param s3KeyPrefix
      *        Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log
-     *        file delivery. For more information, see <a
-     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding
-     *        Your CloudTrail Log Files</a>. The maximum length is 200 characters.
+     *        file delivery. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     *        >Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

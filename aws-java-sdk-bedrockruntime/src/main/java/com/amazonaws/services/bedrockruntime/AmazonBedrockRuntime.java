@@ -43,6 +43,42 @@ public interface AmazonBedrockRuntime {
 
     /**
      * <p>
+     * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
+     * works with all models that support messages. This allows you to write code once and use it with different models.
+     * Should a model have unique inference parameters, you can also pass those unique parameters to the model. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
+     * inference</a> in the Bedrock User Guide.
+     * </p>
+     * <p>
+     * This operation requires permission for the <code>bedrock:InvokeModel</code> action.
+     * </p>
+     * 
+     * @param converseRequest
+     * @return Result of the Converse operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws ModelTimeoutException
+     *         The request took too long to process. Processing time exceeded the model timeout length.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws ModelNotReadyException
+     *         The model specified in the request is not ready to serve inference requests.
+     * @throws ModelErrorException
+     *         The request failed due to an error while processing the model.
+     * @sample AmazonBedrockRuntime.Converse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/Converse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ConverseResult converse(ConverseRequest converseRequest);
+
+    /**
+     * <p>
      * Invokes the specified Amazon Bedrock model to run inference using the prompt and inference parameters provided in
      * the request body. You use model inference to generate text, images, and embeddings.
      * </p>

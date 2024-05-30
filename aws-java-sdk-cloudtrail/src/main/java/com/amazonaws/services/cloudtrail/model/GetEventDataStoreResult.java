@@ -117,6 +117,13 @@ public class GetEventDataStoreResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private String federationRoleArn;
+    /**
+     * <p>
+     * The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     * organizes event data into partitions based on values derived from partition keys.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<PartitionKey> partitionKeys;
 
     /**
      * <p>
@@ -874,6 +881,87 @@ public class GetEventDataStoreResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     * organizes event data into partitions based on values derived from partition keys.
+     * </p>
+     * 
+     * @return The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     *         organizes event data into partitions based on values derived from partition keys.
+     */
+
+    public java.util.List<PartitionKey> getPartitionKeys() {
+        if (partitionKeys == null) {
+            partitionKeys = new com.amazonaws.internal.SdkInternalList<PartitionKey>();
+        }
+        return partitionKeys;
+    }
+
+    /**
+     * <p>
+     * The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     * organizes event data into partitions based on values derived from partition keys.
+     * </p>
+     * 
+     * @param partitionKeys
+     *        The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     *        organizes event data into partitions based on values derived from partition keys.
+     */
+
+    public void setPartitionKeys(java.util.Collection<PartitionKey> partitionKeys) {
+        if (partitionKeys == null) {
+            this.partitionKeys = null;
+            return;
+        }
+
+        this.partitionKeys = new com.amazonaws.internal.SdkInternalList<PartitionKey>(partitionKeys);
+    }
+
+    /**
+     * <p>
+     * The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     * organizes event data into partitions based on values derived from partition keys.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPartitionKeys(java.util.Collection)} or {@link #withPartitionKeys(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param partitionKeys
+     *        The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     *        organizes event data into partitions based on values derived from partition keys.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEventDataStoreResult withPartitionKeys(PartitionKey... partitionKeys) {
+        if (this.partitionKeys == null) {
+            setPartitionKeys(new com.amazonaws.internal.SdkInternalList<PartitionKey>(partitionKeys.length));
+        }
+        for (PartitionKey ele : partitionKeys) {
+            this.partitionKeys.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     * organizes event data into partitions based on values derived from partition keys.
+     * </p>
+     * 
+     * @param partitionKeys
+     *        The partition keys for the event data store. To improve query performance and efficiency, CloudTrail Lake
+     *        organizes event data into partitions based on values derived from partition keys.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEventDataStoreResult withPartitionKeys(java.util.Collection<PartitionKey> partitionKeys) {
+        setPartitionKeys(partitionKeys);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -912,7 +1000,9 @@ public class GetEventDataStoreResult extends com.amazonaws.AmazonWebServiceResul
         if (getFederationStatus() != null)
             sb.append("FederationStatus: ").append(getFederationStatus()).append(",");
         if (getFederationRoleArn() != null)
-            sb.append("FederationRoleArn: ").append(getFederationRoleArn());
+            sb.append("FederationRoleArn: ").append(getFederationRoleArn()).append(",");
+        if (getPartitionKeys() != null)
+            sb.append("PartitionKeys: ").append(getPartitionKeys());
         sb.append("}");
         return sb.toString();
     }
@@ -983,6 +1073,10 @@ public class GetEventDataStoreResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getFederationRoleArn() != null && other.getFederationRoleArn().equals(this.getFederationRoleArn()) == false)
             return false;
+        if (other.getPartitionKeys() == null ^ this.getPartitionKeys() == null)
+            return false;
+        if (other.getPartitionKeys() != null && other.getPartitionKeys().equals(this.getPartitionKeys()) == false)
+            return false;
         return true;
     }
 
@@ -1005,6 +1099,7 @@ public class GetEventDataStoreResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getBillingMode() == null) ? 0 : getBillingMode().hashCode());
         hashCode = prime * hashCode + ((getFederationStatus() == null) ? 0 : getFederationStatus().hashCode());
         hashCode = prime * hashCode + ((getFederationRoleArn() == null) ? 0 : getFederationRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getPartitionKeys() == null) ? 0 : getPartitionKeys().hashCode());
         return hashCode;
     }
 

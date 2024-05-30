@@ -57,6 +57,8 @@ public class RoutingProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedRegion").build();
     private static final MarshallingInfo<Boolean> ISDEFAULT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsDefault").build();
+    private static final MarshallingInfo<List> ASSOCIATEDQUEUEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssociatedQueueIds").build();
 
     private static final RoutingProfileMarshaller instance = new RoutingProfileMarshaller();
 
@@ -88,6 +90,7 @@ public class RoutingProfileMarshaller {
             protocolMarshaller.marshall(routingProfile.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(routingProfile.getLastModifiedRegion(), LASTMODIFIEDREGION_BINDING);
             protocolMarshaller.marshall(routingProfile.getIsDefault(), ISDEFAULT_BINDING);
+            protocolMarshaller.marshall(routingProfile.getAssociatedQueueIds(), ASSOCIATEDQUEUEIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

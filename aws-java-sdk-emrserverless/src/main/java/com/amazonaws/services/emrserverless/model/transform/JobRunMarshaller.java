@@ -67,6 +67,16 @@ public class JobRunMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionTimeoutMinutes").build();
     private static final MarshallingInfo<StructuredPojo> BILLEDRESOURCEUTILIZATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("billedResourceUtilization").build();
+    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("mode").build();
+    private static final MarshallingInfo<StructuredPojo> RETRYPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retryPolicy").build();
+    private static final MarshallingInfo<Integer> ATTEMPT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attempt").build();
+    private static final MarshallingInfo<java.util.Date> ATTEMPTCREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attemptCreatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ATTEMPTUPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attemptUpdatedAt").timestampFormat("unixTimestamp").build();
 
     private static final JobRunMarshaller instance = new JobRunMarshaller();
 
@@ -103,6 +113,11 @@ public class JobRunMarshaller {
             protocolMarshaller.marshall(jobRun.getTotalExecutionDurationSeconds(), TOTALEXECUTIONDURATIONSECONDS_BINDING);
             protocolMarshaller.marshall(jobRun.getExecutionTimeoutMinutes(), EXECUTIONTIMEOUTMINUTES_BINDING);
             protocolMarshaller.marshall(jobRun.getBilledResourceUtilization(), BILLEDRESOURCEUTILIZATION_BINDING);
+            protocolMarshaller.marshall(jobRun.getMode(), MODE_BINDING);
+            protocolMarshaller.marshall(jobRun.getRetryPolicy(), RETRYPOLICY_BINDING);
+            protocolMarshaller.marshall(jobRun.getAttempt(), ATTEMPT_BINDING);
+            protocolMarshaller.marshall(jobRun.getAttemptCreatedAt(), ATTEMPTCREATEDAT_BINDING);
+            protocolMarshaller.marshall(jobRun.getAttemptUpdatedAt(), ATTEMPTUPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

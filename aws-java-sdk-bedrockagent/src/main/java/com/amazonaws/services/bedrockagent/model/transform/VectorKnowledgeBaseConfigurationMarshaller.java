@@ -29,6 +29,8 @@ public class VectorKnowledgeBaseConfigurationMarshaller {
 
     private static final MarshallingInfo<String> EMBEDDINGMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("embeddingModelArn").build();
+    private static final MarshallingInfo<StructuredPojo> EMBEDDINGMODELCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("embeddingModelConfiguration").build();
 
     private static final VectorKnowledgeBaseConfigurationMarshaller instance = new VectorKnowledgeBaseConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class VectorKnowledgeBaseConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(vectorKnowledgeBaseConfiguration.getEmbeddingModelArn(), EMBEDDINGMODELARN_BINDING);
+            protocolMarshaller.marshall(vectorKnowledgeBaseConfiguration.getEmbeddingModelConfiguration(), EMBEDDINGMODELCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

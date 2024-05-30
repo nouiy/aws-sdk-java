@@ -83,8 +83,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private String characterSetName;
     /**
      * <p>
-     * The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS doesn't
-     * create a database in the DB cluster you are creating.
+     * The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is always
+     * created. If this parameter is specified, an additional database with this name is created.
      * </p>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
@@ -1687,16 +1687,16 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS doesn't
-     * create a database in the DB cluster you are creating.
+     * The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is always
+     * created. If this parameter is specified, an additional database with this name is created.
      * </p>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param databaseName
-     *        The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS
-     *        doesn't create a database in the DB cluster you are creating.</p>
+     *        The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is
+     *        always created. If this parameter is specified, an additional database with this name is created.</p>
      *        <p>
      *        Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -1707,15 +1707,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS doesn't
-     * create a database in the DB cluster you are creating.
+     * The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is always
+     * created. If this parameter is specified, an additional database with this name is created.
      * </p>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS
-     *         doesn't create a database in the DB cluster you are creating.</p>
+     * @return The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is
+     *         always created. If this parameter is specified, an additional database with this name is created.</p>
      *         <p>
      *         Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -1726,16 +1726,16 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS doesn't
-     * create a database in the DB cluster you are creating.
+     * The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is always
+     * created. If this parameter is specified, an additional database with this name is created.
      * </p>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param databaseName
-     *        The name for your database of up to 64 alphanumeric characters. If you don't provide a name, Amazon RDS
-     *        doesn't create a database in the DB cluster you are creating.</p>
+     *        The name for your database of up to 64 alphanumeric characters. A database named <code>postgres</code> is
+     *        always created. If this parameter is specified, an additional database with this name is created.</p>
      *        <p>
      *        Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.

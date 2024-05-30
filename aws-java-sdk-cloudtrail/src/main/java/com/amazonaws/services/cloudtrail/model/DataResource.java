@@ -19,10 +19,33 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon S3 buckets, Lambda functions, or Amazon DynamoDB tables that you specify in your event selectors for your
- * trail to log data events. Data events provide information about the resource operations performed on or within a
- * resource itself. These are also known as data plane operations. You can specify up to 250 data resources for a trail.
+ * Data events provide information about the resource operations performed on or within a resource itself. These are
+ * also known as data plane operations. You can specify up to 250 data resources for a trail.
  * </p>
+ * <p>
+ * Configure the <code>DataResource</code> to specify the resource type and resource ARNs for which you want to log data
+ * events.
+ * </p>
+ * <p>
+ * You can specify the following resource types in your event selectors for your trail:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <code>AWS::DynamoDB::Table</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>AWS::Lambda::Function</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>AWS::S3::Object</code>
+ * </p>
+ * </li>
+ * </ul>
  * <note>
  * <p>
  * The total number of allowed data resources is 250. This number can be distributed between 1 and 5 event selectors,
@@ -128,7 +151,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.
      * </p>
      * <ul>
      * <li>
@@ -372,7 +395,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.
      * </p>
      * <ul>
      * <li>
@@ -431,7 +454,8 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.</p>
+     * @return An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource
+     *         type.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -499,7 +523,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.
      * </p>
      * <ul>
      * <li>
@@ -559,7 +583,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param values
-     *        An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.</p>
+     *        An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -629,7 +653,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.
      * </p>
      * <ul>
      * <li>
@@ -694,7 +718,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param values
-     *        An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.</p>
+     *        An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -766,7 +790,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.
      * </p>
      * <ul>
      * <li>
@@ -826,7 +850,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param values
-     *        An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.</p>
+     *        An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified resource type.</p>
      *        <ul>
      *        <li>
      *        <p>

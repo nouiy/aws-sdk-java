@@ -224,6 +224,10 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String sourceUri;
+
+    private ModelPackageSecurityConfig securityConfig;
+
+    private ModelPackageModelCard modelCard;
     /**
      * <p>
      * A list of the tags associated with the model package. For more information, see <a
@@ -1690,6 +1694,58 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param securityConfig
+     */
+
+    public void setSecurityConfig(ModelPackageSecurityConfig securityConfig) {
+        this.securityConfig = securityConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public ModelPackageSecurityConfig getSecurityConfig() {
+        return this.securityConfig;
+    }
+
+    /**
+     * @param securityConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withSecurityConfig(ModelPackageSecurityConfig securityConfig) {
+        setSecurityConfig(securityConfig);
+        return this;
+    }
+
+    /**
+     * @param modelCard
+     */
+
+    public void setModelCard(ModelPackageModelCard modelCard) {
+        this.modelCard = modelCard;
+    }
+
+    /**
+     * @return
+     */
+
+    public ModelPackageModelCard getModelCard() {
+        return this.modelCard;
+    }
+
+    /**
+     * @param modelCard
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withModelCard(ModelPackageModelCard modelCard) {
+        setModelCard(modelCard);
+        return this;
+    }
+
+    /**
      * <p>
      * A list of the tags associated with the model package. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
@@ -2005,6 +2061,10 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdditionalInferenceSpecifications: ").append(getAdditionalInferenceSpecifications()).append(",");
         if (getSourceUri() != null)
             sb.append("SourceUri: ").append(getSourceUri()).append(",");
+        if (getSecurityConfig() != null)
+            sb.append("SecurityConfig: ").append(getSecurityConfig()).append(",");
+        if (getModelCard() != null)
+            sb.append("ModelCard: ").append(getModelCard()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getCustomerMetadataProperties() != null)
@@ -2124,6 +2184,14 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSourceUri() != null && other.getSourceUri().equals(this.getSourceUri()) == false)
             return false;
+        if (other.getSecurityConfig() == null ^ this.getSecurityConfig() == null)
+            return false;
+        if (other.getSecurityConfig() != null && other.getSecurityConfig().equals(this.getSecurityConfig()) == false)
+            return false;
+        if (other.getModelCard() == null ^ this.getModelCard() == null)
+            return false;
+        if (other.getModelCard() != null && other.getModelCard().equals(this.getModelCard()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -2172,6 +2240,8 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSamplePayloadUrl() == null) ? 0 : getSamplePayloadUrl().hashCode());
         hashCode = prime * hashCode + ((getAdditionalInferenceSpecifications() == null) ? 0 : getAdditionalInferenceSpecifications().hashCode());
         hashCode = prime * hashCode + ((getSourceUri() == null) ? 0 : getSourceUri().hashCode());
+        hashCode = prime * hashCode + ((getSecurityConfig() == null) ? 0 : getSecurityConfig().hashCode());
+        hashCode = prime * hashCode + ((getModelCard() == null) ? 0 : getModelCard().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
         hashCode = prime * hashCode + ((getDriftCheckBaselines() == null) ? 0 : getDriftCheckBaselines().hashCode());

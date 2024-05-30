@@ -125,6 +125,26 @@ public class JobRunJsonUnmarshaller implements Unmarshaller<JobRun, JsonUnmarsha
                     context.nextToken();
                     jobRun.setBilledResourceUtilization(ResourceUtilizationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("mode", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("retryPolicy", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setRetryPolicy(RetryPolicyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("attempt", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setAttempt(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("attemptCreatedAt", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setAttemptCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("attemptUpdatedAt", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setAttemptUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

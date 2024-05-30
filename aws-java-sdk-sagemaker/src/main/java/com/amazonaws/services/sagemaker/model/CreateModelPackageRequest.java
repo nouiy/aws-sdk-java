@@ -200,6 +200,24 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String sourceUri;
+    /**
+     * <p>
+     * The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     * </p>
+     */
+    private ModelPackageSecurityConfig securityConfig;
+    /**
+     * <p>
+     * The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a model
+     * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
+     * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
+     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
+     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
+     * Details of a Model Version</a>.
+     * </p>
+     */
+    private ModelPackageModelCard modelCard;
 
     /**
      * <p>
@@ -1505,6 +1523,125 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     * </p>
+     * 
+     * @param securityConfig
+     *        The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     */
+
+    public void setSecurityConfig(ModelPackageSecurityConfig securityConfig) {
+        this.securityConfig = securityConfig;
+    }
+
+    /**
+     * <p>
+     * The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     * </p>
+     * 
+     * @return The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     */
+
+    public ModelPackageSecurityConfig getSecurityConfig() {
+        return this.securityConfig;
+    }
+
+    /**
+     * <p>
+     * The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     * </p>
+     * 
+     * @param securityConfig
+     *        The KMS Key ID (<code>KMSKeyId</code>) used for encryption of model package information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelPackageRequest withSecurityConfig(ModelPackageSecurityConfig securityConfig) {
+        setSecurityConfig(securityConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a model
+     * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
+     * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
+     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
+     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
+     * Details of a Model Version</a>.
+     * </p>
+     * 
+     * @param modelCard
+     *        The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a
+     *        model package, it is a specific usage of a model card and its schema is simplified compared to the schema
+     *        of <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     *        <code>model_package_details</code>, and <code>model_overview</code> is composed of the
+     *        <code>model_creator</code> and <code>model_artifact</code> properties. For more information about the
+     *        model card associated with the model package, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a
+     *        Model Version</a>.
+     */
+
+    public void setModelCard(ModelPackageModelCard modelCard) {
+        this.modelCard = modelCard;
+    }
+
+    /**
+     * <p>
+     * The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a model
+     * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
+     * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
+     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
+     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
+     * Details of a Model Version</a>.
+     * </p>
+     * 
+     * @return The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a
+     *         model package, it is a specific usage of a model card and its schema is simplified compared to the schema
+     *         of <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     *         <code>model_package_details</code>, and <code>model_overview</code> is composed of the
+     *         <code>model_creator</code> and <code>model_artifact</code> properties. For more information about the
+     *         model card associated with the model package, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a
+     *         Model Version</a>.
+     */
+
+    public ModelPackageModelCard getModelCard() {
+        return this.modelCard;
+    }
+
+    /**
+     * <p>
+     * The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a model
+     * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
+     * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
+     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
+     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
+     * Details of a Model Version</a>.
+     * </p>
+     * 
+     * @param modelCard
+     *        The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a
+     *        model package, it is a specific usage of a model card and its schema is simplified compared to the schema
+     *        of <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
+     *        <code>model_package_details</code>, and <code>model_overview</code> is composed of the
+     *        <code>model_creator</code> and <code>model_artifact</code> properties. For more information about the
+     *        model card associated with the model package, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a
+     *        Model Version</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelPackageRequest withModelCard(ModelPackageModelCard modelCard) {
+        setModelCard(modelCard);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1555,7 +1692,11 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         if (getSkipModelValidation() != null)
             sb.append("SkipModelValidation: ").append(getSkipModelValidation()).append(",");
         if (getSourceUri() != null)
-            sb.append("SourceUri: ").append(getSourceUri());
+            sb.append("SourceUri: ").append(getSourceUri()).append(",");
+        if (getSecurityConfig() != null)
+            sb.append("SecurityConfig: ").append(getSecurityConfig()).append(",");
+        if (getModelCard() != null)
+            sb.append("ModelCard: ").append(getModelCard());
         sb.append("}");
         return sb.toString();
     }
@@ -1651,6 +1792,14 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getSourceUri() != null && other.getSourceUri().equals(this.getSourceUri()) == false)
             return false;
+        if (other.getSecurityConfig() == null ^ this.getSecurityConfig() == null)
+            return false;
+        if (other.getSecurityConfig() != null && other.getSecurityConfig().equals(this.getSecurityConfig()) == false)
+            return false;
+        if (other.getModelCard() == null ^ this.getModelCard() == null)
+            return false;
+        if (other.getModelCard() != null && other.getModelCard().equals(this.getModelCard()) == false)
+            return false;
         return true;
     }
 
@@ -1679,6 +1828,8 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getAdditionalInferenceSpecifications() == null) ? 0 : getAdditionalInferenceSpecifications().hashCode());
         hashCode = prime * hashCode + ((getSkipModelValidation() == null) ? 0 : getSkipModelValidation().hashCode());
         hashCode = prime * hashCode + ((getSourceUri() == null) ? 0 : getSourceUri().hashCode());
+        hashCode = prime * hashCode + ((getSecurityConfig() == null) ? 0 : getSecurityConfig().hashCode());
+        hashCode = prime * hashCode + ((getModelCard() == null) ? 0 : getModelCard().hashCode());
         return hashCode;
     }
 

@@ -637,8 +637,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ConflictException
@@ -931,11 +931,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         store can't be updated.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -945,8 +945,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws OrganizationsNotInUseException
      *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
      *         member of an organization. To make this request, sign in using the credentials of an account that belongs
@@ -1096,11 +1096,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not permitted.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -1110,8 +1110,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws OrganizationsNotInUseException
      *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
      *         member of an organization. To make this request, sign in using the credentials of an account that belongs
@@ -1284,8 +1284,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ChannelExistsForEDSException
@@ -1495,8 +1495,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
@@ -1566,11 +1566,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         administrator.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
@@ -1860,11 +1860,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not supported.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -1874,8 +1874,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws OrganizationsNotInUseException
@@ -1976,11 +1976,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not supported.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -1990,8 +1990,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws OrganizationsNotInUseException
@@ -3752,8 +3752,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * events, be sure the event selector enables logging of the Insights event types you want configured for your
      * trail. For more information about logging Insights events, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
-     * >Logging Insights events for trails</a> in the <i>CloudTrail User Guide</i>. By default, trails created without
-     * specific event selectors are configured to log all read and write management events, and no data events.
+     * >Logging Insights events</a> in the <i>CloudTrail User Guide</i>. By default, trails created without specific
+     * event selectors are configured to log all read and write management events, and no data events.
      * </p>
      * <p>
      * When an event occurs in your account, CloudTrail evaluates the event selectors or advanced event selectors in all
@@ -3916,8 +3916,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
@@ -4092,8 +4092,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ThrottlingException
@@ -4263,11 +4263,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         delegated administrator.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
@@ -4419,8 +4419,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @sample AWSCloudTrail.RemoveTags
@@ -4496,11 +4496,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not supported.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -4514,8 +4514,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws OrganizationNotInAllFeaturesModeException
@@ -4599,8 +4599,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
@@ -4664,7 +4664,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * you want to import CloudTrail events contained in another prefix, you must include the prefix in the
      * <code>S3LocationUri</code>. For more considerations about importing trail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-copy-trail-to-lake.html#cloudtrail-trail-copy-considerations"
-     * >Considerations</a>.
+     * >Considerations for copying trail events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * When you start a new import, the <code>Destinations</code> and <code>ImportSource</code> parameters are required.
@@ -4839,8 +4839,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
@@ -5019,8 +5019,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
@@ -5216,8 +5216,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
@@ -5449,11 +5449,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         store can't be updated.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -5467,8 +5467,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws OrganizationNotInAllFeaturesModeException
@@ -5665,11 +5665,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not permitted.
      * @throws CloudTrailAccessNotEnabledException
      *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
-     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_how-to-enable-disable-trusted-access"
+     *         >How to enable or disable trusted access</a> in the <i>Organizations User Guide</i> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
-     *         >Prepare For Creating a Trail For Your Organization</a>.
+     *         >Prepare For Creating a Trail For Your Organization</a> in the <i>CloudTrail User Guide</i>.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
@@ -5683,8 +5683,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a> or <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
-     *         event data store</a>.
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html"
+     *         >Organization event data stores</a>.
      * @throws OrganizationNotInAllFeaturesModeException
      *         This exception is thrown when Organizations is not configured to support all features. All features must
      *         be enabled in Organizations to support creating an organization trail or event data store.

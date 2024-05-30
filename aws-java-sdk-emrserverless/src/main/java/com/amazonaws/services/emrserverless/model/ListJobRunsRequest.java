@@ -62,6 +62,12 @@ public class ListJobRunsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.List<String> states;
+    /**
+     * <p>
+     * The mode of the job runs to list.
+     * </p>
+     */
+    private String mode;
 
     /**
      * <p>
@@ -372,6 +378,65 @@ public class ListJobRunsRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The mode of the job runs to list.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job runs to list.
+     * @see JobRunMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job runs to list.
+     * </p>
+     * 
+     * @return The mode of the job runs to list.
+     * @see JobRunMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job runs to list.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job runs to list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public ListJobRunsRequest withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the job runs to list.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job runs to list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public ListJobRunsRequest withMode(JobRunMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -394,7 +459,9 @@ public class ListJobRunsRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getCreatedAtBefore() != null)
             sb.append("CreatedAtBefore: ").append(getCreatedAtBefore()).append(",");
         if (getStates() != null)
-            sb.append("States: ").append(getStates());
+            sb.append("States: ").append(getStates()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode());
         sb.append("}");
         return sb.toString();
     }
@@ -433,6 +500,10 @@ public class ListJobRunsRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getStates() != null && other.getStates().equals(this.getStates()) == false)
             return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
         return true;
     }
 
@@ -447,6 +518,7 @@ public class ListJobRunsRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getCreatedAtAfter() == null) ? 0 : getCreatedAtAfter().hashCode());
         hashCode = prime * hashCode + ((getCreatedAtBefore() == null) ? 0 : getCreatedAtBefore().hashCode());
         hashCode = prime * hashCode + ((getStates() == null) ? 0 : getStates().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         return hashCode;
     }
 

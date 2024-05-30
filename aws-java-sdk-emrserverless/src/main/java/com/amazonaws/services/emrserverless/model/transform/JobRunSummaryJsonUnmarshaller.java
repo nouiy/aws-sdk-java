@@ -60,6 +60,10 @@ public class JobRunSummaryJsonUnmarshaller implements Unmarshaller<JobRunSummary
                     context.nextToken();
                     jobRunSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("mode", targetDepth)) {
+                    context.nextToken();
+                    jobRunSummary.setMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     jobRunSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -95,6 +99,18 @@ public class JobRunSummaryJsonUnmarshaller implements Unmarshaller<JobRunSummary
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     jobRunSummary.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("attempt", targetDepth)) {
+                    context.nextToken();
+                    jobRunSummary.setAttempt(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("attemptCreatedAt", targetDepth)) {
+                    context.nextToken();
+                    jobRunSummary.setAttemptCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("attemptUpdatedAt", targetDepth)) {
+                    context.nextToken();
+                    jobRunSummary.setAttemptUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

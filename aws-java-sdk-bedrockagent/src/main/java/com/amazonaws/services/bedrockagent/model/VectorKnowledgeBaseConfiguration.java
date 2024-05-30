@@ -34,6 +34,12 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
      * </p>
      */
     private String embeddingModelArn;
+    /**
+     * <p>
+     * The embeddings model configuration details for the vector model used in Knowledge Base.
+     * </p>
+     */
+    private EmbeddingModelConfiguration embeddingModelConfiguration;
 
     /**
      * <p>
@@ -76,6 +82,46 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The embeddings model configuration details for the vector model used in Knowledge Base.
+     * </p>
+     * 
+     * @param embeddingModelConfiguration
+     *        The embeddings model configuration details for the vector model used in Knowledge Base.
+     */
+
+    public void setEmbeddingModelConfiguration(EmbeddingModelConfiguration embeddingModelConfiguration) {
+        this.embeddingModelConfiguration = embeddingModelConfiguration;
+    }
+
+    /**
+     * <p>
+     * The embeddings model configuration details for the vector model used in Knowledge Base.
+     * </p>
+     * 
+     * @return The embeddings model configuration details for the vector model used in Knowledge Base.
+     */
+
+    public EmbeddingModelConfiguration getEmbeddingModelConfiguration() {
+        return this.embeddingModelConfiguration;
+    }
+
+    /**
+     * <p>
+     * The embeddings model configuration details for the vector model used in Knowledge Base.
+     * </p>
+     * 
+     * @param embeddingModelConfiguration
+     *        The embeddings model configuration details for the vector model used in Knowledge Base.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VectorKnowledgeBaseConfiguration withEmbeddingModelConfiguration(EmbeddingModelConfiguration embeddingModelConfiguration) {
+        setEmbeddingModelConfiguration(embeddingModelConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +134,9 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEmbeddingModelArn() != null)
-            sb.append("EmbeddingModelArn: ").append(getEmbeddingModelArn());
+            sb.append("EmbeddingModelArn: ").append(getEmbeddingModelArn()).append(",");
+        if (getEmbeddingModelConfiguration() != null)
+            sb.append("EmbeddingModelConfiguration: ").append(getEmbeddingModelConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,10 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
             return false;
         if (other.getEmbeddingModelArn() != null && other.getEmbeddingModelArn().equals(this.getEmbeddingModelArn()) == false)
             return false;
+        if (other.getEmbeddingModelConfiguration() == null ^ this.getEmbeddingModelConfiguration() == null)
+            return false;
+        if (other.getEmbeddingModelConfiguration() != null && other.getEmbeddingModelConfiguration().equals(this.getEmbeddingModelConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +168,7 @@ public class VectorKnowledgeBaseConfiguration implements Serializable, Cloneable
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEmbeddingModelArn() == null) ? 0 : getEmbeddingModelArn().hashCode());
+        hashCode = prime * hashCode + ((getEmbeddingModelConfiguration() == null) ? 0 : getEmbeddingModelConfiguration().hashCode());
         return hashCode;
     }
 

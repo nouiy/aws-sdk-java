@@ -34,6 +34,51 @@ public interface AmazonBedrockRuntimeAsync extends AmazonBedrockRuntime {
 
     /**
      * <p>
+     * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
+     * works with all models that support messages. This allows you to write code once and use it with different models.
+     * Should a model have unique inference parameters, you can also pass those unique parameters to the model. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
+     * inference</a> in the Bedrock User Guide.
+     * </p>
+     * <p>
+     * This operation requires permission for the <code>bedrock:InvokeModel</code> action.
+     * </p>
+     * 
+     * @param converseRequest
+     * @return A Java Future containing the result of the Converse operation returned by the service.
+     * @sample AmazonBedrockRuntimeAsync.Converse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/Converse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ConverseResult> converseAsync(ConverseRequest converseRequest);
+
+    /**
+     * <p>
+     * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
+     * works with all models that support messages. This allows you to write code once and use it with different models.
+     * Should a model have unique inference parameters, you can also pass those unique parameters to the model. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
+     * inference</a> in the Bedrock User Guide.
+     * </p>
+     * <p>
+     * This operation requires permission for the <code>bedrock:InvokeModel</code> action.
+     * </p>
+     * 
+     * @param converseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the Converse operation returned by the service.
+     * @sample AmazonBedrockRuntimeAsyncHandler.Converse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/Converse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ConverseResult> converseAsync(ConverseRequest converseRequest,
+            com.amazonaws.handlers.AsyncHandler<ConverseRequest, ConverseResult> asyncHandler);
+
+    /**
+     * <p>
      * Invokes the specified Amazon Bedrock model to run inference using the prompt and inference parameters provided in
      * the request body. You use model inference to generate text, images, and embeddings.
      * </p>

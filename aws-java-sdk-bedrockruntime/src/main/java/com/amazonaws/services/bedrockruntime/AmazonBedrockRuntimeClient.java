@@ -82,29 +82,29 @@ public class AmazonBedrockRuntimeClient extends AmazonWebServiceClient implement
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ModelTimeoutException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockruntime.model.transform.ModelTimeoutExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ModelErrorException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ModelErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockruntime.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                            new JsonErrorShapeMetadata().withErrorCode("ModelTimeoutException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockruntime.model.transform.ModelTimeoutExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ModelNotReadyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ModelNotReadyExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockruntime.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockruntime.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockruntime.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.bedrockruntime.model.AmazonBedrockRuntimeException.class));
 
     public static AmazonBedrockRuntimeClientBuilder builder() {
@@ -151,6 +151,84 @@ public class AmazonBedrockRuntimeClient extends AmazonWebServiceClient implement
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/bedrockruntime/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/bedrockruntime/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
+     * works with all models that support messages. This allows you to write code once and use it with different models.
+     * Should a model have unique inference parameters, you can also pass those unique parameters to the model. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
+     * inference</a> in the Bedrock User Guide.
+     * </p>
+     * <p>
+     * This operation requires permission for the <code>bedrock:InvokeModel</code> action.
+     * </p>
+     * 
+     * @param converseRequest
+     * @return Result of the Converse operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws ModelTimeoutException
+     *         The request took too long to process. Processing time exceeded the model timeout length.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws ModelNotReadyException
+     *         The model specified in the request is not ready to serve inference requests.
+     * @throws ModelErrorException
+     *         The request failed due to an error while processing the model.
+     * @sample AmazonBedrockRuntime.Converse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/Converse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ConverseResult converse(ConverseRequest request) {
+        request = beforeClientExecution(request);
+        return executeConverse(request);
+    }
+
+    @SdkInternalApi
+    final ConverseResult executeConverse(ConverseRequest converseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(converseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ConverseRequest> request = null;
+        Response<ConverseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ConverseRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(converseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock Runtime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "Converse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ConverseResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ConverseResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**

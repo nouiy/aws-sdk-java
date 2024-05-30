@@ -31,6 +31,8 @@ public class GetJobRunRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("applicationId").build();
     private static final MarshallingInfo<String> JOBRUNID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("jobRunId").build();
+    private static final MarshallingInfo<Integer> ATTEMPT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("attempt").build();
 
     private static final GetJobRunRequestMarshaller instance = new GetJobRunRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class GetJobRunRequestMarshaller {
         try {
             protocolMarshaller.marshall(getJobRunRequest.getApplicationId(), APPLICATIONID_BINDING);
             protocolMarshaller.marshall(getJobRunRequest.getJobRunId(), JOBRUNID_BINDING);
+            protocolMarshaller.marshall(getJobRunRequest.getAttempt(), ATTEMPT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

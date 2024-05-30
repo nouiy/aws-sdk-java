@@ -85,6 +85,10 @@ public class TimeSeriesForecastingJobConfigJsonUnmarshaller implements Unmarshal
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("CandidateGenerationConfig", targetDepth)) {
+                    context.nextToken();
+                    timeSeriesForecastingJobConfig.setCandidateGenerationConfig(CandidateGenerationConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

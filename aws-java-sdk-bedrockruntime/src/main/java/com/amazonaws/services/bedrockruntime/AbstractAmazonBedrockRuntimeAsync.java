@@ -28,6 +28,19 @@ public class AbstractAmazonBedrockRuntimeAsync extends AbstractAmazonBedrockRunt
     }
 
     @Override
+    public java.util.concurrent.Future<ConverseResult> converseAsync(ConverseRequest request) {
+
+        return converseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ConverseResult> converseAsync(ConverseRequest request,
+            com.amazonaws.handlers.AsyncHandler<ConverseRequest, ConverseResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<InvokeModelResult> invokeModelAsync(InvokeModelRequest request) {
 
         return invokeModelAsync(request, null);

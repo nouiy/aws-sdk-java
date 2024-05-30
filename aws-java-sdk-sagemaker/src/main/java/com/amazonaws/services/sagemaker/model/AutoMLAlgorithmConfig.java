@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The collection of algorithms run on a dataset for training the model candidates of an Autopilot job.
+ * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AutoMLAlgorithmConfig" target="_top">AWS
@@ -30,7 +30,12 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The selection of algorithms run on a dataset to train the model candidates of an Autopilot job.
+     * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
      * </p>
      * <note>
      * <p>
@@ -107,6 +112,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * <p>
      * "xgboost"
      * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Choose your algorithms from this list.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * "cnn-qr"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "deepar"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "prophet"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "arima"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "npts"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "ets"
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * </li>
@@ -116,7 +167,12 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The selection of algorithms run on a dataset to train the model candidates of an Autopilot job.
+     * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
      * </p>
      * <note>
      * <p>
@@ -197,8 +253,60 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Choose your algorithms from this list.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * "cnn-qr"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "deepar"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "prophet"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "arima"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "npts"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "ets"
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
-     * @return The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
+     * @return The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot
+     *         job.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
+     *         </p>
      *         <note>
      *         <p>
      *         Selected algorithms must belong to the list corresponding to the training mode set in <a href=
@@ -277,6 +385,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Choose your algorithms from this list.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         "cnn-qr"
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         "deepar"
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         "prophet"
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         "arima"
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         "npts"
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         "ets"
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         </ul>
+     *         </li>
      * @see AutoMLAlgorithm
      */
 
@@ -286,7 +440,12 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The selection of algorithms run on a dataset to train the model candidates of an Autopilot job.
+     * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
      * </p>
      * <note>
      * <p>
@@ -367,9 +526,61 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Choose your algorithms from this list.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * "cnn-qr"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "deepar"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "prophet"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "arima"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "npts"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "ets"
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param autoMLAlgorithms
-     *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
+     *        The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot
+     *        job.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
+     *        </p>
      *        <note>
      *        <p>
      *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
@@ -445,6 +656,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        <p>
      *        "xgboost"
      *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Choose your algorithms from this list.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        "cnn-qr"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "deepar"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "prophet"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "arima"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "npts"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "ets"
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      *        </ul>
      *        </li>
@@ -462,7 +719,12 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The selection of algorithms run on a dataset to train the model candidates of an Autopilot job.
+     * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
      * </p>
      * <note>
      * <p>
@@ -543,6 +805,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Choose your algorithms from this list.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * "cnn-qr"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "deepar"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "prophet"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "arima"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "npts"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "ets"
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAutoMLAlgorithms(java.util.Collection)} or {@link #withAutoMLAlgorithms(java.util.Collection)} if you
@@ -550,7 +858,13 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param autoMLAlgorithms
-     *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
+     *        The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot
+     *        job.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
+     *        </p>
      *        <note>
      *        <p>
      *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
@@ -626,6 +940,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        <p>
      *        "xgboost"
      *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Choose your algorithms from this list.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        "cnn-qr"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "deepar"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "prophet"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "arima"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "npts"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "ets"
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      *        </ul>
      *        </li>
@@ -645,7 +1005,12 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The selection of algorithms run on a dataset to train the model candidates of an Autopilot job.
+     * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
      * </p>
      * <note>
      * <p>
@@ -726,9 +1091,61 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Choose your algorithms from this list.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * "cnn-qr"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "deepar"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "prophet"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "arima"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "npts"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "ets"
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param autoMLAlgorithms
-     *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
+     *        The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot
+     *        job.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
+     *        </p>
      *        <note>
      *        <p>
      *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
@@ -804,6 +1221,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        <p>
      *        "xgboost"
      *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Choose your algorithms from this list.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        "cnn-qr"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "deepar"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "prophet"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "arima"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "npts"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "ets"
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      *        </ul>
      *        </li>
@@ -818,7 +1281,12 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The selection of algorithms run on a dataset to train the model candidates of an Autopilot job.
+     * The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot job.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
      * </p>
      * <note>
      * <p>
@@ -899,9 +1367,61 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Choose your algorithms from this list.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * "cnn-qr"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "deepar"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "prophet"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "arima"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "npts"
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * "ets"
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param autoMLAlgorithms
-     *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
+     *        The selection of algorithms trained on your dataset to generate the model candidates for an Autopilot
+     *        job.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>For the tabular problem type <code>TabularJobConfig</code>:</b>
+     *        </p>
      *        <note>
      *        <p>
      *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
@@ -977,6 +1497,52 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        <p>
      *        "xgboost"
      *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>For the time-series forecasting problem type <code>TimeSeriesForecastingJobConfig</code>:</b>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Choose your algorithms from this list.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        "cnn-qr"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "deepar"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "prophet"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "arima"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "npts"
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        "ets"
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      *        </ul>
      *        </li>

@@ -41,9 +41,9 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>.
      * </p>
      */
     private String s3KeyPrefix;
@@ -203,16 +203,16 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>.
      * </p>
      * 
      * @param s3KeyPrefix
      *        Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log
-     *        file delivery. For more information, see <a
-     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding
-     *        Your CloudTrail Log Files</a>.
+     *        file delivery. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     *        >Finding Your CloudTrail Log Files</a>.
      */
 
     public void setS3KeyPrefix(String s3KeyPrefix) {
@@ -222,15 +222,15 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>.
      * </p>
      * 
      * @return Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log
-     *         file delivery. For more information, see <a
-     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding
-     *         Your CloudTrail Log Files</a>.
+     *         file delivery. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     *         >Finding Your CloudTrail Log Files</a>.
      */
 
     public String getS3KeyPrefix() {
@@ -240,16 +240,16 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file
-     * delivery. For more information, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your
-     * CloudTrail Log Files</a>.
+     * delivery. For more information, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     * >Finding Your CloudTrail Log Files</a>.
      * </p>
      * 
      * @param s3KeyPrefix
      *        Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log
-     *        file delivery. For more information, see <a
-     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding
-     *        Your CloudTrail Log Files</a>.
+     *        file delivery. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files"
+     *        >Finding Your CloudTrail Log Files</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

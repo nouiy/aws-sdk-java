@@ -21,8 +21,8 @@ import javax.annotation.Generated;
  * see <a
  * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
  * >Prepare For Creating a Trail For Your Organization</a> or <a
- * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an event data
- * store</a>.
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html">Organization
+ * event data stores</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

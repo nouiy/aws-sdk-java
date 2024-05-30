@@ -74,6 +74,18 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * The mode of the job run when it starts.
+     * </p>
+     */
+    private String mode;
+    /**
+     * <p>
+     * The retry policy when job run starts.
+     * </p>
+     */
+    private RetryPolicy retryPolicy;
 
     /**
      * <p>
@@ -430,6 +442,105 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The mode of the job run when it starts.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run when it starts.
+     * @see JobRunMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run when it starts.
+     * </p>
+     * 
+     * @return The mode of the job run when it starts.
+     * @see JobRunMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run when it starts.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run when it starts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public StartJobRunRequest withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run when it starts.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run when it starts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public StartJobRunRequest withMode(JobRunMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The retry policy when job run starts.
+     * </p>
+     * 
+     * @param retryPolicy
+     *        The retry policy when job run starts.
+     */
+
+    public void setRetryPolicy(RetryPolicy retryPolicy) {
+        this.retryPolicy = retryPolicy;
+    }
+
+    /**
+     * <p>
+     * The retry policy when job run starts.
+     * </p>
+     * 
+     * @return The retry policy when job run starts.
+     */
+
+    public RetryPolicy getRetryPolicy() {
+        return this.retryPolicy;
+    }
+
+    /**
+     * <p>
+     * The retry policy when job run starts.
+     * </p>
+     * 
+     * @param retryPolicy
+     *        The retry policy when job run starts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartJobRunRequest withRetryPolicy(RetryPolicy retryPolicy) {
+        setRetryPolicy(retryPolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -456,7 +567,11 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getExecutionTimeoutMinutes() != null)
             sb.append("ExecutionTimeoutMinutes: ").append(getExecutionTimeoutMinutes()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode()).append(",");
+        if (getRetryPolicy() != null)
+            sb.append("RetryPolicy: ").append(getRetryPolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -503,6 +618,14 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
+        if (other.getRetryPolicy() == null ^ this.getRetryPolicy() == null)
+            return false;
+        if (other.getRetryPolicy() != null && other.getRetryPolicy().equals(this.getRetryPolicy()) == false)
+            return false;
         return true;
     }
 
@@ -519,6 +642,8 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getExecutionTimeoutMinutes() == null) ? 0 : getExecutionTimeoutMinutes().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
+        hashCode = prime * hashCode + ((getRetryPolicy() == null) ? 0 : getRetryPolicy().hashCode());
         return hashCode;
     }
 

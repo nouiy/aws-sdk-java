@@ -116,6 +116,12 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean isDefault;
+    /**
+     * <p>
+     * The IDs of the associated queue.
+     * </p>
+     */
+    private java.util.List<String> associatedQueueIds;
 
     /**
      * <p>
@@ -793,6 +799,76 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The IDs of the associated queue.
+     * </p>
+     * 
+     * @return The IDs of the associated queue.
+     */
+
+    public java.util.List<String> getAssociatedQueueIds() {
+        return associatedQueueIds;
+    }
+
+    /**
+     * <p>
+     * The IDs of the associated queue.
+     * </p>
+     * 
+     * @param associatedQueueIds
+     *        The IDs of the associated queue.
+     */
+
+    public void setAssociatedQueueIds(java.util.Collection<String> associatedQueueIds) {
+        if (associatedQueueIds == null) {
+            this.associatedQueueIds = null;
+            return;
+        }
+
+        this.associatedQueueIds = new java.util.ArrayList<String>(associatedQueueIds);
+    }
+
+    /**
+     * <p>
+     * The IDs of the associated queue.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAssociatedQueueIds(java.util.Collection)} or {@link #withAssociatedQueueIds(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param associatedQueueIds
+     *        The IDs of the associated queue.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RoutingProfile withAssociatedQueueIds(String... associatedQueueIds) {
+        if (this.associatedQueueIds == null) {
+            setAssociatedQueueIds(new java.util.ArrayList<String>(associatedQueueIds.length));
+        }
+        for (String ele : associatedQueueIds) {
+            this.associatedQueueIds.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IDs of the associated queue.
+     * </p>
+     * 
+     * @param associatedQueueIds
+     *        The IDs of the associated queue.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RoutingProfile withAssociatedQueueIds(java.util.Collection<String> associatedQueueIds) {
+        setAssociatedQueueIds(associatedQueueIds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -831,7 +907,9 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
         if (getLastModifiedRegion() != null)
             sb.append("LastModifiedRegion: ").append(getLastModifiedRegion()).append(",");
         if (getIsDefault() != null)
-            sb.append("IsDefault: ").append(getIsDefault());
+            sb.append("IsDefault: ").append(getIsDefault()).append(",");
+        if (getAssociatedQueueIds() != null)
+            sb.append("AssociatedQueueIds: ").append(getAssociatedQueueIds());
         sb.append("}");
         return sb.toString();
     }
@@ -902,6 +980,10 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getIsDefault() != null && other.getIsDefault().equals(this.getIsDefault()) == false)
             return false;
+        if (other.getAssociatedQueueIds() == null ^ this.getAssociatedQueueIds() == null)
+            return false;
+        if (other.getAssociatedQueueIds() != null && other.getAssociatedQueueIds().equals(this.getAssociatedQueueIds()) == false)
+            return false;
         return true;
     }
 
@@ -924,6 +1006,7 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedRegion() == null) ? 0 : getLastModifiedRegion().hashCode());
         hashCode = prime * hashCode + ((getIsDefault() == null) ? 0 : getIsDefault().hashCode());
+        hashCode = prime * hashCode + ((getAssociatedQueueIds() == null) ? 0 : getAssociatedQueueIds().hashCode());
         return hashCode;
     }
 

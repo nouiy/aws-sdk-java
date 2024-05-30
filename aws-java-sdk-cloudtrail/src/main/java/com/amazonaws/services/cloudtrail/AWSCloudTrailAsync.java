@@ -1628,8 +1628,8 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * events, be sure the event selector enables logging of the Insights event types you want configured for your
      * trail. For more information about logging Insights events, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
-     * >Logging Insights events for trails</a> in the <i>CloudTrail User Guide</i>. By default, trails created without
-     * specific event selectors are configured to log all read and write management events, and no data events.
+     * >Logging Insights events</a> in the <i>CloudTrail User Guide</i>. By default, trails created without specific
+     * event selectors are configured to log all read and write management events, and no data events.
      * </p>
      * <p>
      * When an event occurs in your account, CloudTrail evaluates the event selectors or advanced event selectors in all
@@ -1705,8 +1705,8 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * events, be sure the event selector enables logging of the Insights event types you want configured for your
      * trail. For more information about logging Insights events, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
-     * >Logging Insights events for trails</a> in the <i>CloudTrail User Guide</i>. By default, trails created without
-     * specific event selectors are configured to log all read and write management events, and no data events.
+     * >Logging Insights events</a> in the <i>CloudTrail User Guide</i>. By default, trails created without specific
+     * event selectors are configured to log all read and write management events, and no data events.
      * </p>
      * <p>
      * When an event occurs in your account, CloudTrail evaluates the event selectors or advanced event selectors in all
@@ -2056,7 +2056,7 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * you want to import CloudTrail events contained in another prefix, you must include the prefix in the
      * <code>S3LocationUri</code>. For more considerations about importing trail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-copy-trail-to-lake.html#cloudtrail-trail-copy-considerations"
-     * >Considerations</a>.
+     * >Considerations for copying trail events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * When you start a new import, the <code>Destinations</code> and <code>ImportSource</code> parameters are required.
@@ -2091,7 +2091,7 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * you want to import CloudTrail events contained in another prefix, you must include the prefix in the
      * <code>S3LocationUri</code>. For more considerations about importing trail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-copy-trail-to-lake.html#cloudtrail-trail-copy-considerations"
-     * >Considerations</a>.
+     * >Considerations for copying trail events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * <p>
      * When you start a new import, the <code>Destinations</code> and <code>ImportSource</code> parameters are required.

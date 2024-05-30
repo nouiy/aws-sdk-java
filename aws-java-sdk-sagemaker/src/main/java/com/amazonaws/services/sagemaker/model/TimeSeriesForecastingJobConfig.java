@@ -145,6 +145,8 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      */
     private java.util.List<HolidayConfigAttributes> holidayConfig;
 
+    private CandidateGenerationConfig candidateGenerationConfig;
+
     /**
      * <p>
      * A URL to the Amazon S3 data source containing additional selected features that complement the target, itemID,
@@ -949,6 +951,32 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
     }
 
     /**
+     * @param candidateGenerationConfig
+     */
+
+    public void setCandidateGenerationConfig(CandidateGenerationConfig candidateGenerationConfig) {
+        this.candidateGenerationConfig = candidateGenerationConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public CandidateGenerationConfig getCandidateGenerationConfig() {
+        return this.candidateGenerationConfig;
+    }
+
+    /**
+     * @param candidateGenerationConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TimeSeriesForecastingJobConfig withCandidateGenerationConfig(CandidateGenerationConfig candidateGenerationConfig) {
+        setCandidateGenerationConfig(candidateGenerationConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -975,7 +1003,9 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
         if (getTimeSeriesConfig() != null)
             sb.append("TimeSeriesConfig: ").append(getTimeSeriesConfig()).append(",");
         if (getHolidayConfig() != null)
-            sb.append("HolidayConfig: ").append(getHolidayConfig());
+            sb.append("HolidayConfig: ").append(getHolidayConfig()).append(",");
+        if (getCandidateGenerationConfig() != null)
+            sb.append("CandidateGenerationConfig: ").append(getCandidateGenerationConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1022,6 +1052,10 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
             return false;
         if (other.getHolidayConfig() != null && other.getHolidayConfig().equals(this.getHolidayConfig()) == false)
             return false;
+        if (other.getCandidateGenerationConfig() == null ^ this.getCandidateGenerationConfig() == null)
+            return false;
+        if (other.getCandidateGenerationConfig() != null && other.getCandidateGenerationConfig().equals(this.getCandidateGenerationConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1038,6 +1072,7 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getTransformations() == null) ? 0 : getTransformations().hashCode());
         hashCode = prime * hashCode + ((getTimeSeriesConfig() == null) ? 0 : getTimeSeriesConfig().hashCode());
         hashCode = prime * hashCode + ((getHolidayConfig() == null) ? 0 : getHolidayConfig().hashCode());
+        hashCode = prime * hashCode + ((getCandidateGenerationConfig() == null) ? 0 : getCandidateGenerationConfig().hashCode());
         return hashCode;
     }
 

@@ -216,6 +216,25 @@ public interface AWSEMRServerless {
 
     /**
      * <p>
+     * Lists all attempt of a job run.
+     * </p>
+     * 
+     * @param listJobRunAttemptsRequest
+     * @return Result of the ListJobRunAttempts operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AWSEMRServerless.ListJobRunAttempts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/ListJobRunAttempts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListJobRunAttemptsResult listJobRunAttempts(ListJobRunAttemptsRequest listJobRunAttemptsRequest);
+
+    /**
+     * <p>
      * Lists job runs based on a set of parameters.
      * </p>
      * 

@@ -63,6 +63,11 @@ public class AbstractAWSEMRServerless implements AWSEMRServerless {
     }
 
     @Override
+    public ListJobRunAttemptsResult listJobRunAttempts(ListJobRunAttemptsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListJobRunsResult listJobRuns(ListJobRunsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

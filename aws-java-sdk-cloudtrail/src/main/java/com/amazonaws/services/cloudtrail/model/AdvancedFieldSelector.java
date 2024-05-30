@@ -290,6 +290,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::QApps:QApp</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::QBusiness::Application</code>
      * </p>
      * </li>
@@ -370,17 +375,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::SWF::Domain</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
      * <p>
+     * <code>AWS::SSM::ManagedNode</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SWF::Domain</code>
      * </p>
      * </li>
      * <li>
@@ -408,6 +418,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::XRay::Trace</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
@@ -418,10 +433,20 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
-     * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
-     * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
-     * objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include only the bucket ARN as the
-     * matching value.
+     * type you've speciﬁed in the template as the value of resources.type.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     * </p>
+     * </note>
+     * <p>
+     * The <code>resources.ARN</code> field can be set one of the following.
+     * </p>
+     * <p>
+     * If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log
+     * all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include
+     * only the bucket ARN as the matching value.
      * </p>
      * <p>
      * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
@@ -803,6 +828,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -986,17 +1022,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1008,6 +1033,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1015,6 +1056,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1383,6 +1435,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::QApps:QApp</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::QBusiness::Application</code>
      * </p>
      * </li>
@@ -1463,17 +1520,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::SWF::Domain</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
      * <p>
+     * <code>AWS::SSM::ManagedNode</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SWF::Domain</code>
      * </p>
      * </li>
      * <li>
@@ -1501,6 +1563,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::XRay::Trace</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
@@ -1511,10 +1578,20 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
-     * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
-     * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
-     * objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include only the bucket ARN as the
-     * matching value.
+     * type you've speciﬁed in the template as the value of resources.type.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     * </p>
+     * </note>
+     * <p>
+     * The <code>resources.ARN</code> field can be set one of the following.
+     * </p>
+     * <p>
+     * If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log
+     * all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include
+     * only the bucket ARN as the matching value.
      * </p>
      * <p>
      * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
@@ -1896,6 +1973,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2079,17 +2167,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2101,6 +2178,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2108,6 +2201,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2429,6 +2533,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::QApps:QApp</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::QBusiness::Application</code>
      *        </p>
      *        </li>
@@ -2509,17 +2618,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::SWF::Domain</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>AWS::SQS::Queue</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::SSM::ManagedNode</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SWF::Domain</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2547,6 +2661,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <code>AWS::VerifiedPermissions::PolicyStore</code>
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::XRay::Trace</code>
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
      *        You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one
@@ -2557,8 +2676,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <p>
      *        <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you
      *        use <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid
-     *        resource of the type you've speciﬁed in the template as the value of resources.type. For example, if
-     *        resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
+     *        resource of the type you've speciﬁed in the template as the value of resources.type.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        The <code>resources.ARN</code> field can be set one of the following.
+     *        </p>
+     *        <p>
+     *        If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
      *        log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and
      *        include only the bucket ARN as the matching value.
      *        </p>
@@ -2942,6 +3071,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set
      *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -3125,17 +3265,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -3147,6 +3276,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is
      *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -3154,6 +3299,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -3481,6 +3637,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::QApps:QApp</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::QBusiness::Application</code>
      * </p>
      * </li>
@@ -3561,17 +3722,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::SWF::Domain</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
      * <p>
+     * <code>AWS::SSM::ManagedNode</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SWF::Domain</code>
      * </p>
      * </li>
      * <li>
@@ -3599,6 +3765,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::XRay::Trace</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
@@ -3609,10 +3780,20 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
-     * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
-     * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
-     * objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include only the bucket ARN as the
-     * matching value.
+     * type you've speciﬁed in the template as the value of resources.type.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     * </p>
+     * </note>
+     * <p>
+     * The <code>resources.ARN</code> field can be set one of the following.
+     * </p>
+     * <p>
+     * If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log
+     * all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include
+     * only the bucket ARN as the matching value.
      * </p>
      * <p>
      * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
@@ -3994,6 +4175,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -4177,17 +4369,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -4199,6 +4380,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -4206,6 +4403,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -4526,6 +4734,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::QApps:QApp</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::QBusiness::Application</code>
      *         </p>
      *         </li>
@@ -4606,17 +4819,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::SWF::Domain</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         <code>AWS::SQS::Queue</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::SSM::ManagedNode</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::SSMMessages::ControlChannel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SWF::Domain</code>
      *         </p>
      *         </li>
      *         <li>
@@ -4644,6 +4862,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <code>AWS::VerifiedPermissions::PolicyStore</code>
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::XRay::Trace</code>
+     *         </p>
+     *         </li>
      *         </ul>
      *         <p>
      *         You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one
@@ -4654,9 +4877,19 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <p>
      *         <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if
      *         you use <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid
-     *         resource of the type you've speciﬁed in the template as the value of resources.type. For example, if
-     *         resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
-     *         log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator,
+     *         resource of the type you've speciﬁed in the template as the value of resources.type.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         The <code>resources.ARN</code> field can be set one of the following.
+     *         </p>
+     *         <p>
+     *         If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats.
+     *         To log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator,
      *         and include only the bucket ARN as the matching value.
      *         </p>
      *         <p>
@@ -5040,6 +5273,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set
      *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -5224,17 +5468,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -5246,6 +5479,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator
      *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -5253,6 +5502,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -5580,6 +5840,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::QApps:QApp</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::QBusiness::Application</code>
      * </p>
      * </li>
@@ -5660,17 +5925,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::SWF::Domain</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
      * <p>
+     * <code>AWS::SSM::ManagedNode</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SWF::Domain</code>
      * </p>
      * </li>
      * <li>
@@ -5698,6 +5968,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::XRay::Trace</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one resource
@@ -5708,10 +5983,20 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <p>
      * <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you use
      * <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid resource of the
-     * type you've speciﬁed in the template as the value of resources.type. For example, if resources.type equals
-     * <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log all data events for all
-     * objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include only the bucket ARN as the
-     * matching value.
+     * type you've speciﬁed in the template as the value of resources.type.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     * </p>
+     * </note>
+     * <p>
+     * The <code>resources.ARN</code> field can be set one of the following.
+     * </p>
+     * <p>
+     * If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To log
+     * all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and include
+     * only the bucket ARN as the matching value.
      * </p>
      * <p>
      * The trailing slash is intentional; do not exclude it. Replace the text between less than and greater than symbols
@@ -6093,6 +6378,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -6276,17 +6572,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -6298,6 +6583,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -6305,6 +6606,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -6626,6 +6938,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::QApps:QApp</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::QBusiness::Application</code>
      *        </p>
      *        </li>
@@ -6706,17 +7023,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::SWF::Domain</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>AWS::SQS::Queue</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::SSM::ManagedNode</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SWF::Domain</code>
      *        </p>
      *        </li>
      *        <li>
@@ -6744,6 +7066,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <code>AWS::VerifiedPermissions::PolicyStore</code>
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::XRay::Trace</code>
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
      *        You can have only one <code>resources.type</code> ﬁeld per selector. To log data events on more than one
@@ -6754,8 +7081,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <p>
      *        <b> <code>resources.ARN</code> </b> - You can use any operator with <code>resources.ARN</code>, but if you
      *        use <code>Equals</code> or <code>NotEquals</code>, the value must exactly match the ARN of a valid
-     *        resource of the type you've speciﬁed in the template as the value of resources.type. For example, if
-     *        resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
+     *        resource of the type you've speciﬁed in the template as the value of resources.type.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can't use the <code>resources.ARN</code> field to filter resource types that do not have ARNs.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        The <code>resources.ARN</code> field can be set one of the following.
+     *        </p>
+     *        <p>
+     *        If resources.type equals <code>AWS::S3::Object</code>, the ARN must be in one of the following formats. To
      *        log all data events for all objects in a specific S3 bucket, use the <code>StartsWith</code> operator, and
      *        include only the bucket ARN as the matching value.
      *        </p>
@@ -7139,6 +7476,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QApps:QApp</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qapps:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_UUID&gt;/qapp/&lt;qapp_UUID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set
      *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -7322,17 +7670,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -7344,6 +7681,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SSM::ManagedNode</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is
      *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -7351,6 +7704,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SWF::Domain</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

@@ -28,7 +28,13 @@ public enum AutoMLAlgorithm {
     Randomforest("randomforest"),
     ExtraTrees("extra-trees"),
     NnTorch("nn-torch"),
-    Fastai("fastai");
+    Fastai("fastai"),
+    CnnQr("cnn-qr"),
+    Deepar("deepar"),
+    Prophet("prophet"),
+    Npts("npts"),
+    Arima("arima"),
+    Ets("ets");
 
     private String value;
 

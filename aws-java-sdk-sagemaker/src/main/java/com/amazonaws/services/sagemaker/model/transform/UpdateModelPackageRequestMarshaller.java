@@ -45,6 +45,8 @@ public class UpdateModelPackageRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InferenceSpecification").build();
     private static final MarshallingInfo<String> SOURCEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SourceUri").build();
+    private static final MarshallingInfo<StructuredPojo> MODELCARD_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelCard").build();
 
     private static final UpdateModelPackageRequestMarshaller instance = new UpdateModelPackageRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class UpdateModelPackageRequestMarshaller {
             protocolMarshaller.marshall(updateModelPackageRequest.getAdditionalInferenceSpecificationsToAdd(), ADDITIONALINFERENCESPECIFICATIONSTOADD_BINDING);
             protocolMarshaller.marshall(updateModelPackageRequest.getInferenceSpecification(), INFERENCESPECIFICATION_BINDING);
             protocolMarshaller.marshall(updateModelPackageRequest.getSourceUri(), SOURCEURI_BINDING);
+            protocolMarshaller.marshall(updateModelPackageRequest.getModelCard(), MODELCARD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

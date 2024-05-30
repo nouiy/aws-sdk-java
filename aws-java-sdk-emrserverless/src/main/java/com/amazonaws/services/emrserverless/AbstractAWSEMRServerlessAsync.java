@@ -119,6 +119,19 @@ public class AbstractAWSEMRServerlessAsync extends AbstractAWSEMRServerless impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListJobRunAttemptsResult> listJobRunAttemptsAsync(ListJobRunAttemptsRequest request) {
+
+        return listJobRunAttemptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListJobRunAttemptsResult> listJobRunAttemptsAsync(ListJobRunAttemptsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListJobRunAttemptsRequest, ListJobRunAttemptsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobRunsResult> listJobRunsAsync(ListJobRunsRequest request) {
 
         return listJobRunsAsync(request, null);

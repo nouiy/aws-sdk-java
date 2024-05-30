@@ -33,6 +33,8 @@ public class JobRunSummaryMarshaller {
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("mode").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> CREATEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -51,6 +53,12 @@ public class JobRunSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("releaseLabel").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<Integer> ATTEMPT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attempt").build();
+    private static final MarshallingInfo<java.util.Date> ATTEMPTCREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attemptCreatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ATTEMPTUPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attemptUpdatedAt").timestampFormat("unixTimestamp").build();
 
     private static final JobRunSummaryMarshaller instance = new JobRunSummaryMarshaller();
 
@@ -71,6 +79,7 @@ public class JobRunSummaryMarshaller {
             protocolMarshaller.marshall(jobRunSummary.getApplicationId(), APPLICATIONID_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getId(), ID_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(jobRunSummary.getMode(), MODE_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getCreatedAt(), CREATEDAT_BINDING);
@@ -80,6 +89,9 @@ public class JobRunSummaryMarshaller {
             protocolMarshaller.marshall(jobRunSummary.getStateDetails(), STATEDETAILS_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getReleaseLabel(), RELEASELABEL_BINDING);
             protocolMarshaller.marshall(jobRunSummary.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(jobRunSummary.getAttempt(), ATTEMPT_BINDING);
+            protocolMarshaller.marshall(jobRunSummary.getAttemptCreatedAt(), ATTEMPTCREATEDAT_BINDING);
+            protocolMarshaller.marshall(jobRunSummary.getAttemptUpdatedAt(), ATTEMPTUPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

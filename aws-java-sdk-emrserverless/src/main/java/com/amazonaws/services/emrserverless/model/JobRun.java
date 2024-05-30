@@ -144,6 +144,36 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ResourceUtilization billedResourceUtilization;
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     */
+    private String mode;
+    /**
+     * <p>
+     * The retry policy of the job run.
+     * </p>
+     */
+    private RetryPolicy retryPolicy;
+    /**
+     * <p>
+     * The attempt of the job run.
+     * </p>
+     */
+    private Integer attempt;
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     */
+    private java.util.Date attemptCreatedAt;
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     */
+    private java.util.Date attemptUpdatedAt;
 
     /**
      * <p>
@@ -969,6 +999,225 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run.
+     * @see JobRunMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @return The mode of the job run.
+     * @see JobRunMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public JobRun withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the job run.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see JobRunMode
+     */
+
+    public JobRun withMode(JobRunMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The retry policy of the job run.
+     * </p>
+     * 
+     * @param retryPolicy
+     *        The retry policy of the job run.
+     */
+
+    public void setRetryPolicy(RetryPolicy retryPolicy) {
+        this.retryPolicy = retryPolicy;
+    }
+
+    /**
+     * <p>
+     * The retry policy of the job run.
+     * </p>
+     * 
+     * @return The retry policy of the job run.
+     */
+
+    public RetryPolicy getRetryPolicy() {
+        return this.retryPolicy;
+    }
+
+    /**
+     * <p>
+     * The retry policy of the job run.
+     * </p>
+     * 
+     * @param retryPolicy
+     *        The retry policy of the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withRetryPolicy(RetryPolicy retryPolicy) {
+        setRetryPolicy(retryPolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The attempt of the job run.
+     * </p>
+     * 
+     * @param attempt
+     *        The attempt of the job run.
+     */
+
+    public void setAttempt(Integer attempt) {
+        this.attempt = attempt;
+    }
+
+    /**
+     * <p>
+     * The attempt of the job run.
+     * </p>
+     * 
+     * @return The attempt of the job run.
+     */
+
+    public Integer getAttempt() {
+        return this.attempt;
+    }
+
+    /**
+     * <p>
+     * The attempt of the job run.
+     * </p>
+     * 
+     * @param attempt
+     *        The attempt of the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withAttempt(Integer attempt) {
+        setAttempt(attempt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     * 
+     * @param attemptCreatedAt
+     *        The date and time of when the job run attempt was created.
+     */
+
+    public void setAttemptCreatedAt(java.util.Date attemptCreatedAt) {
+        this.attemptCreatedAt = attemptCreatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     * 
+     * @return The date and time of when the job run attempt was created.
+     */
+
+    public java.util.Date getAttemptCreatedAt() {
+        return this.attemptCreatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was created.
+     * </p>
+     * 
+     * @param attemptCreatedAt
+     *        The date and time of when the job run attempt was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withAttemptCreatedAt(java.util.Date attemptCreatedAt) {
+        setAttemptCreatedAt(attemptCreatedAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     * 
+     * @param attemptUpdatedAt
+     *        The date and time of when the job run attempt was last updated.
+     */
+
+    public void setAttemptUpdatedAt(java.util.Date attemptUpdatedAt) {
+        this.attemptUpdatedAt = attemptUpdatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     * 
+     * @return The date and time of when the job run attempt was last updated.
+     */
+
+    public java.util.Date getAttemptUpdatedAt() {
+        return this.attemptUpdatedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time of when the job run attempt was last updated.
+     * </p>
+     * 
+     * @param attemptUpdatedAt
+     *        The date and time of when the job run attempt was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withAttemptUpdatedAt(java.util.Date attemptUpdatedAt) {
+        setAttemptUpdatedAt(attemptUpdatedAt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1017,7 +1266,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (getExecutionTimeoutMinutes() != null)
             sb.append("ExecutionTimeoutMinutes: ").append(getExecutionTimeoutMinutes()).append(",");
         if (getBilledResourceUtilization() != null)
-            sb.append("BilledResourceUtilization: ").append(getBilledResourceUtilization());
+            sb.append("BilledResourceUtilization: ").append(getBilledResourceUtilization()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode()).append(",");
+        if (getRetryPolicy() != null)
+            sb.append("RetryPolicy: ").append(getRetryPolicy()).append(",");
+        if (getAttempt() != null)
+            sb.append("Attempt: ").append(getAttempt()).append(",");
+        if (getAttemptCreatedAt() != null)
+            sb.append("AttemptCreatedAt: ").append(getAttemptCreatedAt()).append(",");
+        if (getAttemptUpdatedAt() != null)
+            sb.append("AttemptUpdatedAt: ").append(getAttemptUpdatedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -1109,6 +1368,26 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getBilledResourceUtilization() != null && other.getBilledResourceUtilization().equals(this.getBilledResourceUtilization()) == false)
             return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
+        if (other.getRetryPolicy() == null ^ this.getRetryPolicy() == null)
+            return false;
+        if (other.getRetryPolicy() != null && other.getRetryPolicy().equals(this.getRetryPolicy()) == false)
+            return false;
+        if (other.getAttempt() == null ^ this.getAttempt() == null)
+            return false;
+        if (other.getAttempt() != null && other.getAttempt().equals(this.getAttempt()) == false)
+            return false;
+        if (other.getAttemptCreatedAt() == null ^ this.getAttemptCreatedAt() == null)
+            return false;
+        if (other.getAttemptCreatedAt() != null && other.getAttemptCreatedAt().equals(this.getAttemptCreatedAt()) == false)
+            return false;
+        if (other.getAttemptUpdatedAt() == null ^ this.getAttemptUpdatedAt() == null)
+            return false;
+        if (other.getAttemptUpdatedAt() != null && other.getAttemptUpdatedAt().equals(this.getAttemptUpdatedAt()) == false)
+            return false;
         return true;
     }
 
@@ -1136,6 +1415,11 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTotalExecutionDurationSeconds() == null) ? 0 : getTotalExecutionDurationSeconds().hashCode());
         hashCode = prime * hashCode + ((getExecutionTimeoutMinutes() == null) ? 0 : getExecutionTimeoutMinutes().hashCode());
         hashCode = prime * hashCode + ((getBilledResourceUtilization() == null) ? 0 : getBilledResourceUtilization().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
+        hashCode = prime * hashCode + ((getRetryPolicy() == null) ? 0 : getRetryPolicy().hashCode());
+        hashCode = prime * hashCode + ((getAttempt() == null) ? 0 : getAttempt().hashCode());
+        hashCode = prime * hashCode + ((getAttemptCreatedAt() == null) ? 0 : getAttemptCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getAttemptUpdatedAt() == null) ? 0 : getAttemptUpdatedAt().hashCode());
         return hashCode;
     }
 

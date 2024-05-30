@@ -147,6 +147,14 @@ public class ModelPackageJsonUnmarshaller implements Unmarshaller<ModelPackage, 
                     context.nextToken();
                     modelPackage.setSourceUri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SecurityConfig", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setSecurityConfig(ModelPackageSecurityConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ModelCard", targetDepth)) {
+                    context.nextToken();
+                    modelPackage.setModelCard(ModelPackageModelCardJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     modelPackage.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

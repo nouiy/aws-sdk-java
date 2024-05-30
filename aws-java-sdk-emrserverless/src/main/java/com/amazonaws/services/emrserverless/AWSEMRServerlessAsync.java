@@ -302,6 +302,37 @@ public interface AWSEMRServerlessAsync extends AWSEMRServerless {
 
     /**
      * <p>
+     * Lists all attempt of a job run.
+     * </p>
+     * 
+     * @param listJobRunAttemptsRequest
+     * @return A Java Future containing the result of the ListJobRunAttempts operation returned by the service.
+     * @sample AWSEMRServerlessAsync.ListJobRunAttempts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/ListJobRunAttempts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListJobRunAttemptsResult> listJobRunAttemptsAsync(ListJobRunAttemptsRequest listJobRunAttemptsRequest);
+
+    /**
+     * <p>
+     * Lists all attempt of a job run.
+     * </p>
+     * 
+     * @param listJobRunAttemptsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListJobRunAttempts operation returned by the service.
+     * @sample AWSEMRServerlessAsyncHandler.ListJobRunAttempts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/ListJobRunAttempts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListJobRunAttemptsResult> listJobRunAttemptsAsync(ListJobRunAttemptsRequest listJobRunAttemptsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListJobRunAttemptsRequest, ListJobRunAttemptsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists job runs based on a set of parameters.
      * </p>
      * 
