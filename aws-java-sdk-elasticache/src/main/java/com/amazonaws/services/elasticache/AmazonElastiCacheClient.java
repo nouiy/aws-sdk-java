@@ -6170,7 +6170,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Represents the input of a <code>TestFailover</code> operation which test automatic failover on a specified node
+     * Represents the input of a <code>TestFailover</code> operation which tests automatic failover on a specified node
      * group (called shard in the console) in a replication group (called cluster in the console).
      * </p>
      * <p>
@@ -6184,7 +6184,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the
+     * A customer can use this operation to test automatic failover on up to 15 shards (called node groups in the
      * ElastiCache API and Amazon CLI) in any rolling 24-hour period.
      * </p>
      * </li>

@@ -74,6 +74,9 @@ public interface AWSLaunchWizard {
      * 
      * @param deleteDeploymentRequest
      * @return Result of the DeleteDeployment operation returned by the service.
+     * @throws ResourceLimitException
+     *         You have exceeded an Launch Wizard resource limit. For example, you might have too many deployments in
+     *         progress.
      * @throws InternalServerException
      *         An internal error has occurred. Retry your request, but if the problem persists, contact us with details
      *         by posting a question on <a href="https://repost.aws/">re:Post</a>.
@@ -129,6 +132,32 @@ public interface AWSLaunchWizard {
 
     /**
      * <p>
+     * Returns details for a given workload and deployment pattern, including the available specifications. You can use
+     * the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+     * operation to discover the available workload names and the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
+     * >ListWorkloadDeploymentPatterns</a> operation to discover the available deployment pattern names of a given
+     * workload.
+     * </p>
+     * 
+     * @param getWorkloadDeploymentPatternRequest
+     * @return Result of the GetWorkloadDeploymentPattern operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error has occurred. Retry your request, but if the problem persists, contact us with details
+     *         by posting a question on <a href="https://repost.aws/">re:Post</a>.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ResourceNotFoundException
+     *         The specified workload or deployment resource can't be found.
+     * @sample AWSLaunchWizard.GetWorkloadDeploymentPattern
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkloadDeploymentPattern"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetWorkloadDeploymentPatternResult getWorkloadDeploymentPattern(GetWorkloadDeploymentPatternRequest getWorkloadDeploymentPatternRequest);
+
+    /**
+     * <p>
      * Lists the events of a deployment.
      * </p>
      * 
@@ -167,7 +196,29 @@ public interface AWSLaunchWizard {
 
     /**
      * <p>
-     * Lists the workload deployment patterns.
+     * Lists the tags associated with a specified resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error has occurred. Retry your request, but if the problem persists, contact us with details
+     *         by posting a question on <a href="https://repost.aws/">re:Post</a>.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ResourceNotFoundException
+     *         The specified workload or deployment resource can't be found.
+     * @sample AWSLaunchWizard.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Lists the workload deployment patterns for a given workload name. You can use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+     * operation to discover the available workload names.
      * </p>
      * 
      * @param listWorkloadDeploymentPatternsRequest
@@ -187,7 +238,9 @@ public interface AWSLaunchWizard {
 
     /**
      * <p>
-     * Lists the workloads.
+     * Lists the available workload names. You can use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
+     * >ListWorkloadDeploymentPatterns</a> operation to discover the available deployment patterns for a given workload.
      * </p>
      * 
      * @param listWorkloadsRequest
@@ -202,6 +255,46 @@ public interface AWSLaunchWizard {
      *      API Documentation</a>
      */
     ListWorkloadsResult listWorkloads(ListWorkloadsRequest listWorkloadsRequest);
+
+    /**
+     * <p>
+     * Adds the specified tags to the given resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error has occurred. Retry your request, but if the problem persists, contact us with details
+     *         by posting a question on <a href="https://repost.aws/">re:Post</a>.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ResourceNotFoundException
+     *         The specified workload or deployment resource can't be found.
+     * @sample AWSLaunchWizard.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Removes the specified tags from the given resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error has occurred. Retry your request, but if the problem persists, contact us with details
+     *         by posting a question on <a href="https://repost.aws/">re:Post</a>.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     * @throws ResourceNotFoundException
+     *         The specified workload or deployment resource can't be found.
+     * @sample AWSLaunchWizard.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

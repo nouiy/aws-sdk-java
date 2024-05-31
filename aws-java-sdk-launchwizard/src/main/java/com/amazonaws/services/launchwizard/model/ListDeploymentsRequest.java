@@ -32,12 +32,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>WORKLOAD_NAME</code>
+     * <code>WORKLOAD_NAME</code> - The name used in deployments.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DEPLOYMENT_STATUS</code>
+     * <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> | <code>DELETE_IN_PROGRESS</code>
+     * | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> | <code>DELETED</code> | <code>FAILED</code> |
+     * <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      * </p>
      * </li>
      * </ul>
@@ -65,12 +67,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>WORKLOAD_NAME</code>
+     * <code>WORKLOAD_NAME</code> - The name used in deployments.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DEPLOYMENT_STATUS</code>
+     * <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> | <code>DELETE_IN_PROGRESS</code>
+     * | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> | <code>DELETED</code> | <code>FAILED</code> |
+     * <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      * </p>
      * </li>
      * </ul>
@@ -79,12 +83,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>WORKLOAD_NAME</code>
+     *         <code>WORKLOAD_NAME</code> - The name used in deployments.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DEPLOYMENT_STATUS</code>
+     *         <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> |
+     *         <code>DELETE_IN_PROGRESS</code> | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> |
+     *         <code>DELETED</code> | <code>FAILED</code> | <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      *         </p>
      *         </li>
      */
@@ -100,12 +106,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>WORKLOAD_NAME</code>
+     * <code>WORKLOAD_NAME</code> - The name used in deployments.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DEPLOYMENT_STATUS</code>
+     * <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> | <code>DELETE_IN_PROGRESS</code>
+     * | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> | <code>DELETED</code> | <code>FAILED</code> |
+     * <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      * </p>
      * </li>
      * </ul>
@@ -115,12 +123,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>WORKLOAD_NAME</code>
+     *        <code>WORKLOAD_NAME</code> - The name used in deployments.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DEPLOYMENT_STATUS</code>
+     *        <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> |
+     *        <code>DELETE_IN_PROGRESS</code> | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> |
+     *        <code>DELETED</code> | <code>FAILED</code> | <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      *        </p>
      *        </li>
      */
@@ -141,12 +151,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>WORKLOAD_NAME</code>
+     * <code>WORKLOAD_NAME</code> - The name used in deployments.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DEPLOYMENT_STATUS</code>
+     * <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> | <code>DELETE_IN_PROGRESS</code>
+     * | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> | <code>DELETED</code> | <code>FAILED</code> |
+     * <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      * </p>
      * </li>
      * </ul>
@@ -161,12 +173,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>WORKLOAD_NAME</code>
+     *        <code>WORKLOAD_NAME</code> - The name used in deployments.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DEPLOYMENT_STATUS</code>
+     *        <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> |
+     *        <code>DELETE_IN_PROGRESS</code> | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> |
+     *        <code>DELETED</code> | <code>FAILED</code> | <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -189,12 +203,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>WORKLOAD_NAME</code>
+     * <code>WORKLOAD_NAME</code> - The name used in deployments.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DEPLOYMENT_STATUS</code>
+     * <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> | <code>DELETE_IN_PROGRESS</code>
+     * | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> | <code>DELETED</code> | <code>FAILED</code> |
+     * <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      * </p>
      * </li>
      * </ul>
@@ -204,12 +220,14 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>WORKLOAD_NAME</code>
+     *        <code>WORKLOAD_NAME</code> - The name used in deployments.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DEPLOYMENT_STATUS</code>
+     *        <code>DEPLOYMENT_STATUS</code> - <code>COMPLETED</code> | <code>CREATING</code> |
+     *        <code>DELETE_IN_PROGRESS</code> | <code>DELETE_INITIATING</code> | <code>DELETE_FAILED</code> |
+     *        <code>DELETED</code> | <code>FAILED</code> | <code>IN_PROGRESS</code> | <code>VALIDATING</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -33,6 +33,8 @@ public class DeploymentDataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> DELETEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deletedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> DEPLOYMENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deploymentArn").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -45,6 +47,8 @@ public class DeploymentDataMarshaller {
             .marshallLocationName("specifications").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> WORKLOADNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workloadName").build();
 
@@ -66,12 +70,14 @@ public class DeploymentDataMarshaller {
         try {
             protocolMarshaller.marshall(deploymentData.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(deploymentData.getDeletedAt(), DELETEDAT_BINDING);
+            protocolMarshaller.marshall(deploymentData.getDeploymentArn(), DEPLOYMENTARN_BINDING);
             protocolMarshaller.marshall(deploymentData.getId(), ID_BINDING);
             protocolMarshaller.marshall(deploymentData.getName(), NAME_BINDING);
             protocolMarshaller.marshall(deploymentData.getPatternName(), PATTERNNAME_BINDING);
             protocolMarshaller.marshall(deploymentData.getResourceGroup(), RESOURCEGROUP_BINDING);
             protocolMarshaller.marshall(deploymentData.getSpecifications(), SPECIFICATIONS_BINDING);
             protocolMarshaller.marshall(deploymentData.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(deploymentData.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(deploymentData.getWorkloadName(), WORKLOADNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

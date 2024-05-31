@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The identifier for a resource object that contains resources where a finding was detected.
+ * The identifier for a resource object that contains resources to scan. Specifying a codeArtifactId is required to
+ * create a scan.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-security-2018-05-10/ResourceId" target="_top">AWS API
@@ -30,18 +31,21 @@ public class ResourceId implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the code file uploaded to the resource where a finding was detected.
+     * The identifier for the code file uploaded to the resource object. Returned by <code>CreateUploadUrl</code> when
+     * you upload resources to be scanned.
      * </p>
      */
     private String codeArtifactId;
 
     /**
      * <p>
-     * The identifier for the code file uploaded to the resource where a finding was detected.
+     * The identifier for the code file uploaded to the resource object. Returned by <code>CreateUploadUrl</code> when
+     * you upload resources to be scanned.
      * </p>
      * 
      * @param codeArtifactId
-     *        The identifier for the code file uploaded to the resource where a finding was detected.
+     *        The identifier for the code file uploaded to the resource object. Returned by <code>CreateUploadUrl</code>
+     *        when you upload resources to be scanned.
      */
 
     public void setCodeArtifactId(String codeArtifactId) {
@@ -50,10 +54,12 @@ public class ResourceId implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the code file uploaded to the resource where a finding was detected.
+     * The identifier for the code file uploaded to the resource object. Returned by <code>CreateUploadUrl</code> when
+     * you upload resources to be scanned.
      * </p>
      * 
-     * @return The identifier for the code file uploaded to the resource where a finding was detected.
+     * @return The identifier for the code file uploaded to the resource object. Returned by
+     *         <code>CreateUploadUrl</code> when you upload resources to be scanned.
      */
 
     public String getCodeArtifactId() {
@@ -62,11 +68,13 @@ public class ResourceId implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the code file uploaded to the resource where a finding was detected.
+     * The identifier for the code file uploaded to the resource object. Returned by <code>CreateUploadUrl</code> when
+     * you upload resources to be scanned.
      * </p>
      * 
      * @param codeArtifactId
-     *        The identifier for the code file uploaded to the resource where a finding was detected.
+     *        The identifier for the code file uploaded to the resource object. Returned by <code>CreateUploadUrl</code>
+     *        when you upload resources to be scanned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

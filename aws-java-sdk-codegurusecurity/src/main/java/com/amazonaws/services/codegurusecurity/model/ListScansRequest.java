@@ -29,7 +29,8 @@ public class ListScansRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 100 results.
      * </p>
      */
     private Integer maxResults;
@@ -46,13 +47,15 @@ public class ListScansRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 100 results.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of results to return in the response. Use this parameter when paginating results. If
      *        additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in
-     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not
+     *        specified, returns 100 results.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -63,12 +66,14 @@ public class ListScansRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 100 results.
      * </p>
      * 
      * @return The maximum number of results to return in the response. Use this parameter when paginating results. If
      *         additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in
-     *         the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     *         the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not
+     *         specified, returns 100 results.
      */
 
     public Integer getMaxResults() {
@@ -79,13 +84,15 @@ public class ListScansRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 100 results.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of results to return in the response. Use this parameter when paginating results. If
      *        additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in
-     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not
+     *        specified, returns 100 results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,8 +28,7 @@ public class GetMetricsSummaryRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within the past
-     * two years since metrics data is only stored for two years. If a date outside of this range is passed, the
-     * response will be empty.
+     * two years.
      * </p>
      */
     private java.util.Date date;
@@ -37,14 +36,12 @@ public class GetMetricsSummaryRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within the past
-     * two years since metrics data is only stored for two years. If a date outside of this range is passed, the
-     * response will be empty.
+     * two years.
      * </p>
      * 
      * @param date
      *        The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within
-     *        the past two years since metrics data is only stored for two years. If a date outside of this range is
-     *        passed, the response will be empty.
+     *        the past two years.
      */
 
     public void setDate(java.util.Date date) {
@@ -54,13 +51,11 @@ public class GetMetricsSummaryRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within the past
-     * two years since metrics data is only stored for two years. If a date outside of this range is passed, the
-     * response will be empty.
+     * two years.
      * </p>
      * 
      * @return The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within
-     *         the past two years since metrics data is only stored for two years. If a date outside of this range is
-     *         passed, the response will be empty.
+     *         the past two years.
      */
 
     public java.util.Date getDate() {
@@ -70,14 +65,12 @@ public class GetMetricsSummaryRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within the past
-     * two years since metrics data is only stored for two years. If a date outside of this range is passed, the
-     * response will be empty.
+     * two years.
      * </p>
      * 
      * @param date
      *        The date you want to retrieve summary metrics from, rounded to the nearest day. The date must be within
-     *        the past two years since metrics data is only stored for two years. If a date outside of this range is
-     *        passed, the response will be empty.
+     *        the past two years.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

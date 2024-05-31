@@ -39,6 +39,12 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     private java.util.Date createdAt;
     /**
      * <p>
+     * Details about the error that causes a scan to fail to be retrieved.
+     * </p>
+     */
+    private String errorMessage;
+    /**
+     * <p>
      * The number of times a scan has been re-run on a revised resource.
      * </p>
      */
@@ -63,7 +69,7 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     private String scanNameArn;
     /**
      * <p>
-     * The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     * The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      * <code>Failed</code>.
      * </p>
      */
@@ -187,6 +193,46 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     public GetScanResult withCreatedAt(java.util.Date createdAt) {
         setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about the error that causes a scan to fail to be retrieved.
+     * </p>
+     * 
+     * @param errorMessage
+     *        Details about the error that causes a scan to fail to be retrieved.
+     */
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    /**
+     * <p>
+     * Details about the error that causes a scan to fail to be retrieved.
+     * </p>
+     * 
+     * @return Details about the error that causes a scan to fail to be retrieved.
+     */
+
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * <p>
+     * Details about the error that causes a scan to fail to be retrieved.
+     * </p>
+     * 
+     * @param errorMessage
+     *        Details about the error that causes a scan to fail to be retrieved.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetScanResult withErrorMessage(String errorMessage) {
+        setErrorMessage(errorMessage);
         return this;
     }
 
@@ -352,12 +398,12 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     * The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      * <code>Failed</code>.
      * </p>
      * 
      * @param scanState
-     *        The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     *        The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      *        <code>Failed</code>.
      * @see ScanState
      */
@@ -368,11 +414,11 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     * The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      * <code>Failed</code>.
      * </p>
      * 
-     * @return The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     * @return The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      *         <code>Failed</code>.
      * @see ScanState
      */
@@ -383,12 +429,12 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     * The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      * <code>Failed</code>.
      * </p>
      * 
      * @param scanState
-     *        The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     *        The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      *        <code>Failed</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScanState
@@ -401,12 +447,12 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     * The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      * <code>Failed</code>.
      * </p>
      * 
      * @param scanState
-     *        The current state of the scan. Pass either <code>InProgress</code>, <code>Successful</code>, or
+     *        The current state of the scan. Returns either <code>InProgress</code>, <code>Successful</code>, or
      *        <code>Failed</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScanState
@@ -473,6 +519,8 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
             sb.append("AnalysisType: ").append(getAnalysisType()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getErrorMessage() != null)
+            sb.append("ErrorMessage: ").append(getErrorMessage()).append(",");
         if (getNumberOfRevisions() != null)
             sb.append("NumberOfRevisions: ").append(getNumberOfRevisions()).append(",");
         if (getRunId() != null)
@@ -506,6 +554,10 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getErrorMessage() == null ^ this.getErrorMessage() == null)
+            return false;
+        if (other.getErrorMessage() != null && other.getErrorMessage().equals(this.getErrorMessage()) == false)
             return false;
         if (other.getNumberOfRevisions() == null ^ this.getNumberOfRevisions() == null)
             return false;
@@ -541,6 +593,7 @@ public class GetScanResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
         hashCode = prime * hashCode + ((getAnalysisType() == null) ? 0 : getAnalysisType().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getErrorMessage() == null) ? 0 : getErrorMessage().hashCode());
         hashCode = prime * hashCode + ((getNumberOfRevisions() == null) ? 0 : getNumberOfRevisions().hashCode());
         hashCode = prime * hashCode + ((getRunId() == null) ? 0 : getRunId().hashCode());
         hashCode = prime * hashCode + ((getScanName() == null) ? 0 : getScanName().hashCode());

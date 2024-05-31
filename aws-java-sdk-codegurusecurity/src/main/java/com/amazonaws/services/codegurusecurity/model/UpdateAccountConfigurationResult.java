@@ -25,18 +25,21 @@ public class UpdateAccountConfigurationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you did not
+     * specify a customer-managed KMS key in the request, returns empty.
      * </p>
      */
     private EncryptionConfig encryptionConfig;
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you did not
+     * specify a customer-managed KMS key in the request, returns empty.
      * </p>
      * 
      * @param encryptionConfig
-     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you
+     *        did not specify a customer-managed KMS key in the request, returns empty.
      */
 
     public void setEncryptionConfig(EncryptionConfig encryptionConfig) {
@@ -45,10 +48,12 @@ public class UpdateAccountConfigurationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you did not
+     * specify a customer-managed KMS key in the request, returns empty.
      * </p>
      * 
-     * @return An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     * @return An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you
+     *         did not specify a customer-managed KMS key in the request, returns empty.
      */
 
     public EncryptionConfig getEncryptionConfig() {
@@ -57,11 +62,13 @@ public class UpdateAccountConfigurationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you did not
+     * specify a customer-managed KMS key in the request, returns empty.
      * </p>
      * 
      * @param encryptionConfig
-     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption.
+     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. If you
+     *        did not specify a customer-managed KMS key in the request, returns empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,18 +27,24 @@ public class UpdateAccountConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     * The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will use an
+     * AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want CodeGuru Security
+     * to use an AWS-managed key for encryption instead, pass nothing.
      * </p>
      */
     private EncryptionConfig encryptionConfig;
 
     /**
      * <p>
-     * The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     * The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will use an
+     * AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want CodeGuru Security
+     * to use an AWS-managed key for encryption instead, pass nothing.
      * </p>
      * 
      * @param encryptionConfig
-     *        The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     *        The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will
+     *        use an AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want
+     *        CodeGuru Security to use an AWS-managed key for encryption instead, pass nothing.
      */
 
     public void setEncryptionConfig(EncryptionConfig encryptionConfig) {
@@ -47,10 +53,14 @@ public class UpdateAccountConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     * The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will use an
+     * AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want CodeGuru Security
+     * to use an AWS-managed key for encryption instead, pass nothing.
      * </p>
      * 
-     * @return The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     * @return The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will
+     *         use an AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want
+     *         CodeGuru Security to use an AWS-managed key for encryption instead, pass nothing.
      */
 
     public EncryptionConfig getEncryptionConfig() {
@@ -59,11 +69,15 @@ public class UpdateAccountConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     * The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will use an
+     * AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want CodeGuru Security
+     * to use an AWS-managed key for encryption instead, pass nothing.
      * </p>
      * 
      * @param encryptionConfig
-     *        The KMS key ARN you want to use for encryption. Defaults to service-side encryption if missing.
+     *        The customer-managed KMS key ARN you want to use for encryption. If not specified, CodeGuru Security will
+     *        use an AWS-managed key for encryption. If you previously specified a customer-managed KMS key and want
+     *        CodeGuru Security to use an AWS-managed key for encryption instead, pass nothing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

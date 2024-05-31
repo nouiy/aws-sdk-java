@@ -56,6 +56,10 @@ public class GetScanResultJsonUnmarshaller implements Unmarshaller<GetScanResult
                     context.nextToken();
                     getScanResult.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("errorMessage", targetDepth)) {
+                    context.nextToken();
+                    getScanResult.setErrorMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("numberOfRevisions", targetDepth)) {
                     context.nextToken();
                     getScanResult.setNumberOfRevisions(context.getUnmarshaller(Long.class).unmarshall(context));

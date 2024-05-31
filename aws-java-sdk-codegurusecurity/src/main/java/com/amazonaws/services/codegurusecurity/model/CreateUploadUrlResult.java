@@ -25,7 +25,8 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier for the uploaded code resource.
+     * The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     * resources.
      * </p>
      */
     private String codeArtifactId;
@@ -37,19 +38,21 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.Map<String, String> requestHeaders;
     /**
      * <p>
-     * A pre-signed S3 URL. You can upload the code file you want to scan and add the required
-     * <code>requestHeaders</code> using any HTTP client.
+     * A pre-signed S3 URL. You can upload the code file you want to scan with the required <code>requestHeaders</code>
+     * using any HTTP client.
      * </p>
      */
     private String s3Url;
 
     /**
      * <p>
-     * The identifier for the uploaded code resource.
+     * The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     * resources.
      * </p>
      * 
      * @param codeArtifactId
-     *        The identifier for the uploaded code resource.
+     *        The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     *        resources.
      */
 
     public void setCodeArtifactId(String codeArtifactId) {
@@ -58,10 +61,12 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier for the uploaded code resource.
+     * The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     * resources.
      * </p>
      * 
-     * @return The identifier for the uploaded code resource.
+     * @return The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     *         resources.
      */
 
     public String getCodeArtifactId() {
@@ -70,11 +75,13 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier for the uploaded code resource.
+     * The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     * resources.
      * </p>
      * 
      * @param codeArtifactId
-     *        The identifier for the uploaded code resource.
+     *        The identifier for the uploaded code resource. Pass this to <code>CreateScan</code> to use the uploaded
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,12 +160,12 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A pre-signed S3 URL. You can upload the code file you want to scan and add the required
-     * <code>requestHeaders</code> using any HTTP client.
+     * A pre-signed S3 URL. You can upload the code file you want to scan with the required <code>requestHeaders</code>
+     * using any HTTP client.
      * </p>
      * 
      * @param s3Url
-     *        A pre-signed S3 URL. You can upload the code file you want to scan and add the required
+     *        A pre-signed S3 URL. You can upload the code file you want to scan with the required
      *        <code>requestHeaders</code> using any HTTP client.
      */
 
@@ -168,11 +175,11 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A pre-signed S3 URL. You can upload the code file you want to scan and add the required
-     * <code>requestHeaders</code> using any HTTP client.
+     * A pre-signed S3 URL. You can upload the code file you want to scan with the required <code>requestHeaders</code>
+     * using any HTTP client.
      * </p>
      * 
-     * @return A pre-signed S3 URL. You can upload the code file you want to scan and add the required
+     * @return A pre-signed S3 URL. You can upload the code file you want to scan with the required
      *         <code>requestHeaders</code> using any HTTP client.
      */
 
@@ -182,12 +189,12 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A pre-signed S3 URL. You can upload the code file you want to scan and add the required
-     * <code>requestHeaders</code> using any HTTP client.
+     * A pre-signed S3 URL. You can upload the code file you want to scan with the required <code>requestHeaders</code>
+     * using any HTTP client.
      * </p>
      * 
      * @param s3Url
-     *        A pre-signed S3 URL. You can upload the code file you want to scan and add the required
+     *        A pre-signed S3 URL. You can upload the code file you want to scan with the required
      *        <code>requestHeaders</code> using any HTTP client.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

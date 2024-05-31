@@ -69,7 +69,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * manualCreation is only available for GitHub webhooks.
+     * <code>manualCreation</code> is only available for GitHub webhooks.
      * </p>
      * </note>
      */
@@ -368,7 +368,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * manualCreation is only available for GitHub webhooks.
+     * <code>manualCreation</code> is only available for GitHub webhooks.
      * </p>
      * </note>
      * 
@@ -378,7 +378,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
      *        <note>
      *        <p>
-     *        manualCreation is only available for GitHub webhooks.
+     *        <code>manualCreation</code> is only available for GitHub webhooks.
      *        </p>
      */
 
@@ -394,7 +394,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * manualCreation is only available for GitHub webhooks.
+     * <code>manualCreation</code> is only available for GitHub webhooks.
      * </p>
      * </note>
      * 
@@ -403,7 +403,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
      *         <note>
      *         <p>
-     *         manualCreation is only available for GitHub webhooks.
+     *         <code>manualCreation</code> is only available for GitHub webhooks.
      *         </p>
      */
 
@@ -419,7 +419,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * manualCreation is only available for GitHub webhooks.
+     * <code>manualCreation</code> is only available for GitHub webhooks.
      * </p>
      * </note>
      * 
@@ -429,7 +429,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
      *        <note>
      *        <p>
-     *        manualCreation is only available for GitHub webhooks.
+     *        <code>manualCreation</code> is only available for GitHub webhooks.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -447,7 +447,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * manualCreation is only available for GitHub webhooks.
+     * <code>manualCreation</code> is only available for GitHub webhooks.
      * </p>
      * </note>
      * 
@@ -456,7 +456,7 @@ public class CreateWebhookRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <code>secret</code> values in the output can be used to manually create a webhook within GitHub.</p>
      *         <note>
      *         <p>
-     *         manualCreation is only available for GitHub webhooks.
+     *         <code>manualCreation</code> is only available for GitHub webhooks.
      *         </p>
      */
 

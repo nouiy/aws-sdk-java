@@ -80,6 +80,19 @@ public class AbstractAWSLaunchWizardAsync extends AbstractAWSLaunchWizard implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetWorkloadDeploymentPatternResult> getWorkloadDeploymentPatternAsync(GetWorkloadDeploymentPatternRequest request) {
+
+        return getWorkloadDeploymentPatternAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkloadDeploymentPatternResult> getWorkloadDeploymentPatternAsync(GetWorkloadDeploymentPatternRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkloadDeploymentPatternRequest, GetWorkloadDeploymentPatternResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDeploymentEventsResult> listDeploymentEventsAsync(ListDeploymentEventsRequest request) {
 
         return listDeploymentEventsAsync(request, null);
@@ -106,6 +119,19 @@ public class AbstractAWSLaunchWizardAsync extends AbstractAWSLaunchWizard implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListWorkloadDeploymentPatternsResult> listWorkloadDeploymentPatternsAsync(ListWorkloadDeploymentPatternsRequest request) {
 
         return listWorkloadDeploymentPatternsAsync(request, null);
@@ -127,6 +153,32 @@ public class AbstractAWSLaunchWizardAsync extends AbstractAWSLaunchWizard implem
     @Override
     public java.util.concurrent.Future<ListWorkloadsResult> listWorkloadsAsync(ListWorkloadsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListWorkloadsRequest, ListWorkloadsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

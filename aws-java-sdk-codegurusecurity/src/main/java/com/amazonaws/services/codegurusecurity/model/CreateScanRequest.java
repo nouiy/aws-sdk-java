@@ -43,14 +43,14 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String clientToken;
     /**
      * <p>
-     * The identifier for an input resource used to create a scan.
+     * The identifier for the resource object to be scanned.
      * </p>
      */
     private ResourceId resourceId;
     /**
      * <p>
      * The unique name that CodeGuru Security uses to track revisions across multiple scans of the same resource. Only
-     * allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto generated.
+     * allowed for a <code>STANDARD</code> scan type.
      * </p>
      */
     private String scanName;
@@ -218,11 +218,11 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier for an input resource used to create a scan.
+     * The identifier for the resource object to be scanned.
      * </p>
      * 
      * @param resourceId
-     *        The identifier for an input resource used to create a scan.
+     *        The identifier for the resource object to be scanned.
      */
 
     public void setResourceId(ResourceId resourceId) {
@@ -231,10 +231,10 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier for an input resource used to create a scan.
+     * The identifier for the resource object to be scanned.
      * </p>
      * 
-     * @return The identifier for an input resource used to create a scan.
+     * @return The identifier for the resource object to be scanned.
      */
 
     public ResourceId getResourceId() {
@@ -243,11 +243,11 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier for an input resource used to create a scan.
+     * The identifier for the resource object to be scanned.
      * </p>
      * 
      * @param resourceId
-     *        The identifier for an input resource used to create a scan.
+     *        The identifier for the resource object to be scanned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -259,12 +259,12 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The unique name that CodeGuru Security uses to track revisions across multiple scans of the same resource. Only
-     * allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto generated.
+     * allowed for a <code>STANDARD</code> scan type.
      * </p>
      * 
      * @param scanName
      *        The unique name that CodeGuru Security uses to track revisions across multiple scans of the same resource.
-     *        Only allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto generated.
+     *        Only allowed for a <code>STANDARD</code> scan type.
      */
 
     public void setScanName(String scanName) {
@@ -274,12 +274,11 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The unique name that CodeGuru Security uses to track revisions across multiple scans of the same resource. Only
-     * allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto generated.
+     * allowed for a <code>STANDARD</code> scan type.
      * </p>
      * 
      * @return The unique name that CodeGuru Security uses to track revisions across multiple scans of the same
-     *         resource. Only allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto
-     *         generated.
+     *         resource. Only allowed for a <code>STANDARD</code> scan type.
      */
 
     public String getScanName() {
@@ -289,12 +288,12 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The unique name that CodeGuru Security uses to track revisions across multiple scans of the same resource. Only
-     * allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto generated.
+     * allowed for a <code>STANDARD</code> scan type.
      * </p>
      * 
      * @param scanName
      *        The unique name that CodeGuru Security uses to track revisions across multiple scans of the same resource.
-     *        Only allowed for a <code>STANDARD</code> scan type. If not specified, it will be auto generated.
+     *        Only allowed for a <code>STANDARD</code> scan type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The end date of the interval which you want to retrieve metrics from.
+     * The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      * </p>
      */
     private java.util.Date endDate;
@@ -35,7 +35,8 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 1000 results.
      * </p>
      */
     private Integer maxResults;
@@ -49,18 +50,18 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
     private String nextToken;
     /**
      * <p>
-     * The start date of the interval which you want to retrieve metrics from.
+     * The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      * </p>
      */
     private java.util.Date startDate;
 
     /**
      * <p>
-     * The end date of the interval which you want to retrieve metrics from.
+     * The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      * </p>
      * 
      * @param endDate
-     *        The end date of the interval which you want to retrieve metrics from.
+     *        The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      */
 
     public void setEndDate(java.util.Date endDate) {
@@ -69,10 +70,10 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The end date of the interval which you want to retrieve metrics from.
+     * The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      * </p>
      * 
-     * @return The end date of the interval which you want to retrieve metrics from.
+     * @return The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      */
 
     public java.util.Date getEndDate() {
@@ -81,11 +82,11 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The end date of the interval which you want to retrieve metrics from.
+     * The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      * </p>
      * 
      * @param endDate
-     *        The end date of the interval which you want to retrieve metrics from.
+     *        The end date of the interval which you want to retrieve metrics from. Round to the nearest day.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,13 +99,15 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 1000 results.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of results to return in the response. Use this parameter when paginating results. If
      *        additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in
-     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not
+     *        specified, returns 1000 results.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -115,12 +118,14 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 1000 results.
      * </p>
      * 
      * @return The maximum number of results to return in the response. Use this parameter when paginating results. If
      *         additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in
-     *         the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     *         the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not
+     *         specified, returns 1000 results.
      */
 
     public Integer getMaxResults() {
@@ -131,13 +136,15 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The maximum number of results to return in the response. Use this parameter when paginating results. If
      * additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in the
-     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     * response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not specified,
+     * returns 1000 results.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of results to return in the response. Use this parameter when paginating results. If
      *        additional results exist beyond the number you specify, the <code>nextToken</code> element is returned in
-     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results.
+     *        the response. Use <code>nextToken</code> in a subsequent request to retrieve additional results. If not
+     *        specified, returns 1000 results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,11 +207,11 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The start date of the interval which you want to retrieve metrics from.
+     * The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      * </p>
      * 
      * @param startDate
-     *        The start date of the interval which you want to retrieve metrics from.
+     *        The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      */
 
     public void setStartDate(java.util.Date startDate) {
@@ -213,10 +220,10 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The start date of the interval which you want to retrieve metrics from.
+     * The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      * </p>
      * 
-     * @return The start date of the interval which you want to retrieve metrics from.
+     * @return The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      */
 
     public java.util.Date getStartDate() {
@@ -225,11 +232,11 @@ public class ListFindingsMetricsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The start date of the interval which you want to retrieve metrics from.
+     * The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      * </p>
      * 
      * @param startDate
-     *        The start date of the interval which you want to retrieve metrics from.
+     *        The start date of the interval which you want to retrieve metrics from. Rounds to the nearest day.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

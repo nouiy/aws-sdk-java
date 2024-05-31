@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A summary of findings metrics in an account.
+ * A summary of findings metrics for an account on a specified date.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-security-2018-05-10/AccountFindingsMetric"
@@ -30,42 +30,42 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of closed findings of each severity in an account on the specified date.
+     * The number of closed findings of each severity on the specified date.
      * </p>
      */
     private FindingMetricsValuePerSeverity closedFindings;
     /**
      * <p>
-     * The date from which the finding metrics were retrieved.
+     * The date from which the findings metrics were retrieved.
      * </p>
      */
     private java.util.Date date;
     /**
      * <p>
-     * The average time it takes to close findings of each severity in days.
+     * The average time in days it takes to close findings of each severity as of a specified date.
      * </p>
      */
     private FindingMetricsValuePerSeverity meanTimeToClose;
     /**
      * <p>
-     * The number of new findings of each severity in account on the specified date.
+     * The number of new findings of each severity on the specified date.
      * </p>
      */
     private FindingMetricsValuePerSeverity newFindings;
     /**
      * <p>
-     * The number of open findings of each severity in an account as of the specified date.
+     * The number of open findings of each severity as of the specified date.
      * </p>
      */
     private FindingMetricsValuePerSeverity openFindings;
 
     /**
      * <p>
-     * The number of closed findings of each severity in an account on the specified date.
+     * The number of closed findings of each severity on the specified date.
      * </p>
      * 
      * @param closedFindings
-     *        The number of closed findings of each severity in an account on the specified date.
+     *        The number of closed findings of each severity on the specified date.
      */
 
     public void setClosedFindings(FindingMetricsValuePerSeverity closedFindings) {
@@ -74,10 +74,10 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of closed findings of each severity in an account on the specified date.
+     * The number of closed findings of each severity on the specified date.
      * </p>
      * 
-     * @return The number of closed findings of each severity in an account on the specified date.
+     * @return The number of closed findings of each severity on the specified date.
      */
 
     public FindingMetricsValuePerSeverity getClosedFindings() {
@@ -86,11 +86,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of closed findings of each severity in an account on the specified date.
+     * The number of closed findings of each severity on the specified date.
      * </p>
      * 
      * @param closedFindings
-     *        The number of closed findings of each severity in an account on the specified date.
+     *        The number of closed findings of each severity on the specified date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The date from which the finding metrics were retrieved.
+     * The date from which the findings metrics were retrieved.
      * </p>
      * 
      * @param date
-     *        The date from which the finding metrics were retrieved.
+     *        The date from which the findings metrics were retrieved.
      */
 
     public void setDate(java.util.Date date) {
@@ -114,10 +114,10 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The date from which the finding metrics were retrieved.
+     * The date from which the findings metrics were retrieved.
      * </p>
      * 
-     * @return The date from which the finding metrics were retrieved.
+     * @return The date from which the findings metrics were retrieved.
      */
 
     public java.util.Date getDate() {
@@ -126,11 +126,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The date from which the finding metrics were retrieved.
+     * The date from which the findings metrics were retrieved.
      * </p>
      * 
      * @param date
-     *        The date from which the finding metrics were retrieved.
+     *        The date from which the findings metrics were retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The average time it takes to close findings of each severity in days.
+     * The average time in days it takes to close findings of each severity as of a specified date.
      * </p>
      * 
      * @param meanTimeToClose
-     *        The average time it takes to close findings of each severity in days.
+     *        The average time in days it takes to close findings of each severity as of a specified date.
      */
 
     public void setMeanTimeToClose(FindingMetricsValuePerSeverity meanTimeToClose) {
@@ -154,10 +154,10 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The average time it takes to close findings of each severity in days.
+     * The average time in days it takes to close findings of each severity as of a specified date.
      * </p>
      * 
-     * @return The average time it takes to close findings of each severity in days.
+     * @return The average time in days it takes to close findings of each severity as of a specified date.
      */
 
     public FindingMetricsValuePerSeverity getMeanTimeToClose() {
@@ -166,11 +166,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The average time it takes to close findings of each severity in days.
+     * The average time in days it takes to close findings of each severity as of a specified date.
      * </p>
      * 
      * @param meanTimeToClose
-     *        The average time it takes to close findings of each severity in days.
+     *        The average time in days it takes to close findings of each severity as of a specified date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,11 +181,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of new findings of each severity in account on the specified date.
+     * The number of new findings of each severity on the specified date.
      * </p>
      * 
      * @param newFindings
-     *        The number of new findings of each severity in account on the specified date.
+     *        The number of new findings of each severity on the specified date.
      */
 
     public void setNewFindings(FindingMetricsValuePerSeverity newFindings) {
@@ -194,10 +194,10 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of new findings of each severity in account on the specified date.
+     * The number of new findings of each severity on the specified date.
      * </p>
      * 
-     * @return The number of new findings of each severity in account on the specified date.
+     * @return The number of new findings of each severity on the specified date.
      */
 
     public FindingMetricsValuePerSeverity getNewFindings() {
@@ -206,11 +206,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of new findings of each severity in account on the specified date.
+     * The number of new findings of each severity on the specified date.
      * </p>
      * 
      * @param newFindings
-     *        The number of new findings of each severity in account on the specified date.
+     *        The number of new findings of each severity on the specified date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +221,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of open findings of each severity in an account as of the specified date.
+     * The number of open findings of each severity as of the specified date.
      * </p>
      * 
      * @param openFindings
-     *        The number of open findings of each severity in an account as of the specified date.
+     *        The number of open findings of each severity as of the specified date.
      */
 
     public void setOpenFindings(FindingMetricsValuePerSeverity openFindings) {
@@ -234,10 +234,10 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of open findings of each severity in an account as of the specified date.
+     * The number of open findings of each severity as of the specified date.
      * </p>
      * 
-     * @return The number of open findings of each severity in an account as of the specified date.
+     * @return The number of open findings of each severity as of the specified date.
      */
 
     public FindingMetricsValuePerSeverity getOpenFindings() {
@@ -246,11 +246,11 @@ public class AccountFindingsMetric implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The number of open findings of each severity in an account as of the specified date.
+     * The number of open findings of each severity as of the specified date.
      * </p>
      * 
      * @param openFindings
-     *        The number of open findings of each severity in an account as of the specified date.
+     *        The number of open findings of each severity as of the specified date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

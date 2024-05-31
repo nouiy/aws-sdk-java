@@ -162,6 +162,53 @@ public interface AWSLaunchWizardAsync extends AWSLaunchWizard {
 
     /**
      * <p>
+     * Returns details for a given workload and deployment pattern, including the available specifications. You can use
+     * the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+     * operation to discover the available workload names and the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
+     * >ListWorkloadDeploymentPatterns</a> operation to discover the available deployment pattern names of a given
+     * workload.
+     * </p>
+     * 
+     * @param getWorkloadDeploymentPatternRequest
+     * @return A Java Future containing the result of the GetWorkloadDeploymentPattern operation returned by the
+     *         service.
+     * @sample AWSLaunchWizardAsync.GetWorkloadDeploymentPattern
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkloadDeploymentPattern"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkloadDeploymentPatternResult> getWorkloadDeploymentPatternAsync(
+            GetWorkloadDeploymentPatternRequest getWorkloadDeploymentPatternRequest);
+
+    /**
+     * <p>
+     * Returns details for a given workload and deployment pattern, including the available specifications. You can use
+     * the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+     * operation to discover the available workload names and the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
+     * >ListWorkloadDeploymentPatterns</a> operation to discover the available deployment pattern names of a given
+     * workload.
+     * </p>
+     * 
+     * @param getWorkloadDeploymentPatternRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetWorkloadDeploymentPattern operation returned by the
+     *         service.
+     * @sample AWSLaunchWizardAsyncHandler.GetWorkloadDeploymentPattern
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkloadDeploymentPattern"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkloadDeploymentPatternResult> getWorkloadDeploymentPatternAsync(
+            GetWorkloadDeploymentPatternRequest getWorkloadDeploymentPatternRequest,
+            com.amazonaws.handlers.AsyncHandler<GetWorkloadDeploymentPatternRequest, GetWorkloadDeploymentPatternResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the events of a deployment.
      * </p>
      * 
@@ -224,7 +271,40 @@ public interface AWSLaunchWizardAsync extends AWSLaunchWizard {
 
     /**
      * <p>
-     * Lists the workload deployment patterns.
+     * Lists the tags associated with a specified resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSLaunchWizardAsync.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Lists the tags associated with a specified resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSLaunchWizardAsyncHandler.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the workload deployment patterns for a given workload name. You can use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+     * operation to discover the available workload names.
      * </p>
      * 
      * @param listWorkloadDeploymentPatternsRequest
@@ -239,7 +319,9 @@ public interface AWSLaunchWizardAsync extends AWSLaunchWizard {
 
     /**
      * <p>
-     * Lists the workload deployment patterns.
+     * Lists the workload deployment patterns for a given workload name. You can use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+     * operation to discover the available workload names.
      * </p>
      * 
      * @param listWorkloadDeploymentPatternsRequest
@@ -259,7 +341,9 @@ public interface AWSLaunchWizardAsync extends AWSLaunchWizard {
 
     /**
      * <p>
-     * Lists the workloads.
+     * Lists the available workload names. You can use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
+     * >ListWorkloadDeploymentPatterns</a> operation to discover the available deployment patterns for a given workload.
      * </p>
      * 
      * @param listWorkloadsRequest
@@ -272,7 +356,9 @@ public interface AWSLaunchWizardAsync extends AWSLaunchWizard {
 
     /**
      * <p>
-     * Lists the workloads.
+     * Lists the available workload names. You can use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
+     * >ListWorkloadDeploymentPatterns</a> operation to discover the available deployment patterns for a given workload.
      * </p>
      * 
      * @param listWorkloadsRequest
@@ -287,5 +373,67 @@ public interface AWSLaunchWizardAsync extends AWSLaunchWizard {
      */
     java.util.concurrent.Future<ListWorkloadsResult> listWorkloadsAsync(ListWorkloadsRequest listWorkloadsRequest,
             com.amazonaws.handlers.AsyncHandler<ListWorkloadsRequest, ListWorkloadsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Adds the specified tags to the given resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSLaunchWizardAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Adds the specified tags to the given resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSLaunchWizardAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the specified tags from the given resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSLaunchWizardAsync.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Removes the specified tags from the given resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSLaunchWizardAsyncHandler.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
 }

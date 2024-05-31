@@ -52,8 +52,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The <code>RELEASED</code>,
-     * <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub only.
+     * Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     * Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      * </p>
      * </note></li>
      * </ul>
@@ -238,8 +238,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The <code>RELEASED</code>,
-     * <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub only.
+     * Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     * Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      * </p>
      * </note></li>
      * </ul>
@@ -399,9 +399,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The
-     *        <code>RELEASED</code>, <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub
-     *        only.
+     *        Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     *        Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      *        </p>
      *        </note></li>
      *        </ul>
@@ -571,8 +570,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The <code>RELEASED</code>,
-     * <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub only.
+     * Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     * Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      * </p>
      * </note></li>
      * </ul>
@@ -731,9 +730,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <note>
      *         <p>
-     *         The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The
-     *         <code>RELEASED</code>, <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub
-     *         only.
+     *         Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     *         Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      *         </p>
      *         </note></li>
      *         </ul>
@@ -903,8 +901,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The <code>RELEASED</code>,
-     * <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub only.
+     * Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     * Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      * </p>
      * </note></li>
      * </ul>
@@ -1064,9 +1062,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The
-     *        <code>RELEASED</code>, <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub
-     *        only.
+     *        Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     *        Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      *        </p>
      *        </note></li>
      *        </ul>
@@ -1238,8 +1235,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The <code>RELEASED</code>,
-     * <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub only.
+     * Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     * Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      * </p>
      * </note></li>
      * </ul>
@@ -1399,9 +1396,8 @@ public class WebhookFilter implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        The <code>PULL_REQUEST_REOPENED</code> works with GitHub and GitHub Enterprise only. The
-     *        <code>RELEASED</code>, <code>PRERELEASED</code>, and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub
-     *        only.
+     *        Types <code>PULL_REQUEST_REOPENED</code> and <code>WORKFLOW_JOB_QUEUED</code> work with GitHub and GitHub
+     *        Enterprise only. Types <code>RELEASED</code> and <code>PRERELEASED</code> work with GitHub only.
      *        </p>
      *        </note></li>
      *        </ul>

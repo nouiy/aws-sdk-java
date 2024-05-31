@@ -460,12 +460,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Rotate
+     * ROTATE - default, if no update strategy is provided
      * </p>
      * </li>
      * <li>
      * <p>
-     * Set
+     * SET - allowed only after ROTATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE - allowed only when transitioning to RBAC
      * </p>
      * </li>
      * </ul>
@@ -3727,12 +3732,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Rotate
+     * ROTATE - default, if no update strategy is provided
      * </p>
      * </li>
      * <li>
      * <p>
-     * Set
+     * SET - allowed only after ROTATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE - allowed only when transitioning to RBAC
      * </p>
      * </li>
      * </ul>
@@ -3748,12 +3758,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Rotate
+     *        ROTATE - default, if no update strategy is provided
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Set
+     *        SET - allowed only after ROTATE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETE - allowed only when transitioning to RBAC
      *        </p>
      *        </li>
      *        </ul>
@@ -3776,12 +3791,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Rotate
+     * ROTATE - default, if no update strategy is provided
      * </p>
      * </li>
      * <li>
      * <p>
-     * Set
+     * SET - allowed only after ROTATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE - allowed only when transitioning to RBAC
      * </p>
      * </li>
      * </ul>
@@ -3796,12 +3816,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *         <ul>
      *         <li>
      *         <p>
-     *         Rotate
+     *         ROTATE - default, if no update strategy is provided
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Set
+     *         SET - allowed only after ROTATE
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DELETE - allowed only when transitioning to RBAC
      *         </p>
      *         </li>
      *         </ul>
@@ -3824,12 +3849,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Rotate
+     * ROTATE - default, if no update strategy is provided
      * </p>
      * </li>
      * <li>
      * <p>
-     * Set
+     * SET - allowed only after ROTATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE - allowed only when transitioning to RBAC
      * </p>
      * </li>
      * </ul>
@@ -3845,12 +3875,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Rotate
+     *        ROTATE - default, if no update strategy is provided
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Set
+     *        SET - allowed only after ROTATE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETE - allowed only when transitioning to RBAC
      *        </p>
      *        </li>
      *        </ul>
@@ -3875,12 +3910,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Rotate
+     * ROTATE - default, if no update strategy is provided
      * </p>
      * </li>
      * <li>
      * <p>
-     * Set
+     * SET - allowed only after ROTATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE - allowed only when transitioning to RBAC
      * </p>
      * </li>
      * </ul>
@@ -3896,12 +3936,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Rotate
+     *        ROTATE - default, if no update strategy is provided
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Set
+     *        SET - allowed only after ROTATE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETE - allowed only when transitioning to RBAC
      *        </p>
      *        </li>
      *        </ul>
@@ -3924,12 +3969,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Rotate
+     * ROTATE - default, if no update strategy is provided
      * </p>
      * </li>
      * <li>
      * <p>
-     * Set
+     * SET - allowed only after ROTATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE - allowed only when transitioning to RBAC
      * </p>
      * </li>
      * </ul>
@@ -3945,12 +3995,17 @@ public class ModifyCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Rotate
+     *        ROTATE - default, if no update strategy is provided
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Set
+     *        SET - allowed only after ROTATE
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        DELETE - allowed only when transitioning to RBAC
      *        </p>
      *        </li>
      *        </ul>

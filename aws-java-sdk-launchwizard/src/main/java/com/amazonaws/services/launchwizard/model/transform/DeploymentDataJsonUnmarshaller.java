@@ -56,6 +56,10 @@ public class DeploymentDataJsonUnmarshaller implements Unmarshaller<DeploymentDa
                     context.nextToken();
                     deploymentData.setDeletedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("deploymentArn", targetDepth)) {
+                    context.nextToken();
+                    deploymentData.setDeploymentArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     deploymentData.setId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -80,6 +84,11 @@ public class DeploymentDataJsonUnmarshaller implements Unmarshaller<DeploymentDa
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     deploymentData.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("tags", targetDepth)) {
+                    context.nextToken();
+                    deploymentData.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
+                            .unmarshall(context));
                 }
                 if (context.testExpression("workloadName", targetDepth)) {
                     context.nextToken();

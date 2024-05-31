@@ -62,7 +62,7 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> detectorTags;
     /**
      * <p>
-     * The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     * The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      * </p>
      */
     private String generatorId;
@@ -92,7 +92,10 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
     private String ruleId;
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. Severity can be critical, high, medium, low, or informational. For information on
+     * severity levels, see <a
+     * href="https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     * >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * </p>
      */
     private String severity;
@@ -374,11 +377,11 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     * The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      * </p>
      * 
      * @param generatorId
-     *        The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     *        The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      */
 
     public void setGeneratorId(String generatorId) {
@@ -387,10 +390,10 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     * The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      * </p>
      * 
-     * @return The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     * @return The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      */
 
     public String getGeneratorId() {
@@ -399,11 +402,11 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     * The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      * </p>
      * 
      * @param generatorId
-     *        The identifier for the component that generated a finding such as AWSCodeGuruSecurity or AWSInspector.
+     *        The identifier for the component that generated a finding such as AmazonCodeGuruSecurity.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -574,11 +577,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. Severity can be critical, high, medium, low, or informational. For information on
+     * severity levels, see <a
+     * href="https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     * >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the finding.
+     *        The severity of the finding. Severity can be critical, high, medium, low, or informational. For
+     *        information on severity levels, see <a href=
+     *        "https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     *        >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * @see Severity
      */
 
@@ -588,10 +597,16 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. Severity can be critical, high, medium, low, or informational. For information on
+     * severity levels, see <a
+     * href="https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     * >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * </p>
      * 
-     * @return The severity of the finding.
+     * @return The severity of the finding. Severity can be critical, high, medium, low, or informational. For
+     *         information on severity levels, see <a href=
+     *         "https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     *         >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * @see Severity
      */
 
@@ -601,11 +616,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. Severity can be critical, high, medium, low, or informational. For information on
+     * severity levels, see <a
+     * href="https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     * >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the finding.
+     *        The severity of the finding. Severity can be critical, high, medium, low, or informational. For
+     *        information on severity levels, see <a href=
+     *        "https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     *        >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Severity
      */
@@ -617,11 +638,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. Severity can be critical, high, medium, low, or informational. For information on
+     * severity levels, see <a
+     * href="https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     * >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * </p>
      * 
      * @param severity
-     *        The severity of the finding.
+     *        The severity of the finding. Severity can be critical, high, medium, low, or informational. For
+     *        information on severity levels, see <a href=
+     *        "https://docs.aws.amazon.com/codeguru/latest/security-ug/findings-overview.html#severity-distribution"
+     *        >Finding severity</a> in the <i>Amazon CodeGuru Security User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Severity
      */

@@ -25,24 +25,24 @@ public class GetAccountConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default, CodeGuru
-     * Security uses an AWS-managed key for encryption. To specify your own key, call
-     * <code>UpdateAccountConfiguration</code>.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By default,
+     * CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     * <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      * </p>
      */
     private EncryptionConfig encryptionConfig;
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default, CodeGuru
-     * Security uses an AWS-managed key for encryption. To specify your own key, call
-     * <code>UpdateAccountConfiguration</code>.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By default,
+     * CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     * <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      * </p>
      * 
      * @param encryptionConfig
-     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default,
-     *        CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
-     *        <code>UpdateAccountConfiguration</code>.
+     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By
+     *        default, CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     *        <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      */
 
     public void setEncryptionConfig(EncryptionConfig encryptionConfig) {
@@ -51,14 +51,14 @@ public class GetAccountConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default, CodeGuru
-     * Security uses an AWS-managed key for encryption. To specify your own key, call
-     * <code>UpdateAccountConfiguration</code>.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By default,
+     * CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     * <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      * </p>
      * 
-     * @return An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default,
-     *         CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
-     *         <code>UpdateAccountConfiguration</code>.
+     * @return An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By
+     *         default, CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     *         <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      */
 
     public EncryptionConfig getEncryptionConfig() {
@@ -67,15 +67,15 @@ public class GetAccountConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default, CodeGuru
-     * Security uses an AWS-managed key for encryption. To specify your own key, call
-     * <code>UpdateAccountConfiguration</code>.
+     * An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By default,
+     * CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     * <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      * </p>
      * 
      * @param encryptionConfig
-     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN to use for encryption. By default,
-     *        CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
-     *        <code>UpdateAccountConfiguration</code>.
+     *        An <code>EncryptionConfig</code> object that contains the KMS key ARN that is used for encryption. By
+     *        default, CodeGuru Security uses an AWS-managed key for encryption. To specify your own key, call
+     *        <code>UpdateAccountConfiguration</code>. If you do not specify a customer-managed key, returns empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

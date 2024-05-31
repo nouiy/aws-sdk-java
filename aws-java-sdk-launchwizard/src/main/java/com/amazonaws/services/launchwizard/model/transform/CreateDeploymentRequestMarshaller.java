@@ -37,6 +37,8 @@ public class CreateDeploymentRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> SPECIFICATIONS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("specifications").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> WORKLOADNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workloadName").build();
 
@@ -60,6 +62,7 @@ public class CreateDeploymentRequestMarshaller {
             protocolMarshaller.marshall(createDeploymentRequest.getDryRun(), DRYRUN_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getSpecifications(), SPECIFICATIONS_BINDING);
+            protocolMarshaller.marshall(createDeploymentRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getWorkloadName(), WORKLOADNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

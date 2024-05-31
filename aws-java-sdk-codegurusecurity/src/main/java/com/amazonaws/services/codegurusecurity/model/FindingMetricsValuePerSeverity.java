@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The severity of the issue in the code that generated a finding.
+ * A numeric value corresponding to the severity of a finding, such as the number of open findings or the average time
+ * it takes to close findings of a given severity.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-security-2018-05-10/FindingMetricsValuePerSeverity"
@@ -30,42 +31,42 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is critical and should be addressed immediately.
+     * A numeric value corresponding to a critical finding.
      * </p>
      */
     private Double critical;
     /**
      * <p>
-     * The severity of the finding is high and should be addressed as a near-term priority.
+     * A numeric value corresponding to a high severity finding.
      * </p>
      */
     private Double high;
     /**
      * <p>
-     * The finding is related to quality or readability improvements and not considered actionable.
+     * A numeric value corresponding to an informational finding.
      * </p>
      */
     private Double info;
     /**
      * <p>
-     * The severity of the finding is low and does require action on its own.
+     * A numeric value corresponding to a low severity finding.
      * </p>
      */
     private Double low;
     /**
      * <p>
-     * The severity of the finding is medium and should be addressed as a mid-term priority.
+     * A numeric value corresponding to a medium severity finding.
      * </p>
      */
     private Double medium;
 
     /**
      * <p>
-     * The severity of the finding is critical and should be addressed immediately.
+     * A numeric value corresponding to a critical finding.
      * </p>
      * 
      * @param critical
-     *        The severity of the finding is critical and should be addressed immediately.
+     *        A numeric value corresponding to a critical finding.
      */
 
     public void setCritical(Double critical) {
@@ -74,10 +75,10 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is critical and should be addressed immediately.
+     * A numeric value corresponding to a critical finding.
      * </p>
      * 
-     * @return The severity of the finding is critical and should be addressed immediately.
+     * @return A numeric value corresponding to a critical finding.
      */
 
     public Double getCritical() {
@@ -86,11 +87,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is critical and should be addressed immediately.
+     * A numeric value corresponding to a critical finding.
      * </p>
      * 
      * @param critical
-     *        The severity of the finding is critical and should be addressed immediately.
+     *        A numeric value corresponding to a critical finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +102,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is high and should be addressed as a near-term priority.
+     * A numeric value corresponding to a high severity finding.
      * </p>
      * 
      * @param high
-     *        The severity of the finding is high and should be addressed as a near-term priority.
+     *        A numeric value corresponding to a high severity finding.
      */
 
     public void setHigh(Double high) {
@@ -114,10 +115,10 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is high and should be addressed as a near-term priority.
+     * A numeric value corresponding to a high severity finding.
      * </p>
      * 
-     * @return The severity of the finding is high and should be addressed as a near-term priority.
+     * @return A numeric value corresponding to a high severity finding.
      */
 
     public Double getHigh() {
@@ -126,11 +127,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is high and should be addressed as a near-term priority.
+     * A numeric value corresponding to a high severity finding.
      * </p>
      * 
      * @param high
-     *        The severity of the finding is high and should be addressed as a near-term priority.
+     *        A numeric value corresponding to a high severity finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +142,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The finding is related to quality or readability improvements and not considered actionable.
+     * A numeric value corresponding to an informational finding.
      * </p>
      * 
      * @param info
-     *        The finding is related to quality or readability improvements and not considered actionable.
+     *        A numeric value corresponding to an informational finding.
      */
 
     public void setInfo(Double info) {
@@ -154,10 +155,10 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The finding is related to quality or readability improvements and not considered actionable.
+     * A numeric value corresponding to an informational finding.
      * </p>
      * 
-     * @return The finding is related to quality or readability improvements and not considered actionable.
+     * @return A numeric value corresponding to an informational finding.
      */
 
     public Double getInfo() {
@@ -166,11 +167,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The finding is related to quality or readability improvements and not considered actionable.
+     * A numeric value corresponding to an informational finding.
      * </p>
      * 
      * @param info
-     *        The finding is related to quality or readability improvements and not considered actionable.
+     *        A numeric value corresponding to an informational finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,11 +182,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is low and does require action on its own.
+     * A numeric value corresponding to a low severity finding.
      * </p>
      * 
      * @param low
-     *        The severity of the finding is low and does require action on its own.
+     *        A numeric value corresponding to a low severity finding.
      */
 
     public void setLow(Double low) {
@@ -194,10 +195,10 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is low and does require action on its own.
+     * A numeric value corresponding to a low severity finding.
      * </p>
      * 
-     * @return The severity of the finding is low and does require action on its own.
+     * @return A numeric value corresponding to a low severity finding.
      */
 
     public Double getLow() {
@@ -206,11 +207,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is low and does require action on its own.
+     * A numeric value corresponding to a low severity finding.
      * </p>
      * 
      * @param low
-     *        The severity of the finding is low and does require action on its own.
+     *        A numeric value corresponding to a low severity finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +222,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is medium and should be addressed as a mid-term priority.
+     * A numeric value corresponding to a medium severity finding.
      * </p>
      * 
      * @param medium
-     *        The severity of the finding is medium and should be addressed as a mid-term priority.
+     *        A numeric value corresponding to a medium severity finding.
      */
 
     public void setMedium(Double medium) {
@@ -234,10 +235,10 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is medium and should be addressed as a mid-term priority.
+     * A numeric value corresponding to a medium severity finding.
      * </p>
      * 
-     * @return The severity of the finding is medium and should be addressed as a mid-term priority.
+     * @return A numeric value corresponding to a medium severity finding.
      */
 
     public Double getMedium() {
@@ -246,11 +247,11 @@ public class FindingMetricsValuePerSeverity implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The severity of the finding is medium and should be addressed as a mid-term priority.
+     * A numeric value corresponding to a medium severity finding.
      * </p>
      * 
      * @param medium
-     *        The severity of the finding is medium and should be addressed as a mid-term priority.
+     *        A numeric value corresponding to a medium severity finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

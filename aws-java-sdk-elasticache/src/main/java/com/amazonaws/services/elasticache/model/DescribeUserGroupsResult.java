@@ -33,7 +33,7 @@ public class DescribeUserGroupsResult extends com.amazonaws.AmazonWebServiceResu
      * <p>
      * An optional marker returned from a prior request. Use this marker for pagination of results from this operation.
      * If this parameter is specified, the response includes only records beyond the marker, up to the value specified
-     * by MaxRecords. &gt;
+     * by MaxRecords.&gt;
      * </p>
      */
     private String marker;
@@ -115,13 +115,13 @@ public class DescribeUserGroupsResult extends com.amazonaws.AmazonWebServiceResu
      * <p>
      * An optional marker returned from a prior request. Use this marker for pagination of results from this operation.
      * If this parameter is specified, the response includes only records beyond the marker, up to the value specified
-     * by MaxRecords. &gt;
+     * by MaxRecords.&gt;
      * </p>
      * 
      * @param marker
      *        An optional marker returned from a prior request. Use this marker for pagination of results from this
      *        operation. If this parameter is specified, the response includes only records beyond the marker, up to the
-     *        value specified by MaxRecords. &gt;
+     *        value specified by MaxRecords.&gt;
      */
 
     public void setMarker(String marker) {
@@ -132,12 +132,12 @@ public class DescribeUserGroupsResult extends com.amazonaws.AmazonWebServiceResu
      * <p>
      * An optional marker returned from a prior request. Use this marker for pagination of results from this operation.
      * If this parameter is specified, the response includes only records beyond the marker, up to the value specified
-     * by MaxRecords. &gt;
+     * by MaxRecords.&gt;
      * </p>
      * 
      * @return An optional marker returned from a prior request. Use this marker for pagination of results from this
      *         operation. If this parameter is specified, the response includes only records beyond the marker, up to
-     *         the value specified by MaxRecords. &gt;
+     *         the value specified by MaxRecords.&gt;
      */
 
     public String getMarker() {
@@ -148,13 +148,13 @@ public class DescribeUserGroupsResult extends com.amazonaws.AmazonWebServiceResu
      * <p>
      * An optional marker returned from a prior request. Use this marker for pagination of results from this operation.
      * If this parameter is specified, the response includes only records beyond the marker, up to the value specified
-     * by MaxRecords. &gt;
+     * by MaxRecords.&gt;
      * </p>
      * 
      * @param marker
      *        An optional marker returned from a prior request. Use this marker for pagination of results from this
      *        operation. If this parameter is specified, the response includes only records beyond the marker, up to the
-     *        value specified by MaxRecords. &gt;
+     *        value specified by MaxRecords.&gt;
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about account-level configuration.
+ * Information about the encryption configuration for an account. Required to call
+ * <code>UpdateAccountConfiguration</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-security-2018-05-10/EncryptionConfig" target="_top">AWS
@@ -30,19 +31,18 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The KMS key ARN to use for encryption. This must be provided as a header when uploading your code resource.
+     * The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      * </p>
      */
     private String kmsKeyArn;
 
     /**
      * <p>
-     * The KMS key ARN to use for encryption. This must be provided as a header when uploading your code resource.
+     * The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The KMS key ARN to use for encryption. This must be provided as a header when uploading your code
-     *        resource.
+     *        The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -51,11 +51,10 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The KMS key ARN to use for encryption. This must be provided as a header when uploading your code resource.
+     * The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      * </p>
      * 
-     * @return The KMS key ARN to use for encryption. This must be provided as a header when uploading your code
-     *         resource.
+     * @return The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      */
 
     public String getKmsKeyArn() {
@@ -64,12 +63,11 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The KMS key ARN to use for encryption. This must be provided as a header when uploading your code resource.
+     * The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The KMS key ARN to use for encryption. This must be provided as a header when uploading your code
-     *        resource.
+     *        The KMS key ARN that is used for encryption. If an AWS-managed key is used for encryption, returns empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

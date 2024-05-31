@@ -30,7 +30,7 @@ public class SuggestedFix implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The suggested code to add to your file.
+     * The suggested code fix. If applicable, includes code patch to replace your source code.
      * </p>
      */
     private String code;
@@ -43,11 +43,11 @@ public class SuggestedFix implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The suggested code to add to your file.
+     * The suggested code fix. If applicable, includes code patch to replace your source code.
      * </p>
      * 
      * @param code
-     *        The suggested code to add to your file.
+     *        The suggested code fix. If applicable, includes code patch to replace your source code.
      */
 
     public void setCode(String code) {
@@ -56,10 +56,10 @@ public class SuggestedFix implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The suggested code to add to your file.
+     * The suggested code fix. If applicable, includes code patch to replace your source code.
      * </p>
      * 
-     * @return The suggested code to add to your file.
+     * @return The suggested code fix. If applicable, includes code patch to replace your source code.
      */
 
     public String getCode() {
@@ -68,11 +68,11 @@ public class SuggestedFix implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The suggested code to add to your file.
+     * The suggested code fix. If applicable, includes code patch to replace your source code.
      * </p>
      * 
      * @param code
-     *        The suggested code to add to your file.
+     *        The suggested code fix. If applicable, includes code patch to replace your source code.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -56,7 +56,7 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Returns a list of all requested findings.
+     * Returns a list of requested findings from standard scans.
      * </p>
      * 
      * @param batchGetFindingsRequest
@@ -77,7 +77,7 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Use to create a scan using code uploaded to an S3 bucket.
+     * Use to create a scan using code uploaded to an Amazon S3 bucket.
      * </p>
      * 
      * @param createScanRequest
@@ -103,10 +103,11 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Generates a pre-signed URL and request headers used to upload a code resource.
+     * Generates a pre-signed URL, request headers used to upload a code resource, and code artifact identifier for the
+     * uploaded resource.
      * </p>
      * <p>
-     * You can upload your code resource to the URL and add the request headers using any HTTP client.
+     * You can upload your code resource to the URL with the request headers using any HTTP client.
      * </p>
      * 
      * @param createUploadUrlRequest
@@ -127,7 +128,7 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Use to get account level configuration.
+     * Use to get the encryption configuration for an account.
      * </p>
      * 
      * @param getAccountConfigurationRequest
@@ -174,7 +175,7 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Returns top level metrics about an account from a specified date, including number of open findings, the
+     * Returns a summary of metrics for an account from a specified date, including number of open findings, the
      * categories with most findings, the scans with most open findings, and scans with most open critical findings.
      * </p>
      * 
@@ -207,6 +208,8 @@ public interface AmazonCodeGuruSecurity {
      *         The resource specified in the request was not found.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @sample AmazonCodeGuruSecurity.GetScan
@@ -238,7 +241,7 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Returns a list of all the standard scans in an account. Does not return express scans.
+     * Returns a list of all scans in an account. Does not return <code>EXPRESS</code> scans.
      * </p>
      * 
      * @param listScansRequest
@@ -337,7 +340,7 @@ public interface AmazonCodeGuruSecurity {
 
     /**
      * <p>
-     * Use to update account-level configuration with an encryption key.
+     * Use to update the encryption configuration for an account.
      * </p>
      * 
      * @param updateAccountConfigurationRequest

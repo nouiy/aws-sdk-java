@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about summary metrics in an account.
+ * A summary of metrics for an account as of a specified date.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-security-2018-05-10/MetricsSummary" target="_top">AWS
@@ -30,8 +30,7 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     * findings in an account.
+     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most findings.
      * </p>
      */
     private java.util.List<CategoryWithFindingNum> categoriesWithMostFindings;
@@ -43,33 +42,31 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date date;
     /**
      * <p>
-     * The number of open findings of each severity in an account.
+     * The number of open findings of each severity.
      * </p>
      */
     private FindingMetricsValuePerSeverity openFindings;
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings
-     * in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
+     * findings.
      * </p>
      */
     private java.util.List<ScanNameWithFindingNum> scansWithMostOpenCriticalFindings;
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
-     * findings in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings.
      * </p>
      */
     private java.util.List<ScanNameWithFindingNum> scansWithMostOpenFindings;
 
     /**
      * <p>
-     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     * findings in an account.
+     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most findings.
      * </p>
      * 
-     * @return A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     *         findings in an account.
+     * @return A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most
+     *         findings.
      */
 
     public java.util.List<CategoryWithFindingNum> getCategoriesWithMostFindings() {
@@ -78,13 +75,12 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     * findings in an account.
+     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most findings.
      * </p>
      * 
      * @param categoriesWithMostFindings
-     *        A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     *        findings in an account.
+     *        A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most
+     *        findings.
      */
 
     public void setCategoriesWithMostFindings(java.util.Collection<CategoryWithFindingNum> categoriesWithMostFindings) {
@@ -98,8 +94,7 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     * findings in an account.
+     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most findings.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -108,8 +103,8 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param categoriesWithMostFindings
-     *        A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     *        findings in an account.
+     *        A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most
+     *        findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,13 +120,12 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     * findings in an account.
+     * A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most findings.
      * </p>
      * 
      * @param categoriesWithMostFindings
-     *        A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most open
-     *        findings in an account.
+     *        A list of <code>CategoryWithFindingNum</code> objects for the top 5 finding categories with the most
+     *        findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,11 +176,11 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of open findings of each severity in an account.
+     * The number of open findings of each severity.
      * </p>
      * 
      * @param openFindings
-     *        The number of open findings of each severity in an account.
+     *        The number of open findings of each severity.
      */
 
     public void setOpenFindings(FindingMetricsValuePerSeverity openFindings) {
@@ -195,10 +189,10 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of open findings of each severity in an account.
+     * The number of open findings of each severity.
      * </p>
      * 
-     * @return The number of open findings of each severity in an account.
+     * @return The number of open findings of each severity.
      */
 
     public FindingMetricsValuePerSeverity getOpenFindings() {
@@ -207,11 +201,11 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of open findings of each severity in an account.
+     * The number of open findings of each severity.
      * </p>
      * 
      * @param openFindings
-     *        The number of open findings of each severity in an account.
+     *        The number of open findings of each severity.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,12 +216,12 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings
-     * in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
+     * findings.
      * </p>
      * 
      * @return A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *         findings in an account.
+     *         critical findings.
      */
 
     public java.util.List<ScanNameWithFindingNum> getScansWithMostOpenCriticalFindings() {
@@ -236,13 +230,13 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings
-     * in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
+     * findings.
      * </p>
      * 
      * @param scansWithMostOpenCriticalFindings
      *        A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *        findings in an account.
+     *        critical findings.
      */
 
     public void setScansWithMostOpenCriticalFindings(java.util.Collection<ScanNameWithFindingNum> scansWithMostOpenCriticalFindings) {
@@ -256,8 +250,8 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings
-     * in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
+     * findings.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -267,7 +261,7 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param scansWithMostOpenCriticalFindings
      *        A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *        findings in an account.
+     *        critical findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -283,13 +277,13 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings
-     * in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
+     * findings.
      * </p>
      * 
      * @param scansWithMostOpenCriticalFindings
      *        A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *        findings in an account.
+     *        critical findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,12 +294,11 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
-     * findings in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings.
      * </p>
      * 
      * @return A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *         critical findings in an account.
+     *         findings.
      */
 
     public java.util.List<ScanNameWithFindingNum> getScansWithMostOpenFindings() {
@@ -314,13 +307,12 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
-     * findings in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings.
      * </p>
      * 
      * @param scansWithMostOpenFindings
      *        A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *        critical findings in an account.
+     *        findings.
      */
 
     public void setScansWithMostOpenFindings(java.util.Collection<ScanNameWithFindingNum> scansWithMostOpenFindings) {
@@ -334,8 +326,7 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
-     * findings in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -345,7 +336,7 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param scansWithMostOpenFindings
      *        A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *        critical findings in an account.
+     *        findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,13 +352,12 @@ public class MetricsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open critical
-     * findings in an account.
+     * A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open findings.
      * </p>
      * 
      * @param scansWithMostOpenFindings
      *        A list of <code>ScanNameWithFindingNum</code> objects for the top 3 scans with the most number of open
-     *        critical findings in an account.
+     *        findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

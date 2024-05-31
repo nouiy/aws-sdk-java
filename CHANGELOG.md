@@ -1,3 +1,20 @@
+# __1.12.734__ __2024-05-31__
+## __AWS CodeBuild__
+  - ### Features
+    - AWS CodeBuild now supports Self-hosted GitHub Actions runners for Github Enterprise
+
+## __AWS Launch Wizard__
+  - ### Features
+    - This release adds support for describing workload deployment specifications, deploying additional workload types, and managing tags for Launch Wizard resources with API operations.
+
+## __Amazon CodeGuru Security__
+  - ### Features
+    - This release includes minor model updates and documentation updates.
+
+## __Amazon ElastiCache__
+  - ### Features
+    - Update to attributes of TestFailover and minor revisions.
+
 # __1.12.733__ __2024-05-30__
 ## __AWS Certificate Manager__
   - ### Features

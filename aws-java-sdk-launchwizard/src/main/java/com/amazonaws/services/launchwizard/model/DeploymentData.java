@@ -42,6 +42,12 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date deletedAt;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the deployment.
+     * </p>
+     */
+    private String deploymentArn;
+    /**
+     * <p>
      * The ID of the deployment.
      * </p>
      */
@@ -66,9 +72,14 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
     private String resourceGroup;
     /**
      * <p>
-     * The specifications of the deployment. For more information on specifications for each deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      */
     private java.util.Map<String, String> specifications;
@@ -78,6 +89,12 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * Information about the tags attached to a deployment.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
     /**
      * <p>
      * The name of the workload.
@@ -162,6 +179,46 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
 
     public DeploymentData withDeletedAt(java.util.Date deletedAt) {
         setDeletedAt(deletedAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the deployment.
+     * </p>
+     * 
+     * @param deploymentArn
+     *        The Amazon Resource Name (ARN) of the deployment.
+     */
+
+    public void setDeploymentArn(String deploymentArn) {
+        this.deploymentArn = deploymentArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the deployment.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the deployment.
+     */
+
+    public String getDeploymentArn() {
+        return this.deploymentArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the deployment.
+     * </p>
+     * 
+     * @param deploymentArn
+     *        The Amazon Resource Name (ARN) of the deployment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeploymentData withDeploymentArn(String deploymentArn) {
+        setDeploymentArn(deploymentArn);
         return this;
     }
 
@@ -327,14 +384,24 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specifications of the deployment. For more information on specifications for each deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      * 
-     * @return The specifications of the deployment. For more information on specifications for each deployment, see <a
-     *         href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">
-     *         Workload specifications</a>.
+     * @return The settings specified for the deployment. These settings define how to deploy and configure your
+     *         resources created by the deployment. For more information about the specifications required for creating
+     *         a deployment for a SAP workload, see <a href=
+     *         "https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     *         deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     *         workloads, use the <a href=
+     *         "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     *         <code>GetWorkloadDeploymentPattern</code> </a> operation.
      */
 
     public java.util.Map<String, String> getSpecifications() {
@@ -343,15 +410,25 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specifications of the deployment. For more information on specifications for each deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      * 
      * @param specifications
-     *        The specifications of the deployment. For more information on specifications for each deployment, see <a
-     *        href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">
-     *        Workload specifications</a>.
+     *        The settings specified for the deployment. These settings define how to deploy and configure your
+     *        resources created by the deployment. For more information about the specifications required for creating a
+     *        deployment for a SAP workload, see <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     *        deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     *        workloads, use the <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     *        <code>GetWorkloadDeploymentPattern</code> </a> operation.
      */
 
     public void setSpecifications(java.util.Map<String, String> specifications) {
@@ -360,15 +437,25 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specifications of the deployment. For more information on specifications for each deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      * 
      * @param specifications
-     *        The specifications of the deployment. For more information on specifications for each deployment, see <a
-     *        href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">
-     *        Workload specifications</a>.
+     *        The settings specified for the deployment. These settings define how to deploy and configure your
+     *        resources created by the deployment. For more information about the specifications required for creating a
+     *        deployment for a SAP workload, see <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     *        deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     *        workloads, use the <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     *        <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -466,6 +553,74 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Information about the tags attached to a deployment.
+     * </p>
+     * 
+     * @return Information about the tags attached to a deployment.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Information about the tags attached to a deployment.
+     * </p>
+     * 
+     * @param tags
+     *        Information about the tags attached to a deployment.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * Information about the tags attached to a deployment.
+     * </p>
+     * 
+     * @param tags
+     *        Information about the tags attached to a deployment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeploymentData withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see DeploymentData#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeploymentData addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeploymentData clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the workload.
      * </p>
      * 
@@ -520,6 +675,8 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDeletedAt() != null)
             sb.append("DeletedAt: ").append(getDeletedAt()).append(",");
+        if (getDeploymentArn() != null)
+            sb.append("DeploymentArn: ").append(getDeploymentArn()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
@@ -532,6 +689,8 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
             sb.append("Specifications: ").append("***Sensitive Data Redacted***").append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags()).append(",");
         if (getWorkloadName() != null)
             sb.append("WorkloadName: ").append(getWorkloadName());
         sb.append("}");
@@ -555,6 +714,10 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
         if (other.getDeletedAt() == null ^ this.getDeletedAt() == null)
             return false;
         if (other.getDeletedAt() != null && other.getDeletedAt().equals(this.getDeletedAt()) == false)
+            return false;
+        if (other.getDeploymentArn() == null ^ this.getDeploymentArn() == null)
+            return false;
+        if (other.getDeploymentArn() != null && other.getDeploymentArn().equals(this.getDeploymentArn()) == false)
             return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
@@ -580,6 +743,10 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         if (other.getWorkloadName() == null ^ this.getWorkloadName() == null)
             return false;
         if (other.getWorkloadName() != null && other.getWorkloadName().equals(this.getWorkloadName()) == false)
@@ -594,12 +761,14 @@ public class DeploymentData implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDeletedAt() == null) ? 0 : getDeletedAt().hashCode());
+        hashCode = prime * hashCode + ((getDeploymentArn() == null) ? 0 : getDeploymentArn().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPatternName() == null) ? 0 : getPatternName().hashCode());
         hashCode = prime * hashCode + ((getResourceGroup() == null) ? 0 : getResourceGroup().hashCode());
         hashCode = prime * hashCode + ((getSpecifications() == null) ? 0 : getSpecifications().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getWorkloadName() == null) ? 0 : getWorkloadName().hashCode());
         return hashCode;
     }

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a resource, such as an Amazon S3 bucket or AWS Lambda function, that contains a finding.
+ * Information about a resource that contains a finding.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-security-2018-05-10/Resource" target="_top">AWS API
@@ -30,24 +30,24 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the resource.
+     * The <code>scanName</code> of the scan that was run on the resource.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The identifier for a section of the resource, such as an AWS Lambda layer.
+     * The identifier for a section of the resource.
      * </p>
      */
     private String subResourceId;
 
     /**
      * <p>
-     * The identifier for the resource.
+     * The <code>scanName</code> of the scan that was run on the resource.
      * </p>
      * 
      * @param id
-     *        The identifier for the resource.
+     *        The <code>scanName</code> of the scan that was run on the resource.
      */
 
     public void setId(String id) {
@@ -56,10 +56,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the resource.
+     * The <code>scanName</code> of the scan that was run on the resource.
      * </p>
      * 
-     * @return The identifier for the resource.
+     * @return The <code>scanName</code> of the scan that was run on the resource.
      */
 
     public String getId() {
@@ -68,11 +68,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the resource.
+     * The <code>scanName</code> of the scan that was run on the resource.
      * </p>
      * 
      * @param id
-     *        The identifier for the resource.
+     *        The <code>scanName</code> of the scan that was run on the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for a section of the resource, such as an AWS Lambda layer.
+     * The identifier for a section of the resource.
      * </p>
      * 
      * @param subResourceId
-     *        The identifier for a section of the resource, such as an AWS Lambda layer.
+     *        The identifier for a section of the resource.
      */
 
     public void setSubResourceId(String subResourceId) {
@@ -96,10 +96,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for a section of the resource, such as an AWS Lambda layer.
+     * The identifier for a section of the resource.
      * </p>
      * 
-     * @return The identifier for a section of the resource, such as an AWS Lambda layer.
+     * @return The identifier for a section of the resource.
      */
 
     public String getSubResourceId() {
@@ -108,11 +108,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for a section of the resource, such as an AWS Lambda layer.
+     * The identifier for a section of the resource.
      * </p>
      * 
      * @param subResourceId
-     *        The identifier for a section of the resource, such as an AWS Lambda layer.
+     *        The identifier for a section of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

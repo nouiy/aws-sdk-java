@@ -27,21 +27,21 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code> or
-     * <code>GetScan</code>.
+     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>,
+     * <code>ListScans</code>, or <code>GetScan</code>.
      * </p>
      */
     private String resourceArn;
 
     /**
      * <p>
-     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code> or
-     * <code>GetScan</code>.
+     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>,
+     * <code>ListScans</code>, or <code>GetScan</code>.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code>
-     *        or <code>GetScan</code>.
+     *        The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>,
+     *        <code>ListScans</code>, or <code>GetScan</code>.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -50,12 +50,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code> or
-     * <code>GetScan</code>.
+     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>,
+     * <code>ListScans</code>, or <code>GetScan</code>.
      * </p>
      * 
-     * @return The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code>
-     *         or <code>GetScan</code>.
+     * @return The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>
+     *         , <code>ListScans</code>, or <code>GetScan</code>.
      */
 
     public String getResourceArn() {
@@ -64,13 +64,13 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code> or
-     * <code>GetScan</code>.
+     * The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>,
+     * <code>ListScans</code>, or <code>GetScan</code>.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>ListScans</code>
-     *        or <code>GetScan</code>.
+     *        The ARN of the <code>ScanName</code> object. You can retrieve this ARN by calling <code>CreateScan</code>,
+     *        <code>ListScans</code>, or <code>GetScan</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

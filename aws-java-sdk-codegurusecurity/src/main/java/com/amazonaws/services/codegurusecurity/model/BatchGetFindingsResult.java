@@ -32,7 +32,7 @@ public class BatchGetFindingsResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.List<BatchGetFindingsError> failedFindings;
     /**
      * <p>
-     * A list of all requested findings.
+     * A list of all findings which were successfully fetched.
      * </p>
      */
     private java.util.List<Finding> findings;
@@ -117,10 +117,10 @@ public class BatchGetFindingsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of all requested findings.
+     * A list of all findings which were successfully fetched.
      * </p>
      * 
-     * @return A list of all requested findings.
+     * @return A list of all findings which were successfully fetched.
      */
 
     public java.util.List<Finding> getFindings() {
@@ -129,11 +129,11 @@ public class BatchGetFindingsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of all requested findings.
+     * A list of all findings which were successfully fetched.
      * </p>
      * 
      * @param findings
-     *        A list of all requested findings.
+     *        A list of all findings which were successfully fetched.
      */
 
     public void setFindings(java.util.Collection<Finding> findings) {
@@ -147,7 +147,7 @@ public class BatchGetFindingsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of all requested findings.
+     * A list of all findings which were successfully fetched.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -156,7 +156,7 @@ public class BatchGetFindingsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param findings
-     *        A list of all requested findings.
+     *        A list of all findings which were successfully fetched.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,11 +172,11 @@ public class BatchGetFindingsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of all requested findings.
+     * A list of all findings which were successfully fetched.
      * </p>
      * 
      * @param findings
-     *        A list of all requested findings.
+     *        A list of all findings which were successfully fetched.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -49,18 +49,28 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     private String name;
     /**
      * <p>
-     * The settings specified for the deployment. For more information on the specifications required for creating a
-     * deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      */
     private java.util.Map<String, String> specifications;
     /**
      * <p>
+     * The tags to add to the deployment.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
+    /**
+     * <p>
      * The name of the workload. You can use the <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
-     * <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this parameter.
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     * <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      * </p>
      */
     private String workloadName;
@@ -230,16 +240,24 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The settings specified for the deployment. For more information on the specifications required for creating a
-     * deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      * 
-     * @return The settings specified for the deployment. For more information on the specifications required for
-     *         creating a deployment, see <a
-     *         href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html"
-     *         >Workload specifications</a>.
+     * @return The settings specified for the deployment. These settings define how to deploy and configure your
+     *         resources created by the deployment. For more information about the specifications required for creating
+     *         a deployment for a SAP workload, see <a href=
+     *         "https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     *         deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     *         workloads, use the <a href=
+     *         "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     *         <code>GetWorkloadDeploymentPattern</code> </a> operation.
      */
 
     public java.util.Map<String, String> getSpecifications() {
@@ -248,17 +266,25 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The settings specified for the deployment. For more information on the specifications required for creating a
-     * deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      * 
      * @param specifications
-     *        The settings specified for the deployment. For more information on the specifications required for
-     *        creating a deployment, see <a
-     *        href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html"
-     *        >Workload specifications</a>.
+     *        The settings specified for the deployment. These settings define how to deploy and configure your
+     *        resources created by the deployment. For more information about the specifications required for creating a
+     *        deployment for a SAP workload, see <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     *        deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     *        workloads, use the <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     *        <code>GetWorkloadDeploymentPattern</code> </a> operation.
      */
 
     public void setSpecifications(java.util.Map<String, String> specifications) {
@@ -267,17 +293,25 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The settings specified for the deployment. For more information on the specifications required for creating a
-     * deployment, see <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html">Workload
-     * specifications</a>.
+     * The settings specified for the deployment. These settings define how to deploy and configure your resources
+     * created by the deployment. For more information about the specifications required for creating a deployment for a
+     * SAP workload, see <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     * deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     * workloads, use the <a
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     * <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * </p>
      * 
      * @param specifications
-     *        The settings specified for the deployment. For more information on the specifications required for
-     *        creating a deployment, see <a
-     *        href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications.html"
-     *        >Workload specifications</a>.
+     *        The settings specified for the deployment. These settings define how to deploy and configure your
+     *        resources created by the deployment. For more information about the specifications required for creating a
+     *        deployment for a SAP workload, see <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+     *        deployment specifications</a>. To retrieve the specifications required to create a deployment for other
+     *        workloads, use the <a href=
+     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+     *        <code>GetWorkloadDeploymentPattern</code> </a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -316,16 +350,83 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * The tags to add to the deployment.
+     * </p>
+     * 
+     * @return The tags to add to the deployment.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The tags to add to the deployment.
+     * </p>
+     * 
+     * @param tags
+     *        The tags to add to the deployment.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * The tags to add to the deployment.
+     * </p>
+     * 
+     * @param tags
+     *        The tags to add to the deployment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeploymentRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see CreateDeploymentRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeploymentRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeploymentRequest clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the workload. You can use the <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
-     * <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this parameter.
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     * <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      * </p>
      * 
      * @param workloadName
-     *        The name of the workload. You can use the <a href=
-     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
-     *        <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this
-     *        parameter.
+     *        The name of the workload. You can use the <a
+     *        href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     *        <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      */
 
     public void setWorkloadName(String workloadName) {
@@ -335,14 +436,13 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The name of the workload. You can use the <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
-     * <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this parameter.
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     * <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      * </p>
      * 
      * @return The name of the workload. You can use the <a
-     *         href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html"
-     *         > <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this
-     *         parameter.
+     *         href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     *         <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      */
 
     public String getWorkloadName() {
@@ -352,15 +452,14 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The name of the workload. You can use the <a
-     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
-     * <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this parameter.
+     * href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     * <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      * </p>
      * 
      * @param workloadName
-     *        The name of the workload. You can use the <a href=
-     *        "https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
-     *        <code>ListWorkloadDeploymentPatterns</code> </a> operation to discover supported values for this
-     *        parameter.
+     *        The name of the workload. You can use the <a
+     *        href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+     *        <code>ListWorkloads</code> </a> operation to discover supported values for this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -389,6 +488,8 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("Name: ").append(getName()).append(",");
         if (getSpecifications() != null)
             sb.append("Specifications: ").append("***Sensitive Data Redacted***").append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags()).append(",");
         if (getWorkloadName() != null)
             sb.append("WorkloadName: ").append(getWorkloadName());
         sb.append("}");
@@ -421,6 +522,10 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getSpecifications() != null && other.getSpecifications().equals(this.getSpecifications()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         if (other.getWorkloadName() == null ^ this.getWorkloadName() == null)
             return false;
         if (other.getWorkloadName() != null && other.getWorkloadName().equals(this.getWorkloadName()) == false)
@@ -437,6 +542,7 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getDryRun() == null) ? 0 : getDryRun().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getSpecifications() == null) ? 0 : getSpecifications().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getWorkloadName() == null) ? 0 : getWorkloadName().hashCode());
         return hashCode;
     }
