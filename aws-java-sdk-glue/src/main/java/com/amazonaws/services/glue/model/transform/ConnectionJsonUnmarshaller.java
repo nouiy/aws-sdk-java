@@ -87,6 +87,22 @@ public class ConnectionJsonUnmarshaller implements Unmarshaller<Connection, Json
                     context.nextToken();
                     connection.setLastUpdatedBy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Status", targetDepth)) {
+                    context.nextToken();
+                    connection.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StatusReason", targetDepth)) {
+                    context.nextToken();
+                    connection.setStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LastConnectionValidationTime", targetDepth)) {
+                    context.nextToken();
+                    connection.setLastConnectionValidationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("AuthenticationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    connection.setAuthenticationConfiguration(AuthenticationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

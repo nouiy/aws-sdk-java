@@ -58,7 +58,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     * Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      * </p>
      * </li>
      * </ul>
@@ -238,7 +238,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     * Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      * </p>
      * </li>
      * </ul>
@@ -250,7 +250,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     *        Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      *        </p>
      *        </li>
      */
@@ -268,7 +268,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     * Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      * </p>
      * </li>
      * </ul>
@@ -279,7 +279,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      *         <ul>
      *         <li>
      *         <p>
-     *         Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     *         Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      *         </p>
      *         </li>
      */
@@ -297,7 +297,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     * Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      * </p>
      * </li>
      * </ul>
@@ -309,7 +309,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        Fully qualify identifiers: <code>SELECT * from table1 → SELECT * from db1.table1</code>
+     *        Fully qualified identifiers: <code>SELECT * from table1 -&gt; SELECT * from db1.table1</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

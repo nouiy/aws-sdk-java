@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.globalaccelerator.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class UpdateCustomRoutingAcceleratorRequestMarshaller {
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> IPADDRESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IpAddressType").build();
+    private static final MarshallingInfo<List> IPADDRESSES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("IpAddresses").build();
     private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Enabled").build();
 
@@ -55,6 +58,7 @@ public class UpdateCustomRoutingAcceleratorRequestMarshaller {
             protocolMarshaller.marshall(updateCustomRoutingAcceleratorRequest.getAcceleratorArn(), ACCELERATORARN_BINDING);
             protocolMarshaller.marshall(updateCustomRoutingAcceleratorRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateCustomRoutingAcceleratorRequest.getIpAddressType(), IPADDRESSTYPE_BINDING);
+            protocolMarshaller.marshall(updateCustomRoutingAcceleratorRequest.getIpAddresses(), IPADDRESSES_BINDING);
             protocolMarshaller.marshall(updateCustomRoutingAcceleratorRequest.getEnabled(), ENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

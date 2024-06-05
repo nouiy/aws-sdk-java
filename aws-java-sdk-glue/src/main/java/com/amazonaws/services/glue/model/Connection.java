@@ -312,20 +312,20 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> connectionProperties;
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to make this connection successfully.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to make this connection successfully.
      * </p>
      */
     private PhysicalConnectionRequirements physicalConnectionRequirements;
     /**
      * <p>
-     * The time that this connection definition was created.
+     * The timestamp of the time that this connection definition was created.
      * </p>
      */
     private java.util.Date creationTime;
     /**
      * <p>
-     * The last time that this connection definition was updated.
+     * The timestamp of the last time the connection definition was updated.
      * </p>
      */
     private java.util.Date lastUpdatedTime;
@@ -335,6 +335,31 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String lastUpdatedBy;
+    /**
+     * <p>
+     * The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or <code>FAILED</code>
+     * .
+     * </p>
+     */
+    private String status;
+    /**
+     * <p>
+     * The reason for the connection status.
+     * </p>
+     */
+    private String statusReason;
+    /**
+     * <p>
+     * A timestamp of the time this connection was last validated.
+     * </p>
+     */
+    private java.util.Date lastConnectionValidationTime;
+    /**
+     * <p>
+     * The authentication properties of the connection.
+     * </p>
+     */
+    private AuthenticationConfiguration authenticationConfiguration;
 
     /**
      * <p>
@@ -2148,13 +2173,13 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to make this connection successfully.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to make this connection successfully.
      * </p>
      * 
      * @param physicalConnectionRequirements
-     *        A map of physical connection requirements, such as virtual private cloud (VPC) and
-     *        <code>SecurityGroup</code>, that are needed to make this connection successfully.
+     *        The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
+     *        that are needed to make this connection successfully.
      */
 
     public void setPhysicalConnectionRequirements(PhysicalConnectionRequirements physicalConnectionRequirements) {
@@ -2163,12 +2188,12 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to make this connection successfully.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to make this connection successfully.
      * </p>
      * 
-     * @return A map of physical connection requirements, such as virtual private cloud (VPC) and
-     *         <code>SecurityGroup</code>, that are needed to make this connection successfully.
+     * @return The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
+     *         that are needed to make this connection successfully.
      */
 
     public PhysicalConnectionRequirements getPhysicalConnectionRequirements() {
@@ -2177,13 +2202,13 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to make this connection successfully.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to make this connection successfully.
      * </p>
      * 
      * @param physicalConnectionRequirements
-     *        A map of physical connection requirements, such as virtual private cloud (VPC) and
-     *        <code>SecurityGroup</code>, that are needed to make this connection successfully.
+     *        The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
+     *        that are needed to make this connection successfully.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2194,11 +2219,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that this connection definition was created.
+     * The timestamp of the time that this connection definition was created.
      * </p>
      * 
      * @param creationTime
-     *        The time that this connection definition was created.
+     *        The timestamp of the time that this connection definition was created.
      */
 
     public void setCreationTime(java.util.Date creationTime) {
@@ -2207,10 +2232,10 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that this connection definition was created.
+     * The timestamp of the time that this connection definition was created.
      * </p>
      * 
-     * @return The time that this connection definition was created.
+     * @return The timestamp of the time that this connection definition was created.
      */
 
     public java.util.Date getCreationTime() {
@@ -2219,11 +2244,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that this connection definition was created.
+     * The timestamp of the time that this connection definition was created.
      * </p>
      * 
      * @param creationTime
-     *        The time that this connection definition was created.
+     *        The timestamp of the time that this connection definition was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2234,11 +2259,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this connection definition was updated.
+     * The timestamp of the last time the connection definition was updated.
      * </p>
      * 
      * @param lastUpdatedTime
-     *        The last time that this connection definition was updated.
+     *        The timestamp of the last time the connection definition was updated.
      */
 
     public void setLastUpdatedTime(java.util.Date lastUpdatedTime) {
@@ -2247,10 +2272,10 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this connection definition was updated.
+     * The timestamp of the last time the connection definition was updated.
      * </p>
      * 
-     * @return The last time that this connection definition was updated.
+     * @return The timestamp of the last time the connection definition was updated.
      */
 
     public java.util.Date getLastUpdatedTime() {
@@ -2259,11 +2284,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this connection definition was updated.
+     * The timestamp of the last time the connection definition was updated.
      * </p>
      * 
      * @param lastUpdatedTime
-     *        The last time that this connection definition was updated.
+     *        The timestamp of the last time the connection definition was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2313,6 +2338,193 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or <code>FAILED</code>
+     * .
+     * </p>
+     * 
+     * @param status
+     *        The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or
+     *        <code>FAILED</code>.
+     * @see ConnectionStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or <code>FAILED</code>
+     * .
+     * </p>
+     * 
+     * @return The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or
+     *         <code>FAILED</code>.
+     * @see ConnectionStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or <code>FAILED</code>
+     * .
+     * </p>
+     * 
+     * @param status
+     *        The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or
+     *        <code>FAILED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionStatus
+     */
+
+    public Connection withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or <code>FAILED</code>
+     * .
+     * </p>
+     * 
+     * @param status
+     *        The status of the connection. Can be one of: <code>READY</code>, <code>IN_PROGRESS</code>, or
+     *        <code>FAILED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionStatus
+     */
+
+    public Connection withStatus(ConnectionStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The reason for the connection status.
+     * </p>
+     * 
+     * @param statusReason
+     *        The reason for the connection status.
+     */
+
+    public void setStatusReason(String statusReason) {
+        this.statusReason = statusReason;
+    }
+
+    /**
+     * <p>
+     * The reason for the connection status.
+     * </p>
+     * 
+     * @return The reason for the connection status.
+     */
+
+    public String getStatusReason() {
+        return this.statusReason;
+    }
+
+    /**
+     * <p>
+     * The reason for the connection status.
+     * </p>
+     * 
+     * @param statusReason
+     *        The reason for the connection status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Connection withStatusReason(String statusReason) {
+        setStatusReason(statusReason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A timestamp of the time this connection was last validated.
+     * </p>
+     * 
+     * @param lastConnectionValidationTime
+     *        A timestamp of the time this connection was last validated.
+     */
+
+    public void setLastConnectionValidationTime(java.util.Date lastConnectionValidationTime) {
+        this.lastConnectionValidationTime = lastConnectionValidationTime;
+    }
+
+    /**
+     * <p>
+     * A timestamp of the time this connection was last validated.
+     * </p>
+     * 
+     * @return A timestamp of the time this connection was last validated.
+     */
+
+    public java.util.Date getLastConnectionValidationTime() {
+        return this.lastConnectionValidationTime;
+    }
+
+    /**
+     * <p>
+     * A timestamp of the time this connection was last validated.
+     * </p>
+     * 
+     * @param lastConnectionValidationTime
+     *        A timestamp of the time this connection was last validated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Connection withLastConnectionValidationTime(java.util.Date lastConnectionValidationTime) {
+        setLastConnectionValidationTime(lastConnectionValidationTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The authentication properties of the connection.
+     * </p>
+     * 
+     * @param authenticationConfiguration
+     *        The authentication properties of the connection.
+     */
+
+    public void setAuthenticationConfiguration(AuthenticationConfiguration authenticationConfiguration) {
+        this.authenticationConfiguration = authenticationConfiguration;
+    }
+
+    /**
+     * <p>
+     * The authentication properties of the connection.
+     * </p>
+     * 
+     * @return The authentication properties of the connection.
+     */
+
+    public AuthenticationConfiguration getAuthenticationConfiguration() {
+        return this.authenticationConfiguration;
+    }
+
+    /**
+     * <p>
+     * The authentication properties of the connection.
+     * </p>
+     * 
+     * @param authenticationConfiguration
+     *        The authentication properties of the connection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Connection withAuthenticationConfiguration(AuthenticationConfiguration authenticationConfiguration) {
+        setAuthenticationConfiguration(authenticationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2341,7 +2553,15 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
         if (getLastUpdatedTime() != null)
             sb.append("LastUpdatedTime: ").append(getLastUpdatedTime()).append(",");
         if (getLastUpdatedBy() != null)
-            sb.append("LastUpdatedBy: ").append(getLastUpdatedBy());
+            sb.append("LastUpdatedBy: ").append(getLastUpdatedBy()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getStatusReason() != null)
+            sb.append("StatusReason: ").append(getStatusReason()).append(",");
+        if (getLastConnectionValidationTime() != null)
+            sb.append("LastConnectionValidationTime: ").append(getLastConnectionValidationTime()).append(",");
+        if (getAuthenticationConfiguration() != null)
+            sb.append("AuthenticationConfiguration: ").append(getAuthenticationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -2393,6 +2613,22 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastUpdatedBy() != null && other.getLastUpdatedBy().equals(this.getLastUpdatedBy()) == false)
             return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getStatusReason() == null ^ this.getStatusReason() == null)
+            return false;
+        if (other.getStatusReason() != null && other.getStatusReason().equals(this.getStatusReason()) == false)
+            return false;
+        if (other.getLastConnectionValidationTime() == null ^ this.getLastConnectionValidationTime() == null)
+            return false;
+        if (other.getLastConnectionValidationTime() != null && other.getLastConnectionValidationTime().equals(this.getLastConnectionValidationTime()) == false)
+            return false;
+        if (other.getAuthenticationConfiguration() == null ^ this.getAuthenticationConfiguration() == null)
+            return false;
+        if (other.getAuthenticationConfiguration() != null && other.getAuthenticationConfiguration().equals(this.getAuthenticationConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -2410,6 +2646,10 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedBy() == null) ? 0 : getLastUpdatedBy().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
+        hashCode = prime * hashCode + ((getLastConnectionValidationTime() == null) ? 0 : getLastConnectionValidationTime().hashCode());
+        hashCode = prime * hashCode + ((getAuthenticationConfiguration() == null) ? 0 : getAuthenticationConfiguration().hashCode());
         return hashCode;
     }
 

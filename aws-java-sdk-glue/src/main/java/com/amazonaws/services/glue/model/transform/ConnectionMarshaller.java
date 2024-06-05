@@ -47,6 +47,14 @@ public class ConnectionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> LASTUPDATEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedBy").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Status").build();
+    private static final MarshallingInfo<String> STATUSREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatusReason").build();
+    private static final MarshallingInfo<java.util.Date> LASTCONNECTIONVALIDATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastConnectionValidationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> AUTHENTICATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthenticationConfiguration").build();
 
     private static final ConnectionMarshaller instance = new ConnectionMarshaller();
 
@@ -73,6 +81,10 @@ public class ConnectionMarshaller {
             protocolMarshaller.marshall(connection.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(connection.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
             protocolMarshaller.marshall(connection.getLastUpdatedBy(), LASTUPDATEDBY_BINDING);
+            protocolMarshaller.marshall(connection.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(connection.getStatusReason(), STATUSREASON_BINDING);
+            protocolMarshaller.marshall(connection.getLastConnectionValidationTime(), LASTCONNECTIONVALIDATIONTIME_BINDING);
+            protocolMarshaller.marshall(connection.getAuthenticationConfiguration(), AUTHENTICATIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

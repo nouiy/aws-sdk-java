@@ -30,7 +30,7 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the connection. Connection will not function as expected without a name.
+     * The name of the connection.
      * </p>
      */
     private String name;
@@ -144,6 +144,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
+     * <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Requires the <code>AuthenticationConfiguration</code> member to be configured.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * <code>NETWORK</code> - Designates a network connection to a data source within an Amazon Virtual Private Cloud
      * environment (Amazon VPC).
      * </p>
@@ -210,19 +222,31 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
     private java.util.Map<String, String> connectionProperties;
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to successfully make this connection.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to successfully make this connection.
      * </p>
      */
     private PhysicalConnectionRequirements physicalConnectionRequirements;
+    /**
+     * <p>
+     * The authentication properties of the connection. Used for a Salesforce connection.
+     * </p>
+     */
+    private AuthenticationConfigurationInput authenticationConfiguration;
+    /**
+     * <p>
+     * A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is true.
+     * </p>
+     */
+    private Boolean validateCredentials;
 
     /**
      * <p>
-     * The name of the connection. Connection will not function as expected without a name.
+     * The name of the connection.
      * </p>
      * 
      * @param name
-     *        The name of the connection. Connection will not function as expected without a name.
+     *        The name of the connection.
      */
 
     public void setName(String name) {
@@ -231,10 +255,10 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the connection. Connection will not function as expected without a name.
+     * The name of the connection.
      * </p>
      * 
-     * @return The name of the connection. Connection will not function as expected without a name.
+     * @return The name of the connection.
      */
 
     public String getName() {
@@ -243,11 +267,11 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the connection. Connection will not function as expected without a name.
+     * The name of the connection.
      * </p>
      * 
      * @param name
-     *        The name of the connection. Connection will not function as expected without a name.
+     *        The name of the connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -394,6 +418,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * Required: All of (<code>USERNAME</code>, <code>PASSWORD</code>) or <code>SECRET_ID</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Requires the <code>AuthenticationConfiguration</code> member to be configured.
      * </p>
      * </li>
      * </ul>
@@ -548,6 +584,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        Required: All of (<code>USERNAME</code>, <code>PASSWORD</code>) or <code>SECRET_ID</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Requires the <code>AuthenticationConfiguration</code> member to be configured.
      *        </p>
      *        </li>
      *        </ul>
@@ -715,6 +763,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
+     * <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Requires the <code>AuthenticationConfiguration</code> member to be configured.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * <code>NETWORK</code> - Designates a network connection to a data source within an Amazon Virtual Private Cloud
      * environment (Amazon VPC).
      * </p>
@@ -862,6 +922,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *         <li>
      *         <p>
      *         Required: All of (<code>USERNAME</code>, <code>PASSWORD</code>) or <code>SECRET_ID</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Requires the <code>AuthenticationConfiguration</code> member to be configured.
      *         </p>
      *         </li>
      *         </ul>
@@ -1029,6 +1101,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
+     * <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Requires the <code>AuthenticationConfiguration</code> member to be configured.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * <code>NETWORK</code> - Designates a network connection to a data source within an Amazon Virtual Private Cloud
      * environment (Amazon VPC).
      * </p>
@@ -1177,6 +1261,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        Required: All of (<code>USERNAME</code>, <code>PASSWORD</code>) or <code>SECRET_ID</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Requires the <code>AuthenticationConfiguration</code> member to be configured.
      *        </p>
      *        </li>
      *        </ul>
@@ -1346,6 +1442,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
+     * <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Requires the <code>AuthenticationConfiguration</code> member to be configured.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
      * <code>NETWORK</code> - Designates a network connection to a data source within an Amazon Virtual Private Cloud
      * environment (Amazon VPC).
      * </p>
@@ -1494,6 +1602,18 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        Required: All of (<code>USERNAME</code>, <code>PASSWORD</code>) or <code>SECRET_ID</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SALESFORCE</code> - Designates a connection to Salesforce using OAuth authencation.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Requires the <code>AuthenticationConfiguration</code> member to be configured.
      *        </p>
      *        </li>
      *        </ul>
@@ -1699,13 +1819,13 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to successfully make this connection.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to successfully make this connection.
      * </p>
      * 
      * @param physicalConnectionRequirements
-     *        A map of physical connection requirements, such as virtual private cloud (VPC) and
-     *        <code>SecurityGroup</code>, that are needed to successfully make this connection.
+     *        The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
+     *        that are needed to successfully make this connection.
      */
 
     public void setPhysicalConnectionRequirements(PhysicalConnectionRequirements physicalConnectionRequirements) {
@@ -1714,12 +1834,12 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to successfully make this connection.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to successfully make this connection.
      * </p>
      * 
-     * @return A map of physical connection requirements, such as virtual private cloud (VPC) and
-     *         <code>SecurityGroup</code>, that are needed to successfully make this connection.
+     * @return The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
+     *         that are needed to successfully make this connection.
      */
 
     public PhysicalConnectionRequirements getPhysicalConnectionRequirements() {
@@ -1728,19 +1848,115 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
-     * that are needed to successfully make this connection.
+     * The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>, that
+     * are needed to successfully make this connection.
      * </p>
      * 
      * @param physicalConnectionRequirements
-     *        A map of physical connection requirements, such as virtual private cloud (VPC) and
-     *        <code>SecurityGroup</code>, that are needed to successfully make this connection.
+     *        The physical connection requirements, such as virtual private cloud (VPC) and <code>SecurityGroup</code>,
+     *        that are needed to successfully make this connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ConnectionInput withPhysicalConnectionRequirements(PhysicalConnectionRequirements physicalConnectionRequirements) {
         setPhysicalConnectionRequirements(physicalConnectionRequirements);
         return this;
+    }
+
+    /**
+     * <p>
+     * The authentication properties of the connection. Used for a Salesforce connection.
+     * </p>
+     * 
+     * @param authenticationConfiguration
+     *        The authentication properties of the connection. Used for a Salesforce connection.
+     */
+
+    public void setAuthenticationConfiguration(AuthenticationConfigurationInput authenticationConfiguration) {
+        this.authenticationConfiguration = authenticationConfiguration;
+    }
+
+    /**
+     * <p>
+     * The authentication properties of the connection. Used for a Salesforce connection.
+     * </p>
+     * 
+     * @return The authentication properties of the connection. Used for a Salesforce connection.
+     */
+
+    public AuthenticationConfigurationInput getAuthenticationConfiguration() {
+        return this.authenticationConfiguration;
+    }
+
+    /**
+     * <p>
+     * The authentication properties of the connection. Used for a Salesforce connection.
+     * </p>
+     * 
+     * @param authenticationConfiguration
+     *        The authentication properties of the connection. Used for a Salesforce connection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectionInput withAuthenticationConfiguration(AuthenticationConfigurationInput authenticationConfiguration) {
+        setAuthenticationConfiguration(authenticationConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is true.
+     * </p>
+     * 
+     * @param validateCredentials
+     *        A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is
+     *        true.
+     */
+
+    public void setValidateCredentials(Boolean validateCredentials) {
+        this.validateCredentials = validateCredentials;
+    }
+
+    /**
+     * <p>
+     * A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is true.
+     * </p>
+     * 
+     * @return A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is
+     *         true.
+     */
+
+    public Boolean getValidateCredentials() {
+        return this.validateCredentials;
+    }
+
+    /**
+     * <p>
+     * A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is true.
+     * </p>
+     * 
+     * @param validateCredentials
+     *        A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is
+     *        true.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectionInput withValidateCredentials(Boolean validateCredentials) {
+        setValidateCredentials(validateCredentials);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is true.
+     * </p>
+     * 
+     * @return A flag to validate the credentials during create connection. Used for a Salesforce connection. Default is
+     *         true.
+     */
+
+    public Boolean isValidateCredentials() {
+        return this.validateCredentials;
     }
 
     /**
@@ -1766,7 +1982,11 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
         if (getConnectionProperties() != null)
             sb.append("ConnectionProperties: ").append(getConnectionProperties()).append(",");
         if (getPhysicalConnectionRequirements() != null)
-            sb.append("PhysicalConnectionRequirements: ").append(getPhysicalConnectionRequirements());
+            sb.append("PhysicalConnectionRequirements: ").append(getPhysicalConnectionRequirements()).append(",");
+        if (getAuthenticationConfiguration() != null)
+            sb.append("AuthenticationConfiguration: ").append(getAuthenticationConfiguration()).append(",");
+        if (getValidateCredentials() != null)
+            sb.append("ValidateCredentials: ").append(getValidateCredentials());
         sb.append("}");
         return sb.toString();
     }
@@ -1806,6 +2026,14 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
         if (other.getPhysicalConnectionRequirements() != null
                 && other.getPhysicalConnectionRequirements().equals(this.getPhysicalConnectionRequirements()) == false)
             return false;
+        if (other.getAuthenticationConfiguration() == null ^ this.getAuthenticationConfiguration() == null)
+            return false;
+        if (other.getAuthenticationConfiguration() != null && other.getAuthenticationConfiguration().equals(this.getAuthenticationConfiguration()) == false)
+            return false;
+        if (other.getValidateCredentials() == null ^ this.getValidateCredentials() == null)
+            return false;
+        if (other.getValidateCredentials() != null && other.getValidateCredentials().equals(this.getValidateCredentials()) == false)
+            return false;
         return true;
     }
 
@@ -1820,6 +2048,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getMatchCriteria() == null) ? 0 : getMatchCriteria().hashCode());
         hashCode = prime * hashCode + ((getConnectionProperties() == null) ? 0 : getConnectionProperties().hashCode());
         hashCode = prime * hashCode + ((getPhysicalConnectionRequirements() == null) ? 0 : getPhysicalConnectionRequirements().hashCode());
+        hashCode = prime * hashCode + ((getAuthenticationConfiguration() == null) ? 0 : getAuthenticationConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getValidateCredentials() == null) ? 0 : getValidateCredentials().hashCode());
         return hashCode;
     }
 

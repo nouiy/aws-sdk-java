@@ -26,7 +26,8 @@ public enum ConnectionType {
     KAFKA("KAFKA"),
     NETWORK("NETWORK"),
     MARKETPLACE("MARKETPLACE"),
-    CUSTOM("CUSTOM");
+    CUSTOM("CUSTOM"),
+    SALESFORCE("SALESFORCE");
 
     private String value;
 

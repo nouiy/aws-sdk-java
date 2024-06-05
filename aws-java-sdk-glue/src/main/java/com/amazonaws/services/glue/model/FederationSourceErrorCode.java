@@ -20,10 +20,15 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum FederationSourceErrorCode {
 
+    AccessDeniedException("AccessDeniedException"),
+    EntityNotFoundException("EntityNotFoundException"),
+    InvalidCredentialsException("InvalidCredentialsException"),
+    InvalidInputException("InvalidInputException"),
     InvalidResponseException("InvalidResponseException"),
     OperationTimeoutException("OperationTimeoutException"),
     OperationNotSupportedException("OperationNotSupportedException"),
     InternalServiceException("InternalServiceException"),
+    PartialFailureException("PartialFailureException"),
     ThrottlingException("ThrottlingException");
 
     private String value;

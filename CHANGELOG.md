@@ -1,3 +1,16 @@
+# __1.12.737__ __2024-06-05__
+## __AWS Global Accelerator__
+  - ### Features
+    - This release contains a new optional ip-addresses input field for the update accelerator and update custom routing accelerator apis. This input enables consumers to replace IPv4 addresses on existing accelerators with addresses provided in the input.
+
+## __AWS Glue__
+  - ### Features
+    - AWS Glue now supports native SaaS connectivity: Salesforce connector available now
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Added new params copySource and key to copyObject API for supporting S3 Access Grants plugin. These changes will not change any of the existing S3 API functionality.
+
 # __1.12.736__ __2024-06-04__
 ## __Amazon Elastic Compute Cloud__
   - ### Features

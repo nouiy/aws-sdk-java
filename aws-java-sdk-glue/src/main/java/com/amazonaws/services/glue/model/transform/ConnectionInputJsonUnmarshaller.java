@@ -75,6 +75,14 @@ public class ConnectionInputJsonUnmarshaller implements Unmarshaller<ConnectionI
                     context.nextToken();
                     connectionInput.setPhysicalConnectionRequirements(PhysicalConnectionRequirementsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AuthenticationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    connectionInput.setAuthenticationConfiguration(AuthenticationConfigurationInputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ValidateCredentials", targetDepth)) {
+                    context.nextToken();
+                    connectionInput.setValidateCredentials(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

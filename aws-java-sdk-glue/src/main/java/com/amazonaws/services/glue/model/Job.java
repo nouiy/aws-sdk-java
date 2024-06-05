@@ -166,7 +166,12 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The job timeout in minutes. This is the maximum time that a job run can consume resources before it is terminated
-     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch jobs.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      */
     private Integer timeout;
@@ -1321,12 +1326,22 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The job timeout in minutes. This is the maximum time that a job run can consume resources before it is terminated
-     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch jobs.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      * 
      * @param timeout
      *        The job timeout in minutes. This is the maximum time that a job run can consume resources before it is
-     *        terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     *        terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch
+     *        jobs.</p>
+     *        <p>
+     *        Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank,
+     *        the job will be restarted after 7 days based if you have not setup a maintenance window. If you have setup
+     *        maintenance window, it will be restarted during the maintenance window after 7 days.
      */
 
     public void setTimeout(Integer timeout) {
@@ -1336,11 +1351,21 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The job timeout in minutes. This is the maximum time that a job run can consume resources before it is terminated
-     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch jobs.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      * 
      * @return The job timeout in minutes. This is the maximum time that a job run can consume resources before it is
-     *         terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     *         terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch
+     *         jobs.</p>
+     *         <p>
+     *         Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank,
+     *         the job will be restarted after 7 days based if you have not setup a maintenance window. If you have
+     *         setup maintenance window, it will be restarted during the maintenance window after 7 days.
      */
 
     public Integer getTimeout() {
@@ -1350,12 +1375,22 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The job timeout in minutes. This is the maximum time that a job run can consume resources before it is terminated
-     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     * and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch jobs.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      * 
      * @param timeout
      *        The job timeout in minutes. This is the maximum time that a job run can consume resources before it is
-     *        terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
+     *        terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours) for batch
+     *        jobs.</p>
+     *        <p>
+     *        Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank,
+     *        the job will be restarted after 7 days based if you have not setup a maintenance window. If you have setup
+     *        maintenance window, it will be restarted during the maintenance window after 7 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
