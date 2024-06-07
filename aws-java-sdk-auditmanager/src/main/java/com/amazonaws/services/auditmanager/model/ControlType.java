@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ControlType {
 
     Standard("Standard"),
-    Custom("Custom");
+    Custom("Custom"),
+    Core("Core");
 
     private String value;
 

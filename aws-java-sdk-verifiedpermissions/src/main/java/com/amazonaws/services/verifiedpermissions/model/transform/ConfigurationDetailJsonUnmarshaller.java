@@ -52,6 +52,10 @@ public class ConfigurationDetailJsonUnmarshaller implements Unmarshaller<Configu
                     context.nextToken();
                     configurationDetail.setCognitoUserPoolConfiguration(CognitoUserPoolConfigurationDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("openIdConnectConfiguration", targetDepth)) {
+                    context.nextToken();
+                    configurationDetail.setOpenIdConnectConfiguration(OpenIdConnectConfigurationDetailJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

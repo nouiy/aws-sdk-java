@@ -59,6 +59,8 @@ public class ControlMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedBy").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("state").build();
 
     private static final ControlMarshaller instance = new ControlMarshaller();
 
@@ -91,6 +93,7 @@ public class ControlMarshaller {
             protocolMarshaller.marshall(control.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(control.getLastUpdatedBy(), LASTUPDATEDBY_BINDING);
             protocolMarshaller.marshall(control.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(control.getState(), STATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

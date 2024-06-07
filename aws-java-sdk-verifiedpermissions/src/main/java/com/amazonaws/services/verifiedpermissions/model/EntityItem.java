@@ -50,7 +50,13 @@ public class EntityItem implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, AttributeValue> attributes;
     /**
      * <p>
-     * The parents in the hierarchy that contains the entity.
+     * The parent entities in the hierarchy that contains the entity. A principal or resource entity can be defined with
+     * at most 99 <i>transitive parents</i> per authorization request.
+     * </p>
+     * <p>
+     * A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     * parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight groups, for
+     * a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * </p>
      */
     private java.util.List<EntityIdentifier> parents;
@@ -165,10 +171,21 @@ public class EntityItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parents in the hierarchy that contains the entity.
+     * The parent entities in the hierarchy that contains the entity. A principal or resource entity can be defined with
+     * at most 99 <i>transitive parents</i> per authorization request.
+     * </p>
+     * <p>
+     * A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     * parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight groups, for
+     * a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * </p>
      * 
-     * @return The parents in the hierarchy that contains the entity.
+     * @return The parent entities in the hierarchy that contains the entity. A principal or resource entity can be
+     *         defined with at most 99 <i>transitive parents</i> per authorization request. </p>
+     *         <p>
+     *         A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents
+     *         of parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight
+     *         groups, for a total of 100: one entity, 91 entity parents, and eight parents of parents.
      */
 
     public java.util.List<EntityIdentifier> getParents() {
@@ -177,11 +194,22 @@ public class EntityItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parents in the hierarchy that contains the entity.
+     * The parent entities in the hierarchy that contains the entity. A principal or resource entity can be defined with
+     * at most 99 <i>transitive parents</i> per authorization request.
+     * </p>
+     * <p>
+     * A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     * parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight groups, for
+     * a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * </p>
      * 
      * @param parents
-     *        The parents in the hierarchy that contains the entity.
+     *        The parent entities in the hierarchy that contains the entity. A principal or resource entity can be
+     *        defined with at most 99 <i>transitive parents</i> per authorization request. </p>
+     *        <p>
+     *        A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     *        parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight
+     *        groups, for a total of 100: one entity, 91 entity parents, and eight parents of parents.
      */
 
     public void setParents(java.util.Collection<EntityIdentifier> parents) {
@@ -195,7 +223,13 @@ public class EntityItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parents in the hierarchy that contains the entity.
+     * The parent entities in the hierarchy that contains the entity. A principal or resource entity can be defined with
+     * at most 99 <i>transitive parents</i> per authorization request.
+     * </p>
+     * <p>
+     * A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     * parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight groups, for
+     * a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -204,7 +238,12 @@ public class EntityItem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param parents
-     *        The parents in the hierarchy that contains the entity.
+     *        The parent entities in the hierarchy that contains the entity. A principal or resource entity can be
+     *        defined with at most 99 <i>transitive parents</i> per authorization request. </p>
+     *        <p>
+     *        A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     *        parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight
+     *        groups, for a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -220,11 +259,22 @@ public class EntityItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parents in the hierarchy that contains the entity.
+     * The parent entities in the hierarchy that contains the entity. A principal or resource entity can be defined with
+     * at most 99 <i>transitive parents</i> per authorization request.
+     * </p>
+     * <p>
+     * A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     * parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight groups, for
+     * a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * </p>
      * 
      * @param parents
-     *        The parents in the hierarchy that contains the entity.
+     *        The parent entities in the hierarchy that contains the entity. A principal or resource entity can be
+     *        defined with at most 99 <i>transitive parents</i> per authorization request. </p>
+     *        <p>
+     *        A transitive parent is an entity in the hierarchy of entities including all direct parents, and parents of
+     *        parents. For example, a user can be a member of 91 groups if one of those groups is a member of eight
+     *        groups, for a total of 100: one entity, 91 entity parents, and eight parents of parents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

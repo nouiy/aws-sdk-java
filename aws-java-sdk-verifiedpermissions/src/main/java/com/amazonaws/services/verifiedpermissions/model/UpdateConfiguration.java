@@ -19,16 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains an updated configuration to replace the configuration in an existing identity source.
+ * Contains an update to replace the configuration in an existing identity source.
  * </p>
- * <note>
- * <p>
- * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
- * </p>
- * <p>
- * You must specify a <code>userPoolArn</code>, and optionally, a <code>ClientId</code>.
- * </p>
- * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/UpdateConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -42,6 +34,14 @@ public class UpdateConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private UpdateCognitoUserPoolConfiguration cognitoUserPoolConfiguration;
+    /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     */
+    private UpdateOpenIdConnectConfiguration openIdConnectConfiguration;
 
     /**
      * <p>
@@ -84,6 +84,58 @@ public class UpdateConfiguration implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * 
+     * @param openIdConnectConfiguration
+     *        Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that
+     *        Verified Permissions can use to generate entities from authenticated identities. It specifies the issuer
+     *        URL, token type that you want to use, and policy store entity details.
+     */
+
+    public void setOpenIdConnectConfiguration(UpdateOpenIdConnectConfiguration openIdConnectConfiguration) {
+        this.openIdConnectConfiguration = openIdConnectConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * 
+     * @return Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that
+     *         Verified Permissions can use to generate entities from authenticated identities. It specifies the issuer
+     *         URL, token type that you want to use, and policy store entity details.
+     */
+
+    public UpdateOpenIdConnectConfiguration getOpenIdConnectConfiguration() {
+        return this.openIdConnectConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * 
+     * @param openIdConnectConfiguration
+     *        Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that
+     *        Verified Permissions can use to generate entities from authenticated identities. It specifies the issuer
+     *        URL, token type that you want to use, and policy store entity details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateConfiguration withOpenIdConnectConfiguration(UpdateOpenIdConnectConfiguration openIdConnectConfiguration) {
+        setOpenIdConnectConfiguration(openIdConnectConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -96,7 +148,9 @@ public class UpdateConfiguration implements Serializable, Cloneable, StructuredP
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCognitoUserPoolConfiguration() != null)
-            sb.append("CognitoUserPoolConfiguration: ").append(getCognitoUserPoolConfiguration());
+            sb.append("CognitoUserPoolConfiguration: ").append(getCognitoUserPoolConfiguration()).append(",");
+        if (getOpenIdConnectConfiguration() != null)
+            sb.append("OpenIdConnectConfiguration: ").append(getOpenIdConnectConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -115,6 +169,10 @@ public class UpdateConfiguration implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getCognitoUserPoolConfiguration() != null && other.getCognitoUserPoolConfiguration().equals(this.getCognitoUserPoolConfiguration()) == false)
             return false;
+        if (other.getOpenIdConnectConfiguration() == null ^ this.getOpenIdConnectConfiguration() == null)
+            return false;
+        if (other.getOpenIdConnectConfiguration() != null && other.getOpenIdConnectConfiguration().equals(this.getOpenIdConnectConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -124,6 +182,7 @@ public class UpdateConfiguration implements Serializable, Cloneable, StructuredP
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCognitoUserPoolConfiguration() == null) ? 0 : getCognitoUserPoolConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOpenIdConnectConfiguration() == null) ? 0 : getOpenIdConnectConfiguration().hashCode());
         return hashCode;
     }
 

@@ -154,7 +154,7 @@ public class ContextDefinition implements Serializable, Cloneable, StructuredPoj
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getContextMap() != null)
-            sb.append("ContextMap: ").append(getContextMap());
+            sb.append("ContextMap: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

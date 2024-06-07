@@ -100,9 +100,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
      * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
-     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
-     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
-     * Details of a Model Version</a>.
+     * and <code>model_artifact</code> properties. For more information about the model package model card schema, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * package model card schema</a>. For more information about the model card associated with the model package, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a Model
+     * Version</a>.
      * </p>
      */
     private ModelPackageModelCard modelCard;
@@ -679,9 +681,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
      * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
-     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
-     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
-     * Details of a Model Version</a>.
+     * and <code>model_artifact</code> properties. For more information about the model package model card schema, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * package model card schema</a>. For more information about the model card associated with the model package, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a Model
+     * Version</a>.
      * </p>
      * 
      * @param modelCard
@@ -690,9 +694,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      *        of <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      *        <code>model_package_details</code>, and <code>model_overview</code> is composed of the
      *        <code>model_creator</code> and <code>model_artifact</code> properties. For more information about the
-     *        model card associated with the model package, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a
-     *        Model Version</a>.
+     *        model package model card schema, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     *        package model card schema</a>. For more information about the model card associated with the model
+     *        package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View
+     *        the Details of a Model Version</a>.
      */
 
     public void setModelCard(ModelPackageModelCard modelCard) {
@@ -705,9 +711,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
      * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
-     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
-     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
-     * Details of a Model Version</a>.
+     * and <code>model_artifact</code> properties. For more information about the model package model card schema, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * package model card schema</a>. For more information about the model card associated with the model package, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a Model
+     * Version</a>.
      * </p>
      * 
      * @return The model card associated with the model package. Since <code>ModelPackageModelCard</code> is tied to a
@@ -715,9 +723,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      *         of <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      *         <code>model_package_details</code>, and <code>model_overview</code> is composed of the
      *         <code>model_creator</code> and <code>model_artifact</code> properties. For more information about the
-     *         model card associated with the model package, see <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a
-     *         Model Version</a>.
+     *         model package model card schema, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema"
+     *         >Model package model card schema</a>. For more information about the model card associated with the model
+     *         package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View
+     *         the Details of a Model Version</a>.
      */
 
     public ModelPackageModelCard getModelCard() {
@@ -730,9 +740,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
      * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code>
-     * and <code>model_artifact</code> properties. For more information about the model card associated with the model
-     * package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the
-     * Details of a Model Version</a>.
+     * and <code>model_artifact</code> properties. For more information about the model package model card schema, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * package model card schema</a>. For more information about the model card associated with the model package, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a Model
+     * Version</a>.
      * </p>
      * 
      * @param modelCard
@@ -741,9 +753,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      *        of <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
      *        <code>model_package_details</code>, and <code>model_overview</code> is composed of the
      *        <code>model_creator</code> and <code>model_artifact</code> properties. For more information about the
-     *        model card associated with the model package, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a
-     *        Model Version</a>.
+     *        model package model card schema, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     *        package model card schema</a>. For more information about the model card associated with the model
+     *        package, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View
+     *        the Details of a Model Version</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

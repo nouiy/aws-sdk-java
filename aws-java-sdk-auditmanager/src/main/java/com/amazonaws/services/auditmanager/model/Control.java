@@ -118,6 +118,14 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only. This
+     * state indicates that the standard control can still be used to collect evidence, but Audit Manager is no longer
+     * updating or maintaining that control.
+     * </p>
+     */
+    private String state;
 
     /**
      * <p>
@@ -797,6 +805,81 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only. This
+     * state indicates that the standard control can still be used to collect evidence, but Audit Manager is no longer
+     * updating or maintaining that control.
+     * </p>
+     * 
+     * @param state
+     *        The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only.
+     *        This state indicates that the standard control can still be used to collect evidence, but Audit Manager is
+     *        no longer updating or maintaining that control.
+     * @see ControlState
+     */
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    /**
+     * <p>
+     * The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only. This
+     * state indicates that the standard control can still be used to collect evidence, but Audit Manager is no longer
+     * updating or maintaining that control.
+     * </p>
+     * 
+     * @return The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only.
+     *         This state indicates that the standard control can still be used to collect evidence, but Audit Manager
+     *         is no longer updating or maintaining that control.
+     * @see ControlState
+     */
+
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     * <p>
+     * The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only. This
+     * state indicates that the standard control can still be used to collect evidence, but Audit Manager is no longer
+     * updating or maintaining that control.
+     * </p>
+     * 
+     * @param state
+     *        The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only.
+     *        This state indicates that the standard control can still be used to collect evidence, but Audit Manager is
+     *        no longer updating or maintaining that control.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ControlState
+     */
+
+    public Control withState(String state) {
+        setState(state);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only. This
+     * state indicates that the standard control can still be used to collect evidence, but Audit Manager is no longer
+     * updating or maintaining that control.
+     * </p>
+     * 
+     * @param state
+     *        The state of the control. The <code>END_OF_SUPPORT</code> state is applicable to standard controls only.
+     *        This state indicates that the standard control can still be used to collect evidence, but Audit Manager is
+     *        no longer updating or maintaining that control.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ControlState
+     */
+
+    public Control withState(ControlState state) {
+        this.state = state.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -817,7 +900,7 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getTestingInformation() != null)
             sb.append("TestingInformation: ").append("***Sensitive Data Redacted***").append(",");
         if (getActionPlanTitle() != null)
@@ -837,7 +920,9 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
         if (getLastUpdatedBy() != null)
             sb.append("LastUpdatedBy: ").append("***Sensitive Data Redacted***").append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState());
         sb.append("}");
         return sb.toString();
     }
@@ -912,6 +997,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getState() == null ^ this.getState() == null)
+            return false;
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+            return false;
         return true;
     }
 
@@ -935,6 +1024,7 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedBy() == null) ? 0 : getLastUpdatedBy().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         return hashCode;
     }
 

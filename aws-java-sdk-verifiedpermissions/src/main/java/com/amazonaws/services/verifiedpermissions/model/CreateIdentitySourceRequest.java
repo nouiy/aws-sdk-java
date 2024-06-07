@@ -58,14 +58,6 @@ public class CreateIdentitySourceRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies the details required to communicate with the identity provider (IdP) associated with this identity
      * source.
      * </p>
-     * <note>
-     * <p>
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     * </p>
-     * <p>
-     * You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     * </p>
-     * </note>
      */
     private Configuration configuration;
     /**
@@ -260,24 +252,10 @@ public class CreateIdentitySourceRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies the details required to communicate with the identity provider (IdP) associated with this identity
      * source.
      * </p>
-     * <note>
-     * <p>
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     * </p>
-     * <p>
-     * You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     * </p>
-     * </note>
      * 
      * @param configuration
      *        Specifies the details required to communicate with the identity provider (IdP) associated with this
-     *        identity source.</p> <note>
-     *        <p>
-     *        At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     *        </p>
-     *        <p>
-     *        You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     *        </p>
+     *        identity source.
      */
 
     public void setConfiguration(Configuration configuration) {
@@ -289,23 +267,9 @@ public class CreateIdentitySourceRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies the details required to communicate with the identity provider (IdP) associated with this identity
      * source.
      * </p>
-     * <note>
-     * <p>
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     * </p>
-     * <p>
-     * You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     * </p>
-     * </note>
      * 
      * @return Specifies the details required to communicate with the identity provider (IdP) associated with this
-     *         identity source.</p> <note>
-     *         <p>
-     *         At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     *         </p>
-     *         <p>
-     *         You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     *         </p>
+     *         identity source.
      */
 
     public Configuration getConfiguration() {
@@ -317,24 +281,10 @@ public class CreateIdentitySourceRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies the details required to communicate with the identity provider (IdP) associated with this identity
      * source.
      * </p>
-     * <note>
-     * <p>
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     * </p>
-     * <p>
-     * You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     * </p>
-     * </note>
      * 
      * @param configuration
      *        Specifies the details required to communicate with the identity provider (IdP) associated with this
-     *        identity source.</p> <note>
-     *        <p>
-     *        At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
-     *        </p>
-     *        <p>
-     *        You must specify a <code>UserPoolArn</code>, and optionally, a <code>ClientId</code>.
-     *        </p>
+     *        identity source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -439,6 +439,15 @@ public interface AWSB2Bi {
      * 
      * @param listCapabilitiesRequest
      * @return Result of the ListCapabilities operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         Occurs when a B2BI object cannot be validated against a request from another object.
+     * @throws ThrottlingException
+     *         The request was denied due to throttling: the data speed and rendering may be limited depending on
+     *         various parameters and conditions.
+     * @throws InternalServerException
+     *         This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.
      * @sample AWSB2Bi.ListCapabilities
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/b2bi-2022-06-23/ListCapabilities" target="_top">AWS API
      *      Documentation</a>
@@ -480,6 +489,15 @@ public interface AWSB2Bi {
      * 
      * @param listProfilesRequest
      * @return Result of the ListProfiles operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         Occurs when a B2BI object cannot be validated against a request from another object.
+     * @throws ThrottlingException
+     *         The request was denied due to throttling: the data speed and rendering may be limited depending on
+     *         various parameters and conditions.
+     * @throws InternalServerException
+     *         This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.
      * @sample AWSB2Bi.ListProfiles
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/b2bi-2022-06-23/ListProfiles" target="_top">AWS API
      *      Documentation</a>
@@ -515,6 +533,15 @@ public interface AWSB2Bi {
      * 
      * @param listTransformersRequest
      * @return Result of the ListTransformers operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         Occurs when a B2BI object cannot be validated against a request from another object.
+     * @throws ThrottlingException
+     *         The request was denied due to throttling: the data speed and rendering may be limited depending on
+     *         various parameters and conditions.
+     * @throws InternalServerException
+     *         This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.
      * @sample AWSB2Bi.ListTransformers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/b2bi-2022-06-23/ListTransformers" target="_top">AWS API
      *      Documentation</a>
@@ -534,6 +561,9 @@ public interface AWSB2Bi {
      * 
      * @param startTransformerJobRequest
      * @return Result of the StartTransformerJob operation returned by the service.
+     * @throws ConflictException
+     *         A conflict exception is thrown when you attempt to delete a resource (such as a profile or a capability)
+     *         that is being used by other resources.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ValidationException

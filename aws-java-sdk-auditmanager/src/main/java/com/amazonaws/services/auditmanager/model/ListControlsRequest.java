@@ -27,7 +27,7 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as a standard control or a custom control.
+     * A filter that narrows the list of controls to a specific type.
      * </p>
      */
     private String controlType;
@@ -39,18 +39,46 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String nextToken;
     /**
      * <p>
-     * Represents the maximum number of results on a page or for an API request call.
+     * The maximum number of results on a page or for an API request call.
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control Catalog.
+     * </p>
+     * <p>
+     * To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control domain,
+     * a control objective, or a common control. For information about how to find the ARNs for these resources, see <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a>, <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     * <code>ListObjectives</code> </a>, and <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     * <code>ListCommonControls</code> </a>.
+     * </p>
+     * <note>
+     * <p>
+     * You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t currently
+     * supported. If you want to filter by more than one ARN, we recommend that you run the <code>ListControls</code>
+     * operation separately for each ARN.
+     * </p>
+     * </note>
+     * <p>
+     * Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control Catalog
+     * resource. For example, this operation might return a list of custom controls that don't belong to any control
+     * domain or control objective.
+     * </p>
+     */
+    private String controlCatalogId;
 
     /**
      * <p>
-     * The type of control, such as a standard control or a custom control.
+     * A filter that narrows the list of controls to a specific type.
      * </p>
      * 
      * @param controlType
-     *        The type of control, such as a standard control or a custom control.
+     *        A filter that narrows the list of controls to a specific type.
      * @see ControlType
      */
 
@@ -60,10 +88,10 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as a standard control or a custom control.
+     * A filter that narrows the list of controls to a specific type.
      * </p>
      * 
-     * @return The type of control, such as a standard control or a custom control.
+     * @return A filter that narrows the list of controls to a specific type.
      * @see ControlType
      */
 
@@ -73,11 +101,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as a standard control or a custom control.
+     * A filter that narrows the list of controls to a specific type.
      * </p>
      * 
      * @param controlType
-     *        The type of control, such as a standard control or a custom control.
+     *        A filter that narrows the list of controls to a specific type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlType
      */
@@ -89,11 +117,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as a standard control or a custom control.
+     * A filter that narrows the list of controls to a specific type.
      * </p>
      * 
      * @param controlType
-     *        The type of control, such as a standard control or a custom control.
+     *        A filter that narrows the list of controls to a specific type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlType
      */
@@ -145,11 +173,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Represents the maximum number of results on a page or for an API request call.
+     * The maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results on a page or for an API request call.
+     *        The maximum number of results on a page or for an API request call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -158,10 +186,10 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Represents the maximum number of results on a page or for an API request call.
+     * The maximum number of results on a page or for an API request call.
      * </p>
      * 
-     * @return Represents the maximum number of results on a page or for an API request call.
+     * @return The maximum number of results on a page or for an API request call.
      */
 
     public Integer getMaxResults() {
@@ -170,16 +198,191 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Represents the maximum number of results on a page or for an API request call.
+     * The maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results on a page or for an API request call.
+     *        The maximum number of results on a page or for an API request call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListControlsRequest withMaxResults(Integer maxResults) {
         setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control Catalog.
+     * </p>
+     * <p>
+     * To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control domain,
+     * a control objective, or a common control. For information about how to find the ARNs for these resources, see <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a>, <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     * <code>ListObjectives</code> </a>, and <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     * <code>ListCommonControls</code> </a>.
+     * </p>
+     * <note>
+     * <p>
+     * You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t currently
+     * supported. If you want to filter by more than one ARN, we recommend that you run the <code>ListControls</code>
+     * operation separately for each ARN.
+     * </p>
+     * </note>
+     * <p>
+     * Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control Catalog
+     * resource. For example, this operation might return a list of custom controls that don't belong to any control
+     * domain or control objective.
+     * </p>
+     * 
+     * @param controlCatalogId
+     *        A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control
+     *        Catalog. </p>
+     *        <p>
+     *        To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control
+     *        domain, a control objective, or a common control. For information about how to find the ARNs for these
+     *        resources, see <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     *        <code>ListDomains</code> </a>, <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     *        <code>ListObjectives</code> </a>, and <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     *        <code>ListCommonControls</code> </a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t
+     *        currently supported. If you want to filter by more than one ARN, we recommend that you run the
+     *        <code>ListControls</code> operation separately for each ARN.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control Catalog
+     *        resource. For example, this operation might return a list of custom controls that don't belong to any
+     *        control domain or control objective.
+     */
+
+    public void setControlCatalogId(String controlCatalogId) {
+        this.controlCatalogId = controlCatalogId;
+    }
+
+    /**
+     * <p>
+     * A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control Catalog.
+     * </p>
+     * <p>
+     * To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control domain,
+     * a control objective, or a common control. For information about how to find the ARNs for these resources, see <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a>, <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     * <code>ListObjectives</code> </a>, and <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     * <code>ListCommonControls</code> </a>.
+     * </p>
+     * <note>
+     * <p>
+     * You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t currently
+     * supported. If you want to filter by more than one ARN, we recommend that you run the <code>ListControls</code>
+     * operation separately for each ARN.
+     * </p>
+     * </note>
+     * <p>
+     * Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control Catalog
+     * resource. For example, this operation might return a list of custom controls that don't belong to any control
+     * domain or control objective.
+     * </p>
+     * 
+     * @return A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control
+     *         Catalog. </p>
+     *         <p>
+     *         To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control
+     *         domain, a control objective, or a common control. For information about how to find the ARNs for these
+     *         resources, see <a
+     *         href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     *         <code>ListDomains</code> </a>, <a
+     *         href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     *         <code>ListObjectives</code> </a>, and <a
+     *         href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     *         <code>ListCommonControls</code> </a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t
+     *         currently supported. If you want to filter by more than one ARN, we recommend that you run the
+     *         <code>ListControls</code> operation separately for each ARN.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control
+     *         Catalog resource. For example, this operation might return a list of custom controls that don't belong to
+     *         any control domain or control objective.
+     */
+
+    public String getControlCatalogId() {
+        return this.controlCatalogId;
+    }
+
+    /**
+     * <p>
+     * A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control Catalog.
+     * </p>
+     * <p>
+     * To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control domain,
+     * a control objective, or a common control. For information about how to find the ARNs for these resources, see <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a>, <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     * <code>ListObjectives</code> </a>, and <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     * <code>ListCommonControls</code> </a>.
+     * </p>
+     * <note>
+     * <p>
+     * You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t currently
+     * supported. If you want to filter by more than one ARN, we recommend that you run the <code>ListControls</code>
+     * operation separately for each ARN.
+     * </p>
+     * </note>
+     * <p>
+     * Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control Catalog
+     * resource. For example, this operation might return a list of custom controls that don't belong to any control
+     * domain or control objective.
+     * </p>
+     * 
+     * @param controlCatalogId
+     *        A filter that narrows the list of controls to a specific resource from the Amazon Web Services Control
+     *        Catalog. </p>
+     *        <p>
+     *        To use this parameter, specify the ARN of the Control Catalog resource. You can specify either a control
+     *        domain, a control objective, or a common control. For information about how to find the ARNs for these
+     *        resources, see <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     *        <code>ListDomains</code> </a>, <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListObjectives.html">
+     *        <code>ListObjectives</code> </a>, and <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListCommonControls.html">
+     *        <code>ListCommonControls</code> </a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can only filter by one Control Catalog resource at a time. Specifying multiple resource ARNs isn’t
+     *        currently supported. If you want to filter by more than one ARN, we recommend that you run the
+     *        <code>ListControls</code> operation separately for each ARN.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Alternatively, specify <code>UNCATEGORIZED</code> to list controls that aren't mapped to a Control Catalog
+     *        resource. For example, this operation might return a list of custom controls that don't belong to any
+     *        control domain or control objective.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListControlsRequest withControlCatalogId(String controlCatalogId) {
+        setControlCatalogId(controlCatalogId);
         return this;
     }
 
@@ -200,7 +403,9 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getControlCatalogId() != null)
+            sb.append("ControlCatalogId: ").append(getControlCatalogId());
         sb.append("}");
         return sb.toString();
     }
@@ -227,6 +432,10 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getControlCatalogId() == null ^ this.getControlCatalogId() == null)
+            return false;
+        if (other.getControlCatalogId() != null && other.getControlCatalogId().equals(this.getControlCatalogId()) == false)
+            return false;
         return true;
     }
 
@@ -238,6 +447,7 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getControlType() == null) ? 0 : getControlType().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getControlCatalogId() == null) ? 0 : getControlCatalogId().hashCode());
         return hashCode;
     }
 

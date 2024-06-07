@@ -29,6 +29,8 @@ public class ConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> COGNITOUSERPOOLCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cognitoUserPoolConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> OPENIDCONNECTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("openIdConnectConfiguration").build();
 
     private static final ConfigurationMarshaller instance = new ConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class ConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(configuration.getCognitoUserPoolConfiguration(), COGNITOUSERPOOLCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(configuration.getOpenIdConnectConfiguration(), OPENIDCONNECTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -40,7 +40,10 @@ public class ControlDomainInsights implements Serializable, Cloneable, Structure
     private String name;
     /**
      * <p>
-     * The unique identifier for the control domain.
+     * The unique identifier for the control domain. Audit Manager supports the control domains that are provided by
+     * Amazon Web Services Control Catalog. For information about how to find a list of available control domains, see
+     * <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      * </p>
      */
     private String id;
@@ -112,11 +115,18 @@ public class ControlDomainInsights implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier for the control domain.
+     * The unique identifier for the control domain. Audit Manager supports the control domains that are provided by
+     * Amazon Web Services Control Catalog. For information about how to find a list of available control domains, see
+     * <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the control domain.
+     *        The unique identifier for the control domain. Audit Manager supports the control domains that are provided
+     *        by Amazon Web Services Control Catalog. For information about how to find a list of available control
+     *        domains, see <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     *        <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      */
 
     public void setId(String id) {
@@ -125,10 +135,17 @@ public class ControlDomainInsights implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier for the control domain.
+     * The unique identifier for the control domain. Audit Manager supports the control domains that are provided by
+     * Amazon Web Services Control Catalog. For information about how to find a list of available control domains, see
+     * <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      * </p>
      * 
-     * @return The unique identifier for the control domain.
+     * @return The unique identifier for the control domain. Audit Manager supports the control domains that are
+     *         provided by Amazon Web Services Control Catalog. For information about how to find a list of available
+     *         control domains, see <a
+     *         href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     *         <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      */
 
     public String getId() {
@@ -137,11 +154,18 @@ public class ControlDomainInsights implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier for the control domain.
+     * The unique identifier for the control domain. Audit Manager supports the control domains that are provided by
+     * Amazon Web Services Control Catalog. For information about how to find a list of available control domains, see
+     * <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the control domain.
+     *        The unique identifier for the control domain. Audit Manager supports the control domains that are provided
+     *        by Amazon Web Services Control Catalog. For information about how to find a list of available control
+     *        domains, see <a
+     *        href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     *        <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

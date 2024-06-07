@@ -51,7 +51,7 @@ public class ListKeywordsForDataSourceRequest extends com.amazonaws.AmazonWebSer
      * 
      * @param source
      *        The control mapping data source that the keywords apply to.
-     * @see SourceType
+     * @see DataSourceType
      */
 
     public void setSource(String source) {
@@ -64,7 +64,7 @@ public class ListKeywordsForDataSourceRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @return The control mapping data source that the keywords apply to.
-     * @see SourceType
+     * @see DataSourceType
      */
 
     public String getSource() {
@@ -79,7 +79,7 @@ public class ListKeywordsForDataSourceRequest extends com.amazonaws.AmazonWebSer
      * @param source
      *        The control mapping data source that the keywords apply to.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see SourceType
+     * @see DataSourceType
      */
 
     public ListKeywordsForDataSourceRequest withSource(String source) {
@@ -95,10 +95,10 @@ public class ListKeywordsForDataSourceRequest extends com.amazonaws.AmazonWebSer
      * @param source
      *        The control mapping data source that the keywords apply to.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see SourceType
+     * @see DataSourceType
      */
 
-    public ListKeywordsForDataSourceRequest withSource(SourceType source) {
+    public ListKeywordsForDataSourceRequest withSource(DataSourceType source) {
         this.source = source.toString();
         return this;
     }

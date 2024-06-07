@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The control mapping fields that represent the source for evidence collection, along with related parameters and
+ * The mapping attributes that determine the evidence source for a given control, along with related parameters and
  * metadata. This doesn't contain <code>mappingID</code>.
  * </p>
  * 
@@ -43,14 +43,30 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
     private String sourceDescription;
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection method is automated or
+     * manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically infers and
+     * populates the correct value based on the <code>sourceType</code> that you specify.
      * </p>
      */
     private String sourceSetUpOption;
     /**
      * <p>
-     * Specifies one of the five types of data sources for evidence collection.
+     * Specifies which type of data source is used to collect evidence.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>, <code>AWS_Config</code>,
+     * <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     * <code>Common_Control</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String sourceType;
 
@@ -153,11 +169,15 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection method is automated or
+     * manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically infers and
+     * populates the correct value based on the <code>sourceType</code> that you specify.
      * </p>
      * 
      * @param sourceSetUpOption
-     *        The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     *        The setup option for the data source. This option reflects if the evidence collection method is automated
+     *        or manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically
+     *        infers and populates the correct value based on the <code>sourceType</code> that you specify.
      * @see SourceSetUpOption
      */
 
@@ -167,10 +187,14 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection method is automated or
+     * manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically infers and
+     * populates the correct value based on the <code>sourceType</code> that you specify.
      * </p>
      * 
-     * @return The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * @return The setup option for the data source. This option reflects if the evidence collection method is automated
+     *         or manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically
+     *         infers and populates the correct value based on the <code>sourceType</code> that you specify.
      * @see SourceSetUpOption
      */
 
@@ -180,11 +204,15 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection method is automated or
+     * manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically infers and
+     * populates the correct value based on the <code>sourceType</code> that you specify.
      * </p>
      * 
      * @param sourceSetUpOption
-     *        The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     *        The setup option for the data source. This option reflects if the evidence collection method is automated
+     *        or manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically
+     *        infers and populates the correct value based on the <code>sourceType</code> that you specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceSetUpOption
      */
@@ -196,11 +224,15 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection method is automated or
+     * manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically infers and
+     * populates the correct value based on the <code>sourceType</code> that you specify.
      * </p>
      * 
      * @param sourceSetUpOption
-     *        The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     *        The setup option for the data source. This option reflects if the evidence collection method is automated
+     *        or manual. If you don’t provide a value for <code>sourceSetUpOption</code>, Audit Manager automatically
+     *        infers and populates the correct value based on the <code>sourceType</code> that you specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceSetUpOption
      */
@@ -212,11 +244,38 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies one of the five types of data sources for evidence collection.
+     * Specifies which type of data source is used to collect evidence.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>, <code>AWS_Config</code>,
+     * <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     * <code>Common_Control</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param sourceType
-     *        Specifies one of the five types of data sources for evidence collection.
+     *        Specifies which type of data source is used to collect evidence. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>,
+     *        <code>AWS_Config</code>, <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     *        <code>Common_Control</code>.
+     *        </p>
+     *        </li>
      * @see SourceType
      */
 
@@ -226,10 +285,38 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies one of the five types of data sources for evidence collection.
+     * Specifies which type of data source is used to collect evidence.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>, <code>AWS_Config</code>,
+     * <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     * <code>Common_Control</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Specifies one of the five types of data sources for evidence collection.
+     * @return Specifies which type of data source is used to collect evidence. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>,
+     *         <code>AWS_Config</code>, <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>
+     *         .
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     *         <code>Common_Control</code>.
+     *         </p>
+     *         </li>
      * @see SourceType
      */
 
@@ -239,11 +326,38 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies one of the five types of data sources for evidence collection.
+     * Specifies which type of data source is used to collect evidence.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>, <code>AWS_Config</code>,
+     * <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     * <code>Common_Control</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param sourceType
-     *        Specifies one of the five types of data sources for evidence collection.
+     *        Specifies which type of data source is used to collect evidence. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>,
+     *        <code>AWS_Config</code>, <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     *        <code>Common_Control</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceType
      */
@@ -255,11 +369,38 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Specifies one of the five types of data sources for evidence collection.
+     * Specifies which type of data source is used to collect evidence.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>, <code>AWS_Config</code>,
+     * <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     * <code>Common_Control</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param sourceType
-     *        Specifies one of the five types of data sources for evidence collection.
+     *        Specifies which type of data source is used to collect evidence. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The source can be an individual data source type, such as <code>AWS_Cloudtrail</code>,
+     *        <code>AWS_Config</code>, <code>AWS_Security_Hub</code>, <code>AWS_API_Call</code>, or <code>MANUAL</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The source can also be a managed grouping of data sources, such as a <code>Core_Control</code> or a
+     *        <code>Common_Control</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceType
      */

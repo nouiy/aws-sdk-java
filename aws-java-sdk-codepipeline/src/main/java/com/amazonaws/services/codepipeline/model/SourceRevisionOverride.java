@@ -23,6 +23,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * source revision is the version with all the changes to your application code, or source artifact, for the pipeline
  * execution.
  * </p>
+ * <note>
+ * <p>
+ * For the <code>S3_OBJECT_VERSION_ID</code> and <code>S3_OBJECT_KEY</code> types of source revisions, either of the
+ * types can be used independently, or they can be used together to override the source with a specific ObjectKey and
+ * VersionID.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/SourceRevisionOverride"
  *      target="_top">AWS API Documentation</a>

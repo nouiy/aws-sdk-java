@@ -24,7 +24,9 @@ public enum SourceType {
     AWS_Config("AWS_Config"),
     AWS_Security_Hub("AWS_Security_Hub"),
     AWS_API_Call("AWS_API_Call"),
-    MANUAL("MANUAL");
+    MANUAL("MANUAL"),
+    Common_Control("Common_Control"),
+    Core_Control("Core_Control");
 
     private String value;
 

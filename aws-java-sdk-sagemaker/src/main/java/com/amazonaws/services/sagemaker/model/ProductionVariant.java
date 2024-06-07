@@ -129,6 +129,18 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private ProductionVariantRoutingConfig routingConfig;
+    /**
+     * <p>
+     * Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     * configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services optimizes these
+     * configurations for different machine learning workloads.
+     * </p>
+     * <p>
+     * By selecting an AMI version, you can ensure that your inference environment is compatible with specific software
+     * requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron driver versions.
+     * </p>
+     */
+    private String inferenceAmiVersion;
 
     /**
      * <p>
@@ -842,6 +854,113 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     * configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services optimizes these
+     * configurations for different machine learning workloads.
+     * </p>
+     * <p>
+     * By selecting an AMI version, you can ensure that your inference environment is compatible with specific software
+     * requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron driver versions.
+     * </p>
+     * 
+     * @param inferenceAmiVersion
+     *        Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     *        configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services
+     *        optimizes these configurations for different machine learning workloads.</p>
+     *        <p>
+     *        By selecting an AMI version, you can ensure that your inference environment is compatible with specific
+     *        software requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron
+     *        driver versions.
+     * @see ProductionVariantInferenceAmiVersion
+     */
+
+    public void setInferenceAmiVersion(String inferenceAmiVersion) {
+        this.inferenceAmiVersion = inferenceAmiVersion;
+    }
+
+    /**
+     * <p>
+     * Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     * configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services optimizes these
+     * configurations for different machine learning workloads.
+     * </p>
+     * <p>
+     * By selecting an AMI version, you can ensure that your inference environment is compatible with specific software
+     * requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron driver versions.
+     * </p>
+     * 
+     * @return Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     *         configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services
+     *         optimizes these configurations for different machine learning workloads.</p>
+     *         <p>
+     *         By selecting an AMI version, you can ensure that your inference environment is compatible with specific
+     *         software requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron
+     *         driver versions.
+     * @see ProductionVariantInferenceAmiVersion
+     */
+
+    public String getInferenceAmiVersion() {
+        return this.inferenceAmiVersion;
+    }
+
+    /**
+     * <p>
+     * Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     * configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services optimizes these
+     * configurations for different machine learning workloads.
+     * </p>
+     * <p>
+     * By selecting an AMI version, you can ensure that your inference environment is compatible with specific software
+     * requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron driver versions.
+     * </p>
+     * 
+     * @param inferenceAmiVersion
+     *        Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     *        configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services
+     *        optimizes these configurations for different machine learning workloads.</p>
+     *        <p>
+     *        By selecting an AMI version, you can ensure that your inference environment is compatible with specific
+     *        software requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron
+     *        driver versions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ProductionVariantInferenceAmiVersion
+     */
+
+    public ProductionVariant withInferenceAmiVersion(String inferenceAmiVersion) {
+        setInferenceAmiVersion(inferenceAmiVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     * configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services optimizes these
+     * configurations for different machine learning workloads.
+     * </p>
+     * <p>
+     * By selecting an AMI version, you can ensure that your inference environment is compatible with specific software
+     * requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron driver versions.
+     * </p>
+     * 
+     * @param inferenceAmiVersion
+     *        Specifies an option from a collection of preconfigured Amazon Machine Image (AMI) images. Each image is
+     *        configured by Amazon Web Services with a set of software and driver versions. Amazon Web Services
+     *        optimizes these configurations for different machine learning workloads.</p>
+     *        <p>
+     *        By selecting an AMI version, you can ensure that your inference environment is compatible with specific
+     *        software requirements, such as CUDA driver versions, Linux kernel versions, or Amazon Web Services Neuron
+     *        driver versions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ProductionVariantInferenceAmiVersion
+     */
+
+    public ProductionVariant withInferenceAmiVersion(ProductionVariantInferenceAmiVersion inferenceAmiVersion) {
+        this.inferenceAmiVersion = inferenceAmiVersion.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -880,7 +999,9 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
         if (getManagedInstanceScaling() != null)
             sb.append("ManagedInstanceScaling: ").append(getManagedInstanceScaling()).append(",");
         if (getRoutingConfig() != null)
-            sb.append("RoutingConfig: ").append(getRoutingConfig());
+            sb.append("RoutingConfig: ").append(getRoutingConfig()).append(",");
+        if (getInferenceAmiVersion() != null)
+            sb.append("InferenceAmiVersion: ").append(getInferenceAmiVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -953,6 +1074,10 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getRoutingConfig() != null && other.getRoutingConfig().equals(this.getRoutingConfig()) == false)
             return false;
+        if (other.getInferenceAmiVersion() == null ^ this.getInferenceAmiVersion() == null)
+            return false;
+        if (other.getInferenceAmiVersion() != null && other.getInferenceAmiVersion().equals(this.getInferenceAmiVersion()) == false)
+            return false;
         return true;
     }
 
@@ -976,6 +1101,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getEnableSSMAccess() == null) ? 0 : getEnableSSMAccess().hashCode());
         hashCode = prime * hashCode + ((getManagedInstanceScaling() == null) ? 0 : getManagedInstanceScaling().hashCode());
         hashCode = prime * hashCode + ((getRoutingConfig() == null) ? 0 : getRoutingConfig().hashCode());
+        hashCode = prime * hashCode + ((getInferenceAmiVersion() == null) ? 0 : getInferenceAmiVersion().hashCode());
         return hashCode;
     }
 

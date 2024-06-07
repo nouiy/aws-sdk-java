@@ -288,6 +288,8 @@ public interface AWSAuditManager {
      *         from the Service Quotas console. For a list of Audit Manager service quotas, see <a
      *         href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and
      *         restrictions for Audit Manager</a>.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
      * @sample AWSAuditManager.CreateAssessment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessment" target="_top">AWS
      *      API Documentation</a>
@@ -1060,11 +1062,21 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Gets a list of all of the Amazon Web Services that you can choose to include in your assessment. When you <a
-     * href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_CreateAssessment.html">create an
-     * assessment</a>, specify which of these services you want to include to narrow the assessment's <a
-     * href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Scope.html">scope</a>.
+     * Gets a list of the Amazon Web Services from which Audit Manager can collect evidence.
      * </p>
+     * <p>
+     * Audit Manager defines which Amazon Web Services are in scope for an assessment. Audit Manager infers this scope
+     * by examining the assessment’s controls and their data sources, and then mapping this information to one or more
+     * of the corresponding Amazon Web Services that are in this list.
+     * </p>
+     * <note>
+     * <p>
+     * For information about why it's no longer possible to specify services in scope manually, see <a href=
+     * "https://docs.aws.amazon.com/audit-manager/latest/userguide/evidence-collection-issues.html#unable-to-edit-services"
+     * >I can't edit the services in scope for my assessment</a> in the <i>Troubleshooting</i> section of the Audit
+     * Manager user guide.
+     * </p>
+     * </note>
      * 
      * @param getServicesInScopeRequest
      * @return Result of the GetServicesInScope operation returned by the service.
@@ -1217,6 +1229,12 @@ public interface AWSAuditManager {
      * <p>
      * Lists the latest analytics data for control domains across all of your active assessments.
      * </p>
+     * <p>
+     * Audit Manager supports the control domains that are provided by Amazon Web Services Control Catalog. For
+     * information about how to find a list of available control domains, see <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
+     * </p>
      * <note>
      * <p>
      * A control domain is listed only if at least one of the controls within that domain collected evidence on the
@@ -1245,6 +1263,12 @@ public interface AWSAuditManager {
     /**
      * <p>
      * Lists analytics data for control domains within a specified active assessment.
+     * </p>
+     * <p>
+     * Audit Manager supports the control domains that are provided by Amazon Web Services Control Catalog. For
+     * information about how to find a list of available control domains, see <a
+     * href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_ListDomains.html">
+     * <code>ListDomains</code> </a> in the Amazon Web Services Control Catalog API Reference.
      * </p>
      * <note>
      * <p>
@@ -1559,6 +1583,8 @@ public interface AWSAuditManager {
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
      * @sample AWSAuditManager.UpdateAssessment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessment" target="_top">AWS
      *      API Documentation</a>

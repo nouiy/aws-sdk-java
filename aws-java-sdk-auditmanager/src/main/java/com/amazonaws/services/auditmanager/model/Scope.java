@@ -19,8 +19,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The wrapper that contains the Amazon Web Services accounts and services that are in scope for the assessment.
+ * The wrapper that contains the Amazon Web Services accounts that are in scope for the assessment.
  * </p>
+ * <note>
+ * <p>
+ * You no longer need to specify which Amazon Web Services are in scope when you create or update an assessment. Audit
+ * Manager infers the services in scope by examining your assessment controls and their data sources, and then mapping
+ * this information to the relevant Amazon Web Services.
+ * </p>
+ * <p>
+ * If an underlying data source changes for your assessment, we automatically update the services scope as needed to
+ * reflect the correct Amazon Web Services. This ensures that your assessment collects accurate and comprehensive
+ * evidence about all of the relevant services in your AWS environment.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Scope" target="_top">AWS API
  *      Documentation</a>
@@ -38,7 +50,14 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Web Services services that are included in the scope of the assessment.
      * </p>
+     * <important>
+     * <p>
+     * This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web Services,
+     * Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as empty.
+     * </p>
+     * </important>
      */
+    @Deprecated
     private java.util.List<AWSService> awsServices;
 
     /**
@@ -115,10 +134,21 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Web Services services that are included in the scope of the assessment.
      * </p>
+     * <important>
+     * <p>
+     * This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web Services,
+     * Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as empty.
+     * </p>
+     * </important>
      * 
-     * @return The Amazon Web Services services that are included in the scope of the assessment.
+     * @return The Amazon Web Services services that are included in the scope of the assessment. </p> <important>
+     *         <p>
+     *         This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web
+     *         Services, Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as
+     *         empty.
+     *         </p>
      */
-
+    @Deprecated
     public java.util.List<AWSService> getAwsServices() {
         return awsServices;
     }
@@ -127,11 +157,22 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Web Services services that are included in the scope of the assessment.
      * </p>
+     * <important>
+     * <p>
+     * This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web Services,
+     * Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as empty.
+     * </p>
+     * </important>
      * 
      * @param awsServices
-     *        The Amazon Web Services services that are included in the scope of the assessment.
+     *        The Amazon Web Services services that are included in the scope of the assessment. </p> <important>
+     *        <p>
+     *        This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web
+     *        Services, Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as
+     *        empty.
+     *        </p>
      */
-
+    @Deprecated
     public void setAwsServices(java.util.Collection<AWSService> awsServices) {
         if (awsServices == null) {
             this.awsServices = null;
@@ -145,6 +186,12 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Web Services services that are included in the scope of the assessment.
      * </p>
+     * <important>
+     * <p>
+     * This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web Services,
+     * Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as empty.
+     * </p>
+     * </important>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAwsServices(java.util.Collection)} or {@link #withAwsServices(java.util.Collection)} if you want to
@@ -152,10 +199,15 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param awsServices
-     *        The Amazon Web Services services that are included in the scope of the assessment.
+     *        The Amazon Web Services services that are included in the scope of the assessment. </p> <important>
+     *        <p>
+     *        This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web
+     *        Services, Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as
+     *        empty.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public Scope withAwsServices(AWSService... awsServices) {
         if (this.awsServices == null) {
             setAwsServices(new java.util.ArrayList<AWSService>(awsServices.length));
@@ -170,12 +222,23 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Web Services services that are included in the scope of the assessment.
      * </p>
+     * <important>
+     * <p>
+     * This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web Services,
+     * Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as empty.
+     * </p>
+     * </important>
      * 
      * @param awsServices
-     *        The Amazon Web Services services that are included in the scope of the assessment.
+     *        The Amazon Web Services services that are included in the scope of the assessment. </p> <important>
+     *        <p>
+     *        This API parameter is no longer supported. If you use this parameter to specify one or more Amazon Web
+     *        Services, Audit Manager ignores this input. Instead, the value for <code>awsServices</code> will show as
+     *        empty.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public Scope withAwsServices(java.util.Collection<AWSService> awsServices) {
         setAwsServices(awsServices);
         return this;

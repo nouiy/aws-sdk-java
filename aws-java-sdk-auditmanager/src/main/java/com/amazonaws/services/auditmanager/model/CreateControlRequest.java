@@ -421,7 +421,7 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getTestingInformation() != null)
             sb.append("TestingInformation: ").append("***Sensitive Data Redacted***").append(",");
         if (getActionPlanTitle() != null)

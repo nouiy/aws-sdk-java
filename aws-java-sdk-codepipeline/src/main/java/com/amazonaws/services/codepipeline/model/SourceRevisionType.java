@@ -22,7 +22,8 @@ public enum SourceRevisionType {
 
     COMMIT_ID("COMMIT_ID"),
     IMAGE_DIGEST("IMAGE_DIGEST"),
-    S3_OBJECT_VERSION_ID("S3_OBJECT_VERSION_ID");
+    S3_OBJECT_VERSION_ID("S3_OBJECT_VERSION_ID"),
+    S3_OBJECT_KEY("S3_OBJECT_KEY");
 
     private String value;
 

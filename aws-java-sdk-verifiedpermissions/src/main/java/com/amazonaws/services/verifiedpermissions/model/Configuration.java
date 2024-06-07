@@ -21,14 +21,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Contains configuration information used when creating a new identity source.
  * </p>
- * <note>
- * <p>
- * At this time, the only valid member of this structure is a Amazon Cognito user pool configuration.
- * </p>
- * <p>
- * Specifies a <code>userPoolArn</code>, a <code>groupConfiguration</code>, and a <code>ClientId</code>.
- * </p>
- * </note>
  * <p>
  * This data type is used as a request parameter for the <a
  * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html"
@@ -54,6 +46,18 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private CognitoUserPoolConfiguration cognitoUserPoolConfiguration;
+    /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * <p>
+     * Example:
+     * <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     * </p>
+     */
+    private OpenIdConnectConfiguration openIdConnectConfiguration;
 
     /**
      * <p>
@@ -135,6 +139,79 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * <p>
+     * Example:
+     * <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     * </p>
+     * 
+     * @param openIdConnectConfiguration
+     *        Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that
+     *        Verified Permissions can use to generate entities from authenticated identities. It specifies the issuer
+     *        URL, token type that you want to use, and policy store entity details.</p>
+     *        <p>
+     *        Example:
+     *        <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     */
+
+    public void setOpenIdConnectConfiguration(OpenIdConnectConfiguration openIdConnectConfiguration) {
+        this.openIdConnectConfiguration = openIdConnectConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * <p>
+     * Example:
+     * <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     * </p>
+     * 
+     * @return Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that
+     *         Verified Permissions can use to generate entities from authenticated identities. It specifies the issuer
+     *         URL, token type that you want to use, and policy store entity details.</p>
+     *         <p>
+     *         Example:
+     *         <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     */
+
+    public OpenIdConnectConfiguration getOpenIdConnectConfiguration() {
+        return this.openIdConnectConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that Verified
+     * Permissions can use to generate entities from authenticated identities. It specifies the issuer URL, token type
+     * that you want to use, and policy store entity details.
+     * </p>
+     * <p>
+     * Example:
+     * <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     * </p>
+     * 
+     * @param openIdConnectConfiguration
+     *        Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity source, that
+     *        Verified Permissions can use to generate entities from authenticated identities. It specifies the issuer
+     *        URL, token type that you want to use, and policy store entity details.</p>
+     *        <p>
+     *        Example:
+     *        <code>"configuration":{"openIdConnectConfiguration":{"issuer":"https://auth.example.com","tokenSelection":{"accessTokenOnly":{"audiences":["https://myapp.example.com","https://myapp2.example.com"],"principalIdClaim":"sub"}},"entityIdPrefix":"MyOIDCProvider","groupConfiguration":{"groupClaim":"groups","groupEntityType":"MyCorp::UserGroup"}}}</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Configuration withOpenIdConnectConfiguration(OpenIdConnectConfiguration openIdConnectConfiguration) {
+        setOpenIdConnectConfiguration(openIdConnectConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -147,7 +224,9 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCognitoUserPoolConfiguration() != null)
-            sb.append("CognitoUserPoolConfiguration: ").append(getCognitoUserPoolConfiguration());
+            sb.append("CognitoUserPoolConfiguration: ").append(getCognitoUserPoolConfiguration()).append(",");
+        if (getOpenIdConnectConfiguration() != null)
+            sb.append("OpenIdConnectConfiguration: ").append(getOpenIdConnectConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -166,6 +245,10 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCognitoUserPoolConfiguration() != null && other.getCognitoUserPoolConfiguration().equals(this.getCognitoUserPoolConfiguration()) == false)
             return false;
+        if (other.getOpenIdConnectConfiguration() == null ^ this.getOpenIdConnectConfiguration() == null)
+            return false;
+        if (other.getOpenIdConnectConfiguration() != null && other.getOpenIdConnectConfiguration().equals(this.getOpenIdConnectConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -175,6 +258,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCognitoUserPoolConfiguration() == null) ? 0 : getCognitoUserPoolConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOpenIdConnectConfiguration() == null) ? 0 : getOpenIdConnectConfiguration().hashCode());
         return hashCode;
     }
 

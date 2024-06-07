@@ -33,6 +33,8 @@ public class ListControlsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> CONTROLCATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("controlCatalogId").build();
 
     private static final ListControlsRequestMarshaller instance = new ListControlsRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListControlsRequestMarshaller {
             protocolMarshaller.marshall(listControlsRequest.getControlType(), CONTROLTYPE_BINDING);
             protocolMarshaller.marshall(listControlsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listControlsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listControlsRequest.getControlCatalogId(), CONTROLCATALOGID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -23,8 +23,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * package, it is a specific usage of a model card and its schema is simplified compared to the schema of
  * <code>ModelCard</code>. The <code>ModelPackageModelCard</code> schema does not include
  * <code>model_package_details</code>, and <code>model_overview</code> is composed of the <code>model_creator</code> and
- * <code>model_artifact</code> properties. For more information about the model card associated with the model package,
- * see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a Model
+ * <code>model_artifact</code> properties. For more information about the model package model card schema, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model package
+ * model card schema</a>. For more information about the model card associated with the model package, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html">View the Details of a Model
  * Version</a>.
  * </p>
  * 
@@ -36,7 +38,9 @@ public class ModelPackageModelCard implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The content of the model card.
+     * The content of the model card. The content must follow the schema described in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * Package Model Card Schema</a>.
      * </p>
      */
     private String modelCardContent;
@@ -73,11 +77,15 @@ public class ModelPackageModelCard implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The content of the model card.
+     * The content of the model card. The content must follow the schema described in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * Package Model Card Schema</a>.
      * </p>
      * 
      * @param modelCardContent
-     *        The content of the model card.
+     *        The content of the model card. The content must follow the schema described in <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     *        Package Model Card Schema</a>.
      */
 
     public void setModelCardContent(String modelCardContent) {
@@ -86,10 +94,14 @@ public class ModelPackageModelCard implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The content of the model card.
+     * The content of the model card. The content must follow the schema described in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * Package Model Card Schema</a>.
      * </p>
      * 
-     * @return The content of the model card.
+     * @return The content of the model card. The content must follow the schema described in <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema"
+     *         >Model Package Model Card Schema</a>.
      */
 
     public String getModelCardContent() {
@@ -98,11 +110,15 @@ public class ModelPackageModelCard implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The content of the model card.
+     * The content of the model card. The content must follow the schema described in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     * Package Model Card Schema</a>.
      * </p>
      * 
      * @param modelCardContent
-     *        The content of the model card.
+     *        The content of the model card. The content must follow the schema described in <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-details.html#model-card-schema">Model
+     *        Package Model Card Schema</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
