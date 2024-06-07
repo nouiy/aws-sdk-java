@@ -30,12 +30,16 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the place index resource.
      * </p>
      */
-    private java.util.Date createTime;
+    private String indexName;
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * The data provider of geospatial data. Values can be one of the following:
@@ -66,23 +70,19 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
     private String dataSource;
     /**
      * <p>
-     * The optional description for the place index resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     */
-    private String indexName;
-    /**
-     * <p>
      * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
     @Deprecated
     private String pricingPlan;
+    /**
+     * <p>
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
     /**
      * <p>
      * The timestamp for when the place index resource was last updated in <a
@@ -94,53 +94,81 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the place index resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the place index resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param indexName
+     *        The name of the place index resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setIndexName(String indexName) {
+        this.indexName = indexName;
     }
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the place index resource.
      * </p>
      * 
-     * @return The timestamp for when the place index resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return The name of the place index resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getIndexName() {
+        return this.indexName;
     }
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the place index resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the place index resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param indexName
+     *        The name of the place index resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListPlaceIndexesResponseEntry withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
+    public ListPlaceIndexesResponseEntry withIndexName(String indexName) {
+        setIndexName(indexName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the place index resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     * 
+     * @return The optional description for the place index resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the place index resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPlaceIndexesResponseEntry withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -315,86 +343,6 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The optional description for the place index resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the place index resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the place index resource.
-     * </p>
-     * 
-     * @return The optional description for the place index resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the place index resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the place index resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListPlaceIndexesResponseEntry withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     * 
-     * @param indexName
-     *        The name of the place index resource.
-     */
-
-    public void setIndexName(String indexName) {
-        this.indexName = indexName;
-    }
-
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     * 
-     * @return The name of the place index resource.
-     */
-
-    public String getIndexName() {
-        return this.indexName;
-    }
-
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     * 
-     * @param indexName
-     *        The name of the place index resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListPlaceIndexesResponseEntry withIndexName(String indexName) {
-        setIndexName(indexName);
-        return this;
-    }
-
-    /**
-     * <p>
      * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -449,6 +397,58 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
     @Deprecated
     public ListPlaceIndexesResponseEntry withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the place index resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the place index resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the place index resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPlaceIndexesResponseEntry withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -516,16 +516,16 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getIndexName() != null)
             sb.append("IndexName: ").append(getIndexName()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -542,25 +542,25 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
         if (obj instanceof ListPlaceIndexesResponseEntry == false)
             return false;
         ListPlaceIndexesResponseEntry other = (ListPlaceIndexesResponseEntry) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getIndexName() == null ^ this.getIndexName() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
-        if (other.getDataSource() == null ^ this.getDataSource() == null)
-            return false;
-        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
+        if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getIndexName() == null ^ this.getIndexName() == null)
+        if (other.getDataSource() == null ^ this.getDataSource() == null)
             return false;
-        if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
+        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -574,11 +574,11 @@ public class ListPlaceIndexesResponseEntry implements Serializable, Cloneable, S
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getIndexName() == null) ? 0 : getIndexName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

@@ -55,6 +55,8 @@ public class TableInputMarshaller {
             .marshallLocationName("Parameters").build();
     private static final MarshallingInfo<StructuredPojo> TARGETTABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetTable").build();
+    private static final MarshallingInfo<StructuredPojo> VIEWDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ViewDefinition").build();
 
     private static final TableInputMarshaller instance = new TableInputMarshaller();
 
@@ -85,6 +87,7 @@ public class TableInputMarshaller {
             protocolMarshaller.marshall(tableInput.getTableType(), TABLETYPE_BINDING);
             protocolMarshaller.marshall(tableInput.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(tableInput.getTargetTable(), TARGETTABLE_BINDING);
+            protocolMarshaller.marshall(tableInput.getViewDefinition(), VIEWDEFINITION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

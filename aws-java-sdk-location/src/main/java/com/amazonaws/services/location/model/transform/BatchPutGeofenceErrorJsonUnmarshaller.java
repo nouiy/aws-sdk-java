@@ -48,13 +48,13 @@ public class BatchPutGeofenceErrorJsonUnmarshaller implements Unmarshaller<Batch
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Error", targetDepth)) {
-                    context.nextToken();
-                    batchPutGeofenceError.setError(BatchItemErrorJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("GeofenceId", targetDepth)) {
                     context.nextToken();
                     batchPutGeofenceError.setGeofenceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Error", targetDepth)) {
+                    context.nextToken();
+                    batchPutGeofenceError.setError(BatchItemErrorJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

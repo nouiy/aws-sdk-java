@@ -27,20 +27,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateTrackerRequestMarshaller {
 
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
-    private static final MarshallingInfo<Boolean> EVENTBRIDGEENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventBridgeEnabled").build();
-    private static final MarshallingInfo<Boolean> KMSKEYENABLEGEOSPATIALQUERIES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KmsKeyEnableGeospatialQueries").build();
-    private static final MarshallingInfo<String> POSITIONFILTERING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PositionFiltering").build();
+    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("TrackerName").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
     private static final MarshallingInfo<String> PRICINGPLANDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlanDataSource").build();
-    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("TrackerName").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<String> POSITIONFILTERING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PositionFiltering").build();
+    private static final MarshallingInfo<Boolean> EVENTBRIDGEENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventBridgeEnabled").build();
+    private static final MarshallingInfo<Boolean> KMSKEYENABLEGEOSPATIALQUERIES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KmsKeyEnableGeospatialQueries").build();
 
     private static final UpdateTrackerRequestMarshaller instance = new UpdateTrackerRequestMarshaller();
 
@@ -58,13 +58,13 @@ public class UpdateTrackerRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateTrackerRequest.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(updateTrackerRequest.getEventBridgeEnabled(), EVENTBRIDGEENABLED_BINDING);
-            protocolMarshaller.marshall(updateTrackerRequest.getKmsKeyEnableGeospatialQueries(), KMSKEYENABLEGEOSPATIALQUERIES_BINDING);
-            protocolMarshaller.marshall(updateTrackerRequest.getPositionFiltering(), POSITIONFILTERING_BINDING);
+            protocolMarshaller.marshall(updateTrackerRequest.getTrackerName(), TRACKERNAME_BINDING);
             protocolMarshaller.marshall(updateTrackerRequest.getPricingPlan(), PRICINGPLAN_BINDING);
             protocolMarshaller.marshall(updateTrackerRequest.getPricingPlanDataSource(), PRICINGPLANDATASOURCE_BINDING);
-            protocolMarshaller.marshall(updateTrackerRequest.getTrackerName(), TRACKERNAME_BINDING);
+            protocolMarshaller.marshall(updateTrackerRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updateTrackerRequest.getPositionFiltering(), POSITIONFILTERING_BINDING);
+            protocolMarshaller.marshall(updateTrackerRequest.getEventBridgeEnabled(), EVENTBRIDGEENABLED_BINDING);
+            protocolMarshaller.marshall(updateTrackerRequest.getKmsKeyEnableGeospatialQueries(), KMSKEYENABLEGEOSPATIALQUERIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

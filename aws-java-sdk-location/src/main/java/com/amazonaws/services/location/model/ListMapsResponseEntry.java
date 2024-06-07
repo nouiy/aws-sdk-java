@@ -30,18 +30,10 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the associated map resource.
      * </p>
      */
-    private java.util.Date createTime;
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     */
-    private String dataSource;
+    private String mapName;
     /**
      * <p>
      * The description for the map resource.
@@ -50,10 +42,10 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
     private String description;
     /**
      * <p>
-     * The name of the associated map resource.
+     * Specifies the data provider for the associated map tiles.
      * </p>
      */
-    private String mapName;
+    private String dataSource;
     /**
      * <p>
      * No longer used. Always returns <code>RequestBasedUsage</code>.
@@ -61,6 +53,14 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
      */
     @Deprecated
     private String pricingPlan;
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
     /**
      * <p>
      * The timestamp for when the map resource was last updated in <a
@@ -72,93 +72,41 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the associated map resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the map resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param mapName
+     *        The name of the associated map resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
     }
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the associated map resource.
      * </p>
      * 
-     * @return The timestamp for when the map resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return The name of the associated map resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getMapName() {
+        return this.mapName;
     }
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the associated map resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the map resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param mapName
+     *        The name of the associated map resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListMapsResponseEntry withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     * 
-     * @param dataSource
-     *        Specifies the data provider for the associated map tiles.
-     */
-
-    public void setDataSource(String dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     * 
-     * @return Specifies the data provider for the associated map tiles.
-     */
-
-    public String getDataSource() {
-        return this.dataSource;
-    }
-
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     * 
-     * @param dataSource
-     *        Specifies the data provider for the associated map tiles.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListMapsResponseEntry withDataSource(String dataSource) {
-        setDataSource(dataSource);
+    public ListMapsResponseEntry withMapName(String mapName) {
+        setMapName(mapName);
         return this;
     }
 
@@ -204,41 +152,41 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the associated map resource.
+     * Specifies the data provider for the associated map tiles.
      * </p>
      * 
-     * @param mapName
-     *        The name of the associated map resource.
+     * @param dataSource
+     *        Specifies the data provider for the associated map tiles.
      */
 
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
+    public void setDataSource(String dataSource) {
+        this.dataSource = dataSource;
     }
 
     /**
      * <p>
-     * The name of the associated map resource.
+     * Specifies the data provider for the associated map tiles.
      * </p>
      * 
-     * @return The name of the associated map resource.
+     * @return Specifies the data provider for the associated map tiles.
      */
 
-    public String getMapName() {
-        return this.mapName;
+    public String getDataSource() {
+        return this.dataSource;
     }
 
     /**
      * <p>
-     * The name of the associated map resource.
+     * Specifies the data provider for the associated map tiles.
      * </p>
      * 
-     * @param mapName
-     *        The name of the associated map resource.
+     * @param dataSource
+     *        Specifies the data provider for the associated map tiles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListMapsResponseEntry withMapName(String mapName) {
-        setMapName(mapName);
+    public ListMapsResponseEntry withDataSource(String dataSource) {
+        setDataSource(dataSource);
         return this;
     }
 
@@ -298,6 +246,58 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
     @Deprecated
     public ListMapsResponseEntry withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the map resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the map resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the map resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListMapsResponseEntry withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -365,16 +365,16 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getMapName() != null)
             sb.append("MapName: ").append(getMapName()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -391,25 +391,25 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
         if (obj instanceof ListMapsResponseEntry == false)
             return false;
         ListMapsResponseEntry other = (ListMapsResponseEntry) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getMapName() == null ^ this.getMapName() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
-        if (other.getDataSource() == null ^ this.getDataSource() == null)
-            return false;
-        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
+        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getMapName() == null ^ this.getMapName() == null)
+        if (other.getDataSource() == null ^ this.getDataSource() == null)
             return false;
-        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
+        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -423,11 +423,11 @@ public class ListMapsResponseEntry implements Serializable, Cloneable, Structure
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

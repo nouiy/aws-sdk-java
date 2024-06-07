@@ -151,6 +151,14 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      */
     private Integer perUnitStorageThroughput;
+    /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     * increasing metadata performance.
+     * </p>
+     */
+    private UpdateFileSystemLustreMetadataConfiguration metadataConfiguration;
 
     /**
      * <p>
@@ -1085,6 +1093,58 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     * increasing metadata performance.
+     * </p>
+     * 
+     * @param metadataConfiguration
+     *        The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     *        <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     *        increasing metadata performance.
+     */
+
+    public void setMetadataConfiguration(UpdateFileSystemLustreMetadataConfiguration metadataConfiguration) {
+        this.metadataConfiguration = metadataConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     * increasing metadata performance.
+     * </p>
+     * 
+     * @return The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     *         <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     *         increasing metadata performance.
+     */
+
+    public UpdateFileSystemLustreMetadataConfiguration getMetadataConfiguration() {
+        return this.metadataConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     * increasing metadata performance.
+     * </p>
+     * 
+     * @param metadataConfiguration
+     *        The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     *        <code>PERSISTENT_2</code> deployment type. When this configuration is enabled, the file system supports
+     *        increasing metadata performance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemLustreConfiguration withMetadataConfiguration(UpdateFileSystemLustreMetadataConfiguration metadataConfiguration) {
+        setMetadataConfiguration(metadataConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1111,7 +1171,9 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
         if (getRootSquashConfiguration() != null)
             sb.append("RootSquashConfiguration: ").append(getRootSquashConfiguration()).append(",");
         if (getPerUnitStorageThroughput() != null)
-            sb.append("PerUnitStorageThroughput: ").append(getPerUnitStorageThroughput());
+            sb.append("PerUnitStorageThroughput: ").append(getPerUnitStorageThroughput()).append(",");
+        if (getMetadataConfiguration() != null)
+            sb.append("MetadataConfiguration: ").append(getMetadataConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1159,6 +1221,10 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
             return false;
         if (other.getPerUnitStorageThroughput() != null && other.getPerUnitStorageThroughput().equals(this.getPerUnitStorageThroughput()) == false)
             return false;
+        if (other.getMetadataConfiguration() == null ^ this.getMetadataConfiguration() == null)
+            return false;
+        if (other.getMetadataConfiguration() != null && other.getMetadataConfiguration().equals(this.getMetadataConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1175,6 +1241,7 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
         hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRootSquashConfiguration() == null) ? 0 : getRootSquashConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPerUnitStorageThroughput() == null) ? 0 : getPerUnitStorageThroughput().hashCode());
+        hashCode = prime * hashCode + ((getMetadataConfiguration() == null) ? 0 : getMetadataConfiguration().hashCode());
         return hashCode;
     }
 

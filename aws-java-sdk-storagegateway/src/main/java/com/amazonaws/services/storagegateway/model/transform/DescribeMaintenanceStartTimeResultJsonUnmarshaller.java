@@ -72,6 +72,11 @@ public class DescribeMaintenanceStartTimeResultJsonUnmarshaller implements Unmar
                     context.nextToken();
                     describeMaintenanceStartTimeResult.setTimezone(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SoftwareUpdatePreferences", targetDepth)) {
+                    context.nextToken();
+                    describeMaintenanceStartTimeResult
+                            .setSoftwareUpdatePreferences(SoftwareUpdatePreferencesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

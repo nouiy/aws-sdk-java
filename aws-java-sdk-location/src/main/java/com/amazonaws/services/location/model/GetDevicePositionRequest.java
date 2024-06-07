@@ -27,56 +27,16 @@ public class GetDevicePositionRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The device whose position you want to retrieve.
-     * </p>
-     */
-    private String deviceId;
-    /**
-     * <p>
      * The tracker resource receiving the position update.
      * </p>
      */
     private String trackerName;
-
     /**
      * <p>
      * The device whose position you want to retrieve.
      * </p>
-     * 
-     * @param deviceId
-     *        The device whose position you want to retrieve.
      */
-
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-    }
-
-    /**
-     * <p>
-     * The device whose position you want to retrieve.
-     * </p>
-     * 
-     * @return The device whose position you want to retrieve.
-     */
-
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    /**
-     * <p>
-     * The device whose position you want to retrieve.
-     * </p>
-     * 
-     * @param deviceId
-     *        The device whose position you want to retrieve.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetDevicePositionRequest withDeviceId(String deviceId) {
-        setDeviceId(deviceId);
-        return this;
-    }
+    private String deviceId;
 
     /**
      * <p>
@@ -119,6 +79,46 @@ public class GetDevicePositionRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The device whose position you want to retrieve.
+     * </p>
+     * 
+     * @param deviceId
+     *        The device whose position you want to retrieve.
+     */
+
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    /**
+     * <p>
+     * The device whose position you want to retrieve.
+     * </p>
+     * 
+     * @return The device whose position you want to retrieve.
+     */
+
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    /**
+     * <p>
+     * The device whose position you want to retrieve.
+     * </p>
+     * 
+     * @param deviceId
+     *        The device whose position you want to retrieve.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetDevicePositionRequest withDeviceId(String deviceId) {
+        setDeviceId(deviceId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -130,10 +130,10 @@ public class GetDevicePositionRequest extends com.amazonaws.AmazonWebServiceRequ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDeviceId() != null)
-            sb.append("DeviceId: ").append(getDeviceId()).append(",");
         if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
+        if (getDeviceId() != null)
+            sb.append("DeviceId: ").append(getDeviceId());
         sb.append("}");
         return sb.toString();
     }
@@ -148,13 +148,13 @@ public class GetDevicePositionRequest extends com.amazonaws.AmazonWebServiceRequ
         if (obj instanceof GetDevicePositionRequest == false)
             return false;
         GetDevicePositionRequest other = (GetDevicePositionRequest) obj;
-        if (other.getDeviceId() == null ^ this.getDeviceId() == null)
-            return false;
-        if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
-            return false;
         if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
         if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
+        if (other.getDeviceId() == null ^ this.getDeviceId() == null)
+            return false;
+        if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
             return false;
         return true;
     }
@@ -164,8 +164,8 @@ public class GetDevicePositionRequest extends com.amazonaws.AmazonWebServiceRequ
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         return hashCode;
     }
 

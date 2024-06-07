@@ -30,6 +30,12 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
 
     /**
      * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     */
+    private Place place;
+    /**
+     * <p>
      * The distance in meters of a great-circle arc between the query position and the result.
      * </p>
      * <note>
@@ -40,12 +46,6 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
      * </note>
      */
     private Double distance;
-    /**
-     * <p>
-     * Details about the search result, such as its address and position.
-     * </p>
-     */
-    private Place place;
     /**
      * <p>
      * The unique identifier of the place. You can use this with the <code>GetPlace</code> operation to find the place
@@ -59,6 +59,46 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
      * </note>
      */
     private String placeId;
+
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     * 
+     * @param place
+     *        Details about the search result, such as its address and position.
+     */
+
+    public void setPlace(Place place) {
+        this.place = place;
+    }
+
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     * 
+     * @return Details about the search result, such as its address and position.
+     */
+
+    public Place getPlace() {
+        return this.place;
+    }
+
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     * 
+     * @param place
+     *        Details about the search result, such as its address and position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchForPositionResult withPlace(Place place) {
+        setPlace(place);
+        return this;
+    }
 
     /**
      * <p>
@@ -127,46 +167,6 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
 
     public SearchForPositionResult withDistance(Double distance) {
         setDistance(distance);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Details about the search result, such as its address and position.
-     * </p>
-     * 
-     * @param place
-     *        Details about the search result, such as its address and position.
-     */
-
-    public void setPlace(Place place) {
-        this.place = place;
-    }
-
-    /**
-     * <p>
-     * Details about the search result, such as its address and position.
-     * </p>
-     * 
-     * @return Details about the search result, such as its address and position.
-     */
-
-    public Place getPlace() {
-        return this.place;
-    }
-
-    /**
-     * <p>
-     * Details about the search result, such as its address and position.
-     * </p>
-     * 
-     * @param place
-     *        Details about the search result, such as its address and position.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SearchForPositionResult withPlace(Place place) {
-        setPlace(place);
         return this;
     }
 
@@ -258,10 +258,10 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDistance() != null)
-            sb.append("Distance: ").append(getDistance()).append(",");
         if (getPlace() != null)
             sb.append("Place: ").append(getPlace()).append(",");
+        if (getDistance() != null)
+            sb.append("Distance: ").append(getDistance()).append(",");
         if (getPlaceId() != null)
             sb.append("PlaceId: ").append(getPlaceId());
         sb.append("}");
@@ -278,13 +278,13 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
         if (obj instanceof SearchForPositionResult == false)
             return false;
         SearchForPositionResult other = (SearchForPositionResult) obj;
-        if (other.getDistance() == null ^ this.getDistance() == null)
-            return false;
-        if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
-            return false;
         if (other.getPlace() == null ^ this.getPlace() == null)
             return false;
         if (other.getPlace() != null && other.getPlace().equals(this.getPlace()) == false)
+            return false;
+        if (other.getDistance() == null ^ this.getDistance() == null)
+            return false;
+        if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
             return false;
         if (other.getPlaceId() == null ^ this.getPlaceId() == null)
             return false;
@@ -298,8 +298,8 @@ public class SearchForPositionResult implements Serializable, Cloneable, Structu
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
         hashCode = prime * hashCode + ((getPlace() == null) ? 0 : getPlace().hashCode());
+        hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
         hashCode = prime * hashCode + ((getPlaceId() == null) ? 0 : getPlaceId().hashCode());
         return hashCode;
     }

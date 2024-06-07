@@ -48,25 +48,25 @@ public class ListKeysResponseEntryJsonUnmarshaller implements Unmarshaller<ListK
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("KeyName", targetDepth)) {
                     context.nextToken();
-                    listKeysResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("Description", targetDepth)) {
-                    context.nextToken();
-                    listKeysResponseEntry.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    listKeysResponseEntry.setKeyName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ExpireTime", targetDepth)) {
                     context.nextToken();
                     listKeysResponseEntry.setExpireTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("KeyName", targetDepth)) {
+                if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
-                    listKeysResponseEntry.setKeyName(context.getUnmarshaller(String.class).unmarshall(context));
+                    listKeysResponseEntry.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Restrictions", targetDepth)) {
                     context.nextToken();
                     listKeysResponseEntry.setRestrictions(ApiKeyRestrictionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    listKeysResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

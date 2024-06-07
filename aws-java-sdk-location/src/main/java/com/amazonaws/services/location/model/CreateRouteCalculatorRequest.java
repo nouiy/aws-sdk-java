@@ -105,17 +105,17 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
     private String dataSource;
     /**
      * <p>
-     * The optional description for the route calculator resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
     @Deprecated
     private String pricingPlan;
+    /**
+     * <p>
+     * The optional description for the route calculator resource.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * Applies one or more tags to the route calculator resource. A tag is a key-value pair helps manage, identify,
@@ -644,46 +644,6 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The optional description for the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the route calculator resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the route calculator resource.
-     * </p>
-     * 
-     * @return The optional description for the route calculator resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the route calculator resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRouteCalculatorRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -738,6 +698,46 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
     @Deprecated
     public CreateRouteCalculatorRequest withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional description for the route calculator resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the route calculator resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the route calculator resource.
+     * </p>
+     * 
+     * @return The optional description for the route calculator resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the route calculator resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the route calculator resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRouteCalculatorRequest withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -1098,10 +1098,10 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
             sb.append("CalculatorName: ").append(getCalculatorName()).append(",");
         if (getDataSource() != null)
             sb.append("DataSource: ").append(getDataSource()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -1126,13 +1126,13 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -1148,8 +1148,8 @@ public class CreateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
         hashCode = prime * hashCode + ((getCalculatorName() == null) ? 0 : getCalculatorName().hashCode());
         hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

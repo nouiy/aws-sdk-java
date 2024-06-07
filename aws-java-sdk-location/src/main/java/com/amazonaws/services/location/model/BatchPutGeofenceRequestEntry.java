@@ -36,6 +36,21 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
     private String geofenceId;
     /**
      * <p>
+     * Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon encoded in
+     * Geobuf format. Including multiple selections will return a validation error.
+     * </p>
+     * <note>
+     * <p>
+     * The <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     * geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     * href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">Geofence
+     * geobuf</a> format supports a maximum of 100,000 vertices.
+     * </p>
+     * </note>
+     */
+    private GeofenceGeometry geometry;
+    /**
+     * <p>
      * Associates one of more properties with the geofence. A property is a key-value pair stored with the geofence and
      * added to any geofence event triggered with that geofence.
      * </p>
@@ -44,19 +59,6 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.Map<String, String> geofenceProperties;
-    /**
-     * <p>
-     * Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both will
-     * return a validation error.
-     * </p>
-     * <note>
-     * <p>
-     * Each <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     * geofence polygon</a> can have a maximum of 1,000 vertices.
-     * </p>
-     * </note>
-     */
-    private GeofenceGeometry geometry;
 
     /**
      * <p>
@@ -95,6 +97,97 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
 
     public BatchPutGeofenceRequestEntry withGeofenceId(String geofenceId) {
         setGeofenceId(geofenceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon encoded in
+     * Geobuf format. Including multiple selections will return a validation error.
+     * </p>
+     * <note>
+     * <p>
+     * The <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     * geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     * href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">Geofence
+     * geobuf</a> format supports a maximum of 100,000 vertices.
+     * </p>
+     * </note>
+     * 
+     * @param geometry
+     *        Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon
+     *        encoded in Geobuf format. Including multiple selections will return a validation error.</p> <note>
+     *        <p>
+     *        The <a
+     *        href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     *        geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     *        href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html"
+     *        >Geofence geobuf</a> format supports a maximum of 100,000 vertices.
+     *        </p>
+     */
+
+    public void setGeometry(GeofenceGeometry geometry) {
+        this.geometry = geometry;
+    }
+
+    /**
+     * <p>
+     * Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon encoded in
+     * Geobuf format. Including multiple selections will return a validation error.
+     * </p>
+     * <note>
+     * <p>
+     * The <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     * geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     * href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">Geofence
+     * geobuf</a> format supports a maximum of 100,000 vertices.
+     * </p>
+     * </note>
+     * 
+     * @return Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon
+     *         encoded in Geobuf format. Including multiple selections will return a validation error.</p> <note>
+     *         <p>
+     *         The <a
+     *         href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     *         geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     *         href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html"
+     *         >Geofence geobuf</a> format supports a maximum of 100,000 vertices.
+     *         </p>
+     */
+
+    public GeofenceGeometry getGeometry() {
+        return this.geometry;
+    }
+
+    /**
+     * <p>
+     * Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon encoded in
+     * Geobuf format. Including multiple selections will return a validation error.
+     * </p>
+     * <note>
+     * <p>
+     * The <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     * geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     * href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">Geofence
+     * geobuf</a> format supports a maximum of 100,000 vertices.
+     * </p>
+     * </note>
+     * 
+     * @param geometry
+     *        Contains the details to specify the position of the geofence. Can be a polygon, a circle or a polygon
+     *        encoded in Geobuf format. Including multiple selections will return a validation error.</p> <note>
+     *        <p>
+     *        The <a
+     *        href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
+     *        geofence polygon</a> format supports a maximum of 1,000 vertices. The <a
+     *        href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html"
+     *        >Geofence geobuf</a> format supports a maximum of 100,000 vertices.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchPutGeofenceRequestEntry withGeometry(GeofenceGeometry geometry) {
+        setGeometry(geometry);
         return this;
     }
 
@@ -188,85 +281,6 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
     }
 
     /**
-     * <p>
-     * Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both will
-     * return a validation error.
-     * </p>
-     * <note>
-     * <p>
-     * Each <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     * geofence polygon</a> can have a maximum of 1,000 vertices.
-     * </p>
-     * </note>
-     * 
-     * @param geometry
-     *        Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both
-     *        will return a validation error.</p> <note>
-     *        <p>
-     *        Each <a
-     *        href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     *        geofence polygon</a> can have a maximum of 1,000 vertices.
-     *        </p>
-     */
-
-    public void setGeometry(GeofenceGeometry geometry) {
-        this.geometry = geometry;
-    }
-
-    /**
-     * <p>
-     * Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both will
-     * return a validation error.
-     * </p>
-     * <note>
-     * <p>
-     * Each <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     * geofence polygon</a> can have a maximum of 1,000 vertices.
-     * </p>
-     * </note>
-     * 
-     * @return Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both
-     *         will return a validation error.</p> <note>
-     *         <p>
-     *         Each <a
-     *         href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     *         geofence polygon</a> can have a maximum of 1,000 vertices.
-     *         </p>
-     */
-
-    public GeofenceGeometry getGeometry() {
-        return this.geometry;
-    }
-
-    /**
-     * <p>
-     * Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both will
-     * return a validation error.
-     * </p>
-     * <note>
-     * <p>
-     * Each <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     * geofence polygon</a> can have a maximum of 1,000 vertices.
-     * </p>
-     * </note>
-     * 
-     * @param geometry
-     *        Contains the details of the position of the geofence. Can be either a polygon or a circle. Including both
-     *        will return a validation error.</p> <note>
-     *        <p>
-     *        Each <a
-     *        href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">
-     *        geofence polygon</a> can have a maximum of 1,000 vertices.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchPutGeofenceRequestEntry withGeometry(GeofenceGeometry geometry) {
-        setGeometry(geometry);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,10 +294,10 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
         sb.append("{");
         if (getGeofenceId() != null)
             sb.append("GeofenceId: ").append(getGeofenceId()).append(",");
-        if (getGeofenceProperties() != null)
-            sb.append("GeofenceProperties: ").append("***Sensitive Data Redacted***").append(",");
         if (getGeometry() != null)
-            sb.append("Geometry: ").append(getGeometry());
+            sb.append("Geometry: ").append(getGeometry()).append(",");
+        if (getGeofenceProperties() != null)
+            sb.append("GeofenceProperties: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -302,13 +316,13 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
             return false;
         if (other.getGeofenceId() != null && other.getGeofenceId().equals(this.getGeofenceId()) == false)
             return false;
-        if (other.getGeofenceProperties() == null ^ this.getGeofenceProperties() == null)
-            return false;
-        if (other.getGeofenceProperties() != null && other.getGeofenceProperties().equals(this.getGeofenceProperties()) == false)
-            return false;
         if (other.getGeometry() == null ^ this.getGeometry() == null)
             return false;
         if (other.getGeometry() != null && other.getGeometry().equals(this.getGeometry()) == false)
+            return false;
+        if (other.getGeofenceProperties() == null ^ this.getGeofenceProperties() == null)
+            return false;
+        if (other.getGeofenceProperties() != null && other.getGeofenceProperties().equals(this.getGeofenceProperties()) == false)
             return false;
         return true;
     }
@@ -319,8 +333,8 @@ public class BatchPutGeofenceRequestEntry implements Serializable, Cloneable, St
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getGeofenceId() == null) ? 0 : getGeofenceId().hashCode());
-        hashCode = prime * hashCode + ((getGeofenceProperties() == null) ? 0 : getGeofenceProperties().hashCode());
         hashCode = prime * hashCode + ((getGeometry() == null) ? 0 : getGeometry().hashCode());
+        hashCode = prime * hashCode + ((getGeofenceProperties() == null) ? 0 : getGeofenceProperties().hashCode());
         return hashCode;
     }
 

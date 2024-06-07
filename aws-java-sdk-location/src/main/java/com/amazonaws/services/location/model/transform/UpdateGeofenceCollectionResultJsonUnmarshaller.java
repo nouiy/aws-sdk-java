@@ -48,13 +48,13 @@ public class UpdateGeofenceCollectionResultJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CollectionArn", targetDepth)) {
-                    context.nextToken();
-                    updateGeofenceCollectionResult.setCollectionArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("CollectionName", targetDepth)) {
                     context.nextToken();
                     updateGeofenceCollectionResult.setCollectionName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CollectionArn", targetDepth)) {
+                    context.nextToken();
+                    updateGeofenceCollectionResult.setCollectionArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

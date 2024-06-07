@@ -33,15 +33,6 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String collectionName;
     /**
      * <p>
-     * An optional limit for the number of geofences returned in a single call.
-     * </p>
-     * <p>
-     * Default value: <code>100</code>
-     * </p>
-     */
-    private Integer maxResults;
-    /**
-     * <p>
      * The pagination token specifying which page of results to return in the response. If no token is provided, the
      * default page is the first page.
      * </p>
@@ -50,6 +41,15 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * An optional limit for the number of geofences returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     */
+    private Integer maxResults;
 
     /**
      * <p>
@@ -88,61 +88,6 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     public ListGeofencesRequest withCollectionName(String collectionName) {
         setCollectionName(collectionName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * An optional limit for the number of geofences returned in a single call.
-     * </p>
-     * <p>
-     * Default value: <code>100</code>
-     * </p>
-     * 
-     * @param maxResults
-     *        An optional limit for the number of geofences returned in a single call. </p>
-     *        <p>
-     *        Default value: <code>100</code>
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * An optional limit for the number of geofences returned in a single call.
-     * </p>
-     * <p>
-     * Default value: <code>100</code>
-     * </p>
-     * 
-     * @return An optional limit for the number of geofences returned in a single call. </p>
-     *         <p>
-     *         Default value: <code>100</code>
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * An optional limit for the number of geofences returned in a single call.
-     * </p>
-     * <p>
-     * Default value: <code>100</code>
-     * </p>
-     * 
-     * @param maxResults
-     *        An optional limit for the number of geofences returned in a single call. </p>
-     *        <p>
-     *        Default value: <code>100</code>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListGeofencesRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
         return this;
     }
 
@@ -208,6 +153,61 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * An optional limit for the number of geofences returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     * 
+     * @param maxResults
+     *        An optional limit for the number of geofences returned in a single call. </p>
+     *        <p>
+     *        Default value: <code>100</code>
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * An optional limit for the number of geofences returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     * 
+     * @return An optional limit for the number of geofences returned in a single call. </p>
+     *         <p>
+     *         Default value: <code>100</code>
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * An optional limit for the number of geofences returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     * 
+     * @param maxResults
+     *        An optional limit for the number of geofences returned in a single call. </p>
+     *        <p>
+     *        Default value: <code>100</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListGeofencesRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -221,10 +221,10 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
         sb.append("{");
         if (getCollectionName() != null)
             sb.append("CollectionName: ").append(getCollectionName()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -243,13 +243,13 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getCollectionName() != null && other.getCollectionName().equals(this.getCollectionName()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -260,8 +260,8 @@ public class ListGeofencesRequest extends com.amazonaws.AmazonWebServiceRequest 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCollectionName() == null) ? 0 : getCollectionName().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

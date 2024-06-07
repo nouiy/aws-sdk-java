@@ -84,6 +84,10 @@ public class HttpEndpointDestinationUpdateJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     httpEndpointDestinationUpdate.setS3Update(S3DestinationUpdateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SecretsManagerConfiguration", targetDepth)) {
+                    context.nextToken();
+                    httpEndpointDestinationUpdate.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

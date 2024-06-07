@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreatePlaceIndexRequestMarshaller {
 
-    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
-    private static final MarshallingInfo<StructuredPojo> DATASOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSourceConfiguration").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> INDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("IndexName").build();
+    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<StructuredPojo> DATASOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSourceConfiguration").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -58,11 +58,11 @@ public class CreatePlaceIndexRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createPlaceIndexRequest.getDataSource(), DATASOURCE_BINDING);
-            protocolMarshaller.marshall(createPlaceIndexRequest.getDataSourceConfiguration(), DATASOURCECONFIGURATION_BINDING);
-            protocolMarshaller.marshall(createPlaceIndexRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createPlaceIndexRequest.getIndexName(), INDEXNAME_BINDING);
+            protocolMarshaller.marshall(createPlaceIndexRequest.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(createPlaceIndexRequest.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(createPlaceIndexRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(createPlaceIndexRequest.getDataSourceConfiguration(), DATASOURCECONFIGURATION_BINDING);
             protocolMarshaller.marshall(createPlaceIndexRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

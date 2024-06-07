@@ -48,13 +48,13 @@ public class UpdateRouteCalculatorResultJsonUnmarshaller implements Unmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CalculatorArn", targetDepth)) {
-                    context.nextToken();
-                    updateRouteCalculatorResult.setCalculatorArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("CalculatorName", targetDepth)) {
                     context.nextToken();
                     updateRouteCalculatorResult.setCalculatorName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CalculatorArn", targetDepth)) {
+                    context.nextToken();
+                    updateRouteCalculatorResult.setCalculatorArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

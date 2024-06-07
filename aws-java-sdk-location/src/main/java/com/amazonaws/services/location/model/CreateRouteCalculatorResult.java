@@ -25,6 +25,19 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The name of the route calculator resource.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>ExampleRouteCalculator</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String calculatorName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) for the route calculator resource. Use the ARN when you specify a resource across
      * all Amazon Web Services.
      * </p>
@@ -37,19 +50,6 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
      * </ul>
      */
     private String calculatorArn;
-    /**
-     * <p>
-     * The name of the route calculator resource.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>ExampleRouteCalculator</code>.
-     * </p>
-     * </li>
-     * </ul>
-     */
-    private String calculatorName;
     /**
      * <p>
      * The timestamp when the route calculator resource was created in <a
@@ -65,6 +65,85 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
      * </ul>
      */
     private java.util.Date createTime;
+
+    /**
+     * <p>
+     * The name of the route calculator resource.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>ExampleRouteCalculator</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param calculatorName
+     *        The name of the route calculator resource. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For example, <code>ExampleRouteCalculator</code>.
+     *        </p>
+     *        </li>
+     */
+
+    public void setCalculatorName(String calculatorName) {
+        this.calculatorName = calculatorName;
+    }
+
+    /**
+     * <p>
+     * The name of the route calculator resource.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>ExampleRouteCalculator</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The name of the route calculator resource. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For example, <code>ExampleRouteCalculator</code>.
+     *         </p>
+     *         </li>
+     */
+
+    public String getCalculatorName() {
+        return this.calculatorName;
+    }
+
+    /**
+     * <p>
+     * The name of the route calculator resource.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>ExampleRouteCalculator</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param calculatorName
+     *        The name of the route calculator resource. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For example, <code>ExampleRouteCalculator</code>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRouteCalculatorResult withCalculatorName(String calculatorName) {
+        setCalculatorName(calculatorName);
+        return this;
+    }
 
     /**
      * <p>
@@ -148,85 +227,6 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
 
     public CreateRouteCalculatorResult withCalculatorArn(String calculatorArn) {
         setCalculatorArn(calculatorArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the route calculator resource.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>ExampleRouteCalculator</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param calculatorName
-     *        The name of the route calculator resource. </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>ExampleRouteCalculator</code>.
-     *        </p>
-     *        </li>
-     */
-
-    public void setCalculatorName(String calculatorName) {
-        this.calculatorName = calculatorName;
-    }
-
-    /**
-     * <p>
-     * The name of the route calculator resource.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>ExampleRouteCalculator</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @return The name of the route calculator resource. </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For example, <code>ExampleRouteCalculator</code>.
-     *         </p>
-     *         </li>
-     */
-
-    public String getCalculatorName() {
-        return this.calculatorName;
-    }
-
-    /**
-     * <p>
-     * The name of the route calculator resource.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>ExampleRouteCalculator</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param calculatorName
-     *        The name of the route calculator resource. </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>ExampleRouteCalculator</code>.
-     *        </p>
-     *        </li>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRouteCalculatorResult withCalculatorName(String calculatorName) {
-        setCalculatorName(calculatorName);
         return this;
     }
 
@@ -333,10 +333,10 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCalculatorArn() != null)
-            sb.append("CalculatorArn: ").append(getCalculatorArn()).append(",");
         if (getCalculatorName() != null)
             sb.append("CalculatorName: ").append(getCalculatorName()).append(",");
+        if (getCalculatorArn() != null)
+            sb.append("CalculatorArn: ").append(getCalculatorArn()).append(",");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
@@ -353,13 +353,13 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof CreateRouteCalculatorResult == false)
             return false;
         CreateRouteCalculatorResult other = (CreateRouteCalculatorResult) obj;
-        if (other.getCalculatorArn() == null ^ this.getCalculatorArn() == null)
-            return false;
-        if (other.getCalculatorArn() != null && other.getCalculatorArn().equals(this.getCalculatorArn()) == false)
-            return false;
         if (other.getCalculatorName() == null ^ this.getCalculatorName() == null)
             return false;
         if (other.getCalculatorName() != null && other.getCalculatorName().equals(this.getCalculatorName()) == false)
+            return false;
+        if (other.getCalculatorArn() == null ^ this.getCalculatorArn() == null)
+            return false;
+        if (other.getCalculatorArn() != null && other.getCalculatorArn().equals(this.getCalculatorArn()) == false)
             return false;
         if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
@@ -373,8 +373,8 @@ public class CreateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCalculatorArn() == null) ? 0 : getCalculatorArn().hashCode());
         hashCode = prime * hashCode + ((getCalculatorName() == null) ? 0 : getCalculatorName().hashCode());
+        hashCode = prime * hashCode + ((getCalculatorArn() == null) ? 0 : getCalculatorArn().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }

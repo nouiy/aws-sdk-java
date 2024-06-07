@@ -74,6 +74,39 @@ public class AWSAccountAsyncClient extends AWSAccountClient implements AWSAccoun
     }
 
     @Override
+    public java.util.concurrent.Future<AcceptPrimaryEmailUpdateResult> acceptPrimaryEmailUpdateAsync(AcceptPrimaryEmailUpdateRequest request) {
+
+        return acceptPrimaryEmailUpdateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AcceptPrimaryEmailUpdateResult> acceptPrimaryEmailUpdateAsync(final AcceptPrimaryEmailUpdateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AcceptPrimaryEmailUpdateRequest, AcceptPrimaryEmailUpdateResult> asyncHandler) {
+        final AcceptPrimaryEmailUpdateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AcceptPrimaryEmailUpdateResult>() {
+            @Override
+            public AcceptPrimaryEmailUpdateResult call() throws Exception {
+                AcceptPrimaryEmailUpdateResult result = null;
+
+                try {
+                    result = executeAcceptPrimaryEmailUpdate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAlternateContactResult> deleteAlternateContactAsync(DeleteAlternateContactRequest request) {
 
         return deleteAlternateContactAsync(request, null);
@@ -239,6 +272,39 @@ public class AWSAccountAsyncClient extends AWSAccountClient implements AWSAccoun
     }
 
     @Override
+    public java.util.concurrent.Future<GetPrimaryEmailResult> getPrimaryEmailAsync(GetPrimaryEmailRequest request) {
+
+        return getPrimaryEmailAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPrimaryEmailResult> getPrimaryEmailAsync(final GetPrimaryEmailRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPrimaryEmailRequest, GetPrimaryEmailResult> asyncHandler) {
+        final GetPrimaryEmailRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPrimaryEmailResult>() {
+            @Override
+            public GetPrimaryEmailResult call() throws Exception {
+                GetPrimaryEmailResult result = null;
+
+                try {
+                    result = executeGetPrimaryEmail(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetRegionOptStatusResult> getRegionOptStatusAsync(GetRegionOptStatusRequest request) {
 
         return getRegionOptStatusAsync(request, null);
@@ -355,6 +421,39 @@ public class AWSAccountAsyncClient extends AWSAccountClient implements AWSAccoun
 
                 try {
                     result = executePutContactInformation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartPrimaryEmailUpdateResult> startPrimaryEmailUpdateAsync(StartPrimaryEmailUpdateRequest request) {
+
+        return startPrimaryEmailUpdateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartPrimaryEmailUpdateResult> startPrimaryEmailUpdateAsync(final StartPrimaryEmailUpdateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartPrimaryEmailUpdateRequest, StartPrimaryEmailUpdateResult> asyncHandler) {
+        final StartPrimaryEmailUpdateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartPrimaryEmailUpdateResult>() {
+            @Override
+            public StartPrimaryEmailUpdateResult call() throws Exception {
+                StartPrimaryEmailUpdateResult result = null;
+
+                try {
+                    result = executeStartPrimaryEmailUpdate(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

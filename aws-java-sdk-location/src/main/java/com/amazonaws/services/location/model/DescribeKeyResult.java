@@ -25,28 +25,6 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     */
-    private java.util.Date createTime;
-    /**
-     * <p>
-     * The optional description for the API key resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * The timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     */
-    private java.util.Date expireTime;
-    /**
-     * <p>
      * The key value/string of an API key.
      * </p>
      */
@@ -75,10 +53,20 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
     private ApiKeyRestrictions restrictions;
     /**
      * <p>
-     * Tags associated with the API key resource.
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      */
-    private java.util.Map<String, String> tags;
+    private java.util.Date createTime;
+    /**
+     * <p>
+     * The timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date expireTime;
     /**
      * <p>
      * The timestamp for when the API key resource was last updated in <a
@@ -87,150 +75,18 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      */
     private java.util.Date updateTime;
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the API key resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @return The timestamp for when the API key resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public java.util.Date getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the API key resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeKeyResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
-
     /**
      * <p>
      * The optional description for the API key resource.
      * </p>
-     * 
-     * @param description
-     *        The optional description for the API key resource.
      */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    private String description;
     /**
      * <p>
-     * The optional description for the API key resource.
+     * Tags associated with the API key resource.
      * </p>
-     * 
-     * @return The optional description for the API key resource.
      */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the API key resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the API key resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeKeyResult withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param expireTime
-     *        The timestamp for when the API key resource will expire in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public void setExpireTime(java.util.Date expireTime) {
-        this.expireTime = expireTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @return The timestamp for when the API key resource will expire in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public java.util.Date getExpireTime() {
-        return this.expireTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param expireTime
-     *        The timestamp for when the API key resource will expire in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeKeyResult withExpireTime(java.util.Date expireTime) {
-        setExpireTime(expireTime);
-        return this;
-    }
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -425,6 +281,202 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the API key resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the API key resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the API key resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeKeyResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param expireTime
+     *        The timestamp for when the API key resource will expire in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setExpireTime(java.util.Date expireTime) {
+        this.expireTime = expireTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the API key resource will expire in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getExpireTime() {
+        return this.expireTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param expireTime
+     *        The timestamp for when the API key resource will expire in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeKeyResult withExpireTime(java.util.Date expireTime) {
+        setExpireTime(expireTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param updateTime
+     *        The timestamp for when the API key resource was last updated in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the API key resource was last updated in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param updateTime
+     *        The timestamp for when the API key resource was last updated in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeKeyResult withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional description for the API key resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the API key resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the API key resource.
+     * </p>
+     * 
+     * @return The optional description for the API key resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the API key resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the API key resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeKeyResult withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
      * Tags associated with the API key resource.
      * </p>
      * 
@@ -492,58 +544,6 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p>
-     * The timestamp for when the API key resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param updateTime
-     *        The timestamp for when the API key resource was last updated in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @return The timestamp for when the API key resource was last updated in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param updateTime
-     *        The timestamp for when the API key resource was last updated in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeKeyResult withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -555,12 +555,6 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getExpireTime() != null)
-            sb.append("ExpireTime: ").append(getExpireTime()).append(",");
         if (getKey() != null)
             sb.append("Key: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeyArn() != null)
@@ -569,10 +563,16 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
             sb.append("KeyName: ").append(getKeyName()).append(",");
         if (getRestrictions() != null)
             sb.append("Restrictions: ").append(getRestrictions()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getExpireTime() != null)
+            sb.append("ExpireTime: ").append(getExpireTime()).append(",");
         if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -587,18 +587,6 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (obj instanceof DescribeKeyResult == false)
             return false;
         DescribeKeyResult other = (DescribeKeyResult) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
-            return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getExpireTime() == null ^ this.getExpireTime() == null)
-            return false;
-        if (other.getExpireTime() != null && other.getExpireTime().equals(this.getExpireTime()) == false)
-            return false;
         if (other.getKey() == null ^ this.getKey() == null)
             return false;
         if (other.getKey() != null && other.getKey().equals(this.getKey()) == false)
@@ -615,13 +603,25 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
             return false;
         if (other.getRestrictions() != null && other.getRestrictions().equals(this.getRestrictions()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+            return false;
+        if (other.getExpireTime() == null ^ this.getExpireTime() == null)
+            return false;
+        if (other.getExpireTime() != null && other.getExpireTime().equals(this.getExpireTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
         if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -631,15 +631,15 @@ public class DescribeKeyResult extends com.amazonaws.AmazonWebServiceResult<com.
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getExpireTime() == null) ? 0 : getExpireTime().hashCode());
         hashCode = prime * hashCode + ((getKey() == null) ? 0 : getKey().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
         hashCode = prime * hashCode + ((getRestrictions() == null) ? 0 : getRestrictions().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getExpireTime() == null) ? 0 : getExpireTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

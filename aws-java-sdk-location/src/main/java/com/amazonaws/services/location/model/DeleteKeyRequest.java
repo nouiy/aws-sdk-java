@@ -27,6 +27,12 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * The name of the API key to delete.
+     * </p>
+     */
+    private String keyName;
+    /**
+     * <p>
      * ForceDelete bypasses an API key's expiry conditions and deletes the key. Set the parameter <code>true</code> to
      * delete the key or to <code>false</code> to not preemptively delete the API key.
      * </p>
@@ -43,12 +49,46 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      */
     private Boolean forceDelete;
+
     /**
      * <p>
      * The name of the API key to delete.
      * </p>
+     * 
+     * @param keyName
+     *        The name of the API key to delete.
      */
-    private String keyName;
+
+    public void setKeyName(String keyName) {
+        this.keyName = keyName;
+    }
+
+    /**
+     * <p>
+     * The name of the API key to delete.
+     * </p>
+     * 
+     * @return The name of the API key to delete.
+     */
+
+    public String getKeyName() {
+        return this.keyName;
+    }
+
+    /**
+     * <p>
+     * The name of the API key to delete.
+     * </p>
+     * 
+     * @param keyName
+     *        The name of the API key to delete.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteKeyRequest withKeyName(String keyName) {
+        setKeyName(keyName);
+        return this;
+    }
 
     /**
      * <p>
@@ -195,46 +235,6 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
-     * <p>
-     * The name of the API key to delete.
-     * </p>
-     * 
-     * @param keyName
-     *        The name of the API key to delete.
-     */
-
-    public void setKeyName(String keyName) {
-        this.keyName = keyName;
-    }
-
-    /**
-     * <p>
-     * The name of the API key to delete.
-     * </p>
-     * 
-     * @return The name of the API key to delete.
-     */
-
-    public String getKeyName() {
-        return this.keyName;
-    }
-
-    /**
-     * <p>
-     * The name of the API key to delete.
-     * </p>
-     * 
-     * @param keyName
-     *        The name of the API key to delete.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteKeyRequest withKeyName(String keyName) {
-        setKeyName(keyName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -246,10 +246,10 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getForceDelete() != null)
-            sb.append("ForceDelete: ").append(getForceDelete()).append(",");
         if (getKeyName() != null)
-            sb.append("KeyName: ").append(getKeyName());
+            sb.append("KeyName: ").append(getKeyName()).append(",");
+        if (getForceDelete() != null)
+            sb.append("ForceDelete: ").append(getForceDelete());
         sb.append("}");
         return sb.toString();
     }
@@ -264,13 +264,13 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof DeleteKeyRequest == false)
             return false;
         DeleteKeyRequest other = (DeleteKeyRequest) obj;
-        if (other.getForceDelete() == null ^ this.getForceDelete() == null)
-            return false;
-        if (other.getForceDelete() != null && other.getForceDelete().equals(this.getForceDelete()) == false)
-            return false;
         if (other.getKeyName() == null ^ this.getKeyName() == null)
             return false;
         if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
+            return false;
+        if (other.getForceDelete() == null ^ this.getForceDelete() == null)
+            return false;
+        if (other.getForceDelete() != null && other.getForceDelete().equals(this.getForceDelete()) == false)
             return false;
         return true;
     }
@@ -280,8 +280,8 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getForceDelete() == null) ? 0 : getForceDelete().hashCode());
         hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
+        hashCode = prime * hashCode + ((getForceDelete() == null) ? 0 : getForceDelete().hashCode());
         return hashCode;
     }
 

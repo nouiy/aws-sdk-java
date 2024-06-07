@@ -27,6 +27,32 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * The name of the place index resource.
+     * </p>
+     * <p>
+     * Requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be a unique place index resource name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String indexName;
+    /**
+     * <p>
      * Specifies the geospatial data provider for the new place index.
      * </p>
      * <note>
@@ -81,10 +107,11 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     private String dataSource;
     /**
      * <p>
-     * Specifies the data storage option requesting Places.
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
-    private DataSourceConfiguration dataSourceConfiguration;
+    @Deprecated
+    private String pricingPlan;
     /**
      * <p>
      * The optional description for the place index resource.
@@ -93,37 +120,10 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * The name of the place index resource.
-     * </p>
-     * <p>
-     * Requirements:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Must be a unique place index resource name.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     * </p>
-     * </li>
-     * </ul>
-     */
-    private String indexName;
-    /**
-     * <p>
-     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * Specifies the data storage option requesting Places.
      * </p>
      */
-    @Deprecated
-    private String pricingPlan;
+    private DataSourceConfiguration dataSourceConfiguration;
     /**
      * <p>
      * Applies one or more tags to the place index resource. A tag is a key-value pair that helps you manage, identify,
@@ -169,6 +169,163 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      */
     private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * The name of the place index resource.
+     * </p>
+     * <p>
+     * Requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be a unique place index resource name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param indexName
+     *        The name of the place index resource. </p>
+     *        <p>
+     *        Requirements:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be a unique place index resource name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     *        </p>
+     *        </li>
+     */
+
+    public void setIndexName(String indexName) {
+        this.indexName = indexName;
+    }
+
+    /**
+     * <p>
+     * The name of the place index resource.
+     * </p>
+     * <p>
+     * Requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be a unique place index resource name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The name of the place index resource. </p>
+     *         <p>
+     *         Requirements:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Must be a unique place index resource name.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     *         </p>
+     *         </li>
+     */
+
+    public String getIndexName() {
+        return this.indexName;
+    }
+
+    /**
+     * <p>
+     * The name of the place index resource.
+     * </p>
+     * <p>
+     * Requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be a unique place index resource name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param indexName
+     *        The name of the place index resource. </p>
+     *        <p>
+     *        Requirements:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be a unique place index resource name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePlaceIndexRequest withIndexName(String indexName) {
+        setIndexName(indexName);
+        return this;
+    }
 
     /**
      * <p>
@@ -504,243 +661,6 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the data storage option requesting Places.
-     * </p>
-     * 
-     * @param dataSourceConfiguration
-     *        Specifies the data storage option requesting Places.
-     */
-
-    public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
-        this.dataSourceConfiguration = dataSourceConfiguration;
-    }
-
-    /**
-     * <p>
-     * Specifies the data storage option requesting Places.
-     * </p>
-     * 
-     * @return Specifies the data storage option requesting Places.
-     */
-
-    public DataSourceConfiguration getDataSourceConfiguration() {
-        return this.dataSourceConfiguration;
-    }
-
-    /**
-     * <p>
-     * Specifies the data storage option requesting Places.
-     * </p>
-     * 
-     * @param dataSourceConfiguration
-     *        Specifies the data storage option requesting Places.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreatePlaceIndexRequest withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
-        setDataSourceConfiguration(dataSourceConfiguration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The optional description for the place index resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the place index resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the place index resource.
-     * </p>
-     * 
-     * @return The optional description for the place index resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the place index resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the place index resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreatePlaceIndexRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     * <p>
-     * Requirements:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Must be a unique place index resource name.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param indexName
-     *        The name of the place index resource. </p>
-     *        <p>
-     *        Requirements:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Must be a unique place index resource name.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     *        </p>
-     *        </li>
-     */
-
-    public void setIndexName(String indexName) {
-        this.indexName = indexName;
-    }
-
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     * <p>
-     * Requirements:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Must be a unique place index resource name.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @return The name of the place index resource. </p>
-     *         <p>
-     *         Requirements:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Must be a unique place index resource name.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     *         </p>
-     *         </li>
-     */
-
-    public String getIndexName() {
-        return this.indexName;
-    }
-
-    /**
-     * <p>
-     * The name of the place index resource.
-     * </p>
-     * <p>
-     * Requirements:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Must be a unique place index resource name.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param indexName
-     *        The name of the place index resource. </p>
-     *        <p>
-     *        Requirements:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens (-), periods (.), and underscores (_).
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Must be a unique place index resource name.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        No spaces allowed. For example, <code>ExamplePlaceIndex</code>.
-     *        </p>
-     *        </li>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreatePlaceIndexRequest withIndexName(String indexName) {
-        setIndexName(indexName);
-        return this;
-    }
-
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -795,6 +715,86 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     @Deprecated
     public CreatePlaceIndexRequest withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the place index resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     * 
+     * @return The optional description for the place index resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the place index resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the place index resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePlaceIndexRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the data storage option requesting Places.
+     * </p>
+     * 
+     * @param dataSourceConfiguration
+     *        Specifies the data storage option requesting Places.
+     */
+
+    public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
+        this.dataSourceConfiguration = dataSourceConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies the data storage option requesting Places.
+     * </p>
+     * 
+     * @return Specifies the data storage option requesting Places.
+     */
+
+    public DataSourceConfiguration getDataSourceConfiguration() {
+        return this.dataSourceConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies the data storage option requesting Places.
+     * </p>
+     * 
+     * @param dataSourceConfiguration
+     *        Specifies the data storage option requesting Places.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePlaceIndexRequest withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
+        setDataSourceConfiguration(dataSourceConfiguration);
         return this;
     }
 
@@ -1109,16 +1109,16 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
-        if (getDataSourceConfiguration() != null)
-            sb.append("DataSourceConfiguration: ").append(getDataSourceConfiguration()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getIndexName() != null)
             sb.append("IndexName: ").append(getIndexName()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getDataSourceConfiguration() != null)
+            sb.append("DataSourceConfiguration: ").append(getDataSourceConfiguration()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -1135,25 +1135,25 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof CreatePlaceIndexRequest == false)
             return false;
         CreatePlaceIndexRequest other = (CreatePlaceIndexRequest) obj;
+        if (other.getIndexName() == null ^ this.getIndexName() == null)
+            return false;
+        if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
+            return false;
         if (other.getDataSource() == null ^ this.getDataSource() == null)
             return false;
         if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
-        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
+        if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
-        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
+        if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getIndexName() == null ^ this.getIndexName() == null)
+        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
             return false;
-        if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
-            return false;
-        if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
-            return false;
-        if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -1167,11 +1167,11 @@ public class CreatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
-        hashCode = prime * hashCode + ((getDataSourceConfiguration() == null) ? 0 : getDataSourceConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getIndexName() == null) ? 0 : getIndexName().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDataSourceConfiguration() == null) ? 0 : getDataSourceConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

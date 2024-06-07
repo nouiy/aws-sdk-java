@@ -25,6 +25,12 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * The name of the geofence collection.
+     * </p>
+     */
+    private String collectionName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) for the geofence collection resource. Used when you need to specify a resource
      * across all Amazon Web Services.
      * </p>
@@ -39,37 +45,10 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
     private String collectionArn;
     /**
      * <p>
-     * The name of the geofence collection.
-     * </p>
-     */
-    private String collectionName;
-    /**
-     * <p>
-     * The timestamp for when the geofence resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     */
-    private java.util.Date createTime;
-    /**
-     * <p>
      * The optional description for the geofence collection.
      * </p>
      */
     private String description;
-    /**
-     * <p>
-     * The number of geofences in the geofence collection.
-     * </p>
-     */
-    private Integer geofenceCount;
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
-     * </p>
-     */
-    private String kmsKeyId;
     /**
      * <p>
      * No longer used. Always returns <code>RequestBasedUsage</code>.
@@ -86,10 +65,25 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
     private String pricingPlanDataSource;
     /**
      * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
+     * </p>
+     */
+    private String kmsKeyId;
+    /**
+     * <p>
      * Displays the key, value pairs of tags associated with this resource.
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The timestamp for when the geofence resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     */
+    private java.util.Date createTime;
     /**
      * <p>
      * The timestamp for when the geofence collection was last updated in <a
@@ -98,6 +92,52 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private java.util.Date updateTime;
+    /**
+     * <p>
+     * The number of geofences in the geofence collection.
+     * </p>
+     */
+    private Integer geofenceCount;
+
+    /**
+     * <p>
+     * The name of the geofence collection.
+     * </p>
+     * 
+     * @param collectionName
+     *        The name of the geofence collection.
+     */
+
+    public void setCollectionName(String collectionName) {
+        this.collectionName = collectionName;
+    }
+
+    /**
+     * <p>
+     * The name of the geofence collection.
+     * </p>
+     * 
+     * @return The name of the geofence collection.
+     */
+
+    public String getCollectionName() {
+        return this.collectionName;
+    }
+
+    /**
+     * <p>
+     * The name of the geofence collection.
+     * </p>
+     * 
+     * @param collectionName
+     *        The name of the geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeGeofenceCollectionResult withCollectionName(String collectionName) {
+        setCollectionName(collectionName);
+        return this;
+    }
 
     /**
      * <p>
@@ -186,98 +226,6 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the geofence collection.
-     * </p>
-     * 
-     * @param collectionName
-     *        The name of the geofence collection.
-     */
-
-    public void setCollectionName(String collectionName) {
-        this.collectionName = collectionName;
-    }
-
-    /**
-     * <p>
-     * The name of the geofence collection.
-     * </p>
-     * 
-     * @return The name of the geofence collection.
-     */
-
-    public String getCollectionName() {
-        return this.collectionName;
-    }
-
-    /**
-     * <p>
-     * The name of the geofence collection.
-     * </p>
-     * 
-     * @param collectionName
-     *        The name of the geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeGeofenceCollectionResult withCollectionName(String collectionName) {
-        setCollectionName(collectionName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the geofence resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the geofence resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     */
-
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the geofence resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     * 
-     * @return The timestamp for when the geofence resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     */
-
-    public java.util.Date getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the geofence resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the geofence resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeGeofenceCollectionResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
-
-    /**
-     * <p>
      * The optional description for the geofence collection.
      * </p>
      * 
@@ -313,95 +261,6 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
 
     public DescribeGeofenceCollectionResult withDescription(String description) {
         setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The number of geofences in the geofence collection.
-     * </p>
-     * 
-     * @param geofenceCount
-     *        The number of geofences in the geofence collection.
-     */
-
-    public void setGeofenceCount(Integer geofenceCount) {
-        this.geofenceCount = geofenceCount;
-    }
-
-    /**
-     * <p>
-     * The number of geofences in the geofence collection.
-     * </p>
-     * 
-     * @return The number of geofences in the geofence collection.
-     */
-
-    public Integer getGeofenceCount() {
-        return this.geofenceCount;
-    }
-
-    /**
-     * <p>
-     * The number of geofences in the geofence collection.
-     * </p>
-     * 
-     * @param geofenceCount
-     *        The number of geofences in the geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeGeofenceCollectionResult withGeofenceCount(Integer geofenceCount) {
-        setGeofenceCount(geofenceCount);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
-     * </p>
-     * 
-     * @param kmsKeyId
-     *        A key identifier for an <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *        customer managed key</a> assigned to the Amazon Location resource
-     */
-
-    public void setKmsKeyId(String kmsKeyId) {
-        this.kmsKeyId = kmsKeyId;
-    }
-
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
-     * </p>
-     * 
-     * @return A key identifier for an <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *         customer managed key</a> assigned to the Amazon Location resource
-     */
-
-    public String getKmsKeyId() {
-        return this.kmsKeyId;
-    }
-
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
-     * </p>
-     * 
-     * @param kmsKeyId
-     *        A key identifier for an <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *        customer managed key</a> assigned to the Amazon Location resource
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeGeofenceCollectionResult withKmsKeyId(String kmsKeyId) {
-        setKmsKeyId(kmsKeyId);
         return this;
     }
 
@@ -506,6 +365,55 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        A key identifier for an <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *        customer managed key</a> assigned to the Amazon Location resource
+     */
+
+    public void setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
+     * </p>
+     * 
+     * @return A key identifier for an <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *         customer managed key</a> assigned to the Amazon Location resource
+     */
+
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a> assigned to the Amazon Location resource
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        A key identifier for an <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *        customer managed key</a> assigned to the Amazon Location resource
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeGeofenceCollectionResult withKmsKeyId(String kmsKeyId) {
+        setKmsKeyId(kmsKeyId);
+        return this;
+    }
+
+    /**
+     * <p>
      * Displays the key, value pairs of tags associated with this resource.
      * </p>
      * 
@@ -574,6 +482,58 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * The timestamp for when the geofence resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the geofence resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the geofence resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     * 
+     * @return The timestamp for when the geofence resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the geofence resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the geofence resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeGeofenceCollectionResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp for when the geofence collection was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
@@ -625,6 +585,46 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The number of geofences in the geofence collection.
+     * </p>
+     * 
+     * @param geofenceCount
+     *        The number of geofences in the geofence collection.
+     */
+
+    public void setGeofenceCount(Integer geofenceCount) {
+        this.geofenceCount = geofenceCount;
+    }
+
+    /**
+     * <p>
+     * The number of geofences in the geofence collection.
+     * </p>
+     * 
+     * @return The number of geofences in the geofence collection.
+     */
+
+    public Integer getGeofenceCount() {
+        return this.geofenceCount;
+    }
+
+    /**
+     * <p>
+     * The number of geofences in the geofence collection.
+     * </p>
+     * 
+     * @param geofenceCount
+     *        The number of geofences in the geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeGeofenceCollectionResult withGeofenceCount(Integer geofenceCount) {
+        setGeofenceCount(geofenceCount);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -636,26 +636,26 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCollectionArn() != null)
-            sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
         if (getCollectionName() != null)
             sb.append("CollectionName: ").append(getCollectionName()).append(",");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getCollectionArn() != null)
+            sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
-        if (getGeofenceCount() != null)
-            sb.append("GeofenceCount: ").append(getGeofenceCount()).append(",");
-        if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
         if (getPricingPlanDataSource() != null)
             sb.append("PricingPlanDataSource: ").append(getPricingPlanDataSource()).append(",");
+        if (getKmsKeyId() != null)
+            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getGeofenceCount() != null)
+            sb.append("GeofenceCount: ").append(getGeofenceCount());
         sb.append("}");
         return sb.toString();
     }
@@ -670,29 +670,17 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
         if (obj instanceof DescribeGeofenceCollectionResult == false)
             return false;
         DescribeGeofenceCollectionResult other = (DescribeGeofenceCollectionResult) obj;
-        if (other.getCollectionArn() == null ^ this.getCollectionArn() == null)
-            return false;
-        if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
-            return false;
         if (other.getCollectionName() == null ^ this.getCollectionName() == null)
             return false;
         if (other.getCollectionName() != null && other.getCollectionName().equals(this.getCollectionName()) == false)
             return false;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getCollectionArn() == null ^ this.getCollectionArn() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+        if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getGeofenceCount() == null ^ this.getGeofenceCount() == null)
-            return false;
-        if (other.getGeofenceCount() != null && other.getGeofenceCount().equals(this.getGeofenceCount()) == false)
-            return false;
-        if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
-            return false;
-        if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
@@ -702,13 +690,25 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getPricingPlanDataSource() != null && other.getPricingPlanDataSource().equals(this.getPricingPlanDataSource()) == false)
             return false;
+        if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
+            return false;
+        if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+            return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
         if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+            return false;
+        if (other.getGeofenceCount() == null ^ this.getGeofenceCount() == null)
+            return false;
+        if (other.getGeofenceCount() != null && other.getGeofenceCount().equals(this.getGeofenceCount()) == false)
             return false;
         return true;
     }
@@ -718,16 +718,16 @@ public class DescribeGeofenceCollectionResult extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
         hashCode = prime * hashCode + ((getCollectionName() == null) ? 0 : getCollectionName().hashCode());
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getGeofenceCount() == null) ? 0 : getGeofenceCount().hashCode());
-        hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
         hashCode = prime * hashCode + ((getPricingPlanDataSource() == null) ? 0 : getPricingPlanDataSource().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getGeofenceCount() == null) ? 0 : getGeofenceCount().hashCode());
         return hashCode;
     }
 

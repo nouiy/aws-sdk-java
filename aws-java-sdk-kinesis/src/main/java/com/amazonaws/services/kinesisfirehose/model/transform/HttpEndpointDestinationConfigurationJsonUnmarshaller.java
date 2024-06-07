@@ -86,6 +86,11 @@ public class HttpEndpointDestinationConfigurationJsonUnmarshaller implements Unm
                     context.nextToken();
                     httpEndpointDestinationConfiguration.setS3Configuration(S3DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SecretsManagerConfiguration", targetDepth)) {
+                    context.nextToken();
+                    httpEndpointDestinationConfiguration.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

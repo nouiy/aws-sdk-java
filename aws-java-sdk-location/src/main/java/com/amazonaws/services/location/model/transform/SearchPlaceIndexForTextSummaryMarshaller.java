@@ -28,24 +28,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SearchPlaceIndexForTextSummaryMarshaller {
 
+    private static final MarshallingInfo<String> TEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Text").build();
     private static final MarshallingInfo<List> BIASPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("BiasPosition").build();
-    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
     private static final MarshallingInfo<List> FILTERBBOX_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("FilterBBox").build();
-    private static final MarshallingInfo<List> FILTERCATEGORIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCategories").build();
     private static final MarshallingInfo<List> FILTERCOUNTRIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCountries").build();
-    private static final MarshallingInfo<String> LANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Language").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<List> RESULTBBOX_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ResultBBox").build();
-    private static final MarshallingInfo<String> TEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Text").build();
+    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
+    private static final MarshallingInfo<String> LANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Language").build();
+    private static final MarshallingInfo<List> FILTERCATEGORIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCategories").build();
 
     private static final SearchPlaceIndexForTextSummaryMarshaller instance = new SearchPlaceIndexForTextSummaryMarshaller();
 
@@ -63,15 +63,15 @@ public class SearchPlaceIndexForTextSummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getText(), TEXT_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getBiasPosition(), BIASPOSITION_BINDING);
-            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getFilterBBox(), FILTERBBOX_BINDING);
-            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getFilterCategories(), FILTERCATEGORIES_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getFilterCountries(), FILTERCOUNTRIES_BINDING);
-            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getLanguage(), LANGUAGE_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getResultBBox(), RESULTBBOX_BINDING);
-            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getText(), TEXT_BINDING);
+            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getDataSource(), DATASOURCE_BINDING);
+            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getLanguage(), LANGUAGE_BINDING);
+            protocolMarshaller.marshall(searchPlaceIndexForTextSummary.getFilterCategories(), FILTERCATEGORIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

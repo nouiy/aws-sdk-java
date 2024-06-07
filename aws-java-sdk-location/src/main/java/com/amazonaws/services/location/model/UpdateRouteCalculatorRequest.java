@@ -33,17 +33,17 @@ public class UpdateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
     private String calculatorName;
     /**
      * <p>
-     * Updates the description for the route calculator resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
     @Deprecated
     private String pricingPlan;
+    /**
+     * <p>
+     * Updates the description for the route calculator resource.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -82,46 +82,6 @@ public class UpdateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
 
     public UpdateRouteCalculatorRequest withCalculatorName(String calculatorName) {
         setCalculatorName(calculatorName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        Updates the description for the route calculator resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the route calculator resource.
-     * </p>
-     * 
-     * @return Updates the description for the route calculator resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        Updates the description for the route calculator resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateRouteCalculatorRequest withDescription(String description) {
-        setDescription(description);
         return this;
     }
 
@@ -185,6 +145,46 @@ public class UpdateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * Updates the description for the route calculator resource.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the route calculator resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the route calculator resource.
+     * </p>
+     * 
+     * @return Updates the description for the route calculator resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the route calculator resource.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the route calculator resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRouteCalculatorRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -198,10 +198,10 @@ public class UpdateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
         sb.append("{");
         if (getCalculatorName() != null)
             sb.append("CalculatorName: ").append(getCalculatorName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getPricingPlan() != null)
-            sb.append("PricingPlan: ").append(getPricingPlan());
+            sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -220,13 +220,13 @@ public class UpdateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getCalculatorName() != null && other.getCalculatorName().equals(this.getCalculatorName()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -237,8 +237,8 @@ public class UpdateRouteCalculatorRequest extends com.amazonaws.AmazonWebService
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCalculatorName() == null) ? 0 : getCalculatorName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

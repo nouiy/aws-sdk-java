@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListTrackersResponseEntryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrackerName").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
     private static final MarshallingInfo<String> PRICINGPLANDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlanDataSource").build();
-    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrackerName").build();
+    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateTime").timestampFormat("iso8601").build();
 
@@ -56,11 +56,11 @@ public class ListTrackersResponseEntryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listTrackersResponseEntry.getCreateTime(), CREATETIME_BINDING);
+            protocolMarshaller.marshall(listTrackersResponseEntry.getTrackerName(), TRACKERNAME_BINDING);
             protocolMarshaller.marshall(listTrackersResponseEntry.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(listTrackersResponseEntry.getPricingPlan(), PRICINGPLAN_BINDING);
             protocolMarshaller.marshall(listTrackersResponseEntry.getPricingPlanDataSource(), PRICINGPLANDATASOURCE_BINDING);
-            protocolMarshaller.marshall(listTrackersResponseEntry.getTrackerName(), TRACKERNAME_BINDING);
+            protocolMarshaller.marshall(listTrackersResponseEntry.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(listTrackersResponseEntry.getUpdateTime(), UPDATETIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

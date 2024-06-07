@@ -52,17 +52,17 @@ public class CalculateRouteMatrixSummaryJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     calculateRouteMatrixSummary.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("DistanceUnit", targetDepth)) {
+                if (context.testExpression("RouteCount", targetDepth)) {
                     context.nextToken();
-                    calculateRouteMatrixSummary.setDistanceUnit(context.getUnmarshaller(String.class).unmarshall(context));
+                    calculateRouteMatrixSummary.setRouteCount(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("ErrorCount", targetDepth)) {
                     context.nextToken();
                     calculateRouteMatrixSummary.setErrorCount(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("RouteCount", targetDepth)) {
+                if (context.testExpression("DistanceUnit", targetDepth)) {
                     context.nextToken();
-                    calculateRouteMatrixSummary.setRouteCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                    calculateRouteMatrixSummary.setDistanceUnit(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

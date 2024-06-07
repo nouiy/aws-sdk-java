@@ -35,6 +35,8 @@ public class ViewRepresentationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ViewOriginalText").build();
     private static final MarshallingInfo<String> VIEWEXPANDEDTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ViewExpandedText").build();
+    private static final MarshallingInfo<String> VALIDATIONCONNECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ValidationConnection").build();
     private static final MarshallingInfo<Boolean> ISSTALE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("IsStale").build();
 
@@ -58,6 +60,7 @@ public class ViewRepresentationMarshaller {
             protocolMarshaller.marshall(viewRepresentation.getDialectVersion(), DIALECTVERSION_BINDING);
             protocolMarshaller.marshall(viewRepresentation.getViewOriginalText(), VIEWORIGINALTEXT_BINDING);
             protocolMarshaller.marshall(viewRepresentation.getViewExpandedText(), VIEWEXPANDEDTEXT_BINDING);
+            protocolMarshaller.marshall(viewRepresentation.getValidationConnection(), VALIDATIONCONNECTION_BINDING);
             protocolMarshaller.marshall(viewRepresentation.getIsStale(), ISSTALE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

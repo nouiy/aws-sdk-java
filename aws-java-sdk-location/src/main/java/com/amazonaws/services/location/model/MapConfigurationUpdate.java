@@ -30,21 +30,6 @@ public class MapConfigurationUpdate implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     * support custom layers, you can enable layer(s), such as <code>POI</code> layer for the VectorEsriNavigation
-     * style. Default is <code>unset</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers">Custom
-     * Layers</a>.
-     * </p>
-     * </note>
-     */
-    private java.util.List<String> customLayers;
-    /**
-     * <p>
      * Specifies the political view for the style. Set to an empty string to not use a political view, or, for styles
      * that support specific political views, you can choose a view, such as <code>IND</code> for the Indian view.
      * </p>
@@ -57,141 +42,19 @@ public class MapConfigurationUpdate implements Serializable, Cloneable, Structur
      * </note>
      */
     private String politicalView;
-
     /**
      * <p>
      * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     * support custom layers, you can enable layer(s), such as <code>POI</code> layer for the VectorEsriNavigation
-     * style. Default is <code>unset</code>.
+     * support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style. Default is
+     * <code>unset</code>.
      * </p>
      * <note>
      * <p>
-     * Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers">Custom
-     * Layers</a>.
+     * Not all map resources or styles support custom layers. See Custom Layers for more information.
      * </p>
      * </note>
-     * 
-     * @return Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles
-     *         that support custom layers, you can enable layer(s), such as <code>POI</code> layer for the
-     *         VectorEsriNavigation style. Default is <code>unset</code>.</p> <note>
-     *         <p>
-     *         Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     *         href=
-     *         "https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers">Custom
-     *         Layers</a>.
-     *         </p>
      */
-
-    public java.util.List<String> getCustomLayers() {
-        return customLayers;
-    }
-
-    /**
-     * <p>
-     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     * support custom layers, you can enable layer(s), such as <code>POI</code> layer for the VectorEsriNavigation
-     * style. Default is <code>unset</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers">Custom
-     * Layers</a>.
-     * </p>
-     * </note>
-     * 
-     * @param customLayers
-     *        Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     *        support custom layers, you can enable layer(s), such as <code>POI</code> layer for the
-     *        VectorEsriNavigation style. Default is <code>unset</code>.</p> <note>
-     *        <p>
-     *        Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers"
-     *        >Custom Layers</a>.
-     *        </p>
-     */
-
-    public void setCustomLayers(java.util.Collection<String> customLayers) {
-        if (customLayers == null) {
-            this.customLayers = null;
-            return;
-        }
-
-        this.customLayers = new java.util.ArrayList<String>(customLayers);
-    }
-
-    /**
-     * <p>
-     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     * support custom layers, you can enable layer(s), such as <code>POI</code> layer for the VectorEsriNavigation
-     * style. Default is <code>unset</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers">Custom
-     * Layers</a>.
-     * </p>
-     * </note>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setCustomLayers(java.util.Collection)} or {@link #withCustomLayers(java.util.Collection)} if you want to
-     * override the existing values.
-     * </p>
-     * 
-     * @param customLayers
-     *        Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     *        support custom layers, you can enable layer(s), such as <code>POI</code> layer for the
-     *        VectorEsriNavigation style. Default is <code>unset</code>.</p> <note>
-     *        <p>
-     *        Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers"
-     *        >Custom Layers</a>.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MapConfigurationUpdate withCustomLayers(String... customLayers) {
-        if (this.customLayers == null) {
-            setCustomLayers(new java.util.ArrayList<String>(customLayers.length));
-        }
-        for (String ele : customLayers) {
-            this.customLayers.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     * support custom layers, you can enable layer(s), such as <code>POI</code> layer for the VectorEsriNavigation
-     * style. Default is <code>unset</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers">Custom
-     * Layers</a>.
-     * </p>
-     * </note>
-     * 
-     * @param customLayers
-     *        Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
-     *        support custom layers, you can enable layer(s), such as <code>POI</code> layer for the
-     *        VectorEsriNavigation style. Default is <code>unset</code>.</p> <note>
-     *        <p>
-     *        Currenlty only <code>VectorEsriNavigation</code> supports CustomLayers. For more information, see <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html#map-custom-layers"
-     *        >Custom Layers</a>.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MapConfigurationUpdate withCustomLayers(java.util.Collection<String> customLayers) {
-        setCustomLayers(customLayers);
-        return this;
-    }
+    private java.util.List<String> customLayers;
 
     /**
      * <p>
@@ -279,6 +142,124 @@ public class MapConfigurationUpdate implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     * support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style. Default is
+     * <code>unset</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Not all map resources or styles support custom layers. See Custom Layers for more information.
+     * </p>
+     * </note>
+     * 
+     * @return Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles
+     *         that support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation
+     *         style. Default is <code>unset</code>.</p> <note>
+     *         <p>
+     *         Not all map resources or styles support custom layers. See Custom Layers for more information.
+     *         </p>
+     */
+
+    public java.util.List<String> getCustomLayers() {
+        return customLayers;
+    }
+
+    /**
+     * <p>
+     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     * support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style. Default is
+     * <code>unset</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Not all map resources or styles support custom layers. See Custom Layers for more information.
+     * </p>
+     * </note>
+     * 
+     * @param customLayers
+     *        Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     *        support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style.
+     *        Default is <code>unset</code>.</p> <note>
+     *        <p>
+     *        Not all map resources or styles support custom layers. See Custom Layers for more information.
+     *        </p>
+     */
+
+    public void setCustomLayers(java.util.Collection<String> customLayers) {
+        if (customLayers == null) {
+            this.customLayers = null;
+            return;
+        }
+
+        this.customLayers = new java.util.ArrayList<String>(customLayers);
+    }
+
+    /**
+     * <p>
+     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     * support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style. Default is
+     * <code>unset</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Not all map resources or styles support custom layers. See Custom Layers for more information.
+     * </p>
+     * </note>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomLayers(java.util.Collection)} or {@link #withCustomLayers(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param customLayers
+     *        Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     *        support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style.
+     *        Default is <code>unset</code>.</p> <note>
+     *        <p>
+     *        Not all map resources or styles support custom layers. See Custom Layers for more information.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MapConfigurationUpdate withCustomLayers(String... customLayers) {
+        if (this.customLayers == null) {
+            setCustomLayers(new java.util.ArrayList<String>(customLayers.length));
+        }
+        for (String ele : customLayers) {
+            this.customLayers.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     * support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style. Default is
+     * <code>unset</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Not all map resources or styles support custom layers. See Custom Layers for more information.
+     * </p>
+     * </note>
+     * 
+     * @param customLayers
+     *        Specifies the custom layers for the style. Leave unset to not enable any custom layer, or, for styles that
+     *        support custom layers, you can enable layer(s), such as POI layer for the VectorEsriNavigation style.
+     *        Default is <code>unset</code>.</p> <note>
+     *        <p>
+     *        Not all map resources or styles support custom layers. See Custom Layers for more information.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MapConfigurationUpdate withCustomLayers(java.util.Collection<String> customLayers) {
+        setCustomLayers(customLayers);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -290,10 +271,10 @@ public class MapConfigurationUpdate implements Serializable, Cloneable, Structur
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCustomLayers() != null)
-            sb.append("CustomLayers: ").append(getCustomLayers()).append(",");
         if (getPoliticalView() != null)
-            sb.append("PoliticalView: ").append(getPoliticalView());
+            sb.append("PoliticalView: ").append(getPoliticalView()).append(",");
+        if (getCustomLayers() != null)
+            sb.append("CustomLayers: ").append(getCustomLayers());
         sb.append("}");
         return sb.toString();
     }
@@ -308,13 +289,13 @@ public class MapConfigurationUpdate implements Serializable, Cloneable, Structur
         if (obj instanceof MapConfigurationUpdate == false)
             return false;
         MapConfigurationUpdate other = (MapConfigurationUpdate) obj;
-        if (other.getCustomLayers() == null ^ this.getCustomLayers() == null)
-            return false;
-        if (other.getCustomLayers() != null && other.getCustomLayers().equals(this.getCustomLayers()) == false)
-            return false;
         if (other.getPoliticalView() == null ^ this.getPoliticalView() == null)
             return false;
         if (other.getPoliticalView() != null && other.getPoliticalView().equals(this.getPoliticalView()) == false)
+            return false;
+        if (other.getCustomLayers() == null ^ this.getCustomLayers() == null)
+            return false;
+        if (other.getCustomLayers() != null && other.getCustomLayers().equals(this.getCustomLayers()) == false)
             return false;
         return true;
     }
@@ -324,8 +305,8 @@ public class MapConfigurationUpdate implements Serializable, Cloneable, Structur
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCustomLayers() == null) ? 0 : getCustomLayers().hashCode());
         hashCode = prime * hashCode + ((getPoliticalView() == null) ? 0 : getPoliticalView().hashCode());
+        hashCode = prime * hashCode + ((getCustomLayers() == null) ? 0 : getCustomLayers().hashCode());
         return hashCode;
     }
 

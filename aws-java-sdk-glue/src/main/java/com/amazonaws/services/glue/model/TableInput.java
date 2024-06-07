@@ -132,6 +132,13 @@ public class TableInput implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private TableIdentifier targetTable;
+    /**
+     * <p>
+     * A structure that contains all the information that defines the view, including the dialect or dialects for the
+     * view, and the query.
+     * </p>
+     */
+    private ViewDefinitionInput viewDefinition;
 
     /**
      * <p>
@@ -880,6 +887,52 @@ public class TableInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A structure that contains all the information that defines the view, including the dialect or dialects for the
+     * view, and the query.
+     * </p>
+     * 
+     * @param viewDefinition
+     *        A structure that contains all the information that defines the view, including the dialect or dialects for
+     *        the view, and the query.
+     */
+
+    public void setViewDefinition(ViewDefinitionInput viewDefinition) {
+        this.viewDefinition = viewDefinition;
+    }
+
+    /**
+     * <p>
+     * A structure that contains all the information that defines the view, including the dialect or dialects for the
+     * view, and the query.
+     * </p>
+     * 
+     * @return A structure that contains all the information that defines the view, including the dialect or dialects
+     *         for the view, and the query.
+     */
+
+    public ViewDefinitionInput getViewDefinition() {
+        return this.viewDefinition;
+    }
+
+    /**
+     * <p>
+     * A structure that contains all the information that defines the view, including the dialect or dialects for the
+     * view, and the query.
+     * </p>
+     * 
+     * @param viewDefinition
+     *        A structure that contains all the information that defines the view, including the dialect or dialects for
+     *        the view, and the query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableInput withViewDefinition(ViewDefinitionInput viewDefinition) {
+        setViewDefinition(viewDefinition);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -916,7 +969,9 @@ public class TableInput implements Serializable, Cloneable, StructuredPojo {
         if (getParameters() != null)
             sb.append("Parameters: ").append(getParameters()).append(",");
         if (getTargetTable() != null)
-            sb.append("TargetTable: ").append(getTargetTable());
+            sb.append("TargetTable: ").append(getTargetTable()).append(",");
+        if (getViewDefinition() != null)
+            sb.append("ViewDefinition: ").append(getViewDefinition());
         sb.append("}");
         return sb.toString();
     }
@@ -983,6 +1038,10 @@ public class TableInput implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTargetTable() != null && other.getTargetTable().equals(this.getTargetTable()) == false)
             return false;
+        if (other.getViewDefinition() == null ^ this.getViewDefinition() == null)
+            return false;
+        if (other.getViewDefinition() != null && other.getViewDefinition().equals(this.getViewDefinition()) == false)
+            return false;
         return true;
     }
 
@@ -1004,6 +1063,7 @@ public class TableInput implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTableType() == null) ? 0 : getTableType().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         hashCode = prime * hashCode + ((getTargetTable() == null) ? 0 : getTargetTable().hashCode());
+        hashCode = prime * hashCode + ((getViewDefinition() == null) ? 0 : getViewDefinition().hashCode());
         return hashCode;
     }
 

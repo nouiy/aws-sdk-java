@@ -48,16 +48,16 @@ public class BatchGetDevicePositionResultJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("DevicePositions", targetDepth)) {
-                    context.nextToken();
-                    batchGetDevicePositionResult.setDevicePositions(new ListUnmarshaller<DevicePosition>(DevicePositionJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("Errors", targetDepth)) {
                     context.nextToken();
                     batchGetDevicePositionResult.setErrors(new ListUnmarshaller<BatchGetDevicePositionError>(BatchGetDevicePositionErrorJsonUnmarshaller
                             .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("DevicePositions", targetDepth)) {
+                    context.nextToken();
+                    batchGetDevicePositionResult.setDevicePositions(new ListUnmarshaller<DevicePosition>(DevicePositionJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

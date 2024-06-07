@@ -48,16 +48,16 @@ public class SearchPlaceIndexForPositionResultJsonUnmarshaller implements Unmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Summary", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForPositionResult.setSummary(SearchPlaceIndexForPositionSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Results", targetDepth)) {
                     context.nextToken();
                     searchPlaceIndexForPositionResult.setResults(new ListUnmarshaller<SearchForPositionResult>(SearchForPositionResultJsonUnmarshaller
                             .getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("Summary", targetDepth)) {
-                    context.nextToken();
-                    searchPlaceIndexForPositionResult.setSummary(SearchPlaceIndexForPositionSummaryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

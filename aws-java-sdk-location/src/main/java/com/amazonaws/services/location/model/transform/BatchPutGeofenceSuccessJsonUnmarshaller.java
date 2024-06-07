@@ -48,13 +48,13 @@ public class BatchPutGeofenceSuccessJsonUnmarshaller implements Unmarshaller<Bat
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    batchPutGeofenceSuccess.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("GeofenceId", targetDepth)) {
                     context.nextToken();
                     batchPutGeofenceSuccess.setGeofenceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    batchPutGeofenceSuccess.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

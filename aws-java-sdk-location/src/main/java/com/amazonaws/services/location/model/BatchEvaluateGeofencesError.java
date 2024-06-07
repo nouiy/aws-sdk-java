@@ -37,18 +37,18 @@ public class BatchEvaluateGeofencesError implements Serializable, Cloneable, Str
     private String deviceId;
     /**
      * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     */
-    private BatchItemError error;
-    /**
-     * <p>
      * Specifies a timestamp for when the error occurred in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
      * </p>
      */
     private java.util.Date sampleTime;
+    /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     */
+    private BatchItemError error;
 
     /**
      * <p>
@@ -87,46 +87,6 @@ public class BatchEvaluateGeofencesError implements Serializable, Cloneable, Str
 
     public BatchEvaluateGeofencesError withDeviceId(String deviceId) {
         setDeviceId(deviceId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     * 
-     * @param error
-     *        Contains details associated to the batch error.
-     */
-
-    public void setError(BatchItemError error) {
-        this.error = error;
-    }
-
-    /**
-     * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     * 
-     * @return Contains details associated to the batch error.
-     */
-
-    public BatchItemError getError() {
-        return this.error;
-    }
-
-    /**
-     * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     * 
-     * @param error
-     *        Contains details associated to the batch error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchEvaluateGeofencesError withError(BatchItemError error) {
-        setError(error);
         return this;
     }
 
@@ -183,6 +143,46 @@ public class BatchEvaluateGeofencesError implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     * 
+     * @param error
+     *        Contains details associated to the batch error.
+     */
+
+    public void setError(BatchItemError error) {
+        this.error = error;
+    }
+
+    /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     * 
+     * @return Contains details associated to the batch error.
+     */
+
+    public BatchItemError getError() {
+        return this.error;
+    }
+
+    /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     * 
+     * @param error
+     *        Contains details associated to the batch error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchEvaluateGeofencesError withError(BatchItemError error) {
+        setError(error);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -196,10 +196,10 @@ public class BatchEvaluateGeofencesError implements Serializable, Cloneable, Str
         sb.append("{");
         if (getDeviceId() != null)
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
-        if (getError() != null)
-            sb.append("Error: ").append(getError()).append(",");
         if (getSampleTime() != null)
-            sb.append("SampleTime: ").append(getSampleTime());
+            sb.append("SampleTime: ").append(getSampleTime()).append(",");
+        if (getError() != null)
+            sb.append("Error: ").append(getError());
         sb.append("}");
         return sb.toString();
     }
@@ -218,13 +218,13 @@ public class BatchEvaluateGeofencesError implements Serializable, Cloneable, Str
             return false;
         if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
             return false;
-        if (other.getError() == null ^ this.getError() == null)
-            return false;
-        if (other.getError() != null && other.getError().equals(this.getError()) == false)
-            return false;
         if (other.getSampleTime() == null ^ this.getSampleTime() == null)
             return false;
         if (other.getSampleTime() != null && other.getSampleTime().equals(this.getSampleTime()) == false)
+            return false;
+        if (other.getError() == null ^ this.getError() == null)
+            return false;
+        if (other.getError() != null && other.getError().equals(this.getError()) == false)
             return false;
         return true;
     }
@@ -235,8 +235,8 @@ public class BatchEvaluateGeofencesError implements Serializable, Cloneable, Str
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
-        hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
+        hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         return hashCode;
     }
 

@@ -39,9 +39,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
      * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
-     * uses to control data access. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a> in the
-     * <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
+     * uses to control data access. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -66,8 +64,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
-     * the FSx for ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the FSx for ONTAP User Guide.
      * </p>
      */
     private String securityStyle;
@@ -115,8 +113,9 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
-     * types</a> in the Amazon FSx for NetApp ONTAP User Guide.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume types</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      */
     private String ontapVolumeType;
@@ -175,8 +174,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use for
      * different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the Amazon FSx
-     * for NetApp ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume styles</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      */
     private String volumeStyle;
@@ -243,9 +242,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
      * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
-     * uses to control data access. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a> in the
-     * <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
+     * uses to control data access. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -270,16 +267,14 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
-     * the FSx for ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the FSx for ONTAP User Guide.
      * </p>
      * 
      * @param securityStyle
      *        Specifies the security style for the volume. If a volume's security style is not specified, it is
      *        automatically set to the root volume's security style. The security style determines the type of
-     *        permissions that FSx for ONTAP uses to control data access. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a>
-     *        in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:</p>
+     *        permissions that FSx for ONTAP uses to control data access. Specify one of the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -303,8 +298,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
-     *        style</a> in the FSx for ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *        >Volume security style</a> in the FSx for ONTAP User Guide.
      * @see SecurityStyle
      */
 
@@ -316,9 +311,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
      * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
-     * uses to control data access. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a> in the
-     * <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
+     * uses to control data access. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -343,15 +336,13 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
-     * the FSx for ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the FSx for ONTAP User Guide.
      * </p>
      * 
      * @return Specifies the security style for the volume. If a volume's security style is not specified, it is
      *         automatically set to the root volume's security style. The security style determines the type of
-     *         permissions that FSx for ONTAP uses to control data access. For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a>
-     *         in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:</p>
+     *         permissions that FSx for ONTAP uses to control data access. Specify one of the following values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -375,8 +366,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *         </ul>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
-     *         style</a> in the FSx for ONTAP User Guide.
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *         >Volume security style</a> in the FSx for ONTAP User Guide.
      * @see SecurityStyle
      */
 
@@ -388,9 +379,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
      * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
-     * uses to control data access. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a> in the
-     * <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
+     * uses to control data access. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -415,16 +404,14 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
-     * the FSx for ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the FSx for ONTAP User Guide.
      * </p>
      * 
      * @param securityStyle
      *        Specifies the security style for the volume. If a volume's security style is not specified, it is
      *        automatically set to the root volume's security style. The security style determines the type of
-     *        permissions that FSx for ONTAP uses to control data access. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a>
-     *        in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:</p>
+     *        permissions that FSx for ONTAP uses to control data access. Specify one of the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -448,8 +435,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
-     *        style</a> in the FSx for ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *        >Volume security style</a> in the FSx for ONTAP User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SecurityStyle
      */
@@ -463,9 +450,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
      * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
-     * uses to control data access. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a> in the
-     * <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
+     * uses to control data access. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -490,16 +475,14 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
-     * the FSx for ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the FSx for ONTAP User Guide.
      * </p>
      * 
      * @param securityStyle
      *        Specifies the security style for the volume. If a volume's security style is not specified, it is
      *        automatically set to the root volume's security style. The security style determines the type of
-     *        permissions that FSx for ONTAP uses to control data access. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style">Volume security style</a>
-     *        in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:</p>
+     *        permissions that FSx for ONTAP uses to control data access. Specify one of the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -523,8 +506,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
-     *        style</a> in the FSx for ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *        >Volume security style</a> in the FSx for ONTAP User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SecurityStyle
      */
@@ -749,8 +732,9 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
-     * types</a> in the Amazon FSx for NetApp ONTAP User Guide.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume types</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @param ontapVolumeType
@@ -769,7 +753,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume
      *        types</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @see InputOntapVolumeType
      */
@@ -796,8 +781,9 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
-     * types</a> in the Amazon FSx for NetApp ONTAP User Guide.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume types</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @return Specifies the type of volume you are creating. Valid values are the following:</p>
@@ -815,7 +801,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume
      *         types</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @see InputOntapVolumeType
      */
@@ -842,8 +829,9 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
-     * types</a> in the Amazon FSx for NetApp ONTAP User Guide.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume types</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @param ontapVolumeType
@@ -862,7 +850,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume
      *        types</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InputOntapVolumeType
@@ -891,8 +880,9 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
-     * types</a> in the Amazon FSx for NetApp ONTAP User Guide.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume types</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @param ontapVolumeType
@@ -911,7 +901,8 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types">Volume
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types">Volume
      *        types</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InputOntapVolumeType
@@ -1261,15 +1252,15 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use for
      * different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the Amazon FSx
-     * for NetApp ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume styles</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @param volumeStyle
      *        Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use
      *        for different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the
-     *        Amazon FSx for NetApp ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume
+     *        styles</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @see VolumeStyle
      */
 
@@ -1281,14 +1272,14 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use for
      * different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the Amazon FSx
-     * for NetApp ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume styles</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @return Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use
      *         for different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the
-     *         Amazon FSx for NetApp ONTAP User Guide.
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume
+     *         styles</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @see VolumeStyle
      */
 
@@ -1300,15 +1291,15 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use for
      * different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the Amazon FSx
-     * for NetApp ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume styles</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @param volumeStyle
      *        Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use
      *        for different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the
-     *        Amazon FSx for NetApp ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume
+     *        styles</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeStyle
      */
@@ -1322,15 +1313,15 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * <p>
      * Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use for
      * different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the Amazon FSx
-     * for NetApp ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume styles</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * 
      * @param volumeStyle
      *        Use to specify the style of an ONTAP volume. FSx for ONTAP offers two styles of volumes that you can use
      *        for different purposes, FlexVol and FlexGroup volumes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html">Volume styles</a> in the
-     *        Amazon FSx for NetApp ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles">Volume
+     *        styles</a> in the Amazon FSx for NetApp ONTAP User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeStyle
      */

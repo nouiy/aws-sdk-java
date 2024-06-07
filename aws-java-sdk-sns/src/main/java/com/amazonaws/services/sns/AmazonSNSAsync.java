@@ -237,26 +237,26 @@ public interface AmazonSNSAsync extends AmazonSNS {
      * <ul>
      * <li>
      * <p>
-     * For <code>ADM</code>, <code>PlatformPrincipal</code> is <code>client id</code> and
-     * <code>PlatformCredential</code> is <code>client secret</code>.
+     * For ADM, <code>PlatformPrincipal</code> is <code>client id</code> and <code>PlatformCredential</code> is
+     * <code>client secret</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>Baidu</code>, <code>PlatformPrincipal</code> is <code>API key</code> and
-     * <code>PlatformCredential</code> is <code>secret key</code>.
+     * For APNS and <code>APNS_SANDBOX</code> using certificate credentials, <code>PlatformPrincipal</code> is
+     * <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private key</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>APNS</code> and <code>APNS_SANDBOX</code> using certificate credentials, <code>PlatformPrincipal</code>
-     * is <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private key</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For <code>APNS</code> and <code>APNS_SANDBOX</code> using token credentials, <code>PlatformPrincipal</code> is
+     * For APNS and <code>APNS_SANDBOX</code> using token credentials, <code>PlatformPrincipal</code> is
      * <code>signing key ID</code> and <code>PlatformCredential</code> is <code>signing key</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Baidu, <code>PlatformPrincipal</code> is <code>API key</code> and <code>PlatformCredential</code> is
+     * <code>secret key</code>.
      * </p>
      * </li>
      * <li>
@@ -275,13 +275,13 @@ public interface AmazonSNSAsync extends AmazonSNS {
      * </li>
      * <li>
      * <p>
-     * For <code>MPNS</code>, <code>PlatformPrincipal</code> is <code>TLS certificate</code> and
-     * <code>PlatformCredential</code> is <code>private key</code>.
+     * For MPNS, <code>PlatformPrincipal</code> is <code>TLS certificate</code> and <code>PlatformCredential</code> is
+     * <code>private key</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>WNS</code>, <code>PlatformPrincipal</code> is <code>Package Security Identifier</code> and
+     * For WNS, <code>PlatformPrincipal</code> is <code>Package Security Identifier</code> and
      * <code>PlatformCredential</code> is <code>secret key</code>.
      * </p>
      * </li>
@@ -314,26 +314,26 @@ public interface AmazonSNSAsync extends AmazonSNS {
      * <ul>
      * <li>
      * <p>
-     * For <code>ADM</code>, <code>PlatformPrincipal</code> is <code>client id</code> and
-     * <code>PlatformCredential</code> is <code>client secret</code>.
+     * For ADM, <code>PlatformPrincipal</code> is <code>client id</code> and <code>PlatformCredential</code> is
+     * <code>client secret</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>Baidu</code>, <code>PlatformPrincipal</code> is <code>API key</code> and
-     * <code>PlatformCredential</code> is <code>secret key</code>.
+     * For APNS and <code>APNS_SANDBOX</code> using certificate credentials, <code>PlatformPrincipal</code> is
+     * <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private key</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>APNS</code> and <code>APNS_SANDBOX</code> using certificate credentials, <code>PlatformPrincipal</code>
-     * is <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private key</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For <code>APNS</code> and <code>APNS_SANDBOX</code> using token credentials, <code>PlatformPrincipal</code> is
+     * For APNS and <code>APNS_SANDBOX</code> using token credentials, <code>PlatformPrincipal</code> is
      * <code>signing key ID</code> and <code>PlatformCredential</code> is <code>signing key</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Baidu, <code>PlatformPrincipal</code> is <code>API key</code> and <code>PlatformCredential</code> is
+     * <code>secret key</code>.
      * </p>
      * </li>
      * <li>
@@ -352,13 +352,13 @@ public interface AmazonSNSAsync extends AmazonSNS {
      * </li>
      * <li>
      * <p>
-     * For <code>MPNS</code>, <code>PlatformPrincipal</code> is <code>TLS certificate</code> and
-     * <code>PlatformCredential</code> is <code>private key</code>.
+     * For MPNS, <code>PlatformPrincipal</code> is <code>TLS certificate</code> and <code>PlatformCredential</code> is
+     * <code>private key</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>WNS</code>, <code>PlatformPrincipal</code> is <code>Package Security Identifier</code> and
+     * For WNS, <code>PlatformPrincipal</code> is <code>Package Security Identifier</code> and
      * <code>PlatformCredential</code> is <code>secret key</code>.
      * </p>
      * </li>

@@ -25,14 +25,6 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     */
-    private java.util.Date createTime;
-    /**
-     * <p>
      * The key value/string of an API key. This value is used when making API calls to authorize the call. For example,
      * see <a href="https://docs.aws.amazon.com/location/latest/APIReference/API_GetMapGlyphs.html">GetMapGlyphs</a>.
      * </p>
@@ -58,58 +50,14 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      */
     private String keyName;
-
     /**
      * <p>
      * The timestamp for when the API key resource was created in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the API key resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
-
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @return The timestamp for when the API key resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public java.util.Date getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the API key resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the API key resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKeyResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
+    private java.util.Date createTime;
 
     /**
      * <p>
@@ -286,6 +234,58 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p>
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the API key resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the API key resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the API key resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the API key resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKeyResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -297,14 +297,14 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getKey() != null)
             sb.append("Key: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
         if (getKeyName() != null)
-            sb.append("KeyName: ").append(getKeyName());
+            sb.append("KeyName: ").append(getKeyName()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -319,10 +319,6 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (obj instanceof CreateKeyResult == false)
             return false;
         CreateKeyResult other = (CreateKeyResult) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
-            return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
         if (other.getKey() == null ^ this.getKey() == null)
             return false;
         if (other.getKey() != null && other.getKey().equals(this.getKey()) == false)
@@ -335,6 +331,10 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
             return false;
         if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
             return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+            return false;
         return true;
     }
 
@@ -343,10 +343,10 @@ public class CreateKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getKey() == null) ? 0 : getKey().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }
 

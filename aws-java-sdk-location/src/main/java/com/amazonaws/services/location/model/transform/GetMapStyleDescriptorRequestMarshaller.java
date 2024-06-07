@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetMapStyleDescriptorRequestMarshaller {
 
-    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
-            .marshallLocationName("key").build();
     private static final MarshallingInfo<String> MAPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("MapName").build();
+    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("key").build();
 
     private static final GetMapStyleDescriptorRequestMarshaller instance = new GetMapStyleDescriptorRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class GetMapStyleDescriptorRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getMapStyleDescriptorRequest.getKey(), KEY_BINDING);
             protocolMarshaller.marshall(getMapStyleDescriptorRequest.getMapName(), MAPNAME_BINDING);
+            protocolMarshaller.marshall(getMapStyleDescriptorRequest.getKey(), KEY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

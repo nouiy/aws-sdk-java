@@ -26,17 +26,66 @@ public class SearchPlaceIndexForSuggestionsResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A list of place suggestions that best match the search text.
-     * </p>
-     */
-    private java.util.List<SearchForSuggestionsResult> results;
-    /**
-     * <p>
      * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
      * includes the <code>DataSource</code> of the place index.
      * </p>
      */
     private SearchPlaceIndexForSuggestionsSummary summary;
+    /**
+     * <p>
+     * A list of place suggestions that best match the search text.
+     * </p>
+     */
+    private java.util.List<SearchForSuggestionsResult> results;
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
+     * includes the <code>DataSource</code> of the place index.
+     * </p>
+     * 
+     * @param summary
+     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
+     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
+     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index.
+     */
+
+    public void setSummary(SearchPlaceIndexForSuggestionsSummary summary) {
+        this.summary = summary;
+    }
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
+     * includes the <code>DataSource</code> of the place index.
+     * </p>
+     * 
+     * @return Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
+     *         <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>,
+     *         and <code>Text</code>. Also includes the <code>DataSource</code> of the place index.
+     */
+
+    public SearchPlaceIndexForSuggestionsSummary getSummary() {
+        return this.summary;
+    }
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
+     * includes the <code>DataSource</code> of the place index.
+     * </p>
+     * 
+     * @param summary
+     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
+     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
+     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchPlaceIndexForSuggestionsResult withSummary(SearchPlaceIndexForSuggestionsSummary summary) {
+        setSummary(summary);
+        return this;
+    }
 
     /**
      * <p>
@@ -109,55 +158,6 @@ public class SearchPlaceIndexForSuggestionsResult extends com.amazonaws.AmazonWe
     }
 
     /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
-     * includes the <code>DataSource</code> of the place index.
-     * </p>
-     * 
-     * @param summary
-     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
-     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
-     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index.
-     */
-
-    public void setSummary(SearchPlaceIndexForSuggestionsSummary summary) {
-        this.summary = summary;
-    }
-
-    /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
-     * includes the <code>DataSource</code> of the place index.
-     * </p>
-     * 
-     * @return Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
-     *         <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>,
-     *         and <code>Text</code>. Also includes the <code>DataSource</code> of the place index.
-     */
-
-    public SearchPlaceIndexForSuggestionsSummary getSummary() {
-        return this.summary;
-    }
-
-    /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
-     * includes the <code>DataSource</code> of the place index.
-     * </p>
-     * 
-     * @param summary
-     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
-     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
-     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SearchPlaceIndexForSuggestionsResult withSummary(SearchPlaceIndexForSuggestionsSummary summary) {
-        setSummary(summary);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -169,10 +169,10 @@ public class SearchPlaceIndexForSuggestionsResult extends com.amazonaws.AmazonWe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getResults() != null)
-            sb.append("Results: ").append(getResults()).append(",");
         if (getSummary() != null)
-            sb.append("Summary: ").append(getSummary());
+            sb.append("Summary: ").append(getSummary()).append(",");
+        if (getResults() != null)
+            sb.append("Results: ").append(getResults());
         sb.append("}");
         return sb.toString();
     }
@@ -187,13 +187,13 @@ public class SearchPlaceIndexForSuggestionsResult extends com.amazonaws.AmazonWe
         if (obj instanceof SearchPlaceIndexForSuggestionsResult == false)
             return false;
         SearchPlaceIndexForSuggestionsResult other = (SearchPlaceIndexForSuggestionsResult) obj;
-        if (other.getResults() == null ^ this.getResults() == null)
-            return false;
-        if (other.getResults() != null && other.getResults().equals(this.getResults()) == false)
-            return false;
         if (other.getSummary() == null ^ this.getSummary() == null)
             return false;
         if (other.getSummary() != null && other.getSummary().equals(this.getSummary()) == false)
+            return false;
+        if (other.getResults() == null ^ this.getResults() == null)
+            return false;
+        if (other.getResults() != null && other.getResults().equals(this.getResults()) == false)
             return false;
         return true;
     }
@@ -203,8 +203,8 @@ public class SearchPlaceIndexForSuggestionsResult extends com.amazonaws.AmazonWe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getResults() == null) ? 0 : getResults().hashCode());
         hashCode = prime * hashCode + ((getSummary() == null) ? 0 : getSummary().hashCode());
+        hashCode = prime * hashCode + ((getResults() == null) ? 0 : getResults().hashCode());
         return hashCode;
     }
 

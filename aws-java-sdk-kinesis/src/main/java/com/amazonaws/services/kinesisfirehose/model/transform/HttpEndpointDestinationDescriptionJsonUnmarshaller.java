@@ -85,6 +85,11 @@ public class HttpEndpointDestinationDescriptionJsonUnmarshaller implements Unmar
                     context.nextToken();
                     httpEndpointDestinationDescription.setS3DestinationDescription(S3DestinationDescriptionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SecretsManagerConfiguration", targetDepth)) {
+                    context.nextToken();
+                    httpEndpointDestinationDescription.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

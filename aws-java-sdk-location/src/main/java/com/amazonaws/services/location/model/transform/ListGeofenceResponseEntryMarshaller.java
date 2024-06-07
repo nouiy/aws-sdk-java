@@ -29,18 +29,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListGeofenceResponseEntryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> GEOFENCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceId").build();
-    private static final MarshallingInfo<Map> GEOFENCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceProperties").build();
     private static final MarshallingInfo<StructuredPojo> GEOMETRY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Geometry").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
+    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<Map> GEOFENCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceProperties").build();
 
     private static final ListGeofenceResponseEntryMarshaller instance = new ListGeofenceResponseEntryMarshaller();
 
@@ -58,12 +58,12 @@ public class ListGeofenceResponseEntryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listGeofenceResponseEntry.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(listGeofenceResponseEntry.getGeofenceId(), GEOFENCEID_BINDING);
-            protocolMarshaller.marshall(listGeofenceResponseEntry.getGeofenceProperties(), GEOFENCEPROPERTIES_BINDING);
             protocolMarshaller.marshall(listGeofenceResponseEntry.getGeometry(), GEOMETRY_BINDING);
             protocolMarshaller.marshall(listGeofenceResponseEntry.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(listGeofenceResponseEntry.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(listGeofenceResponseEntry.getUpdateTime(), UPDATETIME_BINDING);
+            protocolMarshaller.marshall(listGeofenceResponseEntry.getGeofenceProperties(), GEOFENCEPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

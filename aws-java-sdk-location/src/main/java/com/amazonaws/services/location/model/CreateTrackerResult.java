@@ -25,12 +25,10 @@ public class CreateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The timestamp for when the tracker resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the tracker resource.
      * </p>
      */
-    private java.util.Date createTime;
+    private String trackerName;
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the tracker resource. Used when you need to specify a resource across all
@@ -47,60 +45,50 @@ public class CreateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
     private String trackerArn;
     /**
      * <p>
+     * The timestamp for when the tracker resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
+
+    /**
+     * <p>
      * The name of the tracker resource.
      * </p>
-     */
-    private String trackerName;
-
-    /**
-     * <p>
-     * The timestamp for when the tracker resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the tracker resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param trackerName
+     *        The name of the tracker resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
     }
 
     /**
      * <p>
-     * The timestamp for when the tracker resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the tracker resource.
      * </p>
      * 
-     * @return The timestamp for when the tracker resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return The name of the tracker resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getTrackerName() {
+        return this.trackerName;
     }
 
     /**
      * <p>
-     * The timestamp for when the tracker resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the tracker resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the tracker resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param trackerName
+     *        The name of the tracker resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateTrackerResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
+    public CreateTrackerResult withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
         return this;
     }
 
@@ -191,41 +179,53 @@ public class CreateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the tracker resource.
+     * The timestamp for when the tracker resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @param trackerName
-     *        The name of the tracker resource.
+     * @param createTime
+     *        The timestamp for when the tracker resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
 
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * <p>
-     * The name of the tracker resource.
+     * The timestamp for when the tracker resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @return The name of the tracker resource.
+     * @return The timestamp for when the tracker resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
 
-    public String getTrackerName() {
-        return this.trackerName;
+    public java.util.Date getCreateTime() {
+        return this.createTime;
     }
 
     /**
      * <p>
-     * The name of the tracker resource.
+     * The timestamp for when the tracker resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @param trackerName
-     *        The name of the tracker resource.
+     * @param createTime
+     *        The timestamp for when the tracker resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateTrackerResult withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
+    public CreateTrackerResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -241,12 +241,12 @@ public class CreateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getTrackerName() != null)
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
         if (getTrackerArn() != null)
             sb.append("TrackerArn: ").append(getTrackerArn()).append(",");
-        if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -261,17 +261,17 @@ public class CreateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
         if (obj instanceof CreateTrackerResult == false)
             return false;
         CreateTrackerResult other = (CreateTrackerResult) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
             return false;
         if (other.getTrackerArn() == null ^ this.getTrackerArn() == null)
             return false;
         if (other.getTrackerArn() != null && other.getTrackerArn().equals(this.getTrackerArn()) == false)
             return false;
-        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
-        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         return true;
     }
@@ -281,9 +281,9 @@ public class CreateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getTrackerArn() == null) ? 0 : getTrackerArn().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getTrackerArn() == null) ? 0 : getTrackerArn().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }
 

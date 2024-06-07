@@ -140,8 +140,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
      * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
      * and <code>ThroughputCapacity</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
-     * FSx for ONTAP user guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1040,8 +1040,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
      * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
      * and <code>ThroughputCapacity</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
-     * FSx for ONTAP user guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1065,8 +1065,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered
      *        by up to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>,
      *        <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in
-     *        the FSx for ONTAP user guide.</p>
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.</p>
      *        <p>
      *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *        </p>
@@ -1094,8 +1094,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
      * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
      * and <code>ThroughputCapacity</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
-     * FSx for ONTAP user guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1119,8 +1119,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         powered by up to 12 HA pairs. The value of this property affects the values of
      *         <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a>
-     *         in the FSx for ONTAP user guide.</p>
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     *         >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.</p>
      *         <p>
      *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *         </p>
@@ -1148,8 +1148,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
      * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
      * and <code>ThroughputCapacity</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
-     * FSx for ONTAP user guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1173,8 +1173,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered
      *        by up to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>,
      *        <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in
-     *        the FSx for ONTAP user guide.</p>
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.</p>
      *        <p>
      *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *        </p>

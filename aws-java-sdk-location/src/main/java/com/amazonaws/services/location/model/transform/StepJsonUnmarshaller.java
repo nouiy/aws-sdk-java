@@ -48,6 +48,18 @@ public class StepJsonUnmarshaller implements Unmarshaller<Step, JsonUnmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("StartPosition", targetDepth)) {
+                    context.nextToken();
+                    step.setStartPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("EndPosition", targetDepth)) {
+                    context.nextToken();
+                    step.setEndPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Distance", targetDepth)) {
                     context.nextToken();
                     step.setDistance(context.getUnmarshaller(Double.class).unmarshall(context));
@@ -56,21 +68,9 @@ public class StepJsonUnmarshaller implements Unmarshaller<Step, JsonUnmarshaller
                     context.nextToken();
                     step.setDurationSeconds(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("EndPosition", targetDepth)) {
-                    context.nextToken();
-                    step.setEndPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("GeometryOffset", targetDepth)) {
                     context.nextToken();
                     step.setGeometryOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("StartPosition", targetDepth)) {
-                    context.nextToken();
-                    step.setStartPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
-
-                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

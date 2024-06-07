@@ -48,10 +48,6 @@ public class CreateKeyResultJsonUnmarshaller implements Unmarshaller<CreateKeyRe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    createKeyResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("Key", targetDepth)) {
                     context.nextToken();
                     createKeyResult.setKey(context.getUnmarshaller(String.class).unmarshall(context));
@@ -63,6 +59,10 @@ public class CreateKeyResultJsonUnmarshaller implements Unmarshaller<CreateKeyRe
                 if (context.testExpression("KeyName", targetDepth)) {
                     context.nextToken();
                     createKeyResult.setKeyName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    createKeyResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

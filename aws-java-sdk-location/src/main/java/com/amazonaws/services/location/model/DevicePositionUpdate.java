@@ -30,16 +30,18 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The accuracy of the device position.
-     * </p>
-     */
-    private PositionalAccuracy accuracy;
-    /**
-     * <p>
      * The device associated to the position update.
      * </p>
      */
     private String deviceId;
+    /**
+     * <p>
+     * The timestamp at which the device's position was determined. Uses <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     */
+    private java.util.Date sampleTime;
     /**
      * <p>
      * The latest device position defined in <a
@@ -50,6 +52,12 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
     private java.util.List<Double> position;
     /**
      * <p>
+     * The accuracy of the device position.
+     * </p>
+     */
+    private PositionalAccuracy accuracy;
+    /**
+     * <p>
      * Associates one of more properties with the position update. A property is a key-value pair stored with the
      * position update and added to any geofence event the update may trigger.
      * </p>
@@ -58,54 +66,6 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.Map<String, String> positionProperties;
-    /**
-     * <p>
-     * The timestamp at which the device's position was determined. Uses <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     */
-    private java.util.Date sampleTime;
-
-    /**
-     * <p>
-     * The accuracy of the device position.
-     * </p>
-     * 
-     * @param accuracy
-     *        The accuracy of the device position.
-     */
-
-    public void setAccuracy(PositionalAccuracy accuracy) {
-        this.accuracy = accuracy;
-    }
-
-    /**
-     * <p>
-     * The accuracy of the device position.
-     * </p>
-     * 
-     * @return The accuracy of the device position.
-     */
-
-    public PositionalAccuracy getAccuracy() {
-        return this.accuracy;
-    }
-
-    /**
-     * <p>
-     * The accuracy of the device position.
-     * </p>
-     * 
-     * @param accuracy
-     *        The accuracy of the device position.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DevicePositionUpdate withAccuracy(PositionalAccuracy accuracy) {
-        setAccuracy(accuracy);
-        return this;
-    }
 
     /**
      * <p>
@@ -144,6 +104,58 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
 
     public DevicePositionUpdate withDeviceId(String deviceId) {
         setDeviceId(deviceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp at which the device's position was determined. Uses <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     * 
+     * @param sampleTime
+     *        The timestamp at which the device's position was determined. Uses <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     */
+
+    public void setSampleTime(java.util.Date sampleTime) {
+        this.sampleTime = sampleTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp at which the device's position was determined. Uses <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     * 
+     * @return The timestamp at which the device's position was determined. Uses <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     */
+
+    public java.util.Date getSampleTime() {
+        return this.sampleTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp at which the device's position was determined. Uses <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * </p>
+     * 
+     * @param sampleTime
+     *        The timestamp at which the device's position was determined. Uses <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePositionUpdate withSampleTime(java.util.Date sampleTime) {
+        setSampleTime(sampleTime);
         return this;
     }
 
@@ -230,6 +242,46 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
 
     public DevicePositionUpdate withPosition(java.util.Collection<Double> position) {
         setPosition(position);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     */
+
+    public void setAccuracy(PositionalAccuracy accuracy) {
+        this.accuracy = accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @return The accuracy of the device position.
+     */
+
+    public PositionalAccuracy getAccuracy() {
+        return this.accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePositionUpdate withAccuracy(PositionalAccuracy accuracy) {
+        setAccuracy(accuracy);
         return this;
     }
 
@@ -323,58 +375,6 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * The timestamp at which the device's position was determined. Uses <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     * 
-     * @param sampleTime
-     *        The timestamp at which the device's position was determined. Uses <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     */
-
-    public void setSampleTime(java.util.Date sampleTime) {
-        this.sampleTime = sampleTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp at which the device's position was determined. Uses <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     * 
-     * @return The timestamp at which the device's position was determined. Uses <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     */
-
-    public java.util.Date getSampleTime() {
-        return this.sampleTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp at which the device's position was determined. Uses <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * </p>
-     * 
-     * @param sampleTime
-     *        The timestamp at which the device's position was determined. Uses <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DevicePositionUpdate withSampleTime(java.util.Date sampleTime) {
-        setSampleTime(sampleTime);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -386,16 +386,16 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAccuracy() != null)
-            sb.append("Accuracy: ").append(getAccuracy()).append(",");
         if (getDeviceId() != null)
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
+        if (getSampleTime() != null)
+            sb.append("SampleTime: ").append(getSampleTime()).append(",");
         if (getPosition() != null)
             sb.append("Position: ").append("***Sensitive Data Redacted***").append(",");
+        if (getAccuracy() != null)
+            sb.append("Accuracy: ").append(getAccuracy()).append(",");
         if (getPositionProperties() != null)
-            sb.append("PositionProperties: ").append("***Sensitive Data Redacted***").append(",");
-        if (getSampleTime() != null)
-            sb.append("SampleTime: ").append(getSampleTime());
+            sb.append("PositionProperties: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -410,25 +410,25 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
         if (obj instanceof DevicePositionUpdate == false)
             return false;
         DevicePositionUpdate other = (DevicePositionUpdate) obj;
-        if (other.getAccuracy() == null ^ this.getAccuracy() == null)
-            return false;
-        if (other.getAccuracy() != null && other.getAccuracy().equals(this.getAccuracy()) == false)
-            return false;
         if (other.getDeviceId() == null ^ this.getDeviceId() == null)
             return false;
         if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
+            return false;
+        if (other.getSampleTime() == null ^ this.getSampleTime() == null)
+            return false;
+        if (other.getSampleTime() != null && other.getSampleTime().equals(this.getSampleTime()) == false)
             return false;
         if (other.getPosition() == null ^ this.getPosition() == null)
             return false;
         if (other.getPosition() != null && other.getPosition().equals(this.getPosition()) == false)
             return false;
+        if (other.getAccuracy() == null ^ this.getAccuracy() == null)
+            return false;
+        if (other.getAccuracy() != null && other.getAccuracy().equals(this.getAccuracy()) == false)
+            return false;
         if (other.getPositionProperties() == null ^ this.getPositionProperties() == null)
             return false;
         if (other.getPositionProperties() != null && other.getPositionProperties().equals(this.getPositionProperties()) == false)
-            return false;
-        if (other.getSampleTime() == null ^ this.getSampleTime() == null)
-            return false;
-        if (other.getSampleTime() != null && other.getSampleTime().equals(this.getSampleTime()) == false)
             return false;
         return true;
     }
@@ -438,11 +438,11 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAccuracy() == null) ? 0 : getAccuracy().hashCode());
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
-        hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
-        hashCode = prime * hashCode + ((getPositionProperties() == null) ? 0 : getPositionProperties().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
+        hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
+        hashCode = prime * hashCode + ((getAccuracy() == null) ? 0 : getAccuracy().hashCode());
+        hashCode = prime * hashCode + ((getPositionProperties() == null) ? 0 : getPositionProperties().hashCode());
         return hashCode;
     }
 

@@ -27,6 +27,12 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * The map resource associated with the glyph ﬁle.
+     * </p>
+     */
+    private String mapName;
+    /**
+     * <p>
      * A comma-separated list of fonts to load glyphs from in order of preference. For example,
      * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
@@ -60,8 +66,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     * <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      * </p>
      * </li>
      * </ul>
@@ -140,12 +145,46 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String key;
+
     /**
      * <p>
      * The map resource associated with the glyph ﬁle.
      * </p>
+     * 
+     * @param mapName
+     *        The map resource associated with the glyph ﬁle.
      */
-    private String mapName;
+
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
+    }
+
+    /**
+     * <p>
+     * The map resource associated with the glyph ﬁle.
+     * </p>
+     * 
+     * @return The map resource associated with the glyph ﬁle.
+     */
+
+    public String getMapName() {
+        return this.mapName;
+    }
+
+    /**
+     * <p>
+     * The map resource associated with the glyph ﬁle.
+     * </p>
+     * 
+     * @param mapName
+     *        The map resource associated with the glyph ﬁle.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMapGlyphsRequest withMapName(String mapName) {
+        setMapName(mapName);
+        return this;
+    }
 
     /**
      * <p>
@@ -182,8 +221,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     * <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      * </p>
      * </li>
      * </ul>
@@ -279,8 +317,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     *        <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     *        VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -382,8 +419,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     * <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      * </p>
      * </li>
      * </ul>
@@ -479,8 +515,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
-     *         VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     *         <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     *         VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -582,8 +617,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     * <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      * </p>
      * </li>
      * </ul>
@@ -679,8 +713,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code> |
-     *        <code>Arial Unicode MS Bold</code> | <code>Arial Unicode MS Regular</code>
+     *        VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -848,46 +881,6 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p>
-     * The map resource associated with the glyph ﬁle.
-     * </p>
-     * 
-     * @param mapName
-     *        The map resource associated with the glyph ﬁle.
-     */
-
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
-    }
-
-    /**
-     * <p>
-     * The map resource associated with the glyph ﬁle.
-     * </p>
-     * 
-     * @return The map resource associated with the glyph ﬁle.
-     */
-
-    public String getMapName() {
-        return this.mapName;
-    }
-
-    /**
-     * <p>
-     * The map resource associated with the glyph ﬁle.
-     * </p>
-     * 
-     * @param mapName
-     *        The map resource associated with the glyph ﬁle.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetMapGlyphsRequest withMapName(String mapName) {
-        setMapName(mapName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -899,14 +892,14 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getMapName() != null)
+            sb.append("MapName: ").append(getMapName()).append(",");
         if (getFontStack() != null)
             sb.append("FontStack: ").append(getFontStack()).append(",");
         if (getFontUnicodeRange() != null)
             sb.append("FontUnicodeRange: ").append(getFontUnicodeRange()).append(",");
         if (getKey() != null)
-            sb.append("Key: ").append("***Sensitive Data Redacted***").append(",");
-        if (getMapName() != null)
-            sb.append("MapName: ").append(getMapName());
+            sb.append("Key: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -921,6 +914,10 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (obj instanceof GetMapGlyphsRequest == false)
             return false;
         GetMapGlyphsRequest other = (GetMapGlyphsRequest) obj;
+        if (other.getMapName() == null ^ this.getMapName() == null)
+            return false;
+        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
+            return false;
         if (other.getFontStack() == null ^ this.getFontStack() == null)
             return false;
         if (other.getFontStack() != null && other.getFontStack().equals(this.getFontStack()) == false)
@@ -933,10 +930,6 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getKey() != null && other.getKey().equals(this.getKey()) == false)
             return false;
-        if (other.getMapName() == null ^ this.getMapName() == null)
-            return false;
-        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
-            return false;
         return true;
     }
 
@@ -945,10 +938,10 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
         hashCode = prime * hashCode + ((getFontStack() == null) ? 0 : getFontStack().hashCode());
         hashCode = prime * hashCode + ((getFontUnicodeRange() == null) ? 0 : getFontUnicodeRange().hashCode());
         hashCode = prime * hashCode + ((getKey() == null) ? 0 : getKey().hashCode());
-        hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
         return hashCode;
     }
 

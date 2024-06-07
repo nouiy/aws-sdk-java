@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListMapsResponseEntryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> MAPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("MapName").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateTime").timestampFormat("iso8601").build();
 
@@ -56,11 +56,11 @@ public class ListMapsResponseEntryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listMapsResponseEntry.getCreateTime(), CREATETIME_BINDING);
-            protocolMarshaller.marshall(listMapsResponseEntry.getDataSource(), DATASOURCE_BINDING);
-            protocolMarshaller.marshall(listMapsResponseEntry.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(listMapsResponseEntry.getMapName(), MAPNAME_BINDING);
+            protocolMarshaller.marshall(listMapsResponseEntry.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(listMapsResponseEntry.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(listMapsResponseEntry.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(listMapsResponseEntry.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(listMapsResponseEntry.getUpdateTime(), UPDATETIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

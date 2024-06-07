@@ -41,15 +41,17 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed. For
+     * more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
      * </p>
      * <p>
      * <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      * <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      * </p>
      * <p>
-     * Any characters not included in this list will be rejected. For more information, see the <a
-     * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     * Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     * Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the queue,
+     * as long as the message body contains at least one valid character.
      * </p>
      * </important>
      */
@@ -247,15 +249,18 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <important>
      *        <p>
-     *        A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     *        A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed.
+     *        For more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
+     *        characters</a>.
      *        </p>
      *        <p>
      *        <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      *        <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      *        </p>
      *        <p>
-     *        Any characters not included in this list will be rejected. For more information, see the <a
-     *        href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     *        Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     *        Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the
+     *        queue, as long as the message body contains at least one valid character.
      *        </p>
      */
     public SendMessageRequest(String queueUrl, String messageBody) {
@@ -324,30 +329,35 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed. For
+     * more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
      * </p>
      * <p>
      * <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      * <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      * </p>
      * <p>
-     * Any characters not included in this list will be rejected. For more information, see the <a
-     * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     * Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     * Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the queue,
+     * as long as the message body contains at least one valid character.
      * </p>
      * </important>
      * 
      * @param messageBody
      *        The message to send. The minimum size is one character. The maximum size is 256 KiB.</p> <important>
      *        <p>
-     *        A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     *        A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed.
+     *        For more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
+     *        characters</a>.
      *        </p>
      *        <p>
      *        <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      *        <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      *        </p>
      *        <p>
-     *        Any characters not included in this list will be rejected. For more information, see the <a
-     *        href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     *        Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     *        Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the
+     *        queue, as long as the message body contains at least one valid character.
      *        </p>
      */
 
@@ -361,29 +371,34 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed. For
+     * more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
      * </p>
      * <p>
      * <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      * <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      * </p>
      * <p>
-     * Any characters not included in this list will be rejected. For more information, see the <a
-     * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     * Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     * Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the queue,
+     * as long as the message body contains at least one valid character.
      * </p>
      * </important>
      * 
      * @return The message to send. The minimum size is one character. The maximum size is 256 KiB.</p> <important>
      *         <p>
-     *         A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     *         A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed.
+     *         For more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
+     *         characters</a>.
      *         </p>
      *         <p>
      *         <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      *         <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      *         </p>
      *         <p>
-     *         Any characters not included in this list will be rejected. For more information, see the <a
-     *         href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     *         Amazon SQS does not throw an exception or completely reject the message if it contains invalid
+     *         characters. Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the
+     *         message in the queue, as long as the message body contains at least one valid character.
      *         </p>
      */
 
@@ -397,30 +412,35 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     * A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed. For
+     * more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
      * </p>
      * <p>
      * <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      * <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      * </p>
      * <p>
-     * Any characters not included in this list will be rejected. For more information, see the <a
-     * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     * Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     * Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the queue,
+     * as long as the message body contains at least one valid character.
      * </p>
      * </important>
      * 
      * @param messageBody
      *        The message to send. The minimum size is one character. The maximum size is 256 KiB.</p> <important>
      *        <p>
-     *        A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:
+     *        A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed.
+     *        For more information, see the <a href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
+     *        characters</a>.
      *        </p>
      *        <p>
      *        <code>#x9</code> | <code>#xA</code> | <code>#xD</code> | <code>#x20</code> to <code>#xD7FF</code> |
      *        <code>#xE000</code> to <code>#xFFFD</code> | <code>#x10000</code> to <code>#x10FFFF</code>
      *        </p>
      *        <p>
-     *        Any characters not included in this list will be rejected. For more information, see the <a
-     *        href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for characters</a>.
+     *        Amazon SQS does not throw an exception or completely reject the message if it contains invalid characters.
+     *        Instead, it replaces those invalid characters with <code>U+FFFD</code> before storing the message in the
+     *        queue, as long as the message body contains at least one valid character.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

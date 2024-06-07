@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class BatchGetDevicePositionRequestMarshaller {
 
-    private static final MarshallingInfo<List> DEVICEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("DeviceIds").build();
     private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("TrackerName").build();
+    private static final MarshallingInfo<List> DEVICEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("DeviceIds").build();
 
     private static final BatchGetDevicePositionRequestMarshaller instance = new BatchGetDevicePositionRequestMarshaller();
 
@@ -49,8 +49,8 @@ public class BatchGetDevicePositionRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(batchGetDevicePositionRequest.getDeviceIds(), DEVICEIDS_BINDING);
             protocolMarshaller.marshall(batchGetDevicePositionRequest.getTrackerName(), TRACKERNAME_BINDING);
+            protocolMarshaller.marshall(batchGetDevicePositionRequest.getDeviceIds(), DEVICEIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

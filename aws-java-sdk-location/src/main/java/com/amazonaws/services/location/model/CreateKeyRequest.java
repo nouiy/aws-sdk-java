@@ -27,20 +27,6 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An optional description for the API key resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * The optional timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
-     * </p>
-     */
-    private java.util.Date expireTime;
-    /**
-     * <p>
      * A custom name for the API key resource.
      * </p>
      * <p>
@@ -67,17 +53,31 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String keyName;
     /**
      * <p>
+     * The API key restrictions for the API key resource.
+     * </p>
+     */
+    private ApiKeyRestrictions restrictions;
+    /**
+     * <p>
+     * An optional description for the API key resource.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The optional timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
+     * </p>
+     */
+    private java.util.Date expireTime;
+    /**
+     * <p>
      * Optionally set to <code>true</code> to set no expiration time for the API key. One of <code>NoExpiry</code> or
      * <code>ExpireTime</code> must be set.
      * </p>
      */
     private Boolean noExpiry;
-    /**
-     * <p>
-     * The API key restrictions for the API key resource.
-     * </p>
-     */
-    private ApiKeyRestrictions restrictions;
     /**
      * <p>
      * Applies one or more tags to the map resource. A tag is a key-value pair that helps manage, identify, search, and
@@ -123,101 +123,6 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </ul>
      */
     private java.util.Map<String, String> tags;
-
-    /**
-     * <p>
-     * An optional description for the API key resource.
-     * </p>
-     * 
-     * @param description
-     *        An optional description for the API key resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * An optional description for the API key resource.
-     * </p>
-     * 
-     * @return An optional description for the API key resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * An optional description for the API key resource.
-     * </p>
-     * 
-     * @param description
-     *        An optional description for the API key resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKeyRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The optional timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
-     * </p>
-     * 
-     * @param expireTime
-     *        The optional timestamp for when the API key resource will expire in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be
-     *        set.
-     */
-
-    public void setExpireTime(java.util.Date expireTime) {
-        this.expireTime = expireTime;
-    }
-
-    /**
-     * <p>
-     * The optional timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
-     * </p>
-     * 
-     * @return The optional timestamp for when the API key resource will expire in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be
-     *         set.
-     */
-
-    public java.util.Date getExpireTime() {
-        return this.expireTime;
-    }
-
-    /**
-     * <p>
-     * The optional timestamp for when the API key resource will expire in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
-     * </p>
-     * 
-     * @param expireTime
-     *        The optional timestamp for when the API key resource will expire in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be
-     *        set.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKeyRequest withExpireTime(java.util.Date expireTime) {
-        setExpireTime(expireTime);
-        return this;
-    }
 
     /**
      * <p>
@@ -378,6 +283,141 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * The API key restrictions for the API key resource.
+     * </p>
+     * 
+     * @param restrictions
+     *        The API key restrictions for the API key resource.
+     */
+
+    public void setRestrictions(ApiKeyRestrictions restrictions) {
+        this.restrictions = restrictions;
+    }
+
+    /**
+     * <p>
+     * The API key restrictions for the API key resource.
+     * </p>
+     * 
+     * @return The API key restrictions for the API key resource.
+     */
+
+    public ApiKeyRestrictions getRestrictions() {
+        return this.restrictions;
+    }
+
+    /**
+     * <p>
+     * The API key restrictions for the API key resource.
+     * </p>
+     * 
+     * @param restrictions
+     *        The API key restrictions for the API key resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKeyRequest withRestrictions(ApiKeyRestrictions restrictions) {
+        setRestrictions(restrictions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional description for the API key resource.
+     * </p>
+     * 
+     * @param description
+     *        An optional description for the API key resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * An optional description for the API key resource.
+     * </p>
+     * 
+     * @return An optional description for the API key resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * An optional description for the API key resource.
+     * </p>
+     * 
+     * @param description
+     *        An optional description for the API key resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKeyRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
+     * </p>
+     * 
+     * @param expireTime
+     *        The optional timestamp for when the API key resource will expire in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be
+     *        set.
+     */
+
+    public void setExpireTime(java.util.Date expireTime) {
+        this.expireTime = expireTime;
+    }
+
+    /**
+     * <p>
+     * The optional timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
+     * </p>
+     * 
+     * @return The optional timestamp for when the API key resource will expire in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be
+     *         set.
+     */
+
+    public java.util.Date getExpireTime() {
+        return this.expireTime;
+    }
+
+    /**
+     * <p>
+     * The optional timestamp for when the API key resource will expire in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be set.
+     * </p>
+     * 
+     * @param expireTime
+     *        The optional timestamp for when the API key resource will expire in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. One of <code>NoExpiry</code> or <code>ExpireTime</code> must be
+     *        set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKeyRequest withExpireTime(java.util.Date expireTime) {
+        setExpireTime(expireTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * Optionally set to <code>true</code> to set no expiration time for the API key. One of <code>NoExpiry</code> or
      * <code>ExpireTime</code> must be set.
      * </p>
@@ -434,46 +474,6 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     public Boolean isNoExpiry() {
         return this.noExpiry;
-    }
-
-    /**
-     * <p>
-     * The API key restrictions for the API key resource.
-     * </p>
-     * 
-     * @param restrictions
-     *        The API key restrictions for the API key resource.
-     */
-
-    public void setRestrictions(ApiKeyRestrictions restrictions) {
-        this.restrictions = restrictions;
-    }
-
-    /**
-     * <p>
-     * The API key restrictions for the API key resource.
-     * </p>
-     * 
-     * @return The API key restrictions for the API key resource.
-     */
-
-    public ApiKeyRestrictions getRestrictions() {
-        return this.restrictions;
-    }
-
-    /**
-     * <p>
-     * The API key restrictions for the API key resource.
-     * </p>
-     * 
-     * @param restrictions
-     *        The API key restrictions for the API key resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKeyRequest withRestrictions(ApiKeyRestrictions restrictions) {
-        setRestrictions(restrictions);
-        return this;
     }
 
     /**
@@ -787,16 +787,16 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeyName() != null)
+            sb.append("KeyName: ").append(getKeyName()).append(",");
+        if (getRestrictions() != null)
+            sb.append("Restrictions: ").append(getRestrictions()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getExpireTime() != null)
             sb.append("ExpireTime: ").append(getExpireTime()).append(",");
-        if (getKeyName() != null)
-            sb.append("KeyName: ").append(getKeyName()).append(",");
         if (getNoExpiry() != null)
             sb.append("NoExpiry: ").append(getNoExpiry()).append(",");
-        if (getRestrictions() != null)
-            sb.append("Restrictions: ").append(getRestrictions()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -813,6 +813,14 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof CreateKeyRequest == false)
             return false;
         CreateKeyRequest other = (CreateKeyRequest) obj;
+        if (other.getKeyName() == null ^ this.getKeyName() == null)
+            return false;
+        if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
+            return false;
+        if (other.getRestrictions() == null ^ this.getRestrictions() == null)
+            return false;
+        if (other.getRestrictions() != null && other.getRestrictions().equals(this.getRestrictions()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -821,17 +829,9 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getExpireTime() != null && other.getExpireTime().equals(this.getExpireTime()) == false)
             return false;
-        if (other.getKeyName() == null ^ this.getKeyName() == null)
-            return false;
-        if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
-            return false;
         if (other.getNoExpiry() == null ^ this.getNoExpiry() == null)
             return false;
         if (other.getNoExpiry() != null && other.getNoExpiry().equals(this.getNoExpiry()) == false)
-            return false;
-        if (other.getRestrictions() == null ^ this.getRestrictions() == null)
-            return false;
-        if (other.getRestrictions() != null && other.getRestrictions().equals(this.getRestrictions()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -845,11 +845,11 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
+        hashCode = prime * hashCode + ((getRestrictions() == null) ? 0 : getRestrictions().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getExpireTime() == null) ? 0 : getExpireTime().hashCode());
-        hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
         hashCode = prime * hashCode + ((getNoExpiry() == null) ? 0 : getNoExpiry().hashCode());
-        hashCode = prime * hashCode + ((getRestrictions() == null) ? 0 : getRestrictions().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

@@ -66,6 +66,12 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
     private String viewExpandedText;
     /**
      * <p>
+     * The name of the connection to be used to validate the specific representation of the view.
+     * </p>
+     */
+    private String validationConnection;
+    /**
+     * <p>
      * Dialects marked as stale are no longer valid and must be updated before they can be queried in their respective
      * query engines.
      * </p>
@@ -322,6 +328,46 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * The name of the connection to be used to validate the specific representation of the view.
+     * </p>
+     * 
+     * @param validationConnection
+     *        The name of the connection to be used to validate the specific representation of the view.
+     */
+
+    public void setValidationConnection(String validationConnection) {
+        this.validationConnection = validationConnection;
+    }
+
+    /**
+     * <p>
+     * The name of the connection to be used to validate the specific representation of the view.
+     * </p>
+     * 
+     * @return The name of the connection to be used to validate the specific representation of the view.
+     */
+
+    public String getValidationConnection() {
+        return this.validationConnection;
+    }
+
+    /**
+     * <p>
+     * The name of the connection to be used to validate the specific representation of the view.
+     * </p>
+     * 
+     * @param validationConnection
+     *        The name of the connection to be used to validate the specific representation of the view.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ViewRepresentation withValidationConnection(String validationConnection) {
+        setValidationConnection(validationConnection);
+        return this;
+    }
+
+    /**
+     * <p>
      * Dialects marked as stale are no longer valid and must be updated before they can be queried in their respective
      * query engines.
      * </p>
@@ -400,6 +446,8 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
             sb.append("ViewOriginalText: ").append(getViewOriginalText()).append(",");
         if (getViewExpandedText() != null)
             sb.append("ViewExpandedText: ").append(getViewExpandedText()).append(",");
+        if (getValidationConnection() != null)
+            sb.append("ValidationConnection: ").append(getValidationConnection()).append(",");
         if (getIsStale() != null)
             sb.append("IsStale: ").append(getIsStale());
         sb.append("}");
@@ -432,6 +480,10 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getViewExpandedText() != null && other.getViewExpandedText().equals(this.getViewExpandedText()) == false)
             return false;
+        if (other.getValidationConnection() == null ^ this.getValidationConnection() == null)
+            return false;
+        if (other.getValidationConnection() != null && other.getValidationConnection().equals(this.getValidationConnection()) == false)
+            return false;
         if (other.getIsStale() == null ^ this.getIsStale() == null)
             return false;
         if (other.getIsStale() != null && other.getIsStale().equals(this.getIsStale()) == false)
@@ -448,6 +500,7 @@ public class ViewRepresentation implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getDialectVersion() == null) ? 0 : getDialectVersion().hashCode());
         hashCode = prime * hashCode + ((getViewOriginalText() == null) ? 0 : getViewOriginalText().hashCode());
         hashCode = prime * hashCode + ((getViewExpandedText() == null) ? 0 : getViewExpandedText().hashCode());
+        hashCode = prime * hashCode + ((getValidationConnection() == null) ? 0 : getValidationConnection().hashCode());
         hashCode = prime * hashCode + ((getIsStale() == null) ? 0 : getIsStale().hashCode());
         return hashCode;
     }

@@ -48,29 +48,17 @@ public class DescribeGeofenceCollectionResultJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CollectionArn", targetDepth)) {
-                    context.nextToken();
-                    describeGeofenceCollectionResult.setCollectionArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("CollectionName", targetDepth)) {
                     context.nextToken();
                     describeGeofenceCollectionResult.setCollectionName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("CollectionArn", targetDepth)) {
                     context.nextToken();
-                    describeGeofenceCollectionResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    describeGeofenceCollectionResult.setCollectionArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     describeGeofenceCollectionResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("GeofenceCount", targetDepth)) {
-                    context.nextToken();
-                    describeGeofenceCollectionResult.setGeofenceCount(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("KmsKeyId", targetDepth)) {
-                    context.nextToken();
-                    describeGeofenceCollectionResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PricingPlan", targetDepth)) {
                     context.nextToken();
@@ -80,14 +68,26 @@ public class DescribeGeofenceCollectionResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     describeGeofenceCollectionResult.setPricingPlanDataSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("KmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    describeGeofenceCollectionResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     describeGeofenceCollectionResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    describeGeofenceCollectionResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();
                     describeGeofenceCollectionResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("GeofenceCount", targetDepth)) {
+                    context.nextToken();
+                    describeGeofenceCollectionResult.setGeofenceCount(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

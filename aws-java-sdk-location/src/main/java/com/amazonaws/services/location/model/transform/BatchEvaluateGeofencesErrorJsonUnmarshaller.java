@@ -52,13 +52,13 @@ public class BatchEvaluateGeofencesErrorJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     batchEvaluateGeofencesError.setDeviceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Error", targetDepth)) {
-                    context.nextToken();
-                    batchEvaluateGeofencesError.setError(BatchItemErrorJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("SampleTime", targetDepth)) {
                     context.nextToken();
                     batchEvaluateGeofencesError.setSampleTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("Error", targetDepth)) {
+                    context.nextToken();
+                    batchEvaluateGeofencesError.setError(BatchItemErrorJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

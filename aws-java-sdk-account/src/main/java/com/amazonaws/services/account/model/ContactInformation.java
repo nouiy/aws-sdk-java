@@ -91,7 +91,10 @@ public class ContactInformation implements Serializable, Cloneable, StructuredPo
     private String postalCode;
     /**
      * <p>
-     * The state or region of the primary contact address. This field is required in selected countries.
+     * The state or region of the primary contact address. If the mailing address is within the United States (US), the
+     * value in this field can be either a two character state code (for example, <code>NJ</code>) or the full state
+     * name (for example, <code>New Jersey</code>). This field is required in the following countries: <code>US</code>,
+     * <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>, <code>IN</code>, and <code>BR</code>.
      * </p>
      */
     private String stateOrRegion;
@@ -510,11 +513,18 @@ public class ContactInformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The state or region of the primary contact address. This field is required in selected countries.
+     * The state or region of the primary contact address. If the mailing address is within the United States (US), the
+     * value in this field can be either a two character state code (for example, <code>NJ</code>) or the full state
+     * name (for example, <code>New Jersey</code>). This field is required in the following countries: <code>US</code>,
+     * <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>, <code>IN</code>, and <code>BR</code>.
      * </p>
      * 
      * @param stateOrRegion
-     *        The state or region of the primary contact address. This field is required in selected countries.
+     *        The state or region of the primary contact address. If the mailing address is within the United States
+     *        (US), the value in this field can be either a two character state code (for example, <code>NJ</code>) or
+     *        the full state name (for example, <code>New Jersey</code>). This field is required in the following
+     *        countries: <code>US</code>, <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>,
+     *        <code>IN</code>, and <code>BR</code>.
      */
 
     public void setStateOrRegion(String stateOrRegion) {
@@ -523,10 +533,17 @@ public class ContactInformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The state or region of the primary contact address. This field is required in selected countries.
+     * The state or region of the primary contact address. If the mailing address is within the United States (US), the
+     * value in this field can be either a two character state code (for example, <code>NJ</code>) or the full state
+     * name (for example, <code>New Jersey</code>). This field is required in the following countries: <code>US</code>,
+     * <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>, <code>IN</code>, and <code>BR</code>.
      * </p>
      * 
-     * @return The state or region of the primary contact address. This field is required in selected countries.
+     * @return The state or region of the primary contact address. If the mailing address is within the United States
+     *         (US), the value in this field can be either a two character state code (for example, <code>NJ</code>) or
+     *         the full state name (for example, <code>New Jersey</code>). This field is required in the following
+     *         countries: <code>US</code>, <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>,
+     *         <code>IN</code>, and <code>BR</code>.
      */
 
     public String getStateOrRegion() {
@@ -535,11 +552,18 @@ public class ContactInformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The state or region of the primary contact address. This field is required in selected countries.
+     * The state or region of the primary contact address. If the mailing address is within the United States (US), the
+     * value in this field can be either a two character state code (for example, <code>NJ</code>) or the full state
+     * name (for example, <code>New Jersey</code>). This field is required in the following countries: <code>US</code>,
+     * <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>, <code>IN</code>, and <code>BR</code>.
      * </p>
      * 
      * @param stateOrRegion
-     *        The state or region of the primary contact address. This field is required in selected countries.
+     *        The state or region of the primary contact address. If the mailing address is within the United States
+     *        (US), the value in this field can be either a two character state code (for example, <code>NJ</code>) or
+     *        the full state name (for example, <code>New Jersey</code>). This field is required in the following
+     *        countries: <code>US</code>, <code>CA</code>, <code>GB</code>, <code>DE</code>, <code>JP</code>,
+     *        <code>IN</code>, and <code>BR</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

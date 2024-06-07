@@ -29,10 +29,10 @@ public class BatchUpdateDevicePositionErrorMarshaller {
 
     private static final MarshallingInfo<String> DEVICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DeviceId").build();
-    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
     private static final MarshallingInfo<java.util.Date> SAMPLETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SampleTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
 
     private static final BatchUpdateDevicePositionErrorMarshaller instance = new BatchUpdateDevicePositionErrorMarshaller();
 
@@ -51,8 +51,8 @@ public class BatchUpdateDevicePositionErrorMarshaller {
 
         try {
             protocolMarshaller.marshall(batchUpdateDevicePositionError.getDeviceId(), DEVICEID_BINDING);
-            protocolMarshaller.marshall(batchUpdateDevicePositionError.getError(), ERROR_BINDING);
             protocolMarshaller.marshall(batchUpdateDevicePositionError.getSampleTime(), SAMPLETIME_BINDING);
+            protocolMarshaller.marshall(batchUpdateDevicePositionError.getError(), ERROR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

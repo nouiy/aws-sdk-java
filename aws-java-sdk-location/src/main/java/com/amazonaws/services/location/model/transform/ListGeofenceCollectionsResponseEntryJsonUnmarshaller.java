@@ -52,10 +52,6 @@ public class ListGeofenceCollectionsResponseEntryJsonUnmarshaller implements Unm
                     context.nextToken();
                     listGeofenceCollectionsResponseEntry.setCollectionName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    listGeofenceCollectionsResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     listGeofenceCollectionsResponseEntry.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
@@ -67,6 +63,10 @@ public class ListGeofenceCollectionsResponseEntryJsonUnmarshaller implements Unm
                 if (context.testExpression("PricingPlanDataSource", targetDepth)) {
                     context.nextToken();
                     listGeofenceCollectionsResponseEntry.setPricingPlanDataSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    listGeofenceCollectionsResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

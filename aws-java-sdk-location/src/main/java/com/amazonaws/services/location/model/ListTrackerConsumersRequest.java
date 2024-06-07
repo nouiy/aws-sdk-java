@@ -27,6 +27,12 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The tracker resource whose associated geofence collections you want to list.
+     * </p>
+     */
+    private String trackerName;
+    /**
+     * <p>
      * An optional limit for the number of resources returned in a single call.
      * </p>
      * <p>
@@ -44,12 +50,46 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private String nextToken;
+
     /**
      * <p>
      * The tracker resource whose associated geofence collections you want to list.
      * </p>
+     * 
+     * @param trackerName
+     *        The tracker resource whose associated geofence collections you want to list.
      */
-    private String trackerName;
+
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+    }
+
+    /**
+     * <p>
+     * The tracker resource whose associated geofence collections you want to list.
+     * </p>
+     * 
+     * @return The tracker resource whose associated geofence collections you want to list.
+     */
+
+    public String getTrackerName() {
+        return this.trackerName;
+    }
+
+    /**
+     * <p>
+     * The tracker resource whose associated geofence collections you want to list.
+     * </p>
+     * 
+     * @param trackerName
+     *        The tracker resource whose associated geofence collections you want to list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListTrackerConsumersRequest withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
+        return this;
+    }
 
     /**
      * <p>
@@ -168,46 +208,6 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * <p>
-     * The tracker resource whose associated geofence collections you want to list.
-     * </p>
-     * 
-     * @param trackerName
-     *        The tracker resource whose associated geofence collections you want to list.
-     */
-
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
-    }
-
-    /**
-     * <p>
-     * The tracker resource whose associated geofence collections you want to list.
-     * </p>
-     * 
-     * @return The tracker resource whose associated geofence collections you want to list.
-     */
-
-    public String getTrackerName() {
-        return this.trackerName;
-    }
-
-    /**
-     * <p>
-     * The tracker resource whose associated geofence collections you want to list.
-     * </p>
-     * 
-     * @param trackerName
-     *        The tracker resource whose associated geofence collections you want to list.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTrackerConsumersRequest withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -219,12 +219,12 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getTrackerName() != null)
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -239,6 +239,10 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof ListTrackerConsumersRequest == false)
             return false;
         ListTrackerConsumersRequest other = (ListTrackerConsumersRequest) obj;
+        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
+            return false;
+        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -246,10 +250,6 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
-        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
-            return false;
-        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
             return false;
         return true;
     }
@@ -259,9 +259,9 @@ public class ListTrackerConsumersRequest extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
         return hashCode;
     }
 

@@ -52,13 +52,13 @@ public class BatchUpdateDevicePositionErrorJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     batchUpdateDevicePositionError.setDeviceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Error", targetDepth)) {
-                    context.nextToken();
-                    batchUpdateDevicePositionError.setError(BatchItemErrorJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("SampleTime", targetDepth)) {
                     context.nextToken();
                     batchUpdateDevicePositionError.setSampleTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("Error", targetDepth)) {
+                    context.nextToken();
+                    batchUpdateDevicePositionError.setError(BatchItemErrorJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

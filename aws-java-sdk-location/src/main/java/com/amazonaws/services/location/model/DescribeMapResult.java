@@ -25,30 +25,10 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies the map tile style selected from a partner data provider.
+     * The map style selected from an available provider.
      * </p>
      */
-    private MapConfiguration configuration;
-    /**
-     * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     */
-    private java.util.Date createTime;
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     */
-    private String dataSource;
-    /**
-     * <p>
-     * The optional description for the map resource.
-     * </p>
-     */
-    private String description;
+    private String mapName;
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the map resource. Used to specify a resource across all Amazon Web Services.
@@ -64,12 +44,6 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String mapArn;
     /**
      * <p>
-     * The map style selected from an available provider.
-     * </p>
-     */
-    private String mapName;
-    /**
-     * <p>
      * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
@@ -77,10 +51,36 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String pricingPlan;
     /**
      * <p>
+     * Specifies the data provider for the associated map tiles.
+     * </p>
+     */
+    private String dataSource;
+    /**
+     * <p>
+     * Specifies the map tile style selected from a partner data provider.
+     * </p>
+     */
+    private MapConfiguration configuration;
+    /**
+     * <p>
+     * The optional description for the map resource.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
      * Tags associated with the map resource.
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
     /**
      * <p>
      * The timestamp for when the map resource was last update in <a
@@ -92,173 +92,41 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies the map tile style selected from a partner data provider.
+     * The map style selected from an available provider.
      * </p>
      * 
-     * @param configuration
-     *        Specifies the map tile style selected from a partner data provider.
+     * @param mapName
+     *        The map style selected from an available provider.
      */
 
-    public void setConfiguration(MapConfiguration configuration) {
-        this.configuration = configuration;
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
     }
 
     /**
      * <p>
-     * Specifies the map tile style selected from a partner data provider.
+     * The map style selected from an available provider.
      * </p>
      * 
-     * @return Specifies the map tile style selected from a partner data provider.
+     * @return The map style selected from an available provider.
      */
 
-    public MapConfiguration getConfiguration() {
-        return this.configuration;
+    public String getMapName() {
+        return this.mapName;
     }
 
     /**
      * <p>
-     * Specifies the map tile style selected from a partner data provider.
+     * The map style selected from an available provider.
      * </p>
      * 
-     * @param configuration
-     *        Specifies the map tile style selected from a partner data provider.
+     * @param mapName
+     *        The map style selected from an available provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public DescribeMapResult withConfiguration(MapConfiguration configuration) {
-        setConfiguration(configuration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the map resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @return The timestamp for when the map resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     */
-
-    public java.util.Date getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * 
-     * @param createTime
-     *        The timestamp for when the map resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeMapResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     * 
-     * @param dataSource
-     *        Specifies the data provider for the associated map tiles.
-     */
-
-    public void setDataSource(String dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     * 
-     * @return Specifies the data provider for the associated map tiles.
-     */
-
-    public String getDataSource() {
-        return this.dataSource;
-    }
-
-    /**
-     * <p>
-     * Specifies the data provider for the associated map tiles.
-     * </p>
-     * 
-     * @param dataSource
-     *        Specifies the data provider for the associated map tiles.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeMapResult withDataSource(String dataSource) {
-        setDataSource(dataSource);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The optional description for the map resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the map resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the map resource.
-     * </p>
-     * 
-     * @return The optional description for the map resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the map resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the map resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeMapResult withDescription(String description) {
-        setDescription(description);
+    public DescribeMapResult withMapName(String mapName) {
+        setMapName(mapName);
         return this;
     }
 
@@ -346,46 +214,6 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The map style selected from an available provider.
-     * </p>
-     * 
-     * @param mapName
-     *        The map style selected from an available provider.
-     */
-
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
-    }
-
-    /**
-     * <p>
-     * The map style selected from an available provider.
-     * </p>
-     * 
-     * @return The map style selected from an available provider.
-     */
-
-    public String getMapName() {
-        return this.mapName;
-    }
-
-    /**
-     * <p>
-     * The map style selected from an available provider.
-     * </p>
-     * 
-     * @param mapName
-     *        The map style selected from an available provider.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeMapResult withMapName(String mapName) {
-        setMapName(mapName);
-        return this;
-    }
-
-    /**
-     * <p>
      * No longer used. Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -440,6 +268,126 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
     @Deprecated
     public DescribeMapResult withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the data provider for the associated map tiles.
+     * </p>
+     * 
+     * @param dataSource
+     *        Specifies the data provider for the associated map tiles.
+     */
+
+    public void setDataSource(String dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies the data provider for the associated map tiles.
+     * </p>
+     * 
+     * @return Specifies the data provider for the associated map tiles.
+     */
+
+    public String getDataSource() {
+        return this.dataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies the data provider for the associated map tiles.
+     * </p>
+     * 
+     * @param dataSource
+     *        Specifies the data provider for the associated map tiles.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMapResult withDataSource(String dataSource) {
+        setDataSource(dataSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the map tile style selected from a partner data provider.
+     * </p>
+     * 
+     * @param configuration
+     *        Specifies the map tile style selected from a partner data provider.
+     */
+
+    public void setConfiguration(MapConfiguration configuration) {
+        this.configuration = configuration;
+    }
+
+    /**
+     * <p>
+     * Specifies the map tile style selected from a partner data provider.
+     * </p>
+     * 
+     * @return Specifies the map tile style selected from a partner data provider.
+     */
+
+    public MapConfiguration getConfiguration() {
+        return this.configuration;
+    }
+
+    /**
+     * <p>
+     * Specifies the map tile style selected from a partner data provider.
+     * </p>
+     * 
+     * @param configuration
+     *        Specifies the map tile style selected from a partner data provider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMapResult withConfiguration(MapConfiguration configuration) {
+        setConfiguration(configuration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional description for the map resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the map resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the map resource.
+     * </p>
+     * 
+     * @return The optional description for the map resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The optional description for the map resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description for the map resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMapResult withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -513,6 +461,58 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the map resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp for when the map resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp for when the map resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMapResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp for when the map resource was last update in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
@@ -575,22 +575,22 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getConfiguration() != null)
-            sb.append("Configuration: ").append(getConfiguration()).append(",");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getMapArn() != null)
-            sb.append("MapArn: ").append(getMapArn()).append(",");
         if (getMapName() != null)
             sb.append("MapName: ").append(getMapName()).append(",");
+        if (getMapArn() != null)
+            sb.append("MapArn: ").append(getMapArn()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource()).append(",");
+        if (getConfiguration() != null)
+            sb.append("Configuration: ").append(getConfiguration()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -607,37 +607,37 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (obj instanceof DescribeMapResult == false)
             return false;
         DescribeMapResult other = (DescribeMapResult) obj;
-        if (other.getConfiguration() == null ^ this.getConfiguration() == null)
+        if (other.getMapName() == null ^ this.getMapName() == null)
             return false;
-        if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
-            return false;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
-            return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
-        if (other.getDataSource() == null ^ this.getDataSource() == null)
-            return false;
-        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
             return false;
         if (other.getMapArn() == null ^ this.getMapArn() == null)
             return false;
         if (other.getMapArn() != null && other.getMapArn().equals(this.getMapArn()) == false)
             return false;
-        if (other.getMapName() == null ^ this.getMapName() == null)
-            return false;
-        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
-            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
             return false;
+        if (other.getDataSource() == null ^ this.getDataSource() == null)
+            return false;
+        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
+            return false;
+        if (other.getConfiguration() == null ^ this.getConfiguration() == null)
+            return false;
+        if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -651,14 +651,14 @@ public class DescribeMapResult extends com.amazonaws.AmazonWebServiceResult<com.
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getMapArn() == null) ? 0 : getMapArn().hashCode());
         hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
+        hashCode = prime * hashCode + ((getMapArn() == null) ? 0 : getMapArn().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
+        hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

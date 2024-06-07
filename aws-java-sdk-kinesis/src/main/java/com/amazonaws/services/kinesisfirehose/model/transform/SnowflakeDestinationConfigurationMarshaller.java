@@ -63,6 +63,8 @@ public class SnowflakeDestinationConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3BackupMode").build();
     private static final MarshallingInfo<StructuredPojo> S3CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3Configuration").build();
+    private static final MarshallingInfo<StructuredPojo> SECRETSMANAGERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerConfiguration").build();
 
     private static final SnowflakeDestinationConfigurationMarshaller instance = new SnowflakeDestinationConfigurationMarshaller();
 
@@ -98,6 +100,7 @@ public class SnowflakeDestinationConfigurationMarshaller {
             protocolMarshaller.marshall(snowflakeDestinationConfiguration.getRetryOptions(), RETRYOPTIONS_BINDING);
             protocolMarshaller.marshall(snowflakeDestinationConfiguration.getS3BackupMode(), S3BACKUPMODE_BINDING);
             protocolMarshaller.marshall(snowflakeDestinationConfiguration.getS3Configuration(), S3CONFIGURATION_BINDING);
+            protocolMarshaller.marshall(snowflakeDestinationConfiguration.getSecretsManagerConfiguration(), SECRETSMANAGERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

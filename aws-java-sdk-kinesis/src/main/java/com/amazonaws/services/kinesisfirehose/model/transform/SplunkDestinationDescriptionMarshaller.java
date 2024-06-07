@@ -47,6 +47,8 @@ public class SplunkDestinationDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLoggingOptions").build();
     private static final MarshallingInfo<StructuredPojo> BUFFERINGHINTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BufferingHints").build();
+    private static final MarshallingInfo<StructuredPojo> SECRETSMANAGERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerConfiguration").build();
 
     private static final SplunkDestinationDescriptionMarshaller instance = new SplunkDestinationDescriptionMarshaller();
 
@@ -74,6 +76,7 @@ public class SplunkDestinationDescriptionMarshaller {
             protocolMarshaller.marshall(splunkDestinationDescription.getProcessingConfiguration(), PROCESSINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(splunkDestinationDescription.getCloudWatchLoggingOptions(), CLOUDWATCHLOGGINGOPTIONS_BINDING);
             protocolMarshaller.marshall(splunkDestinationDescription.getBufferingHints(), BUFFERINGHINTS_BINDING);
+            protocolMarshaller.marshall(splunkDestinationDescription.getSecretsManagerConfiguration(), SECRETSMANAGERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

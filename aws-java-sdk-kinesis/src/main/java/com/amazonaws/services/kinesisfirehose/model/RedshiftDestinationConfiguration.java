@@ -104,6 +104,12 @@ public class RedshiftDestinationConfiguration implements Serializable, Cloneable
      * </p>
      */
     private CloudWatchLoggingOptions cloudWatchLoggingOptions;
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Amazon Redshift.
+     * </p>
+     */
+    private SecretsManagerConfiguration secretsManagerConfiguration;
 
     /**
      * <p>
@@ -640,6 +646,46 @@ public class RedshiftDestinationConfiguration implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The configuration that defines how you access secrets for Amazon Redshift.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        The configuration that defines how you access secrets for Amazon Redshift.
+     */
+
+    public void setSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        this.secretsManagerConfiguration = secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Amazon Redshift.
+     * </p>
+     * 
+     * @return The configuration that defines how you access secrets for Amazon Redshift.
+     */
+
+    public SecretsManagerConfiguration getSecretsManagerConfiguration() {
+        return this.secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Amazon Redshift.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        The configuration that defines how you access secrets for Amazon Redshift.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftDestinationConfiguration withSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        setSecretsManagerConfiguration(secretsManagerConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -672,7 +718,9 @@ public class RedshiftDestinationConfiguration implements Serializable, Cloneable
         if (getS3BackupConfiguration() != null)
             sb.append("S3BackupConfiguration: ").append(getS3BackupConfiguration()).append(",");
         if (getCloudWatchLoggingOptions() != null)
-            sb.append("CloudWatchLoggingOptions: ").append(getCloudWatchLoggingOptions());
+            sb.append("CloudWatchLoggingOptions: ").append(getCloudWatchLoggingOptions()).append(",");
+        if (getSecretsManagerConfiguration() != null)
+            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -731,6 +779,10 @@ public class RedshiftDestinationConfiguration implements Serializable, Cloneable
             return false;
         if (other.getCloudWatchLoggingOptions() != null && other.getCloudWatchLoggingOptions().equals(this.getCloudWatchLoggingOptions()) == false)
             return false;
+        if (other.getSecretsManagerConfiguration() == null ^ this.getSecretsManagerConfiguration() == null)
+            return false;
+        if (other.getSecretsManagerConfiguration() != null && other.getSecretsManagerConfiguration().equals(this.getSecretsManagerConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -750,6 +802,7 @@ public class RedshiftDestinationConfiguration implements Serializable, Cloneable
         hashCode = prime * hashCode + ((getS3BackupMode() == null) ? 0 : getS3BackupMode().hashCode());
         hashCode = prime * hashCode + ((getS3BackupConfiguration() == null) ? 0 : getS3BackupConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCloudWatchLoggingOptions() == null) ? 0 : getCloudWatchLoggingOptions().hashCode());
+        hashCode = prime * hashCode + ((getSecretsManagerConfiguration() == null) ? 0 : getSecretsManagerConfiguration().hashCode());
         return hashCode;
     }
 

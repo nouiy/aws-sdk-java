@@ -134,6 +134,12 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
     private String s3BackupMode;
 
     private S3DestinationConfiguration s3Configuration;
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Snowflake.
+     * </p>
+     */
+    private SecretsManagerConfiguration secretsManagerConfiguration;
 
     /**
      * <p>
@@ -920,6 +926,46 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The configuration that defines how you access secrets for Snowflake.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        The configuration that defines how you access secrets for Snowflake.
+     */
+
+    public void setSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        this.secretsManagerConfiguration = secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Snowflake.
+     * </p>
+     * 
+     * @return The configuration that defines how you access secrets for Snowflake.
+     */
+
+    public SecretsManagerConfiguration getSecretsManagerConfiguration() {
+        return this.secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Snowflake.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        The configuration that defines how you access secrets for Snowflake.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SnowflakeDestinationConfiguration withSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        setSecretsManagerConfiguration(secretsManagerConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -966,7 +1012,9 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
         if (getS3BackupMode() != null)
             sb.append("S3BackupMode: ").append(getS3BackupMode()).append(",");
         if (getS3Configuration() != null)
-            sb.append("S3Configuration: ").append(getS3Configuration());
+            sb.append("S3Configuration: ").append(getS3Configuration()).append(",");
+        if (getSecretsManagerConfiguration() != null)
+            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1053,6 +1101,10 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
             return false;
         if (other.getS3Configuration() != null && other.getS3Configuration().equals(this.getS3Configuration()) == false)
             return false;
+        if (other.getSecretsManagerConfiguration() == null ^ this.getSecretsManagerConfiguration() == null)
+            return false;
+        if (other.getSecretsManagerConfiguration() != null && other.getSecretsManagerConfiguration().equals(this.getSecretsManagerConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1079,6 +1131,7 @@ public class SnowflakeDestinationConfiguration implements Serializable, Cloneabl
         hashCode = prime * hashCode + ((getRetryOptions() == null) ? 0 : getRetryOptions().hashCode());
         hashCode = prime * hashCode + ((getS3BackupMode() == null) ? 0 : getS3BackupMode().hashCode());
         hashCode = prime * hashCode + ((getS3Configuration() == null) ? 0 : getS3Configuration().hashCode());
+        hashCode = prime * hashCode + ((getSecretsManagerConfiguration() == null) ? 0 : getSecretsManagerConfiguration().hashCode());
         return hashCode;
     }
 

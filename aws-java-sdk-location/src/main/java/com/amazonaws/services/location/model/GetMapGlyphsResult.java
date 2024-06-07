@@ -31,16 +31,16 @@ public class GetMapGlyphsResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.nio.ByteBuffer blob;
     /**
      * <p>
-     * The HTTP Cache-Control directive for the value.
-     * </p>
-     */
-    private String cacheControl;
-    /**
-     * <p>
      * The map glyph content type. For example, <code>application/octet-stream</code>.
      * </p>
      */
     private String contentType;
+    /**
+     * <p>
+     * The HTTP Cache-Control directive for the value.
+     * </p>
+     */
+    private String cacheControl;
 
     /**
      * <p>
@@ -111,46 +111,6 @@ public class GetMapGlyphsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The HTTP Cache-Control directive for the value.
-     * </p>
-     * 
-     * @param cacheControl
-     *        The HTTP Cache-Control directive for the value.
-     */
-
-    public void setCacheControl(String cacheControl) {
-        this.cacheControl = cacheControl;
-    }
-
-    /**
-     * <p>
-     * The HTTP Cache-Control directive for the value.
-     * </p>
-     * 
-     * @return The HTTP Cache-Control directive for the value.
-     */
-
-    public String getCacheControl() {
-        return this.cacheControl;
-    }
-
-    /**
-     * <p>
-     * The HTTP Cache-Control directive for the value.
-     * </p>
-     * 
-     * @param cacheControl
-     *        The HTTP Cache-Control directive for the value.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetMapGlyphsResult withCacheControl(String cacheControl) {
-        setCacheControl(cacheControl);
-        return this;
-    }
-
-    /**
-     * <p>
      * The map glyph content type. For example, <code>application/octet-stream</code>.
      * </p>
      * 
@@ -190,6 +150,46 @@ public class GetMapGlyphsResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The HTTP Cache-Control directive for the value.
+     * </p>
+     * 
+     * @param cacheControl
+     *        The HTTP Cache-Control directive for the value.
+     */
+
+    public void setCacheControl(String cacheControl) {
+        this.cacheControl = cacheControl;
+    }
+
+    /**
+     * <p>
+     * The HTTP Cache-Control directive for the value.
+     * </p>
+     * 
+     * @return The HTTP Cache-Control directive for the value.
+     */
+
+    public String getCacheControl() {
+        return this.cacheControl;
+    }
+
+    /**
+     * <p>
+     * The HTTP Cache-Control directive for the value.
+     * </p>
+     * 
+     * @param cacheControl
+     *        The HTTP Cache-Control directive for the value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMapGlyphsResult withCacheControl(String cacheControl) {
+        setCacheControl(cacheControl);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -203,10 +203,10 @@ public class GetMapGlyphsResult extends com.amazonaws.AmazonWebServiceResult<com
         sb.append("{");
         if (getBlob() != null)
             sb.append("Blob: ").append(getBlob()).append(",");
-        if (getCacheControl() != null)
-            sb.append("CacheControl: ").append(getCacheControl()).append(",");
         if (getContentType() != null)
-            sb.append("ContentType: ").append(getContentType());
+            sb.append("ContentType: ").append(getContentType()).append(",");
+        if (getCacheControl() != null)
+            sb.append("CacheControl: ").append(getCacheControl());
         sb.append("}");
         return sb.toString();
     }
@@ -225,13 +225,13 @@ public class GetMapGlyphsResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getBlob() != null && other.getBlob().equals(this.getBlob()) == false)
             return false;
-        if (other.getCacheControl() == null ^ this.getCacheControl() == null)
-            return false;
-        if (other.getCacheControl() != null && other.getCacheControl().equals(this.getCacheControl()) == false)
-            return false;
         if (other.getContentType() == null ^ this.getContentType() == null)
             return false;
         if (other.getContentType() != null && other.getContentType().equals(this.getContentType()) == false)
+            return false;
+        if (other.getCacheControl() == null ^ this.getCacheControl() == null)
+            return false;
+        if (other.getCacheControl() != null && other.getCacheControl().equals(this.getCacheControl()) == false)
             return false;
         return true;
     }
@@ -242,8 +242,8 @@ public class GetMapGlyphsResult extends com.amazonaws.AmazonWebServiceResult<com
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBlob() == null) ? 0 : getBlob().hashCode());
-        hashCode = prime * hashCode + ((getCacheControl() == null) ? 0 : getCacheControl().hashCode());
         hashCode = prime * hashCode + ((getContentType() == null) ? 0 : getContentType().hashCode());
+        hashCode = prime * hashCode + ((getCacheControl() == null) ? 0 : getCacheControl().hashCode());
         return hashCode;
     }
 

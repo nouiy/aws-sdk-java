@@ -30,6 +30,12 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     */
+    private Place place;
+    /**
+     * <p>
      * The distance in meters of a great-circle arc between the bias position specified and the result.
      * <code>Distance</code> will be returned only if a bias position was specified in the query.
      * </p>
@@ -43,10 +49,15 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
     private Double distance;
     /**
      * <p>
-     * Details about the search result, such as its address and position.
+     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
+     * address match (including house number, street, city, country/region, and postal code), the relevance score is
+     * closer to 1.
+     * </p>
+     * <p>
+     * Returned only when the partner selected is Esri or Grab.
      * </p>
      */
-    private Place place;
+    private Double relevance;
     /**
      * <p>
      * The unique identifier of the place. You can use this with the <code>GetPlace</code> operation to find the place
@@ -60,17 +71,46 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
      * </note>
      */
     private String placeId;
+
     /**
      * <p>
-     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
-     * address match (including house number, street, city, country/region, and postal code), the relevance score is
-     * closer to 1.
+     * Details about the search result, such as its address and position.
      * </p>
-     * <p>
-     * Returned only when the partner selected is Esri or Grab.
-     * </p>
+     * 
+     * @param place
+     *        Details about the search result, such as its address and position.
      */
-    private Double relevance;
+
+    public void setPlace(Place place) {
+        this.place = place;
+    }
+
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     * 
+     * @return Details about the search result, such as its address and position.
+     */
+
+    public Place getPlace() {
+        return this.place;
+    }
+
+    /**
+     * <p>
+     * Details about the search result, such as its address and position.
+     * </p>
+     * 
+     * @param place
+     *        Details about the search result, such as its address and position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchForTextResult withPlace(Place place) {
+        setPlace(place);
+        return this;
+    }
 
     /**
      * <p>
@@ -150,41 +190,68 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Details about the search result, such as its address and position.
+     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
+     * address match (including house number, street, city, country/region, and postal code), the relevance score is
+     * closer to 1.
+     * </p>
+     * <p>
+     * Returned only when the partner selected is Esri or Grab.
      * </p>
      * 
-     * @param place
-     *        Details about the search result, such as its address and position.
+     * @param relevance
+     *        The relative confidence in the match for a result among the results returned. For example, if more fields
+     *        for an address match (including house number, street, city, country/region, and postal code), the
+     *        relevance score is closer to 1.</p>
+     *        <p>
+     *        Returned only when the partner selected is Esri or Grab.
      */
 
-    public void setPlace(Place place) {
-        this.place = place;
+    public void setRelevance(Double relevance) {
+        this.relevance = relevance;
     }
 
     /**
      * <p>
-     * Details about the search result, such as its address and position.
+     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
+     * address match (including house number, street, city, country/region, and postal code), the relevance score is
+     * closer to 1.
+     * </p>
+     * <p>
+     * Returned only when the partner selected is Esri or Grab.
      * </p>
      * 
-     * @return Details about the search result, such as its address and position.
+     * @return The relative confidence in the match for a result among the results returned. For example, if more fields
+     *         for an address match (including house number, street, city, country/region, and postal code), the
+     *         relevance score is closer to 1.</p>
+     *         <p>
+     *         Returned only when the partner selected is Esri or Grab.
      */
 
-    public Place getPlace() {
-        return this.place;
+    public Double getRelevance() {
+        return this.relevance;
     }
 
     /**
      * <p>
-     * Details about the search result, such as its address and position.
+     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
+     * address match (including house number, street, city, country/region, and postal code), the relevance score is
+     * closer to 1.
+     * </p>
+     * <p>
+     * Returned only when the partner selected is Esri or Grab.
      * </p>
      * 
-     * @param place
-     *        Details about the search result, such as its address and position.
+     * @param relevance
+     *        The relative confidence in the match for a result among the results returned. For example, if more fields
+     *        for an address match (including house number, street, city, country/region, and postal code), the
+     *        relevance score is closer to 1.</p>
+     *        <p>
+     *        Returned only when the partner selected is Esri or Grab.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public SearchForTextResult withPlace(Place place) {
-        setPlace(place);
+    public SearchForTextResult withRelevance(Double relevance) {
+        setRelevance(relevance);
         return this;
     }
 
@@ -265,73 +332,6 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
-     * address match (including house number, street, city, country/region, and postal code), the relevance score is
-     * closer to 1.
-     * </p>
-     * <p>
-     * Returned only when the partner selected is Esri or Grab.
-     * </p>
-     * 
-     * @param relevance
-     *        The relative confidence in the match for a result among the results returned. For example, if more fields
-     *        for an address match (including house number, street, city, country/region, and postal code), the
-     *        relevance score is closer to 1.</p>
-     *        <p>
-     *        Returned only when the partner selected is Esri or Grab.
-     */
-
-    public void setRelevance(Double relevance) {
-        this.relevance = relevance;
-    }
-
-    /**
-     * <p>
-     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
-     * address match (including house number, street, city, country/region, and postal code), the relevance score is
-     * closer to 1.
-     * </p>
-     * <p>
-     * Returned only when the partner selected is Esri or Grab.
-     * </p>
-     * 
-     * @return The relative confidence in the match for a result among the results returned. For example, if more fields
-     *         for an address match (including house number, street, city, country/region, and postal code), the
-     *         relevance score is closer to 1.</p>
-     *         <p>
-     *         Returned only when the partner selected is Esri or Grab.
-     */
-
-    public Double getRelevance() {
-        return this.relevance;
-    }
-
-    /**
-     * <p>
-     * The relative confidence in the match for a result among the results returned. For example, if more fields for an
-     * address match (including house number, street, city, country/region, and postal code), the relevance score is
-     * closer to 1.
-     * </p>
-     * <p>
-     * Returned only when the partner selected is Esri or Grab.
-     * </p>
-     * 
-     * @param relevance
-     *        The relative confidence in the match for a result among the results returned. For example, if more fields
-     *        for an address match (including house number, street, city, country/region, and postal code), the
-     *        relevance score is closer to 1.</p>
-     *        <p>
-     *        Returned only when the partner selected is Esri or Grab.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SearchForTextResult withRelevance(Double relevance) {
-        setRelevance(relevance);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -343,14 +343,14 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDistance() != null)
-            sb.append("Distance: ").append(getDistance()).append(",");
         if (getPlace() != null)
             sb.append("Place: ").append(getPlace()).append(",");
-        if (getPlaceId() != null)
-            sb.append("PlaceId: ").append(getPlaceId()).append(",");
+        if (getDistance() != null)
+            sb.append("Distance: ").append(getDistance()).append(",");
         if (getRelevance() != null)
-            sb.append("Relevance: ").append(getRelevance());
+            sb.append("Relevance: ").append(getRelevance()).append(",");
+        if (getPlaceId() != null)
+            sb.append("PlaceId: ").append(getPlaceId());
         sb.append("}");
         return sb.toString();
     }
@@ -365,21 +365,21 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
         if (obj instanceof SearchForTextResult == false)
             return false;
         SearchForTextResult other = (SearchForTextResult) obj;
-        if (other.getDistance() == null ^ this.getDistance() == null)
-            return false;
-        if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
-            return false;
         if (other.getPlace() == null ^ this.getPlace() == null)
             return false;
         if (other.getPlace() != null && other.getPlace().equals(this.getPlace()) == false)
             return false;
-        if (other.getPlaceId() == null ^ this.getPlaceId() == null)
+        if (other.getDistance() == null ^ this.getDistance() == null)
             return false;
-        if (other.getPlaceId() != null && other.getPlaceId().equals(this.getPlaceId()) == false)
+        if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
             return false;
         if (other.getRelevance() == null ^ this.getRelevance() == null)
             return false;
         if (other.getRelevance() != null && other.getRelevance().equals(this.getRelevance()) == false)
+            return false;
+        if (other.getPlaceId() == null ^ this.getPlaceId() == null)
+            return false;
+        if (other.getPlaceId() != null && other.getPlaceId().equals(this.getPlaceId()) == false)
             return false;
         return true;
     }
@@ -389,10 +389,10 @@ public class SearchForTextResult implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
         hashCode = prime * hashCode + ((getPlace() == null) ? 0 : getPlace().hashCode());
-        hashCode = prime * hashCode + ((getPlaceId() == null) ? 0 : getPlaceId().hashCode());
+        hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
         hashCode = prime * hashCode + ((getRelevance() == null) ? 0 : getRelevance().hashCode());
+        hashCode = prime * hashCode + ((getPlaceId() == null) ? 0 : getPlaceId().hashCode());
         return hashCode;
     }
 

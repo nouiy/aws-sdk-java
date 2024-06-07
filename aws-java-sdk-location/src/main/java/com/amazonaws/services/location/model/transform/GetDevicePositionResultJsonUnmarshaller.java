@@ -48,13 +48,17 @@ public class GetDevicePositionResultJsonUnmarshaller implements Unmarshaller<Get
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Accuracy", targetDepth)) {
-                    context.nextToken();
-                    getDevicePositionResult.setAccuracy(PositionalAccuracyJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("DeviceId", targetDepth)) {
                     context.nextToken();
                     getDevicePositionResult.setDeviceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SampleTime", targetDepth)) {
+                    context.nextToken();
+                    getDevicePositionResult.setSampleTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("ReceivedTime", targetDepth)) {
+                    context.nextToken();
+                    getDevicePositionResult.setReceivedTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("Position", targetDepth)) {
                     context.nextToken();
@@ -62,18 +66,14 @@ public class GetDevicePositionResultJsonUnmarshaller implements Unmarshaller<Get
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Accuracy", targetDepth)) {
+                    context.nextToken();
+                    getDevicePositionResult.setAccuracy(PositionalAccuracyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("PositionProperties", targetDepth)) {
                     context.nextToken();
                     getDevicePositionResult.setPositionProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("ReceivedTime", targetDepth)) {
-                    context.nextToken();
-                    getDevicePositionResult.setReceivedTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("SampleTime", targetDepth)) {
-                    context.nextToken();
-                    getDevicePositionResult.setSampleTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

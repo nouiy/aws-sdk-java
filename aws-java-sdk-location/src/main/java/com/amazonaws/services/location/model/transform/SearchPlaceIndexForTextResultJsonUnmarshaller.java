@@ -48,15 +48,15 @@ public class SearchPlaceIndexForTextResultJsonUnmarshaller implements Unmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Summary", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForTextResult.setSummary(SearchPlaceIndexForTextSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Results", targetDepth)) {
                     context.nextToken();
                     searchPlaceIndexForTextResult.setResults(new ListUnmarshaller<SearchForTextResult>(SearchForTextResultJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("Summary", targetDepth)) {
-                    context.nextToken();
-                    searchPlaceIndexForTextResult.setSummary(SearchPlaceIndexForTextSummaryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

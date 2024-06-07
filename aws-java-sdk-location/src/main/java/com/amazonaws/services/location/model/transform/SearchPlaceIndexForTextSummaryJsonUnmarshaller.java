@@ -48,25 +48,19 @@ public class SearchPlaceIndexForTextSummaryJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Text", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForTextSummary.setText(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("BiasPosition", targetDepth)) {
                     context.nextToken();
                     searchPlaceIndexForTextSummary.setBiasPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("DataSource", targetDepth)) {
-                    context.nextToken();
-                    searchPlaceIndexForTextSummary.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("FilterBBox", targetDepth)) {
                     context.nextToken();
                     searchPlaceIndexForTextSummary.setFilterBBox(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
-
-                    .unmarshall(context));
-                }
-                if (context.testExpression("FilterCategories", targetDepth)) {
-                    context.nextToken();
-                    searchPlaceIndexForTextSummary.setFilterCategories(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
@@ -75,10 +69,6 @@ public class SearchPlaceIndexForTextSummaryJsonUnmarshaller implements Unmarshal
                     searchPlaceIndexForTextSummary.setFilterCountries(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("Language", targetDepth)) {
-                    context.nextToken();
-                    searchPlaceIndexForTextSummary.setLanguage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("MaxResults", targetDepth)) {
                     context.nextToken();
@@ -90,9 +80,19 @@ public class SearchPlaceIndexForTextSummaryJsonUnmarshaller implements Unmarshal
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("Text", targetDepth)) {
+                if (context.testExpression("DataSource", targetDepth)) {
                     context.nextToken();
-                    searchPlaceIndexForTextSummary.setText(context.getUnmarshaller(String.class).unmarshall(context));
+                    searchPlaceIndexForTextSummary.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Language", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForTextSummary.setLanguage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("FilterCategories", targetDepth)) {
+                    context.nextToken();
+                    searchPlaceIndexForTextSummary.setFilterCategories(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

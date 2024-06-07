@@ -48,13 +48,13 @@ public class CreateRouteCalculatorResultJsonUnmarshaller implements Unmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CalculatorArn", targetDepth)) {
-                    context.nextToken();
-                    createRouteCalculatorResult.setCalculatorArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("CalculatorName", targetDepth)) {
                     context.nextToken();
                     createRouteCalculatorResult.setCalculatorName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CalculatorArn", targetDepth)) {
+                    context.nextToken();
+                    createRouteCalculatorResult.setCalculatorArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();

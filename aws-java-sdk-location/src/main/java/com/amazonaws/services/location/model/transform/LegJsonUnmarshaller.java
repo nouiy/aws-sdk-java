@@ -48,6 +48,18 @@ public class LegJsonUnmarshaller implements Unmarshaller<Leg, JsonUnmarshallerCo
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("StartPosition", targetDepth)) {
+                    context.nextToken();
+                    leg.setStartPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("EndPosition", targetDepth)) {
+                    context.nextToken();
+                    leg.setEndPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Distance", targetDepth)) {
                     context.nextToken();
                     leg.setDistance(context.getUnmarshaller(Double.class).unmarshall(context));
@@ -56,21 +68,9 @@ public class LegJsonUnmarshaller implements Unmarshaller<Leg, JsonUnmarshallerCo
                     context.nextToken();
                     leg.setDurationSeconds(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("EndPosition", targetDepth)) {
-                    context.nextToken();
-                    leg.setEndPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("Geometry", targetDepth)) {
                     context.nextToken();
                     leg.setGeometry(LegGeometryJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("StartPosition", targetDepth)) {
-                    context.nextToken();
-                    leg.setStartPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
-
-                    .unmarshall(context));
                 }
                 if (context.testExpression("Steps", targetDepth)) {
                     context.nextToken();

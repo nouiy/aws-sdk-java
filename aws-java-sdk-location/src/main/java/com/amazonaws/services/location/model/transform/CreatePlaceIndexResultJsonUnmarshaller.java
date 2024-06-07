@@ -48,17 +48,17 @@ public class CreatePlaceIndexResultJsonUnmarshaller implements Unmarshaller<Crea
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("IndexName", targetDepth)) {
                     context.nextToken();
-                    createPlaceIndexResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    createPlaceIndexResult.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("IndexArn", targetDepth)) {
                     context.nextToken();
                     createPlaceIndexResult.setIndexArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("IndexName", targetDepth)) {
+                if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();
-                    createPlaceIndexResult.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
+                    createPlaceIndexResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -30,10 +30,10 @@ public class ApiKeyRestrictionsMarshaller {
 
     private static final MarshallingInfo<List> ALLOWACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("AllowActions").build();
-    private static final MarshallingInfo<List> ALLOWREFERERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("AllowReferers").build();
     private static final MarshallingInfo<List> ALLOWRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AllowResources").build();
+    private static final MarshallingInfo<List> ALLOWREFERERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AllowReferers").build();
 
     private static final ApiKeyRestrictionsMarshaller instance = new ApiKeyRestrictionsMarshaller();
 
@@ -52,8 +52,8 @@ public class ApiKeyRestrictionsMarshaller {
 
         try {
             protocolMarshaller.marshall(apiKeyRestrictions.getAllowActions(), ALLOWACTIONS_BINDING);
-            protocolMarshaller.marshall(apiKeyRestrictions.getAllowReferers(), ALLOWREFERERS_BINDING);
             protocolMarshaller.marshall(apiKeyRestrictions.getAllowResources(), ALLOWRESOURCES_BINDING);
+            protocolMarshaller.marshall(apiKeyRestrictions.getAllowReferers(), ALLOWREFERERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

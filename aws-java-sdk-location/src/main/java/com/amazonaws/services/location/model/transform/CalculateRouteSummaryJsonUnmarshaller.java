@@ -48,6 +48,12 @@ public class CalculateRouteSummaryJsonUnmarshaller implements Unmarshaller<Calcu
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("RouteBBox", targetDepth)) {
+                    context.nextToken();
+                    calculateRouteSummary.setRouteBBox(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("DataSource", targetDepth)) {
                     context.nextToken();
                     calculateRouteSummary.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
@@ -56,19 +62,13 @@ public class CalculateRouteSummaryJsonUnmarshaller implements Unmarshaller<Calcu
                     context.nextToken();
                     calculateRouteSummary.setDistance(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("DistanceUnit", targetDepth)) {
-                    context.nextToken();
-                    calculateRouteSummary.setDistanceUnit(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("DurationSeconds", targetDepth)) {
                     context.nextToken();
                     calculateRouteSummary.setDurationSeconds(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("RouteBBox", targetDepth)) {
+                if (context.testExpression("DistanceUnit", targetDepth)) {
                     context.nextToken();
-                    calculateRouteSummary.setRouteBBox(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
-
-                    .unmarshall(context));
+                    calculateRouteSummary.setDistanceUnit(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

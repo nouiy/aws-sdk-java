@@ -48,38 +48,38 @@ public class DescribeRouteCalculatorResultJsonUnmarshaller implements Unmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CalculatorArn", targetDepth)) {
-                    context.nextToken();
-                    describeRouteCalculatorResult.setCalculatorArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("CalculatorName", targetDepth)) {
                     context.nextToken();
                     describeRouteCalculatorResult.setCalculatorName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("CalculatorArn", targetDepth)) {
                     context.nextToken();
-                    describeRouteCalculatorResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("DataSource", targetDepth)) {
-                    context.nextToken();
-                    describeRouteCalculatorResult.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Description", targetDepth)) {
-                    context.nextToken();
-                    describeRouteCalculatorResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    describeRouteCalculatorResult.setCalculatorArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PricingPlan", targetDepth)) {
                     context.nextToken();
                     describeRouteCalculatorResult.setPricingPlan(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Tags", targetDepth)) {
+                if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
-                    describeRouteCalculatorResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(String.class)).unmarshall(context));
+                    describeRouteCalculatorResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    describeRouteCalculatorResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();
                     describeRouteCalculatorResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("DataSource", targetDepth)) {
+                    context.nextToken();
+                    describeRouteCalculatorResult.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    describeRouteCalculatorResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -48,25 +48,25 @@ public class ListPlaceIndexesResponseEntryJsonUnmarshaller implements Unmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("IndexName", targetDepth)) {
                     context.nextToken();
-                    listPlaceIndexesResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("DataSource", targetDepth)) {
-                    context.nextToken();
-                    listPlaceIndexesResponseEntry.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
+                    listPlaceIndexesResponseEntry.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     listPlaceIndexesResponseEntry.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("IndexName", targetDepth)) {
+                if (context.testExpression("DataSource", targetDepth)) {
                     context.nextToken();
-                    listPlaceIndexesResponseEntry.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
+                    listPlaceIndexesResponseEntry.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PricingPlan", targetDepth)) {
                     context.nextToken();
                     listPlaceIndexesResponseEntry.setPricingPlan(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    listPlaceIndexesResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

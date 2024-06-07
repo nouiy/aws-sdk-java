@@ -29,12 +29,12 @@ public class GetPlaceRequestMarshaller {
 
     private static final MarshallingInfo<String> INDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("IndexName").build();
-    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
-            .marshallLocationName("key").build();
-    private static final MarshallingInfo<String> LANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("language").build();
     private static final MarshallingInfo<String> PLACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("PlaceId").build();
+    private static final MarshallingInfo<String> LANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("language").build();
+    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("key").build();
 
     private static final GetPlaceRequestMarshaller instance = new GetPlaceRequestMarshaller();
 
@@ -53,9 +53,9 @@ public class GetPlaceRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getPlaceRequest.getIndexName(), INDEXNAME_BINDING);
-            protocolMarshaller.marshall(getPlaceRequest.getKey(), KEY_BINDING);
-            protocolMarshaller.marshall(getPlaceRequest.getLanguage(), LANGUAGE_BINDING);
             protocolMarshaller.marshall(getPlaceRequest.getPlaceId(), PLACEID_BINDING);
+            protocolMarshaller.marshall(getPlaceRequest.getLanguage(), LANGUAGE_BINDING);
+            protocolMarshaller.marshall(getPlaceRequest.getKey(), KEY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

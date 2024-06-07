@@ -27,6 +27,12 @@ public class BatchDeleteDevicePositionHistoryRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
+     * The name of the tracker resource to delete the device position history from.
+     * </p>
+     */
+    private String trackerName;
+    /**
+     * <p>
      * Devices whose position history you want to delete.
      * </p>
      * <ul>
@@ -38,12 +44,46 @@ public class BatchDeleteDevicePositionHistoryRequest extends com.amazonaws.Amazo
      * </ul>
      */
     private java.util.List<String> deviceIds;
+
     /**
      * <p>
      * The name of the tracker resource to delete the device position history from.
      * </p>
+     * 
+     * @param trackerName
+     *        The name of the tracker resource to delete the device position history from.
      */
-    private String trackerName;
+
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the tracker resource to delete the device position history from.
+     * </p>
+     * 
+     * @return The name of the tracker resource to delete the device position history from.
+     */
+
+    public String getTrackerName() {
+        return this.trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the tracker resource to delete the device position history from.
+     * </p>
+     * 
+     * @param trackerName
+     *        The name of the tracker resource to delete the device position history from.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchDeleteDevicePositionHistoryRequest withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
+        return this;
+    }
 
     /**
      * <p>
@@ -168,46 +208,6 @@ public class BatchDeleteDevicePositionHistoryRequest extends com.amazonaws.Amazo
     }
 
     /**
-     * <p>
-     * The name of the tracker resource to delete the device position history from.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the tracker resource to delete the device position history from.
-     */
-
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to delete the device position history from.
-     * </p>
-     * 
-     * @return The name of the tracker resource to delete the device position history from.
-     */
-
-    public String getTrackerName() {
-        return this.trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to delete the device position history from.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the tracker resource to delete the device position history from.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchDeleteDevicePositionHistoryRequest withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -219,10 +219,10 @@ public class BatchDeleteDevicePositionHistoryRequest extends com.amazonaws.Amazo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDeviceIds() != null)
-            sb.append("DeviceIds: ").append(getDeviceIds()).append(",");
         if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
+        if (getDeviceIds() != null)
+            sb.append("DeviceIds: ").append(getDeviceIds());
         sb.append("}");
         return sb.toString();
     }
@@ -237,13 +237,13 @@ public class BatchDeleteDevicePositionHistoryRequest extends com.amazonaws.Amazo
         if (obj instanceof BatchDeleteDevicePositionHistoryRequest == false)
             return false;
         BatchDeleteDevicePositionHistoryRequest other = (BatchDeleteDevicePositionHistoryRequest) obj;
-        if (other.getDeviceIds() == null ^ this.getDeviceIds() == null)
-            return false;
-        if (other.getDeviceIds() != null && other.getDeviceIds().equals(this.getDeviceIds()) == false)
-            return false;
         if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
         if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
+        if (other.getDeviceIds() == null ^ this.getDeviceIds() == null)
+            return false;
+        if (other.getDeviceIds() != null && other.getDeviceIds().equals(this.getDeviceIds()) == false)
             return false;
         return true;
     }
@@ -253,8 +253,8 @@ public class BatchDeleteDevicePositionHistoryRequest extends com.amazonaws.Amazo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDeviceIds() == null) ? 0 : getDeviceIds().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getDeviceIds() == null) ? 0 : getDeviceIds().hashCode());
         return hashCode;
     }
 

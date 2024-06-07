@@ -149,8 +149,8 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * will also be included, if present, in the standard JSON messages delivered to other endpoints.
      * </p>
      * <p>
-     * Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not include
-     * line breaks or control characters; and must be less than 100 characters long.
+     * Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100 characters
+     * long.
      * </p>
      */
     private String subject;
@@ -432,8 +432,8 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        Optional parameter to be used as the "Subject" line when the message is delivered to email endpoints. This
      *        field will also be included, if present, in the standard JSON messages delivered to other endpoints.</p>
      *        <p>
-     *        Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not
-     *        include line breaks or control characters; and must be less than 100 characters long.
+     *        Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100
+     *        characters long.
      */
     public PublishRequest(String topicArn, String message, String subject) {
         setTopicArn(topicArn);
@@ -1159,16 +1159,16 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * will also be included, if present, in the standard JSON messages delivered to other endpoints.
      * </p>
      * <p>
-     * Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not include
-     * line breaks or control characters; and must be less than 100 characters long.
+     * Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100 characters
+     * long.
      * </p>
      * 
      * @param subject
      *        Optional parameter to be used as the "Subject" line when the message is delivered to email endpoints. This
      *        field will also be included, if present, in the standard JSON messages delivered to other endpoints.</p>
      *        <p>
-     *        Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not
-     *        include line breaks or control characters; and must be less than 100 characters long.
+     *        Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100
+     *        characters long.
      */
 
     public void setSubject(String subject) {
@@ -1181,16 +1181,16 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * will also be included, if present, in the standard JSON messages delivered to other endpoints.
      * </p>
      * <p>
-     * Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not include
-     * line breaks or control characters; and must be less than 100 characters long.
+     * Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100 characters
+     * long.
      * </p>
      * 
      * @return Optional parameter to be used as the "Subject" line when the message is delivered to email endpoints.
      *         This field will also be included, if present, in the standard JSON messages delivered to other
      *         endpoints.</p>
      *         <p>
-     *         Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not
-     *         include line breaks or control characters; and must be less than 100 characters long.
+     *         Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100
+     *         characters long.
      */
 
     public String getSubject() {
@@ -1203,16 +1203,16 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * will also be included, if present, in the standard JSON messages delivered to other endpoints.
      * </p>
      * <p>
-     * Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not include
-     * line breaks or control characters; and must be less than 100 characters long.
+     * Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100 characters
+     * long.
      * </p>
      * 
      * @param subject
      *        Optional parameter to be used as the "Subject" line when the message is delivered to email endpoints. This
      *        field will also be included, if present, in the standard JSON messages delivered to other endpoints.</p>
      *        <p>
-     *        Constraints: Subjects must be ASCII text that begins with a letter, number, or punctuation mark; must not
-     *        include line breaks or control characters; and must be less than 100 characters long.
+     *        Constraints: Subjects must be UTF-8 text with no line breaks or control characters, and less than 100
+     *        characters long.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

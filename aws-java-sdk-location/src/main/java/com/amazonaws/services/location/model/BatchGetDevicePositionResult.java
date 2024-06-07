@@ -25,17 +25,87 @@ public class BatchGetDevicePositionResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * Contains error details for each device that failed to send its position to the tracker resource.
+     * </p>
+     */
+    private java.util.List<BatchGetDevicePositionError> errors;
+    /**
+     * <p>
      * Contains device position details such as the device ID, position, and timestamps for when the position was
      * received and sampled.
      * </p>
      */
     private java.util.List<DevicePosition> devicePositions;
+
     /**
      * <p>
      * Contains error details for each device that failed to send its position to the tracker resource.
      * </p>
+     * 
+     * @return Contains error details for each device that failed to send its position to the tracker resource.
      */
-    private java.util.List<BatchGetDevicePositionError> errors;
+
+    public java.util.List<BatchGetDevicePositionError> getErrors() {
+        return errors;
+    }
+
+    /**
+     * <p>
+     * Contains error details for each device that failed to send its position to the tracker resource.
+     * </p>
+     * 
+     * @param errors
+     *        Contains error details for each device that failed to send its position to the tracker resource.
+     */
+
+    public void setErrors(java.util.Collection<BatchGetDevicePositionError> errors) {
+        if (errors == null) {
+            this.errors = null;
+            return;
+        }
+
+        this.errors = new java.util.ArrayList<BatchGetDevicePositionError>(errors);
+    }
+
+    /**
+     * <p>
+     * Contains error details for each device that failed to send its position to the tracker resource.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param errors
+     *        Contains error details for each device that failed to send its position to the tracker resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetDevicePositionResult withErrors(BatchGetDevicePositionError... errors) {
+        if (this.errors == null) {
+            setErrors(new java.util.ArrayList<BatchGetDevicePositionError>(errors.length));
+        }
+        for (BatchGetDevicePositionError ele : errors) {
+            this.errors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains error details for each device that failed to send its position to the tracker resource.
+     * </p>
+     * 
+     * @param errors
+     *        Contains error details for each device that failed to send its position to the tracker resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetDevicePositionResult withErrors(java.util.Collection<BatchGetDevicePositionError> errors) {
+        setErrors(errors);
+        return this;
+    }
 
     /**
      * <p>
@@ -116,76 +186,6 @@ public class BatchGetDevicePositionResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p>
-     * Contains error details for each device that failed to send its position to the tracker resource.
-     * </p>
-     * 
-     * @return Contains error details for each device that failed to send its position to the tracker resource.
-     */
-
-    public java.util.List<BatchGetDevicePositionError> getErrors() {
-        return errors;
-    }
-
-    /**
-     * <p>
-     * Contains error details for each device that failed to send its position to the tracker resource.
-     * </p>
-     * 
-     * @param errors
-     *        Contains error details for each device that failed to send its position to the tracker resource.
-     */
-
-    public void setErrors(java.util.Collection<BatchGetDevicePositionError> errors) {
-        if (errors == null) {
-            this.errors = null;
-            return;
-        }
-
-        this.errors = new java.util.ArrayList<BatchGetDevicePositionError>(errors);
-    }
-
-    /**
-     * <p>
-     * Contains error details for each device that failed to send its position to the tracker resource.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
-     * existing values.
-     * </p>
-     * 
-     * @param errors
-     *        Contains error details for each device that failed to send its position to the tracker resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetDevicePositionResult withErrors(BatchGetDevicePositionError... errors) {
-        if (this.errors == null) {
-            setErrors(new java.util.ArrayList<BatchGetDevicePositionError>(errors.length));
-        }
-        for (BatchGetDevicePositionError ele : errors) {
-            this.errors.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Contains error details for each device that failed to send its position to the tracker resource.
-     * </p>
-     * 
-     * @param errors
-     *        Contains error details for each device that failed to send its position to the tracker resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetDevicePositionResult withErrors(java.util.Collection<BatchGetDevicePositionError> errors) {
-        setErrors(errors);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -197,10 +197,10 @@ public class BatchGetDevicePositionResult extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDevicePositions() != null)
-            sb.append("DevicePositions: ").append(getDevicePositions()).append(",");
         if (getErrors() != null)
-            sb.append("Errors: ").append(getErrors());
+            sb.append("Errors: ").append(getErrors()).append(",");
+        if (getDevicePositions() != null)
+            sb.append("DevicePositions: ").append(getDevicePositions());
         sb.append("}");
         return sb.toString();
     }
@@ -215,13 +215,13 @@ public class BatchGetDevicePositionResult extends com.amazonaws.AmazonWebService
         if (obj instanceof BatchGetDevicePositionResult == false)
             return false;
         BatchGetDevicePositionResult other = (BatchGetDevicePositionResult) obj;
-        if (other.getDevicePositions() == null ^ this.getDevicePositions() == null)
-            return false;
-        if (other.getDevicePositions() != null && other.getDevicePositions().equals(this.getDevicePositions()) == false)
-            return false;
         if (other.getErrors() == null ^ this.getErrors() == null)
             return false;
         if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
+            return false;
+        if (other.getDevicePositions() == null ^ this.getDevicePositions() == null)
+            return false;
+        if (other.getDevicePositions() != null && other.getDevicePositions().equals(this.getDevicePositions()) == false)
             return false;
         return true;
     }
@@ -231,8 +231,8 @@ public class BatchGetDevicePositionResult extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDevicePositions() == null) ? 0 : getDevicePositions().hashCode());
         hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
+        hashCode = prime * hashCode + ((getDevicePositions() == null) ? 0 : getDevicePositions().hashCode());
         return hashCode;
     }
 

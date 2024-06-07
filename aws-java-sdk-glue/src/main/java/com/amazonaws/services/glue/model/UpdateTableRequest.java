@@ -64,6 +64,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String versionId;
+    /**
+     * <p>
+     * The operation to be performed when updating the view.
+     * </p>
+     */
+    private String viewUpdateAction;
+    /**
+     * <p>
+     * A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     * </p>
+     */
+    private Boolean force;
 
     /**
      * <p>
@@ -342,6 +354,117 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The operation to be performed when updating the view.
+     * </p>
+     * 
+     * @param viewUpdateAction
+     *        The operation to be performed when updating the view.
+     * @see ViewUpdateAction
+     */
+
+    public void setViewUpdateAction(String viewUpdateAction) {
+        this.viewUpdateAction = viewUpdateAction;
+    }
+
+    /**
+     * <p>
+     * The operation to be performed when updating the view.
+     * </p>
+     * 
+     * @return The operation to be performed when updating the view.
+     * @see ViewUpdateAction
+     */
+
+    public String getViewUpdateAction() {
+        return this.viewUpdateAction;
+    }
+
+    /**
+     * <p>
+     * The operation to be performed when updating the view.
+     * </p>
+     * 
+     * @param viewUpdateAction
+     *        The operation to be performed when updating the view.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ViewUpdateAction
+     */
+
+    public UpdateTableRequest withViewUpdateAction(String viewUpdateAction) {
+        setViewUpdateAction(viewUpdateAction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The operation to be performed when updating the view.
+     * </p>
+     * 
+     * @param viewUpdateAction
+     *        The operation to be performed when updating the view.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ViewUpdateAction
+     */
+
+    public UpdateTableRequest withViewUpdateAction(ViewUpdateAction viewUpdateAction) {
+        this.viewUpdateAction = viewUpdateAction.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     * </p>
+     * 
+     * @param force
+     *        A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     */
+
+    public void setForce(Boolean force) {
+        this.force = force;
+    }
+
+    /**
+     * <p>
+     * A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     * </p>
+     * 
+     * @return A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     */
+
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
+     * <p>
+     * A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     * </p>
+     * 
+     * @param force
+     *        A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTableRequest withForce(Boolean force) {
+        setForce(force);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     * </p>
+     * 
+     * @return A flag that can be set to true to ignore matching storage descriptor and subobject matching requirements.
+     */
+
+    public Boolean isForce() {
+        return this.force;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -364,7 +487,11 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTransactionId() != null)
             sb.append("TransactionId: ").append(getTransactionId()).append(",");
         if (getVersionId() != null)
-            sb.append("VersionId: ").append(getVersionId());
+            sb.append("VersionId: ").append(getVersionId()).append(",");
+        if (getViewUpdateAction() != null)
+            sb.append("ViewUpdateAction: ").append(getViewUpdateAction()).append(",");
+        if (getForce() != null)
+            sb.append("Force: ").append(getForce());
         sb.append("}");
         return sb.toString();
     }
@@ -403,6 +530,14 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getVersionId() != null && other.getVersionId().equals(this.getVersionId()) == false)
             return false;
+        if (other.getViewUpdateAction() == null ^ this.getViewUpdateAction() == null)
+            return false;
+        if (other.getViewUpdateAction() != null && other.getViewUpdateAction().equals(this.getViewUpdateAction()) == false)
+            return false;
+        if (other.getForce() == null ^ this.getForce() == null)
+            return false;
+        if (other.getForce() != null && other.getForce().equals(this.getForce()) == false)
+            return false;
         return true;
     }
 
@@ -417,6 +552,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getSkipArchive() == null) ? 0 : getSkipArchive().hashCode());
         hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
         hashCode = prime * hashCode + ((getVersionId() == null) ? 0 : getVersionId().hashCode());
+        hashCode = prime * hashCode + ((getViewUpdateAction() == null) ? 0 : getViewUpdateAction().hashCode());
+        hashCode = prime * hashCode + ((getForce() == null) ? 0 : getForce().hashCode());
         return hashCode;
     }
 

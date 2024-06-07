@@ -29,10 +29,10 @@ public class UpdateRouteCalculatorRequestMarshaller {
 
     private static final MarshallingInfo<String> CALCULATORNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("CalculatorName").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
 
     private static final UpdateRouteCalculatorRequestMarshaller instance = new UpdateRouteCalculatorRequestMarshaller();
 
@@ -51,8 +51,8 @@ public class UpdateRouteCalculatorRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateRouteCalculatorRequest.getCalculatorName(), CALCULATORNAME_BINDING);
-            protocolMarshaller.marshall(updateRouteCalculatorRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateRouteCalculatorRequest.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(updateRouteCalculatorRequest.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -1002,6 +1002,39 @@ public class AmazonLocationAsyncClient extends AmazonLocationClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ForecastGeofenceEventsResult> forecastGeofenceEventsAsync(ForecastGeofenceEventsRequest request) {
+
+        return forecastGeofenceEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ForecastGeofenceEventsResult> forecastGeofenceEventsAsync(final ForecastGeofenceEventsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ForecastGeofenceEventsRequest, ForecastGeofenceEventsResult> asyncHandler) {
+        final ForecastGeofenceEventsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ForecastGeofenceEventsResult>() {
+            @Override
+            public ForecastGeofenceEventsResult call() throws Exception {
+                ForecastGeofenceEventsResult result = null;
+
+                try {
+                    result = executeForecastGeofenceEvents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDevicePositionResult> getDevicePositionAsync(GetDevicePositionRequest request) {
 
         return getDevicePositionAsync(request, null);
@@ -1977,6 +2010,39 @@ public class AmazonLocationAsyncClient extends AmazonLocationClient implements A
 
                 try {
                     result = executeUpdateTracker(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyDevicePositionResult> verifyDevicePositionAsync(VerifyDevicePositionRequest request) {
+
+        return verifyDevicePositionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyDevicePositionResult> verifyDevicePositionAsync(final VerifyDevicePositionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<VerifyDevicePositionRequest, VerifyDevicePositionResult> asyncHandler) {
+        final VerifyDevicePositionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<VerifyDevicePositionResult>() {
+            @Override
+            public VerifyDevicePositionResult call() throws Exception {
+                VerifyDevicePositionResult result = null;
+
+                try {
+                    result = executeVerifyDevicePosition(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

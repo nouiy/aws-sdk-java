@@ -48,15 +48,15 @@ public class MapConfigurationUpdateJsonUnmarshaller implements Unmarshaller<MapC
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("PoliticalView", targetDepth)) {
+                    context.nextToken();
+                    mapConfigurationUpdate.setPoliticalView(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CustomLayers", targetDepth)) {
                     context.nextToken();
                     mapConfigurationUpdate.setCustomLayers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("PoliticalView", targetDepth)) {
-                    context.nextToken();
-                    mapConfigurationUpdate.setPoliticalView(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

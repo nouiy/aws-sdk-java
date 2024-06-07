@@ -27,18 +27,6 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Updates the parts of the map configuration that can be updated, including the political view.
-     * </p>
-     */
-    private MapConfigurationUpdate configurationUpdate;
-    /**
-     * <p>
-     * Updates the description for the map resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * The name of the map resource to update.
      * </p>
      */
@@ -50,86 +38,18 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
      */
     @Deprecated
     private String pricingPlan;
-
-    /**
-     * <p>
-     * Updates the parts of the map configuration that can be updated, including the political view.
-     * </p>
-     * 
-     * @param configurationUpdate
-     *        Updates the parts of the map configuration that can be updated, including the political view.
-     */
-
-    public void setConfigurationUpdate(MapConfigurationUpdate configurationUpdate) {
-        this.configurationUpdate = configurationUpdate;
-    }
-
-    /**
-     * <p>
-     * Updates the parts of the map configuration that can be updated, including the political view.
-     * </p>
-     * 
-     * @return Updates the parts of the map configuration that can be updated, including the political view.
-     */
-
-    public MapConfigurationUpdate getConfigurationUpdate() {
-        return this.configurationUpdate;
-    }
-
-    /**
-     * <p>
-     * Updates the parts of the map configuration that can be updated, including the political view.
-     * </p>
-     * 
-     * @param configurationUpdate
-     *        Updates the parts of the map configuration that can be updated, including the political view.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateMapRequest withConfigurationUpdate(MapConfigurationUpdate configurationUpdate) {
-        setConfigurationUpdate(configurationUpdate);
-        return this;
-    }
-
     /**
      * <p>
      * Updates the description for the map resource.
      * </p>
-     * 
-     * @param description
-     *        Updates the description for the map resource.
      */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    private String description;
     /**
      * <p>
-     * Updates the description for the map resource.
+     * Updates the parts of the map configuration that can be updated, including the political view.
      * </p>
-     * 
-     * @return Updates the description for the map resource.
      */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the map resource.
-     * </p>
-     * 
-     * @param description
-     *        Updates the description for the map resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateMapRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
+    private MapConfigurationUpdate configurationUpdate;
 
     /**
      * <p>
@@ -231,6 +151,86 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * Updates the description for the map resource.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the map resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the map resource.
+     * </p>
+     * 
+     * @return Updates the description for the map resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the map resource.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the map resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateMapRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Updates the parts of the map configuration that can be updated, including the political view.
+     * </p>
+     * 
+     * @param configurationUpdate
+     *        Updates the parts of the map configuration that can be updated, including the political view.
+     */
+
+    public void setConfigurationUpdate(MapConfigurationUpdate configurationUpdate) {
+        this.configurationUpdate = configurationUpdate;
+    }
+
+    /**
+     * <p>
+     * Updates the parts of the map configuration that can be updated, including the political view.
+     * </p>
+     * 
+     * @return Updates the parts of the map configuration that can be updated, including the political view.
+     */
+
+    public MapConfigurationUpdate getConfigurationUpdate() {
+        return this.configurationUpdate;
+    }
+
+    /**
+     * <p>
+     * Updates the parts of the map configuration that can be updated, including the political view.
+     * </p>
+     * 
+     * @param configurationUpdate
+     *        Updates the parts of the map configuration that can be updated, including the political view.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateMapRequest withConfigurationUpdate(MapConfigurationUpdate configurationUpdate) {
+        setConfigurationUpdate(configurationUpdate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -242,14 +242,14 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getConfigurationUpdate() != null)
-            sb.append("ConfigurationUpdate: ").append(getConfigurationUpdate()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getMapName() != null)
             sb.append("MapName: ").append(getMapName()).append(",");
         if (getPricingPlan() != null)
-            sb.append("PricingPlan: ").append(getPricingPlan());
+            sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getConfigurationUpdate() != null)
+            sb.append("ConfigurationUpdate: ").append(getConfigurationUpdate());
         sb.append("}");
         return sb.toString();
     }
@@ -264,14 +264,6 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof UpdateMapRequest == false)
             return false;
         UpdateMapRequest other = (UpdateMapRequest) obj;
-        if (other.getConfigurationUpdate() == null ^ this.getConfigurationUpdate() == null)
-            return false;
-        if (other.getConfigurationUpdate() != null && other.getConfigurationUpdate().equals(this.getConfigurationUpdate()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getMapName() == null ^ this.getMapName() == null)
             return false;
         if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
@@ -279,6 +271,14 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getConfigurationUpdate() == null ^ this.getConfigurationUpdate() == null)
+            return false;
+        if (other.getConfigurationUpdate() != null && other.getConfigurationUpdate().equals(this.getConfigurationUpdate()) == false)
             return false;
         return true;
     }
@@ -288,10 +288,10 @@ public class UpdateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getConfigurationUpdate() == null) ? 0 : getConfigurationUpdate().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getConfigurationUpdate() == null) ? 0 : getConfigurationUpdate().hashCode());
         return hashCode;
     }
 

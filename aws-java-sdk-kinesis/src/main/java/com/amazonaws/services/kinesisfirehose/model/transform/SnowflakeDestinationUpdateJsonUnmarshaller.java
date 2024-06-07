@@ -116,6 +116,10 @@ public class SnowflakeDestinationUpdateJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     snowflakeDestinationUpdate.setS3Update(S3DestinationUpdateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SecretsManagerConfiguration", targetDepth)) {
+                    context.nextToken();
+                    snowflakeDestinationUpdate.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

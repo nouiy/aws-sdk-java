@@ -25,6 +25,14 @@ public class SearchPlaceIndexForTextResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
+     * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
+     * surrounds the search results.
+     * </p>
+     */
+    private SearchPlaceIndexForTextSummary summary;
+    /**
+     * <p>
      * A list of Places matching the input text. Each result contains additional information about the specific point of
      * interest.
      * </p>
@@ -34,14 +42,61 @@ public class SearchPlaceIndexForTextResult extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private java.util.List<SearchForTextResult> results;
+
     /**
      * <p>
      * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
      * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
      * surrounds the search results.
      * </p>
+     * 
+     * @param summary
+     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
+     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
+     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index and the bounding box,
+     *        <code>ResultBBox</code>, which surrounds the search results.
      */
-    private SearchPlaceIndexForTextSummary summary;
+
+    public void setSummary(SearchPlaceIndexForTextSummary summary) {
+        this.summary = summary;
+    }
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
+     * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
+     * surrounds the search results.
+     * </p>
+     * 
+     * @return Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
+     *         <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>,
+     *         and <code>Text</code>. Also includes the <code>DataSource</code> of the place index and the bounding box,
+     *         <code>ResultBBox</code>, which surrounds the search results.
+     */
+
+    public SearchPlaceIndexForTextSummary getSummary() {
+        return this.summary;
+    }
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
+     * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
+     * surrounds the search results.
+     * </p>
+     * 
+     * @param summary
+     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
+     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
+     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index and the bounding box,
+     *        <code>ResultBBox</code>, which surrounds the search results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchPlaceIndexForTextResult withSummary(SearchPlaceIndexForTextSummary summary) {
+        setSummary(summary);
+        return this;
+    }
 
     /**
      * <p>
@@ -150,61 +205,6 @@ public class SearchPlaceIndexForTextResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
-     * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
-     * surrounds the search results.
-     * </p>
-     * 
-     * @param summary
-     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
-     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
-     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index and the bounding box,
-     *        <code>ResultBBox</code>, which surrounds the search results.
-     */
-
-    public void setSummary(SearchPlaceIndexForTextSummary summary) {
-        this.summary = summary;
-    }
-
-    /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
-     * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
-     * surrounds the search results.
-     * </p>
-     * 
-     * @return Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
-     *         <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>,
-     *         and <code>Text</code>. Also includes the <code>DataSource</code> of the place index and the bounding box,
-     *         <code>ResultBBox</code>, which surrounds the search results.
-     */
-
-    public SearchPlaceIndexForTextSummary getSummary() {
-        return this.summary;
-    }
-
-    /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>, <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and <code>Text</code>. Also
-     * includes the <code>DataSource</code> of the place index and the bounding box, <code>ResultBBox</code>, which
-     * surrounds the search results.
-     * </p>
-     * 
-     * @param summary
-     *        Contains a summary of the request. Echoes the input values for <code>BiasPosition</code>,
-     *        <code>FilterBBox</code>, <code>FilterCountries</code>, <code>Language</code>, <code>MaxResults</code>, and
-     *        <code>Text</code>. Also includes the <code>DataSource</code> of the place index and the bounding box,
-     *        <code>ResultBBox</code>, which surrounds the search results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SearchPlaceIndexForTextResult withSummary(SearchPlaceIndexForTextSummary summary) {
-        setSummary(summary);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -216,10 +216,10 @@ public class SearchPlaceIndexForTextResult extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getResults() != null)
-            sb.append("Results: ").append(getResults()).append(",");
         if (getSummary() != null)
-            sb.append("Summary: ").append(getSummary());
+            sb.append("Summary: ").append(getSummary()).append(",");
+        if (getResults() != null)
+            sb.append("Results: ").append(getResults());
         sb.append("}");
         return sb.toString();
     }
@@ -234,13 +234,13 @@ public class SearchPlaceIndexForTextResult extends com.amazonaws.AmazonWebServic
         if (obj instanceof SearchPlaceIndexForTextResult == false)
             return false;
         SearchPlaceIndexForTextResult other = (SearchPlaceIndexForTextResult) obj;
-        if (other.getResults() == null ^ this.getResults() == null)
-            return false;
-        if (other.getResults() != null && other.getResults().equals(this.getResults()) == false)
-            return false;
         if (other.getSummary() == null ^ this.getSummary() == null)
             return false;
         if (other.getSummary() != null && other.getSummary().equals(this.getSummary()) == false)
+            return false;
+        if (other.getResults() == null ^ this.getResults() == null)
+            return false;
+        if (other.getResults() != null && other.getResults().equals(this.getResults()) == false)
             return false;
         return true;
     }
@@ -250,8 +250,8 @@ public class SearchPlaceIndexForTextResult extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getResults() == null) ? 0 : getResults().hashCode());
         hashCode = prime * hashCode + ((getSummary() == null) ? 0 : getSummary().hashCode());
+        hashCode = prime * hashCode + ((getResults() == null) ? 0 : getResults().hashCode());
         return hashCode;
     }
 

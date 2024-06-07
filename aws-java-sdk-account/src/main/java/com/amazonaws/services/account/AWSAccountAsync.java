@@ -34,6 +34,39 @@ public interface AWSAccountAsync extends AWSAccount {
 
     /**
      * <p>
+     * Accepts the request that originated from <a>StartPrimaryEmailUpdate</a> to update the primary email address (also
+     * known as the root user email address) for the specified account.
+     * </p>
+     * 
+     * @param acceptPrimaryEmailUpdateRequest
+     * @return A Java Future containing the result of the AcceptPrimaryEmailUpdate operation returned by the service.
+     * @sample AWSAccountAsync.AcceptPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/AcceptPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptPrimaryEmailUpdateResult> acceptPrimaryEmailUpdateAsync(AcceptPrimaryEmailUpdateRequest acceptPrimaryEmailUpdateRequest);
+
+    /**
+     * <p>
+     * Accepts the request that originated from <a>StartPrimaryEmailUpdate</a> to update the primary email address (also
+     * known as the root user email address) for the specified account.
+     * </p>
+     * 
+     * @param acceptPrimaryEmailUpdateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AcceptPrimaryEmailUpdate operation returned by the service.
+     * @sample AWSAccountAsyncHandler.AcceptPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/AcceptPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptPrimaryEmailUpdateResult> acceptPrimaryEmailUpdateAsync(AcceptPrimaryEmailUpdateRequest acceptPrimaryEmailUpdateRequest,
+            com.amazonaws.handlers.AsyncHandler<AcceptPrimaryEmailUpdateRequest, AcceptPrimaryEmailUpdateResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified alternate contact from an Amazon Web Services account.
      * </p>
      * <p>
@@ -95,6 +128,11 @@ public interface AWSAccountAsync extends AWSAccount {
      * <p>
      * Disables (opts-out) a particular Region for an account.
      * </p>
+     * <note>
+     * <p>
+     * The act of disabling a Region will remove all IAM access to any resources that reside in that Region.
+     * </p>
+     * </note>
      * 
      * @param disableRegionRequest
      * @return A Java Future containing the result of the DisableRegion operation returned by the service.
@@ -108,6 +146,11 @@ public interface AWSAccountAsync extends AWSAccount {
      * <p>
      * Disables (opts-out) a particular Region for an account.
      * </p>
+     * <note>
+     * <p>
+     * The act of disabling a Region will remove all IAM access to any resources that reside in that Region.
+     * </p>
+     * </note>
      * 
      * @param disableRegionRequest
      * @param asyncHandler
@@ -252,6 +295,37 @@ public interface AWSAccountAsync extends AWSAccount {
      */
     java.util.concurrent.Future<GetContactInformationResult> getContactInformationAsync(GetContactInformationRequest getContactInformationRequest,
             com.amazonaws.handlers.AsyncHandler<GetContactInformationRequest, GetContactInformationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the primary email address for the specified account.
+     * </p>
+     * 
+     * @param getPrimaryEmailRequest
+     * @return A Java Future containing the result of the GetPrimaryEmail operation returned by the service.
+     * @sample AWSAccountAsync.GetPrimaryEmail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/GetPrimaryEmail" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPrimaryEmailResult> getPrimaryEmailAsync(GetPrimaryEmailRequest getPrimaryEmailRequest);
+
+    /**
+     * <p>
+     * Retrieves the primary email address for the specified account.
+     * </p>
+     * 
+     * @param getPrimaryEmailRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPrimaryEmail operation returned by the service.
+     * @sample AWSAccountAsyncHandler.GetPrimaryEmail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/GetPrimaryEmail" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPrimaryEmailResult> getPrimaryEmailAsync(GetPrimaryEmailRequest getPrimaryEmailRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPrimaryEmailRequest, GetPrimaryEmailResult> asyncHandler);
 
     /**
      * <p>
@@ -416,5 +490,36 @@ public interface AWSAccountAsync extends AWSAccount {
      */
     java.util.concurrent.Future<PutContactInformationResult> putContactInformationAsync(PutContactInformationRequest putContactInformationRequest,
             com.amazonaws.handlers.AsyncHandler<PutContactInformationRequest, PutContactInformationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts the process to update the primary email address for the specified account.
+     * </p>
+     * 
+     * @param startPrimaryEmailUpdateRequest
+     * @return A Java Future containing the result of the StartPrimaryEmailUpdate operation returned by the service.
+     * @sample AWSAccountAsync.StartPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/StartPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartPrimaryEmailUpdateResult> startPrimaryEmailUpdateAsync(StartPrimaryEmailUpdateRequest startPrimaryEmailUpdateRequest);
+
+    /**
+     * <p>
+     * Starts the process to update the primary email address for the specified account.
+     * </p>
+     * 
+     * @param startPrimaryEmailUpdateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartPrimaryEmailUpdate operation returned by the service.
+     * @sample AWSAccountAsyncHandler.StartPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/StartPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartPrimaryEmailUpdateResult> startPrimaryEmailUpdateAsync(StartPrimaryEmailUpdateRequest startPrimaryEmailUpdateRequest,
+            com.amazonaws.handlers.AsyncHandler<StartPrimaryEmailUpdateRequest, StartPrimaryEmailUpdateResult> asyncHandler);
 
 }

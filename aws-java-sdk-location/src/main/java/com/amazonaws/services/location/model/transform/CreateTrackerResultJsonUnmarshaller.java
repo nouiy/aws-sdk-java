@@ -48,17 +48,17 @@ public class CreateTrackerResultJsonUnmarshaller implements Unmarshaller<CreateT
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("TrackerName", targetDepth)) {
                     context.nextToken();
-                    createTrackerResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    createTrackerResult.setTrackerName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("TrackerArn", targetDepth)) {
                     context.nextToken();
                     createTrackerResult.setTrackerArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("TrackerName", targetDepth)) {
+                if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();
-                    createTrackerResult.setTrackerName(context.getUnmarshaller(String.class).unmarshall(context));
+                    createTrackerResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -197,7 +197,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     * The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      * </p>
      * <ul>
      * <li>
@@ -207,7 +207,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * Permission to write to the Kinesis Data Firehose delivery stream
+     * Permission to write to the Firehose delivery stream
      * </p>
      * </li>
      * <li>
@@ -217,10 +217,9 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream subscriptions.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data Firehose
-     * delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     * Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For more
+     * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to
+     * Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1148,7 +1147,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     * The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      * </p>
      * <ul>
      * <li>
@@ -1158,7 +1157,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * Permission to write to the Kinesis Data Firehose delivery stream
+     * Permission to write to the Firehose delivery stream
      * </p>
      * </li>
      * <li>
@@ -1168,10 +1167,9 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream subscriptions.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data Firehose
-     * delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     * Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For more
+     * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to
+     * Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1272,7 +1270,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         </ul>
      *         <p>
-     *         The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     *         The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      *         </p>
      *         <ul>
      *         <li>
@@ -1282,7 +1280,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         <ul>
      *         <li>
      *         <p>
-     *         Permission to write to the Kinesis Data Firehose delivery stream
+     *         Permission to write to the Firehose delivery stream
      *         </p>
      *         </li>
      *         <li>
@@ -1292,10 +1290,10 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         </ul>
      *         <p>
-     *         Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream
-     *         subscriptions. For more information, see <a
-     *         href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data
-     *         Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     *         Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Firehose
+     *         delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      *         </p>
      *         </li>
      *         </ul>
@@ -1405,7 +1403,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     * The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      * </p>
      * <ul>
      * <li>
@@ -1415,7 +1413,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * Permission to write to the Kinesis Data Firehose delivery stream
+     * Permission to write to the Firehose delivery stream
      * </p>
      * </li>
      * <li>
@@ -1425,10 +1423,9 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream subscriptions.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data Firehose
-     * delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     * Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For more
+     * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to
+     * Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1529,7 +1526,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        <p>
-     *        The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     *        The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      *        </p>
      *        <ul>
      *        <li>
@@ -1539,7 +1536,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <ul>
      *        <li>
      *        <p>
-     *        Permission to write to the Kinesis Data Firehose delivery stream
+     *        Permission to write to the Firehose delivery stream
      *        </p>
      *        </li>
      *        <li>
@@ -1549,10 +1546,10 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        <p>
-     *        Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream
-     *        subscriptions. For more information, see <a
-     *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data
-     *        Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     *        Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Firehose
+     *        delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
@@ -1659,7 +1656,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     * The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      * </p>
      * <ul>
      * <li>
@@ -1669,7 +1666,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * Permission to write to the Kinesis Data Firehose delivery stream
+     * Permission to write to the Firehose delivery stream
      * </p>
      * </li>
      * <li>
@@ -1679,10 +1676,9 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream subscriptions.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data Firehose
-     * delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     * Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For more
+     * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to
+     * Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1783,7 +1779,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        <p>
-     *        The following attribute applies only to Amazon Kinesis Data Firehose delivery stream subscriptions:
+     *        The following attribute applies only to Amazon Data Firehose delivery stream subscriptions:
      *        </p>
      *        <ul>
      *        <li>
@@ -1793,7 +1789,7 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <ul>
      *        <li>
      *        <p>
-     *        Permission to write to the Kinesis Data Firehose delivery stream
+     *        Permission to write to the Firehose delivery stream
      *        </p>
      *        </li>
      *        <li>
@@ -1803,10 +1799,10 @@ public class SubscribeRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        <p>
-     *        Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream
-     *        subscriptions. For more information, see <a
-     *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Kinesis Data
-     *        Firehose delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
+     *        Specifying a valid ARN for this attribute is required for Firehose delivery stream subscriptions. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html">Fanout to Firehose
+     *        delivery streams</a> in the <i>Amazon SNS Developer Guide</i>.
      *        </p>
      *        </li>
      *        </ul>

@@ -31,10 +31,10 @@ public class BatchPutGeofenceRequestEntryMarshaller {
 
     private static final MarshallingInfo<String> GEOFENCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceId").build();
-    private static final MarshallingInfo<Map> GEOFENCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceProperties").build();
     private static final MarshallingInfo<StructuredPojo> GEOMETRY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Geometry").build();
+    private static final MarshallingInfo<Map> GEOFENCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceProperties").build();
 
     private static final BatchPutGeofenceRequestEntryMarshaller instance = new BatchPutGeofenceRequestEntryMarshaller();
 
@@ -53,8 +53,8 @@ public class BatchPutGeofenceRequestEntryMarshaller {
 
         try {
             protocolMarshaller.marshall(batchPutGeofenceRequestEntry.getGeofenceId(), GEOFENCEID_BINDING);
-            protocolMarshaller.marshall(batchPutGeofenceRequestEntry.getGeofenceProperties(), GEOFENCEPROPERTIES_BINDING);
             protocolMarshaller.marshall(batchPutGeofenceRequestEntry.getGeometry(), GEOMETRY_BINDING);
+            protocolMarshaller.marshall(batchPutGeofenceRequestEntry.getGeofenceProperties(), GEOFENCEPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

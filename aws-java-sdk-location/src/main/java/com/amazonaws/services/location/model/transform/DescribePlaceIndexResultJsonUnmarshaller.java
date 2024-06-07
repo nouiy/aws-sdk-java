@@ -48,9 +48,29 @@ public class DescribePlaceIndexResultJsonUnmarshaller implements Unmarshaller<De
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("IndexName", targetDepth)) {
+                    context.nextToken();
+                    describePlaceIndexResult.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IndexArn", targetDepth)) {
+                    context.nextToken();
+                    describePlaceIndexResult.setIndexArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PricingPlan", targetDepth)) {
+                    context.nextToken();
+                    describePlaceIndexResult.setPricingPlan(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    describePlaceIndexResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();
                     describePlaceIndexResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("UpdateTime", targetDepth)) {
+                    context.nextToken();
+                    describePlaceIndexResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("DataSource", targetDepth)) {
                     context.nextToken();
@@ -60,30 +80,10 @@ public class DescribePlaceIndexResultJsonUnmarshaller implements Unmarshaller<De
                     context.nextToken();
                     describePlaceIndexResult.setDataSourceConfiguration(DataSourceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("Description", targetDepth)) {
-                    context.nextToken();
-                    describePlaceIndexResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("IndexArn", targetDepth)) {
-                    context.nextToken();
-                    describePlaceIndexResult.setIndexArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("IndexName", targetDepth)) {
-                    context.nextToken();
-                    describePlaceIndexResult.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("PricingPlan", targetDepth)) {
-                    context.nextToken();
-                    describePlaceIndexResult.setPricingPlan(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     describePlaceIndexResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("UpdateTime", targetDepth)) {
-                    context.nextToken();
-                    describePlaceIndexResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

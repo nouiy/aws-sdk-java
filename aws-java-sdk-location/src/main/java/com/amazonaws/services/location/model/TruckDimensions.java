@@ -32,24 +32,6 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The height of the truck.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>4.5</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <note>
-     * <p>
-     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     * </p>
-     * </note>
-     */
-    private Double height;
-    /**
-     * <p>
      * The length of the truck.
      * </p>
      * <ul>
@@ -68,13 +50,22 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
     private Double length;
     /**
      * <p>
-     * Specifies the unit of measurement for the truck dimensions.
+     * The height of the truck.
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Default Value: <code>Meters</code>
+     * For example, <code>4.5</code>.
      * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     * </p>
+     * </note>
      */
-    private String unit;
+    private Double height;
     /**
      * <p>
      * The width of the truck.
@@ -93,115 +84,15 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
      * </note>
      */
     private Double width;
-
     /**
      * <p>
-     * The height of the truck.
+     * Specifies the unit of measurement for the truck dimensions.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * For example, <code>4.5</code>.
+     * Default Value: <code>Meters</code>
      * </p>
-     * </li>
-     * </ul>
-     * <note>
-     * <p>
-     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     * </p>
-     * </note>
-     * 
-     * @param height
-     *        The height of the truck.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>4.5</code>.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <note>
-     *        <p>
-     *        For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     *        </p>
      */
-
-    public void setHeight(Double height) {
-        this.height = height;
-    }
-
-    /**
-     * <p>
-     * The height of the truck.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>4.5</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <note>
-     * <p>
-     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     * </p>
-     * </note>
-     * 
-     * @return The height of the truck.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For example, <code>4.5</code>.
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <note>
-     *         <p>
-     *         For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     *         </p>
-     */
-
-    public Double getHeight() {
-        return this.height;
-    }
-
-    /**
-     * <p>
-     * The height of the truck.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>4.5</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <note>
-     * <p>
-     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     * </p>
-     * </note>
-     * 
-     * @param height
-     *        The height of the truck.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>4.5</code>.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <note>
-     *        <p>
-     *        For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TruckDimensions withHeight(Double height) {
-        setHeight(height);
-        return this;
-    }
+    private String unit;
 
     /**
      * <p>
@@ -314,80 +205,110 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the unit of measurement for the truck dimensions.
+     * The height of the truck.
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Default Value: <code>Meters</code>
+     * For example, <code>4.5</code>.
      * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     * </p>
+     * </note>
      * 
-     * @param unit
-     *        Specifies the unit of measurement for the truck dimensions.</p>
+     * @param height
+     *        The height of the truck.</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        Default Value: <code>Meters</code>
-     * @see DimensionUnit
+     *        For example, <code>4.5</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     *        </p>
      */
 
-    public void setUnit(String unit) {
-        this.unit = unit;
+    public void setHeight(Double height) {
+        this.height = height;
     }
 
     /**
      * <p>
-     * Specifies the unit of measurement for the truck dimensions.
+     * The height of the truck.
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Default Value: <code>Meters</code>
+     * For example, <code>4.5</code>.
      * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     * </p>
+     * </note>
      * 
-     * @return Specifies the unit of measurement for the truck dimensions.</p>
+     * @return The height of the truck.</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         Default Value: <code>Meters</code>
-     * @see DimensionUnit
+     *         For example, <code>4.5</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     *         </p>
      */
 
-    public String getUnit() {
-        return this.unit;
+    public Double getHeight() {
+        return this.height;
     }
 
     /**
      * <p>
-     * Specifies the unit of measurement for the truck dimensions.
+     * The height of the truck.
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Default Value: <code>Meters</code>
+     * For example, <code>4.5</code>.
      * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     * </p>
+     * </note>
      * 
-     * @param unit
-     *        Specifies the unit of measurement for the truck dimensions.</p>
+     * @param height
+     *        The height of the truck.</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        Default Value: <code>Meters</code>
+     *        For example, <code>4.5</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        For routes calculated with a HERE resource, this value must be between 0 and 50 meters.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DimensionUnit
      */
 
-    public TruckDimensions withUnit(String unit) {
-        setUnit(unit);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the unit of measurement for the truck dimensions.
-     * </p>
-     * <p>
-     * Default Value: <code>Meters</code>
-     * </p>
-     * 
-     * @param unit
-     *        Specifies the unit of measurement for the truck dimensions.</p>
-     *        <p>
-     *        Default Value: <code>Meters</code>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DimensionUnit
-     */
-
-    public TruckDimensions withUnit(DimensionUnit unit) {
-        this.unit = unit.toString();
+    public TruckDimensions withHeight(Double height) {
+        setHeight(height);
         return this;
     }
 
@@ -501,6 +422,85 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Specifies the unit of measurement for the truck dimensions.
+     * </p>
+     * <p>
+     * Default Value: <code>Meters</code>
+     * </p>
+     * 
+     * @param unit
+     *        Specifies the unit of measurement for the truck dimensions.</p>
+     *        <p>
+     *        Default Value: <code>Meters</code>
+     * @see DimensionUnit
+     */
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    /**
+     * <p>
+     * Specifies the unit of measurement for the truck dimensions.
+     * </p>
+     * <p>
+     * Default Value: <code>Meters</code>
+     * </p>
+     * 
+     * @return Specifies the unit of measurement for the truck dimensions.</p>
+     *         <p>
+     *         Default Value: <code>Meters</code>
+     * @see DimensionUnit
+     */
+
+    public String getUnit() {
+        return this.unit;
+    }
+
+    /**
+     * <p>
+     * Specifies the unit of measurement for the truck dimensions.
+     * </p>
+     * <p>
+     * Default Value: <code>Meters</code>
+     * </p>
+     * 
+     * @param unit
+     *        Specifies the unit of measurement for the truck dimensions.</p>
+     *        <p>
+     *        Default Value: <code>Meters</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DimensionUnit
+     */
+
+    public TruckDimensions withUnit(String unit) {
+        setUnit(unit);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the unit of measurement for the truck dimensions.
+     * </p>
+     * <p>
+     * Default Value: <code>Meters</code>
+     * </p>
+     * 
+     * @param unit
+     *        Specifies the unit of measurement for the truck dimensions.</p>
+     *        <p>
+     *        Default Value: <code>Meters</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DimensionUnit
+     */
+
+    public TruckDimensions withUnit(DimensionUnit unit) {
+        this.unit = unit.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -512,14 +512,14 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getHeight() != null)
-            sb.append("Height: ").append(getHeight()).append(",");
         if (getLength() != null)
             sb.append("Length: ").append(getLength()).append(",");
-        if (getUnit() != null)
-            sb.append("Unit: ").append(getUnit()).append(",");
+        if (getHeight() != null)
+            sb.append("Height: ").append(getHeight()).append(",");
         if (getWidth() != null)
-            sb.append("Width: ").append(getWidth());
+            sb.append("Width: ").append(getWidth()).append(",");
+        if (getUnit() != null)
+            sb.append("Unit: ").append(getUnit());
         sb.append("}");
         return sb.toString();
     }
@@ -534,21 +534,21 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
         if (obj instanceof TruckDimensions == false)
             return false;
         TruckDimensions other = (TruckDimensions) obj;
-        if (other.getHeight() == null ^ this.getHeight() == null)
-            return false;
-        if (other.getHeight() != null && other.getHeight().equals(this.getHeight()) == false)
-            return false;
         if (other.getLength() == null ^ this.getLength() == null)
             return false;
         if (other.getLength() != null && other.getLength().equals(this.getLength()) == false)
             return false;
-        if (other.getUnit() == null ^ this.getUnit() == null)
+        if (other.getHeight() == null ^ this.getHeight() == null)
             return false;
-        if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
+        if (other.getHeight() != null && other.getHeight().equals(this.getHeight()) == false)
             return false;
         if (other.getWidth() == null ^ this.getWidth() == null)
             return false;
         if (other.getWidth() != null && other.getWidth().equals(this.getWidth()) == false)
+            return false;
+        if (other.getUnit() == null ^ this.getUnit() == null)
+            return false;
+        if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
             return false;
         return true;
     }
@@ -558,10 +558,10 @@ public class TruckDimensions implements Serializable, Cloneable, StructuredPojo 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getHeight() == null) ? 0 : getHeight().hashCode());
         hashCode = prime * hashCode + ((getLength() == null) ? 0 : getLength().hashCode());
-        hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
+        hashCode = prime * hashCode + ((getHeight() == null) ? 0 : getHeight().hashCode());
         hashCode = prime * hashCode + ((getWidth() == null) ? 0 : getWidth().hashCode());
+        hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
         return hashCode;
     }
 

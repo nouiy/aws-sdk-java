@@ -25,12 +25,10 @@ public class CreatePlaceIndexResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name for the place index resource.
      * </p>
      */
-    private java.util.Date createTime;
+    private String indexName;
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across Amazon Web
@@ -47,60 +45,50 @@ public class CreatePlaceIndexResult extends com.amazonaws.AmazonWebServiceResult
     private String indexArn;
     /**
      * <p>
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
+
+    /**
+     * <p>
      * The name for the place index resource.
      * </p>
-     */
-    private String indexName;
-
-    /**
-     * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the place index resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param indexName
+     *        The name for the place index resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setIndexName(String indexName) {
+        this.indexName = indexName;
     }
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name for the place index resource.
      * </p>
      * 
-     * @return The timestamp for when the place index resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return The name for the place index resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getIndexName() {
+        return this.indexName;
     }
 
     /**
      * <p>
-     * The timestamp for when the place index resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name for the place index resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the place index resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param indexName
+     *        The name for the place index resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreatePlaceIndexResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
+    public CreatePlaceIndexResult withIndexName(String indexName) {
+        setIndexName(indexName);
         return this;
     }
 
@@ -191,41 +179,53 @@ public class CreatePlaceIndexResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The name for the place index resource.
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @param indexName
-     *        The name for the place index resource.
+     * @param createTime
+     *        The timestamp for when the place index resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
 
-    public void setIndexName(String indexName) {
-        this.indexName = indexName;
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * <p>
-     * The name for the place index resource.
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @return The name for the place index resource.
+     * @return The timestamp for when the place index resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
 
-    public String getIndexName() {
-        return this.indexName;
+    public java.util.Date getCreateTime() {
+        return this.createTime;
     }
 
     /**
      * <p>
-     * The name for the place index resource.
+     * The timestamp for when the place index resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @param indexName
-     *        The name for the place index resource.
+     * @param createTime
+     *        The timestamp for when the place index resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreatePlaceIndexResult withIndexName(String indexName) {
-        setIndexName(indexName);
+    public CreatePlaceIndexResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -241,12 +241,12 @@ public class CreatePlaceIndexResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getIndexName() != null)
+            sb.append("IndexName: ").append(getIndexName()).append(",");
         if (getIndexArn() != null)
             sb.append("IndexArn: ").append(getIndexArn()).append(",");
-        if (getIndexName() != null)
-            sb.append("IndexName: ").append(getIndexName());
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -261,17 +261,17 @@ public class CreatePlaceIndexResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof CreatePlaceIndexResult == false)
             return false;
         CreatePlaceIndexResult other = (CreatePlaceIndexResult) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getIndexName() == null ^ this.getIndexName() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+        if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
             return false;
         if (other.getIndexArn() == null ^ this.getIndexArn() == null)
             return false;
         if (other.getIndexArn() != null && other.getIndexArn().equals(this.getIndexArn()) == false)
             return false;
-        if (other.getIndexName() == null ^ this.getIndexName() == null)
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
-        if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         return true;
     }
@@ -281,9 +281,9 @@ public class CreatePlaceIndexResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getIndexArn() == null) ? 0 : getIndexArn().hashCode());
         hashCode = prime * hashCode + ((getIndexName() == null) ? 0 : getIndexName().hashCode());
+        hashCode = prime * hashCode + ((getIndexArn() == null) ? 0 : getIndexArn().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }
 

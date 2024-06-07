@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class TruckDimensionsMarshaller {
 
-    private static final MarshallingInfo<Double> HEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Height").build();
     private static final MarshallingInfo<Double> LENGTH_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Length").build();
-    private static final MarshallingInfo<String> UNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Unit").build();
+    private static final MarshallingInfo<Double> HEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Height").build();
     private static final MarshallingInfo<Double> WIDTH_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Width").build();
+    private static final MarshallingInfo<String> UNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Unit").build();
 
     private static final TruckDimensionsMarshaller instance = new TruckDimensionsMarshaller();
 
@@ -52,10 +52,10 @@ public class TruckDimensionsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(truckDimensions.getHeight(), HEIGHT_BINDING);
             protocolMarshaller.marshall(truckDimensions.getLength(), LENGTH_BINDING);
-            protocolMarshaller.marshall(truckDimensions.getUnit(), UNIT_BINDING);
+            protocolMarshaller.marshall(truckDimensions.getHeight(), HEIGHT_BINDING);
             protocolMarshaller.marshall(truckDimensions.getWidth(), WIDTH_BINDING);
+            protocolMarshaller.marshall(truckDimensions.getUnit(), UNIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

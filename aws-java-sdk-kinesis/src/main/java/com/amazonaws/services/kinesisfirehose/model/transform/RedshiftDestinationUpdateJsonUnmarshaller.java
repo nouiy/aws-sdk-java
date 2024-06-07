@@ -92,6 +92,10 @@ public class RedshiftDestinationUpdateJsonUnmarshaller implements Unmarshaller<R
                     context.nextToken();
                     redshiftDestinationUpdate.setCloudWatchLoggingOptions(CloudWatchLoggingOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SecretsManagerConfiguration", targetDepth)) {
+                    context.nextToken();
+                    redshiftDestinationUpdate.setSecretsManagerConfiguration(SecretsManagerConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A serializer to use for converting data to the Parquet format before storing it in Amazon S3. For more information,
- * see <a href="https://parquet.apache.org/documentation/latest/">Apache Parquet</a>.
+ * see <a href="https://parquet.apache.org/docs/">Apache Parquet</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/ParquetSerDe" target="_top">AWS API

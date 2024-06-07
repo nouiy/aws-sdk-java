@@ -30,56 +30,16 @@ public class BatchDeleteGeofenceError implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     */
-    private BatchItemError error;
-    /**
-     * <p>
      * The geofence associated with the error message.
      * </p>
      */
     private String geofenceId;
-
     /**
      * <p>
      * Contains details associated to the batch error.
      * </p>
-     * 
-     * @param error
-     *        Contains details associated to the batch error.
      */
-
-    public void setError(BatchItemError error) {
-        this.error = error;
-    }
-
-    /**
-     * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     * 
-     * @return Contains details associated to the batch error.
-     */
-
-    public BatchItemError getError() {
-        return this.error;
-    }
-
-    /**
-     * <p>
-     * Contains details associated to the batch error.
-     * </p>
-     * 
-     * @param error
-     *        Contains details associated to the batch error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchDeleteGeofenceError withError(BatchItemError error) {
-        setError(error);
-        return this;
-    }
+    private BatchItemError error;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class BatchDeleteGeofenceError implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     * 
+     * @param error
+     *        Contains details associated to the batch error.
+     */
+
+    public void setError(BatchItemError error) {
+        this.error = error;
+    }
+
+    /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     * 
+     * @return Contains details associated to the batch error.
+     */
+
+    public BatchItemError getError() {
+        return this.error;
+    }
+
+    /**
+     * <p>
+     * Contains details associated to the batch error.
+     * </p>
+     * 
+     * @param error
+     *        Contains details associated to the batch error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchDeleteGeofenceError withError(BatchItemError error) {
+        setError(error);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class BatchDeleteGeofenceError implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getError() != null)
-            sb.append("Error: ").append(getError()).append(",");
         if (getGeofenceId() != null)
-            sb.append("GeofenceId: ").append(getGeofenceId());
+            sb.append("GeofenceId: ").append(getGeofenceId()).append(",");
+        if (getError() != null)
+            sb.append("Error: ").append(getError());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class BatchDeleteGeofenceError implements Serializable, Cloneable, Struct
         if (obj instanceof BatchDeleteGeofenceError == false)
             return false;
         BatchDeleteGeofenceError other = (BatchDeleteGeofenceError) obj;
-        if (other.getError() == null ^ this.getError() == null)
-            return false;
-        if (other.getError() != null && other.getError().equals(this.getError()) == false)
-            return false;
         if (other.getGeofenceId() == null ^ this.getGeofenceId() == null)
             return false;
         if (other.getGeofenceId() != null && other.getGeofenceId().equals(this.getGeofenceId()) == false)
+            return false;
+        if (other.getError() == null ^ this.getError() == null)
+            return false;
+        if (other.getError() != null && other.getError().equals(this.getError()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class BatchDeleteGeofenceError implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         hashCode = prime * hashCode + ((getGeofenceId() == null) ? 0 : getGeofenceId().hashCode());
+        hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         return hashCode;
     }
 

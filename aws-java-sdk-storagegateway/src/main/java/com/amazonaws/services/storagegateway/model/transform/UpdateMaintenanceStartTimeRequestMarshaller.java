@@ -37,6 +37,8 @@ public class UpdateMaintenanceStartTimeRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DayOfWeek").build();
     private static final MarshallingInfo<Integer> DAYOFMONTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DayOfMonth").build();
+    private static final MarshallingInfo<StructuredPojo> SOFTWAREUPDATEPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SoftwareUpdatePreferences").build();
 
     private static final UpdateMaintenanceStartTimeRequestMarshaller instance = new UpdateMaintenanceStartTimeRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class UpdateMaintenanceStartTimeRequestMarshaller {
             protocolMarshaller.marshall(updateMaintenanceStartTimeRequest.getMinuteOfHour(), MINUTEOFHOUR_BINDING);
             protocolMarshaller.marshall(updateMaintenanceStartTimeRequest.getDayOfWeek(), DAYOFWEEK_BINDING);
             protocolMarshaller.marshall(updateMaintenanceStartTimeRequest.getDayOfMonth(), DAYOFMONTH_BINDING);
+            protocolMarshaller.marshall(updateMaintenanceStartTimeRequest.getSoftwareUpdatePreferences(), SOFTWAREUPDATEPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

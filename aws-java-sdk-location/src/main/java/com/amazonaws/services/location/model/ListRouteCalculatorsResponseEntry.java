@@ -36,19 +36,10 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
     private String calculatorName;
     /**
      * <p>
-     * The timestamp when the route calculator resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The optional description of the route calculator resource.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
      */
-    private java.util.Date createTime;
+    private String description;
     /**
      * <p>
      * The data provider of traffic and road network data. Indicates one of the available providers:
@@ -79,17 +70,26 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
     private String dataSource;
     /**
      * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
     @Deprecated
     private String pricingPlan;
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.Date createTime;
     /**
      * <p>
      * The timestamp when the route calculator resource was last updated in <a
@@ -148,92 +148,41 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The timestamp when the route calculator resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The optional description of the route calculator resource.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @param createTime
-     *        The timestamp when the route calculator resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     *        </p>
-     *        </li>
+     * @param description
+     *        The optional description of the route calculator resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * The timestamp when the route calculator resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The optional description of the route calculator resource.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The timestamp when the route calculator resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     *         </p>
-     *         </li>
+     * @return The optional description of the route calculator resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * The timestamp when the route calculator resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The optional description of the route calculator resource.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @param createTime
-     *        The timestamp when the route calculator resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     *        </p>
-     *        </li>
+     * @param description
+     *        The optional description of the route calculator resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListRouteCalculatorsResponseEntry withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
+    public ListRouteCalculatorsResponseEntry withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -408,46 +357,6 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description of the route calculator resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     * 
-     * @return The optional description of the route calculator resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description of the route calculator resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRouteCalculatorsResponseEntry withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
      * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -502,6 +411,97 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
     @Deprecated
     public ListRouteCalculatorsResponseEntry withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createTime
+     *        The timestamp when the route calculator resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     *        </p>
+     *        </li>
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The timestamp when the route calculator resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createTime
+     *        The timestamp when the route calculator resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRouteCalculatorsResponseEntry withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -610,14 +610,14 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
         sb.append("{");
         if (getCalculatorName() != null)
             sb.append("CalculatorName: ").append(getCalculatorName()).append(",");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -638,21 +638,21 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
             return false;
         if (other.getCalculatorName() != null && other.getCalculatorName().equals(this.getCalculatorName()) == false)
             return false;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getDataSource() == null ^ this.getDataSource() == null)
             return false;
         if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -667,10 +667,10 @@ public class ListRouteCalculatorsResponseEntry implements Serializable, Cloneabl
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCalculatorName() == null) ? 0 : getCalculatorName().hashCode());
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

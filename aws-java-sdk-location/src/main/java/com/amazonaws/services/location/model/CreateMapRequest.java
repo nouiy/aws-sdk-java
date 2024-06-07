@@ -27,19 +27,6 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
-     * map style defines the look of maps and the data provider for your map resource.
-     * </p>
-     */
-    private MapConfiguration configuration;
-    /**
-     * <p>
-     * An optional description for the map resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * The name for the map resource.
      * </p>
      * <p>
@@ -66,11 +53,24 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String mapName;
     /**
      * <p>
+     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
+     * map style defines the look of maps and the data provider for your map resource.
+     * </p>
+     */
+    private MapConfiguration configuration;
+    /**
+     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
     @Deprecated
     private String pricingPlan;
+    /**
+     * <p>
+     * An optional description for the map resource.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * Applies one or more tags to the map resource. A tag is a key-value pair helps manage, identify, search, and
@@ -116,92 +116,6 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </ul>
      */
     private java.util.Map<String, String> tags;
-
-    /**
-     * <p>
-     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
-     * map style defines the look of maps and the data provider for your map resource.
-     * </p>
-     * 
-     * @param configuration
-     *        Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you
-     *        create. The map style defines the look of maps and the data provider for your map resource.
-     */
-
-    public void setConfiguration(MapConfiguration configuration) {
-        this.configuration = configuration;
-    }
-
-    /**
-     * <p>
-     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
-     * map style defines the look of maps and the data provider for your map resource.
-     * </p>
-     * 
-     * @return Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you
-     *         create. The map style defines the look of maps and the data provider for your map resource.
-     */
-
-    public MapConfiguration getConfiguration() {
-        return this.configuration;
-    }
-
-    /**
-     * <p>
-     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
-     * map style defines the look of maps and the data provider for your map resource.
-     * </p>
-     * 
-     * @param configuration
-     *        Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you
-     *        create. The map style defines the look of maps and the data provider for your map resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateMapRequest withConfiguration(MapConfiguration configuration) {
-        setConfiguration(configuration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * An optional description for the map resource.
-     * </p>
-     * 
-     * @param description
-     *        An optional description for the map resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * An optional description for the map resource.
-     * </p>
-     * 
-     * @return An optional description for the map resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * An optional description for the map resource.
-     * </p>
-     * 
-     * @param description
-     *        An optional description for the map resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateMapRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
 
     /**
      * <p>
@@ -362,6 +276,52 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
+     * map style defines the look of maps and the data provider for your map resource.
+     * </p>
+     * 
+     * @param configuration
+     *        Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you
+     *        create. The map style defines the look of maps and the data provider for your map resource.
+     */
+
+    public void setConfiguration(MapConfiguration configuration) {
+        this.configuration = configuration;
+    }
+
+    /**
+     * <p>
+     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
+     * map style defines the look of maps and the data provider for your map resource.
+     * </p>
+     * 
+     * @return Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you
+     *         create. The map style defines the look of maps and the data provider for your map resource.
+     */
+
+    public MapConfiguration getConfiguration() {
+        return this.configuration;
+    }
+
+    /**
+     * <p>
+     * Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you create. The
+     * map style defines the look of maps and the data provider for your map resource.
+     * </p>
+     * 
+     * @param configuration
+     *        Specifies the <code>MapConfiguration</code>, including the map style, for the map resource that you
+     *        create. The map style defines the look of maps and the data provider for your map resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMapRequest withConfiguration(MapConfiguration configuration) {
+        setConfiguration(configuration);
+        return this;
+    }
+
+    /**
+     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -416,6 +376,46 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
     @Deprecated
     public CreateMapRequest withPricingPlan(PricingPlan pricingPlan) {
         this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional description for the map resource.
+     * </p>
+     * 
+     * @param description
+     *        An optional description for the map resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * An optional description for the map resource.
+     * </p>
+     * 
+     * @return An optional description for the map resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * An optional description for the map resource.
+     * </p>
+     * 
+     * @param description
+     *        An optional description for the map resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMapRequest withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -730,14 +730,14 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getConfiguration() != null)
-            sb.append("Configuration: ").append(getConfiguration()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getMapName() != null)
             sb.append("MapName: ").append(getMapName()).append(",");
+        if (getConfiguration() != null)
+            sb.append("Configuration: ").append(getConfiguration()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -754,21 +754,21 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof CreateMapRequest == false)
             return false;
         CreateMapRequest other = (CreateMapRequest) obj;
-        if (other.getConfiguration() == null ^ this.getConfiguration() == null)
-            return false;
-        if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getMapName() == null ^ this.getMapName() == null)
             return false;
         if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
             return false;
+        if (other.getConfiguration() == null ^ this.getConfiguration() == null)
+            return false;
+        if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
+            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -782,10 +782,10 @@ public class CreateMapRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
+        hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

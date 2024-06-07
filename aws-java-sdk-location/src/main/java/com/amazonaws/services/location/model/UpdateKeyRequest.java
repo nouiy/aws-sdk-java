@@ -27,6 +27,12 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * The name of the API key resource to update.
+     * </p>
+     */
+    private String keyName;
+    /**
+     * <p>
      * Updates the description for the API key resource.
      * </p>
      */
@@ -39,6 +45,12 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private java.util.Date expireTime;
+    /**
+     * <p>
+     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     * </p>
+     */
+    private Boolean noExpiry;
     /**
      * <p>
      * The boolean flag to be included for updating <code>ExpireTime</code> or <code>Restrictions</code> details.
@@ -56,22 +68,50 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private Boolean forceUpdate;
     /**
      * <p>
-     * The name of the API key resource to update.
-     * </p>
-     */
-    private String keyName;
-    /**
-     * <p>
-     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     * </p>
-     */
-    private Boolean noExpiry;
-    /**
-     * <p>
      * Updates the API key restrictions for the API key resource.
      * </p>
      */
     private ApiKeyRestrictions restrictions;
+
+    /**
+     * <p>
+     * The name of the API key resource to update.
+     * </p>
+     * 
+     * @param keyName
+     *        The name of the API key resource to update.
+     */
+
+    public void setKeyName(String keyName) {
+        this.keyName = keyName;
+    }
+
+    /**
+     * <p>
+     * The name of the API key resource to update.
+     * </p>
+     * 
+     * @return The name of the API key resource to update.
+     */
+
+    public String getKeyName() {
+        return this.keyName;
+    }
+
+    /**
+     * <p>
+     * The name of the API key resource to update.
+     * </p>
+     * 
+     * @param keyName
+     *        The name of the API key resource to update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateKeyRequest withKeyName(String keyName) {
+        setKeyName(keyName);
+        return this;
+    }
 
     /**
      * <p>
@@ -163,6 +203,60 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public UpdateKeyRequest withExpireTime(java.util.Date expireTime) {
         setExpireTime(expireTime);
         return this;
+    }
+
+    /**
+     * <p>
+     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     * </p>
+     * 
+     * @param noExpiry
+     *        Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     */
+
+    public void setNoExpiry(Boolean noExpiry) {
+        this.noExpiry = noExpiry;
+    }
+
+    /**
+     * <p>
+     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     * </p>
+     * 
+     * @return Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration
+     *         time.
+     */
+
+    public Boolean getNoExpiry() {
+        return this.noExpiry;
+    }
+
+    /**
+     * <p>
+     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     * </p>
+     * 
+     * @param noExpiry
+     *        Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateKeyRequest withNoExpiry(Boolean noExpiry) {
+        setNoExpiry(noExpiry);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
+     * </p>
+     * 
+     * @return Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration
+     *         time.
+     */
+
+    public Boolean isNoExpiry() {
+        return this.noExpiry;
     }
 
     /**
@@ -291,100 +385,6 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the API key resource to update.
-     * </p>
-     * 
-     * @param keyName
-     *        The name of the API key resource to update.
-     */
-
-    public void setKeyName(String keyName) {
-        this.keyName = keyName;
-    }
-
-    /**
-     * <p>
-     * The name of the API key resource to update.
-     * </p>
-     * 
-     * @return The name of the API key resource to update.
-     */
-
-    public String getKeyName() {
-        return this.keyName;
-    }
-
-    /**
-     * <p>
-     * The name of the API key resource to update.
-     * </p>
-     * 
-     * @param keyName
-     *        The name of the API key resource to update.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateKeyRequest withKeyName(String keyName) {
-        setKeyName(keyName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     * </p>
-     * 
-     * @param noExpiry
-     *        Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     */
-
-    public void setNoExpiry(Boolean noExpiry) {
-        this.noExpiry = noExpiry;
-    }
-
-    /**
-     * <p>
-     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     * </p>
-     * 
-     * @return Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration
-     *         time.
-     */
-
-    public Boolean getNoExpiry() {
-        return this.noExpiry;
-    }
-
-    /**
-     * <p>
-     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     * </p>
-     * 
-     * @param noExpiry
-     *        Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateKeyRequest withNoExpiry(Boolean noExpiry) {
-        setNoExpiry(noExpiry);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration time.
-     * </p>
-     * 
-     * @return Whether the API key should expire. Set to <code>true</code> to set the API key to have no expiration
-     *         time.
-     */
-
-    public Boolean isNoExpiry() {
-        return this.noExpiry;
-    }
-
-    /**
-     * <p>
      * Updates the API key restrictions for the API key resource.
      * </p>
      * 
@@ -435,16 +435,16 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeyName() != null)
+            sb.append("KeyName: ").append(getKeyName()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getExpireTime() != null)
             sb.append("ExpireTime: ").append(getExpireTime()).append(",");
-        if (getForceUpdate() != null)
-            sb.append("ForceUpdate: ").append(getForceUpdate()).append(",");
-        if (getKeyName() != null)
-            sb.append("KeyName: ").append(getKeyName()).append(",");
         if (getNoExpiry() != null)
             sb.append("NoExpiry: ").append(getNoExpiry()).append(",");
+        if (getForceUpdate() != null)
+            sb.append("ForceUpdate: ").append(getForceUpdate()).append(",");
         if (getRestrictions() != null)
             sb.append("Restrictions: ").append(getRestrictions());
         sb.append("}");
@@ -461,6 +461,10 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof UpdateKeyRequest == false)
             return false;
         UpdateKeyRequest other = (UpdateKeyRequest) obj;
+        if (other.getKeyName() == null ^ this.getKeyName() == null)
+            return false;
+        if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -469,17 +473,13 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getExpireTime() != null && other.getExpireTime().equals(this.getExpireTime()) == false)
             return false;
-        if (other.getForceUpdate() == null ^ this.getForceUpdate() == null)
-            return false;
-        if (other.getForceUpdate() != null && other.getForceUpdate().equals(this.getForceUpdate()) == false)
-            return false;
-        if (other.getKeyName() == null ^ this.getKeyName() == null)
-            return false;
-        if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
-            return false;
         if (other.getNoExpiry() == null ^ this.getNoExpiry() == null)
             return false;
         if (other.getNoExpiry() != null && other.getNoExpiry().equals(this.getNoExpiry()) == false)
+            return false;
+        if (other.getForceUpdate() == null ^ this.getForceUpdate() == null)
+            return false;
+        if (other.getForceUpdate() != null && other.getForceUpdate().equals(this.getForceUpdate()) == false)
             return false;
         if (other.getRestrictions() == null ^ this.getRestrictions() == null)
             return false;
@@ -493,11 +493,11 @@ public class UpdateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getExpireTime() == null) ? 0 : getExpireTime().hashCode());
-        hashCode = prime * hashCode + ((getForceUpdate() == null) ? 0 : getForceUpdate().hashCode());
-        hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
         hashCode = prime * hashCode + ((getNoExpiry() == null) ? 0 : getNoExpiry().hashCode());
+        hashCode = prime * hashCode + ((getForceUpdate() == null) ? 0 : getForceUpdate().hashCode());
         hashCode = prime * hashCode + ((getRestrictions() == null) ? 0 : getRestrictions().hashCode());
         return hashCode;
     }

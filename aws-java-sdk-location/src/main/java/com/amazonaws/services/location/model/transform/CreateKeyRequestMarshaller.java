@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateKeyRequestMarshaller {
 
+    private static final MarshallingInfo<String> KEYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("KeyName").build();
+    private static final MarshallingInfo<StructuredPojo> RESTRICTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Restrictions").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<java.util.Date> EXPIRETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExpireTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> KEYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("KeyName").build();
     private static final MarshallingInfo<Boolean> NOEXPIRY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NoExpiry").build();
-    private static final MarshallingInfo<StructuredPojo> RESTRICTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Restrictions").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -58,11 +58,11 @@ public class CreateKeyRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createKeyRequest.getKeyName(), KEYNAME_BINDING);
+            protocolMarshaller.marshall(createKeyRequest.getRestrictions(), RESTRICTIONS_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getExpireTime(), EXPIRETIME_BINDING);
-            protocolMarshaller.marshall(createKeyRequest.getKeyName(), KEYNAME_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getNoExpiry(), NOEXPIRY_BINDING);
-            protocolMarshaller.marshall(createKeyRequest.getRestrictions(), RESTRICTIONS_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

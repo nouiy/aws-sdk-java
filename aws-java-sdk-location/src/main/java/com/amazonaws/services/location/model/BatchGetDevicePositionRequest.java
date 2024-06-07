@@ -27,6 +27,12 @@ public class BatchGetDevicePositionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * The tracker resource retrieving the device position.
+     * </p>
+     */
+    private String trackerName;
+    /**
+     * <p>
      * Devices whose position you want to retrieve.
      * </p>
      * <ul>
@@ -38,12 +44,46 @@ public class BatchGetDevicePositionRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      */
     private java.util.List<String> deviceIds;
+
     /**
      * <p>
      * The tracker resource retrieving the device position.
      * </p>
+     * 
+     * @param trackerName
+     *        The tracker resource retrieving the device position.
      */
-    private String trackerName;
+
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+    }
+
+    /**
+     * <p>
+     * The tracker resource retrieving the device position.
+     * </p>
+     * 
+     * @return The tracker resource retrieving the device position.
+     */
+
+    public String getTrackerName() {
+        return this.trackerName;
+    }
+
+    /**
+     * <p>
+     * The tracker resource retrieving the device position.
+     * </p>
+     * 
+     * @param trackerName
+     *        The tracker resource retrieving the device position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetDevicePositionRequest withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
+        return this;
+    }
 
     /**
      * <p>
@@ -168,46 +208,6 @@ public class BatchGetDevicePositionRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p>
-     * The tracker resource retrieving the device position.
-     * </p>
-     * 
-     * @param trackerName
-     *        The tracker resource retrieving the device position.
-     */
-
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
-    }
-
-    /**
-     * <p>
-     * The tracker resource retrieving the device position.
-     * </p>
-     * 
-     * @return The tracker resource retrieving the device position.
-     */
-
-    public String getTrackerName() {
-        return this.trackerName;
-    }
-
-    /**
-     * <p>
-     * The tracker resource retrieving the device position.
-     * </p>
-     * 
-     * @param trackerName
-     *        The tracker resource retrieving the device position.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetDevicePositionRequest withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -219,10 +219,10 @@ public class BatchGetDevicePositionRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDeviceIds() != null)
-            sb.append("DeviceIds: ").append(getDeviceIds()).append(",");
         if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
+        if (getDeviceIds() != null)
+            sb.append("DeviceIds: ").append(getDeviceIds());
         sb.append("}");
         return sb.toString();
     }
@@ -237,13 +237,13 @@ public class BatchGetDevicePositionRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof BatchGetDevicePositionRequest == false)
             return false;
         BatchGetDevicePositionRequest other = (BatchGetDevicePositionRequest) obj;
-        if (other.getDeviceIds() == null ^ this.getDeviceIds() == null)
-            return false;
-        if (other.getDeviceIds() != null && other.getDeviceIds().equals(this.getDeviceIds()) == false)
-            return false;
         if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
         if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
+        if (other.getDeviceIds() == null ^ this.getDeviceIds() == null)
+            return false;
+        if (other.getDeviceIds() != null && other.getDeviceIds().equals(this.getDeviceIds()) == false)
             return false;
         return true;
     }
@@ -253,8 +253,8 @@ public class BatchGetDevicePositionRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDeviceIds() == null) ? 0 : getDeviceIds().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getDeviceIds() == null) ? 0 : getDeviceIds().hashCode());
         return hashCode;
     }
 

@@ -48,18 +48,9 @@ public class ListGeofenceResponseEntryJsonUnmarshaller implements Unmarshaller<L
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    listGeofenceResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("GeofenceId", targetDepth)) {
                     context.nextToken();
                     listGeofenceResponseEntry.setGeofenceId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("GeofenceProperties", targetDepth)) {
-                    context.nextToken();
-                    listGeofenceResponseEntry.setGeofenceProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
                 if (context.testExpression("Geometry", targetDepth)) {
                     context.nextToken();
@@ -69,9 +60,18 @@ public class ListGeofenceResponseEntryJsonUnmarshaller implements Unmarshaller<L
                     context.nextToken();
                     listGeofenceResponseEntry.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    listGeofenceResponseEntry.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();
                     listGeofenceResponseEntry.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("GeofenceProperties", targetDepth)) {
+                    context.nextToken();
+                    listGeofenceResponseEntry.setGeofenceProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

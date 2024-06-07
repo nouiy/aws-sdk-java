@@ -48,13 +48,13 @@ public class UpdatePlaceIndexResultJsonUnmarshaller implements Unmarshaller<Upda
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("IndexArn", targetDepth)) {
-                    context.nextToken();
-                    updatePlaceIndexResult.setIndexArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("IndexName", targetDepth)) {
                     context.nextToken();
                     updatePlaceIndexResult.setIndexName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IndexArn", targetDepth)) {
+                    context.nextToken();
+                    updatePlaceIndexResult.setIndexArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

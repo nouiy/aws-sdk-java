@@ -39,6 +39,10 @@ public class UpdateTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionId").build();
     private static final MarshallingInfo<String> VERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("VersionId").build();
+    private static final MarshallingInfo<String> VIEWUPDATEACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ViewUpdateAction").build();
+    private static final MarshallingInfo<Boolean> FORCE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Force").build();
 
     private static final UpdateTableRequestMarshaller instance = new UpdateTableRequestMarshaller();
 
@@ -62,6 +66,8 @@ public class UpdateTableRequestMarshaller {
             protocolMarshaller.marshall(updateTableRequest.getSkipArchive(), SKIPARCHIVE_BINDING);
             protocolMarshaller.marshall(updateTableRequest.getTransactionId(), TRANSACTIONID_BINDING);
             protocolMarshaller.marshall(updateTableRequest.getVersionId(), VERSIONID_BINDING);
+            protocolMarshaller.marshall(updateTableRequest.getViewUpdateAction(), VIEWUPDATEACTION_BINDING);
+            protocolMarshaller.marshall(updateTableRequest.getForce(), FORCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

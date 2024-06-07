@@ -25,12 +25,10 @@ public class CreateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the map resource.
      * </p>
      */
-    private java.util.Date createTime;
+    private String mapName;
     /**
      * <p>
      * The Amazon Resource Name (ARN) for the map resource. Used to specify a resource across all Amazon Web Services.
@@ -46,60 +44,50 @@ public class CreateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
     private String mapArn;
     /**
      * <p>
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
+
+    /**
+     * <p>
      * The name of the map resource.
      * </p>
-     */
-    private String mapName;
-
-    /**
-     * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the map resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param mapName
+     *        The name of the map resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
     }
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the map resource.
      * </p>
      * 
-     * @return The timestamp for when the map resource was created in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return The name of the map resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getMapName() {
+        return this.mapName;
     }
 
     /**
      * <p>
-     * The timestamp for when the map resource was created in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the map resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp for when the map resource was created in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param mapName
+     *        The name of the map resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateMapResult withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
+    public CreateMapResult withMapName(String mapName) {
+        setMapName(mapName);
         return this;
     }
 
@@ -187,41 +175,53 @@ public class CreateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The name of the map resource.
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @param mapName
-     *        The name of the map resource.
+     * @param createTime
+     *        The timestamp for when the map resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
 
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * <p>
-     * The name of the map resource.
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @return The name of the map resource.
+     * @return The timestamp for when the map resource was created in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      */
 
-    public String getMapName() {
-        return this.mapName;
+    public java.util.Date getCreateTime() {
+        return this.createTime;
     }
 
     /**
      * <p>
-     * The name of the map resource.
+     * The timestamp for when the map resource was created in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      * 
-     * @param mapName
-     *        The name of the map resource.
+     * @param createTime
+     *        The timestamp for when the map resource was created in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateMapResult withMapName(String mapName) {
-        setMapName(mapName);
+    public CreateMapResult withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -237,12 +237,12 @@ public class CreateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getMapName() != null)
+            sb.append("MapName: ").append(getMapName()).append(",");
         if (getMapArn() != null)
             sb.append("MapArn: ").append(getMapArn()).append(",");
-        if (getMapName() != null)
-            sb.append("MapName: ").append(getMapName());
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -257,17 +257,17 @@ public class CreateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (obj instanceof CreateMapResult == false)
             return false;
         CreateMapResult other = (CreateMapResult) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getMapName() == null ^ this.getMapName() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
             return false;
         if (other.getMapArn() == null ^ this.getMapArn() == null)
             return false;
         if (other.getMapArn() != null && other.getMapArn().equals(this.getMapArn()) == false)
             return false;
-        if (other.getMapName() == null ^ this.getMapName() == null)
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
-        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         return true;
     }
@@ -277,9 +277,9 @@ public class CreateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getMapArn() == null) ? 0 : getMapArn().hashCode());
         hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
+        hashCode = prime * hashCode + ((getMapArn() == null) ? 0 : getMapArn().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }
 

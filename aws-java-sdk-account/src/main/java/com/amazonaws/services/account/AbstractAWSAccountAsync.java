@@ -28,6 +28,19 @@ public class AbstractAWSAccountAsync extends AbstractAWSAccount implements AWSAc
     }
 
     @Override
+    public java.util.concurrent.Future<AcceptPrimaryEmailUpdateResult> acceptPrimaryEmailUpdateAsync(AcceptPrimaryEmailUpdateRequest request) {
+
+        return acceptPrimaryEmailUpdateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AcceptPrimaryEmailUpdateResult> acceptPrimaryEmailUpdateAsync(AcceptPrimaryEmailUpdateRequest request,
+            com.amazonaws.handlers.AsyncHandler<AcceptPrimaryEmailUpdateRequest, AcceptPrimaryEmailUpdateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAlternateContactResult> deleteAlternateContactAsync(DeleteAlternateContactRequest request) {
 
         return deleteAlternateContactAsync(request, null);
@@ -93,6 +106,19 @@ public class AbstractAWSAccountAsync extends AbstractAWSAccount implements AWSAc
     }
 
     @Override
+    public java.util.concurrent.Future<GetPrimaryEmailResult> getPrimaryEmailAsync(GetPrimaryEmailRequest request) {
+
+        return getPrimaryEmailAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPrimaryEmailResult> getPrimaryEmailAsync(GetPrimaryEmailRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPrimaryEmailRequest, GetPrimaryEmailResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetRegionOptStatusResult> getRegionOptStatusAsync(GetRegionOptStatusRequest request) {
 
         return getRegionOptStatusAsync(request, null);
@@ -140,6 +166,19 @@ public class AbstractAWSAccountAsync extends AbstractAWSAccount implements AWSAc
     @Override
     public java.util.concurrent.Future<PutContactInformationResult> putContactInformationAsync(PutContactInformationRequest request,
             com.amazonaws.handlers.AsyncHandler<PutContactInformationRequest, PutContactInformationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartPrimaryEmailUpdateResult> startPrimaryEmailUpdateAsync(StartPrimaryEmailUpdateRequest request) {
+
+        return startPrimaryEmailUpdateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartPrimaryEmailUpdateResult> startPrimaryEmailUpdateAsync(StartPrimaryEmailUpdateRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartPrimaryEmailUpdateRequest, StartPrimaryEmailUpdateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

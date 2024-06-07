@@ -31,6 +31,20 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
+     * start position of the leg.
+     * </p>
+     */
+    private java.util.List<Double> startPosition;
+    /**
+     * <p>
+     * The end position of a step. If the position the last step in the leg, this position is the same as the end
+     * position of the leg.
+     * </p>
+     */
+    private java.util.List<Double> endPosition;
+    /**
+     * <p>
      * The travel distance between the step's <code>StartPosition</code> and <code>EndPosition</code>.
      * </p>
      */
@@ -44,13 +58,6 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
     private Double durationSeconds;
     /**
      * <p>
-     * The end position of a step. If the position the last step in the leg, this position is the same as the end
-     * position of the leg.
-     * </p>
-     */
-    private java.util.List<Double> endPosition;
-    /**
-     * <p>
      * Represents the start position, or index, in a sequence of steps within the leg's line string geometry. For
      * example, the index of the first step in a leg geometry is <code>0</code>.
      * </p>
@@ -59,13 +66,162 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer geometryOffset;
+
     /**
      * <p>
      * The starting position of a step. If the position is the first step in the leg, this position is the same as the
      * start position of the leg.
      * </p>
+     * 
+     * @return The starting position of a step. If the position is the first step in the leg, this position is the same
+     *         as the start position of the leg.
      */
-    private java.util.List<Double> startPosition;
+
+    public java.util.List<Double> getStartPosition() {
+        return startPosition;
+    }
+
+    /**
+     * <p>
+     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
+     * start position of the leg.
+     * </p>
+     * 
+     * @param startPosition
+     *        The starting position of a step. If the position is the first step in the leg, this position is the same
+     *        as the start position of the leg.
+     */
+
+    public void setStartPosition(java.util.Collection<Double> startPosition) {
+        if (startPosition == null) {
+            this.startPosition = null;
+            return;
+        }
+
+        this.startPosition = new java.util.ArrayList<Double>(startPosition);
+    }
+
+    /**
+     * <p>
+     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
+     * start position of the leg.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStartPosition(java.util.Collection)} or {@link #withStartPosition(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param startPosition
+     *        The starting position of a step. If the position is the first step in the leg, this position is the same
+     *        as the start position of the leg.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Step withStartPosition(Double... startPosition) {
+        if (this.startPosition == null) {
+            setStartPosition(new java.util.ArrayList<Double>(startPosition.length));
+        }
+        for (Double ele : startPosition) {
+            this.startPosition.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
+     * start position of the leg.
+     * </p>
+     * 
+     * @param startPosition
+     *        The starting position of a step. If the position is the first step in the leg, this position is the same
+     *        as the start position of the leg.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Step withStartPosition(java.util.Collection<Double> startPosition) {
+        setStartPosition(startPosition);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The end position of a step. If the position the last step in the leg, this position is the same as the end
+     * position of the leg.
+     * </p>
+     * 
+     * @return The end position of a step. If the position the last step in the leg, this position is the same as the
+     *         end position of the leg.
+     */
+
+    public java.util.List<Double> getEndPosition() {
+        return endPosition;
+    }
+
+    /**
+     * <p>
+     * The end position of a step. If the position the last step in the leg, this position is the same as the end
+     * position of the leg.
+     * </p>
+     * 
+     * @param endPosition
+     *        The end position of a step. If the position the last step in the leg, this position is the same as the end
+     *        position of the leg.
+     */
+
+    public void setEndPosition(java.util.Collection<Double> endPosition) {
+        if (endPosition == null) {
+            this.endPosition = null;
+            return;
+        }
+
+        this.endPosition = new java.util.ArrayList<Double>(endPosition);
+    }
+
+    /**
+     * <p>
+     * The end position of a step. If the position the last step in the leg, this position is the same as the end
+     * position of the leg.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setEndPosition(java.util.Collection)} or {@link #withEndPosition(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param endPosition
+     *        The end position of a step. If the position the last step in the leg, this position is the same as the end
+     *        position of the leg.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Step withEndPosition(Double... endPosition) {
+        if (this.endPosition == null) {
+            setEndPosition(new java.util.ArrayList<Double>(endPosition.length));
+        }
+        for (Double ele : endPosition) {
+            this.endPosition.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The end position of a step. If the position the last step in the leg, this position is the same as the end
+     * position of the leg.
+     * </p>
+     * 
+     * @param endPosition
+     *        The end position of a step. If the position the last step in the leg, this position is the same as the end
+     *        position of the leg.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Step withEndPosition(java.util.Collection<Double> endPosition) {
+        setEndPosition(endPosition);
+        return this;
+    }
 
     /**
      * <p>
@@ -158,84 +314,6 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The end position of a step. If the position the last step in the leg, this position is the same as the end
-     * position of the leg.
-     * </p>
-     * 
-     * @return The end position of a step. If the position the last step in the leg, this position is the same as the
-     *         end position of the leg.
-     */
-
-    public java.util.List<Double> getEndPosition() {
-        return endPosition;
-    }
-
-    /**
-     * <p>
-     * The end position of a step. If the position the last step in the leg, this position is the same as the end
-     * position of the leg.
-     * </p>
-     * 
-     * @param endPosition
-     *        The end position of a step. If the position the last step in the leg, this position is the same as the end
-     *        position of the leg.
-     */
-
-    public void setEndPosition(java.util.Collection<Double> endPosition) {
-        if (endPosition == null) {
-            this.endPosition = null;
-            return;
-        }
-
-        this.endPosition = new java.util.ArrayList<Double>(endPosition);
-    }
-
-    /**
-     * <p>
-     * The end position of a step. If the position the last step in the leg, this position is the same as the end
-     * position of the leg.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setEndPosition(java.util.Collection)} or {@link #withEndPosition(java.util.Collection)} if you want to
-     * override the existing values.
-     * </p>
-     * 
-     * @param endPosition
-     *        The end position of a step. If the position the last step in the leg, this position is the same as the end
-     *        position of the leg.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Step withEndPosition(Double... endPosition) {
-        if (this.endPosition == null) {
-            setEndPosition(new java.util.ArrayList<Double>(endPosition.length));
-        }
-        for (Double ele : endPosition) {
-            this.endPosition.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * The end position of a step. If the position the last step in the leg, this position is the same as the end
-     * position of the leg.
-     * </p>
-     * 
-     * @param endPosition
-     *        The end position of a step. If the position the last step in the leg, this position is the same as the end
-     *        position of the leg.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Step withEndPosition(java.util.Collection<Double> endPosition) {
-        setEndPosition(endPosition);
-        return this;
-    }
-
-    /**
-     * <p>
      * Represents the start position, or index, in a sequence of steps within the leg's line string geometry. For
      * example, the index of the first step in a leg geometry is <code>0</code>.
      * </p>
@@ -296,84 +374,6 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
-     * start position of the leg.
-     * </p>
-     * 
-     * @return The starting position of a step. If the position is the first step in the leg, this position is the same
-     *         as the start position of the leg.
-     */
-
-    public java.util.List<Double> getStartPosition() {
-        return startPosition;
-    }
-
-    /**
-     * <p>
-     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
-     * start position of the leg.
-     * </p>
-     * 
-     * @param startPosition
-     *        The starting position of a step. If the position is the first step in the leg, this position is the same
-     *        as the start position of the leg.
-     */
-
-    public void setStartPosition(java.util.Collection<Double> startPosition) {
-        if (startPosition == null) {
-            this.startPosition = null;
-            return;
-        }
-
-        this.startPosition = new java.util.ArrayList<Double>(startPosition);
-    }
-
-    /**
-     * <p>
-     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
-     * start position of the leg.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setStartPosition(java.util.Collection)} or {@link #withStartPosition(java.util.Collection)} if you want
-     * to override the existing values.
-     * </p>
-     * 
-     * @param startPosition
-     *        The starting position of a step. If the position is the first step in the leg, this position is the same
-     *        as the start position of the leg.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Step withStartPosition(Double... startPosition) {
-        if (this.startPosition == null) {
-            setStartPosition(new java.util.ArrayList<Double>(startPosition.length));
-        }
-        for (Double ele : startPosition) {
-            this.startPosition.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * The starting position of a step. If the position is the first step in the leg, this position is the same as the
-     * start position of the leg.
-     * </p>
-     * 
-     * @param startPosition
-     *        The starting position of a step. If the position is the first step in the leg, this position is the same
-     *        as the start position of the leg.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Step withStartPosition(java.util.Collection<Double> startPosition) {
-        setStartPosition(startPosition);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -385,16 +385,16 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getStartPosition() != null)
+            sb.append("StartPosition: ").append("***Sensitive Data Redacted***").append(",");
+        if (getEndPosition() != null)
+            sb.append("EndPosition: ").append("***Sensitive Data Redacted***").append(",");
         if (getDistance() != null)
             sb.append("Distance: ").append(getDistance()).append(",");
         if (getDurationSeconds() != null)
             sb.append("DurationSeconds: ").append(getDurationSeconds()).append(",");
-        if (getEndPosition() != null)
-            sb.append("EndPosition: ").append("***Sensitive Data Redacted***").append(",");
         if (getGeometryOffset() != null)
-            sb.append("GeometryOffset: ").append(getGeometryOffset()).append(",");
-        if (getStartPosition() != null)
-            sb.append("StartPosition: ").append("***Sensitive Data Redacted***");
+            sb.append("GeometryOffset: ").append(getGeometryOffset());
         sb.append("}");
         return sb.toString();
     }
@@ -409,6 +409,14 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Step == false)
             return false;
         Step other = (Step) obj;
+        if (other.getStartPosition() == null ^ this.getStartPosition() == null)
+            return false;
+        if (other.getStartPosition() != null && other.getStartPosition().equals(this.getStartPosition()) == false)
+            return false;
+        if (other.getEndPosition() == null ^ this.getEndPosition() == null)
+            return false;
+        if (other.getEndPosition() != null && other.getEndPosition().equals(this.getEndPosition()) == false)
+            return false;
         if (other.getDistance() == null ^ this.getDistance() == null)
             return false;
         if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
@@ -417,17 +425,9 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDurationSeconds() != null && other.getDurationSeconds().equals(this.getDurationSeconds()) == false)
             return false;
-        if (other.getEndPosition() == null ^ this.getEndPosition() == null)
-            return false;
-        if (other.getEndPosition() != null && other.getEndPosition().equals(this.getEndPosition()) == false)
-            return false;
         if (other.getGeometryOffset() == null ^ this.getGeometryOffset() == null)
             return false;
         if (other.getGeometryOffset() != null && other.getGeometryOffset().equals(this.getGeometryOffset()) == false)
-            return false;
-        if (other.getStartPosition() == null ^ this.getStartPosition() == null)
-            return false;
-        if (other.getStartPosition() != null && other.getStartPosition().equals(this.getStartPosition()) == false)
             return false;
         return true;
     }
@@ -437,11 +437,11 @@ public class Step implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getStartPosition() == null) ? 0 : getStartPosition().hashCode());
+        hashCode = prime * hashCode + ((getEndPosition() == null) ? 0 : getEndPosition().hashCode());
         hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
         hashCode = prime * hashCode + ((getDurationSeconds() == null) ? 0 : getDurationSeconds().hashCode());
-        hashCode = prime * hashCode + ((getEndPosition() == null) ? 0 : getEndPosition().hashCode());
         hashCode = prime * hashCode + ((getGeometryOffset() == null) ? 0 : getGeometryOffset().hashCode());
-        hashCode = prime * hashCode + ((getStartPosition() == null) ? 0 : getStartPosition().hashCode());
         return hashCode;
     }
 

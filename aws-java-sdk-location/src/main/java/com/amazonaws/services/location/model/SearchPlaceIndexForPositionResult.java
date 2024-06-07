@@ -25,18 +25,64 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Returns a list of Places closest to the specified position. Each result contains additional information about the
-     * Places returned.
-     * </p>
-     */
-    private java.util.List<SearchForPositionResult> results;
-    /**
-     * <p>
      * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
      * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
      * </p>
      */
     private SearchPlaceIndexForPositionSummary summary;
+    /**
+     * <p>
+     * Returns a list of Places closest to the specified position. Each result contains additional information about the
+     * Places returned.
+     * </p>
+     */
+    private java.util.List<SearchForPositionResult> results;
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
+     * </p>
+     * 
+     * @param summary
+     *        Contains a summary of the request. Echoes the input values for <code>Position</code>,
+     *        <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
+     */
+
+    public void setSummary(SearchPlaceIndexForPositionSummary summary) {
+        this.summary = summary;
+    }
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
+     * </p>
+     * 
+     * @return Contains a summary of the request. Echoes the input values for <code>Position</code>,
+     *         <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
+     */
+
+    public SearchPlaceIndexForPositionSummary getSummary() {
+        return this.summary;
+    }
+
+    /**
+     * <p>
+     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
+     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
+     * </p>
+     * 
+     * @param summary
+     *        Contains a summary of the request. Echoes the input values for <code>Position</code>,
+     *        <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchPlaceIndexForPositionResult withSummary(SearchPlaceIndexForPositionSummary summary) {
+        setSummary(summary);
+        return this;
+    }
 
     /**
      * <p>
@@ -117,52 +163,6 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
-     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
-     * </p>
-     * 
-     * @param summary
-     *        Contains a summary of the request. Echoes the input values for <code>Position</code>,
-     *        <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
-     */
-
-    public void setSummary(SearchPlaceIndexForPositionSummary summary) {
-        this.summary = summary;
-    }
-
-    /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
-     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
-     * </p>
-     * 
-     * @return Contains a summary of the request. Echoes the input values for <code>Position</code>,
-     *         <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
-     */
-
-    public SearchPlaceIndexForPositionSummary getSummary() {
-        return this.summary;
-    }
-
-    /**
-     * <p>
-     * Contains a summary of the request. Echoes the input values for <code>Position</code>, <code>Language</code>,
-     * <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
-     * </p>
-     * 
-     * @param summary
-     *        Contains a summary of the request. Echoes the input values for <code>Position</code>,
-     *        <code>Language</code>, <code>MaxResults</code>, and the <code>DataSource</code> of the place index.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SearchPlaceIndexForPositionResult withSummary(SearchPlaceIndexForPositionSummary summary) {
-        setSummary(summary);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -174,10 +174,10 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getResults() != null)
-            sb.append("Results: ").append(getResults()).append(",");
         if (getSummary() != null)
-            sb.append("Summary: ").append(getSummary());
+            sb.append("Summary: ").append(getSummary()).append(",");
+        if (getResults() != null)
+            sb.append("Results: ").append(getResults());
         sb.append("}");
         return sb.toString();
     }
@@ -192,13 +192,13 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
         if (obj instanceof SearchPlaceIndexForPositionResult == false)
             return false;
         SearchPlaceIndexForPositionResult other = (SearchPlaceIndexForPositionResult) obj;
-        if (other.getResults() == null ^ this.getResults() == null)
-            return false;
-        if (other.getResults() != null && other.getResults().equals(this.getResults()) == false)
-            return false;
         if (other.getSummary() == null ^ this.getSummary() == null)
             return false;
         if (other.getSummary() != null && other.getSummary().equals(this.getSummary()) == false)
+            return false;
+        if (other.getResults() == null ^ this.getResults() == null)
+            return false;
+        if (other.getResults() != null && other.getResults().equals(this.getResults()) == false)
             return false;
         return true;
     }
@@ -208,8 +208,8 @@ public class SearchPlaceIndexForPositionResult extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getResults() == null) ? 0 : getResults().hashCode());
         hashCode = prime * hashCode + ((getSummary() == null) ? 0 : getSummary().hashCode());
+        hashCode = prime * hashCode + ((getResults() == null) ? 0 : getResults().hashCode());
         return hashCode;
     }
 

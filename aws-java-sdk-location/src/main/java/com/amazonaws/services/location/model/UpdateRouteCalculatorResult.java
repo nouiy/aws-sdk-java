@@ -25,6 +25,12 @@ public class UpdateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The name of the updated route calculator resource.
+     * </p>
+     */
+    private String calculatorName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the updated route calculator resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
@@ -38,18 +44,52 @@ public class UpdateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
     private String calculatorArn;
     /**
      * <p>
-     * The name of the updated route calculator resource.
-     * </p>
-     */
-    private String calculatorName;
-    /**
-     * <p>
      * The timestamp for when the route calculator was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      */
     private java.util.Date updateTime;
+
+    /**
+     * <p>
+     * The name of the updated route calculator resource.
+     * </p>
+     * 
+     * @param calculatorName
+     *        The name of the updated route calculator resource.
+     */
+
+    public void setCalculatorName(String calculatorName) {
+        this.calculatorName = calculatorName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated route calculator resource.
+     * </p>
+     * 
+     * @return The name of the updated route calculator resource.
+     */
+
+    public String getCalculatorName() {
+        return this.calculatorName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated route calculator resource.
+     * </p>
+     * 
+     * @param calculatorName
+     *        The name of the updated route calculator resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRouteCalculatorResult withCalculatorName(String calculatorName) {
+        setCalculatorName(calculatorName);
+        return this;
+    }
 
     /**
      * <p>
@@ -135,46 +175,6 @@ public class UpdateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the updated route calculator resource.
-     * </p>
-     * 
-     * @param calculatorName
-     *        The name of the updated route calculator resource.
-     */
-
-    public void setCalculatorName(String calculatorName) {
-        this.calculatorName = calculatorName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated route calculator resource.
-     * </p>
-     * 
-     * @return The name of the updated route calculator resource.
-     */
-
-    public String getCalculatorName() {
-        return this.calculatorName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated route calculator resource.
-     * </p>
-     * 
-     * @param calculatorName
-     *        The name of the updated route calculator resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateRouteCalculatorResult withCalculatorName(String calculatorName) {
-        setCalculatorName(calculatorName);
-        return this;
-    }
-
-    /**
-     * <p>
      * The timestamp for when the route calculator was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
@@ -237,10 +237,10 @@ public class UpdateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCalculatorArn() != null)
-            sb.append("CalculatorArn: ").append(getCalculatorArn()).append(",");
         if (getCalculatorName() != null)
             sb.append("CalculatorName: ").append(getCalculatorName()).append(",");
+        if (getCalculatorArn() != null)
+            sb.append("CalculatorArn: ").append(getCalculatorArn()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -257,13 +257,13 @@ public class UpdateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof UpdateRouteCalculatorResult == false)
             return false;
         UpdateRouteCalculatorResult other = (UpdateRouteCalculatorResult) obj;
-        if (other.getCalculatorArn() == null ^ this.getCalculatorArn() == null)
-            return false;
-        if (other.getCalculatorArn() != null && other.getCalculatorArn().equals(this.getCalculatorArn()) == false)
-            return false;
         if (other.getCalculatorName() == null ^ this.getCalculatorName() == null)
             return false;
         if (other.getCalculatorName() != null && other.getCalculatorName().equals(this.getCalculatorName()) == false)
+            return false;
+        if (other.getCalculatorArn() == null ^ this.getCalculatorArn() == null)
+            return false;
+        if (other.getCalculatorArn() != null && other.getCalculatorArn().equals(this.getCalculatorArn()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -277,8 +277,8 @@ public class UpdateRouteCalculatorResult extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCalculatorArn() == null) ? 0 : getCalculatorArn().hashCode());
         hashCode = prime * hashCode + ((getCalculatorName() == null) ? 0 : getCalculatorName().hashCode());
+        hashCode = prime * hashCode + ((getCalculatorArn() == null) ? 0 : getCalculatorArn().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

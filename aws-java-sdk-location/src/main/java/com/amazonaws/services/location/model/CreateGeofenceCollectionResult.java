@@ -25,6 +25,12 @@ public class CreateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
+     * The name for the geofence collection.
+     * </p>
+     */
+    private String collectionName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) for the geofence collection resource. Used when you need to specify a resource
      * across all Amazon Web Services.
      * </p>
@@ -39,18 +45,52 @@ public class CreateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
     private String collectionArn;
     /**
      * <p>
-     * The name for the geofence collection.
-     * </p>
-     */
-    private String collectionName;
-    /**
-     * <p>
      * The timestamp for when the geofence collection was created in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
      * </p>
      */
     private java.util.Date createTime;
+
+    /**
+     * <p>
+     * The name for the geofence collection.
+     * </p>
+     * 
+     * @param collectionName
+     *        The name for the geofence collection.
+     */
+
+    public void setCollectionName(String collectionName) {
+        this.collectionName = collectionName;
+    }
+
+    /**
+     * <p>
+     * The name for the geofence collection.
+     * </p>
+     * 
+     * @return The name for the geofence collection.
+     */
+
+    public String getCollectionName() {
+        return this.collectionName;
+    }
+
+    /**
+     * <p>
+     * The name for the geofence collection.
+     * </p>
+     * 
+     * @param collectionName
+     *        The name for the geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateGeofenceCollectionResult withCollectionName(String collectionName) {
+        setCollectionName(collectionName);
+        return this;
+    }
 
     /**
      * <p>
@@ -139,46 +179,6 @@ public class CreateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name for the geofence collection.
-     * </p>
-     * 
-     * @param collectionName
-     *        The name for the geofence collection.
-     */
-
-    public void setCollectionName(String collectionName) {
-        this.collectionName = collectionName;
-    }
-
-    /**
-     * <p>
-     * The name for the geofence collection.
-     * </p>
-     * 
-     * @return The name for the geofence collection.
-     */
-
-    public String getCollectionName() {
-        return this.collectionName;
-    }
-
-    /**
-     * <p>
-     * The name for the geofence collection.
-     * </p>
-     * 
-     * @param collectionName
-     *        The name for the geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateGeofenceCollectionResult withCollectionName(String collectionName) {
-        setCollectionName(collectionName);
-        return this;
-    }
-
-    /**
-     * <p>
      * The timestamp for when the geofence collection was created in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
@@ -241,10 +241,10 @@ public class CreateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCollectionArn() != null)
-            sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
         if (getCollectionName() != null)
             sb.append("CollectionName: ").append(getCollectionName()).append(",");
+        if (getCollectionArn() != null)
+            sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
@@ -261,13 +261,13 @@ public class CreateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
         if (obj instanceof CreateGeofenceCollectionResult == false)
             return false;
         CreateGeofenceCollectionResult other = (CreateGeofenceCollectionResult) obj;
-        if (other.getCollectionArn() == null ^ this.getCollectionArn() == null)
-            return false;
-        if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
-            return false;
         if (other.getCollectionName() == null ^ this.getCollectionName() == null)
             return false;
         if (other.getCollectionName() != null && other.getCollectionName().equals(this.getCollectionName()) == false)
+            return false;
+        if (other.getCollectionArn() == null ^ this.getCollectionArn() == null)
+            return false;
+        if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
             return false;
         if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
@@ -281,8 +281,8 @@ public class CreateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
         hashCode = prime * hashCode + ((getCollectionName() == null) ? 0 : getCollectionName().hashCode());
+        hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }

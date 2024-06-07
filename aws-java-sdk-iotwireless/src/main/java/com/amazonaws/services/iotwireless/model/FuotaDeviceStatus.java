@@ -32,7 +32,8 @@ public enum FuotaDeviceStatus {
     MissingFrag("MissingFrag"),
     MemoryError("MemoryError"),
     MICError("MICError"),
-    Successful("Successful");
+    Successful("Successful"),
+    Device_exist_in_conflict_fuota_task("Device_exist_in_conflict_fuota_task");
 
     private String value;
 

@@ -46,7 +46,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A map of attributes with their corresponding values.
      * </p>
      * <p>
-     * The following lists the names, descriptions, and values of the special request parameters that the
+     * The following lists names, descriptions, and values of the special request parameters that the
      * <code>CreateTopic</code> action uses:
      * </p>
      * <ul>
@@ -286,7 +286,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A map of attributes with their corresponding values.
      * </p>
      * <p>
-     * The following lists the names, descriptions, and values of the special request parameters that the
+     * The following lists names, descriptions, and values of the special request parameters that the
      * <code>CreateTopic</code> action uses:
      * </p>
      * <ul>
@@ -391,7 +391,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @return A map of attributes with their corresponding values.</p>
      *         <p>
-     *         The following lists the names, descriptions, and values of the special request parameters that the
+     *         The following lists names, descriptions, and values of the special request parameters that the
      *         <code>CreateTopic</code> action uses:
      *         </p>
      *         <ul>
@@ -509,7 +509,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A map of attributes with their corresponding values.
      * </p>
      * <p>
-     * The following lists the names, descriptions, and values of the special request parameters that the
+     * The following lists names, descriptions, and values of the special request parameters that the
      * <code>CreateTopic</code> action uses:
      * </p>
      * <ul>
@@ -615,7 +615,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param attributes
      *        A map of attributes with their corresponding values.</p>
      *        <p>
-     *        The following lists the names, descriptions, and values of the special request parameters that the
+     *        The following lists names, descriptions, and values of the special request parameters that the
      *        <code>CreateTopic</code> action uses:
      *        </p>
      *        <ul>
@@ -730,7 +730,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A map of attributes with their corresponding values.
      * </p>
      * <p>
-     * The following lists the names, descriptions, and values of the special request parameters that the
+     * The following lists names, descriptions, and values of the special request parameters that the
      * <code>CreateTopic</code> action uses:
      * </p>
      * <ul>
@@ -836,7 +836,7 @@ public class CreateTopicRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param attributes
      *        A map of attributes with their corresponding values.</p>
      *        <p>
-     *        The following lists the names, descriptions, and values of the special request parameters that the
+     *        The following lists names, descriptions, and values of the special request parameters that the
      *        <code>CreateTopic</code> action uses:
      *        </p>
      *        <ul>

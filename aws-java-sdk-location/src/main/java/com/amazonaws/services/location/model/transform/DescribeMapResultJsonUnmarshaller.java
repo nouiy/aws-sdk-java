@@ -48,38 +48,38 @@ public class DescribeMapResultJsonUnmarshaller implements Unmarshaller<DescribeM
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Configuration", targetDepth)) {
+                if (context.testExpression("MapName", targetDepth)) {
                     context.nextToken();
-                    describeMapResult.setConfiguration(MapConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    describeMapResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("DataSource", targetDepth)) {
-                    context.nextToken();
-                    describeMapResult.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Description", targetDepth)) {
-                    context.nextToken();
-                    describeMapResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    describeMapResult.setMapName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("MapArn", targetDepth)) {
                     context.nextToken();
                     describeMapResult.setMapArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("MapName", targetDepth)) {
-                    context.nextToken();
-                    describeMapResult.setMapName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("PricingPlan", targetDepth)) {
                     context.nextToken();
                     describeMapResult.setPricingPlan(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DataSource", targetDepth)) {
+                    context.nextToken();
+                    describeMapResult.setDataSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Configuration", targetDepth)) {
+                    context.nextToken();
+                    describeMapResult.setConfiguration(MapConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    describeMapResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     describeMapResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    describeMapResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

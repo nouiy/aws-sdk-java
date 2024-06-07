@@ -33,10 +33,10 @@ public class CreateRouteCalculatorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CalculatorName").build();
     private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -58,8 +58,8 @@ public class CreateRouteCalculatorRequestMarshaller {
         try {
             protocolMarshaller.marshall(createRouteCalculatorRequest.getCalculatorName(), CALCULATORNAME_BINDING);
             protocolMarshaller.marshall(createRouteCalculatorRequest.getDataSource(), DATASOURCE_BINDING);
-            protocolMarshaller.marshall(createRouteCalculatorRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createRouteCalculatorRequest.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(createRouteCalculatorRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createRouteCalculatorRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

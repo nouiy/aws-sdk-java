@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class BatchDeleteGeofenceErrorMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
     private static final MarshallingInfo<String> GEOFENCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceId").build();
+    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
 
     private static final BatchDeleteGeofenceErrorMarshaller instance = new BatchDeleteGeofenceErrorMarshaller();
 
@@ -48,8 +48,8 @@ public class BatchDeleteGeofenceErrorMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(batchDeleteGeofenceError.getError(), ERROR_BINDING);
             protocolMarshaller.marshall(batchDeleteGeofenceError.getGeofenceId(), GEOFENCEID_BINDING);
+            protocolMarshaller.marshall(batchDeleteGeofenceError.getError(), ERROR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -30,6 +30,43 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
 
     /**
      * <p>
+     * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
+     * example, <code>[min x, min y, max x, max y]</code>.
+     * </p>
+     * <p>
+     * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The first <code>bbox</code> position is the X coordinate or longitude of the lower southwest corner.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The second <code>bbox</code> position is the Y coordinate or latitude of the lower southwest corner.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The next 2 <code>bbox</code> parameters describe the upper northeast corner:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The third <code>bbox</code> position is the X coordinate, or longitude of the upper northeast corner.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The fourth <code>bbox</code> position is the Y coordinate, or latitude of the upper northeast corner.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<Double> routeBBox;
+    /**
+     * <p>
      * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
      * providers:
      * </p>
@@ -71,12 +108,6 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     private Double distance;
     /**
      * <p>
-     * The unit of measurement for route distances.
-     * </p>
-     */
-    private String distanceUnit;
-    /**
-     * <p>
      * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
      * route.
      * </p>
@@ -84,394 +115,10 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     private Double durationSeconds;
     /**
      * <p>
-     * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
-     * example, <code>[min x, min y, max x, max y]</code>.
-     * </p>
-     * <p>
-     * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The first <code>bbox</code> position is the X coordinate or longitude of the lower southwest corner.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The second <code>bbox</code> position is the Y coordinate or latitude of the lower southwest corner.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * The next 2 <code>bbox</code> parameters describe the upper northeast corner:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The third <code>bbox</code> position is the X coordinate, or longitude of the upper northeast corner.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The fourth <code>bbox</code> position is the Y coordinate, or latitude of the upper northeast corner.
-     * </p>
-     * </li>
-     * </ul>
-     */
-    private java.util.List<Double> routeBBox;
-
-    /**
-     * <p>
-     * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
-     * providers:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>Esri</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Grab</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Here</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about data providers, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
-     * Service data providers</a>.
-     * </p>
-     * 
-     * @param dataSource
-     *        The data provider of traffic and road network data used to calculate the route. Indicates one of the
-     *        available providers:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>Esri</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Grab</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Here</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about data providers, see <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
-     *        Location Service data providers</a>.
-     */
-
-    public void setDataSource(String dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    /**
-     * <p>
-     * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
-     * providers:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>Esri</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Grab</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Here</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about data providers, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
-     * Service data providers</a>.
-     * </p>
-     * 
-     * @return The data provider of traffic and road network data used to calculate the route. Indicates one of the
-     *         available providers:</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>Esri</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>Grab</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>Here</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         For more information about data providers, see <a
-     *         href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
-     *         Location Service data providers</a>.
-     */
-
-    public String getDataSource() {
-        return this.dataSource;
-    }
-
-    /**
-     * <p>
-     * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
-     * providers:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>Esri</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Grab</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>Here</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about data providers, see <a
-     * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
-     * Service data providers</a>.
-     * </p>
-     * 
-     * @param dataSource
-     *        The data provider of traffic and road network data used to calculate the route. Indicates one of the
-     *        available providers:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>Esri</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Grab</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>Here</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about data providers, see <a
-     *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
-     *        Location Service data providers</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CalculateRouteSummary withDataSource(String dataSource) {
-        setDataSource(dataSource);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The total distance covered by the route. The sum of the distance travelled between every stop on the route.
-     * </p>
-     * <note>
-     * <p>
-     * If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the
-     * route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
-     * </p>
-     * </note>
-     * 
-     * @param distance
-     *        The total distance covered by the route. The sum of the distance travelled between every stop on the
-     *        route.</p> <note>
-     *        <p>
-     *        If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If
-     *        the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
-     *        </p>
-     */
-
-    public void setDistance(Double distance) {
-        this.distance = distance;
-    }
-
-    /**
-     * <p>
-     * The total distance covered by the route. The sum of the distance travelled between every stop on the route.
-     * </p>
-     * <note>
-     * <p>
-     * If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the
-     * route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
-     * </p>
-     * </note>
-     * 
-     * @return The total distance covered by the route. The sum of the distance travelled between every stop on the
-     *         route.</p> <note>
-     *         <p>
-     *         If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If
-     *         the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
-     *         </p>
-     */
-
-    public Double getDistance() {
-        return this.distance;
-    }
-
-    /**
-     * <p>
-     * The total distance covered by the route. The sum of the distance travelled between every stop on the route.
-     * </p>
-     * <note>
-     * <p>
-     * If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the
-     * route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
-     * </p>
-     * </note>
-     * 
-     * @param distance
-     *        The total distance covered by the route. The sum of the distance travelled between every stop on the
-     *        route.</p> <note>
-     *        <p>
-     *        If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If
-     *        the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CalculateRouteSummary withDistance(Double distance) {
-        setDistance(distance);
-        return this;
-    }
-
-    /**
-     * <p>
      * The unit of measurement for route distances.
      * </p>
-     * 
-     * @param distanceUnit
-     *        The unit of measurement for route distances.
-     * @see DistanceUnit
      */
-
-    public void setDistanceUnit(String distanceUnit) {
-        this.distanceUnit = distanceUnit;
-    }
-
-    /**
-     * <p>
-     * The unit of measurement for route distances.
-     * </p>
-     * 
-     * @return The unit of measurement for route distances.
-     * @see DistanceUnit
-     */
-
-    public String getDistanceUnit() {
-        return this.distanceUnit;
-    }
-
-    /**
-     * <p>
-     * The unit of measurement for route distances.
-     * </p>
-     * 
-     * @param distanceUnit
-     *        The unit of measurement for route distances.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DistanceUnit
-     */
-
-    public CalculateRouteSummary withDistanceUnit(String distanceUnit) {
-        setDistanceUnit(distanceUnit);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The unit of measurement for route distances.
-     * </p>
-     * 
-     * @param distanceUnit
-     *        The unit of measurement for route distances.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see DistanceUnit
-     */
-
-    public CalculateRouteSummary withDistanceUnit(DistanceUnit distanceUnit) {
-        this.distanceUnit = distanceUnit.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
-     * route.
-     * </p>
-     * 
-     * @param durationSeconds
-     *        The total travel time for the route measured in seconds. The sum of the travel time between every stop on
-     *        the route.
-     */
-
-    public void setDurationSeconds(Double durationSeconds) {
-        this.durationSeconds = durationSeconds;
-    }
-
-    /**
-     * <p>
-     * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
-     * route.
-     * </p>
-     * 
-     * @return The total travel time for the route measured in seconds. The sum of the travel time between every stop on
-     *         the route.
-     */
-
-    public Double getDurationSeconds() {
-        return this.durationSeconds;
-    }
-
-    /**
-     * <p>
-     * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
-     * route.
-     * </p>
-     * 
-     * @param durationSeconds
-     *        The total travel time for the route measured in seconds. The sum of the travel time between every stop on
-     *        the route.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CalculateRouteSummary withDurationSeconds(Double durationSeconds) {
-        setDurationSeconds(durationSeconds);
-        return this;
-    }
+    private String distanceUnit;
 
     /**
      * <p>
@@ -788,6 +435,359 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
+     * providers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Esri</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Here</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about data providers, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
+     * Service data providers</a>.
+     * </p>
+     * 
+     * @param dataSource
+     *        The data provider of traffic and road network data used to calculate the route. Indicates one of the
+     *        available providers:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Esri</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Grab</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Here</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about data providers, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
+     *        Location Service data providers</a>.
+     */
+
+    public void setDataSource(String dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    /**
+     * <p>
+     * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
+     * providers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Esri</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Here</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about data providers, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
+     * Service data providers</a>.
+     * </p>
+     * 
+     * @return The data provider of traffic and road network data used to calculate the route. Indicates one of the
+     *         available providers:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Esri</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Grab</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Here</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about data providers, see <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
+     *         Location Service data providers</a>.
+     */
+
+    public String getDataSource() {
+        return this.dataSource;
+    }
+
+    /**
+     * <p>
+     * The data provider of traffic and road network data used to calculate the route. Indicates one of the available
+     * providers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Esri</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Here</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about data providers, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location
+     * Service data providers</a>.
+     * </p>
+     * 
+     * @param dataSource
+     *        The data provider of traffic and road network data used to calculate the route. Indicates one of the
+     *        available providers:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Esri</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Grab</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Here</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about data providers, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon
+     *        Location Service data providers</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CalculateRouteSummary withDataSource(String dataSource) {
+        setDataSource(dataSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total distance covered by the route. The sum of the distance travelled between every stop on the route.
+     * </p>
+     * <note>
+     * <p>
+     * If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the
+     * route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
+     * </p>
+     * </note>
+     * 
+     * @param distance
+     *        The total distance covered by the route. The sum of the distance travelled between every stop on the
+     *        route.</p> <note>
+     *        <p>
+     *        If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If
+     *        the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
+     *        </p>
+     */
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    /**
+     * <p>
+     * The total distance covered by the route. The sum of the distance travelled between every stop on the route.
+     * </p>
+     * <note>
+     * <p>
+     * If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the
+     * route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
+     * </p>
+     * </note>
+     * 
+     * @return The total distance covered by the route. The sum of the distance travelled between every stop on the
+     *         route.</p> <note>
+     *         <p>
+     *         If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If
+     *         the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
+     *         </p>
+     */
+
+    public Double getDistance() {
+        return this.distance;
+    }
+
+    /**
+     * <p>
+     * The total distance covered by the route. The sum of the distance travelled between every stop on the route.
+     * </p>
+     * <note>
+     * <p>
+     * If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the
+     * route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
+     * </p>
+     * </note>
+     * 
+     * @param distance
+     *        The total distance covered by the route. The sum of the distance travelled between every stop on the
+     *        route.</p> <note>
+     *        <p>
+     *        If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If
+     *        the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CalculateRouteSummary withDistance(Double distance) {
+        setDistance(distance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
+     * route.
+     * </p>
+     * 
+     * @param durationSeconds
+     *        The total travel time for the route measured in seconds. The sum of the travel time between every stop on
+     *        the route.
+     */
+
+    public void setDurationSeconds(Double durationSeconds) {
+        this.durationSeconds = durationSeconds;
+    }
+
+    /**
+     * <p>
+     * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
+     * route.
+     * </p>
+     * 
+     * @return The total travel time for the route measured in seconds. The sum of the travel time between every stop on
+     *         the route.
+     */
+
+    public Double getDurationSeconds() {
+        return this.durationSeconds;
+    }
+
+    /**
+     * <p>
+     * The total travel time for the route measured in seconds. The sum of the travel time between every stop on the
+     * route.
+     * </p>
+     * 
+     * @param durationSeconds
+     *        The total travel time for the route measured in seconds. The sum of the travel time between every stop on
+     *        the route.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CalculateRouteSummary withDurationSeconds(Double durationSeconds) {
+        setDurationSeconds(durationSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for route distances.
+     * </p>
+     * 
+     * @param distanceUnit
+     *        The unit of measurement for route distances.
+     * @see DistanceUnit
+     */
+
+    public void setDistanceUnit(String distanceUnit) {
+        this.distanceUnit = distanceUnit;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for route distances.
+     * </p>
+     * 
+     * @return The unit of measurement for route distances.
+     * @see DistanceUnit
+     */
+
+    public String getDistanceUnit() {
+        return this.distanceUnit;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for route distances.
+     * </p>
+     * 
+     * @param distanceUnit
+     *        The unit of measurement for route distances.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DistanceUnit
+     */
+
+    public CalculateRouteSummary withDistanceUnit(String distanceUnit) {
+        setDistanceUnit(distanceUnit);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for route distances.
+     * </p>
+     * 
+     * @param distanceUnit
+     *        The unit of measurement for route distances.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DistanceUnit
+     */
+
+    public CalculateRouteSummary withDistanceUnit(DistanceUnit distanceUnit) {
+        this.distanceUnit = distanceUnit.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -799,16 +799,16 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRouteBBox() != null)
+            sb.append("RouteBBox: ").append("***Sensitive Data Redacted***").append(",");
         if (getDataSource() != null)
             sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getDistance() != null)
             sb.append("Distance: ").append(getDistance()).append(",");
-        if (getDistanceUnit() != null)
-            sb.append("DistanceUnit: ").append(getDistanceUnit()).append(",");
         if (getDurationSeconds() != null)
             sb.append("DurationSeconds: ").append(getDurationSeconds()).append(",");
-        if (getRouteBBox() != null)
-            sb.append("RouteBBox: ").append("***Sensitive Data Redacted***");
+        if (getDistanceUnit() != null)
+            sb.append("DistanceUnit: ").append(getDistanceUnit());
         sb.append("}");
         return sb.toString();
     }
@@ -823,6 +823,10 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
         if (obj instanceof CalculateRouteSummary == false)
             return false;
         CalculateRouteSummary other = (CalculateRouteSummary) obj;
+        if (other.getRouteBBox() == null ^ this.getRouteBBox() == null)
+            return false;
+        if (other.getRouteBBox() != null && other.getRouteBBox().equals(this.getRouteBBox()) == false)
+            return false;
         if (other.getDataSource() == null ^ this.getDataSource() == null)
             return false;
         if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
@@ -831,17 +835,13 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getDistance() != null && other.getDistance().equals(this.getDistance()) == false)
             return false;
-        if (other.getDistanceUnit() == null ^ this.getDistanceUnit() == null)
-            return false;
-        if (other.getDistanceUnit() != null && other.getDistanceUnit().equals(this.getDistanceUnit()) == false)
-            return false;
         if (other.getDurationSeconds() == null ^ this.getDurationSeconds() == null)
             return false;
         if (other.getDurationSeconds() != null && other.getDurationSeconds().equals(this.getDurationSeconds()) == false)
             return false;
-        if (other.getRouteBBox() == null ^ this.getRouteBBox() == null)
+        if (other.getDistanceUnit() == null ^ this.getDistanceUnit() == null)
             return false;
-        if (other.getRouteBBox() != null && other.getRouteBBox().equals(this.getRouteBBox()) == false)
+        if (other.getDistanceUnit() != null && other.getDistanceUnit().equals(this.getDistanceUnit()) == false)
             return false;
         return true;
     }
@@ -851,11 +851,11 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRouteBBox() == null) ? 0 : getRouteBBox().hashCode());
         hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getDistance() == null) ? 0 : getDistance().hashCode());
-        hashCode = prime * hashCode + ((getDistanceUnit() == null) ? 0 : getDistanceUnit().hashCode());
         hashCode = prime * hashCode + ((getDurationSeconds() == null) ? 0 : getDurationSeconds().hashCode());
-        hashCode = prime * hashCode + ((getRouteBBox() == null) ? 0 : getRouteBBox().hashCode());
+        hashCode = prime * hashCode + ((getDistanceUnit() == null) ? 0 : getDistanceUnit().hashCode());
         return hashCode;
     }
 

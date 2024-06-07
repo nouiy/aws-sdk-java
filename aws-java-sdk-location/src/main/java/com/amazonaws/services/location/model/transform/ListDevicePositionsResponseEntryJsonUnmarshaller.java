@@ -48,13 +48,13 @@ public class ListDevicePositionsResponseEntryJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Accuracy", targetDepth)) {
-                    context.nextToken();
-                    listDevicePositionsResponseEntry.setAccuracy(PositionalAccuracyJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("DeviceId", targetDepth)) {
                     context.nextToken();
                     listDevicePositionsResponseEntry.setDeviceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SampleTime", targetDepth)) {
+                    context.nextToken();
+                    listDevicePositionsResponseEntry.setSampleTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("Position", targetDepth)) {
                     context.nextToken();
@@ -62,14 +62,14 @@ public class ListDevicePositionsResponseEntryJsonUnmarshaller implements Unmarsh
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Accuracy", targetDepth)) {
+                    context.nextToken();
+                    listDevicePositionsResponseEntry.setAccuracy(PositionalAccuracyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("PositionProperties", targetDepth)) {
                     context.nextToken();
                     listDevicePositionsResponseEntry.setPositionProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("SampleTime", targetDepth)) {
-                    context.nextToken();
-                    listDevicePositionsResponseEntry.setSampleTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

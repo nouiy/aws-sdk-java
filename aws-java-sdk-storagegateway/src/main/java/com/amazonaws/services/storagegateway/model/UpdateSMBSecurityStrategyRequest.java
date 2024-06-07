@@ -31,19 +31,25 @@ public class UpdateSMBSecurityStrategyRequest extends com.amazonaws.AmazonWebSer
      * Specifies the type of security strategy.
      * </p>
      * <p>
-     * ClientSpecified: if you use this option, requests are established based on what is negotiated by the client. This
-     * option is recommended when you want to maximize compatibility across different clients in your environment.
-     * Supported only in S3 File Gateway.
+     * <code>ClientSpecified</code>: If you choose this option, requests are established based on what is negotiated by
+     * the client. This option is recommended when you want to maximize compatibility across different clients in your
+     * environment. Supported only for S3 File Gateway.
      * </p>
      * <p>
-     * MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients that
-     * have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server 2008 or
-     * newer.
+     * <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2 or
+     * SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows
+     * Server 2008 or newer.
      * </p>
      * <p>
-     * MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that have
-     * encryption enabled. This option is highly recommended for environments that handle sensitive data. This option
-     * works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from SMBv3
+     * clients that have encryption enabled. This option is recommended for environments that handle sensitive data.
+     * This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * </p>
+     * <p>
+     * <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections from
+     * SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This option is
+     * recommended for environments that handle sensitive data. It works with SMB clients on Microsoft Windows 8,
+     * Windows Server 2012, or later.
      * </p>
      */
     private String sMBSecurityStrategy;
@@ -79,37 +85,49 @@ public class UpdateSMBSecurityStrategyRequest extends com.amazonaws.AmazonWebSer
      * Specifies the type of security strategy.
      * </p>
      * <p>
-     * ClientSpecified: if you use this option, requests are established based on what is negotiated by the client. This
-     * option is recommended when you want to maximize compatibility across different clients in your environment.
-     * Supported only in S3 File Gateway.
+     * <code>ClientSpecified</code>: If you choose this option, requests are established based on what is negotiated by
+     * the client. This option is recommended when you want to maximize compatibility across different clients in your
+     * environment. Supported only for S3 File Gateway.
      * </p>
      * <p>
-     * MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients that
-     * have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server 2008 or
-     * newer.
+     * <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2 or
+     * SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows
+     * Server 2008 or newer.
      * </p>
      * <p>
-     * MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that have
-     * encryption enabled. This option is highly recommended for environments that handle sensitive data. This option
-     * works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from SMBv3
+     * clients that have encryption enabled. This option is recommended for environments that handle sensitive data.
+     * This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * </p>
+     * <p>
+     * <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections from
+     * SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This option is
+     * recommended for environments that handle sensitive data. It works with SMB clients on Microsoft Windows 8,
+     * Windows Server 2012, or later.
      * </p>
      * 
      * @param sMBSecurityStrategy
      *        Specifies the type of security strategy.</p>
      *        <p>
-     *        ClientSpecified: if you use this option, requests are established based on what is negotiated by the
-     *        client. This option is recommended when you want to maximize compatibility across different clients in
-     *        your environment. Supported only in S3 File Gateway.
+     *        <code>ClientSpecified</code>: If you choose this option, requests are established based on what is
+     *        negotiated by the client. This option is recommended when you want to maximize compatibility across
+     *        different clients in your environment. Supported only for S3 File Gateway.
      *        </p>
      *        <p>
-     *        MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients
-     *        that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server
-     *        2008 or newer.
+     *        <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2
+     *        or SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista,
+     *        Windows Server 2008 or newer.
      *        </p>
      *        <p>
-     *        MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that
-     *        have encryption enabled. This option is highly recommended for environments that handle sensitive data.
-     *        This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *        <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from
+     *        SMBv3 clients that have encryption enabled. This option is recommended for environments that handle
+     *        sensitive data. This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *        </p>
+     *        <p>
+     *        <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections
+     *        from SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This
+     *        option is recommended for environments that handle sensitive data. It works with SMB clients on Microsoft
+     *        Windows 8, Windows Server 2012, or later.
      * @see SMBSecurityStrategy
      */
 
@@ -122,36 +140,48 @@ public class UpdateSMBSecurityStrategyRequest extends com.amazonaws.AmazonWebSer
      * Specifies the type of security strategy.
      * </p>
      * <p>
-     * ClientSpecified: if you use this option, requests are established based on what is negotiated by the client. This
-     * option is recommended when you want to maximize compatibility across different clients in your environment.
-     * Supported only in S3 File Gateway.
+     * <code>ClientSpecified</code>: If you choose this option, requests are established based on what is negotiated by
+     * the client. This option is recommended when you want to maximize compatibility across different clients in your
+     * environment. Supported only for S3 File Gateway.
      * </p>
      * <p>
-     * MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients that
-     * have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server 2008 or
-     * newer.
+     * <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2 or
+     * SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows
+     * Server 2008 or newer.
      * </p>
      * <p>
-     * MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that have
-     * encryption enabled. This option is highly recommended for environments that handle sensitive data. This option
-     * works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from SMBv3
+     * clients that have encryption enabled. This option is recommended for environments that handle sensitive data.
+     * This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * </p>
+     * <p>
+     * <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections from
+     * SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This option is
+     * recommended for environments that handle sensitive data. It works with SMB clients on Microsoft Windows 8,
+     * Windows Server 2012, or later.
      * </p>
      * 
      * @return Specifies the type of security strategy.</p>
      *         <p>
-     *         ClientSpecified: if you use this option, requests are established based on what is negotiated by the
-     *         client. This option is recommended when you want to maximize compatibility across different clients in
-     *         your environment. Supported only in S3 File Gateway.
+     *         <code>ClientSpecified</code>: If you choose this option, requests are established based on what is
+     *         negotiated by the client. This option is recommended when you want to maximize compatibility across
+     *         different clients in your environment. Supported only for S3 File Gateway.
      *         </p>
      *         <p>
-     *         MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3
-     *         clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows
-     *         Server 2008 or newer.
+     *         <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2
+     *         or SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows
+     *         Vista, Windows Server 2008 or newer.
      *         </p>
      *         <p>
-     *         MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that
-     *         have encryption enabled. This option is highly recommended for environments that handle sensitive data.
-     *         This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *         <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from
+     *         SMBv3 clients that have encryption enabled. This option is recommended for environments that handle
+     *         sensitive data. This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *         </p>
+     *         <p>
+     *         <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections
+     *         from SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This
+     *         option is recommended for environments that handle sensitive data. It works with SMB clients on Microsoft
+     *         Windows 8, Windows Server 2012, or later.
      * @see SMBSecurityStrategy
      */
 
@@ -164,37 +194,49 @@ public class UpdateSMBSecurityStrategyRequest extends com.amazonaws.AmazonWebSer
      * Specifies the type of security strategy.
      * </p>
      * <p>
-     * ClientSpecified: if you use this option, requests are established based on what is negotiated by the client. This
-     * option is recommended when you want to maximize compatibility across different clients in your environment.
-     * Supported only in S3 File Gateway.
+     * <code>ClientSpecified</code>: If you choose this option, requests are established based on what is negotiated by
+     * the client. This option is recommended when you want to maximize compatibility across different clients in your
+     * environment. Supported only for S3 File Gateway.
      * </p>
      * <p>
-     * MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients that
-     * have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server 2008 or
-     * newer.
+     * <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2 or
+     * SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows
+     * Server 2008 or newer.
      * </p>
      * <p>
-     * MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that have
-     * encryption enabled. This option is highly recommended for environments that handle sensitive data. This option
-     * works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from SMBv3
+     * clients that have encryption enabled. This option is recommended for environments that handle sensitive data.
+     * This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * </p>
+     * <p>
+     * <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections from
+     * SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This option is
+     * recommended for environments that handle sensitive data. It works with SMB clients on Microsoft Windows 8,
+     * Windows Server 2012, or later.
      * </p>
      * 
      * @param sMBSecurityStrategy
      *        Specifies the type of security strategy.</p>
      *        <p>
-     *        ClientSpecified: if you use this option, requests are established based on what is negotiated by the
-     *        client. This option is recommended when you want to maximize compatibility across different clients in
-     *        your environment. Supported only in S3 File Gateway.
+     *        <code>ClientSpecified</code>: If you choose this option, requests are established based on what is
+     *        negotiated by the client. This option is recommended when you want to maximize compatibility across
+     *        different clients in your environment. Supported only for S3 File Gateway.
      *        </p>
      *        <p>
-     *        MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients
-     *        that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server
-     *        2008 or newer.
+     *        <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2
+     *        or SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista,
+     *        Windows Server 2008 or newer.
      *        </p>
      *        <p>
-     *        MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that
-     *        have encryption enabled. This option is highly recommended for environments that handle sensitive data.
-     *        This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *        <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from
+     *        SMBv3 clients that have encryption enabled. This option is recommended for environments that handle
+     *        sensitive data. This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *        </p>
+     *        <p>
+     *        <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections
+     *        from SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This
+     *        option is recommended for environments that handle sensitive data. It works with SMB clients on Microsoft
+     *        Windows 8, Windows Server 2012, or later.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SMBSecurityStrategy
      */
@@ -209,37 +251,49 @@ public class UpdateSMBSecurityStrategyRequest extends com.amazonaws.AmazonWebSer
      * Specifies the type of security strategy.
      * </p>
      * <p>
-     * ClientSpecified: if you use this option, requests are established based on what is negotiated by the client. This
-     * option is recommended when you want to maximize compatibility across different clients in your environment.
-     * Supported only in S3 File Gateway.
+     * <code>ClientSpecified</code>: If you choose this option, requests are established based on what is negotiated by
+     * the client. This option is recommended when you want to maximize compatibility across different clients in your
+     * environment. Supported only for S3 File Gateway.
      * </p>
      * <p>
-     * MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients that
-     * have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server 2008 or
-     * newer.
+     * <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2 or
+     * SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows
+     * Server 2008 or newer.
      * </p>
      * <p>
-     * MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that have
-     * encryption enabled. This option is highly recommended for environments that handle sensitive data. This option
-     * works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from SMBv3
+     * clients that have encryption enabled. This option is recommended for environments that handle sensitive data.
+     * This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     * </p>
+     * <p>
+     * <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections from
+     * SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This option is
+     * recommended for environments that handle sensitive data. It works with SMB clients on Microsoft Windows 8,
+     * Windows Server 2012, or later.
      * </p>
      * 
      * @param sMBSecurityStrategy
      *        Specifies the type of security strategy.</p>
      *        <p>
-     *        ClientSpecified: if you use this option, requests are established based on what is negotiated by the
-     *        client. This option is recommended when you want to maximize compatibility across different clients in
-     *        your environment. Supported only in S3 File Gateway.
+     *        <code>ClientSpecified</code>: If you choose this option, requests are established based on what is
+     *        negotiated by the client. This option is recommended when you want to maximize compatibility across
+     *        different clients in your environment. Supported only for S3 File Gateway.
      *        </p>
      *        <p>
-     *        MandatorySigning: if you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients
-     *        that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server
-     *        2008 or newer.
+     *        <code>MandatorySigning</code>: If you choose this option, File Gateway only allows connections from SMBv2
+     *        or SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista,
+     *        Windows Server 2008 or newer.
      *        </p>
      *        <p>
-     *        MandatoryEncryption: if you use this option, file gateway only allows connections from SMBv3 clients that
-     *        have encryption enabled. This option is highly recommended for environments that handle sensitive data.
-     *        This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *        <code>MandatoryEncryption</code>: If you choose this option, File Gateway only allows connections from
+     *        SMBv3 clients that have encryption enabled. This option is recommended for environments that handle
+     *        sensitive data. This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.
+     *        </p>
+     *        <p>
+     *        <code>MandatoryEncryptionNoAes128</code>: If you choose this option, File Gateway only allows connections
+     *        from SMBv3 clients that use 256-bit AES encryption algorithms. 128-bit algorithms are not allowed. This
+     *        option is recommended for environments that handle sensitive data. It works with SMB clients on Microsoft
+     *        Windows 8, Windows Server 2012, or later.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SMBSecurityStrategy
      */

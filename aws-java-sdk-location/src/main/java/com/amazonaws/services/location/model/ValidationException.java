@@ -25,16 +25,16 @@ public class ValidationException extends com.amazonaws.services.location.model.A
 
     /**
      * <p>
-     * The field where the invalid entry was detected.
-     * </p>
-     */
-    private java.util.List<ValidationExceptionField> fieldList;
-    /**
-     * <p>
      * A message with the reason for the validation exception error.
      * </p>
      */
     private String reason;
+    /**
+     * <p>
+     * The field where the invalid entry was detected.
+     * </p>
+     */
+    private java.util.List<ValidationExceptionField> fieldList;
 
     /**
      * Constructs a new ValidationException with the specified error message.
@@ -44,6 +44,67 @@ public class ValidationException extends com.amazonaws.services.location.model.A
      */
     public ValidationException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * A message with the reason for the validation exception error.
+     * </p>
+     * 
+     * @param reason
+     *        A message with the reason for the validation exception error.
+     * @see ValidationExceptionReason
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("reason")
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    /**
+     * <p>
+     * A message with the reason for the validation exception error.
+     * </p>
+     * 
+     * @return A message with the reason for the validation exception error.
+     * @see ValidationExceptionReason
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("reason")
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * <p>
+     * A message with the reason for the validation exception error.
+     * </p>
+     * 
+     * @param reason
+     *        A message with the reason for the validation exception error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ValidationExceptionReason
+     */
+
+    public ValidationException withReason(String reason) {
+        setReason(reason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A message with the reason for the validation exception error.
+     * </p>
+     * 
+     * @param reason
+     *        A message with the reason for the validation exception error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ValidationExceptionReason
+     */
+
+    public ValidationException withReason(ValidationExceptionReason reason) {
+        this.reason = reason.toString();
+        return this;
     }
 
     /**
@@ -115,67 +176,6 @@ public class ValidationException extends com.amazonaws.services.location.model.A
 
     public ValidationException withFieldList(java.util.Collection<ValidationExceptionField> fieldList) {
         setFieldList(fieldList);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A message with the reason for the validation exception error.
-     * </p>
-     * 
-     * @param reason
-     *        A message with the reason for the validation exception error.
-     * @see ValidationExceptionReason
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("reason")
-    public void setReason(String reason) {
-        this.reason = reason;
-    }
-
-    /**
-     * <p>
-     * A message with the reason for the validation exception error.
-     * </p>
-     * 
-     * @return A message with the reason for the validation exception error.
-     * @see ValidationExceptionReason
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("reason")
-    public String getReason() {
-        return this.reason;
-    }
-
-    /**
-     * <p>
-     * A message with the reason for the validation exception error.
-     * </p>
-     * 
-     * @param reason
-     *        A message with the reason for the validation exception error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ValidationExceptionReason
-     */
-
-    public ValidationException withReason(String reason) {
-        setReason(reason);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A message with the reason for the validation exception error.
-     * </p>
-     * 
-     * @param reason
-     *        A message with the reason for the validation exception error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ValidationExceptionReason
-     */
-
-    public ValidationException withReason(ValidationExceptionReason reason) {
-        this.reason = reason.toString();
         return this;
     }
 

@@ -28,16 +28,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class LegMarshaller {
 
+    private static final MarshallingInfo<List> STARTPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StartPosition").build();
+    private static final MarshallingInfo<List> ENDPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("EndPosition").build();
     private static final MarshallingInfo<Double> DISTANCE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Distance").build();
     private static final MarshallingInfo<Double> DURATIONSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DurationSeconds").build();
-    private static final MarshallingInfo<List> ENDPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("EndPosition").build();
     private static final MarshallingInfo<StructuredPojo> GEOMETRY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Geometry").build();
-    private static final MarshallingInfo<List> STARTPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("StartPosition").build();
     private static final MarshallingInfo<List> STEPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Steps").build();
 
@@ -57,11 +57,11 @@ public class LegMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(leg.getStartPosition(), STARTPOSITION_BINDING);
+            protocolMarshaller.marshall(leg.getEndPosition(), ENDPOSITION_BINDING);
             protocolMarshaller.marshall(leg.getDistance(), DISTANCE_BINDING);
             protocolMarshaller.marshall(leg.getDurationSeconds(), DURATIONSECONDS_BINDING);
-            protocolMarshaller.marshall(leg.getEndPosition(), ENDPOSITION_BINDING);
             protocolMarshaller.marshall(leg.getGeometry(), GEOMETRY_BINDING);
-            protocolMarshaller.marshall(leg.getStartPosition(), STARTPOSITION_BINDING);
             protocolMarshaller.marshall(leg.getSteps(), STEPS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

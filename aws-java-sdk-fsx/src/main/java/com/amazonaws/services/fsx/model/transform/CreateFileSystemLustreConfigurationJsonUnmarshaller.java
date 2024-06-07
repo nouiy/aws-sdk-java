@@ -105,6 +105,11 @@ public class CreateFileSystemLustreConfigurationJsonUnmarshaller implements Unma
                     createFileSystemLustreConfiguration.setRootSquashConfiguration(LustreRootSquashConfigurationJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("MetadataConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createFileSystemLustreConfiguration.setMetadataConfiguration(CreateFileSystemLustreMetadataConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -107,6 +107,44 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
     private java.util.List<String> allowActions;
     /**
      * <p>
+     * A list of allowed resource ARNs that a API key bearer can perform actions on.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
+     * match multiple resources of the same type.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
+     * key that is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
+     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
+     * colons (:).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed, even with wildcards. For example,
+     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about ARN format, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     * (ARNs)</a>.
+     * </p>
+     */
+    private java.util.List<String> allowResources;
+    /**
+     * <p>
      * An optional list of allowed HTTP referers for which requests must originate from. Requests using this API key
      * from other domains will not be allowed.
      * </p>
@@ -145,44 +183,6 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
      * </ul>
      */
     private java.util.List<String> allowReferers;
-    /**
-     * <p>
-     * A list of allowed resource ARNs that a API key bearer can perform actions on.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
-     * match multiple resources of the same type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
-     * key that is being created.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
-     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
-     * colons (:).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed, even with wildcards. For example,
-     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about ARN format, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     * (ARNs)</a>.
-     * </p>
-     */
-    private java.util.List<String> allowResources;
 
     /**
      * <p>
@@ -820,6 +820,328 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * A list of allowed resource ARNs that a API key bearer can perform actions on.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
+     * match multiple resources of the same type.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
+     * key that is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
+     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
+     * colons (:).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed, even with wildcards. For example,
+     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about ARN format, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     * (ARNs)</a>.
+     * </p>
+     * 
+     * @return A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
+     *         resource-id to match multiple resources of the same type.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The resources must be in the same <code>partition</code>, <code>region</code>, and
+     *         <code>account-id</code> as the key that is being created.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Other than wildcards, you must include the full ARN, including the <code>arn</code>,
+     *         <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
+     *         <code>resource-id</code> delimited by colons (:).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         No spaces allowed, even with wildcards. For example,
+     *         <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about ARN format, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *         (ARNs)</a>.
+     */
+
+    public java.util.List<String> getAllowResources() {
+        return allowResources;
+    }
+
+    /**
+     * <p>
+     * A list of allowed resource ARNs that a API key bearer can perform actions on.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
+     * match multiple resources of the same type.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
+     * key that is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
+     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
+     * colons (:).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed, even with wildcards. For example,
+     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about ARN format, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     * (ARNs)</a>.
+     * </p>
+     * 
+     * @param allowResources
+     *        A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
+     *        resource-id to match multiple resources of the same type.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code>
+     *        as the key that is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Other than wildcards, you must include the full ARN, including the <code>arn</code>,
+     *        <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
+     *        <code>resource-id</code> delimited by colons (:).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        No spaces allowed, even with wildcards. For example,
+     *        <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about ARN format, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *        (ARNs)</a>.
+     */
+
+    public void setAllowResources(java.util.Collection<String> allowResources) {
+        if (allowResources == null) {
+            this.allowResources = null;
+            return;
+        }
+
+        this.allowResources = new java.util.ArrayList<String>(allowResources);
+    }
+
+    /**
+     * <p>
+     * A list of allowed resource ARNs that a API key bearer can perform actions on.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
+     * match multiple resources of the same type.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
+     * key that is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
+     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
+     * colons (:).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed, even with wildcards. For example,
+     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about ARN format, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     * (ARNs)</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAllowResources(java.util.Collection)} or {@link #withAllowResources(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param allowResources
+     *        A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
+     *        resource-id to match multiple resources of the same type.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code>
+     *        as the key that is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Other than wildcards, you must include the full ARN, including the <code>arn</code>,
+     *        <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
+     *        <code>resource-id</code> delimited by colons (:).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        No spaces allowed, even with wildcards. For example,
+     *        <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about ARN format, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *        (ARNs)</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApiKeyRestrictions withAllowResources(String... allowResources) {
+        if (this.allowResources == null) {
+            setAllowResources(new java.util.ArrayList<String>(allowResources.length));
+        }
+        for (String ele : allowResources) {
+            this.allowResources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of allowed resource ARNs that a API key bearer can perform actions on.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
+     * match multiple resources of the same type.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
+     * key that is being created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
+     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
+     * colons (:).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * No spaces allowed, even with wildcards. For example,
+     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about ARN format, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     * (ARNs)</a>.
+     * </p>
+     * 
+     * @param allowResources
+     *        A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
+     *        resource-id to match multiple resources of the same type.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code>
+     *        as the key that is being created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Other than wildcards, you must include the full ARN, including the <code>arn</code>,
+     *        <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
+     *        <code>resource-id</code> delimited by colons (:).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        No spaces allowed, even with wildcards. For example,
+     *        <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about ARN format, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *        (ARNs)</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApiKeyRestrictions withAllowResources(java.util.Collection<String> allowResources) {
+        setAllowResources(allowResources);
+        return this;
+    }
+
+    /**
+     * <p>
      * An optional list of allowed HTTP referers for which requests must originate from. Requests using this API key
      * from other domains will not be allowed.
      * </p>
@@ -1157,328 +1479,6 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p>
-     * A list of allowed resource ARNs that a API key bearer can perform actions on.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
-     * match multiple resources of the same type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
-     * key that is being created.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
-     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
-     * colons (:).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed, even with wildcards. For example,
-     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about ARN format, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     * (ARNs)</a>.
-     * </p>
-     * 
-     * @return A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
-     *         resource-id to match multiple resources of the same type.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         The resources must be in the same <code>partition</code>, <code>region</code>, and
-     *         <code>account-id</code> as the key that is being created.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Other than wildcards, you must include the full ARN, including the <code>arn</code>,
-     *         <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
-     *         <code>resource-id</code> delimited by colons (:).
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         No spaces allowed, even with wildcards. For example,
-     *         <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         For more information about ARN format, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *         (ARNs)</a>.
-     */
-
-    public java.util.List<String> getAllowResources() {
-        return allowResources;
-    }
-
-    /**
-     * <p>
-     * A list of allowed resource ARNs that a API key bearer can perform actions on.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
-     * match multiple resources of the same type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
-     * key that is being created.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
-     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
-     * colons (:).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed, even with wildcards. For example,
-     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about ARN format, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     * (ARNs)</a>.
-     * </p>
-     * 
-     * @param allowResources
-     *        A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
-     *        resource-id to match multiple resources of the same type.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code>
-     *        as the key that is being created.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Other than wildcards, you must include the full ARN, including the <code>arn</code>,
-     *        <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
-     *        <code>resource-id</code> delimited by colons (:).
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        No spaces allowed, even with wildcards. For example,
-     *        <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about ARN format, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs)</a>.
-     */
-
-    public void setAllowResources(java.util.Collection<String> allowResources) {
-        if (allowResources == null) {
-            this.allowResources = null;
-            return;
-        }
-
-        this.allowResources = new java.util.ArrayList<String>(allowResources);
-    }
-
-    /**
-     * <p>
-     * A list of allowed resource ARNs that a API key bearer can perform actions on.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
-     * match multiple resources of the same type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
-     * key that is being created.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
-     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
-     * colons (:).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed, even with wildcards. For example,
-     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about ARN format, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     * (ARNs)</a>.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setAllowResources(java.util.Collection)} or {@link #withAllowResources(java.util.Collection)} if you want
-     * to override the existing values.
-     * </p>
-     * 
-     * @param allowResources
-     *        A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
-     *        resource-id to match multiple resources of the same type.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code>
-     *        as the key that is being created.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Other than wildcards, you must include the full ARN, including the <code>arn</code>,
-     *        <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
-     *        <code>resource-id</code> delimited by colons (:).
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        No spaces allowed, even with wildcards. For example,
-     *        <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about ARN format, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs)</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ApiKeyRestrictions withAllowResources(String... allowResources) {
-        if (this.allowResources == null) {
-            setAllowResources(new java.util.ArrayList<String>(allowResources.length));
-        }
-        for (String ele : allowResources) {
-            this.allowResources.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * A list of allowed resource ARNs that a API key bearer can perform actions on.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the resource-id to
-     * match multiple resources of the same type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code> as the
-     * key that is being created.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Other than wildcards, you must include the full ARN, including the <code>arn</code>, <code>partition</code>,
-     * <code>service</code>, <code>region</code>, <code>account-id</code> and <code>resource-id</code> delimited by
-     * colons (:).
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * No spaces allowed, even with wildcards. For example,
-     * <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information about ARN format, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     * (ARNs)</a>.
-     * </p>
-     * 
-     * @param allowResources
-     *        A list of allowed resource ARNs that a API key bearer can perform actions on.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The ARN must be the correct ARN for a map, place, or route ARN. You may include wildcards in the
-     *        resource-id to match multiple resources of the same type.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        The resources must be in the same <code>partition</code>, <code>region</code>, and <code>account-id</code>
-     *        as the key that is being created.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Other than wildcards, you must include the full ARN, including the <code>arn</code>,
-     *        <code>partition</code>, <code>service</code>, <code>region</code>, <code>account-id</code> and
-     *        <code>resource-id</code> delimited by colons (:).
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        No spaces allowed, even with wildcards. For example,
-     *        <code>arn:aws:geo:region:<i>account-id</i>:map/ExampleMap*</code>.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information about ARN format, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs)</a>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ApiKeyRestrictions withAllowResources(java.util.Collection<String> allowResources) {
-        setAllowResources(allowResources);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1492,10 +1492,10 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
         sb.append("{");
         if (getAllowActions() != null)
             sb.append("AllowActions: ").append(getAllowActions()).append(",");
-        if (getAllowReferers() != null)
-            sb.append("AllowReferers: ").append(getAllowReferers()).append(",");
         if (getAllowResources() != null)
-            sb.append("AllowResources: ").append(getAllowResources());
+            sb.append("AllowResources: ").append(getAllowResources()).append(",");
+        if (getAllowReferers() != null)
+            sb.append("AllowReferers: ").append(getAllowReferers());
         sb.append("}");
         return sb.toString();
     }
@@ -1514,13 +1514,13 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getAllowActions() != null && other.getAllowActions().equals(this.getAllowActions()) == false)
             return false;
-        if (other.getAllowReferers() == null ^ this.getAllowReferers() == null)
-            return false;
-        if (other.getAllowReferers() != null && other.getAllowReferers().equals(this.getAllowReferers()) == false)
-            return false;
         if (other.getAllowResources() == null ^ this.getAllowResources() == null)
             return false;
         if (other.getAllowResources() != null && other.getAllowResources().equals(this.getAllowResources()) == false)
+            return false;
+        if (other.getAllowReferers() == null ^ this.getAllowReferers() == null)
+            return false;
+        if (other.getAllowReferers() != null && other.getAllowReferers().equals(this.getAllowReferers()) == false)
             return false;
         return true;
     }
@@ -1531,8 +1531,8 @@ public class ApiKeyRestrictions implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAllowActions() == null) ? 0 : getAllowActions().hashCode());
-        hashCode = prime * hashCode + ((getAllowReferers() == null) ? 0 : getAllowReferers().hashCode());
         hashCode = prime * hashCode + ((getAllowResources() == null) ? 0 : getAllowResources().hashCode());
+        hashCode = prime * hashCode + ((getAllowReferers() == null) ? 0 : getAllowReferers().hashCode());
         return hashCode;
     }
 

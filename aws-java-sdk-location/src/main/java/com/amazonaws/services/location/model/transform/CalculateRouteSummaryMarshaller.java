@@ -28,16 +28,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CalculateRouteSummaryMarshaller {
 
+    private static final MarshallingInfo<List> ROUTEBBOX_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RouteBBox").build();
     private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
     private static final MarshallingInfo<Double> DISTANCE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Distance").build();
-    private static final MarshallingInfo<String> DISTANCEUNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DistanceUnit").build();
     private static final MarshallingInfo<Double> DURATIONSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DurationSeconds").build();
-    private static final MarshallingInfo<List> ROUTEBBOX_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("RouteBBox").build();
+    private static final MarshallingInfo<String> DISTANCEUNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DistanceUnit").build();
 
     private static final CalculateRouteSummaryMarshaller instance = new CalculateRouteSummaryMarshaller();
 
@@ -55,11 +55,11 @@ public class CalculateRouteSummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(calculateRouteSummary.getRouteBBox(), ROUTEBBOX_BINDING);
             protocolMarshaller.marshall(calculateRouteSummary.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(calculateRouteSummary.getDistance(), DISTANCE_BINDING);
-            protocolMarshaller.marshall(calculateRouteSummary.getDistanceUnit(), DISTANCEUNIT_BINDING);
             protocolMarshaller.marshall(calculateRouteSummary.getDurationSeconds(), DURATIONSECONDS_BINDING);
-            protocolMarshaller.marshall(calculateRouteSummary.getRouteBBox(), ROUTEBBOX_BINDING);
+            protocolMarshaller.marshall(calculateRouteSummary.getDistanceUnit(), DISTANCEUNIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

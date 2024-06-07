@@ -30,18 +30,10 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The timestamp of when the API key was created, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the API key resource.
      * </p>
      */
-    private java.util.Date createTime;
-    /**
-     * <p>
-     * The optional description for the API key resource.
-     * </p>
-     */
-    private String description;
+    private String keyName;
     /**
      * <p>
      * The timestamp for when the API key resource will expire, in <a
@@ -52,12 +44,20 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
     private java.util.Date expireTime;
     /**
      * <p>
-     * The name of the API key resource.
+     * The optional description for the API key resource.
      * </p>
      */
-    private String keyName;
+    private String description;
 
     private ApiKeyRestrictions restrictions;
+    /**
+     * <p>
+     * The timestamp of when the API key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     */
+    private java.util.Date createTime;
     /**
      * <p>
      * The timestamp of when the API key was last updated, in <a
@@ -69,93 +69,41 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The timestamp of when the API key was created, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the API key resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp of when the API key was created, in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param keyName
+     *        The name of the API key resource.
      */
 
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
+    public void setKeyName(String keyName) {
+        this.keyName = keyName;
     }
 
     /**
      * <p>
-     * The timestamp of when the API key was created, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the API key resource.
      * </p>
      * 
-     * @return The timestamp of when the API key was created, in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return The name of the API key resource.
      */
 
-    public java.util.Date getCreateTime() {
-        return this.createTime;
+    public String getKeyName() {
+        return this.keyName;
     }
 
     /**
      * <p>
-     * The timestamp of when the API key was created, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the API key resource.
      * </p>
      * 
-     * @param createTime
-     *        The timestamp of when the API key was created, in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @param keyName
+     *        The name of the API key resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListKeysResponseEntry withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The optional description for the API key resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the API key resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the API key resource.
-     * </p>
-     * 
-     * @return The optional description for the API key resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description for the API key resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description for the API key resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListKeysResponseEntry withDescription(String description) {
-        setDescription(description);
+    public ListKeysResponseEntry withKeyName(String keyName) {
+        setKeyName(keyName);
         return this;
     }
 
@@ -213,41 +161,41 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the API key resource.
+     * The optional description for the API key resource.
      * </p>
      * 
-     * @param keyName
-     *        The name of the API key resource.
+     * @param description
+     *        The optional description for the API key resource.
      */
 
-    public void setKeyName(String keyName) {
-        this.keyName = keyName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * The name of the API key resource.
+     * The optional description for the API key resource.
      * </p>
      * 
-     * @return The name of the API key resource.
+     * @return The optional description for the API key resource.
      */
 
-    public String getKeyName() {
-        return this.keyName;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * The name of the API key resource.
+     * The optional description for the API key resource.
      * </p>
      * 
-     * @param keyName
-     *        The name of the API key resource.
+     * @param description
+     *        The optional description for the API key resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListKeysResponseEntry withKeyName(String keyName) {
-        setKeyName(keyName);
+    public ListKeysResponseEntry withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -274,6 +222,58 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
 
     public ListKeysResponseEntry withRestrictions(ApiKeyRestrictions restrictions) {
         setRestrictions(restrictions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp of when the API key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp of when the API key was created, in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp of when the API key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @return The timestamp of when the API key was created, in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp of when the API key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * 
+     * @param createTime
+     *        The timestamp of when the API key was created, in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListKeysResponseEntry withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
         return this;
     }
 
@@ -341,16 +341,16 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getExpireTime() != null)
-            sb.append("ExpireTime: ").append(getExpireTime()).append(",");
         if (getKeyName() != null)
             sb.append("KeyName: ").append(getKeyName()).append(",");
+        if (getExpireTime() != null)
+            sb.append("ExpireTime: ").append(getExpireTime()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getRestrictions() != null)
             sb.append("Restrictions: ").append(getRestrictions()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -367,25 +367,25 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
         if (obj instanceof ListKeysResponseEntry == false)
             return false;
         ListKeysResponseEntry other = (ListKeysResponseEntry) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getKeyName() == null ^ this.getKeyName() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
             return false;
         if (other.getExpireTime() == null ^ this.getExpireTime() == null)
             return false;
         if (other.getExpireTime() != null && other.getExpireTime().equals(this.getExpireTime()) == false)
             return false;
-        if (other.getKeyName() == null ^ this.getKeyName() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getKeyName() != null && other.getKeyName().equals(this.getKeyName()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getRestrictions() == null ^ this.getRestrictions() == null)
             return false;
         if (other.getRestrictions() != null && other.getRestrictions().equals(this.getRestrictions()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -399,11 +399,11 @@ public class ListKeysResponseEntry implements Serializable, Cloneable, Structure
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getExpireTime() == null) ? 0 : getExpireTime().hashCode());
         hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
+        hashCode = prime * hashCode + ((getExpireTime() == null) ? 0 : getExpireTime().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRestrictions() == null) ? 0 : getRestrictions().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

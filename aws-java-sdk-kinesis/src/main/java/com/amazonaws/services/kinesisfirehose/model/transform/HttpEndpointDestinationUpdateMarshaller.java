@@ -45,6 +45,8 @@ public class HttpEndpointDestinationUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3BackupMode").build();
     private static final MarshallingInfo<StructuredPojo> S3UPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3Update").build();
+    private static final MarshallingInfo<StructuredPojo> SECRETSMANAGERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerConfiguration").build();
 
     private static final HttpEndpointDestinationUpdateMarshaller instance = new HttpEndpointDestinationUpdateMarshaller();
 
@@ -71,6 +73,7 @@ public class HttpEndpointDestinationUpdateMarshaller {
             protocolMarshaller.marshall(httpEndpointDestinationUpdate.getRetryOptions(), RETRYOPTIONS_BINDING);
             protocolMarshaller.marshall(httpEndpointDestinationUpdate.getS3BackupMode(), S3BACKUPMODE_BINDING);
             protocolMarshaller.marshall(httpEndpointDestinationUpdate.getS3Update(), S3UPDATE_BINDING);
+            protocolMarshaller.marshall(httpEndpointDestinationUpdate.getSecretsManagerConfiguration(), SECRETSMANAGERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

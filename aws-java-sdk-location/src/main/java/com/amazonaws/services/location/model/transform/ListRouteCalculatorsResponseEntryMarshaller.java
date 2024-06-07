@@ -29,14 +29,14 @@ public class ListRouteCalculatorsResponseEntryMarshaller {
 
     private static final MarshallingInfo<String> CALCULATORNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CalculatorName").build();
-    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateTime").timestampFormat("iso8601").build();
 
@@ -57,10 +57,10 @@ public class ListRouteCalculatorsResponseEntryMarshaller {
 
         try {
             protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getCalculatorName(), CALCULATORNAME_BINDING);
-            protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getCreateTime(), CREATETIME_BINDING);
-            protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(listRouteCalculatorsResponseEntry.getUpdateTime(), UPDATETIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -25,86 +25,16 @@ public class BatchPutGeofenceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     * </p>
-     */
-    private java.util.List<BatchPutGeofenceError> errors;
-    /**
-     * <p>
      * Contains each geofence that was successfully stored in a geofence collection.
      * </p>
      */
     private java.util.List<BatchPutGeofenceSuccess> successes;
-
     /**
      * <p>
      * Contains additional error details for each geofence that failed to be stored in a geofence collection.
      * </p>
-     * 
-     * @return Contains additional error details for each geofence that failed to be stored in a geofence collection.
      */
-
-    public java.util.List<BatchPutGeofenceError> getErrors() {
-        return errors;
-    }
-
-    /**
-     * <p>
-     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     * </p>
-     * 
-     * @param errors
-     *        Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     */
-
-    public void setErrors(java.util.Collection<BatchPutGeofenceError> errors) {
-        if (errors == null) {
-            this.errors = null;
-            return;
-        }
-
-        this.errors = new java.util.ArrayList<BatchPutGeofenceError>(errors);
-    }
-
-    /**
-     * <p>
-     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
-     * existing values.
-     * </p>
-     * 
-     * @param errors
-     *        Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchPutGeofenceResult withErrors(BatchPutGeofenceError... errors) {
-        if (this.errors == null) {
-            setErrors(new java.util.ArrayList<BatchPutGeofenceError>(errors.length));
-        }
-        for (BatchPutGeofenceError ele : errors) {
-            this.errors.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     * </p>
-     * 
-     * @param errors
-     *        Contains additional error details for each geofence that failed to be stored in a geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchPutGeofenceResult withErrors(java.util.Collection<BatchPutGeofenceError> errors) {
-        setErrors(errors);
-        return this;
-    }
+    private java.util.List<BatchPutGeofenceError> errors;
 
     /**
      * <p>
@@ -177,6 +107,76 @@ public class BatchPutGeofenceResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     * </p>
+     * 
+     * @return Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     */
+
+    public java.util.List<BatchPutGeofenceError> getErrors() {
+        return errors;
+    }
+
+    /**
+     * <p>
+     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     * </p>
+     * 
+     * @param errors
+     *        Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     */
+
+    public void setErrors(java.util.Collection<BatchPutGeofenceError> errors) {
+        if (errors == null) {
+            this.errors = null;
+            return;
+        }
+
+        this.errors = new java.util.ArrayList<BatchPutGeofenceError>(errors);
+    }
+
+    /**
+     * <p>
+     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param errors
+     *        Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchPutGeofenceResult withErrors(BatchPutGeofenceError... errors) {
+        if (this.errors == null) {
+            setErrors(new java.util.ArrayList<BatchPutGeofenceError>(errors.length));
+        }
+        for (BatchPutGeofenceError ele : errors) {
+            this.errors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     * </p>
+     * 
+     * @param errors
+     *        Contains additional error details for each geofence that failed to be stored in a geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchPutGeofenceResult withErrors(java.util.Collection<BatchPutGeofenceError> errors) {
+        setErrors(errors);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,10 +188,10 @@ public class BatchPutGeofenceResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getErrors() != null)
-            sb.append("Errors: ").append(getErrors()).append(",");
         if (getSuccesses() != null)
-            sb.append("Successes: ").append(getSuccesses());
+            sb.append("Successes: ").append(getSuccesses()).append(",");
+        if (getErrors() != null)
+            sb.append("Errors: ").append(getErrors());
         sb.append("}");
         return sb.toString();
     }
@@ -206,13 +206,13 @@ public class BatchPutGeofenceResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof BatchPutGeofenceResult == false)
             return false;
         BatchPutGeofenceResult other = (BatchPutGeofenceResult) obj;
-        if (other.getErrors() == null ^ this.getErrors() == null)
-            return false;
-        if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
-            return false;
         if (other.getSuccesses() == null ^ this.getSuccesses() == null)
             return false;
         if (other.getSuccesses() != null && other.getSuccesses().equals(this.getSuccesses()) == false)
+            return false;
+        if (other.getErrors() == null ^ this.getErrors() == null)
+            return false;
+        if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
             return false;
         return true;
     }
@@ -222,8 +222,8 @@ public class BatchPutGeofenceResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
         hashCode = prime * hashCode + ((getSuccesses() == null) ? 0 : getSuccesses().hashCode());
+        hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
         return hashCode;
     }
 

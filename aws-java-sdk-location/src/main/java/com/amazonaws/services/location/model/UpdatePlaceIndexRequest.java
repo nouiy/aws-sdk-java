@@ -27,18 +27,6 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Updates the data storage option for the place index resource.
-     * </p>
-     */
-    private DataSourceConfiguration dataSourceConfiguration;
-    /**
-     * <p>
-     * Updates the description for the place index resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * The name of the place index resource to update.
      * </p>
      */
@@ -50,86 +38,18 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
      */
     @Deprecated
     private String pricingPlan;
-
-    /**
-     * <p>
-     * Updates the data storage option for the place index resource.
-     * </p>
-     * 
-     * @param dataSourceConfiguration
-     *        Updates the data storage option for the place index resource.
-     */
-
-    public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
-        this.dataSourceConfiguration = dataSourceConfiguration;
-    }
-
-    /**
-     * <p>
-     * Updates the data storage option for the place index resource.
-     * </p>
-     * 
-     * @return Updates the data storage option for the place index resource.
-     */
-
-    public DataSourceConfiguration getDataSourceConfiguration() {
-        return this.dataSourceConfiguration;
-    }
-
-    /**
-     * <p>
-     * Updates the data storage option for the place index resource.
-     * </p>
-     * 
-     * @param dataSourceConfiguration
-     *        Updates the data storage option for the place index resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePlaceIndexRequest withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
-        setDataSourceConfiguration(dataSourceConfiguration);
-        return this;
-    }
-
     /**
      * <p>
      * Updates the description for the place index resource.
      * </p>
-     * 
-     * @param description
-     *        Updates the description for the place index resource.
      */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    private String description;
     /**
      * <p>
-     * Updates the description for the place index resource.
+     * Updates the data storage option for the place index resource.
      * </p>
-     * 
-     * @return Updates the description for the place index resource.
      */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the place index resource.
-     * </p>
-     * 
-     * @param description
-     *        Updates the description for the place index resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePlaceIndexRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
+    private DataSourceConfiguration dataSourceConfiguration;
 
     /**
      * <p>
@@ -231,6 +151,86 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Updates the description for the place index resource.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the place index resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the place index resource.
+     * </p>
+     * 
+     * @return Updates the description for the place index resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the place index resource.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the place index resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePlaceIndexRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Updates the data storage option for the place index resource.
+     * </p>
+     * 
+     * @param dataSourceConfiguration
+     *        Updates the data storage option for the place index resource.
+     */
+
+    public void setDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
+        this.dataSourceConfiguration = dataSourceConfiguration;
+    }
+
+    /**
+     * <p>
+     * Updates the data storage option for the place index resource.
+     * </p>
+     * 
+     * @return Updates the data storage option for the place index resource.
+     */
+
+    public DataSourceConfiguration getDataSourceConfiguration() {
+        return this.dataSourceConfiguration;
+    }
+
+    /**
+     * <p>
+     * Updates the data storage option for the place index resource.
+     * </p>
+     * 
+     * @param dataSourceConfiguration
+     *        Updates the data storage option for the place index resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePlaceIndexRequest withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
+        setDataSourceConfiguration(dataSourceConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -242,14 +242,14 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDataSourceConfiguration() != null)
-            sb.append("DataSourceConfiguration: ").append(getDataSourceConfiguration()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getIndexName() != null)
             sb.append("IndexName: ").append(getIndexName()).append(",");
         if (getPricingPlan() != null)
-            sb.append("PricingPlan: ").append(getPricingPlan());
+            sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getDataSourceConfiguration() != null)
+            sb.append("DataSourceConfiguration: ").append(getDataSourceConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -264,14 +264,6 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof UpdatePlaceIndexRequest == false)
             return false;
         UpdatePlaceIndexRequest other = (UpdatePlaceIndexRequest) obj;
-        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
-            return false;
-        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getIndexName() == null ^ this.getIndexName() == null)
             return false;
         if (other.getIndexName() != null && other.getIndexName().equals(this.getIndexName()) == false)
@@ -279,6 +271,14 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getDataSourceConfiguration() == null ^ this.getDataSourceConfiguration() == null)
+            return false;
+        if (other.getDataSourceConfiguration() != null && other.getDataSourceConfiguration().equals(this.getDataSourceConfiguration()) == false)
             return false;
         return true;
     }
@@ -288,10 +288,10 @@ public class UpdatePlaceIndexRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDataSourceConfiguration() == null) ? 0 : getDataSourceConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getIndexName() == null) ? 0 : getIndexName().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDataSourceConfiguration() == null) ? 0 : getDataSourceConfiguration().hashCode());
         return hashCode;
     }
 

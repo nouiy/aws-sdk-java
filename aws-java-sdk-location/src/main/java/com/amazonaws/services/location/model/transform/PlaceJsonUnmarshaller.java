@@ -48,9 +48,61 @@ public class PlaceJsonUnmarshaller implements Unmarshaller<Place, JsonUnmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Label", targetDepth)) {
+                    context.nextToken();
+                    place.setLabel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Geometry", targetDepth)) {
+                    context.nextToken();
+                    place.setGeometry(PlaceGeometryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("AddressNumber", targetDepth)) {
                     context.nextToken();
                     place.setAddressNumber(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Street", targetDepth)) {
+                    context.nextToken();
+                    place.setStreet(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Neighborhood", targetDepth)) {
+                    context.nextToken();
+                    place.setNeighborhood(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Municipality", targetDepth)) {
+                    context.nextToken();
+                    place.setMunicipality(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SubRegion", targetDepth)) {
+                    context.nextToken();
+                    place.setSubRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Region", targetDepth)) {
+                    context.nextToken();
+                    place.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Country", targetDepth)) {
+                    context.nextToken();
+                    place.setCountry(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PostalCode", targetDepth)) {
+                    context.nextToken();
+                    place.setPostalCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Interpolated", targetDepth)) {
+                    context.nextToken();
+                    place.setInterpolated(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("TimeZone", targetDepth)) {
+                    context.nextToken();
+                    place.setTimeZone(TimeZoneJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("UnitType", targetDepth)) {
+                    context.nextToken();
+                    place.setUnitType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("UnitNumber", targetDepth)) {
+                    context.nextToken();
+                    place.setUnitNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Categories", targetDepth)) {
                     context.nextToken();
@@ -58,67 +110,15 @@ public class PlaceJsonUnmarshaller implements Unmarshaller<Place, JsonUnmarshall
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("Country", targetDepth)) {
-                    context.nextToken();
-                    place.setCountry(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Geometry", targetDepth)) {
-                    context.nextToken();
-                    place.setGeometry(PlaceGeometryJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("Interpolated", targetDepth)) {
-                    context.nextToken();
-                    place.setInterpolated(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("Label", targetDepth)) {
-                    context.nextToken();
-                    place.setLabel(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Municipality", targetDepth)) {
-                    context.nextToken();
-                    place.setMunicipality(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Neighborhood", targetDepth)) {
-                    context.nextToken();
-                    place.setNeighborhood(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("PostalCode", targetDepth)) {
-                    context.nextToken();
-                    place.setPostalCode(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Region", targetDepth)) {
-                    context.nextToken();
-                    place.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Street", targetDepth)) {
-                    context.nextToken();
-                    place.setStreet(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("SubMunicipality", targetDepth)) {
-                    context.nextToken();
-                    place.setSubMunicipality(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("SubRegion", targetDepth)) {
-                    context.nextToken();
-                    place.setSubRegion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("SupplementalCategories", targetDepth)) {
                     context.nextToken();
                     place.setSupplementalCategories(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("TimeZone", targetDepth)) {
+                if (context.testExpression("SubMunicipality", targetDepth)) {
                     context.nextToken();
-                    place.setTimeZone(TimeZoneJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("UnitNumber", targetDepth)) {
-                    context.nextToken();
-                    place.setUnitNumber(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("UnitType", targetDepth)) {
-                    context.nextToken();
-                    place.setUnitType(context.getUnmarshaller(String.class).unmarshall(context));
+                    place.setSubMunicipality(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

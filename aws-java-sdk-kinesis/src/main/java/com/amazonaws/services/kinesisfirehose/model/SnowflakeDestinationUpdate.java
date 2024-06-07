@@ -136,6 +136,12 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
     private String s3BackupMode;
 
     private S3DestinationUpdate s3Update;
+    /**
+     * <p>
+     * Describes the Secrets Manager configuration in Snowflake.
+     * </p>
+     */
+    private SecretsManagerConfiguration secretsManagerConfiguration;
 
     /**
      * <p>
@@ -930,6 +936,46 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Describes the Secrets Manager configuration in Snowflake.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        Describes the Secrets Manager configuration in Snowflake.
+     */
+
+    public void setSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        this.secretsManagerConfiguration = secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * Describes the Secrets Manager configuration in Snowflake.
+     * </p>
+     * 
+     * @return Describes the Secrets Manager configuration in Snowflake.
+     */
+
+    public SecretsManagerConfiguration getSecretsManagerConfiguration() {
+        return this.secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * Describes the Secrets Manager configuration in Snowflake.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        Describes the Secrets Manager configuration in Snowflake.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SnowflakeDestinationUpdate withSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        setSecretsManagerConfiguration(secretsManagerConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -974,7 +1020,9 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
         if (getS3BackupMode() != null)
             sb.append("S3BackupMode: ").append(getS3BackupMode()).append(",");
         if (getS3Update() != null)
-            sb.append("S3Update: ").append(getS3Update());
+            sb.append("S3Update: ").append(getS3Update()).append(",");
+        if (getSecretsManagerConfiguration() != null)
+            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1057,6 +1105,10 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
             return false;
         if (other.getS3Update() != null && other.getS3Update().equals(this.getS3Update()) == false)
             return false;
+        if (other.getSecretsManagerConfiguration() == null ^ this.getSecretsManagerConfiguration() == null)
+            return false;
+        if (other.getSecretsManagerConfiguration() != null && other.getSecretsManagerConfiguration().equals(this.getSecretsManagerConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1082,6 +1134,7 @@ public class SnowflakeDestinationUpdate implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getRetryOptions() == null) ? 0 : getRetryOptions().hashCode());
         hashCode = prime * hashCode + ((getS3BackupMode() == null) ? 0 : getS3BackupMode().hashCode());
         hashCode = prime * hashCode + ((getS3Update() == null) ? 0 : getS3Update().hashCode());
+        hashCode = prime * hashCode + ((getSecretsManagerConfiguration() == null) ? 0 : getSecretsManagerConfiguration().hashCode());
         return hashCode;
     }
 

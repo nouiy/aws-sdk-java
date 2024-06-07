@@ -27,6 +27,12 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * The map resource associated with the sprite ﬁle.
+     * </p>
+     */
+    private String mapName;
+    /**
+     * <p>
      * The name of the sprite ﬁle. Use the following ﬁle names for the sprite sheet:
      * </p>
      * <ul>
@@ -65,12 +71,46 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String key;
+
     /**
      * <p>
      * The map resource associated with the sprite ﬁle.
      * </p>
+     * 
+     * @param mapName
+     *        The map resource associated with the sprite ﬁle.
      */
-    private String mapName;
+
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
+    }
+
+    /**
+     * <p>
+     * The map resource associated with the sprite ﬁle.
+     * </p>
+     * 
+     * @return The map resource associated with the sprite ﬁle.
+     */
+
+    public String getMapName() {
+        return this.mapName;
+    }
+
+    /**
+     * <p>
+     * The map resource associated with the sprite ﬁle.
+     * </p>
+     * 
+     * @param mapName
+     *        The map resource associated with the sprite ﬁle.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMapSpritesRequest withMapName(String mapName) {
+        setMapName(mapName);
+        return this;
+    }
 
     /**
      * <p>
@@ -318,46 +358,6 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p>
-     * The map resource associated with the sprite ﬁle.
-     * </p>
-     * 
-     * @param mapName
-     *        The map resource associated with the sprite ﬁle.
-     */
-
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
-    }
-
-    /**
-     * <p>
-     * The map resource associated with the sprite ﬁle.
-     * </p>
-     * 
-     * @return The map resource associated with the sprite ﬁle.
-     */
-
-    public String getMapName() {
-        return this.mapName;
-    }
-
-    /**
-     * <p>
-     * The map resource associated with the sprite ﬁle.
-     * </p>
-     * 
-     * @param mapName
-     *        The map resource associated with the sprite ﬁle.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetMapSpritesRequest withMapName(String mapName) {
-        setMapName(mapName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -369,12 +369,12 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getMapName() != null)
+            sb.append("MapName: ").append(getMapName()).append(",");
         if (getFileName() != null)
             sb.append("FileName: ").append(getFileName()).append(",");
         if (getKey() != null)
-            sb.append("Key: ").append("***Sensitive Data Redacted***").append(",");
-        if (getMapName() != null)
-            sb.append("MapName: ").append(getMapName());
+            sb.append("Key: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -389,6 +389,10 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof GetMapSpritesRequest == false)
             return false;
         GetMapSpritesRequest other = (GetMapSpritesRequest) obj;
+        if (other.getMapName() == null ^ this.getMapName() == null)
+            return false;
+        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
+            return false;
         if (other.getFileName() == null ^ this.getFileName() == null)
             return false;
         if (other.getFileName() != null && other.getFileName().equals(this.getFileName()) == false)
@@ -396,10 +400,6 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (other.getKey() == null ^ this.getKey() == null)
             return false;
         if (other.getKey() != null && other.getKey().equals(this.getKey()) == false)
-            return false;
-        if (other.getMapName() == null ^ this.getMapName() == null)
-            return false;
-        if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
             return false;
         return true;
     }
@@ -409,9 +409,9 @@ public class GetMapSpritesRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
         hashCode = prime * hashCode + ((getFileName() == null) ? 0 : getFileName().hashCode());
         hashCode = prime * hashCode + ((getKey() == null) ? 0 : getKey().hashCode());
-        hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
         return hashCode;
     }
 

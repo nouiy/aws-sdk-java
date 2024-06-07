@@ -28,6 +28,11 @@ public class AbstractAWSAccount implements AWSAccount {
     }
 
     @Override
+    public AcceptPrimaryEmailUpdateResult acceptPrimaryEmailUpdate(AcceptPrimaryEmailUpdateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAlternateContactResult deleteAlternateContact(DeleteAlternateContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -53,6 +58,11 @@ public class AbstractAWSAccount implements AWSAccount {
     }
 
     @Override
+    public GetPrimaryEmailResult getPrimaryEmail(GetPrimaryEmailRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetRegionOptStatusResult getRegionOptStatus(GetRegionOptStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +79,11 @@ public class AbstractAWSAccount implements AWSAccount {
 
     @Override
     public PutContactInformationResult putContactInformation(PutContactInformationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartPrimaryEmailUpdateResult startPrimaryEmailUpdate(StartPrimaryEmailUpdateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

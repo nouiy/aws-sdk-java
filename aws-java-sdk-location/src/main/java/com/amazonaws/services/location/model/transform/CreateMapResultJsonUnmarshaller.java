@@ -48,17 +48,17 @@ public class CreateMapResultJsonUnmarshaller implements Unmarshaller<CreateMapRe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("MapName", targetDepth)) {
                     context.nextToken();
-                    createMapResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    createMapResult.setMapName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("MapArn", targetDepth)) {
                     context.nextToken();
                     createMapResult.setMapArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("MapName", targetDepth)) {
+                if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();
-                    createMapResult.setMapName(context.getUnmarshaller(String.class).unmarshall(context));
+                    createMapResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

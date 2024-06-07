@@ -146,6 +146,78 @@ public class AWSAccountClient extends AmazonWebServiceClient implements AWSAccou
 
     /**
      * <p>
+     * Accepts the request that originated from <a>StartPrimaryEmailUpdate</a> to update the primary email address (also
+     * known as the root user email address) for the specified account.
+     * </p>
+     * 
+     * @param acceptPrimaryEmailUpdateRequest
+     * @return Result of the AcceptPrimaryEmailUpdate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The operation failed because it specified a resource that can't be found.
+     * @throws ValidationException
+     *         The operation failed because one of the input parameters was invalid.
+     * @throws ConflictException
+     *         The request could not be processed because of a conflict in the current status of the resource. For
+     *         example, this happens if you try to enable a Region that is currently being disabled (in a status of
+     *         DISABLING).
+     * @throws AccessDeniedException
+     *         The operation failed because the calling identity doesn't have the minimum required permissions.
+     * @throws TooManyRequestsException
+     *         The operation failed because it was called too frequently and exceeded a throttle limit.
+     * @throws InternalServerException
+     *         The operation failed because of an error internal to Amazon Web Services. Try your operation again later.
+     * @sample AWSAccount.AcceptPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/AcceptPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AcceptPrimaryEmailUpdateResult acceptPrimaryEmailUpdate(AcceptPrimaryEmailUpdateRequest request) {
+        request = beforeClientExecution(request);
+        return executeAcceptPrimaryEmailUpdate(request);
+    }
+
+    @SdkInternalApi
+    final AcceptPrimaryEmailUpdateResult executeAcceptPrimaryEmailUpdate(AcceptPrimaryEmailUpdateRequest acceptPrimaryEmailUpdateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(acceptPrimaryEmailUpdateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AcceptPrimaryEmailUpdateRequest> request = null;
+        Response<AcceptPrimaryEmailUpdateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AcceptPrimaryEmailUpdateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(acceptPrimaryEmailUpdateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Account");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AcceptPrimaryEmailUpdate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AcceptPrimaryEmailUpdateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AcceptPrimaryEmailUpdateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified alternate contact from an Amazon Web Services account.
      * </p>
      * <p>
@@ -228,6 +300,11 @@ public class AWSAccountClient extends AmazonWebServiceClient implements AWSAccou
      * <p>
      * Disables (opts-out) a particular Region for an account.
      * </p>
+     * <note>
+     * <p>
+     * The act of disabling a Region will remove all IAM access to any resources that reside in that Region.
+     * </p>
+     * </note>
      * 
      * @param disableRegionRequest
      * @return Result of the DisableRegion operation returned by the service.
@@ -510,6 +587,71 @@ public class AWSAccountClient extends AmazonWebServiceClient implements AWSAccou
 
     /**
      * <p>
+     * Retrieves the primary email address for the specified account.
+     * </p>
+     * 
+     * @param getPrimaryEmailRequest
+     * @return Result of the GetPrimaryEmail operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The operation failed because it specified a resource that can't be found.
+     * @throws ValidationException
+     *         The operation failed because one of the input parameters was invalid.
+     * @throws AccessDeniedException
+     *         The operation failed because the calling identity doesn't have the minimum required permissions.
+     * @throws TooManyRequestsException
+     *         The operation failed because it was called too frequently and exceeded a throttle limit.
+     * @throws InternalServerException
+     *         The operation failed because of an error internal to Amazon Web Services. Try your operation again later.
+     * @sample AWSAccount.GetPrimaryEmail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/GetPrimaryEmail" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetPrimaryEmailResult getPrimaryEmail(GetPrimaryEmailRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPrimaryEmail(request);
+    }
+
+    @SdkInternalApi
+    final GetPrimaryEmailResult executeGetPrimaryEmail(GetPrimaryEmailRequest getPrimaryEmailRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPrimaryEmailRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPrimaryEmailRequest> request = null;
+        Response<GetPrimaryEmailResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPrimaryEmailRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getPrimaryEmailRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Account");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPrimaryEmail");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPrimaryEmailResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetPrimaryEmailResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the opt-in status of a particular Region.
      * </p>
      * 
@@ -771,6 +913,77 @@ public class AWSAccountClient extends AmazonWebServiceClient implements AWSAccou
             HttpResponseHandler<AmazonWebServiceResponse<PutContactInformationResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new PutContactInformationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts the process to update the primary email address for the specified account.
+     * </p>
+     * 
+     * @param startPrimaryEmailUpdateRequest
+     * @return Result of the StartPrimaryEmailUpdate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The operation failed because it specified a resource that can't be found.
+     * @throws ValidationException
+     *         The operation failed because one of the input parameters was invalid.
+     * @throws ConflictException
+     *         The request could not be processed because of a conflict in the current status of the resource. For
+     *         example, this happens if you try to enable a Region that is currently being disabled (in a status of
+     *         DISABLING).
+     * @throws AccessDeniedException
+     *         The operation failed because the calling identity doesn't have the minimum required permissions.
+     * @throws TooManyRequestsException
+     *         The operation failed because it was called too frequently and exceeded a throttle limit.
+     * @throws InternalServerException
+     *         The operation failed because of an error internal to Amazon Web Services. Try your operation again later.
+     * @sample AWSAccount.StartPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/StartPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartPrimaryEmailUpdateResult startPrimaryEmailUpdate(StartPrimaryEmailUpdateRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartPrimaryEmailUpdate(request);
+    }
+
+    @SdkInternalApi
+    final StartPrimaryEmailUpdateResult executeStartPrimaryEmailUpdate(StartPrimaryEmailUpdateRequest startPrimaryEmailUpdateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startPrimaryEmailUpdateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartPrimaryEmailUpdateRequest> request = null;
+        Response<StartPrimaryEmailUpdateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartPrimaryEmailUpdateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startPrimaryEmailUpdateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Account");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartPrimaryEmailUpdate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartPrimaryEmailUpdateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartPrimaryEmailUpdateResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

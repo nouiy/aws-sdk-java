@@ -64,6 +64,10 @@ public class ViewRepresentationJsonUnmarshaller implements Unmarshaller<ViewRepr
                     context.nextToken();
                     viewRepresentation.setViewExpandedText(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ValidationConnection", targetDepth)) {
+                    context.nextToken();
+                    viewRepresentation.setValidationConnection(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("IsStale", targetDepth)) {
                     context.nextToken();
                     viewRepresentation.setIsStale(context.getUnmarshaller(Boolean.class).unmarshall(context));

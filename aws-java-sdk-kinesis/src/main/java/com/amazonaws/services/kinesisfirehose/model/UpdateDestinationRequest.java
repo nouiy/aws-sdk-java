@@ -98,7 +98,7 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
     private AmazonOpenSearchServerlessDestinationUpdate amazonOpenSearchServerlessDestinationUpdate;
     /**
      * <p>
-     * Update to the Snowflake destination condiguration settings
+     * Update to the Snowflake destination configuration settings.
      * </p>
      */
     private SnowflakeDestinationUpdate snowflakeDestinationUpdate;
@@ -571,11 +571,11 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Update to the Snowflake destination condiguration settings
+     * Update to the Snowflake destination configuration settings.
      * </p>
      * 
      * @param snowflakeDestinationUpdate
-     *        Update to the Snowflake destination condiguration settings
+     *        Update to the Snowflake destination configuration settings.
      */
 
     public void setSnowflakeDestinationUpdate(SnowflakeDestinationUpdate snowflakeDestinationUpdate) {
@@ -584,10 +584,10 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Update to the Snowflake destination condiguration settings
+     * Update to the Snowflake destination configuration settings.
      * </p>
      * 
-     * @return Update to the Snowflake destination condiguration settings
+     * @return Update to the Snowflake destination configuration settings.
      */
 
     public SnowflakeDestinationUpdate getSnowflakeDestinationUpdate() {
@@ -596,11 +596,11 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Update to the Snowflake destination condiguration settings
+     * Update to the Snowflake destination configuration settings.
      * </p>
      * 
      * @param snowflakeDestinationUpdate
-     *        Update to the Snowflake destination condiguration settings
+     *        Update to the Snowflake destination configuration settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -94,6 +94,12 @@ public class SplunkDestinationDescription implements Serializable, Cloneable, St
      * </p>
      */
     private SplunkBufferingHints bufferingHints;
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Splunk.
+     * </p>
+     */
+    private SecretsManagerConfiguration secretsManagerConfiguration;
 
     /**
      * <p>
@@ -576,6 +582,46 @@ public class SplunkDestinationDescription implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The configuration that defines how you access secrets for Splunk.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        The configuration that defines how you access secrets for Splunk.
+     */
+
+    public void setSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        this.secretsManagerConfiguration = secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Splunk.
+     * </p>
+     * 
+     * @return The configuration that defines how you access secrets for Splunk.
+     */
+
+    public SecretsManagerConfiguration getSecretsManagerConfiguration() {
+        return this.secretsManagerConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that defines how you access secrets for Splunk.
+     * </p>
+     * 
+     * @param secretsManagerConfiguration
+     *        The configuration that defines how you access secrets for Splunk.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SplunkDestinationDescription withSecretsManagerConfiguration(SecretsManagerConfiguration secretsManagerConfiguration) {
+        setSecretsManagerConfiguration(secretsManagerConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -606,7 +652,9 @@ public class SplunkDestinationDescription implements Serializable, Cloneable, St
         if (getCloudWatchLoggingOptions() != null)
             sb.append("CloudWatchLoggingOptions: ").append(getCloudWatchLoggingOptions()).append(",");
         if (getBufferingHints() != null)
-            sb.append("BufferingHints: ").append(getBufferingHints());
+            sb.append("BufferingHints: ").append(getBufferingHints()).append(",");
+        if (getSecretsManagerConfiguration() != null)
+            sb.append("SecretsManagerConfiguration: ").append(getSecretsManagerConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -662,6 +710,10 @@ public class SplunkDestinationDescription implements Serializable, Cloneable, St
             return false;
         if (other.getBufferingHints() != null && other.getBufferingHints().equals(this.getBufferingHints()) == false)
             return false;
+        if (other.getSecretsManagerConfiguration() == null ^ this.getSecretsManagerConfiguration() == null)
+            return false;
+        if (other.getSecretsManagerConfiguration() != null && other.getSecretsManagerConfiguration().equals(this.getSecretsManagerConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -680,6 +732,7 @@ public class SplunkDestinationDescription implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getProcessingConfiguration() == null) ? 0 : getProcessingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCloudWatchLoggingOptions() == null) ? 0 : getCloudWatchLoggingOptions().hashCode());
         hashCode = prime * hashCode + ((getBufferingHints() == null) ? 0 : getBufferingHints().hashCode());
+        hashCode = prime * hashCode + ((getSecretsManagerConfiguration() == null) ? 0 : getSecretsManagerConfiguration().hashCode());
         return hashCode;
     }
 

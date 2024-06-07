@@ -36,18 +36,18 @@ public class BatchUpdateDevicePositionError implements Serializable, Cloneable, 
     private String deviceId;
     /**
      * <p>
-     * Contains details related to the error code such as the error code and error message.
-     * </p>
-     */
-    private BatchItemError error;
-    /**
-     * <p>
      * The timestamp at which the device position was determined. Uses <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      */
     private java.util.Date sampleTime;
+    /**
+     * <p>
+     * Contains details related to the error code such as the error code and error message.
+     * </p>
+     */
+    private BatchItemError error;
 
     /**
      * <p>
@@ -86,46 +86,6 @@ public class BatchUpdateDevicePositionError implements Serializable, Cloneable, 
 
     public BatchUpdateDevicePositionError withDeviceId(String deviceId) {
         setDeviceId(deviceId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Contains details related to the error code such as the error code and error message.
-     * </p>
-     * 
-     * @param error
-     *        Contains details related to the error code such as the error code and error message.
-     */
-
-    public void setError(BatchItemError error) {
-        this.error = error;
-    }
-
-    /**
-     * <p>
-     * Contains details related to the error code such as the error code and error message.
-     * </p>
-     * 
-     * @return Contains details related to the error code such as the error code and error message.
-     */
-
-    public BatchItemError getError() {
-        return this.error;
-    }
-
-    /**
-     * <p>
-     * Contains details related to the error code such as the error code and error message.
-     * </p>
-     * 
-     * @param error
-     *        Contains details related to the error code such as the error code and error message.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchUpdateDevicePositionError withError(BatchItemError error) {
-        setError(error);
         return this;
     }
 
@@ -182,6 +142,46 @@ public class BatchUpdateDevicePositionError implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Contains details related to the error code such as the error code and error message.
+     * </p>
+     * 
+     * @param error
+     *        Contains details related to the error code such as the error code and error message.
+     */
+
+    public void setError(BatchItemError error) {
+        this.error = error;
+    }
+
+    /**
+     * <p>
+     * Contains details related to the error code such as the error code and error message.
+     * </p>
+     * 
+     * @return Contains details related to the error code such as the error code and error message.
+     */
+
+    public BatchItemError getError() {
+        return this.error;
+    }
+
+    /**
+     * <p>
+     * Contains details related to the error code such as the error code and error message.
+     * </p>
+     * 
+     * @param error
+     *        Contains details related to the error code such as the error code and error message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchUpdateDevicePositionError withError(BatchItemError error) {
+        setError(error);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -195,10 +195,10 @@ public class BatchUpdateDevicePositionError implements Serializable, Cloneable, 
         sb.append("{");
         if (getDeviceId() != null)
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
-        if (getError() != null)
-            sb.append("Error: ").append(getError()).append(",");
         if (getSampleTime() != null)
-            sb.append("SampleTime: ").append(getSampleTime());
+            sb.append("SampleTime: ").append(getSampleTime()).append(",");
+        if (getError() != null)
+            sb.append("Error: ").append(getError());
         sb.append("}");
         return sb.toString();
     }
@@ -217,13 +217,13 @@ public class BatchUpdateDevicePositionError implements Serializable, Cloneable, 
             return false;
         if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
             return false;
-        if (other.getError() == null ^ this.getError() == null)
-            return false;
-        if (other.getError() != null && other.getError().equals(this.getError()) == false)
-            return false;
         if (other.getSampleTime() == null ^ this.getSampleTime() == null)
             return false;
         if (other.getSampleTime() != null && other.getSampleTime().equals(this.getSampleTime()) == false)
+            return false;
+        if (other.getError() == null ^ this.getError() == null)
+            return false;
+        if (other.getError() != null && other.getError().equals(this.getError()) == false)
             return false;
         return true;
     }
@@ -234,8 +234,8 @@ public class BatchUpdateDevicePositionError implements Serializable, Cloneable, 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
-        hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
+        hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
         return hashCode;
     }
 

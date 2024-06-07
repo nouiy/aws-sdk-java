@@ -29,12 +29,12 @@ public class CalculateRouteMatrixSummaryMarshaller {
 
     private static final MarshallingInfo<String> DATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSource").build();
-    private static final MarshallingInfo<String> DISTANCEUNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DistanceUnit").build();
-    private static final MarshallingInfo<Integer> ERRORCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ErrorCount").build();
     private static final MarshallingInfo<Integer> ROUTECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RouteCount").build();
+    private static final MarshallingInfo<Integer> ERRORCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ErrorCount").build();
+    private static final MarshallingInfo<String> DISTANCEUNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DistanceUnit").build();
 
     private static final CalculateRouteMatrixSummaryMarshaller instance = new CalculateRouteMatrixSummaryMarshaller();
 
@@ -53,9 +53,9 @@ public class CalculateRouteMatrixSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(calculateRouteMatrixSummary.getDataSource(), DATASOURCE_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixSummary.getDistanceUnit(), DISTANCEUNIT_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixSummary.getErrorCount(), ERRORCOUNT_BINDING);
             protocolMarshaller.marshall(calculateRouteMatrixSummary.getRouteCount(), ROUTECOUNT_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixSummary.getErrorCount(), ERRORCOUNT_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixSummary.getDistanceUnit(), DISTANCEUNIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

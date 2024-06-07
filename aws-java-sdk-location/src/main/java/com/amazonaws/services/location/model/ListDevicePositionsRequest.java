@@ -27,10 +27,10 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The geometry used to filter device positions.
+     * The tracker resource containing the requested devices.
      * </p>
      */
-    private TrackingFilterGeometry filterGeometry;
+    private String trackerName;
     /**
      * <p>
      * An optional limit for the number of entries returned in a single call.
@@ -52,48 +52,48 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
     private String nextToken;
     /**
      * <p>
+     * The geometry used to filter device positions.
+     * </p>
+     */
+    private TrackingFilterGeometry filterGeometry;
+
+    /**
+     * <p>
      * The tracker resource containing the requested devices.
      * </p>
-     */
-    private String trackerName;
-
-    /**
-     * <p>
-     * The geometry used to filter device positions.
-     * </p>
      * 
-     * @param filterGeometry
-     *        The geometry used to filter device positions.
+     * @param trackerName
+     *        The tracker resource containing the requested devices.
      */
 
-    public void setFilterGeometry(TrackingFilterGeometry filterGeometry) {
-        this.filterGeometry = filterGeometry;
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
     }
 
     /**
      * <p>
-     * The geometry used to filter device positions.
+     * The tracker resource containing the requested devices.
      * </p>
      * 
-     * @return The geometry used to filter device positions.
+     * @return The tracker resource containing the requested devices.
      */
 
-    public TrackingFilterGeometry getFilterGeometry() {
-        return this.filterGeometry;
+    public String getTrackerName() {
+        return this.trackerName;
     }
 
     /**
      * <p>
-     * The geometry used to filter device positions.
+     * The tracker resource containing the requested devices.
      * </p>
      * 
-     * @param filterGeometry
-     *        The geometry used to filter device positions.
+     * @param trackerName
+     *        The tracker resource containing the requested devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListDevicePositionsRequest withFilterGeometry(TrackingFilterGeometry filterGeometry) {
-        setFilterGeometry(filterGeometry);
+    public ListDevicePositionsRequest withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
         return this;
     }
 
@@ -215,41 +215,41 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The tracker resource containing the requested devices.
+     * The geometry used to filter device positions.
      * </p>
      * 
-     * @param trackerName
-     *        The tracker resource containing the requested devices.
+     * @param filterGeometry
+     *        The geometry used to filter device positions.
      */
 
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
+    public void setFilterGeometry(TrackingFilterGeometry filterGeometry) {
+        this.filterGeometry = filterGeometry;
     }
 
     /**
      * <p>
-     * The tracker resource containing the requested devices.
+     * The geometry used to filter device positions.
      * </p>
      * 
-     * @return The tracker resource containing the requested devices.
+     * @return The geometry used to filter device positions.
      */
 
-    public String getTrackerName() {
-        return this.trackerName;
+    public TrackingFilterGeometry getFilterGeometry() {
+        return this.filterGeometry;
     }
 
     /**
      * <p>
-     * The tracker resource containing the requested devices.
+     * The geometry used to filter device positions.
      * </p>
      * 
-     * @param trackerName
-     *        The tracker resource containing the requested devices.
+     * @param filterGeometry
+     *        The geometry used to filter device positions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListDevicePositionsRequest withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
+    public ListDevicePositionsRequest withFilterGeometry(TrackingFilterGeometry filterGeometry) {
+        setFilterGeometry(filterGeometry);
         return this;
     }
 
@@ -265,14 +265,14 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFilterGeometry() != null)
-            sb.append("FilterGeometry: ").append(getFilterGeometry()).append(",");
+        if (getTrackerName() != null)
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+        if (getFilterGeometry() != null)
+            sb.append("FilterGeometry: ").append(getFilterGeometry());
         sb.append("}");
         return sb.toString();
     }
@@ -287,9 +287,9 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
         if (obj instanceof ListDevicePositionsRequest == false)
             return false;
         ListDevicePositionsRequest other = (ListDevicePositionsRequest) obj;
-        if (other.getFilterGeometry() == null ^ this.getFilterGeometry() == null)
+        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
-        if (other.getFilterGeometry() != null && other.getFilterGeometry().equals(this.getFilterGeometry()) == false)
+        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
             return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
@@ -299,9 +299,9 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
-        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
+        if (other.getFilterGeometry() == null ^ this.getFilterGeometry() == null)
             return false;
-        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+        if (other.getFilterGeometry() != null && other.getFilterGeometry().equals(this.getFilterGeometry()) == false)
             return false;
         return true;
     }
@@ -311,10 +311,10 @@ public class ListDevicePositionsRequest extends com.amazonaws.AmazonWebServiceRe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFilterGeometry() == null) ? 0 : getFilterGeometry().hashCode());
+        hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getFilterGeometry() == null) ? 0 : getFilterGeometry().hashCode());
         return hashCode;
     }
 

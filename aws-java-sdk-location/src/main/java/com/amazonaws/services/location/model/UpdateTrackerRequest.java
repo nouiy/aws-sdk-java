@@ -27,33 +27,30 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * The name of the tracker resource to update.
+     * </p>
+     */
+    private String trackerName;
+    /**
+     * <p>
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * </p>
+     */
+    @Deprecated
+    private String pricingPlan;
+    /**
+     * <p>
+     * This parameter is no longer used.
+     * </p>
+     */
+    @Deprecated
+    private String pricingPlanDataSource;
+    /**
+     * <p>
      * Updates the description for the tracker resource.
      * </p>
      */
     private String description;
-    /**
-     * <p>
-     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
-     * </p>
-     * <note>
-     * <p>
-     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
-     * this tracker. Those events are always sent to EventBridge.
-     * </p>
-     * </note>
-     */
-    private Boolean eventBridgeEnabled;
-    /**
-     * <p>
-     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
-     * managed key</a>.
-     * </p>
-     * <p>
-     * This parameter is only used if you are using a KMS customer managed key.
-     * </p>
-     */
-    private Boolean kmsKeyEnableGeospatialQueries;
     /**
      * <p>
      * Updates the position filtering for the tracker resource.
@@ -92,24 +89,166 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String positionFiltering;
     /**
      * <p>
-     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
      * </p>
+     * <note>
+     * <p>
+     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
+     * this tracker. Those events are always sent to EventBridge.
+     * </p>
+     * </note>
      */
-    @Deprecated
-    private String pricingPlan;
+    private Boolean eventBridgeEnabled;
     /**
      * <p>
-     * This parameter is no longer used.
+     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
+     * managed key</a>.
+     * </p>
+     * <p>
+     * This parameter is only used if you are using a KMS customer managed key.
      * </p>
      */
-    @Deprecated
-    private String pricingPlanDataSource;
+    private Boolean kmsKeyEnableGeospatialQueries;
+
     /**
      * <p>
      * The name of the tracker resource to update.
      * </p>
+     * 
+     * @param trackerName
+     *        The name of the tracker resource to update.
      */
-    private String trackerName;
+
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the tracker resource to update.
+     * </p>
+     * 
+     * @return The name of the tracker resource to update.
+     */
+
+    public String getTrackerName() {
+        return this.trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the tracker resource to update.
+     * </p>
+     * 
+     * @param trackerName
+     *        The name of the tracker resource to update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTrackerRequest withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * </p>
+     * 
+     * @param pricingPlan
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * @see PricingPlan
+     */
+    @Deprecated
+    public void setPricingPlan(String pricingPlan) {
+        this.pricingPlan = pricingPlan;
+    }
+
+    /**
+     * <p>
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * </p>
+     * 
+     * @return No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * @see PricingPlan
+     */
+    @Deprecated
+    public String getPricingPlan() {
+        return this.pricingPlan;
+    }
+
+    /**
+     * <p>
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * </p>
+     * 
+     * @param pricingPlan
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PricingPlan
+     */
+    @Deprecated
+    public UpdateTrackerRequest withPricingPlan(String pricingPlan) {
+        setPricingPlan(pricingPlan);
+        return this;
+    }
+
+    /**
+     * <p>
+     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * </p>
+     * 
+     * @param pricingPlan
+     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PricingPlan
+     */
+    @Deprecated
+    public UpdateTrackerRequest withPricingPlan(PricingPlan pricingPlan) {
+        this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * This parameter is no longer used.
+     * </p>
+     * 
+     * @param pricingPlanDataSource
+     *        This parameter is no longer used.
+     */
+    @Deprecated
+    public void setPricingPlanDataSource(String pricingPlanDataSource) {
+        this.pricingPlanDataSource = pricingPlanDataSource;
+    }
+
+    /**
+     * <p>
+     * This parameter is no longer used.
+     * </p>
+     * 
+     * @return This parameter is no longer used.
+     */
+    @Deprecated
+    public String getPricingPlanDataSource() {
+        return this.pricingPlanDataSource;
+    }
+
+    /**
+     * <p>
+     * This parameter is no longer used.
+     * </p>
+     * 
+     * @param pricingPlanDataSource
+     *        This parameter is no longer used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+    @Deprecated
+    public UpdateTrackerRequest withPricingPlanDataSource(String pricingPlanDataSource) {
+        setPricingPlanDataSource(pricingPlanDataSource);
+        return this;
+    }
 
     /**
      * <p>
@@ -149,190 +288,6 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
     public UpdateTrackerRequest withDescription(String description) {
         setDescription(description);
         return this;
-    }
-
-    /**
-     * <p>
-     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
-     * </p>
-     * <note>
-     * <p>
-     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
-     * this tracker. Those events are always sent to EventBridge.
-     * </p>
-     * </note>
-     * 
-     * @param eventBridgeEnabled
-     *        Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
-     *        <note>
-     *        <p>
-     *        You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
-     *        with this tracker. Those events are always sent to EventBridge.
-     *        </p>
-     */
-
-    public void setEventBridgeEnabled(Boolean eventBridgeEnabled) {
-        this.eventBridgeEnabled = eventBridgeEnabled;
-    }
-
-    /**
-     * <p>
-     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
-     * </p>
-     * <note>
-     * <p>
-     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
-     * this tracker. Those events are always sent to EventBridge.
-     * </p>
-     * </note>
-     * 
-     * @return Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
-     *         <note>
-     *         <p>
-     *         You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
-     *         with this tracker. Those events are always sent to EventBridge.
-     *         </p>
-     */
-
-    public Boolean getEventBridgeEnabled() {
-        return this.eventBridgeEnabled;
-    }
-
-    /**
-     * <p>
-     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
-     * </p>
-     * <note>
-     * <p>
-     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
-     * this tracker. Those events are always sent to EventBridge.
-     * </p>
-     * </note>
-     * 
-     * @param eventBridgeEnabled
-     *        Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
-     *        <note>
-     *        <p>
-     *        You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
-     *        with this tracker. Those events are always sent to EventBridge.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateTrackerRequest withEventBridgeEnabled(Boolean eventBridgeEnabled) {
-        setEventBridgeEnabled(eventBridgeEnabled);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
-     * </p>
-     * <note>
-     * <p>
-     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
-     * this tracker. Those events are always sent to EventBridge.
-     * </p>
-     * </note>
-     * 
-     * @return Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
-     *         <note>
-     *         <p>
-     *         You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
-     *         with this tracker. Those events are always sent to EventBridge.
-     *         </p>
-     */
-
-    public Boolean isEventBridgeEnabled() {
-        return this.eventBridgeEnabled;
-    }
-
-    /**
-     * <p>
-     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
-     * managed key</a>.
-     * </p>
-     * <p>
-     * This parameter is only used if you are using a KMS customer managed key.
-     * </p>
-     * 
-     * @param kmsKeyEnableGeospatialQueries
-     *        Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *        customer managed key</a>.</p>
-     *        <p>
-     *        This parameter is only used if you are using a KMS customer managed key.
-     */
-
-    public void setKmsKeyEnableGeospatialQueries(Boolean kmsKeyEnableGeospatialQueries) {
-        this.kmsKeyEnableGeospatialQueries = kmsKeyEnableGeospatialQueries;
-    }
-
-    /**
-     * <p>
-     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
-     * managed key</a>.
-     * </p>
-     * <p>
-     * This parameter is only used if you are using a KMS customer managed key.
-     * </p>
-     * 
-     * @return Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *         customer managed key</a>.</p>
-     *         <p>
-     *         This parameter is only used if you are using a KMS customer managed key.
-     */
-
-    public Boolean getKmsKeyEnableGeospatialQueries() {
-        return this.kmsKeyEnableGeospatialQueries;
-    }
-
-    /**
-     * <p>
-     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
-     * managed key</a>.
-     * </p>
-     * <p>
-     * This parameter is only used if you are using a KMS customer managed key.
-     * </p>
-     * 
-     * @param kmsKeyEnableGeospatialQueries
-     *        Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *        customer managed key</a>.</p>
-     *        <p>
-     *        This parameter is only used if you are using a KMS customer managed key.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateTrackerRequest withKmsKeyEnableGeospatialQueries(Boolean kmsKeyEnableGeospatialQueries) {
-        setKmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
-     * managed key</a>.
-     * </p>
-     * <p>
-     * This parameter is only used if you are using a KMS customer managed key.
-     * </p>
-     * 
-     * @return Enables <code>GeospatialQueries</code> for a tracker that uses a <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *         customer managed key</a>.</p>
-     *         <p>
-     *         This parameter is only used if you are using a KMS customer managed key.
-     */
-
-    public Boolean isKmsKeyEnableGeospatialQueries() {
-        return this.kmsKeyEnableGeospatialQueries;
     }
 
     /**
@@ -636,141 +591,186 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
      * </p>
+     * <note>
+     * <p>
+     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
+     * this tracker. Those events are always sent to EventBridge.
+     * </p>
+     * </note>
      * 
-     * @param pricingPlan
-     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
-     * @see PricingPlan
+     * @param eventBridgeEnabled
+     *        Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
+     *        <note>
+     *        <p>
+     *        You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
+     *        with this tracker. Those events are always sent to EventBridge.
+     *        </p>
      */
-    @Deprecated
-    public void setPricingPlan(String pricingPlan) {
-        this.pricingPlan = pricingPlan;
+
+    public void setEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        this.eventBridgeEnabled = eventBridgeEnabled;
     }
 
     /**
      * <p>
-     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
      * </p>
+     * <note>
+     * <p>
+     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
+     * this tracker. Those events are always sent to EventBridge.
+     * </p>
+     * </note>
      * 
-     * @return No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
-     * @see PricingPlan
+     * @return Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
+     *         <note>
+     *         <p>
+     *         You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
+     *         with this tracker. Those events are always sent to EventBridge.
+     *         </p>
      */
-    @Deprecated
-    public String getPricingPlan() {
-        return this.pricingPlan;
+
+    public Boolean getEventBridgeEnabled() {
+        return this.eventBridgeEnabled;
     }
 
     /**
      * <p>
-     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
      * </p>
+     * <note>
+     * <p>
+     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
+     * this tracker. Those events are always sent to EventBridge.
+     * </p>
+     * </note>
      * 
-     * @param pricingPlan
-     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * @param eventBridgeEnabled
+     *        Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
+     *        <note>
+     *        <p>
+     *        You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
+     *        with this tracker. Those events are always sent to EventBridge.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PricingPlan
      */
-    @Deprecated
-    public UpdateTrackerRequest withPricingPlan(String pricingPlan) {
-        setPricingPlan(pricingPlan);
+
+    public UpdateTrackerRequest withEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        setEventBridgeEnabled(eventBridgeEnabled);
         return this;
     }
 
     /**
      * <p>
-     * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
+     * Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.
+     * </p>
+     * <note>
+     * <p>
+     * You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences with
+     * this tracker. Those events are always sent to EventBridge.
+     * </p>
+     * </note>
+     * 
+     * @return Whether to enable position <code>UPDATE</code> events from this tracker to be sent to EventBridge.</p>
+     *         <note>
+     *         <p>
+     *         You do not need enable this feature to get <code>ENTER</code> and <code>EXIT</code> events for geofences
+     *         with this tracker. Those events are always sent to EventBridge.
+     *         </p>
+     */
+
+    public Boolean isEventBridgeEnabled() {
+        return this.eventBridgeEnabled;
+    }
+
+    /**
+     * <p>
+     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
+     * managed key</a>.
+     * </p>
+     * <p>
+     * This parameter is only used if you are using a KMS customer managed key.
      * </p>
      * 
-     * @param pricingPlan
-     *        No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PricingPlan
+     * @param kmsKeyEnableGeospatialQueries
+     *        Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *        customer managed key</a>.</p>
+     *        <p>
+     *        This parameter is only used if you are using a KMS customer managed key.
      */
-    @Deprecated
-    public UpdateTrackerRequest withPricingPlan(PricingPlan pricingPlan) {
-        this.pricingPlan = pricingPlan.toString();
+
+    public void setKmsKeyEnableGeospatialQueries(Boolean kmsKeyEnableGeospatialQueries) {
+        this.kmsKeyEnableGeospatialQueries = kmsKeyEnableGeospatialQueries;
+    }
+
+    /**
+     * <p>
+     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
+     * managed key</a>.
+     * </p>
+     * <p>
+     * This parameter is only used if you are using a KMS customer managed key.
+     * </p>
+     * 
+     * @return Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *         customer managed key</a>.</p>
+     *         <p>
+     *         This parameter is only used if you are using a KMS customer managed key.
+     */
+
+    public Boolean getKmsKeyEnableGeospatialQueries() {
+        return this.kmsKeyEnableGeospatialQueries;
+    }
+
+    /**
+     * <p>
+     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
+     * managed key</a>.
+     * </p>
+     * <p>
+     * This parameter is only used if you are using a KMS customer managed key.
+     * </p>
+     * 
+     * @param kmsKeyEnableGeospatialQueries
+     *        Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *        customer managed key</a>.</p>
+     *        <p>
+     *        This parameter is only used if you are using a KMS customer managed key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTrackerRequest withKmsKeyEnableGeospatialQueries(Boolean kmsKeyEnableGeospatialQueries) {
+        setKmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries);
         return this;
     }
 
     /**
      * <p>
-     * This parameter is no longer used.
+     * Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS customer
+     * managed key</a>.
      * </p>
-     * 
-     * @param pricingPlanDataSource
-     *        This parameter is no longer used.
-     */
-    @Deprecated
-    public void setPricingPlanDataSource(String pricingPlanDataSource) {
-        this.pricingPlanDataSource = pricingPlanDataSource;
-    }
-
-    /**
      * <p>
-     * This parameter is no longer used.
+     * This parameter is only used if you are using a KMS customer managed key.
      * </p>
      * 
-     * @return This parameter is no longer used.
-     */
-    @Deprecated
-    public String getPricingPlanDataSource() {
-        return this.pricingPlanDataSource;
-    }
-
-    /**
-     * <p>
-     * This parameter is no longer used.
-     * </p>
-     * 
-     * @param pricingPlanDataSource
-     *        This parameter is no longer used.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-    @Deprecated
-    public UpdateTrackerRequest withPricingPlanDataSource(String pricingPlanDataSource) {
-        setPricingPlanDataSource(pricingPlanDataSource);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to update.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the tracker resource to update.
+     * @return Enables <code>GeospatialQueries</code> for a tracker that uses a <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *         customer managed key</a>.</p>
+     *         <p>
+     *         This parameter is only used if you are using a KMS customer managed key.
      */
 
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to update.
-     * </p>
-     * 
-     * @return The name of the tracker resource to update.
-     */
-
-    public String getTrackerName() {
-        return this.trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to update.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the tracker resource to update.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateTrackerRequest withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
-        return this;
+    public Boolean isKmsKeyEnableGeospatialQueries() {
+        return this.kmsKeyEnableGeospatialQueries;
     }
 
     /**
@@ -785,20 +785,20 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getEventBridgeEnabled() != null)
-            sb.append("EventBridgeEnabled: ").append(getEventBridgeEnabled()).append(",");
-        if (getKmsKeyEnableGeospatialQueries() != null)
-            sb.append("KmsKeyEnableGeospatialQueries: ").append(getKmsKeyEnableGeospatialQueries()).append(",");
-        if (getPositionFiltering() != null)
-            sb.append("PositionFiltering: ").append(getPositionFiltering()).append(",");
+        if (getTrackerName() != null)
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
         if (getPricingPlanDataSource() != null)
             sb.append("PricingPlanDataSource: ").append(getPricingPlanDataSource()).append(",");
-        if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getPositionFiltering() != null)
+            sb.append("PositionFiltering: ").append(getPositionFiltering()).append(",");
+        if (getEventBridgeEnabled() != null)
+            sb.append("EventBridgeEnabled: ").append(getEventBridgeEnabled()).append(",");
+        if (getKmsKeyEnableGeospatialQueries() != null)
+            sb.append("KmsKeyEnableGeospatialQueries: ").append(getKmsKeyEnableGeospatialQueries());
         sb.append("}");
         return sb.toString();
     }
@@ -813,9 +813,25 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof UpdateTrackerRequest == false)
             return false;
         UpdateTrackerRequest other = (UpdateTrackerRequest) obj;
+        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
+            return false;
+        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
+        if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
+            return false;
+        if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
+            return false;
+        if (other.getPricingPlanDataSource() == null ^ this.getPricingPlanDataSource() == null)
+            return false;
+        if (other.getPricingPlanDataSource() != null && other.getPricingPlanDataSource().equals(this.getPricingPlanDataSource()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getPositionFiltering() == null ^ this.getPositionFiltering() == null)
+            return false;
+        if (other.getPositionFiltering() != null && other.getPositionFiltering().equals(this.getPositionFiltering()) == false)
             return false;
         if (other.getEventBridgeEnabled() == null ^ this.getEventBridgeEnabled() == null)
             return false;
@@ -826,22 +842,6 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (other.getKmsKeyEnableGeospatialQueries() != null
                 && other.getKmsKeyEnableGeospatialQueries().equals(this.getKmsKeyEnableGeospatialQueries()) == false)
             return false;
-        if (other.getPositionFiltering() == null ^ this.getPositionFiltering() == null)
-            return false;
-        if (other.getPositionFiltering() != null && other.getPositionFiltering().equals(this.getPositionFiltering()) == false)
-            return false;
-        if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
-            return false;
-        if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
-            return false;
-        if (other.getPricingPlanDataSource() == null ^ this.getPricingPlanDataSource() == null)
-            return false;
-        if (other.getPricingPlanDataSource() != null && other.getPricingPlanDataSource().equals(this.getPricingPlanDataSource()) == false)
-            return false;
-        if (other.getTrackerName() == null ^ this.getTrackerName() == null)
-            return false;
-        if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
-            return false;
         return true;
     }
 
@@ -850,13 +850,13 @@ public class UpdateTrackerRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getEventBridgeEnabled() == null) ? 0 : getEventBridgeEnabled().hashCode());
-        hashCode = prime * hashCode + ((getKmsKeyEnableGeospatialQueries() == null) ? 0 : getKmsKeyEnableGeospatialQueries().hashCode());
-        hashCode = prime * hashCode + ((getPositionFiltering() == null) ? 0 : getPositionFiltering().hashCode());
+        hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
         hashCode = prime * hashCode + ((getPricingPlanDataSource() == null) ? 0 : getPricingPlanDataSource().hashCode());
-        hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getPositionFiltering() == null) ? 0 : getPositionFiltering().hashCode());
+        hashCode = prime * hashCode + ((getEventBridgeEnabled() == null) ? 0 : getEventBridgeEnabled().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyEnableGeospatialQueries() == null) ? 0 : getKmsKeyEnableGeospatialQueries().hashCode());
         return hashCode;
     }
 

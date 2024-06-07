@@ -27,6 +27,12 @@ public class DisassociateTrackerConsumerRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
+     * The name of the tracker resource to be dissociated from the consumer.
+     * </p>
+     */
+    private String trackerName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) for the geofence collection to be disassociated from the tracker resource. Used
      * when you need to specify a resource across all Amazon Web Services.
      * </p>
@@ -39,12 +45,46 @@ public class DisassociateTrackerConsumerRequest extends com.amazonaws.AmazonWebS
      * </ul>
      */
     private String consumerArn;
+
     /**
      * <p>
      * The name of the tracker resource to be dissociated from the consumer.
      * </p>
+     * 
+     * @param trackerName
+     *        The name of the tracker resource to be dissociated from the consumer.
      */
-    private String trackerName;
+
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the tracker resource to be dissociated from the consumer.
+     * </p>
+     * 
+     * @return The name of the tracker resource to be dissociated from the consumer.
+     */
+
+    public String getTrackerName() {
+        return this.trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the tracker resource to be dissociated from the consumer.
+     * </p>
+     * 
+     * @param trackerName
+     *        The name of the tracker resource to be dissociated from the consumer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DisassociateTrackerConsumerRequest withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
+        return this;
+    }
 
     /**
      * <p>
@@ -135,46 +175,6 @@ public class DisassociateTrackerConsumerRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * <p>
-     * The name of the tracker resource to be dissociated from the consumer.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the tracker resource to be dissociated from the consumer.
-     */
-
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to be dissociated from the consumer.
-     * </p>
-     * 
-     * @return The name of the tracker resource to be dissociated from the consumer.
-     */
-
-    public String getTrackerName() {
-        return this.trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the tracker resource to be dissociated from the consumer.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the tracker resource to be dissociated from the consumer.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DisassociateTrackerConsumerRequest withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -186,10 +186,10 @@ public class DisassociateTrackerConsumerRequest extends com.amazonaws.AmazonWebS
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getConsumerArn() != null)
-            sb.append("ConsumerArn: ").append(getConsumerArn()).append(",");
         if (getTrackerName() != null)
-            sb.append("TrackerName: ").append(getTrackerName());
+            sb.append("TrackerName: ").append(getTrackerName()).append(",");
+        if (getConsumerArn() != null)
+            sb.append("ConsumerArn: ").append(getConsumerArn());
         sb.append("}");
         return sb.toString();
     }
@@ -204,13 +204,13 @@ public class DisassociateTrackerConsumerRequest extends com.amazonaws.AmazonWebS
         if (obj instanceof DisassociateTrackerConsumerRequest == false)
             return false;
         DisassociateTrackerConsumerRequest other = (DisassociateTrackerConsumerRequest) obj;
-        if (other.getConsumerArn() == null ^ this.getConsumerArn() == null)
-            return false;
-        if (other.getConsumerArn() != null && other.getConsumerArn().equals(this.getConsumerArn()) == false)
-            return false;
         if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
         if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
+        if (other.getConsumerArn() == null ^ this.getConsumerArn() == null)
+            return false;
+        if (other.getConsumerArn() != null && other.getConsumerArn().equals(this.getConsumerArn()) == false)
             return false;
         return true;
     }
@@ -220,8 +220,8 @@ public class DisassociateTrackerConsumerRequest extends com.amazonaws.AmazonWebS
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getConsumerArn() == null) ? 0 : getConsumerArn().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getConsumerArn() == null) ? 0 : getConsumerArn().hashCode());
         return hashCode;
     }
 

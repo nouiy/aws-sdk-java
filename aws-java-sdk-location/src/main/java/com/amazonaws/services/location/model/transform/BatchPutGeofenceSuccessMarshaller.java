@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class BatchPutGeofenceSuccessMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> GEOFENCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeofenceId").build();
+    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateTime").timestampFormat("iso8601").build();
 
@@ -50,8 +50,8 @@ public class BatchPutGeofenceSuccessMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(batchPutGeofenceSuccess.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(batchPutGeofenceSuccess.getGeofenceId(), GEOFENCEID_BINDING);
+            protocolMarshaller.marshall(batchPutGeofenceSuccess.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(batchPutGeofenceSuccess.getUpdateTime(), UPDATETIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

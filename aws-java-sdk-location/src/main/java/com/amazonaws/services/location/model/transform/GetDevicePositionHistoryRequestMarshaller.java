@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetDevicePositionHistoryRequestMarshaller {
 
+    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("TrackerName").build();
     private static final MarshallingInfo<String> DEVICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("DeviceId").build();
-    private static final MarshallingInfo<java.util.Date> ENDTIMEEXCLUSIVE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTimeExclusive").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<java.util.Date> STARTTIMEINCLUSIVE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartTimeInclusive").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("TrackerName").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIMEEXCLUSIVE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTimeExclusive").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
 
     private static final GetDevicePositionHistoryRequestMarshaller instance = new GetDevicePositionHistoryRequestMarshaller();
 
@@ -56,12 +56,12 @@ public class GetDevicePositionHistoryRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getTrackerName(), TRACKERNAME_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getDeviceId(), DEVICEID_BINDING);
-            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getEndTimeExclusive(), ENDTIMEEXCLUSIVE_BINDING);
-            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getStartTimeInclusive(), STARTTIMEINCLUSIVE_BINDING);
-            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getTrackerName(), TRACKERNAME_BINDING);
+            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getEndTimeExclusive(), ENDTIMEEXCLUSIVE_BINDING);
+            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

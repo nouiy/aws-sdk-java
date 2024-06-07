@@ -30,24 +30,24 @@ public class CalculateRouteMatrixRequestMarshaller {
 
     private static final MarshallingInfo<String> CALCULATORNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("CalculatorName").build();
-    private static final MarshallingInfo<StructuredPojo> CARMODEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CarModeOptions").build();
-    private static final MarshallingInfo<Boolean> DEPARTNOW_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DepartNow").build();
     private static final MarshallingInfo<List> DEPARTUREPOSITIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeparturePositions").build();
-    private static final MarshallingInfo<java.util.Date> DEPARTURETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DepartureTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<List> DESTINATIONPOSITIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DestinationPositions").build();
-    private static final MarshallingInfo<String> DISTANCEUNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DistanceUnit").build();
-    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
-            .marshallLocationName("key").build();
     private static final MarshallingInfo<String> TRAVELMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TravelMode").build();
+    private static final MarshallingInfo<java.util.Date> DEPARTURETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DepartureTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<Boolean> DEPARTNOW_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DepartNow").build();
+    private static final MarshallingInfo<String> DISTANCEUNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DistanceUnit").build();
+    private static final MarshallingInfo<StructuredPojo> CARMODEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CarModeOptions").build();
     private static final MarshallingInfo<StructuredPojo> TRUCKMODEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TruckModeOptions").build();
+    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("key").build();
 
     private static final CalculateRouteMatrixRequestMarshaller instance = new CalculateRouteMatrixRequestMarshaller();
 
@@ -66,15 +66,15 @@ public class CalculateRouteMatrixRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(calculateRouteMatrixRequest.getCalculatorName(), CALCULATORNAME_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixRequest.getCarModeOptions(), CARMODEOPTIONS_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixRequest.getDepartNow(), DEPARTNOW_BINDING);
             protocolMarshaller.marshall(calculateRouteMatrixRequest.getDeparturePositions(), DEPARTUREPOSITIONS_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixRequest.getDepartureTime(), DEPARTURETIME_BINDING);
             protocolMarshaller.marshall(calculateRouteMatrixRequest.getDestinationPositions(), DESTINATIONPOSITIONS_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixRequest.getDistanceUnit(), DISTANCEUNIT_BINDING);
-            protocolMarshaller.marshall(calculateRouteMatrixRequest.getKey(), KEY_BINDING);
             protocolMarshaller.marshall(calculateRouteMatrixRequest.getTravelMode(), TRAVELMODE_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixRequest.getDepartureTime(), DEPARTURETIME_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixRequest.getDepartNow(), DEPARTNOW_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixRequest.getDistanceUnit(), DISTANCEUNIT_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixRequest.getCarModeOptions(), CARMODEOPTIONS_BINDING);
             protocolMarshaller.marshall(calculateRouteMatrixRequest.getTruckModeOptions(), TRUCKMODEOPTIONS_BINDING);
+            protocolMarshaller.marshall(calculateRouteMatrixRequest.getKey(), KEY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -25,6 +25,12 @@ public class PutGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
+     * The geofence identifier entered in the request.
+     * </p>
+     */
+    private String geofenceId;
+    /**
+     * <p>
      * The timestamp for when the geofence was created in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
@@ -33,18 +39,52 @@ public class PutGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
     private java.util.Date createTime;
     /**
      * <p>
-     * The geofence identifier entered in the request.
-     * </p>
-     */
-    private String geofenceId;
-    /**
-     * <p>
      * The timestamp for when the geofence was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
      * </p>
      */
     private java.util.Date updateTime;
+
+    /**
+     * <p>
+     * The geofence identifier entered in the request.
+     * </p>
+     * 
+     * @param geofenceId
+     *        The geofence identifier entered in the request.
+     */
+
+    public void setGeofenceId(String geofenceId) {
+        this.geofenceId = geofenceId;
+    }
+
+    /**
+     * <p>
+     * The geofence identifier entered in the request.
+     * </p>
+     * 
+     * @return The geofence identifier entered in the request.
+     */
+
+    public String getGeofenceId() {
+        return this.geofenceId;
+    }
+
+    /**
+     * <p>
+     * The geofence identifier entered in the request.
+     * </p>
+     * 
+     * @param geofenceId
+     *        The geofence identifier entered in the request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutGeofenceResult withGeofenceId(String geofenceId) {
+        setGeofenceId(geofenceId);
+        return this;
+    }
 
     /**
      * <p>
@@ -95,46 +135,6 @@ public class PutGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     public PutGeofenceResult withCreateTime(java.util.Date createTime) {
         setCreateTime(createTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The geofence identifier entered in the request.
-     * </p>
-     * 
-     * @param geofenceId
-     *        The geofence identifier entered in the request.
-     */
-
-    public void setGeofenceId(String geofenceId) {
-        this.geofenceId = geofenceId;
-    }
-
-    /**
-     * <p>
-     * The geofence identifier entered in the request.
-     * </p>
-     * 
-     * @return The geofence identifier entered in the request.
-     */
-
-    public String getGeofenceId() {
-        return this.geofenceId;
-    }
-
-    /**
-     * <p>
-     * The geofence identifier entered in the request.
-     * </p>
-     * 
-     * @param geofenceId
-     *        The geofence identifier entered in the request.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PutGeofenceResult withGeofenceId(String geofenceId) {
-        setGeofenceId(geofenceId);
         return this;
     }
 
@@ -202,10 +202,10 @@ public class PutGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getGeofenceId() != null)
             sb.append("GeofenceId: ").append(getGeofenceId()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -222,13 +222,13 @@ public class PutGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (obj instanceof PutGeofenceResult == false)
             return false;
         PutGeofenceResult other = (PutGeofenceResult) obj;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
-            return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
         if (other.getGeofenceId() == null ^ this.getGeofenceId() == null)
             return false;
         if (other.getGeofenceId() != null && other.getGeofenceId().equals(this.getGeofenceId()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -242,8 +242,8 @@ public class PutGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getGeofenceId() == null) ? 0 : getGeofenceId().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

@@ -47,6 +47,8 @@ public class RedshiftDestinationDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3BackupDescription").build();
     private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGGINGOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLoggingOptions").build();
+    private static final MarshallingInfo<StructuredPojo> SECRETSMANAGERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerConfiguration").build();
 
     private static final RedshiftDestinationDescriptionMarshaller instance = new RedshiftDestinationDescriptionMarshaller();
 
@@ -74,6 +76,7 @@ public class RedshiftDestinationDescriptionMarshaller {
             protocolMarshaller.marshall(redshiftDestinationDescription.getS3BackupMode(), S3BACKUPMODE_BINDING);
             protocolMarshaller.marshall(redshiftDestinationDescription.getS3BackupDescription(), S3BACKUPDESCRIPTION_BINDING);
             protocolMarshaller.marshall(redshiftDestinationDescription.getCloudWatchLoggingOptions(), CLOUDWATCHLOGGINGOPTIONS_BINDING);
+            protocolMarshaller.marshall(redshiftDestinationDescription.getSecretsManagerConfiguration(), SECRETSMANAGERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

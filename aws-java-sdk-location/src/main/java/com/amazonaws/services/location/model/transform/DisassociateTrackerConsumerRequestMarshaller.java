@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DisassociateTrackerConsumerRequestMarshaller {
 
-    private static final MarshallingInfo<String> CONSUMERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("ConsumerArn").build();
     private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("TrackerName").build();
+    private static final MarshallingInfo<String> CONSUMERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("ConsumerArn").build();
 
     private static final DisassociateTrackerConsumerRequestMarshaller instance = new DisassociateTrackerConsumerRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class DisassociateTrackerConsumerRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(disassociateTrackerConsumerRequest.getConsumerArn(), CONSUMERARN_BINDING);
             protocolMarshaller.marshall(disassociateTrackerConsumerRequest.getTrackerName(), TRACKERNAME_BINDING);
+            protocolMarshaller.marshall(disassociateTrackerConsumerRequest.getConsumerArn(), CONSUMERARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

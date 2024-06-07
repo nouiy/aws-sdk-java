@@ -48,21 +48,21 @@ public class TruckDimensionsJsonUnmarshaller implements Unmarshaller<TruckDimens
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Height", targetDepth)) {
-                    context.nextToken();
-                    truckDimensions.setHeight(context.getUnmarshaller(Double.class).unmarshall(context));
-                }
                 if (context.testExpression("Length", targetDepth)) {
                     context.nextToken();
                     truckDimensions.setLength(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
-                if (context.testExpression("Unit", targetDepth)) {
+                if (context.testExpression("Height", targetDepth)) {
                     context.nextToken();
-                    truckDimensions.setUnit(context.getUnmarshaller(String.class).unmarshall(context));
+                    truckDimensions.setHeight(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
                 if (context.testExpression("Width", targetDepth)) {
                     context.nextToken();
                     truckDimensions.setWidth(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("Unit", targetDepth)) {
+                    context.nextToken();
+                    truckDimensions.setUnit(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

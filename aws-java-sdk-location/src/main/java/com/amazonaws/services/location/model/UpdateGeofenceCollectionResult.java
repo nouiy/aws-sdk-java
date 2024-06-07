@@ -25,6 +25,12 @@ public class UpdateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
+     * The name of the updated geofence collection.
+     * </p>
+     */
+    private String collectionName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the updated geofence collection. Used to specify a resource across Amazon Web
      * Services.
      * </p>
@@ -39,18 +45,52 @@ public class UpdateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
     private String collectionArn;
     /**
      * <p>
-     * The name of the updated geofence collection.
-     * </p>
-     */
-    private String collectionName;
-    /**
-     * <p>
      * The time when the geofence collection was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
      * </p>
      */
     private java.util.Date updateTime;
+
+    /**
+     * <p>
+     * The name of the updated geofence collection.
+     * </p>
+     * 
+     * @param collectionName
+     *        The name of the updated geofence collection.
+     */
+
+    public void setCollectionName(String collectionName) {
+        this.collectionName = collectionName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated geofence collection.
+     * </p>
+     * 
+     * @return The name of the updated geofence collection.
+     */
+
+    public String getCollectionName() {
+        return this.collectionName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated geofence collection.
+     * </p>
+     * 
+     * @param collectionName
+     *        The name of the updated geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateGeofenceCollectionResult withCollectionName(String collectionName) {
+        setCollectionName(collectionName);
+        return this;
+    }
 
     /**
      * <p>
@@ -139,46 +179,6 @@ public class UpdateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the updated geofence collection.
-     * </p>
-     * 
-     * @param collectionName
-     *        The name of the updated geofence collection.
-     */
-
-    public void setCollectionName(String collectionName) {
-        this.collectionName = collectionName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated geofence collection.
-     * </p>
-     * 
-     * @return The name of the updated geofence collection.
-     */
-
-    public String getCollectionName() {
-        return this.collectionName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated geofence collection.
-     * </p>
-     * 
-     * @param collectionName
-     *        The name of the updated geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateGeofenceCollectionResult withCollectionName(String collectionName) {
-        setCollectionName(collectionName);
-        return this;
-    }
-
-    /**
-     * <p>
      * The time when the geofence collection was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
@@ -241,10 +241,10 @@ public class UpdateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCollectionArn() != null)
-            sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
         if (getCollectionName() != null)
             sb.append("CollectionName: ").append(getCollectionName()).append(",");
+        if (getCollectionArn() != null)
+            sb.append("CollectionArn: ").append(getCollectionArn()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -261,13 +261,13 @@ public class UpdateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
         if (obj instanceof UpdateGeofenceCollectionResult == false)
             return false;
         UpdateGeofenceCollectionResult other = (UpdateGeofenceCollectionResult) obj;
-        if (other.getCollectionArn() == null ^ this.getCollectionArn() == null)
-            return false;
-        if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
-            return false;
         if (other.getCollectionName() == null ^ this.getCollectionName() == null)
             return false;
         if (other.getCollectionName() != null && other.getCollectionName().equals(this.getCollectionName()) == false)
+            return false;
+        if (other.getCollectionArn() == null ^ this.getCollectionArn() == null)
+            return false;
+        if (other.getCollectionArn() != null && other.getCollectionArn().equals(this.getCollectionArn()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -281,8 +281,8 @@ public class UpdateGeofenceCollectionResult extends com.amazonaws.AmazonWebServi
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
         hashCode = prime * hashCode + ((getCollectionName() == null) ? 0 : getCollectionName().hashCode());
+        hashCode = prime * hashCode + ((getCollectionArn() == null) ? 0 : getCollectionArn().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

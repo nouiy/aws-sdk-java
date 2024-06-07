@@ -32,13 +32,13 @@ public class GetMapGlyphsResultJsonUnmarshaller implements Unmarshaller<GetMapGl
         GetMapGlyphsResult getMapGlyphsResult = new GetMapGlyphsResult();
 
         if (context.isStartOfDocument()) {
-            if (context.getHeader("Cache-Control") != null) {
-                context.setCurrentHeader("Cache-Control");
-                getMapGlyphsResult.setCacheControl(context.getUnmarshaller(String.class).unmarshall(context));
-            }
             if (context.getHeader("Content-Type") != null) {
                 context.setCurrentHeader("Content-Type");
                 getMapGlyphsResult.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
+            }
+            if (context.getHeader("Cache-Control") != null) {
+                context.setCurrentHeader("Cache-Control");
+                getMapGlyphsResult.setCacheControl(context.getUnmarshaller(String.class).unmarshall(context));
             }
         }
 

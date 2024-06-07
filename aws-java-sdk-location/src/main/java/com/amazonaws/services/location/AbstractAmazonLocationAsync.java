@@ -394,6 +394,19 @@ public class AbstractAmazonLocationAsync extends AbstractAmazonLocation implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ForecastGeofenceEventsResult> forecastGeofenceEventsAsync(ForecastGeofenceEventsRequest request) {
+
+        return forecastGeofenceEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ForecastGeofenceEventsResult> forecastGeofenceEventsAsync(ForecastGeofenceEventsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ForecastGeofenceEventsRequest, ForecastGeofenceEventsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDevicePositionResult> getDevicePositionAsync(GetDevicePositionRequest request) {
 
         return getDevicePositionAsync(request, null);
@@ -779,6 +792,19 @@ public class AbstractAmazonLocationAsync extends AbstractAmazonLocation implemen
     @Override
     public java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateTrackerRequest, UpdateTrackerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyDevicePositionResult> verifyDevicePositionAsync(VerifyDevicePositionRequest request) {
+
+        return verifyDevicePositionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyDevicePositionResult> verifyDevicePositionAsync(VerifyDevicePositionRequest request,
+            com.amazonaws.handlers.AsyncHandler<VerifyDevicePositionRequest, VerifyDevicePositionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

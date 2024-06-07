@@ -48,13 +48,13 @@ public class UpdateMapResultJsonUnmarshaller implements Unmarshaller<UpdateMapRe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("MapArn", targetDepth)) {
-                    context.nextToken();
-                    updateMapResult.setMapArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("MapName", targetDepth)) {
                     context.nextToken();
                     updateMapResult.setMapName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("MapArn", targetDepth)) {
+                    context.nextToken();
+                    updateMapResult.setMapArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

@@ -1366,6 +1366,61 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
+     * Evaluates device positions against geofence geometries from a given geofence collection. The event forecasts
+     * three states for which a device can be in relative to a geofence:
+     * </p>
+     * <p>
+     * <code>ENTER</code>: If a device is outside of a geofence, but would breach the fence if the device is moving at
+     * its current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>EXIT</code>: If a device is inside of a geofence, but would breach the fence if the device is moving at its
+     * current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>IDLE</code>: If a device is inside of a geofence, and the device is not moving.
+     * </p>
+     * 
+     * @param forecastGeofenceEventsRequest
+     * @return A Java Future containing the result of the ForecastGeofenceEvents operation returned by the service.
+     * @sample AmazonLocationAsync.ForecastGeofenceEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ForecastGeofenceEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ForecastGeofenceEventsResult> forecastGeofenceEventsAsync(ForecastGeofenceEventsRequest forecastGeofenceEventsRequest);
+
+    /**
+     * <p>
+     * Evaluates device positions against geofence geometries from a given geofence collection. The event forecasts
+     * three states for which a device can be in relative to a geofence:
+     * </p>
+     * <p>
+     * <code>ENTER</code>: If a device is outside of a geofence, but would breach the fence if the device is moving at
+     * its current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>EXIT</code>: If a device is inside of a geofence, but would breach the fence if the device is moving at its
+     * current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>IDLE</code>: If a device is inside of a geofence, and the device is not moving.
+     * </p>
+     * 
+     * @param forecastGeofenceEventsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ForecastGeofenceEvents operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.ForecastGeofenceEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ForecastGeofenceEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ForecastGeofenceEventsResult> forecastGeofenceEventsAsync(ForecastGeofenceEventsRequest forecastGeofenceEventsRequest,
+            com.amazonaws.handlers.AsyncHandler<ForecastGeofenceEventsRequest, ForecastGeofenceEventsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves a device's most recent position according to its sample time.
      * </p>
      * <note>
@@ -1450,6 +1505,11 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <p>
      * Retrieves the geofence details from a geofence collection.
      * </p>
+     * <note>
+     * <p>
+     * The returned geometry will always match the geometry format used when the geofence was created.
+     * </p>
+     * </note>
      * 
      * @param getGeofenceRequest
      * @return A Java Future containing the result of the GetGeofence operation returned by the service.
@@ -1463,6 +1523,11 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <p>
      * Retrieves the geofence details from a geofence collection.
      * </p>
+     * <note>
+     * <p>
+     * The returned geometry will always match the geometry format used when the geofence was created.
+     * </p>
+     * </note>
      * 
      * @param getGeofenceRequest
      * @param asyncHandler
@@ -2471,5 +2536,38 @@ public interface AmazonLocationAsync extends AmazonLocation {
      */
     java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest updateTrackerRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateTrackerRequest, UpdateTrackerResult> asyncHandler);
+
+    /**
+     * <p>
+     * Verifies the integrity of the device's position by determining if it was reported behind a proxy, and by
+     * comparing it to an inferred position estimated based on the device's state.
+     * </p>
+     * 
+     * @param verifyDevicePositionRequest
+     * @return A Java Future containing the result of the VerifyDevicePosition operation returned by the service.
+     * @sample AmazonLocationAsync.VerifyDevicePosition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/VerifyDevicePosition" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<VerifyDevicePositionResult> verifyDevicePositionAsync(VerifyDevicePositionRequest verifyDevicePositionRequest);
+
+    /**
+     * <p>
+     * Verifies the integrity of the device's position by determining if it was reported behind a proxy, and by
+     * comparing it to an inferred position estimated based on the device's state.
+     * </p>
+     * 
+     * @param verifyDevicePositionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the VerifyDevicePosition operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.VerifyDevicePosition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/VerifyDevicePosition" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<VerifyDevicePositionResult> verifyDevicePositionAsync(VerifyDevicePositionRequest verifyDevicePositionRequest,
+            com.amazonaws.handlers.AsyncHandler<VerifyDevicePositionRequest, VerifyDevicePositionResult> asyncHandler);
 
 }

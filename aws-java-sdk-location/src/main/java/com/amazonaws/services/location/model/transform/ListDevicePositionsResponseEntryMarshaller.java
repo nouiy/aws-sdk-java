@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListDevicePositionsResponseEntryMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> ACCURACY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Accuracy").build();
     private static final MarshallingInfo<String> DEVICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DeviceId").build();
-    private static final MarshallingInfo<List> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Position").build();
-    private static final MarshallingInfo<Map> POSITIONPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PositionProperties").build();
     private static final MarshallingInfo<java.util.Date> SAMPLETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SampleTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<List> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Position").build();
+    private static final MarshallingInfo<StructuredPojo> ACCURACY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Accuracy").build();
+    private static final MarshallingInfo<Map> POSITIONPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PositionProperties").build();
 
     private static final ListDevicePositionsResponseEntryMarshaller instance = new ListDevicePositionsResponseEntryMarshaller();
 
@@ -56,11 +56,11 @@ public class ListDevicePositionsResponseEntryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listDevicePositionsResponseEntry.getAccuracy(), ACCURACY_BINDING);
             protocolMarshaller.marshall(listDevicePositionsResponseEntry.getDeviceId(), DEVICEID_BINDING);
-            protocolMarshaller.marshall(listDevicePositionsResponseEntry.getPosition(), POSITION_BINDING);
-            protocolMarshaller.marshall(listDevicePositionsResponseEntry.getPositionProperties(), POSITIONPROPERTIES_BINDING);
             protocolMarshaller.marshall(listDevicePositionsResponseEntry.getSampleTime(), SAMPLETIME_BINDING);
+            protocolMarshaller.marshall(listDevicePositionsResponseEntry.getPosition(), POSITION_BINDING);
+            protocolMarshaller.marshall(listDevicePositionsResponseEntry.getAccuracy(), ACCURACY_BINDING);
+            protocolMarshaller.marshall(listDevicePositionsResponseEntry.getPositionProperties(), POSITIONPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

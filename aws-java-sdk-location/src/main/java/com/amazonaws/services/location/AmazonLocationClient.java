@@ -79,26 +79,26 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.location.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.location.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.location.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.location.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.location.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.location.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.location.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.location.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.location.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.location.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.location.model.AmazonLocationException.class));
 
     public static AmazonLocationClientBuilder builder() {
@@ -2527,6 +2527,94 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Evaluates device positions against geofence geometries from a given geofence collection. The event forecasts
+     * three states for which a device can be in relative to a geofence:
+     * </p>
+     * <p>
+     * <code>ENTER</code>: If a device is outside of a geofence, but would breach the fence if the device is moving at
+     * its current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>EXIT</code>: If a device is inside of a geofence, but would breach the fence if the device is moving at its
+     * current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>IDLE</code>: If a device is inside of a geofence, and the device is not moving.
+     * </p>
+     * 
+     * @param forecastGeofenceEventsRequest
+     * @return Result of the ForecastGeofenceEvents operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.ForecastGeofenceEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ForecastGeofenceEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ForecastGeofenceEventsResult forecastGeofenceEvents(ForecastGeofenceEventsRequest request) {
+        request = beforeClientExecution(request);
+        return executeForecastGeofenceEvents(request);
+    }
+
+    @SdkInternalApi
+    final ForecastGeofenceEventsResult executeForecastGeofenceEvents(ForecastGeofenceEventsRequest forecastGeofenceEventsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(forecastGeofenceEventsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ForecastGeofenceEventsRequest> request = null;
+        Response<ForecastGeofenceEventsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ForecastGeofenceEventsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(forecastGeofenceEventsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Location");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ForecastGeofenceEvents");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "geofencing.";
+                String resolvedHostPrefix = String.format("geofencing.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ForecastGeofenceEventsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ForecastGeofenceEventsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves a device's most recent position according to its sample time.
      * </p>
      * <note>
@@ -2691,6 +2779,11 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * Retrieves the geofence details from a geofence collection.
      * </p>
+     * <note>
+     * <p>
+     * The returned geometry will always match the geometry format used when the geofence was created.
+     * </p>
+     * </note>
      * 
      * @param getGeofenceRequest
      * @return Result of the GetGeofence operation returned by the service.
@@ -4853,6 +4946,82 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateTrackerResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateTrackerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Verifies the integrity of the device's position by determining if it was reported behind a proxy, and by
+     * comparing it to an inferred position estimated based on the device's state.
+     * </p>
+     * 
+     * @param verifyDevicePositionRequest
+     * @return Result of the VerifyDevicePosition operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.VerifyDevicePosition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/VerifyDevicePosition" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public VerifyDevicePositionResult verifyDevicePosition(VerifyDevicePositionRequest request) {
+        request = beforeClientExecution(request);
+        return executeVerifyDevicePosition(request);
+    }
+
+    @SdkInternalApi
+    final VerifyDevicePositionResult executeVerifyDevicePosition(VerifyDevicePositionRequest verifyDevicePositionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(verifyDevicePositionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<VerifyDevicePositionRequest> request = null;
+        Response<VerifyDevicePositionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new VerifyDevicePositionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(verifyDevicePositionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Location");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "VerifyDevicePosition");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "tracking.";
+                String resolvedHostPrefix = String.format("tracking.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<VerifyDevicePositionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new VerifyDevicePositionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();

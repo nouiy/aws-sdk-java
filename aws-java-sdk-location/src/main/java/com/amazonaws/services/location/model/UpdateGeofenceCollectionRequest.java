@@ -33,12 +33,6 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     private String collectionName;
     /**
      * <p>
-     * Updates the description for the geofence collection.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
@@ -51,6 +45,12 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
      */
     @Deprecated
     private String pricingPlanDataSource;
+    /**
+     * <p>
+     * Updates the description for the geofence collection.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -89,46 +89,6 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     public UpdateGeofenceCollectionRequest withCollectionName(String collectionName) {
         setCollectionName(collectionName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the geofence collection.
-     * </p>
-     * 
-     * @param description
-     *        Updates the description for the geofence collection.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the geofence collection.
-     * </p>
-     * 
-     * @return Updates the description for the geofence collection.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * Updates the description for the geofence collection.
-     * </p>
-     * 
-     * @param description
-     *        Updates the description for the geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateGeofenceCollectionRequest withDescription(String description) {
-        setDescription(description);
         return this;
     }
 
@@ -232,6 +192,46 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Updates the description for the geofence collection.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the geofence collection.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the geofence collection.
+     * </p>
+     * 
+     * @return Updates the description for the geofence collection.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Updates the description for the geofence collection.
+     * </p>
+     * 
+     * @param description
+     *        Updates the description for the geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateGeofenceCollectionRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -245,12 +245,12 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
         sb.append("{");
         if (getCollectionName() != null)
             sb.append("CollectionName: ").append(getCollectionName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
         if (getPricingPlanDataSource() != null)
-            sb.append("PricingPlanDataSource: ").append(getPricingPlanDataSource());
+            sb.append("PricingPlanDataSource: ").append(getPricingPlanDataSource()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -269,10 +269,6 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getCollectionName() != null && other.getCollectionName().equals(this.getCollectionName()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
@@ -280,6 +276,10 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
         if (other.getPricingPlanDataSource() == null ^ this.getPricingPlanDataSource() == null)
             return false;
         if (other.getPricingPlanDataSource() != null && other.getPricingPlanDataSource().equals(this.getPricingPlanDataSource()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -290,9 +290,9 @@ public class UpdateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCollectionName() == null) ? 0 : getCollectionName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
         hashCode = prime * hashCode + ((getPricingPlanDataSource() == null) ? 0 : getPricingPlanDataSource().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

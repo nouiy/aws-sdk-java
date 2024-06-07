@@ -72,8 +72,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * <code>MIXED</code> This is an advanced setting. For more information, see <a
-     * href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for NetApp
-     * ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * </li>
      * </ul>
@@ -343,8 +343,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * <code>MIXED</code> This is an advanced setting. For more information, see <a
-     * href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for NetApp
-     * ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * </li>
      * </ul>
@@ -370,8 +370,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>MIXED</code> This is an advanced setting. For more information, see <a
-     *        href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for
-     *        NetApp ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
+     *        style</a> in the Amazon FSx for NetApp ONTAP User Guide.
      *        </p>
      *        </li>
      *        </ul>
@@ -402,8 +402,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * <code>MIXED</code> This is an advanced setting. For more information, see <a
-     * href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for NetApp
-     * ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * </li>
      * </ul>
@@ -428,8 +428,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      *         <li>
      *         <p>
      *         <code>MIXED</code> This is an advanced setting. For more information, see <a
-     *         href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for
-     *         NetApp ONTAP User Guide.
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
+     *         style</a> in the Amazon FSx for NetApp ONTAP User Guide.
      *         </p>
      *         </li>
      *         </ul>
@@ -460,8 +460,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * <code>MIXED</code> This is an advanced setting. For more information, see <a
-     * href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for NetApp
-     * ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * </li>
      * </ul>
@@ -487,8 +487,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>MIXED</code> This is an advanced setting. For more information, see <a
-     *        href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for
-     *        NetApp ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
+     *        style</a> in the Amazon FSx for NetApp ONTAP User Guide.
      *        </p>
      *        </li>
      *        </ul>
@@ -521,8 +521,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * <code>MIXED</code> This is an advanced setting. For more information, see <a
-     * href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for NetApp
-     * ONTAP User Guide.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      * </p>
      * </li>
      * </ul>
@@ -548,8 +548,8 @@ public class CreateStorageVirtualMachineRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>MIXED</code> This is an advanced setting. For more information, see <a
-     *        href="fsx/latest/ONTAPGuide/volume-security-style.html">Volume security style</a> in the Amazon FSx for
-     *        NetApp ONTAP User Guide.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html">Volume security
+     *        style</a> in the Amazon FSx for NetApp ONTAP User Guide.
      *        </p>
      *        </li>
      *        </ul>

@@ -25,6 +25,12 @@ public class UpdateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
+     * The name of the updated tracker resource.
+     * </p>
+     */
+    private String trackerName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the updated tracker resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
@@ -38,18 +44,52 @@ public class UpdateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
     private String trackerArn;
     /**
      * <p>
-     * The name of the updated tracker resource.
-     * </p>
-     */
-    private String trackerName;
-    /**
-     * <p>
      * The timestamp for when the tracker resource was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      */
     private java.util.Date updateTime;
+
+    /**
+     * <p>
+     * The name of the updated tracker resource.
+     * </p>
+     * 
+     * @param trackerName
+     *        The name of the updated tracker resource.
+     */
+
+    public void setTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated tracker resource.
+     * </p>
+     * 
+     * @return The name of the updated tracker resource.
+     */
+
+    public String getTrackerName() {
+        return this.trackerName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated tracker resource.
+     * </p>
+     * 
+     * @param trackerName
+     *        The name of the updated tracker resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTrackerResult withTrackerName(String trackerName) {
+        setTrackerName(trackerName);
+        return this;
+    }
 
     /**
      * <p>
@@ -133,46 +173,6 @@ public class UpdateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the updated tracker resource.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the updated tracker resource.
-     */
-
-    public void setTrackerName(String trackerName) {
-        this.trackerName = trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated tracker resource.
-     * </p>
-     * 
-     * @return The name of the updated tracker resource.
-     */
-
-    public String getTrackerName() {
-        return this.trackerName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated tracker resource.
-     * </p>
-     * 
-     * @param trackerName
-     *        The name of the updated tracker resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateTrackerResult withTrackerName(String trackerName) {
-        setTrackerName(trackerName);
-        return this;
-    }
-
-    /**
-     * <p>
      * The timestamp for when the tracker resource was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
@@ -235,10 +235,10 @@ public class UpdateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getTrackerArn() != null)
-            sb.append("TrackerArn: ").append(getTrackerArn()).append(",");
         if (getTrackerName() != null)
             sb.append("TrackerName: ").append(getTrackerName()).append(",");
+        if (getTrackerArn() != null)
+            sb.append("TrackerArn: ").append(getTrackerArn()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -255,13 +255,13 @@ public class UpdateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
         if (obj instanceof UpdateTrackerResult == false)
             return false;
         UpdateTrackerResult other = (UpdateTrackerResult) obj;
-        if (other.getTrackerArn() == null ^ this.getTrackerArn() == null)
-            return false;
-        if (other.getTrackerArn() != null && other.getTrackerArn().equals(this.getTrackerArn()) == false)
-            return false;
         if (other.getTrackerName() == null ^ this.getTrackerName() == null)
             return false;
         if (other.getTrackerName() != null && other.getTrackerName().equals(this.getTrackerName()) == false)
+            return false;
+        if (other.getTrackerArn() == null ^ this.getTrackerArn() == null)
+            return false;
+        if (other.getTrackerArn() != null && other.getTrackerArn().equals(this.getTrackerArn()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -275,8 +275,8 @@ public class UpdateTrackerResult extends com.amazonaws.AmazonWebServiceResult<co
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getTrackerArn() == null) ? 0 : getTrackerArn().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());
+        hashCode = prime * hashCode + ((getTrackerArn() == null) ? 0 : getTrackerArn().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

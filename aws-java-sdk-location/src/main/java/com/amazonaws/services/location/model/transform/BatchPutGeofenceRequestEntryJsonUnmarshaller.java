@@ -52,14 +52,14 @@ public class BatchPutGeofenceRequestEntryJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     batchPutGeofenceRequestEntry.setGeofenceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Geometry", targetDepth)) {
+                    context.nextToken();
+                    batchPutGeofenceRequestEntry.setGeometry(GeofenceGeometryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("GeofenceProperties", targetDepth)) {
                     context.nextToken();
                     batchPutGeofenceRequestEntry.setGeofenceProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("Geometry", targetDepth)) {
-                    context.nextToken();
-                    batchPutGeofenceRequestEntry.setGeometry(GeofenceGeometryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

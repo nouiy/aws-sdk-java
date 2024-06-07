@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies changes you are making to the self-managed Microsoft Active Directory (AD) configuration to which an FSx
- * for Windows File Server file system or an FSx for ONTAP SVM is joined.
+ * Specifies changes you are making to the self-managed Microsoft Active Directory configuration to which an FSx for
+ * Windows File Server file system or an FSx for ONTAP SVM is joined.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/SelfManagedActiveDirectoryConfigurationUpdates"
@@ -31,8 +31,8 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated user name for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * <p>
      * This account must have the permissions required to join computers to the domain in the organizational unit
@@ -42,41 +42,42 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
     private String userName;
     /**
      * <p>
-     * Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated password for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      */
     private String password;
     /**
      * <p>
-     * A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     * A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory domain.
      * </p>
      */
     private java.util.List<String> dnsIps;
     /**
      * <p>
-     * Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     * Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      * </p>
      */
     private String domainName;
     /**
      * <p>
-     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed AD.
+     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed Active
+     * Directory.
      * </p>
      */
     private String organizationalUnitDistinguishedName;
     /**
      * <p>
-     * Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     * privileges for the Amazon FSx resource.
+     * For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory domain
+     * group whose members are granted administrative privileges for the Amazon FSx resource.
      * </p>
      */
     private String fileSystemAdministratorsGroup;
 
     /**
      * <p>
-     * Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated user name for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * <p>
      * This account must have the permissions required to join computers to the domain in the organizational unit
@@ -84,8 +85,8 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
      * </p>
      * 
      * @param userName
-     *        Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses
-     *        this account to join to your self-managed AD domain.</p>
+     *        Specifies the updated user name for the service account on your self-managed Active Directory domain.
+     *        Amazon FSx uses this account to join to your self-managed Active Directory domain.</p>
      *        <p>
      *        This account must have the permissions required to join computers to the domain in the organizational unit
      *        provided in <code>OrganizationalUnitDistinguishedName</code>.
@@ -97,16 +98,16 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated user name for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * <p>
      * This account must have the permissions required to join computers to the domain in the organizational unit
      * provided in <code>OrganizationalUnitDistinguishedName</code>.
      * </p>
      * 
-     * @return Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses
-     *         this account to join to your self-managed AD domain.</p>
+     * @return Specifies the updated user name for the service account on your self-managed Active Directory domain.
+     *         Amazon FSx uses this account to join to your self-managed Active Directory domain.</p>
      *         <p>
      *         This account must have the permissions required to join computers to the domain in the organizational
      *         unit provided in <code>OrganizationalUnitDistinguishedName</code>.
@@ -118,8 +119,8 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated user name for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * <p>
      * This account must have the permissions required to join computers to the domain in the organizational unit
@@ -127,8 +128,8 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
      * </p>
      * 
      * @param userName
-     *        Specifies the updated user name for the service account on your self-managed AD domain. Amazon FSx uses
-     *        this account to join to your self-managed AD domain.</p>
+     *        Specifies the updated user name for the service account on your self-managed Active Directory domain.
+     *        Amazon FSx uses this account to join to your self-managed Active Directory domain.</p>
      *        <p>
      *        This account must have the permissions required to join computers to the domain in the organizational unit
      *        provided in <code>OrganizationalUnitDistinguishedName</code>.
@@ -142,13 +143,13 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated password for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * 
      * @param password
-     *        Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses
-     *        this account to join to your self-managed AD domain.
+     *        Specifies the updated password for the service account on your self-managed Active Directory domain.
+     *        Amazon FSx uses this account to join to your self-managed Active Directory domain.
      */
 
     public void setPassword(String password) {
@@ -157,12 +158,12 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated password for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * 
-     * @return Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses
-     *         this account to join to your self-managed AD domain.
+     * @return Specifies the updated password for the service account on your self-managed Active Directory domain.
+     *         Amazon FSx uses this account to join to your self-managed Active Directory domain.
      */
 
     public String getPassword() {
@@ -171,13 +172,13 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses this
-     * account to join to your self-managed AD domain.
+     * Specifies the updated password for the service account on your self-managed Active Directory domain. Amazon FSx
+     * uses this account to join to your self-managed Active Directory domain.
      * </p>
      * 
      * @param password
-     *        Specifies the updated password for the service account on your self-managed AD domain. Amazon FSx uses
-     *        this account to join to your self-managed AD domain.
+     *        Specifies the updated password for the service account on your self-managed Active Directory domain.
+     *        Amazon FSx uses this account to join to your self-managed Active Directory domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,10 +189,11 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     * A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory domain.
      * </p>
      * 
-     * @return A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     * @return A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory
+     *         domain.
      */
 
     public java.util.List<String> getDnsIps() {
@@ -200,11 +202,12 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     * A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory domain.
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     *        A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory
+     *        domain.
      */
 
     public void setDnsIps(java.util.Collection<String> dnsIps) {
@@ -218,7 +221,7 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     * A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory domain.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -227,7 +230,8 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     *        A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory
+     *        domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,11 +247,12 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     * A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory domain.
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to three DNS server or domain controller IP addresses in your self-managed AD domain.
+     *        A list of up to three DNS server or domain controller IP addresses in your self-managed Active Directory
+     *        domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -258,11 +263,11 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     * Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      * </p>
      * 
      * @param domainName
-     *        Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     *        Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      */
 
     public void setDomainName(String domainName) {
@@ -271,10 +276,10 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     * Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      * </p>
      * 
-     * @return Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     * @return Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      */
 
     public String getDomainName() {
@@ -283,11 +288,11 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     * Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      * </p>
      * 
      * @param domainName
-     *        Specifies an updated fully qualified domain name of your self-managed AD configuration.
+     *        Specifies an updated fully qualified domain name of your self-managed Active Directory configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -298,12 +303,13 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed AD.
+     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed Active
+     * Directory.
      * </p>
      * 
      * @param organizationalUnitDistinguishedName
      *        Specifies an updated fully qualified distinguished name of the organization unit within your self-managed
-     *        AD.
+     *        Active Directory.
      */
 
     public void setOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
@@ -312,11 +318,12 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed AD.
+     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed Active
+     * Directory.
      * </p>
      * 
      * @return Specifies an updated fully qualified distinguished name of the organization unit within your self-managed
-     *         AD.
+     *         Active Directory.
      */
 
     public String getOrganizationalUnitDistinguishedName() {
@@ -325,12 +332,13 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed AD.
+     * Specifies an updated fully qualified distinguished name of the organization unit within your self-managed Active
+     * Directory.
      * </p>
      * 
      * @param organizationalUnitDistinguishedName
      *        Specifies an updated fully qualified distinguished name of the organization unit within your self-managed
-     *        AD.
+     *        Active Directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -341,13 +349,13 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     * privileges for the Amazon FSx resource.
+     * For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory domain
+     * group whose members are granted administrative privileges for the Amazon FSx resource.
      * </p>
      * 
      * @param fileSystemAdministratorsGroup
-     *        Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     *        privileges for the Amazon FSx resource.
+     *        For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory
+     *        domain group whose members are granted administrative privileges for the Amazon FSx resource.
      */
 
     public void setFileSystemAdministratorsGroup(String fileSystemAdministratorsGroup) {
@@ -356,12 +364,12 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     * privileges for the Amazon FSx resource.
+     * For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory domain
+     * group whose members are granted administrative privileges for the Amazon FSx resource.
      * </p>
      * 
-     * @return Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     *         privileges for the Amazon FSx resource.
+     * @return For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory
+     *         domain group whose members are granted administrative privileges for the Amazon FSx resource.
      */
 
     public String getFileSystemAdministratorsGroup() {
@@ -370,13 +378,13 @@ public class SelfManagedActiveDirectoryConfigurationUpdates implements Serializa
 
     /**
      * <p>
-     * Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     * privileges for the Amazon FSx resource.
+     * For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory domain
+     * group whose members are granted administrative privileges for the Amazon FSx resource.
      * </p>
      * 
      * @param fileSystemAdministratorsGroup
-     *        Specifies the updated name of the self-managed AD domain group whose members are granted administrative
-     *        privileges for the Amazon FSx resource.
+     *        For FSx for ONTAP file systems only - Specifies the updated name of the self-managed Active Directory
+     *        domain group whose members are granted administrative privileges for the Amazon FSx resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

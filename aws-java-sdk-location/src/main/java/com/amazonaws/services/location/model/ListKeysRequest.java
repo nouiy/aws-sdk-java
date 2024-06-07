@@ -27,12 +27,6 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
-     * </p>
-     */
-    private ApiKeyFilter filter;
-    /**
-     * <p>
      * An optional limit for the number of resources returned in a single call.
      * </p>
      * <p>
@@ -50,46 +44,12 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      */
     private String nextToken;
-
     /**
      * <p>
      * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
      * </p>
-     * 
-     * @param filter
-     *        Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
      */
-
-    public void setFilter(ApiKeyFilter filter) {
-        this.filter = filter;
-    }
-
-    /**
-     * <p>
-     * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
-     * </p>
-     * 
-     * @return Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
-     */
-
-    public ApiKeyFilter getFilter() {
-        return this.filter;
-    }
-
-    /**
-     * <p>
-     * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
-     * </p>
-     * 
-     * @param filter
-     *        Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListKeysRequest withFilter(ApiKeyFilter filter) {
-        setFilter(filter);
-        return this;
-    }
+    private ApiKeyFilter filter;
 
     /**
      * <p>
@@ -208,6 +168,46 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
+     * </p>
+     * 
+     * @param filter
+     *        Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
+     */
+
+    public void setFilter(ApiKeyFilter filter) {
+        this.filter = filter;
+    }
+
+    /**
+     * <p>
+     * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
+     * </p>
+     * 
+     * @return Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
+     */
+
+    public ApiKeyFilter getFilter() {
+        return this.filter;
+    }
+
+    /**
+     * <p>
+     * Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
+     * </p>
+     * 
+     * @param filter
+     *        Optionally filter the list to only <code>Active</code> or <code>Expired</code> API keys.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListKeysRequest withFilter(ApiKeyFilter filter) {
+        setFilter(filter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -219,12 +219,12 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFilter() != null)
-            sb.append("Filter: ").append(getFilter()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getFilter() != null)
+            sb.append("Filter: ").append(getFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -239,10 +239,6 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
         if (obj instanceof ListKeysRequest == false)
             return false;
         ListKeysRequest other = (ListKeysRequest) obj;
-        if (other.getFilter() == null ^ this.getFilter() == null)
-            return false;
-        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
-            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -250,6 +246,10 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getFilter() == null ^ this.getFilter() == null)
+            return false;
+        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
             return false;
         return true;
     }
@@ -259,9 +259,9 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         return hashCode;
     }
 

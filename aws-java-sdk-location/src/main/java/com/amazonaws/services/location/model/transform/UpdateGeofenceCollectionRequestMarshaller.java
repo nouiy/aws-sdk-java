@@ -29,12 +29,12 @@ public class UpdateGeofenceCollectionRequestMarshaller {
 
     private static final MarshallingInfo<String> COLLECTIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("CollectionName").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
     private static final MarshallingInfo<String> PRICINGPLANDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlanDataSource").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
 
     private static final UpdateGeofenceCollectionRequestMarshaller instance = new UpdateGeofenceCollectionRequestMarshaller();
 
@@ -53,9 +53,9 @@ public class UpdateGeofenceCollectionRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateGeofenceCollectionRequest.getCollectionName(), COLLECTIONNAME_BINDING);
-            protocolMarshaller.marshall(updateGeofenceCollectionRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateGeofenceCollectionRequest.getPricingPlan(), PRICINGPLAN_BINDING);
             protocolMarshaller.marshall(updateGeofenceCollectionRequest.getPricingPlanDataSource(), PRICINGPLANDATASOURCE_BINDING);
+            protocolMarshaller.marshall(updateGeofenceCollectionRequest.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

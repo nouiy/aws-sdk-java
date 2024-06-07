@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class MapConfigurationUpdateMarshaller {
 
-    private static final MarshallingInfo<List> CUSTOMLAYERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("CustomLayers").build();
     private static final MarshallingInfo<String> POLITICALVIEW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PoliticalView").build();
+    private static final MarshallingInfo<List> CUSTOMLAYERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("CustomLayers").build();
 
     private static final MapConfigurationUpdateMarshaller instance = new MapConfigurationUpdateMarshaller();
 
@@ -49,8 +49,8 @@ public class MapConfigurationUpdateMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(mapConfigurationUpdate.getCustomLayers(), CUSTOMLAYERS_BINDING);
             protocolMarshaller.marshall(mapConfigurationUpdate.getPoliticalView(), POLITICALVIEW_BINDING);
+            protocolMarshaller.marshall(mapConfigurationUpdate.getCustomLayers(), CUSTOMLAYERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

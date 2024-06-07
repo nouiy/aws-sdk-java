@@ -96,6 +96,11 @@ public class LustreFileSystemConfigurationJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     lustreFileSystemConfiguration.setRootSquashConfiguration(LustreRootSquashConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("MetadataConfiguration", targetDepth)) {
+                    context.nextToken();
+                    lustreFileSystemConfiguration.setMetadataConfiguration(FileSystemLustreMetadataConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

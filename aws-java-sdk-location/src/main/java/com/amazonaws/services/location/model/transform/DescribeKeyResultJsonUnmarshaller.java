@@ -48,18 +48,6 @@ public class DescribeKeyResultJsonUnmarshaller implements Unmarshaller<DescribeK
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    describeKeyResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("Description", targetDepth)) {
-                    context.nextToken();
-                    describeKeyResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("ExpireTime", targetDepth)) {
-                    context.nextToken();
-                    describeKeyResult.setExpireTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("Key", targetDepth)) {
                     context.nextToken();
                     describeKeyResult.setKey(context.getUnmarshaller(String.class).unmarshall(context));
@@ -76,14 +64,26 @@ public class DescribeKeyResultJsonUnmarshaller implements Unmarshaller<DescribeK
                     context.nextToken();
                     describeKeyResult.setRestrictions(ApiKeyRestrictionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("Tags", targetDepth)) {
+                if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();
-                    describeKeyResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
-                            .unmarshall(context));
+                    describeKeyResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("ExpireTime", targetDepth)) {
+                    context.nextToken();
+                    describeKeyResult.setExpireTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();
                     describeKeyResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    describeKeyResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    describeKeyResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
+                            .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

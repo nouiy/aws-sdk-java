@@ -43,6 +43,34 @@ public interface AWSAccount {
 
     /**
      * <p>
+     * Accepts the request that originated from <a>StartPrimaryEmailUpdate</a> to update the primary email address (also
+     * known as the root user email address) for the specified account.
+     * </p>
+     * 
+     * @param acceptPrimaryEmailUpdateRequest
+     * @return Result of the AcceptPrimaryEmailUpdate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The operation failed because it specified a resource that can't be found.
+     * @throws ValidationException
+     *         The operation failed because one of the input parameters was invalid.
+     * @throws ConflictException
+     *         The request could not be processed because of a conflict in the current status of the resource. For
+     *         example, this happens if you try to enable a Region that is currently being disabled (in a status of
+     *         DISABLING).
+     * @throws AccessDeniedException
+     *         The operation failed because the calling identity doesn't have the minimum required permissions.
+     * @throws TooManyRequestsException
+     *         The operation failed because it was called too frequently and exceeded a throttle limit.
+     * @throws InternalServerException
+     *         The operation failed because of an error internal to Amazon Web Services. Try your operation again later.
+     * @sample AWSAccount.AcceptPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/AcceptPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AcceptPrimaryEmailUpdateResult acceptPrimaryEmailUpdate(AcceptPrimaryEmailUpdateRequest acceptPrimaryEmailUpdateRequest);
+
+    /**
+     * <p>
      * Deletes the specified alternate contact from an Amazon Web Services account.
      * </p>
      * <p>
@@ -82,6 +110,11 @@ public interface AWSAccount {
      * <p>
      * Disables (opts-out) a particular Region for an account.
      * </p>
+     * <note>
+     * <p>
+     * The act of disabling a Region will remove all IAM access to any resources that reside in that Region.
+     * </p>
+     * </note>
      * 
      * @param disableRegionRequest
      * @return Result of the DisableRegion operation returned by the service.
@@ -195,6 +228,29 @@ public interface AWSAccount {
 
     /**
      * <p>
+     * Retrieves the primary email address for the specified account.
+     * </p>
+     * 
+     * @param getPrimaryEmailRequest
+     * @return Result of the GetPrimaryEmail operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The operation failed because it specified a resource that can't be found.
+     * @throws ValidationException
+     *         The operation failed because one of the input parameters was invalid.
+     * @throws AccessDeniedException
+     *         The operation failed because the calling identity doesn't have the minimum required permissions.
+     * @throws TooManyRequestsException
+     *         The operation failed because it was called too frequently and exceeded a throttle limit.
+     * @throws InternalServerException
+     *         The operation failed because of an error internal to Amazon Web Services. Try your operation again later.
+     * @sample AWSAccount.GetPrimaryEmail
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/GetPrimaryEmail" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetPrimaryEmailResult getPrimaryEmail(GetPrimaryEmailRequest getPrimaryEmailRequest);
+
+    /**
+     * <p>
      * Retrieves the opt-in status of a particular Region.
      * </p>
      * 
@@ -296,6 +352,33 @@ public interface AWSAccount {
      *      API Documentation</a>
      */
     PutContactInformationResult putContactInformation(PutContactInformationRequest putContactInformationRequest);
+
+    /**
+     * <p>
+     * Starts the process to update the primary email address for the specified account.
+     * </p>
+     * 
+     * @param startPrimaryEmailUpdateRequest
+     * @return Result of the StartPrimaryEmailUpdate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The operation failed because it specified a resource that can't be found.
+     * @throws ValidationException
+     *         The operation failed because one of the input parameters was invalid.
+     * @throws ConflictException
+     *         The request could not be processed because of a conflict in the current status of the resource. For
+     *         example, this happens if you try to enable a Region that is currently being disabled (in a status of
+     *         DISABLING).
+     * @throws AccessDeniedException
+     *         The operation failed because the calling identity doesn't have the minimum required permissions.
+     * @throws TooManyRequestsException
+     *         The operation failed because it was called too frequently and exceeded a throttle limit.
+     * @throws InternalServerException
+     *         The operation failed because of an error internal to Amazon Web Services. Try your operation again later.
+     * @sample AWSAccount.StartPrimaryEmailUpdate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/StartPrimaryEmailUpdate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartPrimaryEmailUpdateResult startPrimaryEmailUpdate(StartPrimaryEmailUpdateRequest startPrimaryEmailUpdateRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

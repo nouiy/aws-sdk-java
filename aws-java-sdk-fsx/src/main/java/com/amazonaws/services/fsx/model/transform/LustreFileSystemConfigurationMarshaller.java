@@ -51,6 +51,8 @@ public class LustreFileSystemConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> ROOTSQUASHCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RootSquashConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> METADATACONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetadataConfiguration").build();
 
     private static final LustreFileSystemConfigurationMarshaller instance = new LustreFileSystemConfigurationMarshaller();
 
@@ -80,6 +82,7 @@ public class LustreFileSystemConfigurationMarshaller {
             protocolMarshaller.marshall(lustreFileSystemConfiguration.getDataCompressionType(), DATACOMPRESSIONTYPE_BINDING);
             protocolMarshaller.marshall(lustreFileSystemConfiguration.getLogConfiguration(), LOGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(lustreFileSystemConfiguration.getRootSquashConfiguration(), ROOTSQUASHCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(lustreFileSystemConfiguration.getMetadataConfiguration(), METADATACONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

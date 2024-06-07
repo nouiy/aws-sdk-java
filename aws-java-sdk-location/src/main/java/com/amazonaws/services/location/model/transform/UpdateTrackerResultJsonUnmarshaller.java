@@ -48,13 +48,13 @@ public class UpdateTrackerResultJsonUnmarshaller implements Unmarshaller<UpdateT
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("TrackerArn", targetDepth)) {
-                    context.nextToken();
-                    updateTrackerResult.setTrackerArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("TrackerName", targetDepth)) {
                     context.nextToken();
                     updateTrackerResult.setTrackerName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TrackerArn", targetDepth)) {
+                    context.nextToken();
+                    updateTrackerResult.setTrackerArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

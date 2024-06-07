@@ -25,6 +25,12 @@ public class UpdateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
+     * The name of the updated map resource.
+     * </p>
+     */
+    private String mapName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the updated map resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
@@ -38,18 +44,52 @@ public class UpdateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
     private String mapArn;
     /**
      * <p>
-     * The name of the updated map resource.
-     * </p>
-     */
-    private String mapName;
-    /**
-     * <p>
      * The timestamp for when the map resource was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      */
     private java.util.Date updateTime;
+
+    /**
+     * <p>
+     * The name of the updated map resource.
+     * </p>
+     * 
+     * @param mapName
+     *        The name of the updated map resource.
+     */
+
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated map resource.
+     * </p>
+     * 
+     * @return The name of the updated map resource.
+     */
+
+    public String getMapName() {
+        return this.mapName;
+    }
+
+    /**
+     * <p>
+     * The name of the updated map resource.
+     * </p>
+     * 
+     * @param mapName
+     *        The name of the updated map resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateMapResult withMapName(String mapName) {
+        setMapName(mapName);
+        return this;
+    }
 
     /**
      * <p>
@@ -132,46 +172,6 @@ public class UpdateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The name of the updated map resource.
-     * </p>
-     * 
-     * @param mapName
-     *        The name of the updated map resource.
-     */
-
-    public void setMapName(String mapName) {
-        this.mapName = mapName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated map resource.
-     * </p>
-     * 
-     * @return The name of the updated map resource.
-     */
-
-    public String getMapName() {
-        return this.mapName;
-    }
-
-    /**
-     * <p>
-     * The name of the updated map resource.
-     * </p>
-     * 
-     * @param mapName
-     *        The name of the updated map resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateMapResult withMapName(String mapName) {
-        setMapName(mapName);
-        return this;
-    }
-
-    /**
-     * <p>
      * The timestamp for when the map resource was last updated in <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
@@ -234,10 +234,10 @@ public class UpdateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMapArn() != null)
-            sb.append("MapArn: ").append(getMapArn()).append(",");
         if (getMapName() != null)
             sb.append("MapName: ").append(getMapName()).append(",");
+        if (getMapArn() != null)
+            sb.append("MapArn: ").append(getMapArn()).append(",");
         if (getUpdateTime() != null)
             sb.append("UpdateTime: ").append(getUpdateTime());
         sb.append("}");
@@ -254,13 +254,13 @@ public class UpdateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (obj instanceof UpdateMapResult == false)
             return false;
         UpdateMapResult other = (UpdateMapResult) obj;
-        if (other.getMapArn() == null ^ this.getMapArn() == null)
-            return false;
-        if (other.getMapArn() != null && other.getMapArn().equals(this.getMapArn()) == false)
-            return false;
         if (other.getMapName() == null ^ this.getMapName() == null)
             return false;
         if (other.getMapName() != null && other.getMapName().equals(this.getMapName()) == false)
+            return false;
+        if (other.getMapArn() == null ^ this.getMapArn() == null)
+            return false;
+        if (other.getMapArn() != null && other.getMapArn().equals(this.getMapArn()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
@@ -274,8 +274,8 @@ public class UpdateMapResult extends com.amazonaws.AmazonWebServiceResult<com.am
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMapArn() == null) ? 0 : getMapArn().hashCode());
         hashCode = prime * hashCode + ((getMapName() == null) ? 0 : getMapName().hashCode());
+        hashCode = prime * hashCode + ((getMapArn() == null) ? 0 : getMapArn().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;
     }

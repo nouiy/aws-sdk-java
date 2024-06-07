@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListTrackerConsumersRequestMarshaller {
 
+    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("TrackerName").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
-    private static final MarshallingInfo<String> TRACKERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("TrackerName").build();
 
     private static final ListTrackerConsumersRequestMarshaller instance = new ListTrackerConsumersRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class ListTrackerConsumersRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listTrackerConsumersRequest.getTrackerName(), TRACKERNAME_BINDING);
             protocolMarshaller.marshall(listTrackerConsumersRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listTrackerConsumersRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listTrackerConsumersRequest.getTrackerName(), TRACKERNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

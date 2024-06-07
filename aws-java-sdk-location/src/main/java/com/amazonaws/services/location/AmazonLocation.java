@@ -972,6 +972,42 @@ public interface AmazonLocation {
 
     /**
      * <p>
+     * Evaluates device positions against geofence geometries from a given geofence collection. The event forecasts
+     * three states for which a device can be in relative to a geofence:
+     * </p>
+     * <p>
+     * <code>ENTER</code>: If a device is outside of a geofence, but would breach the fence if the device is moving at
+     * its current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>EXIT</code>: If a device is inside of a geofence, but would breach the fence if the device is moving at its
+     * current speed within time horizon window.
+     * </p>
+     * <p>
+     * <code>IDLE</code>: If a device is inside of a geofence, and the device is not moving.
+     * </p>
+     * 
+     * @param forecastGeofenceEventsRequest
+     * @return Result of the ForecastGeofenceEvents operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.ForecastGeofenceEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ForecastGeofenceEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ForecastGeofenceEventsResult forecastGeofenceEvents(ForecastGeofenceEventsRequest forecastGeofenceEventsRequest);
+
+    /**
+     * <p>
      * Retrieves a device's most recent position according to its sample time.
      * </p>
      * <note>
@@ -1032,6 +1068,11 @@ public interface AmazonLocation {
      * <p>
      * Retrieves the geofence details from a geofence collection.
      * </p>
+     * <note>
+     * <p>
+     * The returned geometry will always match the geometry format used when the geofence was created.
+     * </p>
+     * </note>
      * 
      * @param getGeofenceRequest
      * @return Result of the GetGeofence operation returned by the service.
@@ -1763,6 +1804,31 @@ public interface AmazonLocation {
      *      Documentation</a>
      */
     UpdateTrackerResult updateTracker(UpdateTrackerRequest updateTrackerRequest);
+
+    /**
+     * <p>
+     * Verifies the integrity of the device's position by determining if it was reported behind a proxy, and by
+     * comparing it to an inferred position estimated based on the device's state.
+     * </p>
+     * 
+     * @param verifyDevicePositionRequest
+     * @return Result of the VerifyDevicePosition operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.VerifyDevicePosition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/VerifyDevicePosition" target="_top">AWS
+     *      API Documentation</a>
+     */
+    VerifyDevicePositionResult verifyDevicePosition(VerifyDevicePositionRequest verifyDevicePositionRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

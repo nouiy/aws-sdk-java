@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdatePlaceIndexRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> DATASOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSourceConfiguration").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> INDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("IndexName").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<StructuredPojo> DATASOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataSourceConfiguration").build();
 
     private static final UpdatePlaceIndexRequestMarshaller instance = new UpdatePlaceIndexRequestMarshaller();
 
@@ -52,10 +52,10 @@ public class UpdatePlaceIndexRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updatePlaceIndexRequest.getDataSourceConfiguration(), DATASOURCECONFIGURATION_BINDING);
-            protocolMarshaller.marshall(updatePlaceIndexRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updatePlaceIndexRequest.getIndexName(), INDEXNAME_BINDING);
             protocolMarshaller.marshall(updatePlaceIndexRequest.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(updatePlaceIndexRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updatePlaceIndexRequest.getDataSourceConfiguration(), DATASOURCECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

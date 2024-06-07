@@ -163,6 +163,13 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * </p>
      */
     private LustreRootSquashConfiguration rootSquashConfiguration;
+    /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type.
+     * </p>
+     */
+    private FileSystemLustreMetadataConfiguration metadataConfiguration;
 
     /**
      * <p>
@@ -1200,6 +1207,52 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type.
+     * </p>
+     * 
+     * @param metadataConfiguration
+     *        The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     *        <code>PERSISTENT_2</code> deployment type.
+     */
+
+    public void setMetadataConfiguration(FileSystemLustreMetadataConfiguration metadataConfiguration) {
+        this.metadataConfiguration = metadataConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type.
+     * </p>
+     * 
+     * @return The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     *         <code>PERSISTENT_2</code> deployment type.
+     */
+
+    public FileSystemLustreMetadataConfiguration getMetadataConfiguration() {
+        return this.metadataConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     * <code>PERSISTENT_2</code> deployment type.
+     * </p>
+     * 
+     * @param metadataConfiguration
+     *        The Lustre metadata performance configuration for an Amazon FSx for Lustre file system using a
+     *        <code>PERSISTENT_2</code> deployment type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LustreFileSystemConfiguration withMetadataConfiguration(FileSystemLustreMetadataConfiguration metadataConfiguration) {
+        setMetadataConfiguration(metadataConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1234,7 +1287,9 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
         if (getLogConfiguration() != null)
             sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
         if (getRootSquashConfiguration() != null)
-            sb.append("RootSquashConfiguration: ").append(getRootSquashConfiguration());
+            sb.append("RootSquashConfiguration: ").append(getRootSquashConfiguration()).append(",");
+        if (getMetadataConfiguration() != null)
+            sb.append("MetadataConfiguration: ").append(getMetadataConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1298,6 +1353,10 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
             return false;
         if (other.getRootSquashConfiguration() != null && other.getRootSquashConfiguration().equals(this.getRootSquashConfiguration()) == false)
             return false;
+        if (other.getMetadataConfiguration() == null ^ this.getMetadataConfiguration() == null)
+            return false;
+        if (other.getMetadataConfiguration() != null && other.getMetadataConfiguration().equals(this.getMetadataConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1318,6 +1377,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
         hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRootSquashConfiguration() == null) ? 0 : getRootSquashConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getMetadataConfiguration() == null) ? 0 : getMetadataConfiguration().hashCode());
         return hashCode;
     }
 

@@ -13,7 +13,7 @@
 package com.amazonaws.services.location.model.transform;
 
 import java.math.*;
-
+import java.nio.ByteBuffer;
 import javax.annotation.Generated;
 
 import com.amazonaws.services.location.model.*;
@@ -48,10 +48,6 @@ public class GeofenceGeometryJsonUnmarshaller implements Unmarshaller<GeofenceGe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Circle", targetDepth)) {
-                    context.nextToken();
-                    geofenceGeometry.setCircle(CircleJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("Polygon", targetDepth)) {
                     context.nextToken();
                     geofenceGeometry.setPolygon(new ListUnmarshaller<java.util.List<java.util.List<Double>>>(new ListUnmarshaller<java.util.List<Double>>(
@@ -62,6 +58,14 @@ public class GeofenceGeometryJsonUnmarshaller implements Unmarshaller<GeofenceGe
                     )
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("Circle", targetDepth)) {
+                    context.nextToken();
+                    geofenceGeometry.setCircle(CircleJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Geobuf", targetDepth)) {
+                    context.nextToken();
+                    geofenceGeometry.setGeobuf(context.getUnmarshaller(java.nio.ByteBuffer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

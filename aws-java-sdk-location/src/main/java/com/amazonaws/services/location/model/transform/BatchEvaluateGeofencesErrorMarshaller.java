@@ -29,10 +29,10 @@ public class BatchEvaluateGeofencesErrorMarshaller {
 
     private static final MarshallingInfo<String> DEVICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DeviceId").build();
-    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
     private static final MarshallingInfo<java.util.Date> SAMPLETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SampleTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
 
     private static final BatchEvaluateGeofencesErrorMarshaller instance = new BatchEvaluateGeofencesErrorMarshaller();
 
@@ -51,8 +51,8 @@ public class BatchEvaluateGeofencesErrorMarshaller {
 
         try {
             protocolMarshaller.marshall(batchEvaluateGeofencesError.getDeviceId(), DEVICEID_BINDING);
-            protocolMarshaller.marshall(batchEvaluateGeofencesError.getError(), ERROR_BINDING);
             protocolMarshaller.marshall(batchEvaluateGeofencesError.getSampleTime(), SAMPLETIME_BINDING);
+            protocolMarshaller.marshall(batchEvaluateGeofencesError.getError(), ERROR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

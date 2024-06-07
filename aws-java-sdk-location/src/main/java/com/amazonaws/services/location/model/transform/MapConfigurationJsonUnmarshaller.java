@@ -48,19 +48,19 @@ public class MapConfigurationJsonUnmarshaller implements Unmarshaller<MapConfigu
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CustomLayers", targetDepth)) {
+                if (context.testExpression("Style", targetDepth)) {
                     context.nextToken();
-                    mapConfiguration.setCustomLayers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
+                    mapConfiguration.setStyle(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PoliticalView", targetDepth)) {
                     context.nextToken();
                     mapConfiguration.setPoliticalView(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Style", targetDepth)) {
+                if (context.testExpression("CustomLayers", targetDepth)) {
                     context.nextToken();
-                    mapConfiguration.setStyle(context.getUnmarshaller(String.class).unmarshall(context));
+                    mapConfiguration.setCustomLayers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

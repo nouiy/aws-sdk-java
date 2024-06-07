@@ -32,7 +32,7 @@ import com.amazonaws.services.kinesisfirehose.model.*;
  * </note>
  * <p>
  * Amazon Data Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon
- * Simple Storage Service (Amazon S3), Amazon OpenSearch Service, Amazon Redshift, Splunk, and various other supportd
+ * Simple Storage Service (Amazon S3), Amazon OpenSearch Service, Amazon Redshift, Splunk, and various other supported
  * destinations.
  * </p>
  */
@@ -748,8 +748,9 @@ public interface AmazonKinesisFirehoseAsync extends AmazonKinesisFirehose {
      * new CMK to encrypt and decrypt data and to manage the grant.
      * </p>
      * <p>
-     * For the KMS grant creation to be successful, Firehose APIs <code>StartDeliveryStreamEncryption</code> and
-     * <code>CreateDeliveryStream</code> should not be called with session credentials that are more than 6 hours old.
+     * For the KMS grant creation to be successful, the Firehose API operations
+     * <code>StartDeliveryStreamEncryption</code> and <code>CreateDeliveryStream</code> should not be called with
+     * session credentials that are more than 6 hours old.
      * </p>
      * <p>
      * If a delivery stream already has encryption enabled and then you invoke this operation to change the ARN of the
@@ -808,8 +809,9 @@ public interface AmazonKinesisFirehoseAsync extends AmazonKinesisFirehose {
      * new CMK to encrypt and decrypt data and to manage the grant.
      * </p>
      * <p>
-     * For the KMS grant creation to be successful, Firehose APIs <code>StartDeliveryStreamEncryption</code> and
-     * <code>CreateDeliveryStream</code> should not be called with session credentials that are more than 6 hours old.
+     * For the KMS grant creation to be successful, the Firehose API operations
+     * <code>StartDeliveryStreamEncryption</code> and <code>CreateDeliveryStream</code> should not be called with
+     * session credentials that are more than 6 hours old.
      * </p>
      * <p>
      * If a delivery stream already has encryption enabled and then you invoke this operation to change the ARN of the

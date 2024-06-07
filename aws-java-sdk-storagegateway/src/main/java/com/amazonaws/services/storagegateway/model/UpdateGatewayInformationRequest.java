@@ -48,7 +48,10 @@ public class UpdateGatewayInformationRequest extends com.amazonaws.AmazonWebServ
     private String cloudWatchLogGroupARN;
     /**
      * <p>
-     * Specifies the size of the gateway's metadata cache.
+     * Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     * recommendations. For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html">Performance
+     * guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      */
     private String gatewayCapacity;
@@ -220,11 +223,18 @@ public class UpdateGatewayInformationRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the size of the gateway's metadata cache.
+     * Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     * recommendations. For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html">Performance
+     * guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      * 
      * @param gatewayCapacity
-     *        Specifies the size of the gateway's metadata cache.
+     *        Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     *        recommendations. For more information, see <a
+     *        href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html"
+     *        >Performance guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User
+     *        Guide</i>.
      * @see GatewayCapacity
      */
 
@@ -234,10 +244,17 @@ public class UpdateGatewayInformationRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the size of the gateway's metadata cache.
+     * Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     * recommendations. For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html">Performance
+     * guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      * 
-     * @return Specifies the size of the gateway's metadata cache.
+     * @return Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     *         recommendations. For more information, see <a
+     *         href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html"
+     *         >Performance guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User
+     *         Guide</i>.
      * @see GatewayCapacity
      */
 
@@ -247,11 +264,18 @@ public class UpdateGatewayInformationRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the size of the gateway's metadata cache.
+     * Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     * recommendations. For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html">Performance
+     * guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      * 
      * @param gatewayCapacity
-     *        Specifies the size of the gateway's metadata cache.
+     *        Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     *        recommendations. For more information, see <a
+     *        href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html"
+     *        >Performance guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User
+     *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GatewayCapacity
      */
@@ -263,11 +287,18 @@ public class UpdateGatewayInformationRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specifies the size of the gateway's metadata cache.
+     * Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     * recommendations. For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html">Performance
+     * guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      * 
      * @param gatewayCapacity
-     *        Specifies the size of the gateway's metadata cache.
+     *        Specifies the size of the gateway's metadata cache. This setting impacts gateway performance and hardware
+     *        recommendations. For more information, see <a
+     *        href="https://docs.aws.amazon.com/filegateway/latest/files3/performance-multiple-file-shares.html"
+     *        >Performance guidance for gateways with multiple file shares</a> in the <i>Amazon S3 File Gateway User
+     *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GatewayCapacity
      */

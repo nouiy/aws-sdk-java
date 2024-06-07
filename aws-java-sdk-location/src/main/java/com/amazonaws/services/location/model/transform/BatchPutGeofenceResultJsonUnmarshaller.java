@@ -48,15 +48,15 @@ public class BatchPutGeofenceResultJsonUnmarshaller implements Unmarshaller<Batc
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Errors", targetDepth)) {
-                    context.nextToken();
-                    batchPutGeofenceResult.setErrors(new ListUnmarshaller<BatchPutGeofenceError>(BatchPutGeofenceErrorJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("Successes", targetDepth)) {
                     context.nextToken();
                     batchPutGeofenceResult.setSuccesses(new ListUnmarshaller<BatchPutGeofenceSuccess>(BatchPutGeofenceSuccessJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Errors", targetDepth)) {
+                    context.nextToken();
+                    batchPutGeofenceResult.setErrors(new ListUnmarshaller<BatchPutGeofenceError>(BatchPutGeofenceErrorJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

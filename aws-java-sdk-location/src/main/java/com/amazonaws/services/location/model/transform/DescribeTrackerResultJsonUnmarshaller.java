@@ -48,29 +48,17 @@ public class DescribeTrackerResultJsonUnmarshaller implements Unmarshaller<Descr
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
+                if (context.testExpression("TrackerName", targetDepth)) {
                     context.nextToken();
-                    describeTrackerResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    describeTrackerResult.setTrackerName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TrackerArn", targetDepth)) {
+                    context.nextToken();
+                    describeTrackerResult.setTrackerArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     describeTrackerResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("EventBridgeEnabled", targetDepth)) {
-                    context.nextToken();
-                    describeTrackerResult.setEventBridgeEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("KmsKeyEnableGeospatialQueries", targetDepth)) {
-                    context.nextToken();
-                    describeTrackerResult.setKmsKeyEnableGeospatialQueries(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("KmsKeyId", targetDepth)) {
-                    context.nextToken();
-                    describeTrackerResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("PositionFiltering", targetDepth)) {
-                    context.nextToken();
-                    describeTrackerResult.setPositionFiltering(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PricingPlan", targetDepth)) {
                     context.nextToken();
@@ -85,17 +73,29 @@ public class DescribeTrackerResultJsonUnmarshaller implements Unmarshaller<Descr
                     describeTrackerResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
-                if (context.testExpression("TrackerArn", targetDepth)) {
+                if (context.testExpression("CreateTime", targetDepth)) {
                     context.nextToken();
-                    describeTrackerResult.setTrackerArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("TrackerName", targetDepth)) {
-                    context.nextToken();
-                    describeTrackerResult.setTrackerName(context.getUnmarshaller(String.class).unmarshall(context));
+                    describeTrackerResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();
                     describeTrackerResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("KmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    describeTrackerResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PositionFiltering", targetDepth)) {
+                    context.nextToken();
+                    describeTrackerResult.setPositionFiltering(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("EventBridgeEnabled", targetDepth)) {
+                    context.nextToken();
+                    describeTrackerResult.setEventBridgeEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("KmsKeyEnableGeospatialQueries", targetDepth)) {
+                    context.nextToken();
+                    describeTrackerResult.setKmsKeyEnableGeospatialQueries(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

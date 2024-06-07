@@ -28,10 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GeofenceGeometryMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> CIRCLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Circle").build();
     private static final MarshallingInfo<List> POLYGON_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Polygon").build();
+    private static final MarshallingInfo<StructuredPojo> CIRCLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Circle").build();
+    private static final MarshallingInfo<java.nio.ByteBuffer> GEOBUF_BINDING = MarshallingInfo.builder(MarshallingType.BYTE_BUFFER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Geobuf").build();
 
     private static final GeofenceGeometryMarshaller instance = new GeofenceGeometryMarshaller();
 
@@ -49,8 +51,9 @@ public class GeofenceGeometryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(geofenceGeometry.getCircle(), CIRCLE_BINDING);
             protocolMarshaller.marshall(geofenceGeometry.getPolygon(), POLYGON_BINDING);
+            protocolMarshaller.marshall(geofenceGeometry.getCircle(), CIRCLE_BINDING);
+            protocolMarshaller.marshall(geofenceGeometry.getGeobuf(), GEOBUF_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

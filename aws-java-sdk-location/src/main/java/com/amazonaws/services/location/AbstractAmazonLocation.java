@@ -168,6 +168,11 @@ public class AbstractAmazonLocation implements AmazonLocation {
     }
 
     @Override
+    public ForecastGeofenceEventsResult forecastGeofenceEvents(ForecastGeofenceEventsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDevicePositionResult getDevicePosition(GetDevicePositionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -314,6 +319,11 @@ public class AbstractAmazonLocation implements AmazonLocation {
 
     @Override
     public UpdateTrackerResult updateTracker(UpdateTrackerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public VerifyDevicePositionResult verifyDevicePosition(VerifyDevicePositionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

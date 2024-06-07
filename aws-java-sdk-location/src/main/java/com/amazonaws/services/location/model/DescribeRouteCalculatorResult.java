@@ -25,6 +25,12 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * The name of the route calculator resource being described.
+     * </p>
+     */
+    private String calculatorName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) for the Route calculator resource. Use the ARN when you specify a resource across
      * Amazon Web Services.
      * </p>
@@ -39,10 +45,17 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
     private String calculatorArn;
     /**
      * <p>
-     * The name of the route calculator resource being described.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      */
-    private String calculatorName;
+    @Deprecated
+    private String pricingPlan;
+    /**
+     * <p>
+     * The optional description of the route calculator resource.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * The timestamp when the route calculator resource was created in <a
@@ -58,6 +71,21 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      * </ul>
      */
     private java.util.Date createTime;
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.Date updateTime;
     /**
      * <p>
      * The data provider of traffic and road network data. Indicates one of the available providers:
@@ -88,38 +116,50 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
     private String dataSource;
     /**
      * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * Always returns <code>RequestBasedUsage</code>.
-     * </p>
-     */
-    @Deprecated
-    private String pricingPlan;
-    /**
-     * <p>
      * Tags associated with route calculator resource.
      * </p>
      */
     private java.util.Map<String, String> tags;
+
     /**
      * <p>
-     * The timestamp when the route calculator resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * The name of the route calculator resource being described.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
+     * 
+     * @param calculatorName
+     *        The name of the route calculator resource being described.
      */
-    private java.util.Date updateTime;
+
+    public void setCalculatorName(String calculatorName) {
+        this.calculatorName = calculatorName;
+    }
+
+    /**
+     * <p>
+     * The name of the route calculator resource being described.
+     * </p>
+     * 
+     * @return The name of the route calculator resource being described.
+     */
+
+    public String getCalculatorName() {
+        return this.calculatorName;
+    }
+
+    /**
+     * <p>
+     * The name of the route calculator resource being described.
+     * </p>
+     * 
+     * @param calculatorName
+     *        The name of the route calculator resource being described.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeRouteCalculatorResult withCalculatorName(String calculatorName) {
+        setCalculatorName(calculatorName);
+        return this;
+    }
 
     /**
      * <p>
@@ -208,41 +248,100 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the route calculator resource being described.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @param calculatorName
-     *        The name of the route calculator resource being described.
+     * @param pricingPlan
+     *        Always returns <code>RequestBasedUsage</code>.
+     * @see PricingPlan
      */
-
-    public void setCalculatorName(String calculatorName) {
-        this.calculatorName = calculatorName;
+    @Deprecated
+    public void setPricingPlan(String pricingPlan) {
+        this.pricingPlan = pricingPlan;
     }
 
     /**
      * <p>
-     * The name of the route calculator resource being described.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @return The name of the route calculator resource being described.
+     * @return Always returns <code>RequestBasedUsage</code>.
+     * @see PricingPlan
      */
-
-    public String getCalculatorName() {
-        return this.calculatorName;
+    @Deprecated
+    public String getPricingPlan() {
+        return this.pricingPlan;
     }
 
     /**
      * <p>
-     * The name of the route calculator resource being described.
+     * Always returns <code>RequestBasedUsage</code>.
      * </p>
      * 
-     * @param calculatorName
-     *        The name of the route calculator resource being described.
+     * @param pricingPlan
+     *        Always returns <code>RequestBasedUsage</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PricingPlan
+     */
+    @Deprecated
+    public DescribeRouteCalculatorResult withPricingPlan(String pricingPlan) {
+        setPricingPlan(pricingPlan);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Always returns <code>RequestBasedUsage</code>.
+     * </p>
+     * 
+     * @param pricingPlan
+     *        Always returns <code>RequestBasedUsage</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PricingPlan
+     */
+    @Deprecated
+    public DescribeRouteCalculatorResult withPricingPlan(PricingPlan pricingPlan) {
+        this.pricingPlan = pricingPlan.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The optional description of the route calculator resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description of the route calculator resource.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The optional description of the route calculator resource.
+     * </p>
+     * 
+     * @return The optional description of the route calculator resource.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The optional description of the route calculator resource.
+     * </p>
+     * 
+     * @param description
+     *        The optional description of the route calculator resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public DescribeRouteCalculatorResult withCalculatorName(String calculatorName) {
-        setCalculatorName(calculatorName);
+    public DescribeRouteCalculatorResult withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -334,6 +433,97 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
 
     public DescribeRouteCalculatorResult withCreateTime(java.util.Date createTime) {
         setCreateTime(createTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param updateTime
+     *        The timestamp when the route calculator resource was last updated in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     *        </p>
+     *        </li>
+     */
+
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The timestamp when the route calculator resource was last updated in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when the route calculator resource was last updated in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param updateTime
+     *        The timestamp when the route calculator resource was last updated in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
+     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeRouteCalculatorResult withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
         return this;
     }
 
@@ -508,105 +698,6 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description of the route calculator resource.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     * 
-     * @return The optional description of the route calculator resource.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The optional description of the route calculator resource.
-     * </p>
-     * 
-     * @param description
-     *        The optional description of the route calculator resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeRouteCalculatorResult withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Always returns <code>RequestBasedUsage</code>.
-     * </p>
-     * 
-     * @param pricingPlan
-     *        Always returns <code>RequestBasedUsage</code>.
-     * @see PricingPlan
-     */
-    @Deprecated
-    public void setPricingPlan(String pricingPlan) {
-        this.pricingPlan = pricingPlan;
-    }
-
-    /**
-     * <p>
-     * Always returns <code>RequestBasedUsage</code>.
-     * </p>
-     * 
-     * @return Always returns <code>RequestBasedUsage</code>.
-     * @see PricingPlan
-     */
-    @Deprecated
-    public String getPricingPlan() {
-        return this.pricingPlan;
-    }
-
-    /**
-     * <p>
-     * Always returns <code>RequestBasedUsage</code>.
-     * </p>
-     * 
-     * @param pricingPlan
-     *        Always returns <code>RequestBasedUsage</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PricingPlan
-     */
-    @Deprecated
-    public DescribeRouteCalculatorResult withPricingPlan(String pricingPlan) {
-        setPricingPlan(pricingPlan);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Always returns <code>RequestBasedUsage</code>.
-     * </p>
-     * 
-     * @param pricingPlan
-     *        Always returns <code>RequestBasedUsage</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PricingPlan
-     */
-    @Deprecated
-    public DescribeRouteCalculatorResult withPricingPlan(PricingPlan pricingPlan) {
-        this.pricingPlan = pricingPlan.toString();
-        return this;
-    }
-
-    /**
-     * <p>
      * Tags associated with route calculator resource.
      * </p>
      * 
@@ -674,97 +765,6 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p>
-     * The timestamp when the route calculator resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param updateTime
-     *        The timestamp when the route calculator resource was last updated in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     *        </p>
-     *        </li>
-     */
-
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp when the route calculator resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @return The timestamp when the route calculator resource was last updated in <a
-     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *         <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     *         </p>
-     *         </li>
-     */
-
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
-    }
-
-    /**
-     * <p>
-     * The timestamp when the route calculator resource was last updated in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param updateTime
-     *        The timestamp when the route calculator resource was last updated in <a
-     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
-     *        <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For example, <code>2020–07-2T12:15:20.000Z+01:00</code>
-     *        </p>
-     *        </li>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeRouteCalculatorResult withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -776,22 +776,22 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCalculatorArn() != null)
-            sb.append("CalculatorArn: ").append(getCalculatorArn()).append(",");
         if (getCalculatorName() != null)
             sb.append("CalculatorName: ").append(getCalculatorName()).append(",");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+        if (getCalculatorArn() != null)
+            sb.append("CalculatorArn: ").append(getCalculatorArn()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -806,37 +806,37 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
         if (obj instanceof DescribeRouteCalculatorResult == false)
             return false;
         DescribeRouteCalculatorResult other = (DescribeRouteCalculatorResult) obj;
-        if (other.getCalculatorArn() == null ^ this.getCalculatorArn() == null)
-            return false;
-        if (other.getCalculatorArn() != null && other.getCalculatorArn().equals(this.getCalculatorArn()) == false)
-            return false;
         if (other.getCalculatorName() == null ^ this.getCalculatorName() == null)
             return false;
         if (other.getCalculatorName() != null && other.getCalculatorName().equals(this.getCalculatorName()) == false)
             return false;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+        if (other.getCalculatorArn() == null ^ this.getCalculatorArn() == null)
             return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
-        if (other.getDataSource() == null ^ this.getDataSource() == null)
-            return false;
-        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getCalculatorArn() != null && other.getCalculatorArn().equals(this.getCalculatorArn()) == false)
             return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
         if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
         if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+            return false;
+        if (other.getDataSource() == null ^ this.getDataSource() == null)
+            return false;
+        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
         return true;
     }
@@ -846,14 +846,14 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCalculatorArn() == null) ? 0 : getCalculatorArn().hashCode());
         hashCode = prime * hashCode + ((getCalculatorName() == null) ? 0 : getCalculatorName().hashCode());
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getCalculatorArn() == null) ? 0 : getCalculatorArn().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

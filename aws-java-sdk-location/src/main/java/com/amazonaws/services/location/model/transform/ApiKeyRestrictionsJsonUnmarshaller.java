@@ -54,15 +54,15 @@ public class ApiKeyRestrictionsJsonUnmarshaller implements Unmarshaller<ApiKeyRe
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("AllowReferers", targetDepth)) {
-                    context.nextToken();
-                    apiKeyRestrictions.setAllowReferers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("AllowResources", targetDepth)) {
                     context.nextToken();
                     apiKeyRestrictions.setAllowResources(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("AllowReferers", targetDepth)) {
+                    context.nextToken();
+                    apiKeyRestrictions.setAllowReferers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

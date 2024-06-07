@@ -48,13 +48,13 @@ public class PutGeofenceResultJsonUnmarshaller implements Unmarshaller<PutGeofen
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTime", targetDepth)) {
-                    context.nextToken();
-                    putGeofenceResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("GeofenceId", targetDepth)) {
                     context.nextToken();
                     putGeofenceResult.setGeofenceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    context.nextToken();
+                    putGeofenceResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("UpdateTime", targetDepth)) {
                     context.nextToken();

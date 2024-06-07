@@ -53,19 +53,6 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     private String collectionName;
     /**
      * <p>
-     * An optional description for the geofence collection.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     * </p>
-     */
-    private String kmsKeyId;
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      */
@@ -78,6 +65,12 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
      */
     @Deprecated
     private String pricingPlanDataSource;
+    /**
+     * <p>
+     * An optional description for the geofence collection.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * Applies one or more tags to the geofence collection. A tag is a key-value pair helps manage, identify, search,
@@ -123,6 +116,13 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     * </p>
+     */
+    private String kmsKeyId;
 
     /**
      * <p>
@@ -283,95 +283,6 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An optional description for the geofence collection.
-     * </p>
-     * 
-     * @param description
-     *        An optional description for the geofence collection.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * An optional description for the geofence collection.
-     * </p>
-     * 
-     * @return An optional description for the geofence collection.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * An optional description for the geofence collection.
-     * </p>
-     * 
-     * @param description
-     *        An optional description for the geofence collection.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateGeofenceCollectionRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     * </p>
-     * 
-     * @param kmsKeyId
-     *        A key identifier for an <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *        customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     */
-
-    public void setKmsKeyId(String kmsKeyId) {
-        this.kmsKeyId = kmsKeyId;
-    }
-
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     * </p>
-     * 
-     * @return A key identifier for an <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *         customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     */
-
-    public String getKmsKeyId() {
-        return this.kmsKeyId;
-    }
-
-    /**
-     * <p>
-     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
-     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     * </p>
-     * 
-     * @param kmsKeyId
-     *        A key identifier for an <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
-     *        customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateGeofenceCollectionRequest withKmsKeyId(String kmsKeyId) {
-        setKmsKeyId(kmsKeyId);
-        return this;
-    }
-
-    /**
-     * <p>
      * No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
      * </p>
      * 
@@ -466,6 +377,46 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     @Deprecated
     public CreateGeofenceCollectionRequest withPricingPlanDataSource(String pricingPlanDataSource) {
         setPricingPlanDataSource(pricingPlanDataSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional description for the geofence collection.
+     * </p>
+     * 
+     * @param description
+     *        An optional description for the geofence collection.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * An optional description for the geofence collection.
+     * </p>
+     * 
+     * @return An optional description for the geofence collection.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * An optional description for the geofence collection.
+     * </p>
+     * 
+     * @param description
+     *        An optional description for the geofence collection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateGeofenceCollectionRequest withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -769,6 +720,55 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        A key identifier for an <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *        customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     */
+
+    public void setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     * </p>
+     * 
+     * @return A key identifier for an <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *         customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     */
+
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
+     * Web Services KMS customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        A key identifier for an <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon Web Services KMS
+     *        customer managed key</a>. Enter a key ID, key ARN, alias name, or alias ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateGeofenceCollectionRequest withKmsKeyId(String kmsKeyId) {
+        setKmsKeyId(kmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -782,16 +782,16 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
         sb.append("{");
         if (getCollectionName() != null)
             sb.append("CollectionName: ").append(getCollectionName()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getPricingPlan() != null)
             sb.append("PricingPlan: ").append(getPricingPlan()).append(",");
         if (getPricingPlanDataSource() != null)
             sb.append("PricingPlanDataSource: ").append(getPricingPlanDataSource()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getKmsKeyId() != null)
+            sb.append("KmsKeyId: ").append(getKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -810,14 +810,6 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getCollectionName() != null && other.getCollectionName().equals(this.getCollectionName()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
-            return false;
-        if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
-            return false;
         if (other.getPricingPlan() == null ^ this.getPricingPlan() == null)
             return false;
         if (other.getPricingPlan() != null && other.getPricingPlan().equals(this.getPricingPlan()) == false)
@@ -826,9 +818,17 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getPricingPlanDataSource() != null && other.getPricingPlanDataSource().equals(this.getPricingPlanDataSource()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
+            return false;
+        if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
         return true;
     }
@@ -839,11 +839,11 @@ public class CreateGeofenceCollectionRequest extends com.amazonaws.AmazonWebServ
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCollectionName() == null) ? 0 : getCollectionName().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());
         hashCode = prime * hashCode + ((getPricingPlanDataSource() == null) ? 0 : getPricingPlanDataSource().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         return hashCode;
     }
 

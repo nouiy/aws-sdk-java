@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListKeysResponseEntryMarshaller {
 
-    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
-    private static final MarshallingInfo<java.util.Date> EXPIRETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExpireTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> KEYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("KeyName").build();
+    private static final MarshallingInfo<java.util.Date> EXPIRETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExpireTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<StructuredPojo> RESTRICTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Restrictions").build();
+    private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateTime").timestampFormat("iso8601").build();
 
@@ -56,11 +56,11 @@ public class ListKeysResponseEntryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listKeysResponseEntry.getCreateTime(), CREATETIME_BINDING);
-            protocolMarshaller.marshall(listKeysResponseEntry.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(listKeysResponseEntry.getExpireTime(), EXPIRETIME_BINDING);
             protocolMarshaller.marshall(listKeysResponseEntry.getKeyName(), KEYNAME_BINDING);
+            protocolMarshaller.marshall(listKeysResponseEntry.getExpireTime(), EXPIRETIME_BINDING);
+            protocolMarshaller.marshall(listKeysResponseEntry.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(listKeysResponseEntry.getRestrictions(), RESTRICTIONS_BINDING);
+            protocolMarshaller.marshall(listKeysResponseEntry.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(listKeysResponseEntry.getUpdateTime(), UPDATETIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
